@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by Amadeus s.a.s. (Amadeus s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.amadeus.com/2010/06/Security_v1" xmlns:ama_ct="http://xml.amadeus.com/2010/06/Types_v2" xmlns:iata="http://www.iata.org/IATA/2007/00/IATA2010.1" xmlns:ota2010b="http://www.opentravel.org/OTA/2003/05/OTA2010B" targetNamespace="http://xml.amadeus.com/2010/06/Security_v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.000" id="AMA2012V">
+  <xs:import namespace="http://xml.amadeus.com/2010/06/Types_v2" schemaLocation="../2012F/AMA_CommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://www.iata.org/IATA/2007/00/IATA2010.1" schemaLocation="../../IATA/2010.1/IATA_Proxy.xsd" />
+  <xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2010B" schemaLocation="../../OTA/2010B/OTA_Proxy.xsd" />
+  <!--Replaced file inclusion D:/Java/AXA/input/AMA/2012V/chameleon/AMA_SecurityCommonTypes.xsd with its content-->
+  <xs:complexType name="ItemAccessControl">
+    <xs:annotation>
+      <xs:documentation>Type to convey specific security for a given item.</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:element name="AmadeusOfficeID" maxOccurs="10">
+        <xs:annotation>
+          <xs:documentation>Amadeus office ID or Amadeus office ID mask for which specific rights are given. If element is empty, default office is the owner of the item.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="ota2010b:StringLength0to32">
+              <xs:attribute name="AccessMode" type="ama_ct:CodePatternType" use="required">
+                <xs:annotation>
+                  <xs:documentation>Contain the type of the access to the item granted to the office. Refer to the Amadeus codeset table IAM (Item Access Mode).</xs:documentation>
+                </xs:annotation>
+              </xs:attribute>
+              <xs:attribute name="AccessExtension" type="xs:boolean" use="optional">
+                <xs:annotation>
+                  <xs:documentation>If true, the access is extended to offices which have an agreement with the given office (dedicated setting (often EOS agreement) should be checked).</xs:documentation>
+                </xs:annotation>
+              </xs:attribute>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+</xs:schema>

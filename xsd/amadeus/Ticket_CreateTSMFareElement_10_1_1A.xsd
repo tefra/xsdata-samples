@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/TFRECQ_10_1_1A" xmlns="http://xml.amadeus.com/TFRECQ_10_1_1A" elementFormDefault="qualified">
+  <xs:element name="Ticket_CreateTSMFareElement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="fareElementTattoo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="reference">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="qualifier">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..10</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="10" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="number">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: n..35</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:decimal">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Format limitations: n..35</xs:documentation>
+                          </xs:annotation>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fareElementInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="text">
+                <xs:simpleType>
+                  <xs:annotation>
+                    <xs:documentation xml:lang="en">Format limitations: an..9999</xs:documentation>
+                  </xs:annotation>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1" />
+                    <xs:maxLength value="9999" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+<!-- SchemaRules="2009/09"-->
+<!--Created with SchemaBuilder 4.2 by Amadeus S.A.S.-->
+<!--Build Key:
+1F8B080000000000000095934D6FDB300C86EFFA15B9ED3024B153605803E8E025760E5BD2AEF16E010255661CA1B2E4897251A3E87F1F253B587AD9C7C52029E9D5AB87F426DFE50F5999AF8F773BBE48D2649AA6D3C5A749E15425FA4972BB5C2C96379F279B6DF931499649C2B26DE6FB16B0501A8C6880B34781B0A3085B21819FBD6F97F3F94BA367A21115743893B699337906F9B4A76F23B8771D30692B40F0C88D35216B1A30949D84C698B6C2F441969B4E6B2AB4BD53F5D90F690527D169BF716D4966AA41B1B2DDA3863DFCECC048B8175E9E8705305FFEC92398DF7B5EC32BDF8EAFCFE050594391030D244391A8E982FE8D9D88C143A7C9A20D38621E99C4C321FA8B80B652E8F185DAD695727CBD3CE4953A09E94B6B351EF2F2B856E885F12B6242A808D2612BDC137865EA610F46AC78F8666B923175F4105FDE80AB61641AE34281AE706F9D276A973A2219CA30A07C5F5B83174A8F2D32FFC5A6B5CAF81DF8AB36386BFD151A36D80E0091662FB99D27B7630D0BEB32AD481187A308EE5949C0B5929E6E14AE1FA061239C0F6A3F8C92CAF7A37DEF84412DC25662C2092DCE47E532DBCE5F2BD08ACC0B1A97B719ADB260AA1AA77390A0E158BD9F49AA444211C60B6A7FD7F9B6F385D515381E0A8C4DA7DB81DC079C2873B2AE8926A6533670E169C6AE2EE7D97D762C95A4661ED3E48626B811CAF0F26B79E9C04438103CA51F6F2CF0B278C857DF594BB3AEF07C99FDB1013CA5E85985AE50183188488C8FB7AC48CE43B9DF16249C6B080F649796FC71D3D86CF2C27E018A9FC39336040000
+-->
+

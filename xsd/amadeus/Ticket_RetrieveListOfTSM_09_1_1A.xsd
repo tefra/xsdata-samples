@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace= "http://xml.amadeus.com/TTSLRQ_09_1_1A" 
+xmlns="http://xml.amadeus.com/TTSLRQ_09_1_1A" 
+elementFormDefault="qualified">
+
+  <xs:element name="Ticket_RetrieveListOfTSM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="passengerTattoo" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="passengerReference">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="type">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Format limitations: an..3
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="3"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="value">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Format limitations: an..35
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="35"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="deadIndicator">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="statusDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="indicator">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Format limitations: an..3
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="3"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="action">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Format limitations: an..3
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="3"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="infantOrAdultAssociation" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="paxDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="type">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Format limitations: an..2
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="2"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+
+<!-- Created with SchemaBuilder 3.1 by Amadeus S.A.S. -->
+<!-- Build Key:
+1F8B0800000000000000854F3D6FC23014DCFD2BD82B88C9509548192211984AAB42D51119FB004BFEA07E4ED508F1DFEB04ABEAD6ED74EFDE7DACDB4DFBD6ECDAE5FE6553979C2FA6F372CA17930F280752A29FCC1FAB7251954F93F5F3EE81F38A73E684055D84447D8DFD05B7FDF50B81B477090518081A38718293FD8D496F2D5CA4FA280C8119EF4E83411D4307A67C7730D8E2B34B62BC8A28CFF7C3511B8CB2316240FFC4A44A94F012516843B5F30E890B27E4DCC1466DE5195664267F34B44BA7CC49AF4088F9FF902236BF63CF315EAAA2F8B66626AC50E86896B6152C781FFFD464644588037C775AEAD8676B1AB369E543637432A6FBD0B1E34AC328DAFA10A1B2FC0743E02E779A010000
+-->

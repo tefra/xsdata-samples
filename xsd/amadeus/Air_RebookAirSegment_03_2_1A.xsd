@@ -1,0 +1,409 @@
+<xs:schema 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace= "http://xml.amadeus.com/ARBKUQ_03_2_1A" 
+xmlns="http://xml.amadeus.com/ARBKUQ_03_2_1A" 
+elementFormDefault="qualified">
+
+  <xs:element name="Air_RebookAirSegment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="bestPricerRecommendation" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="selectionDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="option">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Edifact representation: an..3
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="3"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="optionInformation">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Edifact representation: n..3
+                            </xs:documentation>
+                          </xs:annotation>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="originDestinationDetails" maxOccurs="99">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="originDestination">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="origin">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Edifact representation: an..25
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="25"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="destination">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Edifact representation: an..25
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="25"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="itineraryInfo" maxOccurs="20">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="flightDetails">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="flightDate">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="departureDate">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..35
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                      <xs:minLength value="1"/>
+                                      <xs:maxLength value="35"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="departureTime" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:decimal">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: n..4
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="arrivalDate" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..35
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                      <xs:minLength value="1"/>
+                                      <xs:maxLength value="35"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="arrivalTime" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:decimal">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: n..4
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="dateVariation" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: n1
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                      <xs:minLength value="1"/>
+                                      <xs:maxLength value="1"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="boardPointDetails">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="trueLocationId">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..25
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                      <xs:minLength value="1"/>
+                                      <xs:maxLength value="25"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="offpointDetails" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="trueLocationId">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..25
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                      <xs:minLength value="1"/>
+                                      <xs:maxLength value="25"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="companyDetails">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="marketingCompany">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..35
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                      <xs:minLength value="1"/>
+                                      <xs:maxLength value="35"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="flightIdentification">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="flightNumber">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..35
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                      <xs:minLength value="1"/>
+                                      <xs:maxLength value="35"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="bookingClass">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..17
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                      <xs:minLength value="1"/>
+                                      <xs:maxLength value="17"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="operationalSuffix" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..3
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                      <xs:minLength value="1"/>
+                                      <xs:maxLength value="3"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="flightTypeDetails" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="flightIndicator" maxOccurs="9">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..6
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                      <xs:minLength value="1"/>
+                                      <xs:maxLength value="6"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="itemNumber" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:decimal">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: n..6
+                                  </xs:documentation>
+                                </xs:annotation>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="specialSegment" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..3
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="3"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="marriageDetails" minOccurs="0" maxOccurs="99">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="relation" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..3
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                      <xs:minLength value="1"/>
+                                      <xs:maxLength value="3"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="marriageIdentifier" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:decimal">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: n..10
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="lineNumber" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:decimal">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: n..6
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="otherRelation" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..3
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                      <xs:minLength value="1"/>
+                                      <xs:maxLength value="3"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="carrierCode" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..35
+                                        </xs:documentation>
+                                      </xs:annotation>
+                                      <xs:minLength value="1"/>
+                                      <xs:maxLength value="35"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="relatedFlightInfo">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="quantity">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:decimal">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: n..15
+                                  </xs:documentation>
+                                </xs:annotation>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="statusCode" minOccurs="0" maxOccurs="10">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..3
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="3"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

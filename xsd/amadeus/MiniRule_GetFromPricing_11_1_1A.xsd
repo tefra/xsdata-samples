@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/TMRCRQ_11_1_1A" xmlns="http://xml.amadeus.com/TMRCRQ_11_1_1A" elementFormDefault="qualified">
+  <xs:element name="MiniRule_GetFromPricing">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Retreive Mini Rules associated to a Fare Recommendation from Pricing Context</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="fareRecommendationId" maxOccurs="99" type="ItemReferencesAndVersionsType">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">Fare Recommendation ID</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ItemReferencesAndVersionsType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Exchange and link unique identifiers</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="referenceType" minOccurs="0" type="AlphaNumericString_Length1To3">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">FRN for Fare Recommendation Number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="uniqueReference" minOccurs="0" type="AlphaNumericString_Length1To35">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Specify Fare Recommendation ID  or   "ALL" to retrieve Minirules associated to all Fare Recommendations</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AlphaNumericString_Length1To3">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericString_Length1To35">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Format limitations: an..35</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="35" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+<!-- SchemaRules="2010/01"-->
+<!--Created with SchemaBuilder 4.3.2 by Amadeus S.A.S.-->
+<!--"Amadeus Proprietary and Confidential Information: unauthorized use and disclosure strictly forbidden. 2010 - Amadeus s.a.s - All Rights Reserved."-->
+<!--Build Key:
+1F8B080000000000000095934D6FDB300C86EFFA15422F3B0C49EC761F40001DDCC4C9062C6996A6B700816A31895059F244B98857F4BF8FB29DB63B0CDB2E0645C9AFA8E725E7F9325F679B7CBABB598ACB244D07C9A74172C5675E2BD9F0E4F338F9304E3FF2F962F33E49C649C2B245169A0A70A60D585982A0C4EE5AA22E36313D3CA162F71261497B58C902C431846A3C1A9D4A3394A55450E3B070E5881547281E6EE95B4A117C0DAC700A10020AEB6C5C9525585AF57B65256D135585AD8DA144D5787D3806719175AA7CE55DE53504E91B2EADE21367F75A918696867FB57BE74B19B4B3635E5B5987A3F3FA27285E23B4C795C6C238AC3D700C5E17C1349CFEB9D78A34869CE8247CC0CF97E1500E31AE8DE1EB5807F23555EF1F410D2F9882BDAC4D98FB2A5251622F0D0253AEBE37700B3F6AB005AC64288EFD0ED8EB7F6206F6F5CC53F4E179F7F4081EE955147930403214C903DDD03CB33DB9B4AE0D3173D1B076DDBAD6FE1CA3BF08185748D32337EEA0B417D3F1F64B9E4DB7B9D27B59848D7306B7F96637D518A40D13728AFC23E7B60BE91F20687BE8CE60EB356EBFB90369D9435B885637D634AC047F801E461BCF341885B7CE87177CF470A4BA328C4C7FCF4DC9756DFACEB1FF85A872DA862584CE8EB6D9BC73E10D21D6151E39621C926494A47D0E67CE67469362DFA7B103740138A5FEA11BA9153B76584A1FA2DA9DD5850E4D5F7EF0D2A269BB92A808228CA35E79932D464F0A8CA6E225B5CDF39076592C4ABD1D1A6A91C979523A4DCAB480DA31D5B6602734E1A60E551D66CE28F02226181B0C161DBC77C8F5EB740C06AC4323D28CBDB95F64AB6CB7D056470EBB34BDA2762EA5B662B5CE199C2A726A277137CDE762B3BECBCFCE70E9418ACBCBE49C109BC57AB2FECE2A9A058D4772B763DE1923528A1E75748BC2168F6C498A97ABE71066DE952B1A516A2D76B6E98F077AF3459AB25F4FAD8220EF040000
+-->
+

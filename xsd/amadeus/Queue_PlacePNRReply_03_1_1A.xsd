@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/QUQPCR_03_1_1A" xmlns="http://xml.amadeus.com/QUQPCR_03_1_1A" elementFormDefault="qualified">
+  <xs:element name="Queue_PlacePNRReply">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="errorReturn" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="errorDefinition">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="errorDetails">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="errorCode">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:string">
+                                <xs:minLength value="1" />
+                                <xs:maxLength value="3" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="errorCategory" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:string">
+                                <xs:minLength value="1" />
+                                <xs:maxLength value="3" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="errorCodeOwner" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:string">
+                                <xs:minLength value="1" />
+                                <xs:maxLength value="3" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="errorText" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="freeTextDetails" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="textSubjectQualifier">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:string">
+                                <xs:minLength value="1" />
+                                <xs:maxLength value="3" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="source" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:string">
+                                <xs:minLength value="1" />
+                                <xs:maxLength value="3" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="encoding" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:string">
+                                <xs:minLength value="1" />
+                                <xs:maxLength value="3" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="freeText" maxOccurs="99">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..199</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="199" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="recordLocator" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="reservation">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="controlNumber">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..8</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="8" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+<!-- SchemaRules="2009/09"-->
+<!--Created with SchemaBuilder 5.0.0 by Amadeus S.A.S.-->
+<!--Build Key:
+1F8B08000000000000009593C16EDB300C86EF7A8ADC7618123BCB86B50174F06A273B2C699AB8B700866A338E5059F244B9A851F4DD47C90ED6EEB2ED629034FD93FC48AFB36DB64FF22C2D6EB7FC533CFF3C8DAFA6F37872E87425FA49FC65B9582C175793F526FF18C7CB3866C926717D0BB8920AB46880B30781B0250B5B51023F3BD72EA3E8B95133D1880A3A9C95A689D803292A48A5E511827352D71855B244569EA17C3CD0B311DCD90E58692AA014E4DA68EF350D68F24E4261705BA17B5F8FEB4E290AB4BD95F5D90D6E0527D129B7B66D4E5D56836265BA070507F8D9812E61275C791EE5407FFBA7EE41FFCE79F1F3BF162F4F60511A4D960505244396A8A942FFCA4E4467DF29EAD17850C10FB4C2C7DEFA8B8032A550E388CAD415714B97C7EF59921EB34A9E44E97263141EB3BC48253AA1DD0D91216084EAB811F6113CE22107035C3CFE303569E93A3412C034606B1851047B2541557830D611BB4B1C91BA4AD0037D1F4BC109A9C645E9FF02D41AA9DD16DCB08CD08C35C6BDE1137C7F2F33360CE079221D697C1DC5D7630C57C6264A92360E2208F6499680A92C1DD516B61F186223ACF3BAF75A96D2F5E320CE0A8D4AF854A2C3893446A3729E6CA2970A94A431049DCFEB8CDE32DF5E355EEB2041B772F3FE46291258052CCFA8DC6DE7DACEAD8CAAC0721F606C3ADD0C0C3FE044EA93B14D68623A6503213E4FD89BE23CD925C55D071D14F398EEB91152F3BBFB8CC1734BCB2A041669B6E6F99E42E37226C282E0F3AF179FD2EF76377BD6D2BF20F17CF937C6D5F039594FD2EF8BCC804504827CA8BA53B4D9DD76CF2EFBF923BE8756F56CDC388F17EC1741BD080E5A040000
+-->
+

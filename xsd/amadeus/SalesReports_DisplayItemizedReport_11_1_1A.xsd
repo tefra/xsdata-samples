@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/TSRIRQ_11_1_1A" xmlns="http://xml.amadeus.com/TSRIRQ_11_1_1A" elementFormDefault="qualified">
+  <xs:element name="SalesReports_DisplayItemizedReport">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To display the itemised report</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="actionDetails" minOccurs="0" type="ActionDetailsTypeI">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">Conveys details used for handling scrolling requests.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="salesReportIdentification" minOccurs="0" type="ItemNumberTypeI">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">This optional segment conveys the sales report number or a number relative to a sales report number.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="agentUserDetails" minOccurs="0" type="UserIdentificationType">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">Conveys optional details related to an agent/user to target a specific sales report.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="agencyDetails" minOccurs="0" type="AdditionalBusinessSourceInformationTypeI">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">Conveys optional agency reference.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="currency" minOccurs="0" type="CurrenciesTypeU">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">Conveys a specific sales report currency to select only sales data in this currency.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="requestOption" minOccurs="0" type="SelectionDetailsTypeI">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">Conveys an option to request a sales report for: - all agents in the office. - all offices sharing the same IATA number - all STP/STDO offices - a STP/STDO office - all TDO offices - a TDO office. - only net remit documents.  Some of those options are combinables.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="validatingCarrierDetails" minOccurs="0" type="TransportIdentifierType">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">Conveys the validating carrier or the airline stock provider details.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="salesIndicator" minOccurs="0" type="StatusType">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">Conveys optional sales indicator notion (INT for international or DOM for domestic) to perform the documents selection for the sales report.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ActionDetailsTypeI">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To specify the action that should be taken on a selected reference number.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="numberOfItemsDetails" minOccurs="0" type="ProcessingInformationTypeI">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Conveys the number of lines to retrieve.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="lastItemsDetails" minOccurs="0" type="ReferenceTypeI">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Identification of the last element retrieved.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdditionalBusinessSourceInformationTypeI">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To specify additional originator and source information.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="sourceType" type="SourceTypeDetailsTypeI">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Source type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="originatorDetails" minOccurs="0" type="OriginatorIdentificationDetailsTypeI">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Details (office/ID, IATA number) of the target office</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CompanyIdentificationTypeI">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Code or name to identify a company and any associated companies.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="marketingCompany" minOccurs="0" type="AlphaNumericString_Length1To3">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Validating carrier code on 2 alpha characters.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CurrenciesTypeU">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To specify currencies used in the transaction and relevant details for the rate of exchange.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="currencyDetails" minOccurs="0" type="CurrencyDetailsTypeU">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Details of the currency.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CurrencyDetailsTypeU">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">The usage to which a currency relates</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="currencyQualifier" type="AlphaNumericString_Length1To3">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Conveys the type of currency.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="currencyIsoCode" minOccurs="0" type="AlphaNumericString_Length1To3">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">ISO code of the currency.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ItemNumberIdentificationTypeI">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Goods identification for a specified source</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="number" minOccurs="0" type="AlphaNumericString_Length1To6">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Conveys a number which can be: - a specific sales report number - a relative sales report number.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="type" type="AlphaNumericString_Length1To3">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Type of the number.  In case the type is the original sales report number, there is no number associated.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ItemNumberTypeI">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To specify an item number</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="itemNumberDetails" type="ItemNumberIdentificationTypeI">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Conveys numbers related to the sales report.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OriginatorIdentificationDetailsTypeI">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To identify the originator of the travel request.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="originatorId" minOccurs="0" type="NumericInteger_Length1To9">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">IATA number of the agency.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="inHouseIdentification1" minOccurs="0" type="AlphaNumericString_Length1To9">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Office ID of the agency.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OriginatorIdentificationDetailsTypeI_85102C">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To identify the originator of the travel request.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="originatorId" minOccurs="0" type="AlphaNumericString_Length1To9">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Agent sine (Numeric Sine)+(Agent Initials)+(Duty Code) ex : 0001XVSU).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProcessingInformationTypeI">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To identify the action to be taken and the selection criteria.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="numberOfItems" minOccurs="0" type="NumericInteger_Length1To6">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">- In a query: number of rows requested. - In a reply: 0 if no more remaining rows, else empty.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReferenceTypeI">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To specify which number in a sequence of references and/or the reference number.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="lastItemIdentifier" minOccurs="0" type="AlphaNumericString_Length1To35">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">- In a reply: conveys  the key on the last item sent in case there are more items.  - In a request: when it is not the first call, conveys the last ticket key received.  This key can be a ticket number or a sales report number, depending on the type of the report.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SelectionDetailsInformationTypeI">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To specify a selected option and associated information.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="option" type="AlphaNumericString_Length1To3">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Conveys an option related to the request.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SelectionDetailsTypeI">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To specify the details for making a selection.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="selectionDetails" type="SelectionDetailsInformationTypeI">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Details of the option.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="otherSelectionDetails" minOccurs="0" maxOccurs="98" type="SelectionDetailsInformationTypeI">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Details of other options, related to the office type.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SourceTypeDetailsTypeI">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To identify the type of source.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="sourceQualifier1" type="AlphaNumericString_Length1To3">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Source qualifier: reporting office.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sourceQualifier2" minOccurs="0" type="AlphaNumericString_Length1To3">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Indicates that data are associated to all agencies sharing the same IATA number.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="StatusDetailsType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To specify a status, the action to be taken, and an additional qualification of the status.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="type" minOccurs="0" type="AlphaNumericString_Length1To3" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="StatusType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To advise the requester system the status of the reply</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="statusInformation" type="StatusDetailsType">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">This composite is used to specify if the documents to be selected are International (INT) or Domestic (DOM)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TransportIdentifierType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To specify the transport service(s) which is /are to be updated or cancelled</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="companyIdentification" minOccurs="0" type="CompanyIdentificationTypeI">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Carrier details</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UserIdentificationType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">This segment is used to identify a user.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="originIdentification" minOccurs="0" type="OriginatorIdentificationDetailsTypeI_85102C">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Originator Identification Details: reporting office.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="originator" minOccurs="0" type="AlphaNumericString_Length1To30">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">User Id of the requester</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AlphaNumericString_Length1To30">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Format limitations: an..30</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericInteger_Length1To6">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Format limitations: n..6</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer">
+      <xs:pattern value="-?[0-9]{1,6}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericString_Length1To35">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Format limitations: an..35</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="35" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericString_Length1To6">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Format limitations: an..6</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericString_Length1To3">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericString_Length1To9">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Format limitations: an..9</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="9" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericInteger_Length1To9">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Format limitations: n..9</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer">
+      <xs:pattern value="-?[0-9]{1,9}" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+<!-- SchemaRules="2010/01"-->
+<!--Created with SchemaBuilder 5.0.0 by Amadeus S.A.S.-->
+<!--"Amadeus Proprietary and Confidential Information: unauthorized use and disclosure strictly forbidden. 2010 - Amadeus s.a.s - All Rights Reserved."-->
+<!--Build Key:
+1F8B080000000000000095534D6FDB300CBDEB5708BBEC30C4B133ACC302E8E03649D76169B324C52E0102C56212A1B2E4897251AFE87F1F653B6B7B5A7731488AE6C77B8F97D3EBE9325F4F27DB9B6B314AB3D1203D1B641FF94F501650C98667D9F8D397F1E833BF9CAF3FA4E9384D593ECF435301CEB4012B4B1014D89E4BD4C53A869307546C2711AEE90D2B59803886508D87C387D224B2940A6A4C0A570ED9AEB6CAC0447B31440841DB030E952E90154728EE56F42DA508BE065638059482C23A1BBDB2044B5EFF5656D236B19DB0B53114A81AAF0FC720DEE55D3BBEF0AEF21A82F40D9756F10B67F75A510D2D0DBFB27BE74B19B4B3635E5B5987A3F3FA37285E23B4E94A63611CD61E3806AF8B601A4EFFECB4A21A0927E4523EE0A76698C804A36F0C5FC639902F697A7F0F2A79C714EC656DC2A5AF225C4AECA54160CAD53B032BF855832D60214371EC5FC09EBF094CB0CF398F91A0A7EDE33D78A4ADC8F26080CA90250FD4A179627BA26F591BC2CC45265BBFA5B3FD395AFF28605C214D0FB9710745344EC69BAFD37CB2992ABD9745583B6770335D6F271A83B4E1829822FE88B9CD5CFA3B888C7739D8728D9BEFEE40B5ECA11D44AB1B6B1A56823F400F466BCF3418852BE7C35FF86871A4B9728C98BE8E4D88756D7AE5D8FF82A872DA866B081D1DADD8BC73E10542AD1F059CB06E858828C6534A8769D6C770E67C6E34D5EE151BB5A00BC00929897A93283B14B1943EC4BAB756173A34FD22C14B8BA6D527E123086B1CF695D7F97CF8A8C0685A4392809E127A65713CF5F27C482C17A79BE96A52A485AABD646D0BF68026DCD4A1AAC3CC19055EC4006383C1BC83F13D72FD7C278301EB401259CE5EF417F922DFAE4816B8848A08C26D361A91B84BA9ADF8962F183CC4F056E27632BD14EBE5EDF4C413971EA4383B3BF962BD5A5E2D7FB08A0E43E391A8EE08E858121959F73A5247668B906CC114AFBA93F02A239BAB00653CE82ECC4EF4BD25B7D787C832F607FA7390442E050000
+-->
+

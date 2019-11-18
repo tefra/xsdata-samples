@@ -1,0 +1,161 @@
+<xs:schema 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace= "http://xml.amadeus.com/TTSMDR_08_1_1A" 
+xmlns="http://xml.amadeus.com/TTSMDR_08_1_1A" 
+elementFormDefault="qualified">
+
+  <xs:element name="Ticket_DeleteTSMPReply">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="applicationErrorCode" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="errorDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="errorCode">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Edifact representation: an..5
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="5"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="errorCategory" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Edifact representation: an..3
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="3"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="errorCodeOwner" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Edifact representation: an..3
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="3"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="errorText" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="freeTextQualification" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="textSubjectQualifier">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Edifact representation: an..3
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="3"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="informationType">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Edifact representation: an..4
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="4"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="freeText" maxOccurs="5">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">
+                        Edifact representation: an..70
+                      </xs:documentation>
+                    </xs:annotation>
+                    <xs:minLength value="1"/>
+                    <xs:maxLength value="70"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tsmTattoos" minOccurs="0" maxOccurs="480">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:sequence>
+                <xs:element name="referenceDetails">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="type" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="en">
+                                Edifact representation: an..3
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="3"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="value">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="en">
+                                Edifact representation: an..17
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="17"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+
+<!-- Created with SchemaBuilder 2.1 by Amadeus S.A.S. -->
+<!-- Build Key:
+1F8B08000000000000007D4F4D6B023114BCE757782F6AB495D2853D08AE9E6A4BB5F4283119DD403E6C5EB6B888FFBDD935949EBCCD9B376FE6CDAA5A571FF36DB5D8BDADCB29E72F43FE3C9CCC065F500EA4443B984C8BD963F1C407ABD7ED03E705E7CC090B3A0989F212DB13AEBBCB0F0269EF120A3010D471E20827DB2B93DE5AB848E541180233DE1D3B833286064CF9666FB0C17793C4781751D6B7C5411BF4B23EA243F7634667522CBD45695E200A6DA874DE2171E1889CDD59A98DAC614566F2C59CB6699539E9150831DFEF53CCFAAF701DE3A9188FCFD68C84150A0D8D52BF310BDEC77FAF32B222C40E7E3A2D756CB335F5D9B4F4616E7432A65BD9FEC7A58651B4F1214265F92FFE633A319E010000
+-->

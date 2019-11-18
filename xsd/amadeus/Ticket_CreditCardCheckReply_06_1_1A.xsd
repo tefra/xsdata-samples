@@ -1,0 +1,570 @@
+<xs:schema 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace= "http://xml.amadeus.com/CCVRSP_06_1_1A" 
+xmlns="http://xml.amadeus.com/CCVRSP_06_1_1A" 
+elementFormDefault="qualified">
+
+  <xs:element name="Ticket_CreditCardCheckReply">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="resultInfo" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="errorWarningInfo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="applicationDetails">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="number">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..5
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="5"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="qualifier">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..3
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="3"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="errorWarningText" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="freeTextDetails" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="qualifier">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..3
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="3"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="freeText">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Edifact representation: an..70
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="70"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="creditCardData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="commonCcData">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ccInfo">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="vendorCode">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an2
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="2"/>
+                                <xs:maxLength value="2"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="cardNumber">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..19
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="19"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="expiryDate">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: n4
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="4"/>
+                                <xs:maxLength value="4"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="authorizationCode" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..8
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="8"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="validatingCarrier" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..3
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="3"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="priceInfo" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="currency" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: a3
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="3"/>
+                                <xs:maxLength value="3"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="amount" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:decimal">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: n..12
+                                  </xs:documentation>
+                                </xs:annotation>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="avsInfo" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="addressCode" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..20
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="20"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="zipCode" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..9
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="9"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="resultCode" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: a1
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="1"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="merchantInfo" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="type" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..4
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="4"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="id" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..15
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="15"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="rejectCode" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Edifact representation: an..5
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="5"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="visaInfo" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="msgRef" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="number" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..12
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="12"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="authorizIndic" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: a1
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="1"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="pointOfService" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an2
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="2"/>
+                                <xs:maxLength value="2"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="respIdentification" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="transacIdentifier" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..15
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="15"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="stipReason" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an1
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="1"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="validationCode" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..4
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="4"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="cardBillingInfo" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="currency" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: n3
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="3"/>
+                                <xs:maxLength value="3"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="amount" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:decimal">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: n..12
+                                  </xs:documentation>
+                                </xs:annotation>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="rate" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:decimal">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: n..8
+                                  </xs:documentation>
+                                </xs:annotation>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="reversalInfo" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="originalData" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..42
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="42"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="replaceAmount" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..12
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="12"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="cannedMessageReference" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="referenceDetails">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="type">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..3
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="3"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="value">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..5
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="5"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="securityIdResponse" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="freeTextDetails">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="textSubjectQualifier">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..3
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="3"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="source">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..3
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="3"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="encoding">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">
+                                    Edifact representation: an..3
+                                  </xs:documentation>
+                                </xs:annotation>
+                                <xs:minLength value="1"/>
+                                <xs:maxLength value="3"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="freeText">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                              Edifact representation: an..199
+                            </xs:documentation>
+                          </xs:annotation>
+                          <xs:minLength value="1"/>
+                          <xs:maxLength value="199"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

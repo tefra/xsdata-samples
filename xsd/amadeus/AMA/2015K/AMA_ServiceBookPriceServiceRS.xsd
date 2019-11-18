@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by ﻿AMADEUS s.a.s. (AMADEUS s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ota="http://www.opentravel.org/OTA/2003/05/OTA2011A" xmlns:iata="http://www.iata.org/IATA/2007/00/IATA2010.1" xmlns="http://xml.amadeus.com/2010/06/ServiceBookAndPrice_v1" xmlns:qt="http://xml.amadeus.com/2010/06/QuotationTypes_v1" xmlns:pnr="http://xml.amadeus.com/2010/06/PNR_Types_v2" xmlns:ama_ct="http://xml.amadeus.com/2010/06/Types_v2" targetNamespace="http://xml.amadeus.com/2010/06/ServiceBookAndPrice_v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.001" id="AMA2015K">
+  <xs:import namespace="http://xml.amadeus.com/2010/06/QuotationTypes_v1" schemaLocation="../2014S/AMA_QuotationCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/PNR_Types_v2" schemaLocation="../2014S/AMA_PNR_CommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2011A" schemaLocation="../../OTA/2011A/OTA_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/Types_v2" schemaLocation="../2012F/AMA_CommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://www.iata.org/IATA/2007/00/IATA2010.1" schemaLocation="../../IATA/2010.1/IATA_Proxy.xsd" />
+  <xs:element name="AMA_ServiceBookPriceServiceRS">
+    <xs:annotation>
+      <xs:documentation>displays information relevant to the products booked and their associated pricing records</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element name="Success" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Services">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Service" maxOccurs="99">
+                      <xs:complexType>
+                        <xs:attribute name="RequestID" use="required">
+                          <xs:annotation>
+                            <xs:documentation>ID of the service request</xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                        <xs:attribute name="ID" type="xs:NMTOKEN" use="required">
+                          <xs:annotation>
+                            <xs:documentation>Tatoo of services booked</xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                        <xs:attribute name="Code" type="ota:StringLength1to16" use="optional">
+                          <xs:annotation>
+                            <xs:documentation>ex: SSR Code of the service booked</xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                        <xs:attribute name="ProviderCode" type="ota:StringLength1to16" use="required">
+                          <xs:annotation>
+                            <xs:documentation>Code of the provider of the service</xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                        <xs:attribute name="Chargeable" type="xs:string" use="required">
+                          <xs:annotation>
+                            <xs:documentation>Must include Yes / No / Exempted</xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                        <xs:attribute name="CustomerRefId" type="xs:NMTOKENS" use="required">
+                          <xs:annotation>
+                            <xs:documentation>Tattoo of the passenger to whom the service applies</xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                        <xs:attribute name="SegmentRefId" type="xs:NMTOKENS" use="optional">
+                          <xs:annotation>
+                            <xs:documentation>Tattoo of the segment to which the service applies</xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Quotations" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Quotation" minOccurs="0" maxOccurs="99">
+                      <xs:annotation>
+                        <xs:documentation>Information related to the pricing records created</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:attribute name="ID" type="xs:NMTOKEN" use="required">
+                          <xs:annotation>
+                            <xs:documentation>Tattoo of the pricing record created</xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                        <xs:attributeGroup ref="qt:PriceAttributeGroup" />
+                        <xs:attribute name="PricingRecordType" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Type of the pricing record (TSM-P, TSM-F etc...)</xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                        <xs:attribute name="ServiceRefIds" type="pnr:ReferenceListType">
+                          <xs:annotation>
+                            <xs:documentation>Tattoos of the services linked to the pricng record</xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Errors" type="ama_ct:GenericErrorsType" minOccurs="0" />
+              <xs:element name="Warnings" type="ama_ct:GenericWarningsType" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Failure" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Errors" type="ama_ct:GenericErrorsType" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+      <xs:attributeGroup ref="ota:OTA_PayloadStdAttributes" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

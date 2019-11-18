@@ -1,0 +1,2073 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 sp1 (x64) (http://www.altova.com) by AMADEUS s.a.s. (AMADEUS s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.amadeus.com/2010/06/PNR_Types_v2" xmlns:ama="http://xml.amadeus.com/ErrorCodes" xmlns:ama_air_ct="http://xml.amadeus.com/2010/06/AirTypes_v2" xmlns:ama_ct="http://xml.amadeus.com/2010/06/Types_v2" xmlns:ama_ferry_ct="http://xml.amadeus.com/2010/06/FerryTypes_v1" xmlns:ama_hotel_ct="http://xml.amadeus.com/2010/06/HotelTypes_v1" xmlns:ama_payment_ct="http://xml.amadeus.com/2010/06/PaymentTypes_v1" xmlns:ama_pricing_ct="http://xml.amadeus.com/2010/06/PricingTypes_v1" xmlns:ama_rail_ct="http://xml.amadeus.com/2010/06/RailTypes_v6" xmlns:ama_res_ct="http://xml.amadeus.com/2010/06/TTR_ReservationProducts_Types_v2" xmlns:ama_secu_ct="http://xml.amadeus.com/2010/06/Security_v1" xmlns:ama_vehicle_ct="http://xml.amadeus.com/2010/06/VehicleTypes_v1" xmlns:iata="http://www.iata.org/IATA/2007/00/IATA2010.1" xmlns:ns1="http://xml.amadeus.com/2010/06/Security_v1" xmlns:ota="http://www.opentravel.org/OTA/2003/05/OTA2011A" xmlns:ota2010b="http://www.opentravel.org/OTA/2003/05/OTA2010B" targetNamespace="http://xml.amadeus.com/2010/06/PNR_Types_v2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.005" id="AMA2014S">
+  <xs:import namespace="http://xml.amadeus.com/2010/06/PaymentTypes_v1" schemaLocation="../2011N/AMA_PaymentCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/RailTypes_v6" schemaLocation="../2011Q/AMA_RailCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/AirTypes_v2" schemaLocation="../2013T/AMA_AirCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2010B" schemaLocation="../../OTA/2010B/OTA_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/TTR_ReservationProducts_Types_v2" schemaLocation="../2011V/AMA_TTR_ReservationProductsCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/Security_v1" schemaLocation="../2012V/AMA_SecurityCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/VehicleTypes_v1" schemaLocation="../2011N/AMA_VehicleCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/HotelTypes_v1" schemaLocation="../2011N/AMA_HotelCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/FerryTypes_v1" schemaLocation="../2011N/AMA_FerryCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/PricingTypes_v1" schemaLocation="../2011N/AMA_PricingCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2011A" schemaLocation="../../OTA/2011A/OTA_Proxy.xsd" />
+  <xs:import namespace="http://www.iata.org/IATA/2007/00/IATA2010.1" schemaLocation="../../IATA/2010.1/IATA_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/Types_v2" schemaLocation="../2012F/AMA_CommonTypes_Proxy.xsd" />
+  <!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QueueCommonType.xsd with its content-->
+  <xs:complexType name="Queue">
+    <xs:sequence>
+      <xs:element name="Message" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="199" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <!--Replaced incorrect type "xs:positiveInteger"-->
+    <xs:attribute name="Number" type="xs:long" use="required" />
+    <xs:attribute name="Category" type="xs:string" use="required" />
+    <xs:attribute name="Application" type="xs:string" use="required" />
+    <xs:attribute name="TargetOffice" type="xs:string" use="required" />
+  </xs:complexType>
+  <!--Replaced file inclusion D:/Java/AXA/input/AMA/2014I/chameleon/AMA_PNR_PointOfSalesCommonTypes.xsd with its content-->
+  <xs:attributeGroup name="CommonOfficeTypeGroup">
+    <xs:attribute name="ID">
+      <xs:annotation>
+        <xs:documentation>OfficeId for Amadeus or external Id in case of TTY POS</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:minLength value="1" />
+          <xs:maxLength value="9" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="NumericId">
+      <xs:annotation>
+        <xs:documentation>IATA code</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9]{1,9}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="City">
+      <xs:annotation>
+        <xs:documentation>IATA City or Airport code</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:minLength value="3" />
+          <xs:maxLength value="3" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="SystemCode">
+      <xs:annotation>
+        <xs:documentation>IATA airline code or GDS code</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:minLength value="2" />
+          <xs:maxLength value="3" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="Country">
+      <xs:annotation>
+        <xs:documentation>IATA Coutry Code</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:minLength value="2" />
+          <xs:maxLength value="2" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="AgentType">
+      <xs:annotation>
+        <xs:documentation>Agent, System, etc</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:minLength value="0" />
+          <xs:maxLength value="1" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="AgentLoginTypeGroup">
+    <xs:attribute name="Sign" use="required">
+      <xs:annotation>
+        <xs:documentation>Numeric and Alpha sign</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9]{4}[0-9A-Z]{2}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="DutyCode" use="required">
+      <xs:annotation>
+        <xs:documentation>Duty code such as SU, PR</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:minLength value="2" />
+          <xs:maxLength value="2" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="DCDTypeGroup">
+    <xs:attribute name="AccessType" use="required">
+      <xs:annotation>
+        <xs:documentation>DCD Information</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:nonNegativeInteger">
+          <xs:maxInclusive value="999" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="Product" use="required">
+      <xs:annotation>
+        <xs:documentation>DCD Information</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:nonNegativeInteger">
+          <xs:maxInclusive value="999" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="SubProduct" use="required">
+      <xs:annotation>
+        <xs:documentation>DCD Information</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:nonNegativeInteger">
+          <xs:maxInclusive value="999" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:complexType name="PointOfSaleType">
+    <xs:annotation>
+      <xs:documentation>PointOfSale data. This is an internal representation only, please use PointOfSale definition from AMA_CommonTypes to show POS data outside of Amadeus</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Office">
+        <xs:complexType>
+          <xs:attributeGroup ref="CommonOfficeTypeGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Login" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Channel" minOccurs="0">
+              <xs:complexType>
+                <xs:attributeGroup ref="DCDTypeGroup" />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attributeGroup ref="AgentLoginTypeGroup" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Actor" use="required">
+      <xs:annotation>
+        <xs:documentation>Type: Owner, Creator, Updator</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Creator" />
+          <xs:enumeration value="Owner" />
+          <xs:enumeration value="Updator" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_PNR_CommonTypes.xsd with its content-->
+  <!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_ETR_CommonTypes.xsd with its content-->
+  <xs:simpleType name="String0">
+    <xs:annotation>
+      <xs:documentation>Used for String length 0</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaStringLength1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+      <xs:pattern value="([a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaStringLength1orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an AlphaStringLength1 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaStringLength1 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaStringLength1to2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="2" />
+      <xs:pattern value="([a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaStringLength1to2orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an AlphaStringLength1to2 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaStringLength1to2 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaStringLength1to4">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4" />
+      <xs:pattern value="([a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaStringLength1to4orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an AlphaStringLength1to4 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaStringLength1to4 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaStringLength3">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+      <xs:pattern value="([a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaStringLength3orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an AlphaStringLength3 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaStringLength3 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used for Numeric Strings, length 1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="1" />
+      <xs:pattern value="([0-9])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a Numeric Strings, length 1 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="NumericStringLength1 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1to2">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used for Numeric Strings, length 1 to 2.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="2" />
+      <xs:pattern value="([0-9])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1to2orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a Numeric Strings, length 1 to 2 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="NumericStringLength1to2 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1to4">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used for Numeric Strings, length 1 to 4.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="4" />
+      <xs:pattern value="([0-9])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1to4orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a Numeric Strings, length 1 to 4 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="NumericStringLength1to4 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1to5">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used for Numeric Strings, length 1 to 5.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="5" />
+      <xs:pattern value="([0-9])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1to5orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a Numeric Strings, length 1 to 5 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="NumericStringLength1to5 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1to8">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used for Numeric Strings, length 1 to 8.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="8" />
+      <xs:pattern value="([0-9])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1to8orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a Numeric Strings, length 1 to 8 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="NumericStringLength1to8 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1to99">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used for Numeric Strings, length 1 to 99.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="99" />
+      <xs:pattern value="([0-9])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1to99orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a Numeric Strings, length 1 to 99 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="NumericStringLength1to99 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="2" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to2orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to2 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to2 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to3">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to3orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to3 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to3 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to4">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to4orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to4 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to4 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to6">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="6" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to6orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to6 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to6 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to7">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="7" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to7orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to7 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to7 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to8">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="8" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to8orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to8 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to8 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to10">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to10orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to10 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to10 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to14">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="14" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to14orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to14 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to14 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to17">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="17" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to17orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to17 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to17 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to19">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="19" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to19orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to19 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to19 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to20">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to20orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to20 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to20 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to25">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="25" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to25orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to25 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to25 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to30">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to30orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to30 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to30 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to31">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="31" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to31orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to31 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to31 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to35">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="35" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to35orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to35 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to35 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to70">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="70" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to70orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to70 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to70 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to9">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="9" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to9orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to9 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to9 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to99">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="99" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to99orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to99 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to99 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to256">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="256" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to256orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to256 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength1to256 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength2">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2" />
+      <xs:maxLength value="2" />
+      <xs:pattern value="([0-9a-zA-Z])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength2orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 2 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength2 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength2to3">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2" />
+      <xs:maxLength value="3" />
+      <xs:pattern value="([0-9a-zA-Z])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength2to3orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 2to3 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength2to3 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength3">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3" />
+      <xs:maxLength value="3" />
+      <xs:pattern value="([0-9a-zA-Z])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength3orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 3 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength3 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength3to7">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3" />
+      <xs:maxLength value="7" />
+      <xs:pattern value="([0-9a-zA-Z])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength3to7orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 3to7 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength3to7 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength4">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="4" />
+      <xs:maxLength value="4" />
+      <xs:pattern value="([0-9a-zA-Z])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength4orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 4 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="AlphaNumericStringLength4 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to20">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to20orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 1 to 20 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength1to20 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to25">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="25" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to25orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 1 to 25 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength1to25 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to30">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to30orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 1 to 30 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength1to30 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to31">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="31" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to31orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 1 to 31 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength1to31 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to35">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="35" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to35orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 1 to35 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength1to35 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to60">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="60" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to60orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 1 to 60 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength1to60 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to64">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="64" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to64orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 1 to 64 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength1to64 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to70">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="70" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to70orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 1 to 70 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength1to70 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to99">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="99" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to99orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 1 to 99 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength1to99 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to109">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="109" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to109orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 1 to 109 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength1to109 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to128">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="128" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to128orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 1 to 128 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength1to128 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to199">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="199" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to199orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 1 to 199 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength1to199 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to256">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="256" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to256orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 1 to 256 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength1to256 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength3">
+    <xs:annotation>
+      <xs:documentation>Used for String length 3</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3" />
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength3orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 3 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength3 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="StringLength4">
+    <xs:annotation>
+      <xs:documentation>Used for String length 4</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="4" />
+      <xs:maxLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength4orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a String length 4 or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="StringLength4 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="accomodationGuaranteePaymentForm">
+    <xs:annotation>
+      <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+        <ama:error code="2213">INVALID FORM OF PAYMENT</ama:error>
+      </xs:appinfo>
+      <xs:documentation xml:lang="en">Authorized forms of payment for Guarantee are: 1-Credit Card, 10-Travel Agent identification, ID-Customer ID, 6-Check, 4-MCO, 12-Company Name</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1" />
+      <xs:enumeration value="10" />
+      <xs:enumeration value="ID" />
+      <xs:enumeration value="6" />
+      <xs:enumeration value="4" />
+      <xs:enumeration value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="accomodationGuaranteePaymentFormOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a accomodationGuaranteePaymentForm or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="accomodationGuaranteePaymentForm String0" />
+  </xs:simpleType>
+  <xs:simpleType name="accomodationDepositPaymentForm">
+    <xs:annotation>
+      <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+        <ama:error code="2213">INVALID FORM OF PAYMENT</ama:error>
+      </xs:appinfo>
+      <xs:documentation xml:lang="en">. Authorized forms of payment for Deposit are : 1-Credit Card, ADV-Advanced deposit, 6-Check, 4-MCO</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1" />
+      <xs:enumeration value="ADV" />
+      <xs:enumeration value="6" />
+      <xs:enumeration value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="accomodationDepositPaymentFormOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a accomodationDepositPaymentForm or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="accomodationDepositPaymentForm String0" />
+  </xs:simpleType>
+  <xs:simpleType name="anyURLorString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either an URL or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="xs:anyURI String0" />
+  </xs:simpleType>
+  <xs:simpleType name="BooleanOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a boolean or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="xs:boolean String0" />
+  </xs:simpleType>
+  <xs:simpleType name="BookingChannelOption">
+    <xs:annotation>
+      <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+        <xs:documentation xml:lang="en">This attribute provides the code of the booking channel. EMA=E-mail, FAX=Fax, N1A=GDS non Amadeus, OTH=Other, PHO=Telephone, WEB=Web page, TEL=Tele Sales, B2B=B2B</xs:documentation>
+        <ama:error code="31771">INVALID BOOKING CHANNEL</ama:error>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EMA" />
+      <xs:enumeration value="FAX" />
+      <xs:enumeration value="N1A" />
+      <xs:enumeration value="OTH" />
+      <xs:enumeration value="PHO" />
+      <xs:enumeration value="WEB" />
+      <xs:enumeration value="TEL" />
+      <xs:enumeration value="B2B" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BookingChannelOptionOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a BookingChannelOption or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="BookingChannelOption String0" />
+  </xs:simpleType>
+  <xs:simpleType name="DateOrDateTimeTypeOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a DateOrDateTimeType or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="ota:DateOrDateTimeType String0" />
+  </xs:simpleType>
+  <xs:simpleType name="DateOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a Date or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="xs:date String0" />
+  </xs:simpleType>
+  <xs:simpleType name="DateTimeOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a DateTime or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="xs:dateTime String0" />
+  </xs:simpleType>
+  <xs:simpleType name="DecimalOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a Decimal or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="xs:decimal String0" />
+  </xs:simpleType>
+  <xs:simpleType name="DurationOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a Duration or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="xs:duration String0" />
+  </xs:simpleType>
+  <xs:simpleType name="ETRStatusCode">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Status code. The status indicates the state of the EC in the external provider’s system. However this attribute is given for information purpose only since there is no synchronisation between the provider system and Amadeus. Full list of possible values, used by much of ETR elements. 
+HK: confirmed. This status should be used when the EC is confirmed in the provider's system.
+HL: Waitlisted. This status should be used when the EC is on wait list in the provider's system. 
+HX: Cancelled. This status should be used when the EC is cancelled in the provider's system. 
+HN: On Request. This status should be used when the EC is on request in the provider's system. 
+TT: Time to Think. This status should be used when the EC is only an Option in the provider's system.</xs:documentation>
+      <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+        <ama:error code="811">INVALID STATUS CODE</ama:error>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HK" />
+      <xs:enumeration value="HX" />
+      <xs:enumeration value="HN" />
+      <xs:enumeration value="HL" />
+      <xs:enumeration value="TT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ETRStatusCodeOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a ETRStatusCode or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="ETRStatusCode String0" />
+  </xs:simpleType>
+  <xs:simpleType name="ETRStatusCodeWithoutHL">
+    <xs:annotation>
+      <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+        <xs:documentation xml:lang="en">Status code. The status indicates the state of the EC in the external provider’s system. However this attribute is given for information purpose only since there is no synchronisation between the provider system and Amadeus. List without HL values used for some ETR elements.
+HK: confirmed. This status should be used when the EC is confirmed in the provider's system.
+HX: Cancelled. This status should be used when the EC is cancelled in the provider's system. 
+HN: On Request. This status should be used when the EC is on request in the provider's system. 		
+TT: Time to Think. This status should be used when the EC is only an Option in the provider's system.</xs:documentation>
+        <ama:error code="811">INVALID STATUS CODE</ama:error>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HK" />
+      <xs:enumeration value="HX" />
+      <xs:enumeration value="HN" />
+      <xs:enumeration value="TT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ETRStatusCodeWithoutHLorString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a ETRStatusCodeWithoutHL or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="ETRStatusCodeWithoutHL String0" />
+  </xs:simpleType>
+  <xs:simpleType name="ISO3166orString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a ISO3166 (Country Code) or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="ota:ISO3166 String0" />
+  </xs:simpleType>
+  <xs:simpleType name="IATA_CodeTypeOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a IATA_CodeType (Location Code) or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="iata:IATA_CodeType String0" />
+  </xs:simpleType>
+  <xs:simpleType name="MileageUnitType">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Mileage Unit</xs:documentation>
+      </xs:annotation>
+      <xs:enumeration value="KM">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Kilometers</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MI">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Miles</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MileageUnitTypeOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a MileageUnitType or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="MileageUnitType String0" />
+  </xs:simpleType>
+  <xs:simpleType name="nonNegativeIntegerOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a nonNegativeInteger or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="xs:nonNegativeInteger String0" />
+  </xs:simpleType>
+  <xs:simpleType name="OriginSystemTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">List of allowed values for Origin System Type.</xs:documentation>
+      </xs:annotation>
+      <xs:enumeration value="TripConcierge Manual" />
+      <xs:enumeration value="Amadeus Integrated Partner" />
+      <xs:enumeration value="AeTM Web" />
+      <xs:enumeration value="AeTM Mobile" />
+      <xs:enumeration value="ePower" />
+      <xs:enumeration value="eRetail" />
+      <xs:enumeration value="Sell Classic" />
+      <xs:enumeration value="Sell Connect" />
+      <xs:enumeration value="Cross-Sell Notifier" />
+      <xs:enumeration value="TOMA" />
+      <xs:enumeration value="IRIS" />
+      <xs:enumeration value="B2W" />
+      <xs:enumeration value="Other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OriginSystemTypeEnumOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a OriginSystemTypeEnum or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="OriginSystemTypeEnum String0" />
+  </xs:simpleType>
+  <xs:simpleType name="positiveIntegerOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a positiveInteger or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="xs:positiveInteger String0" />
+  </xs:simpleType>
+  <xs:simpleType name="RoomTypeEnum">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Definition of possible values for the Room Type: PUB = public, PRI = private</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PUB" />
+      <xs:enumeration value="PRI" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="RoomTypeEnumOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a RoomTypeEnum or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="RoomTypeEnum String0" />
+  </xs:simpleType>
+  <xs:simpleType name="TimeOrString0">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used in order to validate either a Time or String0.</xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="xs:time String0" />
+  </xs:simpleType>
+  <xs:complexType name="BookingChannelType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Booking Channel</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="code" type="BookingChannelOptionOrString0" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Booking channel. Refer to the OTA Booking Channel Type (BCT) codeset list.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="description" type="StringLength1to35orString0" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Booking channel description</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="ExternalSystemType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Information about the external System corresponding to this ETR</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="creation" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="dateTime" type="DateOrDateTimeTypeOrString0" use="optional">
+            <xs:annotation>
+              <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+                <ama:error code="24806">INVALID DATE</ama:error>
+                <!-- NB: here only the reg expr of ota:DateOrDateTimeType is checked. Full validation of validity date is done on creation BEs -->
+              </xs:appinfo>
+              <xs:documentation xml:lang="en">Booking date in the external system with optional time</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MileageType">
+    <xs:attribute name="distance" type="NumericStringLength1to8orString0">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="24155">INVALID MILEAGE AMOUNT</ama:error>
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">Mileage: Distance of the trip</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="unit" type="MileageUnitTypeOrString0">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="987">MILEAGE TYPE MUST BE MILES/KILOMETERS</ama:error>
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">Mileage Unit: Unit of distance</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="OriginSystemType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Information about the origin system</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="type" type="OriginSystemTypeEnumOrString0" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Type of the origin system: TripConcierge Manual, Amadeus Integrated Partner, AeTM Web, AeTM Mobile, ePower, eRetail, Sell Classic, Sell Connect, Cross-Sell Notifier, TOMA, IRIS, Other</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="description" type="StringLength1to99orString0" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Description of the origin system (notably in case of Other)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="ProviderType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Provider Type for almost all elements except specificities needed for ETR Air, Train, Coach, etc.</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="ref" type="AlphaNumericStringLength1to6orString0" use="optional">
+      <xs:annotation>
+        <xs:documentation>Provides provider's profile reference</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="name" type="StringLength1to70orString0" use="optional">
+      <xs:annotation>
+        <xs:documentation>provider name</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="code" type="AlphaNumericStringLength1to35orString0" use="optional">
+      <xs:annotation>
+        <xs:documentation>provider code</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="externalRef" type="AlphaNumericStringLength1to10orString0" use="optional">
+      <xs:annotation>
+        <xs:documentation>External profile reference for imported profiles</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="RailProviderType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Provider Type for ETR Train, Coach &amp; Transfer</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="ref" type="AlphaNumericStringLength1to6orString0" use="optional">
+      <xs:annotation>
+        <xs:documentation>Provides provider's profile reference</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="name" type="StringLength1to70orString0" use="optional">
+      <xs:annotation>
+        <xs:documentation>provider name</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="code" type="AlphaNumericStringLength1to35orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="24198">INVALID PROVIDER CODE</ama:error>
+        </xs:appinfo>
+        <xs:documentation>provider code</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="externalRef" type="AlphaNumericStringLength1to10orString0" use="optional">
+      <xs:annotation>
+        <xs:documentation>External profile reference for imported profiles</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="ReferralType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Booking Channel</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="partner" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="identifier" type="StringLength1to60orString0">
+            <xs:annotation>
+              <xs:documentation>Affiliated ID of the partner which redirects the traveller to client website</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="url" type="anyURLorString0">
+            <xs:annotation>
+              <xs:documentation>URL of the website that has redirected the user to the client application</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="onlineFlow" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Flow used to create the booking: Multiple Destinations, CrossSell, UpSell, Shopping Cart, Package</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:attributeGroup name="AddressWithCommonAttributesGroup">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Group containing the attributes common to all the Addresses (there are differences between Accomodation addresses and other addresses because the city name is mandatory for Accomodation while it is optional for other ETR).</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="line" type="StringLength1to70orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="11823">INVALID FIELD LENGTH ADDRESS LINE1</ama:error>
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">address line with street, number, building, etc.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="complement" type="StringLength1to70orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="11826">INVALID FIELD LENGTH ADDRESS LINE2</ama:error>
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">complement to address line, if not enough space</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="zip" type="AlphaNumericStringLength1to17orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="11834">INVALID FIELD LENGTH ZIP OR POST CODE</ama:error>
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">Post Office Code number.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="countryCode" type="AlphaNumericStringLength2orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="47">INVALID COUNTRY CODE</ama:error>
+          <!-- NB: this is defined there only for the case when the value does not match the grammar format. Then, the real check against RFD is under creation BE's responsibility -->
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">Country code (2 character standard IATA country code)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="latitude" type="DecimalOrString0" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Latitude (geographic coordinate) expressed in decimal degree.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="longitude" type="DecimalOrString0" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Longitude (geographic coordinate) expressed in decimal degree.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="AddressGroup">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Standard address used by a lot of element with all attributes as optional</xs:documentation>
+    </xs:annotation>
+    <!--Replaced nested attributeGroup {http://xml.amadeus.com/2010/06/PNR_Types_v2}AddressWithCommonAttributesGroup by content from AMA_PNR_CommonTypes_Proxy-->
+    <xs:attribute name="line" type="StringLength1to70orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="11823">INVALID FIELD LENGTH ADDRESS LINE1</ama:error>
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">address line with street, number, building, etc.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="complement" type="StringLength1to70orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="11826">INVALID FIELD LENGTH ADDRESS LINE2</ama:error>
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">complement to address line, if not enough space</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="zip" type="AlphaNumericStringLength1to17orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="11834">INVALID FIELD LENGTH ZIP OR POST CODE</ama:error>
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">Post Office Code number.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="countryCode" type="AlphaNumericStringLength2orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="47">INVALID COUNTRY CODE</ama:error>
+          <!-- NB: this is defined there only for the case when the value does not match the grammar format. Then, the real check against RFD is under creation BE's responsibility -->
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">Country code (2 character standard IATA country code)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="latitude" type="DecimalOrString0" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Latitude (geographic coordinate) expressed in decimal degree.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="longitude" type="DecimalOrString0" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Longitude (geographic coordinate) expressed in decimal degree.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="cityName" type="StringLength1to35orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="11829">INVALID FIELD LENGTH CITY NAME</ama:error>
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">City (e.g. Dublin), town, or postal station (i.e. a postal service territory, often used in a military address).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="stateCode" type="AlphaNumericStringLength1to2orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="11260">INVALID STATE CODE FOR COUNTRY SPECIFIED</ama:error>
+          <!-- NB: this is defined there only for the case when the value does not match the grammar format. Then, the real check against RFD is under creation BE's responsibility -->
+        </xs:appinfo>
+        <xs:documentation>State code (2 characters standard IATA state code)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="AddressWithMandatoryCityNameGroup">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Standard address used by a lot of element with all attributes as optional</xs:documentation>
+    </xs:annotation>
+    <!--Replaced nested attributeGroup {http://xml.amadeus.com/2010/06/PNR_Types_v2}AddressWithCommonAttributesGroup by content from AMA_PNR_CommonTypes_Proxy-->
+    <xs:attribute name="line" type="StringLength1to70orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="11823">INVALID FIELD LENGTH ADDRESS LINE1</ama:error>
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">address line with street, number, building, etc.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="complement" type="StringLength1to70orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="11826">INVALID FIELD LENGTH ADDRESS LINE2</ama:error>
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">complement to address line, if not enough space</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="zip" type="AlphaNumericStringLength1to17orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="11834">INVALID FIELD LENGTH ZIP OR POST CODE</ama:error>
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">Post Office Code number.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="countryCode" type="AlphaNumericStringLength2orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="47">INVALID COUNTRY CODE</ama:error>
+          <!-- NB: this is defined there only for the case when the value does not match the grammar format. Then, the real check against RFD is under creation BE's responsibility -->
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">Country code (2 character standard IATA country code)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="latitude" type="DecimalOrString0" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Latitude (geographic coordinate) expressed in decimal degree.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="longitude" type="DecimalOrString0" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Longitude (geographic coordinate) expressed in decimal degree.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="cityName" type="StringLength1to35orString0" use="required">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error facet="use" code="11257">NEED CITY NAME</ama:error>
+          <ama:error code="11829">INVALID FIELD LENGTH CITY NAME</ama:error>
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">City (e.g. Dublin), town, or postal station (i.e. a postal service territory, often used in a military address). Mandotory for some elements like ETR Hotel.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="stateCode" type="AlphaNumericStringLength1to2orString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="12701">INVALID STATE CODE</ama:error>
+          <!-- NB: this is defined there only for the case when the value does not match the grammar format. Then, the real check against RFD is under creation BE's responsibility -->
+        </xs:appinfo>
+        <xs:documentation>State code (2 characters standard IATA state code)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="ETRCommonAttributes">
+    <xs:attribute name="confirmNbr" type="AlphaNumericStringLength1to20orString0" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Confirmation Number</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="cancelNbr" type="AlphaNumericStringLength1to20orString0" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Cancellation Number</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <!-- status not here as there are 2 dilfferent possible value list -->
+    <xs:attribute name="overrideStatus" type="AlphaNumericStringLength1to2orString0" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Enable to override status code (e.g. for Offers)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <!-- NIP is not defined there but in each Element because the error code can different (NIP or quantity) -->
+    <xs:attribute name="MBOProductCode" type="StringLength1to20orString0" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">MBO product code = freetext on 20 char. Sub product of the MBO. E.g. for EC Air : international, domestic, european</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:group name="ETRCommonElements">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Group containing the attributes common to all ETR, represented as XSD elements, except the ServiceProvider which is specific for some ETR elements like ETR Air and description which is mandatory for some ETR elements</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="bkgChannel" type="BookingChannelType" minOccurs="0" />
+      <xs:element name="originSystem" type="OriginSystemType" minOccurs="0" />
+      <xs:element name="externalSystem" type="ExternalSystemType" minOccurs="0" />
+      <xs:element name="creation" type="CreationType" minOccurs="0" />
+      <xs:element name="modification" type="ModificationType" minOccurs="0" />
+      <xs:element name="confirmation" type="ConfirmationType" minOccurs="0" />
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="CreationType">
+    <xs:attribute name="dateTime" type="DateTimeOrString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="24806">INVALID DATE</ama:error>
+          <!-- NB: here only the reg expr of ota:DateOrDateTimeType is checked. Full validation of validity date is done on creation BEs -->
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">Creation date time</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="ModificationType">
+    <xs:attribute name="dateTime" type="DateTimeOrString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="24806">INVALID DATE</ama:error>
+          <!-- NB: here only the reg expr of ota:DateOrDateTimeType is checked. Full validation of validity date is done on creation BEs -->
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">Modification date time</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="ConfirmationType">
+    <xs:attribute name="deadline" type="DateTimeOrString0" use="optional">
+      <xs:annotation>
+        <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+          <ama:error code="24806">INVALID DATE</ama:error>
+          <!-- NB: here only the reg expr of ota:DateOrDateTimeType is checked. Full validation of validity date is done on creation BEs -->
+        </xs:appinfo>
+        <xs:documentation xml:lang="en">Confirmation date time limit for Option</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <!--Removed file import on namespace "http://www.iata.org/IATA/2007/00/IATA2010.1" for file IATA_Proxy.xsd because it a duplicate cross import-->
+  <xs:attributeGroup name="DisplayedElement">
+    <xs:annotation>
+      <xs:documentation>Common attributes for element display</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="ID" type="xs:NMTOKEN" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Universal Unique ID" />
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="TID" type="xs:NMTOKEN" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Temporary Unique ID" />
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="RefIDs" type="ReferenceListType" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Simple space separated list of UUIDs that this element is linked to." />
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="LegacyID" type="xs:NMTOKEN" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Tattoo type for usage in legacy PNRACC based messages." />
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="ManagedElement">
+    <xs:annotation>
+      <xs:documentation>Common attributes for element addition</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="ID" type="xs:NMTOKEN" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Temporary ID, just for association purpose during the element addition." />
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="TID" type="xs:ID" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Temporary ID, just for association purpose during the element addition." />
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="RefIDs" type="ReferenceListType" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Simple space separated list of UUIDs that this element is linked to." />
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="RefTIDs" type="xs:IDREFS" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Simple space separated list of TIDs that this element is linked to." />
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:simpleType name="TattooReferenceListType">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="([a-zA-Z0-9]{6})?:?(OT|OOT|ST|OST|PT):[1-9][0-9]{0,4}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:simpleType name="ReferenceListType">
+    <xs:list itemType="xs:NMTOKEN" />
+  </xs:simpleType>
+  <xs:complexType name="PassengerNameType">
+    <xs:annotation>
+      <xs:documentation>Type representing an Individual Name</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Name" minOccurs="0" maxOccurs="5">
+        <xs:complexType>
+          <xs:attribute name="Type" type="xs:string" />
+          <xs:attribute name="IsRef" type="BooleanOrString0" />
+          <xs:attribute name="LastName" type="xs:string" />
+          <xs:attribute name="FirstName" type="xs:string" />
+          <xs:attribute name="Title" type="xs:string" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="PTC" type="xs:string" />
+    <xs:attribute name="StaffType" type="xs:string" />
+    <xs:attribute name="DateOfBirth" type="DateOrString0" />
+    <xs:attribute name="Age" type="nonNegativeIntegerOrString0" />
+    <xs:attribute name="SpecialSeat" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>CBBG or EXST</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="IdentificationCode" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>ID or CR field</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="ScheduleInfoType">
+    <xs:annotation>
+      <xs:documentation>Contains scheduling informations, e.g. ticketing arrangement elements, options.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ActionOffice" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>IATA code of the queuing/cancellation office.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ActionDate" type="xs:date" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Date of queuing/canellation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ActionTime" type="xs:time" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Time of queuing/canellation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="QueueNbr" type="ota2010b:Numeric0to4" minOccurs="0" />
+      <xs:element name="QueueCategory" type="ota2010b:Numeric0to4" minOccurs="0" />
+      <xs:element name="Text" type="ota2010b:StringLength0to255" minOccurs="0" />
+      <xs:element name="CreatorOffice" type="ota2010b:StringLength1to16" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>The office (IATA code) which creates this scheduling item.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CorporateOffices" type="ota2010b:StringLength1to16" minOccurs="0" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>The offices (IATA code) which have some rights on this scheduling item.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PrintOptions" minOccurs="0" maxOccurs="15">
+        <xs:annotation>
+          <xs:documentation>It is possible to add free text for more precised information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="ota2010b:StringLength0to32">
+              <xs:attribute name="DocToPrint" type="ota2010b:OTA_CodeType">
+                <xs:annotation>
+                  <xs:documentation>Contains the diffetent print options. e.g. ticket print, invoice print... Refer to the TPO list.</xs:documentation>
+                </xs:annotation>
+              </xs:attribute>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="TravelerRefNbrRPH_List" type="ota2010b:ListOfRPH" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">One or more travelers to whom this item applies.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="SegmentRefNbrRPH_List" type="ota2010b:ListOfRPH">
+      <xs:annotation>
+        <xs:documentation>Flight or other resevation to which this item applies.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="AirlineAssociation" type="ota2010b:AlphaLength1to2">
+      <xs:annotation>
+        <xs:documentation>Contains the airline corporate  code associated to the scheduling information.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ServiceRefNbrRPH_List" type="ota2010b:ListOfRPH">
+      <xs:annotation>
+        <xs:documentation>Contains the RPH lis of the services accociated to the scheduling element.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ManualSchedulingInfo" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>True if the element has been added manualy by a travel agent. False if it was added by a system.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ActionType" type="ota2010b:OTA_CodeType">
+      <xs:annotation>
+        <xs:documentation>Contains the action to perform, e.g. Cancellation... Refer to the Amadeus codeset list Scheduling Action Type (SAT).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="FunctionalPurpose" type="ota2010b:OTA_CodeType">
+      <xs:annotation>
+        <xs:documentation>Contains a code which correspond to the functional purpose of the actions to perform. Refer to the Sceduling Functional Purpose codeset list (SFP).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="RemarksType">
+    <xs:annotation>
+      <xs:documentation>Used to convey all remarks.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Purpose" type="ota2010b:OTA_CodeType" minOccurs="0" maxOccurs="5">
+        <xs:annotation>
+          <xs:documentation>Used to precise the purpose of this remark, i.e. general, Itinerary... Refer to the codelist RPU.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Text" type="ota2010b:StringLength1to128" />
+      <xs:element name="RemarkSecurity" type="ama_secu_ct:ItemAccessControl" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="RPH" type="ota2010b:RPH_Type">
+      <xs:annotation>
+        <xs:documentation>Unique id for this remark.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="RemarkCategory" type="ota2010b:AlphaNumericStringLength1to3">
+      <xs:annotation>
+        <xs:documentation>Used to divide remarks into categories, e.g. a,b,c... All remarks with the same category are kept together in the PNR.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="TravelerRefNbrRPH_List" type="ota2010b:ListOfRPH" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">One or more travelers to whom this remark is associated.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="SegmentRefNbrRPH_List" type="ota2010b:ListOfRPH">
+      <xs:annotation>
+        <xs:documentation>Segment (flight, hotel booking, car booking,...) to which this remark is associated.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ElementRefNbrRPH_List" type="ota2010b:ListOfRPH">
+      <xs:annotation>
+        <xs:documentation>Other elements to which this remark is associated.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="PNR_TravelerType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Information about the person traveling.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="PersonName" type="ama_ct:PersonNameType" minOccurs="0" maxOccurs="5">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Name information of the person traveling.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CustLoyalty" minOccurs="0" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Identifies the loyalty program(s) that the customer belongs to and associated information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SegAssocData" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="RedemptionAndUpgardeInfo" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>Contains redemption or upgrade information. It must be filled only when the InfoType is equal to "redemption" or "upgrade".</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="AwardCode" type="ota2010b:AlphaNumericStringLength1to14" minOccurs="0" />
+                        <xs:element name="CertificateNbr" type="ota2010b:AlphaNumericStringLength1to14" minOccurs="0" />
+                        <xs:element name="StockControlNbr" type="ota2010b:AlphaNumericStringLength1to14" minOccurs="0" />
+                        <xs:element name="PriceInMiles" type="ota2010b:NumericStringLength1to16" minOccurs="0" />
+                        <xs:element name="OldClass" type="ota2010b:AlphaLength1" minOccurs="0" />
+                        <xs:element name="NewClass" type="ota2010b:AlphaLength1" minOccurs="0" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+                <xs:attribute name="SegmentRefNbrRPH_List" type="ota2010b:ListOfRPH">
+                  <xs:annotation>
+                    <xs:documentation>Segment to which this loyalty progam applies.</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="InfoType" type="ota2010b:OTA_CodeType" use="required">
+                  <xs:annotation>
+                    <xs:documentation>It contains the use type of the information given in this CustLoyalty element (accrual, Upgarde...). Refer to the Amadeus codeset list CLT.</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="RPH" type="ota2010b:RPH_Type" use="optional">
+                  <xs:annotation>
+                    <xs:documentation xml:lang="en">A reference placeholder for this loyalty information.</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attributeGroup ref="ota2010b:CustomerLoyaltyGroup" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="RPH" type="ota2010b:RPH_Type" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Unique id for this traveler.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attributeGroup ref="ota2010b:GenderGroup" />
+    <xs:attribute name="BirthDate" type="xs:date" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Traveler's date of birth.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="CurrencyCode" type="ota2010b:AlphaLength3" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Specifies the code for the currency units.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="CitizenShipCountryCode" type="ota2010b:ISO3166">
+      <xs:annotation>
+        <xs:documentation>Contains the ISO code of the citizenship country of the traveler.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="PassengerTypeCode" type="ota2010b:AlphaLength3" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Code used to indicate the type of traveler that will be traveling (e.g., ADT, CHD, INF, GRP, NCG, COG ; the two last ones means Non Commercial Group and Corporate Group).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="VIP_Flag" type="xs:boolean" />
+    <xs:attribute name="AccompaniedByInfant" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Indicates if an infant accompanying a traveler is with or without a seat.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="GroupTypeUnassignedQty" type="ota2010b:Numeric0to99">
+      <xs:annotation>
+        <xs:documentation>In the case of a group passenger type code, it indicates the number of unassigned names in the group.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="AdultRefRPH" type="ota2010b:RPH_Type">
+      <xs:annotation>
+        <xs:documentation>Reference of an adult passenger RPH to precise the assocition with an adult in the case of the traveler is an infant.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ReferenceName" type="ama_ct:CodePatternType">
+      <xs:annotation>
+        <xs:documentation>Specify the name that is the reference in the PNR. Refer to the Amadeus codeset list NAT (Name Type). only UN or NN1 are authorized.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="PNR_ImageType">
+    <xs:annotation>
+      <xs:documentation>Contains all data related to a booking record (PNR).</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="GeneralData" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains the record locator of the PNR and all external references.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecordLocator" minOccurs="0" maxOccurs="3">
+              <xs:annotation>
+                <xs:documentation>Record locator used by Amadeus in the context.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:complexContent>
+                  <xs:extension base="iata:UniqueID_Type">
+                    <xs:attribute name="RecordLocatorType" type="ota2010b:OTA_CodeType">
+                      <xs:annotation>
+                        <xs:documentation>Code for the type of the record locator. Refer to the Record locator type (RLT) codeset list.</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ExternalReferences" minOccurs="0" maxOccurs="99">
+              <xs:annotation>
+                <xs:documentation>Other refernces.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:complexContent>
+                  <xs:extension base="iata:UniqueID_Type">
+                    <xs:attribute name="RefType" type="ota2010b:OTA_CodeType">
+                      <xs:annotation>
+                        <xs:documentation>Code for the type of the external reference, e.g. Parent Record locator, Confirmation Number... Refer to the External References (EXR) codeset list.</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="SegmentRefNbrRPH" type="ota2010b:RPH_Type">
+                      <xs:annotation>
+                        <xs:documentation>In the case of a confirmation number, it could be associated to one segment by this field.</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="BookinfFileType" type="ama_ct:CodePatternType">
+            <xs:annotation>
+              <xs:documentation>To specify if the booking file is an Amadeus original booking file or an imported booking file from another system. Refer to the Amadeus codeset list BFT.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="POS" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains the different point of sales of the PNR (creator, owner, last updator...).</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DistribPointsOfSales" type="ama_ct:PointsOfSaleType" minOccurs="0" />
+            <xs:element name="AgencyIT_PointsOfSales" type="ama_ct:PointsOfSaleType" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TravelersInfo" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains the elements relating to passengers (espeically contact and names).</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="TravelerData" type="PNR_TravelerType" minOccurs="0" maxOccurs="199">
+              <xs:annotation>
+                <xs:documentation>Contains all information about the person traveling:, e.g. names, birthdate...</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="ContactInfo" minOccurs="0" maxOccurs="508">
+              <xs:annotation>
+                <xs:documentation>Contains all contact information.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:complexContent>
+                  <xs:extension base="ota2010b:ContactPersonType">
+                    <xs:sequence>
+                      <xs:element name="OtherInfo" type="ota2010b:StringLength1to128" minOccurs="0" maxOccurs="5">
+                        <xs:annotation>
+                          <xs:documentation>Could contain all other contact information.</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="ISO_PreferedLanguage" type="xs:language" minOccurs="0">
+                        <xs:annotation>
+                          <xs:documentation>Precise the prefered language for this contact.</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="TravelerRefNbrRPH_List" type="ota2010b:ListOfRPH" use="optional">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="en">Contains all the passenger association fot these contact information.</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AirReservations" type="ama_air_ct:AirResType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative to air reservations.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AirlineManualAuxiliaryServices" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative to manual auxiliary reservations.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AirlineManualAuxiliarySrvc" type="ama_air_ct:AirlineManualAuxiliarySrvcType" maxOccurs="99" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="HotelReservations" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative to hotel reservations.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="HotelReservation" type="ama_hotel_ct:HotelReservationType" maxOccurs="99" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RailReservations" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative to rail reservations.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RailBooking" type="ama_rail_ct:RailResType" maxOccurs="99" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="VehReservations" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative to car reservations.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="VehicleReservationSegment" type="ama_vehicle_ct:VehicleResType" maxOccurs="99" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FerryReservations" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative to ferry reservations.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="FerryRes" type="ama_ferry_ct:FerryResType" maxOccurs="99" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CruiseReservations" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative to cruise reservations.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Cruisereservation" maxOccurs="99">
+              <xs:complexType />
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GroundTransportationReservations" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all other ground transportation reservations.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="GroundTransportationReservation" type="ama_res_ct:GroundTransportationReservationType" maxOccurs="99" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GoodsAndDocuments" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all Goods and Documents linked with the trip.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="InsuranceDocuments" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="InsuranceDoc" maxOccurs="99">
+                    <xs:complexType />
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActivitiesReservations" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative ot activities reservations. N/A for moment.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="Remarks" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all remarks.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Remark" type="RemarksType" maxOccurs="127" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SchedulingInfo" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains scheduling informations, e.g. ticketing arrangement elements, options.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ScheduleInfo" type="ScheduleInfoType" maxOccurs="600">
+              <xs:annotation>
+                <xs:documentation>Contains one scheduling information.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TicketingInfo" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all ticketing information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="PricingInfo" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all pricing information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="MiscDocInformation" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all miscellaneaous documents information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MiscDoc" type="ama_pricing_ct:MiscDocType" minOccurs="0" maxOccurs="396" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PaymentInfo" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Information about forms of payment used in the booking</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Payment" type="ama_payment_ct:PaymentType" maxOccurs="99" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="State" type="ama_ct:CodePatternType">
+      <xs:annotation>
+        <xs:documentation>Indicates the state of the PNR. Refer to the Amadeus Record State (RST) codeset list.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+</xs:schema>

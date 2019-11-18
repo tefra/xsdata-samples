@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by Amadeus s.a.s. (Amadeus s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.amadeus.com/2010/06/TTR_ReservationProducts_Types_v2" xmlns:ama_ct="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iata="http://www.iata.org/IATA/2007/00/IATA2010.1" xmlns:ota_2011A="http://www.opentravel.org/OTA/2003/05/OTA2011A" targetNamespace="http://xml.amadeus.com/2010/06/TTR_ReservationProducts_Types_v2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.000" id="AMA2011V">
+	<xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2011A" schemaLocation="../../OTA/2011A/OTA_Proxy.xsd"/>
+	<xs:import namespace="http://xml.amadeus.com/2010/06/Types_v1" schemaLocation="../2011Y/AMA_CommonTypes_Proxy.xsd"/>
+	<xs:import namespace="http://www.iata.org/IATA/2007/00/IATA2010.1" schemaLocation="../../IATA/2010.1/IATA_Proxy.xsd"/>
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2011V/chameleon/AMA_TTR_ReservationProductsCommonTypes.xsd with its content-->
+	<xs:complexType name="GroundTransportationReservationType">
+		<xs:sequence>
+			<xs:element name="ConfirmationNbr" type="iata:UniqueID_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Confirmation number associated to the reservation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Provider" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Provides information about the provider.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:choice>
+						<xs:element name="ProviderRef" type="ota_2011A:StringLength1to16" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Provides provider's profile reference</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:sequence>
+							<xs:element name="ProviderContact" type="ota_2011A:ContactPersonType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Provides information about provider's contact.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="LegInfo" minOccurs="0" maxOccurs="99">
+				<xs:annotation>
+					<xs:documentation>Provides information about the legs associated to the reservation.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="DepartureInfo" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Provides information about departure, including date and time, address, airport.</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="ota_2011A:GroundLocationType">
+										<xs:attribute name="LatestCheckInDateTime" type="ota_2011A:DateOrDateTimeType"/>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ArrivalInfo" type="ota_2011A:GroundLocationType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Provides information about arrival, including date and time, address, airport.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="Index" type="xs:long">
+						<xs:annotation>
+							<xs:documentation>Provides information about the ranking of the legs associated to this reservation.</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="ResBookDesigCode" type="ota_2011A:UpperCaseAlphaLength1to2">
+						<xs:annotation>
+							<xs:documentation>Specific Booking Class for this reservation</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="TransportNbr" type="ota_2011A:AlphaNumericStringLength1to8">
+						<xs:annotation>
+							<xs:documentation>Identifies a transport number</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<!--Replaced incorrect type "xs:nonNegativeInteger"-->
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Desc" type="ota_2011A:StringLength0to255" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Free text related to the reservation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="ResType" type="ama_ct:CodePatternType" use="required">
+			<xs:annotation>
+				<xs:documentation>Indicates the type of ground transportation. Refer to the OTA Transportation Code (TRP) codeset list.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="NbrInParty" type="xs:long" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">Number of Travelers associated to this reservation.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Distance" type="xs:long">
+			<xs:annotation>
+				<xs:documentation>Distance of the trip.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="DistanceUnit" type="ota_2011A:DistanceUnitNameType">
+			<xs:annotation>
+				<xs:documentation>Unit of distance</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="NbrOfBaggage" type="xs:long">
+			<xs:annotation>
+				<xs:documentation>Number of baggage associated to this reservation.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="BookingChannel" type="ama_ct:CodePatternType">
+			<xs:annotation>
+				<xs:documentation>Provides information about the booking channel. Refer to the OTA Booking Channel Type  (BCT) codeset list.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="DistributionType" type="ama_ct:CodePatternType">
+			<xs:annotation>
+				<xs:documentation>Provides information about the distribution type. Refer to the OTA Distribution Type  (DTB) codeset list.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="RPH" type="ota_2011A:RPH_Type" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">Unique reference place holder for this ground reservation.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="TravelerRefNbrRPH_List" type="ota_2011A:ListOfRPH">
+			<xs:annotation>
+				<xs:documentation>One or more travelers to whom this reservation applies.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Extended" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>When true, indicates that the reservation is an extended content.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<!--Replaced incorrect type "xs:positiveInteger"-->
+		<!--Replaced incorrect type "xs:positiveInteger"-->
+		<!--Replaced incorrect type "xs:positiveInteger"-->
+	</xs:complexType>
+</xs:schema>

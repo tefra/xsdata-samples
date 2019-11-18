@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created with WSDLGenerator 2.0.0 by Amadeus SAS-->
+<!--  Amadeus Proprietary and Confidential Information: unauthorized use and disclosure strictly forbidden. 2015 - Amadeus s.a.s - All Rights Reserved.  -->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:amasec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:awsl="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3" xmlns:int="http://wsdl.amadeus.com/ServiceBookAndPrice_v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://wsdl.amadeus.com/ServiceBookAndPrice_v1_v4" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://wsdl.amadeus.com/ServiceBookAndPrice_v1_v4" name="TSNIBE_ServiceBookAndPrice_1.0_4.0">
+  <wsdl:documentation>Versions: [interface: 1.0 ; technical: 4.0]</wsdl:documentation>
+  <wsp:Policy wsu:Id="MessagingPolicy">
+    <wsam:Addressing wsp:Optional="true">
+      <wsp:Policy>
+        <wsam:AnonymousResponses />
+      </wsp:Policy>
+    </wsam:Addressing>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="AmadeusPolicy">
+    <wsp:PolicyReference URI="#MessagingPolicy" />
+  </wsp:Policy>
+  <wsdl:import namespace="http://wsdl.amadeus.com/ServiceBookAndPrice_v1" location="ServiceBookAndPrice_1.0.wsdl" />
+  <wsdl:types>
+    <xs:schema>
+      <xs:import schemaLocation="AMA/2012B/AMA_WS_Session.xsd" namespace="http://xml.amadeus.com/2010/06/Session_v3" />
+      <xs:import schemaLocation="AMA_WSLink.xsd" namespace="http://wsdl.amadeus.com/2010/06/ws/Link_v1" />
+      <xs:import schemaLocation="AMA/2012B/AMA_SecurityHostedUser.xsd" namespace="http://xml.amadeus.com/2010/06/Security_v1" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="Session_3.000">
+    <wsdl:part name="session" element="awsse:Session" />
+  </wsdl:message>
+  <wsdl:message name="TransactionFlowLink_1.0">
+    <wsdl:part name="link" element="awsl:TransactionFlowLink" />
+  </wsdl:message>
+  <wsdl:message name="AMA_SecurityHostedUser_1.000">
+    <wsdl:part name="security" element="amasec:AMA_SecurityHostedUser" />
+  </wsdl:message>
+  <wsdl:binding name="ServiceBookAndPrice_Binding" type="int:ServiceBookAndPrice_PT">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Service_BookPriceProduct">
+      <soap:operation soapAction="http://webservices.amadeus.com/Service_BookPriceProduct_1.0" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Session_3.000" part="session" use="literal" />
+        <soap:header message="tns:TransactionFlowLink_1.0" part="link" use="literal" />
+        <soap:header message="tns:AMA_SecurityHostedUser_1.000" part="security" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:Session_3.000" part="session" use="literal" />
+        <soap:header message="tns:TransactionFlowLink_1.0" part="link" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceBookAndPrice_Service">
+    <wsdl:port binding="tns:ServiceBookAndPrice_Binding" name="ServiceBookAndPrice_Port">
+      <wsp:PolicyReference URI="#AmadeusPolicy" />
+      <soap:address location="https://nodeD1.test.webservices.amadeus.com/1ASIWIBETSN" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
+<!--1F8B08000000000000006D8D410B82401085EFFE8A3916A1CC8615ED4D2B442810143A0F3AC1D2BA2BE326F4EF5BEADAE5F1E0F1BEAF62C742C17807C18C3C071A270D5B54C754A954EDA1A5F09281DEA00E7A97EB1CA1BA751B448D98DCDBF315AA1FC10B2C2C7304C57B861926276BD805A069B2A6FF2A3474420BDB689100757981558C75E4140D381A5943CBB2989E4BEF9F851B1A893DA95D607950FF7F06851FFC6F181EC5000000-->

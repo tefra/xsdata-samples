@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by AMADEUS s.a.s. (AMADEUS s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ama_payment_ct="http://xml.amadeus.com/2010/06/PaymentTypes_v1" xmlns:ama_ferry_ct="http://xml.amadeus.com/2010/06/FerryTypes_v1" xmlns:ama_air_ct="http://xml.amadeus.com/2010/06/AirTypes_v2" xmlns:ama_secu_ct="http://xml.amadeus.com/2010/06/Security_v1" xmlns:ama_rail_ct="http://xml.amadeus.com/2010/06/RailTypes_v6" xmlns:ama_hotel_ct="http://xml.amadeus.com/2010/06/HotelTypes_v1" xmlns:ama_pricing_ct="http://xml.amadeus.com/2010/06/PricingTypes_v1" xmlns:ama_res_ct="http://xml.amadeus.com/2010/06/TTR_ReservationProducts_Types_v2" xmlns:ama_vehicle_ct="http://xml.amadeus.com/2010/06/VehicleTypes_v1" xmlns:ama_ct="http://xml.amadeus.com/2010/06/Types_v2" xmlns:ota="http://www.opentravel.org/OTA/2003/05/OTA2010B" xmlns:iata="http://www.iata.org/IATA/2007/00/IATA2010.1" xmlns:ns1="http://xml.amadeus.com/2010/06/Security_v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.002" id="AMA2014F">
+  <xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2010B" schemaLocation="../../../OTA/2010B/OTA_Proxy.xsd" />
+  <xs:import namespace="http://www.iata.org/IATA/2007/00/IATA2010.1" schemaLocation="../../../IATA/2010.1/IATA_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/VehicleTypes_v1" schemaLocation="../../2011N/AMA_VehicleCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/RailTypes_v6" schemaLocation="../../2011Q/AMA_RailCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/AirTypes_v2" schemaLocation="../../2013T/AMA_AirCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/HotelTypes_v1" schemaLocation="../../2011N/AMA_HotelCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/PaymentTypes_v1" schemaLocation="../../2011N/AMA_PaymentCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/FerryTypes_v1" schemaLocation="../../2011N/AMA_FerryCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/PricingTypes_v1" schemaLocation="../../2011N/AMA_PricingCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/TTR_ReservationProducts_Types_v2" schemaLocation="../../2011V/AMA_TTR_ReservationProductsCommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/Types_v2" schemaLocation="../../2012F/AMA_CommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/Security_v1" schemaLocation="../../2012V/AMA_SecurityCommonTypes_Proxy.xsd" />
+  <xs:include schemaLocation="AMA_ETR_CommonTypes.xsd" />
+  <xs:attributeGroup name="DisplayedElement">
+    <xs:annotation>
+      <xs:documentation>Common attributes for element display</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="ID" type="xs:NMTOKEN" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Universal Unique ID" />
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="TID" type="xs:NMTOKEN" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Temporary Unique ID" />
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="RefIDs" type="ReferenceListType" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Simple space separated list of UUIDs that this element is linked to." />
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="LegacyID" type="xs:NMTOKEN" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Tattoo type for usage in legacy PNRACC based messages." />
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="ManagedElement">
+    <xs:annotation>
+      <xs:documentation>Common attributes for element addition</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="ID" type="xs:NMTOKEN" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Temporary ID, just for association purpose during the element addition." />
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="TID" type="xs:ID" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Temporary ID, just for association purpose during the element addition." />
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="RefIDs" type="ReferenceListType" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Simple space separated list of UUIDs that this element is linked to." />
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="RefTIDs" type="xs:IDREFS" use="optional">
+      <xs:annotation>
+        <xs:documentation source="Simple space separated list of TIDs that this element is linked to." />
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:simpleType name="TattooReferenceListType">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(OT|OOT|ST|OST|PT)\-[1-9][0-9]{0,4}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:simpleType name="ReferenceListType">
+    <xs:list itemType="xs:NMTOKEN" />
+  </xs:simpleType>
+  <xs:complexType name="PassengerNameType">
+    <xs:annotation>
+      <xs:documentation>Type representing an Individual Name</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Name" minOccurs="0" maxOccurs="5">
+        <xs:complexType>
+          <xs:attribute name="Type" type="xs:string" />
+          <xs:attribute name="IsRef" type="xs:boolean" />
+          <xs:attribute name="LastName" type="xs:string" />
+          <xs:attribute name="FirstName" type="xs:string" />
+          <xs:attribute name="Title" type="xs:string" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="PTC" type="xs:string" />
+    <xs:attribute name="StaffType" type="xs:string" />
+    <xs:attribute name="DateOfBirth" type="xs:date" />
+    <xs:attribute name="Age" type="xs:nonNegativeInteger" />
+    <xs:attribute name="SpecialSeat" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>CBBG or EXST</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="IdentificationCode" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>ID or CR field</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="ScheduleInfoType">
+    <xs:annotation>
+      <xs:documentation>Contains scheduling informations, e.g. ticketing arrangement elements, options.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ActionOffice" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>IATA code of the queuing/cancellation office.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ActionDate" type="xs:date" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Date of queuing/canellation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ActionTime" type="xs:time" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Time of queuing/canellation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="QueueNbr" type="ota:Numeric0to4" minOccurs="0" />
+      <xs:element name="QueueCategory" type="ota:Numeric0to4" minOccurs="0" />
+      <xs:element name="Text" type="ota:StringLength0to255" minOccurs="0" />
+      <xs:element name="CreatorOffice" type="ota:StringLength1to16" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>The office (IATA code) which creates this scheduling item.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CorporateOffices" type="ota:StringLength1to16" minOccurs="0" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>The offices (IATA code) which have some rights on this scheduling item.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PrintOptions" minOccurs="0" maxOccurs="15">
+        <xs:annotation>
+          <xs:documentation>It is possible to add free text for more precised information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="ota:StringLength0to32">
+              <xs:attribute name="DocToPrint" type="ota:OTA_CodeType">
+                <xs:annotation>
+                  <xs:documentation>Contains the diffetent print options. e.g. ticket print, invoice print... Refer to the TPO list.</xs:documentation>
+                </xs:annotation>
+              </xs:attribute>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="TravelerRefNbrRPH_List" type="ota:ListOfRPH" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">One or more travelers to whom this item applies.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="SegmentRefNbrRPH_List" type="ota:ListOfRPH">
+      <xs:annotation>
+        <xs:documentation>Flight or other resevation to which this item applies.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="AirlineAssociation" type="ota:AlphaLength1to2">
+      <xs:annotation>
+        <xs:documentation>Contains the airline corporate  code associated to the scheduling information.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ServiceRefNbrRPH_List" type="ota:ListOfRPH">
+      <xs:annotation>
+        <xs:documentation>Contains the RPH lis of the services accociated to the scheduling element.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ManualSchedulingInfo" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>True if the element has been added manualy by a travel agent. False if it was added by a system.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ActionType" type="ota:OTA_CodeType">
+      <xs:annotation>
+        <xs:documentation>Contains the action to perform, e.g. Cancellation... Refer to the Amadeus codeset list Scheduling Action Type (SAT).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="FunctionalPurpose" type="ota:OTA_CodeType">
+      <xs:annotation>
+        <xs:documentation>Contains a code which correspond to the functional purpose of the actions to perform. Refer to the Sceduling Functional Purpose codeset list (SFP).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="RemarksType">
+    <xs:annotation>
+      <xs:documentation>Used to convey all remarks.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Purpose" type="ota:OTA_CodeType" minOccurs="0" maxOccurs="5">
+        <xs:annotation>
+          <xs:documentation>Used to precise the purpose of this remark, i.e. general, Itinerary... Refer to the codelist RPU.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Text" type="ota:StringLength1to128" />
+      <xs:element name="RemarkSecurity" type="ama_secu_ct:ItemAccessControl" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="RPH" type="ota:RPH_Type">
+      <xs:annotation>
+        <xs:documentation>Unique id for this remark.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="RemarkCategory" type="ota:AlphaNumericStringLength1to3">
+      <xs:annotation>
+        <xs:documentation>Used to divide remarks into categories, e.g. a,b,c... All remarks with the same category are kept together in the PNR.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="TravelerRefNbrRPH_List" type="ota:ListOfRPH" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">One or more travelers to whom this remark is associated.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="SegmentRefNbrRPH_List" type="ota:ListOfRPH">
+      <xs:annotation>
+        <xs:documentation>Segment (flight, hotel booking, car booking,...) to which this remark is associated.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ElementRefNbrRPH_List" type="ota:ListOfRPH">
+      <xs:annotation>
+        <xs:documentation>Other elements to which this remark is associated.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="PNR_TravelerType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Information about the person traveling.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="PersonName" type="ama_ct:PersonNameType" minOccurs="0" maxOccurs="5">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Name information of the person traveling.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CustLoyalty" minOccurs="0" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Identifies the loyalty program(s) that the customer belongs to and associated information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SegAssocData" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="RedemptionAndUpgardeInfo" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>Contains redemption or upgrade information. It must be filled only when the InfoType is equal to "redemption" or "upgrade".</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="AwardCode" type="ota:AlphaNumericStringLength1to14" minOccurs="0" />
+                        <xs:element name="CertificateNbr" type="ota:AlphaNumericStringLength1to14" minOccurs="0" />
+                        <xs:element name="StockControlNbr" type="ota:AlphaNumericStringLength1to14" minOccurs="0" />
+                        <xs:element name="PriceInMiles" type="ota:NumericStringLength1to16" minOccurs="0" />
+                        <xs:element name="OldClass" type="ota:AlphaLength1" minOccurs="0" />
+                        <xs:element name="NewClass" type="ota:AlphaLength1" minOccurs="0" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+                <xs:attribute name="SegmentRefNbrRPH_List" type="ota:ListOfRPH">
+                  <xs:annotation>
+                    <xs:documentation>Segment to which this loyalty progam applies.</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="InfoType" type="ota:OTA_CodeType" use="required">
+                  <xs:annotation>
+                    <xs:documentation>It contains the use type of the information given in this CustLoyalty element (accrual, Upgarde...). Refer to the Amadeus codeset list CLT.</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="RPH" type="ota:RPH_Type" use="optional">
+                  <xs:annotation>
+                    <xs:documentation xml:lang="en">A reference placeholder for this loyalty information.</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attributeGroup ref="ota:CustomerLoyaltyGroup" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="RPH" type="ota:RPH_Type" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Unique id for this traveler.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attributeGroup ref="ota:GenderGroup" />
+    <xs:attribute name="BirthDate" type="xs:date" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Traveler's date of birth.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="CurrencyCode" type="ota:AlphaLength3" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Specifies the code for the currency units.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="CitizenShipCountryCode" type="ota:ISO3166">
+      <xs:annotation>
+        <xs:documentation>Contains the ISO code of the citizenship country of the traveler.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="PassengerTypeCode" type="ota:AlphaLength3" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Code used to indicate the type of traveler that will be traveling (e.g., ADT, CHD, INF, GRP, NCG, COG ; the two last ones means Non Commercial Group and Corporate Group).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="VIP_Flag" type="xs:boolean" />
+    <xs:attribute name="AccompaniedByInfant" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Indicates if an infant accompanying a traveler is with or without a seat.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="GroupTypeUnassignedQty" type="ota:Numeric0to99">
+      <xs:annotation>
+        <xs:documentation>In the case of a group passenger type code, it indicates the number of unassigned names in the group.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="AdultRefRPH" type="ota:RPH_Type">
+      <xs:annotation>
+        <xs:documentation>Reference of an adult passenger RPH to precise the assocition with an adult in the case of the traveler is an infant.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ReferenceName" type="ama_ct:CodePatternType">
+      <xs:annotation>
+        <xs:documentation>Specify the name that is the reference in the PNR. Refer to the Amadeus codeset list NAT (Name Type). only UN or NN1 are authorized.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="PNR_ImageType">
+    <xs:annotation>
+      <xs:documentation>Contains all data related to a booking record (PNR).</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="GeneralData" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains the record locator of the PNR and all external references.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RecordLocator" minOccurs="0" maxOccurs="3">
+              <xs:annotation>
+                <xs:documentation>Record locator used by Amadeus in the context.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:complexContent>
+                  <xs:extension base="iata:UniqueID_Type">
+                    <xs:attribute name="RecordLocatorType" type="ota:OTA_CodeType">
+                      <xs:annotation>
+                        <xs:documentation>Code for the type of the record locator. Refer to the Record locator type (RLT) codeset list.</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ExternalReferences" minOccurs="0" maxOccurs="99">
+              <xs:annotation>
+                <xs:documentation>Other refernces.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:complexContent>
+                  <xs:extension base="iata:UniqueID_Type">
+                    <xs:attribute name="RefType" type="ota:OTA_CodeType">
+                      <xs:annotation>
+                        <xs:documentation>Code for the type of the external reference, e.g. Parent Record locator, Confirmation Number... Refer to the External References (EXR) codeset list.</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="SegmentRefNbrRPH" type="ota:RPH_Type">
+                      <xs:annotation>
+                        <xs:documentation>In the case of a confirmation number, it could be associated to one segment by this field.</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="BookinfFileType" type="ama_ct:CodePatternType">
+            <xs:annotation>
+              <xs:documentation>To specify if the booking file is an Amadeus original booking file or an imported booking file from another system. Refer to the Amadeus codeset list BFT.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="POS" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains the different point of sales of the PNR (creator, owner, last updator...).</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DistribPointsOfSales" type="ama_ct:PointsOfSaleType" minOccurs="0" />
+            <xs:element name="AgencyIT_PointsOfSales" type="ama_ct:PointsOfSaleType" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TravelersInfo" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains the elements relating to passengers (espeically contact and names).</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="TravelerData" type="PNR_TravelerType" minOccurs="0" maxOccurs="199">
+              <xs:annotation>
+                <xs:documentation>Contains all information about the person traveling:, e.g. names, birthdate...</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="ContactInfo" minOccurs="0" maxOccurs="508">
+              <xs:annotation>
+                <xs:documentation>Contains all contact information.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:complexContent>
+                  <xs:extension base="ota:ContactPersonType">
+                    <xs:sequence>
+                      <xs:element name="OtherInfo" type="ota:StringLength1to128" minOccurs="0" maxOccurs="5">
+                        <xs:annotation>
+                          <xs:documentation>Could contain all other contact information.</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="ISO_PreferedLanguage" type="xs:language" minOccurs="0">
+                        <xs:annotation>
+                          <xs:documentation>Precise the prefered language for this contact.</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="TravelerRefNbrRPH_List" type="ota:ListOfRPH" use="optional">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="en">Contains all the passenger association fot these contact information.</xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AirReservations" type="ama_air_ct:AirResType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative to air reservations.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AirlineManualAuxiliaryServices" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative to manual auxiliary reservations.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AirlineManualAuxiliarySrvc" type="ama_air_ct:AirlineManualAuxiliarySrvcType" maxOccurs="99" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="HotelReservations" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative to hotel reservations.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="HotelReservation" type="ama_hotel_ct:HotelReservationType" maxOccurs="99" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RailReservations" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative to rail reservations.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RailBooking" type="ama_rail_ct:RailResType" maxOccurs="99" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="VehReservations" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative to car reservations.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="VehicleReservationSegment" type="ama_vehicle_ct:VehicleResType" maxOccurs="99" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FerryReservations" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative to ferry reservations.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="FerryRes" type="ama_ferry_ct:FerryResType" maxOccurs="99" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CruiseReservations" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative to cruise reservations.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Cruisereservation" maxOccurs="99">
+              <xs:complexType />
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GroundTransportationReservations" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all other ground transportation reservations.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="GroundTransportationReservation" type="ama_res_ct:GroundTransportationReservationType" maxOccurs="99" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GoodsAndDocuments" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all Goods and Documents linked with the trip.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="InsuranceDocuments" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="InsuranceDoc" maxOccurs="99">
+                    <xs:complexType />
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActivitiesReservations" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all data relative ot activities reservations. N/A for moment.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="Remarks" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all remarks.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Remark" type="RemarksType" maxOccurs="127" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SchedulingInfo" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains scheduling informations, e.g. ticketing arrangement elements, options.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ScheduleInfo" type="ScheduleInfoType" maxOccurs="600">
+              <xs:annotation>
+                <xs:documentation>Contains one scheduling information.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TicketingInfo" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all ticketing information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="PricingInfo" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all pricing information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="MiscDocInformation" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Contains all miscellaneaous documents information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MiscDoc" type="ama_pricing_ct:MiscDocType" minOccurs="0" maxOccurs="396" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PaymentInfo" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Information about forms of payment used in the booking</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Payment" type="ama_payment_ct:PaymentType" maxOccurs="99" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="State" type="ama_ct:CodePatternType">
+      <xs:annotation>
+        <xs:documentation>Indicates the state of the PNR. Refer to the Amadeus Record State (RST) codeset list.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+</xs:schema>
+

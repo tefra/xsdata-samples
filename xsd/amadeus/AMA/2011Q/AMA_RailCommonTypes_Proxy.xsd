@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by Amadeus s.a.s. (Amadeus s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.amadeus.com/2010/06/RailTypes_v6" xmlns:ama_ct="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iata="http://www.iata.org/IATA/2007/00/IATA2010.1" xmlns:ota2010b="http://www.opentravel.org/OTA/2003/05/OTA2010B" targetNamespace="http://xml.amadeus.com/2010/06/RailTypes_v6" elementFormDefault="qualified" attributeFormDefault="unqualified" version="6.000" id="AMA2011Q">
+	<xs:import namespace="http://xml.amadeus.com/2010/06/Types_v1" schemaLocation="../2011Y/AMA_CommonTypes_Proxy.xsd"/>
+	<xs:import namespace="http://www.iata.org/IATA/2007/00/IATA2010.1" schemaLocation="../../IATA/2010.1/IATA_Proxy.xsd"/>
+	<xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2010B" schemaLocation="../../OTA/2010B/OTA_Proxy.xsd"/>
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2011Q/chameleon/AMA_RailCommonTypes.xsd with its content-->
+	<xs:simpleType name="AccomCodeType">
+		<xs:annotation>
+			<xs:documentation>Seat Type Code</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="3"/>
+			<xs:maxLength value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AvailStatusType">
+		<xs:annotation>
+			<xs:documentation>Availability status</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="Available"/>
+			<xs:enumeration value="NotAvailable"/>
+			<xs:enumeration value="ToBeChecked"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DirectionType">
+		<xs:annotation>
+			<xs:documentation>Give the direction of a Journey/Itinerary/Trip or Segment</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="Outward"/>
+			<xs:enumeration value="Inward"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="IDGroup">
+		<xs:annotation>
+			<xs:documentation>Group of attributs to be used when an entity needs to be identified</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="Tattoo" type="xs:int" use="optional">
+			<xs:annotation>
+				<xs:documentation>Element identifier in the PNR.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="RPH" type="ota2010b:RPH_Type" use="optional">
+			<xs:annotation>
+				<xs:documentation>Reference Place Holder - an index code to identify an instance in a collection of like items</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="PlaceAttributesGroup">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Place Attributes</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="CarNumber" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="2"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="PlaceNbr" use="optional">
+			<xs:annotation>
+				<xs:documentation>Physical place number.(Left padding with 0 or [space] if needed)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="3"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:simpleType name="ResIndType">
+		<xs:annotation>
+			<xs:documentation>Indicate if reservation is possible, mandatory ...</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Mandatory"/>
+			<xs:enumeration value="Advised"/>
+			<xs:enumeration value="Possible"/>
+			<xs:enumeration value="Impossible"/>
+			<xs:enumeration value="Unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength0to30Type">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Character Strings, length 0 to 30</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SupplementCodeType">
+		<xs:annotation>
+			<xs:documentation>Supplement Type Code</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="BaseAccomType">
+		<xs:annotation>
+			<xs:documentation>reserved accommodation data</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="AccoType" type="ama_ct:CodeType" minOccurs="0"/>
+			<xs:element name="Compartment" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="CompartmentAttributesType">
+							<xs:attribute name="Number" type="ota2010b:AlphaNumericStringLength1to14" use="optional">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">The compartment number.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:choice minOccurs="0">
+				<xs:element name="Seat" type="SeatAttributesType"/>
+				<xs:element name="Berth" type="BerthAttributesType"/>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attributeGroup ref="PlaceAttributesGroup"/>
+	</xs:complexType>
+	<xs:complexType name="BerthAttributesType">
+		<xs:annotation>
+			<xs:documentation>reserved accommodation data</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Level" type="ama_ct:CodeType" minOccurs="0"/>
+			<xs:element name="Size" type="ama_ct:CodeType" minOccurs="0"/>
+			<xs:element name="Config" type="ama_ct:CodeType" minOccurs="0"/>
+			<xs:element name="Equipments" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Equipment" type="ama_ct:CodeType" maxOccurs="9"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CompartmentAttributesType">
+		<xs:annotation>
+			<xs:documentation>reserved accommodation data</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Environment" type="ama_ct:CodeType" minOccurs="0"/>
+			<xs:element name="Gender" type="ama_ct:CodeType" minOccurs="0"/>
+			<xs:element name="DeckLevel" type="ama_ct:CodeType" minOccurs="0"/>
+			<xs:element name="Position" type="ama_ct:CodeType" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="Smoking" type="xs:boolean"/>
+		<xs:attribute name="PetsAllowed" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="CampaignReductionType">
+		<xs:annotation>
+			<xs:documentation>The campaign information used for reduction.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="CampaignID" use="required">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">The campaign ID code</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="20"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="CorporateReductionType">
+		<xs:annotation>
+			<xs:documentation>The corporate information used for reduction.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="Type">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">The corporate type</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="20"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="CorporateID" use="required">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">The corporate ID code</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="20"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="DateRangeType">
+		<xs:annotation>
+			<xs:documentation>Period of time between a start date and an end date</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="StartDate" type="xs:date" use="required">
+			<xs:annotation>
+				<xs:documentation>Start date</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="EndDate" type="xs:date" use="required">
+			<xs:annotation>
+				<xs:documentation>End date</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ProviderRefType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Identifies a company by name. Based on OTA_CommonTypes-CompanyNameType</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ama_ct:CodeType">
+				<xs:attribute name="ExternalBookingRef">
+					<xs:annotation>
+						<xs:documentation>Provider's booking reference.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="4"/>
+							<xs:maxLength value="20"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RailBookingClassType">
+		<xs:complexContent>
+			<xs:extension base="RailBaseBookingClassType">
+				<xs:sequence>
+					<xs:element name="Class" type="ama_ct:CodeType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>See RDP code list TCC</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="AccommodationType" type="ama_ct:CodeType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>See RDP code list ACT</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="RPH" type="ota2010b:RPH_Type" use="optional">
+					<xs:annotation>
+						<xs:documentation>Reference Place Holder - an index code to identify an instance in a collection of like items</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="SeatAssignable" type="ResIndType" use="optional">
+					<xs:annotation>
+						<xs:documentation>The possibility of seat reservation may be dependent on the booking class, in which case this field is used.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RailBaseBookingClassType">
+		<xs:attribute name="Code" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="3"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="MainClassCode">
+			<xs:annotation>
+				<xs:documentation>The main class that this booking class belongs to.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="RailDiscountCardType">
+		<xs:annotation>
+			<xs:documentation>Optional code and string to describe a rail card.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="ota2010b:StringLength0to128">
+				<xs:attribute name="Code" use="required">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">A code identifying the type of card.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="6"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="RailResType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Rail Booking Data</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Trips">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Trip" type="TripType" maxOccurs="99">
+							<xs:annotation>
+								<xs:documentation>Collection of connected rail segments</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Supplements" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Supplement" maxOccurs="99">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="ReservedSupplementType">
+										<xs:attribute name="TravelerRefNbrRPH" type="ota2010b:RPH_Type" use="required"/>
+										<xs:attribute name="SegmentRefNbrRPH_List" type="ota2010b:ListOfRPH" use="required"/>
+										<xs:attribute name="Tattoo" type="xs:int" use="optional">
+											<xs:annotation>
+												<xs:documentation>Element identifier in the PNR.</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Provider">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ama_ct:CodeType">
+							<xs:sequence>
+								<xs:element name="ExternalRef" type="iata:UniqueID_Type" minOccurs="0"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RailJourneySegType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Any valid journey segment type.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TrafficPeriod" type="ama_ct:CodeType" minOccurs="0"/>
+			<xs:choice>
+				<xs:element name="TrainSegment">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Full details on one specific train segment, including the origin and destination locations for this segment, equipment used, services offered, etc.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="TrainSegmentType"/>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="NonTrainSegment">
+					<xs:annotation>
+						<xs:documentation>Either Arrival and Departure time are given or TransitTime and ChangeTime are given.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="OD_Type">
+								<xs:sequence>
+									<xs:element name="TransportationType" type="ama_ct:CodeType" minOccurs="0"/>
+								</xs:sequence>
+								<xs:attribute name="DepartureDateTime" type="xs:dateTime"/>
+								<xs:attribute name="ArrivalDateTime" type="xs:dateTime" use="optional"/>
+								<xs:attribute name="TransitTime" type="xs:time">
+									<xs:annotation>
+										<xs:documentation xml:lang="en">The time required to traverse this segment.</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+								<xs:attribute name="ChangeTime" type="xs:time">
+									<xs:annotation>
+										<xs:documentation xml:lang="en">The time to change to and from this segment.  When this segment is the first or the last segment of a journey, the time will be half that of the same segment in the middle of another journey.</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="ServicesOnBoard" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ServiceOnBoard" type="ama_ct:CodeType" maxOccurs="99">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">A Service on Board</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="RPH" type="ota2010b:RPH_Type" use="required">
+			<xs:annotation>
+				<xs:documentation>Reference Place Holder - an index code to identify an instance in a collection of like items</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Tattoo" type="xs:int" use="optional">
+			<xs:annotation>
+				<xs:documentation>Element identifier in the PNR.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Status" type="ota2010b:StringLength1to8" use="required">
+			<xs:annotation>
+				<xs:documentation>Confirmed (HK), etc</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ReferencedVendorMessageType">
+		<xs:annotation>
+			<xs:documentation>Vendor messages with reference to the booking class is message is specific to certain booking classes</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ota2010b:VendorMessageType">
+				<xs:attribute name="BookingClassRefNbrRPH_List" type="ota2010b:ListOfRPH"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ReservedAccomType">
+		<xs:annotation>
+			<xs:documentation>reserved accommodation data</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="BaseAccomType">
+				<xs:attribute name="RPH" type="ota2010b:RPH_Type" use="required">
+					<xs:annotation>
+						<xs:documentation>Reference Place Holder - an index code to identify an instance in a collection of like items</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="Tattoo" type="xs:int" use="optional">
+					<xs:annotation>
+						<xs:documentation>Element identifier in the PNR.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="AccomodationCode" type="AccomCodeType" use="required"/>
+				<xs:attribute name="ShortDesc" use="required">
+					<xs:annotation>
+						<xs:documentation>Desc of the accommodation to be stored in the PNR</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="20"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ReservedSupplementType">
+		<xs:annotation>
+			<xs:documentation>supplement data</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SupplementType" type="ama_ct:CodeType" minOccurs="0"/>
+			<xs:element name="Desc">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="RPH" type="ota2010b:RPH_Type" use="required">
+			<xs:annotation>
+				<xs:documentation>Reference Place Holder - an index code to identify an instance in a collection of like items</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="SupplementCode" type="SupplementCodeType" use="required">
+			<xs:annotation>
+				<xs:documentation>Supplement Code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="InPackage" type="xs:long">
+			<xs:annotation>
+				<xs:documentation>Number of supplements that are included in the price of the segment.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<!--Replaced incorrect type "xs:integer"-->
+	</xs:complexType>
+	<xs:complexType name="SeatAttributesType">
+		<xs:annotation>
+			<xs:documentation>reserved accommodation data</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Direction" type="ama_ct:CodeType" minOccurs="0"/>
+			<xs:element name="Position" type="ama_ct:CodeType" minOccurs="0"/>
+			<xs:element name="Config" type="ama_ct:CodeType" minOccurs="0"/>
+			<xs:element name="Equipments" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Equipment" type="ama_ct:CodeType" maxOccurs="9"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StationDetailsType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Operation and location details of the station. Derived from OTA_RailCommonTypes-StationDetails</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Location" type="ama_ct:CodeType"/>
+			<xs:element name="Address" type="ota2010b:AddressType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TrainSegmentType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">The TrainSegmentType complex type defines the construct for holding a train segment availability object. Derived from OTA_RailCommonType-TrainSegmentType</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DepartureStation" type="StationDetailsType">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Departure point of train segment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ArrivalStation" type="StationDetailsType">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Arrival point of train segment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MarketingCompany" type="ama_ct:CodeType">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">The marketing train company</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OperatingCompany" type="ama_ct:CodeType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">The operating train company, if different</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Equipment" type="ama_ct:CodeType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">The type of equipment used for the train journey e.g. Amtrak equipment code, UIC, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TransportationType" type="ama_ct:CodeType" minOccurs="0"/>
+			<xs:element name="TrainOrigin" type="ama_ct:CodeType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Represents the start location of this train service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TrainDestination" type="ama_ct:CodeType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Represents the final destination location of this train service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VendorMessages" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="VendorMessage" type="ReferencedVendorMessageType" maxOccurs="99"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="DepartureDateTime" type="xs:dateTime"/>
+		<xs:attribute name="ArrivalDateTime" type="xs:dateTime" use="optional"/>
+		<xs:attribute name="TrainNbr" type="ota2010b:StringLength1to8">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">The train number assigned to this journey.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="StopQty" type="xs:long" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">The number of stops the train makes</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="JourneyDuration" type="xs:duration" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">The duration of the train from departure location to destination location.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attributeGroup ref="ota2010b:SmokingIndicatorGroup">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">Specifies if the train is smoking or not.</xs:documentation>
+			</xs:annotation>
+		</xs:attributeGroup>
+		<xs:attribute name="CrossBorderInd" type="xs:boolean" use="optional"/>
+		<xs:attribute name="GeographicalMileage" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>Length of the train segment in meters</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<!--Replaced incorrect type "xs:nonNegativeInteger"-->
+		<!--Removed default value attribute for definition of attribute "CrossBorderInd"-->
+	</xs:complexType>
+	<xs:complexType name="OD_Type">
+		<xs:sequence>
+			<xs:element name="Origin" type="ama_ct:CodeType">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">The origin station Code. Default CodeContext is CRS (3 letters code)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Destination" type="ama_ct:CodeType">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">The destination station Code. Default CodeContext is CRS (3 letters code)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TripType">
+		<xs:annotation>
+			<xs:documentation>Represents a set of connected segments and their associated elements (accommodations, services on board) and type (class of services etc.)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Segments" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Segment" maxOccurs="9">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="RailJourneySegType">
+										<xs:sequence>
+											<xs:element name="Accommodations" minOccurs="0">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="Accommodation" maxOccurs="99">
+															<xs:annotation>
+																<xs:documentation>Accommodation data associated to a specific Traveler</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+																<xs:complexContent>
+																	<xs:extension base="ReservedAccomType">
+																		<xs:attribute name="TravelerRefNbrRPH_List" type="ota2010b:ListOfRPH" use="optional">
+																			<xs:annotation>
+																				<xs:documentation xml:lang="en">One or more travelers to whom this service applies.</xs:documentation>
+																			</xs:annotation>
+																		</xs:attribute>
+																	</xs:extension>
+																</xs:complexContent>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="BookingClasses" minOccurs="0">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="BookingClass" maxOccurs="99">
+															<xs:complexType>
+																<xs:complexContent>
+																	<xs:extension base="RailBookingClassType">
+																		<xs:attribute name="TravelerRefNbrRPH_List" type="ota2010b:ListOfRPH" use="optional">
+																			<xs:annotation>
+																				<xs:documentation xml:lang="en">One or more travelers to whom this booking class is associated.</xs:documentation>
+																			</xs:annotation>
+																		</xs:attribute>
+																	</xs:extension>
+																</xs:complexContent>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="RPH" type="ota2010b:RPH_Type" use="required">
+			<xs:annotation>
+				<xs:documentation>Reference Place Holder - an index code to identify an instance in a collection of like items</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Tattoo" type="xs:int" use="optional">
+			<xs:annotation>
+				<xs:documentation>Element identifier in the PNR.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Direction" type="DirectionType" use="required">
+			<xs:annotation>
+				<xs:documentation>Outward, Inward</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

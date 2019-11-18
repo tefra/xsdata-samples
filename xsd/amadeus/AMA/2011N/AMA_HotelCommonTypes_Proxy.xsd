@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by Amadeus s.a.s. (Amadeus s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.amadeus.com/2010/06/HotelTypes_v1" xmlns:ota="http://www.opentravel.org/OTA/2003/05/OTA2010B" targetNamespace="http://xml.amadeus.com/2010/06/HotelTypes_v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.000" id="AMA2011N">
+  <!--Replaced file inclusion D:/Java/AXA/input/AMA/2011N/chameleon/AMA_HotelCommonTypes.xsd with its content-->
+  <xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2010B" schemaLocation="../../OTA/2010B/OTA_Proxy.xsd" />
+  <xs:complexType name="HotelReservationType">
+    <xs:sequence>
+      <xs:element name="RoomStays" type="ota:RoomStaysType">
+        <xs:annotation>
+          <xs:documentation>Collection of room stays.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Services" type="ota:ServicesType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Collection of services.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ResGlobalInfo" type="ota:ResGlobalInfoType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">ResGlobalInfo is a container for various information that affects the Reservation as a whole. These include global comments, counts, reservation Identifiers, loyalty programs, and payment methods.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="RoomStayRes" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Boolean True if this reservation is reserving rooms.  False if it is only reserving services.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attributeGroup ref="ota:DateTimeStampGroup" />
+    <xs:attribute name="ResStatus" type="ota:HotelResStatusType" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Indicates the status of the reservation.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ForcedSellInd" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">When true, indicates a sell was forced even if there are restrictions or no availability.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="SrvcOverrideInd" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">When true, indicates a service has been overridden.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="RateOverrideInd" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">When true, indicates a rate has been overridden.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="WalkInInd" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">When true, indicates the reservation is for a guest that walks-in without a reservation. When false, the reservation is not a walk-in.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="RoomNbrLockedInd" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">When true, indicates a room number cannot be changed. When false, indicates a room number may be changed.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="OriginalDeliveryMethodCode" type="ota:OTA_CodeType" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">The method by which the original reservation was delivered. Refer to OpenTravel Code list Distribution Type (DTB).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="PassiveInd" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">When true, indicates that this item is included for information only and no action should be taken.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="RPH" type="ota:RPH_Type" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Unique id for this hotel reservation.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+</xs:schema>

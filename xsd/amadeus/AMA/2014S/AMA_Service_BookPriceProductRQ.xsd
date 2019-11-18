@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 sp1 (x64) (http://www.altova.com) by AMADEUS s.a.s. (AMADEUS s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.amadeus.com/2010/06/ServiceBookAndPrice_v1" xmlns:ota="http://www.opentravel.org/OTA/2003/05/OTA2011A" xmlns:iata="http://www.iata.org/IATA/2007/00/IATA2010.1" xmlns:ama="http://xml.amadeus.com/2010/06/Types_v2" xmlns:pnr="http://xml.amadeus.com/2010/06/PNR_Types_v2" targetNamespace="http://xml.amadeus.com/2010/06/ServiceBookAndPrice_v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.001" id="AMA2014S">
+  <xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2011A" schemaLocation="../../OTA/2011A/OTA_Proxy.xsd" />
+  <xs:import namespace="http://www.iata.org/IATA/2007/00/IATA2010.1" schemaLocation="../../IATA/2010.1/IATA_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/Types_v2" schemaLocation="../2012F/AMA_CommonTypes_Proxy.xsd" />
+  <xs:import namespace="http://xml.amadeus.com/2010/06/PNR_Types_v2" schemaLocation="AMA_PNR_CommonTypes_Proxy.xsd" />
+  <xs:element name="AMA_Service_BookPriceProductRQ">
+    <xs:annotation>
+      <xs:documentation>BookPriceProduct allows the user to execute the booking and the creation of the pricing record of any recommendation of the output of the ancillary catalogue</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Recommendation" maxOccurs="99">
+          <xs:annotation>
+            <xs:documentation>Entity returned by the Catalogue regrouping the service(s) to which the BookPriceProduct will be applied</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServiceMiscellaneous" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>Additional overridable data which concerns Merchandising services</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="start" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="locationCode" type="ota:StringLength3" minOccurs="0">
+                            <xs:annotation>
+                              <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+                                <ama:error code="11177">INVALID CITY / AIRPORT IATA CODE</ama:error>
+                                <!-- NB: this is defined there only for the case when the value does not match the grammar format. Then, the real check against RFD is under creation BE's responsibility -->
+                              </xs:appinfo>
+                              <xs:documentation xml:lang="en">Location IATA code</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="dateTime" type="ota:DateOrDateTimeType" use="optional">
+                          <xs:annotation>
+                            <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+                              <ama:error code="32685">INVALID START DATE/TIME</ama:error>
+                              <!-- NB: here only the reg expr of ota:DateOrDateTimeType is checked. Full validation of validity date is done on creation BEs -->
+                            </xs:appinfo>
+                            <xs:documentation xml:lang="en">Start date (Service date) and possibly time</xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="end" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="locationCode" type="ota:StringLength3" minOccurs="0">
+                            <xs:annotation>
+                              <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
+                                <ama:error code="11177">INVALID CITY / AIRPORT IATA CODE</ama:error>
+                                <!-- NB: this is defined there only for the case when the value does not match the grammar format. Then, the real check against RFD is under creation BE's responsibility -->
+                              </xs:appinfo>
+                              <xs:documentation xml:lang="en">Location IATA code</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Parameters" minOccurs="0" maxOccurs="99">
+                <xs:annotation>
+                  <xs:documentation>Mandatory operational data needed to execute the booking of a service</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="Name" type="xs:string" />
+                      <xs:attribute name="ProviderCode" type="ota:StringLength1to16" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="RecoID" type="xs:NMTOKEN" use="required">
+              <xs:annotation>
+                <xs:documentation>Unique ID for the service</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="CustomerRefIds" type="pnr:ReferenceListType" use="optional">
+              <xs:annotation>
+                <xs:documentation>One or more travelers to whom this service applies</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="Status" type="ota:OTA_CodeType" use="optional">
+              <xs:annotation>
+                <xs:documentation>Code providing status information for the recommendation</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="Currency" type="ota:AlphaLength3" use="optional">
+              <xs:annotation>
+                <xs:documentation>Currency to be used</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="Quantity" type="ota:Numeric1to99" use="optional">
+              <xs:annotation>
+                <xs:documentation>Used to specify the required number of services of the same type</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attributeGroup ref="ota:OTA_PayloadStdAttributes" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

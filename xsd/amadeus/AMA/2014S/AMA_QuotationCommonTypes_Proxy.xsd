@@ -1,0 +1,2517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 sp1 (x64) (http://www.altova.com) by AMADEUS s.a.s. (AMADEUS s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.amadeus.com/2010/06/QuotationTypes_v1" xmlns:etr="http://xml.amadeus.com/2010/06/ETR_Types_v1" xmlns:iata="http://www.iata.org/IATA/2007/00/IATA2010.1" xmlns:ns1="http://xml.amadeus.com/2010/06/TermsAndConditions_v2" xmlns:ota="http://www.opentravel.org/OTA/2003/05/OTA2011A" xmlns:ota_2011A="http://www.opentravel.org/OTA/2003/05/OTA2011A" xmlns:qt="http://xml.amadeus.com/2010/06/QuotationTypes_v1" targetNamespace="http://xml.amadeus.com/2010/06/QuotationTypes_v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.004" id="AMA2014S">
+	<xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2011A" schemaLocation="../../OTA/2011A/OTA_Proxy.xsd"/>
+	<xs:import namespace="http://www.iata.org/IATA/2007/00/IATA2010.1" schemaLocation="../../IATA/2010.1/IATA_Proxy.xsd"/>
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationComponentCommonTypes.xsd with its content-->
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationElementCommonTypes.xsd with its content-->
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationCommonTypes.xsd with its content-->
+	<xs:simpleType name="String0">
+		<xs:annotation>
+			<xs:documentation>Used for String length 0</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IntegerLength1to13">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Positive Integer of 13 digits length.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{13}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IntegerLength1to13orString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either an IntegerLength1to13 or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="IntegerLength1to13 String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="AlphaLength3orString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either an IntegerLength1to13 or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="iata:AlphaLength3 String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="AlphaNumericStringLength1to4">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="4"/>
+			<xs:pattern value="([0-9a-zA-Z])+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AlphaNumericStringLength1to4orString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either an Alphanumeric Lenght 1to4 or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="AlphaNumericStringLength1to4 String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength1to3">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Character Strings, length 1 to 3.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength1to3orString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a StringLength1to3 or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="StringLength1to3 String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength1to6">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Character Strings, length 1 to 6.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength1to6orString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a StringLength1to6 or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="StringLength1to6 String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength1to13">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Character Strings, length 1 to 13.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="13"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength1to13orString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a StringLength1to13 or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="StringLength1to13 String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength1to15">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Character Strings, length 1 to 15.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength1to15orString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a StringLength1to15 or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="StringLength1to15 String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength1to16">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Character Strings, length 1 to 16.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="16"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength1to16orString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a StringLength1to16 or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="StringLength1to16 String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength1to256">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Character Strings, length 1 to 13.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="256"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength1to256orString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a StringLength1to256 or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="StringLength1to256 String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength1to32">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Character Strings, length 1 to 32.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="32"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength1to32orString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a StringLength1to32 or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="StringLength1to32 String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="String3to6">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="3"/>
+			<xs:maxLength value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength3to6">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="3"/>
+			<xs:maxLength value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StringLength3to6orString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a StringLength3to6 or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="StringLength3to6 String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="BaggageTypeType">
+		<xs:annotation>
+			<xs:documentation>Baggage Type as following: NO - kSBR_QT_BaggageTypeNo = 0 NIL -
+				kSBR_QT_BaggageTypeNil XX - kSBR_QT_BaggageTypeXx N - kSBR_QT_BaggageTypePieces W -
+				kSBR_QT_BaggageTypeWeight = 4</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BaggageTypeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a BaggageTypeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="BaggageTypeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="BaggageUnitType">
+		<xs:annotation>
+			<xs:documentation>Baggage Type as following: K - kSBR_QT_BaggageUnitWeightKilos = 0 L -
+				kSBR_QT_BaggageUnitWeightPounds PC - kSBR_QT_BaggageUnitNumberOfPieces = 2</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BaggageUnitTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a BaggageUnitType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="BaggageUnitType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="BooleanOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a boolean or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="xs:boolean String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="CarrierCodeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Definition of IATA Airline / Carrier code: a 2 to 3
+				alphanums string.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="iata:AirlineType"/>
+	</xs:simpleType>
+	<xs:simpleType name="CarrierCodeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a CarrierCodeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="CarrierCodeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="CityCodeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Definition of IATA City Code: a 3 to 6 characters
+				string.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="3"/>
+			<xs:maxLength value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CityCodeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a CityCodeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="CityCodeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="ConditionsType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="250"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ConditionsTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a ConditionsType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="ConditionsType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="CountryCodeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Definition of IATA Country code: a 2 to 3 alphanums
+				string.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="iata:AlphaNumericStringLength2to3"/>
+	</xs:simpleType>
+	<xs:simpleType name="CountryCodeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a CountryCodeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="CountryCodeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="CouponTypeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Coupon Type as following: kSBR_QT_UndefinedCouponType =
+				0, "undefined" kSBR_QT_CouponTypeAIR, "AIR" kSBR_QT_CouponTypeMCO, "MCO"
+				kSBR_QT_CouponTypeARK, "ARK" kSBR_QT_CouponTypeSSR, "SSR" kSBR_QT_CouponTypeSVC, = 5
+				kSBR_QT_CouponTypeSEA, kSBR_QT_CouponTypeHTL, kSBR_QT_CouponTypeXSB,
+				kSBR_QT_CouponTypeSVF, kSBR_QT_CouponTypeTASF, kSBR_QT_CouponTypeOldTsmP = 11
+				"OldTsmP"</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="11"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CouponTypeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a CouponTypeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="CouponTypeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="CurrencyCodeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">IATA Currency Code definition. A 3 characters string.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="iata:AlphaLength3"/>
+	</xs:simpleType>
+	<xs:simpleType name="CurrencyCodeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a CurrencyCodeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="CurrencyCodeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="DateOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a Date or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="xs:date String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="DateTimeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a DateTime or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="xs:dateTime String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="DateOrDateTimeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a DateOrDateTimeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="ota:DateOrDateTimeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="DecimalOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a Decimal or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="xs:decimal String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="DeliveryModeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Delivery Mode as following:
+				kSBR_QT_UndefinedDeliveryMode = 0, kSBR_QT_DeliveryModePostDelivery,
+				kSBR_QT_DeliveryModeStationPickUp, kSBR_QT_DeliveryModeTravelAgency,
+				kSBR_QT_DeliveryModeEMail, kSBR_QT_DeliveryModeSMS, = 5 kSBR_QT_DeliveryModeID,
+				kSBR_QT_DeliveryModeLoyaltyCard, kSBR_QT_DeliveryModeMMS,
+				kSBR_QT_DeliveryModeMobile, kSBR_QT_DeliveryModeURL,
+				kSBR_QT_DeliveryModeReservationRecord, = 11</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="11"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DeliveryModeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a DeliveryModeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="DeliveryModeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="DisplayTypeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Display Type as following: kSBR_QT_UndefinedDisplayType
+				= 0, kSBR_QT_DisplayTypeMCO, kSBR_QT_DisplayTypeSVF, kSBR_QT_DisplayTypeSVFUS,
+				kSBR_QT_DisplayTypeXSB = 4</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DisplayTypeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a DisplayTypeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="DisplayTypeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="DocumentTypeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Document Type as following:
+				kSBR_QT_UndefinedDocumentType = 0, kSBR_QT_DocumentTypeMCO, kSBR_QT_DocumentTypeXSB,
+				kSBR_QT_DocumentTypeSVF, kSBR_QT_DocumentTypeTASF, kSBR_QT_DocumentTypeOldTSMp,
+				kSBR_QT_DocumentTypeNewTSMp = 6</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DocumentTypeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a DocumentTypeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="DocumentTypeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="FareFamilyType">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="8"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FareFamilyTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a FareFamilyType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="FareFamilyType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="FareFlexibilityTypeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Fare Flexibility Type as following:
+				kSBR_QT_UndefinedFareFlexibilityType = 0, kSBR_QT_FareFlexibilityTypeRefundable,
+				kSBR_QT_FareFlexibilityTypeExchangable, kSBR_QT_FareFlexibilityTypeNotExchangable =
+				3</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FareFlexibilityTypeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a FareFlexibilityTypeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="FareFlexibilityTypeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="FareTypeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Fare Type as following: kSBR_QT_UndefinedFareType = 0,
+				kSBR_QT_FareTypeAward, kSBR_QT_FareTypeFree, kSBR_QT_FareTypeNoFare,
+				kSBR_QT_FareTypeCharter = 4</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FareTypeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a FareTypeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="FareTypeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="IndicatorType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">An indicator is one single alpha
+				string.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IndicatorTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a IndicatorType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="IndicatorType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="InterntationalIndicatorType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">International Indicator as following:
+				kSBR_QT_UndefinedIndicator = 0, kSBR_QT_D, kSBR_QT_I, kSBR_QT_E, kSBR_QT_F,
+				kSBR_QT_B, kSBR_QT_M = 6</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InterntationalIndicatorTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a InterntationalIndicatorType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="InterntationalIndicatorType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="IRUType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">IRU as following: kSBR_QT_UndefinedIRU = 0,
+				kSBR_QT_IRU_R, kSBR_QT_IRU_U, kSBR_QT_IRU_M = 3</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IRUTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a IRUType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="IRUType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="integerOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either an integer or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="xs:integer String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="IssueIndicatorType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Issue Indicator as following:
+				kSBR_QT_UndefinedIssueIndicator = 0, kSBR_QT_IssueIndicatorF : FIRST ISSUE,
+				kSBR_QT_IssueIndicatorI : FIRST ISSUE, IT FARE kSBR_QT_IssueIndicatorU : FIRST
+				ISSUE, BT FARE kSBR_QT_IssueIndicatorR : REISSUE (NOT USED IN THE US),
+				kSBR_QT_IssueIndicatorY : REISSUE OF IT TICKETS (NOT USED IN THE US),
+				kSBR_QT_IssueIndicatorW : REISSUE OF BT TICKETS (NOT USED IN THE US) = 6.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IssueIndicatorTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a IssueIndicatorType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="IssueIndicatorType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="LocationValidityType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="9"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LocationValidityTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a LocationValidityType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="LocationValidityType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="LoyaltyProgramType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Loyalty Program as following: Promo Certificate = 0,
+				Transitional Certificate, Companions Certificate, Miles and Cash, Award Pricing = 4</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LoyaltyProgramTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a LoyaltyProgramType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="LoyaltyProgramType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="nonNegativeIntegerOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a nonNegativeInteger or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="xs:nonNegativeInteger String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="positiveIntegerOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a positiveInteger or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="xs:positiveInteger String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="PresentAtType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="62"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PresentAtTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a PresentAtType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="PresentAtType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="PresentToType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="69"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PresentToTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a PresentToType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="PresentToType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="PricingTypeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Pricing Type as following: kSBR_QT_UndefinedPricingType
+				= 0, kSBR_QT_PricingTypeGlobal, kSBR_QT_PricingTypeIndividual,
+				kSBR_QT_PricingTypeNominative = 3</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PricingTypeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a PricingTypeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="PricingTypeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="ProductTypeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Product Type as following: kSBR_QT_UndefinedProductType
+				= 0, kSBR_QT_ProductTypeRail, kSBR_QT_ProductTypeNoram, kSBR_QT_ProductTypeAir = 3.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ProductTypeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a ProductTypeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="ProductTypeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="RailBookingClassCodeType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RailBookingClassCodeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a RailBookingClassCodeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="RailBookingClassCodeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="RficType">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RficTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a RficType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="RficType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="RfiDescriptionType">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="221"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RfiDescriptionTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a RfiDescriptionType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="RfiDescriptionType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="SegmentOpenIndicatorType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Segment Open Indicator as following:
+				kSBR_QT_UndefinedSegmentIndicator = 0, kSBR_QT_NotOpenSegment,
+				kSBR_QT_OpenSingleSegment, kSBR_QT_OpenReturnSegment, kSBR_QT_OpenBothSegment = 4</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SegmentOpenIndicatorTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a SegmentOpenIndicatorType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="SegmentOpenIndicatorType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="TaxesStatusType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Taxes Status as following: kSBR_QT_UndefinedTaxesStatus
+				= 0, kSBR_QT_TaxesIncluded, kSBR_QT_TaxesExcluded, kSBR_QT_TaxesStatusUnknown,
+				kSBR_QT_TaxesExempt = 4</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TaxesStatusTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a TaxesStatusType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="TaxesStatusType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="TechnicalUseCaseType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Technical Usecase as following:
+				kSBR_QT_UndefinedTechnicalUseCase = 0 AST - kSBR_QT_TechnicalUseCaseAutoCreation
+				(Auto Creation Usecase) ART - kSBR_QT_TechnicalUseCaseAutoReissue (Auto Reissue
+				Usecase) MST - kSBR_QT_TechnicalUseCaseManualCreation (Manual Creation Usecase) OFI
+				- kSBR_QT_TechnicalUseCaseOffersIntegrated (Offers Integrated = priced using PNR
+				context) OFS - kSBR_QT_TechnicalUseCaseOffersStandalone (Offers Standalone = priced
+				ignoring PNR context) = 5</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TechnicalUseCaseTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a TechnicalUseCaseType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="TechnicalUseCaseType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="TicketTypeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Ticket Type as following: kSBR_QT_UndefinedTicketType =
+				0, kSBR_QT_TicketTypeC, kSBR_QT_TicketTypeE, kSBR_QT_TicketTypeB,
+				kSBR_QT_TicketTypeP = 4</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TicketTypeTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a TicketTypeType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="TicketTypeType String0"/>
+	</xs:simpleType>
+	<xs:simpleType name="TransfertType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Connection"/>
+			<xs:enumeration value="StopOver"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TransfertTypeOrString0">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used in order to validate either a TransfertType or String0.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="TransfertType String0"/>
+	</xs:simpleType>
+	<xs:complexType name="AppendedContextType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">This is the context for all appended data (free texts).
+				Is contains some data like Appended Messages etc...</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Message" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BaggageAllowanceType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Baggage Allowance is the aggregation of 3 fields : A
+				Measure (float) - The actual value of the Bagg. Allow. A Bagg. Type (enum) - As
+				following: * NO - kSBR_QT_BaggageTypeNo * NIL - kSBR_QT_BaggageTypeNil * XX -
+				kSBR_QT_BaggageTypeXx * N - kSBR_QT_BaggageTypePieces * W -
+				kSBR_QT_BaggageTypeWeight A Bagg. Unit (enum) - As following: * K -
+				kSBR_QT_BaggageUnitWeightKilos * L - kSBR_QT_BaggageUnitWeightPounds * PC -
+				kSBR_QT_BaggageUnitNumberOfPieces</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="Measure" type="xs:float"/>
+			<xs:element name="Type" type="BaggageTypeTypeOrString0"/>
+			<xs:element name="Unit" type="BaggageUnitTypeOrString0"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="BankerRateType">
+		<xs:annotation>
+			<xs:documentation>A Banker Rate consists of a couple Currency (see Currency Type) + Rate
+				(float).</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="Currency" type="CurrencyType"/>
+			<xs:element name="Rate" type="xs:float"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="BaseValueType">
+		<xs:sequence>
+			<xs:element name="Date" minOccurs="0">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="DateOrDateTimeTypeOrString0">
+							<xs:attribute name="Type" type="xs:string"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Subtype" type="xs:string" use="optional"/>
+		<xs:attribute name="Description" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="CodeContextAndTypeType">
+		<xs:attribute name="Code" type="xs:string"/>
+		<xs:attribute name="Context" type="xs:string"/>
+		<xs:attribute name="Type" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="ConversionRateType">
+		<xs:sequence>
+			<xs:element name="From" type="CodeContextAndTypeType"/>
+			<xs:element name="To" type="CodeContextAndTypeType"/>
+		</xs:sequence>
+		<xs:attribute name="Rate" type="integerOrString0" use="required"/>
+		<xs:attribute name="DecimalPlaces" type="nonNegativeIntegerOrString0" use="optional"/>
+		<xs:attribute name="Type" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="CurrencyType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Currency_type is the representation of IATA definition
+				of a currency. It's a couple CurrencyCode (3 alphas) + DecimalPlace (positive
+				integer).</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="CurrencyCode" type="AlphaLength3orString0">
+			<xs:annotation>
+				<xs:documentation>The code specifying a monetary unit. Use ISO 4217, three alpha code.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="DecimalPlaces" type="nonNegativeIntegerOrString0">
+			<xs:annotation>
+				<xs:documentation>Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit". Typically used when the amount provided includes the minor unit of currency without a decimal point (e.g., USD 8500 needs DecimalPlaces="2" to represent $85)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="DateTimeAndLocationType">
+		<xs:all>
+			<xs:element name="Location">
+				<xs:annotation>
+					<xs:documentation>Location information</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Location has a code and a
+							CodeContext</xs:documentation>
+					</xs:annotation>
+					<xs:attributeGroup ref="CodeAndContextGroup"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+		<xs:attribute name="DateTime" type="DateTimeOrString0" use="required">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">Date and time for this point</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="DisruptionFlightsType">
+		<xs:sequence>
+			<xs:element name="Order" type="positiveIntegerOrString0" minOccurs="0"/>
+			<xs:element name="TicketNumber" type="IntegerLength1to13orString0" minOccurs="0"/>
+			<xs:element name="CouponNumber" type="positiveIntegerOrString0" minOccurs="0"/>
+			<xs:element name="DisruptionTag" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Tag to indicate that the coupon has been identified as disrupted by ATU process</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FareBasisType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">A Fare Basis is a string with 2 attributes: - A Ticket
+				Designator (2to3-char string), optional - A Primary Code (2to3-char string),
+				optional</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="TicketDesignator" type="xs:string" use="optional"/>
+		<xs:attribute name="FareBasisCode" type="xs:string" use="optional"/>
+		<xs:attribute name="PrimaryCode" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="FareCalcType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="hasFareBasis" type="BooleanOrString0"/>
+				<xs:attribute name="isAuto" type="BooleanOrString0"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="FareOrRateType">
+		<xs:complexContent>
+			<xs:extension base="BaseValueType">
+				<xs:sequence>
+					<xs:element name="Quantity" minOccurs="0" maxOccurs="3">
+						<xs:complexType>
+							<xs:simpleContent>
+								<xs:extension base="integerOrString0">
+									<xs:attribute name="Type" type="xs:string" use="required"/>
+									<xs:attribute name="Unit" type="xs:string" use="optional"/>
+								</xs:extension>
+							</xs:simpleContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attributeGroup ref="PriceAttributeGroup"/>
+				<xs:attribute name="IncludeVAT" type="BooleanOrString0"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FareType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Fare Type is the definition of a fare with some special
+				properties. It contains: - A Type (string), mandatory - An Amount (decimal),
+				optional - A Currency Code (3 alphas), optional - A Decimal Place (positive
+				integer), optional - A Flexibility (FareFlexibilityType_type), optional</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="PriceType">
+				<xs:attribute name="Flexibility" type="integerOrString0" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="InConnectionWithType">
+		<xs:annotation>
+			<xs:documentation>In ConnectionWith type is just an aggregation of: A Carrier Code, A
+				Document Serial Number (see ICWTicket Type), A list of Coupon Number (integers), A
+				Coupon Type (specific to ICW, as following: * kQT_UndefinedCouponType = 0, *
+				kQT_Paper_Coupon = 1, * kQT_Electronic_Coupon = 2)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CarrierCode" type="CarrierCodeTypeOrString0" minOccurs="0"/>
+			<xs:element name="DocumentSerialNumber" type="TicketReferenceType" minOccurs="0"/>
+			<!--Replaced incorrect type "xs:nonNegativeInteger"-->
+			<xs:element name="CouponNumber" type="xs:long" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="CouponType" minOccurs="0">
+				<xs:simpleType>
+					<xs:annotation>
+						<xs:documentation>ICW Coupon Type as following: kQT_UndefinedCouponType = 0,
+							kQT_Paper_Coupon = 1, kQT_Electronic_Coupon = 2</xs:documentation>
+					</xs:annotation>
+					<xs:restriction base="xs:nonNegativeInteger">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ItineraryBlobType">
+		<xs:annotation>
+			<xs:documentation>This is a way to transport and store data unchecked but used by
+				someone else.</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="ID">
+				<xs:simpleType>
+					<xs:restriction base="xs:nonNegativeInteger">
+						<xs:annotation>
+							<xs:documentation>Itinerary Blob ID as following:
+								kSBR_QT_UndefinedBlobID = 0, kSBR_QT_BlobFNT, Fare NoTe
+								kSBR_QT_BlobPSP, Pricing blob kSBR_QT_BlobTIP, kSBR_QT_BlobPRO,
+								PRicing Options kSBR_QT_BlobMNR, MiNiRule kSBR_QT_BlobFOP FOP blob =
+								6</xs:documentation>
+						</xs:annotation>
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="6"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Blob" type="xs:string"/>
+			<!-- Next element chould not be handled as simple string, but as a true EDI Def, but this not possible right now -->
+			<xs:element name="EDIDef" type="xs:string"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="LocationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Location has a code and a CodeContext</xs:documentation>
+		</xs:annotation>
+		<xs:attributeGroup ref="CodeAndContextGroup"/>
+	</xs:complexType>
+	<xs:complexType name="NotionalFareType">
+		<xs:annotation>
+			<xs:documentation>Notional Fare contains: A NfClassOfService (Indicator) A NfCarrierCode
+				(CarrierCode) A NfBreakPointIndicator (String) A NfMileage (Integer) A NfBoardPoint
+				(City Code) A NfOffPoint (City Code) A NfHighestCoupon (Fare) A NfCoupon (Fare)</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="ClassOfService" type="IndicatorType"/>
+			<xs:element name="CarrierCode" type="CarrierCodeType"/>
+			<xs:element name="BreakPointIndicator" type="xs:string"/>
+			<!--Replaced incorrect type "xs:integer"-->
+			<xs:element name="Mileage" type="xs:long"/>
+			<xs:element name="BoardPoint" type="CityCodeType"/>
+			<xs:element name="OffPoint" type="CityCodeType"/>
+			<xs:element name="HighestCoupon" type="FareType"/>
+			<xs:element name="Coupon" type="FareType"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="OfficeType">
+		<xs:all>
+			<xs:element name="Name" type="xs:string"/>
+			<!--Replaced incorrect type "xs:nonNegativeInteger"-->
+			<xs:element name="Amid" type="xs:long"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="PassengerPriceCodeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">PassengerPriceCodeType is a string with a minimum and a
+				maximum length (resp. 3 and 6 characters)</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="String3to6">
+				<xs:attribute name="Occurence" type="xs:long"/>
+			</xs:extension>
+			<!--Replaced incorrect type "xs:nonNegativeInteger"-->
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="PassengerReferenceType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used to have a reference to a passenger. Contains: -
+				Passenger's Name (string) - Passenger's Tattoo (integer) - Passenger's Number
+				(integer) - Passenger's Ptc (string) - IsInfant (boolean, default to false) -
+				ParentTattoo (integer, used if current passenger is an infant)</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="Name" type="xs:string"/>
+			<!--Replaced incorrect type "xs:integer"-->
+			<xs:element name="Tattoo" type="xs:long"/>
+			<!--Replaced incorrect type "xs:integer"-->
+			<xs:element name="Number" type="xs:long" minOccurs="0"/>
+			<xs:element name="PTC" type="xs:string" minOccurs="0"/>
+			<!-- IsInfant removed. It is now managed through default value of ParentTattoo (is ==0, then not an infant)
+            <xs:element name="IsInfant"     type="xs:boolean"   minOccurs="0" maxOccurs="1" default="false"/> -->
+			<!--Replaced incorrect type "xs:integer"-->
+			<xs:element name="ParentTattoo" type="xs:long" default="0" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="PointType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">A Point is an integer with a "Type"
+				attribute.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:integer">
+				<xs:attribute name="Type" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Define the type: miles (e.g. for Awards) or points (e.g.
+							for Miles and Cash)</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="PriceComponentType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Pure Prices data should be added here. It extends
+				generic context and so have a mandatory "Type" attribute.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TypedContextType">
+				<xs:sequence>
+					<xs:element name="Price" type="PriceType" minOccurs="0" maxOccurs="999">
+						<xs:annotation>
+							<xs:documentation>Represent generic monetary
+								information.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<!--                    <xs:element name="Fare"     type="FareType"    minOccurs="0" maxOccurs="unbounded"/>-->
+					<xs:element name="Tax" type="TaxType" minOccurs="0" maxOccurs="999">
+						<xs:annotation>
+							<xs:documentation>Represent tax information</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PriceStructureType">
+		<xs:sequence>
+			<xs:element name="ConvertRate" type="ConversionRateType" minOccurs="0" maxOccurs="3"/>
+			<xs:element name="CancellationPolicy" type="StringLength1to256" minOccurs="0"/>
+			<xs:choice minOccurs="0">
+				<xs:element name="Tax" type="SaleTaxType"/>
+				<xs:element name="Price" type="FareOrRateType"/>
+				<xs:element name="VAT" type="VatType"/>
+				<xs:element name="Point" type="PointType"/>
+			</xs:choice>
+			<!-- <xs:element name="Subvalues" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence> -->
+			<xs:element name="PriceStructure" type="PriceStructureType" minOccurs="0" maxOccurs="99"/>
+			<!-- </xs:sequence>
+				</xs:complexType>
+			</xs:element> -->
+		</xs:sequence>
+		<xs:attributeGroup ref="CommonAttributeGroup"/>
+	</xs:complexType>
+	<xs:complexType name="PriceType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Price Type is the definition of a fare with some
+				special properties. It contains: - A Type (string), mandatory - An Amount (decimal),
+				optional - A Currency Code (3 alphas), optional - A Decimal Place (positive
+				integer), optional</xs:documentation>
+		</xs:annotation>
+		<xs:attributeGroup ref="AmountCurrencyAndDecimalPlaceGroup"/>
+		<xs:attribute name="Type" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Defines the price, e.g. for base fare, total...</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="IDCode" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Used only in case the other codes are not suitable, e.g. T01 when Price is an Airline Fees.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Description" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Describes more precisely a Price (or Tax), e.g. "Issuance Fee for Credit Card" when Price is an Airline Fees.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="PricingInfoType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Pricing related data should be added here. It extends
+				generic context and so have a mandatory "Type" attribute.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TypedContextType">
+				<xs:sequence>
+					<xs:element name="Number" type="nonNegativeIntegerOrString0" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Numeric ID</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProductType">
+		<xs:all>
+			<xs:element name="Provider" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Full provider's name (free text). It provides also 2
+						attributes used to specify the provider code in a given context (f.e. Air
+						France =&gt; AF in IATA standard).</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attributeGroup ref="CodeAndContextGroup"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Start" type="DateTimeAndLocationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Start Information</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="End" type="DateTimeAndLocationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>End Information</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ReservationInfoType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Pricing related data should be added here. It extends
+				generic context and so have a mandatory "Type" attribute.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TypedContextType">
+				<xs:sequence>
+					<!--Replaced incorrect type "xs:integer"-->
+					<xs:element name="Number" type="xs:long" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RoutingInfoType">
+		<xs:annotation>
+			<xs:documentation>Routing Info Type is a group of Data. It contains: A Carrier Code, Two
+				City Codes (CityFrom and CityTo), An Indicator (1 char).</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="CarrierCode" type="CarrierCodeType"/>
+			<xs:element name="CityFrom" type="CityCodeType"/>
+			<xs:element name="CityTo" type="CityCodeType"/>
+			<xs:element name="Indicator" type="IndicatorType"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="SaleTaxType">
+		<xs:complexContent>
+			<xs:extension base="FareOrRateType">
+				<xs:attributeGroup ref="SaleTaxAttributeGroup"/>
+				<xs:attribute name="NatureCode" type="xs:string"/>
+				<xs:attribute name="IsoCode" type="xs:string"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="StringToStringMapType">
+		<xs:annotation>
+			<xs:documentation>This an unbounded list of couple (Key, Value), both being
+				strings.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Item" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="Key" type="xs:string"/>
+						<xs:element name="Value" type="xs:string"/>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TaxType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">A Tax is a common Price coupled to several indicators :
+				- IsTaxExempted (boolean), optional - Nature Code (string), optional - Tax Indicator
+				(string), optional - IsoCode (string), optional - Tax Rate (decimal), optional.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="PriceType">
+				<xs:attribute name="IsExempted" type="BooleanOrString0" use="optional">
+					<xs:annotation>
+						<xs:documentation>Attribute set to Y if tax is exempted</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="NatureCode" type="xs:string" use="optional">
+					<xs:annotation>
+						<xs:documentation>Nature Code</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="Indicator" type="xs:string" use="optional">
+					<xs:annotation>
+						<xs:documentation>Used to specify if the tax is: - X new - O Old - Q
+							Refundable - G - U</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="IsoCode" type="xs:string" use="optional">
+					<xs:annotation>
+						<xs:documentation>Iso Country Code</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="Rate" type="DecimalOrString0" use="optional">
+					<xs:annotation>
+						<xs:documentation>Rate</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TicketingInfoType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Ticketing related data should be added here. It extends
+				generic context and so have a mandatory "Type" attribute.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TypedContextType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TicketReferenceType">
+		<xs:annotation>
+			<xs:documentation>ICWTicket Type is a reference to ticket. It contains: An Airline Code,
+				A Ticket Number (9-10 chars string) Two Conjonctives (2 chars strings)</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="AirlineCode" type="CarrierCodeTypeOrString0"/>
+			<xs:element name="TicketNumber">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="9"/>
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="FirstConjonctive">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="SecondConjonctive">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="TypedContextType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">This is a generic context. Is contains only one
+				mandatory "Type" attribute.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="State" use="optional">
+			<xs:annotation>
+				<xs:documentation>Define the status: current or original (i.e. the one at creation
+					time).</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Original"/>
+					<xs:enumeration value="Current"/>
+					<xs:enumeration value=""/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="TypedDateTimeType">
+		<xs:simpleContent>
+			<xs:extension base="xs:dateTime">
+				<xs:attribute name="Type" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="NotBefore"/>
+							<xs:enumeration value="NotAfter"/>
+							<xs:enumeration value="Before"/>
+							<xs:enumeration value="After"/>
+							<xs:enumeration value=""/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TypedLocationType">
+		<xs:complexContent>
+			<xs:extension base="LocationType">
+				<xs:attribute name="Type" use="required">
+					<xs:annotation>
+						<xs:documentation>Type of location time (e.g. start and
+							end)</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="From"/>
+							<xs:enumeration value="To"/>
+							<xs:enumeration value="Connexion"/>
+							<xs:enumeration value=""/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ValidityContextType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">This is the context for all Validity data (locations,
+				dates...).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Location" type="TypedLocationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="DateTime" type="TypedDateTimeType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="VatType">
+		<xs:complexContent>
+			<xs:extension base="BaseValueType">
+				<xs:sequence>
+					<xs:element name="Base" type="FareOrRateType"/>
+				</xs:sequence>
+				<xs:attributeGroup ref="VATAttributeGroup"/>
+				<xs:attribute name="CountryCode" type="xs:string"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:attributeGroup name="AmountCurrencyAndDecimalPlaceGroup">
+		<xs:attribute name="CurrencyCode" type="AlphaLength3orString0">
+			<xs:annotation>
+				<xs:documentation>The code specifying a monetary unit. Use ISO 4217, three alpha code.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="DecimalPlaces" type="nonNegativeIntegerOrString0">
+			<xs:annotation>
+				<xs:documentation>Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit". Typically used when the amount provided includes the minor unit of currency without a decimal point (e.g., USD 8500 needs DecimalPlaces="2" to represent $85)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Amount" type="integerOrString0">
+			<xs:annotation>
+				<xs:documentation>Defines the amount without decimal separator (i.e. Amount=8500 and
+					DecimalPlace=2 represent 85.00)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="CodeAndContextGroup">
+		<xs:attribute name="Code" type="AlphaNumericStringLength1to4orString0" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">Provider code in given code context (f.e. Airline
+					IATA code)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<!--Removed default value attribute for definition of attribute "Context"-->
+		<xs:attribute name="Context" type="AlphaNumericStringLength1to4orString0" use="optional">
+			<xs:annotation>
+				<xs:documentation>Code context for given's code (f.e. IATA, OTA,
+					etc...)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="CommonAttributeGroup">
+		<xs:attribute name="Type" type="xs:string" use="optional"/>
+		<xs:attribute name="Subtype" type="xs:string" use="optional"/>
+		<xs:attribute name="Applicability" type="xs:string"/>
+		<!-- Am I included in my parent yet or not ? -->
+	</xs:attributeGroup>
+	<xs:attributeGroup name="FareAttributeGroup">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Fare Type is the definition of a fare with some special
+				properties. It contains: - A Type (string), mandatory - An Amount (decimal),
+				optional - A Currency Code (3 alphas), optional - A Decimal Place (positive
+				integer), optional - A Flexibility (FareFlexibilityType_type), optional</xs:documentation>
+		</xs:annotation>
+		<!--Replaced nested attributeGroup {http://xml.amadeus.com/2010/06/QuotationTypes_v1}PriceAttributeGroup by content from AMA_QuotationCommonTypes_Proxy-->
+		<xs:attribute name="MiscValue">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">This group is used when price component is returned without an amount, but with an additional data, e.g. exempted</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="EXEMPTED"/>
+					<xs:enumeration value=""/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Type" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Defines the price, e.g. for base fare, total...</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Flexibility" type="integerOrString0" use="optional"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="ItineraryProductAttributeGroup">
+		<xs:attribute name="Type" use="optional">
+			<xs:annotation>
+				<xs:documentation>Type of Product:
+											AIR</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Air"/>
+					<xs:enumeration value="Arunk"/>
+					<xs:enumeration value="GrandTransport"/>
+					<xs:enumeration value="NewGrandTransport"/>
+					<xs:enumeration value=""/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Subtype" use="optional">
+			<xs:annotation>
+				<xs:documentation>Subtype of Product:
+											Flown</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Open"/>
+					<xs:enumeration value="Flown"/>
+					<xs:enumeration value=""/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Identifier" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Flight Number</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ClassOfService" type="StringLength1to3orString0" use="optional">
+			<xs:annotation>
+				<xs:documentation>Class of Service</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="PriceAttributeGroup">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Price Group is the definition of a fare with some
+				special properties. It contains: - A Type (string), mandatory - An Amount (decimal),
+				optional - A Currency Code (3 alphas), optional - A Decimal Place (positive
+				integer), optional</xs:documentation>
+		</xs:annotation>
+		<!--Replaced nested attributeGroup {http://xml.amadeus.com/2010/06/QuotationTypes_v1}AmountCurrencyAndDecimalPlaceGroup by content from AMA_QuotationCommonTypes_Proxy-->
+		<xs:attribute name="CurrencyCode" type="AlphaLength3orString0">
+			<xs:annotation>
+				<xs:documentation>The code specifying a monetary unit. Use ISO 4217, three alpha code.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="DecimalPlaces" type="nonNegativeIntegerOrString0">
+			<xs:annotation>
+				<xs:documentation>Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit". Typically used when the amount provided includes the minor unit of currency without a decimal point (e.g., USD 8500 needs DecimalPlaces="2" to represent $85)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Amount" type="integerOrString0">
+			<xs:annotation>
+				<xs:documentation>Defines the amount without decimal separator (i.e. Amount=8500 and
+					DecimalPlace=2 represent 85.00)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="MiscValue">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">This group is used when price component is returned without an amount, but with an additional data, e.g. exempted</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="EXEMPTED"/>
+					<xs:enumeration value=""/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Type" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Defines the price, e.g. for base fare, total...</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="SaleTaxAttributeGroup">
+		<xs:attribute name="Indicator" type="xs:string"/>
+		<xs:attribute name="ID" type="xs:string" use="optional"/>
+		<xs:attribute name="ComputationMethod" type="xs:string" use="optional"/>
+		<!-- Possible values: 
+																						-	RUL: Rule method
+																						-	COM: Computation method
+																						-	NC: Not computed
+																					 -->
+	</xs:attributeGroup>
+	<xs:attributeGroup name="TaxAttributeGroup">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">A Tax is a common Price coupled to several indicators :
+				- IsTaxExempted (boolean), optional - Nature Code (string), optional - Tax Indicator
+				(string), optional - IsoCode (string), optional - Tax Rate (decimal), optional.</xs:documentation>
+		</xs:annotation>
+		<!--Replaced nested attributeGroup {http://xml.amadeus.com/2010/06/QuotationTypes_v1}PriceAttributeGroup by content from AMA_QuotationCommonTypes_Proxy-->
+		<xs:attribute name="CurrencyCode" type="AlphaLength3orString0">
+			<xs:annotation>
+				<xs:documentation>The code specifying a monetary unit. Use ISO 4217, three alpha code.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="DecimalPlaces" type="nonNegativeIntegerOrString0">
+			<xs:annotation>
+				<xs:documentation>Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit". Typically used when the amount provided includes the minor unit of currency without a decimal point (e.g., USD 8500 needs DecimalPlaces="2" to represent $85)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Amount" type="integerOrString0">
+			<xs:annotation>
+				<xs:documentation>Defines the amount without decimal separator (i.e. Amount=8500 and
+					DecimalPlace=2 represent 85.00)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="MiscValue">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">This group is used when price component is returned without an amount, but with an additional data, e.g. exempted</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="EXEMPTED"/>
+					<xs:enumeration value=""/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Type" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Defines the price, e.g. for base fare, total...</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="IsExempted" type="BooleanOrString0" use="optional">
+			<xs:annotation>
+				<xs:documentation>Attribute set to Y if tax is exempted</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="NatureCode" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Nature Code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Indicator" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Used to specify if the tax is: - X new - O Old - Q
+							Refundable - G - U</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="IsoCode" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Iso Country Code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Rate" type="DecimalOrString0" use="optional">
+			<xs:annotation>
+				<xs:documentation>Rate</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="TypedLocationGroup">
+		<xs:annotation>
+			<xs:documentation>Type of location time:
+From
+To
+Connexion</xs:documentation>
+		</xs:annotation>
+		<!--Replaced nested attributeGroup {http://xml.amadeus.com/2010/06/QuotationTypes_v1}CodeAndContextGroup by content from AMA_QuotationCommonTypes_Proxy-->
+		<xs:attribute name="Code" type="AlphaNumericStringLength1to4orString0" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">Provider code in given code context (f.e. Airline
+					IATA code)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<!--Removed default value attribute for definition of attribute "Context"-->
+		<xs:attribute name="Context" type="AlphaNumericStringLength1to4orString0" use="optional">
+			<xs:annotation>
+				<xs:documentation>Code context for given's code (f.e. IATA, OTA,
+					etc...)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Type" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="From"/>
+					<xs:enumeration value="To"/>
+					<xs:enumeration value="Connexion"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="TypedContextAttributeGroup">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">This is a generic context. Is contains only one
+				mandatory "Type" attribute.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="State" use="optional">
+			<xs:annotation>
+				<xs:documentation>Define the status: 		Current
+Original
+Disrupted</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Original"/>
+					<xs:enumeration value="Current"/>
+					<xs:enumeration value="Disrupted"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="VATAttributeGroup">
+		<!--Replaced nested attributeGroup {http://xml.amadeus.com/2010/06/QuotationTypes_v1}PriceAttributeGroup by content from AMA_QuotationCommonTypes_Proxy-->
+		<xs:attribute name="CurrencyCode" type="AlphaLength3orString0">
+			<xs:annotation>
+				<xs:documentation>The code specifying a monetary unit. Use ISO 4217, three alpha code.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="DecimalPlaces" type="nonNegativeIntegerOrString0">
+			<xs:annotation>
+				<xs:documentation>Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit". Typically used when the amount provided includes the minor unit of currency without a decimal point (e.g., USD 8500 needs DecimalPlaces="2" to represent $85)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Amount" type="integerOrString0">
+			<xs:annotation>
+				<xs:documentation>Defines the amount without decimal separator (i.e. Amount=8500 and
+					DecimalPlace=2 represent 85.00)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="MiscValue">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">This group is used when price component is returned without an amount, but with an additional data, e.g. exempted</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="EXEMPTED"/>
+					<xs:enumeration value=""/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Type" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Defines the price, e.g. for base fare, total...</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Indicator" type="xs:string"/>
+		<xs:attribute name="ID" type="xs:string" use="optional"/>
+		<xs:attribute name="ComputationMethod" type="xs:string" use="optional"/>
+		<!-- Possible values: 
+																						-	RUL: Rule method
+																						-	COM: Computation method
+																						-	NC: Not computed
+																					 -->
+	</xs:attributeGroup>
+	<xs:group name="PriceComponentGroup">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Pure Prices data should be added here. It extends
+				generic context and so have a mandatory "Type" attribute.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Price" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Represent generic monetary
+								information.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attributeGroup ref="PriceAttributeGroup"/>
+				</xs:complexType>
+			</xs:element>
+			<!--                    <xs:element name="Fare"     type="FareType"    minOccurs="0" maxOccurs="unbounded"/>-->
+			<xs:element name="Tax" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Represent tax information</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attributeGroup ref="TaxAttributeGroup"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Point" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Define points and miles information</xs:documentation>
+				</xs:annotation>
+				<!-- New data for SWA: points "amounts"  -->
+				<!-- <xs:complexType>
+						<xs:sequence>
+							<xs:group ref="PointGroup"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="PointAttributeGroup"/>
+				</xs:complexType>  -->
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="PricingInfoGroup">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Pricing related data should be added here. It extends
+				generic context and so have a mandatory "Type" attribute.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<!--Replaced incorrect type "xs:nonNegativeInteger"-->
+			<xs:element name="Number" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Numeric ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="ProductGroup">
+		<xs:sequence>
+			<xs:element name="Provider" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Full provider's name (free text). It provides also 2
+						attributes used to specify the provider code in a given context (f.e. Air
+						France =&gt; AF in IATA standard).</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attributeGroup ref="CodeAndContextGroup"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Start" type="DateTimeAndLocationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Start Information</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="End" type="DateTimeAndLocationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>End Information</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="TicketingInfoGroup">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Pricing related data should be added here. It extends
+				generic context and so have a mandatory "Type" attribute.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<!--Replaced incorrect type "xs:nonNegativeInteger"-->
+			<xs:element name="Number" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Numeric ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="ValidityContextGroup">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">This is the context for all Validity data (locations,
+				dates...).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Location" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attributeGroup ref="TypedLocationGroup"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DateTime" type="TypedDateTimeType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+	<!--****************************************************************************-->
+	<!-- Declaration of QtElementGroup : real data of Element quotation (top level) -->
+	<!--****************************************************************************-->
+	<xs:complexType name="QtElementType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">This is the top of quotation element hierarchy: all others quotations elements must include this group.
+				This involves that every data specified in this group are common to every single quotation; this enables evolution and addition of generic data management.
+				Currently, it contains:
+				- A list of Fares,
+				- A list of Taxes,
+				- A Quotation Type</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="PriceComponentType">
+				<xs:sequence>
+					<xs:element name="QuotationType" type="FullQuotationType_Type" minOccurs="0"/>
+					<!-- New data for SWA: points "amounts"  -->
+					<xs:element name="Point" type="PointType" minOccurs="0" maxOccurs="999">
+						<xs:annotation>
+							<xs:documentation>Define points and miles information</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--****************************************************************************-->
+	<xs:simpleType name="EnumQuotationTypeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Quotation type as following:
+				kSBR_QT_Default = 0,
+				kSBR_QT_Generic,
+				kSBR_QT_Pricing_Record,
+				kSBR_QT_Document_Pricing_Record,
+				kSBR_QT_Itinerary_Pricing_Record,
+				kSBR_QT_Itinerary, = 5
+				kSBR_QT_Atc,
+				kSBR_QT_Document,
+				kSBR_QT_Ob,
+				kSBR_QT_ObFees,
+				kSBR_QT_Coupon, = 10
+				kSBR_QT_Package,
+				kSBR_QT_Coupon_Document,
+				kSBR_QT_Coupon_Itinerary,
+				kSBR_QT_Markup,
+				kSBR_QT_Refund, = 15
+				kSBR_QT_ExtendedContents,
+				kSBR_QT_AddOn,
+				kSBR_QT_Unknown,
+				kSBR_QT_FareComponent = 19</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="19"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="FullQuotationType_Type">
+		<xs:simpleContent>
+			<xs:extension base="EnumQuotationTypeType">
+				<xs:attribute name="Description" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Offer a 'human-readable' description of Quotations' SBM type. Possible values are:
+							"QT_DEFAULT" for basic untyped quotations,
+							"QT_GEN" for abstract Generics (Iti, Doc),
+							"QT_PR" for abstract Pricing Records (Package, ItiPR, DocPR etc...),
+							"QT_DOC_PR" for Document Pricing Records,
+							"QT_ITI_PR" for Itinerary Pricing Records,
+							"QT_ITI" for Itineraries,
+							"QT_ATC_PR" for ATC Pricing Records,
+							"QT_DOC" for Documents,
+							"QT_OBF_DET" for OBs,
+							"QT_OBF" for OB Fees,
+							"QT_CPN" for abstract Coupons (ItiCoupon, DocCoupons),
+							"QT_PCK" for Packages,
+							"QT_DOC_CPN" for Document Coupons,
+							"QT_ITI_CPN" for Itinerary Coupons,
+							"QT_MRK" for Mark-ups,
+							"QT_REF" for Refunds,
+							"QT_EXT_PR" for Extended Pricing Records,
+							"QT_ADN" for Add-ons,
+							"QT_UNKNOWN" for Unknowns,
+							"QT_FAR_COM" for Fare Components.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="QT_DEFAULT"/>
+							<xs:enumeration value="QT_GEN"/>
+							<xs:enumeration value="QT_PR"/>
+							<xs:enumeration value="QT_DOC_PR"/>
+							<xs:enumeration value="QT_ITI_PR"/>
+							<xs:enumeration value="QT_ITI"/>
+							<xs:enumeration value="QT_ATC_PR"/>
+							<xs:enumeration value="QT_DOC"/>
+							<xs:enumeration value="QT_OBF"/>
+							<xs:enumeration value="QT_OBF_DET"/>
+							<xs:enumeration value="QT_CPN"/>
+							<xs:enumeration value="QT_PCK"/>
+							<xs:enumeration value="QT_DOC_CPN"/>
+							<xs:enumeration value="QT_ITI_CPN"/>
+							<xs:enumeration value="QT_MRK"/>
+							<xs:enumeration value="QT_REF"/>
+							<xs:enumeration value="QT_EXT_PR"/>
+							<xs:enumeration value="QT_ADN"/>
+							<xs:enumeration value="QT_UNKNOWN"/>
+							<xs:enumeration value="QT_FAR_COM"/>
+							<xs:enumeration value=""/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!--	Uncomment this to be able to use auto-instanciation tools
+	<xs:element name="QtElementImplementation" type="QtElement"/>-->
+	<!--*******************************************************************-->
+	<!-- Declaration of QtGeneric type that includes the real data (group) -->
+	<!--*******************************************************************-->
+	<xs:complexType name="QtComponentType">
+		<xs:annotation>
+			<xs:documentation>This is the Quotation Generic Type declaration. Quotation Generic is
+                a quotation type to store shared data for Itinerary and Document (resp. used for TST and
+                TSM representation). This means that any data added at this level is accessible to
+                Iti and Doc, avoiding data specification duplication between those 2 types. It
+                includes, like all others quotations types, Quotation Element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="QtElementType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ComponentPricingInfoType">
+		<xs:annotation>
+			<xs:documentation>This is the Quotation Generic Pricing context Type declaration.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="PricingInfoType">
+				<xs:sequence>
+					<xs:element name="Location" type="TypedLocationType" minOccurs="0" maxOccurs="2">
+						<xs:annotation>
+							<xs:documentation>Location information</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<!-- Those two has been merged in Location : they now have a "Type" attribute (From or To)
+                        <xs:element name="Origin"                           type="CityCodeType"            minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="Destination"                      type="CityCodeType"            minOccurs="0" maxOccurs="1"/>-->
+				</xs:sequence>
+				<xs:attribute name="Seasonality" type="xs:string" use="optional">
+					<xs:annotation>
+						<xs:documentation>Define the Seasonality (e.g. High, Low...)</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+			<!-- Added attributes -->
+		</xs:complexContent>
+	</xs:complexType>
+	<!--*******************************************************************-->
+	<!--Removed file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationElementCommonTypes.xsd because it a duplicate cross inclusion-->
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationOC_FeesCommonTypes.xsd with its content-->
+	<!--Removed file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationElementCommonTypes.xsd because it a duplicate cross inclusion-->
+	<!--*******************************************************************-->
+	<!-- Declaration of QtOCFees type that includes the real data (group) -->
+	<!--*******************************************************************-->
+	<xs:complexType name="QtOCFeesType">
+		<xs:annotation>
+			<xs:documentation>This is the Quotation OC Fee Type declaration. It is used to store information related to OC fees.  It includes, like all others quotations types, Quotation Element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="QtElementType">
+				<xs:sequence>
+					<xs:element name="PricingInfo" type="PricingInfoType" minOccurs="0" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--*******************************************************************-->
+	<!--    Uncomment this to be able to use auto-instance generation tools-->
+	<xs:element name="QtOCFees" type="QtOCFeesType"/>
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationExtendedTypes.xsd with its content-->
+	<!--Removed file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationElementCommonTypes.xsd because it a duplicate cross inclusion-->
+	<!--********************************************************************-->
+	<!-- Declaration of QTExtended type that includes the real data (group) -->
+	<!--********************************************************************-->
+	<xs:complexType name="QtExtendedType">
+		<xs:annotation>
+			<xs:documentation>This is the Quotation Extended Type declaration. It is used to store information related to Extended product, in a purchase point of view. It includes, like all others quotations types, Quotation Element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="QtElementType">
+				<xs:sequence>
+					<xs:element name="PricingInfo" minOccurs="0" maxOccurs="2">
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="TypedContextType">
+									<xs:sequence>
+										<xs:element name="FareBasis" type="FareBasisType" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Classic IATA Fare Basis definition. Used in case of non-GDS Air ETR (like ATAC). It contains 3 attributes: PrimaryCode, TicketDesignator and FareBasisCode.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="Type" use="optional">
+										<xs:annotation>
+											<xs:documentation>Type attribute is used to provide info on how the pricing was returned. Possible values are: Global (for a global price including all travellers) and Individual (price is for one person applicable to each linked travellers).</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Individual"/>
+												<xs:enumeration value="Global"/>
+												<xs:enumeration value=""/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ConvertRate" type="ConversionRateType" minOccurs="0" maxOccurs="3"/>
+				</xs:sequence>
+				<xs:attribute name="PassengerType" type="PassengerTypeType"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--*******************************************************************-->
+	<!--    Uncomment this to be able to use auto-instance generation tools-->
+	<!--<xs:element name="QtExtended" type="QtExtendedType"/>-->
+	<xs:simpleType name="PassengerTypeType">
+		<xs:annotation>
+			<xs:documentation>Defines the Type of Traveller concerned in the Quotation.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Passenger"/>
+			<xs:enumeration value="Infant"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationItineraryServiceCommonTypes.xsd with its content-->
+	<!--Removed file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationElementCommonTypes.xsd because it a duplicate cross inclusion-->
+	<!--*********************************************************************-->
+	<!-- Declaration of QtItiCoupon type that includes the real data (group) -->
+	<!--*********************************************************************-->
+	<xs:complexType name="QtItineraryServiceType">
+		<xs:annotation>
+			<xs:documentation>This is the Quotation Itinerary Coupon Type declaration. Quotation Itinerary Coupon
+                is a quotation type to store specific data at Coupon level for TST representation.
+                This means that any data added at this level is not accessible to Document Coupon,
+                avoiding useless data at unwanted level. It includes, Quotation Coupon Element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="QtElementType">
+				<xs:sequence>
+					<xs:element name="PricingInfo" type="PricingInfoType" minOccurs="0" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+			<!-- We currently have no specific data at this level. This may come in the future. -->
+		</xs:complexContent>
+	</xs:complexType>
+	<!--*******************************************************************-->
+	<!--    Uncomment this to be able to use auto-instance generation
+    <xs:element name="ListQtItiService">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="QtItiService" type="QtItineraryServiceType" minOccurs="2" maxOccurs="2"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+     -->
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationItineraryCouponCommonTypes.xsd with its content-->
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationCouponCommonTypes.xsd with its content-->
+	<!--Removed file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationElementCommonTypes.xsd because it a duplicate cross inclusion-->
+	<!--*******************************************************************-->
+	<!-- Declaration of QtCoupon type that includes the real data (group) -->
+	<!--*******************************************************************-->
+	<xs:complexType name="QtCouponType">
+		<xs:annotation>
+			<xs:documentation>This is the Quotation Coupon Type declaration. Quotation Coupon is a quotation type
+                to store shared data for Itinerary Coupon and Document Coupon (resp. used for TST
+                and TSM representation). This means that any data added at this level is accessible 
+                to Iti Coupon and Doc Coupon, avoiding data declaration duplication between those 
+                2 types. It includes, like all others quotations types, Quotation Element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="QtElementType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CouponPricingInfoType">
+		<xs:annotation>
+			<xs:documentation>This is the Quotation Generic Pricing context Type declaration.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="PricingInfoType">
+				<xs:sequence>
+					<xs:element name="Type" type="CouponTypeTypeOrString0" minOccurs="0"/>
+					<xs:element name="Validity" type="ValidityContextType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Validity of the fare (e.g. NVA-Not Valid After and NVB- Not Valid Before)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--*******************************************************************-->
+	<!--*********************************************************************-->
+	<!-- Declaration of QtItiCoupon type that includes the real data (group) -->
+	<!--*********************************************************************-->
+	<xs:complexType name="QtCouponItineraryType">
+		<xs:annotation>
+			<xs:documentation>This is the Quotation Itinerary Coupon Type declaration. Quotation Itinerary Coupon
+                is a quotation type to store specific data at Coupon level for TST representation.
+                This means that any data added at this level is not accessible to Document Coupon,
+                avoiding useless data at unwanted level. It includes, Quotation Coupon Element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="QtCouponType">
+				<xs:sequence>
+					<xs:element name="ProductInfo" type="ProductType"/>
+					<xs:element name="PricingInfo" type="CouponPricingInfoType" minOccurs="0" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--*******************************************************************-->
+	<!--    Uncomment this to be able to use auto-instance generation
+    <xs:element name="ListQtItiCoupon">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="QtItiCoupon" type="QtCouponItineraryType" minOccurs="2" maxOccurs="2"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+     -->
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationGenericCommonTypes.xsd with its content-->
+	<!--Removed file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationElementCommonTypes.xsd because it a duplicate cross inclusion-->
+	<!--*******************************************************************-->
+	<!-- Declaration of QtGeneric type that includes the real data (group) -->
+	<!--*******************************************************************-->
+	<xs:complexType name="QtGenericType">
+		<xs:annotation>
+			<xs:documentation>This is the Quotation Generic Type declaration. Quotation Generic is
+				a quotation type to store shared data for Itinerary and Document (resp. used for TST and
+				TSM representation). This means that any data added at this level is accessible to
+				Iti and Doc, avoiding data specification duplication between those 2 types. It
+				includes, like all others quotations types, Quotation Element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="QtElementType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="GenericPricingInfoType">
+		<xs:annotation>
+			<xs:documentation>This is the Quotation Generic Pricing context Type declaration.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="PricingInfoType">
+				<xs:sequence>
+					<!-- New data for SWA -->
+					<xs:element name="LoyaltyProgram" type="LoyaltyProgramType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Represent the Loyalty program used:
+- Promo Certificate,
+- Transitional Certificate, 
+- Companions Certificate, 
+- Miles and Cash, 
+- Award Pricing</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--*******************************************************************-->
+	<!-- Following data will be added later -->
+	<!--<xs:element name="FareType"				type="FareTypeType"/>
+												<xs:element name="FareType" type="FareTypeType"/>
+						<!-\-  Moved to Appended Context
+			<xs:element name="AppendedMessage"			type="xs:string"					minOccurs="0" maxOccurs="1"/>-\->
+						<xs:element name="IssueIndicator"			type="IssueIndicatorType"			minOccurs="0" maxOccurs="1"/>
+						
+						<xs:element name="Equiv"														minOccurs="0" maxOccurs="1">
+							<xs:complexType>
+								<xs:all>
+									<xs:element name="Fare"			type="FareType"					minOccurs="0" maxOccurs="1"/>
+									<xs:element name="Currency"											minOccurs="0" maxOccurs="1">
+										<xs:complexType>
+											<xs:all>
+												<xs:element name="First" type="CurrencyType"			minOccurs="0" maxOccurs="1"/>
+												<xs:element name="Second" type="CurrencyType"			minOccurs="0" maxOccurs="1"/>
+											</xs:all>
+										</xs:complexType>
+									</xs:element>
+								</xs:all>
+							</xs:complexType>
+						</xs:element>
+						
+						<!-\- This as been moved at Element level 
+			<xs:element name="Taxes"					type="TaxListType"					minOccurs="0" maxOccurs="1"/>	-\->
+						
+						<xs:element name="ManualNetFare"			type="FareType"					minOccurs="0" maxOccurs="1"/>
+						
+						<!-\- Bankers Selling Rates -\->
+						<xs:element name="BankerSellingRate"											minOccurs="0" maxOccurs="1">
+							<xs:complexType>
+								<xs:all>
+									<xs:element name="First"		type="BankerRateType"				minOccurs="0" maxOccurs="1"/>
+									<xs:element name="Second"		type="BankerRateType"				minOccurs="0" maxOccurs="1"/>
+								</xs:all>
+							</xs:complexType>
+						</xs:element>
+						
+						<xs:element name="FareCalc" 				type="FareCalcType"				minOccurs="0" maxOccurs="1"/>
+						
+						<xs:element name="Mileage"														minOccurs="0" maxOccurs="1">
+							<xs:complexType>
+								<xs:all>
+									<xs:element name="Value" 		type="xs:integer"					minOccurs="0" maxOccurs="1"/>
+									<xs:element name="Breakdown" 	type="xs:string"					minOccurs="0" maxOccurs="1"/>
+								</xs:all>
+								<xs:attribute name="isModified" 	type="xs:boolean"					use="optional"/>
+							</xs:complexType>
+						</xs:element>
+						
+						<xs:element name="Creation"														minOccurs="0" maxOccurs="1">
+							<xs:complexType>
+								<xs:all>
+									<xs:element name="Entry"		type="xs:string"					minOccurs="0" maxOccurs="1"/>
+									<xs:element ref="DateTime"											minOccurs="0" maxOccurs="1"/>
+								</xs:all>
+							</xs:complexType>
+						</xs:element>
+						
+						<xs:element name="PricingOverride"												minOccurs="0" maxOccurs="1">
+							<xs:complexType>
+								<xs:all>
+									<xs:element ref="DateTime"											minOccurs="0" maxOccurs="1"/>
+								</xs:all>
+							</xs:complexType>
+						</xs:element>
+						
+						<xs:element name="Modification"													minOccurs="0" maxOccurs="1">
+							<xs:complexType>
+								<xs:all>
+									<xs:element ref="DateTime"											minOccurs="0" maxOccurs="1"/>
+								</xs:all>
+							</xs:complexType>
+						</xs:element>
+						
+						<xs:element name="TaxesStatus" 				type="TaxesStatusType"				minOccurs="0" maxOccurs="1"/>
+						<xs:element name="IRU"						type="IRUType"						minOccurs="0" maxOccurs="1"/>
+						<xs:element name="IsGlobalPrice"			type="xs:boolean"					minOccurs="0" maxOccurs="1"/>
+						<xs:element name="UpgradePoints"			type="xs:integer"					minOccurs="0" maxOccurs="1"/>
+						<xs:element name="InternationalInformation"	type="InterntationalIndicatorType"	minOccurs="0" maxOccurs="1"/>
+						<xs:element name="NonTaxableFare"			type="FareType"					minOccurs="0" maxOccurs="1"/>
+						<xs:element name="Blobs"					type="ItineraryBlobListType"		minOccurs="0" maxOccurs="1"/>-->
+	<!--Removed file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationCommonTypes.xsd because it a duplicate cross inclusion-->
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationItineraryCommonTypes.xsd with its content-->
+	<!--Removed file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationGenericCommonTypes.xsd because it a duplicate cross inclusion-->
+	<!--*******************************************************************-->
+	<!-- Declaration of QtItinerary type that includes the real data (group) -->
+	<!--*******************************************************************-->
+	<xs:complexType name="QtItineraryType">
+		<xs:annotation>
+			<xs:documentation>blabla</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="QtGenericType">
+				<xs:sequence>
+					<xs:element name="PricingInfo" type="GenericPricingInfoType" minOccurs="0" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--*******************************************************************-->
+	<!--    Uncomment this to be able to use auto-instance generation tools-->
+	<xs:element name="QtItinerary" type="QtItineraryType"/>
+	<!--Removed file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationCouponCommonTypes.xsd because it a duplicate cross inclusion-->
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationServiceComponentCommonTypes.xsd with its content-->
+	<!--Removed file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationComponentCommonTypes.xsd because it a duplicate cross inclusion-->
+	<!--*************************************************************************-->
+	<!-- Declaration of QtFareComponent type that includes the real data (group) -->
+	<!--*************************************************************************-->
+	<xs:complexType name="QtServiceComponentType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">This is the Quotation Fare Component Type declaration. Quotation Fare
+                Component is a quotation type to store pricing data relative to a group of Coupons.
+                It includes, like all others quotations types, Quotation Element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="QtComponentType">
+				<xs:sequence>
+					<!-- We can have up to two Pricing Context (Original and Current) -->
+					<xs:element name="PricingInfo" type="ComponentPricingInfoType" minOccurs="0" maxOccurs="2"/>
+					<!-- And up to two Ticketing Context (Original and Current) -->
+					<xs:element name="Ticketing" type="TicketingInfoType" minOccurs="0" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+			<!-- Extends Quotation Element -->
+		</xs:complexContent>
+	</xs:complexType>
+	<!--*******************************************************************-->
+	<!--    Uncomment this to be able to use auto-instance generation tools
+    <xs:element name="ListQtServiceComponent">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="QtServiceComponent" type="QtServiceComponentType" minOccurs="1" maxOccurs="2"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    -->
+	<!--Removed file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationItineraryServiceCommonTypes.xsd because it a duplicate cross inclusion-->
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationTermsAndConditionsCommonTypes.xsd with its content-->
+	<!--Removed file import on namespace "http://www.opentravel.org/OTA/2003/05/OTA2011A" for file OTA_Proxy.xsd because it a duplicate cross import-->
+	<xs:complexType name="TermsAndCondtionsType">
+		<xs:annotation>
+			<xs:documentation>This is used to store all conditions and applicable terms for one given product or one given package.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ModificationRule" type="ModificationRuleType" minOccurs="0" maxOccurs="99"/>
+			<xs:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="99"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ModificationRuleType">
+		<xs:sequence>
+			<xs:element name="Conditions" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="validity" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="start" type="ExtendedDateTimeType" minOccurs="0"/>
+									<xs:element name="end" type="ExtendedDateTimeType" minOccurs="0"/>
+								</xs:sequence>
+								<xs:attribute name="duration" type="xs:duration" use="optional">
+									<xs:annotation>
+										<xs:documentation>This is used to determine the Validity Period after/before a date (e.g. -P2D meaning 2 days before a date). If both a start date and an end date are specified, then this "Duration" attribute should not be used.</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ExceptionalEvents" minOccurs="0" maxOccurs="99">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="event" type="EventType" minOccurs="1" maxOccurs="99"/>
+									<xs:element name="DummyElement" minOccurs="0" maxOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Terms" minOccurs="0">
+				<xs:complexType>
+					<xs:annotation>
+						<xs:documentation>This is used to list all the Terms of the rule (e.g. Penalty).</xs:documentation>
+					</xs:annotation>
+					<xs:sequence>
+						<xs:element name="Penalty" type="PenaltyType" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="99"/>
+		</xs:sequence>
+		<xs:attribute name="modification" type="RestrictedCategoryType" use="required">
+			<xs:annotation>
+				<xs:documentation>This defines what type of modification is concerned in this rule.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="circumstances" type="RestrictedCategoryListType" use="optional">
+			<xs:annotation>
+				<xs:documentation>This is normally used for air travel.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="EventType">
+		<xs:annotation>
+			<xs:documentation>Defines the events under which a rule can apply.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="element" type="EventElementType" use="optional"/>
+		<xs:attribute name="status" type="EventStatusType" use="optional"/>
+	</xs:complexType>
+	<xs:simpleType name="EventElementType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Traveller"/>
+			<xs:enumeration value="FamilyOfTraveller"/>
+			<xs:enumeration value="ParentOfTraveller"/>
+			<xs:enumeration value="SpouseOfTraveller"/>
+			<xs:enumeration value="ChildOfTraveller"/>
+			<xs:enumeration value="Flight"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EventStatusType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Illness"/>
+			<xs:enumeration value="Death"/>
+			<xs:enumeration value="NoShowInFirstFlight"/>
+			<xs:enumeration value="NoShowInSubsequentFlight"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="PenaltyType">
+		<xs:sequence>
+			<xs:element name="Price" type="qt:PriceType" minOccurs="0" maxOccurs="10">
+				<xs:annotation>
+					<xs:documentation>Only for Air Travel: The "Type" attribute in "PriceType" must be used to specify if the Penalty is for "ADV" or "BDV" or ...</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Tax" type="qt:TaxType" minOccurs="0" maxOccurs="10">
+				<xs:annotation>
+					<xs:documentation>Only for Air Travel: The "Type" attribute in "PriceType" must be used to specify if the Penalty is for "ADV" or "BDV" or ...</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Points" type="qt:PointType" minOccurs="0" maxOccurs="10">
+				<xs:annotation>
+					<xs:documentation>Penalty charges expressed in loyalty program unit, e.g. 100 MILES.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RetainedValue" minOccurs="0" maxOccurs="10">
+				<xs:annotation>
+					<xs:documentation>Charges that apply without necessarily getting a benefit or service, e.g. 1 NIGHT.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:nonNegativeInteger">
+							<xs:attribute name="Type" type="xs:string" use="optional"/>
+							<xs:attribute name="Unit" use="required">
+								<xs:annotation>
+									<xs:documentation>Unit e.g. Night.</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Night"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="CategoryListType">
+		<xs:list itemType="RestrictedSubCategoryType"/>
+	</xs:simpleType>
+	<xs:simpleType name="RestrictedCategoryListType">
+		<xs:restriction base="CategoryListType">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AlphabeticDateType">
+		<xs:annotation>
+			<xs:documentation>This type is used to tell a Date expressed in an alphabetic form. Allowed values are enumerated (e.g. ArrivalDate).</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ArrivalDate"/>
+			<xs:enumeration value="DepartureDate"/>
+			<xs:enumeration value="BookingDate"/>
+			<xs:enumeration value="IssuanceDate"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ExtendedDateTimeType">
+		<xs:annotation>
+			<xs:documentation>This type is used to specify a Date(with or without offset) expressed in a standard format in addition to the name of an associated event.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="dateTime" type="ota_2011A:DateOrTimeOrDateTimeType" use="optional"/>
+		<xs:attribute name="name" type="AlphabeticDateType" use="optional"/>
+		<xs:attribute name="offset" type="xs:duration" use="optional"/>
+	</xs:complexType>
+	<xs:simpleType name="RestrictedCategoryType">
+		<xs:annotation>
+			<xs:documentation>This type specifies what is the category of the rule. For products other than Air Travel, e.g.: Refund.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Refund"/>
+			<xs:enumeration value="Cancellation"/>
+			<xs:enumeration value="Reissue"/>
+			<xs:enumeration value="Revalidation"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RestrictedSubCategoryType">
+		<xs:annotation>
+			<xs:documentation>Within a given category(e.g. refund), this type is used to tell the context to which the rule refers to, e.g.: NoShowInFirstFlight.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NoShowInFirstFlight"/>
+			<xs:enumeration value="NoShowInSubsequentFlight"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="DescriptionType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Textual information to provide description and/or additional information.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="language" type="xs:language" use="optional">
+					<xs:annotation>
+						<xs:documentation>Language identification.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="type" type="ota_2011A:AlphaNumericStringLength1to3" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationUsedProductCommonTypes.xsd with its content-->
+	<!--Removed file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationElementCommonTypes.xsd because it a duplicate cross inclusion-->
+	<!--*******************************************************************-->
+	<!-- Declaration of QtOCFees type that includes the real data (group) -->
+	<!--*******************************************************************-->
+	<xs:complexType name="QtUsedProductType">
+		<xs:annotation>
+			<xs:documentation>This is the Quotation Generic Type declaration. Quotation Used Product is for product already used, e.g. flown for air coupons.  It includes, like all others quotations types, Quotation Element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="QtElementType">
+				<xs:sequence>
+					<xs:element name="ProductInfo" type="ProductType">
+						<xs:annotation>
+							<xs:documentation>Product Information</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--*******************************************************************-->
+	<!--    Uncomment this to be able to use auto-instance generation tools-->
+	<xs:element name="QtUsedProduct" type="QtUsedProductType"/>
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationFareComponentCommonTypes.xsd with its content-->
+	<!--Removed file inclusion D:/Java/AXA/input/AMA/2014S/chameleon/AMA_QuotationComponentCommonTypes.xsd because it a duplicate cross inclusion-->
+	<!--*************************************************************************-->
+	<!-- Declaration of QtFareComponent type that includes the real data (group) -->
+	<!--*************************************************************************-->
+	<xs:complexType name="QtFareComponentType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">This is the Quotation Fare Component Type declaration. Quotation Fare
+                Component is a quotation type to store pricing data relative to a group of Coupons.
+                It includes, like all others quotations types, Quotation Element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="QtComponentType">
+				<xs:sequence>
+					<!-- We can have up to two Pricing Context (Original and Current) -->
+					<xs:element name="PricingInfo" type="ComponentPricingInfoType" minOccurs="0" maxOccurs="2"/>
+					<!-- And up to two Ticketing Context (Original and Current) -->
+					<xs:element name="Ticketing" type="TicketingInfoType" minOccurs="0" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+			<!-- Extends Quotation Element -->
+		</xs:complexContent>
+	</xs:complexType>
+	<!--*******************************************************************-->
+	<!--    Uncomment this to be able to use auto-instance generation tools    -->
+	<xs:element name="ListQtFareComponent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="QtFareComponent" type="QtFareComponentType" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/TTSMRQ_13_1_1A" xmlns="http://xml.amadeus.com/TTSMRQ_13_1_1A" elementFormDefault="qualified">
+  <xs:element name="Ticket_DisplayTSMP">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Display a TSM-P query
+Display a TSM-P
+T: Ticketing TSM: Transitional Stored Miscellaneous document R: Read Q: Query  Version 13: Alias of version 12.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="tattooOfTSM" type="ItemReferencesAndVersionsType">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">Tattoo of the TSM-P to display.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ItemReferencesAndVersionsType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Exchange and link unique identifiers</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="uniqueReference" type="AlphaNumericString_Length1To35">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The value of the reference</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AlphaNumericString_Length1To35">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Format limitations: an..35</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="35" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+<!-- SchemaRules="2010/01"-->
+<!--Created with SchemaBuilder 5.0.0 by Amadeus S.A.S.-->
+<!--"Amadeus Proprietary and Confidential Information: unauthorized use and disclosure strictly forbidden. 2010 - Amadeus s.a.s - All Rights Reserved."-->
+<!--Build Key:
+1F8B08000000000000009553C16EDB300CBDEB2B845D7618E2D8E9B643001DDC26ED062C6D9A7AD82540A04A4C2254963C512EEA15FDF751B6B375A76D1783A2E447F2BDC7ABE5F5725356CBC5EEE65ACCF2E26C92CF26C519FF06DA016AD9F1E2FDFCC3C7793EE357ABEA5D9ECFF39C95AB32760DE0A5B1E0640D8212BB73894655299D3DA166F712E19AEEB0910AC431C6663E9D3ED53693B5D4D062A67C3D65F7ADD31616268829428CC61D70AA8D42A68EA01EEEE85B4B11430B4C790DF40485F32E9DEA1A1C9DC6BBBA91AE4BE5846BADA544D305733846F1A61CCAF175F04D301065E8B8749A5F78B7379A308CB4FCB3DBFB50CB68BC9BF3D6C9361E7D303F40F316A17FAE0D2AEBB10DC03106A3A2ED38FD736F3461649C98CBF9849F8A6126334C676BF926F5817C43DD8747D0D91BA6612F5B1BAF4293E8D2622F2D02D3BEBDB77007DF5B700AD632AAE37803EEFC9FC804F7FBCD7312E865F7FC0801692A8A025820188AE4812A742F6C4FF26D5A4B9CF9A4647FEEE5EC7F4ED15F00AC57D28E945B7FD024E362BEFDB42C17DBA5367BA962E5BDC5EDB2DA2D0C46E9E2052945FA9172DB950C0F90141FDE60AF356EBFF80361B943DF88D137CE76AC867080918C3EBE346035DEF9107FD1478323F55562E2F4CFDC82543776748EFB2F8A1A6F5CBC8638C8D19B2D781F5F31D49F938133368C9018C5B44AF9342FC61C5EFA505A43D8A36393178C025C9093A836997260116B1962C2FDEA8C32B11B0789413AB4BD3F891F415CE37444AECAD5F459833534862403BD6474CB527BFAF5FA90592E4E3B336052A6A7AADF64E3147B421B6FDAD8B4F1D25B0D41A4046393C96AA0F12D72F37B4F26133690248A92BDAA2FCA75B9AB8C226D77C55941B6AEA571627DBB61F0D490623B89BBC5F24A549BAFCB93425C069062362B4E09515577ABCD2D6B68270C1E49E581FB41205150F468926A14F6E4C89E47311626B735567684B16627A5C4982C2BACD7B72D848E8DCA8B62C67E024AFF015408050000
+-->
+

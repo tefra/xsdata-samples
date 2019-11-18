@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by Amadeus s.a.s. (Amadeus s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.amadeus.com/2010/06/VehicleTypes_v1" xmlns:ota="http://www.opentravel.org/OTA/2003/05/OTA2010B" targetNamespace="http://xml.amadeus.com/2010/06/VehicleTypes_v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.000" id="AMA2011N">
+  <!--Replaced file inclusion D:/Java/AXA/input/AMA/2011N/chameleon/AMA_VehicleCommonTypes.xsd with its content-->
+  <xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2010B" schemaLocation="../../OTA/2010B/OTA_Proxy.xsd" />
+  <xs:complexType name="VehicleResType">
+    <xs:annotation>
+      <xs:documentation>Container for Car segments</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Customer" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Primary" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>Information on the primary driver, possibly including frequent renter number.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PersonName" type="ota:PersonNameType" minOccurs="0" maxOccurs="5">
+                    <xs:annotation>
+                      <xs:documentation>Detailed name information for the customer in case of it is not a PNR traveler (attribute TravelerRefRPH is not filled).</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="CustLoyalty" minOccurs="0" maxOccurs="25">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">Loyalty program information for the customer.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="MemberPreferences" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Loyalty program preferences specified by the enrolling member.</xs:documentation>
+                          </xs:annotation>
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="AddlReward" minOccurs="0" maxOccurs="5">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">Addl programs that are honored by the primary loyalty account.</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="CompanyName" type="ota:CompanyNameType" minOccurs="0" />
+                                    <xs:element name="Name" type="ota:PersonNameType" minOccurs="0" />
+                                  </xs:sequence>
+                                  <xs:attribute name="MemberID" type="ota:StringLength1to32" use="optional" />
+                                </xs:complexType>
+                              </xs:element>
+                              <xs:element name="Offer" minOccurs="0" maxOccurs="5">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">Source from which members can receive information.</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="Communication" minOccurs="0" maxOccurs="5">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">Preferred method of offer communication.</xs:documentation>
+                                      </xs:annotation>
+                                      <xs:complexType>
+                                        <xs:attribute name="DistribType" type="ota:OTA_CodeType" use="optional">
+                                          <xs:annotation>
+                                            <xs:documentation xml:lang="en">An enumerated list of method of communication. Refer to OpenTravel Code List Distribution Type (DTB).</xs:documentation>
+                                          </xs:annotation>
+                                        </xs:attribute>
+                                      </xs:complexType>
+                                    </xs:element>
+                                  </xs:sequence>
+                                  <xs:attribute name="Type" use="optional">
+                                    <xs:annotation>
+                                      <xs:documentation xml:lang="en">An enumerated list of offer sources.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:simpleType>
+                                      <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Partner" />
+                                        <xs:enumeration value="Loyalty" />
+                                      </xs:restriction>
+                                    </xs:simpleType>
+                                  </xs:attribute>
+                                </xs:complexType>
+                              </xs:element>
+                            </xs:sequence>
+                            <xs:attribute name="Awareness" type="ota:StringLength1to32" use="optional">
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Indicates how person became aware of loyalty program.</xs:documentation>
+                              </xs:annotation>
+                            </xs:attribute>
+                            <xs:attributeGroup ref="ota:PromotionCodeGroup">
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Loyalty enrollment promotion code.</xs:documentation>
+                              </xs:annotation>
+                            </xs:attributeGroup>
+                            <xs:attribute name="AwardsPref" use="optional">
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Method by which awards are allocated.</xs:documentation>
+                              </xs:annotation>
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                  <xs:enumeration value="Points" />
+                                  <xs:enumeration value="Miles" />
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="SecurityInfo" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Information allowing member to securely access account.</xs:documentation>
+                          </xs:annotation>
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="PasswordHint" minOccurs="0" maxOccurs="2">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">Alternate method to password for account access.</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                  <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                      <xs:attribute name="Hint" use="optional">
+                                        <xs:simpleType>
+                                          <xs:restriction base="xs:string">
+                                            <xs:enumeration value="Question" />
+                                            <xs:enumeration value="Answer" />
+                                          </xs:restriction>
+                                        </xs:simpleType>
+                                      </xs:attribute>
+                                    </xs:extension>
+                                  </xs:simpleContent>
+                                </xs:complexType>
+                              </xs:element>
+                            </xs:sequence>
+                            <xs:attribute name="Username" type="ota:StringLength1to32" />
+                            <xs:attribute name="Password" type="ota:StringLength1to32" />
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="SubAccountBalance" minOccurs="0" maxOccurs="99">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Used to specify a sub-account and its point balance associated with this loyalty account.</xs:documentation>
+                          </xs:annotation>
+                          <xs:complexType>
+                            <xs:attribute name="Type" type="ota:StringLength1to16" use="optional">
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Describes the type of sub account (e.g. miles, points, vouchers, stays).</xs:documentation>
+                              </xs:annotation>
+                            </xs:attribute>
+                            <!--Replaced incorrect type "xs:integer"-->
+                            <xs:attribute name="Balance" type="xs:long" use="optional">
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">The current balance for this sub account.</xs:documentation>
+                              </xs:annotation>
+                            </xs:attribute>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                      <xs:attributeGroup ref="ota:CustomerLoyaltyGroup">
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Program rewarding frequent use by accumulating credits for services provided by vendors.</xs:documentation>
+                        </xs:annotation>
+                      </xs:attributeGroup>
+                      <xs:attribute name="Remark" type="ota:StringLength1to128" use="optional">
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">A remark associated with the customer's loyalty program.</xs:documentation>
+                        </xs:annotation>
+                      </xs:attribute>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Additional" minOccurs="0" maxOccurs="9">
+              <xs:annotation>
+                <xs:documentation>Information on additional  driver(s), possibly including frequent renter number.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PersonName" type="ota:PersonNameType" minOccurs="0" maxOccurs="5">
+                    <xs:annotation>
+                      <xs:documentation>Detailed name information for the customer in case of it is not a PNR traveler (attribute TravelerRefRPH is not filled).</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="CustLoyalty" minOccurs="0" maxOccurs="25">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">Loyalty program information for the customer.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="MemberPreferences" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Loyalty program preferences specified by the enrolling member.</xs:documentation>
+                          </xs:annotation>
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="AddlReward" minOccurs="0" maxOccurs="5">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">Addl programs that are honored by the primary loyalty account.</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="CompanyName" type="ota:CompanyNameType" minOccurs="0" />
+                                    <xs:element name="Name" type="ota:PersonNameType" minOccurs="0" />
+                                  </xs:sequence>
+                                  <xs:attribute name="MemberID" type="ota:StringLength1to32" use="optional" />
+                                </xs:complexType>
+                              </xs:element>
+                              <xs:element name="Offer" minOccurs="0" maxOccurs="5">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">Source from which members can receive information.</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="Communication" minOccurs="0" maxOccurs="5">
+                                      <xs:annotation>
+                                        <xs:documentation xml:lang="en">Preferred method of offer communication.</xs:documentation>
+                                      </xs:annotation>
+                                      <xs:complexType>
+                                        <xs:attribute name="DistribType" type="ota:OTA_CodeType" use="optional">
+                                          <xs:annotation>
+                                            <xs:documentation xml:lang="en">An enumerated list of method of communication. Refer to OpenTravel Code List Distribution Type (DTB).</xs:documentation>
+                                          </xs:annotation>
+                                        </xs:attribute>
+                                      </xs:complexType>
+                                    </xs:element>
+                                  </xs:sequence>
+                                  <xs:attribute name="Type" use="optional">
+                                    <xs:annotation>
+                                      <xs:documentation xml:lang="en">An enumerated list of offer sources.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:simpleType>
+                                      <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Partner" />
+                                        <xs:enumeration value="Loyalty" />
+                                      </xs:restriction>
+                                    </xs:simpleType>
+                                  </xs:attribute>
+                                </xs:complexType>
+                              </xs:element>
+                            </xs:sequence>
+                            <xs:attribute name="Awareness" type="ota:StringLength1to32" use="optional">
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Indicates how person became aware of loyalty program.</xs:documentation>
+                              </xs:annotation>
+                            </xs:attribute>
+                            <xs:attributeGroup ref="ota:PromotionCodeGroup">
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Loyalty enrollment promotion code.</xs:documentation>
+                              </xs:annotation>
+                            </xs:attributeGroup>
+                            <xs:attribute name="AwardsPref" use="optional">
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Method by which awards are allocated.</xs:documentation>
+                              </xs:annotation>
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                  <xs:enumeration value="Points" />
+                                  <xs:enumeration value="Miles" />
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="SecurityInfo" minOccurs="0">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Information allowing member to securely access account.</xs:documentation>
+                          </xs:annotation>
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="PasswordHint" minOccurs="0" maxOccurs="2">
+                                <xs:annotation>
+                                  <xs:documentation xml:lang="en">Alternate method to password for account access.</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                  <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                      <xs:attribute name="Hint" use="optional">
+                                        <xs:simpleType>
+                                          <xs:restriction base="xs:string">
+                                            <xs:enumeration value="Question" />
+                                            <xs:enumeration value="Answer" />
+                                          </xs:restriction>
+                                        </xs:simpleType>
+                                      </xs:attribute>
+                                    </xs:extension>
+                                  </xs:simpleContent>
+                                </xs:complexType>
+                              </xs:element>
+                            </xs:sequence>
+                            <xs:attribute name="Username" type="ota:StringLength1to32" />
+                            <xs:attribute name="Password" type="ota:StringLength1to32" />
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="SubAccountBalance" minOccurs="0" maxOccurs="99">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Used to specify a sub-account and its point balance associated with this loyalty account.</xs:documentation>
+                          </xs:annotation>
+                          <xs:complexType>
+                            <xs:attribute name="Type" type="ota:StringLength1to16" use="optional">
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Describes the type of sub account (e.g. miles, points, vouchers, stays).</xs:documentation>
+                              </xs:annotation>
+                            </xs:attribute>
+                            <!--Replaced incorrect type "xs:integer"-->
+                            <xs:attribute name="Balance" type="xs:long" use="optional">
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">The current balance for this sub account.</xs:documentation>
+                              </xs:annotation>
+                            </xs:attribute>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                      <xs:attributeGroup ref="ota:CustomerLoyaltyGroup">
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Program rewarding frequent use by accumulating credits for services provided by vendors.</xs:documentation>
+                        </xs:annotation>
+                      </xs:attributeGroup>
+                      <xs:attribute name="Remark" type="ota:StringLength1to128" use="optional">
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">A remark associated with the customer's loyalty program.</xs:documentation>
+                        </xs:annotation>
+                      </xs:attribute>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="TravelerRefRPH" type="ota:RPH_Type">
+            <xs:annotation>
+              <xs:documentation>If the driver id a traveler of the PNR, it contains the corresponding RPH.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="VehSegmentCore" type="ota:VehicleSegmentCoreType" />
+      <xs:element name="VehSegmentInfo" type="ota:VehicleSegmentAdditionalInfoType" minOccurs="0" />
+    </xs:sequence>
+    <xs:attributeGroup ref="ota:DateTimeStampGroup" />
+    <xs:attribute name="RPH" type="ota:RPH_Type">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Unique reference place holder for this Car segment.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ResStatus" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Used to specify the status of the reservation.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union memberTypes="ota:TransactionStatusType ota:UpperCaseAlphaLength1to2" />
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+</xs:schema>

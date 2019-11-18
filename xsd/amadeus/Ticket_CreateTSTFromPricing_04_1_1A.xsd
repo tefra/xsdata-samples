@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/TAUTCQ_04_1_1A" xmlns="http://xml.amadeus.com/TAUTCQ_04_1_1A" elementFormDefault="qualified">
+  <xs:element name="Ticket_CreateTSTFromPricing">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="pnrLocatorData" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="reservationInformation">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="controlNumber">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..20</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="20" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="psaList" maxOccurs="1980">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itemReference">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="referenceType" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="uniqueReference" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: n..5</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:decimal" />
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="paxReference" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="refDetails" minOccurs="0" maxOccurs="99">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="refQualifier" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:string">
+                                <xs:minLength value="1" />
+                                <xs:maxLength value="3" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="refNumber" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Format limitations: n..5</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:decimal" />
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+<!-- SchemaRules="2009/09"-->
+<!--Created with SchemaBuilder 5.0.0 by Amadeus S.A.S.-->
+<!--Build Key:
+1F8B080000000000000095934D6FDB300C86EFFA15B9ED302476DAAE5803E8E0C54E066C49BBC6BD0530149B7184CA9227CA458DA2FF7D94EC60ED651F1783A4E997E4437A9D6DB3FB24CFD2E276CB2FE2F9D534FE3C9DC7935DA72BD14FE24F8BCBCBC5D5F564BDC93FC6F1228E59B2495CDF02AEA4022D1AE0EC2010B664612B4AE027E7DA45143D376A261A514187B3D234113B90A282545A1E213827758D51254B64E509CAC71D3D1BC19DED8095A6024A41AE8DF65ED38026EF281406B715BAF7F5B8EE94A240DB5B599FDCE05670149D726BDBE6D465352856A63B28D8C1CF0E740977C295A7510EF4977FEA1EF4EF9C173FFF6BF1F20416A5D1645950403264899A2AF4AFEC4874EE3B453D1A0F2AF88156F8D85B7F1150A6146A1C5199BA226EE962FF354BD27D56C9A3285D6E8CC27D9617A94427B45B12190246A8F61B611FC1231E7230C0C5FD77539396AE4323014C03B6861145B0571254853B631DB13BC711A9AB043DD0F7B1149C906A5C94FE2F40AD91DA6DC10DCB08CD5863DC1B3EC1F7F73263C3009E27D291C637517C33C670656CA22469E32082609F640998CAD2516D61FB812136C23AAFFBA065295D3F0EE2ACD0A8844F253A9C4863342AE7C9267AA940491A43D0F9BCCEE82DF3ED55E3B50E12742BCBF7374A91C02A607946E56E3BD7766E65540596FB0063D3E96660F80127521F8D6D4213D3291B08F179C2DE14E7C95D52E4B2A4B516F3581CE8A41B2135CFBF650C9E5BDA5721B048B335CFEF1FB2F37E26C282E017D7679FE7C943BEFCC15AFA1D249ECEBFC7B81D3E27EB49FA959119C88800918F8597A4E620DFE52B6B9A3B4B1CF500241CD49F92C64BE0F115FB058D9D240F72040000
+-->
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/TFRERQ_10_1_1A" xmlns="http://xml.amadeus.com/TFRERQ_10_1_1A" elementFormDefault="qualified">
+  <xs:element name="Ticket_DisplayTSMFareElement">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Get a fare element of a TSM</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="fareElementTattoo" type="ElementManagementSegmentType">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">-Type of the fare element. -Tattoo of the fare element.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ElementManagementSegmentType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">To specify the PNR segments/elements references and action to apply</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="reference" type="ReferencingDetailsType">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Contains the type of the Fare element and the tatoo of the associated TSM.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReferencingDetailsType">
+    <xs:sequence>
+      <xs:element name="qualifier" type="AlphaNumericString_Length1To10">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Type of the fare element.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="number" type="NumericInteger_Length1To35">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Tattoo of the associated TSM.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AlphaNumericString_Length1To10">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Format limitations: an..10</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericInteger_Length1To35">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Format limitations: n..35</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer">
+      <xs:pattern value="-?[0-9]{1,35}" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+<!-- SchemaRules="2010/01"-->
+<!--Created with SchemaBuilder 4.2 by Amadeus S.A.S.-->
+<!--"Amadeus Proprietary and Confidential Information: unauthorized use and disclosure strictly forbidden. 2010 - Amadeus s.a.s - All Rights Reserved."-->
+<!--Build Key:
+1F8B080000000000000095544D6FDB300CBDEB5708BBEC3024B1DB6187003AB84D520C5BD22EF1B04B8040959844A82C79A25CD42BFADF47D9CE9A5DF601180645C98FD47B8FBE99AFE6EBA29CCF76B72B7191E5F928BBA0877F03ED00B56C79FE7E9A7F985E5CF29B65F92ECBA659C68A6511DB1A70612C385981A0C4EE4AA251654A8F9F50B37B89B0A23DACA502718CB19E4E264F951DCB4A6A6870AC7C3561EA08EA6143EF4A8A181A60CA6B4088289C77695555E06835EC55B5746D4215AEB19612751BCCE118C59BA247E577C1D7C14094A1E5D2697EEDDDDE68C230D2F28F6EEF4325A3F16ECA1B279B78F4C1FC00CD1B84EEB836A8ACC72600C7188C8AB6E5F4CDBDD18431E64450C647FC540CC7728C696D2D5FA73E90AFA9FBF0087AFC8669D8CBC6C69B502756B4D84B8BC0B46FEE2D6CE07B034EC19D8CEAD8DF0EDCD53F5106EEF5CC7392E165F7FC0801E9521405B0403014C90315685FD89E445A379628F349AF6EDD89D67D9CA2BF0058AFA41D18B7FEA04D10B3E976AECD5EAA587A6F713B2F77338351BA784D1A9172A4D97629C30344E30EFD19EC54C6ED677F201877E87A30FAD6D99655100E3010D4C50B0356E3C687F88B38BA33524B0526367FCFCD486F6307CFB8FF62A7F6C6C515C4332182F7F18C1CD6379E28C43421D924CB871C2E7C28AC21C4C1A1497BA30067E41CAA4826EC69C34A8698D0BE3AA34C6C87F663900E6DE747624510B9381990CB623979D6600D352FC9302F63DA65A9297D3E2EE48EEBD38CF49894E908EA06D438C59ED0C6DB26D64D5C78AB218894606C345AF6E4BD456E5EE76234623D35222FD8597D51DC15BBD228527497679764E34A1A27CA4FE549042E034891D3EF61488872B19EAFBFB09A0C6FF04842F6F4F61A889CA2479384A1B0634276A489A10A19AAB6B22D37CB0521CF2DA45BB2932C7F3E35284EDDB09FA02DA4ECE1040000
+-->
+

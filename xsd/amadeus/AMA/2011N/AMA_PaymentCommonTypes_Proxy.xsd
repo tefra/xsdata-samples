@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by Amadeus s.a.s. (Amadeus s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.amadeus.com/2010/06/PaymentTypes_v1" xmlns:ota="http://www.opentravel.org/OTA/2003/05/OTA2010B" targetNamespace="http://xml.amadeus.com/2010/06/PaymentTypes_v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.000" id="AMA2011N">
+  <!--Replaced file inclusion D:/Java/AXA/input/AMA/2011N/chameleon/AMA_PaymentCommonTypes.xsd with its content-->
+  <xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2010B" schemaLocation="../../OTA/2010B/OTA_Proxy.xsd" />
+  <xs:attributeGroup name="FormOfPaymentAssociationGroup">
+    <xs:annotation>
+      <xs:documentation>Regroup various possible associations for Form Of Payment element</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="TravelerRefNbrRPH_List" type="ota:ListOfRPH" use="optional">
+      <xs:annotation>
+        <xs:documentation>Specifies one or more traveler numbers. This RPH is associated with the RPH contained in the TravelerData element in TravelersInfo.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="SegmentRefNbrRPH_List" type="ota:ListOfRPH" use="optional">
+      <xs:annotation>
+        <xs:documentation>Specifies one or more segment numbers.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="MiscDocRefNbrRPH_List" type="ota:ListOfRPH" use="optional">
+      <xs:annotation>
+        <xs:documentation>Specifies one or more Miscellaneous Documents numbers. This RPH is associated with the RPH contained in the MiscDoc element in MiscDocInformation.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="PricingRecordRefNbrRPH_List" type="ota:ListOfRPH" use="optional">
+      <xs:annotation>
+        <xs:documentation>Specifies one or more PricingRecord numbers. This RPH is associated with the RPH contained in the PricingRecord element in PricingInfo.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="PassengerTypeCode" type="ota:AlphaLength3" use="optional">
+      <xs:annotation>
+        <xs:documentation>Contains INF or PAX if the payment is associated to all adults or to all infants.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:complexType name="PaymentType">
+    <xs:annotation>
+      <xs:documentation>Information about forms of payment used in a booking.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MeanOfPayment" maxOccurs="4">
+        <xs:annotation>
+          <xs:documentation>Could contain: 1 Old form of payment, and  3 new forms of payment</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:choice>
+              <xs:element name="CreditCardFormOfPayment" type="CreditCardFormOfPaymentType">
+                <xs:annotation>
+                  <xs:documentation xml:lang="en">Specifies credit card information about the customer seeking authorization.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="AcctFormOfPayment" type="AcctFormOfPaymentType">
+                <xs:annotation>
+                  <xs:documentation>Specifies form of payment information.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="FreeTextFormOfpayment" type="ota:StringLength0to128">
+                <xs:annotation>
+                  <xs:documentation>Contains the free flow text of the form of payment</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:choice>
+            <xs:element name="PayerInfo" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>Specifies additional information about the payer (when payer is different than traveler)</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:complexContent>
+                  <xs:extension base="ota:ContactPersonType">
+                    <xs:sequence>
+                      <xs:element name="PersonalDocuments" minOccurs="0" maxOccurs="3">
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Document  information for verification purposes and also used for additional filtering for common names.</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                          <xs:attribute name="DocID" type="ota:StringLength1to32" use="optional">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="en">Unique number assigned by authorities to document.</xs:documentation>
+                            </xs:annotation>
+                          </xs:attribute>
+                          <xs:attribute name="DocType" type="ota:OTA_CodeType" use="optional">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="en">Indicates the type of document (e.g. Passport, Military ID, Drivers License, national ID, Vaccination Certificate). Refer to OpenTravel Code List Document Type (DOC).</xs:documentation>
+                            </xs:annotation>
+                          </xs:attribute>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ReportingInfo" type="ReportingInfo" minOccurs="0" maxOccurs="99">
+              <xs:annotation>
+                <xs:documentation>Specifies additional form of payment data for reporting purpose.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="SequenceInd" type="ota:Numeric0to4">
+            <xs:annotation>
+              <xs:documentation>If this FOP is in a sequence, the filed contains the sequence indicator.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="Type" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Precise the type of the form of payment, i.e. Yes= New,  No=Old.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attributeGroup ref="ota:CurrencyAmountGroup" />
+          <xs:attribute name="NonISO_CurrencyCode" type="ota:StringLength1to8" use="optional">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Specifying the currency used in the authorization, when it isn't a ISO 4217, three alpha code (e.g., points, miles).</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="PaymentRecordID" type="ota:StringLength1to32" use="optional">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Unique ID</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DummyElement" minOccurs="0" maxOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="RPH" type="ota:RPH_Type">
+      <xs:annotation>
+        <xs:documentation>Unique id for this payment.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Type" type="ota:OTA_CodeType">
+      <xs:annotation>
+        <xs:documentation>Used to precise the type of providert ProviderMerchant or AgentMerchant.... Refer to the MET list.                   Agent is Merchant when Travel agency want to store payment information for his own usage. By default provider Merchant should be use.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attributeGroup ref="FormOfPaymentAssociationGroup" />
+  </xs:complexType>
+  <xs:complexType name="AcctFormOfPaymentType">
+    <xs:sequence>
+      <xs:element name="Info" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Information about the form of payment.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="AccountName" type="ota:StringLength1to64" use="optional">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The name on a account.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="CompanyName" type="ota:StringLength1to64" use="optional">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Describes the name of the company to which the form of payment is attached. (Provider Name)</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="PrimaryAcctNbr" type="ota:StringLength1to255" use="optional">
+            <xs:annotation>
+              <xs:documentation>Main ID of the form of payment</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="SecondaryAcctNbr" type="ota:StringLength1to255" use="optional">
+            <xs:annotation>
+              <xs:documentation>Sub ID ie Check ID</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="Password" type="ota:StringLength1to64" use="optional">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Password attached to the form of payment.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="Category" type="ota:StringLength0to128">
+            <xs:annotation>
+              <xs:documentation>Award code defining the type of redemption or upgrade</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="URL" type="ota:URL_Type" minOccurs="0" maxOccurs="5">
+        <xs:annotation>
+          <xs:documentation>Url to confirm payment</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AccountAdditionalInfo" type="ota:StringLength0to128" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Disply purpose only (Can not be use for payment)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="FP_Type" type="ota:OTA_CodeType" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Used to precise the type of the form of payment  (i.e. account, check, asynchronous, bank transfer)... Refer to the codelist FPT.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="AuthorizationCode" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">This is the approval code received on the original authorization request.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[A-Za-z0-9]{1,14}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="FP_SubType" type="ota:StringLength1to16">
+      <xs:annotation>
+        <xs:documentation>Describes the SubType of the form of payment (if necessary), i.e. Boleto, Loterica, Saddad (for Asynchronous) or westernUnion for Bank transfer.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Status" type="ota:UpperCaseAlphaLength1to2" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Precise the status of the form of payment A (approved), P (pending)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="CheckFormOfPaymentType">
+    <xs:sequence>
+      <xs:element name="BankAcct" type="ota:BankAcctType">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Specifies bank account information about the customer seeking authorization.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FreeTextFormOfpayment" type="ota:FreeTextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Disply purpose only (Can not be use for payment)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreditCardFormOfPaymentType">
+    <xs:sequence>
+      <xs:element name="CreditCard">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Specifies the credit card information for which authorization is required.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="ota:PaymentCardType">
+              <xs:sequence>
+                <xs:element name="ThreeD_Secure" minOccurs="0">
+                  <xs:annotation>
+                    <xs:documentation>3D secure information</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="ECI">
+                        <xs:annotation>
+                          <xs:documentation>Electronic Commerce Indicator</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                          <xs:restriction base="ota:NumericStringLength1to3" />
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="XID" type="ota:StringLength1to32">
+                        <xs:annotation>
+                          <xs:documentation>Unique transaction identifier generated by the Payment server</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="Token" type="ota:StringLength1to32">
+                        <xs:annotation>
+                          <xs:documentation>Value generated by the ACS to prove that the cardholder authenticated OK</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="Enrolled" type="ota:UpperCaseAlphaLength1to2">
+                        <xs:annotation>
+                          <xs:documentation>Value of the VERes.enrolled field</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="Status" type="ota:UpperCaseAlphaLength1to2">
+                        <xs:annotation>
+                          <xs:documentation>Indicates if a PARes was received using 3D Secure authentication</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ID" type="ota:UniqueID_Type" minOccurs="0" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>Identification of an authorization party (e.g., merchant, acquirer).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CreditCardAddlInfo" type="ota:StringLength0to128" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Disply purpose only (Can not be use for payment)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="SourceType" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Information describing the point of sale.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:NMTOKEN">
+          <xs:enumeration value="NormalTransaction">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Agent representation (for example, a ticket office).</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="MailOrPhoneOrder">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The source of the purchase request is a mail or phone order.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="UnattendedTerminal">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The source of the purchase request is an unattended terminal such as a kiosk or ATM.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="MerchantIsSuspicious">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates that the merchant requesting the credit seems to be suspicious or fraudulent.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="eCommerceSecuredTransaction">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates an e-comerce transaction provided over a secure channel. For example, SSL (secure sockets layer).</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="eCommerceUnsecuredTransaction">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates an e-comerce transaction provided over an unsecured channel. For example HTTP.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="InFlightAirPhone">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The purchase request is made from an in flight air phone.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CID_NotLegible">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The customer identification number cannot be read.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CID_NotOnCard">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">There is no customer identification number on the card.</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="ExtendedPaymentInd" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">If true, the requester would like to apply extended payment conditions to this authorization.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ExtendedPaymentQty" type="ota:Numeric1to99" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">The number of equal amount, partial payments for the extended payment.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ExtendedPaymentFrequency" type="ota:TimeUnitType" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">The frequency of extended payment installments.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="AuthorizationCode" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">This is the approval code received on the original authorization request.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[A-Za-z0-9]{1,14}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="ReversalInd" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">If true, indicates a request to reverse a credit authorization.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="CardPresentInd" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">When true, the customer has actually presented the credit card.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="E_CommerceCode" type="ota:AlphaNumericStringLength1to8" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">The electronic commerce indicator required for some credit card authorizations, such as the Verified by Visa Process.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="AuthTransactionID" type="ota:StringLength1to32" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">The authentication transaction identifier required for some credit card authorizations, such as the Verified by Visa Process.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="AuthVerificationValue" type="ota:StringLength1to32" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">The cardholder authentication verfication value required for some credit card authorization, such as the Verified by Visa Process.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="ReportingInfo">
+    <xs:annotation>
+      <xs:documentation>Store additional information.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ReportingCode" type="ota:StringLength1to16">
+        <xs:annotation>
+          <xs:documentation>Specifies the name of the data</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ReportingInfo" type="ota:StringLength0to128">
+        <xs:annotation>
+          <xs:documentation>Specifies the information.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

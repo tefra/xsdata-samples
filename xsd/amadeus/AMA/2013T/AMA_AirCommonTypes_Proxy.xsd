@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by Amadeus s.a.s. (Amadeus s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.amadeus.com/2010/06/AirTypes_v2" xmlns:ama_ct="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iata="http://www.iata.org/IATA/2007/00/IATA2010.1" xmlns:ota2010b="http://www.opentravel.org/OTA/2003/05/OTA2010B" targetNamespace="http://xml.amadeus.com/2010/06/AirTypes_v2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.001" id="AMA2013T">
+	<xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2010B" schemaLocation="../../OTA/2010B/OTA_Proxy.xsd"/>
+	<xs:import namespace="http://xml.amadeus.com/2010/06/Types_v1" schemaLocation="../2011Y/AMA_CommonTypes_Proxy.xsd"/>
+	<xs:import namespace="http://www.iata.org/IATA/2007/00/IATA2010.1" schemaLocation="../../IATA/2010.1/IATA_Proxy.xsd"/>
+	<!--Replaced file inclusion D:/Java/AXA/input/AMA/2013T/chameleon/AMA_AirCommonTypes.xsd with its content-->
+	<xs:complexType name="AirlineManualAuxiliarySrvcType">
+		<xs:annotation>
+			<xs:documentation>Contains all data relative to manual auxiliary reservations.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="ManualCar" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ManualAuxiliaryType">
+							<xs:attribute name="PickUpDate" type="xs:date">
+								<xs:annotation>
+									<xs:documentation>Date of traveler's pick up.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="DropOffDate" type="xs:date">
+								<xs:annotation>
+									<xs:documentation>Date of traveler's drop off.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="PickUpCity" type="ota2010b:AlphaLength3">
+								<xs:annotation>
+									<xs:documentation>Three-character city/airport code identifying the location where the car service is required.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="CarType" type="ota2010b:AlphaLength4">
+								<xs:annotation>
+									<xs:documentation>Four-letter combination identifying the type of car (ECAR, EWGN, EMAN, CCAR, CWGN, ICAR,...).</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ManualAirTaxi" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ManualAuxiliaryType">
+							<xs:attribute name="PickUpDate" type="xs:date">
+								<xs:annotation>
+									<xs:documentation>Date of traveler's pick up.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="PickUpCity" type="ota2010b:AlphaLength3">
+								<xs:annotation>
+									<xs:documentation>Three-character city/airport code identifying the location where the traveler is picked up (origin).</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="DroppOffCity" type="ota2010b:AlphaLength3">
+								<xs:annotation>
+									<xs:documentation>Three-character city/airport code identifying the location where the traveler is dropped off (destination).</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ManualHotel" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ManualAuxiliaryType">
+							<xs:attribute name="CheckInDate" type="xs:date">
+								<xs:annotation>
+									<xs:documentation>Date of traveler's check in.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="CheckOutDate" type="xs:date">
+								<xs:annotation>
+									<xs:documentation>Date of traveler's check out.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="CheckInCity" type="ota2010b:AlphaLength3">
+								<xs:annotation>
+									<xs:documentation>Three-character code identifying the city where the hotel is located.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ManualTour" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ManualAuxiliaryType">
+							<xs:attribute name="StartDate" type="xs:date">
+								<xs:annotation>
+									<xs:documentation>Tour's start date.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="StartCity" type="ota2010b:AlphaLength3">
+								<xs:annotation>
+									<xs:documentation>Three alpha IATA city/airport code denoting the location where the tour starts.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SVC" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ManualAuxiliaryType">
+							<xs:attribute name="ServiceType" type="ota2010b:StringLength0to8">
+								<xs:annotation>
+									<xs:documentation>Four alphabetic characters denoting the type of service (LOUN, MUGG,...).</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="ServiceDate" type="xs:date">
+								<xs:annotation>
+									<xs:documentation>Date of the required service.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="BoardPointCity" type="ota2010b:AlphaLength3">
+								<xs:annotation>
+									<xs:documentation>Three-character city/airport code identifying the location where the service is required (i.e. start point).</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="OffPointCity" type="ota2010b:AlphaLength3">
+								<xs:annotation>
+									<xs:documentation>Three-character city/airport code identifying the location where the service ends.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="MiscSeg" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ManualAuxiliaryType">
+							<xs:attribute name="ServiceDate" type="xs:date">
+								<xs:annotation>
+									<xs:documentation>Date of the required service.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="ServiceCity" type="ota2010b:AlphaLength3">
+								<xs:annotation>
+									<xs:documentation>Three-character city/airport code identifying the location where the service is required.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="ServiceType" type="ota2010b:StringLength1to16" use="optional">
+								<xs:annotation>
+									<xs:documentation>String specifying the type of required service (LIMOUSINE,...).</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SurfaceSegment" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ManualAuxiliaryType">
+							<xs:sequence>
+								<xs:element name="Address" type="ota2010b:StringLength1to64" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>City name, as referenced by the pseudo city code, where the service is required and the traveler street address. Free flow minimum length of 6 characters and a maximum length of 40 characters</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="Telephone" type="ota2010b:StringLength1to64" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Passenger telephone contact.  Free flow minimum length of 6 characters and a maximum length of 40 characters</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="PickUpCity" type="ota2010b:AlphaLength3">
+								<xs:annotation>
+									<xs:documentation>Three-character city/airport code identifying the location where the ground transportation is required and the traveler is picked up.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="DropOffCity" type="ota2010b:AlphaLength3">
+								<xs:annotation>
+									<xs:documentation>Three-character city/airport code identifying the location where the traveler is dropped off (destination).</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="GroundTransportationCode" type="ota2010b:StringLength0to8">
+								<xs:annotation>
+									<xs:documentation>Type of ground transportation required (LIMO, ELIM, TAXI, VTAX, FBUS, LBUS, SBUS, FBTA, GRUP, EBUS).</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="PickUpDate" type="xs:date">
+								<xs:annotation>
+									<xs:documentation>Date of traveler's pick up.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="PickUpTime" type="xs:time">
+								<xs:annotation>
+									<xs:documentation>Time of the traveler's pick up.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="DepartureOrArrivalCode" type="xs:boolean">
+								<xs:annotation>
+									<xs:documentation>Departure code D if the ground transportation is required for departure; arrival code A if it is required upon arrival.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="ZoneCode" type="ota2010b:Numeric1to3">
+								<xs:annotation>
+									<xs:documentation>Code referencing the area within the city for passenger pick up or drop off</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+		<xs:attribute name="TravelerRefNbrRPH_List" type="ota2010b:ListOfRPH" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">One or more travelers to whom this service applies.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ManualAuxiliaryType">
+		<xs:annotation>
+			<xs:documentation>Standard contained for all Manual Auxiliaries Services.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Airline" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Indicates the airline associated the manual auxiliary service.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attribute name="Code" type="ota2010b:StringLength1to16" use="optional">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">Identifies a company by the company code.</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Text" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Free text related to the manual auxiliary segment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="RPH" type="ota2010b:RPH_Type">
+			<xs:annotation>
+				<xs:documentation>Unique id for this service.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Status" type="ota2010b:OTA_CodeType" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">Code providing status information for this manual auxiliary service. Refer to OpenTravel Code List Status (STS).</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Quantity" type="ota2010b:Numeric1to99" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">Used to specify the  required number of auxiliary services of the same type.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="PastInd" type="ota2010b:StringLength1to16">
+			<xs:annotation>
+				<xs:documentation>Indicates that the service date is past.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="FlightSegmentType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">FlightSegmentType extends FltSegBaseType to provide additional functionality.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="FltSegBaseType">
+				<xs:sequence>
+					<xs:element name="MarketingAirline" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">The marketing airline. This is required for use with scheduled airline messages but may be omitted for requests by tour operators.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="ota2010b:CompanyNameType">
+									<xs:attributeGroup ref="ota2010b:SingleVendorIndGroup">
+										<xs:annotation>
+											<xs:documentation xml:lang="en">To specifiy if an airline is a member of an alliance.</xs:documentation>
+										</xs:annotation>
+									</xs:attributeGroup>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="FlightNbr" type="ota2010b:FlightNumberType" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">The flight number of the flight. This is required for use with scheduled airline messages but may be omitted for requests by tour operators.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="TourOperatorFltID" type="ota2010b:StringLength1to8" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">ID of a flight in the Tour Operator's inventory. This flight is not necessarily in the inventory of an airline. Rather, it is a code created by tour operators.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="GovernmentApprovalInd" type="xs:boolean" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">When true, indicates that the flight is subject to government approval.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="GovernmentApprovalText" type="xs:string" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Provides additional information concerning the flight being subject to government approval.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BookFlightSegmentType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Container for the flight segment data plus the MarriageGrp.</xs:documentation>
+			<xs:documentation xml:lang="en">Construct for holding the booked flight segment information.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="FlightSegmentType">
+				<xs:sequence>
+					<xs:element name="MarriageGrp" type="ota2010b:StringLength1to16" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">Many airlines link connection flights together by terming them married segments.  When two or more segments are married, they must be processed as one unit. The segments must be moved, cancelled, and/or priced together. The value of the marriage group must be the same for all segments.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="BookingClassAvailabilities" minOccurs="0" maxOccurs="3">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">A collection of availability counts per booking class.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="BookingClassAvail" maxOccurs="26">
+									<xs:annotation>
+										<xs:documentation xml:lang="en">Booking codes available to be sold for a particular flight segment.</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:attributeGroup ref="ota2010b:BookingClassAvailabilityGroup"/>
+										<xs:attribute name="RPH" type="ota2010b:RPH_Type" use="optional">
+											<xs:annotation>
+												<xs:documentation xml:lang="en">RPH refers back to Marketing Cabin Type.</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="CabinType" type="ota2010b:CabinType" use="optional">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">Marketing name as defined by an airline for the first, business or economy cabin.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Comment" type="ota2010b:FreeTextType" minOccurs="0" maxOccurs="9">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">Free text information that the marketing carrier may send about this flight.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="StopLoc" minOccurs="0" maxOccurs="9">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">A location where the flight is scheduled to stop en route to its destination for this flight segment.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:attributeGroup ref="ota2010b:LocationGroup">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">A location where the flight is scheduled to stop en route to its destination for this flight segment.</xs:documentation>
+								</xs:annotation>
+							</xs:attributeGroup>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="LegData" minOccurs="0" maxOccurs="5">
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="FlightSegmentType">
+									<xs:attribute name="ElementRefNbrRPH_List" type="ota2010b:ListOfRPH" use="optional">
+										<xs:annotation>
+											<xs:documentation>One or more elements to whom this service applies.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="TravelerRefNbrRPH_List" type="ota2010b:ListOfRPH" use="optional">
+										<xs:annotation>
+											<xs:documentation>One or more travelers to whom this service applies.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="ResBookDesigCode" type="ota2010b:UpperCaseAlphaLength1to2" use="optional">
+										<xs:annotation>
+											<xs:documentation xml:lang="en">Specific Booking Class for this segment.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="FlightNbrAlphaSuffix">
+										<xs:annotation>
+											<xs:documentation>The suffix associated to the flight number</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="ota2010b:AlphaLength1"/>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="TrafficRestriction">
+										<xs:annotation>
+											<xs:documentation>Type of traffic restrictions defined by TRC list in OTA standard</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:list itemType="ota2010b:OTA_CodeType"/>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:extension>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="PointOfSale" type="ama_ct:PointOfSaleType" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="CoachNbr" type="ota2010b:AlphaNumericStringLength1to19">
+					<xs:annotation>
+						<xs:documentation>Specific for rail as air segment. Defines the coach number.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="ElementRefNbrRPH_List" type="ota2010b:ListOfRPH" use="optional">
+					<xs:annotation>
+						<xs:documentation>One or more elements to whom this service applies.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="FlightDuration" type="ota2010b:DateOrTimeOrDateTimeType">
+					<xs:annotation>
+						<xs:documentation>Estimated flight duration.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="TravelerRefNbrRPH_List" type="ota2010b:ListOfRPH" use="optional">
+					<xs:annotation>
+						<xs:documentation>One or more travelers to whom this service applies.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="ResBookDesigCode" type="ota2010b:UpperCaseAlphaLength1to2" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Specific Booking Class for this segment.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="NbrInParty" type="xs:long" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Number of travelers associated with this segment.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="Status" type="ota2010b:OTA_CodeType" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Code providing status information for this segment. Refer to OpenTravel Code List Status (STS).</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="E_TicketEligibility" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Specifies whether a flight segment is eligible for electronic ticketing.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="ota2010b:StringLength1to16">
+							<xs:enumeration value="Eligible">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">Analogous to the IATA PADIS code: electronic ticket candidate.</xs:documentation>
+								</xs:annotation>
+							</xs:enumeration>
+							<xs:enumeration value="Not Eligible">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">Analogous to the IATA PADIS code: not an electronic ticket candidate.</xs:documentation>
+								</xs:annotation>
+							</xs:enumeration>
+							<xs:enumeration value="Required">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">Analogous to the IATA PADIS code: electronic ticketing required.</xs:documentation>
+								</xs:annotation>
+							</xs:enumeration>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="MealCode" type="ota2010b:MealServiceType" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">The applicable meal service code for this flight.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="DepartureDay" type="ota2010b:DayOfWeekType" use="optional">
+					<xs:annotation>
+						<xs:documentation>Indicates the day of departure in the week.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="StopoverInd" type="xs:boolean" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">When true a stopover is permitted (airline display "O").  When false a stopover is not permitted (airline display "X").</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="LineNbr" type="ota2010b:Numeric1to999" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">A number that corresponds to a line in a previous response of flight segments.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="ConnectionType" type="ota2010b:StringLength0to8" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Used to provide the type of connection for this flight segment.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="ParticipationLevelCode" type="ota2010b:OTA_CodeType" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">To specify the level of participation by a vendor in another system. Refer to OpenTravel Code List Participation Level Code (PLC).</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="Distance" type="xs:long" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Miles acquired per flight segment, usually used for earning of frequent flyer miles.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="DateChangeNbr" type="xs:string" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">The number of days by which the flight's arrival date differs from its departure date (e.g., +1, -1).</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="ValidConnectionInd" type="xs:boolean" use="optional">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">When true, this flight segment constitutes a valid connection.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="FlightNbrAlphaSuffix">
+					<xs:annotation>
+						<xs:documentation>The suffix associated to the flight number</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="ota2010b:AlphaLength1"/>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="TrafficRestriction">
+					<xs:annotation>
+						<xs:documentation>Type of traffic restrictions defined by TRC list in OTA standard</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:list itemType="ota2010b:OTA_CodeType"/>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="Extended" type="xs:boolean">
+					<xs:annotation>
+						<xs:documentation>When true, indicates that the reservation is an extended content.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="NegotiatedSpaceRef" type="ota2010b:StringLength1to16" use="optional">
+					<xs:annotation>
+						<xs:documentation>Reference of the negotiated block</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+			<!--Replaced incorrect type "xs:positiveInteger"-->
+			<!--Replaced incorrect type "xs:nonNegativeInteger"-->
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FltSegBaseType">
+		<xs:annotation>
+			<xs:documentation>Construct for holding a flight segment availability object.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DepartureAirport" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Departure point of flight segment.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attributeGroup ref="ota2010b:AirportLocationGroup"/>
+					<xs:attribute name="LatestCheckInDateTime" type="ota2010b:DateOrDateTimeType" use="optional">
+						<xs:annotation>
+							<xs:documentation>Informs the customer of the latest possible local or UTC time of flight check-in. Accomodates the 12 and the 24 hour clock.</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="OtherCheckInInfo" type="ota2010b:StringLength1to128" use="optional">
+						<xs:annotation>
+							<xs:documentation>Provides generic check-in information, instructions, etc. (for example, used for SIMM DEI-299  - i.e. Check in at United Airlines for Ted flights).</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="LocName" type="ota2010b:StringLength0to255" use="optional">
+						<xs:annotation>
+							<xs:documentation>The full name of the boarding point. This can be the airport name (e.g., Chicago O'Hare), the railway station, or the city name.</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ArrivalAirport" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Arrival point of flight segment.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attributeGroup ref="ota2010b:AirportLocationGroup">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">Identifies the airport location for the arrival.</xs:documentation>
+						</xs:annotation>
+					</xs:attributeGroup>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="OperatingAirline" type="ota2010b:OperatingAirlineType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">The operating airline of the flight if it is a codeshare flight.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Equipment" type="ota2010b:EquipmentType" minOccurs="0" maxOccurs="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">The type of equipment used for the flight.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="DepartureDateTime" type="xs:dateTime" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">The date and time of the flight segment departure.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ArrivalDateTime" type="xs:dateTime" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">Specifies the arrival date and time of a flight.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="StopQty" type="xs:long" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">The number of stops the flight makes.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="RPH" type="ota2010b:RPH_Type" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">Unique reference place holder for this flight segment.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="InfoSource" type="ota2010b:InfoSourceType" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">Used to specify the source of the data being exchanged as determined by trading partners.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<!--Replaced incorrect type "xs:nonNegativeInteger"-->
+	</xs:complexType>
+	<xs:complexType name="AirResType">
+		<xs:annotation>
+			<xs:documentation>Contains all data relative to air reservations.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FlightSegment" type="BookFlightSegmentType" minOccurs="0" maxOccurs="99"/>
+			<xs:element name="SeatsRequest" minOccurs="0" maxOccurs="99">
+				<xs:annotation>
+					<xs:documentation>A collection of Seat requests</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ota2010b:SeatRequestType">
+							<xs:sequence>
+								<xs:element name="Text" type="xs:string" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation xml:lang="en">Free text related to seat.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="ChargeableInd" type="xs:boolean">
+								<xs:annotation>
+									<xs:documentation>Indicates that this SSR seat is chargeable.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="SSR_Code" type="ota2010b:AlphaLength4">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">4-alpha code identifying the type of individual seat request (NSST, NSSW, NSSA, NSSB, NSSR, SMST, SMSA, SMSB, SMSW, SMSR, RQST) and group seat request (NGST, GPST).</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="TravelerRefNbrRPH_List" type="ota2010b:ListOfRPH" use="optional">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">One or more travelers to whom this seat service applies.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="FltRefNbrRPH_List" type="ota2010b:ListOfRPH">
+								<xs:annotation>
+									<xs:documentation>Flight to which this seat service applies.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="RPH" type="ota2010b:RPH_Type">
+								<xs:annotation>
+									<xs:documentation>Unique id for this SSR Seat (unique within all elements which are not travelers or reservation segments).</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="ServiceQty" type="iata:Numeric1to99" use="optional">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">Used to specify the number of seats in a group seat element.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="BoardingPassChangeOfGaugeInd" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Provides indication about boarding pass.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SpecialServicesRequest" minOccurs="0" maxOccurs="99">
+				<xs:annotation>
+					<xs:documentation>A collection of Special Service Requests</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ota2010b:SpecialServiceRequestType">
+							<xs:attribute name="ChargeableInd" type="xs:boolean">
+								<xs:annotation>
+									<xs:documentation>Indicates that this SSR is chargeable.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="TravelerRefNbrRPH_List" type="ota2010b:ListOfRPH" use="optional">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">One or more travelers to whom this service applies.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="FltRefNbrRPH_List" type="ota2010b:ListOfRPH">
+								<xs:annotation>
+									<xs:documentation>Flight to which this service applies.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="RPH" type="ota2010b:RPH_Type">
+								<xs:annotation>
+									<xs:documentation>Unique id for this SSR (unique within all elements which are not travelers or reservation segments).</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="OtherSrvcInfo" minOccurs="0" maxOccurs="99">
+				<xs:annotation>
+					<xs:documentation>A collection of Other Service Information</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ota2010b:OtherServiceInfoType">
+							<xs:attribute name="TravelerRefNbrRPH_List" type="ota2010b:ListOfRPH" use="optional">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">One or more travelers to whom this service applies.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="RPH" type="ota2010b:RPH_Type">
+								<xs:annotation>
+									<xs:documentation>Unique id for this OSI (unique within all elements which are not travelers or reservation segments).</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SeatMapDetailsType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Details of a seat map for a particular aircraft</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CabinClass" maxOccurs="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Describes the Cabin details in a seat map.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ota2010b:CabinClassType">
+							<xs:attribute name="StartingRow" type="ota2010b:NumericStringLength1to3" use="optional">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">Specify the starting row number for this cabin class.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="EndingRow" type="ota2010b:NumericStringLength1to3" use="optional">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">Specify the ending row number for this cabin class.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="TravelerRefNumberRPHs" type="ota2010b:ListOfRPH" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">The reference number is used as a cross reference between the AirTravelerType and the SeatMapDetails. This will be used only if different seat maps are valid for different passengers for the same flight segment.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

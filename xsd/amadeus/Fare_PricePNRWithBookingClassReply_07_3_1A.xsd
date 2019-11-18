@@ -1,0 +1,982 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/TPCBRR_07_3_1A" xmlns="http://xml.amadeus.com/TPCBRR_07_3_1A" elementFormDefault="qualified">
+  <xs:element name="Fare_PricePNRWithBookingClassReply" type="Fare_PricePNRWithBookingClassReply">
+  </xs:element>
+  <xs:simpleType name="applicationErrorCode">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                    Edifact representation: an..5
+                                  </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="codeListQualifier">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                    Edifact representation: an..3
+                                  </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="applicationErrorDetail">
+    <xs:sequence>
+      <xs:element name="applicationErrorCode" type="applicationErrorCode">
+      </xs:element>
+      <xs:element name="codeListQualifier" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="codeListResponsibleAgency" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="applicationErrorInfo">
+    <xs:sequence>
+      <xs:element name="applicationErrorDetail" type="applicationErrorDetail">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="errorFreeText">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                              Edifact representation: an..70
+                            </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="70" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="errorText">
+    <xs:sequence>
+      <xs:element name="errorFreeText" minOccurs="0" type="errorFreeText">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="applicationError">
+    <xs:sequence>
+      <xs:element name="applicationErrorInfo" type="applicationErrorInfo">
+      </xs:element>
+      <xs:element name="errorText" minOccurs="0" type="errorText">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="controlNumber">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                              Edifact representation: an..20
+                            </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="reservationInformation">
+    <xs:sequence>
+      <xs:element name="controlNumber" type="controlNumber">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pnrLocatorData">
+    <xs:sequence>
+      <xs:element name="reservationInformation" type="reservationInformation">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tstIndicator">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                    Edifact representation: an1
+                                  </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="tstInformation">
+    <xs:sequence>
+      <xs:element name="tstIndicator" type="tstIndicator">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="salesIndicator">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                              Edifact representation: a..2
+                            </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="pricingInformation">
+    <xs:sequence>
+      <xs:element name="tstInformation" type="tstInformation">
+      </xs:element>
+      <xs:element name="salesIndicator" minOccurs="0" type="salesIndicator">
+      </xs:element>
+      <xs:element name="fcmi" type="tstIndicator">
+      </xs:element>
+      <xs:element name="bestFareType" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="uniqueReference">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                              Edifact representation: n..5
+                            </xs:documentation>
+      </xs:annotation>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="fareReference">
+    <xs:sequence>
+      <xs:element name="referenceType" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="uniqueReference" minOccurs="0" type="uniqueReference">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="year">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                    Edifact representation: n..6
+                                  </xs:documentation>
+      </xs:annotation>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="month">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                    Edifact representation: n..2
+                                  </xs:documentation>
+      </xs:annotation>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="dateTime">
+    <xs:sequence>
+      <xs:element name="year" minOccurs="0" type="year">
+      </xs:element>
+      <xs:element name="month" minOccurs="0" type="month">
+      </xs:element>
+      <xs:element name="day" minOccurs="0" type="month">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lastTktDate">
+    <xs:sequence>
+      <xs:element name="businessSemantic" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="dateTime" minOccurs="0" type="dateTime">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="carrierInformation">
+    <xs:sequence>
+      <xs:element name="carrierCode" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validatingCarrier">
+    <xs:sequence>
+      <xs:element name="carrierInformation" minOccurs="0" type="carrierInformation">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="refDetails">
+    <xs:sequence>
+      <xs:element name="refQualifier" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="refNumber" minOccurs="0" type="uniqueReference">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="paxSegReference">
+    <xs:sequence>
+      <xs:element name="refDetails" minOccurs="0" maxOccurs="99" type="refDetails">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="fareAmount">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                    Edifact representation: an..11
+                                  </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="fareLocation">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                    Edifact representation: an3
+                                  </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="3" />
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="fareDataMainInformation">
+    <xs:sequence>
+      <xs:element name="fareDataQualifier" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="fareAmount" minOccurs="0" type="fareAmount">
+      </xs:element>
+      <xs:element name="fareCurrency" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="fareLocation" minOccurs="0" type="fareLocation">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fareDataInformation">
+    <xs:sequence>
+      <xs:element name="fareDataMainInformation" type="fareDataMainInformation">
+      </xs:element>
+      <xs:element name="fareDataSupInformation" minOccurs="0" maxOccurs="19" type="fareDataMainInformation">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="taxIdentification">
+    <xs:sequence>
+      <xs:element name="taxIdentifier" type="codeListQualifier">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="taxType">
+    <xs:sequence>
+      <xs:element name="isoCountry" type="codeListQualifier">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="taxDetails">
+    <xs:sequence>
+      <xs:element name="taxQualifier" type="tstIndicator">
+      </xs:element>
+      <xs:element name="taxIdentification" type="taxIdentification">
+      </xs:element>
+      <xs:element name="taxType" minOccurs="0" type="taxType">
+      </xs:element>
+      <xs:element name="taxNature" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="taxExempt" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="taxInformation">
+    <xs:sequence>
+      <xs:element name="taxDetails" type="taxDetails">
+      </xs:element>
+      <xs:element name="amountDetails" minOccurs="0" type="fareDataInformation">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="amount">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                    Edifact representation: n..11
+                                  </xs:documentation>
+      </xs:annotation>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="firstRateDetail">
+    <xs:sequence>
+      <xs:element name="currencyCode" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="amount" minOccurs="0" type="amount">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bankerRates">
+    <xs:sequence>
+      <xs:element name="firstRateDetail" type="firstRateDetail">
+      </xs:element>
+      <xs:element name="secondRateDetail" minOccurs="0" type="firstRateDetail">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="discountCode">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..6
+                                        </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="penDisData">
+    <xs:sequence>
+      <xs:element name="penaltyType" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="penaltyQualifier" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="penaltyAmount" minOccurs="0" type="amount">
+      </xs:element>
+      <xs:element name="discountCode" minOccurs="0" type="discountCode">
+      </xs:element>
+      <xs:element name="penaltyCurrency" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="penDisInformation">
+    <xs:sequence>
+      <xs:element name="infoQualifier" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="penDisData" minOccurs="0" maxOccurs="9" type="penDisData">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="passengerInformation">
+    <xs:sequence>
+      <xs:element name="penDisInformation" type="penDisInformation">
+      </xs:element>
+      <xs:element name="passengerReference" minOccurs="0" type="paxSegReference">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="cityCode">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                              Edifact representation: an..4
+                            </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="originDestination">
+    <xs:sequence>
+      <xs:element name="cityCode" maxOccurs="2" type="cityCode">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="connecDetails">
+    <xs:sequence>
+      <xs:element name="routingInformation" minOccurs="0" type="cityCode">
+      </xs:element>
+      <xs:element name="connexType" minOccurs="0" type="tstIndicator">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="connexInformation">
+    <xs:sequence>
+      <xs:element name="connecDetails" type="connecDetails">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="cityCode1">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                          Edifact representation: a..3
+                                        </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="departureCity">
+    <xs:sequence>
+      <xs:element name="cityCode" minOccurs="0" type="cityCode1">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="bookingClass">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..17
+                                        </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="17" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="classOfService">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                          Edifact representation: a1
+                                        </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="segmentDetail">
+    <xs:sequence>
+      <xs:element name="identification" type="discountCode">
+      </xs:element>
+      <xs:element name="bookingClass" minOccurs="0" type="bookingClass">
+      </xs:element>
+      <xs:element name="classOfService" minOccurs="0" type="classOfService">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ticketingStatus">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                    Edifact representation: an..2
+                                  </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="segDetails">
+    <xs:sequence>
+      <xs:element name="departureCity" minOccurs="0" type="departureCity">
+      </xs:element>
+      <xs:element name="arrivalCity" minOccurs="0" type="departureCity">
+      </xs:element>
+      <xs:element name="airlineDetail" minOccurs="0" type="carrierInformation">
+      </xs:element>
+      <xs:element name="segmentDetail" minOccurs="0" type="segmentDetail">
+      </xs:element>
+      <xs:element name="ticketingStatus" minOccurs="0" type="ticketingStatus">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fareBasisDetails">
+    <xs:sequence>
+      <xs:element name="primaryCode" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="fareBasisCode" minOccurs="0" type="discountCode">
+      </xs:element>
+      <xs:element name="ticketDesignator" minOccurs="0" type="discountCode">
+      </xs:element>
+      <xs:element name="discTktDesignator" minOccurs="0" type="fareAmount">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="zapOffPercentage">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                          Edifact representation: n..8
+                                        </xs:documentation>
+      </xs:annotation>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="zapOffDetails">
+    <xs:sequence>
+      <xs:element name="zapOffType" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="zapOffAmount" minOccurs="0" type="amount">
+      </xs:element>
+      <xs:element name="zapOffPercentage" minOccurs="0" type="zapOffPercentage">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fareQualifier">
+    <xs:sequence>
+      <xs:element name="movementType" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="fareBasisDetails" minOccurs="0" type="fareBasisDetails">
+      </xs:element>
+      <xs:element name="zapOffDetails" minOccurs="0" type="zapOffDetails">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="baggageQuantity">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                          Edifact representation: n1
+                                        </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="bagAllowanceDetails">
+    <xs:sequence>
+      <xs:element name="baggageQuantity" minOccurs="0" type="baggageQuantity">
+      </xs:element>
+      <xs:element name="baggageWeight" minOccurs="0" type="month">
+      </xs:element>
+      <xs:element name="baggageType" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="measureUnit" minOccurs="0" type="tstIndicator">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bagAllowanceInformation">
+    <xs:sequence>
+      <xs:element name="bagAllowanceDetails" minOccurs="0" type="bagAllowanceDetails">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="sequenceNumber">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                          Edifact representation: n..3
+                                        </xs:documentation>
+      </xs:annotation>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="sequenceSection">
+    <xs:sequence>
+      <xs:element name="sequenceNumber" minOccurs="0" type="sequenceNumber">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sequenceInformation">
+    <xs:sequence>
+      <xs:element name="sequenceSection" minOccurs="0" type="sequenceSection">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="segmentInformation">
+    <xs:sequence>
+      <xs:element name="connexInformation" type="connexInformation">
+      </xs:element>
+      <xs:element name="segDetails" minOccurs="0" type="segDetails">
+      </xs:element>
+      <xs:element name="fareQualifier" minOccurs="0" type="fareQualifier">
+      </xs:element>
+      <xs:element name="validityInformation" minOccurs="0" maxOccurs="2" type="lastTktDate">
+      </xs:element>
+      <xs:element name="bagAllowanceInformation" minOccurs="0" type="bagAllowanceInformation">
+      </xs:element>
+      <xs:element name="segmentReference" minOccurs="0" type="paxSegReference">
+      </xs:element>
+      <xs:element name="sequenceInformation" minOccurs="0" type="sequenceInformation">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="attributeDescription">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                      Edifact representation: an..500
+                                    </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="500" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="attributeDetails">
+    <xs:sequence>
+      <xs:element name="attributeType" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="attributeDescription" minOccurs="0" type="attributeDescription">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="otherPricingInfo">
+    <xs:sequence>
+      <xs:sequence>
+        <xs:element name="attributeDetails" maxOccurs="5" type="attributeDetails">
+        </xs:element>
+      </xs:sequence>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="warningInformation">
+    <xs:sequence>
+      <xs:element name="warningCode" type="applicationErrorInfo">
+      </xs:element>
+      <xs:element name="warningText" minOccurs="0" type="errorText">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="number">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..35
+                                        </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="35" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="documentDetails">
+    <xs:sequence>
+      <xs:element name="number" type="number">
+      </xs:element>
+      <xs:element name="type" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ticketInfo">
+    <xs:sequence>
+      <xs:element name="documentDetails" type="documentDetails">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="couponDetails">
+    <xs:sequence>
+      <xs:element name="cpnNumber" type="discountCode">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="otherCouponDetails">
+    <xs:sequence>
+      <xs:sequence>
+        <xs:element name="cpnNumber" type="discountCode">
+        </xs:element>
+      </xs:sequence>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="couponInfo">
+    <xs:sequence>
+      <xs:element name="couponDetails" type="couponDetails">
+      </xs:element>
+      <xs:element name="otherCouponDetails" minOccurs="0" maxOccurs="3" type="otherCouponDetails">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="paperCouponRange">
+    <xs:sequence>
+      <xs:element name="ticketInfo" type="ticketInfo">
+      </xs:element>
+      <xs:element name="couponInfo" type="couponInfo">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="location">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..25
+                                        </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="25" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="monetaryDetails">
+    <xs:sequence>
+      <xs:element name="typeQualifier" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="amount" type="number">
+      </xs:element>
+      <xs:element name="currency" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="location" minOccurs="0" type="location">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="baseFareInfo">
+    <xs:sequence>
+      <xs:element name="monetaryDetails" type="monetaryDetails">
+      </xs:element>
+      <xs:element name="otherMonetaryDetails" minOccurs="0" maxOccurs="5" type="monetaryDetails">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="penaltyAmount">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                                Edifact representation: n..18
+                                              </xs:documentation>
+      </xs:annotation>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="penDisData1">
+    <xs:sequence>
+      <xs:element name="penaltyQualifier" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="penaltyAmount" minOccurs="0" type="penaltyAmount">
+      </xs:element>
+      <xs:element name="penaltyCurrency" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reIssuePenalty">
+    <xs:sequence>
+      <xs:element name="penDisData" minOccurs="0" type="penDisData1">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="firstDpiGroup">
+    <xs:sequence>
+      <xs:element name="reIssuePenalty" type="reIssuePenalty">
+      </xs:element>
+      <xs:element name="reissueInfo" type="baseFareInfo">
+      </xs:element>
+      <xs:element name="oldTaxInfo" type="baseFareInfo">
+      </xs:element>
+      <xs:element name="reissueBalanceInfo" type="baseFareInfo">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="secondDpiGroup">
+    <xs:sequence>
+      <xs:element name="penalty" type="reIssuePenalty">
+      </xs:element>
+      <xs:element name="residualValueInfo" type="baseFareInfo">
+      </xs:element>
+      <xs:element name="oldTaxInfo" type="baseFareInfo">
+      </xs:element>
+      <xs:element name="issueBalanceInfo" type="baseFareInfo">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="attributeDescription1">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..256
+                                        </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="256" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="attributeDetails1">
+    <xs:sequence>
+      <xs:element name="attributeType" type="applicationErrorCode">
+      </xs:element>
+      <xs:element name="attributeDescription" minOccurs="0" type="attributeDescription1">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reissueAttributes">
+    <xs:sequence>
+      <xs:element name="attributeDetails" maxOccurs="99" type="attributeDetails1">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="automaticReissueInfo">
+    <xs:sequence>
+      <xs:element name="ticketInfo" type="ticketInfo">
+      </xs:element>
+      <xs:element name="couponInfo" type="couponInfo">
+      </xs:element>
+      <xs:element name="paperCouponRange" minOccurs="0" type="paperCouponRange">
+      </xs:element>
+      <xs:element name="baseFareInfo" type="baseFareInfo">
+      </xs:element>
+      <xs:element name="firstDpiGroup" type="firstDpiGroup">
+      </xs:element>
+      <xs:element name="secondDpiGroup" type="secondDpiGroup">
+      </xs:element>
+      <xs:element name="reissueAttributes" minOccurs="0" type="reissueAttributes">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="corporateFareIdentifiers">
+    <xs:sequence>
+      <xs:element name="fareQualifier" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="corporateID" minOccurs="0" maxOccurs="20" type="number">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="corporateInfo">
+    <xs:sequence>
+      <xs:element name="corporateFareIdentifiers" maxOccurs="20" type="corporateFareIdentifiers">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="selectionDetails">
+    <xs:sequence>
+      <xs:element name="option" type="ticketingStatus">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="feeType">
+    <xs:sequence>
+      <xs:element name="selectionDetails" type="selectionDetails">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="dataTypeInformation">
+    <xs:sequence>
+      <xs:element name="type" type="codeListQualifier">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="dataInformation">
+    <xs:sequence>
+      <xs:sequence>
+        <xs:element name="indicator" minOccurs="0" type="codeListQualifier">
+        </xs:element>
+      </xs:sequence>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="feeInfo">
+    <xs:sequence>
+      <xs:element name="dataTypeInformation" type="dataTypeInformation">
+      </xs:element>
+      <xs:element name="dataInformation" minOccurs="0" maxOccurs="99" type="dataInformation">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="freeTextQualification">
+    <xs:sequence>
+      <xs:element name="textSubjectQualifier" type="codeListQualifier">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="freeText">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                          Edifact representation: an..10
+                                        </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="feeDescription">
+    <xs:sequence>
+      <xs:element name="freeTextQualification" minOccurs="0" type="freeTextQualification">
+      </xs:element>
+      <xs:element name="freeText" type="freeText">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="amount1">
+    <xs:restriction base="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+                                                Edifact representation: an..12
+                                              </xs:documentation>
+      </xs:annotation>
+      <xs:minLength value="1" />
+      <xs:maxLength value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="monetaryDetails1">
+    <xs:sequence>
+      <xs:element name="typeQualifier" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="amount" minOccurs="0" type="amount1">
+      </xs:element>
+      <xs:element name="currency" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="location" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="feeAmounts">
+    <xs:sequence>
+      <xs:element name="monetaryDetails" maxOccurs="20" type="monetaryDetails1">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="taxDetails1">
+    <xs:sequence>
+      <xs:element name="rate" minOccurs="0" type="bookingClass">
+      </xs:element>
+      <xs:element name="countryCode" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="currencyCode" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="type" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+      <xs:element name="secondType" minOccurs="0" type="codeListQualifier">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="feeTaxes">
+    <xs:sequence>
+      <xs:sequence>
+        <xs:element name="taxDetails" minOccurs="0" maxOccurs="99" type="taxDetails1">
+        </xs:element>
+      </xs:sequence>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="feeDetails">
+    <xs:sequence>
+      <xs:element name="feeInfo" type="feeInfo">
+      </xs:element>
+      <xs:element name="feeDescription" minOccurs="0" type="feeDescription">
+      </xs:element>
+      <xs:element name="feeAmounts" minOccurs="0" type="feeAmounts">
+      </xs:element>
+      <xs:element name="feeTaxes" minOccurs="0" maxOccurs="99" type="feeTaxes">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="feeBreakdown">
+    <xs:sequence>
+      <xs:element name="feeType" type="feeType">
+      </xs:element>
+      <xs:element name="feeDetails" minOccurs="0" maxOccurs="99" type="feeDetails">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mileageTimeDetails">
+    <xs:sequence>
+      <xs:element name="totalMileage" type="zapOffPercentage">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mileage">
+    <xs:sequence>
+      <xs:element name="mileageTimeDetails" minOccurs="0" type="mileageTimeDetails">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fareList">
+    <xs:sequence>
+      <xs:element name="pricingInformation" type="pricingInformation">
+      </xs:element>
+      <xs:element name="fareReference" type="fareReference">
+      </xs:element>
+      <xs:element name="lastTktDate" minOccurs="0" type="lastTktDate">
+      </xs:element>
+      <xs:element name="validatingCarrier" minOccurs="0" type="validatingCarrier">
+      </xs:element>
+      <xs:element name="paxSegReference" type="paxSegReference">
+      </xs:element>
+      <xs:element name="fareDataInformation" type="fareDataInformation">
+      </xs:element>
+      <xs:element name="taxInformation" minOccurs="0" maxOccurs="120" type="taxInformation">
+      </xs:element>
+      <xs:element name="bankerRates" minOccurs="0" type="bankerRates">
+      </xs:element>
+      <xs:element name="passengerInformation" minOccurs="0" maxOccurs="99" type="passengerInformation">
+      </xs:element>
+      <xs:element name="originDestination" minOccurs="0" type="originDestination">
+      </xs:element>
+      <xs:element name="segmentInformation" minOccurs="0" maxOccurs="96" type="segmentInformation">
+      </xs:element>
+      <xs:element name="otherPricingInfo" minOccurs="0" maxOccurs="99" type="otherPricingInfo">
+      </xs:element>
+      <xs:element name="warningInformation" minOccurs="0" maxOccurs="99" type="warningInformation">
+      </xs:element>
+      <xs:element name="automaticReissueInfo" minOccurs="0" type="automaticReissueInfo">
+      </xs:element>
+      <xs:element name="corporateInfo" minOccurs="0" type="corporateInfo">
+      </xs:element>
+      <xs:element name="feeBreakdown" minOccurs="0" maxOccurs="9" type="feeBreakdown">
+      </xs:element>
+      <xs:element name="mileage" minOccurs="0" type="mileage">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Fare_PricePNRWithBookingClassReply">
+    <xs:sequence>
+      <xs:element name="applicationError" minOccurs="0" type="applicationError">
+      </xs:element>
+      <xs:element name="pnrLocatorData" minOccurs="0" type="pnrLocatorData">
+      </xs:element>
+      <xs:element name="fareList" minOccurs="0" maxOccurs="99" type="fareList">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

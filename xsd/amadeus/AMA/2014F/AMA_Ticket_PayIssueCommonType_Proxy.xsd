@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by Amadeus s.a.s. (Amadeus s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.amadeus.com/2010/06/TicketTypes_v1" xmlns:iata="http://www.iata.org/IATA/2007/00/IATA2010.1" xmlns:ota="http://www.opentravel.org/OTA/2003/05/OTA2011A" targetNamespace="http://xml.amadeus.com/2010/06/TicketTypes_v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.000" id="AMA2014F">
+  <xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2011A" schemaLocation="../../OTA/2011A/OTA_Proxy.xsd" />
+  <xs:import namespace="http://www.iata.org/IATA/2007/00/IATA2010.1" schemaLocation="../../IATA/2010.1/IATA_Proxy.xsd" />
+  <!--Replaced file inclusion D:/Java/AXA/input/AMA/2014F/chameleon/AMA_Ticket_PayIssueCommonType.xsd with its content-->
+  <!-- *************************************************** -->
+  <!-- <xs:element name="PaymentForm" type="PaymentFormType"/>-->
+  <xs:simpleType name="NumericStringLength1to30">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used for Numeric Strings, length 1 to 30.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,30}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PaymentFormType">
+    <xs:complexContent>
+      <xs:extension base="iata:PaymentFormType">
+        <xs:sequence>
+          <xs:element name="Price" minOccurs="0">
+            <xs:complexType>
+              <xs:attributeGroup ref="PriceAttributeGroup" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Points" minOccurs="0">
+            <xs:complexType>
+              <xs:attributeGroup ref="PointAttributeGroup" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Instalment" minOccurs="0">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Price" minOccurs="0">
+                  <xs:complexType>
+                    <xs:attributeGroup ref="PriceAttributeGroup" />
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+              <xs:attributeGroup ref="InstalmentAttributeGroup" />
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="ApprovalCode" type="ota:AlphaNumericStringLength1to19">
+          <xs:annotation>
+            <xs:documentation>The approval code returned as part of an authorization process</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="MethodOfPaymentType">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="Card">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AddressVerificationSystemValue" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>Credit Card holder's address</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Line" type="iata:StringLength1to71" minOccurs="0" maxOccurs="5">
+                      <xs:annotation>
+                        <xs:documentation>Street and number on first line. Building, Floor etc... on following lines</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="CityName" type="iata:StringLength1to64" />
+                  <xs:attribute name="PostalCode" type="iata:StringLength1to16">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">Post Office Code number.</xs:documentation>
+                    </xs:annotation>
+                  </xs:attribute>
+                  <xs:attribute name="Country" type="iata:StringLength1to32">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">ISO 3166 code for the country</xs:documentation>
+                    </xs:annotation>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="MagneticTrack" minOccurs="0" maxOccurs="4">
+                <xs:annotation>
+                  <xs:documentation>Contains Data of the Magnetic Stripe of the Credit Card</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="iata:StringLength0to255">
+                      <xs:attribute name="Type" type="TrackType" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Issuance" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>Information about the issuing bank and country</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Bank">
+                      <xs:complexType>
+                        <xs:attribute name="Name" type="iata:StringLength1to128">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Full name of the issuing bank</xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                        <xs:attribute name="ID" type="iata:StringLength1to64">
+                          <xs:annotation>
+                            <xs:documentation xml:lang="en">Code of bank issuing the card.</xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="Country" type="iata:StringLength1to32">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">Credit Card country of issuance</xs:documentation>
+                    </xs:annotation>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PrimaryAccountNumber" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>Credit card number embossed on the front of the card.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="NumericStringLength1to30">
+                      <xs:attribute name="KnoxID" type="NumericStringLength1to30">
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">KnoxID of the Primary Acount Number</xs:documentation>
+                        </xs:annotation>
+                      </xs:attribute>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CVV" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>Verification digits printed on the back of the card usually (CardVerificationValue).</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="iata:NumericStringLength1to8">
+                      <xs:attribute name="KnoxID" type="NumericStringLength1to30">
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">KnoxID of the CVV</xs:documentation>
+                        </xs:annotation>
+                      </xs:attribute>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ApprovalCode" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>A series of characters assigned by the applicable credit card company's authorization system to confirm the approval of a credit sale transaction.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="iata:AlphaNumericStringLength1to14">
+                      <xs:attribute name="Source" type="iata:StringLength1">
+                        <xs:annotation>
+                          <xs:documentation>Can be A if it comes from Amadeus Payment Server, or N if entered manually by an Agent</xs:documentation>
+                        </xs:annotation>
+                      </xs:attribute>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Vendor" minOccurs="0">
+                <xs:complexType>
+                  <xs:attribute name="Code" type="iata:StringLength1to5">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">The 2 character code of the credit card issuer.</xs:documentation>
+                    </xs:annotation>
+                  </xs:attribute>
+                  <xs:attribute name="SubType" type="iata:StringLength1to5">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">To identify a subtype of credit cards</xs:documentation>
+                    </xs:annotation>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Validity" minOccurs="0">
+                <xs:complexType>
+                  <xs:attribute name="StartDate" type="iata:MMYYDate">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">Indicates the starting date.</xs:documentation>
+                    </xs:annotation>
+                  </xs:attribute>
+                  <xs:attribute name="EndDate" type="iata:MMYYDate">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">Indicates the ending date.</xs:documentation>
+                    </xs:annotation>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="HolderName" type="iata:StringLength0to100">
+              <xs:annotation>
+                <xs:documentation xml:lang="en">Name of credit card holder.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="FraudStatus" type="iata:StringLength1to5">
+              <xs:annotation>
+                <xs:documentation>Can be OK, KO or RW (pending).</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Invoice">
+          <xs:complexType>
+            <xs:attribute name="Reference" type="iata:StringLength1to71" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LoyaltyRedemption">
+          <xs:complexType>
+            <xs:attributeGroup ref="iata:LoyaltyCertificateNumberGroup" />
+            <xs:attributeGroup ref="iata:PromotionCodeGroup" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cash">
+          <xs:complexType />
+        </xs:element>
+        <xs:element name="Miscellaneous">
+          <xs:annotation>
+            <xs:documentation>Fops that not processed by Amadeus and that are mainly used for reporting purposes.</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:attribute name="Description" type="iata:StringLength0to250" use="required">
+              <xs:annotation>
+                <xs:documentation>Text to be reported</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+      <xs:element name="InstalmentPlan" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Instalment" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attributeGroup ref="PriceAttributeGroup" />
+                <xs:attribute name="Order">
+                  <xs:annotation>
+                    <xs:documentation>Value : 1 to represent the first instalment (if it has a different amount).</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attributeGroup ref="InstalmentAttributeGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Value" minOccurs="0" maxOccurs="2">
+        <xs:annotation>
+          <xs:documentation>Monetary Amount, in a currency</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attributeGroup ref="PriceAttributeGroup" />
+          <xs:attribute name="PointsType" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>describes the types of point more precisely : Miles (name of Miles program for example), Points (point program)...</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="Type" type="iata:StringLength0to10">
+            <xs:annotation>
+              <xs:documentation>Can be Monetary, for an amount in physical currency, or Points, for an amount in Miles etc.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Status" type="FOPStatusType">
+      <xs:annotation>
+        <xs:documentation>Identify if the FOP is an Old FOP or not. Old FOP contains the FOP(s) that were used in previous transactions in the same booking.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Code" type="iata:StringLength0to15">
+      <xs:annotation>
+        <xs:documentation>The FOP code, identifying type of FOP for Amadeus</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <!-- *************************************************** -->
+  <xs:attributeGroup name="InstalmentAttributeGroup">
+    <xs:attribute name="Number" type="iata:NumericStringLength1to4">
+      <xs:annotation>
+        <xs:documentation>Number of instalments</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="InterestRate" type="iata:NumericStringLength1to8">
+      <xs:annotation>
+        <xs:documentation>Interests in % of the instalment</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Supplier" type="iata:StringLength0to100">
+      <xs:annotation>
+        <xs:documentation>Supplier of the instalment</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <!-- *************************************************** -->
+  <xs:attributeGroup name="PointAttributeGroup">
+    <!--Replaced incorrect type "xs:integer"-->
+    <xs:attribute name="Amount" type="xs:long">
+      <xs:annotation>
+        <xs:documentation>Number of points</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <!-- *************************************************** -->
+  <xs:attributeGroup name="PriceAttributeGroup">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Price Group is the definition of a fare with some
+				special properties. It contains: - A Type (string), mandatory - An Amount (decimal),
+				optional - A Currency Code (3 alphas), optional - A Decimal Place (positive
+				integer), optional</xs:documentation>
+    </xs:annotation>
+    <!--Replaced nested attributeGroup {http://xml.amadeus.com/2010/06/TicketTypes_v1}AmountCurrencyAndDecimalPlaceGroup by content from AMA_Ticket_PayIssueCommonType_Proxy-->
+    <xs:attribute name="Amount" type="xs:long">
+      <xs:annotation>
+        <xs:documentation>Defines the amount without decimal separator (i.e. Amount=8500 and
+					DecimalPlace=2 represent 85.00)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="MiscValue">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">This group is used when price component is returned without an amount, but with an additional data, e.g. exempted</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="EXEMPTED" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="FareType" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>Defines the price, e.g. for base fare, total...</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <!-- *************************************************** -->
+  <xs:attributeGroup name="AmountCurrencyAndDecimalPlaceGroup">
+    <!--Replaced nested attributeGroup {http://www.iata.org/IATA/2007/00/IATA2010.1}CurrencyCodeGroup by content from IATA_Proxy-->
+    <xs:attribute name="CurrencyCode" type="iata:AlphaLength3" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">The code specifying a monetary unit. Use ISO 4217, three alpha code.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="DecimalPlaces" type="xs:long" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit". Typically used when the amount provided includes the minor unit of currency without a decimal point (e.g., USD 8500 needs DecimalPlaces="2" to represent $85).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <!--Replaced incorrect type "xs:integer"-->
+    <xs:attribute name="Amount" type="xs:long">
+      <xs:annotation>
+        <xs:documentation>Defines the amount without decimal separator (i.e. Amount=8500 and
+					DecimalPlace=2 represent 85.00)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:simpleType name="TrackType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Raw" />
+      <xs:enumeration value="1" />
+      <xs:enumeration value="2" />
+      <xs:enumeration value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FOPStatusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Old" />
+      <xs:enumeration value="Active" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

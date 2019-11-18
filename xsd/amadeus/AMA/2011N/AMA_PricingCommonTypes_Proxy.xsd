@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by Amadeus s.a.s. (Amadeus s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.amadeus.com/2010/06/PricingTypes_v1" xmlns:ota="http://www.opentravel.org/OTA/2003/05/OTA2010B" targetNamespace="http://xml.amadeus.com/2010/06/PricingTypes_v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.000" id="AMA2011N">
+  <!--Replaced file inclusion D:/Java/AXA/input/AMA/2011N/chameleon/AMA_PricingCommonTypes.xsd with its content-->
+  <xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2010B" schemaLocation="../../OTA/2010B/OTA_Proxy.xsd" />
+  <xs:complexType name="MiscDocType">
+    <xs:annotation>
+      <xs:documentation>Contains all miscellaneous document information.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="AccountingData" type="ota:FreeTextType" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="RPH" type="ota:RPH_Type">
+      <xs:annotation>
+        <xs:documentation>Unique id for this Miscellaneous document.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="OperationDate" type="ota:DateOrDateTimeType">
+      <xs:annotation>
+        <xs:documentation>Date when the service is to be provided.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="AirlineCode" type="ota:StringLength0to8">
+      <xs:annotation>
+        <xs:documentation>Airline code providing the service.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="LocCode" type="ota:StringLength0to8">
+      <xs:annotation>
+        <xs:documentation>Location code where the service is to be provided.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="MD_Type" type="ota:StringLength1to8">
+      <xs:annotation>
+        <xs:documentation>Specifies the type of Miscellaneous Document (M, X, S, F).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="TravelerRefNbr" type="ota:ListOfRPH" use="optional">
+      <xs:annotation>
+        <xs:documentation>Specifies one or more Traveler numbers. This RPH is associated with the RPH contained in the TravelerData element in TravelersInfo.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+</xs:schema>

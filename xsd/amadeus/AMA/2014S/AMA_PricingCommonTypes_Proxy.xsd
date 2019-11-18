@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by ﻿AMADEUS s.a.s. (AMADEUS s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.amadeus.com/2010/06/PricingTypes_v1" xmlns:tkt="http://xml.amadeus.com/2010/06/TicketTypes_v1" xmlns:ota="http://www.opentravel.org/OTA/2003/05/OTA2011A" xmlns:iata="http://www.iata.org/IATA/2007/00/IATA2010.1" xmlns:ama="http://xml.amadeus.com/2010/06/Types_v2" xmlns:qt="http://xml.amadeus.com/2010/06/QuotationTypes_v1" xmlns:pnr="http://xml.amadeus.com/2010/06/PNR_Types_v2" xmlns:etr="http://xml.amadeus.com/2010/06/ETR_Types_v2" xmlns:ns1="http://xml.amadeus.com/2013/03/QUO_InternalFlatTypes_v1" xmlns:ns2="http://xml.amadeus.com/2010/06/TTR_Types_v1" targetNamespace="http://xml.amadeus.com/2010/06/PricingTypes_v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.000" id="AMA2014S">
+	<xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2011A" schemaLocation="../../OTA/2011A/OTA_Proxy.xsd"/>
+	<xs:import namespace="http://xml.amadeus.com/2010/06/TicketTypes_v1" schemaLocation="../2014F/AMA_Ticket_PayIssueCommonType_Proxy.xsd"/>
+	<xs:import namespace="http://xml.amadeus.com/2010/06/QuotationTypes_v1" schemaLocation="AMA_QuotationCommonTypes_Proxy.xsd"/>
+	<xs:import namespace="http://xml.amadeus.com/2010/06/ETR_Types_v2" schemaLocation="AMA_ETR_CommonTypes_Proxy.xsd"/>
+	<xs:import namespace="http://www.iata.org/IATA/2007/00/IATA2010.1" schemaLocation="../../IATA/2010.1/IATA_Proxy.xsd"/>
+	<xs:import namespace="http://xml.amadeus.com/2010/06/Types_v2" schemaLocation="../2012F/AMA_CommonTypes_Proxy.xsd"/>
+	<xs:complexType name="PricingOptionType">
+		<xs:sequence>
+			<xs:element name="TicketingInfo" minOccurs="0" maxOccurs="20">
+				<xs:annotation>
+					<xs:documentation>Information pertaining to the ticket</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="FareBasis" minOccurs="0">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="qt:FareBasisType">
+										<xs:attribute name="Operation" type="ota:AlphaNumericStringLength1to14"/>
+										<xs:attribute name="DiagnosticType" type="etr:AlphaNumericStringLength1to10"/>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="UpsellRecoID" type="xs:integer" minOccurs="0" maxOccurs="20"/>
+						<xs:element name="FareFamily" minOccurs="0">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="qt:FareFamilyType">
+										<xs:attribute name="Carrier" type="ota:AlphaNumericStringLength1to14"/>
+										<xs:attribute name="Name" type="ota:AlphaNumericStringLength1to14"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="TourCode" type="xs:string" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute name="Number" type="ota:NumericStringLength1to16">
+						<xs:annotation>
+							<xs:documentation>Ticket number</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="Type" type="ota:AlphaNumericStringLength1to14">
+						<xs:annotation>
+							<xs:documentation>Ticket Type</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ServiceProvider" minOccurs="0" maxOccurs="10">
+				<xs:annotation>
+					<xs:documentation>Provider of the journey</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="iata:AirlineType">
+							<xs:attribute name="Type" type="ota:AlphaNumericStringLength1to19">
+								<xs:annotation>
+									<xs:documentation>Type of the carrier</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Nego" nillable="true" minOccurs="0" maxOccurs="20">
+				<xs:annotation>
+					<xs:documentation>Negotiated fares</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Corporate" minOccurs="0" maxOccurs="unbounded">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="20"/>
+									<xs:pattern value="[a-zA-z0-9.\-&amp;]+"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="Type" type="ota:AlphaNumericStringLength1to14"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TaxAndFees" minOccurs="0" maxOccurs="20">
+				<xs:annotation>
+					<xs:documentation>Information pertaining to the taxes and fees applied</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Tax" type="qt:TaxType" minOccurs="0" maxOccurs="20"/>
+						<xs:element name="Fee" minOccurs="0" maxOccurs="20">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="qt:FareType">
+										<xs:attribute name="Code">
+											<xs:annotation>
+												<xs:documentation>OBFee code</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="Operation" type="ota:AlphaNumericStringLength1to14"/>
+					<xs:attribute name="dateTime" type="ota:DateOrDateTimeType"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Booking" minOccurs="0" maxOccurs="20">
+				<xs:annotation>
+					<xs:documentation>Information pertinaing to the booking element</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Cabin" minOccurs="0" maxOccurs="20">
+							<xs:annotation>
+								<xs:documentation>Information on the cabin</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="ota:AlphaNumericStringLength1">
+										<xs:attribute name="cabinOrder" type="ota:AlphaNumericStringLength1to19"/>
+										<xs:attribute name="serviceRefIDs" type="xs:IDREFS" use="optional"/>
+										<xs:attribute name="customerRefIDs" type="xs:IDREFS" use="optional"/>
+										<xs:attribute name="segmentRefIDs" type="xs:IDREFS" use="optional"/>
+										<xs:attribute name="RefTID"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Class" type="ota:AlphaLength1" minOccurs="0" maxOccurs="20">
+							<xs:annotation>
+								<xs:documentation>Information on the class</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="Validation" type="ota:YesNoType"/>
+					<xs:attribute name="Operation" type="ota:AlphaNumericStringLength1to19"/>
+					<xs:attribute name="Type" type="ota:AlphaNumericStringLength1to19"/>
+					<xs:attribute name="dateTime" type="ota:DateOrDateTimeType"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="FareDetermination" minOccurs="0" maxOccurs="20">
+				<xs:annotation>
+					<xs:documentation>Information influencing the computation of the fares</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Place" minOccurs="0" maxOccurs="10">
+							<xs:annotation>
+								<xs:documentation>specific location of the itinerary</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:attribute name="Type">
+									<xs:annotation>
+										<xs:documentation>Defines the type of the location (turnaround, stopover, etc...)</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+								<xs:attribute name="Operation">
+									<xs:annotation>
+										<xs:documentation>Defines the operation to excute (override, etc...)</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+								<xs:attribute name="segmentRefIDs" type="xs:IDREFS" use="optional">
+									<xs:annotation>
+										<xs:documentation>One or more segments to which the pricing element applies</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Fee" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Defines which fee to take into account</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="ota:AlphaNumericStringLength1to19">
+										<xs:attribute name="Type">
+											<xs:annotation>
+												<xs:documentation>Defines the type to apply (PSR, no ticketing fee...)</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Restriction" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Defines specific restrictions that can apply</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Penalty" type="qt:PriceType"/>
+								</xs:sequence>
+								<xs:attribute name="Type">
+									<xs:annotation>
+										<xs:documentation>Defines the type of restriction (not refundable, etc..)</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FormOfPayment" type="tkt:MethodOfPaymentType" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute name="PricingLogic" type="ota:AlphaNumericStringLength1to19"/>
+					<xs:attribute name="lowestFareProcessing" type="ota:AlphaNumericStringLength1to19"/>
+					<xs:attribute name="Operation" type="ota:AlphaNumericStringLength1to19"/>
+					<xs:attribute name="CurrencyCode" type="ota:AlphaLength3"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="LoyaltyProgram" minOccurs="0" maxOccurs="20">
+				<xs:annotation>
+					<xs:documentation>Information pertaining to a loyalty system</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Point" type="qt:PointType" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute name="Type" type="ota:AlphaNumericStringLength1to19">
+						<xs:annotation>
+							<xs:documentation>Type of award pricing</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="ProviderCode" type="ota:StringLength1to16"/>
+					<xs:attribute name="Number" type="ota:AlphaNumericStringLength1to19"/>
+					<xs:attribute name="TierLevel" type="ota:AlphaNumericStringLength1to19"/>
+					<xs:attribute name="PriorityCode" type="ota:AlphaNumericStringLength1to19"/>
+					<xs:attribute name="CurrencyCode" type="ota:AlphaLength3"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Discount" minOccurs="0" maxOccurs="20">
+				<xs:annotation>
+					<xs:documentation>Information triggering a discount</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="code" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Discount code to apply (passenger type, etc...)</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="etr:AlphaNumericStringLength1to30">
+										<xs:attribute name="Operation" type="ota:AlphaNumericStringLength1to19">
+											<xs:annotation>
+												<xs:documentation>Operation to perform with the discount code (override, force,etc...)</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Price" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Price related discounts</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="qt:PriceType">
+										<xs:attribute name="amountType" type="ota:AlphaNumericStringLength1to19">
+											<xs:annotation>
+												<xs:documentation>indicates if the amount to be considered is a percentage or whole amount</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="Operation" type="ota:AlphaNumericStringLength1to19">
+											<xs:annotation>
+												<xs:documentation>operation to perform (Zapoff, etc...)</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+										<xs:attribute name="TicketDesignator" type="ota:AlphaNumericStringLength1to19" use="optional"/>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GeographicalInfo" minOccurs="0" maxOccurs="20">
+				<xs:annotation>
+					<xs:documentation>Georgaphical elements influencing the price computation</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Place" minOccurs="0" maxOccurs="15">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="etr:AlphaNumericStringLength3to7">
+										<xs:attribute name="Type" type="ota:AlphaNumericStringLength1to19">
+											<xs:annotation>
+												<xs:documentation>Type of the location (point of sale, point of ticketing, etc...)</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="RouteIndicator" type="etr:AlphaNumericStringLength1to2"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Customization" minOccurs="0" maxOccurs="20">
+				<xs:annotation>
+					<xs:documentation>Elements to customize the display of the pricing information</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Filter" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>elements filtered in the output of the pricing transaction</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="ota:AlphaNumericStringLength1to8">
+										<xs:attribute name="Operation" type="ota:AlphaNumericStringLength1to19"/>
+										<xs:attribute name="onlyIssuable" type="ota:YesNoType"/>
+										<xs:attribute name="Type" type="ota:AlphaNumericStringLength1to19"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="requestedDescription" type="ota:AlphaNumericStringLength1to19">
+						<xs:annotation>
+							<xs:documentation>specific description requested at pricing time (commercial description, etc..)</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Reprice" minOccurs="0" maxOccurs="20">
+				<xs:annotation>
+					<xs:documentation>Information specific to the repricing flow</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attribute name="residualValue">
+						<xs:simpleType>
+							<xs:list itemType="xs:NMTOKEN"/>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="CheckinCoupon" type="ota:YesNoType"/>
+					<xs:attribute name="Operation" type="ota:AlphaNumericStringLength1to19"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Misc" minOccurs="0" maxOccurs="20">
+				<xs:annotation>
+					<xs:documentation>Miscellaneous information not corresponding to any category</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Parameter" minOccurs="0" maxOccurs="99">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="xs:string">
+										<xs:attribute name="Name" type="ota:AlphaNumericStringLength1to19"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="Code" type="ota:AlphaNumericStringLength1to19" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="serviceRefIDs" type="xs:IDREFS" use="optional">
+			<xs:annotation>
+				<xs:documentation>One or more services to which the pricing element applies</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="customerRefIDs" type="xs:IDREFS" use="optional">
+			<xs:annotation>
+				<xs:documentation>One or more travelers to whom the pricing element applies</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="segmentRefIDs" type="xs:IDREFS" use="optional">
+			<xs:annotation>
+				<xs:documentation>One or more segments to which the pricing element applies</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="RefTID"/>
+	</xs:complexType>
+</xs:schema>

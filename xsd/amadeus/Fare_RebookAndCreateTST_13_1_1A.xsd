@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/TARTCQ_13_1_1A" xmlns="http://xml.amadeus.com/TARTCQ_13_1_1A" elementFormDefault="qualified">
+  <xs:element name="Fare_RebookAndCreateTST">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Rebook and create TST</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="fareReference" maxOccurs="99" type="ItemReferencesAndVersionsType">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">Reference of the fare selected.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ItemReferencesAndVersionsType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Exchange and link unique identifiers</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="referenceType" type="AlphaNumericString_Length1To3" />
+      <xs:element name="uniqueReference" type="NumericInteger_Length1To99">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">number of the fare recommendation chosen</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="actionCategory" minOccurs="0" type="AlphaNumericString_Length1To3">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">To chose if only rebook is required, or if it is needed to rebook and reprice.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AlphaNumericString_Length1To3">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericInteger_Length1To99">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Format limitations: n..99</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer">
+      <xs:pattern value="-?[0-9]{1,99}" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+<!-- SchemaRules="2010/01"-->
+<!--Created with SchemaBuilder 5.0.0 by Amadeus S.A.S.-->
+<!--"Amadeus Proprietary and Confidential Information: unauthorized use and disclosure strictly forbidden. 2010 - Amadeus s.a.s - All Rights Reserved."-->
+<!--Build Key:
+1F8B080000000000000095534D6FDB300CBDEB5708BBEC30C4B1DB150302E8E0264E376069BBD4BD0508148B4984CA9227CA45BDA2FF7D94EDACDD61D87631488AE6C77B8F57C575B1CECB62B1BDB9166769763EC9D2C959C657CE2AD9F1ECE3ECE2D32CCBF8D5AAFC90A6B33465F92A0F5D03B8D406ACAC4150607B295157650C274FA8D84E225CD31B36B202710CA1994DA74FB549642D15B49854AE9EB25D6B958185F6628A1082B6079C2A5D21AB8E503DDCD1B79622F81658E514500A0AEB6CF4EA1A2C79E35BDD48DBC576C2B6C650A0E9BC3E1C8378970FEDF8AD778DD710A4EFB8B48ACF9DDD6B4535B434FC8BDD3B5FCBA09D9DF1D6CA361C9DD73F40F116A14F571A2BE3B0F5C031785D05D371FA67A715D54838C196F2093F35C34426187D63F83ACE817C4DD3FB4750C93BA6602F5B13AE7C13E152622F0D0253AEDD19B883EF2DD80A6E65A88EE30BD8CB7F0213EC6BCE7324E865FBFC081E692BB23C18A03264C90375E85ED89EE85BB786307391C9DEEFE9EC7F8ED65F0A18574933426EDC41118D8BD9E673912F3685D27B5985D239839BA2DC2E340669C39C9822FE88B9CD4AFA07888C0F39D8738D9BAFEE40B5ECA11F44AB1B6B3A56833FC008466F2F35188577CE875FF0D1E24873E51831FD3DB620D6B5199563FF0BA2C6691BAE210C74F462F3CE853708F57E1470C2861522A218EF289DA6D918C3A5F3B9D1547B546CD482AE0017A424EA4DA21C50C45AFA10EBDE5B5DE9D08D8B042F2D9A5E9F848F20AC713A562EF3D5F45981D1B4862401BD24F4CAE278EAEDF99058E6A79B196A52A487AABF646D2BF68426DCB4A169C3D219055EC4006393C96A80F13D72FD7A2793091B401259CEDEF417F96DBE5D4A0FDBECFC4292AA6BA9ADB85D170C9E1A226C2B71BB28AE44B9BE2F4E04714A97E2EC2C3D054499AFCBF937D6D049683C12C903F4033F2223EB5147D2C8ECB1913D8CA2EFBB869D730FB95573AA1AA0BC2BD989AD3F268C1A10D939FB099E56B3920F050000
+-->
+

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by Amadeus s.a.s. (Amadeus s.a.s.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.amadeus.com/2010/06/FerryTypes_v1" xmlns:iata="http://www.iata.org/IATA/2007/00/IATA2010.1" xmlns:ota="http://www.opentravel.org/OTA/2003/05/OTA2010B" targetNamespace="http://xml.amadeus.com/2010/06/FerryTypes_v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.000" id="AMA2011N">
+  <!--Replaced file inclusion D:/Java/AXA/input/AMA/2011N/chameleon/AMA_FerryCommonTypes.xsd with its content-->
+  <xs:import namespace="http://www.opentravel.org/OTA/2003/05/OTA2010B" schemaLocation="../../OTA/2010B/OTA_Proxy.xsd" />
+  <xs:import namespace="http://www.iata.org/IATA/2007/00/IATA2010.1" schemaLocation="../../IATA/2010.1/IATA_Proxy.xsd" />
+  <xs:complexType name="FerryResType">
+    <xs:sequence>
+      <xs:element name="ConfirmationNbr" type="iata:UniqueID_Type" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>conveys the ferry booking number information.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ResCoreInfo">
+        <xs:annotation>
+          <xs:documentation>Contains the details of the ferry itinerary (ferry provider information, ferry booking itinerary)</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="BoardPorts">
+              <xs:annotation>
+                <xs:documentation>Conveys the itinerary leg embarkation and disembarkation ports descriptions</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DepartureBoardPort">
+                    <xs:complexType>
+                      <xs:attribute name="BoardPortName" type="ota:StringLength0to64" />
+                      <xs:attribute name="BoardPortCode" type="ota:AlphaNumericStringLength1to3" />
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ArrivalBoardPort" minOccurs="0">
+                    <xs:complexType>
+                      <xs:attribute name="BoardPortName" type="ota:StringLength0to64" />
+                      <xs:attribute name="BoardPortCode" type="ota:AlphaNumericStringLength1to3" />
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="DepartureDateTime" type="xs:dateTime" use="optional">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The date and time of the ferry departure.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="ArrivalDateTime" type="xs:dateTime" use="optional">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Specifies the arrival date and time of a ferry.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="CheckInTime" type="xs:dateTime" use="optional">
+            <xs:annotation>
+              <xs:documentation>conveys the check-in time for the ferry sailing leg to which it is attached</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="ProviderCode" type="ota:AlphaNumericStringLength1to3" />
+          <xs:attribute name="ShipName" type="ota:AlphaNumericStringLength1to14" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ResTariffInfo" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>contains the tariff and pricing data for the ferry booking</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="NetTotalPriceInfo" minOccurs="0">
+              <xs:complexType>
+                <xs:attributeGroup ref="ota:CurrencyAmountGroup" />
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="OtherPricesInfo" minOccurs="0" maxOccurs="8">
+              <xs:complexType>
+                <xs:attributeGroup ref="ota:CurrencyAmountGroup" />
+                <xs:attribute name="PriceQualifier" type="ota:AlphaNumericStringLength1to3" />
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="TaxInfo" minOccurs="0">
+              <xs:complexType>
+                <xs:attributeGroup ref="ota:FeeTaxGroup" />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="RateCode" type="ota:AlphaNumericStringLength1to14">
+            <xs:annotation>
+              <xs:documentation>conveys the booking fare information</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="TravelerRefNbrRPH_List" type="ota:ListOfRPH" use="optional">
+      <xs:annotation>
+        <xs:documentation>One or more travelers to whom this reservation applies.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Status" type="ota:OTA_CodeType" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Code providing status information for this segment. Refer to OpenTravel Code List Status (STS).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="OptionDateInfo" type="xs:dateTime" use="optional">
+      <xs:annotation>
+        <xs:documentation>conveys the optional booking confirmation dead-line information.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="RPH" type="ota:RPH_Type" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Unique id for this ferry reservation.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+</xs:schema>

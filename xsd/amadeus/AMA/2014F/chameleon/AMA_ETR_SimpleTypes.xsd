@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by AMADEUS SAS (AMADEUS SAS) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ama="http://xml.amadeus.com/ErrorCodes" elementFormDefault="qualified" version="1.000" id="AMA2014F">
+  <xs:annotation>
+    <xs:documentation xml:lang="en">.</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="AlphaStringLength1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+      <xs:pattern value="([a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaStringLength1to4">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4" />
+      <xs:pattern value="([a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="2" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to3">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to4">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to6">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="6" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to7">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="7" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to10">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to17">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="17" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to20">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to25">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="25" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to30">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to31">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="31" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to35">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="35" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to70">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="70" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to99">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="99" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength1to256">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="256" />
+      <xs:pattern value="([0-9a-zA-Z])+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength2">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2" />
+      <xs:maxLength value="2" />
+      <xs:pattern value="([0-9a-zA-Z])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength2to3">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2" />
+      <xs:maxLength value="3" />
+      <xs:pattern value="([0-9a-zA-Z])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength3">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3" />
+      <xs:maxLength value="3" />
+      <xs:pattern value="([0-9a-zA-Z])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumericStringLength3to7">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3" />
+      <xs:maxLength value="7" />
+      <xs:pattern value="([0-9a-zA-Z])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1to2">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used for Numeric Strings, length 1 to 2.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="2" />
+      <xs:pattern value="([0-9])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1to4">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used for Numeric Strings, length 1 to 4.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="4" />
+      <xs:pattern value="([0-9])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericStringLength1to5">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Used for Numeric Strings, length 1 to 5.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="5" />
+      <xs:pattern value="([0-9])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to20">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to25">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="25" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to30">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to31">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="31" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to35">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="35" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to60">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="60" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to64">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="64" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to70">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="70" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to99">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="99" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to109">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="109" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to199">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="199" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringLength1to256">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="256" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+

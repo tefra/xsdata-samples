@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.amadeus.com/TTSTDQ_04_1_1A" xmlns="http://xml.amadeus.com/TTSTDQ_04_1_1A" elementFormDefault="qualified">
+  <xs:element name="Ticket_DeleteTST">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="deleteMode">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="attributeDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="attributeType">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pnrLocatorData" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="reservationInformation">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="controlNumber">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..20</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="20" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="psaList" minOccurs="0" maxOccurs="1980">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itemReference">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="referenceType" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                          <xs:maxLength value="3" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="uniqueReference" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">Format limitations: n..5</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:decimal" />
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="iDDescription" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="iDSequenceNumber">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Format limitations: n..11</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:decimal" />
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="paxReference" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="refDetails" minOccurs="0" maxOccurs="99">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="refQualifier" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Format limitations: an..3</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:string">
+                                <xs:minLength value="1" />
+                                <xs:maxLength value="3" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="refNumber" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation xml:lang="en">Format limitations: n..5</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:decimal" />
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+<!-- SchemaRules="2009/09"-->
+<!--Created with SchemaBuilder 5.0.0 by Amadeus S.A.S.-->
+<!--Build Key:
+1F8B08000000000000009593C16EDB300C86EF7A8ADC7618123B6D57AC0174F06A2703B6A45DE3DE02188ACD384265C913E5A24691771F253B588B1DB65D0C92A67F921FE955B6C91E923C4B8BBB0DBF88E757D3F8F3741E4FB69DAE443F893F2D2E2F1757D793D53AFF18C78B3866C93A717D0BB8940AB46880B3BD40D89085AD28811F9D6B1751F4D2A8996844051DCE4AD3446C4F8A0A52697984E09CD43546952C919547289FB6F46C0477B603569A0A2805B936DA7B4D039ABC835018DC56E8DED7E3BA538A026D6F657D74835BC14174CAAD6C9B5397D5A058996EAF600B3F3BD025DC0B571E4739D05FFEA97BD0BF735EFDFCA7E2F5192C4AA3C9B2A08064C8123555E84FEC40741E3A453D1A0F2AF88156F8D85B7F1150A6146A1C5199BA226EE962F7354BD25D56C983285D6E8CC25D9617A94427B4BB2532048C50EDD6C23E81473CE460808BBBEFA6262D5D87460298066C0D238A602F25A80AB7C63A62778E235257097AA0EF63293821D5B828FD5F805A23B5DB801B96119AB1C6B8377C82EFEF65C686013C4FA4238D6FA2F8668CE1D2D84449D2C64104C13ECB123095A5A3DAC2F603436C84755EF751CB52BA7E1CC459A151099F4A743891C66854CE9375F45A81923486A0F339CDE82DF3ED55E3B50E12742BB7EF6F94228155C0F282CADD75AEEDDCD2A80A2CF701C6A6D3F5C0F0034EA43E18DB8426A6533610E2F384BD29CE93FBA4C865496B2DE6B1D8D34937426A9E7FCB18BCB4B4AF426091662B9E3F3C66E7FD4C8405C12FAECF3ECFF36D9EFE602DFD0E128FE7DF63DC0E9F93F52CFDCAF8C5404604887C2C9C529E039260E725FDF966DC398FAFD82FE474309F5C040000
+-->
+
