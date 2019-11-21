@@ -115,7 +115,6 @@ from samples.travelport.common_v48_0.common import (
     PaymentRestriction,
     PointOfCommencement,
     PointOfSale,
-    ProviderReservation,
     ProviderReservationDetail,
     Remark,
     Ssr,
@@ -238,8 +237,30 @@ class AirExchangeEligibilityReq(BaseReq):
     )
 
     @dataclass
-    class ProviderReservationInfo(ProviderReservation):
-        pass
+    class ProviderReservationInfo:
+        """
+        :ivar provider_code:
+        :ivar provider_locator_code:
+        """
+        provider_code: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ProviderCode",
+                type="Attribute",
+                required=True,
+                min_length=2.0,
+                max_length=5.0
+            )
+        )
+        provider_locator_code: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ProviderLocatorCode",
+                type="Attribute",
+                required=True,
+                max_length=15.0
+            )
+        )
 
 
 @dataclass
@@ -1347,8 +1368,30 @@ class AirRefundQuoteReq(BaseReq):
     )
 
     @dataclass
-    class ProviderReservationInfo(ProviderReservation):
-        pass
+    class ProviderReservationInfo:
+        """
+        :ivar provider_code:
+        :ivar provider_locator_code:
+        """
+        provider_code: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ProviderCode",
+                type="Attribute",
+                required=True,
+                min_length=2.0,
+                max_length=5.0
+            )
+        )
+        provider_locator_code: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ProviderLocatorCode",
+                type="Attribute",
+                required=True,
+                max_length=15.0
+            )
+        )
 
 
 @dataclass
@@ -1867,8 +1910,30 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
     )
 
     @dataclass
-    class ProviderReservationInfo(ProviderReservation):
-        pass
+    class ProviderReservationInfo:
+        """
+        :ivar provider_code:
+        :ivar provider_locator_code:
+        """
+        provider_code: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ProviderCode",
+                type="Attribute",
+                required=True,
+                min_length=2.0,
+                max_length=5.0
+            )
+        )
+        provider_locator_code: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ProviderLocatorCode",
+                type="Attribute",
+                required=True,
+                max_length=15.0
+            )
+        )
 
 
 @dataclass
@@ -1976,8 +2041,30 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
     )
 
     @dataclass
-    class ProviderReservationInfo(ProviderReservation):
-        pass
+    class ProviderReservationInfo:
+        """
+        :ivar provider_code:
+        :ivar provider_locator_code:
+        """
+        provider_code: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ProviderCode",
+                type="Attribute",
+                required=True,
+                min_length=2.0,
+                max_length=5.0
+            )
+        )
+        provider_locator_code: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ProviderLocatorCode",
+                type="Attribute",
+                required=True,
+                max_length=15.0
+            )
+        )
 
 
 @dataclass

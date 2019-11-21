@@ -33,7 +33,6 @@ from samples.travelport.common_v48_0.common import (
     PhoneNumber,
     PointOfSale,
     Provider,
-    ProviderReservation,
     ProviderReservationInfoRef,
     RefundRemark,
     Remark,
@@ -48,14 +47,6 @@ from samples.travelport.common_v48_0.common import (
     SupplierLocator,
     ThirdPartyInformation,
     TicketNumber,
-    AttrBookingTravelerName,
-    AttrDow,
-    AttrDocument,
-    AttrElementKeyResults,
-    AttrFlightTimes,
-    AttrOrigDestDepatureInfo,
-    AttrPrices,
-    AttrProviderSupplier,
     TypeAssociatedRemarkWithSegmentRef,
     TypeErrorInfo,
     TypeFeeInfo,
@@ -1397,6 +1388,52 @@ class ConjunctedTicketInfo:
 
 
 @dataclass
+class ContractCode:
+    """Some private fares (non-ATPCO) are secured to a contract code.
+
+    :ivar provider_code:
+    :ivar supplier_code:
+    :ivar code: The 1-64 character string which uniquely identifies a Contract.
+    :ivar company_name: Providers supported : ACH
+    """
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
+    code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Code",
+            type="Attribute",
+            required=True,
+            min_length=1.0,
+            max_length=64.0
+        )
+    )
+    company_name: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CompanyName",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class CreditSummary:
     """Credit summary associated with the account.
 
@@ -1722,6 +1759,166 @@ class Emdcommission:
 
 
 @dataclass
+class Emdcoupon:
+    """The coupon information for the EMD issued. Supported providers are
+    1G/1V/1P/1J.
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar number: Number of the EMD coupon
+    :ivar status: Status of the coupon. Possible values Open, Void, Refunded, Exchanged, Irregular Operations,Airport Control, Checked In, Flown/Used, Boarded/Lifted, Suspended, Unknown
+    :ivar svc_description: Description of the service related to the EMD Coupon
+    :ivar consumed_at_issuance_ind: Indicates if the EMD coupon has been considered used as soon as issued.
+    :ivar rfic: Reason For Issuance Code for the EMD coupon
+    :ivar rfisc: Reason For Issueance Sub code for the EMD coupon
+    :ivar rfidescription: Reason for Issueance Description for the EMD coupon
+    :ivar origin: Departure Airport Code for the flight with which the Coupon is associated
+    :ivar destination: Destination Airport Code for the flight with which the Coupon is associated
+    :ivar flight_number: Flight Number of the flight with which the coupon is associated.
+    :ivar present_to: Service provider to present the coupon to
+    :ivar present_at: Location of service provider where this coupon should be presented at
+    :ivar non_refundable_ind: Indicates whether the coupon is non-refundable
+    :ivar marketing_carrier: Marketing carrier associated with the coupon
+    :ivar key: System generated Key
+    """
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    number: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Number",
+            type="Attribute",
+            required=True
+        )
+    )
+    status: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Status",
+            type="Attribute",
+            required=True
+        )
+    )
+    svc_description: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SvcDescription",
+            type="Attribute"
+        )
+    )
+    consumed_at_issuance_ind: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="ConsumedAtIssuanceInd",
+            type="Attribute"
+        )
+    )
+    rfic: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RFIC",
+            type="Attribute",
+            required=True,
+            length=1
+        )
+    )
+    rfisc: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RFISC",
+            type="Attribute"
+        )
+    )
+    rfidescription: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RFIDescription",
+            type="Attribute",
+            min_length=1.0,
+            max_length=86.0
+        )
+    )
+    origin: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Origin",
+            type="Attribute",
+            length=3,
+            white_space="collapse"
+        )
+    )
+    destination: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Destination",
+            type="Attribute",
+            length=3,
+            white_space="collapse"
+        )
+    )
+    flight_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FlightNumber",
+            type="Attribute",
+            max_length=5.0
+        )
+    )
+    present_to: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PresentTo",
+            type="Attribute",
+            min_length=1.0,
+            max_length=71.0
+        )
+    )
+    present_at: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PresentAt",
+            type="Attribute",
+            min_length=1.0,
+            max_length=71.0
+        )
+    )
+    non_refundable_ind: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="NonRefundableInd",
+            type="Attribute"
+        )
+    )
+    marketing_carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="MarketingCarrier",
+            type="Attribute",
+            length=2
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class Emdendorsement:
     """Endorsement for EMD. Supported providers are 1V/1G/1P/1J.
 
@@ -1736,6 +1933,97 @@ class Emdendorsement:
             max_length=255.0
         )
     )
+
+
+@dataclass
+class EmdtravelerInfo:
+    """EMD traveler information. Supported providers are 1G/1V/1P/1J.
+
+    :ivar name_info: Name information of the EMD traveler.
+    :ivar traveler_type: Defines the type of traveler used for booking which could be a non-defining type (Companion, Web-fare, etc), or a standard type (Adult, Child, etc).
+    :ivar age: Age of the traveler
+    """
+    name_info: Optional["EmdtravelerInfo.NameInfo"] = field(
+        default=None,
+        metadata=dict(
+            name="NameInfo",
+            type="Element",
+            required=True
+        )
+    )
+    traveler_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TravelerType",
+            type="Attribute",
+            min_length=3.0,
+            max_length=5.0
+        )
+    )
+    age: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Age",
+            type="Attribute"
+        )
+    )
+
+    @dataclass
+    class NameInfo:
+        """
+        :ivar prefix: Name prefix.
+        :ivar first: First Name.
+        :ivar middle: Midle name.
+        :ivar last: Last Name.
+        :ivar suffix: Name suffix.
+        """
+        prefix: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Prefix",
+                type="Attribute",
+                min_length=1.0,
+                max_length=20.0
+            )
+        )
+        first: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="First",
+                type="Attribute",
+                required=True,
+                min_length=1.0,
+                max_length=256.0
+            )
+        )
+        middle: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Middle",
+                type="Attribute",
+                min_length=1.0,
+                max_length=256.0
+            )
+        )
+        last: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Last",
+                type="Attribute",
+                required=True,
+                min_length=1.0,
+                max_length=256.0
+            )
+        )
+        suffix: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Suffix",
+                type="Attribute",
+                min_length=1.0,
+                max_length=256.0
+            )
+        )
 
 
 @dataclass
@@ -2622,6 +2910,71 @@ class FareStatusFailureInfo:
 
 
 @dataclass
+class FareSurcharge:
+    """Surcharges for a fare component.
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar key:
+    :ivar type:
+    :ivar amount:
+    :ivar segment_ref:
+    :ivar coupon_ref: The coupon to which that surcharge is relative (if applicable)
+    """
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute",
+            required=True
+        )
+    )
+    amount: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Amount",
+            type="Attribute",
+            required=True
+        )
+    )
+    segment_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SegmentRef",
+            type="Attribute"
+        )
+    )
+    coupon_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CouponRef",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class FareTicketDesignator:
     """Ticket Designator used to further qualify a Fare.
 
@@ -3237,7 +3590,7 @@ class LoyaltyCardDetails:
             name="PriorityCode",
             type="Attribute",
             required=True,
-            pattern="[a-zA-Z0-9]{1,1}"
+            pattern=r"[a-zA-Z0-9]{1,1}"
         )
     )
 
@@ -4806,6 +5159,139 @@ class RefundAccessCode:
 
 
 @dataclass
+class Restriction:
+    """Fare Reference associated with the BookingRules.
+
+    :ivar days_of_week_restriction:
+    :ivar restriction_passenger_types:
+    """
+    days_of_week_restriction: List["Restriction.DaysOfWeekRestriction"] = field(
+        default_factory=list,
+        metadata=dict(
+            name="DaysOfWeekRestriction",
+            type="Element",
+            min_occurs=0,
+            max_occurs=3
+        )
+    )
+    restriction_passenger_types: List["Restriction.RestrictionPassengerTypes"] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RestrictionPassengerTypes",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+
+    @dataclass
+    class DaysOfWeekRestriction:
+        """
+        :ivar mon:
+        :ivar tue:
+        :ivar wed:
+        :ivar thu:
+        :ivar fri:
+        :ivar sat:
+        :ivar sun:
+        :ivar restriction_exists_ind:
+        :ivar application:
+        :ivar include_exclude_use_ind:
+        """
+        mon: Optional[bool] = field(
+            default=None,
+            metadata=dict(
+                name="Mon",
+                type="Attribute"
+            )
+        )
+        tue: Optional[bool] = field(
+            default=None,
+            metadata=dict(
+                name="Tue",
+                type="Attribute"
+            )
+        )
+        wed: Optional[bool] = field(
+            default=None,
+            metadata=dict(
+                name="Wed",
+                type="Attribute"
+            )
+        )
+        thu: Optional[bool] = field(
+            default=None,
+            metadata=dict(
+                name="Thu",
+                type="Attribute"
+            )
+        )
+        fri: Optional[bool] = field(
+            default=None,
+            metadata=dict(
+                name="Fri",
+                type="Attribute"
+            )
+        )
+        sat: Optional[bool] = field(
+            default=None,
+            metadata=dict(
+                name="Sat",
+                type="Attribute"
+            )
+        )
+        sun: Optional[bool] = field(
+            default=None,
+            metadata=dict(
+                name="Sun",
+                type="Attribute"
+            )
+        )
+        restriction_exists_ind: Optional[bool] = field(
+            default=None,
+            metadata=dict(
+                name="RestrictionExistsInd",
+                type="Attribute"
+            )
+        )
+        application: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Application",
+                type="Attribute"
+            )
+        )
+        include_exclude_use_ind: Optional[bool] = field(
+            default=None,
+            metadata=dict(
+                name="IncludeExcludeUseInd",
+                type="Attribute"
+            )
+        )
+
+    @dataclass
+    class RestrictionPassengerTypes:
+        """
+        :ivar max_nbr_travelers:
+        :ivar total_nbr_ptc:
+        """
+        max_nbr_travelers: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="MaxNbrTravelers",
+                type="Attribute"
+            )
+        )
+        total_nbr_ptc: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="TotalNbrPTC",
+                type="Attribute"
+            )
+        )
+
+
+@dataclass
 class RoutingRules:
     """Rules related to routing.
 
@@ -5689,6 +6175,31 @@ class Variance:
 
 
 @dataclass
+class VoidDocumentInfo:
+    """Container to represent document information.
+
+    :ivar document_number: Identifies the document number to be voided.
+    :ivar document_type: Identifies the document type to be voided, Document Type can have four values like Service Fee, Paper Ticket , MCO and E-Ticket.
+    """
+    document_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DocumentNumber",
+            type="Attribute",
+            min_length=1.0,
+            max_length=13.0
+        )
+    )
+    document_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DocumentType",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class VoidFailureInfo(str):
     """
     :ivar ticket_number:
@@ -5706,6 +6217,47 @@ class VoidFailureInfo(str):
         default=None,
         metadata=dict(
             name="Code",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
+class VoidResultInfo:
+    """List of Successful Or Failed void document results.
+
+    :ivar document_number: Identifies the document number to be voided.
+    :ivar document_type: Identifies the document type to be voided, Document Type can have four values like Service Fee, Paper Ticket , MCO and E-Ticket.
+    :ivar failure_remark: Container to show all provider failure information.
+    :ivar result_type: Successful Or Failed result indicator.
+    """
+    document_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DocumentNumber",
+            type="Attribute",
+            min_length=1.0,
+            max_length=13.0
+        )
+    )
+    document_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DocumentType",
+            type="Attribute"
+        )
+    )
+    failure_remark: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FailureRemark",
+            type="Element"
+        )
+    )
+    result_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ResultType",
             type="Attribute"
         )
     )
@@ -5767,127 +6319,6 @@ class Yield:
         default=None,
         metadata=dict(
             name="BookingTravelerRef",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class AttrEmdsummary:
-    """Details of Booking Traveler Name.
-
-    :ivar number: EMD Number
-    :ivar primary_document_indicator: Indicates whether the EMD is a primary EMD.
-    :ivar in_conjunction_with: Returns the number of the Primary EMD, if this EMD is a conjunctive EMD
-    :ivar associated_ticket_number: This number indicates the e-Ticket number associated with this EMD
-    :ivar plating_carrier: Plating carrier code for which this EMD is issued
-    :ivar issue_date: Issue Date for this EMD
-    """
-    number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            required=True,
-            length=13
-        )
-    )
-    primary_document_indicator: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="PrimaryDocumentIndicator",
-            type="Attribute"
-        )
-    )
-    in_conjunction_with: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="InConjunctionWith",
-            type="Attribute",
-            length=13
-        )
-    )
-    associated_ticket_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AssociatedTicketNumber",
-            type="Attribute",
-            length=13
-        )
-    )
-    plating_carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PlatingCarrier",
-            type="Attribute",
-            length=2
-        )
-    )
-    issue_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="IssueDate",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class AttrLinkInfo:
-    """Holds Participant Level information.
-
-    :ivar participant_level: Type of sell agreement between host and link carrier.
-    :ivar link_availability: Indicates if carrier has link (carrier specific) display option.
-    :ivar polled_availability_option: Indicates if carrier has Inside (polled)Availability option.
-    :ivar availability_display_type: The type of availability from which the segment is sold.Possible Values (List): G - General S - Flight Specific L - Carrier Specific/Direct Access M - Manual Sell F - Fare Shop/Optimal Shop Q - Fare Specific Fare Quote unbooked R - Redemption Availability used to complete the sell. Supported Providers: 1G,1V.
-    """
-    participant_level: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ParticipantLevel",
-            type="Attribute"
-        )
-    )
-    link_availability: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="LinkAvailability",
-            type="Attribute"
-        )
-    )
-    polled_availability_option: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PolledAvailabilityOption",
-            type="Attribute"
-        )
-    )
-    availability_display_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AvailabilityDisplayType",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class AttrPolicyMarking:
-    """
-    :ivar in_policy: This attribute will be used to indicate if a fare or rate has been determined to be ‘in policy’ based on the associated policy settings.
-    :ivar preferred_option: This attribute is used to indicate if the vendors responsible for the fare or rate being returned have been determined to be ‘preferred’ based on the associated policy settings.
-    """
-    in_policy: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="InPolicy",
-            type="Attribute"
-        )
-    )
-    preferred_option: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="PreferredOption",
             type="Attribute"
         )
     )
@@ -5976,6 +6407,68 @@ class TypeBulkTicketModifierType:
 
 
 @dataclass
+class TypeDaysOfOperation:
+    """
+    :ivar mon:
+    :ivar tue:
+    :ivar wed:
+    :ivar thu:
+    :ivar fri:
+    :ivar sat:
+    :ivar sun:
+    """
+    mon: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Mon",
+            type="Attribute"
+        )
+    )
+    tue: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Tue",
+            type="Attribute"
+        )
+    )
+    wed: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Wed",
+            type="Attribute"
+        )
+    )
+    thu: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Thu",
+            type="Attribute"
+        )
+    )
+    fri: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Fri",
+            type="Attribute"
+        )
+    )
+    sat: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Sat",
+            type="Attribute"
+        )
+    )
+    sun: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Sun",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class TypeFailureInfo:
     """
     :ivar code:
@@ -6023,7 +6516,7 @@ class TypeFarePenalty:
             name="Percentage",
             type="Element",
             namespace="http://www.travelport.com/schema/common_v48_0",
-            pattern="([0-9]{1,2}|100)\.[0-9]{1,2}"
+            pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
         )
     )
     penalty_applies: Optional[str] = field(
@@ -6199,7 +6692,7 @@ class TypeTicketModifierPercentType:
             name="Percent",
             type="Attribute",
             required=True,
-            pattern="([0-9]{1,2}|100)\.[0-9]{1,2}"
+            pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
         )
     )
 
@@ -6449,6 +6942,114 @@ class AirExchangeBundleTotal:
             max_occurs=999
         )
     )
+
+
+@dataclass
+class AirExchangeModifiers:
+    """Provides controls and switches for the Exchange process.
+
+    :ivar contract_codes:
+    :ivar booking_date:
+    :ivar ticketing_date:
+    :ivar account_code:
+    :ivar ticket_designator:
+    :ivar allow_penalty_fares:
+    :ivar private_fares_only:
+    :ivar universal_record_locator_code: Which UniversalRecord should this new reservation be applied to. If blank, then a new one is created.
+    :ivar provider_locator_code: Which Provider reservation does this reservation get added to.
+    :ivar provider_code: To be used with ProviderLocatorCode, which host the reservation being added to belongs to.
+    """
+    contract_codes: Optional["AirExchangeModifiers.ContractCodes"] = field(
+        default=None,
+        metadata=dict(
+            name="ContractCodes",
+            type="Element"
+        )
+    )
+    booking_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BookingDate",
+            type="Attribute"
+        )
+    )
+    ticketing_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketingDate",
+            type="Attribute"
+        )
+    )
+    account_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AccountCode",
+            type="Attribute"
+        )
+    )
+    ticket_designator: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketDesignator",
+            type="Attribute",
+            min_length=0.0,
+            max_length=20.0
+        )
+    )
+    allow_penalty_fares: bool = field(
+        default=True,
+        metadata=dict(
+            name="AllowPenaltyFares",
+            type="Attribute"
+        )
+    )
+    private_fares_only: bool = field(
+        default=False,
+        metadata=dict(
+            name="PrivateFaresOnly",
+            type="Attribute"
+        )
+    )
+    universal_record_locator_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="UniversalRecordLocatorCode",
+            type="Attribute",
+            min_length=5.0,
+            max_length=8.0
+        )
+    )
+    provider_locator_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderLocatorCode",
+            type="Attribute",
+            min_length=5.0,
+            max_length=8.0
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute"
+        )
+    )
+
+    @dataclass
+    class ContractCodes:
+        """
+        :ivar contract_code:
+        """
+        contract_code: List[ContractCode] = field(
+            default_factory=list,
+            metadata=dict(
+                name="ContractCode",
+                type="Element",
+                min_occurs=1,
+                max_occurs=999
+            )
+        )
 
 
 @dataclass
@@ -7141,7 +7742,7 @@ class AvailableDiscount:
         metadata=dict(
             name="Percent",
             type="Attribute",
-            pattern="([0-9]{1,2}|100)\.[0-9]{1,2}"
+            pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
         )
     )
     description: Optional[str] = field(
@@ -7575,35 +8176,11 @@ class Connection:
 
 
 @dataclass
-class ContractCode(AttrProviderSupplier):
-    """Some private fares (non-ATPCO) are secured to a contract code.
-
-    :ivar code: The 1-64 character string which uniquely identifies a Contract.
-    :ivar company_name: Providers supported : ACH
-    """
-    code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            min_length=1.0,
-            max_length=64.0
-        )
-    )
-    company_name: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CompanyName",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class Coupon(AttrElementKeyResults):
+class Coupon:
     """The flight coupon that resulted from the ticketing operation.
 
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar ticket_designator:
     :ivar key:
     :ivar coupon_number: The sequential number of this coupon.
@@ -7624,6 +8201,20 @@ class Coupon(AttrElementKeyResults):
     :ivar segment_group: Indicates the grouping in which this segment resides based on Origin/Destination pairs in itinerary
     :ivar marriage_group: Airline Marrraige group indicator
     """
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
     ticket_designator: List[TicketDesignator] = field(
         default_factory=list,
         metadata=dict(
@@ -7918,138 +8509,88 @@ class DocumentSelect:
 
 
 @dataclass
-class Emdcoupon(AttrElementKeyResults):
-    """The coupon information for the EMD issued. Supported providers are
-    1G/1V/1P/1J.
+class Emdsummary:
+    """EMD summary information. Supported providers are 1G/1V/1P/1J.
 
-    :ivar number: Number of the EMD coupon
-    :ivar status: Status of the coupon. Possible values Open, Void, Refunded, Exchanged, Irregular Operations,Airport Control, Checked In, Flown/Used, Boarded/Lifted, Suspended, Unknown
-    :ivar svc_description: Description of the service related to the EMD Coupon
-    :ivar consumed_at_issuance_ind: Indicates if the EMD coupon has been considered used as soon as issued.
-    :ivar rfic: Reason For Issuance Code for the EMD coupon
-    :ivar rfisc: Reason For Issueance Sub code for the EMD coupon
-    :ivar rfidescription: Reason for Issueance Description for the EMD coupon
-    :ivar origin: Departure Airport Code for the flight with which the Coupon is associated
-    :ivar destination: Destination Airport Code for the flight with which the Coupon is associated
-    :ivar flight_number: Flight Number of the flight with which the coupon is associated.
-    :ivar present_to: Service provider to present the coupon to
-    :ivar present_at: Location of service provider where this coupon should be presented at
-    :ivar non_refundable_ind: Indicates whether the coupon is non-refundable
-    :ivar marketing_carrier: Marketing carrier associated with the coupon
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar number: EMD Number
+    :ivar primary_document_indicator: Indicates whether the EMD is a primary EMD.
+    :ivar in_conjunction_with: Returns the number of the Primary EMD, if this EMD is a conjunctive EMD
+    :ivar associated_ticket_number: This number indicates the e-Ticket number associated with this EMD
+    :ivar plating_carrier: Plating carrier code for which this EMD is issued
+    :ivar issue_date: Issue Date for this EMD
+    :ivar emdcoupon: The coupon information for the EMD issued.
     :ivar key: System generated Key
     """
-    number: Optional[int] = field(
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="Number",
             type="Attribute",
-            required=True
-        )
-    )
-    status: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute",
-            required=True
-        )
-    )
-    svc_description: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SvcDescription",
-            type="Attribute"
-        )
-    )
-    consumed_at_issuance_ind: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="ConsumedAtIssuanceInd",
-            type="Attribute"
-        )
-    )
-    rfic: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RFIC",
-            type="Attribute",
             required=True,
-            length=1
+            length=13
         )
     )
-    rfisc: Optional[str] = field(
+    primary_document_indicator: Optional[bool] = field(
         default=None,
         metadata=dict(
-            name="RFISC",
+            name="PrimaryDocumentIndicator",
             type="Attribute"
         )
     )
-    rfidescription: Optional[str] = field(
+    in_conjunction_with: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="RFIDescription",
+            name="InConjunctionWith",
             type="Attribute",
-            min_length=1.0,
-            max_length=86.0
+            length=13
         )
     )
-    origin: Optional[str] = field(
+    associated_ticket_number: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="Origin",
+            name="AssociatedTicketNumber",
             type="Attribute",
-            length=3,
-            white_space="collapse"
+            length=13
         )
     )
-    destination: Optional[str] = field(
+    plating_carrier: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="Destination",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
-    )
-    flight_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FlightNumber",
-            type="Attribute",
-            max_length=5.0
-        )
-    )
-    present_to: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PresentTo",
-            type="Attribute",
-            min_length=1.0,
-            max_length=71.0
-        )
-    )
-    present_at: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PresentAt",
-            type="Attribute",
-            min_length=1.0,
-            max_length=71.0
-        )
-    )
-    non_refundable_ind: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="NonRefundableInd",
-            type="Attribute"
-        )
-    )
-    marketing_carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="MarketingCarrier",
+            name="PlatingCarrier",
             type="Attribute",
             length=2
+        )
+    )
+    issue_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="IssueDate",
+            type="Attribute"
+        )
+    )
+    emdcoupon: List[Emdcoupon] = field(
+        default_factory=list,
+        metadata=dict(
+            name="EMDCoupon",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
         )
     )
     key: Optional[str] = field(
@@ -8062,41 +8603,105 @@ class Emdcoupon(AttrElementKeyResults):
 
 
 @dataclass
-class EmdtravelerInfo:
-    """EMD traveler information. Supported providers are 1G/1V/1P/1J.
+class ElectronicMiscDocument:
+    """Electronic miscellaneous document. Supported providers are 1G/1V/1P/1J.
 
-    :ivar name_info: Name information of the EMD traveler.
-    :ivar traveler_type: Defines the type of traveler used for booking which could be a non-defining type (Companion, Web-fare, etc), or a standard type (Adult, Child, etc).
-    :ivar age: Age of the traveler
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar number: EMD Number
+    :ivar primary_document_indicator: Indicates whether the EMD is a primary EMD.
+    :ivar in_conjunction_with: Returns the number of the Primary EMD, if this EMD is a conjunctive EMD
+    :ivar associated_ticket_number: This number indicates the e-Ticket number associated with this EMD
+    :ivar plating_carrier: Plating carrier code for which this EMD is issued
+    :ivar issue_date: Issue Date for this EMD
+    :ivar emdcoupon: The coupon information for the EMD issued.
+    :ivar status: Status of the EMD calculated on the basis of coupon status. Possible values Open, Void, Refunded, Exchanged, Irregular Operations,Airport Control, Checked In, Flown/Used, Boarded/Lifted, Suspended, Unknown
+    :ivar key: System generated Key
     """
-    name_info: Optional["EmdtravelerInfo.NameInfo"] = field(
+    el_stat: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="NameInfo",
-            type="Element",
-            required=True
-        )
-    )
-    traveler_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TravelerType",
-            type="Attribute",
-            min_length=3.0,
-            max_length=5.0
-        )
-    )
-    age: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="Age",
+            name="ElStat",
             type="Attribute"
         )
     )
-
-    @dataclass
-    class NameInfo(AttrBookingTravelerName):
-        pass
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Number",
+            type="Attribute",
+            required=True,
+            length=13
+        )
+    )
+    primary_document_indicator: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="PrimaryDocumentIndicator",
+            type="Attribute"
+        )
+    )
+    in_conjunction_with: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="InConjunctionWith",
+            type="Attribute",
+            length=13
+        )
+    )
+    associated_ticket_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AssociatedTicketNumber",
+            type="Attribute",
+            length=13
+        )
+    )
+    plating_carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PlatingCarrier",
+            type="Attribute",
+            length=2
+        )
+    )
+    issue_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="IssueDate",
+            type="Attribute"
+        )
+    )
+    emdcoupon: List[Emdcoupon] = field(
+        default_factory=list,
+        metadata=dict(
+            name="EMDCoupon",
+            type="Element",
+            min_occurs=1,
+            max_occurs=999
+        )
+    )
+    status: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Status",
+            type="Attribute"
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
 
 
 @dataclass
@@ -8461,55 +9066,6 @@ class FareStatus:
             name="Code",
             type="Attribute",
             required=True
-        )
-    )
-
-
-@dataclass
-class FareSurcharge(AttrElementKeyResults):
-    """Surcharges for a fare component.
-
-    :ivar key:
-    :ivar type:
-    :ivar amount:
-    :ivar segment_ref:
-    :ivar coupon_ref: The coupon to which that surcharge is relative (if applicable)
-    """
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
-    )
-    amount: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            required=True
-        )
-    )
-    segment_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SegmentRef",
-            type="Attribute"
-        )
-    )
-    coupon_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CouponRef",
-            type="Attribute"
         )
     )
 
@@ -9408,83 +9964,6 @@ class RelatedTraveler:
 
 
 @dataclass
-class Restriction:
-    """Fare Reference associated with the BookingRules.
-
-    :ivar days_of_week_restriction:
-    :ivar restriction_passenger_types:
-    """
-    days_of_week_restriction: List["Restriction.DaysOfWeekRestriction"] = field(
-        default_factory=list,
-        metadata=dict(
-            name="DaysOfWeekRestriction",
-            type="Element",
-            min_occurs=0,
-            max_occurs=3
-        )
-    )
-    restriction_passenger_types: List["Restriction.RestrictionPassengerTypes"] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RestrictionPassengerTypes",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-
-    @dataclass
-    class DaysOfWeekRestriction(AttrDow):
-        """
-        :ivar restriction_exists_ind:
-        :ivar application:
-        :ivar include_exclude_use_ind:
-        """
-        restriction_exists_ind: Optional[bool] = field(
-            default=None,
-            metadata=dict(
-                name="RestrictionExistsInd",
-                type="Attribute"
-            )
-        )
-        application: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="Application",
-                type="Attribute"
-            )
-        )
-        include_exclude_use_ind: Optional[bool] = field(
-            default=None,
-            metadata=dict(
-                name="IncludeExcludeUseInd",
-                type="Attribute"
-            )
-        )
-
-    @dataclass
-    class RestrictionPassengerTypes:
-        """
-        :ivar max_nbr_travelers:
-        :ivar total_nbr_ptc:
-        """
-        max_nbr_travelers: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="MaxNbrTravelers",
-                type="Attribute"
-            )
-        )
-        total_nbr_ptc: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="TotalNbrPTC",
-                type="Attribute"
-            )
-        )
-
-
-@dataclass
 class RuleLengthOfStay:
     """Container for rules providing minimum and maximum stay requirements.
 
@@ -10206,40 +10685,6 @@ class Title(TypeTextElement):
 
 
 @dataclass
-class VoidDocumentInfo(AttrDocument):
-    """Container to represent document information."""
-    pass
-
-
-@dataclass
-class VoidResultInfo(AttrDocument):
-    """List of Successful Or Failed void document results.
-
-    :ivar failure_remark: Container to show all provider failure information.
-    :ivar result_type: Successful Or Failed result indicator.
-    """
-    failure_remark: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FailureRemark",
-            type="Element"
-        )
-    )
-    result_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ResultType",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class TypeDaysOfOperation(AttrDow):
-    pass
-
-
-@dataclass
 class TypeTaxInfoWithPaymentRef(TypeTaxInfo):
     """
     :ivar payment_ref: This reference elements will associate relevant payment to this tax
@@ -10406,114 +10851,6 @@ class AirExchangeBundle:
             max_occurs=999
         )
     )
-
-
-@dataclass
-class AirExchangeModifiers:
-    """Provides controls and switches for the Exchange process.
-
-    :ivar contract_codes:
-    :ivar booking_date:
-    :ivar ticketing_date:
-    :ivar account_code:
-    :ivar ticket_designator:
-    :ivar allow_penalty_fares:
-    :ivar private_fares_only:
-    :ivar universal_record_locator_code: Which UniversalRecord should this new reservation be applied to. If blank, then a new one is created.
-    :ivar provider_locator_code: Which Provider reservation does this reservation get added to.
-    :ivar provider_code: To be used with ProviderLocatorCode, which host the reservation being added to belongs to.
-    """
-    contract_codes: Optional["AirExchangeModifiers.ContractCodes"] = field(
-        default=None,
-        metadata=dict(
-            name="ContractCodes",
-            type="Element"
-        )
-    )
-    booking_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BookingDate",
-            type="Attribute"
-        )
-    )
-    ticketing_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketingDate",
-            type="Attribute"
-        )
-    )
-    account_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AccountCode",
-            type="Attribute"
-        )
-    )
-    ticket_designator: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketDesignator",
-            type="Attribute",
-            min_length=0.0,
-            max_length=20.0
-        )
-    )
-    allow_penalty_fares: bool = field(
-        default=True,
-        metadata=dict(
-            name="AllowPenaltyFares",
-            type="Attribute"
-        )
-    )
-    private_fares_only: bool = field(
-        default=False,
-        metadata=dict(
-            name="PrivateFaresOnly",
-            type="Attribute"
-        )
-    )
-    universal_record_locator_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="UniversalRecordLocatorCode",
-            type="Attribute",
-            min_length=5.0,
-            max_length=8.0
-        )
-    )
-    provider_locator_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderLocatorCode",
-            type="Attribute",
-            min_length=5.0,
-            max_length=8.0
-        )
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute"
-        )
-    )
-
-    @dataclass
-    class ContractCodes:
-        """
-        :ivar contract_code:
-        """
-        contract_code: List[ContractCode] = field(
-            default_factory=list,
-            metadata=dict(
-                name="ContractCode",
-                type="Element",
-                min_occurs=1,
-                max_occurs=999
-            )
-        )
 
 
 @dataclass
@@ -11938,12 +12275,92 @@ class AlternateRoute:
 
 
 @dataclass
-class AuditData(AttrPrices):
+class AuditData:
     """Container for Pricing Audit Data.For providers 1P/1J.
 
+    :ivar total_price: The total price for this entity including base price and all taxes.
+    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
+    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
+    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
+    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
+    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
+    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
+    :ivar services: The total cost for all optional services.
+    :ivar approximate_taxes: The Converted tax amount in Default Currency.
+    :ivar approximate_fees: The Converted fee amount in Default Currency.
     :ivar tax_info:
     :ivar key:
     """
+    total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TotalPrice",
+            type="Attribute"
+        )
+    )
+    base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BasePrice",
+            type="Attribute"
+        )
+    )
+    approximate_total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTotalPrice",
+            type="Attribute"
+        )
+    )
+    approximate_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateBasePrice",
+            type="Attribute"
+        )
+    )
+    equivalent_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EquivalentBasePrice",
+            type="Attribute"
+        )
+    )
+    taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Taxes",
+            type="Attribute"
+        )
+    )
+    fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Fees",
+            type="Attribute"
+        )
+    )
+    services: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Services",
+            type="Attribute"
+        )
+    )
+    approximate_taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTaxes",
+            type="Attribute"
+        )
+    )
+    approximate_fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateFees",
+            type="Attribute"
+        )
+    )
     tax_info: List[TaxInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -12272,51 +12689,60 @@ class EmdpricingInfo:
 
 
 @dataclass
-class Emdsummary(AttrEmdsummary, AttrElementKeyResults):
-    """EMD summary information. Supported providers are 1G/1V/1P/1J.
+class EmdsummaryInfo:
+    """Container for EMD summary information. Supported providers are 1G/1V/1P/1J.
 
-    :ivar emdcoupon: The coupon information for the EMD issued.
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar emdsummary: Summary information for EMDs conjuncted to each other.
+    :ivar emdtraveler_info: EMD traveler information.
+    :ivar payment: Payment charged to issue EMD.
+    :ivar provider_reservation_info_ref: A reference to the provider reservation with which the document is associated.Displayed when shown as part of UR.Not displayed in EMDRetrieveRsp
     :ivar key: System generated Key
     """
-    emdcoupon: List[Emdcoupon] = field(
-        default_factory=list,
-        metadata=dict(
-            name="EMDCoupon",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    key: Optional[str] = field(
+    el_stat: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="Key",
+            name="ElStat",
             type="Attribute"
         )
     )
-
-
-@dataclass
-class ElectronicMiscDocument(AttrEmdsummary, AttrElementKeyResults):
-    """Electronic miscellaneous document. Supported providers are 1G/1V/1P/1J.
-
-    :ivar emdcoupon: The coupon information for the EMD issued.
-    :ivar status: Status of the EMD calculated on the basis of coupon status. Possible values Open, Void, Refunded, Exchanged, Irregular Operations,Airport Control, Checked In, Flown/Used, Boarded/Lifted, Suspended, Unknown
-    :ivar key: System generated Key
-    """
-    emdcoupon: List[Emdcoupon] = field(
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    emdsummary: List[Emdsummary] = field(
         default_factory=list,
         metadata=dict(
-            name="EMDCoupon",
+            name="EMDSummary",
             type="Element",
             min_occurs=1,
             max_occurs=999
         )
     )
-    status: Optional[str] = field(
+    emdtraveler_info: Optional[EmdtravelerInfo] = field(
         default=None,
         metadata=dict(
-            name="Status",
+            name="EMDTravelerInfo",
+            type="Element",
+            required=True
+        )
+    )
+    payment: Optional[Payment] = field(
+        default=None,
+        metadata=dict(
+            name="Payment",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
+        )
+    )
+    provider_reservation_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderReservationInfoRef",
             type="Attribute"
         )
     )
@@ -12932,9 +13358,18 @@ class FaxDetails:
 
 
 @dataclass
-class FlightDetails(AttrOrigDestDepatureInfo, AttrFlightTimes, AttrElementKeyResults):
+class FlightDetails:
     """Specific details within a flight segment.
 
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar flight_time: Time spent (minutes) traveling in flight, including airport taxi time.
+    :ivar travel_time: Total time spent (minutes) traveling including flight time and ground time.
+    :ivar distance: The distance traveled. Units are specified in the parent response element.
+    :ivar origin: The IATA location code for this origination of this entity.
+    :ivar destination: The IATA location code for this destination of this entity.
+    :ivar departure_time: The date and time at which this entity departs. Date and time are represented as Airport Local Time at the place of departure. The correct time zone offset is also included.
+    :ivar arrival_time: The date and time at which this entity arrives at the destination. Date and time are represented as Airport Local Time at the place of arrival. The correct time zone offset is also included.
     :ivar connection:
     :ivar meals:
     :ivar in_flight_services:
@@ -12946,6 +13381,75 @@ class FlightDetails(AttrOrigDestDepatureInfo, AttrFlightTimes, AttrElementKeyRes
     :ivar ground_time:
     :ivar automated_checkin: “True” indicates that the flight allows automated check-in. The default is “False”.
     """
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    flight_time: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="FlightTime",
+            type="Attribute"
+        )
+    )
+    travel_time: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="TravelTime",
+            type="Attribute"
+        )
+    )
+    distance: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Distance",
+            type="Attribute"
+        )
+    )
+    origin: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Origin",
+            type="Attribute",
+            required=True,
+            length=3,
+            white_space="collapse"
+        )
+    )
+    destination: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Destination",
+            type="Attribute",
+            required=True,
+            length=3,
+            white_space="collapse"
+        )
+    )
+    departure_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DepartureTime",
+            type="Attribute"
+        )
+    )
+    arrival_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ArrivalTime",
+            type="Attribute"
+        )
+    )
     connection: Optional[Connection] = field(
         default=None,
         metadata=dict(
@@ -13933,9 +14437,11 @@ class TcrexchangeBundle:
 
 
 @dataclass
-class Ticket(AttrElementKeyResults):
+class Ticket:
     """The ticket that resulted from an air booking.
 
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar coupon:
     :ivar ticket_endorsement:
     :ivar tour_code:
@@ -13944,6 +14450,20 @@ class Ticket(AttrElementKeyResults):
     :ivar ticket_number:
     :ivar ticket_status:
     """
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
     coupon: List[Coupon] = field(
         default_factory=list,
         metadata=dict(
@@ -14154,9 +14674,11 @@ class AlternateRouteList:
 
 
 @dataclass
-class AutoPricingInfo(AttrElementKeyResults):
+class AutoPricingInfo:
     """Auto Pricing based on Segment and Traveler Association.
 
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar air_segment_ref:
     :ivar booking_traveler_ref:
     :ivar air_pricing_modifiers:
@@ -14165,6 +14687,20 @@ class AutoPricingInfo(AttrElementKeyResults):
     :ivar pricing_type: Indicates the Pricing Type used. The possible values are TicketRecord, StoredFare, PricingInstruction.
     :ivar plating_carrier: The Plating Carrier for this journey
     """
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
     air_segment_ref: List[AirSegmentRef] = field(
         default_factory=list,
         metadata=dict(
@@ -14389,11 +14925,15 @@ class DefaultBrandDetail(TypeDefaultBrandDetail):
 
 
 @dataclass
-class Emdinfo(ProviderReservation, AttrElementKeyResults):
+class Emdinfo:
     """This is the parent container to display EMD information. Occurrence of
     multiple unique EMDs inside this container indicate that those EMDs are
     conjunctive to each other. Supported providers are 1G/1V/1P/1J.
 
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar provider_code:
+    :ivar provider_locator_code:
     :ivar emdtraveler_info: Basic information of the traveler associated with this EMDInfo.
     :ivar supplier_locator: List of Supplier Locator information that is associated with this document
     :ivar electronic_misc_document: Electronic miscellaneous documents.As an EMDInfo container displays all the EMDs which are in conjunction, there can be maximum 4 ElectronicMiscDocuments present in an EMDInfo
@@ -14405,6 +14945,39 @@ class Emdinfo(ProviderReservation, AttrElementKeyResults):
     :ivar emdcommission: Commission information applied during EMD issuance
     :ivar key: System generated Key
     """
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            required=True,
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    provider_locator_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderLocatorCode",
+            type="Attribute",
+            required=True,
+            max_length=15.0
+        )
+    )
     emdtraveler_info: Optional[EmdtravelerInfo] = field(
         default=None,
         metadata=dict(
@@ -14476,57 +15049,6 @@ class Emdinfo(ProviderReservation, AttrElementKeyResults):
         metadata=dict(
             name="EMDCommission",
             type="Element"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class EmdsummaryInfo(AttrElementKeyResults):
-    """Container for EMD summary information. Supported providers are 1G/1V/1P/1J.
-
-    :ivar emdsummary: Summary information for EMDs conjuncted to each other.
-    :ivar emdtraveler_info: EMD traveler information.
-    :ivar payment: Payment charged to issue EMD.
-    :ivar provider_reservation_info_ref: A reference to the provider reservation with which the document is associated.Displayed when shown as part of UR.Not displayed in EMDRetrieveRsp
-    :ivar key: System generated Key
-    """
-    emdsummary: List[Emdsummary] = field(
-        default_factory=list,
-        metadata=dict(
-            name="EMDSummary",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
-    )
-    emdtraveler_info: Optional[EmdtravelerInfo] = field(
-        default=None,
-        metadata=dict(
-            name="EMDTravelerInfo",
-            type="Element",
-            required=True
-        )
-    )
-    payment: Optional[Payment] = field(
-        default=None,
-        metadata=dict(
-            name="Payment",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
-    )
-    provider_reservation_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
         )
     )
     key: Optional[str] = field(
@@ -14993,8 +15515,22 @@ class MerchandisingDetails:
 
 
 @dataclass
-class OptionalService(AttrProviderSupplier, AttrPrices, AttrElementKeyResults):
+class OptionalService:
     """
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar total_price: The total price for this entity including base price and all taxes.
+    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
+    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
+    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
+    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
+    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
+    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
+    :ivar services: The total cost for all optional services.
+    :ivar approximate_taxes: The Converted tax amount in Default Currency.
+    :ivar approximate_fees: The Converted fee amount in Default Currency.
+    :ivar provider_code:
+    :ivar supplier_code:
     :ivar service_data:
     :ivar service_info:
     :ivar remark: Information regarding any specific for this service.
@@ -15055,6 +15591,108 @@ class OptionalService(AttrProviderSupplier, AttrPrices, AttrElementKeyResults):
     :ivar tag: Optional service group name.
     :ivar display_order: Optional service group display order.
     """
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TotalPrice",
+            type="Attribute"
+        )
+    )
+    base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BasePrice",
+            type="Attribute"
+        )
+    )
+    approximate_total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTotalPrice",
+            type="Attribute"
+        )
+    )
+    approximate_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateBasePrice",
+            type="Attribute"
+        )
+    )
+    equivalent_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EquivalentBasePrice",
+            type="Attribute"
+        )
+    )
+    taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Taxes",
+            type="Attribute"
+        )
+    )
+    fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Fees",
+            type="Attribute"
+        )
+    )
+    services: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Services",
+            type="Attribute"
+        )
+    )
+    approximate_taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTaxes",
+            type="Attribute"
+        )
+    )
+    approximate_fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateFees",
+            type="Attribute"
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
     service_data: List[ServiceData] = field(
         default_factory=list,
         metadata=dict(
@@ -15707,9 +16345,11 @@ class StructuredFareRulesType:
 
 
 @dataclass
-class TicketingModifiers(AttrElementKeyResults):
+class TicketingModifiers:
     """A container to identify individual ticketing modifiers.
 
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar booking_traveler_ref: Reference to a booking traveler for which ticketing modifier is applied.
     :ivar net_remit: Allows an agency to override the net remittance amount - varies by BSP agreement
     :ivar net_fare: Net Fare amount for a ticketed fare
@@ -15748,6 +16388,20 @@ class TicketingModifiers(AttrElementKeyResults):
     :ivar currency_override_code: This modifier allows an agency to specify the currency like L for Local, E for Euro, U for USD, C for CAD (Canadian dollars).
     :ivar key:
     """
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
     booking_traveler_ref: List[str] = field(
         default_factory=list,
         metadata=dict(
@@ -16424,9 +17078,11 @@ class BaggageAllowanceInfo(BaseBaggageAllowanceInfo):
 
 
 @dataclass
-class FareRule(AttrProviderSupplier):
+class FareRule:
     """Fare Rule Container.
 
+    :ivar provider_code:
+    :ivar supplier_code:
     :ivar fare_rule_long:
     :ivar fare_rule_short:
     :ivar rule_advanced_purchase:
@@ -16439,6 +17095,24 @@ class FareRule(AttrProviderSupplier):
     :ivar source:
     :ivar tariff_number:
     """
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
     fare_rule_long: List[FareRuleLong] = field(
         default_factory=list,
         metadata=dict(
@@ -16588,11 +17262,91 @@ class OptionalServices:
     )
 
     @dataclass
-    class OptionalServicesTotal(AttrPrices):
+    class OptionalServicesTotal:
         """
+        :ivar total_price: The total price for this entity including base price and all taxes.
+        :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
+        :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
+        :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
+        :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
+        :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
+        :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
+        :ivar services: The total cost for all optional services.
+        :ivar approximate_taxes: The Converted tax amount in Default Currency.
+        :ivar approximate_fees: The Converted fee amount in Default Currency.
         :ivar tax_info:
         :ivar fee_info:
         """
+        total_price: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="TotalPrice",
+                type="Attribute"
+            )
+        )
+        base_price: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="BasePrice",
+                type="Attribute"
+            )
+        )
+        approximate_total_price: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ApproximateTotalPrice",
+                type="Attribute"
+            )
+        )
+        approximate_base_price: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ApproximateBasePrice",
+                type="Attribute"
+            )
+        )
+        equivalent_base_price: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="EquivalentBasePrice",
+                type="Attribute"
+            )
+        )
+        taxes: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Taxes",
+                type="Attribute"
+            )
+        )
+        fees: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Fees",
+                type="Attribute"
+            )
+        )
+        services: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Services",
+                type="Attribute"
+            )
+        )
+        approximate_taxes: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ApproximateTaxes",
+                type="Attribute"
+            )
+        )
+        approximate_fees: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ApproximateFees",
+                type="Attribute"
+            )
+        )
         tax_info: List[TaxInfo] = field(
             default_factory=list,
             metadata=dict(
@@ -17292,9 +18046,11 @@ class AvailabilityErrorInfo(TypeErrorInfo):
 
 
 @dataclass
-class FareInfo(AttrElementKeyResults):
+class FareInfo:
     """Information about this fare component.
 
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar fare_ticket_designator:
     :ivar fare_surcharge:
     :ivar account_code:
@@ -17336,6 +18092,20 @@ class FareInfo(AttrElementKeyResults):
     :ivar supplier_code: Code of the provider returning this fare info
     :ivar tax_amount: Currency code and value for the approximate tax amount for this fare component.
     """
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
     fare_ticket_designator: List[FareTicketDesignator] = field(
         default_factory=list,
         metadata=dict(
@@ -17690,10 +18460,26 @@ class AirExchangeMultiQuoteOption:
 
 
 @dataclass
-class AirPricingInfo(AttrPrices, AttrProviderSupplier, AttrElementKeyResults, AttrPolicyMarking):
+class AirPricingInfo:
     """Per traveler type pricing breakdown. This will reflect the pricing for all
     travelers of the specified type.
 
+    :ivar in_policy: This attribute will be used to indicate if a fare or rate has been determined to be ‘in policy’ based on the associated policy settings.
+    :ivar preferred_option: This attribute is used to indicate if the vendors responsible for the fare or rate being returned have been determined to be ‘preferred’ based on the associated policy settings.
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar provider_code:
+    :ivar supplier_code:
+    :ivar total_price: The total price for this entity including base price and all taxes.
+    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
+    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
+    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
+    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
+    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
+    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
+    :ivar services: The total cost for all optional services.
+    :ivar approximate_taxes: The Converted tax amount in Default Currency.
+    :ivar approximate_fees: The Converted fee amount in Default Currency.
     :ivar fare_info:
     :ivar fare_status:
     :ivar fare_info_ref:
@@ -17744,6 +18530,122 @@ class AirPricingInfo(AttrPrices, AttrProviderSupplier, AttrElementKeyResults, At
     :ivar fare_calculation_ind: Fare calculation that was used to price the itinerary.
     :ivar cat35_indicator: A true value indicates that the fare has a Cat35 rule. A false valud indicates that the fare does not have a Cat35 rule
     """
+    in_policy: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="InPolicy",
+            type="Attribute"
+        )
+    )
+    preferred_option: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="PreferredOption",
+            type="Attribute"
+        )
+    )
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
+    total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TotalPrice",
+            type="Attribute"
+        )
+    )
+    base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BasePrice",
+            type="Attribute"
+        )
+    )
+    approximate_total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTotalPrice",
+            type="Attribute"
+        )
+    )
+    approximate_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateBasePrice",
+            type="Attribute"
+        )
+    )
+    equivalent_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EquivalentBasePrice",
+            type="Attribute"
+        )
+    )
+    taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Taxes",
+            type="Attribute"
+        )
+    )
+    fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Fees",
+            type="Attribute"
+        )
+    )
+    services: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Services",
+            type="Attribute"
+        )
+    )
+    approximate_taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTaxes",
+            type="Attribute"
+        )
+    )
+    approximate_fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateFees",
+            type="Attribute"
+        )
+    )
     fare_info: List[FareInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -18172,9 +19074,19 @@ class AirExchangeMulitQuoteList:
 
 
 @dataclass
-class AirPricePoint(AttrPrices):
+class AirPricePoint:
     """The container which holds the Non Solutioned result.
 
+    :ivar total_price: The total price for this entity including base price and all taxes.
+    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
+    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
+    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
+    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
+    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
+    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
+    :ivar services: The total cost for all optional services.
+    :ivar approximate_taxes: The Converted tax amount in Default Currency.
+    :ivar approximate_fees: The Converted fee amount in Default Currency.
     :ivar air_pricing_info:
     :ivar air_pricing_result_message:
     :ivar fee_info: Supported by ACH only
@@ -18183,6 +19095,76 @@ class AirPricePoint(AttrPrices):
     :ivar key:
     :ivar complete_itinerary: This attribute is used to return whether complete Itinerary is present in the AirPricePoint structure or not. If set to true means AirPricePoint contains the result for full requested itinerary.
     """
+    total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TotalPrice",
+            type="Attribute"
+        )
+    )
+    base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BasePrice",
+            type="Attribute"
+        )
+    )
+    approximate_total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTotalPrice",
+            type="Attribute"
+        )
+    )
+    approximate_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateBasePrice",
+            type="Attribute"
+        )
+    )
+    equivalent_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EquivalentBasePrice",
+            type="Attribute"
+        )
+    )
+    taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Taxes",
+            type="Attribute"
+        )
+    )
+    fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Fees",
+            type="Attribute"
+        )
+    )
+    services: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Services",
+            type="Attribute"
+        )
+    )
+    approximate_taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTaxes",
+            type="Attribute"
+        )
+    )
+    approximate_fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateFees",
+            type="Attribute"
+        )
+    )
     air_pricing_info: List[AirPricingInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -18264,9 +19246,19 @@ class AirPricingInfoList:
 
 
 @dataclass
-class AirPricingSolution(AttrPrices):
+class AirPricingSolution:
     """The pricing container for an air travel itinerary.
 
+    :ivar total_price: The total price for this entity including base price and all taxes.
+    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
+    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
+    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
+    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
+    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
+    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
+    :ivar services: The total cost for all optional services.
+    :ivar approximate_taxes: The Converted tax amount in Default Currency.
+    :ivar approximate_fees: The Converted fee amount in Default Currency.
     :ivar air_segment:
     :ivar air_segment_ref:
     :ivar journey:
@@ -18289,6 +19281,76 @@ class AirPricingSolution(AttrPrices):
     :ivar quote_date: This date will be equal to the date of the transaction unless the request included a modified ticket date.
     :ivar itinerary: For an exchange request this tells if the itinerary is the original one or new one. A value of Original will only apply to 1G/1V/1P/1S/1A. A value of New will apply to 1G/1V/1P/1S/1A/ACH.
     """
+    total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TotalPrice",
+            type="Attribute"
+        )
+    )
+    base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BasePrice",
+            type="Attribute"
+        )
+    )
+    approximate_total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTotalPrice",
+            type="Attribute"
+        )
+    )
+    approximate_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateBasePrice",
+            type="Attribute"
+        )
+    )
+    equivalent_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EquivalentBasePrice",
+            type="Attribute"
+        )
+    )
+    taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Taxes",
+            type="Attribute"
+        )
+    )
+    fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Fees",
+            type="Attribute"
+        )
+    )
+    services: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Services",
+            type="Attribute"
+        )
+    )
+    approximate_taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTaxes",
+            type="Attribute"
+        )
+    )
+    approximate_fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateFees",
+            type="Attribute"
+        )
+    )
     air_segment: List[AirSegment] = field(
         default_factory=list,
         metadata=dict(
@@ -18471,9 +19533,21 @@ class AirPricingSolution(AttrPrices):
 
 
 @dataclass
-class Etr(AttrPrices, AttrElementKeyResults):
+class Etr:
     """Result of ticketing request.
 
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar total_price: The total price for this entity including base price and all taxes.
+    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
+    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
+    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
+    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
+    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
+    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
+    :ivar services: The total cost for all optional services.
+    :ivar approximate_taxes: The Converted tax amount in Default Currency.
+    :ivar approximate_fees: The Converted fee amount in Default Currency.
     :ivar air_reservation_locator_code:
     :ivar agency_info:
     :ivar booking_traveler:
@@ -18502,6 +19576,90 @@ class Etr(AttrPrices, AttrElementKeyResults):
     :ivar country_code: Contains Ticketed PCC’s Country code.
     :ivar plating_carrier: Contains the Plating Carrier of this ETR.
     """
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TotalPrice",
+            type="Attribute"
+        )
+    )
+    base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BasePrice",
+            type="Attribute"
+        )
+    )
+    approximate_total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTotalPrice",
+            type="Attribute"
+        )
+    )
+    approximate_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateBasePrice",
+            type="Attribute"
+        )
+    )
+    equivalent_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EquivalentBasePrice",
+            type="Attribute"
+        )
+    )
+    taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Taxes",
+            type="Attribute"
+        )
+    )
+    fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Fees",
+            type="Attribute"
+        )
+    )
+    services: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Services",
+            type="Attribute"
+        )
+    )
+    approximate_taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTaxes",
+            type="Attribute"
+        )
+    )
+    approximate_fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateFees",
+            type="Attribute"
+        )
+    )
     air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
         default=None,
         metadata=dict(
@@ -18728,9 +19886,11 @@ class Etr(AttrPrices, AttrElementKeyResults):
 
 
 @dataclass
-class Tcr(ProviderReservation):
+class Tcr:
     """Information related to Ticketless carriers.
 
+    :ivar provider_code:
+    :ivar provider_locator_code:
     :ivar form_of_payment:
     :ivar payment:
     :ivar booking_traveler:
@@ -18756,6 +19916,25 @@ class Tcr(ProviderReservation):
     :ivar refund_fee: Charges incurred for processing refund.
     :ivar forfeit_amount: Amount forfeited as a result of refund.
     """
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            required=True,
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    provider_locator_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderLocatorCode",
+            type="Attribute",
+            required=True,
+            max_length=15.0
+        )
+    )
     form_of_payment: List[FormOfPayment] = field(
         default_factory=list,
         metadata=dict(

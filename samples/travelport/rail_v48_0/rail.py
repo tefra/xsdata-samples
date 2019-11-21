@@ -10,9 +10,6 @@ from samples.travelport.common_v48_0.common import (
     Remark,
     Segment,
     SupplierLocator,
-    AttrElementKeyResults,
-    AttrPrices,
-    AttrProviderSupplier,
     TypeFlexibleTimeSpec,
     TypePassengerType,
     TypeSearchLocation,
@@ -406,6 +403,106 @@ class RailFareRef:
 
 
 @dataclass
+class RailInfo:
+    """Container for rail-related information required for retrieving a rail seat
+    map/coach map.
+
+    :ivar origin: The IATA location code for this origination of this entity.
+    :ivar rail_loc_origin: RCH specific origin code (a.k.a UCodes) which uniquely identifies a train station.
+    :ivar destination: The IATA location code for this destination of this entity.
+    :ivar rail_loc_destination: RCH specific destination code (a.k.a UCodes) which uniquely identifies a train station.
+    :ivar departure_time: The date and time at which this entity departs. This does not include time zone information since it can be derived from the origin location.
+    :ivar arrival_time: The date and time at which this entity arrives at the destination. This does not include time zone information since it can be derived from the origin location.
+    :ivar train_number:
+    :ivar provider_code:
+    :ivar supplier_code:
+    """
+    origin: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Origin",
+            type="Attribute",
+            length=3,
+            white_space="collapse"
+        )
+    )
+    rail_loc_origin: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RailLocOrigin",
+            type="Attribute",
+            min_length=3.0,
+            max_length=8.0,
+            white_space="collapse"
+        )
+    )
+    destination: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Destination",
+            type="Attribute",
+            length=3,
+            white_space="collapse"
+        )
+    )
+    rail_loc_destination: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RailLocDestination",
+            type="Attribute",
+            min_length=3.0,
+            max_length=8.0,
+            white_space="collapse"
+        )
+    )
+    departure_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DepartureTime",
+            type="Attribute",
+            required=True
+        )
+    )
+    arrival_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ArrivalTime",
+            type="Attribute"
+        )
+    )
+    train_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TrainNumber",
+            type="Attribute",
+            required=True,
+            min_length=1.0,
+            max_length=8.0
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            required=True,
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierCode",
+            type="Attribute",
+            required=True,
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
+
+
+@dataclass
 class RailJourneyRef:
     """Reference to a RailJourney.
 
@@ -621,177 +718,6 @@ class TicketAdvisory:
 
 
 @dataclass
-class AttrRailInfoOrgDesAndRailLoc:
-    """Basic attributes used to describe an origin destination pair.
-
-    :ivar origin: The IATA location code for this origination of this entity.
-    :ivar rail_loc_origin: RCH specific origin code (a.k.a UCodes) which uniquely identifies a train station.
-    :ivar destination: The IATA location code for this destination of this entity.
-    :ivar rail_loc_destination: RCH specific destination code (a.k.a UCodes) which uniquely identifies a train station.
-    :ivar departure_time: The date and time at which this entity departs. This does not include time zone information since it can be derived from the origin location.
-    :ivar arrival_time: The date and time at which this entity arrives at the destination. This does not include time zone information since it can be derived from the origin location.
-    """
-    origin: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Origin",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
-    )
-    rail_loc_origin: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RailLocOrigin",
-            type="Attribute",
-            min_length=3.0,
-            max_length=8.0,
-            white_space="collapse"
-        )
-    )
-    destination: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Destination",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
-    )
-    rail_loc_destination: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RailLocDestination",
-            type="Attribute",
-            min_length=3.0,
-            max_length=8.0,
-            white_space="collapse"
-        )
-    )
-    departure_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DepartureTime",
-            type="Attribute",
-            required=True
-        )
-    )
-    arrival_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ArrivalTime",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class AttrRailOrigDestInfo:
-    """Holds all relevant origin/destination and departure/arrival details.
-
-    :ivar origin_station_name: The origin station name for the Journey.
-    :ivar destination_station_name: The destination station name for the Journey.
-    """
-    origin_station_name: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="OriginStationName",
-            type="Attribute"
-        )
-    )
-    destination_station_name: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DestinationStationName",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class AttrRailSegmentOrigDestInfo:
-    """Holds all relevant origin/destination and departure/arrival details.
-
-    :ivar origin: The IATA location code for this origination of this entity.
-    :ivar destination: The IATA location code for this destination of this entity.
-    :ivar departure_time: The date and time at which this entity departs. This does not include time zone information since it can be derived from the origin location.
-    :ivar arrival_time: The date and time at which this entity arrives at the destination. This does not include time zone information since it can be derived from the origin location.
-    :ivar origin_station_name: The origin station name for the Journey.
-    :ivar destination_station_name: The destination station name for the Journey.
-    :ivar rail_loc_origin: RCH specific origin code (a.k.a UCodes) which uniquely identifies a train station.
-    :ivar rail_loc_destination: RCH specific destination code (a.k.a UCodes) which uniquely identifies a train station.
-    """
-    origin: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Origin",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
-    )
-    destination: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Destination",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
-    )
-    departure_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DepartureTime",
-            type="Attribute",
-            required=True
-        )
-    )
-    arrival_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ArrivalTime",
-            type="Attribute"
-        )
-    )
-    origin_station_name: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="OriginStationName",
-            type="Attribute"
-        )
-    )
-    destination_station_name: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DestinationStationName",
-            type="Attribute"
-        )
-    )
-    rail_loc_origin: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RailLocOrigin",
-            type="Attribute",
-            min_length=3.0,
-            max_length=8.0,
-            white_space="collapse"
-        )
-    )
-    rail_loc_destination: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RailLocDestination",
-            type="Attribute",
-            min_length=3.0,
-            max_length=8.0,
-            white_space="collapse"
-        )
-    )
-
-
-@dataclass
 class Coach:
     """Captures rail seat map/coach map information.
 
@@ -947,47 +873,6 @@ class RailFareNoteList:
             type="Element",
             min_occurs=0,
             max_occurs=999
-        )
-    )
-
-
-@dataclass
-class RailInfo(AttrRailInfoOrgDesAndRailLoc):
-    """Container for rail-related information required for retrieving a rail seat
-    map/coach map.
-
-    :ivar train_number:
-    :ivar provider_code:
-    :ivar supplier_code:
-    """
-    train_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TrainNumber",
-            type="Attribute",
-            required=True,
-            min_length=1.0,
-            max_length=8.0
-        )
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            required=True,
-            min_length=2.0,
-            max_length=5.0
-        )
-    )
-    supplier_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            required=True,
-            min_length=1.0,
-            max_length=5.0
         )
     )
 
@@ -1414,9 +1299,11 @@ class RailTicketInfo:
 
 
 @dataclass
-class RailFare(AttrElementKeyResults):
+class RailFare:
     """Information about this fare component.
 
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar rail_fare_note_ref: Key reference to RailFareNote present in RailFareNotList
     :ivar fare_validity:
     :ivar host_token:
@@ -1443,6 +1330,20 @@ class RailFare(AttrElementKeyResults):
     :ivar rail_loc_origin: RCH specific origin code (a.k.a UCodes) which uniquely identifies a train station.
     :ivar rail_loc_destination: RCH specific destination code (a.k.a UCodes) which uniquely identifies a train station.
     """
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
     rail_fare_note_ref: List[RailFareNoteRef] = field(
         default_factory=list,
         metadata=dict(
@@ -1653,9 +1554,31 @@ class RailFare(AttrElementKeyResults):
 
 
 @dataclass
-class RailJourney(AttrRailSegmentOrigDestInfo, AttrPrices, AttrProviderSupplier, AttrElementKeyResults):
+class RailJourney:
     """Captures all journey-related data.
 
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar provider_code:
+    :ivar supplier_code:
+    :ivar total_price: The total price for this entity including base price and all taxes.
+    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
+    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
+    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
+    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
+    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
+    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
+    :ivar services: The total cost for all optional services.
+    :ivar approximate_taxes: The Converted tax amount in Default Currency.
+    :ivar approximate_fees: The Converted fee amount in Default Currency.
+    :ivar origin: The IATA location code for this origination of this entity.
+    :ivar destination: The IATA location code for this destination of this entity.
+    :ivar departure_time: The date and time at which this entity departs. This does not include time zone information since it can be derived from the origin location.
+    :ivar arrival_time: The date and time at which this entity arrives at the destination. This does not include time zone information since it can be derived from the origin location.
+    :ivar origin_station_name: The origin station name for the Journey.
+    :ivar destination_station_name: The destination station name for the Journey.
+    :ivar rail_loc_origin: RCH specific origin code (a.k.a UCodes) which uniquely identifies a train station.
+    :ivar rail_loc_destination: RCH specific destination code (a.k.a UCodes) which uniquely identifies a train station.
     :ivar journey_remark:
     :ivar host_token:
     :ivar rail_segment:
@@ -1671,6 +1594,175 @@ class RailJourney(AttrRailSegmentOrigDestInfo, AttrPrices, AttrProviderSupplier,
     :ivar route_reference: RouteReference is required in seat assignment purpose
     :ivar operation: "Type of exchange. Add - Add new Journey. Update - Modify existing Journey. Delete - Remove existing Journey"
     """
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
+    total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TotalPrice",
+            type="Attribute"
+        )
+    )
+    base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BasePrice",
+            type="Attribute"
+        )
+    )
+    approximate_total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTotalPrice",
+            type="Attribute"
+        )
+    )
+    approximate_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateBasePrice",
+            type="Attribute"
+        )
+    )
+    equivalent_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EquivalentBasePrice",
+            type="Attribute"
+        )
+    )
+    taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Taxes",
+            type="Attribute"
+        )
+    )
+    fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Fees",
+            type="Attribute"
+        )
+    )
+    services: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Services",
+            type="Attribute"
+        )
+    )
+    approximate_taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTaxes",
+            type="Attribute"
+        )
+    )
+    approximate_fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateFees",
+            type="Attribute"
+        )
+    )
+    origin: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Origin",
+            type="Attribute",
+            length=3,
+            white_space="collapse"
+        )
+    )
+    destination: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Destination",
+            type="Attribute",
+            length=3,
+            white_space="collapse"
+        )
+    )
+    departure_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DepartureTime",
+            type="Attribute",
+            required=True
+        )
+    )
+    arrival_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ArrivalTime",
+            type="Attribute"
+        )
+    )
+    origin_station_name: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="OriginStationName",
+            type="Attribute"
+        )
+    )
+    destination_station_name: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DestinationStationName",
+            type="Attribute"
+        )
+    )
+    rail_loc_origin: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RailLocOrigin",
+            type="Attribute",
+            min_length=3.0,
+            max_length=8.0,
+            white_space="collapse"
+        )
+    )
+    rail_loc_destination: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RailLocDestination",
+            type="Attribute",
+            min_length=3.0,
+            max_length=8.0,
+            white_space="collapse"
+        )
+    )
     journey_remark: List[JourneyRemark] = field(
         default_factory=list,
         metadata=dict(
@@ -1836,9 +1928,21 @@ class RailJourneyList:
 
 
 @dataclass
-class RailPricingInfo(AttrPrices, AttrElementKeyResults):
+class RailPricingInfo:
     """Per traveler type pricing breakdown.
 
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar total_price: The total price for this entity including base price and all taxes.
+    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
+    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
+    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
+    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
+    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
+    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
+    :ivar services: The total cost for all optional services.
+    :ivar approximate_taxes: The Converted tax amount in Default Currency.
+    :ivar approximate_fees: The Converted fee amount in Default Currency.
     :ivar rail_booking_info:
     :ivar passenger_type:
     :ivar booking_traveler_ref:
@@ -1848,6 +1952,90 @@ class RailPricingInfo(AttrPrices, AttrElementKeyResults):
     :ivar exchange_amount: The amount to pay to cover the exchange of the fare (includes penalties).
     :ivar approximate_exchange_amount:
     """
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TotalPrice",
+            type="Attribute"
+        )
+    )
+    base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BasePrice",
+            type="Attribute"
+        )
+    )
+    approximate_total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTotalPrice",
+            type="Attribute"
+        )
+    )
+    approximate_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateBasePrice",
+            type="Attribute"
+        )
+    )
+    equivalent_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EquivalentBasePrice",
+            type="Attribute"
+        )
+    )
+    taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Taxes",
+            type="Attribute"
+        )
+    )
+    fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Fees",
+            type="Attribute"
+        )
+    )
+    services: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Services",
+            type="Attribute"
+        )
+    )
+    approximate_taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTaxes",
+            type="Attribute"
+        )
+    )
+    approximate_fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateFees",
+            type="Attribute"
+        )
+    )
     rail_booking_info: List[RailBookingInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -2074,9 +2262,19 @@ class RailReservation(BaseReservation):
 
 
 @dataclass
-class TypeRailPricingSolution(AttrPrices):
+class TypeRailPricingSolution:
     """Common RailPricingSolution container.
 
+    :ivar total_price: The total price for this entity including base price and all taxes.
+    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
+    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
+    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
+    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
+    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
+    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
+    :ivar services: The total cost for all optional services.
+    :ivar approximate_taxes: The Converted tax amount in Default Currency.
+    :ivar approximate_fees: The Converted fee amount in Default Currency.
     :ivar rail_pricing_info:
     :ivar rail_journey:
     :ivar rail_journey_ref:
@@ -2087,6 +2285,76 @@ class TypeRailPricingSolution(AttrPrices):
     :ivar host_token_ref: HostTokenRef will reference the value in HostTokenList/HostToken @ Key
     :ivar reference: Offer Reference required for Booking(eg.TL).
     """
+    total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TotalPrice",
+            type="Attribute"
+        )
+    )
+    base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BasePrice",
+            type="Attribute"
+        )
+    )
+    approximate_total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTotalPrice",
+            type="Attribute"
+        )
+    )
+    approximate_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateBasePrice",
+            type="Attribute"
+        )
+    )
+    equivalent_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EquivalentBasePrice",
+            type="Attribute"
+        )
+    )
+    taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Taxes",
+            type="Attribute"
+        )
+    )
+    fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Fees",
+            type="Attribute"
+        )
+    )
+    services: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Services",
+            type="Attribute"
+        )
+    )
+    approximate_taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTaxes",
+            type="Attribute"
+        )
+    )
+    approximate_fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateFees",
+            type="Attribute"
+        )
+    )
     rail_pricing_info: List[RailPricingInfo] = field(
         default_factory=list,
         metadata=dict(
