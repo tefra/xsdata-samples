@@ -1,3 +1,4 @@
+from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional
 from samples.travelport.air_v48_0.air import (
@@ -94,6 +95,8 @@ from samples.travelport.air_v48_0.air import (
     TypeAirReservationWithFop,
     TypeApplicableSegment,
     TypeFailureInfo,
+    TypeFareRuleType,
+    TypeMileOrRouteBasedFare,
     TypeTicketFailureInfo,
     TypeTicketingModifiersRef,
 )
@@ -122,6 +125,7 @@ from samples.travelport.common_v48_0.common import (
     SearchPassenger,
     ServiceFeeInfo,
     TicketNumber,
+    TypeDistance,
     TypePassengerType,
 )
 from samples.travelport.common_v48_0.common_req_rsp import (
@@ -803,7 +807,7 @@ class AirFareDisplayReq(BaseReq):
             max_length=5.0
         )
     )
-    include_mile_route_information: Optional[str] = field(
+    include_mile_route_information: Optional[TypeMileOrRouteBasedFare] = field(
         default=None,
         metadata=dict(
             name="IncludeMileRouteInformation",
@@ -919,7 +923,7 @@ class AirFareRulesReq(BaseReq):
             type="Element"
         )
     )
-    fare_rule_type: str = field(
+    fare_rule_type: TypeFareRuleType = field(
         default="long",
         metadata=dict(
             name="FareRuleType",
@@ -2032,7 +2036,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
             type="Element"
         )
     )
-    fare_rule_type: str = field(
+    fare_rule_type: TypeFareRuleType = field(
         default="none",
         metadata=dict(
             name="FareRuleType",
@@ -2171,7 +2175,7 @@ class BaseAirPriceReq(BaseCoreReq):
             type="Attribute"
         )
     )
-    fare_rule_type: str = field(
+    fare_rule_type: TypeFareRuleType = field(
         default="none",
         metadata=dict(
             name="FareRuleType",
@@ -2373,12 +2377,11 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
             type="Element"
         )
     )
-    distance_units: Optional[str] = field(
+    distance_units: Optional[TypeDistance] = field(
         default=None,
         metadata=dict(
             name="DistanceUnits",
-            type="Attribute",
-            length=2
+            type="Attribute"
         )
     )
 
@@ -3022,7 +3025,7 @@ class AirRepriceReq(AirBaseReq):
             required=True
         )
     )
-    fare_rule_type: str = field(
+    fare_rule_type: TypeFareRuleType = field(
         default="none",
         metadata=dict(
             name="FareRuleType",

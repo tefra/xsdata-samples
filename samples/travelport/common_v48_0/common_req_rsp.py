@@ -1,3 +1,4 @@
+from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional
 from samples.travelport.common_v48_0.common import (
@@ -29,6 +30,24 @@ from samples.travelport.common_v48_0.common import (
     Xmlremark,
     TypeErrorInfo,
 )
+
+
+class TypeLoggingLevel(Enum):
+    """The type of various Logging levels.
+
+    :cvar TRACE:
+    :cvar DEBUG:
+    :cvar INFO:
+    :cvar WARN:
+    :cvar ERROR:
+    :cvar FATAL:
+    """
+    TRACE = "TRACE"
+    DEBUG = "DEBUG"
+    INFO = "INFO"
+    WARN = "WARN"
+    ERROR = "ERROR"
+    FATAL = "FATAL"
 
 
 @dataclass
@@ -98,7 +117,7 @@ class BaseCoreReq:
             max_length=25.0
         )
     )
-    override_logging: Optional[str] = field(
+    override_logging: Optional[TypeLoggingLevel] = field(
         default=None,
         metadata=dict(
             name="OverrideLogging",

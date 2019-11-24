@@ -1,3 +1,4 @@
+from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional
 
@@ -69,100 +70,6 @@ class AccountCode:
         default=None,
         metadata=dict(
             name="Type",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class AccountingRemark:
-    """An accounting remark container to hold any printable text.
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar remark_data: Actual remarks data.
-    :ivar booking_traveler_ref: Reference to Booking Traveler.
-    :ivar key:
-    :ivar category: A category to group and organize the various remarks. This is not required, but it is recommended.
-    :ivar type_in_gds:
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar provider_code: Contains the Provider Code of the provider for which this accounting remark is used
-    :ivar use_provider_native_mode: Will be true when terminal process required, else false
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    remark_data: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RemarkData",
-            type="Element",
-            required=True
-        )
-    )
-    booking_traveler_ref: List[str] = field(
-        default_factory=list,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    category: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Category",
-            type="Attribute",
-            max_length=14.0
-        )
-    )
-    type_in_gds: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TypeInGds",
-            type="Attribute",
-            max_length=30.0
-        )
-    )
-    provider_reservation_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2.0,
-            max_length=5.0
-        )
-    )
-    use_provider_native_mode: bool = field(
-        default=False,
-        metadata=dict(
-            name="UseProviderNativeMode",
             type="Attribute"
         )
     )
@@ -454,86 +361,6 @@ class AirSearchParameters:
         default=None,
         metadata=dict(
             name="UnRestrictedFares",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class AppliedProfile:
-    """A simple container to specify the profiles that were applied to a
-    reservation.
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar key: Key for update/delete of the element
-    :ivar traveler_id: The ID of the TravelerProfile that was applied
-    :ivar traveler_name: The name from the TravelerProfile that was applied
-    :ivar account_id: The ID of the AccountProfile that was applied
-    :ivar account_name: The name from the AccountProfile that was applied
-    :ivar immediate_parent_id: The ID of the immediate parent that was applied
-    :ivar immediate_parent_name: The name of the immediate parent that was applied
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    traveler_id: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TravelerID",
-            type="Attribute"
-        )
-    )
-    traveler_name: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TravelerName",
-            type="Attribute"
-        )
-    )
-    account_id: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AccountID",
-            type="Attribute"
-        )
-    )
-    account_name: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AccountName",
-            type="Attribute"
-        )
-    )
-    immediate_parent_id: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ImmediateParentID",
-            type="Attribute"
-        )
-    )
-    immediate_parent_name: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ImmediateParentName",
             type="Attribute"
         )
     )
@@ -945,228 +772,6 @@ class Check:
 
 
 @dataclass
-class Commission:
-    """Identifies the agency commission.
-
-    :ivar key:
-    :ivar level: The commission percentage level.
-    :ivar type: The commission type.
-    :ivar modifier: Optional commission modifier.
-    :ivar amount: The monetary amount of the commission.
-    :ivar value: Contains alphanumeric or alpha characters intended as 1G Value Code as applicable by BSP of client.
-    :ivar percentage: The percent of the commission.
-    :ivar booking_traveler_ref: A reference to a passenger.
-    :ivar commission_override: This is enabled to override CAT-35 commission error during air ticketing. PROVIDER SUPPORTED:Worldspan and JAL
-    """
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    level: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Level",
-            type="Attribute",
-            required=True
-        )
-    )
-    type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
-    )
-    modifier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Modifier",
-            type="Attribute"
-        )
-    )
-    amount: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute"
-        )
-    )
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Value",
-            type="Attribute",
-            min_length=0.0,
-            max_length=15.0
-        )
-    )
-    percentage: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Percentage",
-            type="Attribute",
-            pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
-        )
-    )
-    booking_traveler_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Attribute"
-        )
-    )
-    commission_override: bool = field(
-        default=False,
-        metadata=dict(
-            name="CommissionOverride",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class CommissionRemark:
-    """Identifies the agency commision remarks. Specifically used for Worldspan.
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar provider_reservation_level: Specify commission which is applicable to PNR level.
-    :ivar passenger_type_level: Specify commission which is applicable to per PTC level.
-    :ivar key: Key to be used for internal processing.
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar provider_code: Contains the Provider Code of the provider for which this accounting remark is used
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    provider_reservation_level: Optional["CommissionRemark.ProviderReservationLevel"] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderReservationLevel",
-            type="Element"
-        )
-    )
-    passenger_type_level: List["CommissionRemark.PassengerTypeLevel"] = field(
-        default_factory=list,
-        metadata=dict(
-            name="PassengerTypeLevel",
-            type="Element",
-            min_occurs=0,
-            max_occurs=4
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    provider_reservation_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2.0,
-            max_length=5.0
-        )
-    )
-
-    @dataclass
-    class ProviderReservationLevel:
-        """
-        :ivar amount: The monetary amount of the commission.
-        :ivar percentage: The percent of the commission.
-        :ivar commission_cap: Commission cap for the Airline.
-        """
-        amount: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="Amount",
-                type="Attribute"
-            )
-        )
-        percentage: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="Percentage",
-                type="Attribute",
-                pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
-            )
-        )
-        commission_cap: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="CommissionCap",
-                type="Attribute"
-            )
-        )
-
-    @dataclass
-    class PassengerTypeLevel:
-        """
-        :ivar amount: The monetary amount of the commission.
-        :ivar percentage: The percent of the commission.
-        :ivar commission_cap: Commission cap for the Airline.
-        :ivar traveler_type:
-        """
-        amount: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="Amount",
-                type="Attribute"
-            )
-        )
-        percentage: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="Percentage",
-                type="Attribute",
-                pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
-            )
-        )
-        commission_cap: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="CommissionCap",
-                type="Attribute"
-            )
-        )
-        traveler_type: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="TravelerType",
-                type="Attribute",
-                required=True,
-                min_length=3.0,
-                max_length=5.0
-            )
-        )
-
-
-@dataclass
 class ContinuityCheckOverride:
     """
     :ivar value:
@@ -1368,68 +973,6 @@ class DirectPayment:
 
 
 @dataclass
-class DiscountCard:
-    """Rail Discount Card Information.
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar key:
-    :ivar code:
-    :ivar description:
-    :ivar number:
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            min_length=1.0,
-            max_length=8.0
-        )
-    )
-    description: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Description",
-            type="Attribute",
-            min_length=1.0,
-            max_length=255.0
-        )
-    )
-    number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            min_length=1.0,
-            max_length=36.0
-        )
-    )
-
-
-@dataclass
 class DiscountCardRef:
     """
     :ivar key:
@@ -1474,46 +1017,6 @@ class Distance:
             name="Direction",
             type="Attribute",
             max_length=2.0
-        )
-    )
-
-
-@dataclass
-class DriversLicense:
-    """Details of drivers license.
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar key:
-    :ivar license_number: The driving license number of the booking traveler.
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    license_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="LicenseNumber",
-            type="Attribute",
-            required=True
         )
     )
 
@@ -1687,134 +1190,6 @@ class FormattedTextTextType(str):
 
 
 @dataclass
-class GeneralRemark:
-    """A textual remark container to hold any printable text. (max 512 chars)
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar provider_code:
-    :ivar supplier_code:
-    :ivar remark_data: Actual remarks data.
-    :ivar booking_traveler_ref: Reference to Booking Traveler.
-    :ivar key:
-    :ivar category: A category to group and organize the various remarks. This is not required, but it is recommended.
-    :ivar type_in_gds:
-    :ivar supplier_type: The type of product this reservation is relative to
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar direction: Direction Incoming or Outgoing of the GeneralRemark.
-    :ivar create_date: The date and time that this GeneralRemark was created.
-    :ivar use_provider_native_mode: Will be true when terminal process required, else false
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2.0,
-            max_length=5.0
-        )
-    )
-    supplier_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            min_length=1.0,
-            max_length=5.0
-        )
-    )
-    remark_data: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RemarkData",
-            type="Element",
-            required=True
-        )
-    )
-    booking_traveler_ref: List[str] = field(
-        default_factory=list,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    category: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Category",
-            type="Attribute",
-            max_length=20.0
-        )
-    )
-    type_in_gds: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TypeInGds",
-            type="Attribute",
-            max_length=30.0
-        )
-    )
-    supplier_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SupplierType",
-            type="Attribute"
-        )
-    )
-    provider_reservation_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
-    )
-    direction: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Direction",
-            type="Attribute"
-        )
-    )
-    create_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CreateDate",
-            type="Attribute"
-        )
-    )
-    use_provider_native_mode: bool = field(
-        default=False,
-        metadata=dict(
-            name="UseProviderNativeMode",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
 class GuaranteeType:
     """A type of guarantee i.e.
 
@@ -1922,47 +1297,6 @@ class KeyMapping:
             name="NewKey",
             type="Attribute",
             required=True
-        )
-    )
-
-
-@dataclass
-class LinkedUniversalRecord:
-    """
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar locator_code: A Universal Record that need to be linked to the current Universal Record.
-    :ivar key:
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    locator_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="LocatorCode",
-            type="Attribute",
-            required=True,
-            min_length=5.0,
-            max_length=8.0
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
         )
     )
 
@@ -2289,6 +1623,26 @@ class MiscFormOfPayment:
     )
 
 
+class ModificationType(Enum):
+    """The modification types supported.
+
+    :cvar ADD_SEGMENT: Add a segment to the itinerary
+    :cvar REMOVE_SEGMENT: Delete a segment from the itinerary
+    :cvar REPLACE_SEGMENT: Replace a segment in the itinerary with a new segment
+    :cvar ADD_PASSENGER: Add a passenger to the itinerary
+    :cvar REMOVE_PASSENGER: Remove a passenger from the itinerary
+    :cvar OPTIONS_ONLY: Modification where only options are added / removed from the itinerary
+    :cvar OTHER: Other modification types
+    """
+    ADD_SEGMENT = "AddSegment"
+    REMOVE_SEGMENT = "RemoveSegment"
+    REPLACE_SEGMENT = "ReplaceSegment"
+    ADD_PASSENGER = "AddPassenger"
+    REMOVE_PASSENGER = "RemovePassenger"
+    OPTIONS_ONLY = "OptionsOnly"
+    OTHER = "Other"
+
+
 @dataclass
 class Name:
     """Complete name fields.
@@ -2422,84 +1776,6 @@ class NextResultReference:
 
 
 @dataclass
-class Osi:
-    """Other Service information sent to the carriers during air bookings.
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar key:
-    :ivar carrier:
-    :ivar code:
-    :ivar text:
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar provider_code: Contains the Provider Code of the provider for which this OSI is used
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Carrier",
-            type="Attribute",
-            required=True,
-            length=2
-        )
-    )
-    code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            max_length=4.0
-        )
-    )
-    text: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Text",
-            type="Attribute",
-            required=True,
-            max_length=256.0
-        )
-    )
-    provider_reservation_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2.0,
-            max_length=5.0
-        )
-    )
-
-
-@dataclass
 class OperatedBy:
     """This is the carrier code to support Cross Accrual.
 
@@ -2516,45 +1792,22 @@ class OperatedBy:
     )
 
 
-@dataclass
-class OptionalServiceApplicationLimitType:
-    """The optional service application limit.
+class OptionalServiceApplicabilityType(Enum):
+    """The different levels at which an optional service may be applied.
 
-    :ivar applicable_level: Indicates the applicable level for the option
-    :ivar provider_defined_applicable_levels: Indicates the actual provider defined ApplicableLevels which is mapped to Other
-    :ivar maximum_quantity: The maximum quantity allowed for the type
-    :ivar minimum_quantity: Indicates the minimum number of the option that can be selected.
+    :cvar ITINERARY:
+    :cvar PASSENGER:
+    :cvar SEGMENT:
+    :cvar PASSENGER_SEGMENT:
+    :cvar PASSENGER_OD: PassengerOD stands for passenger origin destination.
+    :cvar OTHER:
     """
-    applicable_level: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApplicableLevel",
-            type="Attribute",
-            required=True
-        )
-    )
-    provider_defined_applicable_levels: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderDefinedApplicableLevels",
-            type="Attribute"
-        )
-    )
-    maximum_quantity: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="MaximumQuantity",
-            type="Attribute",
-            required=True
-        )
-    )
-    minimum_quantity: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="MinimumQuantity",
-            type="Attribute"
-        )
-    )
+    ITINERARY = "Itinerary"
+    PASSENGER = "Passenger"
+    SEGMENT = "Segment"
+    PASSENGER_SEGMENT = "PassengerSegment"
+    PASSENGER_OD = "PassengerOD"
+    OTHER = "Other"
 
 
 @dataclass
@@ -2614,98 +1867,6 @@ class OwnershipChange:
             name="OwningPCC",
             type="Attribute",
             required=True
-        )
-    )
-
-
-@dataclass
-class Payment:
-    """
-    Payment information - must be used in conjunction with credit card info
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar key:
-    :ivar type: Identifies the type of payment. This can be for an itinerary, a traveler, or a service fee for example.
-    :ivar form_of_payment_ref: The credit card that is will be used to make this payment.
-    :ivar booking_traveler_ref: If the type represents a per traveler payment, then this will reference the traveler this payment refers to.
-    :ivar amount:
-    :ivar amount_type: This field displays type of payment amount when it is non-monetary. Presently available/supported value is "Flight Pass Credits".
-    :ivar approximate_amount: It stores the converted payment amount in agency's default currency
-    :ivar status: Status to indicate the business association of the payment element.
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
-    )
-    form_of_payment_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FormOfPaymentRef",
-            type="Attribute",
-            required=True
-        )
-    )
-    booking_traveler_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Attribute"
-        )
-    )
-    amount: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            required=True
-        )
-    )
-    amount_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AmountType",
-            type="Attribute",
-            min_length=1.0,
-            max_length=32.0
-        )
-    )
-    approximate_amount: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApproximateAmount",
-            type="Attribute"
-        )
-    )
-    status: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute"
         )
     )
 
@@ -3294,105 +2455,6 @@ class Restriction:
 
 
 @dataclass
-class ReviewBooking:
-    """Review Booking or Queue Minders is to add the reminders in the Provider
-    Reservation along with the date time and Queue details. On the date time
-    defined in reminders, the message along with the PNR goes to the desired Queue.
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar key: Returned in response. Use it for update of saved review booking.
-    :ivar queue: Queue number, Must be numeric and less than 100.
-    :ivar queue_category: Queue Category, 2 Character Alpha or Numeric.
-    :ivar date_time: Date and Time to place message on designated Queue, Should be prior to the last segment date in the PNR.
-    :ivar pseudo_city_code: Input PCC optional value for placing the PNR into Queue. If not passed, will add as default PNR's Pseudo.
-    :ivar provider_code: The code of the Provider (e.g 1G,1V).
-    :ivar provider_reservation_info_ref: Provider Reservation reference. Returned in the response. Use it for update of saved Review Booking.
-    :ivar remarks: Remark or reminder message. It can be truncated depending on the provider.
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    queue: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="Queue",
-            type="Attribute",
-            required=True,
-            max_inclusive=99.0
-        )
-    )
-    queue_category: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="QueueCategory",
-            type="Attribute",
-            max_length=2.0
-        )
-    )
-    date_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DateTime",
-            type="Attribute",
-            required=True
-        )
-    )
-    pseudo_city_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PseudoCityCode",
-            type="Attribute",
-            min_length=2.0,
-            max_length=10.0
-        )
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2.0,
-            max_length=5.0
-        )
-    )
-    provider_reservation_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
-    )
-    remarks: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Remarks",
-            type="Attribute",
-            required=True,
-            max_length=300.0
-        )
-    )
-
-
-@dataclass
 class RoleInfo:
     """Container to specify the role of the agent.
 
@@ -3437,157 +2499,6 @@ class RoleInfo:
 
 
 @dataclass
-class Ssr:
-    """Special serivces like wheel chair, or pet carrier.
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar key:
-    :ivar segment_ref: Reference to the air segment. May be required for some Types.
-    :ivar passive_segment_ref: Reference to the passive segment.
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar type: Programmatic SSRs use codes recognized by the provider/supplier (example, VGML=vegetarian meal code). Manual SSRs do not have an associated programmatic code.
-    :ivar status:
-    :ivar free_text: Certain SSR types will require a free text message. For example MAAS (Meet and assist).
-    :ivar carrier:
-    :ivar carrier_specific_text: Carrier specific information which are not captured in the FreeText field(not present in IATA's standard SSR DOCO format). An example is VISA Expiration Date.
-    :ivar description:
-    :ivar provider_defined_type: Original Type as sent by the provider
-    :ivar ssrrule_ref: UniqueID to associate a rule to the SSR
-    :ivar url:
-    :ivar profile_id: Key assigned for Secure Flight Document value from the specified profile
-    :ivar profile_secure_flight_doc_key: Unique ID of Booking Traveler's Profile that contains the Secure flight Detail
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    segment_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SegmentRef",
-            type="Attribute"
-        )
-    )
-    passive_segment_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PassiveSegmentRef",
-            type="Attribute"
-        )
-    )
-    provider_reservation_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
-    )
-    type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True,
-            min_length=4.0,
-            max_length=4.0
-        )
-    )
-    status: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute"
-        )
-    )
-    free_text: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FreeText",
-            type="Attribute"
-        )
-    )
-    carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Carrier",
-            type="Attribute",
-            length=2
-        )
-    )
-    carrier_specific_text: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CarrierSpecificText",
-            type="Attribute",
-            min_length=1.0,
-            max_length=64.0
-        )
-    )
-    description: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Description",
-            type="Attribute"
-        )
-    )
-    provider_defined_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderDefinedType",
-            type="Attribute",
-            min_length=1.0,
-            max_length=16.0
-        )
-    )
-    ssrrule_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SSRRuleRef",
-            type="Attribute"
-        )
-    )
-    url: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="URL",
-            type="Attribute"
-        )
-    )
-    profile_id: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProfileID",
-            type="Attribute"
-        )
-    )
-    profile_secure_flight_doc_key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProfileSecureFlightDocKey",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
 class SearchTicketing:
     """Search restriction by Agent.
 
@@ -3613,90 +2524,6 @@ class SearchTicketing:
         default=None,
         metadata=dict(
             name="TicketDate",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class SeatAssignment:
-    """
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar key:
-    :ivar status:
-    :ivar seat:
-    :ivar seat_type_code: The 4 letter SSR code like SMSW,NSSW,SMST etc.
-    :ivar segment_ref:
-    :ivar flight_details_ref:
-    :ivar rail_coach_number: Coach number for which rail seatmap/coachmap is returned.
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    status: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute",
-            required=True,
-            length=2,
-            white_space="collapse"
-        )
-    )
-    seat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Seat",
-            type="Attribute",
-            required=True
-        )
-    )
-    seat_type_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SeatTypeCode",
-            type="Attribute",
-            length=4,
-            white_space="collapse"
-        )
-    )
-    segment_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SegmentRef",
-            type="Attribute"
-        )
-    )
-    flight_details_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FlightDetailsRef",
-            type="Attribute"
-        )
-    )
-    rail_coach_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RailCoachNumber",
             type="Attribute"
         )
     )
@@ -3957,45 +2784,6 @@ class SimpleName(str):
 
 
 @dataclass
-class SpecialEquipment:
-    """
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar key:
-    :ivar type: Special equipment associated with a specific vehicle
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
-    )
-
-
-@dataclass
 class State(str):
     """Container to house the state code for an address."""
     pass
@@ -4102,173 +2890,6 @@ class TicketNumber:
 
 
 @dataclass
-class TravelComplianceData:
-    """Travel Compliance and Preferred Supplier information of the traveler
-    specific to a segment.
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar policy_compliance:
-    :ivar contract_compliance:
-    :ivar preferred_supplier:
-    :ivar key: System generated key, returned back in the response. This can be used to modify or delete a saved TravelComplianceData.
-    :ivar air_segment_ref: Refers to Air Segment. Applicable only for Air. Ignored for others.
-    :ivar passive_segment_ref: Refers to Passive Segment. Applicable only for Passive. Ignored for others.
-    :ivar rail_segment_ref: Refers to Rail Segment. Applicable only for Rail. Ignored for others.
-    :ivar reservation_locator_ref: This is returned in the response. Any input will be ignored for this attribute. This represents the association of Travel Compliance Data with the uAPI reservation locator code, mainly relevant to Hotel and Vehicle.
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    policy_compliance: List["TravelComplianceData.PolicyCompliance"] = field(
-        default_factory=list,
-        metadata=dict(
-            name="PolicyCompliance",
-            type="Element",
-            min_occurs=0,
-            max_occurs=2
-        )
-    )
-    contract_compliance: List["TravelComplianceData.ContractCompliance"] = field(
-        default_factory=list,
-        metadata=dict(
-            name="ContractCompliance",
-            type="Element",
-            min_occurs=0,
-            max_occurs=2
-        )
-    )
-    preferred_supplier: List["TravelComplianceData.PreferredSupplier"] = field(
-        default_factory=list,
-        metadata=dict(
-            name="PreferredSupplier",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    air_segment_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AirSegmentRef",
-            type="Attribute"
-        )
-    )
-    passive_segment_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PassiveSegmentRef",
-            type="Attribute"
-        )
-    )
-    rail_segment_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RailSegmentRef",
-            type="Attribute"
-        )
-    )
-    reservation_locator_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ReservationLocatorRef",
-            type="Attribute",
-            min_length=5.0,
-            max_length=8.0
-        )
-    )
-
-    @dataclass
-    class PolicyCompliance:
-        """
-        :ivar in_policy: Policy Compliance Indicator. For In-Policy set to 'true', For Out-Of-Policy set to 'false''.
-        :ivar policy_token: Optional text message to set the rule or token for which it's In Policy or Out Of Policy.
-        """
-        in_policy: Optional[bool] = field(
-            default=None,
-            metadata=dict(
-                name="InPolicy",
-                type="Attribute",
-                required=True
-            )
-        )
-        policy_token: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="PolicyToken",
-                type="Attribute",
-                min_length=1.0,
-                max_length=128.0
-            )
-        )
-
-    @dataclass
-    class ContractCompliance:
-        """
-        :ivar in_contract: Contract Compliance Indicator. For In-Contract set to 'true', For Out-Of-Contract set to 'false'.
-        :ivar contract_token: Optional text message to set the rule or token for which it's In Contract or Out Of Contract.
-        """
-        in_contract: Optional[bool] = field(
-            default=None,
-            metadata=dict(
-                name="InContract",
-                type="Attribute",
-                required=True
-            )
-        )
-        contract_token: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="ContractToken",
-                type="Attribute",
-                min_length=1.0,
-                max_length=128.0
-            )
-        )
-
-    @dataclass
-    class PreferredSupplier:
-        """
-        :ivar preferred: Preferred Supplier - 'true', 'false'.
-        :ivar profile_type: Indicate profile type. e.g. if Agency Preferred then pass Agency, if Traveler Preferred then pass Traveler.
-        """
-        preferred: Optional[bool] = field(
-            default=None,
-            metadata=dict(
-                name="Preferred",
-                type="Attribute",
-                required=True
-            )
-        )
-        profile_type: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="ProfileType",
-                type="Attribute",
-                required=True
-            )
-        )
-
-
-@dataclass
 class TravelInfo:
     """Traveler information details like Travel Purpose and Trip Name.
 
@@ -4309,6 +2930,21 @@ class TravelerType:
             max_length=5.0
         )
     )
+
+
+class UrticketStatus(Enum):
+    """Information on whether the Universal Record ticket status is Ticketed,
+    Unticketed , Partially Ticketed or Not Applicable status.
+
+    :cvar TICKETED:
+    :cvar UNTICKETED:
+    :cvar PARTIALLY_TICKETED:
+    :cvar NOT_APPLICABLE:
+    """
+    TICKETED = "Ticketed"
+    UNTICKETED = "Unticketed"
+    PARTIALLY_TICKETED = "Partially Ticketed"
+    NOT_APPLICABLE = "Not Applicable"
 
 
 @dataclass
@@ -4352,28 +2988,24 @@ class Xmlremark(str):
     )
 
 
-@dataclass
-class TypeAgencyHierarchyReference:
+class TypeAdjustmentTarget(Enum):
     """
-    :ivar profile_id:
-    :ivar profile_type:
+    :cvar BASE:
+    :cvar TOTAL:
+    :cvar OTHER:
     """
-    profile_id: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="ProfileID",
-            type="Attribute",
-            required=True
-        )
-    )
-    profile_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProfileType",
-            type="Attribute",
-            required=True
-        )
-    )
+    BASE = "Base"
+    TOTAL = "Total"
+    OTHER = "Other"
+
+
+class TypeAdjustmentType(Enum):
+    """
+    :cvar AMOUNT:
+    :cvar PERCENTAGE:
+    """
+    AMOUNT = "Amount"
+    PERCENTAGE = "Percentage"
 
 
 @dataclass
@@ -4411,6 +3043,20 @@ class TypeAgencyPayment:
     )
 
 
+class TypeAgencyProfileLevel(Enum):
+    """Profile levels in the Agency Hierarchy.
+
+    :cvar AGENCY:
+    :cvar BRANCH:
+    :cvar BRANCH_GROUP:
+    :cvar AGENT:
+    """
+    AGENCY = "Agency"
+    BRANCH = "Branch"
+    BRANCH_GROUP = "BranchGroup"
+    AGENT = "Agent"
+
+
 @dataclass
 class TypeAgentInfo:
     pass
@@ -4428,6 +3074,50 @@ class TypeBookingTransactionsAllowed:
             type="Attribute"
         )
     )
+
+
+class TypeCommissionLevel(Enum):
+    """ATA/IATA Standard commission level.
+
+    :cvar RECALLED:
+    :cvar FARE:
+    :cvar PENALTY:
+    """
+    RECALLED = "Recalled"
+    FARE = "Fare"
+    PENALTY = "Penalty"
+
+
+class TypeCommissionModifier(Enum):
+    """Optional commission modifier.
+
+    :cvar FARE_PERCENT: Commission percentage applied to the fare
+    :cvar FARE_AMOUNT: Commission amount applied to the fare
+    :cvar COMMISSION_AMOUNT: Specific commission amount to be applied
+    :cvar LESS_STANDARD_COMMISSION: Indicates commission percentage applied to the fare less the standard commission
+    :cvar STANDARD_PLUS_SUPPLEMENTARY_PERCENT: Indicates commission percentage includes standard and supplementary commission
+    :cvar SUPPLEMENTARY_PERCENT: Supplementary commission percent which is applied to the fare
+    :cvar SUPPLEMENTARY_AMOUNT: Supplementary commission amount which is applied to the fare
+    """
+    FARE_PERCENT = "FarePercent"
+    FARE_AMOUNT = "FareAmount"
+    COMMISSION_AMOUNT = "CommissionAmount"
+    LESS_STANDARD_COMMISSION = "LessStandardCommission"
+    STANDARD_PLUS_SUPPLEMENTARY_PERCENT = "StandardPlusSupplementaryPercent"
+    SUPPLEMENTARY_PERCENT = "SupplementaryPercent"
+    SUPPLEMENTARY_AMOUNT = "SupplementaryAmount"
+
+
+class TypeCommissionType(Enum):
+    """Types of possible commission.
+
+    :cvar FLAT:
+    :cvar PERCENT_BASE:
+    :cvar PERCENT_TOTAL:
+    """
+    FLAT = "Flat"
+    PERCENT_BASE = "PercentBase"
+    PERCENT_TOTAL = "PercentTotal"
 
 
 @dataclass
@@ -4455,6 +3145,188 @@ class TypeDateRange:
     )
 
 
+class TypeDirection(Enum):
+    """Defines the Direction for Incoming or Outgoing.
+
+    :cvar INCOMING:
+    :cvar OUTGOING:
+    """
+    INCOMING = "Incoming"
+    OUTGOING = "Outgoing"
+
+
+class TypeDistance(Enum):
+    """2 Letter distance unit code.
+
+    :cvar MI:
+    :cvar KM:
+    """
+    MI = "MI"
+    KM = "KM"
+
+
+class TypeDoorCount(Enum):
+    """
+    :cvar TWO_TO_THREE_DOORS:
+    :cvar TWO_TO_FOUR_DOORS:
+    :cvar FOUR_TO_FIVE_DOORS:
+    """
+    TWO_TO_THREE_DOORS = "TwoToThreeDoors"
+    TWO_TO_FOUR_DOORS = "TwoToFourDoors"
+    FOUR_TO_FIVE_DOORS = "FourToFiveDoors"
+
+
+class TypeElement(Enum):
+    """Defines the list of available data types for modifications.
+
+    :cvar PAYMENT:
+    :cvar CREDIT_CARD_AUTHORIZATION:
+    :cvar DELIVERY_INFO:
+    :cvar FORM_OF_PAYMENT:
+    :cvar ACTION_STATUS:
+    :cvar OSI:
+    :cvar GENERAL_REMARK:
+    :cvar UNASSOCIATED_REMARK:
+    :cvar ACCOUNTING_REMARK:
+    :cvar POST_SCRIPT:
+    :cvar AIR_RESERVATION_AIR_SEGMENT_UPDATE:
+    :cvar AIR_SEGMENT:
+    :cvar PHONE_NUMBER:
+    :cvar EMAIL:
+    :cvar LOYALTY_CARD:
+    :cvar SSR:
+    :cvar SEAT_ASSIGNMENT:
+    :cvar SPECIFIC_SEAT_ASSIGNMENT:
+    :cvar AUTO_SEAT_ASSIGNMENT:
+    :cvar AIR_PRICING_INFO:
+    :cvar VEHICLE_SPECIAL_REQUEST:
+    :cvar SPECIAL_EQUIPMENT:
+    :cvar XMLREMARK:
+    :cvar ADDRESS:
+    :cvar TICKETING_MODIFIERS:
+    :cvar GUARANTEE:
+    :cvar DELIVERY_ADDRESS:
+    :cvar SERVICE_FEE_INFO:
+    :cvar LINKED_UNIVERSAL_RECORD:
+    :cvar NAME_REMARK:
+    :cvar PASSIVE_SEGMENT:
+    :cvar PAYMENT_INFORMATION:
+    :cvar CUSTOMER_ID:
+    :cvar DRIVERS_LICENSE:
+    :cvar ASSOCIATED_REMARK:
+    :cvar COLLECTION_ADDRESS:
+    :cvar HOTEL_SPECIAL_REQUEST:
+    :cvar CORPORATE_DISCOUNT_ID:
+    :cvar COMMISSION_REMARK:
+    :cvar POCKET_ITINERARY_REMARK:
+    :cvar CUSTOMIZED_NAME_DATA:
+    :cvar INVOICE_REMARK:
+    :cvar THIRD_PARTY_INFORMATION:
+    :cvar TRAVEL_COMPLIANCE:
+    :cvar REVIEW_BOOKING:
+    :cvar CONSOLIDATOR_REMARK:
+    :cvar BOOKING_TRAVELER:
+    :cvar APPLIED_PROFILE:
+    :cvar TRIP_NAME:
+    :cvar TRAVEL_PURPOSE:
+    :cvar BOOKING_CONFIRMATION:
+    :cvar BRAND:
+    """
+    PAYMENT = "Payment"
+    CREDIT_CARD_AUTHORIZATION = "CreditCardAuthorization"
+    DELIVERY_INFO = "DeliveryInfo"
+    FORM_OF_PAYMENT = "FormOfPayment"
+    ACTION_STATUS = "ActionStatus"
+    OSI = "OSI"
+    GENERAL_REMARK = "GeneralRemark"
+    UNASSOCIATED_REMARK = "UnassociatedRemark"
+    ACCOUNTING_REMARK = "AccountingRemark"
+    POST_SCRIPT = "PostScript"
+    AIR_RESERVATION_AIR_SEGMENT_UPDATE = "AirReservationAirSegmentUpdate"
+    AIR_SEGMENT = "AirSegment"
+    PHONE_NUMBER = "PhoneNumber"
+    EMAIL = "Email"
+    LOYALTY_CARD = "LoyaltyCard"
+    SSR = "SSR"
+    SEAT_ASSIGNMENT = "SeatAssignment"
+    SPECIFIC_SEAT_ASSIGNMENT = "SpecificSeatAssignment"
+    AUTO_SEAT_ASSIGNMENT = "AutoSeatAssignment"
+    AIR_PRICING_INFO = "AirPricingInfo"
+    VEHICLE_SPECIAL_REQUEST = "VehicleSpecialRequest"
+    SPECIAL_EQUIPMENT = "SpecialEquipment"
+    XMLREMARK = "XMLRemark"
+    ADDRESS = "Address"
+    TICKETING_MODIFIERS = "TicketingModifiers"
+    GUARANTEE = "Guarantee"
+    DELIVERY_ADDRESS = "DeliveryAddress"
+    SERVICE_FEE_INFO = "ServiceFeeInfo"
+    LINKED_UNIVERSAL_RECORD = "LinkedUniversalRecord"
+    NAME_REMARK = "NameRemark"
+    PASSIVE_SEGMENT = "PassiveSegment"
+    PAYMENT_INFORMATION = "PaymentInformation"
+    CUSTOMER_ID = "CustomerID"
+    DRIVERS_LICENSE = "DriversLicense"
+    ASSOCIATED_REMARK = "AssociatedRemark"
+    COLLECTION_ADDRESS = "CollectionAddress"
+    HOTEL_SPECIAL_REQUEST = "HotelSpecialRequest"
+    CORPORATE_DISCOUNT_ID = "CorporateDiscountID"
+    COMMISSION_REMARK = "CommissionRemark"
+    POCKET_ITINERARY_REMARK = "PocketItineraryRemark"
+    CUSTOMIZED_NAME_DATA = "CustomizedNameData"
+    INVOICE_REMARK = "InvoiceRemark"
+    THIRD_PARTY_INFORMATION = "ThirdPartyInformation"
+    TRAVEL_COMPLIANCE = "TravelCompliance"
+    REVIEW_BOOKING = "ReviewBooking"
+    CONSOLIDATOR_REMARK = "ConsolidatorRemark"
+    BOOKING_TRAVELER = "BookingTraveler"
+    APPLIED_PROFILE = "AppliedProfile"
+    TRIP_NAME = "TripName"
+    TRAVEL_PURPOSE = "TravelPurpose"
+    BOOKING_CONFIRMATION = "BookingConfirmation"
+    BRAND = "Brand"
+
+
+class TypeElementStatus(Enum):
+    """Values to specify the state of the element. "A" refers to "Add" , "M" refers
+    to "Modified" and "C" refers to error conditions when value provided in "Key"
+    attribute is not retained in response.
+
+    :cvar A:
+    :cvar M:
+    :cvar C:
+    """
+    A = "A"
+    M = "M"
+    C = "C"
+
+
+class TypeEventType(Enum):
+    """The various reservation events (book, cancel, void, etc)
+
+    :cvar CREATE:
+    :cvar CANCEL:
+    :cvar TICKET:
+    :cvar REFUND:
+    :cvar EXCHANGE:
+    :cvar VOID:
+    """
+    CREATE = "Create"
+    CANCEL = "Cancel"
+    TICKET = "Ticket"
+    REFUND = "Refund"
+    EXCHANGE = "Exchange"
+    VOID = "Void"
+
+
+class TypeFarePull(Enum):
+    """
+    :cvar REVERSE_OF_ORIGIN_DESTINATION:
+    :cvar SAME_AS_ORIGIN_DESTINATION:
+    """
+    REVERSE_OF_ORIGIN_DESTINATION = "ReverseOfOriginDestination"
+    SAME_AS_ORIGIN_DESTINATION = "SameAsOriginDestination"
+
+
 @dataclass
 class TypeFormOfPaymentPnrreference:
     """
@@ -4477,10 +3349,88 @@ class TypeFormOfPaymentPnrreference:
     )
 
 
+class TypeFormOfRefund(Enum):
+    """
+    :cvar MCO:
+    :cvar FORM_OF_PAYMENT:
+    """
+    MCO = "MCO"
+    FORM_OF_PAYMENT = "FormOfPayment"
+
+
 @dataclass
 class TypeFreeFormText(str):
     """Free form Text."""
     pass
+
+
+class TypeFuel(Enum):
+    """
+    :cvar PETROL:
+    :cvar DIESEL:
+    :cvar HYBRID:
+    :cvar ELECTRIC:
+    :cvar LPGCNG:
+    :cvar HYDROGEN:
+    :cvar MULTI_FUEL:
+    :cvar ETHANOL:
+    """
+    PETROL = "Petrol"
+    DIESEL = "Diesel"
+    HYBRID = "Hybrid"
+    ELECTRIC = "Electric"
+    LPGCNG = "LPGCNG"
+    HYDROGEN = "Hydrogen"
+    MULTI_FUEL = "MultiFuel"
+    ETHANOL = "Ethanol"
+
+
+class TypeFulfillmentIdtype(Enum):
+    """IdentificationType to define how the customer will identify himself when
+    collecting the ticket.
+
+    :cvar BAHN_CARD:
+    :cvar CREDIT_CARD:
+    :cvar EURO_CHEQUE_CARD:
+    :cvar COLLECTION_REFERENCE:
+    """
+    BAHN_CARD = "Bahn Card"
+    CREDIT_CARD = "Credit Card"
+    EURO_CHEQUE_CARD = "Euro Cheque Card"
+    COLLECTION_REFERENCE = "Collection Reference"
+
+
+class TypeFulfillmentType(Enum):
+    """Defines how the client wishes to receive travel documents, e.g. collect
+    ticket at a kiosk, print in agency.
+
+    :cvar KIOSK:
+    :cvar TRAVEL_AGENCY:
+    :cvar COURIER:
+    :cvar STANDARD_MAIL:
+    :cvar TICKETLESS:
+    :cvar TICKET_OFFICE:
+    :cvar EXPRESS_MAIL:
+    :cvar CORPORATE_KIOSK:
+    :cvar TRAIN_STATION_SERVICE_DESK:
+    :cvar DIRECT_PRINTING_OF_TICKET:
+    :cvar PRINTING_OF_TICKET_AT_HOME:
+    :cvar DIGITAL_PRINTING_OF_TICKET_AT_HOME:
+    :cvar RETRIEVE_TICKET_AT_EUROSTAR_IN_LONDON:
+    """
+    KIOSK = "Kiosk"
+    TRAVEL_AGENCY = "Travel Agency"
+    COURIER = "Courier"
+    STANDARD_MAIL = "Standard Mail"
+    TICKETLESS = "Ticketless"
+    TICKET_OFFICE = "Ticket Office"
+    EXPRESS_MAIL = "Express Mail"
+    CORPORATE_KIOSK = "Corporate Kiosk"
+    TRAIN_STATION_SERVICE_DESK = "Train Station Service Desk"
+    DIRECT_PRINTING_OF_TICKET = "Direct Printing of Ticket"
+    PRINTING_OF_TICKET_AT_HOME = "Printing of Ticket at Home"
+    DIGITAL_PRINTING_OF_TICKET_AT_HOME = "Digital Printing of Ticket at Home"
+    RETRIEVE_TICKET_AT_EUROSTAR_IN_LONDON = "Retrieve Ticket at Eurostar in London"
 
 
 @dataclass
@@ -4534,6 +3484,83 @@ class TypeGuaranteeInformation:
     )
 
 
+class TypeImageSize(Enum):
+    """The image size.
+
+    T - Thumbnail
+    I - Minimum
+    S - Small
+    M - Medium
+    L - Large
+    E - Extra Large
+    G - Guaranteed
+    F - Forced
+    B - Big
+    J - Jumbo
+    O - Original
+    H - Huge
+    C - Colossal
+    :cvar T:
+    :cvar I:
+    :cvar S:
+    :cvar M:
+    :cvar L:
+    :cvar E:
+    :cvar G:
+    :cvar F:
+    :cvar B:
+    :cvar J:
+    :cvar O:
+    :cvar H:
+    :cvar C:
+    """
+    T = "T"
+    I = "I"
+    S = "S"
+    M = "M"
+    L = "L"
+    E = "E"
+    G = "G"
+    F = "F"
+    B = "B"
+    J = "J"
+    O = "O"
+    H = "H"
+    C = "C"
+
+
+class TypeInvoiceRecordCategory(Enum):
+    """Invoice record type: Invoice, Void, Refund, Manual.
+
+    :cvar INVOICE:
+    :cvar VOID:
+    :cvar REFUND:
+    :cvar MANUAL:
+    """
+    INVOICE = "Invoice"
+    VOID = "Void"
+    REFUND = "Refund"
+    MANUAL = "Manual"
+
+
+class TypeItineraryCode(Enum):
+    """
+    :cvar INTERNATIONAL: Indicates the itinerary is International
+    :cvar DOMESTIC: Indicates the itinerary is domestic
+    """
+    INTERNATIONAL = "International"
+    DOMESTIC = "Domestic"
+
+
+class TypeItineraryType(Enum):
+    """
+    :cvar NEW: Indicates the itinerary is New
+    :cvar ORIGINAL: Indicates the itinerary is Original
+    """
+    NEW = "New"
+    ORIGINAL = "Original"
+
+
 @dataclass
 class TypeKeyBasedReference:
     """Generic type to be used for Key based reference.
@@ -4548,6 +3575,60 @@ class TypeKeyBasedReference:
             required=True
         )
     )
+
+
+class TypeLicenseCode(Enum):
+    """The type of license assigned to an agent.
+
+    :cvar STANDARD:
+    :cvar STANDARD_PLUS:
+    :cvar ENTERPRISE:
+    :cvar TE_ONLY:
+    :cvar U_API:
+    """
+    STANDARD = "Standard"
+    STANDARD_PLUS = "Standard Plus"
+    ENTERPRISE = "Enterprise"
+    TE_ONLY = "TE Only"
+    U_API = "uAPI"
+
+
+class TypeMcofeeType(Enum):
+    """The available Airline service fee types for an MCO.
+
+    :cvar CURRENTLY:
+    :cvar UNDEFINED:
+    """
+    CURRENTLY = "CURRENTLY"
+    UNDEFINED = "UNDEFINED"
+
+
+class TypeMcostatus(Enum):
+    """The available status codes for an MCO.
+
+    :cvar OPEN:
+    :cvar USED:
+    :cvar REFUNDED:
+    :cvar VOIDED:
+    :cvar EXPIRED:
+    """
+    OPEN = "Open"
+    USED = "Used"
+    REFUNDED = "Refunded"
+    VOIDED = "Voided"
+    EXPIRED = "Expired"
+
+
+class TypeMcotype(Enum):
+    """The available types for an MCO.
+
+    :cvar AGENCY_SERVICE_FEE:
+    :cvar EXCHANGE_RESIDUAL:
+    :cvar AIRLINE_SERVICE_FEE:
+    """
+    AGENCY_SERVICE_FEE = "AgencyServiceFee"
+    EXCHANGE_RESIDUAL = "ExchangeResidual"
+    AIRLINE_SERVICE_FEE = "AirlineServiceFee"
 
 
 @dataclass
@@ -4601,6 +3682,30 @@ class TypeOtasubKey:
     )
 
 
+class TypeOtherImageSize(Enum):
+    """Other unknown image sizes.
+
+    :cvar X:
+    """
+    X = "X"
+
+
+class TypePolicy(Enum):
+    """Available product types.
+
+    :cvar AIR:
+    :cvar VEHICLE:
+    :cvar HOTEL:
+    :cvar RAIL:
+    :cvar TICKETING:
+    """
+    AIR = "Air"
+    VEHICLE = "Vehicle"
+    HOTEL = "Hotel"
+    RAIL = "Rail"
+    TICKETING = "Ticketing"
+
+
 @dataclass
 class TypePolicyCodesList:
     """
@@ -4637,29 +3742,153 @@ class TypePolicyCodesList:
     )
 
 
-@dataclass
-class TypeProfileRef:
-    """ProfileEntityID and ProfileLevel together identity a profile entity.
-
-    :ivar profile_entity_id:
-    :ivar profile_level:
+class TypePriceClassOfService(Enum):
     """
-    profile_entity_id: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProfileEntityID",
-            type="Attribute",
-            required=True
-        )
-    )
-    profile_level: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProfileLevel",
-            type="Attribute",
-            required=True
-        )
-    )
+    :cvar CLASS_BOOKED:
+    :cvar LOWEST_CLASS:
+    """
+    CLASS_BOOKED = "ClassBooked"
+    LOWEST_CLASS = "LowestClass"
+
+
+class TypePricingType(Enum):
+    """
+    :cvar CLASS_BOOKED:
+    :cvar LOWEST_CLASS:
+    :cvar LOWEST_QUOTE:
+    """
+    CLASS_BOOKED = "ClassBooked"
+    LOWEST_CLASS = "LowestClass"
+    LOWEST_QUOTE = "LowestQuote"
+
+
+class TypeProduct(Enum):
+    """Available product types.
+
+    :cvar AIR:
+    :cvar VEHICLE:
+    :cvar HOTEL:
+    :cvar RAIL:
+    :cvar CRUISE:
+    :cvar OTHER:
+    """
+    AIR = "Air"
+    VEHICLE = "Vehicle"
+    HOTEL = "Hotel"
+    RAIL = "Rail"
+    CRUISE = "Cruise"
+    OTHER = "Other"
+
+
+class TypeProfileApplicability(Enum):
+    """The applicability of the profile or profile template value.
+
+    :cvar ALWAYS:
+    :cvar OPTIONAL:
+    :cvar NEVER:
+    """
+    ALWAYS = "Always"
+    OPTIONAL = "Optional"
+    NEVER = "Never"
+
+
+class TypeProfileEntityStatus(Enum):
+    """Status of the given profile/entity. Any profile with a status other than
+    Active cannot perform most transactions.
+
+    :cvar ACTIVE:
+    :cvar INACTIVE:
+    """
+    ACTIVE = "Active"
+    INACTIVE = "Inactive"
+
+
+class TypeProfileEntityStatusWithDelete(Enum):
+    """Specify whether the change is to update or delete the field.
+
+    :cvar DELETED:
+    :cvar ACTIVE:
+    :cvar INACTIVE:
+    """
+    DELETED = "Deleted"
+    ACTIVE = "Active"
+    INACTIVE = "Inactive"
+
+
+class TypeProfileLevel(Enum):
+    """The type of the profile or profile template.
+
+    :cvar AGENCY:
+    :cvar BRANCH:
+    :cvar BRANCH_GROUP:
+    :cvar AGENT:
+    :cvar ACCOUNT:
+    :cvar TRAVELER_GROUP:
+    :cvar TRAVELER:
+    """
+    AGENCY = "Agency"
+    BRANCH = "Branch"
+    BRANCH_GROUP = "BranchGroup"
+    AGENT = "Agent"
+    ACCOUNT = "Account"
+    TRAVELER_GROUP = "TravelerGroup"
+    TRAVELER = "Traveler"
+
+
+class TypeProfileLevelWithCredential(Enum):
+    """The "profile level" used for association of workflow etc.
+
+    :cvar AGENCY:
+    :cvar BRANCH:
+    :cvar AGENT:
+    """
+    AGENCY = "Agency"
+    BRANCH = "Branch"
+    AGENT = "Agent"
+
+
+class TypeProfileLevelWithSystem(Enum):
+    """The "profile level" used for association of workflow etc.
+
+    :cvar SYSTEM:
+    :cvar AGENCY:
+    :cvar BRANCH:
+    :cvar BRANCH_GROUP:
+    :cvar AGENT:
+    :cvar ACCOUNT:
+    :cvar TRAVELER_GROUP:
+    :cvar TRAVELER:
+    """
+    SYSTEM = "System"
+    AGENCY = "Agency"
+    BRANCH = "Branch"
+    BRANCH_GROUP = "BranchGroup"
+    AGENT = "Agent"
+    ACCOUNT = "Account"
+    TRAVELER_GROUP = "TravelerGroup"
+    TRAVELER = "Traveler"
+
+
+class TypeProfileType(Enum):
+    """A type for unique party identifiers of any party role.
+
+    :cvar AGENCY_GROUP:
+    :cvar AGENCY:
+    :cvar BRANCH_GROUP:
+    :cvar BRANCH:
+    :cvar AGENT:
+    :cvar ACCOUNT:
+    :cvar TRAVELER_GROUP:
+    :cvar TRAVELER:
+    """
+    AGENCY_GROUP = "AgencyGroup"
+    AGENCY = "Agency"
+    BRANCH_GROUP = "BranchGroup"
+    BRANCH = "Branch"
+    AGENT = "Agent"
+    ACCOUNT = "Account"
+    TRAVELER_GROUP = "TravelerGroup"
+    TRAVELER = "Traveler"
 
 
 @dataclass
@@ -4692,6 +3921,80 @@ class TypeProviderReservationDetail:
     )
 
 
+class TypeProviderToken(Enum):
+    """List of known hosts with terminal access.
+
+    :cvar SABRE:
+    """
+    SABRE = "Sabre"
+
+
+class TypePurchaseWindow(Enum):
+    """The purchase windows available for merchandising service.
+
+    :cvar BOOKING_ONLY:
+    :cvar TICKETING_ONLY:
+    :cvar CHECK_IN_ONLY:
+    :cvar ANYTIME:
+    :cvar POST_TICKETING:
+    """
+    BOOKING_ONLY = "BookingOnly"
+    TICKETING_ONLY = "TicketingOnly"
+    CHECK_IN_ONLY = "CheckInOnly"
+    ANYTIME = "Anytime"
+    POST_TICKETING = "PostTicketing"
+
+
+class TypeQueueModifyAction(Enum):
+    """Queue action: remove, requeue, move, add, unlock.
+
+    :cvar REMOVE:
+    :cvar REQUEUE:
+    :cvar MOVE:
+    :cvar ADD:
+    :cvar UNLOCK:
+    """
+    REMOVE = "Remove"
+    REQUEUE = "Requeue"
+    MOVE = "Move"
+    ADD = "Add"
+    UNLOCK = "Unlock"
+
+
+class TypeRateCategory(Enum):
+    """The category of the rate (Best, etc)
+
+    :cvar ASSOCIATION:
+    :cvar BUSINESS:
+    :cvar CORPORATE:
+    :cvar GOVERNMENT:
+    :cvar INDUSTRY:
+    :cvar PACKAGE:
+    :cvar INCLUSIVE:
+    :cvar PROMOTIONAL:
+    :cvar CREDENTIAL:
+    :cvar STANDARD:
+    :cvar CONSORTIUM:
+    :cvar CONVENTION:
+    :cvar NEGOTIATED:
+    :cvar PREPAY:
+    """
+    ASSOCIATION = "Association"
+    BUSINESS = "Business"
+    CORPORATE = "Corporate"
+    GOVERNMENT = "Government"
+    INDUSTRY = "Industry"
+    PACKAGE = "Package"
+    INCLUSIVE = "Inclusive"
+    PROMOTIONAL = "Promotional"
+    CREDENTIAL = "Credential"
+    STANDARD = "Standard"
+    CONSORTIUM = "Consortium"
+    CONVENTION = "Convention"
+    NEGOTIATED = "Negotiated"
+    PREPAY = "Prepay"
+
+
 @dataclass
 class TypeRateDescription:
     """
@@ -4714,6 +4017,59 @@ class TypeRateDescription:
             type="Attribute"
         )
     )
+
+
+class TypeRateGuarantee(Enum):
+    """The guarantee for this rate.
+
+    :cvar RATE_GUARANTEED:
+    :cvar RATE_QUOTED:
+    :cvar AGENT_ENTERED:
+    """
+    RATE_GUARANTEED = "Rate Guaranteed"
+    RATE_QUOTED = "Rate Quoted"
+    AGENT_ENTERED = "Agent Entered"
+
+
+class TypeRateTimePeriod(Enum):
+    """The period for the rate code (daily, weekly, etc)
+
+    :cvar HOURLY:
+    :cvar DAILY:
+    :cvar WEEKLY:
+    :cvar MONTHLY:
+    :cvar WEEKEND_DAY:
+    :cvar OTHER:
+    :cvar PACKAGE:
+    :cvar BUNDLE:
+    :cvar TOTAL:
+    """
+    HOURLY = "Hourly"
+    DAILY = "Daily"
+    WEEKLY = "Weekly"
+    MONTHLY = "Monthly"
+    WEEKEND_DAY = "WeekendDay"
+    OTHER = "Other"
+    PACKAGE = "Package"
+    BUNDLE = "Bundle"
+    TOTAL = "Total"
+
+
+class TypeRecordStatus(Enum):
+    """Information on whether the Universal Record is Current, Past , Cancelled or
+    Any status.
+
+    :cvar ALL:
+    :cvar PAST:
+    :cvar CURRENT:
+    :cvar CANCELED:
+    :cvar UNKNOWN:
+    """
+    ALL = "All"
+    PAST = "Past"
+    CURRENT = "Current"
+    CANCELED = "Canceled"
+    UNKNOWN = "Unknown"
 
 
 @dataclass
@@ -4783,6 +4139,51 @@ class TypeRemarkWithTravelerRef:
     )
 
 
+class TypeReqSeat(Enum):
+    """
+    :cvar ANY:
+    :cvar AISLE:
+    :cvar BULKHEAD:
+    :cvar EXIT:
+    :cvar WINDOW:
+    :cvar MIDDLE:
+    """
+    ANY = "Any"
+    AISLE = "Aisle"
+    BULKHEAD = "Bulkhead"
+    EXIT = "Exit"
+    WINDOW = "Window"
+    MIDDLE = "Middle"
+
+
+class TypeReserveRequirement(Enum):
+    """Type of payment required to reserve travel i.e. Hotel Reservation
+    requirement.
+
+    :cvar DEPOSIT:
+    :cvar GUARANTEE:
+    :cvar PREPAYMENT:
+    :cvar OTHER:
+    """
+    DEPOSIT = "Deposit"
+    GUARANTEE = "Guarantee"
+    PREPAYMENT = "Prepayment"
+    OTHER = "Other"
+
+
+class TypeResidency(Enum):
+    """The passenger residency type.Residence Type can be Employee, National or
+    Resident.
+
+    :cvar EMPLOYEE:
+    :cvar NATIONAL:
+    :cvar RESIDENT:
+    """
+    EMPLOYEE = "Employee"
+    NATIONAL = "National"
+    RESIDENT = "Resident"
+
+
 @dataclass
 class TypeResultMessage(str):
     """Used to identify the results of a requests.
@@ -4827,6 +4228,20 @@ class TypeSegmentRef:
     )
 
 
+class TypeSource(Enum):
+    """The source/level at which is item is defined (available through inheritance)
+
+    :cvar AGENCY:
+    :cvar BRANCH_GROUP:
+    :cvar BRANCH:
+    :cvar AGENT:
+    """
+    AGENCY = "Agency"
+    BRANCH_GROUP = "BranchGroup"
+    BRANCH = "Branch"
+    AGENT = "Agent"
+
+
 @dataclass
 class TypeSpecificTime:
     """Specify exact times. System will automatically convert to a range according
@@ -4842,6 +4257,18 @@ class TypeSpecificTime:
             required=True
         )
     )
+
+
+class TypeStatus(Enum):
+    """The status of the service fees.
+
+    :cvar ISSUED: The service fee has been issued.
+    :cvar READY_TO_ISSUE: The service fee is ready to be issued.
+    :cvar ISSUE_LATER: The service fee can be issued later.
+    """
+    ISSUED = "Issued"
+    READY_TO_ISSUE = "ReadyToIssue"
+    ISSUE_LATER = "IssueLater"
 
 
 @dataclass
@@ -4900,6 +4327,28 @@ class TypeTax:
     )
 
 
+class TypeTicketStatus(Enum):
+    """Status for the ticket (Ticketed, Voided, etc)
+
+    :cvar U: Code="U" Description="Unticketed"
+    :cvar T: Code="T" Description="Ticketed"
+    :cvar V: Code="V" Description="Voided"
+    :cvar R: Code="R" Description="Refunded"
+    :cvar X: Code="X" Description="eXchanged"
+    :cvar Z: Code="Z" Description="Unknown/Archived/Carrier Modified"
+    :cvar N: Code="N" Description="Unused"
+    :cvar S: Code="S" Description="Used"
+    """
+    U = "U"
+    T = "T"
+    V = "V"
+    R = "R"
+    X = "X"
+    Z = "Z"
+    N = "N"
+    S = "S"
+
+
 @dataclass
 class TypeTimeRange:
     """Specify a range of times.
@@ -4923,6 +4372,209 @@ class TypeTimeRange:
             required=True
         )
     )
+
+
+class TypeTrinary(Enum):
+    """Extension of boolean, that allows for unknown values.
+
+    :cvar TRUE_VALUE:
+    :cvar FALSE_VALUE:
+    :cvar UNKNOWN:
+    """
+    TRUE_VALUE = "true"
+    FALSE_VALUE = "false"
+    UNKNOWN = "unknown"
+
+
+class TypeVehicleCategory(Enum):
+    """The category of vehicle.
+
+    :cvar CAR:
+    :cvar VAN:
+    :cvar SUV:
+    :cvar CONVERTIBLE:
+    :cvar TRUCK:
+    :cvar STATION_WAGON:
+    :cvar PICKUP:
+    :cvar ALL_TERRAIN:
+    :cvar RECREATIONAL:
+    :cvar SPORT:
+    :cvar SPECIAL:
+    :cvar EXTENDED_CAB_PICKUP:
+    :cvar REGULAR_CAB_PICKUP:
+    :cvar SPECIAL_OFFER:
+    :cvar COUPE:
+    :cvar MONOSPACE:
+    :cvar ROADSTER:
+    :cvar CROSSOVER:
+    :cvar MOTORCYCLE:
+    :cvar LIMO:
+    :cvar MOTORHOME:
+    :cvar TWO_WHEEL_VEHICLE:
+    :cvar COMMERCIAL_VAN_OR_TRUCK:
+    """
+    CAR = "Car"
+    VAN = "Van"
+    SUV = "SUV"
+    CONVERTIBLE = "Convertible"
+    TRUCK = "Truck"
+    STATION_WAGON = "StationWagon"
+    PICKUP = "Pickup"
+    ALL_TERRAIN = "AllTerrain"
+    RECREATIONAL = "Recreational"
+    SPORT = "Sport"
+    SPECIAL = "Special"
+    EXTENDED_CAB_PICKUP = "ExtendedCabPickup"
+    REGULAR_CAB_PICKUP = "RegularCabPickup"
+    SPECIAL_OFFER = "SpecialOffer"
+    COUPE = "Coupe"
+    MONOSPACE = "Monospace"
+    ROADSTER = "Roadster"
+    CROSSOVER = "Crossover"
+    MOTORCYCLE = "Motorcycle"
+    LIMO = "Limo"
+    MOTORHOME = "Motorhome"
+    TWO_WHEEL_VEHICLE = "TwoWheelVehicle"
+    COMMERCIAL_VAN_OR_TRUCK = "CommercialVanOrTruck"
+
+
+class TypeVehicleClass(Enum):
+    """The class of vehicle.
+
+    :cvar MINI:
+    :cvar ECONOMY:
+    :cvar COMPACT:
+    :cvar INTERMEDIATE:
+    :cvar STANDARD:
+    :cvar FULLSIZE:
+    :cvar LUXURY:
+    :cvar PREMIUM:
+    :cvar SPECIAL:
+    :cvar MINI_ELITE:
+    :cvar ECONOMY_ELITE:
+    :cvar COMPACT_ELITE:
+    :cvar INTERMEDIATE_ELITE:
+    :cvar STANDARD_ELITE:
+    :cvar FULLSIZE_ELITE:
+    :cvar PREMIUM_ELITE:
+    :cvar LUXURY_ELITE:
+    :cvar OVERSIZE:
+    :cvar SUBCOMPACT:
+    :cvar MINIVAN:
+    :cvar TWELVE_PASSENGER_VAN:
+    :cvar MOVING_VAN:
+    :cvar FIFTEEN_PASSENGER_VAN:
+    :cvar CARGO_VAN:
+    :cvar TWELVE_FOOT_TRUCK:
+    :cvar TWENTY_FOOT_TRUCK:
+    :cvar TWENTYFOUR_FOOT_TRUCK:
+    :cvar TWENTYSIX_FOOT_TRUCK:
+    :cvar MOPED:
+    :cvar STRETCH:
+    :cvar REGULAR:
+    :cvar UNIQUE:
+    :cvar EXOTIC:
+    :cvar SMALL_OR_MEDIUM_TRUCK:
+    :cvar LARGE_TRUCK:
+    :cvar SMALL_SUV:
+    :cvar MEDIUM_SUV:
+    :cvar LARGE_SUV:
+    :cvar EXOTIC_SUV:
+    :cvar FOUR_WHEEL_DRIVE:
+    """
+    MINI = "Mini"
+    ECONOMY = "Economy"
+    COMPACT = "Compact"
+    INTERMEDIATE = "Intermediate"
+    STANDARD = "Standard"
+    FULLSIZE = "Fullsize"
+    LUXURY = "Luxury"
+    PREMIUM = "Premium"
+    SPECIAL = "Special"
+    MINI_ELITE = "MiniElite"
+    ECONOMY_ELITE = "EconomyElite"
+    COMPACT_ELITE = "CompactElite"
+    INTERMEDIATE_ELITE = "IntermediateElite"
+    STANDARD_ELITE = "StandardElite"
+    FULLSIZE_ELITE = "FullsizeElite"
+    PREMIUM_ELITE = "PremiumElite"
+    LUXURY_ELITE = "LuxuryElite"
+    OVERSIZE = "Oversize"
+    SUBCOMPACT = "Subcompact"
+    MINIVAN = "Minivan"
+    TWELVE_PASSENGER_VAN = "TwelvePassengerVan"
+    MOVING_VAN = "MovingVan"
+    FIFTEEN_PASSENGER_VAN = "FifteenPassengerVan"
+    CARGO_VAN = "CargoVan"
+    TWELVE_FOOT_TRUCK = "TwelveFootTruck"
+    TWENTY_FOOT_TRUCK = "TwentyFootTruck"
+    TWENTYFOUR_FOOT_TRUCK = "TwentyfourFootTruck"
+    TWENTYSIX_FOOT_TRUCK = "TwentysixFootTruck"
+    MOPED = "Moped"
+    STRETCH = "Stretch"
+    REGULAR = "Regular"
+    UNIQUE = "Unique"
+    EXOTIC = "Exotic"
+    SMALL_OR_MEDIUM_TRUCK = "SmallOrMediumTruck"
+    LARGE_TRUCK = "LargeTruck"
+    SMALL_SUV = "SmallSUV"
+    MEDIUM_SUV = "MediumSUV"
+    LARGE_SUV = "LargeSUV"
+    EXOTIC_SUV = "ExoticSUV"
+    FOUR_WHEEL_DRIVE = "FourWheelDrive"
+
+
+class TypeVehicleLocation(Enum):
+    """The type of location requested, such as resort, city center.
+
+    :cvar TERMINAL:
+    :cvar SHUTTLE_ON_AIRPORT:
+    :cvar SHUTTLE_OFF_AIRPORT:
+    :cvar RAILWAY_STATION:
+    :cvar HOTEL:
+    :cvar CAR_DEALER:
+    :cvar CITY_CENTER_DOWNTOWN:
+    :cvar EAST_OF_CITY_CENTER:
+    :cvar SOUTH_OF_CITY_CENTER:
+    :cvar WEST_OF_CITY_CENTER:
+    :cvar NORTH_OF_CITY_CENTER:
+    :cvar PORT_OR_FERRY:
+    :cvar NEAR_RESORT:
+    :cvar AIRPORT:
+    :cvar UNKNOWN:
+    """
+    TERMINAL = "Terminal"
+    SHUTTLE_ON_AIRPORT = "ShuttleOnAirport"
+    SHUTTLE_OFF_AIRPORT = "ShuttleOffAirport"
+    RAILWAY_STATION = "RailwayStation"
+    HOTEL = "Hotel"
+    CAR_DEALER = "CarDealer"
+    CITY_CENTER_DOWNTOWN = "CityCenterDowntown"
+    EAST_OF_CITY_CENTER = "EastOfCityCenter"
+    SOUTH_OF_CITY_CENTER = "SouthOfCityCenter"
+    WEST_OF_CITY_CENTER = "WestOfCityCenter"
+    NORTH_OF_CITY_CENTER = "NorthOfCityCenter"
+    PORT_OR_FERRY = "PortOrFerry"
+    NEAR_RESORT = "NearResort"
+    AIRPORT = "Airport"
+    UNKNOWN = "Unknown"
+
+
+class TypeVehicleTransmission(Enum):
+    """
+    :cvar AUTOMATIC:
+    :cvar AUTOMATIC4_WD:
+    :cvar AUTOMATIC_AWD:
+    :cvar MANUAL:
+    :cvar MANUAL4_WD:
+    :cvar MANUAL_AWD:
+    """
+    AUTOMATIC = "Automatic"
+    AUTOMATIC4_WD = "Automatic4WD"
+    AUTOMATIC_AWD = "AutomaticAWD"
+    MANUAL = "Manual"
+    MANUAL4_WD = "Manual4WD"
+    MANUAL_AWD = "ManualAWD"
 
 
 @dataclass
@@ -4989,52 +4641,109 @@ class TypeVendorLocation:
     )
 
 
-@dataclass
-class TypeVoucherInformation:
-    """Information pertaining to the payment of a Vehicle Rental.
-
-    :ivar voucher_type: Specifies if the Voucher is for Full Credit or a Group/Day or a Monetary Amount or RegularVoucher.
-    :ivar amount: Amount associated with the Voucher.
-    :ivar confirmation_number: Confirmation from the vendor for the voucher
-    :ivar account_name: Associated account name for the voucher
-    :ivar number: To advise car associates of the voucher number and store in the car segment. It is required when VoucherType selected as "RegularVoucher" for 1P, 1J only.
+class TypeVoucherType(Enum):
     """
-    voucher_type: Optional[str] = field(
+    :cvar FULL_CREDIT:
+    :cvar GROUP_OR_DAY:
+    :cvar SPECIFIC_VALUE:
+    :cvar REGULAR_VOUCHER:
+    """
+    FULL_CREDIT = "FullCredit"
+    GROUP_OR_DAY = "GroupOrDay"
+    SPECIFIC_VALUE = "SpecificValue"
+    REGULAR_VOUCHER = "RegularVoucher"
+
+
+@dataclass
+class AccountingRemark:
+    """An accounting remark container to hold any printable text.
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar remark_data: Actual remarks data.
+    :ivar booking_traveler_ref: Reference to Booking Traveler.
+    :ivar key:
+    :ivar category: A category to group and organize the various remarks. This is not required, but it is recommended.
+    :ivar type_in_gds:
+    :ivar provider_reservation_info_ref: Provider reservation reference key.
+    :ivar provider_code: Contains the Provider Code of the provider for which this accounting remark is used
+    :ivar use_provider_native_mode: Will be true when terminal process required, else false
+    """
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
-            name="VoucherType",
-            type="Attribute",
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    remark_data: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RemarkData",
+            type="Element",
             required=True
         )
     )
-    amount: Optional[str] = field(
+    booking_traveler_ref: List[str] = field(
+        default_factory=list,
+        metadata=dict(
+            name="BookingTravelerRef",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    key: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="Amount",
+            name="Key",
             type="Attribute"
         )
     )
-    confirmation_number: Optional[str] = field(
+    category: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="ConfirmationNumber",
-            type="Attribute"
-        )
-    )
-    account_name: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AccountName",
-            type="Attribute"
-        )
-    )
-    number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Number",
+            name="Category",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            max_length=14.0
+        )
+    )
+    type_in_gds: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TypeInGds",
+            type="Attribute",
+            max_length=30.0
+        )
+    )
+    provider_reservation_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderReservationInfoRef",
+            type="Attribute"
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    use_provider_native_mode: bool = field(
+        default=False,
+        metadata=dict(
+            name="UseProviderNativeMode",
+            type="Attribute"
         )
     )
 
@@ -5058,7 +4767,7 @@ class ActionStatus:
     :ivar pseudo_city_code: The Branch PCC in the host system where PNR can be queued for ticketing. When used with TAU it will auto queue to Q10. When used with TAW agent performs manual move to Q.
     :ivar account_code: Used with TAW. Used to specify a corporate or in house account code to the PNR as part of ticketing arrangement field.
     """
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -5201,12 +4910,6 @@ class AgencyPayment(TypeAgencyPayment):
 
 
 @dataclass
-class AirSeatAssignment(SeatAssignment):
-    """Identifies the seat assignment for a passenger."""
-    pass
-
-
-@dataclass
 class Airport(Location):
     """Airport identifier.
 
@@ -5220,6 +4923,86 @@ class Airport(Location):
             required=True,
             length=3,
             white_space="collapse"
+        )
+    )
+
+
+@dataclass
+class AppliedProfile:
+    """A simple container to specify the profiles that were applied to a
+    reservation.
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar key: Key for update/delete of the element
+    :ivar traveler_id: The ID of the TravelerProfile that was applied
+    :ivar traveler_name: The name from the TravelerProfile that was applied
+    :ivar account_id: The ID of the AccountProfile that was applied
+    :ivar account_name: The name from the AccountProfile that was applied
+    :ivar immediate_parent_id: The ID of the immediate parent that was applied
+    :ivar immediate_parent_name: The name of the immediate parent that was applied
+    """
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    traveler_id: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TravelerID",
+            type="Attribute"
+        )
+    )
+    traveler_name: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TravelerName",
+            type="Attribute"
+        )
+    )
+    account_id: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AccountID",
+            type="Attribute"
+        )
+    )
+    account_name: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AccountName",
+            type="Attribute"
+        )
+    )
+    immediate_parent_id: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ImmediateParentID",
+            type="Attribute"
+        )
+    )
+    immediate_parent_name: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ImmediateParentName",
+            type="Attribute"
         )
     )
 
@@ -5383,6 +5166,228 @@ class CityOrAirport(Location):
 
 
 @dataclass
+class Commission:
+    """Identifies the agency commission.
+
+    :ivar key:
+    :ivar level: The commission percentage level.
+    :ivar type: The commission type.
+    :ivar modifier: Optional commission modifier.
+    :ivar amount: The monetary amount of the commission.
+    :ivar value: Contains alphanumeric or alpha characters intended as 1G Value Code as applicable by BSP of client.
+    :ivar percentage: The percent of the commission.
+    :ivar booking_traveler_ref: A reference to a passenger.
+    :ivar commission_override: This is enabled to override CAT-35 commission error during air ticketing. PROVIDER SUPPORTED:Worldspan and JAL
+    """
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    level: Optional[TypeCommissionLevel] = field(
+        default=None,
+        metadata=dict(
+            name="Level",
+            type="Attribute",
+            required=True
+        )
+    )
+    type: Optional[TypeCommissionType] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute",
+            required=True
+        )
+    )
+    modifier: Optional[TypeCommissionModifier] = field(
+        default=None,
+        metadata=dict(
+            name="Modifier",
+            type="Attribute"
+        )
+    )
+    amount: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Amount",
+            type="Attribute"
+        )
+    )
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Value",
+            type="Attribute",
+            min_length=0.0,
+            max_length=15.0
+        )
+    )
+    percentage: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Percentage",
+            type="Attribute",
+            pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
+        )
+    )
+    booking_traveler_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BookingTravelerRef",
+            type="Attribute"
+        )
+    )
+    commission_override: bool = field(
+        default=False,
+        metadata=dict(
+            name="CommissionOverride",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
+class CommissionRemark:
+    """Identifies the agency commision remarks. Specifically used for Worldspan.
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar provider_reservation_level: Specify commission which is applicable to PNR level.
+    :ivar passenger_type_level: Specify commission which is applicable to per PTC level.
+    :ivar key: Key to be used for internal processing.
+    :ivar provider_reservation_info_ref: Provider reservation reference key.
+    :ivar provider_code: Contains the Provider Code of the provider for which this accounting remark is used
+    """
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    provider_reservation_level: Optional["CommissionRemark.ProviderReservationLevel"] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderReservationLevel",
+            type="Element"
+        )
+    )
+    passenger_type_level: List["CommissionRemark.PassengerTypeLevel"] = field(
+        default_factory=list,
+        metadata=dict(
+            name="PassengerTypeLevel",
+            type="Element",
+            min_occurs=0,
+            max_occurs=4
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    provider_reservation_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderReservationInfoRef",
+            type="Attribute"
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+
+    @dataclass
+    class ProviderReservationLevel:
+        """
+        :ivar amount: The monetary amount of the commission.
+        :ivar percentage: The percent of the commission.
+        :ivar commission_cap: Commission cap for the Airline.
+        """
+        amount: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Amount",
+                type="Attribute"
+            )
+        )
+        percentage: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Percentage",
+                type="Attribute",
+                pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
+            )
+        )
+        commission_cap: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="CommissionCap",
+                type="Attribute"
+            )
+        )
+
+    @dataclass
+    class PassengerTypeLevel:
+        """
+        :ivar amount: The monetary amount of the commission.
+        :ivar percentage: The percent of the commission.
+        :ivar commission_cap: Commission cap for the Airline.
+        :ivar traveler_type:
+        """
+        amount: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Amount",
+                type="Attribute"
+            )
+        )
+        percentage: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Percentage",
+                type="Attribute",
+                pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
+            )
+        )
+        commission_cap: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="CommissionCap",
+                type="Attribute"
+            )
+        )
+        traveler_type: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="TravelerType",
+                type="Attribute",
+                required=True,
+                min_length=3.0,
+                max_length=5.0
+            )
+        )
+
+
+@dataclass
 class ConsolidatorRemark:
     """Authorization remark for Consolidator access to a PNR . Contains PCC
     information created by retail agent to allow a consolidator or other Axess
@@ -5395,7 +5400,7 @@ class ConsolidatorRemark:
     :ivar provider_reservation_info_ref: Provider reservation reference key.
     :ivar provider_code: Contains the Provider Code of the provider for which this element is used
     """
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -5485,6 +5490,108 @@ class CustomerId(TypeRemark):
 
 
 @dataclass
+class DiscountCard:
+    """Rail Discount Card Information.
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar key:
+    :ivar code:
+    :ivar description:
+    :ivar number:
+    """
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Code",
+            type="Attribute",
+            required=True,
+            min_length=1.0,
+            max_length=8.0
+        )
+    )
+    description: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Description",
+            type="Attribute",
+            min_length=1.0,
+            max_length=255.0
+        )
+    )
+    number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Number",
+            type="Attribute",
+            min_length=1.0,
+            max_length=36.0
+        )
+    )
+
+
+@dataclass
+class DriversLicense:
+    """Details of drivers license.
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar key:
+    :ivar license_number: The driving license number of the booking traveler.
+    """
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    license_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="LicenseNumber",
+            type="Attribute",
+            required=True
+        )
+    )
+
+
+@dataclass
 class Email:
     """Container for an email address with a type specifier (max 128 chars)
 
@@ -5496,7 +5603,7 @@ class Email:
     :ivar comment:
     :ivar email_id:
     """
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -5554,6 +5661,134 @@ class Email:
 
 
 @dataclass
+class GeneralRemark:
+    """A textual remark container to hold any printable text. (max 512 chars)
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar provider_code:
+    :ivar supplier_code:
+    :ivar remark_data: Actual remarks data.
+    :ivar booking_traveler_ref: Reference to Booking Traveler.
+    :ivar key:
+    :ivar category: A category to group and organize the various remarks. This is not required, but it is recommended.
+    :ivar type_in_gds:
+    :ivar supplier_type: The type of product this reservation is relative to
+    :ivar provider_reservation_info_ref: Provider reservation reference key.
+    :ivar direction: Direction Incoming or Outgoing of the GeneralRemark.
+    :ivar create_date: The date and time that this GeneralRemark was created.
+    :ivar use_provider_native_mode: Will be true when terminal process required, else false
+    """
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
+    remark_data: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RemarkData",
+            type="Element",
+            required=True
+        )
+    )
+    booking_traveler_ref: List[str] = field(
+        default_factory=list,
+        metadata=dict(
+            name="BookingTravelerRef",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    category: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Category",
+            type="Attribute",
+            max_length=20.0
+        )
+    )
+    type_in_gds: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TypeInGds",
+            type="Attribute",
+            max_length=30.0
+        )
+    )
+    supplier_type: Optional[TypeProduct] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierType",
+            type="Attribute"
+        )
+    )
+    provider_reservation_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderReservationInfoRef",
+            type="Attribute"
+        )
+    )
+    direction: Optional[TypeDirection] = field(
+        default=None,
+        metadata=dict(
+            name="Direction",
+            type="Attribute"
+        )
+    )
+    create_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CreateDate",
+            type="Attribute"
+        )
+    )
+    use_provider_native_mode: bool = field(
+        default=False,
+        metadata=dict(
+            name="UseProviderNativeMode",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class HostTokenList:
     """The shared object list of Host Tokens.
 
@@ -5566,6 +5801,47 @@ class HostTokenList:
             type="Element",
             min_occurs=1,
             max_occurs=999
+        )
+    )
+
+
+@dataclass
+class LinkedUniversalRecord:
+    """
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar locator_code: A Universal Record that need to be linked to the current Universal Record.
+    :ivar key:
+    """
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    locator_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="LocatorCode",
+            type="Attribute",
+            required=True,
+            min_length=5.0,
+            max_length=8.0
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
         )
     )
 
@@ -5596,7 +5872,7 @@ class NameRemark:
     :ivar key:
     :ivar category: A category to group and organize the various remarks. This is not required, but it is recommended.
     """
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -5644,6 +5920,125 @@ class NameRemark:
 
 
 @dataclass
+class Osi:
+    """Other Service information sent to the carriers during air bookings.
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar key:
+    :ivar carrier:
+    :ivar code:
+    :ivar text:
+    :ivar provider_reservation_info_ref: Provider reservation reference key.
+    :ivar provider_code: Contains the Provider Code of the provider for which this OSI is used
+    """
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Carrier",
+            type="Attribute",
+            required=True,
+            length=2
+        )
+    )
+    code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Code",
+            type="Attribute",
+            max_length=4.0
+        )
+    )
+    text: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Text",
+            type="Attribute",
+            required=True,
+            max_length=256.0
+        )
+    )
+    provider_reservation_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderReservationInfoRef",
+            type="Attribute"
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+
+
+@dataclass
+class OptionalServiceApplicationLimitType:
+    """The optional service application limit.
+
+    :ivar applicable_level: Indicates the applicable level for the option
+    :ivar provider_defined_applicable_levels: Indicates the actual provider defined ApplicableLevels which is mapped to Other
+    :ivar maximum_quantity: The maximum quantity allowed for the type
+    :ivar minimum_quantity: Indicates the minimum number of the option that can be selected.
+    """
+    applicable_level: Optional[OptionalServiceApplicabilityType] = field(
+        default=None,
+        metadata=dict(
+            name="ApplicableLevel",
+            type="Attribute",
+            required=True
+        )
+    )
+    provider_defined_applicable_levels: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderDefinedApplicableLevels",
+            type="Attribute"
+        )
+    )
+    maximum_quantity: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="MaximumQuantity",
+            type="Attribute",
+            required=True
+        )
+    )
+    minimum_quantity: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="MinimumQuantity",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class PassengerInfo:
     """Booking Traveler information tied to invoice.
 
@@ -5677,68 +6072,92 @@ class PassengerInfo:
 
 
 @dataclass
-class PassiveInfo:
-    """Used by CreateReservationReq for passing in elements normally found post-
-    booking.
-
-    :ivar ticket_number:
-    :ivar confirmation_number:
-    :ivar commission:
-    :ivar provider_code:
-    :ivar provider_locator_code:
-    :ivar supplier_code:
-    :ivar supplier_locator_code:
+class Payment:
     """
-    ticket_number: List[str] = field(
-        default_factory=list,
-        metadata=dict(
-            name="TicketNumber",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    confirmation_number: List[str] = field(
-        default_factory=list,
-        metadata=dict(
-            name="ConfirmationNumber",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    commission: Optional[Commission] = field(
+    Payment information - must be used in conjunction with credit card info
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar key:
+    :ivar type: Identifies the type of payment. This can be for an itinerary, a traveler, or a service fee for example.
+    :ivar form_of_payment_ref: The credit card that is will be used to make this payment.
+    :ivar booking_traveler_ref: If the type represents a per traveler payment, then this will reference the traveler this payment refers to.
+    :ivar amount:
+    :ivar amount_type: This field displays type of payment amount when it is non-monetary. Presently available/supported value is "Flight Pass Credits".
+    :ivar approximate_amount: It stores the converted payment amount in agency's default currency
+    :ivar status: Status to indicate the business association of the payment element.
+    """
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
-            name="Commission",
-            type="Element"
-        )
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderCode",
+            name="ElStat",
             type="Attribute"
         )
     )
-    provider_locator_code: Optional[str] = field(
+    key_override: Optional[bool] = field(
         default=None,
         metadata=dict(
-            name="ProviderLocatorCode",
+            name="KeyOverride",
             type="Attribute"
         )
     )
-    supplier_code: Optional[str] = field(
+    key: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="SupplierCode",
+            name="Key",
             type="Attribute"
         )
     )
-    supplier_locator_code: Optional[str] = field(
+    type: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="SupplierLocatorCode",
+            name="Type",
+            type="Attribute",
+            required=True
+        )
+    )
+    form_of_payment_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FormOfPaymentRef",
+            type="Attribute",
+            required=True
+        )
+    )
+    booking_traveler_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BookingTravelerRef",
+            type="Attribute"
+        )
+    )
+    amount: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Amount",
+            type="Attribute",
+            required=True
+        )
+    )
+    amount_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AmountType",
+            type="Attribute",
+            min_length=1.0,
+            max_length=32.0
+        )
+    )
+    approximate_amount: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateAmount",
+            type="Attribute"
+        )
+    )
+    status: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Status",
             type="Attribute"
         )
     )
@@ -5776,7 +6195,7 @@ class PhoneNumber:
     :ivar extension:
     :ivar text:
     """
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -5882,7 +6301,7 @@ class PolicyInformation:
             type="Element"
         )
     )
-    type: Optional[str] = field(
+    type: Optional[TypePolicy] = field(
         default=None,
         metadata=dict(
             name="Type",
@@ -6147,7 +6566,7 @@ class RailSeatAssignment:
     :ivar rail_segment_ref:
     :ivar coach_number:
     """
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -6230,27 +6649,251 @@ class RequestKeyMappings:
 
 
 @dataclass
-class Ssrinfo:
-    """Bundle SSR with BookingTraveler reference in order to add SSR post booking.
+class ReviewBooking:
+    """Review Booking or Queue Minders is to add the reminders in the Provider
+    Reservation along with the date time and Queue details. On the date time
+    defined in reminders, the message along with the PNR goes to the desired Queue.
 
-    :ivar ssr:
-    :ivar booking_traveler_ref: Reference to Booking Traveler.
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar key: Returned in response. Use it for update of saved review booking.
+    :ivar queue: Queue number, Must be numeric and less than 100.
+    :ivar queue_category: Queue Category, 2 Character Alpha or Numeric.
+    :ivar date_time: Date and Time to place message on designated Queue, Should be prior to the last segment date in the PNR.
+    :ivar pseudo_city_code: Input PCC optional value for placing the PNR into Queue. If not passed, will add as default PNR's Pseudo.
+    :ivar provider_code: The code of the Provider (e.g 1G,1V).
+    :ivar provider_reservation_info_ref: Provider Reservation reference. Returned in the response. Use it for update of saved Review Booking.
+    :ivar remarks: Remark or reminder message. It can be truncated depending on the provider.
     """
-    ssr: Optional[Ssr] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
-            name="SSR",
-            type="Element",
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    queue: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Queue",
+            type="Attribute",
+            required=True,
+            max_inclusive=99.0
+        )
+    )
+    queue_category: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="QueueCategory",
+            type="Attribute",
+            max_length=2.0
+        )
+    )
+    date_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DateTime",
+            type="Attribute",
             required=True
         )
     )
-    booking_traveler_ref: List[str] = field(
-        default_factory=list,
+    pseudo_city_code: Optional[str] = field(
+        default=None,
         metadata=dict(
-            name="BookingTravelerRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
+            name="PseudoCityCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=10.0
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    provider_reservation_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderReservationInfoRef",
+            type="Attribute"
+        )
+    )
+    remarks: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Remarks",
+            type="Attribute",
+            required=True,
+            max_length=300.0
+        )
+    )
+
+
+@dataclass
+class Ssr:
+    """Special serivces like wheel chair, or pet carrier.
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar key:
+    :ivar segment_ref: Reference to the air segment. May be required for some Types.
+    :ivar passive_segment_ref: Reference to the passive segment.
+    :ivar provider_reservation_info_ref: Provider reservation reference key.
+    :ivar type: Programmatic SSRs use codes recognized by the provider/supplier (example, VGML=vegetarian meal code). Manual SSRs do not have an associated programmatic code.
+    :ivar status:
+    :ivar free_text: Certain SSR types will require a free text message. For example MAAS (Meet and assist).
+    :ivar carrier:
+    :ivar carrier_specific_text: Carrier specific information which are not captured in the FreeText field(not present in IATA's standard SSR DOCO format). An example is VISA Expiration Date.
+    :ivar description:
+    :ivar provider_defined_type: Original Type as sent by the provider
+    :ivar ssrrule_ref: UniqueID to associate a rule to the SSR
+    :ivar url:
+    :ivar profile_id: Key assigned for Secure Flight Document value from the specified profile
+    :ivar profile_secure_flight_doc_key: Unique ID of Booking Traveler's Profile that contains the Secure flight Detail
+    """
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    segment_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SegmentRef",
+            type="Attribute"
+        )
+    )
+    passive_segment_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PassiveSegmentRef",
+            type="Attribute"
+        )
+    )
+    provider_reservation_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderReservationInfoRef",
+            type="Attribute"
+        )
+    )
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute",
+            required=True,
+            min_length=4.0,
+            max_length=4.0
+        )
+    )
+    status: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Status",
+            type="Attribute"
+        )
+    )
+    free_text: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FreeText",
+            type="Attribute"
+        )
+    )
+    carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Carrier",
+            type="Attribute",
+            length=2
+        )
+    )
+    carrier_specific_text: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CarrierSpecificText",
+            type="Attribute",
+            min_length=1.0,
+            max_length=64.0
+        )
+    )
+    description: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Description",
+            type="Attribute"
+        )
+    )
+    provider_defined_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderDefinedType",
+            type="Attribute",
+            min_length=1.0,
+            max_length=16.0
+        )
+    )
+    ssrrule_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SSRRuleRef",
+            type="Attribute"
+        )
+    )
+    url: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="URL",
+            type="Attribute"
+        )
+    )
+    profile_id: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProfileID",
+            type="Attribute"
+        )
+    )
+    profile_secure_flight_doc_key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProfileSecureFlightDocKey",
+            type="Attribute"
         )
     )
 
@@ -6261,10 +6904,94 @@ class SearchEvent(TypeTimeRange):
 
     :ivar type:
     """
-    type: Optional[str] = field(
+    type: Optional[TypeEventType] = field(
         default=None,
         metadata=dict(
             name="Type",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
+class SeatAssignment:
+    """
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar key:
+    :ivar status:
+    :ivar seat:
+    :ivar seat_type_code: The 4 letter SSR code like SMSW,NSSW,SMST etc.
+    :ivar segment_ref:
+    :ivar flight_details_ref:
+    :ivar rail_coach_number: Coach number for which rail seatmap/coachmap is returned.
+    """
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    status: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Status",
+            type="Attribute",
+            required=True,
+            length=2,
+            white_space="collapse"
+        )
+    )
+    seat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Seat",
+            type="Attribute",
+            required=True
+        )
+    )
+    seat_type_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SeatTypeCode",
+            type="Attribute",
+            length=4,
+            white_space="collapse"
+        )
+    )
+    segment_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SegmentRef",
+            type="Attribute"
+        )
+    )
+    flight_details_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FlightDetailsRef",
+            type="Attribute"
+        )
+    )
+    rail_coach_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RailCoachNumber",
             type="Attribute"
         )
     )
@@ -6300,7 +7027,7 @@ class Segment:
     :ivar travel_order: To identify the appropriate travel sequence for Air/Car/Hotel segments/reservations based on travel dates. This ordering is applicable across the UR not provider or traveler specific
     :ivar provider_segment_order: To identify the appropriate travel sequence for Air/Car/Hotel/Rail segments/reservations in the provider reservation.
     """
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -6389,6 +7116,45 @@ class ServiceInfo:
 
 
 @dataclass
+class SpecialEquipment:
+    """
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar key:
+    :ivar type: Special equipment associated with a specific vehicle
+    """
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute",
+            required=True
+        )
+    )
+
+
+@dataclass
 class SupplierLocator:
     """Locator code on the host carrier system.
 
@@ -6454,7 +7220,7 @@ class ThirdPartyInformation:
     :ivar provider_reservation_info_ref: Provider Reservation reference
     :ivar key: Unique identifier of the third party supplier. Key can be used to modify or delete saved third party information.
     """
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -6519,6 +7285,173 @@ class ThirdPartyInformation:
 
 
 @dataclass
+class TravelComplianceData:
+    """Travel Compliance and Preferred Supplier information of the traveler
+    specific to a segment.
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar policy_compliance:
+    :ivar contract_compliance:
+    :ivar preferred_supplier:
+    :ivar key: System generated key, returned back in the response. This can be used to modify or delete a saved TravelComplianceData.
+    :ivar air_segment_ref: Refers to Air Segment. Applicable only for Air. Ignored for others.
+    :ivar passive_segment_ref: Refers to Passive Segment. Applicable only for Passive. Ignored for others.
+    :ivar rail_segment_ref: Refers to Rail Segment. Applicable only for Rail. Ignored for others.
+    :ivar reservation_locator_ref: This is returned in the response. Any input will be ignored for this attribute. This represents the association of Travel Compliance Data with the uAPI reservation locator code, mainly relevant to Hotel and Vehicle.
+    """
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    policy_compliance: List["TravelComplianceData.PolicyCompliance"] = field(
+        default_factory=list,
+        metadata=dict(
+            name="PolicyCompliance",
+            type="Element",
+            min_occurs=0,
+            max_occurs=2
+        )
+    )
+    contract_compliance: List["TravelComplianceData.ContractCompliance"] = field(
+        default_factory=list,
+        metadata=dict(
+            name="ContractCompliance",
+            type="Element",
+            min_occurs=0,
+            max_occurs=2
+        )
+    )
+    preferred_supplier: List["TravelComplianceData.PreferredSupplier"] = field(
+        default_factory=list,
+        metadata=dict(
+            name="PreferredSupplier",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    air_segment_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AirSegmentRef",
+            type="Attribute"
+        )
+    )
+    passive_segment_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PassiveSegmentRef",
+            type="Attribute"
+        )
+    )
+    rail_segment_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RailSegmentRef",
+            type="Attribute"
+        )
+    )
+    reservation_locator_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ReservationLocatorRef",
+            type="Attribute",
+            min_length=5.0,
+            max_length=8.0
+        )
+    )
+
+    @dataclass
+    class PolicyCompliance:
+        """
+        :ivar in_policy: Policy Compliance Indicator. For In-Policy set to 'true', For Out-Of-Policy set to 'false''.
+        :ivar policy_token: Optional text message to set the rule or token for which it's In Policy or Out Of Policy.
+        """
+        in_policy: Optional[bool] = field(
+            default=None,
+            metadata=dict(
+                name="InPolicy",
+                type="Attribute",
+                required=True
+            )
+        )
+        policy_token: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="PolicyToken",
+                type="Attribute",
+                min_length=1.0,
+                max_length=128.0
+            )
+        )
+
+    @dataclass
+    class ContractCompliance:
+        """
+        :ivar in_contract: Contract Compliance Indicator. For In-Contract set to 'true', For Out-Of-Contract set to 'false'.
+        :ivar contract_token: Optional text message to set the rule or token for which it's In Contract or Out Of Contract.
+        """
+        in_contract: Optional[bool] = field(
+            default=None,
+            metadata=dict(
+                name="InContract",
+                type="Attribute",
+                required=True
+            )
+        )
+        contract_token: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ContractToken",
+                type="Attribute",
+                min_length=1.0,
+                max_length=128.0
+            )
+        )
+
+    @dataclass
+    class PreferredSupplier:
+        """
+        :ivar preferred: Preferred Supplier - 'true', 'false'.
+        :ivar profile_type: Indicate profile type. e.g. if Agency Preferred then pass Agency, if Traveler Preferred then pass Traveler.
+        """
+        preferred: Optional[bool] = field(
+            default=None,
+            metadata=dict(
+                name="Preferred",
+                type="Attribute",
+                required=True
+            )
+        )
+        profile_type: Optional[TypeProfileType] = field(
+            default=None,
+            metadata=dict(
+                name="ProfileType",
+                type="Attribute",
+                required=True
+            )
+        )
+
+
+@dataclass
 class UnassociatedRemark(TypeRemarkWithTravelerRef):
     """A textual remark container to hold non-associated itinerary remarks.
 
@@ -6541,26 +7474,25 @@ class VendorLocation(TypeVendorLocation):
 
 
 @dataclass
-class TypeAgencyHierarchyLongReference(TypeAgencyHierarchyReference):
+class TypeAgencyHierarchyReference:
     """
-    :ivar profile_version:
-    :ivar profile_name: Initially: Agent: Last, First, Branch: BranchCode, Agency: Name. After new profile implementation: Agent: UserName, others levels: Name.
+    :ivar profile_id:
+    :ivar profile_type:
     """
-    profile_version: Optional[int] = field(
+    profile_id: Optional[int] = field(
         default=None,
         metadata=dict(
-            name="ProfileVersion",
+            name="ProfileID",
             type="Attribute",
             required=True
         )
     )
-    profile_name: Optional[str] = field(
+    profile_type: Optional[TypeAgencyProfileLevel] = field(
         default=None,
         metadata=dict(
-            name="ProfileName",
+            name="ProfileType",
             type="Attribute",
-            required=True,
-            max_length=102.0
+            required=True
         )
     )
 
@@ -6687,7 +7619,7 @@ class TypeFeeInfo:
     :ivar passenger_type_code:
     :ivar text: Additional Information returned from Supplier.(ACH only)
     """
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -6950,6 +7882,31 @@ class TypeOtakeyword:
 
 
 @dataclass
+class TypeProfileRef:
+    """ProfileEntityID and ProfileLevel together identity a profile entity.
+
+    :ivar profile_entity_id:
+    :ivar profile_level:
+    """
+    profile_entity_id: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProfileEntityID",
+            type="Attribute",
+            required=True
+        )
+    )
+    profile_level: Optional[TypeProfileLevel] = field(
+        default=None,
+        metadata=dict(
+            name="ProfileLevel",
+            type="Attribute",
+            required=True
+        )
+    )
+
+
+@dataclass
 class TypeProviderReservationSpecificInfo:
     """
     :ivar operated_by: Cross accrual carrier info
@@ -7004,7 +7961,7 @@ class TypeStructuredAddress:
     :ivar provider_reservation_info_ref: Tagging provider reservation info with Address.
     :ivar key: Key for update/delete of the element
     """
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -7291,6 +8248,56 @@ class TypeTransactionsAllowed(TypeBookingTransactionsAllowed):
         metadata=dict(
             name="PricingEnabled",
             type="Attribute"
+        )
+    )
+
+
+@dataclass
+class TypeVoucherInformation:
+    """Information pertaining to the payment of a Vehicle Rental.
+
+    :ivar voucher_type: Specifies if the Voucher is for Full Credit or a Group/Day or a Monetary Amount or RegularVoucher.
+    :ivar amount: Amount associated with the Voucher.
+    :ivar confirmation_number: Confirmation from the vendor for the voucher
+    :ivar account_name: Associated account name for the voucher
+    :ivar number: To advise car associates of the voucher number and store in the car segment. It is required when VoucherType selected as "RegularVoucher" for 1P, 1J only.
+    """
+    voucher_type: Optional[TypeVoucherType] = field(
+        default=None,
+        metadata=dict(
+            name="VoucherType",
+            type="Attribute",
+            required=True
+        )
+    )
+    amount: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Amount",
+            type="Attribute"
+        )
+    )
+    confirmation_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ConfirmationNumber",
+            type="Attribute"
+        )
+    )
+    account_name: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AccountName",
+            type="Attribute"
+        )
+    )
+    number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Number",
+            type="Attribute",
+            min_length=1.0,
+            max_length=16.0
         )
     )
 
@@ -7610,7 +8617,7 @@ class AirExchangeInfo:
             type="Attribute"
         )
     )
-    fare_pull: Optional[str] = field(
+    fare_pull: Optional[TypeFarePull] = field(
         default=None,
         metadata=dict(
             name="FarePull",
@@ -7633,7 +8640,7 @@ class AirExchangeInfo:
             type="Attribute"
         )
     )
-    form_of_refund: Optional[str] = field(
+    form_of_refund: Optional[TypeFormOfRefund] = field(
         default=None,
         metadata=dict(
             name="FormOfRefund",
@@ -7702,216 +8709,9 @@ class AirExchangeInfo:
 
 
 @dataclass
-class BaseReservation:
-    """
-    :ivar accounting_remark:
-    :ivar general_remark:
-    :ivar restriction:
-    :ivar passive_info:
-    :ivar locator_code: The unique identifier for this reservation. If this is this View Only UR LocatorCode is '999999'.
-    :ivar create_date: The date and time that this reservation was created.
-    :ivar modified_date: The date and time that this reservation was last modified for any reason.
-    :ivar customer_number:
-    """
-    accounting_remark: List[AccountingRemark] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AccountingRemark",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    general_remark: List[GeneralRemark] = field(
-        default_factory=list,
-        metadata=dict(
-            name="GeneralRemark",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    restriction: List[Restriction] = field(
-        default_factory=list,
-        metadata=dict(
-            name="Restriction",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    passive_info: Optional[PassiveInfo] = field(
-        default=None,
-        metadata=dict(
-            name="PassiveInfo",
-            type="Element"
-        )
-    )
-    locator_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="LocatorCode",
-            type="Attribute",
-            required=True,
-            min_length=5.0,
-            max_length=8.0
-        )
-    )
-    create_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CreateDate",
-            type="Attribute",
-            required=True
-        )
-    )
-    modified_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ModifiedDate",
-            type="Attribute",
-            required=True
-        )
-    )
-    customer_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CustomerNumber",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class BookingTraveler:
-    """A traveler and all their accompanying data.
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar key:
-    :ivar traveler_type: Defines the type of traveler used for booking which could be a non-defining type (Companion, Web-fare, etc), or a standard type (Adult, Child, etc).
-    :ivar age: BookingTraveler age
-    :ivar vip: When set to True indicates that the Booking Traveler is a VIP based on agency/customer criteria
-    :ivar dob: Traveler Date of Birth
-    :ivar gender: The BookingTraveler gender type
-    :ivar nationality: Specify ISO country code for nationality of the Booking Traveler
-    :ivar ssr:
-    :ivar name_remark:
-    :ivar air_seat_assignment:
-    :ivar rail_seat_assignment:
-    :ivar name_number: Host Name Number
-    """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    traveler_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TravelerType",
-            type="Attribute",
-            min_length=3.0,
-            max_length=5.0
-        )
-    )
-    age: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="Age",
-            type="Attribute"
-        )
-    )
-    vip: bool = field(
-        default=False,
-        metadata=dict(
-            name="VIP",
-            type="Attribute"
-        )
-    )
-    dob: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DOB",
-            type="Attribute"
-        )
-    )
-    gender: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Gender",
-            type="Attribute",
-            min_length=1.0,
-            max_length=2.0
-        )
-    )
-    nationality: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Nationality",
-            type="Attribute",
-            length=2
-        )
-    )
-    ssr: List[Ssr] = field(
-        default_factory=list,
-        metadata=dict(
-            name="SSR",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    name_remark: List[NameRemark] = field(
-        default_factory=list,
-        metadata=dict(
-            name="NameRemark",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    air_seat_assignment: List[AirSeatAssignment] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AirSeatAssignment",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    rail_seat_assignment: List[RailSeatAssignment] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailSeatAssignment",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    name_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="NameNumber",
-            type="Attribute"
-        )
-    )
+class AirSeatAssignment(SeatAssignment):
+    """Identifies the seat assignment for a passenger."""
+    pass
 
 
 @dataclass
@@ -8184,7 +8984,7 @@ class LoyaltyCard:
             type="Attribute"
         )
     )
-    supplier_type: Optional[str] = field(
+    supplier_type: Optional[TypeProduct] = field(
         default=None,
         metadata=dict(
             name="SupplierType",
@@ -8328,6 +9128,74 @@ class McopriceData:
 
 
 @dataclass
+class PassiveInfo:
+    """Used by CreateReservationReq for passing in elements normally found post-
+    booking.
+
+    :ivar ticket_number:
+    :ivar confirmation_number:
+    :ivar commission:
+    :ivar provider_code:
+    :ivar provider_locator_code:
+    :ivar supplier_code:
+    :ivar supplier_locator_code:
+    """
+    ticket_number: List[str] = field(
+        default_factory=list,
+        metadata=dict(
+            name="TicketNumber",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    confirmation_number: List[str] = field(
+        default_factory=list,
+        metadata=dict(
+            name="ConfirmationNumber",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    commission: Optional[Commission] = field(
+        default=None,
+        metadata=dict(
+            name="Commission",
+            type="Element"
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute"
+        )
+    )
+    provider_locator_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderLocatorCode",
+            type="Attribute"
+        )
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierCode",
+            type="Attribute"
+        )
+    )
+    supplier_locator_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierLocatorCode",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class PaymentRestriction:
     """
     :ivar card_restriction:
@@ -8371,6 +9239,32 @@ class ReservationName:
         metadata=dict(
             name="NameOverride",
             type="Element"
+        )
+    )
+
+
+@dataclass
+class Ssrinfo:
+    """Bundle SSR with BookingTraveler reference in order to add SSR post booking.
+
+    :ivar ssr:
+    :ivar booking_traveler_ref: Reference to Booking Traveler.
+    """
+    ssr: Optional[Ssr] = field(
+        default=None,
+        metadata=dict(
+            name="SSR",
+            type="Element",
+            required=True
+        )
+    )
+    booking_traveler_ref: List[str] = field(
+        default_factory=list,
+        metadata=dict(
+            name="BookingTravelerRef",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
         )
     )
 
@@ -8672,6 +9566,31 @@ class TravelerInformation:
 
 
 @dataclass
+class TypeAgencyHierarchyLongReference(TypeAgencyHierarchyReference):
+    """
+    :ivar profile_version:
+    :ivar profile_name: Initially: Agent: Last, First, Branch: BranchCode, Agency: Name. After new profile implementation: Agent: UserName, others levels: Name.
+    """
+    profile_version: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="ProfileVersion",
+            type="Attribute",
+            required=True
+        )
+    )
+    profile_name: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProfileName",
+            type="Attribute",
+            required=True,
+            max_length=102.0
+        )
+    )
+
+
+@dataclass
 class TypeAssociatedRemarkWithSegmentRef(TypeAssociatedRemark):
     """A textual remark container to hold Associated itinerary remarks with segment
     association.
@@ -8957,6 +9876,219 @@ class Apiprovider:
 
 
 @dataclass
+class BaseReservation:
+    """
+    :ivar accounting_remark:
+    :ivar general_remark:
+    :ivar restriction:
+    :ivar passive_info:
+    :ivar locator_code: The unique identifier for this reservation. If this is this View Only UR LocatorCode is '999999'.
+    :ivar create_date: The date and time that this reservation was created.
+    :ivar modified_date: The date and time that this reservation was last modified for any reason.
+    :ivar customer_number:
+    """
+    accounting_remark: List[AccountingRemark] = field(
+        default_factory=list,
+        metadata=dict(
+            name="AccountingRemark",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    general_remark: List[GeneralRemark] = field(
+        default_factory=list,
+        metadata=dict(
+            name="GeneralRemark",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    restriction: List[Restriction] = field(
+        default_factory=list,
+        metadata=dict(
+            name="Restriction",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    passive_info: Optional[PassiveInfo] = field(
+        default=None,
+        metadata=dict(
+            name="PassiveInfo",
+            type="Element"
+        )
+    )
+    locator_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="LocatorCode",
+            type="Attribute",
+            required=True,
+            min_length=5.0,
+            max_length=8.0
+        )
+    )
+    create_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CreateDate",
+            type="Attribute",
+            required=True
+        )
+    )
+    modified_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ModifiedDate",
+            type="Attribute",
+            required=True
+        )
+    )
+    customer_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CustomerNumber",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
+class BookingTraveler:
+    """A traveler and all their accompanying data.
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar key:
+    :ivar traveler_type: Defines the type of traveler used for booking which could be a non-defining type (Companion, Web-fare, etc), or a standard type (Adult, Child, etc).
+    :ivar age: BookingTraveler age
+    :ivar vip: When set to True indicates that the Booking Traveler is a VIP based on agency/customer criteria
+    :ivar dob: Traveler Date of Birth
+    :ivar gender: The BookingTraveler gender type
+    :ivar nationality: Specify ISO country code for nationality of the Booking Traveler
+    :ivar ssr:
+    :ivar name_remark:
+    :ivar air_seat_assignment:
+    :ivar rail_seat_assignment:
+    :ivar name_number: Host Name Number
+    """
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    traveler_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TravelerType",
+            type="Attribute",
+            min_length=3.0,
+            max_length=5.0
+        )
+    )
+    age: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Age",
+            type="Attribute"
+        )
+    )
+    vip: bool = field(
+        default=False,
+        metadata=dict(
+            name="VIP",
+            type="Attribute"
+        )
+    )
+    dob: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DOB",
+            type="Attribute"
+        )
+    )
+    gender: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Gender",
+            type="Attribute",
+            min_length=1.0,
+            max_length=2.0
+        )
+    )
+    nationality: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Nationality",
+            type="Attribute",
+            length=2
+        )
+    )
+    ssr: List[Ssr] = field(
+        default_factory=list,
+        metadata=dict(
+            name="SSR",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    name_remark: List[NameRemark] = field(
+        default_factory=list,
+        metadata=dict(
+            name="NameRemark",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    air_seat_assignment: List[AirSeatAssignment] = field(
+        default_factory=list,
+        metadata=dict(
+            name="AirSeatAssignment",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    rail_seat_assignment: List[RailSeatAssignment] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailSeatAssignment",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    name_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="NameNumber",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class BookingTravelerInfo:
     """Container that will allow modifying Universal record data that is not
     product specific.
@@ -9187,7 +10319,7 @@ class Group:
     :ivar traveler_type: Defines the type of traveler used for booking which could be a non-defining type (Companion, Web-fare, etc), or a standard type (Adult, Child, etc).
     :ivar group_size: Represents size of the group
     """
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -9445,7 +10577,7 @@ class ServiceRuleType:
                 max_occurs=999
             )
         )
-        applicable_levels: List[str] = field(
+        applicable_levels: List[OptionalServiceApplicabilityType] = field(
             default_factory=list,
             metadata=dict(
                 name="ApplicableLevels",
@@ -9493,7 +10625,7 @@ class ServiceRuleType:
                 max_occurs=999
             )
         )
-        supported_modifications: List[str] = field(
+        supported_modifications: List[ModificationType] = field(
             default_factory=list,
             metadata=dict(
                 name="SupportedModifications",
@@ -9520,7 +10652,7 @@ class ServiceRuleType:
             :ivar refundable: Indicates if the price of the option is refundable.
             :ivar provider_defined_modification_type: Indicates the actual provider defined modification type which is mapped to Other
             """
-            modification: Optional[str] = field(
+            modification: Optional[ModificationType] = field(
                 default=None,
                 metadata=dict(
                     name="Modification",
@@ -9779,7 +10911,7 @@ class TypePassengerType:
             type="Attribute"
         )
     )
-    residency_type: Optional[str] = field(
+    residency_type: Optional[TypeResidency] = field(
         default=None,
         metadata=dict(
             name="ResidencyType",
@@ -9837,7 +10969,7 @@ class FormOfPayment:
     :ivar profile_id: The unique ID of the profile that contains the payment details to use.
     :ivar profile_key: The Key assigned to the payment details value from the specified profile.
     """
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -9934,7 +11066,7 @@ class FormOfPayment:
             type="Attribute"
         )
     )
-    fulfillment_idtype: Optional[str] = field(
+    fulfillment_idtype: Optional[TypeFulfillmentIdtype] = field(
         default=None,
         metadata=dict(
             name="FulfillmentIDType",
@@ -10014,7 +11146,7 @@ class Guarantee:
     :ivar external_reference:
     :ivar reusable: Indicates whether the form of payment can be reused or not. Currently applicable for Credit and Debit form of payment
     """
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -10166,7 +11298,7 @@ class ServiceFeeInfo:
     :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated Service Fee TaxInfo array for a breakdown of the individual taxes.
     :ivar booking_traveler_name: The name of the passenger.
     """
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -10210,7 +11342,7 @@ class ServiceFeeInfo:
             type="Element"
         )
     )
-    status: Optional[str] = field(
+    status: Optional[TypeStatus] = field(
         default=None,
         metadata=dict(
             name="Status",
