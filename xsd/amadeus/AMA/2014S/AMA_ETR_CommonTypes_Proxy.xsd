@@ -749,11 +749,11 @@
   </xs:simpleType>
   <xs:simpleType name="ETRStatusCode">
     <xs:annotation>
-      <xs:documentation xml:lang="en">Status code. The status indicates the state of the EC in the external provider’s system. However this attribute is given for information purpose only since there is no synchronisation between the provider system and Amadeus. Full list of possible values, used by much of ETR elements. 
+      <xs:documentation xml:lang="en">Status code. The status indicates the state of the EC in the external provider’s system. However this attribute is given for information purpose only since there is no synchronisation between the provider system and Amadeus. Full list of possible values, used by much of ETR elements.
 HK: confirmed. This status should be used when the EC is confirmed in the provider's system.
-HL: Waitlisted. This status should be used when the EC is on wait list in the provider's system. 
-HX: Cancelled. This status should be used when the EC is cancelled in the provider's system. 
-HN: On Request. This status should be used when the EC is on request in the provider's system. 
+HL: Waitlisted. This status should be used when the EC is on wait list in the provider's system.
+HX: Cancelled. This status should be used when the EC is cancelled in the provider's system.
+HN: On Request. This status should be used when the EC is on request in the provider's system.
 TT: Time to Think. This status should be used when the EC is only an Option in the provider's system.</xs:documentation>
       <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
         <ama:error code="811">INVALID STATUS CODE</ama:error>
@@ -778,8 +778,8 @@ TT: Time to Think. This status should be used when the EC is only an Option in t
       <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
         <xs:documentation xml:lang="en">Status code. The status indicates the state of the EC in the external provider’s system. However this attribute is given for information purpose only since there is no synchronisation between the provider system and Amadeus. List without HL values used for some ETR elements.
 HK: confirmed. This status should be used when the EC is confirmed in the provider's system.
-HX: Cancelled. This status should be used when the EC is cancelled in the provider's system. 
-HN: On Request. This status should be used when the EC is on request in the provider's system. 		
+HX: Cancelled. This status should be used when the EC is cancelled in the provider's system.
+HN: On Request. This status should be used when the EC is on request in the provider's system.
 TT: Time to Think. This status should be used when the EC is only an Option in the provider's system.</xs:documentation>
         <ama:error code="811">INVALID STATUS CODE</ama:error>
       </xs:appinfo>
@@ -1502,7 +1502,7 @@ TT: Time to Think. This status should be used when the EC is only an Option in t
         <xs:appinfo source="http://xml.amadeus.com/ErrorCodes">
           <ama:error code="10474">INVALID ROOM CATEGORY</ama:error>
         </xs:appinfo>
-        <xs:documentation xml:lang="en">Apartement category: U-Unknown (value by default), B-Budget, T-Standard, S-Superior, X-Deluxe 
+        <xs:documentation xml:lang="en">Apartement category: U-Unknown (value by default), B-Budget, T-Standard, S-Superior, X-Deluxe
 Temporary solution waiting to define Apartement as real elements linkned to the ETR Apartement and Pax.</xs:documentation>
       </xs:annotation>
       <xs:simpleType>

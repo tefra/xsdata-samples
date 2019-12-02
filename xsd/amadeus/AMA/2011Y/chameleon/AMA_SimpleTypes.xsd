@@ -14,4 +14,3 @@ Pattern is composed on 3 parts: Standard (AMA or OTA or IATA), ListCode (3 upper
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>
-
