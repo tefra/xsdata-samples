@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ns0:LowFareSearchReq xmlns:ns0="http://www.travelport.com/schema/air_v48_0" xmlns:ns1="http://www.travelport.com/schema/common_v48_0" TraceId="c0716df8-12f5-11ea-9d04-000c293dfa64" TargetBranch="P107695" SolutionResult="true" PreferCompleteItinerary="true" ReturnBrandedFares="true" CheckOBFees="All">
+  <ns1:BillingPointOfSaleInfo OriginApplication="UAPI"/>
+  <ns0:SearchAirLeg>
+    <ns0:SearchOrigin>
+      <ns1:CityOrAirport Code="LON"/>
+    </ns0:SearchOrigin>
+    <ns0:SearchDestination>
+      <ns1:CityOrAirport Code="NYC"/>
+    </ns0:SearchDestination>
+    <ns0:SearchDepTime PreferredTime="2019-12-15"/>
+    <ns0:AirLegModifiers AllowDirectAccess="true"/>
+  </ns0:SearchAirLeg>
+  <ns0:AirSearchModifiers DistanceType="MI" IncludeFlightDetails="true" AllowChangeOfAirport="true" MaxSolutions="250">
+    <ns0:PreferredProviders>
+      <ns1:Provider Code="1P"/>
+    </ns0:PreferredProviders>
+  </ns0:AirSearchModifiers>
+  <ns1:SearchPassenger Code="ADT" Age="30"/>
+  <ns1:SearchPassenger Code="ADT" Age="30"/>
+  <ns1:SearchPassenger Code="ADT" Age="30"/>
+  <ns1:SearchPassenger Code="CNN" Age="7"/>
+  <ns1:SearchPassenger Code="CNN" Age="7"/>
+  <ns1:SearchPassenger Code="INF"/>
+  <ns0:AirPricingModifiers CurrencyType="EUR" FaresIndicator="PublicAndPrivateFares" ETicketability="Yes" ReturnServices="true"/>
+  <ns1:FormOfPayment Type="Credit">
+    <ns1:CreditCard Type="CA" Number="5234123412341234" ExpDate="2020-11" Name="Thug Life" CVV="123"/>
+  </ns1:FormOfPayment>
+</ns0:LowFareSearchReq>

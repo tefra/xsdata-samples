@@ -26,6 +26,10 @@ class FareMasterPricerTravelBoardSearch:
     :ivar fee_option:
     :ivar office_id_details:
     """
+    class Meta:
+        name = "Fare_MasterPricerTravelBoardSearch"
+        namespace = "http://xml.amadeus.com/FMPTBQ_15_3_1A"
+
     number_of_unit: Optional["FareMasterPricerTravelBoardSearch.NumberOfUnit"] = field(
         default=None,
         metadata=dict(
@@ -2220,7 +2224,16 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CompanyId:
-                pass
+                """
+                :ivar value:
+                """
+                value: Optional[str] = field(
+                    default=None,
+                    metadata=dict(
+                        name="value",
+                        type="Restriction"
+                    )
+                )
 
             @dataclass
             class SellingPoint:
@@ -7956,7 +7969,16 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CompanyId:
-                pass
+                """
+                :ivar value:
+                """
+                value: Optional[str] = field(
+                    default=None,
+                    metadata=dict(
+                        name="value",
+                        type="Restriction"
+                    )
+                )
 
             @dataclass
             class SellingPoint:

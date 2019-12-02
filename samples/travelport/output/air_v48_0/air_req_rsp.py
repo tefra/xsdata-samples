@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional
-from samples.travelport.air_v48_0.air import (
+from samples.travelport.output.air_v48_0.air import (
     ApisrequirementsList,
     AirExchangeBundle,
     AirExchangeBundleTotal,
@@ -95,12 +95,10 @@ from samples.travelport.air_v48_0.air import (
     TypeAirReservationWithFop,
     TypeApplicableSegment,
     TypeFailureInfo,
-    TypeFareRuleType,
-    TypeMileOrRouteBasedFare,
     TypeTicketFailureInfo,
     TypeTicketingModifiersRef,
 )
-from samples.travelport.common_v48_0.common import (
+from samples.travelport.output.common_v48_0.common import (
     AccountCode,
     AddSvc,
     AgencySellInfo,
@@ -125,10 +123,9 @@ from samples.travelport.common_v48_0.common import (
     SearchPassenger,
     ServiceFeeInfo,
     TicketNumber,
-    TypeDistance,
     TypePassengerType,
 )
-from samples.travelport.common_v48_0.common_req_rsp import (
+from samples.travelport.output.common_v48_0.common_req_rsp import (
     BaseCoreReq,
     BaseCoreSearchReq,
     BaseReq,
@@ -136,7 +133,7 @@ from samples.travelport.common_v48_0.common_req_rsp import (
     BaseSearchReq,
     BaseSearchRsp,
 )
-from samples.travelport.rail_v48_0.rail import (
+from samples.travelport.output.rail_v48_0.rail import (
     RailFareIdlist,
     RailFareList,
     RailFareNoteList,
@@ -156,6 +153,9 @@ class SearchSpecificAirSegment:
     :ivar destination: The IATA location code for this destination of this entity.
     :ivar segment_index: The sequential AirSegment number that this segment connected to.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     departure_time: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -214,7 +214,6 @@ class SearchSpecificAirSegment:
 @dataclass
 class AirBaseReq(BaseReq):
     """Context for Requests and Responses."""
-    pass
 
 
 @dataclass
@@ -224,6 +223,9 @@ class AirExchangeEligibilityReq(BaseReq):
     :ivar provider_reservation_info: Provider:1P - Represents a valid Provider Reservation/PNR whose itinerary is to be exchanged
     :ivar type: Type choices are "Detail" or "Summary" Default will be Summary
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     provider_reservation_info: Optional["AirExchangeEligibilityReq.ProviderReservationInfo"] = field(
         default=None,
         metadata=dict(
@@ -272,6 +274,9 @@ class AirExchangeEligibilityRsp(BaseRsp):
     """
     :ivar exchange_eligibility_info:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     exchange_eligibility_info: Optional[ExchangeEligibilityInfo] = field(
         default=None,
         metadata=dict(
@@ -293,6 +298,9 @@ class AirExchangeQuoteRsp(BaseRsp):
     :ivar optional_services: Provider: ACH.
     :ivar fare_rule: Provider: ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     ticket_number: List[TicketNumber] = field(
         default_factory=list,
         metadata=dict(
@@ -375,6 +383,9 @@ class AirExchangeReq(BaseReq):
     :ivar add_svc: 1P - Add SVC segments to collect additional fee
     :ivar return_reservation: Provider: ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
         default=None,
         metadata=dict(
@@ -502,6 +513,9 @@ class AirExchangeRsp(BaseRsp):
     :ivar air_reservation: Provider: ACH.
     :ivar exchange_failure_info: Provider: ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     ticket_number: List[TicketNumber] = field(
         default_factory=list,
         metadata=dict(
@@ -553,6 +567,9 @@ class AirExchangeTicketingReq(BaseReq):
     :ivar bulk_ticket: Providers 1G, 1V, 1P.
     :ivar change_fee_on_ticket: Applies the change fee/penalty to the original form of payment. Providers: 1V
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
         default=None,
         metadata=dict(
@@ -629,6 +646,9 @@ class AirExchangeTicketingRsp(BaseRsp):
     :ivar ticket_failure_info: Provider 1G, 1V, 1P.
     :ivar detailed_billing_information: Providers 1G, 1V, 1P.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_solution_changed_info: Optional[AirSolutionChangedInfo] = field(
         default=None,
         metadata=dict(
@@ -684,6 +704,9 @@ class AirFareDisplayReq(BaseReq):
     :ivar nscc: 1 to 3 numeric that define a Search Control Console filter.This attribute is used to override that filter.
     :ivar return_mm: If this attribute is set to true, Fare Control Manager processing will be invoked.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     fare_type: List[FareType] = field(
         default_factory=list,
         metadata=dict(
@@ -698,7 +721,6 @@ class AirFareDisplayReq(BaseReq):
         metadata=dict(
             name="PassengerType",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -807,7 +829,7 @@ class AirFareDisplayReq(BaseReq):
             max_length=5.0
         )
     )
-    include_mile_route_information: Optional[TypeMileOrRouteBasedFare] = field(
+    include_mile_route_information: Optional[str] = field(
         default=None,
         metadata=dict(
             name="IncludeMileRouteInformation",
@@ -854,6 +876,9 @@ class AirFareDisplayRsp(BaseRsp):
 
     :ivar fare_display: Provider: 1G,1V,1P,1J.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     fare_display: List[FareDisplay] = field(
         default_factory=list,
         metadata=dict(
@@ -869,30 +894,17 @@ class AirFareDisplayRsp(BaseRsp):
 class AirFareRulesReq(BaseReq):
     """Request to display the full text fare rules.
 
-    :ivar air_fare_rules_modifier: Provider: 1G,1V.
-    :ivar fare_rules_filter_category: Structured Fare Rules Filter if requested will return rules for requested categories in the response. Applicable for providers 1G, 1V.
     :ivar air_reservation_selector: Provider: 1G,1V,1P,1J,ACH-Parameters to use for a fare rule lookup associated with an Air Reservation Locator Code
     :ivar fare_rule_lookup: Used to look up fare rules based on the origin, destination, and carrier of the air segment, the fare basis code and the provider code. Providers: 1P, 1J.
     :ivar fare_rule_key: Used to look up fare rules based on a fare rule key. Providers: 1G, 1V, 1P, 1J, ACH.
     :ivar air_fare_display_rule_key: Provider: 1G,1V,1P,1J.
+    :ivar air_fare_rules_modifier: Provider: 1G,1V.
+    :ivar fare_rules_filter_category: Structured Fare Rules Filter if requested will return rules for requested categories in the response. Applicable for providers 1G, 1V.
     :ivar fare_rule_type: Provider: 1G,1V,1P,1J,ACH.
     """
-    air_fare_rules_modifier: Optional[AirFareRulesModifier] = field(
-        default=None,
-        metadata=dict(
-            name="AirFareRulesModifier",
-            type="Element"
-        )
-    )
-    fare_rules_filter_category: List["AirFareRulesReq.FareRulesFilterCategory"] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FareRulesFilterCategory",
-            type="Element",
-            min_occurs=0,
-            max_occurs=16
-        )
-    )
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_reservation_selector: Optional["AirFareRulesReq.AirReservationSelector"] = field(
         default=None,
         metadata=dict(
@@ -923,7 +935,23 @@ class AirFareRulesReq(BaseReq):
             type="Element"
         )
     )
-    fare_rule_type: TypeFareRuleType = field(
+    air_fare_rules_modifier: Optional[AirFareRulesModifier] = field(
+        default=None,
+        metadata=dict(
+            name="AirFareRulesModifier",
+            type="Element"
+        )
+    )
+    fare_rules_filter_category: List["AirFareRulesReq.FareRulesFilterCategory"] = field(
+        default_factory=list,
+        metadata=dict(
+            name="FareRulesFilterCategory",
+            type="Element",
+            min_occurs=0,
+            max_occurs=16
+        )
+    )
+    fare_rule_type: str = field(
         default="long",
         metadata=dict(
             name="FareRuleType",
@@ -987,6 +1015,9 @@ class AirFareRulesRsp(BaseRsp):
 
     :ivar fare_rule: Provider: 1G,1V,1P,1J,ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     fare_rule: List[FareRule] = field(
         default_factory=list,
         metadata=dict(
@@ -1007,6 +1038,9 @@ class AirMerchandisingDetailsReq(BaseReq):
     :ivar optional_service_modifiers:
     :ivar merchandising_availability_details:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     merchandising_details: Optional[MerchandisingDetails] = field(
         default=None,
         metadata=dict(
@@ -1038,6 +1072,9 @@ class AirMerchandisingDetailsRsp(BaseRsp):
     :ivar brand:
     :ivar unassociated_booking_code_list: Lists classes of service by segment sent in the request which are not associated to a brand.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     optional_services: Optional[OptionalServices] = field(
         default=None,
         metadata=dict(
@@ -1089,6 +1126,9 @@ class AirMerchandisingOfferAvailabilityReq(BaseReq):
     :ivar offer_availability_modifiers: Provider: 1G,1V,1P,1J,ACH.
     :ivar merchandising_pricing_modifiers: Used to provide additional pricing modifiers. Provider:ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     agency_sell_info: Optional[AgencySellInfo] = field(
         default=None,
         metadata=dict(
@@ -1140,6 +1180,9 @@ class AirMerchandisingOfferAvailabilityRsp(BaseRsp):
     :ivar optional_services:
     :ivar embargo_list:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_solution: Optional[AirSolution] = field(
         default=None,
         metadata=dict(
@@ -1179,6 +1222,9 @@ class AirPrePayReq(BaseReq):
     :ivar list_search: Provider: ACH.
     :ivar pre_pay_retrieve: Provider: ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     list_search: Optional["AirPrePayReq.ListSearch"] = field(
         default=None,
         metadata=dict(
@@ -1273,6 +1319,9 @@ class AirPrePayRsp(BaseRsp):
     :ivar more_indicator: Provider: ACH-Indicates if there are more flight passes to be offered
     :ivar more_data_start_index: Provider: ACH-Indicates start index of the next flight Passes
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     pre_pay_profile_info: List[PrePayProfileInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -1318,6 +1367,9 @@ class AirRefundQuoteReq(BaseReq):
     :ivar provider_reservation_info: Provider: 1P - Represents a valid Provider Reservation/PNR whose itinerary is to be requested
     :ivar ignore: Provider: ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     ticket_number: List[TicketNumber] = field(
         default_factory=list,
         metadata=dict(
@@ -1404,6 +1456,9 @@ class AirRefundQuoteRsp(BaseRsp):
     :ivar air_refund_bundle:
     :ivar tcrrefund_bundle: Provider: ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_refund_bundle: List[AirRefundBundle] = field(
         default_factory=list,
         metadata=dict(
@@ -1434,6 +1489,9 @@ class AirRefundReq(BaseReq):
     :ivar commission: Provider: ACH.
     :ivar form_of_payment: Provider: ACH-Form of Payment for any Additional Collection charges for the Refund.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_refund_bundle: List[AirRefundBundle] = field(
         default_factory=list,
         metadata=dict(
@@ -1486,6 +1544,9 @@ class AirRefundRsp(BaseRsp):
     :ivar tcr: Provider: ACH.
     :ivar refund_failure_info: Provider: ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     etr: List[Etr] = field(
         default_factory=list,
         metadata=dict(
@@ -1521,6 +1582,9 @@ class AirRepriceRsp(BaseRsp):
     :ivar air_pricing_solution:
     :ivar fare_rule:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_pricing_solution: Optional[AirPricingSolution] = field(
         default=None,
         metadata=dict(
@@ -1546,6 +1610,9 @@ class AirRetrieveDocumentReq(BaseReq):
     standard carriers. TCRs will be returned for Ticketless carriers. If the
     locator is send on a standard carrier, all ETRs will be retrieved.
 
+    :ivar universal_record_locator_code: Contains the Locator Code of the Universal Record that houses this reservation.
+    :ivar provider_code: Contains the Provider Code of the provider that houses this reservation.
+    :ivar provider_locator_code: Contains the Locator Code of the Provider Reservation that houses this reservation.
     :ivar air_reservation_locator_code: Provider: 1G,1V,1P,1J.
     :ivar ticket_number: Provider: 1G,1V,1P,1J.
     :ivar tcrnumber: Provider: 1G,1V,1P,1J-The identifying number for a Ticketless Air Reservation.
@@ -1553,6 +1620,35 @@ class AirRetrieveDocumentReq(BaseReq):
     :ivar return_pricing: Provider: 1G,1V,1P,1J-Will return a response which includes the pricing associated with the ETR.
     :ivar retrieve_mco: When true, returns MCO Information. The default value is false.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    universal_record_locator_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="UniversalRecordLocatorCode",
+            type="Attribute",
+            min_length=5.0,
+            max_length=8.0
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    provider_locator_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderLocatorCode",
+            type="Attribute",
+            max_length=15.0
+        )
+    )
     air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
         default=None,
         metadata=dict(
@@ -1612,6 +1708,9 @@ class AirRetrieveDocumentRsp(BaseRsp):
     :ivar service_fee_info: Provider: 1G,1V
     :ivar universal_record_locator_code: Provider: 1G,1V,1P,1J-Represents a valid Universal Record locator code.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     etr: List[Etr] = field(
         default_factory=list,
         metadata=dict(
@@ -1675,10 +1774,10 @@ class AirSearchReq(BaseSearchReq):
     """Base Request for Air Search.
 
     :ivar point_of_commencement:
-    :ivar air_search_modifiers:
-    :ivar journey_data:
     :ivar search_air_leg:
     :ivar search_specific_air_segment:
+    :ivar air_search_modifiers:
+    :ivar journey_data:
     """
     point_of_commencement: Optional[PointOfCommencement] = field(
         default=None,
@@ -1686,20 +1785,6 @@ class AirSearchReq(BaseSearchReq):
             name="PointOfCommencement",
             type="Element",
             namespace="http://www.travelport.com/schema/common_v48_0"
-        )
-    )
-    air_search_modifiers: Optional[AirSearchModifiers] = field(
-        default=None,
-        metadata=dict(
-            name="AirSearchModifiers",
-            type="Element"
-        )
-    )
-    journey_data: Optional[JourneyData] = field(
-        default=None,
-        metadata=dict(
-            name="JourneyData",
-            type="Element"
         )
     )
     search_air_leg: List[SearchAirLeg] = field(
@@ -1720,6 +1805,20 @@ class AirSearchReq(BaseSearchReq):
             max_occurs=999
         )
     )
+    air_search_modifiers: Optional[AirSearchModifiers] = field(
+        default=None,
+        metadata=dict(
+            name="AirSearchModifiers",
+            type="Element"
+        )
+    )
+    journey_data: Optional[JourneyData] = field(
+        default=None,
+        metadata=dict(
+            name="JourneyData",
+            type="Element"
+        )
+    )
 
 
 @dataclass
@@ -1731,6 +1830,9 @@ class AirTicketingRsp(BaseRsp):
     :ivar ticket_failure_info: Provider: 1G,1V,1P,1J.
     :ivar detailed_billing_information: Provider: 1G,1V,1P,1J.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_solution_changed_info: Optional[AirSolutionChangedInfo] = field(
         default=None,
         metadata=dict(
@@ -1778,6 +1880,9 @@ class AirVoidDocumentReq(BaseReq):
     :ivar provider_locator_code: Provider: 1G,1V-Contains the locator of the host reservation.
     :ivar validate_spanish_residency: Provider: 1G - If set as true, Spanish Residency will be validated for Provisioned Customers.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
         default=None,
         metadata=dict(
@@ -1834,6 +1939,9 @@ class AirVoidDocumentRsp(BaseRsp):
     :ivar etr: Provider: 1G,1V.
     :ivar void_result_info: Provider: 1G,1V.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     etr: List[Etr] = field(
         default_factory=list,
         metadata=dict(
@@ -2036,7 +2144,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
             type="Element"
         )
     )
-    fare_rule_type: TypeFareRuleType = field(
+    fare_rule_type: str = field(
         default="none",
         metadata=dict(
             name="FareRuleType",
@@ -2175,7 +2283,7 @@ class BaseAirPriceReq(BaseCoreReq):
             type="Attribute"
         )
     )
-    fare_rule_type: TypeFareRuleType = field(
+    fare_rule_type: str = field(
         default="none",
         metadata=dict(
             name="FareRuleType",
@@ -2266,12 +2374,30 @@ class BaseAirPriceRsp(BaseRsp):
 class BaseAirSearchReq(BaseCoreSearchReq):
     """Base Request for Low fare air Search.
 
+    :ivar search_air_leg:
+    :ivar search_specific_air_segment:
     :ivar air_search_modifiers:
     :ivar split_ticketing_search:
     :ivar journey_data:
-    :ivar search_air_leg:
-    :ivar search_specific_air_segment:
     """
+    search_air_leg: List[SearchAirLeg] = field(
+        default_factory=list,
+        metadata=dict(
+            name="SearchAirLeg",
+            type="Element",
+            min_occurs=0,
+            max_occurs=9
+        )
+    )
+    search_specific_air_segment: List[SearchSpecificAirSegment] = field(
+        default_factory=list,
+        metadata=dict(
+            name="SearchSpecificAirSegment",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
     air_search_modifiers: Optional[AirSearchModifiers] = field(
         default=None,
         metadata=dict(
@@ -2291,24 +2417,6 @@ class BaseAirSearchReq(BaseCoreSearchReq):
         metadata=dict(
             name="JourneyData",
             type="Element"
-        )
-    )
-    search_air_leg: List[SearchAirLeg] = field(
-        default_factory=list,
-        metadata=dict(
-            name="SearchAirLeg",
-            type="Element",
-            min_occurs=0,
-            max_occurs=9
-        )
-    )
-    search_specific_air_segment: List[SearchSpecificAirSegment] = field(
-        default_factory=list,
-        metadata=dict(
-            name="SearchSpecificAirSegment",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
         )
     )
 
@@ -2377,7 +2485,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
             type="Element"
         )
     )
-    distance_units: Optional[TypeDistance] = field(
+    distance_units: Optional[str] = field(
         default=None,
         metadata=dict(
             name="DistanceUnits",
@@ -2391,6 +2499,9 @@ class BrandList:
     """
     :ivar brand:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     brand: List[Brand] = field(
         default_factory=list,
         metadata=dict(
@@ -2415,6 +2526,10 @@ class EmdissuanceReq(BaseReq):
     :ivar show_details: This attribute gives the control to request for complete information on Issued EMDs or minimal information.Requesting complete information leads to possible multiple supplier calls for fetching all the details.
     :ivar issue_all_open_svc: Issues EMDS to all SVC segments. If it is true, TicketNumber and SVC segment reference need not be provided. Supported provider 1P.
     """
+    class Meta:
+        name = "EMDIssuanceReq"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     provider_reservation_detail: Optional[ProviderReservationDetail] = field(
         default=None,
         metadata=dict(
@@ -2480,6 +2595,10 @@ class EmdissuanceRsp(BaseRsp):
     :ivar emdsummary_info: List of EMDSummaryInfo elements to show minimal information in issuance response. Appears for ShowDetails=false in the request.This is the default behaviour.
     :ivar emdinfo: List of EMDInfo elements to show detailoed information in issuance response. Appears for ShowDetails=true in the request.
     """
+    class Meta:
+        name = "EMDIssuanceRsp"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     emdsummary_info: List[EmdsummaryInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -2508,6 +2627,10 @@ class EmdretrieveReq(BaseReq):
     :ivar list_retrieve: Provider: 1G/1V/1P/1J-Information required for retrieval of list of EMDs
     :ivar detail_retrieve: Provider: 1G/1V/1P/1J-Information required for a detailed EMD retrieve
     """
+    class Meta:
+        name = "EMDRetrieveReq"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     list_retrieve: Optional["EmdretrieveReq.ListRetrieve"] = field(
         default=None,
         metadata=dict(
@@ -2571,6 +2694,10 @@ class EmdretrieveRsp(BaseRsp):
     :ivar emdinfo: Provider: 1G/1V/1P/1J.
     :ivar emdsummary_info: Provider: 1G/1V/1P/1J.
     """
+    class Meta:
+        name = "EMDRetrieveRsp"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     emdinfo: Optional[Emdinfo] = field(
         default=None,
         metadata=dict(
@@ -2595,6 +2722,9 @@ class FlightDetailsReq(BaseReq):
 
     :ivar air_segment: Provider: 1G,1V,1P,1J.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment: List[AirSegment] = field(
         default_factory=list,
         metadata=dict(
@@ -2612,6 +2742,9 @@ class FlightDetailsRsp(BaseRsp):
     :ivar air_segment: Provider: 1G,1V,1P,1J.
     :ivar co2_emissions:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment: List[AirSegment] = field(
         default_factory=list,
         metadata=dict(
@@ -2638,6 +2771,9 @@ class FlightInformationReq(BaseReq):
 
     :ivar flight_info_criteria: Provider: 1G,1V.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     flight_info_criteria: List[FlightInfoCriteria] = field(
         default_factory=list,
         metadata=dict(
@@ -2654,6 +2790,9 @@ class FlightInformationRsp(BaseRsp):
     """
     :ivar flight_info: Provider: 1G,1V.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     flight_info: List[FlightInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -2671,6 +2810,9 @@ class FlightTimeTableReq(BaseSearchReq):
 
     :ivar flight_time_table_criteria: Provider: 1G,1V.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     flight_time_table_criteria: Optional[FlightTimeTableCriteria] = field(
         default=None,
         metadata=dict(
@@ -2687,6 +2829,9 @@ class FlightTimeTableRsp(BaseSearchRsp):
 
     :ivar flight_time_table_list: Provider: 1G,1V.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     flight_time_table_list: Optional["FlightTimeTableRsp.FlightTimeTableList"] = field(
         default=None,
         metadata=dict(
@@ -2719,6 +2864,9 @@ class RetrieveLowFareSearchReq(BaseReq):
     :ivar search_id: Provider: 1G,1V,1P,1J,ACH-SearchID to be used for Asynchronous LowFareSearch Request
     :ivar provider_code: Provider: 1G,1V,1P,1J,ACH-Provider code of a specific host
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     search_id: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2752,6 +2900,9 @@ class SeatMapReq(BaseReq):
     :ivar return_seat_pricing: Provider: 1G,1V,1P,1J,ACH-When set to true the price of the seat will be returned if it exists.
     :ivar return_branding_info: A value of true will return the BrandingInfo block in the response if applicable. A value of false will not return the BrandingInfo block in the response. Providers: 1G, 1V, 1P, 1J, ACH
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     agency_sell_info: Optional[AgencySellInfo] = field(
         default=None,
         metadata=dict(
@@ -2834,6 +2985,9 @@ class SeatMapRsp(BaseRsp):
     :ivar copyright: Copyright text applicable for some seat content. Providers: 1G, 1V, 1P, 1J,ACH
     :ivar group_seat_price: Provider: 1G,1V-Seat price for the all passengers traveling together only when supplier provides group flat fee.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     host_token: List[HostToken] = field(
         default_factory=list,
         metadata=dict(
@@ -2936,6 +3090,9 @@ class AirExchangeMultiQuoteReq(BaseAirExchangeMultiQuoteReq):
 
     :ivar type: Type choices are "Detail" or "Summary" Default will be Summary
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     type: str = field(
         default="Summary",
         metadata=dict(
@@ -2952,6 +3109,9 @@ class AirExchangeMultiQuoteRsp(BaseRsp):
     :ivar brand_list:
     :ivar air_exchange_mulit_quote_list:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment_list: List[AirSegmentList] = field(
         default_factory=list,
         metadata=dict(
@@ -2984,7 +3144,9 @@ class AirExchangeMultiQuoteRsp(BaseRsp):
 @dataclass
 class AirExchangeQuoteReq(BaseAirExchangeQuoteReq):
     """Request to quote the exchange of an itinerary."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
@@ -2993,12 +3155,16 @@ class AirPriceReq(BaseAirPriceReq):
 
     Pricing commands can be specified globally, or specifically per command.
     """
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
 class AirPriceRsp(BaseAirPriceRsp):
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
@@ -3010,6 +3176,9 @@ class AirRepriceReq(AirBaseReq):
     :ivar fare_rule_type:
     :ivar ignore_availability:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
         default=None,
         metadata=dict(
@@ -3025,7 +3194,7 @@ class AirRepriceReq(AirBaseReq):
             required=True
         )
     )
-    fare_rule_type: TypeFareRuleType = field(
+    fare_rule_type: str = field(
         default="none",
         metadata=dict(
             name="FareRuleType",
@@ -3051,14 +3220,14 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
     :ivar alternate_route_list:
     :ivar alternate_location_distance_list:
     :ivar fare_info_message:
+    :ivar air_pricing_solution:
+    :ivar air_price_point_list:
     :ivar rail_segment_list:
     :ivar rail_journey_list:
     :ivar rail_fare_note_list:
     :ivar rail_fare_idlist:
     :ivar rail_fare_list:
     :ivar rail_pricing_solution:
-    :ivar air_pricing_solution:
-    :ivar air_price_point_list:
     """
     fare_note_list: Optional[FareNoteList] = field(
         default=None,
@@ -3102,6 +3271,22 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             type="Element",
             min_occurs=0,
             max_occurs=99
+        )
+    )
+    air_pricing_solution: List[AirPricingSolution] = field(
+        default_factory=list,
+        metadata=dict(
+            name="AirPricingSolution",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    air_price_point_list: Optional[AirPricePointList] = field(
+        default=None,
+        metadata=dict(
+            name="AirPricePointList",
+            type="Element"
         )
     )
     rail_segment_list: Optional[RailSegmentList] = field(
@@ -3154,22 +3339,6 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             max_occurs=999
         )
     )
-    air_pricing_solution: List[AirPricingSolution] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AirPricingSolution",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    air_price_point_list: Optional[AirPricePointList] = field(
-        default=None,
-        metadata=dict(
-            name="AirPricePointList",
-            type="Element"
-        )
-    )
 
 
 @dataclass
@@ -3189,6 +3358,9 @@ class AirTicketingReq(AirBaseReq):
     :ivar bulk_ticket: Provider: 1G,1V,1P,1J.
     :ivar validate_spanish_residency: Provider: 1G - If set as true, Spanish Residency will be validated for Provisioned Customers.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
         default=None,
         metadata=dict(
@@ -3321,6 +3493,9 @@ class AirUpsellSearchReq(AirBaseReq):
     :ivar air_itinerary: Provider: 1G,1V,1P,1J,ACH-AirItinerary of the pricing request.
     :ivar air_price_result: Provider: 1G,1V,1P,1J,ACH-Result of AirPrice request. Upsell uses this to search for new offer.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_itinerary: Optional[AirItinerary] = field(
         default=None,
         metadata=dict(
@@ -3343,7 +3518,9 @@ class AirUpsellSearchReq(AirBaseReq):
 @dataclass
 class AirUpsellSearchRsp(BaseAirPriceRsp):
     """Response of Upsell Offers search for the given Itinerary."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
@@ -3356,6 +3533,9 @@ class AvailabilitySearchReq(AirSearchReq):
     :ivar channel_id: A Channel ID is 4 alpha-numeric characters used to activate the Search Control Console filter for a specific group of travelers being served by the agency credential.
     :ivar nscc: Allows the agency to bypass/override the Search Control Console rule.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     search_passenger: List[SearchPassenger] = field(
         default_factory=list,
         metadata=dict(
@@ -3405,7 +3585,9 @@ class AvailabilitySearchReq(AirSearchReq):
 
 @dataclass
 class AvailabilitySearchRsp(BaseAvailabilitySearchRsp):
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
@@ -3604,7 +3786,9 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
 @dataclass
 class ScheduleSearchReq(AirSearchReq):
     """Schedule Search request."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
@@ -3613,6 +3797,9 @@ class LowFareSearchAsynchReq(BaseLowFareSearchReq):
 
     :ivar air_search_asynch_modifiers: Provider: 1G,1V,1P,1J,ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_search_asynch_modifiers: Optional[AirSearchAsynchModifiers] = field(
         default=None,
         metadata=dict(
@@ -3632,6 +3819,9 @@ class LowFareSearchAsynchRsp(AirSearchRsp):
     :ivar search_id: Provider: 1G,1V,1P,1J,ACH-Indicates the Search Id of the LFS search
     :ivar currency_type: Provider: 1G,1V,1P,1J,ACH-Specifies the default Currency Type in the response.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     async_provider_specific_response: List[AsyncProviderSpecificResponse] = field(
         default_factory=list,
         metadata=dict(
@@ -3672,6 +3862,9 @@ class LowFareSearchReq(BaseLowFareSearchReq):
 
     :ivar policy_reference: This attribute will be used to pass in a value on the request which would be used to link to a ‘Policy Group’ in a policy engine external to UAPI.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     policy_reference: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3690,6 +3883,9 @@ class LowFareSearchRsp(AirSearchRsp):
     :ivar brand_list:
     :ivar currency_type: Provider: 1G,1V,1P,1J,ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     brand_list: Optional[BrandList] = field(
         default=None,
         metadata=dict(
@@ -3716,6 +3912,9 @@ class RetrieveLowFareSearchRsp(AirSearchRsp):
     :ivar brand_list:
     :ivar currency_type: Provider: 1G,1V,1P,1J,ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     async_provider_specific_response: List[AsyncProviderSpecificResponse] = field(
         default_factory=list,
         metadata=dict(
@@ -3745,4 +3944,5 @@ class RetrieveLowFareSearchRsp(AirSearchRsp):
 @dataclass
 class ScheduleSearchRsp(AirSearchRsp):
     """Schedule Search response."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"

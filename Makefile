@@ -1,6 +1,7 @@
 generate:
-	xsdata generate xsd/travelport/air_v48_0/AirReqRsp.xsd --package samples.travelport.air_v48_0
-	xsdata generate xsd/amadeus/Fare_MasterPricerTravelBoardSearch_15_3_1A.xsd --package samples.amadeus
+	xsdata generate xsd/travelport/air_v48_0/AirReqRsp.xsd --package samples.travelport.output.air_v48_0
+	xsdata generate xsd/amadeus/Fare_MasterPricerTravelBoardSearch_15_3_1A.xsd --package samples.amadeus.output
 
 print:
-	xsdata generate xsd/travelport/air_v48_0/AirReqRsp.xsd --package samples.travelport.air_v48_0 --print > ./print.txt
+	xsdata generate xsd/travelport/air_v48_0/AirReqRsp.xsd --package samples.travelport.output.air_v48_0 --print > ./samples/travelport/classes.txt
+	xsdata generate xsd/amadeus/Fare_MasterPricerTravelBoardSearch_15_3_1A.xsd --package samples.amadeus.output --print > ./samples/amadeus/classes.txt
