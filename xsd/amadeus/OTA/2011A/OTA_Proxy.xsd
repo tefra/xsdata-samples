@@ -10500,7 +10500,7 @@
           <!--Replaced incorrect type "xs:positiveInteger"-->
           <xs:attribute name="MaximumAge" type="xs:long" use="optional">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Identifies the maximum age of a person allowed to rent a vehicle from this 
+              <xs:documentation xml:lang="en">Identifies the maximum age of a person allowed to rent a vehicle from this
 rental facility.</xs:documentation>
             </xs:annotation>
           </xs:attribute>
@@ -44737,7 +44737,7 @@ specific date or date range.</xs:documentation>
     <xs:attribute name="Type" type="StringLength1to16" use="optional">
       <xs:annotation>
         <xs:documentation xml:lang="en">Specifies the special requirement type identification (e.g.,  occasion,
- special service, 
+ special service,
 language).</xs:documentation>
       </xs:annotation>
     </xs:attribute>
@@ -44816,7 +44816,7 @@ language).</xs:documentation>
   </xs:complexType>
   <xs:complexType name="GroundFeesType">
     <xs:annotation>
-      <xs:documentation xml:lang="en">Fees that are applied in addition to the Ground Transportation Service charges for this reservation. 
+      <xs:documentation xml:lang="en">Fees that are applied in addition to the Ground Transportation Service charges for this reservation.
 
 NOTE: Non-base charges, such as the basic price of the service are typically specified in the ServiceCharges element, while additional fees, such as gratuity, are specified here.</xs:documentation>
     </xs:annotation>
@@ -45201,7 +45201,7 @@ NOTE: Non-base charges, such as the basic price of the service are typically spe
     </xs:attribute>
     <xs:attribute name="RateCategory" type="OTA_CodeType" use="optional">
       <xs:annotation>
-        <xs:documentation xml:lang="en">The rate category associated with the service. Refer to OpenTravel Rate Category (RTC) code list. 
+        <xs:documentation xml:lang="en">The rate category associated with the service. Refer to OpenTravel Rate Category (RTC) code list.
 
 NOTE: It is not recommended to use this field for published rates.</xs:documentation>
       </xs:annotation>
@@ -45299,14 +45299,14 @@ NOTE: It is not recommended to use this field for published rates.</xs:documenta
       </xs:element>
       <xs:element name="ServiceCharges" type="GroundServiceChargesType" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Charges that apply to this vehicle/ ground transportation service for this reservation. 
+          <xs:documentation xml:lang="en">Charges that apply to this vehicle/ ground transportation service for this reservation.
 
 NOTE: Non-base charges, such as gratuity, are typically specified in the Fees element.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Fees" type="GroundFeesType" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Fees that are applied in addition to the Ground Transportation Service charges for this reservation. 
+          <xs:documentation xml:lang="en">Fees that are applied in addition to the Ground Transportation Service charges for this reservation.
 
 NOTE: Non-base charges, such as the basic price of the service are typically specified in the ServiceCharges element, while additional fees, such as gratuity, are specified here.</xs:documentation>
         </xs:annotation>
@@ -45377,7 +45377,7 @@ NOTE: This element typically contains the total of both ServiceCharges and Fees.
       </xs:element>
       <xs:element name="PaymentRules" type="PaymentRulesType" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">A collection of payment rules associated with this ground transportation reservation. 
+          <xs:documentation xml:lang="en">A collection of payment rules associated with this ground transportation reservation.
 
 NOTE: This instance of PaymentRules is typically used if there are payment rules that are applicable to a specific vehicle or ground service type.</xs:documentation>
         </xs:annotation>
@@ -45424,14 +45424,14 @@ NOTE: This instance of PaymentRules is typically used if there are payment rules
       </xs:element>
       <xs:element name="ServiceCharges" type="GroundServiceChargesType" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Charges that apply to this vehicle/ ground transportation service for this reservation. 
+          <xs:documentation xml:lang="en">Charges that apply to this vehicle/ ground transportation service for this reservation.
 
 NOTE: Non-base charges, such as gratuity, are typically specified in the Fees element.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Fees" type="GroundFeesType" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Fees that are applied in addition to the Ground Transportation Service charges for this reservation. 
+          <xs:documentation xml:lang="en">Fees that are applied in addition to the Ground Transportation Service charges for this reservation.
 
 NOTE: Non-base charges, such as the basic price of the service are typically specified in the ServiceCharges element, while additional fees, such as gratuity, are specified here.</xs:documentation>
         </xs:annotation>
@@ -45492,7 +45492,7 @@ NOTE: This element typically contains the total of both ServiceCharges and Fees.
       </xs:element>
       <xs:element name="PaymentRules" type="PaymentRulesType" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">A collection of payment rules associated with this ground transportation reservation. 
+          <xs:documentation xml:lang="en">A collection of payment rules associated with this ground transportation reservation.
 
 NOTE: This instance of PaymentRules is typically used if there are payment rules that are applicable to a specific vehicle or ground service type.</xs:documentation>
         </xs:annotation>

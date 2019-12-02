@@ -1485,7 +1485,7 @@
 		<xs:attribute name="Indicator" type="xs:string"/>
 		<xs:attribute name="ID" type="xs:string" use="optional"/>
 		<xs:attribute name="ComputationMethod" type="xs:string" use="optional"/>
-		<!-- Possible values: 
+		<!-- Possible values:
 																						-	RUL: Rule method
 																						-	COM: Computation method
 																						-	NC: Not computed
@@ -1645,7 +1645,7 @@ Disrupted</xs:documentation>
 		<xs:attribute name="Indicator" type="xs:string"/>
 		<xs:attribute name="ID" type="xs:string" use="optional"/>
 		<xs:attribute name="ComputationMethod" type="xs:string" use="optional"/>
-		<!-- Possible values: 
+		<!-- Possible values:
 																						-	RUL: Rule method
 																						-	COM: Computation method
 																						-	NC: Not computed
@@ -2033,8 +2033,8 @@ Disrupted</xs:documentation>
 		<xs:annotation>
 			<xs:documentation>This is the Quotation Coupon Type declaration. Quotation Coupon is a quotation type
                 to store shared data for Itinerary Coupon and Document Coupon (resp. used for TST
-                and TSM representation). This means that any data added at this level is accessible 
-                to Iti Coupon and Doc Coupon, avoiding data declaration duplication between those 
+                and TSM representation). This means that any data added at this level is accessible
+                to Iti Coupon and Doc Coupon, avoiding data declaration duplication between those
                 2 types. It includes, like all others quotations types, Quotation Element.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
@@ -2117,9 +2117,9 @@ Disrupted</xs:documentation>
 						<xs:annotation>
 							<xs:documentation>Represent the Loyalty program used:
 - Promo Certificate,
-- Transitional Certificate, 
-- Companions Certificate, 
-- Miles and Cash, 
+- Transitional Certificate,
+- Companions Certificate,
+- Miles and Cash,
 - Award Pricing</xs:documentation>
 						</xs:annotation>
 					</xs:element>
@@ -2134,7 +2134,7 @@ Disrupted</xs:documentation>
 						<!-\-  Moved to Appended Context
 			<xs:element name="AppendedMessage"			type="xs:string"					minOccurs="0" maxOccurs="1"/>-\->
 						<xs:element name="IssueIndicator"			type="IssueIndicatorType"			minOccurs="0" maxOccurs="1"/>
-						
+
 						<xs:element name="Equiv"														minOccurs="0" maxOccurs="1">
 							<xs:complexType>
 								<xs:all>
@@ -2150,12 +2150,12 @@ Disrupted</xs:documentation>
 								</xs:all>
 							</xs:complexType>
 						</xs:element>
-						
-						<!-\- This as been moved at Element level 
+
+						<!-\- This as been moved at Element level
 			<xs:element name="Taxes"					type="TaxListType"					minOccurs="0" maxOccurs="1"/>	-\->
-						
+
 						<xs:element name="ManualNetFare"			type="FareType"					minOccurs="0" maxOccurs="1"/>
-						
+
 						<!-\- Bankers Selling Rates -\->
 						<xs:element name="BankerSellingRate"											minOccurs="0" maxOccurs="1">
 							<xs:complexType>
@@ -2165,9 +2165,9 @@ Disrupted</xs:documentation>
 								</xs:all>
 							</xs:complexType>
 						</xs:element>
-						
+
 						<xs:element name="FareCalc" 				type="FareCalcType"				minOccurs="0" maxOccurs="1"/>
-						
+
 						<xs:element name="Mileage"														minOccurs="0" maxOccurs="1">
 							<xs:complexType>
 								<xs:all>
@@ -2177,7 +2177,7 @@ Disrupted</xs:documentation>
 								<xs:attribute name="isModified" 	type="xs:boolean"					use="optional"/>
 							</xs:complexType>
 						</xs:element>
-						
+
 						<xs:element name="Creation"														minOccurs="0" maxOccurs="1">
 							<xs:complexType>
 								<xs:all>
@@ -2186,7 +2186,7 @@ Disrupted</xs:documentation>
 								</xs:all>
 							</xs:complexType>
 						</xs:element>
-						
+
 						<xs:element name="PricingOverride"												minOccurs="0" maxOccurs="1">
 							<xs:complexType>
 								<xs:all>
@@ -2194,7 +2194,7 @@ Disrupted</xs:documentation>
 								</xs:all>
 							</xs:complexType>
 						</xs:element>
-						
+
 						<xs:element name="Modification"													minOccurs="0" maxOccurs="1">
 							<xs:complexType>
 								<xs:all>
@@ -2202,7 +2202,7 @@ Disrupted</xs:documentation>
 								</xs:all>
 							</xs:complexType>
 						</xs:element>
-						
+
 						<xs:element name="TaxesStatus" 				type="TaxesStatusType"				minOccurs="0" maxOccurs="1"/>
 						<xs:element name="IRU"						type="IRUType"						minOccurs="0" maxOccurs="1"/>
 						<xs:element name="IsGlobalPrice"			type="xs:boolean"					minOccurs="0" maxOccurs="1"/>
