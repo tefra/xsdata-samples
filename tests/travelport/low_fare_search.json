@@ -1,0 +1,80 @@
+{
+  "AirSearchModifiers": {
+    "MaxSolutions": 250,
+    "PreferredProviders": {
+      "Provider": [
+        {
+          "Code": "1P"
+        }
+      ]
+    }
+  },
+  "TraceId": "c0716df8-12f5-11ea-9d04-000c293dfa64",
+  "CheckOBFees": "All",
+  "BillingPointOfSaleInfo": {
+    "OriginApplication": "UAPI"
+  },
+  "FormOfPayment": {
+    "Type": "Credit",
+    "CreditCard": {
+      "Type": "CA",
+      "Name": "Thug Life",
+      "ExpDate": "2020-11",
+      "CVV": "123",
+      "Number": "5234123412341234"
+    }
+  },
+  "SearchAirLeg": [
+    {
+      "SearchDepTime": {
+        "PreferredTime": "2019-12-15"
+      },
+      "SearchDestination": {
+        "CityOrAirport": {
+          "Code": "NYC"
+        }
+      },
+      "SearchOrigin": {
+        "CityOrAirport": {
+          "Code": "LON"
+        }
+      },
+      "AirLegModifiers": {
+        "AllowDirectAccess": true
+      }
+    }
+  ],
+  "SolutionResult": "false",
+  "SearchPassenger": [
+    {
+      "Age": 30,
+      "Code": "ADT"
+    },
+    {
+      "Age": 30,
+      "Code": "ADT"
+    },
+    {
+      "Age": 30,
+      "Code": "ADT"
+    },
+    {
+      "Age": 7,
+      "Code": "CNN"
+    },
+    {
+      "Age": 7,
+      "Code": "CNN"
+    },
+    {
+      "Age": 0,
+      "Code": "INF"
+    }
+  ],
+  "TargetBranch": "P107695",
+  "AirPricingModifiers": {
+    "ETicketability": "Yes",
+    "FaresIndicator": "PublicAndPrivateFares",
+    "CurrencyType": "EUR"
+  }
+}

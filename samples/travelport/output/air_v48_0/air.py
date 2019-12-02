@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional
-from samples.travelport.common_v48_0.common import (
+from samples.travelport.output.common_v48_0.common import (
     AccountCode,
     AgencyInfo,
     AirExchangeInfo,
@@ -48,28 +48,17 @@ from samples.travelport.common_v48_0.common import (
     SupplierLocator,
     ThirdPartyInformation,
     TicketNumber,
-    TypeAdjustmentTarget,
-    TypeAdjustmentType,
     TypeAssociatedRemarkWithSegmentRef,
-    TypeDistance,
-    TypeElementStatus,
     TypeErrorInfo,
     TypeFeeInfo,
     TypeFlexibleTimeSpec,
-    TypeFormOfRefund,
-    TypeItineraryCode,
     TypeLocation,
     TypePassengerType,
-    TypePriceClassOfService,
-    TypePricingType,
-    TypePurchaseWindow,
-    TypeReqSeat,
     TypeResultMessage,
     TypeSearchLocation,
     TypeSegmentRef as CommonTypeSegmentRef,
     TypeStructuredAddress,
     TypeTaxInfo,
-    TypeTicketStatus,
     TypeTimeSpec,
 )
 
@@ -110,6 +99,9 @@ class Advtype:
     :ivar latest_rsvn_dt: Latest reservation date.
     :ivar latest_tk_dt: Latest ticketing date.
     """
+    class Meta:
+        name = "ADVType"
+
     adv_rsvn_only_if_tk: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -347,6 +339,9 @@ class ActionDetails:
     :ivar event_time: Time at which the fare was stored for Provider: 1P/1J
     :ivar text: The type of action the agent performed for Provider: 1P/1J
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     pseudo_city_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -391,6 +386,9 @@ class AdditionalInfo:
     """
     :ivar category: The category code is the code the AdditionalInfo text came from, e.g. S5 or S7.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     category: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -407,6 +405,9 @@ class AddlBookingCodeInformation:
 
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -430,12 +431,14 @@ class Adjustment:
     :ivar approximate_adjusted_total_price: The Converted adjusted total price in Default Currency for this entity.
     :ivar booking_traveler_ref: Reference to a booking traveler for which adjustment is applied.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     amount: Optional[str] = field(
         default=None,
         metadata=dict(
             name="Amount",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
+            type="Element"
         )
     )
     percent: Optional[float] = field(
@@ -470,6 +473,40 @@ class Adjustment:
 
 
 @dataclass
+class AirFareDiscount:
+    """Fare Discounts.
+
+    :ivar percentage:
+    :ivar amount:
+    :ivar discount_method:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    percentage: Optional[float] = field(
+        default=None,
+        metadata=dict(
+            name="Percentage",
+            type="Attribute"
+        )
+    )
+    amount: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Amount",
+            type="Attribute"
+        )
+    )
+    discount_method: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DiscountMethod",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class AirFareDisplayRuleKey:
     """The Tariff Fare Rule requested using a Key. The key is typically a provider
     specific string which is required to make either a following Air Fare Tariff
@@ -478,6 +515,9 @@ class AirFareDisplayRuleKey:
     :ivar value:
     :ivar provider_code:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -499,11 +539,42 @@ class AirFareDisplayRuleKey:
 
 
 @dataclass
+class AirFareRuleCategory:
+    """A collection of fare rule category codes.
+
+    :ivar category_code: The Category Code for Air Fare Rule.
+    :ivar fare_info_ref:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    category_code: List[str] = field(
+        default_factory=list,
+        metadata=dict(
+            name="CategoryCode",
+            type="Element",
+            min_occurs=1,
+            max_occurs=10
+        )
+    )
+    fare_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FareInfoRef",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class AirItinerarySolutionRef:
     """Reference to a complete AirItinerarySolution from a shared list.
 
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -520,6 +591,9 @@ class AirPricingInfoRef:
 
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -538,6 +612,9 @@ class AirRefundModifiers:
     :ivar account_code:
     :ivar ticket_designator:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     refund_date: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -569,6 +646,9 @@ class AirReservationLocatorCode:
 
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -586,6 +666,9 @@ class AirSearchAsynchModifiers:
 
     :ivar initial_asynch_result:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     initial_asynch_result: Optional["AirSearchAsynchModifiers.InitialAsynchResult"] = field(
         default=None,
         metadata=dict(
@@ -614,6 +697,9 @@ class AirSegmentRef:
 
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -632,6 +718,9 @@ class AirSegmentTicketingModifiers:
     :ivar air_segment_ref:
     :ivar brand_tier: Modifier to price by specific brand tier number.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment_ref: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -657,6 +746,9 @@ class Alliance:
 
     :ivar code: The possible values are *A for Star Alliance,*O for One world,*S for Sky team etc.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -673,6 +765,9 @@ class AlternateLocationDistanceRef:
 
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -684,11 +779,157 @@ class AlternateLocationDistanceRef:
 
 
 @dataclass
+class AutoSeatAssignment:
+    """Request object used to request seats automatically by seat type.
+
+    :ivar segment_ref: The segment that this assignment belongs to
+    :ivar smoking: Indicates that the requested seat type should be a smoking seat.
+    :ivar seat_type: The type of seat that is requested
+    :ivar group: Indicates that this seat request is for group seating for all passengers. If no SegmentRef is included, group seating will be requested for all segments.
+    :ivar booking_traveler_ref: The booking traveler that this seat assignment is for. If not entered, this applies to the primary booking traveler and other passengers are adjacent.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    segment_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SegmentRef",
+            type="Attribute"
+        )
+    )
+    smoking: bool = field(
+        default=False,
+        metadata=dict(
+            name="Smoking",
+            type="Attribute"
+        )
+    )
+    seat_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SeatType",
+            type="Attribute",
+            required=True
+        )
+    )
+    group: bool = field(
+        default=False,
+        metadata=dict(
+            name="Group",
+            type="Attribute"
+        )
+    )
+    booking_traveler_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BookingTravelerRef",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
+class BackOfficeHandOff:
+    """Allows an agency to select the back office documents and also route to
+    different host to produce for the itinerary.
+
+    :ivar type: The type of back office document,valid options are Accounting,Global,NonAccounting,NonAccountingRemote,Dual.
+    :ivar location: This is required for NonAccountingRemote,Dual and Global type back office.
+    :ivar pseudo_city_code: The PCC of the host system where it would be routed.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute",
+            required=True
+        )
+    )
+    location: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Location",
+            type="Attribute"
+        )
+    )
+    pseudo_city_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PseudoCityCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=10.0
+        )
+    )
+
+
+@dataclass
+class BillingDetailItem:
+    """The Billing Details Information.
+
+    :ivar name: Detailed Billing Information Name(e.g Personal ID, Account Number)
+    :ivar data_type: Detailed Billing Information DataType (Alpha, Numeric, etc.)
+    :ivar min_length: Detailed Billing Information Minimum Length.
+    :ivar max_length: Detailed Billing Information Maximum Length.
+    :ivar value: Detailed Billing Information Value
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    name: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Name",
+            type="Attribute",
+            required=True
+        )
+    )
+    data_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DataType",
+            type="Attribute",
+            required=True
+        )
+    )
+    min_length: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="MinLength",
+            type="Attribute",
+            required=True
+        )
+    )
+    max_length: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="MaxLength",
+            type="Attribute",
+            required=True
+        )
+    )
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Value",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class BookingCode:
     """The Booking Code (Class of Service) for a segment.
 
     :ivar code:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -709,6 +950,9 @@ class BookingCodeInfo:
     :ivar cabin_class: Specifies Cabin class for a group of class of services. Cabin class is not identified if it is not present.
     :ivar booking_counts: Lists class of service and their counts for specific cabin class
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     cabin_class: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -738,6 +982,9 @@ class BookingInfo:
     :ivar air_itinerary_solution_ref: Reference to an Air Itinerary Solution
     :ivar host_token_ref: HostToken Reference for this segment and fare combination.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     booking_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -809,6 +1056,9 @@ class BookingRulesFareReference(str):
     :ivar upgrage_allowed:
     :ivar upgrade_class_of_service:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     class_of_service: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -858,6 +1108,10 @@ class BrandId:
 
     :ivar id:
     """
+    class Meta:
+        name = "BrandID"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     id: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -877,6 +1131,9 @@ class BrandInfo:
     :ivar air_pricing_info_ref: A reference to a AirPricing. Providers: ACH, 1G, 1V, 1P, 1J.
     :ivar fare_info_ref: A reference to a FareInfo. Providers: ACH, 1G, 1V, 1P, 1J.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -917,6 +1174,9 @@ class BrandModifiers:
     :ivar fare_family_display: Used to request a fare family display.
     :ivar basic_details_only: Used to request basic details of the brand.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     fare_family_display: Optional["BrandModifiers.FareFamilyDisplay"] = field(
         default=None,
         metadata=dict(
@@ -964,12 +1224,83 @@ class BrandModifiers:
 
 
 @dataclass
+class BundledService:
+    """Displays the services bundled together.
+
+    :ivar carrier: Carrier the service is applicable.
+    :ivar carrier_sub_code: Carrier sub code. True means the carrier used their own sub code. False means the carrier used an ATPCO sub code
+    :ivar service_type: The type of service or what the service is used for, e.g. F type is flight type, meaning the service is used on a flight
+    :ivar service_sub_code: The sub code of the service, e.g. OAA for Pre paid baggage
+    :ivar name: Name of the bundled service.
+    :ivar booking: Booking method for the bundled service, e..g SSR.
+    :ivar occurrence: How many of the service are included in the bundled service.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Carrier",
+            type="Attribute",
+            length=2
+        )
+    )
+    carrier_sub_code: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="CarrierSubCode",
+            type="Attribute"
+        )
+    )
+    service_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ServiceType",
+            type="Attribute"
+        )
+    )
+    service_sub_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ServiceSubCode",
+            type="Attribute"
+        )
+    )
+    name: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Name",
+            type="Attribute"
+        )
+    )
+    booking: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Booking",
+            type="Attribute"
+        )
+    )
+    occurrence: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Occurrence",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class Co2Emission:
     """Carbon emission values.
 
     :ivar air_segment_ref: The segment reference
     :ivar value: The CO2 emission value for the air segment
     """
+    class Meta:
+        name = "CO2Emission"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment_ref: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -991,12 +1322,59 @@ class CarrierCode:
     """
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
             name="value",
             type="Restriction",
             length=2
+        )
+    )
+
+
+@dataclass
+class Characteristic:
+    """
+    :ivar value:
+    :ivar position:
+    :ivar row_location:
+    :ivar padiscode: Industry standard code that defines seat and row characteristic.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Value",
+            type="Attribute",
+            required=True
+        )
+    )
+    position: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Position",
+            type="Attribute"
+        )
+    )
+    row_location: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RowLocation",
+            type="Attribute"
+        )
+    )
+    padiscode: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PADISCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=99.0
         )
     )
 
@@ -1009,6 +1387,9 @@ class CodeshareInfo(str):
     :ivar operating_carrier: The actual carrier that is operating the flight.
     :ivar operating_flight_number: The actual flight number of the carrier that is operating the flight.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     operating_carrier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1033,6 +1414,9 @@ class CompanyName:
 
     :ivar supplier_code:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     supplier_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1040,6 +1424,68 @@ class CompanyName:
             type="Attribute",
             required=True,
             length=2
+        )
+    )
+
+
+@dataclass
+class ConjunctedTicketInfo:
+    """
+    :ivar number:
+    :ivar iatanumber:
+    :ivar ticket_issue_date:
+    :ivar ticketing_agent_sign_on:
+    :ivar country_code: Contains Ticketed PCC’s Country code.
+    :ivar status:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Number",
+            type="Attribute",
+            required=True
+        )
+    )
+    iatanumber: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="IATANumber",
+            type="Attribute",
+            max_length=8.0
+        )
+    )
+    ticket_issue_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketIssueDate",
+            type="Attribute"
+        )
+    )
+    ticketing_agent_sign_on: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketingAgentSignOn",
+            type="Attribute",
+            max_length=8.0
+        )
+    )
+    country_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CountryCode",
+            type="Attribute",
+            length=2
+        )
+    )
+    status: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Status",
+            type="Attribute",
+            required=True
         )
     )
 
@@ -1053,6 +1499,9 @@ class ContractCode:
     :ivar code: The 1-64 character string which uniquely identifies a Contract.
     :ivar company_name: Providers supported : ACH
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     provider_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1098,6 +1547,9 @@ class CreditSummary:
     :ivar current_balance:
     :ivar initial_credit:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     currency_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1132,6 +1584,9 @@ class CustomerReceiptInfo:
     :ivar booking_traveler_ref: Refererence of the Booking Traveler related to the email.
     :ivar email_ref: Reference to the email address used for receipt of EMD.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     booking_traveler_ref: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1152,8 +1607,49 @@ class CustomerReceiptInfo:
 
 @dataclass
 class CustomerSearch:
-    """Detailed customer information for searching pre pay profiles."""
-    pass
+    """Detailed customer information for searching pre pay profiles.
+
+    :ivar value:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Restriction"
+        )
+    )
+
+
+@dataclass
+class DestinationPurposeCode:
+    """This code is required to indicate destination and purpose of Travel. It is
+    applicable for Canada and Bermuda agency only. This is used by Worldspan.
+
+    :ivar destination:
+    :ivar purpose:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    destination: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Destination",
+            type="Attribute",
+            required=True
+        )
+    )
+    purpose: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Purpose",
+            type="Attribute",
+            required=True
+        )
+    )
 
 
 @dataclass
@@ -1164,6 +1660,9 @@ class Document:
     :ivar type: Type of the Document. Visa, Passport, DriverLicense etc.
     :ivar level: Applicability level of the Document. Required, Supported, API_Supported or Unknown.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     sequence: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -1193,6 +1692,9 @@ class DocumentModifiers:
     :ivar generate_itinerary_invoice: Generate itinerary/invoice documents along with ticket
     :ivar generate_accounting_interface: Generate interface message along with ticket
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     generate_itinerary_invoice: bool = field(
         default=False,
         metadata=dict(
@@ -1218,6 +1720,9 @@ class DocumentRequired:
     :ivar doc_id:
     :ivar allowed_ids:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     doc_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1249,11 +1754,328 @@ class DocumentRequired:
 
 
 @dataclass
+class Emd:
+    """
+    :ivar fulfillment_type: A one digit code specifying how the service must be fulfilled. See FulfillmentTypeDescription for the description of this value.
+    :ivar fulfillment_type_description: EMD description.
+    :ivar associated_item: The type of Optional Service. The choices are Flight, Ticket, Merchandising, Rule Buster, Allowance, Chargeable Baggage, Carry On Baggage Allowance, Prepaid Baggage. Provider: 1G, 1V, 1P, 1J
+    :ivar availability_charge_indicator: A one-letter code specifying whether the service is available or if there is a charge associated with it. X = Service not available F = No charge for service (free) and an EMD is not issued to reflect free service E = No charge for service (free) and an EMD is issued to reflect the free service. G = No charge for service (free), booking is not required and an EMD is not issued to reflect free service H = No charge for service (free), booking is not required, and an EMD is issued to reflect the free service. Blank = No application. Charges apply according to the data in the Service Fee fields.
+    :ivar refund_reissue_indicator: An attribute specifying whether the service is refundable or reissuable.
+    :ivar commissionable: True/False value to whether or not the service is comissionable.
+    :ivar mileage_indicator: True/False value to whether or not the service has miles.
+    :ivar location: 3 letter location code where the service will be availed.
+    :ivar date: The date at which the service will be used.
+    :ivar booking: Holds the booking description for the service, e.g., SSR.
+    :ivar display_category: Describes when the service should be displayed.
+    :ivar reusable: Identifies if the service can be re-used towards a future purchase.
+    """
+    class Meta:
+        name = "EMD"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    fulfillment_type: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="FulfillmentType",
+            type="Attribute",
+            min_inclusive=1.0,
+            max_inclusive=5.0
+        )
+    )
+    fulfillment_type_description: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FulfillmentTypeDescription",
+            type="Attribute"
+        )
+    )
+    associated_item: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AssociatedItem",
+            type="Attribute"
+        )
+    )
+    availability_charge_indicator: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AvailabilityChargeIndicator",
+            type="Attribute"
+        )
+    )
+    refund_reissue_indicator: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RefundReissueIndicator",
+            type="Attribute"
+        )
+    )
+    commissionable: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Commissionable",
+            type="Attribute"
+        )
+    )
+    mileage_indicator: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="MileageIndicator",
+            type="Attribute"
+        )
+    )
+    location: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Location",
+            type="Attribute",
+            length=3,
+            white_space="collapse"
+        )
+    )
+    date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Date",
+            type="Attribute"
+        )
+    )
+    booking: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Booking",
+            type="Attribute"
+        )
+    )
+    display_category: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DisplayCategory",
+            type="Attribute"
+        )
+    )
+    reusable: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Reusable",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
+class Emdcommission:
+    """Commission information to be used for EMD issuance. Supported providers are
+    1V/1G/1P/1J.
+
+    :ivar type: Type of the commission applied.One of Amount/Percentage
+    :ivar value: Value of the commission applied for EMD issuance.Could represent amount or percentage depending on the type
+    :ivar currency_code: Currency of the commission amount applied.Applicable only with type - Amount
+    """
+    class Meta:
+        name = "EMDCommission"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute",
+            required=True
+        )
+    )
+    value: Optional[float] = field(
+        default=None,
+        metadata=dict(
+            name="Value",
+            type="Attribute",
+            required=True
+        )
+    )
+    currency_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CurrencyCode",
+            type="Attribute",
+            length=3
+        )
+    )
+
+
+@dataclass
+class Emdcoupon:
+    """The coupon information for the EMD issued. Supported providers are
+    1G/1V/1P/1J.
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar number: Number of the EMD coupon
+    :ivar status: Status of the coupon. Possible values Open, Void, Refunded, Exchanged, Irregular Operations,Airport Control, Checked In, Flown/Used, Boarded/Lifted, Suspended, Unknown
+    :ivar svc_description: Description of the service related to the EMD Coupon
+    :ivar consumed_at_issuance_ind: Indicates if the EMD coupon has been considered used as soon as issued.
+    :ivar rfic: Reason For Issuance Code for the EMD coupon
+    :ivar rfisc: Reason For Issueance Sub code for the EMD coupon
+    :ivar rfidescription: Reason for Issueance Description for the EMD coupon
+    :ivar origin: Departure Airport Code for the flight with which the Coupon is associated
+    :ivar destination: Destination Airport Code for the flight with which the Coupon is associated
+    :ivar flight_number: Flight Number of the flight with which the coupon is associated.
+    :ivar present_to: Service provider to present the coupon to
+    :ivar present_at: Location of service provider where this coupon should be presented at
+    :ivar non_refundable_ind: Indicates whether the coupon is non-refundable
+    :ivar marketing_carrier: Marketing carrier associated with the coupon
+    :ivar key: System generated Key
+    """
+    class Meta:
+        name = "EMDCoupon"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    number: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Number",
+            type="Attribute",
+            required=True
+        )
+    )
+    status: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Status",
+            type="Attribute",
+            required=True
+        )
+    )
+    svc_description: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SvcDescription",
+            type="Attribute"
+        )
+    )
+    consumed_at_issuance_ind: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="ConsumedAtIssuanceInd",
+            type="Attribute"
+        )
+    )
+    rfic: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RFIC",
+            type="Attribute",
+            required=True,
+            length=1
+        )
+    )
+    rfisc: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RFISC",
+            type="Attribute"
+        )
+    )
+    rfidescription: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RFIDescription",
+            type="Attribute",
+            min_length=1.0,
+            max_length=86.0
+        )
+    )
+    origin: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Origin",
+            type="Attribute",
+            length=3,
+            white_space="collapse"
+        )
+    )
+    destination: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Destination",
+            type="Attribute",
+            length=3,
+            white_space="collapse"
+        )
+    )
+    flight_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FlightNumber",
+            type="Attribute",
+            max_length=5.0
+        )
+    )
+    present_to: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PresentTo",
+            type="Attribute",
+            min_length=1.0,
+            max_length=71.0
+        )
+    )
+    present_at: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PresentAt",
+            type="Attribute",
+            min_length=1.0,
+            max_length=71.0
+        )
+    )
+    non_refundable_ind: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="NonRefundableInd",
+            type="Attribute"
+        )
+    )
+    marketing_carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="MarketingCarrier",
+            type="Attribute",
+            length=2
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class Emdendorsement:
     """Endorsement for EMD. Supported providers are 1V/1G/1P/1J.
 
     :ivar value:
     """
+    class Meta:
+        name = "EMDEndorsement"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1273,6 +2095,10 @@ class EmdtravelerInfo:
     :ivar traveler_type: Defines the type of traveler used for booking which could be a non-defining type (Companion, Web-fare, etc), or a standard type (Adult, Child, etc).
     :ivar age: Age of the traveler
     """
+    class Meta:
+        name = "EMDTravelerInfo"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     name_info: Optional["EmdtravelerInfo.NameInfo"] = field(
         default=None,
         metadata=dict(
@@ -1370,6 +2196,9 @@ class Embargo:
     :ivar url: Website of the operating carrier. Provider: 1G, 1V, 1P, 1J
     :ivar service_sub_code: The service sub code of the optional service on which the embargo applies. Provider: 1G, 1V, 1P, 1J
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1446,6 +2275,9 @@ class ExchangedTicketInfo:
 
     :ivar number: Original Ticket that was Exchange/Reissued
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     number: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1463,12 +2295,14 @@ class ExcludeTicketing:
 
     :ivar booking_traveler_ref: Reference to a booking traveler for which ticketing modifier is applied.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     booking_traveler_ref: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="BookingTravelerRef",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -1482,6 +2316,10 @@ class ExemptObfee:
 
     :ivar sub_code:
     """
+    class Meta:
+        name = "ExemptOBFee"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     sub_code: List[str] = field(
         default_factory=list,
         metadata=dict(
@@ -1504,12 +2342,14 @@ class ExemptTaxes:
     :ivar tax_territory: exemption is achieved by sending in the TaxTerritory in the tax exempt price request.
     :ivar company_name: The federal government body name must be provided in this element. This field is required by AC
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     country_code: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="CountryCode",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999,
             length=2
@@ -1557,6 +2397,9 @@ class FareBasis:
     :ivar code: The fare basis code for this fare
     :ivar segment_ref: The segment to which this FareBasis Code is to connected
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1577,7 +2420,9 @@ class FareBasis:
 @dataclass
 class FareCalc(str):
     """The complete fare calculation line."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
@@ -1586,10 +2431,40 @@ class FareDetailsRef:
 
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
             name="Key",
+            type="Attribute",
+            required=True
+        )
+    )
+
+
+@dataclass
+class FareGuaranteeInfo:
+    """The information related to fare guarantee details.
+
+    :ivar guarantee_date: The date till which the fare is guaranteed.
+    :ivar guarantee_type: Determines the status of a fare for a passenger.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    guarantee_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="GuaranteeDate",
+            type="Attribute"
+        )
+    )
+    guarantee_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="GuaranteeType",
             type="Attribute",
             required=True
         )
@@ -1602,6 +2477,9 @@ class FareInfoMessage(str):
     A simple textual fare information message.Providers supported : 1G/1V/1P/1J
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1618,6 +2496,9 @@ class FareInfoRef:
 
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1631,18 +2512,39 @@ class FareInfoRef:
 @dataclass
 class FareMileageInformation(str):
     """Contains Fare/Tariff Display Mileage Information."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
 class FareNote(str):
     """A simple textual fare note. Used within several other objects.
 
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     :ivar precedence:
     :ivar note_name:
     :ivar fare_info_message_ref:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1680,6 +2582,9 @@ class FareNoteRef:
 
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1704,6 +2609,9 @@ class FarePricing:
     :ivar taxes:
     :ivar mmid: Contains the Reference id which is generated when the request was ReturnMM=”true”.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     passenger_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1776,6 +2684,9 @@ class FareRemarkRef:
     """
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1787,12 +2698,142 @@ class FareRemarkRef:
 
 
 @dataclass
+class FareRestrictionDate:
+    """Fare restriction based on date ranges. StartDate and EndDate are strings
+    representing respective dates. If a year component is present then it signifies
+    an exact date. If only day and month components are present then it signifies a
+    seasonal date, which means applicable for that date in any year.
+
+    :ivar direction:
+    :ivar start_date:
+    :ivar end_date:
+    :ivar end_date_indicator: This field indicates the end date/last date for which travel on the fare component being validated must be commenced or completed
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    direction: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Direction",
+            type="Attribute"
+        )
+    )
+    start_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="StartDate",
+            type="Attribute"
+        )
+    )
+    end_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EndDate",
+            type="Attribute"
+        )
+    )
+    end_date_indicator: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EndDateIndicator",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
+class FareRestrictionDaysOfWeek:
+    """Days of the week that the restriction applies too.
+
+    :ivar direction:
+    :ivar trip_type:
+    :ivar monday:
+    :ivar tuesday:
+    :ivar wednesday:
+    :ivar thursday:
+    :ivar friday:
+    :ivar saturday:
+    :ivar sunday:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    direction: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Direction",
+            type="Attribute"
+        )
+    )
+    trip_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TripType",
+            type="Attribute"
+        )
+    )
+    monday: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Monday",
+            type="Attribute"
+        )
+    )
+    tuesday: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Tuesday",
+            type="Attribute"
+        )
+    )
+    wednesday: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Wednesday",
+            type="Attribute"
+        )
+    )
+    thursday: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Thursday",
+            type="Attribute"
+        )
+    )
+    friday: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Friday",
+            type="Attribute"
+        )
+    )
+    saturday: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Saturday",
+            type="Attribute"
+        )
+    )
+    sunday: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Sunday",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class FareRestrictionSaleDate:
     """Restrict when this fare can be sold.
 
     :ivar start_date:
     :ivar end_date:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     start_date: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1825,6 +2866,9 @@ class FareRestrictionSeasonal:
     :ivar seasonal_range2_start_date:
     :ivar seasonal_range2_end_date:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     comment: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1886,7 +2930,9 @@ class FareRestrictionSeasonal:
 @dataclass
 class FareRoutingInformation(str):
     """Contains Fare/Tariff Display Routing Information."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
@@ -1895,6 +2941,9 @@ class FareRuleCategory:
 
     :ivar category:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     category: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -1913,6 +2962,9 @@ class FareRuleFailureInfo:
 
     :ivar reason:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     reason: List[str] = field(
         default_factory=list,
         metadata=dict(
@@ -1934,6 +2986,9 @@ class FareRuleKey:
     :ivar fare_info_ref: The Fare Component to which this Rule Key applies
     :ivar provider_code:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1970,6 +3025,9 @@ class FareRuleLong(str):
     :ivar category:
     :ivar type:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     category: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -1993,6 +3051,9 @@ class FareRuleLongRef:
 
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2010,6 +3071,9 @@ class FareRuleNameValue:
     :ivar name:
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     name: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2034,6 +3098,9 @@ class FareRuleShortRef:
 
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2052,6 +3119,9 @@ class FareRulesFilterCategory:
     :ivar category_code: Fare Rules Filter category can be requested. Currently only '˜MIN, MAX, ADV, CHG, OTH' is supported. Applicable for Providers 1G,1V,1P,1J.
     :ivar fare_info_ref: This tells if Low Fare Finder was used.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     category_code: List[str] = field(
         default_factory=list,
         metadata=dict(
@@ -2077,6 +3147,9 @@ class FareStatusFailureInfo:
     :ivar code: The failure code of the fare.
     :ivar reason: The reason for the failure.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2095,11 +3168,82 @@ class FareStatusFailureInfo:
 
 
 @dataclass
+class FareSurcharge:
+    """Surcharges for a fare component.
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar key:
+    :ivar type:
+    :ivar amount:
+    :ivar segment_ref:
+    :ivar coupon_ref: The coupon to which that surcharge is relative (if applicable)
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute",
+            required=True
+        )
+    )
+    amount: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Amount",
+            type="Attribute",
+            required=True
+        )
+    )
+    segment_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SegmentRef",
+            type="Attribute"
+        )
+    )
+    coupon_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CouponRef",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class FareTicketDesignator:
     """Ticket Designator used to further qualify a Fare.
 
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2117,6 +3261,9 @@ class FareType:
 
     :ivar code:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2135,6 +3282,9 @@ class FeeApplication:
     :ivar value:
     :ivar code: The code associated to the fee application. The choices are: 1, 2, 3, 4, 5, K, F
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2164,12 +3314,14 @@ class FlexExploreModifiers:
     :ivar radius: Radius around the destination of actual itinerary in which the search would be performed. Supported only with types - DistanceInMiles and DistanceInKilometers
     :ivar group_name: Group name for a set of destinations to be searched. Use with Type=Group. Group names are defined in the Search Control Console. Supported Providers: 1G/1V/1P
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     destination: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="Destination",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=59,
             length=3,
@@ -2207,6 +3359,9 @@ class FlightDetailsRef:
 
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2228,6 +3383,9 @@ class FlightInfoCriteria:
     :ivar departure_date: The date at which this entity departs. This does not include time zone information since it can be derived from the origin location.
     :ivar class_of_service:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2308,6 +3466,9 @@ class FlightType:
     :ivar double_interline_con:
     :ivar triple_interline_con:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     require_single_carrier: bool = field(
         default=False,
         metadata=dict(
@@ -2396,6 +3557,9 @@ class GroupedOption:
     """
     :ivar optional_service_ref: Reference to a optionalService which is paired with other optional services in the parent PairedOptions element.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     optional_service_ref: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2419,6 +3583,9 @@ class HostReservation:
     :ivar universal_locator_code: The locator of the Universal Record, if one exists.
     :ivar eticket: An flag to indicate if ticket has been issued for the PNR.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     carrier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2482,6 +3649,9 @@ class ImageLocation(str):
     :ivar image_width: The width of the image
     :ivar image_height: The height of the image
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2521,7 +3691,71 @@ class InFlightServices(str):
     change' etc.. These follow the IATA standard. Please see the IATA
     standards for a more complete list.
     """
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+
+
+@dataclass
+class IncludeAddlBookingCodeInfo:
+    """Used to include primary or secondary carrier's booking code details.
+
+    :ivar type: The type defines that the booking code info is for primary or secondary carrier.
+    :ivar secondary_carrier: The secondary carrier code is required when type is secondary .
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute",
+            required=True
+        )
+    )
+    secondary_carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SecondaryCarrier",
+            type="Attribute",
+            length=2
+        )
+    )
+
+
+@dataclass
+class Itinerary:
+    """Allows an agency to select the itinenary option for ticket.
+
+    :ivar type: Specifies the type of itinenary option for ticket like Invoice type or Pocket itinenary.
+    :ivar option: Specifies the itinerary option like NoFare,NoAmount.
+    :ivar separate_indicator: Set to true if one itinerary to be printed per passenger.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute"
+        )
+    )
+    option: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Option",
+            type="Attribute"
+        )
+    )
+    separate_indicator: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="SeparateIndicator",
+            type="Attribute"
+        )
+    )
 
 
 @dataclass
@@ -2531,6 +3765,9 @@ class LanguageOption:
     :ivar language: 2 Letter ISO Language code
     :ivar country: 2 Letter ISO Country code
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     language: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2562,6 +3799,9 @@ class LegDetail:
     :ivar travel_date: The Departure date and time for this Leg Detail.
     :ivar flight_number: Flight Number for the Search Leg Detail.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2622,6 +3862,9 @@ class LegRef:
 
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2639,6 +3882,9 @@ class LoyaltyCardDetails:
     :ivar supplier_code: Carrier Code
     :ivar priority_code:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     supplier_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2672,6 +3918,9 @@ class Maxtype:
     :ivar tm_dowmax: If a max unit of time is true then number corrolates to day of the week starting with 1 for Sunday.
     :ivar num_occur_max: Number of maximum occurances.
     """
+    class Meta:
+        name = "MAXType"
+
     hours_max: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -2749,6 +3998,9 @@ class Mintype:
     :ivar fare_component: Fare component number of the most restrictive fare.
     :ivar num_occur_min: Number of min occurances. This field is used in conjunction with the Day of Week.
     """
+    class Meta:
+        name = "MINType"
+
     hours_min: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -2808,6 +4060,70 @@ class Mintype:
 
 
 @dataclass
+class ManualFareAdjustment:
+    """
+    :ivar applied_on: Represents pricing component upon which manual increment/discount to be applied. Presently supported values are Base and Total. Other is present as a future place holder but presently no request processing logic is available for value Other
+    :ivar adjustment_type: Represents process used for applying manual discount/increment. Presently supported values are Flat, Percentage.
+    :ivar value: Represents value of increment/discount applied. Negative value is considered as discount whereas positive value represents increment
+    :ivar passenger_ref: Represents passenger association.
+    :ivar ticket_designator: Providers: 1p/1j
+    :ivar fare_type: Providers: 1p/1j
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    applied_on: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AppliedOn",
+            type="Attribute",
+            required=True
+        )
+    )
+    adjustment_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AdjustmentType",
+            type="Attribute",
+            required=True
+        )
+    )
+    value: Optional[float] = field(
+        default=None,
+        metadata=dict(
+            name="Value",
+            type="Attribute",
+            required=True
+        )
+    )
+    passenger_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PassengerRef",
+            type="Attribute"
+        )
+    )
+    ticket_designator: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketDesignator",
+            type="Attribute",
+            min_length=0.0,
+            max_length=20.0
+        )
+    )
+    fare_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FareType",
+            type="Attribute",
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
+
+
+@dataclass
 class MaxLayoverDurationType:
     """User can specify its attribute's value in Minutes. Maximum size of each
     attribute is 4.
@@ -2845,6 +4161,42 @@ class MaxLayoverDurationType:
     )
 
 
+class Meals(Enum):
+    """Available Meal Service.
+
+    :cvar MEAL:
+    :cvar COLD_MEAL:
+    :cvar HOT_MEAL:
+    :cvar BREAKFAST:
+    :cvar CONTINENTAL_BREAKFAST:
+    :cvar LUNCH:
+    :cvar DINNER:
+    :cvar SNACK_OR_BRUNCH:
+    :cvar FOOD_FOR_PURCHASE:
+    :cvar COMPLIMENTARY_REFRESHMENTS:
+    :cvar ALCOHOLIC_BEVERAGES_FOR_PURCHASE:
+    :cvar COMPLIMENTARY_ALCOHOLIC_BEVERAGES:
+    :cvar FOOD_AND_BEVERAGES_FOR_PURCHASE:
+    :cvar NO_MEAL_SERVICE:
+    :cvar REFRESHMENTS_FOR_PURCHASE:
+    """
+    MEAL = "Meal"
+    COLD_MEAL = "ColdMeal"
+    HOT_MEAL = "HotMeal"
+    BREAKFAST = "Breakfast"
+    CONTINENTAL_BREAKFAST = "ContinentalBreakfast"
+    LUNCH = "Lunch"
+    DINNER = "Dinner"
+    SNACK_OR_BRUNCH = "SnackOrBrunch"
+    FOOD_FOR_PURCHASE = "FoodForPurchase"
+    COMPLIMENTARY_REFRESHMENTS = "ComplimentaryRefreshments"
+    ALCOHOLIC_BEVERAGES_FOR_PURCHASE = "AlcoholicBeveragesForPurchase"
+    COMPLIMENTARY_ALCOHOLIC_BEVERAGES = "ComplimentaryAlcoholicBeverages"
+    FOOD_AND_BEVERAGES_FOR_PURCHASE = "FoodAndBeveragesForPurchase"
+    NO_MEAL_SERVICE = "NoMealService"
+    REFRESHMENTS_FOR_PURCHASE = "RefreshmentsForPurchase"
+
+
 @dataclass
 class MultiGdssearchIndicator:
     """Indicates whether public fares and/or private fares should be returned.
@@ -2855,6 +4207,10 @@ class MultiGdssearchIndicator:
     :ivar private_fare_code: The code of the corporate private fare. This is the same as an account code. Use of this attribute requires specifically provisioned credentials.
     :ivar private_fare_code_only: : Indicates whether or not the private fares returned should be restricted to only those specific to the PrivateFareCode in the previous attribute. This has the same validation as the AccountCodeFaresOnly attribute. Use of this attribute requires specifically provisioned credentials.
     """
+    class Meta:
+        name = "MultiGDSSearchIndicator"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2934,6 +4290,9 @@ class Othtype:
     :ivar not_usacity: Not USA city. True if Origin or final destination not a continental U.S. City. False if Origin or final destination a continental U.S. City.
     :ivar missing_rules: Missing rules. True if rules are missing. False if rules are not missing.
     """
+    class Meta:
+        name = "OTHType"
+
     cat0: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -3195,12 +4554,14 @@ class OfferAvailabilityModifiers:
     :ivar carrier: The carrier whose paid seat optional services is to be returned by uAPI.
     :ivar currency_type: Currency code override. Providers: ACH, 1G, 1V, 1P, 1J
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     service_type: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="ServiceType",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999,
             min_length=1.0,
@@ -3212,7 +4573,6 @@ class OfferAvailabilityModifiers:
         metadata=dict(
             name="Carrier",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999,
             length=2
@@ -3239,6 +4599,9 @@ class OptionalServiceModifier:
     :ivar travel_date: The departure date of the air segment the optional service is valid for.
     :ivar description: This allows MDS to return specific image and text corresponding to the ancillary name (S5 ancillary name).
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3300,11 +4663,86 @@ class OptionalServiceRef:
 
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
             name="value",
             type="Restriction"
+        )
+    )
+
+
+@dataclass
+class OriginalItineraryDetails:
+    """Used for rapid reprice to provide additional information about the original
+    itinerary. Providers: 1G/1V/1P/1S/1A.
+
+    :ivar itinerary_type: Values allowed are International or Domestic. This tells if the itinerary is international or domestic.
+    :ivar bulk_ticket: Set to true and the itinerary is/will be a bulk ticket. Set to false and the itinerary being repriced will not be a bulk ticket. Default is false.
+    :ivar ticketing_pcc: This is the PCC or SID where the ticket was issued
+    :ivar ticketing_iata: This is the IATA where the ticket was issued.
+    :ivar ticketing_country: This is the country where the ticket was issued.
+    :ivar tour_code:
+    :ivar ticketing_date: The date the repriced itinerary was ticketed
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    itinerary_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ItineraryType",
+            type="Attribute"
+        )
+    )
+    bulk_ticket: bool = field(
+        default=False,
+        metadata=dict(
+            name="BulkTicket",
+            type="Attribute"
+        )
+    )
+    ticketing_pcc: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketingPCC",
+            type="Attribute",
+            min_length=2.0,
+            max_length=10.0
+        )
+    )
+    ticketing_iata: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketingIATA",
+            type="Attribute",
+            max_length=8.0
+        )
+    )
+    ticketing_country: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketingCountry",
+            type="Attribute",
+            length=2
+        )
+    )
+    tour_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TourCode",
+            type="Attribute",
+            max_length=15.0
+        )
+    )
+    ticketing_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketingDate",
+            type="Attribute"
         )
     )
 
@@ -3316,6 +4754,9 @@ class OverrideCode:
 
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3332,6 +4773,9 @@ class PassengerDetailsRef:
 
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3349,6 +4793,9 @@ class PassengerReceiptOverride:
 
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3367,6 +4814,9 @@ class PassengerSeatPrice:
     :ivar booking_traveler_ref:
     :ivar amount:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     booking_traveler_ref: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3392,6 +4842,9 @@ class PassengerTicketNumber:
     :ivar ticket_number: The identifying number for a Ticket for a passenger.
     :ivar booking_traveler_ref: Reference to a passenger associated with a ticket.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     ticket_number: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3416,6 +4869,9 @@ class PaymentRef:
 
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3542,6 +4998,9 @@ class Penalty:
     :ivar amount: Penalty Amount
     :ivar penalty_type: This is the PPC (Price Processing Code)code.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     amount: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3574,6 +5033,9 @@ class PenaltyInformation(str):
     :ivar refundable: Answers whether the FareComponent is refundable
     :ivar change_fee_application_code: Unique code associated with the PenaltyInformation text which defines how fees will be applied/calculated. E.g. J2 translates to "From among all fare components, changed and unchanged...."
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     carrier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3675,6 +5137,9 @@ class PersonName:
     :ivar last: Person Last Name.
     :ivar prefix: Person Name prefix.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     first: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3711,6 +5176,9 @@ class PersonNameSearch:
 
     :ivar last: Person Last Name to be searched for Flight Pass content.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     last: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3728,12 +5196,14 @@ class PolicyCodesList:
     """
     :ivar policy_code: A code that indicates why an item was determined to be ‘out of policy’.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     policy_code: List[int] = field(
         default_factory=list,
         metadata=dict(
             name="PolicyCode",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=1,
             max_occurs=10,
             min_inclusive=1.0,
@@ -3781,6 +5251,9 @@ class PriceRange:
     :ivar start_price: Price range start value
     :ivar end_price: Price range end value
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     default_currency: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -3805,12 +5278,176 @@ class PriceRange:
 
 
 @dataclass
+class PricingDetails:
+    """Used for rapid reprice. This is a response element. Additional information
+    about how pricing was obtain, messages, etc. Providers: 1G/1V/1P/1S/1A.
+
+    :ivar advisory_message: Advisory messages returned from the host.
+    :ivar endorsement_text: Endorsement text returned from the host.
+    :ivar waiver_text: Waiver text returned from the host.
+    :ivar low_fare_pricing: This tells if Low Fare Finder was used.
+    :ivar low_fare_found: This tells if the lowest fare was found.
+    :ivar penalty_applies: This tells if penalties apply.
+    :ivar discount_applies: This tells if a discount applies.
+    :ivar itinerary_type: Values allowed are International or Domestic. This tells if the itinerary is international or domestic.
+    :ivar validating_vendor_code: The vendor code of the validating carrier.
+    :ivar for_ticketing_on_date: The ticketing date of the itinerary.
+    :ivar last_date_to_ticket: The last date to issue the ticket.
+    :ivar form_of_refund: How the refund will be issued. Values will be MCO or FormOfPayment
+    :ivar account_code:
+    :ivar bankers_selling_rate: The selling rate at time of quote.
+    :ivar pricing_type: Ties with the RepricingModifiers sent in the request and tells how the itinerary was priced.
+    :ivar conversion_rate: The conversion rate at the time of quote.
+    :ivar rate_of_exchange: The exchange rate at time of quote.
+    :ivar original_ticket_currency: The currency of the original ticket.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    advisory_message: List[str] = field(
+        default_factory=list,
+        metadata=dict(
+            name="AdvisoryMessage",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    endorsement_text: List[str] = field(
+        default_factory=list,
+        metadata=dict(
+            name="EndorsementText",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    waiver_text: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="WaiverText",
+            type="Element"
+        )
+    )
+    low_fare_pricing: bool = field(
+        default=False,
+        metadata=dict(
+            name="LowFarePricing",
+            type="Attribute"
+        )
+    )
+    low_fare_found: bool = field(
+        default=False,
+        metadata=dict(
+            name="LowFareFound",
+            type="Attribute"
+        )
+    )
+    penalty_applies: bool = field(
+        default=False,
+        metadata=dict(
+            name="PenaltyApplies",
+            type="Attribute"
+        )
+    )
+    discount_applies: bool = field(
+        default=False,
+        metadata=dict(
+            name="DiscountApplies",
+            type="Attribute"
+        )
+    )
+    itinerary_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ItineraryType",
+            type="Attribute"
+        )
+    )
+    validating_vendor_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ValidatingVendorCode",
+            type="Attribute",
+            length=2
+        )
+    )
+    for_ticketing_on_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ForTicketingOnDate",
+            type="Attribute"
+        )
+    )
+    last_date_to_ticket: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="LastDateToTicket",
+            type="Attribute"
+        )
+    )
+    form_of_refund: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FormOfRefund",
+            type="Attribute"
+        )
+    )
+    account_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AccountCode",
+            type="Attribute"
+        )
+    )
+    bankers_selling_rate: Optional[float] = field(
+        default=None,
+        metadata=dict(
+            name="BankersSellingRate",
+            type="Attribute"
+        )
+    )
+    pricing_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PricingType",
+            type="Attribute"
+        )
+    )
+    conversion_rate: Optional[float] = field(
+        default=None,
+        metadata=dict(
+            name="ConversionRate",
+            type="Attribute"
+        )
+    )
+    rate_of_exchange: Optional[float] = field(
+        default=None,
+        metadata=dict(
+            name="RateOfExchange",
+            type="Attribute"
+        )
+    )
+    original_ticket_currency: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="OriginalTicketCurrency",
+            type="Attribute",
+            length=3
+        )
+    )
+
+
+@dataclass
 class PrintBlankFormItinerary:
     """Produce a customized itinerary/Invoice document in blank form format.
 
     :ivar include_description: If it is true then document will be printed including descriptions.
     :ivar include_header: If it is true then document will be printed including it's header.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     include_description: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -3838,6 +5475,9 @@ class PromoCode:
     :ivar provider_code: To be used to specify Provider Code.
     :ivar supplier_code: To be used to specify Supplier Code.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3877,6 +5517,9 @@ class RailCoachDetails:
     :ivar available_rail_seats: Number of available seats present in this rail coach.
     :ivar rail_seat_map_availability: Indicates if seats are available in this rail coach which can be mapped.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     rail_coach_number: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3926,6 +5569,9 @@ class Restriction:
     :ivar days_of_week_restriction:
     :ivar restriction_passenger_types:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     days_of_week_restriction: List["Restriction.DaysOfWeekRestriction"] = field(
         default_factory=list,
         metadata=dict(
@@ -4058,6 +5704,9 @@ class RoutingRules:
 
     :ivar routing:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     routing: List["RoutingRules.Routing"] = field(
         default_factory=list,
         metadata=dict(
@@ -4132,6 +5781,60 @@ class RoutingRules:
 
 
 @dataclass
+class RuleAdvancedPurchase:
+    """Container for rules regarding advance purchase restrictions.
+    TicketingEarliestDate and TicketingLatestDate are strings representing
+    respective dates. If a year component is present then it signifies an exact
+    date. If only day and month components are present then it signifies a seasonal
+    date, which means applicable for that date in any year.
+
+    :ivar reservation_latest_period:
+    :ivar reservation_latest_unit:
+    :ivar ticketing_earliest_date:
+    :ivar ticketing_latest_date:
+    :ivar more_rules_present: If true, specifies that advance purchase information will be present in fare rules.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    reservation_latest_period: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ReservationLatestPeriod",
+            type="Attribute"
+        )
+    )
+    reservation_latest_unit: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ReservationLatestUnit",
+            type="Attribute"
+        )
+    )
+    ticketing_earliest_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketingEarliestDate",
+            type="Attribute"
+        )
+    )
+    ticketing_latest_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketingLatestDate",
+            type="Attribute"
+        )
+    )
+    more_rules_present: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="MoreRulesPresent",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class RuleCharges:
     """Container for rules related to charges such as deposits, surcharges,
     penalities, etc..
@@ -4142,6 +5845,9 @@ class RuleCharges:
     :ivar percent:
     :ivar more_rules_present: If true, specifies that advance purchase information will be present in fare rules.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     penalty_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4184,6 +5890,9 @@ class Rules:
     """
     :ivar rules_text: Rules text
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     rules_text: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4204,6 +5913,9 @@ class SeatInformation:
     :ivar rating: Definition of the seat rating. Providers: 1G, 1V, 1P, 1J
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     power: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4271,7 +5983,9 @@ class SeatInformation:
 @dataclass
 class SegmentIndex(int):
     """Identifies the segment that is part of this group."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
@@ -4281,6 +5995,9 @@ class ServiceSubGroup:
 
     :ivar code: The Service Sub Group Code of the Ancillary Service. Providers: 1G, 1V, 1P, 1J, ACH
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4300,6 +6017,9 @@ class SpecificSeatAssignment:
     :ivar seat_id: The actual seat ID that is being requested. Special Characters are not supported in this field.
     :ivar rail_coach_number: Coach number for which rail seatmap/coachmap is returned.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     booking_traveler_ref: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4350,6 +6070,9 @@ class SplitTicketingSearch:
 
     :ivar round_trip: Percentage of Roundtrip price points to be returned in the search response. This should be an even number. The One-Way price points returned in the response would be evenly distributed between the outbound and the inbound.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     round_trip: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -4369,6 +6092,9 @@ class SponsoredFltInfo:
     :ivar neutral_lnb: The neutral line number for the flight item.
     :ivar flt_key: The unique identifying key for the sponsored flight.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     sponsored_lnb: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -4415,6 +6141,9 @@ class SvcSegment:
     :ivar fee: The fee to be collected using SVC segment
     :ivar emdnumber: Generated EMD number, if EMD is issued on the SVC
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4523,12 +6252,60 @@ class SvcSegment:
 
 
 @dataclass
+class Tcrinfo:
+    """
+    :ivar status:
+    :ivar date:
+    :ivar tcrnumber: The identifying number for a Ticketless Air Reservation.
+    :ivar provider_reservation_info_ref: Provider reservation reference key.
+    """
+    class Meta:
+        name = "TCRInfo"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    status: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Status",
+            type="Attribute",
+            required=True
+        )
+    )
+    date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Date",
+            type="Attribute"
+        )
+    )
+    tcrnumber: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TCRNumber",
+            type="Attribute",
+            required=True
+        )
+    )
+    provider_reservation_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderReservationInfoRef",
+            type="Attribute",
+            required=True
+        )
+    )
+
+
+@dataclass
 class Tax:
     """Taxes for Land Charges.
 
     :ivar category: The tax category represents a valid IATA tax code.
     :ivar amount:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     category: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4553,12 +6330,14 @@ class TextInfo:
     :ivar text:
     :ivar title:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     text: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="Text",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999,
             max_length=250.0
@@ -4581,6 +6360,9 @@ class TicketAgency:
     :ivar provider_code: The code of the Provider (e.g. 1G, 1P)
     :ivar pseudo_city_code: The PCC of the host system.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     provider_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4605,6 +6387,9 @@ class TicketDesignator:
 
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4622,6 +6407,9 @@ class TicketEndorsement:
     """
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4641,6 +6429,9 @@ class TicketValidity:
     :ivar not_valid_before: Fare not valid before this date.
     :ivar not_valid_after: Fare not valid after this date.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     not_valid_before: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4663,6 +6454,9 @@ class TicketingModifiersRef:
 
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4679,6 +6473,9 @@ class TourCode:
 
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4697,6 +6494,9 @@ class TravelArranger(str):
     :ivar company_short_name: Company Name
     :ivar code: IATA Code for Arranger
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     company_short_name: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4718,6 +6518,10 @@ class Url(str):
     """
     :ivar type:
     """
+    class Meta:
+        name = "URL"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4734,12 +6538,15 @@ class Urlinfo:
     :ivar text:
     :ivar url:
     """
+    class Meta:
+        name = "URLInfo"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     text: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="Text",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999,
             max_length=250.0
@@ -4763,6 +6570,9 @@ class UpsellBrand:
     :ivar fare_basis:
     :ivar fare_info_ref:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     fare_basis: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4804,12 +6614,58 @@ class ValueDetails:
 
 
 @dataclass
+class Variance:
+    """Indicates any variance in the requested flight.
+
+    :ivar type: Indicates type Variance, i.e. Actual, Estimated, Canceled and Diversion.
+    :ivar time: Indicates time for Variance.
+    :ivar indicator: Indicates VAriance Indicator, i.e. Early, Late.
+    :ivar reason: Reason for Variance
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute",
+            required=True
+        )
+    )
+    time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Time",
+            type="Attribute"
+        )
+    )
+    indicator: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Indicator",
+            type="Attribute"
+        )
+    )
+    reason: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Reason",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class VoidDocumentInfo:
     """Container to represent document information.
 
     :ivar document_number: Identifies the document number to be voided.
     :ivar document_type: Identifies the document type to be voided, Document Type can have four values like Service Fee, Paper Ticket , MCO and E-Ticket.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     document_number: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4834,6 +6690,9 @@ class VoidFailureInfo(str):
     :ivar ticket_number:
     :ivar code:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     ticket_number: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4860,6 +6719,9 @@ class VoidResultInfo:
     :ivar failure_remark: Container to show all provider failure information.
     :ivar result_type: Successful Or Failed result indicator.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     document_number: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4900,6 +6762,9 @@ class WaiverCode:
     :ivar ticket_designator:
     :ivar endorsement: Endorsement. Size can be up to 100 characters
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     tour_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4937,6 +6802,9 @@ class Yield:
     :ivar amount: Yield per passenger level in Default Currency for this entity.
     :ivar booking_traveler_ref: Reference to a booking traveler for which Yield is applied.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     amount: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -5025,6 +6893,9 @@ class TypeAnchorFlightData:
     :ivar flight_number: Indicates Anchor flight number
     :ivar connection_indicator: Indicates that the Anchor flight has any connecting flight or not
     """
+    class Meta:
+        name = "typeAnchorFlightData"
+
     airline_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -5059,6 +6930,9 @@ class TypeApplicableSegment:
     :ivar air_itinerary_details_ref:
     :ivar booking_counts: Classes of service and their counts.
     """
+    class Meta:
+        name = "typeApplicableSegment"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -5170,6 +7044,9 @@ class TypeBulkTicketModifierType:
 
     :ivar suppress_on_fare_calc: Optional attribute to allow a modifier impact such as Bulk Ticketing to have information suppressed on the Fare Calc when generating supporting documents Check the specific host system which may or may not support this function
     """
+    class Meta:
+        name = "typeBulkTicketModifierType"
+
     suppress_on_fare_calc: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -5246,6 +7123,9 @@ class TypeDaysOfOperation:
     :ivar sat:
     :ivar sun:
     """
+    class Meta:
+        name = "typeDaysOfOperation"
+
     mon: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -5394,6 +7274,9 @@ class TypeFailureInfo:
     :ivar code:
     :ivar message:
     """
+    class Meta:
+        name = "typeFailureInfo"
+
     code: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -5496,12 +7379,14 @@ class TypeFarePenalty:
     :ivar penalty_applies:
     :ivar no_show: The No Show penalty (if any) to change/cancel the fare.
     """
+    class Meta:
+        name = "typeFarePenalty"
+
     amount: Optional[str] = field(
         default=None,
         metadata=dict(
             name="Amount",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
+            type="Element"
         )
     )
     percentage: Optional[str] = field(
@@ -5509,7 +7394,6 @@ class TypeFarePenalty:
         metadata=dict(
             name="Percentage",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
         )
     )
@@ -5811,6 +7695,9 @@ class TypeNativeSearchModifier(str):
     """
     :ivar provider_code: The host for which the NativeModfier being added to
     """
+    class Meta:
+        name = "typeNativeSearchModifier"
+
     provider_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -5828,6 +7715,9 @@ class TypeNonAirReservationRef:
     """
     :ivar locator_code:
     """
+    class Meta:
+        name = "typeNonAirReservationRef"
+
     locator_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -5954,6 +7844,48 @@ class TypeReportingType(Enum):
     SCHEDULE_DISCREPANCIES = "ScheduleDiscrepancies"
 
 
+@dataclass
+class TypeRestrictionLengthOfStay:
+    """Length Of Stay Restriction ( e.g. 2 day minimum..)
+
+    :ivar length:
+    :ivar stay_unit:
+    :ivar stay_date:
+    :ivar more_rules_present: If true, specifies that advance purchase information will be present in fare rules.
+    """
+    class Meta:
+        name = "typeRestrictionLengthOfStay"
+
+    length: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Length",
+            type="Attribute"
+        )
+    )
+    stay_unit: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="StayUnit",
+            type="Attribute"
+        )
+    )
+    stay_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="StayDate",
+            type="Attribute"
+        )
+    )
+    more_rules_present: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="MoreRulesPresent",
+            type="Attribute"
+        )
+    )
+
+
 class TypeRowLocation(Enum):
     """Facility Position with respect to a Row. Possible values are Rear, Front.
 
@@ -6005,6 +7937,9 @@ class TypeSegmentRef:
     """
     :ivar key:
     """
+    class Meta:
+        name = "typeSegmentRef"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -6066,6 +8001,9 @@ class TypeTextElement(str):
     :ivar type:
     :ivar language_code: ISO 639 two-character language codes are used to retrieve specific information in the requested language. For Rich Content and Branding, language codes ZH-HANT (Chinese Traditional), ZH-HANS (Chinese Simplified), FR-CA (French Canadian) and PT-BR (Portuguese Brazil) can also be used. For RCH, language codes ENGB, ENUS, DEDE, DECH can also be used. Only certain services support this attribute. Providers: ACH, RCH, 1G, 1V, 1P, 1J.
     """
+    class Meta:
+        name = "typeTextElement"
+
     type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -6089,6 +8027,9 @@ class TypeTicketModifierAccountingType:
     Ticketing Modifier used to add accounting - discount information.
     :ivar value:
     """
+    class Meta:
+        name = "typeTicketModifierAccountingType"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -6106,6 +8047,9 @@ class TypeTicketModifierAmountType:
 
     :ivar amount: Amount associated with a ticketing modifier
     """
+    class Meta:
+        name = "typeTicketModifierAmountType"
+
     amount: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -6123,6 +8067,9 @@ class TypeTicketModifierPercentType:
 
     :ivar percent: Percent associated with a ticketing modifier
     """
+    class Meta:
+        name = "typeTicketModifierPercentType"
+
     percent: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -6141,6 +8088,9 @@ class TypeTicketModifierValueType:
     :ivar value:
     :ivar net_fare_value: Treat the value as net fare discount information
     """
+    class Meta:
+        name = "typeTicketModifierValueType"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -6188,6 +8138,9 @@ class TypeUnitOfMeasure:
     :ivar value:
     :ivar unit: Unit values would be lb,Lb,kg etc.
     """
+    class Meta:
+        name = "typeUnitOfMeasure"
+
     value: Optional[float] = field(
         default=None,
         metadata=dict(
@@ -6239,6 +8192,31 @@ class TypeVarianceType(Enum):
 
 
 @dataclass
+class TypeWeight:
+    """
+    :ivar value:
+    :ivar unit:
+    """
+    class Meta:
+        name = "typeWeight"
+
+    value: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Value",
+            type="Attribute"
+        )
+    )
+    unit: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Unit",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class Apisrequirements:
     """Specific details for APIS Requirements.
 
@@ -6250,6 +8228,10 @@ class Apisrequirements:
     :ivar required_documents: What are required documents for the APIS Requirement. One, FirstAndOneOther or All
     :ivar nationality_required: Nationality of the traveler is required for booking for some suppliers.
     """
+    class Meta:
+        name = "APISRequirements"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     document: List[Document] = field(
         default_factory=list,
         metadata=dict(
@@ -6309,6 +8291,9 @@ class Affiliations:
 
     :ivar travel_arranger:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     travel_arranger: List[TravelArranger] = field(
         default_factory=list,
         metadata=dict(
@@ -6330,6 +8315,9 @@ class AirAvailInfo:
     :ivar provider_code:
     :ivar host_token_ref:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     booking_code_info: List[BookingCodeInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -6396,6 +8384,9 @@ class AirExchangeBundleTotal:
     :ivar air_exchange_info:
     :ivar penalty: Only used within an AirExchangeQuoteRsp
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_exchange_info: Optional[AirExchangeInfo] = field(
         default=None,
         metadata=dict(
@@ -6432,6 +8423,9 @@ class AirExchangeModifiers:
     :ivar provider_locator_code: Which Provider reservation does this reservation get added to.
     :ivar provider_code: To be used with ProviderLocatorCode, which host the reservation being added to belongs to.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     contract_codes: Optional["AirExchangeModifiers.ContractCodes"] = field(
         default=None,
         metadata=dict(
@@ -6533,6 +8527,9 @@ class AirExchangeTicketBundle:
     :ivar form_of_payment_ref:
     :ivar waiver_code:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     ticket_number: Optional[TicketNumber] = field(
         default=None,
         metadata=dict(
@@ -6570,57 +8567,21 @@ class AirExchangeTicketBundle:
 
 
 @dataclass
-class AirFareDiscount:
-    """Fare Discounts.
+class AirFareRulesModifier:
+    """The modifiers for Air Fare Rules.
 
-    :ivar percentage:
-    :ivar amount:
-    :ivar discount_method:
+    :ivar air_fare_rule_category:
     """
-    percentage: Optional[float] = field(
-        default=None,
-        metadata=dict(
-            name="Percentage",
-            type="Attribute"
-        )
-    )
-    amount: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute"
-        )
-    )
-    discount_method: Optional[TypeFareDiscount] = field(
-        default=None,
-        metadata=dict(
-            name="DiscountMethod",
-            type="Attribute"
-        )
-    )
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
-
-@dataclass
-class AirFareRuleCategory:
-    """A collection of fare rule category codes.
-
-    :ivar category_code: The Category Code for Air Fare Rule.
-    :ivar fare_info_ref:
-    """
-    category_code: List[TypeFareRuleCategoryCode] = field(
+    air_fare_rule_category: List[AirFareRuleCategory] = field(
         default_factory=list,
         metadata=dict(
-            name="CategoryCode",
+            name="AirFareRuleCategory",
             type="Element",
-            min_occurs=1,
-            max_occurs=10
-        )
-    )
-    fare_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FareInfoRef",
-            type="Attribute"
+            min_occurs=0,
+            max_occurs=999
         )
     )
 
@@ -6633,6 +8594,9 @@ class AirPricingAdjustment:
     :ivar adjustment:
     :ivar key: Key of AirPricingInfo from booking.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     adjustment: Optional[Adjustment] = field(
         default=None,
         metadata=dict(
@@ -6655,8 +8619,42 @@ class AirPricingAdjustment:
 class AirPricingPayment:
     """
     AirPricing Payment information - used to associate a FormOfPayment withiin the UR with one or more AirPricingInfos
+    :ivar payment:
+    :ivar form_of_payment:
+    :ivar form_of_payment_ref:
     :ivar air_pricing_info_ref:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    payment: List[Payment] = field(
+        default_factory=list,
+        metadata=dict(
+            name="Payment",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    form_of_payment: List[FormOfPayment] = field(
+        default_factory=list,
+        metadata=dict(
+            name="FormOfPayment",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    form_of_payment_ref: Optional[FormOfPaymentRef] = field(
+        default=None,
+        metadata=dict(
+            name="FormOfPaymentRef",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
+        )
+    )
     air_pricing_info_ref: List[AirPricingInfoRef] = field(
         default_factory=list,
         metadata=dict(
@@ -6685,6 +8683,9 @@ class AirRefundInfo:
     :ivar retain: This indicates whether any amount is retained by the provider.
     :ivar refund: This indicates whether carrier/host supports refund for the correcponding pnr.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     refund_remark: List[RefundRemark] = field(
         default_factory=list,
         metadata=dict(
@@ -6795,6 +8796,9 @@ class AirSegmentDetails:
     :ivar operating_carrier: The actual carrier that is operating the flight.
     :ivar flight_number: Flight Number for the Search Leg Detail.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     passenger_details_ref: List[PassengerDetailsRef] = field(
         default_factory=list,
         metadata=dict(
@@ -6943,6 +8947,9 @@ class AirSegmentPricingModifiers:
     :ivar connection_indicator: ConnectionIndicator attribute will be used to map connection indicators AvailabilityAndPricing, TurnAround and Stopover. This attribute is for Wordspan/1P only.
     :ivar brand_tier: Modifier to price by specific brand tier number.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     permitted_booking_codes: Optional["AirSegmentPricingModifiers.PermittedBookingCodes"] = field(
         default=None,
         metadata=dict(
@@ -6999,14 +9006,14 @@ class AirSegmentPricingModifiers:
             type="Attribute"
         )
     )
-    fare_break: Optional[TypeFareBreak] = field(
+    fare_break: Optional[str] = field(
         default=None,
         metadata=dict(
             name="FareBreak",
             type="Attribute"
         )
     )
-    connection_indicator: Optional[TypeConnectionIndicator] = field(
+    connection_indicator: Optional[str] = field(
         default=None,
         metadata=dict(
             name="ConnectionIndicator",
@@ -7056,6 +9063,9 @@ class AirTicketingModifiers:
     :ivar suppress_tax_and_fee: Allow to suppress Taxand Fee in ticketing response.Providers supported: Worldspan and JAL.
     :ivar no_comparison_sfq: 1P/1J - Set to "true" to include the no comparison overide #NC to override the existing SFQ and issue the ticket. Only valid for AirTicketingReq, not valid for AirExchangeTicketingReq.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     document_modifiers: Optional[DocumentModifiers] = field(
         default=None,
         metadata=dict(
@@ -7166,6 +9176,9 @@ class AlternateLocationDistance:
     :ivar search_location: The Searching City or Airport specified in the Request.
     :ivar alternate_location: The nearby Alternate City or Airport to SearchLocation.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     distance: Optional[Distance] = field(
         default=None,
         metadata=dict(
@@ -7208,67 +9221,25 @@ class AlternateLocationDistance:
 @dataclass
 class ApplicableSegment(TypeApplicableSegment):
     """Applicable air segment."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
 class AssociatedRemark(TypeAssociatedRemarkWithSegmentRef):
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
 class AsyncProviderSpecificResponse(BaseAsyncProviderSpecificResponse):
     """Identifies pending responses from a specific provider using MoreResults
     attribute."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
-
-@dataclass
-class AutoSeatAssignment:
-    """Request object used to request seats automatically by seat type.
-
-    :ivar segment_ref: The segment that this assignment belongs to
-    :ivar smoking: Indicates that the requested seat type should be a smoking seat.
-    :ivar seat_type: The type of seat that is requested
-    :ivar group: Indicates that this seat request is for group seating for all passengers. If no SegmentRef is included, group seating will be requested for all segments.
-    :ivar booking_traveler_ref: The booking traveler that this seat assignment is for. If not entered, this applies to the primary booking traveler and other passengers are adjacent.
-    """
-    segment_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SegmentRef",
-            type="Attribute"
-        )
-    )
-    smoking: bool = field(
-        default=False,
-        metadata=dict(
-            name="Smoking",
-            type="Attribute"
-        )
-    )
-    seat_type: Optional[TypeReqSeat] = field(
-        default=None,
-        metadata=dict(
-            name="SeatType",
-            type="Attribute",
-            required=True
-        )
-    )
-    group: bool = field(
-        default=False,
-        metadata=dict(
-            name="Group",
-            type="Attribute"
-        )
-    )
-    booking_traveler_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Attribute"
-        )
-    )
 
 
 @dataclass
@@ -7280,6 +9251,9 @@ class AvailableDiscount:
     :ivar description:
     :ivar discount_qualifier:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     loyalty_program: List[LoyaltyProgram] = field(
         default_factory=list,
         metadata=dict(
@@ -7329,6 +9303,10 @@ class AvailableSsr:
     :ivar ssrrules: Holds the rules for selecting the SSR in the itinerary
     :ivar industry_standard_ssr:
     """
+    class Meta:
+        name = "AvailableSSR"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     ssr: List[Ssr] = field(
         default_factory=list,
         metadata=dict(
@@ -7344,7 +9322,6 @@ class AvailableSsr:
         metadata=dict(
             name="SSRRules",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -7362,36 +9339,27 @@ class AvailableSsr:
 
 
 @dataclass
-class BackOfficeHandOff:
-    """Allows an agency to select the back office documents and also route to
-    different host to produce for the itinerary.
+class BaggageAllowance:
+    """Free Baggage Allowance.
 
-    :ivar type: The type of back office document,valid options are Accounting,Global,NonAccounting,NonAccountingRemote,Dual.
-    :ivar location: This is required for NonAccountingRemote,Dual and Global type back office.
-    :ivar pseudo_city_code: The PCC of the host system where it would be routed.
+    :ivar number_of_pieces:
+    :ivar max_weight:
     """
-    type: Optional[TypeBackOffice] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    number_of_pieces: Optional[int] = field(
         default=None,
         metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
+            name="NumberOfPieces",
+            type="Element"
         )
     )
-    location: Optional[str] = field(
+    max_weight: Optional[TypeWeight] = field(
         default=None,
         metadata=dict(
-            name="Location",
-            type="Attribute"
-        )
-    )
-    pseudo_city_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PseudoCityCode",
-            type="Attribute",
-            min_length=2.0,
-            max_length=10.0
+            name="MaxWeight",
+            type="Element"
         )
     )
 
@@ -7454,116 +9422,20 @@ class BaseBaggageAllowanceInfo:
 
 
 @dataclass
-class BillingDetailItem:
-    """The Billing Details Information.
-
-    :ivar name: Detailed Billing Information Name(e.g Personal ID, Account Number)
-    :ivar data_type: Detailed Billing Information DataType (Alpha, Numeric, etc.)
-    :ivar min_length: Detailed Billing Information Minimum Length.
-    :ivar max_length: Detailed Billing Information Maximum Length.
-    :ivar value: Detailed Billing Information Value
+class BundledServices:
     """
-    name: Optional[TypeBillingDetailsName] = field(
-        default=None,
-        metadata=dict(
-            name="Name",
-            type="Attribute",
-            required=True
-        )
-    )
-    data_type: Optional[TypeBillingDetailsDataType] = field(
-        default=None,
-        metadata=dict(
-            name="DataType",
-            type="Attribute",
-            required=True
-        )
-    )
-    min_length: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="MinLength",
-            type="Attribute",
-            required=True
-        )
-    )
-    max_length: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="MaxLength",
-            type="Attribute",
-            required=True
-        )
-    )
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Value",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class BundledService:
-    """Displays the services bundled together.
-
-    :ivar carrier: Carrier the service is applicable.
-    :ivar carrier_sub_code: Carrier sub code. True means the carrier used their own sub code. False means the carrier used an ATPCO sub code
-    :ivar service_type: The type of service or what the service is used for, e.g. F type is flight type, meaning the service is used on a flight
-    :ivar service_sub_code: The sub code of the service, e.g. OAA for Pre paid baggage
-    :ivar name: Name of the bundled service.
-    :ivar booking: Booking method for the bundled service, e..g SSR.
-    :ivar occurrence: How many of the service are included in the bundled service.
+    :ivar bundled_service:
     """
-    carrier: Optional[str] = field(
-        default=None,
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    bundled_service: List[BundledService] = field(
+        default_factory=list,
         metadata=dict(
-            name="Carrier",
-            type="Attribute",
-            length=2
-        )
-    )
-    carrier_sub_code: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="CarrierSubCode",
-            type="Attribute"
-        )
-    )
-    service_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ServiceType",
-            type="Attribute"
-        )
-    )
-    service_sub_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ServiceSubCode",
-            type="Attribute"
-        )
-    )
-    name: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Name",
-            type="Attribute"
-        )
-    )
-    booking: Optional[TypeBooking] = field(
-        default=None,
-        metadata=dict(
-            name="Booking",
-            type="Attribute"
-        )
-    )
-    occurrence: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="Occurrence",
-            type="Attribute"
+            name="BundledService",
+            type="Element",
+            min_occurs=0,
+            max_occurs=16
         )
     )
 
@@ -7574,6 +9446,9 @@ class Chgtype:
 
     :ivar pen_fee:
     """
+    class Meta:
+        name = "CHGType"
+
     pen_fee: List[PenFeeType] = field(
         default_factory=list,
         metadata=dict(
@@ -7595,6 +9470,10 @@ class Co2Emissions:
     :ivar category: The category name of the type of cabin, either Economy or Premium. Premium is any cabin that is not considered Economy
     :ivar source: The source responsible for the values
     """
+    class Meta:
+        name = "CO2Emissions"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     co2_emission: List[Co2Emission] = field(
         default_factory=list,
         metadata=dict(
@@ -7646,6 +9525,9 @@ class CarrierList:
     :ivar carrier_code:
     :ivar include_carrier:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     carrier_code: List[CarrierCode] = field(
         default_factory=list,
         metadata=dict(
@@ -7691,53 +9573,15 @@ class CategoryDetailsType:
 
 
 @dataclass
-class Characteristic:
-    """
-    :ivar value:
-    :ivar position:
-    :ivar row_location:
-    :ivar padiscode: Industry standard code that defines seat and row characteristic.
-    """
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Value",
-            type="Attribute",
-            required=True
-        )
-    )
-    position: Optional[TypePosition] = field(
-        default=None,
-        metadata=dict(
-            name="Position",
-            type="Attribute"
-        )
-    )
-    row_location: Optional[TypeRowLocation] = field(
-        default=None,
-        metadata=dict(
-            name="RowLocation",
-            type="Attribute"
-        )
-    )
-    padiscode: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PADISCode",
-            type="Attribute",
-            min_length=1.0,
-            max_length=99.0
-        )
-    )
-
-
-@dataclass
 class ChargesRules:
     """Fare Reference associated with the BookingRules.
 
     :ivar voluntary_changes:
     :ivar voluntary_refunds:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     voluntary_changes: List["ChargesRules.VoluntaryChanges"] = field(
         default_factory=list,
         metadata=dict(
@@ -7801,65 +9645,6 @@ class ChargesRules:
 
 
 @dataclass
-class ConjunctedTicketInfo:
-    """
-    :ivar number:
-    :ivar iatanumber:
-    :ivar ticket_issue_date:
-    :ivar ticketing_agent_sign_on:
-    :ivar country_code: Contains Ticketed PCC’s Country code.
-    :ivar status:
-    """
-    number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            required=True
-        )
-    )
-    iatanumber: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="IATANumber",
-            type="Attribute",
-            max_length=8.0
-        )
-    )
-    ticket_issue_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketIssueDate",
-            type="Attribute"
-        )
-    )
-    ticketing_agent_sign_on: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketingAgentSignOn",
-            type="Attribute",
-            max_length=8.0
-        )
-    )
-    country_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CountryCode",
-            type="Attribute",
-            length=2
-        )
-    )
-    status: Optional[TypeTicketStatus] = field(
-        default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute",
-            required=True
-        )
-    )
-
-
-@dataclass
 class Connection:
     """Flight Connection Information.
 
@@ -7874,6 +9659,9 @@ class Connection:
     :ivar flight_details_index: The sequential FlightDetails number that this connection information applies to.
     :ivar include_stop_over_to_fare_quote: The field determines to quote fares with or without stop overs,the values can be NoStopOver,StopOver and IgnoreSegment.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     fare_note: Optional[FareNote] = field(
         default=None,
         metadata=dict(
@@ -7937,7 +9725,7 @@ class Connection:
             type="Attribute"
         )
     )
-    include_stop_over_to_fare_quote: Optional[TypeIgnoreStopOver] = field(
+    include_stop_over_to_fare_quote: Optional[str] = field(
         default=None,
         metadata=dict(
             name="IncludeStopOverToFareQuote",
@@ -7972,7 +9760,10 @@ class Coupon:
     :ivar segment_group: Indicates the grouping in which this segment resides based on Origin/Destination pairs in itinerary
     :ivar marriage_group: Airline Marrraige group indicator
     """
-    el_stat: Optional[TypeElementStatus] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    el_stat: Optional[str] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -8140,27 +9931,40 @@ class Coupon:
 
 
 @dataclass
-class DestinationPurposeCode:
-    """This code is required to indicate destination and purpose of Travel. It is
-    applicable for Canada and Bermuda agency only. This is used by Worldspan.
+class DetailedBillingInformation:
+    """Container to send Detailed Billing Information for ticketing.
 
-    :ivar destination:
-    :ivar purpose:
+    :ivar form_of_payment_ref:
+    :ivar air_pricing_info_ref: Returns related air pricing infos.
+    :ivar billing_detail_item:
     """
-    destination: Optional[TypeDestinationCode] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    form_of_payment_ref: Optional[FormOfPaymentRef] = field(
         default=None,
         metadata=dict(
-            name="Destination",
-            type="Attribute",
-            required=True
+            name="FormOfPaymentRef",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
-    purpose: Optional[TypePurposeCode] = field(
-        default=None,
+    air_pricing_info_ref: List[AirPricingInfoRef] = field(
+        default_factory=list,
         metadata=dict(
-            name="Purpose",
-            type="Attribute",
-            required=True
+            name="AirPricingInfoRef",
+            type="Element",
+            min_occurs=1,
+            max_occurs=999
+        )
+    )
+    billing_detail_item: List[BillingDetailItem] = field(
+        default_factory=list,
+        metadata=dict(
+            name="BillingDetailItem",
+            type="Element",
+            min_occurs=1,
+            max_occurs=999
         )
     )
 
@@ -8171,6 +9975,9 @@ class Dimension(TypeUnitOfMeasure):
 
     :ivar type: Type denotes Length,Height,Width of a baggage.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -8189,6 +9996,9 @@ class DocumentOptions:
     :ivar suppress_itinerary_remarks: True when itinerary remarks are suppressed.
     :ivar generate_itin_numbers: True when itinerary numbers are system generated.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     passenger_receipt_override: Optional[PassengerReceiptOverride] = field(
         default=None,
         metadata=dict(
@@ -8223,170 +10033,75 @@ class DocumentOptions:
 
 
 @dataclass
-class Emd:
+class DocumentSelect:
+    """Allows an agency to select the documents to produce for the itinerary.
+
+    :ivar back_office_hand_off:
+    :ivar itinerary:
+    :ivar issue_ticket_only: Set to true to alter system default of itinerary,ticket and back office.
+    :ivar issue_electronic_ticket: Set to true for electronic tickets.
+    :ivar fax_indicator: Set to true for providing fax details.
     """
-    :ivar fulfillment_type: A one digit code specifying how the service must be fulfilled. See FulfillmentTypeDescription for the description of this value.
-    :ivar fulfillment_type_description: EMD description.
-    :ivar associated_item: The type of Optional Service. The choices are Flight, Ticket, Merchandising, Rule Buster, Allowance, Chargeable Baggage, Carry On Baggage Allowance, Prepaid Baggage. Provider: 1G, 1V, 1P, 1J
-    :ivar availability_charge_indicator: A one-letter code specifying whether the service is available or if there is a charge associated with it. X = Service not available F = No charge for service (free) and an EMD is not issued to reflect free service E = No charge for service (free) and an EMD is issued to reflect the free service. G = No charge for service (free), booking is not required and an EMD is not issued to reflect free service H = No charge for service (free), booking is not required, and an EMD is issued to reflect the free service. Blank = No application. Charges apply according to the data in the Service Fee fields.
-    :ivar refund_reissue_indicator: An attribute specifying whether the service is refundable or reissuable.
-    :ivar commissionable: True/False value to whether or not the service is comissionable.
-    :ivar mileage_indicator: True/False value to whether or not the service has miles.
-    :ivar location: 3 letter location code where the service will be availed.
-    :ivar date: The date at which the service will be used.
-    :ivar booking: Holds the booking description for the service, e.g., SSR.
-    :ivar display_category: Describes when the service should be displayed.
-    :ivar reusable: Identifies if the service can be re-used towards a future purchase.
-    """
-    fulfillment_type: Optional[int] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    back_office_hand_off: Optional[BackOfficeHandOff] = field(
         default=None,
         metadata=dict(
-            name="FulfillmentType",
-            type="Attribute",
-            min_inclusive=1.0,
-            max_inclusive=5.0
+            name="BackOfficeHandOff",
+            type="Element"
         )
     )
-    fulfillment_type_description: Optional[str] = field(
+    itinerary: Optional[Itinerary] = field(
         default=None,
         metadata=dict(
-            name="FulfillmentTypeDescription",
+            name="Itinerary",
+            type="Element"
+        )
+    )
+    issue_ticket_only: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="IssueTicketOnly",
             type="Attribute"
         )
     )
-    associated_item: Optional[str] = field(
+    issue_electronic_ticket: Optional[bool] = field(
         default=None,
         metadata=dict(
-            name="AssociatedItem",
+            name="IssueElectronicTicket",
             type="Attribute"
         )
     )
-    availability_charge_indicator: Optional[str] = field(
+    fax_indicator: Optional[bool] = field(
         default=None,
         metadata=dict(
-            name="AvailabilityChargeIndicator",
-            type="Attribute"
-        )
-    )
-    refund_reissue_indicator: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RefundReissueIndicator",
-            type="Attribute"
-        )
-    )
-    commissionable: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="Commissionable",
-            type="Attribute"
-        )
-    )
-    mileage_indicator: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="MileageIndicator",
-            type="Attribute"
-        )
-    )
-    location: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Location",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
-    )
-    date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Date",
-            type="Attribute"
-        )
-    )
-    booking: Optional[TypeBooking] = field(
-        default=None,
-        metadata=dict(
-            name="Booking",
-            type="Attribute"
-        )
-    )
-    display_category: Optional[TypeDisplayCategory] = field(
-        default=None,
-        metadata=dict(
-            name="DisplayCategory",
-            type="Attribute"
-        )
-    )
-    reusable: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="Reusable",
+            name="FaxIndicator",
             type="Attribute"
         )
     )
 
 
 @dataclass
-class Emdcommission:
-    """Commission information to be used for EMD issuance. Supported providers are
-    1V/1G/1P/1J.
-
-    :ivar type: Type of the commission applied.One of Amount/Percentage
-    :ivar value: Value of the commission applied for EMD issuance.Could represent amount or percentage depending on the type
-    :ivar currency_code: Currency of the commission amount applied.Applicable only with type - Amount
-    """
-    type: Optional[TypeAdjustmentType] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
-    )
-    value: Optional[float] = field(
-        default=None,
-        metadata=dict(
-            name="Value",
-            type="Attribute",
-            required=True
-        )
-    )
-    currency_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CurrencyCode",
-            type="Attribute",
-            length=3
-        )
-    )
-
-
-@dataclass
-class Emdcoupon:
-    """The coupon information for the EMD issued. Supported providers are
-    1G/1V/1P/1J.
+class Emdsummary:
+    """EMD summary information. Supported providers are 1G/1V/1P/1J.
 
     :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar number: Number of the EMD coupon
-    :ivar status: Status of the coupon. Possible values Open, Void, Refunded, Exchanged, Irregular Operations,Airport Control, Checked In, Flown/Used, Boarded/Lifted, Suspended, Unknown
-    :ivar svc_description: Description of the service related to the EMD Coupon
-    :ivar consumed_at_issuance_ind: Indicates if the EMD coupon has been considered used as soon as issued.
-    :ivar rfic: Reason For Issuance Code for the EMD coupon
-    :ivar rfisc: Reason For Issueance Sub code for the EMD coupon
-    :ivar rfidescription: Reason for Issueance Description for the EMD coupon
-    :ivar origin: Departure Airport Code for the flight with which the Coupon is associated
-    :ivar destination: Destination Airport Code for the flight with which the Coupon is associated
-    :ivar flight_number: Flight Number of the flight with which the coupon is associated.
-    :ivar present_to: Service provider to present the coupon to
-    :ivar present_at: Location of service provider where this coupon should be presented at
-    :ivar non_refundable_ind: Indicates whether the coupon is non-refundable
-    :ivar marketing_carrier: Marketing carrier associated with the coupon
+    :ivar number: EMD Number
+    :ivar primary_document_indicator: Indicates whether the EMD is a primary EMD.
+    :ivar in_conjunction_with: Returns the number of the Primary EMD, if this EMD is a conjunctive EMD
+    :ivar associated_ticket_number: This number indicates the e-Ticket number associated with this EMD
+    :ivar plating_carrier: Plating carrier code for which this EMD is issued
+    :ivar issue_date: Issue Date for this EMD
+    :ivar emdcoupon: The coupon information for the EMD issued.
     :ivar key: System generated Key
     """
-    el_stat: Optional[TypeElementStatus] = field(
+    class Meta:
+        name = "EMDSummary"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    el_stat: Optional[str] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -8400,118 +10115,165 @@ class Emdcoupon:
             type="Attribute"
         )
     )
-    number: Optional[int] = field(
+    number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="Number",
             type="Attribute",
-            required=True
+            required=True,
+            length=13
+        )
+    )
+    primary_document_indicator: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="PrimaryDocumentIndicator",
+            type="Attribute"
+        )
+    )
+    in_conjunction_with: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="InConjunctionWith",
+            type="Attribute",
+            length=13
+        )
+    )
+    associated_ticket_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AssociatedTicketNumber",
+            type="Attribute",
+            length=13
+        )
+    )
+    plating_carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PlatingCarrier",
+            type="Attribute",
+            length=2
+        )
+    )
+    issue_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="IssueDate",
+            type="Attribute"
+        )
+    )
+    emdcoupon: List[Emdcoupon] = field(
+        default_factory=list,
+        metadata=dict(
+            name="EMDCoupon",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
+class ElectronicMiscDocument:
+    """Electronic miscellaneous document. Supported providers are 1G/1V/1P/1J.
+
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar number: EMD Number
+    :ivar primary_document_indicator: Indicates whether the EMD is a primary EMD.
+    :ivar in_conjunction_with: Returns the number of the Primary EMD, if this EMD is a conjunctive EMD
+    :ivar associated_ticket_number: This number indicates the e-Ticket number associated with this EMD
+    :ivar plating_carrier: Plating carrier code for which this EMD is issued
+    :ivar issue_date: Issue Date for this EMD
+    :ivar emdcoupon: The coupon information for the EMD issued.
+    :ivar status: Status of the EMD calculated on the basis of coupon status. Possible values Open, Void, Refunded, Exchanged, Irregular Operations,Airport Control, Checked In, Flown/Used, Boarded/Lifted, Suspended, Unknown
+    :ivar key: System generated Key
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Number",
+            type="Attribute",
+            required=True,
+            length=13
+        )
+    )
+    primary_document_indicator: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="PrimaryDocumentIndicator",
+            type="Attribute"
+        )
+    )
+    in_conjunction_with: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="InConjunctionWith",
+            type="Attribute",
+            length=13
+        )
+    )
+    associated_ticket_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AssociatedTicketNumber",
+            type="Attribute",
+            length=13
+        )
+    )
+    plating_carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PlatingCarrier",
+            type="Attribute",
+            length=2
+        )
+    )
+    issue_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="IssueDate",
+            type="Attribute"
+        )
+    )
+    emdcoupon: List[Emdcoupon] = field(
+        default_factory=list,
+        metadata=dict(
+            name="EMDCoupon",
+            type="Element",
+            min_occurs=1,
+            max_occurs=999
         )
     )
     status: Optional[str] = field(
         default=None,
         metadata=dict(
             name="Status",
-            type="Attribute",
-            required=True
-        )
-    )
-    svc_description: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SvcDescription",
             type="Attribute"
-        )
-    )
-    consumed_at_issuance_ind: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="ConsumedAtIssuanceInd",
-            type="Attribute"
-        )
-    )
-    rfic: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RFIC",
-            type="Attribute",
-            required=True,
-            length=1
-        )
-    )
-    rfisc: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RFISC",
-            type="Attribute"
-        )
-    )
-    rfidescription: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RFIDescription",
-            type="Attribute",
-            min_length=1.0,
-            max_length=86.0
-        )
-    )
-    origin: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Origin",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
-    )
-    destination: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Destination",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
-    )
-    flight_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FlightNumber",
-            type="Attribute",
-            max_length=5.0
-        )
-    )
-    present_to: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PresentTo",
-            type="Attribute",
-            min_length=1.0,
-            max_length=71.0
-        )
-    )
-    present_at: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PresentAt",
-            type="Attribute",
-            min_length=1.0,
-            max_length=71.0
-        )
-    )
-    non_refundable_ind: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="NonRefundableInd",
-            type="Attribute"
-        )
-    )
-    marketing_carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="MarketingCarrier",
-            type="Attribute",
-            length=2
         )
     )
     key: Optional[str] = field(
@@ -8529,6 +10291,9 @@ class EmbargoList:
 
     :ivar embargo:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     embargo: List[Embargo] = field(
         default_factory=list,
         metadata=dict(
@@ -8548,6 +10313,9 @@ class ExchangePenaltyInfo:
     :ivar minimum_change_fee: Minimum change fee for changes to the itinerary.
     :ivar maximum_change_fee: Maximum change fee for changes to the itinerary.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     penalty_information: List[PenaltyInformation] = field(
         default_factory=list,
         metadata=dict(
@@ -8591,6 +10359,9 @@ class FareDetails:
     :ivar passenger_detail_ref: PassengerRef key
     :ivar fare_basis: The fare basis code for this fare
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     fare_ticket_designator: Optional[FareTicketDesignator] = field(
         default=None,
         metadata=dict(
@@ -8626,35 +10397,14 @@ class FareDetails:
 
 
 @dataclass
-class FareGuaranteeInfo:
-    """The information related to fare guarantee details.
-
-    :ivar guarantee_date: The date till which the fare is guaranteed.
-    :ivar guarantee_type: Determines the status of a fare for a passenger.
-    """
-    guarantee_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="GuaranteeDate",
-            type="Attribute"
-        )
-    )
-    guarantee_type: Optional[TypeFareGuarantee] = field(
-        default=None,
-        metadata=dict(
-            name="GuaranteeType",
-            type="Attribute",
-            required=True
-        )
-    )
-
-
-@dataclass
 class FareNoteList:
     """The shared object list of Notes.
 
     :ivar fare_note:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     fare_note: List[FareNote] = field(
         default_factory=list,
         metadata=dict(
@@ -8674,6 +10424,9 @@ class FareRemark:
     :ivar key:
     :ivar name:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     text: List[str] = field(
         default_factory=list,
         metadata=dict(
@@ -8709,121 +10462,56 @@ class FareRemark:
 
 
 @dataclass
-class FareRestrictionDate:
-    """Fare restriction based on date ranges. StartDate and EndDate are strings
-    representing respective dates. If a year component is present then it signifies
-    an exact date. If only day and month components are present then it signifies a
-    seasonal date, which means applicable for that date in any year.
+class FareRestriction:
+    """Fare Restriction.
 
-    :ivar direction:
-    :ivar start_date:
-    :ivar end_date:
-    :ivar end_date_indicator: This field indicates the end date/last date for which travel on the fare component being validated must be commenced or completed
+    :ivar fare_restriction_days_of_week:
+    :ivar fare_restriction_date:
+    :ivar fare_restriction_sale_date:
+    :ivar fare_restriction_seasonal:
+    :ivar fare_restrictiontype:
     """
-    direction: Optional[TypeFareDirectionality] = field(
-        default=None,
-        metadata=dict(
-            name="Direction",
-            type="Attribute"
-        )
-    )
-    start_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="StartDate",
-            type="Attribute"
-        )
-    )
-    end_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="EndDate",
-            type="Attribute"
-        )
-    )
-    end_date_indicator: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="EndDateIndicator",
-            type="Attribute"
-        )
-    )
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
-
-@dataclass
-class FareRestrictionDaysOfWeek:
-    """Days of the week that the restriction applies too.
-
-    :ivar direction:
-    :ivar trip_type:
-    :ivar monday:
-    :ivar tuesday:
-    :ivar wednesday:
-    :ivar thursday:
-    :ivar friday:
-    :ivar saturday:
-    :ivar sunday:
-    """
-    direction: Optional[TypeFareDirectionality] = field(
-        default=None,
+    fare_restriction_days_of_week: List[FareRestrictionDaysOfWeek] = field(
+        default_factory=list,
         metadata=dict(
-            name="Direction",
-            type="Attribute"
+            name="FareRestrictionDaysOfWeek",
+            type="Element",
+            min_occurs=0,
+            max_occurs=3
         )
     )
-    trip_type: Optional[TypeFareTripType] = field(
-        default=None,
+    fare_restriction_date: List[FareRestrictionDate] = field(
+        default_factory=list,
         metadata=dict(
-            name="TripType",
-            type="Attribute"
+            name="FareRestrictionDate",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
         )
     )
-    monday: Optional[bool] = field(
+    fare_restriction_sale_date: Optional[FareRestrictionSaleDate] = field(
         default=None,
         metadata=dict(
-            name="Monday",
-            type="Attribute"
+            name="FareRestrictionSaleDate",
+            type="Element"
         )
     )
-    tuesday: Optional[bool] = field(
-        default=None,
+    fare_restriction_seasonal: List[FareRestrictionSeasonal] = field(
+        default_factory=list,
         metadata=dict(
-            name="Tuesday",
-            type="Attribute"
+            name="FareRestrictionSeasonal",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
         )
     )
-    wednesday: Optional[bool] = field(
+    fare_restrictiontype: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="Wednesday",
-            type="Attribute"
-        )
-    )
-    thursday: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="Thursday",
-            type="Attribute"
-        )
-    )
-    friday: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="Friday",
-            type="Attribute"
-        )
-    )
-    saturday: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="Saturday",
-            type="Attribute"
-        )
-    )
-    sunday: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="Sunday",
+            name="FareRestrictiontype",
             type="Attribute"
         )
     )
@@ -8844,6 +10532,9 @@ class FareRuleLookup:
     :ivar departure_date:
     :ivar ticketing_date:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     account_code: Optional[AccountCode] = field(
         default=None,
         metadata=dict(
@@ -8931,6 +10622,9 @@ class FareRuleShort:
     :ivar category:
     :ivar table_number:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     fare_rule_name_value: List[FareRuleNameValue] = field(
         default_factory=list,
         metadata=dict(
@@ -8964,6 +10658,9 @@ class FareStatus:
     :ivar fare_status_failure_info:
     :ivar code: The status of the fare.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     fare_status_failure_info: Optional[FareStatusFailureInfo] = field(
         default=None,
         metadata=dict(
@@ -8971,7 +10668,7 @@ class FareStatus:
             type="Element"
         )
     )
-    code: Optional[TypeFareStatusCode] = field(
+    code: Optional[str] = field(
         default=None,
         metadata=dict(
             name="Code",
@@ -8982,75 +10679,164 @@ class FareStatus:
 
 
 @dataclass
-class FareSurcharge:
-    """Surcharges for a fare component.
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar key:
-    :ivar type:
-    :ivar amount:
-    :ivar segment_ref:
-    :ivar coupon_ref: The coupon to which that surcharge is relative (if applicable)
-    """
-    el_stat: Optional[TypeElementStatus] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-    type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
-    )
-    amount: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            required=True
-        )
-    )
-    segment_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SegmentRef",
-            type="Attribute"
-        )
-    )
-    coupon_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CouponRef",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
 class FeeInfo(TypeFeeInfo):
     """A generic type of fee for those charges which are incurred by the passenger,
     but not necessarily shown on tickets."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+
+
+@dataclass
+class FlightInfoDetail:
+    """
+    :ivar codeshare_info:
+    :ivar meals:
+    :ivar in_flight_services:
+    :ivar variance:
+    :ivar origin: The IATA location code for this origination of this entity.
+    :ivar destination: The IATA location code for this destination of this entity.
+    :ivar scheduled_departure_time: The date and time at which this entity is scheduled to depart. This does not include time zone information since it can be derived from the origin location.
+    :ivar scheduled_arrival_time: The date and time at which this entity is scheduled to arrive at the destination. This does not include time zone information since it can be derived from the origin location.
+    :ivar travel_time: Total time spent (minutes) traveling including flight time and ground time.
+    :ivar eticketability: Identifies if this particular segment is E-Ticketable
+    :ivar equipment:
+    :ivar origin_terminal:
+    :ivar origin_gate: To be used to display origin flight gate number
+    :ivar destination_terminal:
+    :ivar destination_gate: To be used to display destination flight gate number
+    :ivar automated_checkin: “True” indicates that the flight allows automated check-in. The default is “False”.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    codeshare_info: Optional[CodeshareInfo] = field(
+        default=None,
+        metadata=dict(
+            name="CodeshareInfo",
+            type="Element"
+        )
+    )
+    meals: List[Meals] = field(
+        default_factory=list,
+        metadata=dict(
+            name="Meals",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    in_flight_services: List[InFlightServices] = field(
+        default_factory=list,
+        metadata=dict(
+            name="InFlightServices",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    variance: List[Variance] = field(
+        default_factory=list,
+        metadata=dict(
+            name="Variance",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    origin: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Origin",
+            type="Attribute",
+            required=True,
+            length=3,
+            white_space="collapse"
+        )
+    )
+    destination: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Destination",
+            type="Attribute",
+            required=True,
+            length=3,
+            white_space="collapse"
+        )
+    )
+    scheduled_departure_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ScheduledDepartureTime",
+            type="Attribute"
+        )
+    )
+    scheduled_arrival_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ScheduledArrivalTime",
+            type="Attribute"
+        )
+    )
+    travel_time: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="TravelTime",
+            type="Attribute"
+        )
+    )
+    eticketability: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ETicketability",
+            type="Attribute"
+        )
+    )
+    equipment: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Equipment",
+            type="Attribute",
+            length=3
+        )
+    )
+    origin_terminal: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="OriginTerminal",
+            type="Attribute"
+        )
+    )
+    origin_gate: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="OriginGate",
+            type="Attribute",
+            max_length=6.0
+        )
+    )
+    destination_terminal: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DestinationTerminal",
+            type="Attribute"
+        )
+    )
+    destination_gate: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DestinationGate",
+            type="Attribute",
+            max_length=6.0
+        )
+    )
+    automated_checkin: bool = field(
+        default=False,
+        metadata=dict(
+            name="AutomatedCheckin",
+            type="Attribute"
+        )
+    )
 
 
 @dataclass
@@ -9058,6 +10844,9 @@ class GroupedOptionInfo:
     """
     :ivar grouped_option:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     grouped_option: List[GroupedOption] = field(
         default_factory=list,
         metadata=dict(
@@ -9075,6 +10864,9 @@ class HostTokenList:
 
     :ivar host_token:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     host_token: List[HostToken] = field(
         default_factory=list,
         metadata=dict(
@@ -9088,36 +10880,14 @@ class HostTokenList:
 
 
 @dataclass
-class IncludeAddlBookingCodeInfo:
-    """Used to include primary or secondary carrier's booking code details.
-
-    :ivar type: The type defines that the booking code info is for primary or secondary carrier.
-    :ivar secondary_carrier: The secondary carrier code is required when type is secondary .
-    """
-    type: Optional[TypeCarrierCode] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
-    )
-    secondary_carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SecondaryCarrier",
-            type="Attribute",
-            length=2
-        )
-    )
-
-
-@dataclass
 class InvoluntaryChange:
     """Specify the Ticket Endorsement value.
 
     :ivar ticket_endorsement:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     ticket_endorsement: Optional[TicketEndorsement] = field(
         default=None,
         metadata=dict(
@@ -9129,32 +10899,63 @@ class InvoluntaryChange:
 
 
 @dataclass
-class Itinerary:
-    """Allows an agency to select the itinenary option for ticket.
+class IssuanceModifiers:
+    """General modifiers supported for EMD Issuance.Supported providers are
+    1V/1G/1P/1J.
 
-    :ivar type: Specifies the type of itinenary option for ticket like Invoice type or Pocket itinenary.
-    :ivar option: Specifies the itinerary option like NoFare,NoAmount.
-    :ivar separate_indicator: Set to true if one itinerary to be printed per passenger.
+    :ivar form_of_payment_ref: Reference to FormOfPayment present in the UR to be used for EMD issuance.
+    :ivar form_of_payment: FormOfPayment information to be used for EMD issuance.
+    :ivar customer_receipt_info: Information about customer receipt via email.
+    :ivar emdendorsement: Endorsement details to be used during EMD issuance.
+    :ivar emdcommission: Commission information to be used for EMD issuance.
+    :ivar plating_carrier: Plating carrier code for which this EMD is issued.
     """
-    type: Optional[TypeItinerary] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    form_of_payment_ref: Optional[FormOfPaymentRef] = field(
         default=None,
         metadata=dict(
-            name="Type",
-            type="Attribute"
+            name="FormOfPaymentRef",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
-    option: Optional[TypeItineraryOption] = field(
+    form_of_payment: Optional[FormOfPayment] = field(
         default=None,
         metadata=dict(
-            name="Option",
-            type="Attribute"
+            name="FormOfPayment",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
-    separate_indicator: Optional[bool] = field(
+    customer_receipt_info: Optional[CustomerReceiptInfo] = field(
         default=None,
         metadata=dict(
-            name="SeparateIndicator",
-            type="Attribute"
+            name="CustomerReceiptInfo",
+            type="Element"
+        )
+    )
+    emdendorsement: Optional[Emdendorsement] = field(
+        default=None,
+        metadata=dict(
+            name="EMDEndorsement",
+            type="Element"
+        )
+    )
+    emdcommission: Optional[Emdcommission] = field(
+        default=None,
+        metadata=dict(
+            name="EMDCommission",
+            type="Element"
+        )
+    )
+    plating_carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PlatingCarrier",
+            type="Attribute",
+            length=2
         )
     )
 
@@ -9166,6 +10967,9 @@ class Journey:
     :ivar air_segment_ref:
     :ivar travel_time: Total traveling time that is difference between the departure time of the first segment and the arrival time of the last segments for that particular entire set of connection.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment_ref: List[AirSegmentRef] = field(
         default_factory=list,
         metadata=dict(
@@ -9195,6 +10999,9 @@ class LandCharges:
     :ivar pre_paid:
     :ivar deposit:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     tax: List[Tax] = field(
         default_factory=list,
         metadata=dict(
@@ -9251,6 +11058,9 @@ class Leg:
     :ivar origin: Returns the origin airport or city code for the leg.
     :ivar destination: Returns the destination airport or city code for the leg.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     leg_detail: List[LegDetail] = field(
         default_factory=list,
         metadata=dict(
@@ -9309,6 +11119,9 @@ class LegPrice:
     :ivar total_price: The Total Prices for the Combination of Journey legs for this Price.
     :ivar approximate_total_price: The Converted Total Price in Agency's Default Currency Value
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     leg_detail: List[LegDetail] = field(
         default_factory=list,
         metadata=dict(
@@ -9344,77 +11157,13 @@ class LegPrice:
 
 
 @dataclass
-class ManualFareAdjustment:
-    """
-    :ivar applied_on: Represents pricing component upon which manual increment/discount to be applied. Presently supported values are Base and Total. Other is present as a future place holder but presently no request processing logic is available for value Other
-    :ivar adjustment_type: Represents process used for applying manual discount/increment. Presently supported values are Flat, Percentage.
-    :ivar value: Represents value of increment/discount applied. Negative value is considered as discount whereas positive value represents increment
-    :ivar passenger_ref: Represents passenger association.
-    :ivar ticket_designator: Providers: 1p/1j
-    :ivar fare_type: Providers: 1p/1j
-    """
-    applied_on: Optional[TypeAdjustmentTarget] = field(
-        default=None,
-        metadata=dict(
-            name="AppliedOn",
-            type="Attribute",
-            required=True
-        )
-    )
-    adjustment_type: Optional[TypeAdjustmentType] = field(
-        default=None,
-        metadata=dict(
-            name="AdjustmentType",
-            type="Attribute",
-            required=True
-        )
-    )
-    value: Optional[float] = field(
-        default=None,
-        metadata=dict(
-            name="Value",
-            type="Attribute",
-            required=True
-        )
-    )
-    passenger_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PassengerRef",
-            type="Attribute"
-        )
-    )
-    ticket_designator: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketDesignator",
-            type="Attribute",
-            min_length=0.0,
-            max_length=20.0
-        )
-    )
-    fare_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FareType",
-            type="Attribute",
-            min_length=1.0,
-            max_length=5.0
-        )
-    )
-
-
-@dataclass
-class Meals(TypeMealService):
-    """Available Meal Service."""
-    pass
-
-
-@dataclass
 class MerchandisingPricingModifiers:
     """
     :ivar account_code: The account code is used to get corporate discounted pricing on paid seats. Provider:ACH
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     account_code: List[AccountCode] = field(
         default_factory=list,
         metadata=dict(
@@ -9433,6 +11182,9 @@ class OptionalServiceModifiers:
 
     :ivar optional_service_modifier:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     optional_service_modifier: List[OptionalServiceModifier] = field(
         default_factory=list,
         metadata=dict(
@@ -9445,75 +11197,6 @@ class OptionalServiceModifiers:
 
 
 @dataclass
-class OriginalItineraryDetails:
-    """Used for rapid reprice to provide additional information about the original
-    itinerary. Providers: 1G/1V/1P/1S/1A.
-
-    :ivar itinerary_type: Values allowed are International or Domestic. This tells if the itinerary is international or domestic.
-    :ivar bulk_ticket: Set to true and the itinerary is/will be a bulk ticket. Set to false and the itinerary being repriced will not be a bulk ticket. Default is false.
-    :ivar ticketing_pcc: This is the PCC or SID where the ticket was issued
-    :ivar ticketing_iata: This is the IATA where the ticket was issued.
-    :ivar ticketing_country: This is the country where the ticket was issued.
-    :ivar tour_code:
-    :ivar ticketing_date: The date the repriced itinerary was ticketed
-    """
-    itinerary_type: Optional[TypeItineraryCode] = field(
-        default=None,
-        metadata=dict(
-            name="ItineraryType",
-            type="Attribute"
-        )
-    )
-    bulk_ticket: bool = field(
-        default=False,
-        metadata=dict(
-            name="BulkTicket",
-            type="Attribute"
-        )
-    )
-    ticketing_pcc: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketingPCC",
-            type="Attribute",
-            min_length=2.0,
-            max_length=10.0
-        )
-    )
-    ticketing_iata: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketingIATA",
-            type="Attribute",
-            max_length=8.0
-        )
-    )
-    ticketing_country: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketingCountry",
-            type="Attribute",
-            length=2
-        )
-    )
-    tour_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TourCode",
-            type="Attribute",
-            max_length=15.0
-        )
-    )
-    ticketing_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketingDate",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
 class Pcc:
     """Specify pseudo City.
 
@@ -9521,6 +11204,10 @@ class Pcc:
     :ivar point_of_sale:
     :ivar ticket_agency:
     """
+    class Meta:
+        name = "PCC"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     override_pcc: Optional[OverridePcc] = field(
         default=None,
         metadata=dict(
@@ -9557,6 +11244,9 @@ class PassengerDetails:
     :ivar code: Passenger code
     :ivar age: Passenger age
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     loyalty_card_details: List[LoyaltyCardDetails] = field(
         default_factory=list,
         metadata=dict(
@@ -9594,11 +11284,32 @@ class PassengerDetails:
 
 
 @dataclass
+class PassengerType(TypePassengerType):
+    """The passenger type details associated to a fare.
+
+    :ivar fare_guarantee_info:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    fare_guarantee_info: Optional[FareGuaranteeInfo] = field(
+        default=None,
+        metadata=dict(
+            name="FareGuaranteeInfo",
+            type="Element"
+        )
+    )
+
+
+@dataclass
 class PenaltyFareInformation:
     """
     :ivar penalty_info: Penalty Limit if requested.
     :ivar prohibit_penalty_fares: Indicates whether user wants penalty fares to be returned.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     penalty_info: Optional[TypeFarePenalty] = field(
         default=None,
         metadata=dict(
@@ -9621,6 +11332,9 @@ class PermittedCabins:
     """
     :ivar cabin_class:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     cabin_class: List[CabinClass] = field(
         default_factory=list,
         metadata=dict(
@@ -9638,6 +11352,9 @@ class PermittedCarriers:
     """
     :ivar carrier:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     carrier: List[Carrier] = field(
         default_factory=list,
         metadata=dict(
@@ -9652,7 +11369,9 @@ class PermittedCarriers:
 
 @dataclass
 class PocketItineraryRemark(TypeAssociatedRemarkWithSegmentRef):
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
@@ -9663,6 +11382,9 @@ class PrePayId:
     :ivar id: This is the exact pre pay number. Example flight pass number
     :ivar type: Type of pre pay unique identifier,presently only available value is FlightPass.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     company_name: Optional[CompanyName] = field(
         default=None,
         metadata=dict(
@@ -9695,6 +11417,9 @@ class PreferredBookingCodes:
 
     :ivar booking_code:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     booking_code: List[BookingCode] = field(
         default_factory=list,
         metadata=dict(
@@ -9711,6 +11436,9 @@ class PreferredCabins:
     """
     :ivar cabin_class:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     cabin_class: Optional[CabinClass] = field(
         default=None,
         metadata=dict(
@@ -9727,6 +11455,9 @@ class PreferredCarriers:
     """
     :ivar carrier:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     carrier: List[Carrier] = field(
         default_factory=list,
         metadata=dict(
@@ -9740,168 +11471,13 @@ class PreferredCarriers:
 
 
 @dataclass
-class PricingDetails:
-    """Used for rapid reprice. This is a response element. Additional information
-    about how pricing was obtain, messages, etc. Providers: 1G/1V/1P/1S/1A.
-
-    :ivar advisory_message: Advisory messages returned from the host.
-    :ivar endorsement_text: Endorsement text returned from the host.
-    :ivar waiver_text: Waiver text returned from the host.
-    :ivar low_fare_pricing: This tells if Low Fare Finder was used.
-    :ivar low_fare_found: This tells if the lowest fare was found.
-    :ivar penalty_applies: This tells if penalties apply.
-    :ivar discount_applies: This tells if a discount applies.
-    :ivar itinerary_type: Values allowed are International or Domestic. This tells if the itinerary is international or domestic.
-    :ivar validating_vendor_code: The vendor code of the validating carrier.
-    :ivar for_ticketing_on_date: The ticketing date of the itinerary.
-    :ivar last_date_to_ticket: The last date to issue the ticket.
-    :ivar form_of_refund: How the refund will be issued. Values will be MCO or FormOfPayment
-    :ivar account_code:
-    :ivar bankers_selling_rate: The selling rate at time of quote.
-    :ivar pricing_type: Ties with the RepricingModifiers sent in the request and tells how the itinerary was priced.
-    :ivar conversion_rate: The conversion rate at the time of quote.
-    :ivar rate_of_exchange: The exchange rate at time of quote.
-    :ivar original_ticket_currency: The currency of the original ticket.
-    """
-    advisory_message: List[str] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AdvisoryMessage",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    endorsement_text: List[str] = field(
-        default_factory=list,
-        metadata=dict(
-            name="EndorsementText",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    waiver_text: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="WaiverText",
-            type="Element"
-        )
-    )
-    low_fare_pricing: bool = field(
-        default=False,
-        metadata=dict(
-            name="LowFarePricing",
-            type="Attribute"
-        )
-    )
-    low_fare_found: bool = field(
-        default=False,
-        metadata=dict(
-            name="LowFareFound",
-            type="Attribute"
-        )
-    )
-    penalty_applies: bool = field(
-        default=False,
-        metadata=dict(
-            name="PenaltyApplies",
-            type="Attribute"
-        )
-    )
-    discount_applies: bool = field(
-        default=False,
-        metadata=dict(
-            name="DiscountApplies",
-            type="Attribute"
-        )
-    )
-    itinerary_type: Optional[TypeItineraryCode] = field(
-        default=None,
-        metadata=dict(
-            name="ItineraryType",
-            type="Attribute"
-        )
-    )
-    validating_vendor_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ValidatingVendorCode",
-            type="Attribute",
-            length=2
-        )
-    )
-    for_ticketing_on_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ForTicketingOnDate",
-            type="Attribute"
-        )
-    )
-    last_date_to_ticket: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="LastDateToTicket",
-            type="Attribute"
-        )
-    )
-    form_of_refund: Optional[TypeFormOfRefund] = field(
-        default=None,
-        metadata=dict(
-            name="FormOfRefund",
-            type="Attribute"
-        )
-    )
-    account_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AccountCode",
-            type="Attribute"
-        )
-    )
-    bankers_selling_rate: Optional[float] = field(
-        default=None,
-        metadata=dict(
-            name="BankersSellingRate",
-            type="Attribute"
-        )
-    )
-    pricing_type: Optional[TypePricingType] = field(
-        default=None,
-        metadata=dict(
-            name="PricingType",
-            type="Attribute"
-        )
-    )
-    conversion_rate: Optional[float] = field(
-        default=None,
-        metadata=dict(
-            name="ConversionRate",
-            type="Attribute"
-        )
-    )
-    rate_of_exchange: Optional[float] = field(
-        default=None,
-        metadata=dict(
-            name="RateOfExchange",
-            type="Attribute"
-        )
-    )
-    original_ticket_currency: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="OriginalTicketCurrency",
-            type="Attribute",
-            length=3
-        )
-    )
-
-
-@dataclass
 class ProhibitedCabins:
     """
     :ivar cabin_class:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     cabin_class: List[CabinClass] = field(
         default_factory=list,
         metadata=dict(
@@ -9919,6 +11495,9 @@ class ProhibitedCarriers:
     """
     :ivar carrier:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     carrier: List[Carrier] = field(
         default_factory=list,
         metadata=dict(
@@ -9936,30 +11515,16 @@ class RefundFailureInfo:
     """Will be optionally returned as part of AirRefunTicketingRsp if one or all
     ticket refund requests fail.
 
-    :ivar booking_traveler_ref:
-    :ivar tcrnumber: The identifying number for a Ticketless Air Reservation.
     :ivar ticket_number:
     :ivar name:
+    :ivar tcrnumber: The identifying number for a Ticketless Air Reservation.
+    :ivar booking_traveler_ref:
     :ivar code:
     :ivar message:
     """
-    booking_traveler_ref: List[str] = field(
-        default_factory=list,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=1,
-            max_occurs=999
-        )
-    )
-    tcrnumber: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TCRNumber",
-            type="Element"
-        )
-    )
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     ticket_number: Optional[TicketNumber] = field(
         default=None,
         metadata=dict(
@@ -9974,7 +11539,24 @@ class RefundFailureInfo:
         metadata=dict(
             name="Name",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             required=True
+        )
+    )
+    tcrnumber: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TCRNumber",
+            type="Element"
+        )
+    )
+    booking_traveler_ref: List[str] = field(
+        default_factory=list,
+        metadata=dict(
+            name="BookingTravelerRef",
+            type="Element",
+            min_occurs=1,
+            max_occurs=999
         )
     )
     code: Optional[int] = field(
@@ -10004,6 +11586,9 @@ class RelatedTraveler:
     :ivar status_code: Traveler status code(One of Marked for deletion,Lapsed,Terminated,Active,Inactive)
     :ivar relation: Relation to the pre pay id. Example flight pass user
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     loyalty_card: List[LoyaltyCard] = field(
         default_factory=list,
         metadata=dict(
@@ -10067,52 +11652,27 @@ class RelatedTraveler:
 
 
 @dataclass
-class RuleAdvancedPurchase:
-    """Container for rules regarding advance purchase restrictions.
-    TicketingEarliestDate and TicketingLatestDate are strings representing
-    respective dates. If a year component is present then it signifies an exact
-    date. If only day and month components are present then it signifies a seasonal
-    date, which means applicable for that date in any year.
+class RuleLengthOfStay:
+    """Container for rules providing minimum and maximum stay requirements.
 
-    :ivar reservation_latest_period:
-    :ivar reservation_latest_unit:
-    :ivar ticketing_earliest_date:
-    :ivar ticketing_latest_date:
-    :ivar more_rules_present: If true, specifies that advance purchase information will be present in fare rules.
+    :ivar minimum_stay:
+    :ivar maximum_stay:
     """
-    reservation_latest_period: Optional[str] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    minimum_stay: Optional[TypeRestrictionLengthOfStay] = field(
         default=None,
         metadata=dict(
-            name="ReservationLatestPeriod",
-            type="Attribute"
+            name="MinimumStay",
+            type="Element"
         )
     )
-    reservation_latest_unit: Optional[TypeStayUnit] = field(
+    maximum_stay: Optional[TypeRestrictionLengthOfStay] = field(
         default=None,
         metadata=dict(
-            name="ReservationLatestUnit",
-            type="Attribute"
-        )
-    )
-    ticketing_earliest_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketingEarliestDate",
-            type="Attribute"
-        )
-    )
-    ticketing_latest_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketingLatestDate",
-            type="Attribute"
-        )
-    )
-    more_rules_present: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="MoreRulesPresent",
-            type="Attribute"
+            name="MaximumStay",
+            type="Element"
         )
     )
 
@@ -10123,6 +11683,9 @@ class SearchTraveler(TypePassengerType):
     :ivar air_seat_assignment:
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_seat_assignment: List[AirSeatAssignment] = field(
         default_factory=list,
         metadata=dict(
@@ -10156,6 +11719,9 @@ class SegmentSelect:
     :ivar all_vehicle: Set to true to consider all Vehicle reservations as Auxiliary segment and false to discard all Vehicle reservations
     :ivar all_passive: Set to true to consider all Passive segments as Auxiliary segment and false to discard passive segments
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment_ref: List[TypeSegmentRef] = field(
         default_factory=list,
         metadata=dict(
@@ -10239,6 +11805,9 @@ class SelectionModifiers:
     :ivar supplier_code: Supplier/Vendor code for which EMDs will be generated on all the associated services. Required if PNR contains more than one supplier.
     :ivar rfic: Reason for issuance code for which EMDs will be generated on all the associated services.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment_ref: List[AirSegmentRef] = field(
         default_factory=list,
         metadata=dict(
@@ -10253,7 +11822,6 @@ class SelectionModifiers:
         metadata=dict(
             name="SvcSegmentRef",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -10281,6 +11849,9 @@ class ServiceAssociations:
     """
     :ivar applicable_segment: Applicable air segment associated with this brand.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     applicable_segment: List["ServiceAssociations.ApplicableSegment"] = field(
         default_factory=list,
         metadata=dict(
@@ -10329,6 +11900,9 @@ class ServiceGroup:
     :ivar service_sub_group:
     :ivar code: The Service Group Code of the Ancillary Service. Providers: 1G, 1V, 1P, 1J, ACH
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     service_sub_group: List[ServiceSubGroup] = field(
         default_factory=list,
         metadata=dict(
@@ -10364,6 +11938,9 @@ class SolutionGroup:
     :ivar tag: An arbitrary name for this group of solutions. Will be returned with the solution for idetification.
     :ivar primary: Indicates that this is a primary SolutionGroup when using alternate pricing concepts
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     permitted_account_codes: Optional["SolutionGroup.PermittedAccountCodes"] = field(
         default=None,
         metadata=dict(
@@ -10406,7 +11983,7 @@ class SolutionGroup:
             type="Attribute"
         )
     )
-    trip_type: Optional[TypeTripType] = field(
+    trip_type: Optional[str] = field(
         default=None,
         metadata=dict(
             name="TripType",
@@ -10414,7 +11991,7 @@ class SolutionGroup:
             required=True
         )
     )
-    diversification: Optional[TypeDiversity] = field(
+    diversification: Optional[str] = field(
         default=None,
         metadata=dict(
             name="Diversification",
@@ -10527,6 +12104,9 @@ class SpecificTimeTable:
     :ivar carrier:
     :ivar flight_number:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     flight_origin: Optional["SpecificTimeTable.FlightOrigin"] = field(
         default=None,
         metadata=dict(
@@ -10600,50 +12180,11 @@ class SpecificTimeTable:
 
 
 @dataclass
-class Tcrinfo:
-    """
-    :ivar status:
-    :ivar date:
-    :ivar tcrnumber: The identifying number for a Ticketless Air Reservation.
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    """
-    status: Optional[TypeTcrstatus] = field(
-        default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute",
-            required=True
-        )
-    )
-    date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Date",
-            type="Attribute"
-        )
-    )
-    tcrnumber: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TCRNumber",
-            type="Attribute",
-            required=True
-        )
-    )
-    provider_reservation_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute",
-            required=True
-        )
-    )
-
-
-@dataclass
 class TaxInfo(TypeTaxInfo):
     """The tax information for a."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
@@ -10653,6 +12194,9 @@ class TermConditions:
     :ivar language_option:
     :ivar include_term_conditions: Specifies whether Term and Conditions included in the Fax or not .
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     language_option: List[LanguageOption] = field(
         default_factory=list,
         metadata=dict(
@@ -10676,7 +12220,9 @@ class TermConditions:
 class Text(TypeTextElement):
     """Type of Text, Eg-'Upsell','Marketing Agent','Marketing
     Consumer','Strapline','Rule'."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
@@ -10691,6 +12237,9 @@ class TicketFailureInfo:
     :ivar message:
     :ivar booking_traveler_ref:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_pricing_info_ref: List[AirPricingInfoRef] = field(
         default_factory=list,
         metadata=dict(
@@ -10705,6 +12254,7 @@ class TicketFailureInfo:
         metadata=dict(
             name="Name",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             required=True
         )
     )
@@ -10734,91 +12284,131 @@ class TicketFailureInfo:
 
 
 @dataclass
+class TicketInfo:
+    """
+    :ivar name:
+    :ivar conjuncted_ticket_info:
+    :ivar exchanged_ticket_info:
+    :ivar number:
+    :ivar iatanumber:
+    :ivar ticket_issue_date:
+    :ivar ticketing_agent_sign_on:
+    :ivar country_code: Contains Ticketed PCC’s Country code.
+    :ivar status:
+    :ivar bulk_ticket: Whether the ticket was issued as bulk.
+    :ivar booking_traveler_ref: A reference to a passenger.
+    :ivar air_pricing_info_ref: A reference to a AirPricing.Applicable Providers 1G and 1V.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    name: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Name",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            required=True
+        )
+    )
+    conjuncted_ticket_info: List[ConjunctedTicketInfo] = field(
+        default_factory=list,
+        metadata=dict(
+            name="ConjunctedTicketInfo",
+            type="Element",
+            min_occurs=0,
+            max_occurs=3
+        )
+    )
+    exchanged_ticket_info: List[ExchangedTicketInfo] = field(
+        default_factory=list,
+        metadata=dict(
+            name="ExchangedTicketInfo",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Number",
+            type="Attribute",
+            required=True
+        )
+    )
+    iatanumber: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="IATANumber",
+            type="Attribute",
+            max_length=8.0
+        )
+    )
+    ticket_issue_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketIssueDate",
+            type="Attribute"
+        )
+    )
+    ticketing_agent_sign_on: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketingAgentSignOn",
+            type="Attribute",
+            max_length=8.0
+        )
+    )
+    country_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CountryCode",
+            type="Attribute",
+            length=2
+        )
+    )
+    status: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Status",
+            type="Attribute",
+            required=True
+        )
+    )
+    bulk_ticket: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="BulkTicket",
+            type="Attribute"
+        )
+    )
+    booking_traveler_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BookingTravelerRef",
+            type="Attribute",
+            required=True
+        )
+    )
+    air_pricing_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AirPricingInfoRef",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class Title(TypeTextElement):
     """The additional titles associated to the brand or optional service.
 
     Providers: ACH, RCH, 1G, 1V, 1P, 1J.
     """
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
-
-@dataclass
-class Variance:
-    """Indicates any variance in the requested flight.
-
-    :ivar type: Indicates type Variance, i.e. Actual, Estimated, Canceled and Diversion.
-    :ivar time: Indicates time for Variance.
-    :ivar indicator: Indicates VAriance Indicator, i.e. Early, Late.
-    :ivar reason: Reason for Variance
-    """
-    type: Optional[TypeVarianceType] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
-    )
-    time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Time",
-            type="Attribute"
-        )
-    )
-    indicator: Optional[TypeVarianceIndicator] = field(
-        default=None,
-        metadata=dict(
-            name="Indicator",
-            type="Attribute"
-        )
-    )
-    reason: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Reason",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class TypeRestrictionLengthOfStay:
-    """Length Of Stay Restriction ( e.g. 2 day minimum..)
-
-    :ivar length:
-    :ivar stay_unit:
-    :ivar stay_date:
-    :ivar more_rules_present: If true, specifies that advance purchase information will be present in fare rules.
-    """
-    length: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="Length",
-            type="Attribute"
-        )
-    )
-    stay_unit: Optional[TypeStayUnit] = field(
-        default=None,
-        metadata=dict(
-            name="StayUnit",
-            type="Attribute"
-        )
-    )
-    stay_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="StayDate",
-            type="Attribute"
-        )
-    )
-    more_rules_present: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="MoreRulesPresent",
-            type="Attribute"
-        )
-    )
 
 
 @dataclass
@@ -10826,6 +12416,9 @@ class TypeTaxInfoWithPaymentRef(TypeTaxInfo):
     """
     :ivar payment_ref: This reference elements will associate relevant payment to this tax
     """
+    class Meta:
+        name = "typeTaxInfoWithPaymentRef"
+
     payment_ref: List[PaymentRef] = field(
         default_factory=list,
         metadata=dict(
@@ -10841,30 +12434,16 @@ class TypeTaxInfoWithPaymentRef(TypeTaxInfo):
 class TypeTicketFailureInfo:
     """Will be optionally returned as part if one or all ticketing requests fail.
 
-    :ivar booking_traveler_ref:
-    :ivar tcrnumber: The identifying number for a Ticketless Air Reservation.
     :ivar ticket_number:
     :ivar name:
+    :ivar tcrnumber: The identifying number for a Ticketless Air Reservation.
+    :ivar booking_traveler_ref:
     :ivar code:
     :ivar message:
     """
-    booking_traveler_ref: List[str] = field(
-        default_factory=list,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=1,
-            max_occurs=999
-        )
-    )
-    tcrnumber: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TCRNumber",
-            type="Element"
-        )
-    )
+    class Meta:
+        name = "typeTicketFailureInfo"
+
     ticket_number: Optional[TicketNumber] = field(
         default=None,
         metadata=dict(
@@ -10879,7 +12458,24 @@ class TypeTicketFailureInfo:
         metadata=dict(
             name="Name",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             required=True
+        )
+    )
+    tcrnumber: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TCRNumber",
+            type="Element"
+        )
+    )
+    booking_traveler_ref: List[str] = field(
+        default_factory=list,
+        metadata=dict(
+            name="BookingTravelerRef",
+            type="Element",
+            min_occurs=1,
+            max_occurs=999
         )
     )
     code: Optional[int] = field(
@@ -10905,6 +12501,9 @@ class TypeTicketingModifiersRef:
     :ivar air_pricing_info_ref:
     :ivar key:
     """
+    class Meta:
+        name = "typeTicketingModifiersRef"
+
     air_pricing_info_ref: List[AirPricingInfoRef] = field(
         default_factory=list,
         metadata=dict(
@@ -10925,33 +12524,15 @@ class TypeTicketingModifiersRef:
 
 
 @dataclass
-class TypeWeight:
-    """
-    :ivar value:
-    :ivar unit:
-    """
-    value: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="Value",
-            type="Attribute"
-        )
-    )
-    unit: Optional[TypeUnitWeight] = field(
-        default=None,
-        metadata=dict(
-            name="Unit",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
 class ApisrequirementsList:
     """The shared object list of APISRequirements.
 
     :ivar apisrequirements:
     """
+    class Meta:
+        name = "APISRequirementsList"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     apisrequirements: List[Apisrequirements] = field(
         default_factory=list,
         metadata=dict(
@@ -10973,6 +12554,9 @@ class AirExchangeBundle:
     :ivar tax_info:
     :ivar penalty: Only used within an AirExchangeQuoteRsp
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_exchange_info: Optional[AirExchangeInfo] = field(
         default=None,
         metadata=dict(
@@ -11039,7 +12623,10 @@ class AirFareDisplayModifiers:
     :ivar prohibit_travel_restricted_fares: Indicates that the Fares not complying Travel Restrictions and Seasonality fare rules are prohibited
     :ivar filed_currency: Represents the filed currency of the fare
     """
-    trip_type: List[TypeFareTripType] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    trip_type: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="TripType",
@@ -11063,7 +12650,7 @@ class AirFareDisplayModifiers:
             type="Element"
         )
     )
-    fare_search_option: List[TypeFareSearchOption] = field(
+    fare_search_option: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="FareSearchOption",
@@ -11114,7 +12701,7 @@ class AirFareDisplayModifiers:
             type="Attribute"
         )
     )
-    fares_indicator: Optional[TypeFaresIndicator] = field(
+    fares_indicator: Optional[str] = field(
         default=None,
         metadata=dict(
             name="FaresIndicator",
@@ -11150,7 +12737,7 @@ class AirFareDisplayModifiers:
             type="Attribute"
         )
     )
-    global_indicator: Optional[TypeAtpcoglobalIndicator] = field(
+    global_indicator: Optional[str] = field(
         default=None,
         metadata=dict(
             name="GlobalIndicator",
@@ -11210,23 +12797,6 @@ class AirFareDisplayModifiers:
 
 
 @dataclass
-class AirFareRulesModifier:
-    """The modifiers for Air Fare Rules.
-
-    :ivar air_fare_rule_category:
-    """
-    air_fare_rule_category: List[AirFareRuleCategory] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AirFareRuleCategory",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-
-
-@dataclass
 class AirItineraryDetails:
     """Itinerary details containing brand details.
 
@@ -11234,6 +12804,9 @@ class AirItineraryDetails:
     :ivar passenger_details:
     :ivar key: Air itinerary details key
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment_details: List[AirSegmentDetails] = field(
         default_factory=list,
         metadata=dict(
@@ -11270,6 +12843,9 @@ class AirItinerarySolution:
     :ivar connection:
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment_ref: List[AirSegmentRef] = field(
         default_factory=list,
         metadata=dict(
@@ -11325,6 +12901,9 @@ class AirLegModifiers:
     :ivar order_by: Indicates whether to sort by Journey Time, Deparature Time or Arrival Time
     :ivar max_journey_time: Maximum Journey Time for this leg (in hours) 0-99. Supported Providers 1G,1V.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     permitted_cabins: Optional[PermittedCabins] = field(
         default=None,
         metadata=dict(
@@ -11640,6 +13219,9 @@ class AirPricingModifiers:
     :ivar sell_check: Checks if the segment is bookable before pricing
     :ivar return_failed_segments: If "true", returns failed segments information.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     prohibited_rule_categories: Optional["AirPricingModifiers.ProhibitedRuleCategories"] = field(
         default=None,
         metadata=dict(
@@ -11784,7 +13366,7 @@ class AirPricingModifiers:
             type="Attribute"
         )
     )
-    fares_indicator: Optional[TypeFaresIndicator] = field(
+    fares_indicator: Optional[str] = field(
         default=None,
         metadata=dict(
             name="FaresIndicator",
@@ -11815,7 +13397,7 @@ class AirPricingModifiers:
             length=2
         )
     )
-    eticketability: Optional[TypeEticketability] = field(
+    eticketability: Optional[str] = field(
         default=None,
         metadata=dict(
             name="ETicketability",
@@ -11850,7 +13432,7 @@ class AirPricingModifiers:
             type="Attribute"
         )
     )
-    inventory_request_type: Optional[TypeInventoryRequest] = field(
+    inventory_request_type: Optional[str] = field(
         default=None,
         metadata=dict(
             name="InventoryRequestType",
@@ -11984,6 +13566,9 @@ class AirRefundBundle:
     :ivar ptc: Specifies the passenger type code for 1P
     :ivar refund_type: Specifies whether this bundle was auto or manually generated
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_refund_info: Optional[AirRefundInfo] = field(
         default=None,
         metadata=dict(
@@ -11997,6 +13582,7 @@ class AirRefundBundle:
         metadata=dict(
             name="Name",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -12076,6 +13662,9 @@ class AirSearchModifiers:
     :ivar max_journey_time: Maximum Journey Time for all legs (in hours) 0-99. For LFS Supported Providers are 1G,1V,1P,1J. For AirAvail Supported Providers are 1G,1V.
     :ivar jet_service_only: Restricts results to Jet service flights only.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     disfavored_providers: Optional["AirSearchModifiers.DisfavoredProviders"] = field(
         default=None,
         metadata=dict(
@@ -12188,7 +13777,7 @@ class AirSearchModifiers:
             type="Element"
         )
     )
-    distance_type: TypeDistance = field(
+    distance_type: str = field(
         default="MI",
         metadata=dict(
             name="DistanceType",
@@ -12412,6 +14001,9 @@ class AlternateLocationDistanceList:
 
     :ivar alternate_location_distance:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     alternate_location_distance: List[AlternateLocationDistance] = field(
         default_factory=list,
         metadata=dict(
@@ -12430,6 +14022,9 @@ class AlternateRoute:
     :ivar leg:
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     leg: List[Leg] = field(
         default_factory=list,
         metadata=dict(
@@ -12466,6 +14061,9 @@ class AuditData:
     :ivar tax_info:
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     total_price: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -12555,29 +14153,6 @@ class AuditData:
 
 
 @dataclass
-class BaggageAllowance:
-    """Free Baggage Allowance.
-
-    :ivar number_of_pieces:
-    :ivar max_weight:
-    """
-    number_of_pieces: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="NumberOfPieces",
-            type="Element"
-        )
-    )
-    max_weight: Optional[TypeWeight] = field(
-        default=None,
-        metadata=dict(
-            name="MaxWeight",
-            type="Element"
-        )
-    )
-
-
-@dataclass
 class BaggageRestriction:
     """Information related to Baggage restriction rules .
 
@@ -12585,6 +14160,9 @@ class BaggageRestriction:
     :ivar max_weight:
     :ivar text_info:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     dimension: List[Dimension] = field(
         default_factory=list,
         metadata=dict(
@@ -12624,6 +14202,9 @@ class BookingRules:
     :ivar document_required: Detail about required documents for this pre pay id
     :ivar gender_dob_required: Vendor populates if gender/DOB data is required in book.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     booking_rules_fare_reference: List[BookingRulesFareReference] = field(
         default_factory=list,
         metadata=dict(
@@ -12700,6 +14281,9 @@ class BrandingInfo:
     :ivar commercial_name: The commercial name of the Ancillary Service. Providers: 1G, 1V, 1P, 1J, ACH
     :ivar chargeable: Indicates if the optional service is not offered, is available for a charge, or is included in the brand. Providers: 1G, 1V, 1P, 1J, ACH
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     price_range: List[PriceRange] = field(
         default_factory=list,
         metadata=dict(
@@ -12748,7 +14332,6 @@ class BrandingInfo:
         metadata=dict(
             name="AirSegmentRef",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=1,
             max_occurs=99
         )
@@ -12799,100 +14382,41 @@ class BrandingInfo:
 
 
 @dataclass
-class BundledServices:
+class DocumentInfo:
+    """Container for the document information summary line.
+
+    :ivar ticket_info:
+    :ivar mcoinfo:
+    :ivar tcrinfo:
     """
-    :ivar bundled_service:
-    """
-    bundled_service: List[BundledService] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    ticket_info: List[TicketInfo] = field(
         default_factory=list,
         metadata=dict(
-            name="BundledService",
+            name="TicketInfo",
             type="Element",
             min_occurs=0,
-            max_occurs=16
-        )
-    )
-
-
-@dataclass
-class DetailedBillingInformation:
-    """Container to send Detailed Billing Information for ticketing.
-
-    :ivar form_of_payment_ref:
-    :ivar air_pricing_info_ref: Returns related air pricing infos.
-    :ivar billing_detail_item:
-    """
-    form_of_payment_ref: Optional[FormOfPaymentRef] = field(
-        default=None,
-        metadata=dict(
-            name="FormOfPaymentRef",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
-    )
-    air_pricing_info_ref: List[AirPricingInfoRef] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AirPricingInfoRef",
-            type="Element",
-            min_occurs=1,
             max_occurs=999
         )
     )
-    billing_detail_item: List[BillingDetailItem] = field(
+    mcoinfo: List[Mcoinformation] = field(
         default_factory=list,
         metadata=dict(
-            name="BillingDetailItem",
+            name="MCOInfo",
             type="Element",
-            min_occurs=1,
+            min_occurs=0,
             max_occurs=999
         )
     )
-
-
-@dataclass
-class DocumentSelect:
-    """Allows an agency to select the documents to produce for the itinerary.
-
-    :ivar back_office_hand_off:
-    :ivar itinerary:
-    :ivar issue_ticket_only: Set to true to alter system default of itinerary,ticket and back office.
-    :ivar issue_electronic_ticket: Set to true for electronic tickets.
-    :ivar fax_indicator: Set to true for providing fax details.
-    """
-    back_office_hand_off: Optional[BackOfficeHandOff] = field(
-        default=None,
+    tcrinfo: List[Tcrinfo] = field(
+        default_factory=list,
         metadata=dict(
-            name="BackOfficeHandOff",
-            type="Element"
-        )
-    )
-    itinerary: Optional[Itinerary] = field(
-        default=None,
-        metadata=dict(
-            name="Itinerary",
-            type="Element"
-        )
-    )
-    issue_ticket_only: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="IssueTicketOnly",
-            type="Attribute"
-        )
-    )
-    issue_electronic_ticket: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="IssueElectronicTicket",
-            type="Attribute"
-        )
-    )
-    fax_indicator: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="FaxIndicator",
-            type="Attribute"
+            name="TCRInfo",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
         )
     )
 
@@ -12908,6 +14432,10 @@ class EmdpricingInfo:
     :ivar total_tax:
     :ivar equiv_fare:
     """
+    class Meta:
+        name = "EMDPricingInfo"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     tax_info: List[TaxInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -12948,21 +14476,22 @@ class EmdpricingInfo:
 
 
 @dataclass
-class Emdsummary:
-    """EMD summary information. Supported providers are 1G/1V/1P/1J.
+class EmdsummaryInfo:
+    """Container for EMD summary information. Supported providers are 1G/1V/1P/1J.
 
     :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar number: EMD Number
-    :ivar primary_document_indicator: Indicates whether the EMD is a primary EMD.
-    :ivar in_conjunction_with: Returns the number of the Primary EMD, if this EMD is a conjunctive EMD
-    :ivar associated_ticket_number: This number indicates the e-Ticket number associated with this EMD
-    :ivar plating_carrier: Plating carrier code for which this EMD is issued
-    :ivar issue_date: Issue Date for this EMD
-    :ivar emdcoupon: The coupon information for the EMD issued.
+    :ivar emdsummary: Summary information for EMDs conjuncted to each other.
+    :ivar emdtraveler_info: EMD traveler information.
+    :ivar payment: Payment charged to issue EMD.
+    :ivar provider_reservation_info_ref: A reference to the provider reservation with which the document is associated.Displayed when shown as part of UR.Not displayed in EMDRetrieveRsp
     :ivar key: System generated Key
     """
-    el_stat: Optional[TypeElementStatus] = field(
+    class Meta:
+        name = "EMDSummaryInfo"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    el_stat: Optional[str] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -12976,161 +14505,35 @@ class Emdsummary:
             type="Attribute"
         )
     )
-    number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            required=True,
-            length=13
-        )
-    )
-    primary_document_indicator: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="PrimaryDocumentIndicator",
-            type="Attribute"
-        )
-    )
-    in_conjunction_with: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="InConjunctionWith",
-            type="Attribute",
-            length=13
-        )
-    )
-    associated_ticket_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AssociatedTicketNumber",
-            type="Attribute",
-            length=13
-        )
-    )
-    plating_carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PlatingCarrier",
-            type="Attribute",
-            length=2
-        )
-    )
-    issue_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="IssueDate",
-            type="Attribute"
-        )
-    )
-    emdcoupon: List[Emdcoupon] = field(
+    emdsummary: List[Emdsummary] = field(
         default_factory=list,
         metadata=dict(
-            name="EMDCoupon",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class ElectronicMiscDocument:
-    """Electronic miscellaneous document. Supported providers are 1G/1V/1P/1J.
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar number: EMD Number
-    :ivar primary_document_indicator: Indicates whether the EMD is a primary EMD.
-    :ivar in_conjunction_with: Returns the number of the Primary EMD, if this EMD is a conjunctive EMD
-    :ivar associated_ticket_number: This number indicates the e-Ticket number associated with this EMD
-    :ivar plating_carrier: Plating carrier code for which this EMD is issued
-    :ivar issue_date: Issue Date for this EMD
-    :ivar emdcoupon: The coupon information for the EMD issued.
-    :ivar status: Status of the EMD calculated on the basis of coupon status. Possible values Open, Void, Refunded, Exchanged, Irregular Operations,Airport Control, Checked In, Flown/Used, Boarded/Lifted, Suspended, Unknown
-    :ivar key: System generated Key
-    """
-    el_stat: Optional[TypeElementStatus] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            required=True,
-            length=13
-        )
-    )
-    primary_document_indicator: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="PrimaryDocumentIndicator",
-            type="Attribute"
-        )
-    )
-    in_conjunction_with: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="InConjunctionWith",
-            type="Attribute",
-            length=13
-        )
-    )
-    associated_ticket_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AssociatedTicketNumber",
-            type="Attribute",
-            length=13
-        )
-    )
-    plating_carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PlatingCarrier",
-            type="Attribute",
-            length=2
-        )
-    )
-    issue_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="IssueDate",
-            type="Attribute"
-        )
-    )
-    emdcoupon: List[Emdcoupon] = field(
-        default_factory=list,
-        metadata=dict(
-            name="EMDCoupon",
+            name="EMDSummary",
             type="Element",
             min_occurs=1,
             max_occurs=999
         )
     )
-    status: Optional[str] = field(
+    emdtraveler_info: Optional[EmdtravelerInfo] = field(
         default=None,
         metadata=dict(
-            name="Status",
+            name="EMDTravelerInfo",
+            type="Element",
+            required=True
+        )
+    )
+    payment: Optional[Payment] = field(
+        default=None,
+        metadata=dict(
+            name="Payment",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
+        )
+    )
+    provider_reservation_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderReservationInfoRef",
             type="Attribute"
         )
     )
@@ -13146,7 +14549,9 @@ class ElectronicMiscDocument:
 @dataclass
 class EmbargoInfo(BaseBaggageAllowanceInfo):
     """Information related to Embargo."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
@@ -13156,6 +14561,9 @@ class Enumeration:
 
     :ivar solution_group:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     solution_group: List[SolutionGroup] = field(
         default_factory=list,
         metadata=dict(
@@ -13175,6 +14583,9 @@ class ExchangeEligibilityInfo:
     :ivar refundable_fares: Fares eligible for refund: All, Some, None
     :ivar passed_automation_checks: Indicates whether the itinerary passed initial validation for automated exchange
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     exchange_penalty_info: List[ExchangePenaltyInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -13218,6 +14629,9 @@ class ExpertSolution:
     :ivar approximate_total_price: The Converted Total Price in Agency's Default Currency Value
     :ivar created_date: The Date on which this solution was created
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     leg_price: List[LegPrice] = field(
         default_factory=list,
         metadata=dict(
@@ -13289,6 +14703,9 @@ class Facility:
     :ivar optional_service_ref: References the OptionalService for the Row/Facility. Providers: ACH, 1G, 1V, 1P, 1J
     :ivar seat_information_ref: Specifies the seat information for the seat. Providers: ACH, 1G, 1V, 1P, 1J
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     characteristic: List[Characteristic] = field(
         default_factory=list,
         metadata=dict(
@@ -13350,7 +14767,7 @@ class Facility:
             type="Element"
         )
     )
-    type: Optional[TypeFacility] = field(
+    type: Optional[str] = field(
         default=None,
         metadata=dict(
             name="Type",
@@ -13365,7 +14782,7 @@ class Facility:
             type="Attribute"
         )
     )
-    availability: Optional[TypeSeatAvailability] = field(
+    availability: Optional[str] = field(
         default=None,
         metadata=dict(
             name="Availability",
@@ -13485,11 +14902,72 @@ class Facility:
 
 
 @dataclass
+class FareDisplayRule:
+    """Fare Display Rule Container.
+
+    :ivar rule_advanced_purchase:
+    :ivar rule_length_of_stay:
+    :ivar rule_charges:
+    :ivar rule_number:
+    :ivar source:
+    :ivar tariff_number:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    rule_advanced_purchase: Optional[RuleAdvancedPurchase] = field(
+        default=None,
+        metadata=dict(
+            name="RuleAdvancedPurchase",
+            type="Element"
+        )
+    )
+    rule_length_of_stay: Optional[RuleLengthOfStay] = field(
+        default=None,
+        metadata=dict(
+            name="RuleLengthOfStay",
+            type="Element"
+        )
+    )
+    rule_charges: Optional[RuleCharges] = field(
+        default=None,
+        metadata=dict(
+            name="RuleCharges",
+            type="Element"
+        )
+    )
+    rule_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RuleNumber",
+            type="Attribute"
+        )
+    )
+    source: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Source",
+            type="Attribute"
+        )
+    )
+    tariff_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TariffNumber",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class FareRemarkList:
     """The shared object list of FareInfos.
 
     :ivar fare_remark:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     fare_remark: List[FareRemark] = field(
         default_factory=list,
         metadata=dict(
@@ -13497,59 +14975,6 @@ class FareRemarkList:
             type="Element",
             min_occurs=1,
             max_occurs=999
-        )
-    )
-
-
-@dataclass
-class FareRestriction:
-    """Fare Restriction.
-
-    :ivar fare_restriction_days_of_week:
-    :ivar fare_restriction_date:
-    :ivar fare_restriction_sale_date:
-    :ivar fare_restriction_seasonal:
-    :ivar fare_restrictiontype:
-    """
-    fare_restriction_days_of_week: List[FareRestrictionDaysOfWeek] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FareRestrictionDaysOfWeek",
-            type="Element",
-            min_occurs=0,
-            max_occurs=3
-        )
-    )
-    fare_restriction_date: List[FareRestrictionDate] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FareRestrictionDate",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    fare_restriction_sale_date: Optional[FareRestrictionSaleDate] = field(
-        default=None,
-        metadata=dict(
-            name="FareRestrictionSaleDate",
-            type="Element"
-        )
-    )
-    fare_restriction_seasonal: List[FareRestrictionSeasonal] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FareRestrictionSeasonal",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    fare_restrictiontype: Optional[TypeFareRestrictionType] = field(
-        default=None,
-        metadata=dict(
-            name="FareRestrictiontype",
-            type="Attribute"
         )
     )
 
@@ -13602,6 +15027,9 @@ class FareRulesFilter:
     :ivar adv: For Advance Res/Tkt
     :ivar oth: Other
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     refundability: Optional["FareRulesFilter.Refundability"] = field(
         default=None,
         metadata=dict(
@@ -13680,6 +15108,9 @@ class FaxDetails:
     :ivar dept_billing_code: Department billing code.
     :ivar invoice_number: Invoice number.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     phone_number: Optional[PhoneNumber] = field(
         default=None,
         metadata=dict(
@@ -13747,15 +15178,15 @@ class FaxDetails:
 class FlightDetails:
     """Specific details within a flight segment.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar flight_time: Time spent (minutes) traveling in flight, including airport taxi time.
-    :ivar travel_time: Total time spent (minutes) traveling including flight time and ground time.
-    :ivar distance: The distance traveled. Units are specified in the parent response element.
     :ivar origin: The IATA location code for this origination of this entity.
     :ivar destination: The IATA location code for this destination of this entity.
     :ivar departure_time: The date and time at which this entity departs. Date and time are represented as Airport Local Time at the place of departure. The correct time zone offset is also included.
     :ivar arrival_time: The date and time at which this entity arrives at the destination. Date and time are represented as Airport Local Time at the place of arrival. The correct time zone offset is also included.
+    :ivar flight_time: Time spent (minutes) traveling in flight, including airport taxi time.
+    :ivar travel_time: Total time spent (minutes) traveling including flight time and ground time.
+    :ivar distance: The distance traveled. Units are specified in the parent response element.
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar connection:
     :ivar meals:
     :ivar in_flight_services:
@@ -13767,41 +15198,9 @@ class FlightDetails:
     :ivar ground_time:
     :ivar automated_checkin: “True” indicates that the flight allows automated check-in. The default is “False”.
     """
-    el_stat: Optional[TypeElementStatus] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    flight_time: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="FlightTime",
-            type="Attribute"
-        )
-    )
-    travel_time: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="TravelTime",
-            type="Attribute"
-        )
-    )
-    distance: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="Distance",
-            type="Attribute"
-        )
-    )
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     origin: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -13833,6 +15232,41 @@ class FlightDetails:
         default=None,
         metadata=dict(
             name="ArrivalTime",
+            type="Attribute"
+        )
+    )
+    flight_time: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="FlightTime",
+            type="Attribute"
+        )
+    )
+    travel_time: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="TravelTime",
+            type="Attribute"
+        )
+    )
+    distance: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Distance",
+            type="Attribute"
+        )
+    )
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
             type="Attribute"
         )
     )
@@ -13915,57 +15349,63 @@ class FlightDetails:
 
 
 @dataclass
-class FlightInfoDetail:
+class FlightInfo:
     """
-    :ivar codeshare_info:
-    :ivar meals:
-    :ivar in_flight_services:
-    :ivar variance:
+    :ivar flight_info_detail:
+    :ivar flight_info_error_message: Errors, Warnings and informational messages for the Flight referenced above.
+    :ivar criteria_key: An identifier to link the flightinfo responses to the criteria in request. The value populated here is passed in request.
+    :ivar carrier: The carrier that is marketing this segment
+    :ivar flight_number: The flight number under which the marketing carrier is marketing this flight
     :ivar origin: The IATA location code for this origination of this entity.
     :ivar destination: The IATA location code for this destination of this entity.
-    :ivar scheduled_departure_time: The date and time at which this entity is scheduled to depart. This does not include time zone information since it can be derived from the origin location.
-    :ivar scheduled_arrival_time: The date and time at which this entity is scheduled to arrive at the destination. This does not include time zone information since it can be derived from the origin location.
-    :ivar travel_time: Total time spent (minutes) traveling including flight time and ground time.
-    :ivar eticketability: Identifies if this particular segment is E-Ticketable
-    :ivar equipment:
-    :ivar origin_terminal:
-    :ivar origin_gate: To be used to display origin flight gate number
-    :ivar destination_terminal:
-    :ivar destination_gate: To be used to display destination flight gate number
-    :ivar automated_checkin: “True” indicates that the flight allows automated check-in. The default is “False”.
+    :ivar departure_date: The date at which this entity departs. This does not include time zone information since it can be derived from the origin location.
+    :ivar class_of_service:
     """
-    codeshare_info: Optional[CodeshareInfo] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    flight_info_detail: List[FlightInfoDetail] = field(
+        default_factory=list,
+        metadata=dict(
+            name="FlightInfoDetail",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    flight_info_error_message: List[TypeResultMessage] = field(
+        default_factory=list,
+        metadata=dict(
+            name="FlightInfoErrorMessage",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    criteria_key: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="CodeshareInfo",
-            type="Element"
+            name="CriteriaKey",
+            type="Attribute",
+            required=True
         )
     )
-    meals: List[Meals] = field(
-        default_factory=list,
+    carrier: Optional[str] = field(
+        default=None,
         metadata=dict(
-            name="Meals",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
+            name="Carrier",
+            type="Attribute",
+            required=True,
+            length=2
         )
     )
-    in_flight_services: List[InFlightServices] = field(
-        default_factory=list,
+    flight_number: Optional[str] = field(
+        default=None,
         metadata=dict(
-            name="InFlightServices",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    variance: List[Variance] = field(
-        default_factory=list,
-        metadata=dict(
-            name="Variance",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
+            name="FlightNumber",
+            type="Attribute",
+            required=True,
+            max_length=5.0
         )
     )
     origin: Optional[str] = field(
@@ -13973,7 +15413,6 @@ class FlightInfoDetail:
         metadata=dict(
             name="Origin",
             type="Attribute",
-            required=True,
             length=3,
             white_space="collapse"
         )
@@ -13983,82 +15422,25 @@ class FlightInfoDetail:
         metadata=dict(
             name="Destination",
             type="Attribute",
-            required=True,
             length=3,
             white_space="collapse"
         )
     )
-    scheduled_departure_time: Optional[str] = field(
+    departure_date: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="ScheduledDepartureTime",
-            type="Attribute"
-        )
-    )
-    scheduled_arrival_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ScheduledArrivalTime",
-            type="Attribute"
-        )
-    )
-    travel_time: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="TravelTime",
-            type="Attribute"
-        )
-    )
-    eticketability: Optional[TypeEticketability] = field(
-        default=None,
-        metadata=dict(
-            name="ETicketability",
-            type="Attribute"
-        )
-    )
-    equipment: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Equipment",
+            name="DepartureDate",
             type="Attribute",
-            length=3
+            required=True
         )
     )
-    origin_terminal: Optional[str] = field(
+    class_of_service: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="OriginTerminal",
-            type="Attribute"
-        )
-    )
-    origin_gate: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="OriginGate",
+            name="ClassOfService",
             type="Attribute",
-            max_length=6.0
-        )
-    )
-    destination_terminal: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DestinationTerminal",
-            type="Attribute"
-        )
-    )
-    destination_gate: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DestinationGate",
-            type="Attribute",
-            max_length=6.0
-        )
-    )
-    automated_checkin: bool = field(
-        default=False,
-        metadata=dict(
-            name="AutomatedCheckin",
-            type="Attribute"
+            min_length=1.0,
+            max_length=2.0
         )
     )
 
@@ -14093,6 +15475,9 @@ class FlightTimeDetail:
     :ivar secure_sell:
     :ivar availability_source:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     days_of_operation: Optional[TypeDaysOfOperation] = field(
         default=None,
         metadata=dict(
@@ -14297,6 +15682,9 @@ class GeneralTimeTable:
     :ivar end_time: Flight end time of flight time tabel .
     :ivar include_connection: Include or exclude connecting flights.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     days_of_operation: Optional[TypeDaysOfOperation] = field(
         default=None,
         metadata=dict(
@@ -14309,7 +15697,6 @@ class GeneralTimeTable:
         metadata=dict(
             name="FlightOrigin",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             required=True
         )
     )
@@ -14318,7 +15705,6 @@ class GeneralTimeTable:
         metadata=dict(
             name="FlightDestination",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             required=True
         )
     )
@@ -14368,65 +15754,6 @@ class GeneralTimeTable:
 
 
 @dataclass
-class IssuanceModifiers:
-    """General modifiers supported for EMD Issuance.Supported providers are
-    1V/1G/1P/1J.
-
-    :ivar customer_receipt_info: Information about customer receipt via email.
-    :ivar emdendorsement: Endorsement details to be used during EMD issuance.
-    :ivar emdcommission: Commission information to be used for EMD issuance.
-    :ivar form_of_payment_ref: Reference to FormOfPayment present in the UR to be used for EMD issuance.
-    :ivar form_of_payment: FormOfPayment information to be used for EMD issuance.
-    :ivar plating_carrier: Plating carrier code for which this EMD is issued.
-    """
-    customer_receipt_info: Optional[CustomerReceiptInfo] = field(
-        default=None,
-        metadata=dict(
-            name="CustomerReceiptInfo",
-            type="Element"
-        )
-    )
-    emdendorsement: Optional[Emdendorsement] = field(
-        default=None,
-        metadata=dict(
-            name="EMDEndorsement",
-            type="Element"
-        )
-    )
-    emdcommission: Optional[Emdcommission] = field(
-        default=None,
-        metadata=dict(
-            name="EMDCommission",
-            type="Element"
-        )
-    )
-    form_of_payment_ref: Optional[FormOfPaymentRef] = field(
-        default=None,
-        metadata=dict(
-            name="FormOfPaymentRef",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
-    )
-    form_of_payment: Optional[FormOfPayment] = field(
-        default=None,
-        metadata=dict(
-            name="FormOfPayment",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
-    )
-    plating_carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PlatingCarrier",
-            type="Attribute",
-            length=2
-        )
-    )
-
-
-@dataclass
 class Option:
     """List of segment and fare available for the search air leg.
 
@@ -14435,6 +15762,9 @@ class Option:
     :ivar key:
     :ivar travel_time: Total traveling time that is difference between the departure time of the first segment and the arrival time of the last segments for that particular entire set of connection.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     booking_info: List[BookingInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -14471,21 +15801,6 @@ class Option:
 
 
 @dataclass
-class PassengerType(TypePassengerType):
-    """The passenger type details associated to a fare.
-
-    :ivar fare_guarantee_info:
-    """
-    fare_guarantee_info: Optional[FareGuaranteeInfo] = field(
-        default=None,
-        metadata=dict(
-            name="FareGuaranteeInfo",
-            type="Element"
-        )
-    )
-
-
-@dataclass
 class PrePayCustomer:
     """Detailed customer information for searching pre pay profiles.
 
@@ -14495,6 +15810,9 @@ class PrePayCustomer:
     :ivar related_traveler: Travelers related to this pre pay id
     :ivar loyalty_card: Customer loyalty card detail
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     person_name: Optional[PersonName] = field(
         default=None,
         metadata=dict(
@@ -14517,7 +15835,6 @@ class PrePayCustomer:
         metadata=dict(
             name="Address",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -14552,6 +15869,9 @@ class PrePayPriceInfo:
     :ivar total_fare:
     :ivar total_tax:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     tax_info: List[TaxInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -14613,6 +15933,9 @@ class RepricingModifiers:
     :ivar multi_airport_search: A value of Multi Airport Search Indicator is optional. Available in AirExchangeMultiQuoteReq only.
     :ivar connection_point: A value of Connection City Code is optional. Available in AirExchangeMultiQuoteReq only.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     private_fare_options: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -14663,7 +15986,7 @@ class RepricingModifiers:
             length=2
         )
     )
-    price_class_of_service: Optional[TypePriceClassOfService] = field(
+    price_class_of_service: Optional[str] = field(
         default=None,
         metadata=dict(
             name="PriceClassOfService",
@@ -14821,6 +16144,9 @@ class Route:
     :ivar leg:
     :ivar key:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     leg: List[Leg] = field(
         default_factory=list,
         metadata=dict(
@@ -14841,24 +16167,46 @@ class Route:
 
 
 @dataclass
-class RuleLengthOfStay:
-    """Container for rules providing minimum and maximum stay requirements.
+class SegmentModifiers:
+    """To be used to modify the ticket modifiers for air segment.
 
-    :ivar minimum_stay:
-    :ivar maximum_stay:
+    :ivar air_segment_ref:
+    :ivar ticket_validity: To be used to pass the ticket validity dates
+    :ivar baggage_allowance:
+    :ivar ticket_designator:
     """
-    minimum_stay: Optional[TypeRestrictionLengthOfStay] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    air_segment_ref: Optional[AirSegmentRef] = field(
         default=None,
         metadata=dict(
-            name="MinimumStay",
+            name="AirSegmentRef",
+            type="Element",
+            required=True
+        )
+    )
+    ticket_validity: Optional[TicketValidity] = field(
+        default=None,
+        metadata=dict(
+            name="TicketValidity",
             type="Element"
         )
     )
-    maximum_stay: Optional[TypeRestrictionLengthOfStay] = field(
+    baggage_allowance: Optional[BaggageAllowance] = field(
         default=None,
         metadata=dict(
-            name="MaximumStay",
+            name="BaggageAllowance",
             type="Element"
+        )
+    )
+    ticket_designator: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketDesignator",
+            type="Element",
+            min_length=0.0,
+            max_length=20.0
         )
     )
 
@@ -14875,6 +16223,10 @@ class TcrexchangeBundle:
     :ivar penalty: Only used within an AirExchangeQuoteRsp
     :ivar tcrnumber: The identifying number for a Ticketless Air Reservation.
     """
+    class Meta:
+        name = "TCRExchangeBundle"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_exchange_info: Optional[AirExchangeInfo] = field(
         default=None,
         metadata=dict(
@@ -14945,7 +16297,10 @@ class Ticket:
     :ivar ticket_number:
     :ivar ticket_status:
     """
-    el_stat: Optional[TypeElementStatus] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    el_stat: Optional[str] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -15011,123 +16366,10 @@ class Ticket:
             length=13
         )
     )
-    ticket_status: Optional[TypeTicketStatus] = field(
+    ticket_status: Optional[str] = field(
         default=None,
         metadata=dict(
             name="TicketStatus",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class TicketInfo:
-    """
-    :ivar name:
-    :ivar conjuncted_ticket_info:
-    :ivar exchanged_ticket_info:
-    :ivar number:
-    :ivar iatanumber:
-    :ivar ticket_issue_date:
-    :ivar ticketing_agent_sign_on:
-    :ivar country_code: Contains Ticketed PCC’s Country code.
-    :ivar status:
-    :ivar bulk_ticket: Whether the ticket was issued as bulk.
-    :ivar booking_traveler_ref: A reference to a passenger.
-    :ivar air_pricing_info_ref: A reference to a AirPricing.Applicable Providers 1G and 1V.
-    """
-    name: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Name",
-            type="Element",
-            required=True
-        )
-    )
-    conjuncted_ticket_info: List[ConjunctedTicketInfo] = field(
-        default_factory=list,
-        metadata=dict(
-            name="ConjunctedTicketInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=3
-        )
-    )
-    exchanged_ticket_info: List[ExchangedTicketInfo] = field(
-        default_factory=list,
-        metadata=dict(
-            name="ExchangedTicketInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            required=True
-        )
-    )
-    iatanumber: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="IATANumber",
-            type="Attribute",
-            max_length=8.0
-        )
-    )
-    ticket_issue_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketIssueDate",
-            type="Attribute"
-        )
-    )
-    ticketing_agent_sign_on: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketingAgentSignOn",
-            type="Attribute",
-            max_length=8.0
-        )
-    )
-    country_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CountryCode",
-            type="Attribute",
-            length=2
-        )
-    )
-    status: Optional[TypeTicketStatus] = field(
-        default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute",
-            required=True
-        )
-    )
-    bulk_ticket: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="BulkTicket",
-            type="Attribute"
-        )
-    )
-    booking_traveler_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Attribute",
-            required=True
-        )
-    )
-    air_pricing_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AirPricingInfoRef",
             type="Attribute"
         )
     )
@@ -15141,6 +16383,9 @@ class TypeDefaultBrandDetail:
     :ivar applicable_segment: Defines for which air segment the brand is applicable.
     :ivar brand_id: The unique identifier of the brand
     """
+    class Meta:
+        name = "typeDefaultBrandDetail"
+
     text: List[Text] = field(
         default_factory=list,
         metadata=dict(
@@ -15185,6 +16430,9 @@ class AccountRelatedRules:
     :ivar booking_rules:
     :ivar routing_rules:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     booking_rules: List[BookingRules] = field(
         default_factory=list,
         metadata=dict(
@@ -15209,6 +16457,9 @@ class AirExchangeBundleList:
 
     :ivar air_exchange_bundle:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_exchange_bundle: List[AirExchangeBundle] = field(
         default_factory=list,
         metadata=dict(
@@ -15230,6 +16481,9 @@ class AirPricingCommand:
     :ivar command_key: An identifier to link the pricing responses to the pricing commands. The value passed here will be returned in the resulting AirPricingInfo(s) from this command.
     :ivar cabin_class: Specify the cabin type to price the entire itinerary in. If segment level cabin selection is required, this attribute should not be used.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_pricing_modifiers: Optional[AirPricingModifiers] = field(
         default=None,
         metadata=dict(
@@ -15269,6 +16523,9 @@ class AlternateRouteList:
 
     :ivar alternate_route:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     alternate_route: List[AlternateRoute] = field(
         default_factory=list,
         metadata=dict(
@@ -15294,7 +16551,10 @@ class AutoPricingInfo:
     :ivar pricing_type: Indicates the Pricing Type used. The possible values are TicketRecord, StoredFare, PricingInstruction.
     :ivar plating_carrier: The Plating Carrier for this journey
     """
-    el_stat: Optional[TypeElementStatus] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    el_stat: Optional[str] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -15382,6 +16642,9 @@ class BagDetails:
     :ivar total_price:
     :ivar approximate_total_price:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     baggage_restriction: List[BaggageRestriction] = field(
         default_factory=list,
         metadata=dict(
@@ -15451,6 +16714,9 @@ class CarryOnAllowanceInfo(BaseBaggageAllowanceInfo):
 
     :ivar carry_on_details: Information related to Carry-On Bag details .
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     carry_on_details: List["CarryOnAllowanceInfo.CarryOnDetails"] = field(
         default_factory=list,
         metadata=dict(
@@ -15528,45 +16794,9 @@ class CarryOnAllowanceInfo(BaseBaggageAllowanceInfo):
 @dataclass
 class DefaultBrandDetail(TypeDefaultBrandDetail):
     """Applicable air segment."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
-
-@dataclass
-class DocumentInfo:
-    """Container for the document information summary line.
-
-    :ivar ticket_info:
-    :ivar mcoinfo:
-    :ivar tcrinfo:
-    """
-    ticket_info: List[TicketInfo] = field(
-        default_factory=list,
-        metadata=dict(
-            name="TicketInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    mcoinfo: List[Mcoinformation] = field(
-        default_factory=list,
-        metadata=dict(
-            name="MCOInfo",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    tcrinfo: List[Tcrinfo] = field(
-        default_factory=list,
-        metadata=dict(
-            name="TCRInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
 
 
 @dataclass
@@ -15590,7 +16820,11 @@ class Emdinfo:
     :ivar emdcommission: Commission information applied during EMD issuance
     :ivar key: System generated Key
     """
-    el_stat: Optional[TypeElementStatus] = field(
+    class Meta:
+        name = "EMDInfo"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    el_stat: Optional[str] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -15706,78 +16940,14 @@ class Emdinfo:
 
 
 @dataclass
-class EmdsummaryInfo:
-    """Container for EMD summary information. Supported providers are 1G/1V/1P/1J.
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar emdsummary: Summary information for EMDs conjuncted to each other.
-    :ivar emdtraveler_info: EMD traveler information.
-    :ivar payment: Payment charged to issue EMD.
-    :ivar provider_reservation_info_ref: A reference to the provider reservation with which the document is associated.Displayed when shown as part of UR.Not displayed in EMDRetrieveRsp
-    :ivar key: System generated Key
-    """
-    el_stat: Optional[TypeElementStatus] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    emdsummary: List[Emdsummary] = field(
-        default_factory=list,
-        metadata=dict(
-            name="EMDSummary",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
-    )
-    emdtraveler_info: Optional[EmdtravelerInfo] = field(
-        default=None,
-        metadata=dict(
-            name="EMDTravelerInfo",
-            type="Element",
-            required=True
-        )
-    )
-    payment: Optional[Payment] = field(
-        default=None,
-        metadata=dict(
-            name="Payment",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
-    )
-    provider_reservation_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
 class ExpertSolutionList:
     """Identifies the Expert Solutions retrieved from the Knowledge Base.
 
     :ivar expert_solution:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     expert_solution: List[ExpertSolution] = field(
         default_factory=list,
         metadata=dict(
@@ -15790,56 +16960,275 @@ class ExpertSolutionList:
 
 
 @dataclass
-class FareDisplayRule:
-    """Fare Display Rule Container.
+class FareDisplay:
+    """Fare/Tariff Display.
 
-    :ivar rule_advanced_purchase:
-    :ivar rule_length_of_stay:
-    :ivar rule_charges:
-    :ivar rule_number:
-    :ivar source:
-    :ivar tariff_number:
+    :ivar fare_display_rule:
+    :ivar fare_pricing:
+    :ivar fare_restriction:
+    :ivar fare_routing_information:
+    :ivar fare_mileage_information:
+    :ivar air_fare_display_rule_key:
+    :ivar booking_code:
+    :ivar account_code:
+    :ivar addl_booking_code_information:
+    :ivar fare_rule_failure_info: Returns fare rule failure info for Non Valid fares.
+    :ivar price_change: Indicates a price change is found in Fare Control Manager
+    :ivar carrier:
+    :ivar fare_basis:
+    :ivar amount:
+    :ivar trip_type:
+    :ivar fare_type_code:
+    :ivar special_fare:
+    :ivar instant_purchase:
+    :ivar eligibility_restricted:
+    :ivar flight_restricted:
+    :ivar stopovers_restricted:
+    :ivar transfers_restricted:
+    :ivar blackouts_exist:
+    :ivar accompanied_travel:
+    :ivar mile_or_route_based_fare:
+    :ivar global_indicator:
+    :ivar origin: Returns the origin airport or city code for which this tariff is applicable.
+    :ivar destination: Returns the destination airport or city code for which this tariff is applicable.
+    :ivar fare_ticketing_code: Returns the ticketing code for which this tariff is applicable.
+    :ivar fare_ticketing_designator: Returns the ticketing designator for which this tariff is applicable.
     """
-    rule_advanced_purchase: Optional[RuleAdvancedPurchase] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    fare_display_rule: Optional[FareDisplayRule] = field(
         default=None,
         metadata=dict(
-            name="RuleAdvancedPurchase",
+            name="FareDisplayRule",
+            type="Element",
+            required=True
+        )
+    )
+    fare_pricing: List[FarePricing] = field(
+        default_factory=list,
+        metadata=dict(
+            name="FarePricing",
+            type="Element",
+            min_occurs=1,
+            max_occurs=999
+        )
+    )
+    fare_restriction: List[FareRestriction] = field(
+        default_factory=list,
+        metadata=dict(
+            name="FareRestriction",
+            type="Element",
+            min_occurs=0,
+            max_occurs=99
+        )
+    )
+    fare_routing_information: Optional[FareRoutingInformation] = field(
+        default=None,
+        metadata=dict(
+            name="FareRoutingInformation",
             type="Element"
         )
     )
-    rule_length_of_stay: Optional[RuleLengthOfStay] = field(
+    fare_mileage_information: Optional[FareMileageInformation] = field(
         default=None,
         metadata=dict(
-            name="RuleLengthOfStay",
+            name="FareMileageInformation",
             type="Element"
         )
     )
-    rule_charges: Optional[RuleCharges] = field(
+    air_fare_display_rule_key: Optional[AirFareDisplayRuleKey] = field(
         default=None,
         metadata=dict(
-            name="RuleCharges",
+            name="AirFareDisplayRuleKey",
             type="Element"
         )
     )
-    rule_number: Optional[str] = field(
+    booking_code: List[BookingCode] = field(
+        default_factory=list,
+        metadata=dict(
+            name="BookingCode",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    account_code: List[AccountCode] = field(
+        default_factory=list,
+        metadata=dict(
+            name="AccountCode",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    addl_booking_code_information: Optional[AddlBookingCodeInformation] = field(
         default=None,
         metadata=dict(
-            name="RuleNumber",
+            name="AddlBookingCodeInformation",
+            type="Element"
+        )
+    )
+    fare_rule_failure_info: Optional[FareRuleFailureInfo] = field(
+        default=None,
+        metadata=dict(
+            name="FareRuleFailureInfo",
+            type="Element"
+        )
+    )
+    price_change: List[PriceChangeType] = field(
+        default_factory=list,
+        metadata=dict(
+            name="PriceChange",
+            type="Element",
+            min_occurs=0,
+            max_occurs=99
+        )
+    )
+    carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Carrier",
+            type="Attribute",
+            required=True,
+            length=2
+        )
+    )
+    fare_basis: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FareBasis",
+            type="Attribute",
+            required=True
+        )
+    )
+    amount: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Amount",
+            type="Attribute",
+            required=True
+        )
+    )
+    trip_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TripType",
             type="Attribute"
         )
     )
-    source: Optional[str] = field(
+    fare_type_code: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="Source",
+            name="FareTypeCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
+    special_fare: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="SpecialFare",
             type="Attribute"
         )
     )
-    tariff_number: Optional[str] = field(
+    instant_purchase: Optional[bool] = field(
         default=None,
         metadata=dict(
-            name="TariffNumber",
+            name="InstantPurchase",
             type="Attribute"
+        )
+    )
+    eligibility_restricted: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="EligibilityRestricted",
+            type="Attribute"
+        )
+    )
+    flight_restricted: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="FlightRestricted",
+            type="Attribute"
+        )
+    )
+    stopovers_restricted: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="StopoversRestricted",
+            type="Attribute"
+        )
+    )
+    transfers_restricted: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="TransfersRestricted",
+            type="Attribute"
+        )
+    )
+    blackouts_exist: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="BlackoutsExist",
+            type="Attribute"
+        )
+    )
+    accompanied_travel: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="AccompaniedTravel",
+            type="Attribute"
+        )
+    )
+    mile_or_route_based_fare: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="MileOrRouteBasedFare",
+            type="Attribute"
+        )
+    )
+    global_indicator: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="GlobalIndicator",
+            type="Attribute"
+        )
+    )
+    origin: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Origin",
+            type="Attribute",
+            length=3,
+            white_space="collapse"
+        )
+    )
+    destination: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Destination",
+            type="Attribute",
+            length=3,
+            white_space="collapse"
+        )
+    )
+    fare_ticketing_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FareTicketingCode",
+            type="Attribute"
+        )
+    )
+    fare_ticketing_designator: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FareTicketingDesignator",
+            type="Attribute",
+            min_length=0.0,
+            max_length=20.0
         )
     )
 
@@ -15851,6 +17240,9 @@ class FaxDetailsInformation:
     :ivar air_pricing_info_ref: Returns related air pricing infos.
     :ivar fax_details:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_pricing_info_ref: List[AirPricingInfoRef] = field(
         default_factory=list,
         metadata=dict(
@@ -15876,6 +17268,9 @@ class FlightDetailsList:
 
     :ivar flight_details:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     flight_details: List[FlightDetails] = field(
         default_factory=list,
         metadata=dict(
@@ -15883,101 +17278,6 @@ class FlightDetailsList:
             type="Element",
             min_occurs=1,
             max_occurs=999
-        )
-    )
-
-
-@dataclass
-class FlightInfo:
-    """
-    :ivar flight_info_detail:
-    :ivar flight_info_error_message: Errors, Warnings and informational messages for the Flight referenced above.
-    :ivar criteria_key: An identifier to link the flightinfo responses to the criteria in request. The value populated here is passed in request.
-    :ivar carrier: The carrier that is marketing this segment
-    :ivar flight_number: The flight number under which the marketing carrier is marketing this flight
-    :ivar origin: The IATA location code for this origination of this entity.
-    :ivar destination: The IATA location code for this destination of this entity.
-    :ivar departure_date: The date at which this entity departs. This does not include time zone information since it can be derived from the origin location.
-    :ivar class_of_service:
-    """
-    flight_info_detail: List[FlightInfoDetail] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FlightInfoDetail",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    flight_info_error_message: List[TypeResultMessage] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FlightInfoErrorMessage",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    criteria_key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CriteriaKey",
-            type="Attribute",
-            required=True
-        )
-    )
-    carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Carrier",
-            type="Attribute",
-            required=True,
-            length=2
-        )
-    )
-    flight_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FlightNumber",
-            type="Attribute",
-            required=True,
-            max_length=5.0
-        )
-    )
-    origin: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Origin",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
-    )
-    destination: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Destination",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
-    )
-    departure_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DepartureDate",
-            type="Attribute",
-            required=True
-        )
-    )
-    class_of_service: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ClassOfService",
-            type="Attribute",
-            min_length=1.0,
-            max_length=2.0
         )
     )
 
@@ -15991,6 +17291,9 @@ class FlightOption:
     :ivar origin: The IATA location code for this origination of this entity.
     :ivar destination: The IATA location code for this destination of this entity.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     option: List[Option] = field(
         default_factory=list,
         metadata=dict(
@@ -16036,6 +17339,9 @@ class FlightTimeTableCriteria:
     :ivar general_time_table:
     :ivar specific_time_table:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     general_time_table: Optional[GeneralTimeTable] = field(
         default=None,
         metadata=dict(
@@ -16059,6 +17365,9 @@ class MerchandisingAvailabilityDetails:
     :ivar air_itinerary_details:
     :ivar account_code:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_itinerary_details: Optional[AirItineraryDetails] = field(
         default=None,
         metadata=dict(
@@ -16084,6 +17393,9 @@ class MerchandisingDetails:
     :ivar air_itinerary_details:
     :ivar account_code:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_itinerary_details: List[AirItineraryDetails] = field(
         default_factory=list,
         metadata=dict(
@@ -16108,8 +17420,8 @@ class MerchandisingDetails:
 @dataclass
 class OptionalService:
     """
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar provider_code:
+    :ivar supplier_code:
     :ivar total_price: The total price for this entity including base price and all taxes.
     :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
     :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
@@ -16120,8 +17432,8 @@ class OptionalService:
     :ivar services: The total cost for all optional services.
     :ivar approximate_taxes: The Converted tax amount in Default Currency.
     :ivar approximate_fees: The Converted fee amount in Default Currency.
-    :ivar provider_code:
-    :ivar supplier_code:
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar service_data:
     :ivar service_info:
     :ivar remark: Information regarding any specific for this service.
@@ -16182,18 +17494,25 @@ class OptionalService:
     :ivar tag: Optional service group name.
     :ivar display_order: Optional service group display order.
     """
-    el_stat: Optional[TypeElementStatus] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    provider_code: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="ElStat",
-            type="Attribute"
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
         )
     )
-    key_override: Optional[bool] = field(
+    supplier_code: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
+            name="SupplierCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=5.0
         )
     )
     total_price: Optional[str] = field(
@@ -16266,22 +17585,18 @@ class OptionalService:
             type="Attribute"
         )
     )
-    provider_code: Optional[str] = field(
+    el_stat: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2.0,
-            max_length=5.0
+            name="ElStat",
+            type="Attribute"
         )
     )
-    supplier_code: Optional[str] = field(
+    key_override: Optional[bool] = field(
         default=None,
         metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            min_length=1.0,
-            max_length=5.0
+            name="KeyOverride",
+            type="Attribute"
         )
     )
     service_data: List[ServiceData] = field(
@@ -16432,7 +17747,7 @@ class OptionalService:
             type="Attribute"
         )
     )
-    purchase_window: Optional[TypePurchaseWindow] = field(
+    purchase_window: Optional[str] = field(
         default=None,
         metadata=dict(
             name="PurchaseWindow",
@@ -16544,7 +17859,7 @@ class OptionalService:
             type="Attribute"
         )
     )
-    assess_indicator: Optional[TypeAssessIndicator] = field(
+    assess_indicator: Optional[str] = field(
         default=None,
         metadata=dict(
             name="AssessIndicator",
@@ -16748,6 +18063,9 @@ class PrePayAccount:
     :ivar effective_date: Effective date for the pre pay account
     :ivar expire_date: Expiry date for the pre pay account
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     credit_summary: Optional[CreditSummary] = field(
         default=None,
         metadata=dict(
@@ -16805,6 +18123,9 @@ class RouteList:
 
     :ivar route:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     route: List[Route] = field(
         default_factory=list,
         metadata=dict(
@@ -16825,6 +18146,9 @@ class Row:
     :ivar number:
     :ivar search_traveler_ref:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     facility: List[Facility] = field(
         default_factory=list,
         metadata=dict(
@@ -16866,16 +18190,18 @@ class SearchAirLeg:
 
     :ivar search_origin:
     :ivar search_destination:
-    :ivar air_leg_modifiers:
     :ivar search_dep_time:
     :ivar search_arv_time: Specifies the preferred time within the time range. For 1G, 1V, 1P, 1J, it is supported for AvailabilitySearchReq (TimeRange must also be specified) and not supported for LowFareSearchReq. ACH does not support search by arrival time.
+    :ivar air_leg_modifiers:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     search_origin: List[TypeSearchLocation] = field(
         default_factory=list,
         metadata=dict(
             name="SearchOrigin",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=1,
             max_occurs=999
         )
@@ -16885,16 +18211,8 @@ class SearchAirLeg:
         metadata=dict(
             name="SearchDestination",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
-        )
-    )
-    air_leg_modifiers: Optional[AirLegModifiers] = field(
-        default=None,
-        metadata=dict(
-            name="AirLegModifiers",
-            type="Element"
         )
     )
     search_dep_time: List[TypeFlexibleTimeSpec] = field(
@@ -16902,7 +18220,6 @@ class SearchAirLeg:
         metadata=dict(
             name="SearchDepTime",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -16912,51 +18229,15 @@ class SearchAirLeg:
         metadata=dict(
             name="SearchArvTime",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
     )
-
-
-@dataclass
-class SegmentModifiers:
-    """To be used to modify the ticket modifiers for air segment.
-
-    :ivar air_segment_ref:
-    :ivar ticket_validity: To be used to pass the ticket validity dates
-    :ivar baggage_allowance:
-    :ivar ticket_designator:
-    """
-    air_segment_ref: Optional[AirSegmentRef] = field(
+    air_leg_modifiers: Optional[AirLegModifiers] = field(
         default=None,
         metadata=dict(
-            name="AirSegmentRef",
-            type="Element",
-            required=True
-        )
-    )
-    ticket_validity: Optional[TicketValidity] = field(
-        default=None,
-        metadata=dict(
-            name="TicketValidity",
+            name="AirLegModifiers",
             type="Element"
-        )
-    )
-    baggage_allowance: Optional[BaggageAllowance] = field(
-        default=None,
-        metadata=dict(
-            name="BaggageAllowance",
-            type="Element"
-        )
-    )
-    ticket_designator: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketDesignator",
-            type="Element",
-            min_length=0.0,
-            max_length=20.0
         )
     )
 
@@ -16973,1017 +18254,6 @@ class StructuredFareRulesType:
             type="Element",
             min_occurs=0,
             max_occurs=99
-        )
-    )
-
-
-@dataclass
-class TypeBaseAirSegment(Segment):
-    """
-    :ivar sponsored_flt_info:
-    :ivar codeshare_info:
-    :ivar air_avail_info:
-    :ivar flight_details:
-    :ivar flight_details_ref:
-    :ivar alternate_location_distance_ref:
-    :ivar connection:
-    :ivar sell_message:
-    :ivar rail_coach_details:
-    :ivar open_segment: Indicates OpenSegment when True
-    :ivar group: The Origin Destination Grouping of this segment.
-    :ivar carrier: The carrier that is marketing this segment
-    :ivar cabin_class: Specifies Cabin class for a group of class of services. Cabin class is not identified if it is not present.
-    :ivar flight_number: The flight number under which the marketing carrier is marketing this flight
-    :ivar class_of_service:
-    :ivar eticketability: Identifies if this particular segment is E-Ticketable
-    :ivar equipment: Identifies the equipment that this segment is operating under.
-    :ivar marriage_group: Identifies this segment as being a married segment. It is paired with other segments of the same value.
-    :ivar number_of_stops: Identifies the number of stops for each within the segment.
-    :ivar seamless: Identifies that this segment was sold via a direct access channel to the marketing carrier.
-    :ivar change_of_plane: Indicates the traveler must change planes between flights.
-    :ivar guaranteed_payment_carrier: Identifies that this segment has Guaranteed Payment Carrier.
-    :ivar host_token_ref: Identifies that this segment has Guaranteed Payment Carrier.
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar passive_provider_reservation_info_ref: Provider reservation reference key.
-    :ivar optional_services_indicator: Indicates true if flight provides optional services.
-    :ivar availability_source: Indicates Availability source of AirSegment.
-    :ivar apisrequirements_ref: Reference to the APIS Requirements for this AirSegment.
-    :ivar black_listed: Indicates blacklisted carriers which are banned from servicing points to, from and within the European Community.
-    :ivar operational_status: Refers to the flight operational status for the segment. This attribute will only be returned in the AvailabilitySearchRsp and not used/returned in any other request/responses. If this attribute is not returned back in the response, it means the flight is operational and not past scheduled departure.
-    :ivar number_in_party: Number of person traveling in this air segment excluding the number of infants on lap.
-    :ivar rail_coach_number: Coach number for which rail seatmap/coachmap is returned.
-    :ivar booking_date: Used for rapid reprice. The date the booking was made. Providers: 1G/1V/1P/1S/1A
-    :ivar flown_segment: Used for rapid reprice. Tells whether or not the air segment has been flown. Providers: 1G/1V/1P/1S/1A
-    :ivar schedule_change: Used for rapid reprice. Tells whether or not the air segment had a schedule change by the carrier. This tells rapid reprice that the change in the air segment was involuntary and because of a schedule change, not because the user is changing the segment. Providers: 1G/1V/1P/1S/1A
-    :ivar brand_indicator: Value “B” specifies that the carrier supports Rich Content and Branding. The Brand Indicator is only returned in the availability search response. Provider: 1G, 1V, 1P, 1J, ACH
-    """
-    sponsored_flt_info: Optional[SponsoredFltInfo] = field(
-        default=None,
-        metadata=dict(
-            name="SponsoredFltInfo",
-            type="Element"
-        )
-    )
-    codeshare_info: Optional[CodeshareInfo] = field(
-        default=None,
-        metadata=dict(
-            name="CodeshareInfo",
-            type="Element"
-        )
-    )
-    air_avail_info: List[AirAvailInfo] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AirAvailInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    flight_details: List[FlightDetails] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FlightDetails",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    flight_details_ref: List[FlightDetailsRef] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FlightDetailsRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    alternate_location_distance_ref: List[AlternateLocationDistanceRef] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AlternateLocationDistanceRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    connection: Optional[Connection] = field(
-        default=None,
-        metadata=dict(
-            name="Connection",
-            type="Element"
-        )
-    )
-    sell_message: List[SellMessage] = field(
-        default_factory=list,
-        metadata=dict(
-            name="SellMessage",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    rail_coach_details: List[RailCoachDetails] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailCoachDetails",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    open_segment: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="OpenSegment",
-            type="Attribute"
-        )
-    )
-    group: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="Group",
-            type="Attribute",
-            required=True
-        )
-    )
-    carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Carrier",
-            type="Attribute",
-            length=2
-        )
-    )
-    cabin_class: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CabinClass",
-            type="Attribute"
-        )
-    )
-    flight_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FlightNumber",
-            type="Attribute",
-            max_length=5.0
-        )
-    )
-    class_of_service: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ClassOfService",
-            type="Attribute",
-            min_length=1.0,
-            max_length=2.0
-        )
-    )
-    eticketability: Optional[TypeEticketability] = field(
-        default=None,
-        metadata=dict(
-            name="ETicketability",
-            type="Attribute"
-        )
-    )
-    equipment: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Equipment",
-            type="Attribute",
-            length=3
-        )
-    )
-    marriage_group: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="MarriageGroup",
-            type="Attribute"
-        )
-    )
-    number_of_stops: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="NumberOfStops",
-            type="Attribute"
-        )
-    )
-    seamless: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="Seamless",
-            type="Attribute"
-        )
-    )
-    change_of_plane: bool = field(
-        default=False,
-        metadata=dict(
-            name="ChangeOfPlane",
-            type="Attribute"
-        )
-    )
-    guaranteed_payment_carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="GuaranteedPaymentCarrier",
-            type="Attribute"
-        )
-    )
-    host_token_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="HostTokenRef",
-            type="Attribute"
-        )
-    )
-    provider_reservation_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
-    )
-    passive_provider_reservation_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PassiveProviderReservationInfoRef",
-            type="Attribute"
-        )
-    )
-    optional_services_indicator: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="OptionalServicesIndicator",
-            type="Attribute"
-        )
-    )
-    availability_source: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AvailabilitySource",
-            type="Attribute",
-            max_length=1.0
-        )
-    )
-    apisrequirements_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="APISRequirementsRef",
-            type="Attribute"
-        )
-    )
-    black_listed: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="BlackListed",
-            type="Attribute"
-        )
-    )
-    operational_status: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="OperationalStatus",
-            type="Attribute"
-        )
-    )
-    number_in_party: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="NumberInParty",
-            type="Attribute",
-            min_inclusive=1.0,
-            max_inclusive=99.0
-        )
-    )
-    rail_coach_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RailCoachNumber",
-            type="Attribute",
-            max_length=4.0
-        )
-    )
-    booking_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BookingDate",
-            type="Attribute"
-        )
-    )
-    flown_segment: bool = field(
-        default=False,
-        metadata=dict(
-            name="FlownSegment",
-            type="Attribute"
-        )
-    )
-    schedule_change: bool = field(
-        default=False,
-        metadata=dict(
-            name="ScheduleChange",
-            type="Attribute"
-        )
-    )
-    brand_indicator: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BrandIndicator",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class AirSegment(TypeBaseAirSegment):
-    """An Air marketable travel segment."""
-    pass
-
-
-@dataclass
-class BaggageAllowanceInfo(BaseBaggageAllowanceInfo):
-    """Information related to Baggage allowance like URL,Height,Weight etc.
-
-    :ivar bag_details:
-    :ivar traveler_type:
-    :ivar fare_info_ref:
-    """
-    bag_details: List[BagDetails] = field(
-        default_factory=list,
-        metadata=dict(
-            name="BagDetails",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    traveler_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TravelerType",
-            type="Attribute",
-            min_length=3.0,
-            max_length=5.0
-        )
-    )
-    fare_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FareInfoRef",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class FareDisplay:
-    """Fare/Tariff Display.
-
-    :ivar fare_display_rule:
-    :ivar fare_pricing:
-    :ivar fare_restriction:
-    :ivar fare_routing_information:
-    :ivar fare_mileage_information:
-    :ivar air_fare_display_rule_key:
-    :ivar booking_code:
-    :ivar account_code:
-    :ivar addl_booking_code_information:
-    :ivar fare_rule_failure_info: Returns fare rule failure info for Non Valid fares.
-    :ivar price_change: Indicates a price change is found in Fare Control Manager
-    :ivar carrier:
-    :ivar fare_basis:
-    :ivar amount:
-    :ivar trip_type:
-    :ivar fare_type_code:
-    :ivar special_fare:
-    :ivar instant_purchase:
-    :ivar eligibility_restricted:
-    :ivar flight_restricted:
-    :ivar stopovers_restricted:
-    :ivar transfers_restricted:
-    :ivar blackouts_exist:
-    :ivar accompanied_travel:
-    :ivar mile_or_route_based_fare:
-    :ivar global_indicator:
-    :ivar origin: Returns the origin airport or city code for which this tariff is applicable.
-    :ivar destination: Returns the destination airport or city code for which this tariff is applicable.
-    :ivar fare_ticketing_code: Returns the ticketing code for which this tariff is applicable.
-    :ivar fare_ticketing_designator: Returns the ticketing designator for which this tariff is applicable.
-    """
-    fare_display_rule: Optional[FareDisplayRule] = field(
-        default=None,
-        metadata=dict(
-            name="FareDisplayRule",
-            type="Element",
-            required=True
-        )
-    )
-    fare_pricing: List[FarePricing] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FarePricing",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
-    )
-    fare_restriction: List[FareRestriction] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FareRestriction",
-            type="Element",
-            min_occurs=0,
-            max_occurs=99
-        )
-    )
-    fare_routing_information: Optional[FareRoutingInformation] = field(
-        default=None,
-        metadata=dict(
-            name="FareRoutingInformation",
-            type="Element"
-        )
-    )
-    fare_mileage_information: Optional[FareMileageInformation] = field(
-        default=None,
-        metadata=dict(
-            name="FareMileageInformation",
-            type="Element"
-        )
-    )
-    air_fare_display_rule_key: Optional[AirFareDisplayRuleKey] = field(
-        default=None,
-        metadata=dict(
-            name="AirFareDisplayRuleKey",
-            type="Element"
-        )
-    )
-    booking_code: List[BookingCode] = field(
-        default_factory=list,
-        metadata=dict(
-            name="BookingCode",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    account_code: List[AccountCode] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AccountCode",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    addl_booking_code_information: Optional[AddlBookingCodeInformation] = field(
-        default=None,
-        metadata=dict(
-            name="AddlBookingCodeInformation",
-            type="Element"
-        )
-    )
-    fare_rule_failure_info: Optional[FareRuleFailureInfo] = field(
-        default=None,
-        metadata=dict(
-            name="FareRuleFailureInfo",
-            type="Element"
-        )
-    )
-    price_change: List[PriceChangeType] = field(
-        default_factory=list,
-        metadata=dict(
-            name="PriceChange",
-            type="Element",
-            min_occurs=0,
-            max_occurs=99
-        )
-    )
-    carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Carrier",
-            type="Attribute",
-            required=True,
-            length=2
-        )
-    )
-    fare_basis: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FareBasis",
-            type="Attribute",
-            required=True
-        )
-    )
-    amount: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            required=True
-        )
-    )
-    trip_type: Optional[TypeFareTripType] = field(
-        default=None,
-        metadata=dict(
-            name="TripType",
-            type="Attribute"
-        )
-    )
-    fare_type_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FareTypeCode",
-            type="Attribute",
-            min_length=1.0,
-            max_length=5.0
-        )
-    )
-    special_fare: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="SpecialFare",
-            type="Attribute"
-        )
-    )
-    instant_purchase: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="InstantPurchase",
-            type="Attribute"
-        )
-    )
-    eligibility_restricted: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="EligibilityRestricted",
-            type="Attribute"
-        )
-    )
-    flight_restricted: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="FlightRestricted",
-            type="Attribute"
-        )
-    )
-    stopovers_restricted: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="StopoversRestricted",
-            type="Attribute"
-        )
-    )
-    transfers_restricted: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="TransfersRestricted",
-            type="Attribute"
-        )
-    )
-    blackouts_exist: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="BlackoutsExist",
-            type="Attribute"
-        )
-    )
-    accompanied_travel: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="AccompaniedTravel",
-            type="Attribute"
-        )
-    )
-    mile_or_route_based_fare: Optional[TypeMileOrRouteBasedFare] = field(
-        default=None,
-        metadata=dict(
-            name="MileOrRouteBasedFare",
-            type="Attribute"
-        )
-    )
-    global_indicator: Optional[TypeAtpcoglobalIndicator] = field(
-        default=None,
-        metadata=dict(
-            name="GlobalIndicator",
-            type="Attribute"
-        )
-    )
-    origin: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Origin",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
-    )
-    destination: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Destination",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
-    )
-    fare_ticketing_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FareTicketingCode",
-            type="Attribute"
-        )
-    )
-    fare_ticketing_designator: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FareTicketingDesignator",
-            type="Attribute",
-            min_length=0.0,
-            max_length=20.0
-        )
-    )
-
-
-@dataclass
-class FareRule:
-    """Fare Rule Container.
-
-    :ivar provider_code:
-    :ivar supplier_code:
-    :ivar fare_rule_long:
-    :ivar fare_rule_short:
-    :ivar rule_advanced_purchase:
-    :ivar rule_length_of_stay:
-    :ivar rule_charges:
-    :ivar fare_rule_result_message:
-    :ivar structured_fare_rules:
-    :ivar fare_info_ref:
-    :ivar rule_number:
-    :ivar source:
-    :ivar tariff_number:
-    """
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2.0,
-            max_length=5.0
-        )
-    )
-    supplier_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            min_length=1.0,
-            max_length=5.0
-        )
-    )
-    fare_rule_long: List[FareRuleLong] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FareRuleLong",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    fare_rule_short: List[FareRuleShort] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FareRuleShort",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    rule_advanced_purchase: Optional[RuleAdvancedPurchase] = field(
-        default=None,
-        metadata=dict(
-            name="RuleAdvancedPurchase",
-            type="Element"
-        )
-    )
-    rule_length_of_stay: Optional[RuleLengthOfStay] = field(
-        default=None,
-        metadata=dict(
-            name="RuleLengthOfStay",
-            type="Element"
-        )
-    )
-    rule_charges: Optional[RuleCharges] = field(
-        default=None,
-        metadata=dict(
-            name="RuleCharges",
-            type="Element"
-        )
-    )
-    fare_rule_result_message: List[TypeResultMessage] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FareRuleResultMessage",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    structured_fare_rules: Optional[StructuredFareRulesType] = field(
-        default=None,
-        metadata=dict(
-            name="StructuredFareRules",
-            type="Element"
-        )
-    )
-    fare_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FareInfoRef",
-            type="Attribute"
-        )
-    )
-    rule_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RuleNumber",
-            type="Attribute"
-        )
-    )
-    source: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Source",
-            type="Attribute"
-        )
-    )
-    tariff_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TariffNumber",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class FlightOptionsList:
-    """List of Flight Options for the itinerary.
-
-    :ivar flight_option:
-    """
-    flight_option: List[FlightOption] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FlightOption",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-
-
-@dataclass
-class OptionalServices:
-    """A wrapper for all the information regarding each of the Optional services.
-
-    :ivar optional_services_total: The total fares, fees and taxes associated with the Optional Services
-    :ivar optional_service:
-    :ivar grouped_option_info: Details about an unselected or "other" option when optional services are grouped together.
-    :ivar optional_service_rules: Holds the rules for selecting the optional service in the itinerary
-    """
-    optional_services_total: Optional["OptionalServices.OptionalServicesTotal"] = field(
-        default=None,
-        metadata=dict(
-            name="OptionalServicesTotal",
-            type="Element"
-        )
-    )
-    optional_service: List[OptionalService] = field(
-        default_factory=list,
-        metadata=dict(
-            name="OptionalService",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
-    )
-    grouped_option_info: List[GroupedOptionInfo] = field(
-        default_factory=list,
-        metadata=dict(
-            name="GroupedOptionInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    optional_service_rules: List[ServiceRuleType] = field(
-        default_factory=list,
-        metadata=dict(
-            name="OptionalServiceRules",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-
-    @dataclass
-    class OptionalServicesTotal:
-        """
-        :ivar total_price: The total price for this entity including base price and all taxes.
-        :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
-        :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
-        :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
-        :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
-        :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
-        :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
-        :ivar services: The total cost for all optional services.
-        :ivar approximate_taxes: The Converted tax amount in Default Currency.
-        :ivar approximate_fees: The Converted fee amount in Default Currency.
-        :ivar tax_info:
-        :ivar fee_info:
-        """
-        total_price: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="TotalPrice",
-                type="Attribute"
-            )
-        )
-        base_price: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="BasePrice",
-                type="Attribute"
-            )
-        )
-        approximate_total_price: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="ApproximateTotalPrice",
-                type="Attribute"
-            )
-        )
-        approximate_base_price: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="ApproximateBasePrice",
-                type="Attribute"
-            )
-        )
-        equivalent_base_price: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="EquivalentBasePrice",
-                type="Attribute"
-            )
-        )
-        taxes: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="Taxes",
-                type="Attribute"
-            )
-        )
-        fees: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="Fees",
-                type="Attribute"
-            )
-        )
-        services: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="Services",
-                type="Attribute"
-            )
-        )
-        approximate_taxes: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="ApproximateTaxes",
-                type="Attribute"
-            )
-        )
-        approximate_fees: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="ApproximateFees",
-                type="Attribute"
-            )
-        )
-        tax_info: List[TaxInfo] = field(
-            default_factory=list,
-            metadata=dict(
-                name="TaxInfo",
-                type="Element",
-                min_occurs=0,
-                max_occurs=999
-            )
-        )
-        fee_info: List[FeeInfo] = field(
-            default_factory=list,
-            metadata=dict(
-                name="FeeInfo",
-                type="Element",
-                min_occurs=0,
-                max_occurs=999
-            )
-        )
-
-
-@dataclass
-class PrePayProfileInfo:
-    """PrePay Profile associated with the customer.
-
-    :ivar pre_pay_id: Pre pay unique identifier detail.This information block is returned both in list and detail retrieve transactions.Example flight pass number
-    :ivar pre_pay_customer: Pre pay customer detail.This information block is returned both in list and detail retrieve transactions.
-    :ivar pre_pay_account: Pre pay account detail.This information block is returned both in list and detail retrieve transactions.
-    :ivar affiliations: Pre pay affiliations detail.This information block is returned only in detail retrieve transactions.
-    :ivar account_related_rules: Pre pay account related rules.This information block is returned only in detail retrieve transactions.
-    :ivar status_code: Customer pre pay profile status code(One of Marked for deletion,Lapsed,Terminated,Active,Inactive)
-    :ivar creator_id: This is the loyalty card number of the person who originally purchased/setup the flight pass
-    """
-    pre_pay_id: Optional[PrePayId] = field(
-        default=None,
-        metadata=dict(
-            name="PrePayId",
-            type="Element",
-            required=True
-        )
-    )
-    pre_pay_customer: Optional[PrePayCustomer] = field(
-        default=None,
-        metadata=dict(
-            name="PrePayCustomer",
-            type="Element"
-        )
-    )
-    pre_pay_account: Optional[PrePayAccount] = field(
-        default=None,
-        metadata=dict(
-            name="PrePayAccount",
-            type="Element"
-        )
-    )
-    affiliations: Optional[Affiliations] = field(
-        default=None,
-        metadata=dict(
-            name="Affiliations",
-            type="Element"
-        )
-    )
-    account_related_rules: Optional[AccountRelatedRules] = field(
-        default=None,
-        metadata=dict(
-            name="AccountRelatedRules",
-            type="Element"
-        )
-    )
-    status_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="StatusCode",
-            type="Attribute"
-        )
-    )
-    creator_id: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CreatorID",
-            type="Attribute",
-            min_length=1.0,
-            max_length=36.0
-        )
-    )
-
-
-@dataclass
-class Rows:
-    """A wrapper for all the information regarding each of the rows. Providers:
-    ACH, 1G, 1V, 1P, 1J.
-
-    :ivar row: Provider: 1G,1V,1P,1J,ACH,MCH.
-    :ivar segment_ref: Specifies the AirSegment the seat map is for. Providers: ACH, 1G, 1V, 1P, 1J
-    """
-    row: List[Row] = field(
-        default_factory=list,
-        metadata=dict(
-            name="Row",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    segment_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SegmentRef",
-            type="Attribute"
         )
     )
 
@@ -18032,7 +18302,10 @@ class TicketingModifiers:
     :ivar currency_override_code: This modifier allows an agency to specify the currency like L for Local, E for Euro, U for USD, C for CAD (Canadian dollars).
     :ivar key:
     """
-    el_stat: Optional[TypeElementStatus] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    el_stat: Optional[str] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -18051,7 +18324,6 @@ class TicketingModifiers:
         metadata=dict(
             name="BookingTravelerRef",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -18338,6 +18610,910 @@ class TicketingModifiers:
 
 
 @dataclass
+class TypeBaseAirSegment(Segment):
+    """
+    :ivar provider_code:
+    :ivar supplier_code:
+    :ivar origin: The IATA location code for this origination of this entity.
+    :ivar destination: The IATA location code for this destination of this entity.
+    :ivar departure_time: The date and time at which this entity departs. Date and time are represented as Airport Local Time at the place of departure. The correct time zone offset is also included.
+    :ivar arrival_time: The date and time at which this entity arrives at the destination. Date and time are represented as Airport Local Time at the place of arrival. The correct time zone offset is also included.
+    :ivar flight_time: Time spent (minutes) traveling in flight, including airport taxi time.
+    :ivar travel_time: Total time spent (minutes) traveling including flight time and ground time.
+    :ivar distance: The distance traveled. Units are specified in the parent response element.
+    :ivar participant_level: Type of sell agreement between host and link carrier.
+    :ivar link_availability: Indicates if carrier has link (carrier specific) display option.
+    :ivar polled_availability_option: Indicates if carrier has Inside (polled)Availability option.
+    :ivar availability_display_type: The type of availability from which the segment is sold.Possible Values (List): G - General S - Flight Specific L - Carrier Specific/Direct Access M - Manual Sell F - Fare Shop/Optimal Shop Q - Fare Specific Fare Quote unbooked R - Redemption Availability used to complete the sell. Supported Providers: 1G,1V.
+    :ivar sponsored_flt_info:
+    :ivar codeshare_info:
+    :ivar air_avail_info:
+    :ivar flight_details:
+    :ivar flight_details_ref:
+    :ivar alternate_location_distance_ref:
+    :ivar connection:
+    :ivar sell_message:
+    :ivar rail_coach_details:
+    :ivar open_segment: Indicates OpenSegment when True
+    :ivar group: The Origin Destination Grouping of this segment.
+    :ivar carrier: The carrier that is marketing this segment
+    :ivar cabin_class: Specifies Cabin class for a group of class of services. Cabin class is not identified if it is not present.
+    :ivar flight_number: The flight number under which the marketing carrier is marketing this flight
+    :ivar class_of_service:
+    :ivar eticketability: Identifies if this particular segment is E-Ticketable
+    :ivar equipment: Identifies the equipment that this segment is operating under.
+    :ivar marriage_group: Identifies this segment as being a married segment. It is paired with other segments of the same value.
+    :ivar number_of_stops: Identifies the number of stops for each within the segment.
+    :ivar seamless: Identifies that this segment was sold via a direct access channel to the marketing carrier.
+    :ivar change_of_plane: Indicates the traveler must change planes between flights.
+    :ivar guaranteed_payment_carrier: Identifies that this segment has Guaranteed Payment Carrier.
+    :ivar host_token_ref: Identifies that this segment has Guaranteed Payment Carrier.
+    :ivar provider_reservation_info_ref: Provider reservation reference key.
+    :ivar passive_provider_reservation_info_ref: Provider reservation reference key.
+    :ivar optional_services_indicator: Indicates true if flight provides optional services.
+    :ivar availability_source: Indicates Availability source of AirSegment.
+    :ivar apisrequirements_ref: Reference to the APIS Requirements for this AirSegment.
+    :ivar black_listed: Indicates blacklisted carriers which are banned from servicing points to, from and within the European Community.
+    :ivar operational_status: Refers to the flight operational status for the segment. This attribute will only be returned in the AvailabilitySearchRsp and not used/returned in any other request/responses. If this attribute is not returned back in the response, it means the flight is operational and not past scheduled departure.
+    :ivar number_in_party: Number of person traveling in this air segment excluding the number of infants on lap.
+    :ivar rail_coach_number: Coach number for which rail seatmap/coachmap is returned.
+    :ivar booking_date: Used for rapid reprice. The date the booking was made. Providers: 1G/1V/1P/1S/1A
+    :ivar flown_segment: Used for rapid reprice. Tells whether or not the air segment has been flown. Providers: 1G/1V/1P/1S/1A
+    :ivar schedule_change: Used for rapid reprice. Tells whether or not the air segment had a schedule change by the carrier. This tells rapid reprice that the change in the air segment was involuntary and because of a schedule change, not because the user is changing the segment. Providers: 1G/1V/1P/1S/1A
+    :ivar brand_indicator: Value “B” specifies that the carrier supports Rich Content and Branding. The Brand Indicator is only returned in the availability search response. Provider: 1G, 1V, 1P, 1J, ACH
+    """
+    class Meta:
+        name = "typeBaseAirSegment"
+
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
+    origin: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Origin",
+            type="Attribute",
+            required=True,
+            length=3,
+            white_space="collapse"
+        )
+    )
+    destination: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Destination",
+            type="Attribute",
+            required=True,
+            length=3,
+            white_space="collapse"
+        )
+    )
+    departure_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DepartureTime",
+            type="Attribute"
+        )
+    )
+    arrival_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ArrivalTime",
+            type="Attribute"
+        )
+    )
+    flight_time: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="FlightTime",
+            type="Attribute"
+        )
+    )
+    travel_time: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="TravelTime",
+            type="Attribute"
+        )
+    )
+    distance: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Distance",
+            type="Attribute"
+        )
+    )
+    participant_level: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ParticipantLevel",
+            type="Attribute"
+        )
+    )
+    link_availability: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="LinkAvailability",
+            type="Attribute"
+        )
+    )
+    polled_availability_option: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PolledAvailabilityOption",
+            type="Attribute"
+        )
+    )
+    availability_display_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AvailabilityDisplayType",
+            type="Attribute"
+        )
+    )
+    sponsored_flt_info: Optional[SponsoredFltInfo] = field(
+        default=None,
+        metadata=dict(
+            name="SponsoredFltInfo",
+            type="Element"
+        )
+    )
+    codeshare_info: Optional[CodeshareInfo] = field(
+        default=None,
+        metadata=dict(
+            name="CodeshareInfo",
+            type="Element"
+        )
+    )
+    air_avail_info: List[AirAvailInfo] = field(
+        default_factory=list,
+        metadata=dict(
+            name="AirAvailInfo",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    flight_details: List[FlightDetails] = field(
+        default_factory=list,
+        metadata=dict(
+            name="FlightDetails",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    flight_details_ref: List[FlightDetailsRef] = field(
+        default_factory=list,
+        metadata=dict(
+            name="FlightDetailsRef",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    alternate_location_distance_ref: List[AlternateLocationDistanceRef] = field(
+        default_factory=list,
+        metadata=dict(
+            name="AlternateLocationDistanceRef",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    connection: Optional[Connection] = field(
+        default=None,
+        metadata=dict(
+            name="Connection",
+            type="Element"
+        )
+    )
+    sell_message: List[SellMessage] = field(
+        default_factory=list,
+        metadata=dict(
+            name="SellMessage",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    rail_coach_details: List[RailCoachDetails] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailCoachDetails",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    open_segment: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="OpenSegment",
+            type="Attribute"
+        )
+    )
+    group: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Group",
+            type="Attribute",
+            required=True
+        )
+    )
+    carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Carrier",
+            type="Attribute",
+            length=2
+        )
+    )
+    cabin_class: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CabinClass",
+            type="Attribute"
+        )
+    )
+    flight_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FlightNumber",
+            type="Attribute",
+            max_length=5.0
+        )
+    )
+    class_of_service: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ClassOfService",
+            type="Attribute",
+            min_length=1.0,
+            max_length=2.0
+        )
+    )
+    eticketability: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ETicketability",
+            type="Attribute"
+        )
+    )
+    equipment: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Equipment",
+            type="Attribute",
+            length=3
+        )
+    )
+    marriage_group: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="MarriageGroup",
+            type="Attribute"
+        )
+    )
+    number_of_stops: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="NumberOfStops",
+            type="Attribute"
+        )
+    )
+    seamless: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="Seamless",
+            type="Attribute"
+        )
+    )
+    change_of_plane: bool = field(
+        default=False,
+        metadata=dict(
+            name="ChangeOfPlane",
+            type="Attribute"
+        )
+    )
+    guaranteed_payment_carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="GuaranteedPaymentCarrier",
+            type="Attribute"
+        )
+    )
+    host_token_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="HostTokenRef",
+            type="Attribute"
+        )
+    )
+    provider_reservation_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderReservationInfoRef",
+            type="Attribute"
+        )
+    )
+    passive_provider_reservation_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PassiveProviderReservationInfoRef",
+            type="Attribute"
+        )
+    )
+    optional_services_indicator: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="OptionalServicesIndicator",
+            type="Attribute"
+        )
+    )
+    availability_source: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AvailabilitySource",
+            type="Attribute",
+            max_length=1.0
+        )
+    )
+    apisrequirements_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="APISRequirementsRef",
+            type="Attribute"
+        )
+    )
+    black_listed: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="BlackListed",
+            type="Attribute"
+        )
+    )
+    operational_status: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="OperationalStatus",
+            type="Attribute"
+        )
+    )
+    number_in_party: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="NumberInParty",
+            type="Attribute",
+            min_inclusive=1.0,
+            max_inclusive=99.0
+        )
+    )
+    rail_coach_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RailCoachNumber",
+            type="Attribute",
+            max_length=4.0
+        )
+    )
+    booking_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BookingDate",
+            type="Attribute"
+        )
+    )
+    flown_segment: bool = field(
+        default=False,
+        metadata=dict(
+            name="FlownSegment",
+            type="Attribute"
+        )
+    )
+    schedule_change: bool = field(
+        default=False,
+        metadata=dict(
+            name="ScheduleChange",
+            type="Attribute"
+        )
+    )
+    brand_indicator: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BrandIndicator",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
+class AirPricingTicketingModifiers:
+    """
+    AirPricing TicketingModifier information - used to associate Ticketing Modifiers with one or more AirPricingInfos/ProviderReservationInfo
+    :ivar air_pricing_info_ref:
+    :ivar ticketing_modifiers:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    air_pricing_info_ref: List[AirPricingInfoRef] = field(
+        default_factory=list,
+        metadata=dict(
+            name="AirPricingInfoRef",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    ticketing_modifiers: Optional[TicketingModifiers] = field(
+        default=None,
+        metadata=dict(
+            name="TicketingModifiers",
+            type="Element",
+            required=True
+        )
+    )
+
+
+@dataclass
+class AirSegment(TypeBaseAirSegment):
+    """An Air marketable travel segment."""
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+
+
+@dataclass
+class BaggageAllowanceInfo(BaseBaggageAllowanceInfo):
+    """Information related to Baggage allowance like URL,Height,Weight etc.
+
+    :ivar bag_details:
+    :ivar traveler_type:
+    :ivar fare_info_ref:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    bag_details: List[BagDetails] = field(
+        default_factory=list,
+        metadata=dict(
+            name="BagDetails",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    traveler_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TravelerType",
+            type="Attribute",
+            min_length=3.0,
+            max_length=5.0
+        )
+    )
+    fare_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FareInfoRef",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
+class FareRule:
+    """Fare Rule Container.
+
+    :ivar provider_code:
+    :ivar supplier_code:
+    :ivar fare_rule_long:
+    :ivar fare_rule_short:
+    :ivar rule_advanced_purchase:
+    :ivar rule_length_of_stay:
+    :ivar rule_charges:
+    :ivar fare_rule_result_message:
+    :ivar structured_fare_rules:
+    :ivar fare_info_ref:
+    :ivar rule_number:
+    :ivar source:
+    :ivar tariff_number:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
+    fare_rule_long: List[FareRuleLong] = field(
+        default_factory=list,
+        metadata=dict(
+            name="FareRuleLong",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    fare_rule_short: List[FareRuleShort] = field(
+        default_factory=list,
+        metadata=dict(
+            name="FareRuleShort",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    rule_advanced_purchase: Optional[RuleAdvancedPurchase] = field(
+        default=None,
+        metadata=dict(
+            name="RuleAdvancedPurchase",
+            type="Element"
+        )
+    )
+    rule_length_of_stay: Optional[RuleLengthOfStay] = field(
+        default=None,
+        metadata=dict(
+            name="RuleLengthOfStay",
+            type="Element"
+        )
+    )
+    rule_charges: Optional[RuleCharges] = field(
+        default=None,
+        metadata=dict(
+            name="RuleCharges",
+            type="Element"
+        )
+    )
+    fare_rule_result_message: List[TypeResultMessage] = field(
+        default_factory=list,
+        metadata=dict(
+            name="FareRuleResultMessage",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    structured_fare_rules: Optional[StructuredFareRulesType] = field(
+        default=None,
+        metadata=dict(
+            name="StructuredFareRules",
+            type="Element"
+        )
+    )
+    fare_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FareInfoRef",
+            type="Attribute"
+        )
+    )
+    rule_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RuleNumber",
+            type="Attribute"
+        )
+    )
+    source: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Source",
+            type="Attribute"
+        )
+    )
+    tariff_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TariffNumber",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
+class FlightOptionsList:
+    """List of Flight Options for the itinerary.
+
+    :ivar flight_option:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    flight_option: List[FlightOption] = field(
+        default_factory=list,
+        metadata=dict(
+            name="FlightOption",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+
+
+@dataclass
+class OptionalServices:
+    """A wrapper for all the information regarding each of the Optional services.
+
+    :ivar optional_services_total: The total fares, fees and taxes associated with the Optional Services
+    :ivar optional_service:
+    :ivar grouped_option_info: Details about an unselected or "other" option when optional services are grouped together.
+    :ivar optional_service_rules: Holds the rules for selecting the optional service in the itinerary
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    optional_services_total: Optional["OptionalServices.OptionalServicesTotal"] = field(
+        default=None,
+        metadata=dict(
+            name="OptionalServicesTotal",
+            type="Element"
+        )
+    )
+    optional_service: List[OptionalService] = field(
+        default_factory=list,
+        metadata=dict(
+            name="OptionalService",
+            type="Element",
+            min_occurs=1,
+            max_occurs=999
+        )
+    )
+    grouped_option_info: List[GroupedOptionInfo] = field(
+        default_factory=list,
+        metadata=dict(
+            name="GroupedOptionInfo",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    optional_service_rules: List[ServiceRuleType] = field(
+        default_factory=list,
+        metadata=dict(
+            name="OptionalServiceRules",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+
+    @dataclass
+    class OptionalServicesTotal:
+        """
+        :ivar total_price: The total price for this entity including base price and all taxes.
+        :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
+        :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
+        :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
+        :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
+        :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
+        :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
+        :ivar services: The total cost for all optional services.
+        :ivar approximate_taxes: The Converted tax amount in Default Currency.
+        :ivar approximate_fees: The Converted fee amount in Default Currency.
+        :ivar tax_info:
+        :ivar fee_info:
+        """
+        total_price: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="TotalPrice",
+                type="Attribute"
+            )
+        )
+        base_price: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="BasePrice",
+                type="Attribute"
+            )
+        )
+        approximate_total_price: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ApproximateTotalPrice",
+                type="Attribute"
+            )
+        )
+        approximate_base_price: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ApproximateBasePrice",
+                type="Attribute"
+            )
+        )
+        equivalent_base_price: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="EquivalentBasePrice",
+                type="Attribute"
+            )
+        )
+        taxes: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Taxes",
+                type="Attribute"
+            )
+        )
+        fees: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Fees",
+                type="Attribute"
+            )
+        )
+        services: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Services",
+                type="Attribute"
+            )
+        )
+        approximate_taxes: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ApproximateTaxes",
+                type="Attribute"
+            )
+        )
+        approximate_fees: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ApproximateFees",
+                type="Attribute"
+            )
+        )
+        tax_info: List[TaxInfo] = field(
+            default_factory=list,
+            metadata=dict(
+                name="TaxInfo",
+                type="Element",
+                min_occurs=0,
+                max_occurs=999
+            )
+        )
+        fee_info: List[FeeInfo] = field(
+            default_factory=list,
+            metadata=dict(
+                name="FeeInfo",
+                type="Element",
+                min_occurs=0,
+                max_occurs=999
+            )
+        )
+
+
+@dataclass
+class PrePayProfileInfo:
+    """PrePay Profile associated with the customer.
+
+    :ivar pre_pay_id: Pre pay unique identifier detail.This information block is returned both in list and detail retrieve transactions.Example flight pass number
+    :ivar pre_pay_customer: Pre pay customer detail.This information block is returned both in list and detail retrieve transactions.
+    :ivar pre_pay_account: Pre pay account detail.This information block is returned both in list and detail retrieve transactions.
+    :ivar affiliations: Pre pay affiliations detail.This information block is returned only in detail retrieve transactions.
+    :ivar account_related_rules: Pre pay account related rules.This information block is returned only in detail retrieve transactions.
+    :ivar status_code: Customer pre pay profile status code(One of Marked for deletion,Lapsed,Terminated,Active,Inactive)
+    :ivar creator_id: This is the loyalty card number of the person who originally purchased/setup the flight pass
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    pre_pay_id: Optional[PrePayId] = field(
+        default=None,
+        metadata=dict(
+            name="PrePayId",
+            type="Element",
+            required=True
+        )
+    )
+    pre_pay_customer: Optional[PrePayCustomer] = field(
+        default=None,
+        metadata=dict(
+            name="PrePayCustomer",
+            type="Element"
+        )
+    )
+    pre_pay_account: Optional[PrePayAccount] = field(
+        default=None,
+        metadata=dict(
+            name="PrePayAccount",
+            type="Element"
+        )
+    )
+    affiliations: Optional[Affiliations] = field(
+        default=None,
+        metadata=dict(
+            name="Affiliations",
+            type="Element"
+        )
+    )
+    account_related_rules: Optional[AccountRelatedRules] = field(
+        default=None,
+        metadata=dict(
+            name="AccountRelatedRules",
+            type="Element"
+        )
+    )
+    status_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="StatusCode",
+            type="Attribute"
+        )
+    )
+    creator_id: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CreatorID",
+            type="Attribute",
+            min_length=1.0,
+            max_length=36.0
+        )
+    )
+
+
+@dataclass
+class Rows:
+    """A wrapper for all the information regarding each of the rows. Providers:
+    ACH, 1G, 1V, 1P, 1J.
+
+    :ivar row: Provider: 1G,1V,1P,1J,ACH,MCH.
+    :ivar segment_ref: Specifies the AirSegment the seat map is for. Providers: ACH, 1G, 1V, 1P, 1J
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    row: List[Row] = field(
+        default_factory=list,
+        metadata=dict(
+            name="Row",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    segment_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SegmentRef",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class AirItinerary:
     """A container for an Air only travel itinerary.
 
@@ -18345,6 +19521,9 @@ class AirItinerary:
     :ivar host_token:
     :ivar apisrequirements:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment: List[AirSegment] = field(
         default_factory=list,
         metadata=dict(
@@ -18376,38 +19555,15 @@ class AirItinerary:
 
 
 @dataclass
-class AirPricingTicketingModifiers:
-    """
-    AirPricing TicketingModifier information - used to associate Ticketing Modifiers with one or more AirPricingInfos/ProviderReservationInfo
-    :ivar air_pricing_info_ref:
-    :ivar ticketing_modifiers:
-    """
-    air_pricing_info_ref: List[AirPricingInfoRef] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AirPricingInfoRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    ticketing_modifiers: Optional[TicketingModifiers] = field(
-        default=None,
-        metadata=dict(
-            name="TicketingModifiers",
-            type="Element",
-            required=True
-        )
-    )
-
-
-@dataclass
 class AirSegmentError:
     """Container to return error messages corresponding to AirSegment.
 
     :ivar air_segment:
     :ivar error_message:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment: Optional[AirSegment] = field(
         default=None,
         metadata=dict(
@@ -18432,6 +19588,9 @@ class AirSegmentList:
 
     :ivar air_segment:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment: List[AirSegment] = field(
         default_factory=list,
         metadata=dict(
@@ -18453,6 +19612,9 @@ class AirSolution:
     :ivar host_token:
     :ivar fare_basis:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     search_traveler: List[SearchTraveler] = field(
         default_factory=list,
         metadata=dict(
@@ -18500,6 +19662,9 @@ class BaggageAllowances:
     :ivar carry_on_allowance_info:
     :ivar embargo_info:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     baggage_allowance_info: List[BaggageAllowanceInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -18554,6 +19719,9 @@ class Brand:
     :ivar brand_tier: Modifier to price by specific brand tier number.
     :ivar brand_maintained: Indicates whether the brand was maintained from the original ticket.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     title: List[Title] = field(
         default_factory=list,
         metadata=dict(
@@ -18726,6 +19894,9 @@ class ExchangeAirSegment:
     :ivar cabin_class:
     :ivar fare_basis_code: The fare basis code to be used for exchange of this segment.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment: Optional[AirSegment] = field(
         default=None,
         metadata=dict(
@@ -18758,6 +19929,9 @@ class JourneyData:
 
     :ivar air_segment:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment: List[AirSegment] = field(
         default_factory=list,
         metadata=dict(
@@ -18784,6 +19958,10 @@ class TcrrefundBundle:
     :ivar refund_type: Specifies whether this bundle was auto or manually generated
     :ivar refund_access_code:
     """
+    class Meta:
+        name = "TCRRefundBundle"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_refund_info: Optional[AirRefundInfo] = field(
         default=None,
         metadata=dict(
@@ -18871,6 +20049,9 @@ class AirSegmentData:
     :ivar cabin_class: Specifies Cabin class for a group of class of services. Cabin class is not identified if it is not present.
     :ivar class_of_service:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment_ref: List[AirSegmentRef] = field(
         default_factory=list,
         metadata=dict(
@@ -18922,6 +20103,9 @@ class AirSegmentSellFailureInfo:
 
     :ivar air_segment_error:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment_error: List[AirSegmentError] = field(
         default_factory=list,
         metadata=dict(
@@ -18938,6 +20122,9 @@ class AvailabilityErrorInfo(TypeErrorInfo):
     """
     :ivar air_segment_error:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment_error: List[AirSegmentError] = field(
         default_factory=list,
         metadata=dict(
@@ -18996,7 +20183,10 @@ class FareInfo:
     :ivar supplier_code: Code of the provider returning this fare info
     :ivar tax_amount: Currency code and value for the approximate tax amount for this fare component.
     """
-    el_stat: Optional[TypeElementStatus] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    el_stat: Optional[str] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -19205,7 +20395,7 @@ class FareInfo:
             type="Attribute"
         )
     )
-    private_fare: Optional[TypePrivateFare] = field(
+    private_fare: Optional[str] = field(
         default=None,
         metadata=dict(
             name="PrivateFare",
@@ -19336,6 +20526,9 @@ class AirExchangeMultiQuoteOption:
     :ivar air_exchange_bundle_total:
     :ivar air_exchange_bundle_list:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_segment_data: List[AirSegmentData] = field(
         default_factory=list,
         metadata=dict(
@@ -19368,10 +20561,6 @@ class AirPricingInfo:
     """Per traveler type pricing breakdown. This will reflect the pricing for all
     travelers of the specified type.
 
-    :ivar in_policy: This attribute will be used to indicate if a fare or rate has been determined to be ‘in policy’ based on the associated policy settings.
-    :ivar preferred_option: This attribute is used to indicate if the vendors responsible for the fare or rate being returned have been determined to be ‘preferred’ based on the associated policy settings.
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar provider_code:
     :ivar supplier_code:
     :ivar total_price: The total price for this entity including base price and all taxes.
@@ -19384,6 +20573,10 @@ class AirPricingInfo:
     :ivar services: The total cost for all optional services.
     :ivar approximate_taxes: The Converted tax amount in Default Currency.
     :ivar approximate_fees: The Converted fee amount in Default Currency.
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar in_policy: This attribute will be used to indicate if a fare or rate has been determined to be ‘in policy’ based on the associated policy settings.
+    :ivar preferred_option: This attribute is used to indicate if the vendors responsible for the fare or rate being returned have been determined to be ‘preferred’ based on the associated policy settings.
     :ivar fare_info:
     :ivar fare_status:
     :ivar fare_info_ref:
@@ -19434,34 +20627,9 @@ class AirPricingInfo:
     :ivar fare_calculation_ind: Fare calculation that was used to price the itinerary.
     :ivar cat35_indicator: A true value indicates that the fare has a Cat35 rule. A false valud indicates that the fare does not have a Cat35 rule
     """
-    in_policy: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="InPolicy",
-            type="Attribute"
-        )
-    )
-    preferred_option: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="PreferredOption",
-            type="Attribute"
-        )
-    )
-    el_stat: Optional[TypeElementStatus] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     provider_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -19547,6 +20715,34 @@ class AirPricingInfo:
         default=None,
         metadata=dict(
             name="ApproximateFees",
+            type="Attribute"
+        )
+    )
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    in_policy: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="InPolicy",
+            type="Attribute"
+        )
+    )
+    preferred_option: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="PreferredOption",
             type="Attribute"
         )
     )
@@ -19853,7 +21049,7 @@ class AirPricingInfo:
             type="Attribute"
         )
     )
-    pricing_method: Optional[TypePricingMethod] = field(
+    pricing_method: Optional[str] = field(
         default=None,
         metadata=dict(
             name="PricingMethod",
@@ -19868,7 +21064,7 @@ class AirPricingInfo:
             type="Attribute"
         )
     )
-    eticketability: Optional[TypeEticketability] = field(
+    eticketability: Optional[str] = field(
         default=None,
         metadata=dict(
             name="ETicketability",
@@ -19949,6 +21145,9 @@ class FareInfoList:
 
     :ivar fare_info:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     fare_info: List[FareInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -19966,6 +21165,9 @@ class AirExchangeMulitQuoteList:
 
     :ivar air_exchange_multi_quote_option:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_exchange_multi_quote_option: List[AirExchangeMultiQuoteOption] = field(
         default_factory=list,
         metadata=dict(
@@ -19999,6 +21201,9 @@ class AirPricePoint:
     :ivar key:
     :ivar complete_itinerary: This attribute is used to return whether complete Itinerary is present in the AirPricePoint structure or not. If set to true means AirPricePoint contains the result for full requested itinerary.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     total_price: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -20083,7 +21288,6 @@ class AirPricePoint:
         metadata=dict(
             name="AirPricingResultMessage",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -20138,6 +21342,9 @@ class AirPricingInfoList:
 
     :ivar air_pricing_info:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_pricing_info: List[AirPricingInfo] = field(
         default_factory=list,
         metadata=dict(
@@ -20185,6 +21392,9 @@ class AirPricingSolution:
     :ivar quote_date: This date will be equal to the date of the transaction unless the request included a modified ticket date.
     :ivar itinerary: For an exchange request this tells if the itinerary is the original one or new one. A value of Original will only apply to 1G/1V/1P/1S/1A. A value of New will apply to 1G/1V/1P/1S/1A/ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     total_price: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -20342,7 +21552,6 @@ class AirPricingSolution:
         metadata=dict(
             name="AirPricingResultMessage",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -20440,8 +21649,6 @@ class AirPricingSolution:
 class Etr:
     """Result of ticketing request.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar total_price: The total price for this entity including base price and all taxes.
     :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
     :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
@@ -20452,6 +21659,8 @@ class Etr:
     :ivar services: The total cost for all optional services.
     :ivar approximate_taxes: The Converted tax amount in Default Currency.
     :ivar approximate_fees: The Converted fee amount in Default Currency.
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar air_reservation_locator_code:
     :ivar agency_info:
     :ivar booking_traveler:
@@ -20480,20 +21689,10 @@ class Etr:
     :ivar country_code: Contains Ticketed PCC’s Country code.
     :ivar plating_carrier: Contains the Plating Carrier of this ETR.
     """
-    el_stat: Optional[TypeElementStatus] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
+    class Meta:
+        name = "ETR"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     total_price: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -20561,6 +21760,20 @@ class Etr:
         default=None,
         metadata=dict(
             name="ApproximateFees",
+            type="Attribute"
+        )
+    )
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
             type="Attribute"
         )
     )
@@ -20820,6 +22033,10 @@ class Tcr:
     :ivar refund_fee: Charges incurred for processing refund.
     :ivar forfeit_amount: Amount forfeited as a result of refund.
     """
+    class Meta:
+        name = "TCR"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     provider_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -20930,7 +22147,7 @@ class Tcr:
             required=True
         )
     )
-    status: Optional[TypeTcrstatus] = field(
+    status: Optional[str] = field(
         default=None,
         metadata=dict(
             name="Status",
@@ -21063,6 +22280,9 @@ class TypeBaseAirReservation(BaseReservation):
     :ivar air_exchange_bundle_total:
     :ivar air_exchange_bundle: Bundle exchange, pricing, and penalty information. Providers ACH/1G/1V/1P
     """
+    class Meta:
+        name = "typeBaseAirReservation"
+
     optional_services: Optional[OptionalServices] = field(
         default=None,
         metadata=dict(
@@ -21242,6 +22462,9 @@ class AirPricePointList:
 
     :ivar air_price_point: The container which holds the Non Solutioned result. Different options for each search leg requested will be returned and one option for each search leg can be selected.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_price_point: List[AirPricePoint] = field(
         default_factory=list,
         metadata=dict(
@@ -21263,6 +22486,9 @@ class AirPriceResult:
     :ivar air_price_error:
     :ivar command_key: The command identifier used when this is in response to an AirPricingCommand. Not used in any request processing.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_pricing_solution: List[AirPricingSolution] = field(
         default_factory=list,
         metadata=dict(
@@ -21285,8 +22511,7 @@ class AirPriceResult:
         default=None,
         metadata=dict(
             name="AirPriceError",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
+            type="Element"
         )
     )
     command_key: Optional[str] = field(
@@ -21302,7 +22527,9 @@ class AirPriceResult:
 @dataclass
 class AirReservation(TypeBaseAirReservation):
     """The parent container for all booking data."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
@@ -21313,6 +22540,9 @@ class AirScheduleChangedInfo:
 
     :ivar air_pricing_solution:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_pricing_solution: Optional[AirPricingSolution] = field(
         default=None,
         metadata=dict(
@@ -21334,6 +22564,9 @@ class AirSolutionChangedInfo:
     :ivar air_pricing_solution:
     :ivar reason_code:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_pricing_solution: Optional[AirPricingSolution] = field(
         default=None,
         metadata=dict(
@@ -21359,6 +22592,9 @@ class OptionalServicesInfo:
     :ivar form_of_payment:
     :ivar form_of_payment_ref:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_pricing_solution: Optional[AirPricingSolution] = field(
         default=None,
         metadata=dict(
@@ -21395,6 +22631,9 @@ class TypeAirReservationWithFop(TypeBaseAirReservation):
 
     :ivar form_of_payment:
     """
+    class Meta:
+        name = "typeAirReservationWithFOP"
+
     form_of_payment: List[FormOfPayment] = field(
         default_factory=list,
         metadata=dict(

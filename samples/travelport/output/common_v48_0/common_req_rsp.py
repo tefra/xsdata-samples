@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional
-from samples.travelport.common_v48_0.common import (
+from samples.travelport.output.common_v48_0.common import (
     AccountingRemark,
     AgencyContactInfo,
     AgentIdoverride,
@@ -117,7 +117,7 @@ class BaseCoreReq:
             max_length=25.0
         )
     )
-    override_logging: Optional[TypeLoggingLevel] = field(
+    override_logging: Optional[str] = field(
         default=None,
         metadata=dict(
             name="OverrideLogging",
@@ -185,7 +185,9 @@ class BaseRsp:
 @dataclass
 class ErrorInfo(TypeErrorInfo):
     """Container for error data when there is an application error."""
-    pass
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
 
 
 @dataclass

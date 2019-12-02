@@ -1,0 +1,1290 @@
+
+samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch()
+    buckets: List["FareMasterPricerTravelBoardSearch.Buckets"] = [('default', 'list'), ('max_occurs', 10), ('min_occurs', 0)]
+    combination_fare_families: List["FareMasterPricerTravelBoardSearch.CombinationFareFamilies"] = [('default', 'list'), ('max_occurs', 2000), ('min_occurs', 0)]
+    customer_ref: Optional["FareMasterPricerTravelBoardSearch.CustomerRef"] = [('default', None)]
+    fare_families: List["FareMasterPricerTravelBoardSearch.FareFamilies"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+    fare_options: Optional["FareMasterPricerTravelBoardSearch.FareOptions"] = [('default', None)]
+    fee_option: List["FareMasterPricerTravelBoardSearch.FeeOption"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 0)]
+    form_of_payment_by_passenger: List["FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger"] = [('default', 'list'), ('max_occurs', 60), ('min_occurs', 0)]
+    global_options: Optional["FareMasterPricerTravelBoardSearch.GlobalOptions"] = [('default', None)]
+    itinerary: List["FareMasterPricerTravelBoardSearch.Itinerary"] = [('default', 'list'), ('max_occurs', 18), ('min_occurs', 0)]
+    number_of_unit: Optional["FareMasterPricerTravelBoardSearch.NumberOfUnit"] = [('default', None)]
+    office_id_details: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+    passenger_info_grp: List["FareMasterPricerTravelBoardSearch.PassengerInfoGrp"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 0)]
+    pax_reference: List["FareMasterPricerTravelBoardSearch.PaxReference"] = [('default', 'list'), ('max_occurs', 6), ('min_occurs', 0)]
+    price_to_beat: Optional["FareMasterPricerTravelBoardSearch.PriceToBeat"] = [('default', None)]
+    solution_family: List["FareMasterPricerTravelBoardSearch.SolutionFamily"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+    tax_info: List["FareMasterPricerTravelBoardSearch.TaxInfo"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 0)]
+    ticket_change_info: Optional["FareMasterPricerTravelBoardSearch.TicketChangeInfo"] = [('default', None)]
+    travel_flight_info: Optional["FareMasterPricerTravelBoardSearch.TravelFlightInfo"] = [('default', None)]
+    value_search: List["FareMasterPricerTravelBoardSearch.ValueSearch"] = [('default', 'list'), ('max_occurs', 99), ('min_occurs', 0)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Buckets()
+        bucket_details: List["FareMasterPricerTravelBoardSearch.Buckets.BucketDetails"] = [('default', 'list'), ('max_occurs', 15), ('min_occurs', 0)]
+        bucket_info: Optional["FareMasterPricerTravelBoardSearch.Buckets.BucketInfo"] = [('default', None), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Buckets.BucketDetails()
+            attribute: List["FareMasterPricerTravelBoardSearch.Buckets.BucketDetails.Attribute"] = [('default', 'list'), ('max_occurs', 10), ('min_occurs', 0)]
+            code: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Buckets.BucketDetails.Attribute()
+                requested_sgt: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                value: List[str] = [('default', 'list'), ('max_length', 20.0), ('max_occurs', 50), ('min_length', 1.0), ('min_occurs', 0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Buckets.BucketInfo()
+            attribute_count: Optional[float] = [('default', None)]
+            completion: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            count: Optional[float] = [('default', None)]
+            mode: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            name: Optional[str] = [('default', None), ('max_length', 20.0), ('min_length', 1.0)]
+            number: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            value_ref: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            weight: Optional[float] = [('default', None)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.CombinationFareFamilies()
+        item_ffcnumber: Optional["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber"] = [('default', None), ('required', True)]
+        nb_of_units: Optional["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.NbOfUnits"] = [('default', None)]
+        reference_info: List["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ReferenceInfo"] = [('default', 'list'), ('max_occurs', 6), ('min_occurs', 0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber()
+            item_number_id: Optional["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber.ItemNumberId"] = [('default', None), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber.ItemNumberId()
+                number: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 1.0)]
+                qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                responsible_agency: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.CombinationFareFamilies.NbOfUnits()
+            unit_number_detail: List["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.NbOfUnits.UnitNumberDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 1)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.CombinationFareFamilies.NbOfUnits.UnitNumberDetail()
+                number_of_units: Optional[float] = [('default', None)]
+                type_of_unit: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ReferenceInfo()
+            dummy_net: Optional[str] = [('default', None)]
+            referencing_detail: List["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ReferenceInfo.ReferencingDetail"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ReferenceInfo.ReferencingDetail()
+                ref_number: Optional[float] = [('default', None), ('required', True)]
+                ref_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.CustomerRef()
+        customer_references: List["FareMasterPricerTravelBoardSearch.CustomerRef.CustomerReferences"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 1)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.CustomerRef.CustomerReferences()
+            reference_number: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+            reference_party_name: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+            reference_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+            traveller_reference_nbr: Optional[str] = [('default', None), ('max_length', 10.0), ('min_length', 1.0)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies()
+        family_criteria: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria"] = [('default', None)]
+        family_information: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyInformation"] = [('default', None), ('required', True)]
+        fare_family_segment: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment"] = [('default', 'list'), ('max_occurs', 6), ('min_occurs', 0)]
+        other_possible_criteria: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria()
+            cabin_processing_identifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            cabin_product: List["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.CabinProduct"] = [('default', 'list'), ('max_occurs', 6), ('min_occurs', 0)]
+            carrier_id: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 20), ('min_length', 1.0), ('min_occurs', 0)]
+            corporate_info: List["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.CorporateInfo"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+            date_time_details: List["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.DateTimeDetails"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+            fare_family_info: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.FareFamilyInfo"] = [('default', None)]
+            fare_product_detail: List["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.FareProductDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+            other_criteria: List["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.OtherCriteria"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+            rdb: List[str] = [('default', 'list'), ('max_length', 2.0), ('max_occurs', 20), ('min_length', 1.0), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.CabinProduct()
+                cabin_designator: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.CorporateInfo()
+                corporate_name: Optional[str] = [('default', None), ('max_length', 20.0), ('min_length', 1.0)]
+                corporate_number_identifier: Optional[str] = [('default', None), ('max_length', 12.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.DateTimeDetails()
+                date: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0), ('required', True)]
+                other_date: Optional[float] = [('default', None)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.FareFamilyInfo()
+                fare_family_qual: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 9), ('min_length', 0.0), ('min_occurs', 1)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.FareProductDetail()
+                fare_basis: Optional[str] = [('default', None), ('max_length', 18.0), ('min_length', 0.0)]
+                fare_type: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 3), ('min_length', 0.0), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.OtherCriteria()
+                name: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0), ('required', True)]
+                value: List[str] = [('default', 'list'), ('max_length', 20.0), ('max_occurs', 10), ('min_length', 1.0), ('min_occurs', 0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FamilyInformation()
+            commercial_family_details: List["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyInformation.CommercialFamilyDetails"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+            fare_familyname: Optional[str] = [('default', None), ('max_length', 10.0), ('min_length', 1.0)]
+            hierarchy: Optional[float] = [('default', None)]
+            ref_number: Optional[float] = [('default', None)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FamilyInformation.CommercialFamilyDetails()
+                commercial_family: Optional[str] = [('default', None), ('max_length', 10.0), ('min_length', 1.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment()
+            family_criteria: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria"] = [('default', None)]
+            reference_info: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.ReferenceInfo"] = [('default', None), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria()
+                cabin_processing_identifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                cabin_product: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.CabinProduct"] = [('default', 'list'), ('max_occurs', 6), ('min_occurs', 0)]
+                carrier_id: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 20), ('min_length', 1.0), ('min_occurs', 0)]
+                corporate_info: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.CorporateInfo"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                date_time_details: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.DateTimeDetails"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                fare_family_info: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.FareFamilyInfo"] = [('default', None)]
+                fare_product_detail: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.FareProductDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                other_criteria: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.OtherCriteria"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                rdb: List[str] = [('default', 'list'), ('max_length', 2.0), ('max_occurs', 20), ('min_length', 1.0), ('min_occurs', 0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.CabinProduct()
+                    cabin_designator: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.CorporateInfo()
+                    corporate_name: Optional[str] = [('default', None), ('max_length', 20.0), ('min_length', 1.0)]
+                    corporate_number_identifier: Optional[str] = [('default', None), ('max_length', 12.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.DateTimeDetails()
+                    date: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0), ('required', True)]
+                    other_date: Optional[float] = [('default', None)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.FareFamilyInfo()
+                    fare_family_qual: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 9), ('min_length', 0.0), ('min_occurs', 1)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.FareProductDetail()
+                    fare_basis: Optional[str] = [('default', None), ('max_length', 18.0), ('min_length', 0.0)]
+                    fare_type: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 3), ('min_length', 0.0), ('min_occurs', 0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.OtherCriteria()
+                    name: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0), ('required', True)]
+                    value: List[str] = [('default', 'list'), ('max_length', 20.0), ('max_occurs', 10), ('min_length', 1.0), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.ReferenceInfo()
+                referencing_detail: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.ReferenceInfo.ReferencingDetail"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.ReferenceInfo.ReferencingDetail()
+                    ref_number: Optional[float] = [('default', None), ('required', True)]
+                    ref_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria()
+            family_criteria: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria"] = [('default', None)]
+            fare_family_segment: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment"] = [('default', 'list'), ('max_occurs', 6), ('min_occurs', 0)]
+            logical_link: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink"] = [('default', None), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria()
+                cabin_processing_identifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                cabin_product: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.CabinProduct"] = [('default', 'list'), ('max_occurs', 6), ('min_occurs', 0)]
+                carrier_id: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 20), ('min_length', 1.0), ('min_occurs', 0)]
+                corporate_info: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.CorporateInfo"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                date_time_details: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.DateTimeDetails"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                fare_family_info: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.FareFamilyInfo"] = [('default', None)]
+                fare_product_detail: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.FareProductDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                other_criteria: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.OtherCriteria"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                rdb: List[str] = [('default', 'list'), ('max_length', 2.0), ('max_occurs', 20), ('min_length', 1.0), ('min_occurs', 0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.CabinProduct()
+                    cabin_designator: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.CorporateInfo()
+                    corporate_name: Optional[str] = [('default', None), ('max_length', 20.0), ('min_length', 1.0)]
+                    corporate_number_identifier: Optional[str] = [('default', None), ('max_length', 12.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.DateTimeDetails()
+                    date: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0), ('required', True)]
+                    other_date: Optional[float] = [('default', None)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.FareFamilyInfo()
+                    fare_family_qual: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 9), ('min_length', 0.0), ('min_occurs', 1)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.FareProductDetail()
+                    fare_basis: Optional[str] = [('default', None), ('max_length', 18.0), ('min_length', 0.0)]
+                    fare_type: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 3), ('min_length', 0.0), ('min_occurs', 0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.OtherCriteria()
+                    name: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0), ('required', True)]
+                    value: List[str] = [('default', 'list'), ('max_length', 20.0), ('max_occurs', 10), ('min_length', 1.0), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment()
+                family_criteria: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria"] = [('default', None)]
+                reference_info: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.ReferenceInfo"] = [('default', None), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria()
+                    cabin_processing_identifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                    cabin_product: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.CabinProduct"] = [('default', 'list'), ('max_occurs', 6), ('min_occurs', 0)]
+                    carrier_id: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 20), ('min_length', 1.0), ('min_occurs', 0)]
+                    corporate_info: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.CorporateInfo"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                    date_time_details: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.DateTimeDetails"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                    fare_family_info: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.FareFamilyInfo"] = [('default', None)]
+                    fare_product_detail: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.FareProductDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                    other_criteria: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.OtherCriteria"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                    rdb: List[str] = [('default', 'list'), ('max_length', 2.0), ('max_occurs', 20), ('min_length', 1.0), ('min_occurs', 0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.CabinProduct()
+                        cabin_designator: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0), ('required', True)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.CorporateInfo()
+                        corporate_name: Optional[str] = [('default', None), ('max_length', 20.0), ('min_length', 1.0)]
+                        corporate_number_identifier: Optional[str] = [('default', None), ('max_length', 12.0), ('min_length', 1.0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.DateTimeDetails()
+                        date: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0), ('required', True)]
+                        other_date: Optional[float] = [('default', None)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.FareFamilyInfo()
+                        fare_family_qual: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 9), ('min_length', 0.0), ('min_occurs', 1)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.FareProductDetail()
+                        fare_basis: Optional[str] = [('default', None), ('max_length', 18.0), ('min_length', 0.0)]
+                        fare_type: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 3), ('min_length', 0.0), ('min_occurs', 0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.OtherCriteria()
+                        name: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0), ('required', True)]
+                        value: List[str] = [('default', 'list'), ('max_length', 20.0), ('max_occurs', 10), ('min_length', 1.0), ('min_occurs', 0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.ReferenceInfo()
+                    referencing_detail: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.ReferenceInfo.ReferencingDetail"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.ReferenceInfo.ReferencingDetail()
+                        ref_number: Optional[float] = [('default', None), ('required', True)]
+                        ref_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink()
+                boolean_expression: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink.BooleanExpression"] = [('default', None), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink.BooleanExpression()
+                    code_operator: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions()
+        conversion_rate: Optional["FareMasterPricerTravelBoardSearch.FareOptions.ConversionRate"] = [('default', None)]
+        corporate: Optional["FareMasterPricerTravelBoardSearch.FareOptions.Corporate"] = [('default', None)]
+        fee_id_description: Optional["FareMasterPricerTravelBoardSearch.FareOptions.FeeIdDescription"] = [('default', None)]
+        form_of_payment: Optional["FareMasterPricerTravelBoardSearch.FareOptions.FormOfPayment"] = [('default', None)]
+        frequent_traveller_info: Optional["FareMasterPricerTravelBoardSearch.FareOptions.FrequentTravellerInfo"] = [('default', None)]
+        monetary_cabin_info: Optional["FareMasterPricerTravelBoardSearch.FareOptions.MonetaryCabinInfo"] = [('default', None)]
+        pricing_tick_info: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo"] = [('default', None), ('required', True)]
+        ticketing_price_scheme: Optional["FareMasterPricerTravelBoardSearch.FareOptions.TicketingPriceScheme"] = [('default', None)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.ConversionRate()
+            conversion_rate_detail: List["FareMasterPricerTravelBoardSearch.FareOptions.ConversionRate.ConversionRateDetail"] = [('default', 'list'), ('max_occurs', 2), ('min_occurs', 1)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.ConversionRate.ConversionRateDetail()
+                conversion_type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                currency: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.Corporate()
+            corporate_id: List["FareMasterPricerTravelBoardSearch.FareOptions.Corporate.CorporateId"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.Corporate.CorporateId()
+                corporate_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 0.0), ('required', True)]
+                identity: List[str] = [('default', 'list'), ('max_length', 20.0), ('max_occurs', 9), ('min_length', 1.0), ('min_occurs', 1)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.FeeIdDescription()
+            fee_id: List["FareMasterPricerTravelBoardSearch.FareOptions.FeeIdDescription.FeeId"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.FeeIdDescription.FeeId()
+                fee_id_number: Optional[str] = [('default', None), ('max_length', 50.0), ('min_length', 1.0), ('required', True)]
+                fee_type: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.FormOfPayment()
+            form_of_payment_details: List["FareMasterPricerTravelBoardSearch.FareOptions.FormOfPayment.FormOfPaymentDetails"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.FormOfPayment.FormOfPaymentDetails()
+                charged_amount: Optional[float] = [('default', None)]
+                credit_card_number: Optional[str] = [('default', None), ('max_length', 20.0), ('min_length', 1.0)]
+                type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.FrequentTravellerInfo()
+            frequent_traveller_details: List["FareMasterPricerTravelBoardSearch.FareOptions.FrequentTravellerInfo.FrequentTravellerDetails"] = [('default', 'list'), ('max_occurs', 99), ('min_occurs', 1)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.FrequentTravellerInfo.FrequentTravellerDetails()
+                carrier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+                customer_reference: Optional[str] = [('default', None), ('max_length', 10.0), ('min_length', 1.0)]
+                number: Optional[str] = [('default', None), ('max_length', 25.0), ('min_length', 1.0)]
+                priority_code: Optional[str] = [('default', None), ('max_length', 12.0), ('min_length', 1.0)]
+                tier_description: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+                tier_level: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+                type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.MonetaryCabinInfo()
+            money_and_cabin_info: List["FareMasterPricerTravelBoardSearch.FareOptions.MonetaryCabinInfo.MoneyAndCabinInfo"] = [('default', 'list'), ('max_occurs', 99), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.MonetaryCabinInfo.MoneyAndCabinInfo()
+                amount: Optional[float] = [('default', None), ('required', True)]
+                amount_type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 0.0)]
+                cabin_class_designator: List[str] = [('default', 'list'), ('max_length', 1.0), ('max_occurs', 9), ('min_length', 1.0), ('min_occurs', 0)]
+                currency: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo()
+            company_id: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.CompanyId"] = [('default', None)]
+            corporate_id: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.CorporateId"] = [('default', None)]
+            journey_origin_point: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.JourneyOriginPoint"] = [('default', None)]
+            pricing_ticketing: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.PricingTicketing"] = [('default', None)]
+            selling_point: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.SellingPoint"] = [('default', None)]
+            ticketing_date: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.TicketingDate"] = [('default', None)]
+            ticketing_point: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.TicketingPoint"] = [('default', None)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.CompanyId()
+                value: Optional[str] = [('default', None)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.CorporateId()
+                arc_number: Optional[str] = [('default', None), ('max_length', 12.0), ('min_length', 1.0)]
+                ersp_number: Optional[str] = [('default', None), ('max_length', 12.0), ('min_length', 1.0)]
+                iata_number: Optional[str] = [('default', None), ('max_length', 12.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.JourneyOriginPoint()
+                country: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.PricingTicketing()
+                price_type: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 50), ('min_length', 0.0), ('min_occurs', 1)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.SellingPoint()
+                country: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.TicketingDate()
+                date: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0), ('required', True)]
+                rtc_date: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.TicketingPoint()
+                country: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FareOptions.TicketingPriceScheme()
+            description: Optional[str] = [('default', None), ('max_length', 250.0), ('min_length', 1.0)]
+            name: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+            reference_number: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0), ('required', True)]
+            status: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption()
+        fee_details: List["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails"] = [('default', 'list'), ('max_occurs', 99), ('min_occurs', 0)]
+        fee_type_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo"] = [('default', None), ('required', True)]
+        rate_tax: Optional["FareMasterPricerTravelBoardSearch.FeeOption.RateTax"] = [('default', None)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails()
+            associated_amounts: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.AssociatedAmounts"] = [('default', None)]
+            fee_description_grp: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp"] = [('default', None)]
+            fee_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo"] = [('default', None), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.AssociatedAmounts()
+                monetary_details: List["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.AssociatedAmounts.MonetaryDetails"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 1)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.AssociatedAmounts.MonetaryDetails()
+                    amount: Optional[str] = [('default', None), ('max_length', 12.0), ('min_length', 1.0)]
+                    currency: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                    location: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                    type_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp()
+                item_number_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo"] = [('default', None), ('required', True)]
+                service_attributes_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceAttributesInfo"] = [('default', None)]
+                service_description_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo"] = [('default', None)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo()
+                    item_number_details: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo.ItemNumberDetails"] = [('default', None), ('required', True)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo.ItemNumberDetails()
+                        number: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 1.0)]
+                        qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        responsible_agency: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceAttributesInfo()
+                    attribute_details: List["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceAttributesInfo.AttributeDetails"] = [('default', 'list'), ('max_occurs', 99), ('min_occurs', 1)]
+                    attribute_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceAttributesInfo.AttributeDetails()
+                        attribute_description: Optional[str] = [('default', None), ('max_length', 256.0), ('min_length', 1.0)]
+                        attribute_type: Optional[str] = [('default', None), ('max_length', 25.0), ('min_length', 1.0), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo()
+                    seat_details: List["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo.SeatDetails"] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
+                    service_requirements_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo.ServiceRequirementsInfo"] = [('default', None), ('required', True)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo.SeatDetails()
+                        seat_characteristics: List[str] = [('default', 'list'), ('max_length', 2.0), ('max_occurs', 5), ('min_length', 1.0), ('min_occurs', 0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo.ServiceRequirementsInfo()
+                        service_classification: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 1.0), ('required', True)]
+                        service_free_text: List[str] = [('default', 'list'), ('max_length', 70.0), ('max_occurs', 99), ('min_length', 1.0), ('min_occurs', 0)]
+                        service_group: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        service_marketing_carrier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        service_number_of_instances: Optional[float] = [('default', None)]
+                        service_status: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        service_sub_group: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo()
+                data_information: List["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo.DataInformation"] = [('default', 'list'), ('max_occurs', 99), ('min_occurs', 0)]
+                data_type_information: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo.DataTypeInformation"] = [('default', None), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo.DataInformation()
+                    indicator: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo.DataTypeInformation()
+                    option: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                    sub_type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo()
+            carrier_fee_details: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo.CarrierFeeDetails"] = [('default', None), ('required', True)]
+            other_selection_details: List["FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo.OtherSelectionDetails"] = [('default', 'list'), ('max_occurs', 98), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo.CarrierFeeDetails()
+                option_information: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo.OtherSelectionDetails()
+                option: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+                option_information: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.RateTax()
+            monetary_details: List["FareMasterPricerTravelBoardSearch.FeeOption.RateTax.MonetaryDetails"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 1)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FeeOption.RateTax.MonetaryDetails()
+                amount: Optional[str] = [('default', None), ('max_length', 12.0), ('min_length', 1.0)]
+                currency: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                type_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger()
+        form_of_payment_details: Optional["FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails"] = [('default', None), ('required', True)]
+        passenger_fee_reference: Optional["FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.PassengerFeeReference"] = [('default', None)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails()
+            form_of_payment_details: List["FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails.FormOfPaymentDetails"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails.FormOfPaymentDetails()
+                charged_amount: Optional[float] = [('default', None)]
+                credit_card_number: Optional[str] = [('default', None), ('max_length', 20.0), ('min_length', 1.0)]
+                type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.PassengerFeeReference()
+            other_characteristics: Optional["FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.PassengerFeeReference.OtherCharacteristics"] = [('default', None)]
+            passenger_fee_ref_number: Optional[float] = [('default', None)]
+            passenger_fee_ref_type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.PassengerFeeReference.OtherCharacteristics()
+                passenger_fee_ref_qualif: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.GlobalOptions()
+        selection_details: List["FareMasterPricerTravelBoardSearch.GlobalOptions.SelectionDetails"] = [('default', 'list'), ('max_occurs', 10), ('min_occurs', 1)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.GlobalOptions.SelectionDetails()
+            option: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+            option_information: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary()
+        arrival_localization: Optional["FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization"] = [('default', None)]
+        attributes: Optional["FareMasterPricerTravelBoardSearch.Itinerary.Attributes"] = [('default', None)]
+        departure_localization: Optional["FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization"] = [('default', None)]
+        family_information: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FamilyInformation"] = [('default', None)]
+        flight_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo"] = [('default', None)]
+        flight_info_pnr: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr"] = [('default', 'list'), ('max_occurs', 4), ('min_occurs', 0)]
+        group_of_flights: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights"] = [('default', 'list'), ('max_occurs', 6), ('min_occurs', 0)]
+        requested_segment_action: Optional["FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentAction"] = [('default', None)]
+        requested_segment_ref: Optional["FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentRef"] = [('default', None), ('required', True)]
+        time_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails"] = [('default', None)]
+        value_search: List["FareMasterPricerTravelBoardSearch.Itinerary.ValueSearch"] = [('default', 'list'), ('max_occurs', 99), ('min_occurs', 0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization()
+            arrival_multi_city: List["FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization.ArrivalMultiCity"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+            arrival_point_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization.ArrivalPointDetails"] = [('default', None)]
+            attribute_details: List["FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization.AttributeDetails"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization.ArrivalMultiCity()
+                airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization.ArrivalPointDetails()
+                airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                distance: Optional[float] = [('default', None)]
+                distance_unit: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 0.0)]
+                latitude: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0)]
+                longitude: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization.AttributeDetails()
+                type: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0)]
+                value: List[str] = [('default', 'list'), ('max_length', 20.0), ('max_occurs', 10), ('min_length', 1.0), ('min_occurs', 0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.Attributes()
+            attribute_details: List["FareMasterPricerTravelBoardSearch.Itinerary.Attributes.AttributeDetails"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 1)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.Attributes.AttributeDetails()
+                attribute_description: Optional[str] = [('default', None), ('max_length', 50.0), ('min_length', 1.0)]
+                attribute_type: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization()
+            attribute_details: List["FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.AttributeDetails"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+            dep_multi_city: List["FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.DepMultiCity"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+            departure_point: Optional["FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.DeparturePoint"] = [('default', None)]
+            first_pnr_segment_ref: Optional["FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.FirstPnrSegmentRef"] = [('default', None)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.AttributeDetails()
+                type: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0)]
+                value: List[str] = [('default', 'list'), ('max_length', 20.0), ('max_occurs', 10), ('min_length', 1.0), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.DepMultiCity()
+                airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.DeparturePoint()
+                airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                distance: Optional[float] = [('default', None)]
+                distance_unit: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                latitude: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0)]
+                longitude: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.FirstPnrSegmentRef()
+                pnr_segment_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                pnr_segment_tattoo: Optional[float] = [('default', None)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FamilyInformation()
+            commercial_family_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FamilyInformation.CommercialFamilyDetails"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FamilyInformation.CommercialFamilyDetails()
+                commercial_family: Optional[str] = [('default', None), ('max_length', 10.0), ('min_length', 1.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo()
+            cabin_id: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.CabinId"] = [('default', None)]
+            company_identity: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.CompanyIdentity"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+            exclusion_detail: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.ExclusionDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+            flight_detail: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.FlightDetail"] = [('default', None)]
+            inclusion_detail: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.InclusionDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+            unit_number_detail: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.UnitNumberDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.CabinId()
+                cabin: List[str] = [('default', 'list'), ('max_length', 1.0), ('max_occurs', 5), ('min_length', 0.0), ('min_occurs', 0)]
+                cabin_qualifier: Optional[str] = [('default', None), ('max_length', 2.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.CompanyIdentity()
+                carrier_id: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 99), ('min_length', 2.0), ('min_occurs', 1)]
+                carrier_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 0.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.ExclusionDetail()
+                airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                exclusion_identifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 0.0), ('required', True)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.FlightDetail()
+                flight_type: List[str] = [('default', 'list'), ('max_length', 2.0), ('max_occurs', 9), ('min_length', 1.0), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.InclusionDetail()
+                airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                inclusion_identifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 0.0), ('required', True)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.UnitNumberDetail()
+                number_of_units: Optional[float] = [('default', None), ('required', True)]
+                type_of_unit: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr()
+            codeshare_data: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData"] = [('default', None)]
+            disclosure: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.Disclosure"] = [('default', None)]
+            incidental_stop_info: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo"] = [('default', 'list'), ('max_occurs', 8), ('min_occurs', 0)]
+            reservation_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo"] = [('default', None)]
+            stop_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.StopDetails"] = [('default', None)]
+            terminal_equipment_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails"] = [('default', 'list'), ('max_occurs', 2), ('min_occurs', 0)]
+            time_table_date: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate"] = [('default', None)]
+            traffic_restriction_data: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TrafficRestrictionData"] = [('default', None)]
+            travel_response_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails"] = [('default', None), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData()
+                codeshare_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData.CodeshareDetails"] = [('default', None), ('required', True)]
+                other_codeshare_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData.OtherCodeshareDetails"] = [('default', 'list'), ('max_occurs', 8), ('min_occurs', 0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData.CodeshareDetails()
+                    airline_designator: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 2.0)]
+                    flight_number: Optional[float] = [('default', None)]
+                    operational_suffix: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                    transport_stage_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData.OtherCodeshareDetails()
+                    airline_designator: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 2.0)]
+                    flight_number: Optional[float] = [('default', None)]
+                    operational_suffix: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                    transport_stage_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.Disclosure()
+                free_text: Optional[str] = [('default', None), ('max_length', 70.0), ('min_length', 1.0), ('required', True)]
+                free_text_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.Disclosure.FreeTextDetails"] = [('default', None), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.Disclosure.FreeTextDetails()
+                    encoding: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+                    information_type: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 1.0)]
+                    source: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+                    text_subject_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo()
+                date_time_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo.DateTimeInfo"] = [('default', None), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo.DateTimeInfo()
+                    date_time_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo.DateTimeInfo.DateTimeDetails"] = [('default', 'list'), ('max_occurs', 2), ('min_occurs', 0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo.DateTimeInfo.DateTimeDetails()
+                        date: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0)]
+                        qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        qualifier2: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        reserved1: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        reserved2: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0)]
+                        time: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 4.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo()
+                booking: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                date_time_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo.DateTimeDetails"] = [('default', None)]
+                designator: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                identifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                item_number: Optional[float] = [('default', None)]
+                movement_type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                product_type_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo.ProductTypeDetails"] = [('default', None)]
+                status: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo.DateTimeDetails()
+                    date: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0), ('required', True)]
+                    time: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 4.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo.ProductTypeDetails()
+                    availability_context: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 1.0)]
+                    sequence_number: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.StopDetails()
+                routing_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.StopDetails.RoutingDetails"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.StopDetails.RoutingDetails()
+                    station: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 3.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails()
+                arrival_station_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.ArrivalStationInfo"] = [('default', None)]
+                departure_station_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.DepartureStationInfo"] = [('default', None)]
+                leg_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.LegDetails"] = [('default', None)]
+                mileage_time_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.MileageTimeDetails"] = [('default', None)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.ArrivalStationInfo()
+                    terminal: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.DepartureStationInfo()
+                    terminal: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.LegDetails()
+                    complexing_flight_indicator: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                    duration: Optional[float] = [('default', None)]
+                    equipment: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.MileageTimeDetails()
+                    elapsed_ground_time: Optional[float] = [('default', None)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate()
+                begin_date_time: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.BeginDateTime"] = [('default', None)]
+                end_date_time: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.EndDateTime"] = [('default', None)]
+                frequency: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.Frequency"] = [('default', None)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.BeginDateTime()
+                    day: Optional[float] = [('default', None)]
+                    month: Optional[float] = [('default', None)]
+                    year: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 4.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.EndDateTime()
+                    day: Optional[float] = [('default', None)]
+                    month: Optional[float] = [('default', None)]
+                    year: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 4.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.Frequency()
+                    qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+                    value: List[str] = [('default', 'list'), ('max_length', 1.0), ('max_occurs', 7), ('min_length', 1.0), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TrafficRestrictionData()
+                traffic_restriction_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TrafficRestrictionData.TrafficRestrictionDetails"] = [('default', 'list'), ('max_occurs', 5), ('min_occurs', 0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TrafficRestrictionData.TrafficRestrictionDetails()
+                    code: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails()
+                board_point_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.BoardPointDetails"] = [('default', None), ('required', True)]
+                company_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.CompanyDetails"] = [('default', None), ('required', True)]
+                flight_date: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightDate"] = [('default', None)]
+                flight_identification: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightIdentification"] = [('default', None)]
+                flight_type_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightTypeDetails"] = [('default', None)]
+                offpoint_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.OffpointDetails"] = [('default', None), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.BoardPointDetails()
+                    true_location_id: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 3.0), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.CompanyDetails()
+                    marketing_company: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 2.0), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightDate()
+                    arrival_date: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 8.0)]
+                    arrival_time: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 4.0)]
+                    date_variation: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                    departure_date: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 8.0)]
+                    departure_time: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 4.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightIdentification()
+                    flight_number: Optional[float] = [('default', None), ('required', True)]
+                    operational_suffix: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightTypeDetails()
+                    flight_indicator: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 5), ('min_length', 1.0), ('min_occurs', 1)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.OffpointDetails()
+                    true_location_id: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 3.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights()
+            flight_details: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails"] = [('default', 'list'), ('max_occurs', 4), ('min_occurs', 1)]
+            price_to_beat: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat"] = [('default', None)]
+            prop_flight_gr_detail: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PropFlightGrDetail"] = [('default', None), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails()
+                add_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AddInfo"] = [('default', None)]
+                avl_info: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AvlInfo"] = [('default', 'list'), ('max_occurs', 6), ('min_occurs', 0)]
+                commercial_agreement: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.CommercialAgreement"] = [('default', None)]
+                flight_information: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation"] = [('default', None), ('required', True)]
+                price_to_beat: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat"] = [('default', None)]
+                reservation_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo"] = [('default', None)]
+                technical_stop: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TechnicalStop"] = [('default', 'list'), ('max_occurs', 5), ('min_occurs', 0)]
+                terminal_equipment_details: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails"] = [('default', 'list'), ('max_occurs', 2), ('min_occurs', 0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AddInfo()
+                    date_time_period_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AddInfo.DateTimePeriodDetails"] = [('default', None)]
+                    product_identification: List[str] = [('default', 'list'), ('max_length', 35.0), ('max_occurs', 2), ('min_length', 1.0), ('min_occurs', 0)]
+                    reference_number: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+                    status: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 2), ('min_length', 1.0), ('min_occurs', 0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AddInfo.DateTimePeriodDetails()
+                        qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+                        value: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AvlInfo()
+                    cabin_product: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AvlInfo.CabinProduct"] = [('default', 'list'), ('max_occurs', 26), ('min_occurs', 0)]
+                    context_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AvlInfo.ContextDetails"] = [('default', None)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AvlInfo.CabinProduct()
+                        avl_status: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        booking_modifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                        cabin: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                        rbd: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0), ('required', True)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AvlInfo.ContextDetails()
+                        avl: List[str] = [('default', 'list'), ('max_length', 6.0), ('max_occurs', 9), ('min_length', 1.0), ('min_occurs', 1)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.CommercialAgreement()
+                    codeshare_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.CommercialAgreement.CodeshareDetails"] = [('default', None)]
+                    other_codeshare_details: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.CommercialAgreement.OtherCodeshareDetails"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.CommercialAgreement.CodeshareDetails()
+                        airline_designator: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 2.0)]
+                        code_share_type: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                        flight_number: Optional[float] = [('default', None)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.CommercialAgreement.OtherCodeshareDetails()
+                        airline_designator: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 2.0)]
+                        code_share_type: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                        flight_number: Optional[float] = [('default', None)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation()
+                    add_product_detail: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.AddProductDetail"] = [('default', None)]
+                    attribute_details: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.AttributeDetails"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                    company_id: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.CompanyId"] = [('default', None)]
+                    flight_ortrain_number: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0)]
+                    location: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.Location"] = [('default', 'list'), ('max_occurs', 2), ('min_occurs', 1)]
+                    product_date_time: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.ProductDateTime"] = [('default', None), ('required', True)]
+                    product_detail: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.ProductDetail"] = [('default', None)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.AddProductDetail()
+                        electronic_ticketing: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                        flight_characteristic: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 9), ('min_length', 1.0), ('min_occurs', 0)]
+                        last_seat_available: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                        level_of_access: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        operational_suffix: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                        product_detail_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.AttributeDetails()
+                        attribute_description: Optional[str] = [('default', None), ('max_length', 10.0), ('min_length', 1.0)]
+                        attribute_type: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0), ('required', True)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.CompanyId()
+                        marketing_carrier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 2.0), ('required', True)]
+                        operating_carrier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 2.0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.Location()
+                        airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                        location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+                        terminal: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.ProductDateTime()
+                        date_of_arrival: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0)]
+                        date_of_departure: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0), ('required', True)]
+                        date_variation: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                        time_of_arrival: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 4.0)]
+                        time_of_departure: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 4.0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.ProductDetail()
+                        equipment_type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        location_id: List[str] = [('default', 'list'), ('max_length', 5.0), ('max_occurs', 3), ('min_length', 3.0), ('min_occurs', 0)]
+                        operating_day: Optional[str] = [('default', None), ('max_length', 7.0), ('min_length', 1.0)]
+                        tech_stop_number: Optional[float] = [('default', None)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat()
+                    additional_money_info: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat.AdditionalMoneyInfo"] = [('default', 'list'), ('max_occurs', 19), ('min_occurs', 0)]
+                    money_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat.MoneyInfo"] = [('default', None), ('required', True)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat.AdditionalMoneyInfo()
+                        amount: Optional[float] = [('default', None), ('required', True)]
+                        currency: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        location_id: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 3.0)]
+                        qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat.MoneyInfo()
+                        amount: Optional[float] = [('default', None), ('required', True)]
+                        currency: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo()
+                    booking: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                    date_time_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo.DateTimeDetails"] = [('default', None)]
+                    designator: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                    identifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                    item_number: Optional[float] = [('default', None)]
+                    movement_type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                    product_type_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo.ProductTypeDetails"] = [('default', None)]
+                    status: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo.DateTimeDetails()
+                        date: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0), ('required', True)]
+                        time: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 4.0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo.ProductTypeDetails()
+                        availability_context: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 1.0)]
+                        sequence_number: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TechnicalStop()
+                    dummy_net: Optional[str] = [('default', None)]
+                    stop_details: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TechnicalStop.StopDetails"] = [('default', 'list'), ('max_occurs', 2), ('min_occurs', 1)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TechnicalStop.StopDetails()
+                        date: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0)]
+                        date_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        equipement_type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                        first_time: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 4.0)]
+                        location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails()
+                    arrival_station_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.ArrivalStationInfo"] = [('default', None)]
+                    departure_station_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.DepartureStationInfo"] = [('default', None)]
+                    leg_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.LegDetails"] = [('default', None)]
+                    mileage_time_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.MileageTimeDetails"] = [('default', None)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.ArrivalStationInfo()
+                        terminal: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.DepartureStationInfo()
+                        terminal: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.LegDetails()
+                        complexing_flight_indicator: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                        duration: Optional[float] = [('default', None)]
+                        equipment: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.MileageTimeDetails()
+                        elapsed_ground_time: Optional[float] = [('default', None)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat()
+                additional_money_info: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat.AdditionalMoneyInfo"] = [('default', 'list'), ('max_occurs', 19), ('min_occurs', 0)]
+                money_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat.MoneyInfo"] = [('default', None), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat.AdditionalMoneyInfo()
+                    amount: Optional[float] = [('default', None), ('required', True)]
+                    currency: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                    location_id: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 3.0)]
+                    qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat.MoneyInfo()
+                    amount: Optional[float] = [('default', None), ('required', True)]
+                    currency: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                    qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PropFlightGrDetail()
+                flight_characteristic: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 0.0)]
+                flight_proposal: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PropFlightGrDetail.FlightProposal"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 1)]
+                maj_cabin: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PropFlightGrDetail.FlightProposal()
+                    ref: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 1.0)]
+                    unit_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentAction()
+            action_request_code: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+            product_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentAction.ProductDetails"] = [('default', None)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentAction.ProductDetails()
+                booking_class: Optional[str] = [('default', None), ('max_length', 2.0), ('min_length', 1.0)]
+                flight_number: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0), ('required', True)]
+                modifier: List[str] = [('default', 'list'), ('max_length', 7.0), ('max_occurs', 3), ('min_length', 1.0), ('min_occurs', 0)]
+                operational_suffix: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentRef()
+            location_forcing: List["FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentRef.LocationForcing"] = [('default', 'list'), ('max_occurs', 2), ('min_occurs', 0)]
+            seg_ref: Optional[float] = [('default', None), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentRef.LocationForcing()
+                airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0), ('required', True)]
+                segment_number: Optional[float] = [('default', None), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails()
+            first_date_time_detail: Optional["FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.FirstDateTimeDetail"] = [('default', None), ('required', True)]
+            range_of_date: Optional["FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.RangeOfDate"] = [('default', None)]
+            trip_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.TripDetails"] = [('default', None)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.FirstDateTimeDetail()
+                date: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0)]
+                time: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 4.0)]
+                time_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                time_window: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.RangeOfDate()
+                day_interval: Optional[float] = [('default', None)]
+                range_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                time_atdestination: Optional[str] = [('default', None), ('max_length', 4.0), ('min_length', 4.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.TripDetails()
+                flexibility_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                trip_duration: Optional[float] = [('default', None)]
+                trip_interval: Optional[float] = [('default', None)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.ValueSearch()
+            criteria_code: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            criteria_details: List["FareMasterPricerTravelBoardSearch.Itinerary.ValueSearch.CriteriaDetails"] = [('default', 'list'), ('max_occurs', 10), ('min_occurs', 0)]
+            criteria_name: Optional[str] = [('default', None), ('max_length', 50.0), ('min_length', 1.0)]
+            value: Optional[str] = [('default', None), ('max_length', 18.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.Itinerary.ValueSearch.CriteriaDetails()
+                attribute: List[str] = [('default', 'list'), ('max_length', 9.0), ('max_occurs', 99), ('min_length', 1.0), ('min_occurs', 0)]
+                type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                value: Optional[str] = [('default', None), ('max_length', 18.0), ('min_length', 1.0)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.NumberOfUnit()
+        unit_number_detail: List["FareMasterPricerTravelBoardSearch.NumberOfUnit.UnitNumberDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 1)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.NumberOfUnit.UnitNumberDetail()
+            number_of_units: Optional[float] = [('default', None), ('required', True)]
+            type_of_unit: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails()
+        airline_distribution_details: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails"] = [('default', 'list'), ('max_occurs', 6), ('min_occurs', 0)]
+        corporate_fare_info: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.CorporateFareInfo"] = [('default', None)]
+        nb_of_units: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.NbOfUnits"] = [('default', None)]
+        office_id_information: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.OfficeIdInformation"] = [('default', None), ('required', True)]
+        pricing_tick_info: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo"] = [('default', None)]
+        travel_flight_info: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo"] = [('default', None)]
+        uid_option: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.UidOption"] = [('default', None)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails()
+            flight_info: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo"] = [('default', None)]
+            requested_segment_ref: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.RequestedSegmentRef"] = [('default', None), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo()
+                cabin_id: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.CabinId"] = [('default', None)]
+                company_identity: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.CompanyIdentity"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                exclusion_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.ExclusionDetail"] = [('default', 'list'), ('max_occurs', 2), ('min_occurs', 0)]
+                flight_detail: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.FlightDetail"] = [('default', None)]
+                inclusion_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.InclusionDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+                unit_number_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.UnitNumberDetail"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.CabinId()
+                    cabin: List[str] = [('default', 'list'), ('max_length', 1.0), ('max_occurs', 3), ('min_length', 0.0), ('min_occurs', 1)]
+                    cabin_qualifier: Optional[str] = [('default', None), ('max_length', 2.0), ('min_length', 1.0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.CompanyIdentity()
+                    carrier_id: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 99), ('min_length', 2.0), ('min_occurs', 1)]
+                    carrier_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 0.0), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.ExclusionDetail()
+                    airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                    exclusion_identifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 0.0), ('required', True)]
+                    location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.FlightDetail()
+                    flight_type: List[str] = [('default', 'list'), ('max_length', 2.0), ('max_occurs', 9), ('min_length', 1.0), ('min_occurs', 0)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.InclusionDetail()
+                    airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                    inclusion_identifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 0.0), ('required', True)]
+                    location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.UnitNumberDetail()
+                    number_of_units: Optional[float] = [('default', None), ('required', True)]
+                    type_of_unit: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.RequestedSegmentRef()
+                location_forcing: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.RequestedSegmentRef.LocationForcing"] = [('default', 'list'), ('max_occurs', 2), ('min_occurs', 0)]
+                seg_ref: Optional[float] = [('default', None), ('required', True)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.RequestedSegmentRef.LocationForcing()
+                    airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0), ('required', True)]
+                    segment_number: Optional[float] = [('default', None), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.CorporateFareInfo()
+            corporate_fare_identifiers: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.CorporateFareInfo.CorporateFareIdentifiers"] = [('default', None)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.CorporateFareInfo.CorporateFareIdentifiers()
+                fare_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                identify_number: List[str] = [('default', 'list'), ('max_length', 35.0), ('max_occurs', 20), ('min_length', 1.0), ('min_occurs', 0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.NbOfUnits()
+            unit_number_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.NbOfUnits.UnitNumberDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 1)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.NbOfUnits.UnitNumberDetail()
+                number_of_units: Optional[float] = [('default', None)]
+                type_of_unit: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.OfficeIdInformation()
+            office_code: Optional[str] = [('default', None), ('max_length', 30.0), ('min_length', 1.0)]
+            office_identification: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.OfficeIdInformation.OfficeIdentification"] = [('default', None)]
+            office_type: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.OfficeIdInformation.OfficeIdentification()
+                agent_signin: Optional[str] = [('default', None), ('max_length', 9.0), ('min_length', 1.0)]
+                confidential_office: Optional[str] = [('default', None), ('max_length', 9.0), ('min_length', 1.0)]
+                office_name: Optional[float] = [('default', None)]
+                other_office: Optional[str] = [('default', None), ('max_length', 9.0), ('min_length', 1.0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo()
+            company_id: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.CompanyId"] = [('default', None)]
+            corporate_id: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.CorporateId"] = [('default', None)]
+            journey_origin_point: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.JourneyOriginPoint"] = [('default', None)]
+            pricing_ticketing: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.PricingTicketing"] = [('default', None)]
+            selling_point: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.SellingPoint"] = [('default', None)]
+            ticketing_date: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.TicketingDate"] = [('default', None)]
+            ticketing_point: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.TicketingPoint"] = [('default', None)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.CompanyId()
+                value: Optional[str] = [('default', None)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.CorporateId()
+                arc_number: Optional[str] = [('default', None), ('max_length', 12.0), ('min_length', 1.0)]
+                ersp_number: Optional[str] = [('default', None), ('max_length', 12.0), ('min_length', 1.0)]
+                iata_number: Optional[str] = [('default', None), ('max_length', 12.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.JourneyOriginPoint()
+                country: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.PricingTicketing()
+                price_type: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 50), ('min_length', 0.0), ('min_occurs', 1)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.SellingPoint()
+                country: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.TicketingDate()
+                date: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0), ('required', True)]
+                rtc_date: Optional[str] = [('default', None), ('max_length', 6.0), ('min_length', 6.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.TicketingPoint()
+                country: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo()
+            cabin_id: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.CabinId"] = [('default', None)]
+            company_identity: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.CompanyIdentity"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+            exclusion_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.ExclusionDetail"] = [('default', 'list'), ('max_occurs', 2), ('min_occurs', 0)]
+            flight_detail: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.FlightDetail"] = [('default', None)]
+            inclusion_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.InclusionDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+            unit_number_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.UnitNumberDetail"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.CabinId()
+                cabin: List[str] = [('default', 'list'), ('max_length', 1.0), ('max_occurs', 3), ('min_length', 0.0), ('min_occurs', 1)]
+                cabin_qualifier: Optional[str] = [('default', None), ('max_length', 2.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.CompanyIdentity()
+                carrier_id: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 99), ('min_length', 2.0), ('min_occurs', 1)]
+                carrier_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 0.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.ExclusionDetail()
+                airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                exclusion_identifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 0.0), ('required', True)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.FlightDetail()
+                flight_type: List[str] = [('default', 'list'), ('max_length', 2.0), ('max_occurs', 9), ('min_length', 1.0), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.InclusionDetail()
+                airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+                inclusion_identifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 0.0), ('required', True)]
+                location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.UnitNumberDetail()
+                number_of_units: Optional[float] = [('default', None), ('required', True)]
+                type_of_unit: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.UidOption()
+            attribute_details: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.UidOption.AttributeDetails"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 1)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.OfficeIdDetails.UidOption.AttributeDetails()
+                attribute_description: Optional[str] = [('default', None), ('max_length', 20.0), ('min_length', 1.0)]
+                attribute_type: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0), ('required', True)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.PassengerInfoGrp()
+        passenger_reference: Optional["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PassengerReference"] = [('default', None), ('required', True)]
+        psg_details_info: List["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo"] = [('default', 'list'), ('max_occurs', 2), ('min_occurs', 0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PassengerReference()
+            segment_control_details: List["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PassengerReference.SegmentControlDetails"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PassengerReference.SegmentControlDetails()
+                quantity: Optional[float] = [('default', None)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo()
+            discount_ptc: Optional["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.DiscountPtc"] = [('default', None), ('required', True)]
+            flequent_flyer_details: Optional["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.FlequentFlyerDetails"] = [('default', None)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.DiscountPtc()
+                value: Optional[float] = [('default', None)]
+                value_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.FlequentFlyerDetails()
+                frequent_traveller_details: List["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.FlequentFlyerDetails.FrequentTravellerDetails"] = [('default', 'list'), ('max_occurs', 99), ('min_occurs', 1)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.FlequentFlyerDetails.FrequentTravellerDetails()
+                    carrier: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+                    company_code: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+                    customer_reference: Optional[str] = [('default', None), ('max_length', 10.0), ('min_length', 1.0)]
+                    customer_value: Optional[float] = [('default', None)]
+                    number: Optional[str] = [('default', None), ('max_length', 28.0), ('min_length', 1.0)]
+                    priority_code: Optional[str] = [('default', None), ('max_length', 12.0), ('min_length', 1.0)]
+                    status: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+                    tier_description: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+                    tier_level: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+                    type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.PaxReference()
+        ptc: List[str] = [('default', 'list'), ('max_length', 6.0), ('max_occurs', 3), ('min_length', 1.0), ('min_occurs', 0)]
+        traveller: List["FareMasterPricerTravelBoardSearch.PaxReference.Traveller"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 1)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.PaxReference.Traveller()
+            infant_indicator: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+            ref: Optional[float] = [('default', None), ('required', True)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.PriceToBeat()
+        additional_money_info: List["FareMasterPricerTravelBoardSearch.PriceToBeat.AdditionalMoneyInfo"] = [('default', 'list'), ('max_occurs', 19), ('min_occurs', 0)]
+        money_info: Optional["FareMasterPricerTravelBoardSearch.PriceToBeat.MoneyInfo"] = [('default', None), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.PriceToBeat.AdditionalMoneyInfo()
+            amount: Optional[float] = [('default', None), ('required', True)]
+            currency: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            location_id: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 3.0)]
+            qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.PriceToBeat.MoneyInfo()
+            amount: Optional[float] = [('default', None), ('required', True)]
+            currency: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.SolutionFamily()
+        fare_details: Optional["FareMasterPricerTravelBoardSearch.SolutionFamily.FareDetails"] = [('default', None)]
+        fare_type_grouping: Optional["FareMasterPricerTravelBoardSearch.SolutionFamily.FareTypeGrouping"] = [('default', None)]
+        identity_number: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+        rate_category: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+        value: Optional[float] = [('default', None)]
+        value_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.SolutionFamily.FareDetails()
+            country: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            fare_category: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            rate: Optional[float] = [('default', None)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.SolutionFamily.FareTypeGrouping()
+            pricing_group: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TaxInfo()
+        tax_detail: List["FareMasterPricerTravelBoardSearch.TaxInfo.TaxDetail"] = [('default', 'list'), ('max_occurs', 99), ('min_occurs', 0)]
+        withhold_tax_surcharge: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TaxInfo.TaxDetail()
+            amount_qualifier: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            country: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            currency: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            rate: Optional[str] = [('default', None), ('max_length', 18.0), ('min_length', 1.0)]
+            type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TicketChangeInfo()
+        ticket_number_details: Optional["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketNumberDetails"] = [('default', None), ('required', True)]
+        ticket_requested_segments: List["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments"] = [('default', 'list'), ('max_occurs', 6), ('min_occurs', 0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketNumberDetails()
+            document_details: List["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketNumberDetails.DocumentDetails"] = [('default', 'list'), ('max_occurs', 99), ('min_occurs', 1)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketNumberDetails.DocumentDetails()
+                number: Optional[str] = [('default', None), ('max_length', 35.0), ('min_length', 1.0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments()
+            action_identification: Optional["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ActionIdentification"] = [('default', None), ('required', True)]
+            connect_point_details: Optional["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ConnectPointDetails"] = [('default', None)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ActionIdentification()
+                action_request_code: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+                product_details: Optional["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ActionIdentification.ProductDetails"] = [('default', None)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ActionIdentification.ProductDetails()
+                    booking_class: Optional[str] = [('default', None), ('max_length', 2.0), ('min_length', 1.0)]
+                    flight_number: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0), ('required', True)]
+                    modifier: List[str] = [('default', 'list'), ('max_length', 7.0), ('max_occurs', 3), ('min_length', 1.0), ('min_occurs', 0)]
+                    operational_suffix: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+
+            samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ConnectPointDetails()
+                connection_details: List["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ConnectPointDetails.ConnectionDetails"] = [('default', 'list'), ('max_occurs', 17), ('min_occurs', 1)]
+
+                samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ConnectPointDetails.ConnectionDetails()
+                    location: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TravelFlightInfo()
+        cabin_id: Optional["FareMasterPricerTravelBoardSearch.TravelFlightInfo.CabinId"] = [('default', None)]
+        company_identity: List["FareMasterPricerTravelBoardSearch.TravelFlightInfo.CompanyIdentity"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+        exclusion_detail: List["FareMasterPricerTravelBoardSearch.TravelFlightInfo.ExclusionDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+        flight_detail: Optional["FareMasterPricerTravelBoardSearch.TravelFlightInfo.FlightDetail"] = [('default', None)]
+        inclusion_detail: List["FareMasterPricerTravelBoardSearch.TravelFlightInfo.InclusionDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+        unit_number_detail: List["FareMasterPricerTravelBoardSearch.TravelFlightInfo.UnitNumberDetail"] = [('default', 'list'), ('max_occurs', 20), ('min_occurs', 0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TravelFlightInfo.CabinId()
+            cabin: List[str] = [('default', 'list'), ('max_length', 1.0), ('max_occurs', 5), ('min_length', 0.0), ('min_occurs', 0)]
+            cabin_qualifier: Optional[str] = [('default', None), ('max_length', 2.0), ('min_length', 1.0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TravelFlightInfo.CompanyIdentity()
+            carrier_id: List[str] = [('default', 'list'), ('max_length', 3.0), ('max_occurs', 999), ('min_length', 2.0), ('min_occurs', 1)]
+            carrier_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 0.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TravelFlightInfo.ExclusionDetail()
+            airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+            exclusion_identifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 0.0), ('required', True)]
+            location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TravelFlightInfo.FlightDetail()
+            flight_type: List[str] = [('default', 'list'), ('max_length', 2.0), ('max_occurs', 9), ('min_length', 1.0), ('min_occurs', 0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TravelFlightInfo.InclusionDetail()
+            airport_city_qualifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 1.0)]
+            inclusion_identifier: Optional[str] = [('default', None), ('max_length', 1.0), ('min_length', 0.0), ('required', True)]
+            location_id: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 3.0), ('required', True)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.TravelFlightInfo.UnitNumberDetail()
+            number_of_units: Optional[float] = [('default', None), ('required', True)]
+            type_of_unit: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0), ('required', True)]
+
+    samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.ValueSearch()
+        criteria_code: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+        criteria_details: List["FareMasterPricerTravelBoardSearch.ValueSearch.CriteriaDetails"] = [('default', 'list'), ('max_occurs', 10), ('min_occurs', 0)]
+        criteria_name: Optional[str] = [('default', None), ('max_length', 50.0), ('min_length', 1.0)]
+        value: Optional[str] = [('default', None), ('max_length', 18.0), ('min_length', 1.0)]
+
+        samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a.FareMasterPricerTravelBoardSearch.ValueSearch.CriteriaDetails()
+            attribute: List[str] = [('default', 'list'), ('max_length', 9.0), ('max_occurs', 99), ('min_length', 1.0), ('min_occurs', 0)]
+            type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 1.0)]
+            value: Optional[str] = [('default', None), ('max_length', 18.0), ('min_length', 1.0)]
