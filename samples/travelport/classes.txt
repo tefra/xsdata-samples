@@ -352,8 +352,9 @@ samples.travelport.output.common_v48_0.common.CoordinateLocation(Location)
     latitude: Optional[float] = [('default', None), ('required', True)]
     longitude: Optional[float] = [('default', None), ('required', True)]
 
-samples.travelport.output.common_v48_0.common.CorporateDiscountId(str)
+samples.travelport.output.common_v48_0.common.CorporateDiscountId()
     negotiated_rate_code: Optional[bool] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.Credentials()
     user_id: Optional[str] = [('default', None), ('max_length', 36.0), ('required', True)]
@@ -381,9 +382,10 @@ samples.travelport.output.common_v48_0.common.CustomProfileInformation()
 samples.travelport.output.common_v48_0.common.CustomerId(TypeRemark)
     key: Optional[str] = [('default', None)]
 
-samples.travelport.output.common_v48_0.common.CustomizedNameData(str)
+samples.travelport.output.common_v48_0.common.CustomizedNameData()
     key: Optional[str] = [('default', None)]
     provider_reservation_info_ref: Optional[str] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.DebitCard(TypePaymentCard)
     issue_number: Optional[str] = [('default', None), ('max_length', 8.0)]
@@ -501,10 +503,11 @@ samples.travelport.output.common_v48_0.common.FormOfPayment()
 samples.travelport.output.common_v48_0.common.FormOfPaymentRef()
     key: Optional[str] = [('default', None), ('required', True)]
 
-samples.travelport.output.common_v48_0.common.FormattedTextTextType(str)
+samples.travelport.output.common_v48_0.common.FormattedTextTextType()
     formatted: Optional[bool] = [('default', None)]
     language: Optional[str] = [('default', None)]
     text_format: Optional[str] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.GeneralRemark()
     booking_traveler_ref: List[str] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
@@ -558,11 +561,12 @@ samples.travelport.output.common_v48_0.common.Guarantee()
 samples.travelport.output.common_v48_0.common.GuaranteeType()
     value: Optional[str] = [('default', None), ('max_length', 250.0)]
 
-samples.travelport.output.common_v48_0.common.HostToken(str)
+samples.travelport.output.common_v48_0.common.HostToken()
     el_stat: Optional[str] = [('default', None)]
     host: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 2.0)]
     key: Optional[str] = [('default', None)]
     key_override: Optional[bool] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.HostTokenList()
     host_token: List[HostToken] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 1)]
@@ -693,8 +697,9 @@ samples.travelport.output.common_v48_0.common.McopriceData()
         amount: Optional[str] = [('default', None)]
         percentage: Optional[str] = [('default', None), ('pattern', '([0-9]{1,2}|100)\\.[0-9]{1,2}')]
 
-samples.travelport.output.common_v48_0.common.Mcoremark(str)
+samples.travelport.output.common_v48_0.common.Mcoremark()
     additional_rmk: Optional[bool] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.Mcotext(TypeFreeFormText)
     type: Optional[str] = [('default', None)]
@@ -784,8 +789,9 @@ samples.travelport.output.common_v48_0.common.Osi()
     provider_reservation_info_ref: Optional[str] = [('default', None)]
     text: Optional[str] = [('default', None), ('max_length', 256.0), ('required', True)]
 
-samples.travelport.output.common_v48_0.common.OtherGuaranteeInfo(str)
+samples.travelport.output.common_v48_0.common.OtherGuaranteeInfo()
     type: Optional[str] = [('default', None), ('required', True)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.OverridePcc()
     provider_code: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 2.0), ('required', True)]
@@ -962,8 +968,9 @@ samples.travelport.output.common_v48_0.common.ReferencePoint()
 samples.travelport.output.common_v48_0.common.RefundRemark()
     remark_data: Optional[str] = [('default', None), ('required', True)]
 
-samples.travelport.output.common_v48_0.common.Remark(str)
+samples.travelport.output.common_v48_0.common.Remark()
     key: Optional[str] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.RequestKeyMappings()
     key_mapping: List[KeyMapping] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
@@ -980,11 +987,12 @@ samples.travelport.output.common_v48_0.common.ReservationName()
     booking_traveler_ref: Optional[BookingTravelerRef] = [('default', None)]
     name_override: Optional[NameOverride] = [('default', None)]
 
-samples.travelport.output.common_v48_0.common.ResponseMessage(str)
+samples.travelport.output.common_v48_0.common.ResponseMessage()
     code: Optional[int] = [('default', None), ('required', True)]
     provider_code: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 2.0)]
     supplier_code: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0)]
     type: Optional[str] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.Restriction()
     operation: Optional[str] = [('default', None), ('required', True)]
@@ -1046,10 +1054,12 @@ samples.travelport.output.common_v48_0.common.Segment()
     status: Optional[str] = [('default', None)]
     travel_order: Optional[int] = [('default', None)]
 
-samples.travelport.output.common_v48_0.common.SegmentRemark(str)
+samples.travelport.output.common_v48_0.common.SegmentRemark()
     key: Optional[str] = [('default', None), ('required', True)]
+    value: Optional[str] = [('default', None)]
 
-samples.travelport.output.common_v48_0.common.SellMessage(str)
+samples.travelport.output.common_v48_0.common.SellMessage()
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.ServiceData()
     air_segment_ref: Optional[str] = [('default', None)]
@@ -1159,7 +1169,8 @@ samples.travelport.output.common_v48_0.common.ShopInformation()
         destination: Optional[str] = [('default', None), ('length', 3), ('white_space', 'collapse')]
         origin: Optional[str] = [('default', None), ('length', 3), ('white_space', 'collapse')]
 
-samples.travelport.output.common_v48_0.common.SimpleName(str)
+samples.travelport.output.common_v48_0.common.SimpleName()
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.SpecialEquipment()
     el_stat: Optional[str] = [('default', None)]
@@ -1190,7 +1201,8 @@ samples.travelport.output.common_v48_0.common.Ssrinfo()
     booking_traveler_ref: List[str] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
     ssr: Optional[Ssr] = [('default', None), ('required', True)]
 
-samples.travelport.output.common_v48_0.common.State(str)
+samples.travelport.output.common_v48_0.common.State()
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.StockControl()
     number: Optional[str] = [('default', None)]
@@ -1210,7 +1222,8 @@ samples.travelport.output.common_v48_0.common.TaxDetail()
     fare_info_ref: Optional[str] = [('default', None)]
     origin_airport: Optional[str] = [('default', None), ('length', 3)]
 
-samples.travelport.output.common_v48_0.common.TerminalSessionInfo(str)
+samples.travelport.output.common_v48_0.common.TerminalSessionInfo()
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.ThirdPartyInformation()
     el_stat: Optional[str] = [('default', None)]
@@ -1499,7 +1512,8 @@ samples.travelport.output.common_v48_0.common.TypeFormOfRefund(str)
     FORM_OF_PAYMENT: xs:string = [('default', '"FormOfPayment"')]
     MCO: xs:string = [('default', '"MCO"')]
 
-samples.travelport.output.common_v48_0.common.TypeFreeFormText(str)
+samples.travelport.output.common_v48_0.common.TypeFreeFormText()
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.TypeFuel(str)
     DIESEL: xs:string = [('default', '"Diesel"')]
@@ -1801,9 +1815,10 @@ samples.travelport.output.common_v48_0.common.TypeRecordStatus(str)
     PAST: xs:string = [('default', '"Past"')]
     UNKNOWN: xs:string = [('default', '"Unknown"')]
 
-samples.travelport.output.common_v48_0.common.TypeRemark(str)
+samples.travelport.output.common_v48_0.common.TypeRemark()
     provider_code: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 2.0)]
     provider_reservation_info_ref: Optional[str] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.TypeRemarkWithTravelerRef()
     booking_traveler_ref: List[str] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
@@ -1830,9 +1845,10 @@ samples.travelport.output.common_v48_0.common.TypeResidency(str)
     NATIONAL: xs:string = [('default', '"National"')]
     RESIDENT: xs:string = [('default', '"Resident"')]
 
-samples.travelport.output.common_v48_0.common.TypeResultMessage(str)
+samples.travelport.output.common_v48_0.common.TypeResultMessage()
     code: Optional[int] = [('default', None), ('required', True)]
     type: Optional[str] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common.TypeSearchLocation()
     airport: Optional[Airport] = [('default', None)]
@@ -2059,11 +2075,12 @@ samples.travelport.output.common_v48_0.common.UrticketStatus(str)
 
 samples.travelport.output.common_v48_0.common.VendorLocation(TypeVendorLocation)
 
-samples.travelport.output.common_v48_0.common.Xmlremark(str)
+samples.travelport.output.common_v48_0.common.Xmlremark()
     category: Optional[str] = [('default', None), ('max_length', 10.0)]
     el_stat: Optional[str] = [('default', None)]
     key: Optional[str] = [('default', None)]
     key_override: Optional[bool] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.common_v48_0.common_req_rsp.BaseCoreReq()
     agent_idoverride: List[AgentIdoverride] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
@@ -2153,12 +2170,14 @@ samples.travelport.output.rail_v48_0.rail.FareValidity()
 samples.travelport.output.rail_v48_0.rail.FulFillmentType()
     value: Optional[str] = [('default', None), ('max_length', 255.0), ('min_length', 0.0)]
 
-samples.travelport.output.rail_v48_0.rail.JourneyRemark(str)
+samples.travelport.output.rail_v48_0.rail.JourneyRemark()
     category: Optional[str] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
-samples.travelport.output.rail_v48_0.rail.OperatingCompany(str)
+samples.travelport.output.rail_v48_0.rail.OperatingCompany()
     code: Optional[str] = [('default', None)]
     name: Optional[str] = [('default', None), ('required', True)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.rail_v48_0.rail.RailAutoSeatAssignment()
     booking_traveler_ref: Optional[str] = [('default', None)]
@@ -2230,11 +2249,12 @@ samples.travelport.output.rail_v48_0.rail.RailFareComponent()
         discount_card: List[DiscountCard] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 1)]
         key: Optional[str] = [('default', None)]
 
-samples.travelport.output.rail_v48_0.rail.RailFareId(str)
+samples.travelport.output.rail_v48_0.rail.RailFareId()
     category: Optional[str] = [('default', None)]
     el_stat: Optional[str] = [('default', None)]
     key: Optional[str] = [('default', None), ('required', True)]
     key_override: Optional[bool] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.rail_v48_0.rail.RailFareIdlist()
     rail_fare_id: List[RailFareId] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 1)]
@@ -2245,11 +2265,12 @@ samples.travelport.output.rail_v48_0.rail.RailFareIdref()
 samples.travelport.output.rail_v48_0.rail.RailFareList()
     rail_fare: List[RailFare] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 1)]
 
-samples.travelport.output.rail_v48_0.rail.RailFareNote(str)
+samples.travelport.output.rail_v48_0.rail.RailFareNote()
     el_stat: Optional[str] = [('default', None)]
     key: Optional[str] = [('default', None), ('required', True)]
     key_override: Optional[bool] = [('default', None)]
     note_name: Optional[str] = [('default', None), ('required', True)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.rail_v48_0.rail.RailFareNoteList()
     rail_fare_note: List[RailFareNote] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
@@ -2410,9 +2431,10 @@ samples.travelport.output.rail_v48_0.rail.RailSegment(Segment)
     transport_mode: Optional[str] = [('default', None)]
     travel_time: Optional[int] = [('default', None)]
 
-samples.travelport.output.rail_v48_0.rail.RailSegmentInfo(str)
+samples.travelport.output.rail_v48_0.rail.RailSegmentInfo()
     category: Optional[str] = [('default', None)]
     type: Optional[str] = [('default', None), ('required', True)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.rail_v48_0.rail.RailSegmentList()
     rail_segment: List[RailSegment] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
@@ -3311,12 +3333,13 @@ samples.travelport.output.air_v48_0.air.BookingRules()
     samples.travelport.output.air_v48_0.air.BookingRules.RuleInfo()
         charges_rules: Optional[ChargesRules] = [('default', None)]
 
-samples.travelport.output.air_v48_0.air.BookingRulesFareReference(str)
+samples.travelport.output.air_v48_0.air.BookingRulesFareReference()
     account_code: Optional[str] = [('default', None)]
     class_of_service: Optional[str] = [('default', None), ('max_length', 2.0), ('min_length', 1.0)]
     ticket_designator_code: Optional[str] = [('default', None), ('max_length', 20.0), ('min_length', 0.0)]
     upgrade_class_of_service: Optional[str] = [('default', None), ('max_length', 2.0), ('min_length', 1.0)]
     upgrage_allowed: Optional[bool] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.Brand()
     air_itinerary_details_ref: Optional[str] = [('default', None)]
@@ -3440,9 +3463,10 @@ samples.travelport.output.air_v48_0.air.Co2Emissions()
     total_value: Optional[float] = [('default', None)]
     unit: Optional[str] = [('default', None), ('max_length', 64.0), ('min_length', 1.0)]
 
-samples.travelport.output.air_v48_0.air.CodeshareInfo(str)
+samples.travelport.output.air_v48_0.air.CodeshareInfo()
     operating_carrier: Optional[str] = [('default', None), ('length', 2)]
     operating_flight_number: Optional[str] = [('default', None), ('max_length', 5.0)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.CompanyName()
     supplier_code: Optional[str] = [('default', None), ('length', 2), ('required', True)]
@@ -3799,7 +3823,8 @@ samples.travelport.output.air_v48_0.air.FareBasis()
     code: Optional[str] = [('default', None), ('required', True)]
     segment_ref: Optional[str] = [('default', None)]
 
-samples.travelport.output.air_v48_0.air.FareCalc(str)
+samples.travelport.output.air_v48_0.air.FareCalc()
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.FareDetails()
     fare_basis: Optional[str] = [('default', None), ('max_length', 20.0), ('required', True)]
@@ -3901,21 +3926,24 @@ samples.travelport.output.air_v48_0.air.FareInfo()
 samples.travelport.output.air_v48_0.air.FareInfoList()
     fare_info: List[FareInfo] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 1)]
 
-samples.travelport.output.air_v48_0.air.FareInfoMessage(str)
+samples.travelport.output.air_v48_0.air.FareInfoMessage()
     key: Optional[str] = [('default', None), ('required', True)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.FareInfoRef()
     key: Optional[str] = [('default', None), ('required', True)]
 
-samples.travelport.output.air_v48_0.air.FareMileageInformation(str)
+samples.travelport.output.air_v48_0.air.FareMileageInformation()
+    value: Optional[str] = [('default', None)]
 
-samples.travelport.output.air_v48_0.air.FareNote(str)
+samples.travelport.output.air_v48_0.air.FareNote()
     el_stat: Optional[str] = [('default', None)]
     fare_info_message_ref: Optional[str] = [('default', None)]
     key: Optional[str] = [('default', None), ('required', True)]
     key_override: Optional[bool] = [('default', None)]
     note_name: Optional[str] = [('default', None)]
     precedence: Optional[int] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.FareNoteList()
     fare_note: List[FareNote] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
@@ -3984,7 +4012,8 @@ samples.travelport.output.air_v48_0.air.FareRestrictionSeasonal()
     seasonal_range2_start_date: Optional[str] = [('default', None)]
     variation_by_travel_dates: Optional[str] = [('default', None)]
 
-samples.travelport.output.air_v48_0.air.FareRoutingInformation(str)
+samples.travelport.output.air_v48_0.air.FareRoutingInformation()
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.FareRule()
     fare_info_ref: Optional[str] = [('default', None)]
@@ -4017,9 +4046,10 @@ samples.travelport.output.air_v48_0.air.FareRuleKey()
     provider_code: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 2.0), ('required', True)]
     value: Optional[str] = [('default', None), ('min_length', 1.0), ('white_space', 'collapse')]
 
-samples.travelport.output.air_v48_0.air.FareRuleLong(str)
+samples.travelport.output.air_v48_0.air.FareRuleLong()
     category: Optional[int] = [('default', None), ('required', True)]
     type: Optional[str] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.FareRuleLongRef()
     key: Optional[str] = [('default', None), ('required', True)]
@@ -4258,12 +4288,14 @@ samples.travelport.output.air_v48_0.air.HostReservation()
 samples.travelport.output.air_v48_0.air.HostTokenList()
     host_token: List[HostToken] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 1)]
 
-samples.travelport.output.air_v48_0.air.ImageLocation(str)
+samples.travelport.output.air_v48_0.air.ImageLocation()
     image_height: Optional[int] = [('default', None), ('required', True)]
     image_width: Optional[int] = [('default', None), ('required', True)]
     type: Optional[str] = [('default', None), ('required', True)]
+    value: Optional[str] = [('default', None)]
 
-samples.travelport.output.air_v48_0.air.InFlightServices(str)
+samples.travelport.output.air_v48_0.air.InFlightServices()
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.IncludeAddlBookingCodeInfo()
     secondary_carrier: Optional[str] = [('default', None), ('length', 2)]
@@ -4630,7 +4662,7 @@ samples.travelport.output.air_v48_0.air.PenaltyFareInformation()
     penalty_info: Optional[TypeFarePenalty] = [('default', None)]
     prohibit_penalty_fares: Optional[bool] = [('default', None), ('required', True)]
 
-samples.travelport.output.air_v48_0.air.PenaltyInformation(str)
+samples.travelport.output.air_v48_0.air.PenaltyInformation()
     board_point: Optional[str] = [('default', None), ('length', 3), ('white_space', 'collapse')]
     carrier: Optional[str] = [('default', None), ('length', 2)]
     change_fee_application_code: Optional[str] = [('default', None), ('length', 2)]
@@ -4643,6 +4675,7 @@ samples.travelport.output.air_v48_0.air.PenaltyInformation(str)
     off_point: Optional[str] = [('default', None), ('length', 3), ('white_space', 'collapse')]
     priceable_unit: Optional[int] = [('default', None)]
     refundable: Optional[bool] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.PermittedCabins()
     cabin_class: List[CabinClass] = [('default', 'list'), ('max_occurs', 5), ('min_occurs', 1)]
@@ -4708,10 +4741,11 @@ samples.travelport.output.air_v48_0.air.PreferredCabins()
 samples.travelport.output.air_v48_0.air.PreferredCarriers()
     carrier: List[Carrier] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 1)]
 
-samples.travelport.output.air_v48_0.air.PriceChangeType(str)
+samples.travelport.output.air_v48_0.air.PriceChangeType()
     amount: Optional[str] = [('default', None), ('required', True)]
     carrier: Optional[str] = [('default', None)]
     segment_ref: Optional[str] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.PriceRange()
     default_currency: Optional[bool] = [('default', None)]
@@ -4899,10 +4933,12 @@ samples.travelport.output.air_v48_0.air.SeatInformation()
     type: Optional[str] = [('default', None), ('required', True)]
     video: Optional[str] = [('default', None), ('required', True)]
 
-    samples.travelport.output.air_v48_0.air.SeatInformation.Rating(str)
+    samples.travelport.output.air_v48_0.air.SeatInformation.Rating()
         number: Optional[int] = [('default', None), ('required', True)]
+        value: Optional[str] = [('default', None)]
 
-samples.travelport.output.air_v48_0.air.SegmentIndex(int)
+samples.travelport.output.air_v48_0.air.SegmentIndex()
+    value: Optional[int] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.SegmentModifiers()
     air_segment_ref: Optional[AirSegmentRef] = [('default', None), ('required', True)]
@@ -5183,9 +5219,10 @@ samples.travelport.output.air_v48_0.air.Title(TypeTextElement)
 samples.travelport.output.air_v48_0.air.TourCode()
     value: Optional[str] = [('default', None), ('max_length', 15.0), ('required', True)]
 
-samples.travelport.output.air_v48_0.air.TravelArranger(str)
+samples.travelport.output.air_v48_0.air.TravelArranger()
     code: Optional[str] = [('default', None)]
     company_short_name: Optional[str] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.TypeAirReservationWithFop(TypeBaseAirReservation)
     form_of_payment: List[FormOfPayment] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
@@ -5589,8 +5626,9 @@ samples.travelport.output.air_v48_0.air.TypeMileOrRouteBasedFare(str)
     MILE: xs:string = [('default', '"Mile"')]
     ROUTE: xs:string = [('default', '"Route"')]
 
-samples.travelport.output.air_v48_0.air.TypeNativeSearchModifier(str)
+samples.travelport.output.air_v48_0.air.TypeNativeSearchModifier()
     provider_code: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 2.0), ('required', True)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.TypeNonAirReservationRef()
     locator_code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 5.0), ('required', True)]
@@ -5697,9 +5735,10 @@ samples.travelport.output.air_v48_0.air.TypeTcrstatus(str)
     REFUNDED: xs:string = [('default', '"Refunded"')]
     UNKNOWN: xs:string = [('default', '"Unknown"')]
 
-samples.travelport.output.air_v48_0.air.TypeTextElement(str)
+samples.travelport.output.air_v48_0.air.TypeTextElement()
     language_code: Optional[str] = [('default', None)]
     type: Optional[str] = [('default', None), ('required', True)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.TypeTicketFailureInfo()
     booking_traveler_ref: List[str] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 1)]
@@ -5763,8 +5802,9 @@ samples.travelport.output.air_v48_0.air.UpsellBrand()
     fare_basis: Optional[str] = [('default', None)]
     fare_info_ref: Optional[str] = [('default', None)]
 
-samples.travelport.output.air_v48_0.air.Url(str)
+samples.travelport.output.air_v48_0.air.Url()
     type: Optional[str] = [('default', None)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.Urlinfo()
     text: List[str] = [('default', 'list'), ('max_length', 250.0), ('max_occurs', 999), ('min_occurs', 0)]
@@ -5784,9 +5824,10 @@ samples.travelport.output.air_v48_0.air.VoidDocumentInfo()
     document_number: Optional[str] = [('default', None), ('max_length', 13.0), ('min_length', 1.0)]
     document_type: Optional[str] = [('default', None)]
 
-samples.travelport.output.air_v48_0.air.VoidFailureInfo(str)
+samples.travelport.output.air_v48_0.air.VoidFailureInfo()
     code: Optional[int] = [('default', None)]
     ticket_number: Optional[str] = [('default', None), ('required', True)]
+    value: Optional[str] = [('default', None)]
 
 samples.travelport.output.air_v48_0.air.VoidResultInfo()
     document_number: Optional[str] = [('default', None), ('max_length', 13.0), ('min_length', 1.0)]

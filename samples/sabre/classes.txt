@@ -1,0 +1,1769 @@
+
+samples.sabre.output.bargain_finder_max_common_types_v1_9_7.AdvResTicketingType()
+    adv_res_ind: Optional[bool] = [('default', None)]
+    adv_reservation: Optional["AdvResTicketingType.AdvReservation"] = [('default', None)]
+    adv_ticketing: Optional["AdvResTicketingType.AdvTicketing"] = [('default', None)]
+    adv_ticketing_ind: Optional[bool] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_common_types_v1_9_7.AdvResTicketingType.AdvReservation()
+        latest_period: Optional[str] = [('default', None), ('pattern', '[0-9]{1,3}')]
+        latest_time_of_day: Optional[str] = [('default', None)]
+        latest_unit: Optional[str] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_common_types_v1_9_7.AdvResTicketingType.AdvTicketing()
+        from_depart_period: Optional[str] = [('default', None), ('pattern', '[0-9]{1,3}')]
+        from_depart_time_of_day: Optional[str] = [('default', None)]
+        from_depart_unit: Optional[str] = [('default', None)]
+        from_res_period: Optional[str] = [('default', None), ('pattern', '[0-9]{1,3}')]
+        from_res_time_of_day: Optional[str] = [('default', None)]
+        from_res_unit: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_common_types_v1_9_7.AirTripType(str)
+    CIRCLE: xs:string = [('default', '"Circle"')]
+    ONE_WAY: xs:string = [('default', '"OneWay"')]
+    OPEN_JAW: xs:string = [('default', '"OpenJaw"')]
+    OTHER: xs:string = [('default', '"Other"')]
+    RETURN_VALUE: xs:string = [('default', '"Return"')]
+
+samples.sabre.output.bargain_finder_max_common_types_v1_9_7.CompanyNameType()
+    code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0)]
+    code_context: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0)]
+    company_short_name: Optional[str] = [('default', None), ('max_length', 64.0), ('min_length', 1.0)]
+    travel_sector: Optional[str] = [('default', None)]
+    value: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_common_types_v1_9_7.DepartureOrArrival(str)
+    ARRIVAL: xs:string = [('default', '"Arrival"')]
+    DEPARTURE: xs:string = [('default', '"Departure"')]
+
+samples.sabre.output.bargain_finder_max_common_types_v1_9_7.EquipmentType()
+    air_equip_type: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 3.0), ('required', True)]
+    changeof_gauge: bool = [('default', False)]
+    value: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_common_types_v1_9_7.FareDirectionality(str)
+    FROM_VALUE: xs:string = [('default', '"FROM"')]
+    TO: xs:string = [('default', '"TO"')]
+
+samples.sabre.output.bargain_finder_max_common_types_v1_9_7.OutboundOrInbound(str)
+    INBOUND: xs:string = [('default', '"Inbound"')]
+    OUTBOUND: xs:string = [('default', '"Outbound"')]
+
+samples.sabre.output.bargain_finder_max_common_types_v1_9_7.PassengerTypeQuantityType(TravelerCountType)
+    changeable: bool = [('default', True)]
+    index: Optional[int] = [('default', None)]
+    tpa_extensions: Optional["PassengerTypeQuantityType.TpaExtensions"] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_common_types_v1_9_7.PassengerTypeQuantityType.TpaExtensions()
+        age: Optional["PassengerTypeQuantityType.TpaExtensions.Age"] = [('default', None)]
+        birth_date: Optional["PassengerTypeQuantityType.TpaExtensions.BirthDate"] = [('default', None)]
+        state: Optional["PassengerTypeQuantityType.TpaExtensions.State"] = [('default', None)]
+        total_number: Optional["PassengerTypeQuantityType.TpaExtensions.TotalNumber"] = [('default', None)]
+        voluntary_changes: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges"] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_common_types_v1_9_7.PassengerTypeQuantityType.TpaExtensions.Age()
+            years: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_common_types_v1_9_7.PassengerTypeQuantityType.TpaExtensions.BirthDate()
+            date: Optional[str] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_common_types_v1_9_7.PassengerTypeQuantityType.TpaExtensions.State()
+            code: Optional[str] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_common_types_v1_9_7.PassengerTypeQuantityType.TpaExtensions.TotalNumber()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_common_types_v1_9_7.PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges()
+            match: Optional[str] = [('default', None)]
+            penalty: List["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty"] = [('default', 'list'), ('max_occurs', 2), ('min_occurs', 0)]
+
+            samples.sabre.output.bargain_finder_max_common_types_v1_9_7.PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty()
+                amount: Optional[float] = [('default', None), ('fraction_digits', 3)]
+                application: Optional[str] = [('default', None)]
+                currency_code: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+                decimal_places: Optional[int] = [('default', None)]
+                exclude: Optional[bool] = [('default', None)]
+                type: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_common_types_v1_9_7.StayRestrictionsType()
+    maximum_stay: Optional["StayRestrictionsType.MaximumStay"] = [('default', None), ('required', True)]
+    minimum_stay: Optional["StayRestrictionsType.MinimumStay"] = [('default', None), ('required', True)]
+    stay_restrictions_ind: Optional[bool] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_common_types_v1_9_7.StayRestrictionsType.MaximumStay()
+        max_stay: Optional[int] = [('default', None), ('max_inclusive', 99.0), ('min_inclusive', 1.0)]
+        max_stay_date: Optional[str] = [('default', None)]
+        return_time_of_day: Optional[str] = [('default', None)]
+        return_type: Optional[str] = [('default', None)]
+        stay_unit: Optional[str] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_common_types_v1_9_7.StayRestrictionsType.MinimumStay()
+        min_stay: Optional[int] = [('default', None), ('max_inclusive', 99.0), ('min_inclusive', 1.0)]
+        min_stay_date: Optional[str] = [('default', None)]
+        return_time_of_day: Optional[str] = [('default', None)]
+        stay_unit: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_common_types_v1_9_7.StayUnitType(str)
+    DAYS: xs:string = [('default', '"Days"')]
+    FRI: xs:string = [('default', '"FRI"')]
+    HOURS: xs:string = [('default', '"Hours"')]
+    MINUTES: xs:string = [('default', '"Minutes"')]
+    MON: xs:string = [('default', '"MON"')]
+    MONTHS: xs:string = [('default', '"Months"')]
+    SAT: xs:string = [('default', '"SAT"')]
+    SUN: xs:string = [('default', '"SUN"')]
+    THU: xs:string = [('default', '"THU"')]
+    TUES: xs:string = [('default', '"TUES"')]
+    WED: xs:string = [('default', '"WED"')]
+
+samples.sabre.output.bargain_finder_max_common_types_v1_9_7.TravelerCountType()
+    age: Optional[int] = [('default', None), ('max_inclusive', 999.0), ('min_inclusive', 0.0)]
+    code: Optional[str] = [('default', None)]
+    code_context: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0)]
+    quantity: Optional[int] = [('default', None), ('max_inclusive', 999.0), ('min_inclusive', 1.0)]
+    uri: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_common_types_v1_9_7.VoluntaryChangesType()
+    penalty: Optional["VoluntaryChangesType.Penalty"] = [('default', None)]
+    vol_change_ind: Optional[bool] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_common_types_v1_9_7.VoluntaryChangesType.Penalty()
+        amount: Optional[float] = [('default', None), ('fraction_digits', 3)]
+        currency_code: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+        decimal_places: Optional[int] = [('default', None)]
+        departure_status: Optional[str] = [('default', None)]
+        penalty_type: Optional[str] = [('default', None)]
+        percent: Optional[float] = [('default', None), ('max_inclusive', 100.0), ('min_inclusive', 0.01)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.AddressType()
+    address_line: List[str] = [('default', 'list'), ('max_length', 64.0), ('max_occurs', 5), ('min_length', 1.0), ('min_occurs', 0)]
+    bldg_room: Optional[str] = [('default', None), ('max_length', 64.0), ('min_length', 0.0)]
+    city_name: Optional[str] = [('default', None), ('max_length', 64.0), ('min_length', 1.0)]
+    country_name: Optional[CountryNameType] = [('default', None)]
+    county: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0)]
+    formatted_ind: bool = [('default', False)]
+    postal_code: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    share_market_ind: Optional[str] = [('default', None)]
+    share_synch_ind: Optional[str] = [('default', None)]
+    state_prov: Optional[StateProvType] = [('default', None)]
+    street_nmbr: Optional[StreetNmbrType] = [('default', None)]
+    type: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType()
+    all_flights_data: bool = [('default', False)]
+    ancillary_fees: Optional["AirSearchPrefsType.AncillaryFees"] = [('default', None)]
+    cabin_pref: List[CabinPrefType] = [('default', 'list'), ('max_occurs', 3), ('min_occurs', 0)]
+    equip_pref: List[EquipmentTypePref] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 0)]
+    eticket_desired: bool = [('default', False)]
+    fare_restrict_pref: List["AirSearchPrefsType.FareRestrictPref"] = [('default', 'list'), ('max_occurs', 4), ('min_occurs', 0)]
+    flight_type_pref: Optional[FlightTypePrefType] = [('default', None)]
+    frequent_flyer: List["AirSearchPrefsType.FrequentFlyer"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+    hybrid: bool = [('default', True)]
+    interline_brands: Optional[InterlineBrandsType] = [('default', None)]
+    max_stops_quantity: Optional[int] = [('default', None), ('max_inclusive', 999.0), ('min_inclusive', 0.0)]
+    on_time_rate: Optional[float] = [('default', None), ('max_inclusive', 100.0), ('min_inclusive', 0.01)]
+    smoking_allowed: bool = [('default', False)]
+    spanish_family_discount: Optional["AirSearchPrefsType.SpanishFamilyDiscount"] = [('default', None)]
+    ticket_distrib_pref: List[TicketDistribPrefType] = [('default', 'list'), ('max_occurs', 3), ('min_occurs', 0)]
+    tpa_extensions: Optional["AirSearchPrefsType.TpaExtensions"] = [('default', None)]
+    use_all_flights: bool = [('default', False)]
+    valid_interline_ticket: bool = [('default', False)]
+    vendor_pref: List[CompanyNamePrefType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.AncillaryFees()
+        ancillary_fee_group: List["AirSearchPrefsType.AncillaryFees.AncillaryFeeGroup"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+        enable: Optional[bool] = [('default', None), ('required', True)]
+        summary: Optional[bool] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.AncillaryFees.AncillaryFeeGroup()
+            code: Optional[str] = [('default', None), ('required', True)]
+            count: Optional[str] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.FareRestrictPref(FareRestrictPrefType)
+        adv_res_ticketing: Optional[AdvResTicketingType] = [('default', None)]
+        stay_restrictions: Optional[StayRestrictionsType] = [('default', None)]
+        voluntary_changes: Optional[VoluntaryChangesType] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.FrequentFlyer()
+        airline_code: Optional[str] = [('default', None)]
+        status: Optional[int] = [('default', None), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.SpanishFamilyDiscount()
+        level: Optional[int] = [('default', None), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions()
+        additional_fare_limit: Optional["AirSearchPrefsType.TpaExtensions.AdditionalFareLimit"] = [('default', None)]
+        air_service_only: Optional["AirSearchPrefsType.TpaExtensions.AirServiceOnly"] = [('default', None)]
+        aircraft_type_penalty: Optional["AirSearchPrefsType.TpaExtensions.AircraftTypePenalty"] = [('default', None)]
+        alt_cities_combinations: Optional[AltCitiesCombinationsType] = [('default', None)]
+        alternate_airport_penalty: Optional["AirSearchPrefsType.TpaExtensions.AlternateAirportPenalty"] = [('default', None)]
+        arrival_window: Optional[str] = [('default', None), ('pattern', '([0-2][0-9][0-5][0-9]){2}')]
+        avs_penalty_crrs: Optional["AirSearchPrefsType.TpaExtensions.AvsPenaltyCrrs"] = [('default', None)]
+        budget: Optional["AirSearchPrefsType.TpaExtensions.Budget"] = [('default', None)]
+        content_type: Optional["AirSearchPrefsType.TpaExtensions.ContentType"] = [('default', None)]
+        country_pref: List["AirSearchPrefsType.TpaExtensions.CountryPref"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+        dep_penalty_in_usd: Optional["AirSearchPrefsType.TpaExtensions.DepPenaltyInUsd"] = [('default', None)]
+        departure_window: Optional[str] = [('default', None), ('pattern', '([0-2][0-9][0-5][0-9]){2}')]
+        diversity_parameters: Optional["AirSearchPrefsType.TpaExtensions.DiversityParameters"] = [('default', None)]
+        domestic_layover_time: Optional["AirSearchPrefsType.TpaExtensions.DomesticLayoverTime"] = [('default', None)]
+        dur_penalty_in_usd: Optional["AirSearchPrefsType.TpaExtensions.DurPenaltyInUsd"] = [('default', None)]
+        exclude_alliance_pref: List[AllianceType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+        exclude_call_direct_carriers: Optional["AirSearchPrefsType.TpaExtensions.ExcludeCallDirectCarriers"] = [('default', None)]
+        exclude_vendor_pref: List["AirSearchPrefsType.TpaExtensions.ExcludeVendorPref"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+        exempt_all_taxes: Optional["AirSearchPrefsType.TpaExtensions.ExemptAllTaxes"] = [('default', None)]
+        exempt_all_taxes_and_fees: Optional["AirSearchPrefsType.TpaExtensions.ExemptAllTaxesAndFees"] = [('default', None)]
+        exempt_tax: List[TaxCodeType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+        fare_amount_threshold: Optional["AirSearchPrefsType.TpaExtensions.FareAmountThreshold"] = [('default', None)]
+        fare_focus_rules: Optional["AirSearchPrefsType.TpaExtensions.FareFocusRules"] = [('default', None)]
+        flexible_fares: Optional[FlexibleFaresType] = [('default', None)]
+        flight_repeat_limit: Optional["AirSearchPrefsType.TpaExtensions.FlightRepeatLimit"] = [('default', None)]
+        flight_stops_as_connections: Optional[FlightStopsAsConnectionsType] = [('default', None)]
+        flt_opt_lfsreuse_limit_for_avs: Optional["AirSearchPrefsType.TpaExtensions.FltOptLfsreuseLimitForAvs"] = [('default', None)]
+        flt_opt_lfsreuse_limit_for_non_avs: Optional["AirSearchPrefsType.TpaExtensions.FltOptLfsreuseLimitForNonAvs"] = [('default', None)]
+        flt_opt_must_price_reuse_limit: Optional["AirSearchPrefsType.TpaExtensions.FltOptMustPriceReuseLimit"] = [('default', None)]
+        governing_carrier_override: Optional[GoverningCarrierOverrideType] = [('default', None)]
+        include_alliance_pref: List[AllianceType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+        interline_indicator: Optional["AirSearchPrefsType.TpaExtensions.InterlineIndicator"] = [('default', None)]
+        itinerary_number_threshold: Optional["AirSearchPrefsType.TpaExtensions.ItineraryNumberThreshold"] = [('default', None)]
+        jet_service_only: Optional["AirSearchPrefsType.TpaExtensions.JetServiceOnly"] = [('default', None)]
+        jump_cabin_logic: Optional[JumpCabinLogicType] = [('default', None)]
+        keep_same_cabin: Optional[KeepSameCabinType] = [('default', None)]
+        long_connect_points: Optional["AirSearchPrefsType.TpaExtensions.LongConnectPoints"] = [('default', None)]
+        long_connect_time: Optional["AirSearchPrefsType.TpaExtensions.LongConnectTime"] = [('default', None)]
+        max_allowed_lfsoverage_per_crr_percent: Optional["AirSearchPrefsType.TpaExtensions.MaxAllowedLfsoveragePerCrrPercent"] = [('default', None)]
+        max_allowed_must_price_overage_per_crr: Optional["AirSearchPrefsType.TpaExtensions.MaxAllowedMustPriceOveragePerCrr"] = [('default', None)]
+        max_num_of2_plus_stp_sol: Optional["AirSearchPrefsType.TpaExtensions.MaxNumOf2PlusStpSol"] = [('default', None)]
+        max_num_of_non_stp_inrl_sol: Optional["AirSearchPrefsType.TpaExtensions.MaxNumOfNonStpInrlSol"] = [('default', None)]
+        max_num_of_non_stp_onl_sol: Optional["AirSearchPrefsType.TpaExtensions.MaxNumOfNonStpOnlSol"] = [('default', None)]
+        max_num_of_single_stp_onl_sol: Optional["AirSearchPrefsType.TpaExtensions.MaxNumOfSingleStpOnlSol"] = [('default', None)]
+        max_price: Optional["AirSearchPrefsType.TpaExtensions.MaxPrice"] = [('default', None)]
+        max_rel_fare_lvl_ofx_for_cnx: Optional["AirSearchPrefsType.TpaExtensions.MaxRelFareLvlOfxForCnx"] = [('default', None)]
+        max_rel_fare_lvl_ofx_for_non_stp: Optional["AirSearchPrefsType.TpaExtensions.MaxRelFareLvlOfxForNonStp"] = [('default', None)]
+        min_allowed_overage_per_crr: Optional["AirSearchPrefsType.TpaExtensions.MinAllowedOveragePerCrr"] = [('default', None)]
+        min_allowed_overage_per_crr_percent: Optional["AirSearchPrefsType.TpaExtensions.MinAllowedOveragePerCrrPercent"] = [('default', None)]
+        multi_airport_codes: Optional["AirSearchPrefsType.TpaExtensions.MultiAirportCodes"] = [('default', None)]
+        num_of_low_fare_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfLowFareSol"] = [('default', None)]
+        num_of_must_price2_plus_stp_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPrice2PlusStpSol"] = [('default', None)]
+        num_of_must_price_inrl_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPriceInrlSol"] = [('default', None)]
+        num_of_must_price_nstp1_stp_inrl_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstp1StpInrlSol"] = [('default', None)]
+        num_of_must_price_nstp1_stp_onl_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstp1StpOnlSol"] = [('default', None)]
+        num_of_must_price_nstp_inrl_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstpInrlSol"] = [('default', None)]
+        num_of_must_price_nstp_onl_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstpOnlSol"] = [('default', None)]
+        num_of_must_price_onl_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPriceOnlSol"] = [('default', None)]
+        num_of_must_price_sstop_onl_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPriceSstopOnlSol"] = [('default', None)]
+        num_trips: Optional[NumTripsType] = [('default', None)]
+        num_trips_with_routing: Optional["AirSearchPrefsType.TpaExtensions.NumTripsWithRouting"] = [('default', None)]
+        online_indicator: Optional["AirSearchPrefsType.TpaExtensions.OnlineIndicator"] = [('default', None)]
+        options_per_date_pair_list: Optional["AirSearchPrefsType.TpaExtensions.OptionsPerDatePairList"] = [('default', None)]
+        retailer_rules: Optional[RetailerRulesType] = [('default', None)]
+        same_connection_airport_only: Optional["AirSearchPrefsType.TpaExtensions.SameConnectionAirportOnly"] = [('default', None)]
+        same_origin_airport_only: Optional["AirSearchPrefsType.TpaExtensions.SameOriginAirportOnly"] = [('default', None)]
+        same_turnaround_airport_only: Optional["AirSearchPrefsType.TpaExtensions.SameTurnaroundAirportOnly"] = [('default', None)]
+        selling_levels: Optional["AirSearchPrefsType.TpaExtensions.SellingLevels"] = [('default', None)]
+        settlement_method: Optional[str] = [('default', None), ('pattern', '[a-zA-Z0-9]{3}')]
+        stp_penalty_in_usd: Optional["AirSearchPrefsType.TpaExtensions.StpPenaltyInUsd"] = [('default', None)]
+        target_min_num_of_lfsonl_sol_per_crr: Optional["AirSearchPrefsType.TpaExtensions.TargetMinNumOfLfsonlSolPerCrr"] = [('default', None)]
+        target_min_num_of_lfstot_onl_sol_percent: Optional["AirSearchPrefsType.TpaExtensions.TargetMinNumOfLfstotOnlSolPercent"] = [('default', None)]
+        taxes: Optional["AirSearchPrefsType.TpaExtensions.Taxes"] = [('default', None)]
+        ticketing_sum_of_locals: Optional["AirSearchPrefsType.TpaExtensions.TicketingSumOfLocals"] = [('default', None)]
+        trip_type: Optional["AirSearchPrefsType.TpaExtensions.TripType"] = [('default', None)]
+        upper_bound_lfsfactor: Optional["AirSearchPrefsType.TpaExtensions.UpperBoundLfsfactor"] = [('default', None)]
+        upper_bound_must_price_factor_for_non_stp: Optional["AirSearchPrefsType.TpaExtensions.UpperBoundMustPriceFactorForNonStp"] = [('default', None)]
+        upper_bound_must_price_factor_for_not_non_stp: Optional["AirSearchPrefsType.TpaExtensions.UpperBoundMustPriceFactorForNotNonStp"] = [('default', None)]
+        validating_carrier: Optional[ValidatingCarrierType] = [('default', None)]
+        validating_carrier_check: Optional["AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck"] = [('default', None)]
+        xofares: Optional[XofaresType] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.AdditionalFareLimit()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.AirServiceOnly()
+            ind: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.AircraftTypePenalty()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.AlternateAirportPenalty()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.AvsPenaltyCrrs()
+            value: Optional[str] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.Budget()
+            maximum_price: Optional[str] = [('default', None)]
+            minimum_price: Optional[str] = [('default', None)]
+            relative_price_threshold: Optional[str] = [('default', None), ('pattern', '0|-?[1-9][0-9]*%?')]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.ContentType()
+            type: Optional[str] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.CountryPref()
+            code: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{2}'), ('required', True)]
+            prefer_level: Optional[str] = [('default', None), ('pattern', 'Unacceptable'), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.DepPenaltyInUsd()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.DiversityParameters()
+            additional_non_stops_number: Optional[int] = [('default', None), ('min_inclusive', 1.0)]
+            additional_non_stops_percentage: Optional[int] = [('default', None), ('max_inclusive', 100.0), ('min_inclusive', 0.0)]
+            inbound_outbound_pairing: Optional[int] = [('default', None), ('max_inclusive', 1000.0), ('min_inclusive', 1.0)]
+            time_of_day_distribution: Optional["AirSearchPrefsType.TpaExtensions.DiversityParameters.TimeOfDayDistribution"] = [('default', None)]
+            weightings: Optional["AirSearchPrefsType.TpaExtensions.DiversityParameters.Weightings"] = [('default', None)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.DiversityParameters.TimeOfDayDistribution()
+                time_of_day_range: List["AirSearchPrefsType.TpaExtensions.DiversityParameters.TimeOfDayDistribution.TimeOfDayRange"] = [('default', 'list'), ('max_occurs', 4), ('min_occurs', 2)]
+
+                samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.DiversityParameters.TimeOfDayDistribution.TimeOfDayRange()
+                    begin: Optional[str] = [('default', None), ('pattern', '([0-1][0-9]|2[0-3])[0-5][0-9]'), ('required', True)]
+                    end: Optional[str] = [('default', None), ('pattern', '([0-1][0-9]|2[0-3])[0-5][0-9]'), ('required', True)]
+                    percentage: Optional[int] = [('default', None), ('max_inclusive', 100.0), ('min_inclusive', 0.0), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.DiversityParameters.Weightings()
+                price_weight: Optional[int] = [('default', None), ('max_inclusive', 10.0), ('min_inclusive', 0.0), ('required', True)]
+                travel_time_weight: Optional[int] = [('default', None), ('max_inclusive', 10.0), ('min_inclusive', 0.0), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.DomesticLayoverTime()
+            hours: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.DurPenaltyInUsd()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.ExcludeCallDirectCarriers()
+            enabled: Optional[bool] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.ExcludeVendorPref()
+            code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.ExemptAllTaxes()
+            value: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.ExemptAllTaxesAndFees()
+            value: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.FareAmountThreshold()
+            value: Optional[float] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.FareFocusRules()
+            exclude: Optional[bool] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.FlightRepeatLimit()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.FltOptLfsreuseLimitForAvs()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.FltOptLfsreuseLimitForNonAvs()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.FltOptMustPriceReuseLimit()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.InterlineIndicator()
+            ind: Optional[bool] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.ItineraryNumberThreshold()
+            value: Optional[float] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.JetServiceOnly()
+            ind: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.LongConnectPoints()
+            max: Optional[int] = [('default', None)]
+            min: Optional[int] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.LongConnectTime()
+            enable: Optional[bool] = [('default', None)]
+            max: Optional[int] = [('default', None)]
+            min: Optional[int] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.MaxAllowedLfsoveragePerCrrPercent()
+            value: Optional[float] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.MaxAllowedMustPriceOveragePerCrr()
+            value: Optional[float] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.MaxNumOf2PlusStpSol()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.MaxNumOfNonStpInrlSol()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.MaxNumOfNonStpOnlSol()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.MaxNumOfSingleStpOnlSol()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.MaxPrice()
+            value: Optional[float] = [('default', None), ('fraction_digits', 3)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.MaxRelFareLvlOfxForCnx()
+            value: Optional[float] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.MaxRelFareLvlOfxForNonStp()
+            value: Optional[float] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.MinAllowedOveragePerCrr()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.MinAllowedOveragePerCrrPercent()
+            value: Optional[float] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.MultiAirportCodes()
+            enable_open_jaw: bool = [('default', False)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.NumOfLowFareSol()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.NumOfMustPrice2PlusStpSol()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.NumOfMustPriceInrlSol()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstp1StpInrlSol()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstp1StpOnlSol()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstpInrlSol()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstpOnlSol()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.NumOfMustPriceOnlSol()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.NumOfMustPriceSstopOnlSol()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.NumTripsWithRouting()
+            number: int = [('default', 5), ('min_inclusive', 1.0)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.OnlineIndicator()
+            ind: Optional[bool] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.OptionsPerDatePairList()
+            options_per_date_pair: List[OptionsPerDatePairType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 1)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.SameConnectionAirportOnly()
+            ind: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.SameOriginAirportOnly()
+            ind: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.SameTurnaroundAirportOnly()
+            ind: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.SellingLevels()
+            selling_level_rules: Optional["AirSearchPrefsType.TpaExtensions.SellingLevels.SellingLevelRules"] = [('default', None)]
+            show_fare_amounts: Optional["AirSearchPrefsType.TpaExtensions.SellingLevels.ShowFareAmounts"] = [('default', None)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.SellingLevels.SellingLevelRules()
+                ignore: Optional[bool] = [('default', None), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.SellingLevels.ShowFareAmounts()
+                adjusted: Optional[bool] = [('default', None)]
+                original: Optional[bool] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.StpPenaltyInUsd()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.TargetMinNumOfLfsonlSolPerCrr()
+            value: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.TargetMinNumOfLfstotOnlSolPercent()
+            value: Optional[float] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.Taxes()
+            tax: List[TaxCodeAmountType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.TicketingSumOfLocals()
+            enable: bool = [('default', False)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.TripType()
+            value: Optional[str] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.UpperBoundLfsfactor()
+            value: Optional[float] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.UpperBoundMustPriceFactorForNonStp()
+            value: Optional[float] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.UpperBoundMustPriceFactorForNotNonStp()
+            value: Optional[float] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck()
+            carrier: List["AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Carrier"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+            country: List["AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Country"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+            ietvalidation: Optional["AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Ietvalidation"] = [('default', None), ('required', True)]
+            settlement_validation: Optional["AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.SettlementValidation"] = [('default', None), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Carrier()
+                code: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,3}'), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Country()
+                code: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{2}'), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Ietvalidation()
+                ind: Optional[bool] = [('default', None), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.SettlementValidation()
+                ind: Optional[bool] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirTravelerType()
+    accompanied_by_infant: Optional[bool] = [('default', None)]
+    address: List[AddressType] = [('default', 'list'), ('max_occurs', 5), ('min_occurs', 0)]
+    birth_date: Optional[str] = [('default', None)]
+    currency_code: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+    cust_loyalty: List[CustLoyaltyType] = [('default', 'list'), ('max_occurs', 5), ('min_occurs', 0)]
+    document: List[DocumentType] = [('default', 'list'), ('max_occurs', 10), ('min_occurs', 0)]
+    email: List[EmailType] = [('default', 'list'), ('max_occurs', 3), ('min_occurs', 0)]
+    flight_segment_rphs: Optional["AirTravelerType.FlightSegmentRphs"] = [('default', None)]
+    gender: Optional[str] = [('default', None)]
+    passenger_type_code: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}'), ('required', True)]
+    passenger_type_quantity: Optional[PassengerTypeQuantityType] = [('default', None)]
+    person_name: Optional[PersonNameType] = [('default', None), ('required', True)]
+    profile_ref: Optional["AirTravelerType.ProfileRef"] = [('default', None)]
+    share_market_ind: Optional[str] = [('default', None)]
+    share_synch_ind: Optional[str] = [('default', None)]
+    telephone: List[TelephoneType] = [('default', 'list'), ('max_occurs', 5), ('min_occurs', 0)]
+    traveler_ref_number: Optional[TravelerRefNumberType] = [('default', None), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirTravelerType.FlightSegmentRphs()
+        flight_segment_rph: List[str] = [('default', 'list'), ('max_occurs', 99), ('min_occurs', 1), ('pattern', '[0-9]{1,8}')]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirTravelerType.ProfileRef()
+        unique_id: Optional[UniqueIdType] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.AirlineType()
+    marketing: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,3}'), ('required', True)]
+    operating: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,3}'), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.AllianceType()
+    code: Optional[str] = [('default', None), ('length', 2), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.AltCitiesCombinationsLocationsType(str)
+    ALL: xs:string = [('default', '"All"')]
+    MAIN: xs:string = [('default', '"Main"')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.AltCitiesCombinationsType()
+    destinations: str = [('default', '"Main"')]
+    origins: str = [('default', '"Main"')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ApplyResidentDiscountType()
+    ind: Optional[bool] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ArunkType()
+    destination_location: Optional[RequestLocationType] = [('default', None), ('required', True)]
+    origin_location: Optional[RequestLocationType] = [('default', None), ('required', True)]
+    side_trip: Optional[SideTripType] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.AwardShoppingType()
+    enable: Optional[bool] = [('default', None)]
+    use_ras: bool = [('default', False)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.BillingInformationType()
+    aaacity: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    action_code: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 1.0)]
+    agent_sine_in: Optional[str] = [('default', None), ('max_length', 3.0)]
+    partition_id: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,4}')]
+    service_name: Optional[str] = [('default', None), ('pattern', '[0-9a-zA-Z,]{1,8}')]
+    user_branch: int = [('default', 0)]
+    user_set_address: Optional[str] = [('default', None), ('pattern', '[0-9A-F]{6}')]
+    user_station: int = [('default', 0)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.BookingChannelType()
+    primary: Optional[bool] = [('default', None)]
+    type: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.BookingClassPrefType()
+    prefer_level: str = [('default', '"Preferred"')]
+    res_book_desig_code: Optional[str] = [('default', None), ('pattern', '[A-Z]{1,2}'), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.BrandType()
+    code: Optional[str] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.CabinPrefType()
+    cabin: Optional[str] = [('default', None)]
+    prefer_level: str = [('default', '"Preferred"')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.CabinType(str)
+    BUSINESS: xs:string = [('default', '"Business"')]
+    C: xs:string = [('default', '"C"')]
+    ECONOMY: xs:string = [('default', '"Economy"')]
+    F: xs:string = [('default', '"F"')]
+    FIRST: xs:string = [('default', '"First"')]
+    J: xs:string = [('default', '"J"')]
+    P: xs:string = [('default', '"P"')]
+    PREMIUM_BUSINESS: xs:string = [('default', '"PremiumBusiness"')]
+    PREMIUM_ECONOMY: xs:string = [('default', '"PremiumEconomy"')]
+    PREMIUM_FIRST: xs:string = [('default', '"PremiumFirst"')]
+    S: xs:string = [('default', '"S"')]
+    Y: xs:string = [('default', '"Y"')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.CachePartitionGroupType()
+    partition: List[CachePartitionType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 2)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.CachePartitionType()
+    name: Optional[str] = [('default', None), ('pattern', '[A-Z0-9_]{1,}'), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.CarrierType(str)
+    MARKETING: xs:string = [('default', '"Marketing"')]
+    OPERATING: xs:string = [('default', '"Operating"')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.CompanyNamePrefType(CompanyNameType)
+    prefer_level: str = [('default', '"Preferred"')]
+    type: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ConnectionType()
+    connection_location: List["ConnectionType.ConnectionLocation"] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 1)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ConnectionType.ConnectionLocation(RequestLocationType)
+        connection_info: Optional[str] = [('default', None)]
+        inclusive: bool = [('default', True)]
+        min_change_time: Optional[int] = [('default', None)]
+        prefer_level: str = [('default', '"Preferred"')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.CountryNameType()
+    code: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{2}')]
+    value: Optional[str] = [('default', None), ('max_length', 64.0), ('min_length', 0.0)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.CustLoyaltyType()
+    effective_date: Optional[str] = [('default', None)]
+    expire_date: Optional[str] = [('default', None)]
+    loyal_level: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    membership_id: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0)]
+    program_id: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    rph: Optional[str] = [('default', None), ('pattern', '[0-9]{1,8}')]
+    share_market_ind: Optional[str] = [('default', None)]
+    share_synch_ind: Optional[str] = [('default', None)]
+    signup_date: Optional[str] = [('default', None)]
+    single_vendor_ind: Optional[str] = [('default', None)]
+    travel_sector: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.DateRangeType()
+    date_range: Optional[int] = [('default', None)]
+    outbound_date: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.DateTimeType()
+    connection_time_max: Optional[int] = [('default', None)]
+    connection_time_min: Optional[int] = [('default', None)]
+    date_flexibility: Optional[int] = [('default', None)]
+    max_options_per_date: Optional[int] = [('default', None)]
+    time_tolerance: Optional[int] = [('default', None)]
+    time_window_end: Optional[str] = [('default', None), ('pattern', '([0-1][0-9]|2[0-3])[0-5][0-9]')]
+    time_window_start: Optional[str] = [('default', None), ('pattern', '([0-1][0-9]|2[0-3])[0-5][0-9]')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.DepartureDaysType()
+    value: Optional[str] = [('default', None), ('length', 7), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.DiversityControlType()
+    dimensions: Optional["DiversityControlType.Dimensions"] = [('default', None), ('required', True)]
+    low_fare_bucket: Optional["DiversityControlType.LowFareBucket"] = [('default', None), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.DiversityControlType.Dimensions()
+        carrier: Optional["DiversityControlType.Dimensions.Carrier"] = [('default', None)]
+        inbound_outbound_pairing: Optional["DiversityControlType.Dimensions.InboundOutboundPairing"] = [('default', None)]
+        operating_duplicate: Optional["DiversityControlType.Dimensions.OperatingDuplicate"] = [('default', None)]
+        price_weight: int = [('default', 10), ('max_inclusive', 10.0), ('min_inclusive', 0.0)]
+        stops_number: Optional["DiversityControlType.Dimensions.StopsNumber"] = [('default', None)]
+        time_of_day: Optional["DiversityControlType.Dimensions.TimeOfDay"] = [('default', None)]
+        travel_time: Optional["DiversityControlType.Dimensions.TravelTime"] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.DiversityControlType.Dimensions.Carrier()
+            default: Optional["DiversityControlType.Dimensions.Carrier.Default"] = [('default', None)]
+            online_indicator: bool = [('default', False)]
+            override: List["DiversityControlType.Dimensions.Carrier.Override"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+            weight: Optional[int] = [('default', None), ('max_inclusive', 10.0), ('min_inclusive', 1.0), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.DiversityControlType.Dimensions.Carrier.Default()
+                options: Optional[str] = [('default', None), ('pattern', '[1-9][0-9]*|0%?|100%|[1-9][0-9]?%'), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.DiversityControlType.Dimensions.Carrier.Override()
+                code: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,3}'), ('required', True)]
+                options: Optional[str] = [('default', None), ('pattern', '[1-9][0-9]*|0%?|100%|[1-9][0-9]?%'), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.DiversityControlType.Dimensions.InboundOutboundPairing()
+            duplicates: int = [('default', 1)]
+            weight: Optional[int] = [('default', None), ('max_inclusive', 10.0), ('min_inclusive', 1.0), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.DiversityControlType.Dimensions.OperatingDuplicate()
+            preferred_carrier: List["DiversityControlType.Dimensions.OperatingDuplicate.PreferredCarrier"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+            weight: Optional[int] = [('default', None), ('max_inclusive', 10.0), ('min_inclusive', 1.0), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.DiversityControlType.Dimensions.OperatingDuplicate.PreferredCarrier()
+                code: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,3}'), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.DiversityControlType.Dimensions.StopsNumber()
+            weight: Optional[int] = [('default', None), ('max_inclusive', 10.0), ('min_inclusive', 1.0), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.DiversityControlType.Dimensions.TimeOfDay()
+            distribution: List["DiversityControlType.Dimensions.TimeOfDay.Distribution"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+            weight: Optional[int] = [('default', None), ('max_inclusive', 10.0), ('min_inclusive', 1.0), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.DiversityControlType.Dimensions.TimeOfDay.Distribution()
+                direction: Optional[str] = [('default', None)]
+                endpoint: str = [('default', '"Departure"')]
+                leg: Optional[int] = [('default', None)]
+                range: List["DiversityControlType.Dimensions.TimeOfDay.Distribution.Range"] = [('default', 'list'), ('max_occurs', 4), ('min_occurs', 0)]
+
+                samples.sabre.output.bargain_finder_max_rq_v1_9_7.DiversityControlType.Dimensions.TimeOfDay.Distribution.Range()
+                    begin: Optional[str] = [('default', None), ('pattern', '([0-1]?[0-9]|2[0-3]):[0-5][0-9]'), ('required', True)]
+                    end: Optional[str] = [('default', None), ('pattern', '([0-1]?[0-9]|2[0-3]):[0-5][0-9]'), ('required', True)]
+                    options: Optional[str] = [('default', None), ('pattern', '[1-9][0-9]*|0%?|100%|[1-9][0-9]?%')]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.DiversityControlType.Dimensions.TravelTime()
+            weight: Optional[int] = [('default', None), ('max_inclusive', 10.0), ('min_inclusive', 1.0), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.DiversityControlType.LowFareBucket()
+        fare_cut_off: Optional[str] = [('default', None), ('pattern', '(0|100|[1-9][0-9]?)%')]
+        options: Optional[str] = [('default', None), ('pattern', '[1-9][0-9]*|0%?|100%|[1-9][0-9]?%')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.DocumentType()
+    birth_date: Optional[str] = [('default', None)]
+    doc_holder_name: Optional[str] = [('default', None), ('max_length', 64.0), ('min_length', 1.0)]
+    doc_id: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0)]
+    doc_issue_authority: Optional[str] = [('default', None), ('max_length', 64.0), ('min_length', 1.0)]
+    doc_issue_location: Optional[str] = [('default', None), ('max_length', 64.0), ('min_length', 1.0)]
+    doc_limitations: List[str] = [('default', 'list'), ('max_length', 64.0), ('max_occurs', 9), ('min_length', 1.0), ('min_occurs', 0)]
+    doc_type: Optional[str] = [('default', None)]
+    effective_date: Optional[str] = [('default', None)]
+    expire_date: Optional[str] = [('default', None)]
+    gender: Optional[str] = [('default', None)]
+    share_market_ind: Optional[str] = [('default', None)]
+    share_synch_ind: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.EmailType()
+    default_ind: bool = [('default', False)]
+    email_type: Optional[str] = [('default', None)]
+    share_market_ind: Optional[str] = [('default', None)]
+    share_synch_ind: Optional[str] = [('default', None)]
+    value: Optional[str] = [('default', None), ('max_length', 128.0), ('min_length', 1.0)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.EquipmentTypePref(EquipmentType)
+    prefer_level: str = [('default', '"Preferred"')]
+    wide_body: Optional[bool] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeAirSearchPrefsType()
+    tpa_extensions: Optional[ExchangeTravelPreferencesTpaExtensionsType] = [('default', None)]
+    valid_interline_ticket: bool = [('default', False)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeFareType()
+    base_fare_amount: Optional[float] = [('default', None), ('fraction_digits', 3), ('required', True)]
+    base_fare_currency: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}'), ('required', True)]
+    fare_calc_currency: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}'), ('required', True)]
+    non_refundable_amount: Optional[float] = [('default', None), ('fraction_digits', 3)]
+    roe: Optional[float] = [('default', None)]
+    validating_carrier: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,3}')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeOriginDestinationFlightType()
+    airline: Optional[AirlineType] = [('default', None), ('required', True)]
+    arrival_date_time: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?'), ('required', True)]
+    booking_date_time: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?')]
+    class_of_service: Optional[str] = [('default', None), ('pattern', '[A-Z]{1,2}'), ('required', True)]
+    departure_date_time: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?'), ('required', True)]
+    destination_location: Optional[RequestLocationType] = [('default', None), ('required', True)]
+    fare: Optional["ExchangeOriginDestinationFlightType.Fare"] = [('default', None), ('required', True)]
+    flown: bool = [('default', False)]
+    marriage_status: Optional[str] = [('default', None)]
+    mileage_display: List[MileageDisplayType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+    number: Optional[int] = [('default', None), ('required', True)]
+    origin_location: Optional[RequestLocationType] = [('default', None), ('required', True)]
+    plus_up: List[PlusUpType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+    reservation: Optional[ReservationType] = [('default', None)]
+    side_trip: Optional[SideTripType] = [('default', None)]
+    type: Optional[str] = [('default', None), ('pattern', '[AKO]'), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeOriginDestinationFlightType.Fare(FareDetailsType)
+        adjustment: Optional["ExchangeOriginDestinationFlightType.Fare.Adjustment"] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeOriginDestinationFlightType.Fare.Adjustment()
+            currency: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+            group: Optional[int] = [('default', None)]
+            value: Optional[str] = [('default', None), ('pattern', '(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)%?'), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
+    alternate_time: Optional["ExchangeOriginDestinationInformationType.AlternateTime"] = [('default', None)]
+    cabin_pref: Optional[CabinPrefType] = [('default', None)]
+    connection_time: Optional["ExchangeOriginDestinationInformationType.ConnectionTime"] = [('default', None)]
+    date_flexibility: List["ExchangeOriginDestinationInformationType.DateFlexibility"] = [('default', 'list'), ('max_occurs', 2), ('min_occurs', 0)]
+    flight: List[ExchangeOriginDestinationFlightType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 1)]
+    max_one_way_options: Optional["ExchangeOriginDestinationInformationType.MaxOneWayOptions"] = [('default', None)]
+    num_one_way_options: Optional["ExchangeOriginDestinationInformationType.NumOneWayOptions"] = [('default', None)]
+    segment_type: Optional["ExchangeOriginDestinationInformationType.SegmentType"] = [('default', None)]
+    sister_destination_location: List[RequestLocationType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+    sister_destination_mileage: Optional["ExchangeOriginDestinationInformationType.SisterDestinationMileage"] = [('default', None)]
+    sister_origin_location: List[RequestLocationType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+    sister_origin_mileage: Optional["ExchangeOriginDestinationInformationType.SisterOriginMileage"] = [('default', None)]
+    total_travel_time: Optional["ExchangeOriginDestinationInformationType.TotalTravelTime"] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeOriginDestinationInformationType.AlternateTime()
+        minus: Optional[int] = [('default', None), ('max_inclusive', 72.0), ('min_inclusive', 0.0)]
+        plus: Optional[int] = [('default', None), ('max_inclusive', 9.0), ('min_inclusive', 0.0)]
+        plus_minus: Optional[int] = [('default', None), ('max_inclusive', 9.0), ('min_inclusive', 0.0)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeOriginDestinationInformationType.ConnectionTime()
+        enable_excluded_connection: Optional[bool] = [('default', None)]
+        excluded_connection_begin: Optional[str] = [('default', None), ('pattern', '([0-1][0-9]|2[0-3])[0-5][0-9]')]
+        excluded_connection_end: Optional[str] = [('default', None), ('pattern', '([0-1][0-9]|2[0-3])[0-5][0-9]')]
+        max: Optional[int] = [('default', None)]
+        min: Optional[int] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeOriginDestinationInformationType.DateFlexibility()
+        minus: Optional[int] = [('default', None)]
+        nbr_of_days: Optional[int] = [('default', None)]
+        plus: Optional[int] = [('default', None)]
+        validate: Optional[bool] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeOriginDestinationInformationType.MaxOneWayOptions()
+        value: Optional[int] = [('default', None), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeOriginDestinationInformationType.NumOneWayOptions()
+        number: Optional[int] = [('default', None), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeOriginDestinationInformationType.SegmentType()
+        code: Optional[str] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeOriginDestinationInformationType.SisterDestinationMileage()
+        number: Optional[int] = [('default', None), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeOriginDestinationInformationType.SisterOriginMileage()
+        number: Optional[int] = [('default', None), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeOriginDestinationInformationType.TotalTravelTime()
+        max: Optional[int] = [('default', None)]
+        min: Optional[int] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangePostype()
+    source: Optional[ExchangeSourceType] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeSettingsType()
+    attach_exchange_info: bool = [('default', False)]
+    branded_results: Optional[bool] = [('default', None)]
+    miptimeout_threshold: Optional[int] = [('default', None)]
+    reissue_exchange: Optional[str] = [('default', None)]
+    reprice_current_itin: bool = [('default', True)]
+    request_type: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeSourceType()
+    abacus_user: bool = [('default', False)]
+    accounting_code: Optional[str] = [('default', None), ('pattern', '[0-9a-zA-Z]{2,3}')]
+    agent_city: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}'), ('required', True)]
+    agent_department_code: Optional[str] = [('default', None), ('max_length', 6.0)]
+    agent_duty: Optional[str] = [('default', None), ('length', 1)]
+    agent_duty_code: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    agent_function: Optional[str] = [('default', None), ('max_length', 3.0)]
+    agent_iata: Optional[str] = [('default', None), ('pattern', '[0-9]{1,14}')]
+    agent_sine: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    airline_channel_code: Optional[str] = [('default', None), ('pattern', '[A-Z]{3}')]
+    airline_vendor_id: Optional[str] = [('default', None), ('pattern', '[A-Z0-9]{2,3}')]
+    airport_code: Optional[str] = [('default', None), ('pattern', '[A-Z0-9]{3,5}')]
+    booking_channel: Optional[SourceBookingChannelType] = [('default', None)]
+    carrier: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,3}'), ('required', True)]
+    co_host_id: Optional[int] = [('default', None)]
+    default_ticketing_carrier: Optional[str] = [('default', None), ('pattern', '[A-Z0-9]{2}[A-Z]?')]
+    ersp_user_id: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    eticket_capable: bool = [('default', False)]
+    first_depart_point: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 3.0)]
+    home_agency_iata: Optional[str] = [('default', None), ('pattern', '[0-9]{1,14}')]
+    host_carrier: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,3}')]
+    isocountry: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{2}')]
+    isocurrency: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+    main_travel_agency_pcc: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0), ('required', True)]
+    office_code: Optional[str] = [('default', None), ('pattern', '[0-9]{7}')]
+    personal_city_code: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{3,4}')]
+    pseudo_city_code: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    travel_agency_iata: Optional[str] = [('default', None), ('pattern', '[0-9]{1,14}')]
+    vendor_crscode: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeTpaExtensionsType()
+    award_shopping: Optional[AwardShoppingType] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeTravelPreferencesTpaExtensionsType()
+    exempt_all_taxes: Optional["ExchangeTravelPreferencesTpaExtensionsType.ExemptAllTaxes"] = [('default', None)]
+    exempt_all_taxes_and_fees: Optional["ExchangeTravelPreferencesTpaExtensionsType.ExemptAllTaxesAndFees"] = [('default', None)]
+    exempt_tax: List[TaxCodeType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+    settlement_method: Optional[str] = [('default', None), ('pattern', '[a-zA-Z0-9]{3}')]
+    taxes: Optional["ExchangeTravelPreferencesTpaExtensionsType.Taxes"] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeTravelPreferencesTpaExtensionsType.ExemptAllTaxes()
+        value: Optional[bool] = [('default', None), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeTravelPreferencesTpaExtensionsType.ExemptAllTaxesAndFees()
+        value: Optional[bool] = [('default', None), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeTravelPreferencesTpaExtensionsType.Taxes()
+        tax: List[TaxCodeAmountType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ExchangeType()
+    arunk: Optional[ArunkType] = [('default', None)]
+    bypass_advance_purchase_option: Optional[str] = [('default', None), ('length', 1)]
+    exchanged_tkt_issue_date_time: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?')]
+    fare: Optional[ExchangeFareType] = [('default', None), ('required', True)]
+    number_of_tax_boxes: Optional[int] = [('default', None)]
+    origin_destination_information: Optional[ExchangeOriginDestinationInformationType] = [('default', None), ('required', True)]
+    origin_destination_information: Optional[ExchangeOriginDestinationInformationType] = [('default', None), ('required', True)]
+    original_tkt_issue_date_time: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?'), ('required', True)]
+    pos: Optional[ExchangePostype] = [('default', None), ('required', True)]
+    previous_exchange_date_time: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?')]
+    tpa_extensions: Optional[ExchangeTpaExtensionsType] = [('default', None)]
+    travel_preferences: Optional[ExchangeAirSearchPrefsType] = [('default', None)]
+    traveler_info_summary: Optional[TravelerInfoSummaryType] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.FareDetailsType()
+    amount: Optional[float] = [('default', None), ('fraction_digits', 3)]
+    basis_code: Optional[str] = [('default', None), ('max_length', 15.0), ('min_length', 1.0), ('pattern', '[A-Z0-9]+(/[A-Z0-9]+)?'), ('required', True)]
+    brand_id: Optional[str] = [('default', None), ('min_length', 1.0)]
+    component_no: Optional[int] = [('default', None), ('required', True)]
+    program_id: Optional[int] = [('default', None)]
+    rule_number: Optional[str] = [('default', None)]
+    source_vendor: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,3}')]
+    tariff: Optional[str] = [('default', None)]
+    vendor: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.FareOptionalDetailsType()
+    amount: Optional[float] = [('default', None), ('fraction_digits', 3)]
+    basis_code: Optional[str] = [('default', None), ('max_length', 15.0), ('min_length', 1.0), ('pattern', '[A-Z0-9]+(/[A-Z0-9]+)?')]
+    brand_id: Optional[str] = [('default', None), ('min_length', 1.0)]
+    component_no: Optional[int] = [('default', None)]
+    program_id: Optional[int] = [('default', None)]
+    rule_number: Optional[str] = [('default', None)]
+    source_vendor: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,3}')]
+    tariff: Optional[str] = [('default', None)]
+    vendor: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.FareRestrictPrefType()
+    fare_restriction: Optional[str] = [('default', None)]
+    prefer_level: str = [('default', '"Preferred"')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType()
+    fare_parameters: List["FlexibleFaresType.FareParameters"] = [('default', 'list'), ('max_occurs', 10), ('min_occurs', 1)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters()
+        account_code: Optional["FlexibleFaresType.FareParameters.AccountCode"] = [('default', None)]
+        cabin: Optional["FlexibleFaresType.FareParameters.Cabin"] = [('default', None)]
+        corporate_id: Optional["FlexibleFaresType.FareParameters.CorporateId"] = [('default', None)]
+        exclude_restricted: Optional["FlexibleFaresType.FareParameters.ExcludeRestricted"] = [('default', None)]
+        jump_cabin_logic: Optional[JumpCabinLogicType] = [('default', None)]
+        keep_same_cabin: Optional[KeepSameCabinType] = [('default', None)]
+        min_max_stay: Optional["FlexibleFaresType.FareParameters.MinMaxStay"] = [('default', None)]
+        negotiated_fares_only: Optional["FlexibleFaresType.FareParameters.NegotiatedFaresOnly"] = [('default', None)]
+        passenger_type: Optional["FlexibleFaresType.FareParameters.PassengerType"] = [('default', None)]
+        passenger_type_quantity: List[PassengerTypeQuantityType] = [('default', 'list'), ('max_occurs', 4), ('min_occurs', 0)]
+        private_fare: Optional["FlexibleFaresType.FareParameters.PrivateFare"] = [('default', None)]
+        public_fare: Optional["FlexibleFaresType.FareParameters.PublicFare"] = [('default', None)]
+        refund_penalty: Optional["FlexibleFaresType.FareParameters.RefundPenalty"] = [('default', None)]
+        res_ticketing: Optional["FlexibleFaresType.FareParameters.ResTicketing"] = [('default', None)]
+        xofares: Optional["FlexibleFaresType.FareParameters.Xofares"] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters.AccountCode()
+            code: Optional[str] = [('default', None), ('max_length', 20.0), ('min_length', 1.0), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters.Cabin()
+            type: Optional[str] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters.CorporateId()
+            code: Optional[str] = [('default', None), ('pattern', '[A-Za-z]{3}[0-9]{2}'), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters.ExcludeRestricted()
+            ind: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters.MinMaxStay()
+            ind: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters.NegotiatedFaresOnly()
+            ind: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters.PassengerType()
+            code: Optional[str] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters.PrivateFare()
+            ind: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters.PublicFare()
+            ind: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters.RefundPenalty()
+            ind: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters.ResTicketing()
+            ind: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters.Xofares()
+            ind: Optional[bool] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlightStopsAsConnectionsType()
+    ind: Optional[bool] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlightTypePrefType()
+    flight_type: Optional[str] = [('default', None)]
+    max_connections: Optional[str] = [('default', None)]
+    prefer_level: str = [('default', '"Preferred"')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlightTypeType(str)
+    CONNECTION: xs:string = [('default', '"Connection"')]
+    DIRECT: xs:string = [('default', '"Direct"')]
+    NONSTOP: xs:string = [('default', '"Nonstop"')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.GlobalDateTimeType(DateTimeType)
+    date_time: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}'), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.GoverningCarrierOverrideType()
+    airline_code: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,3}'), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.IncludeVendorPrefType()
+    code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.InterlineBrandsType()
+    brand: List[BrandType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+    change_brand_for_soldout: bool = [('default', False)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.JumpCabinLogicType()
+    disabled: Optional[bool] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.KeepSameCabinType()
+    enabled: Optional[bool] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.MileageDisplayType()
+    city: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+    surcharge: Optional[int] = [('default', None)]
+    type: Optional[str] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.NumTripsType()
+    number: int = [('default', 9), ('min_inclusive', 1.0)]
+    per_date_max: Optional[int] = [('default', None)]
+    per_date_min: Optional[int] = [('default', None)]
+    per_market: Optional[int] = [('default', None)]
+    per_month: Optional[int] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.OptionsPerDatePairType()
+    departure: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}'), ('required', True)]
+    max: Optional[int] = [('default', None), ('required', True)]
+    min: Optional[int] = [('default', None), ('required', True)]
+    return_value: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.OriginDestinationFlightType()
+    airline: Optional[AirlineType] = [('default', None), ('required', True)]
+    arrival_date_time: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?'), ('required', True)]
+    booking_date_time: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?')]
+    class_of_service: Optional[str] = [('default', None), ('pattern', '[A-Z]{1,2}')]
+    departure_date_time: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?'), ('required', True)]
+    destination_location: Optional[RequestLocationType] = [('default', None), ('required', True)]
+    fare: Optional[FareOptionalDetailsType] = [('default', None)]
+    flown: bool = [('default', False)]
+    marriage_status: Optional[str] = [('default', None)]
+    mileage_display: List[MileageDisplayType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+    number: Optional[int] = [('default', None), ('required', True)]
+    origin_location: Optional[RequestLocationType] = [('default', None), ('required', True)]
+    plus_up: List[PlusUpType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+    reservation: Optional[ReservationType] = [('default', None)]
+    shopped: bool = [('default', False)]
+    side_trip: Optional[SideTripType] = [('default', None)]
+    type: Optional[str] = [('default', None), ('pattern', '[AKO]'), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.OriginDestinationInformationType(TravelDateTimeType)
+    connection_locations: Optional[ConnectionType] = [('default', None)]
+    destination_location: Optional["OriginDestinationInformationType.DestinationLocation"] = [('default', None), ('required', True)]
+    origin_location: Optional["OriginDestinationInformationType.OriginLocation"] = [('default', None), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.OriginDestinationInformationType.DestinationLocation(RequestLocationType)
+        all_airports: Optional[bool] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.OriginDestinationInformationType.OriginLocation(RequestLocationType)
+        all_airports: Optional[bool] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq()
+    alt_lang_id: Optional[str] = [('default', None)]
+    available_flights_only: bool = [('default', True)]
+    direct_flights_only: bool = [('default', False)]
+    echo_token: Optional[str] = [('default', None)]
+    leg: List["OtaAirLowFareSearchRq.Leg"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+    max_responses: Optional[str] = [('default', None)]
+    origin_destination_information: List["OtaAirLowFareSearchRq.OriginDestinationInformation"] = [('default', 'list'), ('max_occurs', 10), ('min_occurs', 0)]
+    pos: Optional[PosType] = [('default', None), ('required', True)]
+    primary_lang_id: Optional[str] = [('default', None)]
+    response_type: Optional[str] = [('default', None)]
+    response_version: Optional[str] = [('default', None)]
+    separate_messages: bool = [('default', False)]
+    sequence_nmbr: Optional[str] = [('default', None)]
+    target: str = [('default', '"Production"')]
+    time_stamp: Optional[str] = [('default', None)]
+    tpa_extensions: Optional["OtaAirLowFareSearchRq.TpaExtensions"] = [('default', None)]
+    transaction_identifier: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0)]
+    transaction_status_code: Optional[str] = [('default', None)]
+    travel_preferences: Optional[AirSearchPrefsType] = [('default', None)]
+    traveler_info_summary: Optional[TravelerInfoSummaryType] = [('default', None), ('required', True)]
+    truncate_messages: bool = [('default', True)]
+    version: Optional[str] = [('default', None), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.Leg()
+        arrival_date_time: Optional[GlobalDateTimeType] = [('default', None)]
+        cabin: Optional["OtaAirLowFareSearchRq.Leg.Cabin"] = [('default', None)]
+        carriers: Optional["OtaAirLowFareSearchRq.Leg.Carriers"] = [('default', None)]
+        connection_locations: Optional[ConnectionType] = [('default', None)]
+        departure_date_time: Optional["OtaAirLowFareSearchRq.Leg.DepartureDateTime"] = [('default', None)]
+        destinations: Optional["OtaAirLowFareSearchRq.Leg.Destinations"] = [('default', None), ('required', True)]
+        max_options: Optional[int] = [('default', None)]
+        origins: Optional["OtaAirLowFareSearchRq.Leg.Origins"] = [('default', None), ('required', True)]
+        rph: Optional[str] = [('default', None), ('pattern', '[0-9]{1,8}'), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.Leg.Cabin()
+            preference_level: str = [('default', '"Preferred"')]
+            type: Optional[str] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.Leg.Carriers()
+            exclude_vendor_pref: List["OtaAirLowFareSearchRq.Leg.Carriers.ExcludeVendorPref"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+            include_vendor_pref: List[IncludeVendorPrefType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.Leg.Carriers.ExcludeVendorPref()
+                code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.Leg.DepartureDateTime(GlobalDateTimeType)
+            week_days: Optional[str] = [('default', None), ('length', 7)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.Leg.Destinations()
+            destination: List["OtaAirLowFareSearchRq.Leg.Destinations.Destination"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 1)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.Leg.Destinations.Destination()
+                airport_code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0)]
+                airports_group: Optional[str] = [('default', None)]
+                arrival_date_time_override: Optional[OverrideDateTimeType] = [('default', None)]
+                carriers: Optional["OtaAirLowFareSearchRq.Leg.Destinations.Destination.Carriers"] = [('default', None)]
+                connection_locations: Optional[ConnectionType] = [('default', None)]
+
+                samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.Leg.Destinations.Destination.Carriers()
+                    exclude_vendor_pref: List["OtaAirLowFareSearchRq.Leg.Destinations.Destination.Carriers.ExcludeVendorPref"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+                    include_vendor_pref: List[IncludeVendorPrefType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+
+                    samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.Leg.Destinations.Destination.Carriers.ExcludeVendorPref()
+                        code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.Leg.Origins()
+            origin: List["OtaAirLowFareSearchRq.Leg.Origins.Origin"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 1)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.Leg.Origins.Origin()
+                airport_code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0)]
+                airports_group: Optional[str] = [('default', None)]
+                carriers: Optional["OtaAirLowFareSearchRq.Leg.Origins.Origin.Carriers"] = [('default', None)]
+                connection_locations: Optional[ConnectionType] = [('default', None)]
+                departure_date_time_override: Optional[OverrideDateTimeType] = [('default', None)]
+
+                samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.Leg.Origins.Origin.Carriers()
+                    exclude_vendor_pref: List["OtaAirLowFareSearchRq.Leg.Origins.Origin.Carriers.ExcludeVendorPref"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+                    include_vendor_pref: List[IncludeVendorPrefType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+
+                    samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.Leg.Origins.Origin.Carriers.ExcludeVendorPref()
+                        code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.OriginDestinationInformation(OriginDestinationInformationType)
+        fixed: bool = [('default', False)]
+        full_diversity: bool = [('default', False)]
+        rph: Optional[str] = [('default', None), ('pattern', '[0-9]{1,8}')]
+        tpa_extensions: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions"] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions()
+            alternate_time: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.AlternateTime"] = [('default', None)]
+            cabin_pref: Optional[CabinPrefType] = [('default', None)]
+            connection_time: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.ConnectionTime"] = [('default', None)]
+            date_flexibility: List["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.DateFlexibility"] = [('default', 'list'), ('max_occurs', 2), ('min_occurs', 0)]
+            departure_days: Optional[DepartureDaysType] = [('default', None)]
+            flight: List[OriginDestinationFlightType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+            include_alliance_pref: List[AllianceType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+            include_vendor_pref: List[IncludeVendorPrefType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+            max_one_way_options: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.MaxOneWayOptions"] = [('default', None)]
+            num_one_way_options: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.NumOneWayOptions"] = [('default', None)]
+            routing: List[RoutingDefinitionType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+            segment_type: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SegmentType"] = [('default', None)]
+            sister_destination_location: List[RequestLocationType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+            sister_destination_mileage: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SisterDestinationMileage"] = [('default', None)]
+            sister_origin_location: List[RequestLocationType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+            sister_origin_mileage: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SisterOriginMileage"] = [('default', None)]
+            total_travel_time: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.TotalTravelTime"] = [('default', None)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.AlternateTime()
+                minus: Optional[int] = [('default', None), ('max_inclusive', 72.0), ('min_inclusive', 0.0)]
+                plus: Optional[int] = [('default', None), ('max_inclusive', 9.0), ('min_inclusive', 0.0)]
+                plus_minus: Optional[int] = [('default', None), ('max_inclusive', 9.0), ('min_inclusive', 0.0)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.ConnectionTime()
+                enable_excluded_connection: Optional[bool] = [('default', None)]
+                excluded_connection_begin: Optional[str] = [('default', None), ('pattern', '([0-1][0-9]|2[0-3])[0-5][0-9]')]
+                excluded_connection_end: Optional[str] = [('default', None), ('pattern', '([0-1][0-9]|2[0-3])[0-5][0-9]')]
+                max: Optional[int] = [('default', None)]
+                min: Optional[int] = [('default', None)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.DateFlexibility()
+                minus: Optional[int] = [('default', None)]
+                nbr_of_days: Optional[int] = [('default', None)]
+                plus: Optional[int] = [('default', None)]
+                validate: Optional[bool] = [('default', None)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.MaxOneWayOptions()
+                value: Optional[int] = [('default', None), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.NumOneWayOptions()
+                number: Optional[int] = [('default', None), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SegmentType()
+                code: Optional[str] = [('default', None)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SisterDestinationMileage()
+                number: Optional[int] = [('default', None), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SisterOriginMileage()
+                number: Optional[int] = [('default', None), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.TotalTravelTime()
+                max: Optional[int] = [('default', None)]
+                min: Optional[int] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions()
+        alternate_airport_cities: List["OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportCities"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+        alternate_airport_mileage: Optional["OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportMileage"] = [('default', None)]
+        alternate_dates_processing: Optional["OtaAirLowFareSearchRq.TpaExtensions.AlternateDatesProcessing"] = [('default', None)]
+        alternate_pcc: List["OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+        award_shopping: Optional[AwardShoppingType] = [('default', None)]
+        billing: Optional[BillingInformationType] = [('default', None)]
+        diversity_control: Optional[DiversityControlType] = [('default', None)]
+        exchange: List[ExchangeType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+        exchange_settings: Optional[ExchangeSettingsType] = [('default', None)]
+        intelli_sell_transaction: Optional[TransactionType] = [('default', None)]
+        itinerary_cache: Optional["OtaAirLowFareSearchRq.TpaExtensions.ItineraryCache"] = [('default', None)]
+        messaging_details: Optional["OtaAirLowFareSearchRq.TpaExtensions.MessagingDetails"] = [('default', None)]
+        multi_ticket: Optional["OtaAirLowFareSearchRq.TpaExtensions.MultiTicket"] = [('default', None)]
+        partitions: Optional["OtaAirLowFareSearchRq.TpaExtensions.Partitions"] = [('default', None)]
+        reservation_data: Optional["OtaAirLowFareSearchRq.TpaExtensions.ReservationData"] = [('default', None)]
+        split_taxes: Optional["OtaAirLowFareSearchRq.TpaExtensions.SplitTaxes"] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportCities()
+            alternate_location: List["OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportCities.AlternateLocation"] = [('default', 'list'), ('max_occurs', 5), ('min_occurs', 1)]
+            specified_location: Optional["OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportCities.SpecifiedLocation"] = [('default', None), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportCities.AlternateLocation()
+                location_code: Optional[str] = [('default', None), ('pattern', '[A-Z]*')]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportCities.SpecifiedLocation()
+                location_code: Optional[str] = [('default', None), ('pattern', '[A-Z]*')]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportMileage()
+            number: Optional[str] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.AlternateDatesProcessing()
+            calendar_mode: Optional[bool] = [('default', None)]
+            num_options_per_alternate_date: int = [('default', 9)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc()
+            pseudo_city_code: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0), ('required', True)]
+            travel_preferences: Optional["OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences"] = [('default', None)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences()
+                tpa_extensions: Optional["OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences.TpaExtensions"] = [('default', None)]
+                vendor_pref: List["OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences.VendorPref"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+
+                samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences.TpaExtensions()
+                    exclude_alliance_pref: List[AllianceType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+                    include_alliance_pref: List[AllianceType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+
+                samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences.VendorPref()
+                    code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0), ('required', True)]
+                    prefer_level: str = [('default', '"Preferred"')]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.ItineraryCache()
+            public_time_to_live: Optional[int] = [('default', None)]
+            remove_previous_on_update: Optional[bool] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.MessagingDetails()
+            mdrsubset: Optional["OtaAirLowFareSearchRq.TpaExtensions.MessagingDetails.Mdrsubset"] = [('default', None)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.MessagingDetails.Mdrsubset()
+                code: Optional[str] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.MultiTicket()
+            display_policy: Optional[str] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.Partitions()
+            group: Optional[CachePartitionGroupType] = [('default', None)]
+            partition: Optional[CachePartitionType] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.ReservationData()
+            dknumber: Optional[str] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq.TpaExtensions.SplitTaxes()
+            by_fare_component: Optional[bool] = [('default', None)]
+            by_leg: Optional[bool] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.OverrideDateTimeType(DateTimeType)
+    date_time: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.PersonNameType()
+    given_name: List[str] = [('default', 'list'), ('max_length', 64.0), ('max_occurs', 5), ('min_length', 1.0), ('min_occurs', 0)]
+    middle_name: List[str] = [('default', 'list'), ('max_length', 64.0), ('max_occurs', 3), ('min_length', 1.0), ('min_occurs', 0)]
+    name_prefix: List[str] = [('default', 'list'), ('max_length', 16.0), ('max_occurs', 3), ('min_length', 1.0), ('min_occurs', 0)]
+    name_suffix: List[str] = [('default', 'list'), ('max_length', 16.0), ('max_occurs', 3), ('min_length', 1.0), ('min_occurs', 0)]
+    name_title: List[str] = [('default', 'list'), ('max_length', 16.0), ('max_occurs', 5), ('min_length', 1.0), ('min_occurs', 0)]
+    name_type: Optional[str] = [('default', None)]
+    share_market_ind: Optional[str] = [('default', None)]
+    share_synch_ind: Optional[str] = [('default', None)]
+    surname: Optional[str] = [('default', None), ('max_length', 64.0), ('min_length', 1.0), ('required', True)]
+    surname_prefix: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.PlusUpType()
+    amount: Optional[float] = [('default', None), ('fraction_digits', 3), ('required', True)]
+    country_of_payment: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{2}')]
+    destination_city: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}'), ('required', True)]
+    fare_destination_city: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+    fare_origin_city: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+    message: Optional[str] = [('default', None)]
+    origin_city: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}'), ('required', True)]
+    via_city: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.PointOfSaleOverrideType()
+    code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.PointOfTicketingOverrideType()
+    code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.PosType()
+    source: List[SourceType] = [('default', 'list'), ('max_occurs', 5), ('min_occurs', 1)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.PositionType()
+    altitude: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    latitude: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    longitude: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.PreferLevelType(str)
+    ONLY: xs:string = [('default', '"Only"')]
+    PREFERRED: xs:string = [('default', '"Preferred"')]
+    UNACCEPTABLE: xs:string = [('default', '"Unacceptable"')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType()
+    account_code: Optional["PriceRequestInformationType.AccountCode"] = [('default', None)]
+    currency_code: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+    fare_qualifier: Optional[str] = [('default', None)]
+    negotiated_fare_code: Optional["PriceRequestInformationType.NegotiatedFareCode"] = [('default', None)]
+    negotiated_fares_only: Optional[bool] = [('default', None)]
+    net_fares_used: Optional[bool] = [('default', None)]
+    pricing_source: Optional[str] = [('default', None)]
+    process_thru_fares_only: Optional[bool] = [('default', None)]
+    purchase_date: Optional[str] = [('default', None)]
+    purchase_time: Optional[str] = [('default', None)]
+    reprice: Optional[bool] = [('default', None)]
+    tpa_extensions: Optional["PriceRequestInformationType.TpaExtensions"] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.AccountCode()
+        code: Optional[str] = [('default', None), ('max_length', 20.0), ('min_length', 1.0), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.NegotiatedFareCode()
+        code: Optional[str] = [('default', None), ('pattern', '[A-Za-z]{3}[0-9]{2}')]
+        code_context: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0)]
+        secondary_code: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+        supplier: List[CompanyNameType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+        supplier_code: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+        tpa_extensions: Optional[str] = [('default', None)]
+        uri: Optional[str] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions()
+        apply_resident_discount: Optional[ApplyResidentDiscountType] = [('default', None)]
+        branded_fare_indicators: Optional["PriceRequestInformationType.TpaExtensions.BrandedFareIndicators"] = [('default', None)]
+        currency: Optional["PriceRequestInformationType.TpaExtensions.Currency"] = [('default', None)]
+        customer_type: Optional["PriceRequestInformationType.TpaExtensions.CustomerType"] = [('default', None)]
+        eticketable_override: Optional["PriceRequestInformationType.TpaExtensions.EticketableOverride"] = [('default', None)]
+        fare_adjustment: Optional["PriceRequestInformationType.TpaExtensions.FareAdjustment"] = [('default', None)]
+        fare_breaks_at_legs: Optional["PriceRequestInformationType.TpaExtensions.FareBreaksAtLegs"] = [('default', None)]
+        iatafare: Optional["PriceRequestInformationType.TpaExtensions.Iatafare"] = [('default', None)]
+        indicators: Optional["PriceRequestInformationType.TpaExtensions.Indicators"] = [('default', None)]
+        multiple_traveler_groups: Optional["PriceRequestInformationType.TpaExtensions.MultipleTravelerGroups"] = [('default', None)]
+        obfees: Optional["PriceRequestInformationType.TpaExtensions.Obfees"] = [('default', None)]
+        passenger_status: Optional["PriceRequestInformationType.TpaExtensions.PassengerStatus"] = [('default', None)]
+        point_of_sale_override: Optional[PointOfSaleOverrideType] = [('default', None)]
+        point_of_ticketing_override: Optional[PointOfTicketingOverrideType] = [('default', None)]
+        priority: Optional["PriceRequestInformationType.TpaExtensions.Priority"] = [('default', None)]
+        private_fare: Optional["PriceRequestInformationType.TpaExtensions.PrivateFare"] = [('default', None)]
+        promo_id: Optional[str] = [('default', None)]
+        public_fare: Optional["PriceRequestInformationType.TpaExtensions.PublicFare"] = [('default', None)]
+        use_reduced_constructions: Optional["PriceRequestInformationType.TpaExtensions.UseReducedConstructions"] = [('default', None)]
+        web_fare: Optional["PriceRequestInformationType.TpaExtensions.WebFare"] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.BrandedFareIndicators()
+            multiple_branded_fares: Optional[bool] = [('default', None)]
+            return_cheapest_unbranded_fare: Optional["PriceRequestInformationType.TpaExtensions.BrandedFareIndicators.ReturnCheapestUnbrandedFare"] = [('default', None)]
+            single_branded_fare: Optional[bool] = [('default', None)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.BrandedFareIndicators.ReturnCheapestUnbrandedFare()
+                ind: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.Currency()
+            dual: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+            moverride: Optional[bool] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.CustomerType()
+            value: Optional[str] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.EticketableOverride()
+            value: Optional[bool] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.FareAdjustment()
+            currency: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+            value: Optional[str] = [('default', None), ('pattern', '(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)%?'), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.FareBreaksAtLegs()
+            ind: Optional[bool] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.Iatafare()
+            ind: bool = [('default', False)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.Indicators()
+            min_max_stay: Optional["PriceRequestInformationType.TpaExtensions.Indicators.MinMaxStay"] = [('default', None)]
+            refund_penalty: Optional["PriceRequestInformationType.TpaExtensions.Indicators.RefundPenalty"] = [('default', None)]
+            res_ticketing: Optional["PriceRequestInformationType.TpaExtensions.Indicators.ResTicketing"] = [('default', None)]
+            retain_fare: Optional["PriceRequestInformationType.TpaExtensions.Indicators.RetainFare"] = [('default', None)]
+            travel_policy: Optional["PriceRequestInformationType.TpaExtensions.Indicators.TravelPolicy"] = [('default', None)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.Indicators.MinMaxStay()
+                ind: Optional[bool] = [('default', None), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.Indicators.RefundPenalty()
+                ind: Optional[bool] = [('default', None), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.Indicators.ResTicketing()
+                ind: Optional[bool] = [('default', None), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.Indicators.RetainFare()
+                ind: Optional[bool] = [('default', None), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.Indicators.TravelPolicy()
+                ind: Optional[bool] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.MultipleTravelerGroups()
+            itineraries_per_group: Optional[int] = [('default', None), ('max_inclusive', 99.0), ('min_inclusive', 1.0)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.Obfees()
+            rtype: Optional[bool] = [('default', None)]
+            ttype: Optional[bool] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.PassengerStatus()
+            city_code: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+            country_code: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{2}'), ('required', True)]
+            state_code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0)]
+            type: Optional[str] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.Priority()
+            direct_flights: Optional["PriceRequestInformationType.TpaExtensions.Priority.DirectFlights"] = [('default', None), ('required', True)]
+            price: Optional["PriceRequestInformationType.TpaExtensions.Priority.Price"] = [('default', None), ('required', True)]
+            time: Optional["PriceRequestInformationType.TpaExtensions.Priority.Time"] = [('default', None), ('required', True)]
+            vendor: Optional["PriceRequestInformationType.TpaExtensions.Priority.Vendor"] = [('default', None), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.Priority.DirectFlights()
+                priority: Optional[int] = [('default', None), ('max_inclusive', 4.0), ('min_inclusive', 1.0), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.Priority.Price()
+                priority: Optional[int] = [('default', None), ('max_inclusive', 4.0), ('min_inclusive', 1.0), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.Priority.Time()
+                priority: Optional[int] = [('default', None), ('max_inclusive', 4.0), ('min_inclusive', 1.0), ('required', True)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.Priority.Vendor()
+                priority: Optional[int] = [('default', None), ('max_inclusive', 4.0), ('min_inclusive', 1.0), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.PrivateFare()
+            ind: bool = [('default', False)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.PublicFare()
+            ind: bool = [('default', False)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.UseReducedConstructions()
+            ind: Optional[bool] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.PriceRequestInformationType.TpaExtensions.WebFare()
+            ind: Optional[bool] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.RequestLocationType()
+    airports_group: Optional[str] = [('default', None), ('pattern', '[A-Za-z0-9]{1,40}')]
+    code_context: str = [('default', '"IATA"'), ('max_length', 32.0), ('min_length', 1.0)]
+    location_code: Optional[str] = [('default', None), ('pattern', '[A-Z]{1,8}')]
+    value: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.RequestPricingSourceType(str)
+    BOTH: xs:string = [('default', '"Both"')]
+    PRIVATE: xs:string = [('default', '"Private"')]
+    PUBLISHED: xs:string = [('default', '"Published"')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ReservationType()
+    real_status: Optional[str] = [('default', None), ('pattern', '[A-Z]{1,2}')]
+    status: Optional[str] = [('default', None), ('pattern', '[A-Z]{1,2}')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.RetailerRulesType()
+    force: bool = [('default', False)]
+    retailer_rule: List["RetailerRulesType.RetailerRule"] = [('default', 'list'), ('max_occurs', 4), ('min_occurs', 1)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.RetailerRulesType.RetailerRule()
+        code: Optional[str] = [('default', None), ('pattern', '[0-9a-zA-Z]{2,20}'), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.RoutingDefinitionType()
+    add_wildcards: Optional[bool] = [('default', None)]
+    routing_leg: List[RoutingLegType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 1)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.RoutingLegType()
+    connect_point: List[str] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0), ('pattern', '[A-Z]{3,5}')]
+    inbound_carrier: List[str] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0), ('pattern', '[A-Z0-9][A-Z][A-Z0-9]?')]
+    inbound_outbound_carrier: List[str] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0), ('pattern', '[A-Z0-9][A-Z][A-Z0-9]?')]
+    outbound_carrier: List[str] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0), ('pattern', '[A-Z0-9][A-Z][A-Z0-9]?')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.SeatStatusSimType()
+    command: Optional[str] = [('default', None)]
+    type: Optional[str] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.SideTripType()
+    end: Optional[bool] = [('default', None)]
+    number: Optional[int] = [('default', None)]
+    start: Optional[bool] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.SourceBookingChannelType(BookingChannelType)
+    company_name: Optional[CompanyNameType] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.SourceType()
+    abacus_user: bool = [('default', False)]
+    accounting_code: Optional[str] = [('default', None), ('pattern', '[0-9a-zA-Z]{2,3}')]
+    agent_city: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+    agent_department_code: Optional[str] = [('default', None), ('max_length', 6.0)]
+    agent_duty: Optional[str] = [('default', None), ('length', 1)]
+    agent_duty_code: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    agent_function: Optional[str] = [('default', None), ('max_length', 3.0)]
+    agent_iata: Optional[str] = [('default', None), ('pattern', '[0-9]{1,14}')]
+    agent_sine: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    airline_channel_code: Optional[str] = [('default', None), ('pattern', '[A-Z]{3}')]
+    airline_vendor_id: Optional[str] = [('default', None), ('pattern', '[A-Z0-9]{2,3}')]
+    airport_code: Optional[str] = [('default', None), ('pattern', '[A-Z0-9]{3,5}')]
+    booking_channel: Optional[SourceBookingChannelType] = [('default', None)]
+    carrier: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,3}')]
+    default_ticketing_carrier: Optional[str] = [('default', None), ('pattern', '[A-Z0-9]{2}[A-Z]?')]
+    ersp_user_id: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    first_depart_point: Optional[str] = [('default', None), ('max_length', 3.0), ('min_length', 3.0)]
+    home_agency_iata: Optional[str] = [('default', None), ('pattern', '[0-9]{1,14}')]
+    home_pcc: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    isocountry: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{2}')]
+    isocurrency: Optional[str] = [('default', None), ('pattern', '[a-zA-Z]{3}')]
+    main_travel_agency_pcc: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    office_code: Optional[str] = [('default', None), ('pattern', '[0-9]{7}')]
+    personal_city_code: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{3,4}')]
+    position: Optional[PositionType] = [('default', None)]
+    pseudo_city_code: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    requestor_id: Optional[UniqueIdType] = [('default', None), ('required', True)]
+    travel_agency_iata: Optional[str] = [('default', None), ('pattern', '[0-9]{1,14}')]
+    vendor_crscode: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.StateProvType()
+    state_code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0)]
+    value: Optional[str] = [('default', None), ('max_length', 64.0), ('min_length', 0.0)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.StreetNmbrType()
+    po_box: Optional[str] = [('default', None), ('max_length', 16.0), ('min_length', 1.0)]
+    value: Optional[str] = [('default', None), ('max_length', 64.0), ('min_length', 0.0)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.TaxCodeAmountType(TaxCodeType)
+    amount: Optional[float] = [('default', None), ('fraction_digits', 3)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.TaxCodeType()
+    tax_code: Optional[str] = [('default', None), ('pattern', '[A-Z0-9]{2}[A-Z0-9]{0,1}'), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.TelephoneType()
+    area_city_code: Optional[str] = [('default', None), ('pattern', '[0-9]{1,8}')]
+    country_access_code: Optional[str] = [('default', None), ('pattern', '[0-9]{1,3}')]
+    extension: Optional[str] = [('default', None), ('pattern', '[0-9]{1,5}')]
+    formatted_ind: bool = [('default', False)]
+    phone_location_type: Optional[str] = [('default', None)]
+    phone_number: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0), ('required', True)]
+    phone_tech_type: Optional[str] = [('default', None)]
+    pin: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0)]
+    share_market_ind: Optional[str] = [('default', None)]
+    share_synch_ind: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.TicketDistribPrefType()
+    distrib_type: Optional[str] = [('default', None)]
+    prefer_level: str = [('default', '"Preferred"')]
+    ticket_time: Optional[str] = [('default', None)]
+    value: Optional[str] = [('default', None), ('max_length', 64.0), ('min_length', 0.0)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType()
+    atsetest: Optional["TransactionType.Atsetest"] = [('default', None)]
+    available_level: Optional["TransactionType.AvailableLevel"] = [('default', None)]
+    branch: Optional["TransactionType.Branch"] = [('default', None)]
+    chunk_number: Optional[str] = [('default', None)]
+    client_session_id: Optional["TransactionType.ClientSessionId"] = [('default', None)]
+    compress_response: Optional["TransactionType.CompressResponse"] = [('default', None)]
+    config_set: Optional[str] = [('default', None)]
+    debug: Optional[bool] = [('default', None)]
+    debug_key: Optional[str] = [('default', None)]
+    diagnostics: Optional["TransactionType.Diagnostics"] = [('default', None)]
+    disable_cache: Optional[bool] = [('default', None)]
+    fare_overrides: Optional["TransactionType.FareOverrides"] = [('default', None)]
+    purchase_type: Optional["TransactionType.PurchaseType"] = [('default', None)]
+    request_type: Optional["TransactionType.RequestType"] = [('default', None)]
+    response_sorting: Optional["TransactionType.ResponseSorting"] = [('default', None)]
+    sabre_ath: Optional["TransactionType.SabreAth"] = [('default', None)]
+    seat_status_sim: Optional[SeatStatusSimType] = [('default', None)]
+    service_tag: Optional["TransactionType.ServiceTag"] = [('default', None)]
+    show_itin_source: Optional[bool] = [('default', None)]
+    subagent_data: Optional["TransactionType.SubagentData"] = [('default', None)]
+    tran_id: Optional["TransactionType.TranId"] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.Atsetest()
+        feature: Optional[str] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.AvailableLevel()
+        value: Optional[str] = [('default', None), ('required', True)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.Branch()
+        name: str = [('default', '"Main"')]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.ClientSessionId()
+        value: Optional[str] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.CompressResponse()
+        value: bool = [('default', False)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.Diagnostics()
+        diagnostic: List["TransactionType.Diagnostics.Diagnostic"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 1)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.Diagnostics.Diagnostic()
+            code: Optional[str] = [('default', None), ('pattern', '[A-Za-z0-9_]+(/[A-Za-z0-9_]+)*'), ('required', True)]
+            diagnostic_argument: List["TransactionType.Diagnostics.Diagnostic.DiagnosticArgument"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+            target: Optional[str] = [('default', None)]
+            tpa_extensions: Optional[str] = [('default', None)]
+
+            samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.Diagnostics.Diagnostic.DiagnosticArgument()
+                name: Optional[str] = [('default', None), ('required', True)]
+                value: Optional[str] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.FareOverrides()
+        fare_override: List["TransactionType.FareOverrides.FareOverride"] = [('default', 'list'), ('max_occurs', 4), ('min_occurs', 1)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.FareOverrides.FareOverride()
+            callable: str = [('default', '"true"')]
+            corporate_id: Optional[str] = [('default', None)]
+            fare_type: Optional[str] = [('default', None), ('required', True)]
+            pseudo_city_code: Optional[str] = [('default', None)]
+            tpa_extensions: Optional[str] = [('default', None)]
+            vendor_pref: List[CompanyNamePrefType] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.PurchaseType()
+        name: Optional[str] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.RequestType()
+        name: Optional[str] = [('default', None)]
+        value: Optional[str] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.ResponseSorting()
+        enable_chronological_sorting: Optional[bool] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.SabreAth()
+        binary_sec_token: Optional[str] = [('default', None)]
+        conversation_id: Optional[str] = [('default', None)]
+        value: Optional[str] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.ServiceTag()
+        name: Optional[str] = [('default', None)]
+        value: Optional[str] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.SubagentData()
+        code: Optional[str] = [('default', None)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TransactionType.TranId()
+        value: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelDateTimeType()
+    arrival_date_time: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}')]
+    arrival_dates: Optional["TravelDateTimeType.ArrivalDates"] = [('default', None)]
+    arrival_window: Optional[str] = [('default', None), ('pattern', '([0-2][0-9][0-5][0-9]){2}')]
+    departure_date_time: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}')]
+    departure_dates: Optional["TravelDateTimeType.DepartureDates"] = [('default', None)]
+    departure_window: Optional[str] = [('default', None), ('pattern', '([0-2][0-9][0-5][0-9]){2}')]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelDateTimeType.ArrivalDates()
+        day: Optional["TravelDateTimeType.ArrivalDates.Day"] = [('default', None)]
+        days_range: Optional["TravelDateTimeType.ArrivalDates.DaysRange"] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelDateTimeType.ArrivalDates.Day()
+            date: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}'), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelDateTimeType.ArrivalDates.DaysRange()
+            from_date: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}'), ('required', True)]
+            to_date: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}'), ('required', True)]
+            week_days: Optional[str] = [('default', None), ('pattern', '[S_][M_][T_][W_][T_][F_][S_]')]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelDateTimeType.DepartureDates()
+        day: Optional["TravelDateTimeType.DepartureDates.Day"] = [('default', None)]
+        days_range: Optional["TravelDateTimeType.DepartureDates.DaysRange"] = [('default', None)]
+        length_of_stay: Optional["TravelDateTimeType.DepartureDates.LengthOfStay"] = [('default', None)]
+        length_of_stay_range: Optional["TravelDateTimeType.DepartureDates.LengthOfStayRange"] = [('default', None)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelDateTimeType.DepartureDates.Day()
+            date: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}'), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelDateTimeType.DepartureDates.DaysRange()
+            from_date: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}'), ('required', True)]
+            to_date: Optional[str] = [('default', None), ('pattern', '[0-9]{4}-[0-9]{2}-[0-9]{2}'), ('required', True)]
+            week_days: Optional[str] = [('default', None), ('pattern', '[S_][M_][T_][W_][T_][F_][S_]')]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelDateTimeType.DepartureDates.LengthOfStay()
+            days: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelDateTimeType.DepartureDates.LengthOfStayRange()
+            max_days: Optional[int] = [('default', None), ('required', True)]
+            min_days: Optional[int] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelerInfoSummaryTpaExtensionsType()
+    traveler_rating: List["TravelerInfoSummaryTpaExtensionsType.TravelerRating"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelerInfoSummaryTpaExtensionsType.TravelerRating()
+        frequent_flyer: List["TravelerInfoSummaryTpaExtensionsType.TravelerRating.FrequentFlyer"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+        score: List["TravelerInfoSummaryTpaExtensionsType.TravelerRating.Score"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelerInfoSummaryTpaExtensionsType.TravelerRating.FrequentFlyer()
+            carrier: Optional[str] = [('default', None), ('required', True)]
+            tier: Optional[int] = [('default', None), ('required', True)]
+
+        samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelerInfoSummaryTpaExtensionsType.TravelerRating.Score()
+            carrier: Optional[str] = [('default', None), ('required', True)]
+            value: Optional[int] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelerInfoSummaryType()
+    air_traveler_avail: List[TravelerInformationType] = [('default', 'list'), ('max_occurs', 4), ('min_occurs', 0)]
+    price_request_information: Optional[PriceRequestInformationType] = [('default', None)]
+    seats_requested: List[int] = [('default', 'list'), ('max_occurs', 4), ('min_occurs', 0)]
+    specific_ptc_indicator: Optional[bool] = [('default', None)]
+    tpa_extensions: Optional[TravelerInfoSummaryTpaExtensionsType] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelerInformationType()
+    air_traveler: Optional[AirTravelerType] = [('default', None)]
+    passenger_type_quantity: List[PassengerTypeQuantityType] = [('default', 'list'), ('max_occurs', 9), ('min_occurs', 1)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.TravelerRefNumberType()
+    rph: Optional[str] = [('default', None), ('pattern', '[0-9]{1,8}')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.UniqueIdType()
+    company_name: Optional[CompanyNameType] = [('default', None)]
+    id: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0), ('required', True)]
+    id_context: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0)]
+    instance: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0)]
+    type: Optional[str] = [('default', None), ('required', True)]
+    url: Optional[str] = [('default', None)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ValidatingCarrierPreferLevelType(str)
+    PREFERRED: xs:string = [('default', '"Preferred"')]
+    UNACCEPTABLE: xs:string = [('default', '"Unacceptable"')]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.ValidatingCarrierType()
+    code: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,3}')]
+    preference: List["ValidatingCarrierType.Preference"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
+
+    samples.sabre.output.bargain_finder_max_rq_v1_9_7.ValidatingCarrierType.Preference()
+        code: Optional[str] = [('default', None), ('pattern', '[0-9A-Z]{2,3}'), ('required', True)]
+        level: Optional[str] = [('default', None), ('required', True)]
+
+samples.sabre.output.bargain_finder_max_rq_v1_9_7.XofaresType()
+    value: Optional[bool] = [('default', None), ('required', True)]

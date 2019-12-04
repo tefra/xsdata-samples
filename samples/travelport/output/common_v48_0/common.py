@@ -39,14 +39,22 @@ class AccountCode:
     not specified, it will be considered a default AccounCode to be sent to all the
     Providers or Suppliers.
 
+    :ivar code:
     :ivar provider_code:
     :ivar supplier_code:
-    :ivar code:
     :ivar type: An identifier to categorize this account code. For example, FlightPass for AC Flight Pass or RFB for AC corporate Rewards for Business.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Code",
+            type="Attribute",
+            max_length=36.0
+        )
+    )
     provider_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -63,14 +71,6 @@ class AccountCode:
             type="Attribute",
             min_length=1.0,
             max_length=5.0
-        )
-    )
-    code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            max_length=36.0
         )
     )
     type: Optional[str] = field(
@@ -1267,15 +1267,23 @@ class ContinuityCheckOverride:
 
 
 @dataclass
-class CorporateDiscountId(str):
+class CorporateDiscountId:
     """These are zero or more negotiated rate codes.
 
+    :ivar value:
     :ivar negotiated_rate_code: When set to true, the data in the CorporateDiscountID is a negotiated rate code. Otherwise, this data is a Corporate Discount ID rate.
     """
     class Meta:
         name = "CorporateDiscountID"
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     negotiated_rate_code: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -1421,22 +1429,30 @@ class CustomProfileInformation:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction"
+            type="Extension"
         )
     )
 
 
 @dataclass
-class CustomizedNameData(str):
+class CustomizedNameData:
     """Customized Name Data is used to print customized name on the different
     documents.
 
+    :ivar value:
     :ivar key:
     :ivar provider_reservation_info_ref:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1798,24 +1814,32 @@ class FormOfPaymentRef:
 
 
 @dataclass
-class FormattedTextTextType(str):
+class FormattedTextTextType:
     """Provides text and indicates whether it is formatted or not.
 
-    :ivar language: Language identification.
+    :ivar value:
     :ivar formatted: Textual information, which may be formatted as a line of information, or unformatted, as a paragraph of text.
+    :ivar language: Language identification.
     :ivar text_format: Indicates the format of text used in the description e.g. unformatted or html.
     """
-    language: Optional[str] = field(
+    value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="Language",
-            type="Attribute"
+            name="value",
+            type="Extension"
         )
     )
     formatted: Optional[bool] = field(
         default=None,
         metadata=dict(
             name="Formatted",
+            type="Attribute"
+        )
+    )
+    language: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Language",
             type="Attribute"
         )
     )
@@ -1979,7 +2003,7 @@ class GuaranteeType:
 
 
 @dataclass
-class HostToken(str):
+class HostToken:
     """This is a host token. It contains some kind of payload we got from a host
     that must be passed in on successive calls they know who you are as our system
     does not maintain state. The format of this string isn't important as long as
@@ -1990,6 +2014,7 @@ class HostToken(str):
 
     :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar value:
     :ivar host: The host associated with this token
     :ivar key: Unique identifier for this token - use this key when a single HostToken is shared by multiple elements.
     """
@@ -2008,6 +2033,13 @@ class HostToken(str):
         metadata=dict(
             name="KeyOverride",
             type="Attribute"
+        )
+    )
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
         )
     )
     host: Optional[str] = field(
@@ -2157,7 +2189,7 @@ class Location:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction"
+            type="Extension"
         )
     )
 
@@ -2306,15 +2338,23 @@ class McofeeInfo:
 
 
 @dataclass
-class Mcoremark(str):
+class Mcoremark:
     """Information related to fare construction, free form text etc. of the MCO.
 
+    :ivar value:
     :ivar additional_rmk: Indicates if the remark is additional remark or not.
     """
     class Meta:
         name = "MCORemark"
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     additional_rmk: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -2849,13 +2889,21 @@ class OptionalServiceApplicationLimitType:
 
 
 @dataclass
-class OtherGuaranteeInfo(str):
+class OtherGuaranteeInfo:
     """
+    :ivar value:
     :ivar type: 1) IATA/ARC Number 2) Agency Address 2) Deposit Taken 3) Others
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3528,14 +3576,22 @@ class RefundRemark:
 
 
 @dataclass
-class Remark(str):
+class Remark:
     """A textual remark container to hold any printable text. (max 512 chars)
 
+    :ivar value:
     :ivar key:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3598,11 +3654,12 @@ class Requisition:
 
 
 @dataclass
-class ResponseMessage(str):
+class ResponseMessage:
     """A simple textual fare note. Used within several other objects.
 
     :ivar provider_code:
     :ivar supplier_code:
+    :ivar value:
     :ivar code:
     :ivar type: Indicates the type of message (Warning, Error, Info)
     """
@@ -3625,6 +3682,13 @@ class ResponseMessage(str):
             type="Attribute",
             min_length=1.0,
             max_length=5.0
+        )
+    )
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
         )
     )
     code: Optional[int] = field(
@@ -3824,8 +3888,6 @@ class RoleInfo:
 class Ssr:
     """Special serivces like wheel chair, or pet carrier.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     :ivar segment_ref: Reference to the air segment. May be required for some Types.
     :ivar passive_segment_ref: Reference to the passive segment.
@@ -3839,6 +3901,8 @@ class Ssr:
     :ivar provider_defined_type: Original Type as sent by the provider
     :ivar ssrrule_ref: UniqueID to associate a rule to the SSR
     :ivar url:
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar profile_id: Key assigned for Secure Flight Document value from the specified profile
     :ivar profile_secure_flight_doc_key: Unique ID of Booking Traveler's Profile that contains the Secure flight Detail
     """
@@ -3846,20 +3910,6 @@ class Ssr:
         name = "SSR"
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3959,6 +4009,20 @@ class Ssr:
             type="Attribute"
         )
     )
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
     profile_id: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4012,30 +4076,16 @@ class SearchTicketing:
 @dataclass
 class SeatAssignment:
     """
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     :ivar status:
     :ivar seat:
     :ivar seat_type_code: The 4 letter SSR code like SMSW,NSSW,SMST etc.
     :ivar segment_ref:
     :ivar flight_details_ref:
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar rail_coach_number: Coach number for which rail seatmap/coachmap is returned.
     """
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4084,6 +4134,20 @@ class SeatAssignment:
             type="Attribute"
         )
     )
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
     rail_coach_number: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4115,14 +4179,22 @@ class SeatAttribute:
 
 
 @dataclass
-class SegmentRemark(str):
+class SegmentRemark:
     """A textual remark container to hold any printable text. (max 512 chars)
 
+    :ivar value:
     :ivar key:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4134,15 +4206,22 @@ class SegmentRemark(str):
 
 
 @dataclass
-class SellMessage(str):
-    """Sell Message from Vendor.
+class SellMessage:
+    """Sell Message from Vendor. This is applicable in response messages only, any
+    input in request message will be ignored.
 
-    This is applicable in response messages only, any input in request
-    message will be ignored.
+    :ivar value:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
 
 
 @dataclass
@@ -4356,11 +4435,21 @@ class ShopInformation:
 
 
 @dataclass
-class SimpleName(str):
-    """Free text name."""
+class SimpleName:
+    """Free text name.
+
+    :ivar value:
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
 
 
 @dataclass
@@ -4406,11 +4495,21 @@ class SpecialEquipment:
 
 
 @dataclass
-class State(str):
-    """Container to house the state code for an address."""
+class State:
+    """Container to house the state code for an address.
+
+    :ivar value:
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
 
 
 @dataclass
@@ -4493,15 +4592,22 @@ class TaxDetail:
 
 
 @dataclass
-class TerminalSessionInfo(str):
-    """Travelport use only.
+class TerminalSessionInfo:
+    """Travelport use only. This element contains CDATA information representing
+    existing GDS session data or ACH credentials information of the terminal user.
 
-    This element contains CDATA information representing existing GDS
-    session data or ACH credentials information of the terminal user
+    :ivar value:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
 
 
 @dataclass
@@ -4778,12 +4884,13 @@ class UnitedNations:
 
 
 @dataclass
-class Xmlremark(str):
+class Xmlremark:
     """A remark container to hold an XML document. (max 1024 chars) This will be
     encoded with xml encoding.
 
     :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar value:
     :ivar key:
     :ivar category: A category to group and organize the various remarks. This is not required, but it is recommended.
     """
@@ -4803,6 +4910,13 @@ class Xmlremark(str):
         metadata=dict(
             name="KeyOverride",
             type="Attribute"
+        )
+    )
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
         )
     )
     key: Optional[str] = field(
@@ -4933,7 +5047,7 @@ class TypeAgentInfo:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction"
+            type="Extension"
         )
     )
 
@@ -5244,11 +5358,21 @@ class TypeFormOfRefund(Enum):
 
 
 @dataclass
-class TypeFreeFormText(str):
-    """Free form Text."""
+class TypeFreeFormText:
+    """Free form Text.
+
+    :ivar value:
+    """
     class Meta:
         name = "typeFreeFormText"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
 
 
 class TypeFuel(Enum):
@@ -6012,14 +6136,22 @@ class TypeRecordStatus(Enum):
 
 
 @dataclass
-class TypeRemark(str):
+class TypeRemark:
     """
+    :ivar value:
     :ivar provider_reservation_info_ref: Provider reservation reference key.
     :ivar provider_code: Contains the Provider Code of the provider for which this element is used
     """
     class Meta:
         name = "typeRemark"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -6130,15 +6262,23 @@ class TypeResidency(Enum):
 
 
 @dataclass
-class TypeResultMessage(str):
+class TypeResultMessage:
     """Used to identify the results of a requests.
 
+    :ivar value:
     :ivar code:
     :ivar type: Indicates the type of message (Warning, Error, Info)
     """
     class Meta:
         name = "typeResultMessage"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     code: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -6168,7 +6308,7 @@ class TypeSearchTimeSpec:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction"
+            type="Extension"
         )
     )
 
@@ -8907,11 +9047,6 @@ class TypeStructuredAddress:
 @dataclass
 class TypeTaxInfo:
     """
-    :ivar amount:
-    :ivar origin_airport:
-    :ivar destination_airport:
-    :ivar country_code:
-    :ivar fare_info_ref:
     :ivar tax_detail:
     :ivar included_in_base:
     :ivar key: The tax key represents a valid key of tax
@@ -8920,6 +9055,11 @@ class TypeTaxInfo:
     :ivar segment_ref: The segment to which that tax is relative (if applicable)
     :ivar flight_details_ref: The flight details that this tax is relative to (if applicable)
     :ivar coupon_ref: The coupon to which that tax is relative (if applicable)
+    :ivar amount:
+    :ivar origin_airport:
+    :ivar destination_airport:
+    :ivar country_code:
+    :ivar fare_info_ref:
     :ivar tax_exempted: This indicates whether the tax specified by tax category is exempted.
     :ivar provider_code: Code of the provider returning this TaxInfo.
     :ivar supplier_code: Code of the supplier returning this TaxInfo.
@@ -8928,44 +9068,6 @@ class TypeTaxInfo:
     class Meta:
         name = "typeTaxInfo"
 
-    amount: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            required=True
-        )
-    )
-    origin_airport: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="OriginAirport",
-            type="Attribute",
-            length=3
-        )
-    )
-    destination_airport: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DestinationAirport",
-            type="Attribute",
-            length=3
-        )
-    )
-    country_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CountryCode",
-            type="Attribute"
-        )
-    )
-    fare_info_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FareInfoRef",
-            type="Attribute"
-        )
-    )
     tax_detail: List[TaxDetail] = field(
         default_factory=list,
         metadata=dict(
@@ -9022,6 +9124,44 @@ class TypeTaxInfo:
         default=None,
         metadata=dict(
             name="CouponRef",
+            type="Attribute"
+        )
+    )
+    amount: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Amount",
+            type="Attribute",
+            required=True
+        )
+    )
+    origin_airport: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="OriginAirport",
+            type="Attribute",
+            length=3
+        )
+    )
+    destination_airport: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DestinationAirport",
+            type="Attribute",
+            length=3
+        )
+    )
+    country_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CountryCode",
+            type="Attribute"
+        )
+    )
+    fare_info_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FareInfoRef",
             type="Attribute"
         )
     )
@@ -9816,13 +9956,13 @@ class LocationAddress(TypeStructuredAddress):
 class LoyaltyCard:
     """Provider loyalty card information.
 
+    :ivar provider_reservation_specific_info:
     :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     :ivar supplier_code: The code used to identify the Loyalty supplier, e.g. AA, ZE, MC
     :ivar alliance_level:
     :ivar membership_program: Loyalty Program membership Id of the traveler specific to Amtrak(2V) Guest Rewards
-    :ivar provider_reservation_specific_info:
     :ivar card_number:
     :ivar status:
     :ivar membership_status:
@@ -9835,6 +9975,15 @@ class LoyaltyCard:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    provider_reservation_specific_info: List[TypeProviderReservationSpecificInfo] = field(
+        default_factory=list,
+        metadata=dict(
+            name="ProviderReservationSpecificInfo",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
     el_stat: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -9879,15 +10028,6 @@ class LoyaltyCard:
             type="Attribute",
             min_length=1.0,
             max_length=32.0
-        )
-    )
-    provider_reservation_specific_info: List[TypeProviderReservationSpecificInfo] = field(
-        default_factory=list,
-        metadata=dict(
-            name="ProviderReservationSpecificInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
         )
     )
     card_number: Optional[str] = field(
@@ -11953,6 +12093,9 @@ class SearchPassenger(TypePassengerType):
 class FormOfPayment:
     """A Form of Payment used to purchase all or part of a booking.
 
+    :ivar credit_card:
+    :ivar debit_card:
+    :ivar enett_van:
     :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar certificate:
@@ -11965,9 +12108,6 @@ class FormOfPayment:
     :ivar direct_payment:
     :ivar agent_voucher:
     :ivar payment_advice:
-    :ivar credit_card:
-    :ivar debit_card:
-    :ivar enett_van:
     :ivar provider_reservation_info_ref:
     :ivar segment_ref:
     :ivar bsppayment:
@@ -11990,6 +12130,27 @@ class FormOfPayment:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    credit_card: Optional[CreditCard] = field(
+        default=None,
+        metadata=dict(
+            name="CreditCard",
+            type="Element"
+        )
+    )
+    debit_card: Optional[DebitCard] = field(
+        default=None,
+        metadata=dict(
+            name="DebitCard",
+            type="Element"
+        )
+    )
+    enett_van: Optional[EnettVan] = field(
+        default=None,
+        metadata=dict(
+            name="EnettVan",
+            type="Element"
+        )
+    )
     el_stat: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -12071,27 +12232,6 @@ class FormOfPayment:
         default=None,
         metadata=dict(
             name="PaymentAdvice",
-            type="Element"
-        )
-    )
-    credit_card: Optional[CreditCard] = field(
-        default=None,
-        metadata=dict(
-            name="CreditCard",
-            type="Element"
-        )
-    )
-    debit_card: Optional[DebitCard] = field(
-        default=None,
-        metadata=dict(
-            name="DebitCard",
-            type="Element"
-        )
-    )
-    enett_van: Optional[EnettVan] = field(
-        default=None,
-        metadata=dict(
-            name="EnettVan",
             type="Element"
         )
     )
@@ -12377,8 +12517,6 @@ class ServiceFeeInfo:
     """Travel Agency Service Fees (TASF) are charged by the agency through BSP or
     Airline Reporting Corporation (ARC).
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar form_of_payment:
     :ivar service_fee_tax_info:
     :ivar credit_card_auth:
@@ -12394,25 +12532,13 @@ class ServiceFeeInfo:
     :ivar total_amount: The total amount for this Service Fee including base amount and all taxes.
     :ivar base_amount: Represents the base price for this entity. This does not include any taxes.
     :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated Service Fee TaxInfo array for a breakdown of the individual taxes.
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar booking_traveler_name: The name of the passenger.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
     form_of_payment: Optional[FormOfPayment] = field(
         default=None,
         metadata=dict(
@@ -12517,6 +12643,20 @@ class ServiceFeeInfo:
         default=None,
         metadata=dict(
             name="Taxes",
+            type="Attribute"
+        )
+    )
+    el_stat: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
             type="Attribute"
         )
     )

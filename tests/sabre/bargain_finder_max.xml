@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ns0:OTA_AirLowFareSearchRQ xmlns:ns0="http://www.opentravel.org/OTA/2003/05" Target="Production" Version="1.9.7" AvailableFlightsOnly="true" TruncateMessages="true">
+  <ns0:POS>
+    <ns0:Source PseudoCityCode="C9QH">
+      <ns0:RequestorID Type="1" ID="1">
+        <ns0:CompanyName Code="TN"/>
+      </ns0:RequestorID>
+    </ns0:Source>
+  </ns0:POS>
+  <ns0:OriginDestinationInformation RPH="1">
+    <ns0:DepartureDateTime>2019-12-19T00:00:00</ns0:DepartureDateTime>
+    <ns0:OriginLocation LocationCode="ATH" CodeContext="IATA"/>
+    <ns0:DestinationLocation LocationCode="LON" CodeContext="IATA"/>
+    <ns0:TPA_Extensions>
+      <ns0:SegmentType Code="O"/>
+    </ns0:TPA_Extensions>
+  </ns0:OriginDestinationInformation>
+  <ns0:TravelPreferences ValidInterlineTicket="true" Hybrid="true">
+    <ns0:TPA_Extensions>
+      <ns0:TripType Value="OneWay"/>
+      <ns0:ExcludeCallDirectCarriers Enabled="true"/>
+      <ns0:SettlementMethod>BSP</ns0:SettlementMethod>
+    </ns0:TPA_Extensions>
+  </ns0:TravelPreferences>
+  <ns0:TravelerInfoSummary>
+    <ns0:SeatsRequested>1</ns0:SeatsRequested>
+    <ns0:AirTravelerAvail>
+      <ns0:PassengerTypeQuantity Quantity="1" Code="ADT" Changeable="true"/>
+    </ns0:AirTravelerAvail>
+    <ns0:PriceRequestInformation CurrencyCode="EUR">
+      <ns0:TPA_Extensions>
+        <ns0:Priority>
+          <ns0:Price Priority="1"/>
+          <ns0:DirectFlights Priority="2"/>
+          <ns0:Time Priority="3"/>
+          <ns0:Vendor Priority="4"/>
+        </ns0:Priority>
+      </ns0:TPA_Extensions>
+    </ns0:PriceRequestInformation>
+  </ns0:TravelerInfoSummary>
+  <ns0:TPA_Extensions>
+    <ns0:IntelliSellTransaction>
+      <ns0:RequestType Name="250ITINS"/>
+    </ns0:IntelliSellTransaction>
+  </ns0:TPA_Extensions>
+</ns0:OTA_AirLowFareSearchRQ>
