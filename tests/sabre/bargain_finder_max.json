@@ -1,0 +1,81 @@
+{
+  "TPA_Extensions": {
+    "IntelliSellTransaction": {
+      "RequestType": {
+        "Name": "250ITINS"
+      }
+    }
+  },
+  "TravelPreferences": {
+    "TPA_Extensions": {
+      "TripType": {
+        "Value": "OneWay"
+      },
+      "SettlementMethod": "BSP",
+      "ExcludeCallDirectCarriers": {
+        "Enabled": true
+      }
+    },
+    "ValidInterlineTicket": true
+  },
+  "OriginDestinationInformation": [
+    {
+      "TPA_Extensions": {
+        "SegmentType": {
+          "Code": "O"
+        }
+      },
+      "DepartureDateTime": "2019-12-19T00:00:00",
+      "RPH": 1,
+      "OriginLocation": {
+        "LocationCode": "ATH"
+      },
+      "DestinationLocation": {
+        "LocationCode": "LON"
+      }
+    }
+  ],
+  "Version": "1.9.7",
+  "POS": {
+    "Source": {
+      "PseudoCityCode": "C9QH",
+      "RequestorID": {
+        "Type": 1,
+        "ID": 1,
+        "CompanyName": {
+          "Code": "TN"
+        }
+      }
+    }
+  },
+  "TravelerInfoSummary": {
+    "SeatsRequested": 1,
+    "PriceRequestInformation": {
+      "TPA_Extensions": {
+        "Priority": {
+          "DirectFlights": {
+            "Priority": 2
+          },
+          "Price": {
+            "Priority": 1
+          },
+          "Vendor": {
+            "Priority": 4
+          },
+          "Time": {
+            "Priority": 3
+          }
+        }
+      },
+      "CurrencyCode": "EUR"
+    },
+    "AirTravelerAvail": {
+      "PassengerTypeQuantity": [
+        {
+          "Code": "ADT",
+          "Quantity": 1
+        }
+      ]
+    }
+  }
+}
