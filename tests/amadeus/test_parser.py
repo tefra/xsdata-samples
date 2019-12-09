@@ -5,8 +5,8 @@ from unittest import TestCase
 from xsdata.formats.dict.serializer import DictSerializer
 from xsdata.formats.xml.parser import XmlParser
 
-from samples.sabre.output.bargain_finder_max_rs_v1_9_7 import (
-    OtaAirLowFareSearchRs,
+from samples.amadeus.output.fare_master_pricer_travel_board_search_reply_15_3_1_a import (
+    FareMasterPricerTravelBoardSearchReply,
 )
 
 parser = XmlParser()
@@ -19,16 +19,15 @@ def value_dict(data):
 
 
 class ParserTests(TestCase):
-    def test_bargain_finder_max(self):
-        fixture = "bargain_finder_max_rs"
+    def test_master_pricer(self):
+        fixture = "master_pricer_rs"
 
         xml_str = dir.joinpath(f"{fixture}.xml")
-        obj = parser.from_path(xml_str, OtaAirLowFareSearchRs)
+        obj = parser.from_path(xml_str, FareMasterPricerTravelBoardSearchReply)
 
         output = dir.joinpath(f"{fixture}.json")
         expected = json.loads(output.read_text())
 
         result = serializer.render(obj, dict_factory=serializer.filter_none)
         self.assertEqual(expected, result)
-
         output.write_text(json.dumps(result, indent=2))

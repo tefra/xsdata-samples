@@ -21,7 +21,7 @@ xsd_location = str(
 
 class SerializerTests(TestCase):
     def test_master_pricer(self):
-        fixture = "master_pricer"
+        fixture = "master_pricer_rq"
 
         json_data = dir.joinpath(f"{fixture}.json").read_text()
         xml = serializer.render(
