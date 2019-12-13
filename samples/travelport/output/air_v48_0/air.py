@@ -5645,25 +5645,6 @@ class RailCoachDetails:
 
 
 @dataclass
-class RefundAccessCode:
-    """For some vendors a code/password is required to avail any amount retained
-    during refund.User can define their own password too This attribute will be
-    used to show/accept this code.
-
-    :ivar value:
-    """
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Restriction",
-            min_length=1.0,
-            max_length=32.0
-        )
-    )
-
-
-@dataclass
 class Restriction:
     """Fare Reference associated with the BookingRules.
 
@@ -20189,11 +20170,13 @@ class TcrrefundBundle:
             required=True
         )
     )
-    refund_access_code: Optional[RefundAccessCode] = field(
+    refund_access_code: Optional[str] = field(
         default=None,
         metadata=dict(
             name="RefundAccessCode",
-            type="Attribute"
+            type="Attribute",
+            min_length=1.0,
+            max_length=32.0
         )
     )
 
@@ -22385,11 +22368,13 @@ class Tcr:
             max_length=15.0
         )
     )
-    refund_access_code: Optional[RefundAccessCode] = field(
+    refund_access_code: Optional[str] = field(
         default=None,
         metadata=dict(
             name="RefundAccessCode",
-            type="Attribute"
+            type="Attribute",
+            min_length=1.0,
+            max_length=32.0
         )
     )
     refund_amount: Optional[str] = field(

@@ -1,4 +1,3 @@
-from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional
 from samples.travelport.output.air_v48_0.air import (
