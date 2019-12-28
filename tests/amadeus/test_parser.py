@@ -2,8 +2,8 @@ import json
 from pathlib import Path
 from unittest import TestCase
 
-from xsdata.formats.dict.serializer import DictSerializer
-from xsdata.formats.xml.parser import XmlParser
+from xsdata.formats.dataclass.parsers import XmlParser
+from xsdata.formats.dataclass.serializers import DictSerializer
 
 from samples.amadeus.output.fare_master_pricer_travel_board_search_reply_15_3_1_a import (
     FareMasterPricerTravelBoardSearchReply,

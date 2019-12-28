@@ -2,8 +2,8 @@ import json
 from pathlib import Path
 from unittest import TestCase
 
-from xsdata.formats.dict.serializer import DictSerializer
-from xsdata.formats.xml.parser import XmlParser
+from xsdata.formats.dataclass.parsers import XmlParser
+from xsdata.formats.dataclass.serializers import DictSerializer
 
 from samples.sabre.output.bargain_finder_max_rs_v1_9_7 import (
     OtaAirLowFareSearchRs,

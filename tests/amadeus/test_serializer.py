@@ -2,8 +2,8 @@ from pathlib import Path
 from unittest import TestCase
 
 from lxml import etree
-from xsdata.formats.dict.parser import DictParser
-from xsdata.formats.xml.serializer import XmlSerializer
+from xsdata.formats.dataclass.parsers import DictParser
+from xsdata.formats.dataclass.serializers import XmlSerializer
 
 from samples.amadeus.output.fare_master_pricer_travel_board_search_15_3_1_a import (
     FareMasterPricerTravelBoardSearch,
