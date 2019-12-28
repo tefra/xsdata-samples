@@ -17,14 +17,16 @@ class AdvResTicketingType:
         default=None,
         metadata=dict(
             name="AdvReservation",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     adv_ticketing: Optional["AdvResTicketingType.AdvTicketing"] = field(
         default=None,
         metadata=dict(
             name="AdvTicketing",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     adv_res_ind: Optional[bool] = field(
@@ -271,6 +273,7 @@ class StayRestrictionsType:
         metadata=dict(
             name="MinimumStay",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -279,6 +282,7 @@ class StayRestrictionsType:
         metadata=dict(
             name="MaximumStay",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -472,7 +476,8 @@ class VoluntaryChangesType:
         default=None,
         metadata=dict(
             name="Penalty",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     vol_change_ind: Optional[bool] = field(
@@ -553,7 +558,8 @@ class PassengerTypeQuantityType(TravelerCountType):
         default=None,
         metadata=dict(
             name="TPA_Extensions",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     changeable: bool = field(
@@ -584,35 +590,40 @@ class PassengerTypeQuantityType(TravelerCountType):
             default=None,
             metadata=dict(
                 name="BirthDate",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         age: Optional["PassengerTypeQuantityType.TpaExtensions.Age"] = field(
             default=None,
             metadata=dict(
                 name="Age",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         state: Optional["PassengerTypeQuantityType.TpaExtensions.State"] = field(
             default=None,
             metadata=dict(
                 name="State",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         total_number: Optional["PassengerTypeQuantityType.TpaExtensions.TotalNumber"] = field(
             default=None,
             metadata=dict(
                 name="TotalNumber",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         voluntary_changes: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges"] = field(
             default=None,
             metadata=dict(
                 name="VoluntaryChanges",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
 
@@ -684,6 +695,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                 metadata=dict(
                     name="Penalty",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=0,
                     max_occurs=2
                 )

@@ -68,6 +68,7 @@ class BaseCoreReq:
         metadata=dict(
             name="BillingPointOfSaleInfo",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             required=True
         )
     )
@@ -76,6 +77,7 @@ class BaseCoreReq:
         metadata=dict(
             name="AgentIDOverride",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -84,7 +86,8 @@ class BaseCoreReq:
         default=None,
         metadata=dict(
             name="TerminalSessionInfo",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     trace_id: Optional[str] = field(
@@ -148,6 +151,7 @@ class BaseRsp:
         metadata=dict(
             name="ResponseMessage",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -201,6 +205,7 @@ class BaseCoreSearchReq(BaseCoreReq):
         metadata=dict(
             name="NextResultReference",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -217,7 +222,8 @@ class BaseReq(BaseCoreReq):
         default=None,
         metadata=dict(
             name="OverridePCC",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     retrieve_provider_reservation_details: bool = field(
@@ -239,6 +245,7 @@ class BaseSearchRsp(BaseRsp):
         metadata=dict(
             name="NextResultReference",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -279,6 +286,7 @@ class BaseCreateReservationReq(BaseReq):
         metadata=dict(
             name="LinkedUniversalRecord",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -288,6 +296,7 @@ class BaseCreateReservationReq(BaseReq):
         metadata=dict(
             name="BookingTraveler",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -297,6 +306,7 @@ class BaseCreateReservationReq(BaseReq):
         metadata=dict(
             name="OSI",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -306,6 +316,7 @@ class BaseCreateReservationReq(BaseReq):
         metadata=dict(
             name="AccountingRemark",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -315,6 +326,7 @@ class BaseCreateReservationReq(BaseReq):
         metadata=dict(
             name="GeneralRemark",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -324,6 +336,7 @@ class BaseCreateReservationReq(BaseReq):
         metadata=dict(
             name="XMLRemark",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -333,6 +346,7 @@ class BaseCreateReservationReq(BaseReq):
         metadata=dict(
             name="UnassociatedRemark",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -341,56 +355,64 @@ class BaseCreateReservationReq(BaseReq):
         default=None,
         metadata=dict(
             name="Postscript",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     passive_info: Optional[PassiveInfo] = field(
         default=None,
         metadata=dict(
             name="PassiveInfo",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     continuity_check_override: Optional[ContinuityCheckOverride] = field(
         default=None,
         metadata=dict(
             name="ContinuityCheckOverride",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     agency_contact_info: Optional[AgencyContactInfo] = field(
         default=None,
         metadata=dict(
             name="AgencyContactInfo",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     customer_id: Optional[CustomerId] = field(
         default=None,
         metadata=dict(
             name="CustomerID",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     file_finishing_info: Optional[FileFinishingInfo] = field(
         default=None,
         metadata=dict(
             name="FileFinishingInfo",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     commission_remark: Optional[CommissionRemark] = field(
         default=None,
         metadata=dict(
             name="CommissionRemark",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     consolidator_remark: Optional[ConsolidatorRemark] = field(
         default=None,
         metadata=dict(
             name="ConsolidatorRemark",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     invoice_remark: List[InvoiceRemark] = field(
@@ -398,6 +420,7 @@ class BaseCreateReservationReq(BaseReq):
         metadata=dict(
             name="InvoiceRemark",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -407,6 +430,7 @@ class BaseCreateReservationReq(BaseReq):
         metadata=dict(
             name="SSR",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -415,14 +439,16 @@ class BaseCreateReservationReq(BaseReq):
         default=None,
         metadata=dict(
             name="EmailNotification",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     queue_place: Optional[QueuePlace] = field(
         default=None,
         metadata=dict(
             name="QueuePlace",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     rule_name: Optional[str] = field(
@@ -484,6 +510,7 @@ class BaseSearchReq(BaseReq):
         metadata=dict(
             name="NextResultReference",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -501,6 +528,7 @@ class BaseCreateWithFormOfPaymentReq(BaseCreateReservationReq):
         metadata=dict(
             name="FormOfPayment",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )

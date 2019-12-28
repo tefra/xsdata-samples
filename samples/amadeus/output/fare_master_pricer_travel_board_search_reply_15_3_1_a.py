@@ -16,6 +16,7 @@ class AdditionalFareQualifierDetailsTypeI:
         metadata=dict(
             name="rateClass",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -25,6 +26,7 @@ class AdditionalFareQualifierDetailsTypeI:
         metadata=dict(
             name="ticketDesignator",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=18.0
         )
@@ -34,6 +36,7 @@ class AdditionalFareQualifierDetailsTypeI:
         metadata=dict(
             name="pricingGroup",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -43,6 +46,7 @@ class AdditionalFareQualifierDetailsTypeI:
         metadata=dict(
             name="secondRateClass",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=29,
             min_length=1.0,
@@ -64,6 +68,7 @@ class AdditionalProductDetailsType:
         metadata=dict(
             name="equipmentType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -73,6 +78,7 @@ class AdditionalProductDetailsType:
         metadata=dict(
             name="operatingDay",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=7.0
         )
@@ -82,6 +88,7 @@ class AdditionalProductDetailsType:
         metadata=dict(
             name="techStopNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,2}"
         )
     )
@@ -90,6 +97,7 @@ class AdditionalProductDetailsType:
         metadata=dict(
             name="locationId",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=3,
             min_length=3.0,
@@ -108,6 +116,7 @@ class ApplicationErrorInformationType:
         metadata=dict(
             name="error",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=4.0
@@ -127,6 +136,7 @@ class AttributeInformationType:
         metadata=dict(
             name="feeParameterType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=3.0,
             max_length=3.0
         )
@@ -136,6 +146,7 @@ class AttributeInformationType:
         metadata=dict(
             name="feeParameterDescription",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=15.0
         )
@@ -154,6 +165,7 @@ class AttributeInformationTypeU:
         metadata=dict(
             name="attributeType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=25.0
@@ -164,6 +176,7 @@ class AttributeInformationTypeU:
         metadata=dict(
             name="attributeDescription",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=256.0
         )
@@ -185,6 +198,7 @@ class AttributeInformationType97181C:
         metadata=dict(
             name="attributeType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=25.0
@@ -195,6 +209,7 @@ class AttributeInformationType97181C:
         metadata=dict(
             name="attributeDescription",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=256.0
         )
@@ -214,6 +229,7 @@ class BaggageDetailsType:
         metadata=dict(
             name="freeAllowance",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,15}"
         )
     )
@@ -222,6 +238,7 @@ class BaggageDetailsType:
         metadata=dict(
             name="quantityCode",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"[0-9A-Z]{1,3}"
         )
     )
@@ -230,6 +247,7 @@ class BaggageDetailsType:
         metadata=dict(
             name="unitQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -249,6 +267,7 @@ class BagtagDetailsType:
         metadata=dict(
             name="identifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -258,6 +277,7 @@ class BagtagDetailsType:
         metadata=dict(
             name="number",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,15}"
         )
     )
@@ -274,6 +294,7 @@ class BucketInformationType:
         metadata=dict(
             name="number",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -283,6 +304,7 @@ class BucketInformationType:
         metadata=dict(
             name="name",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=20.0
         )
@@ -300,6 +322,7 @@ class CabinInformationType:
         metadata=dict(
             name="service",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=5.0
@@ -310,6 +333,7 @@ class CabinInformationType:
         metadata=dict(
             name="cabin",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9,
             min_length=1.0,
@@ -331,6 +355,7 @@ class CabinProductDetailsType:
         metadata=dict(
             name="rbd",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=1.0
@@ -341,6 +366,7 @@ class CabinProductDetailsType:
         metadata=dict(
             name="bookingModifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=1.0
         )
@@ -350,6 +376,7 @@ class CabinProductDetailsType:
         metadata=dict(
             name="cabin",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=1.0
         )
@@ -359,6 +386,7 @@ class CabinProductDetailsType:
         metadata=dict(
             name="avlStatus",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=3.0
         )
@@ -381,6 +409,7 @@ class CabinProductDetailsType195516C:
         metadata=dict(
             name="rbd",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=1.0
         )
@@ -390,6 +419,7 @@ class CabinProductDetailsType195516C:
         metadata=dict(
             name="bookingModifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=1.0
         )
@@ -399,6 +429,7 @@ class CabinProductDetailsType195516C:
         metadata=dict(
             name="cabin",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=1.0
         )
@@ -408,6 +439,7 @@ class CabinProductDetailsType195516C:
         metadata=dict(
             name="avlStatus",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=0.0,
             max_length=3.0
@@ -431,6 +463,7 @@ class CabinProductDetailsType205138C:
         metadata=dict(
             name="rbd",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=1.0
@@ -441,6 +474,7 @@ class CabinProductDetailsType205138C:
         metadata=dict(
             name="bookingModifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"[0-9A-Z]"
         )
     )
@@ -449,6 +483,7 @@ class CabinProductDetailsType205138C:
         metadata=dict(
             name="cabin",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=1.0
         )
@@ -458,6 +493,7 @@ class CabinProductDetailsType205138C:
         metadata=dict(
             name="avlStatus",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"[0-9A-Z]{1,3}"
         )
     )
@@ -478,6 +514,7 @@ class CabinProductDetailsType229142C:
         metadata=dict(
             name="rbd",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=1.0
@@ -488,6 +525,7 @@ class CabinProductDetailsType229142C:
         metadata=dict(
             name="cabin",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=1.0
         )
@@ -497,6 +535,7 @@ class CabinProductDetailsType229142C:
         metadata=dict(
             name="avlStatus",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"[0-9A-Z]{1,3}"
         )
     )
@@ -513,6 +552,7 @@ class CategoryDescriptionType:
         metadata=dict(
             name="number",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             pattern=r"-?[0-9]{1,3}"
         )
@@ -522,6 +562,7 @@ class CategoryDescriptionType:
         metadata=dict(
             name="code",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -539,6 +580,7 @@ class ClassInformationType:
         metadata=dict(
             name="service",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=5.0
@@ -549,6 +591,7 @@ class ClassInformationType:
         metadata=dict(
             name="rbd",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=26,
             min_length=1.0,
@@ -569,6 +612,7 @@ class CodedAttributeInformationType:
         metadata=dict(
             name="attributeType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=5.0
@@ -579,6 +623,7 @@ class CodedAttributeInformationType:
         metadata=dict(
             name="attributeDescription",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=50.0
         )
@@ -600,6 +645,7 @@ class CodedAttributeInformationType270108C:
         metadata=dict(
             name="attributeType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=5.0
@@ -610,6 +656,7 @@ class CodedAttributeInformationType270108C:
         metadata=dict(
             name="attributeDescription",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=10.0
         )
@@ -628,6 +675,7 @@ class CompanyIdentificationTextType:
         metadata=dict(
             name="textRefNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{0,4}"
         )
     )
@@ -636,6 +684,7 @@ class CompanyIdentificationTextType:
         metadata=dict(
             name="companyText",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=70.0
         )
@@ -654,6 +703,7 @@ class CompanyIdentificationType:
         metadata=dict(
             name="marketingCarrier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=2.0,
             max_length=3.0
@@ -664,6 +714,7 @@ class CompanyIdentificationType:
         metadata=dict(
             name="operatingCarrier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=2.0,
             max_length=3.0
         )
@@ -673,6 +724,7 @@ class CompanyIdentificationType:
         metadata=dict(
             name="alliance",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=2.0
         )
@@ -692,6 +744,7 @@ class CompanyIdentificationTypeI:
         metadata=dict(
             name="marketingCompany",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=2.0,
             max_length=3.0
         )
@@ -701,6 +754,7 @@ class CompanyIdentificationTypeI:
         metadata=dict(
             name="operatingCompany",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=2.0,
             max_length=3.0
         )
@@ -710,6 +764,7 @@ class CompanyIdentificationTypeI:
         metadata=dict(
             name="otherCompany",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=2.0,
             max_length=3.0
         )
@@ -729,6 +784,7 @@ class CompanyRoleIdentificationType:
         metadata=dict(
             name="codeShareType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=1.0
         )
@@ -738,6 +794,7 @@ class CompanyRoleIdentificationType:
         metadata=dict(
             name="airlineDesignator",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=2.0,
             max_length=3.0
         )
@@ -747,6 +804,7 @@ class CompanyRoleIdentificationType:
         metadata=dict(
             name="flightNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,4}"
         )
     )
@@ -767,6 +825,7 @@ class CompanyRoleIdentificationType120771C:
         metadata=dict(
             name="transportStageQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -776,6 +835,7 @@ class CompanyRoleIdentificationType120771C:
         metadata=dict(
             name="company",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=2.0,
             max_length=3.0
         )
@@ -794,6 +854,7 @@ class ConversionRateDetailsTypeI:
         metadata=dict(
             name="conversionType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -803,6 +864,7 @@ class ConversionRateDetailsTypeI:
         metadata=dict(
             name="currency",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -812,6 +874,7 @@ class ConversionRateDetailsTypeI:
         metadata=dict(
             name="amount",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=12.0
         )
@@ -835,6 +898,7 @@ class ConversionRateDetailsTypeI179848C:
         metadata=dict(
             name="conversionType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -844,6 +908,7 @@ class ConversionRateDetailsTypeI179848C:
         metadata=dict(
             name="currency",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=3.0
@@ -854,6 +919,7 @@ class ConversionRateDetailsTypeI179848C:
         metadata=dict(
             name="rate",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=18.0
         )
@@ -863,6 +929,7 @@ class ConversionRateDetailsTypeI179848C:
         metadata=dict(
             name="convertedAmountLink",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=18.0
         )
@@ -872,6 +939,7 @@ class ConversionRateDetailsTypeI179848C:
         metadata=dict(
             name="taxQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=3.0
         )
@@ -890,6 +958,7 @@ class CriteriaiDetaislType:
         metadata=dict(
             name="type",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -899,6 +968,7 @@ class CriteriaiDetaislType:
         metadata=dict(
             name="value",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=18.0
         )
@@ -916,6 +986,7 @@ class DataInformationType:
         metadata=dict(
             name="indicator",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -935,6 +1006,7 @@ class DataTypeInformationType:
         metadata=dict(
             name="subType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=3.0
@@ -945,6 +1017,7 @@ class DataTypeInformationType:
         metadata=dict(
             name="option",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -965,6 +1038,7 @@ class DateAndTimeDetailsType:
         metadata=dict(
             name="dateQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -974,6 +1048,7 @@ class DateAndTimeDetailsType:
         metadata=dict(
             name="date",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])[0-9]{2}"
         )
     )
@@ -982,6 +1057,7 @@ class DateAndTimeDetailsType:
         metadata=dict(
             name="firstTime",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
         )
     )
@@ -990,6 +1066,7 @@ class DateAndTimeDetailsType:
         metadata=dict(
             name="equipementType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -999,6 +1076,7 @@ class DateAndTimeDetailsType:
         metadata=dict(
             name="locationId",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=3.0,
             max_length=5.0
         )
@@ -1022,6 +1100,7 @@ class DateAndTimeDetailsType256192C:
         metadata=dict(
             name="qualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1031,6 +1110,7 @@ class DateAndTimeDetailsType256192C:
         metadata=dict(
             name="date",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -1040,6 +1120,7 @@ class DateAndTimeDetailsType256192C:
         metadata=dict(
             name="time",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
         )
     )
@@ -1048,6 +1129,7 @@ class DateAndTimeDetailsType256192C:
         metadata=dict(
             name="location",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=25.0
         )
@@ -1066,6 +1148,7 @@ class DateTimePeriodDetailsTypeI:
         metadata=dict(
             name="qualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=3.0
@@ -1076,6 +1159,7 @@ class DateTimePeriodDetailsTypeI:
         metadata=dict(
             name="value",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -1096,6 +1180,7 @@ class DiscountPenaltyInformationType:
         metadata=dict(
             name="fareQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=3.0
@@ -1106,6 +1191,7 @@ class DiscountPenaltyInformationType:
         metadata=dict(
             name="rateCategory",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -1114,14 +1200,16 @@ class DiscountPenaltyInformationType:
         default=None,
         metadata=dict(
             name="amount",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     percentage: Optional[float] = field(
         default=None,
         metadata=dict(
             name="percentage",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -1141,6 +1229,7 @@ class DiscountPenaltyMonetaryInformationType:
         metadata=dict(
             name="feeType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1150,6 +1239,7 @@ class DiscountPenaltyMonetaryInformationType:
         metadata=dict(
             name="feeAmountType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1158,7 +1248,8 @@ class DiscountPenaltyMonetaryInformationType:
         default=None,
         metadata=dict(
             name="feeAmount",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     fee_currency: Optional[str] = field(
@@ -1166,6 +1257,7 @@ class DiscountPenaltyMonetaryInformationType:
         metadata=dict(
             name="feeCurrency",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1203,6 +1295,7 @@ class FareCalculationCodeDetailsType:
         metadata=dict(
             name="qualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1211,7 +1304,8 @@ class FareCalculationCodeDetailsType:
         default=None,
         metadata=dict(
             name="amount",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     location_code: Optional[str] = field(
@@ -1219,6 +1313,7 @@ class FareCalculationCodeDetailsType:
         metadata=dict(
             name="locationCode",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1228,6 +1323,7 @@ class FareCalculationCodeDetailsType:
         metadata=dict(
             name="otherLocationCode",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1236,7 +1332,8 @@ class FareCalculationCodeDetailsType:
         default=None,
         metadata=dict(
             name="rate",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -1253,6 +1350,7 @@ class FareCategoryCodesTypeI:
         metadata=dict(
             name="fareType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=20.0
@@ -1263,6 +1361,7 @@ class FareCategoryCodesTypeI:
         metadata=dict(
             name="otherFareType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=8,
             min_length=1.0,
@@ -1282,6 +1381,7 @@ class FareDetailsType:
         metadata=dict(
             name="passengerTypeQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1302,6 +1402,7 @@ class FareDetailsTypeI:
         metadata=dict(
             name="qualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1310,7 +1411,8 @@ class FareDetailsTypeI:
         default=None,
         metadata=dict(
             name="rate",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     country: Optional[str] = field(
@@ -1318,6 +1420,7 @@ class FareDetailsTypeI:
         metadata=dict(
             name="country",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1327,6 +1430,7 @@ class FareDetailsTypeI:
         metadata=dict(
             name="fareCategory",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1349,6 +1453,7 @@ class FareDetailsType193037C:
         metadata=dict(
             name="qualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"[0-9A-Z]{1,3}"
         )
     )
@@ -1357,6 +1462,7 @@ class FareDetailsType193037C:
         metadata=dict(
             name="rate",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,8}"
         )
     )
@@ -1365,6 +1471,7 @@ class FareDetailsType193037C:
         metadata=dict(
             name="country",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1374,6 +1481,7 @@ class FareDetailsType193037C:
         metadata=dict(
             name="fareCategory",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"[0-9A-Z]{1,3}"
         )
     )
@@ -1390,6 +1498,7 @@ class FareFamilyDetailsType:
         metadata=dict(
             name="commercialFamily",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=10.0
@@ -1409,6 +1518,7 @@ class FareInformationTypeI:
         metadata=dict(
             name="valueQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1418,6 +1528,7 @@ class FareInformationTypeI:
         metadata=dict(
             name="value",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,15}"
         )
     )
@@ -1433,6 +1544,7 @@ class FareProductDetailsType:
         metadata=dict(
             name="fareBasis",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=18.0
         )
@@ -1454,6 +1566,7 @@ class FareProductDetailsType248552C:
         metadata=dict(
             name="fareBasis",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=18.0
         )
@@ -1463,6 +1576,7 @@ class FareProductDetailsType248552C:
         metadata=dict(
             name="passengerType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=6.0
         )
@@ -1472,6 +1586,7 @@ class FareProductDetailsType248552C:
         metadata=dict(
             name="fareType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9,
             min_length=0.0,
@@ -1490,6 +1605,7 @@ class FareTypeGroupingInformationType:
         metadata=dict(
             name="pricingGroup",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -1507,6 +1623,7 @@ class FreeTextQualificationType:
         metadata=dict(
             name="textSubjectQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=3.0
@@ -1517,6 +1634,7 @@ class FreeTextQualificationType:
         metadata=dict(
             name="informationType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=4.0
         )
@@ -1535,6 +1653,7 @@ class FreeTextQualificationTypeI:
         metadata=dict(
             name="textSubjectQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=3.0
@@ -1557,6 +1676,7 @@ class FreeTextQualificationType120769C:
         metadata=dict(
             name="textSubjectQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=3.0
@@ -1567,6 +1687,7 @@ class FreeTextQualificationType120769C:
         metadata=dict(
             name="informationType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=4.0
         )
@@ -1576,6 +1697,7 @@ class FreeTextQualificationType120769C:
         metadata=dict(
             name="language",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1595,6 +1717,7 @@ class FrequentTravellerIdentificationType:
         metadata=dict(
             name="carrier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -1604,6 +1727,7 @@ class FrequentTravellerIdentificationType:
         metadata=dict(
             name="number",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=28.0
         )
@@ -1613,6 +1737,7 @@ class FrequentTravellerIdentificationType:
         metadata=dict(
             name="tierLevel",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -1622,6 +1747,7 @@ class FrequentTravellerIdentificationType:
         metadata=dict(
             name="priorityCode",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=12.0
         )
@@ -1642,6 +1768,7 @@ class ItemNumberIdentificationType:
         metadata=dict(
             name="number",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=4.0
         )
@@ -1651,6 +1778,7 @@ class ItemNumberIdentificationType:
         metadata=dict(
             name="type",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1660,6 +1788,7 @@ class ItemNumberIdentificationType:
         metadata=dict(
             name="qualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1669,6 +1798,7 @@ class ItemNumberIdentificationType:
         metadata=dict(
             name="responsibleAgency",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1689,6 +1819,7 @@ class ItemNumberIdentificationType191597C:
         metadata=dict(
             name="number",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=6.0
         )
@@ -1698,6 +1829,7 @@ class ItemNumberIdentificationType191597C:
         metadata=dict(
             name="numberType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=3.0
         )
@@ -1721,6 +1853,7 @@ class ItemNumberIdentificationType192331C:
         metadata=dict(
             name="number",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=6.0
         )
@@ -1730,6 +1863,7 @@ class ItemNumberIdentificationType192331C:
         metadata=dict(
             name="type",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1739,6 +1873,7 @@ class ItemNumberIdentificationType192331C:
         metadata=dict(
             name="qualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1748,6 +1883,7 @@ class ItemNumberIdentificationType192331C:
         metadata=dict(
             name="responsibleAgency",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1769,6 +1905,7 @@ class ItemNumberIdentificationType234878C:
         metadata=dict(
             name="number",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,6}"
         )
     )
@@ -1777,6 +1914,7 @@ class ItemNumberIdentificationType234878C:
         metadata=dict(
             name="type",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1797,6 +1935,7 @@ class ItemNumberIdentificationType248537C:
         metadata=dict(
             name="number",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -1815,6 +1954,7 @@ class ItemReferencesAndVersionsType:
         metadata=dict(
             name="referenceType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=6.0
         )
@@ -1824,6 +1964,7 @@ class ItemReferencesAndVersionsType:
         metadata=dict(
             name="refNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,3}"
         )
     )
@@ -1844,6 +1985,7 @@ class ItemReferencesAndVersionsType78536S:
         metadata=dict(
             name="referenceType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1853,6 +1995,7 @@ class ItemReferencesAndVersionsType78536S:
         metadata=dict(
             name="refNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,3}"
         )
     )
@@ -1873,6 +2016,7 @@ class ItemReferencesAndVersionsType78564S:
         metadata=dict(
             name="referenceType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -1882,6 +2026,7 @@ class ItemReferencesAndVersionsType78564S:
         metadata=dict(
             name="feeRefNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,3}"
         )
     )
@@ -1899,6 +2044,7 @@ class ItineraryDetailsType:
         metadata=dict(
             name="airportCityQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=1.0
@@ -1909,6 +2055,7 @@ class ItineraryDetailsType:
         metadata=dict(
             name="segmentNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             pattern=r"-?[0-9]{1,3}"
         )
@@ -1927,6 +2074,7 @@ class LocationIdentificationDetailsType:
         metadata=dict(
             name="locationId",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=3.0,
             max_length=5.0
@@ -1937,6 +2085,7 @@ class LocationIdentificationDetailsType:
         metadata=dict(
             name="airportCityQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=1.0
         )
@@ -1946,6 +2095,7 @@ class LocationIdentificationDetailsType:
         metadata=dict(
             name="terminal",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=5.0
         )
@@ -1963,6 +2113,7 @@ class MiniRulesDetailsType:
         metadata=dict(
             name="interpretation",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=9.0
         )
@@ -1972,6 +2123,7 @@ class MiniRulesDetailsType:
         metadata=dict(
             name="value",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=10,
             min_length=0.0,
@@ -1990,6 +2142,7 @@ class MiniRulesIndicatorType:
         metadata=dict(
             name="ruleIndicator",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=2,
             min_length=1.0,
@@ -2009,6 +2162,7 @@ class MiniRulesType:
         metadata=dict(
             name="category",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=3.0
@@ -2028,6 +2182,7 @@ class MonetaryInformationDetailsType:
         metadata=dict(
             name="amountType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=3.0
         )
@@ -2037,6 +2192,7 @@ class MonetaryInformationDetailsType:
         metadata=dict(
             name="amount",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True
         )
     )
@@ -2045,6 +2201,7 @@ class MonetaryInformationDetailsType:
         metadata=dict(
             name="currency",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2064,6 +2221,7 @@ class MonetaryInformationDetailsTypeI:
         metadata=dict(
             name="typeQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=6.0
@@ -2074,6 +2232,7 @@ class MonetaryInformationDetailsTypeI:
         metadata=dict(
             name="amount",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -2083,6 +2242,7 @@ class MonetaryInformationDetailsTypeI:
         metadata=dict(
             name="currency",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2106,6 +2266,7 @@ class MonetaryInformationDetailsType245528C:
         metadata=dict(
             name="typeQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=3.0
@@ -2115,7 +2276,8 @@ class MonetaryInformationDetailsType245528C:
         default=None,
         metadata=dict(
             name="amount",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     currency: Optional[str] = field(
@@ -2123,6 +2285,7 @@ class MonetaryInformationDetailsType245528C:
         metadata=dict(
             name="currency",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2132,6 +2295,7 @@ class MonetaryInformationDetailsType245528C:
         metadata=dict(
             name="location",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=25.0
         )
@@ -2150,6 +2314,7 @@ class OnTimePerformanceType:
         metadata=dict(
             name="dateTimePeriod",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -2158,7 +2323,8 @@ class OnTimePerformanceType:
         default=None,
         metadata=dict(
             name="percentage",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     accuracy: Optional[str] = field(
@@ -2166,6 +2332,7 @@ class OnTimePerformanceType:
         metadata=dict(
             name="accuracy",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2186,6 +2353,7 @@ class OriginAndDestinationRequestType134833S:
         metadata=dict(
             name="segRef",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             pattern=r"-?[0-9]{1,2}"
         )
@@ -2206,6 +2374,7 @@ class OriginatorIdentificationDetailsTypeI:
         metadata=dict(
             name="officeName",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,9}"
         )
     )
@@ -2214,6 +2383,7 @@ class OriginatorIdentificationDetailsTypeI:
         metadata=dict(
             name="agentSignin",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=9.0
         )
@@ -2223,6 +2393,7 @@ class OriginatorIdentificationDetailsTypeI:
         metadata=dict(
             name="confidentialOffice",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=9.0
         )
@@ -2232,6 +2403,7 @@ class OriginatorIdentificationDetailsTypeI:
         metadata=dict(
             name="otherOffice",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=9.0
         )
@@ -2249,6 +2421,7 @@ class PricingTicketingInformationType:
         metadata=dict(
             name="priceType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=20,
             min_length=0.0,
@@ -2268,6 +2441,7 @@ class PricingTicketingSubsequentType:
         metadata=dict(
             name="paxFareNum",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=10,
             min_length=1.0,
@@ -2289,6 +2463,7 @@ class ProcessingInformationType:
         metadata=dict(
             name="actionQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2298,6 +2473,7 @@ class ProcessingInformationType:
         metadata=dict(
             name="referenceQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2307,6 +2483,7 @@ class ProcessingInformationType:
         metadata=dict(
             name="refNum",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=6.0
         )
@@ -2327,6 +2504,7 @@ class ProductDateTimeType:
         metadata=dict(
             name="dateOfDeparture",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             pattern=r"(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])[0-9]{2}"
         )
@@ -2336,6 +2514,7 @@ class ProductDateTimeType:
         metadata=dict(
             name="timeOfDeparture",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
         )
     )
@@ -2344,6 +2523,7 @@ class ProductDateTimeType:
         metadata=dict(
             name="dateOfArrival",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])[0-9]{2}"
         )
     )
@@ -2352,6 +2532,7 @@ class ProductDateTimeType:
         metadata=dict(
             name="timeOfArrival",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
         )
     )
@@ -2360,6 +2541,7 @@ class ProductDateTimeType:
         metadata=dict(
             name="dateVariation",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,1}"
         )
     )
@@ -2379,6 +2561,7 @@ class ProductDetailsType:
         metadata=dict(
             name="designator",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=17.0
@@ -2389,6 +2572,7 @@ class ProductDetailsType:
         metadata=dict(
             name="availabilityStatus",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2398,6 +2582,7 @@ class ProductDetailsType:
         metadata=dict(
             name="specialService",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2407,6 +2592,7 @@ class ProductDetailsType:
         metadata=dict(
             name="option",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9,
             min_length=1.0,
@@ -2431,6 +2617,7 @@ class ProductFacilitiesType:
         metadata=dict(
             name="lastSeatAvailable",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=1.0
         )
@@ -2440,6 +2627,7 @@ class ProductFacilitiesType:
         metadata=dict(
             name="levelOfAccess",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2449,6 +2637,7 @@ class ProductFacilitiesType:
         metadata=dict(
             name="electronicTicketing",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=1.0
         )
@@ -2458,6 +2647,7 @@ class ProductFacilitiesType:
         metadata=dict(
             name="operationalSuffix",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=1.0
         )
@@ -2467,6 +2657,7 @@ class ProductFacilitiesType:
         metadata=dict(
             name="productDetailQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2476,6 +2667,7 @@ class ProductFacilitiesType:
         metadata=dict(
             name="flightCharacteristic",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9,
             min_length=1.0,
@@ -2495,6 +2687,7 @@ class ProductTypeDetailsType:
         metadata=dict(
             name="availabilityCnxType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=9,
             min_length=1.0,
@@ -2517,6 +2710,7 @@ class ProductTypeDetailsType205137C:
         metadata=dict(
             name="avl",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=9,
             min_length=1.0,
@@ -2536,6 +2730,7 @@ class ProposedSegmentDetailsType:
         metadata=dict(
             name="ref",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=6.0
         )
@@ -2545,6 +2740,7 @@ class ProposedSegmentDetailsType:
         metadata=dict(
             name="unitQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2565,6 +2761,7 @@ class ReferenceType:
         metadata=dict(
             name="refOfLeg",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=6.0
         )
@@ -2574,6 +2771,7 @@ class ReferenceType:
         metadata=dict(
             name="firstItemIdentifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,3}"
         )
     )
@@ -2582,6 +2780,7 @@ class ReferenceType:
         metadata=dict(
             name="lastItemIdentifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,3}"
         )
     )
@@ -2598,6 +2797,7 @@ class ReferencingDetailsType:
         metadata=dict(
             name="refQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=3.0
         )
@@ -2607,6 +2807,7 @@ class ReferencingDetailsType:
         metadata=dict(
             name="refNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             pattern=r"-?[0-9]{0,3}"
         )
@@ -2628,6 +2829,7 @@ class ReferencingDetailsType191583C:
         metadata=dict(
             name="refQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2637,6 +2839,7 @@ class ReferencingDetailsType191583C:
         metadata=dict(
             name="refNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             pattern=r"-?[0-9]{0,6}"
         )
@@ -2658,6 +2861,7 @@ class ReferencingDetailsType195561C:
         metadata=dict(
             name="refQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2667,6 +2871,7 @@ class ReferencingDetailsType195561C:
         metadata=dict(
             name="refNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             pattern=r"-?[0-9]{0,3}"
         )
@@ -2688,6 +2893,7 @@ class ReferencingDetailsType234704C:
         metadata=dict(
             name="type",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=10.0
         )
@@ -2697,6 +2903,7 @@ class ReferencingDetailsType234704C:
         metadata=dict(
             name="value",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=60.0
         )
@@ -2715,6 +2922,7 @@ class SegmentRepetitionControlDetailsTypeI:
         metadata=dict(
             name="quantity",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,15}"
         )
     )
@@ -2723,6 +2931,7 @@ class SegmentRepetitionControlDetailsTypeI:
         metadata=dict(
             name="numberOfUnits",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,15}"
         )
     )
@@ -2740,6 +2949,7 @@ class SelectionDetailsInformationType:
         metadata=dict(
             name="type",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=3.0
@@ -2750,6 +2960,7 @@ class SelectionDetailsInformationType:
         metadata=dict(
             name="optionInformation",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2768,6 +2979,7 @@ class SequenceInformationTypeU:
         metadata=dict(
             name="number",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=10.0
@@ -2778,6 +2990,7 @@ class SequenceInformationTypeU:
         metadata=dict(
             name="identificationCode",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=17.0
         )
@@ -2796,6 +3009,7 @@ class ServicesReferences:
         metadata=dict(
             name="reference",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=4.0
         )
@@ -2805,6 +3019,7 @@ class ServicesReferences:
         metadata=dict(
             name="status",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2814,6 +3029,7 @@ class ServicesReferences:
         metadata=dict(
             name="fromPrice",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=18.0
         )
@@ -2832,6 +3048,7 @@ class SpecialRequirementsDataDetailsType:
         metadata=dict(
             name="seatCharacteristics",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=5,
             min_length=1.0,
@@ -2842,7 +3059,8 @@ class SpecialRequirementsDataDetailsType:
         default=None,
         metadata=dict(
             name="Dummy.NET",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -2863,6 +3081,7 @@ class SpecialRequirementsTypeDetailsType:
         metadata=dict(
             name="serviceClassification",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=4.0
@@ -2873,6 +3092,7 @@ class SpecialRequirementsTypeDetailsType:
         metadata=dict(
             name="serviceStatus",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2882,6 +3102,7 @@ class SpecialRequirementsTypeDetailsType:
         metadata=dict(
             name="serviceNumberOfInstances",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,15}"
         )
     )
@@ -2890,6 +3111,7 @@ class SpecialRequirementsTypeDetailsType:
         metadata=dict(
             name="serviceMarketingCarrier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2899,6 +3121,7 @@ class SpecialRequirementsTypeDetailsType:
         metadata=dict(
             name="serviceGroup",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2908,6 +3131,7 @@ class SpecialRequirementsTypeDetailsType:
         metadata=dict(
             name="serviceSubGroup",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2917,6 +3141,7 @@ class SpecialRequirementsTypeDetailsType:
         metadata=dict(
             name="serviceFreeText",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=99,
             min_length=1.0,
@@ -2936,6 +3161,7 @@ class SpecificTravellerDetailsType:
         metadata=dict(
             name="referenceNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=10.0
         )
@@ -2955,6 +3181,7 @@ class StatusDetailsType:
         metadata=dict(
             name="advisoryTypeInfo",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2964,6 +3191,7 @@ class StatusDetailsType:
         metadata=dict(
             name="notification",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2973,6 +3201,7 @@ class StatusDetailsType:
         metadata=dict(
             name="notification2",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -2982,6 +3211,7 @@ class StatusDetailsType:
         metadata=dict(
             name="description",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=70.0
         )
@@ -3004,6 +3234,7 @@ class StatusDetailsType256255C:
         metadata=dict(
             name="indicator",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -3013,6 +3244,7 @@ class StatusDetailsType256255C:
         metadata=dict(
             name="action",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -3034,6 +3266,7 @@ class TaxDetailsType:
         metadata=dict(
             name="rate",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=12.0
         )
@@ -3043,6 +3276,7 @@ class TaxDetailsType:
         metadata=dict(
             name="countryCode",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -3052,6 +3286,7 @@ class TaxDetailsType:
         metadata=dict(
             name="currencyCode",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -3061,6 +3296,7 @@ class TaxDetailsType:
         metadata=dict(
             name="type",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -3070,6 +3306,7 @@ class TaxDetailsType:
         metadata=dict(
             name="indicator",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=98,
             min_length=1.0,
@@ -3089,6 +3326,7 @@ class TravellerDetailsType:
         metadata=dict(
             name="ref",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,3}"
         )
     )
@@ -3097,6 +3335,7 @@ class TravellerDetailsType:
         metadata=dict(
             name="infantIndicator",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,1}"
         )
     )
@@ -3113,7 +3352,8 @@ class ActionDetailsType:
         default=None,
         metadata=dict(
             name="numberOfItemsDetails",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     last_items_details: List[ReferenceType] = field(
@@ -3121,6 +3361,7 @@ class ActionDetailsType:
         metadata=dict(
             name="lastItemsDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=99
         )
@@ -3141,6 +3382,7 @@ class ApplicationErrorInformationType78543S:
         metadata=dict(
             name="applicationErrorDetail",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True
         )
     )
@@ -3158,6 +3400,7 @@ class AttributeType:
         metadata=dict(
             name="attributeQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -3167,6 +3410,7 @@ class AttributeType:
         metadata=dict(
             name="attributeDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=99
         )
@@ -3184,6 +3428,7 @@ class AttributeTypeU:
         metadata=dict(
             name="attributeFunction",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -3193,6 +3438,7 @@ class AttributeTypeU:
         metadata=dict(
             name="attributeDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True
         )
     )
@@ -3212,6 +3458,7 @@ class AttributeType78561S:
         metadata=dict(
             name="feeParameter",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=20
         )
@@ -3230,6 +3477,7 @@ class CategDescrType:
         metadata=dict(
             name="descriptionInfo",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True
         )
     )
@@ -3238,6 +3486,7 @@ class CategDescrType:
         metadata=dict(
             name="processIndicator",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -3255,6 +3504,7 @@ class CodedAttributeType:
         metadata=dict(
             name="attributeDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=9
         )
@@ -3273,7 +3523,8 @@ class CommercialAgreementsType:
         default=None,
         metadata=dict(
             name="codeshareDetails",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     other_codeshare_details: List[CompanyRoleIdentificationType] = field(
@@ -3281,6 +3532,7 @@ class CommercialAgreementsType:
         metadata=dict(
             name="otherCodeshareDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9
         )
@@ -3298,6 +3550,7 @@ class ConversionRateTypeI:
         metadata=dict(
             name="conversionRateDetail",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=9
         )
@@ -3318,6 +3571,7 @@ class ConversionRateTypeI78562S:
         metadata=dict(
             name="conversionRateDetail",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=9
         )
@@ -3336,6 +3590,7 @@ class DateAndTimeInformationType:
         metadata=dict(
             name="stopDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=2
         )
@@ -3344,7 +3599,8 @@ class DateAndTimeInformationType:
         default=None,
         metadata=dict(
             name="Dummy.NET",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -3365,6 +3621,7 @@ class DateAndTimeInformationType182345S:
         metadata=dict(
             name="dateAndTimeDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=400
         )
@@ -3373,7 +3630,8 @@ class DateAndTimeInformationType182345S:
         default=None,
         metadata=dict(
             name="Dummy.NET",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -3390,6 +3648,7 @@ class DiscountAndPenaltyInformationType:
         metadata=dict(
             name="feeIdentification",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -3398,7 +3657,8 @@ class DiscountAndPenaltyInformationType:
         default=None,
         metadata=dict(
             name="feeInformation",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -3413,7 +3673,8 @@ class ExcessBaggageType:
         default=None,
         metadata=dict(
             name="baggageDetails",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     bag_tag_details: List[BagtagDetailsType] = field(
@@ -3421,6 +3682,7 @@ class ExcessBaggageType:
         metadata=dict(
             name="bagTagDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=99
         )
@@ -3445,6 +3707,7 @@ class FareFamilyType:
         metadata=dict(
             name="refNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             pattern=r"-?[0-9]{1,3}"
         )
@@ -3454,6 +3717,7 @@ class FareFamilyType:
         metadata=dict(
             name="fareFamilyname",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=10.0
         )
@@ -3463,6 +3727,7 @@ class FareFamilyType:
         metadata=dict(
             name="hierarchy",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,4}"
         )
     )
@@ -3471,6 +3736,7 @@ class FareFamilyType:
         metadata=dict(
             name="cabin",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=1.0
         )
@@ -3480,6 +3746,7 @@ class FareFamilyType:
         metadata=dict(
             name="commercialFamilyDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=20
         )
@@ -3489,6 +3756,7 @@ class FareFamilyType:
         metadata=dict(
             name="description",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=100.0
         )
@@ -3498,6 +3766,7 @@ class FareFamilyType:
         metadata=dict(
             name="carrier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=2.0,
             max_length=3.0
         )
@@ -3507,6 +3776,7 @@ class FareFamilyType:
         metadata=dict(
             name="services",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=20
         )
@@ -3528,6 +3798,7 @@ class FareInformationType:
         metadata=dict(
             name="valueQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"[0-9A-Z]{1,3}"
         )
     )
@@ -3536,6 +3807,7 @@ class FareInformationType:
         metadata=dict(
             name="value",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,15}"
         )
     )
@@ -3543,7 +3815,8 @@ class FareInformationType:
         default=None,
         metadata=dict(
             name="fareDetails",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     identity_number: Optional[str] = field(
@@ -3551,6 +3824,7 @@ class FareInformationType:
         metadata=dict(
             name="identityNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -3559,7 +3833,8 @@ class FareInformationType:
         default=None,
         metadata=dict(
             name="fareTypeGrouping",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     rate_category: Optional[str] = field(
@@ -3567,6 +3842,7 @@ class FareInformationType:
         metadata=dict(
             name="rateCategory",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -3586,7 +3862,8 @@ class FareInformationType80868S:
         default=None,
         metadata=dict(
             name="fareDetails",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -3606,6 +3883,7 @@ class FareQualifierDetailsType:
         metadata=dict(
             name="movementType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -3614,21 +3892,24 @@ class FareQualifierDetailsType:
         default=None,
         metadata=dict(
             name="fareCategories",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     fare_details: Optional[FareDetailsTypeI] = field(
         default=None,
         metadata=dict(
             name="fareDetails",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     additional_fare_details: Optional[AdditionalFareQualifierDetailsTypeI] = field(
         default=None,
         metadata=dict(
             name="additionalFareDetails",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     discount_details: List[DiscountPenaltyInformationType] = field(
@@ -3636,6 +3917,7 @@ class FareQualifierDetailsType:
         metadata=dict(
             name="discountDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9
         )
@@ -3653,7 +3935,8 @@ class FlightCharacteristicsType:
         default=None,
         metadata=dict(
             name="onTimePerformance",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     in_flight_srv: List[str] = field(
@@ -3661,6 +3944,7 @@ class FlightCharacteristicsType:
         metadata=dict(
             name="inFlightSrv",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=99,
             min_length=1.0,
@@ -3681,6 +3965,7 @@ class FlightProductInformationType:
         metadata=dict(
             name="cabinProduct",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=6
         )
@@ -3689,7 +3974,8 @@ class FlightProductInformationType:
         default=None,
         metadata=dict(
             name="contextDetails",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -3709,6 +3995,7 @@ class FlightProductInformationType141442S:
         metadata=dict(
             name="cabinProduct",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=26
         )
@@ -3717,7 +4004,8 @@ class FlightProductInformationType141442S:
         default=None,
         metadata=dict(
             name="contextDetails",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -3736,14 +4024,16 @@ class FlightProductInformationType161491S:
         default=None,
         metadata=dict(
             name="cabinProduct",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     fare_product_detail: Optional[FareProductDetailsType] = field(
         default=None,
         metadata=dict(
             name="fareProductDetail",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -3765,14 +4055,16 @@ class FlightProductInformationType176659S:
         default=None,
         metadata=dict(
             name="cabinProduct",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     fare_product_detail: Optional[FareProductDetailsType248552C] = field(
         default=None,
         metadata=dict(
             name="fareProductDetail",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     corporate_id: List[str] = field(
@@ -3780,6 +4072,7 @@ class FlightProductInformationType176659S:
         metadata=dict(
             name="corporateId",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=2,
             min_length=1.0,
@@ -3791,6 +4084,7 @@ class FlightProductInformationType176659S:
         metadata=dict(
             name="breakPoint",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=1.0
         )
@@ -3799,7 +4093,8 @@ class FlightProductInformationType176659S:
         default=None,
         metadata=dict(
             name="contextDetails",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -3817,6 +4112,7 @@ class FlightServicesType:
         metadata=dict(
             name="serviceType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=3.0
@@ -3827,6 +4123,7 @@ class FlightServicesType:
         metadata=dict(
             name="cabinInfo",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=99
         )
@@ -3836,6 +4133,7 @@ class FlightServicesType:
         metadata=dict(
             name="classInfo",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=99
         )
@@ -3853,6 +4151,7 @@ class FrequentTravellerIdentificationCodeType:
         metadata=dict(
             name="frequentTravellerDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=99
         )
@@ -3873,6 +4172,7 @@ class HeaderInformationTypeI:
         metadata=dict(
             name="status",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=2,
             min_length=1.0,
@@ -3883,7 +4183,8 @@ class HeaderInformationTypeI:
         default=None,
         metadata=dict(
             name="dateTimePeriodDetails",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     reference_number: Optional[str] = field(
@@ -3891,6 +4192,7 @@ class HeaderInformationTypeI:
         metadata=dict(
             name="referenceNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -3900,6 +4202,7 @@ class HeaderInformationTypeI:
         metadata=dict(
             name="productIdentification",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=2,
             min_length=1.0,
@@ -3919,7 +4222,8 @@ class InteractiveFreeTextType:
         default=None,
         metadata=dict(
             name="freeTextQualification",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     free_text: Optional[str] = field(
@@ -3927,6 +4231,7 @@ class InteractiveFreeTextType:
         metadata=dict(
             name="freeText",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=50.0
         )
@@ -3947,7 +4252,8 @@ class InteractiveFreeTextType78534S:
         default=None,
         metadata=dict(
             name="freeTextQualification",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     description: List[str] = field(
@@ -3955,6 +4261,7 @@ class InteractiveFreeTextType78534S:
         metadata=dict(
             name="description",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9,
             min_length=1.0,
@@ -3977,7 +4284,8 @@ class InteractiveFreeTextType78544S:
         default=None,
         metadata=dict(
             name="freeTextQualification",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     description: List[str] = field(
@@ -3985,6 +4293,7 @@ class InteractiveFreeTextType78544S:
         metadata=dict(
             name="description",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9,
             min_length=1.0,
@@ -4007,7 +4316,8 @@ class InteractiveFreeTextType78559S:
         default=None,
         metadata=dict(
             name="freeTextQualification",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     description: List[str] = field(
@@ -4015,6 +4325,7 @@ class InteractiveFreeTextType78559S:
         metadata=dict(
             name="description",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9,
             min_length=1.0,
@@ -4034,6 +4345,7 @@ class ItemNumberType:
         metadata=dict(
             name="itemNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True
         )
     )
@@ -4054,7 +4366,8 @@ class ItemNumberType161497S:
         default=None,
         metadata=dict(
             name="itemNumberId",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     code_share_details: List[CompanyRoleIdentificationType120771C] = field(
@@ -4062,6 +4375,7 @@ class ItemNumberType161497S:
         metadata=dict(
             name="codeShareDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=6
         )
@@ -4070,7 +4384,8 @@ class ItemNumberType161497S:
         default=None,
         metadata=dict(
             name="priceTicketing",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -4089,6 +4404,7 @@ class ItemNumberType166130S:
         metadata=dict(
             name="itemNumberDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=99
         )
@@ -4109,6 +4425,7 @@ class ItemNumberType176648S:
         metadata=dict(
             name="itemNumberDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=99
         )
@@ -4129,6 +4446,7 @@ class ItemNumberType80866S:
         metadata=dict(
             name="itemNumberDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True
         )
     )
@@ -4151,6 +4469,7 @@ class MiniRulesType78547S:
         metadata=dict(
             name="restrictionType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=6.0
         )
@@ -4160,6 +4479,7 @@ class MiniRulesType78547S:
         metadata=dict(
             name="category",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=0.0,
             max_length=3.0
@@ -4169,7 +4489,8 @@ class MiniRulesType78547S:
         default=None,
         metadata=dict(
             name="indicator",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     mini_rules: List[MiniRulesDetailsType] = field(
@@ -4177,6 +4498,7 @@ class MiniRulesType78547S:
         metadata=dict(
             name="miniRules",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=5
         )
@@ -4194,6 +4516,7 @@ class MonetaryInformationType:
         metadata=dict(
             name="monetaryDetail",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=20
         )
@@ -4211,6 +4534,7 @@ class MonetaryInformationTypeI:
         metadata=dict(
             name="monetaryDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=99
         )
@@ -4232,6 +4556,7 @@ class MonetaryInformationType174241S:
         metadata=dict(
             name="monetaryDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True
         )
     )
@@ -4240,6 +4565,7 @@ class MonetaryInformationType174241S:
         metadata=dict(
             name="otherMonetaryDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=19
         )
@@ -4260,6 +4586,7 @@ class MonetaryInformationType185955S:
         metadata=dict(
             name="monetaryDetail",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=2
         )
@@ -4280,6 +4607,7 @@ class MonetaryInformationType193024S:
         metadata=dict(
             name="monetaryDetail",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=30
         )
@@ -4298,6 +4626,7 @@ class OriginAndDestinationRequestType:
         metadata=dict(
             name="segRef",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             pattern=r"-?[0-9]{1,2}"
         )
@@ -4307,6 +4636,7 @@ class OriginAndDestinationRequestType:
         metadata=dict(
             name="locationForcing",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=2
         )
@@ -4332,6 +4662,7 @@ class PricingTicketingSubsequentType193023S:
         metadata=dict(
             name="paxFareNum",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
             min_length=1.0,
             max_length=3.0
@@ -4342,6 +4673,7 @@ class PricingTicketingSubsequentType193023S:
         metadata=dict(
             name="totalFareAmount",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True
         )
     )
@@ -4349,7 +4681,8 @@ class PricingTicketingSubsequentType193023S:
         default=None,
         metadata=dict(
             name="totalTaxAmount",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     code_share_details: List[CompanyRoleIdentificationType120771C] = field(
@@ -4357,6 +4690,7 @@ class PricingTicketingSubsequentType193023S:
         metadata=dict(
             name="codeShareDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=6
         )
@@ -4366,6 +4700,7 @@ class PricingTicketingSubsequentType193023S:
         metadata=dict(
             name="monetaryDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=20
         )
@@ -4374,7 +4709,8 @@ class PricingTicketingSubsequentType193023S:
         default=None,
         metadata=dict(
             name="pricingTicketing",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -4391,6 +4727,7 @@ class ProductInformationType:
         metadata=dict(
             name="productDetailsQualifier",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -4400,6 +4737,7 @@ class ProductInformationType:
         metadata=dict(
             name="bookingClassDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=26
         )
@@ -4419,6 +4757,7 @@ class ProposedSegmentType:
         metadata=dict(
             name="flightProposal",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=9
         )
@@ -4428,6 +4767,7 @@ class ProposedSegmentType:
         metadata=dict(
             name="flightCharacteristic",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
             max_length=3.0
         )
@@ -4437,6 +4777,7 @@ class ProposedSegmentType:
         metadata=dict(
             name="majCabin",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=1.0
         )
@@ -4455,6 +4796,7 @@ class ReferenceInfoType:
         metadata=dict(
             name="referencingDetail",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=200
         )
@@ -4463,7 +4805,8 @@ class ReferenceInfoType:
         default=None,
         metadata=dict(
             name="Dummy.NET",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -4483,6 +4826,7 @@ class ReferenceInfoType133176S:
         metadata=dict(
             name="referencingDetail",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=99
         )
@@ -4503,6 +4847,7 @@ class ReferenceInfoType134839S:
         metadata=dict(
             name="referencingDetail",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=99
         )
@@ -4523,6 +4868,7 @@ class ReferenceInfoType134840S:
         metadata=dict(
             name="referencingDetail",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=200
         )
@@ -4543,6 +4889,7 @@ class ReferenceInfoType165972S:
         metadata=dict(
             name="referenceDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=20
         )
@@ -4564,6 +4911,7 @@ class ReferenceInfoType176658S:
         metadata=dict(
             name="referencingDetail",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=6
         )
@@ -4581,6 +4929,7 @@ class SegmentRepetitionControlTypeI:
         metadata=dict(
             name="segmentControlDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9
         )
@@ -4598,6 +4947,7 @@ class SelectionDetailsType:
         metadata=dict(
             name="carrierFeeDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True
         )
     )
@@ -4613,7 +4963,8 @@ class SequenceDetailsTypeU:
         default=None,
         metadata=dict(
             name="sequenceDetails",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -4631,6 +4982,7 @@ class SpecialRequirementsDetailsType:
         metadata=dict(
             name="serviceRequirementsInfo",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True
         )
     )
@@ -4639,6 +4991,7 @@ class SpecialRequirementsDetailsType:
         metadata=dict(
             name="seatDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=999
         )
@@ -4658,6 +5011,7 @@ class SpecificDataInformationType:
         metadata=dict(
             name="dataTypeInformation",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True
         )
     )
@@ -4666,6 +5020,7 @@ class SpecificDataInformationType:
         metadata=dict(
             name="dataInformation",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=99
         )
@@ -4683,6 +5038,7 @@ class SpecificTravellerType:
         metadata=dict(
             name="travellerDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=99
         )
@@ -4700,6 +5056,7 @@ class StatusType:
         metadata=dict(
             name="status",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=10
         )
@@ -4720,6 +5077,7 @@ class StatusType182386S:
         metadata=dict(
             name="statusInformation",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=99
         )
@@ -4738,6 +5096,7 @@ class TaxType:
         metadata=dict(
             name="taxCategory",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=3.0
         )
@@ -4747,6 +5106,7 @@ class TaxType:
         metadata=dict(
             name="taxDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=99
         )
@@ -4764,7 +5124,8 @@ class TransportIdentifierType:
         default=None,
         metadata=dict(
             name="companyIdentification",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
 
@@ -4787,6 +5148,7 @@ class TravelProductType:
         metadata=dict(
             name="productDateTime",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True
         )
     )
@@ -4795,6 +5157,7 @@ class TravelProductType:
         metadata=dict(
             name="location",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=2
         )
@@ -4803,7 +5166,8 @@ class TravelProductType:
         default=None,
         metadata=dict(
             name="companyId",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     flight_ortrain_number: Optional[str] = field(
@@ -4811,6 +5175,7 @@ class TravelProductType:
         metadata=dict(
             name="flightOrtrainNumber",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=8.0
         )
@@ -4819,14 +5184,16 @@ class TravelProductType:
         default=None,
         metadata=dict(
             name="productDetail",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     add_product_detail: Optional[ProductFacilitiesType] = field(
         default=None,
         metadata=dict(
             name="addProductDetail",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     attribute_details: List[CodedAttributeInformationType270108C] = field(
@@ -4834,6 +5201,7 @@ class TravelProductType:
         metadata=dict(
             name="attributeDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=20
         )
@@ -4852,6 +5220,7 @@ class TravellerReferenceInformationType:
         metadata=dict(
             name="ptc",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=3,
             min_length=1.0,
@@ -4863,6 +5232,7 @@ class TravellerReferenceInformationType:
         metadata=dict(
             name="traveller",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9
         )
@@ -4881,7 +5251,8 @@ class UserIdentificationType:
         default=None,
         metadata=dict(
             name="officeIdentification",
-            type="Element"
+            type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
     office_type: Optional[str] = field(
@@ -4889,6 +5260,7 @@ class UserIdentificationType:
         metadata=dict(
             name="officeType",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=1.0
         )
@@ -4898,6 +5270,7 @@ class UserIdentificationType:
         metadata=dict(
             name="officeCode",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=30.0
         )
@@ -4917,6 +5290,7 @@ class ValueSearchCriteriaType:
         metadata=dict(
             name="ref",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=35.0
         )
@@ -4926,6 +5300,7 @@ class ValueSearchCriteriaType:
         metadata=dict(
             name="value",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
             max_length=18.0
         )
@@ -4935,6 +5310,7 @@ class ValueSearchCriteriaType:
         metadata=dict(
             name="criteriaDetails",
             type="Element",
+            namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=10
         )

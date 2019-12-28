@@ -5687,6 +5687,7 @@ class TypeOtasubKey:
         metadata=dict(
             name="Text",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -5747,6 +5748,7 @@ class TypePolicyCodesList:
         metadata=dict(
             name="PolicyCode",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=10
         )
@@ -5756,6 +5758,7 @@ class TypePolicyCodesList:
         metadata=dict(
             name="MinPolicyCode",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=10
         )
@@ -5765,6 +5768,7 @@ class TypePolicyCodesList:
         metadata=dict(
             name="MaxPolicyCode",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=10
         )
@@ -6069,6 +6073,7 @@ class TypeRateDescription:
         metadata=dict(
             name="Text",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=1,
             max_occurs=999
         )
@@ -6186,6 +6191,7 @@ class TypeRemarkWithTravelerRef:
         metadata=dict(
             name="RemarkData",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             required=True
         )
     )
@@ -6194,6 +6200,7 @@ class TypeRemarkWithTravelerRef:
         metadata=dict(
             name="BookingTravelerRef",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -6393,6 +6400,7 @@ class TypeSubKey:
         metadata=dict(
             name="Text",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -8205,6 +8213,7 @@ class Segment:
         metadata=dict(
             name="SegmentRemark",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -8540,6 +8549,7 @@ class TypeErrorInfo:
         metadata=dict(
             name="Code",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             required=True
         )
     )
@@ -8548,6 +8558,7 @@ class TypeErrorInfo:
         metadata=dict(
             name="Service",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             required=True
         )
     )
@@ -8556,6 +8567,7 @@ class TypeErrorInfo:
         metadata=dict(
             name="Type",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             required=True
         )
     )
@@ -8564,6 +8576,7 @@ class TypeErrorInfo:
         metadata=dict(
             name="Description",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             required=True
         )
     )
@@ -8572,6 +8585,7 @@ class TypeErrorInfo:
         metadata=dict(
             name="TransactionId",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             required=True
         )
     )
@@ -8579,28 +8593,32 @@ class TypeErrorInfo:
         default=None,
         metadata=dict(
             name="TraceId",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     command_history: Optional[str] = field(
         default=None,
         metadata=dict(
             name="CommandHistory",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     auxdata: Optional[Auxdata] = field(
         default=None,
         metadata=dict(
             name="Auxdata",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     stack_trace: Optional[str] = field(
         default=None,
         metadata=dict(
             name="StackTrace",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
 
@@ -8668,6 +8686,7 @@ class TypeFeeInfo:
         metadata=dict(
             name="TaxInfoRef",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -8676,7 +8695,8 @@ class TypeFeeInfo:
         default=None,
         metadata=dict(
             name="IncludedInBase",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     base_amount: Optional[str] = field(
@@ -8798,6 +8818,7 @@ class TypeKeyword:
         metadata=dict(
             name="SubKey",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=99
         )
@@ -8807,6 +8828,7 @@ class TypeKeyword:
         metadata=dict(
             name="Text",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -8861,6 +8883,7 @@ class TypeOtakeyword:
         metadata=dict(
             name="SubKey",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=99
         )
@@ -8870,6 +8893,7 @@ class TypeOtakeyword:
         metadata=dict(
             name="Text",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -8915,6 +8939,7 @@ class TypeProviderReservationSpecificInfo:
         metadata=dict(
             name="OperatedBy",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -8923,7 +8948,8 @@ class TypeProviderReservationSpecificInfo:
         default=None,
         metadata=dict(
             name="ProviderReservationInfoRef",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     provider_reservation_level: Optional[bool] = field(
@@ -8979,6 +9005,7 @@ class TypeStructuredAddress:
         metadata=dict(
             name="AddressName",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             max_length=128.0
         )
     )
@@ -8987,6 +9014,7 @@ class TypeStructuredAddress:
         metadata=dict(
             name="Street",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=5,
             min_length=1.0,
@@ -8998,6 +9026,7 @@ class TypeStructuredAddress:
         metadata=dict(
             name="City",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_length=2.0,
             max_length=50.0
         )
@@ -9006,7 +9035,8 @@ class TypeStructuredAddress:
         default=None,
         metadata=dict(
             name="State",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     postal_code: Optional[str] = field(
@@ -9014,6 +9044,7 @@ class TypeStructuredAddress:
         metadata=dict(
             name="PostalCode",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_length=1.0,
             max_length=15.0
         )
@@ -9023,6 +9054,7 @@ class TypeStructuredAddress:
         metadata=dict(
             name="Country",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             length=2
         )
     )
@@ -9031,6 +9063,7 @@ class TypeStructuredAddress:
         metadata=dict(
             name="ProviderReservationInfoRef",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=99
         )
@@ -9073,6 +9106,7 @@ class TypeTaxInfo:
         metadata=dict(
             name="TaxDetail",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -9081,7 +9115,8 @@ class TypeTaxInfo:
         default=None,
         metadata=dict(
             name="IncludedInBase",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     key: Optional[str] = field(
@@ -9216,14 +9251,16 @@ class TypeTimeSpec:
         default=None,
         metadata=dict(
             name="TimeRange",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     specific_time: Optional[TypeSpecificTime] = field(
         default=None,
         metadata=dict(
             name="SpecificTime",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     preferred_time: Optional[str] = field(
@@ -9695,6 +9732,7 @@ class BaseReservation:
         metadata=dict(
             name="AccountingRemark",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -9704,6 +9742,7 @@ class BaseReservation:
         metadata=dict(
             name="GeneralRemark",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -9713,6 +9752,7 @@ class BaseReservation:
         metadata=dict(
             name="Restriction",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -9721,7 +9761,8 @@ class BaseReservation:
         default=None,
         metadata=dict(
             name="PassiveInfo",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     locator_code: Optional[str] = field(
@@ -10109,6 +10150,7 @@ class Mcoinformation:
         metadata=dict(
             name="PassengerInfo",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -10646,7 +10688,8 @@ class TypeFlexibleTimeSpec(TypeTimeSpec):
         default=None,
         metadata=dict(
             name="SearchExtraDays",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
 
@@ -10686,21 +10729,24 @@ class TypeLocation:
         default=None,
         metadata=dict(
             name="Airport",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     city: Optional[City] = field(
         default=None,
         metadata=dict(
             name="City",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     city_or_airport: Optional[CityOrAirport] = field(
         default=None,
         metadata=dict(
             name="CityOrAirport",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
 
@@ -10725,14 +10771,16 @@ class TypePaymentCard:
         default=None,
         metadata=dict(
             name="PhoneNumber",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     billing_address: Optional[TypeStructuredAddress] = field(
         default=None,
         metadata=dict(
             name="BillingAddress",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     type: Optional[str] = field(
@@ -10804,42 +10852,48 @@ class TypeSearchLocation:
         default=None,
         metadata=dict(
             name="Airport",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     city: Optional[City] = field(
         default=None,
         metadata=dict(
             name="City",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     city_or_airport: Optional[CityOrAirport] = field(
         default=None,
         metadata=dict(
             name="CityOrAirport",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     coordinate_location: Optional[CoordinateLocation] = field(
         default=None,
         metadata=dict(
             name="CoordinateLocation",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     rail_location: Optional[RailLocation] = field(
         default=None,
         metadata=dict(
             name="RailLocation",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     distance: Optional[Distance] = field(
         default=None,
         metadata=dict(
             name="Distance",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
 
@@ -11585,28 +11639,32 @@ class ServiceRuleType:
         default=None,
         metadata=dict(
             name="ApplicationRules",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     application_level: Optional["ServiceRuleType.ApplicationLevel"] = field(
         default=None,
         metadata=dict(
             name="ApplicationLevel",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     modify_rules: Optional["ServiceRuleType.ModifyRules"] = field(
         default=None,
         metadata=dict(
             name="ModifyRules",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     secondary_type_rules: Optional["ServiceRuleType.SecondaryTypeRules"] = field(
         default=None,
         metadata=dict(
             name="SecondaryTypeRules",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     remarks: List[FormattedTextTextType] = field(
@@ -11614,6 +11672,7 @@ class ServiceRuleType:
         metadata=dict(
             name="Remarks",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=99
         )
@@ -11684,7 +11743,8 @@ class ServiceRuleType:
             default=None,
             metadata=dict(
                 name="ApplicationLimits",
-                type="Element"
+                type="Element",
+                namespace="http://www.travelport.com/schema/common_v48_0"
             )
         )
         service_data: List[ServiceData] = field(
@@ -11692,6 +11752,7 @@ class ServiceRuleType:
             metadata=dict(
                 name="ServiceData",
                 type="Element",
+                namespace="http://www.travelport.com/schema/common_v48_0",
                 min_occurs=0,
                 max_occurs=999
             )
@@ -11723,6 +11784,7 @@ class ServiceRuleType:
                 metadata=dict(
                     name="ApplicationLimit",
                     type="Element",
+                    namespace="http://www.travelport.com/schema/common_v48_0",
                     min_occurs=1,
                     max_occurs=10
                 )
@@ -11740,6 +11802,7 @@ class ServiceRuleType:
             metadata=dict(
                 name="ModifyRule",
                 type="Element",
+                namespace="http://www.travelport.com/schema/common_v48_0",
                 min_occurs=1,
                 max_occurs=999
             )
@@ -11825,6 +11888,7 @@ class ServiceRuleType:
             metadata=dict(
                 name="SecondaryTypeRule",
                 type="Element",
+                namespace="http://www.travelport.com/schema/common_v48_0",
                 min_occurs=1,
                 max_occurs=999
             )
@@ -11841,6 +11905,7 @@ class ServiceRuleType:
                 metadata=dict(
                     name="ApplicationLimit",
                     type="Element",
+                    namespace="http://www.travelport.com/schema/common_v48_0",
                     min_occurs=0,
                     max_occurs=10
                 )
@@ -11954,7 +12019,8 @@ class TypePassengerType:
         default=None,
         metadata=dict(
             name="Name",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     loyalty_card: List[LoyaltyCard] = field(
@@ -11962,6 +12028,7 @@ class TypePassengerType:
         metadata=dict(
             name="LoyaltyCard",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -11971,6 +12038,7 @@ class TypePassengerType:
         metadata=dict(
             name="DiscountCard",
             type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
             max_occurs=9
         )
@@ -11979,7 +12047,8 @@ class TypePassengerType:
         default=None,
         metadata=dict(
             name="PersonalGeography",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     code: Optional[str] = field(

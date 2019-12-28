@@ -4792,9 +4792,6 @@ samples.travelport.output.air_v48_0.air.RailCoachDetails()
     rail_coach_number: Optional[str] = [('default', None)]
     rail_seat_map_availability: Optional[bool] = [('default', None)]
 
-samples.travelport.output.air_v48_0.air.RefundAccessCode()
-    value: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0)]
-
 samples.travelport.output.air_v48_0.air.RefundFailureInfo()
     booking_traveler_ref: List[str] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 1)]
     code: Optional[int] = [('default', None), ('required', True)]
@@ -5075,7 +5072,7 @@ samples.travelport.output.air_v48_0.air.Tcr()
     payment: List[Payment] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
     provider_code: Optional[str] = [('default', None), ('max_length', 5.0), ('min_length', 2.0), ('required', True)]
     provider_locator_code: Optional[str] = [('default', None), ('max_length', 15.0), ('required', True)]
-    refund_access_code: Optional[RefundAccessCode] = [('default', None)]
+    refund_access_code: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0)]
     refund_amount: Optional[str] = [('default', None)]
     refund_fee: Optional[str] = [('default', None)]
     refund_remark: List[RefundRemark] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
@@ -5105,7 +5102,7 @@ samples.travelport.output.air_v48_0.air.TcrrefundBundle()
     air_segment: List[AirSegment] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
     fee_info: List[FeeInfo] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
     host_token: List[HostToken] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
-    refund_access_code: Optional[RefundAccessCode] = [('default', None)]
+    refund_access_code: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0)]
     refund_type: Optional[str] = [('default', None), ('required', True)]
     tax_info: List[TaxInfo] = [('default', 'list'), ('max_occurs', 999), ('min_occurs', 0)]
     tcrnumber: Optional[str] = [('default', None), ('required', True)]

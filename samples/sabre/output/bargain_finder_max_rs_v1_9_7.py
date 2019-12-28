@@ -256,6 +256,7 @@ class BaggageInformationType:
         metadata=dict(
             name="Segment",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=1,
             max_occurs=9223372036854775807
         )
@@ -265,6 +266,7 @@ class BaggageInformationType:
         metadata=dict(
             name="Allowance",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -396,6 +398,7 @@ class CurrencyConversionsType:
         metadata=dict(
             name="Conversion",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -520,6 +523,7 @@ class FareMessagesType:
         metadata=dict(
             name="Message",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -857,7 +861,8 @@ class ReissueInfoType:
         default=None,
         metadata=dict(
             name="ChangeFees",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     residual_idicator: Optional[str] = field(
@@ -927,6 +932,7 @@ class ReissueInfoType:
             metadata=dict(
                 name="ChangeFee",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 required=True
             )
         )
@@ -1135,7 +1141,8 @@ class ValidatingCarrierInfoType:
         default=None,
         metadata=dict(
             name="Default",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     alternate: List["ValidatingCarrierInfoType.Alternate"] = field(
@@ -1143,6 +1150,7 @@ class ValidatingCarrierInfoType:
         metadata=dict(
             name="Alternate",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=24
         )
@@ -1175,6 +1183,7 @@ class ValidatingCarrierInfoType:
             metadata=dict(
                 name="Country",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
                 max_occurs=9223372036854775807
             )
@@ -1214,6 +1223,7 @@ class ValidatingCarrierInfoType:
             metadata=dict(
                 name="Country",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
                 max_occurs=9223372036854775807
             )
@@ -1257,6 +1267,7 @@ class AirlineLowestFaresType:
         metadata=dict(
             name="Airline",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -1265,6 +1276,7 @@ class AirlineLowestFaresType:
         metadata=dict(
             name="NoStops",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -1273,6 +1285,7 @@ class AirlineLowestFaresType:
         metadata=dict(
             name="LowestFare",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -1281,6 +1294,7 @@ class AirlineLowestFaresType:
         metadata=dict(
             name="ItineraryCount",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -1315,6 +1329,7 @@ class AlternateDateLowestFaresType:
         metadata=dict(
             name="DepartureDateTime",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -1323,6 +1338,7 @@ class AlternateDateLowestFaresType:
         metadata=dict(
             name="ReturnlDateTime",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -1331,6 +1347,7 @@ class AlternateDateLowestFaresType:
         metadata=dict(
             name="LowestFare",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -1349,6 +1366,7 @@ class AlternateLocationLowestFaresType:
         metadata=dict(
             name="OriginLocation",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -1357,6 +1375,7 @@ class AlternateLocationLowestFaresType:
         metadata=dict(
             name="DestinationLocation",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -1365,6 +1384,7 @@ class AlternateLocationLowestFaresType:
         metadata=dict(
             name="LowestFare",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -1380,6 +1400,7 @@ class BaggageInformationListType:
         metadata=dict(
             name="BaggageInformation",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=1,
             max_occurs=9223372036854775807
         )
@@ -1396,6 +1417,7 @@ class ComplexProcessingMessageType(ProcessingMessageType):
         metadata=dict(
             name="Leg",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=10
         )
@@ -1512,6 +1534,7 @@ class FareComponentTaxesType:
         metadata=dict(
             name="FlightSegment",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=1,
             max_occurs=9223372036854775807
         )
@@ -1521,6 +1544,7 @@ class FareComponentTaxesType:
         metadata=dict(
             name="Tax",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=99
         )
@@ -1611,14 +1635,16 @@ class RuleInfoType:
         default=None,
         metadata=dict(
             name="ResTicketingRules",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     length_of_stay_rules: Optional[StayRestrictionsType] = field(
         default=None,
         metadata=dict(
             name="LengthOfStayRules",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
 
@@ -1631,7 +1657,8 @@ class RuleInfoType:
             default=None,
             metadata=dict(
                 name="AdvResTicketing",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
 
@@ -1647,6 +1674,7 @@ class SellingFareDataType:
         metadata=dict(
             name="HandlingMarkupSummary",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=9223372036854775807
         )
@@ -1680,6 +1708,7 @@ class TicketingInfoRsType:
         metadata=dict(
             name="TicketAdvisory",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=10
         )
@@ -1688,7 +1717,8 @@ class TicketingInfoRsType:
         default=None,
         metadata=dict(
             name="TPA_Extensions",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     e_ticket_number: Optional[str] = field(
@@ -1741,6 +1771,7 @@ class VccinformationType:
         metadata=dict(
             name="FareComponentBreakdown",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=24
         )
@@ -1890,6 +1921,7 @@ class BookFlightSegmentType:
         metadata=dict(
             name="DepartureAirport",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -1898,6 +1930,7 @@ class BookFlightSegmentType:
         metadata=dict(
             name="ArrivalAirport",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -1905,7 +1938,8 @@ class BookFlightSegmentType:
         default=None,
         metadata=dict(
             name="OperatingAirline",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     equipment: List[EquipmentType] = field(
@@ -1913,6 +1947,7 @@ class BookFlightSegmentType:
         metadata=dict(
             name="Equipment",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=2
         )
@@ -1921,14 +1956,16 @@ class BookFlightSegmentType:
         default=None,
         metadata=dict(
             name="MarketingAirline",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     disclosure_airline: Optional[CompanyNameType] = field(
         default=None,
         metadata=dict(
             name="DisclosureAirline",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     marriage_grp: Optional[str] = field(
@@ -1936,6 +1973,7 @@ class BookFlightSegmentType:
         metadata=dict(
             name="MarriageGrp",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_length=1.0,
             max_length=16.0
         )
@@ -1944,35 +1982,40 @@ class BookFlightSegmentType:
         default=None,
         metadata=dict(
             name="StopAirports",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     departure_time_zone: Optional["BookFlightSegmentType.DepartureTimeZone"] = field(
         default=None,
         metadata=dict(
             name="DepartureTimeZone",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     arrival_time_zone: Optional["BookFlightSegmentType.ArrivalTimeZone"] = field(
         default=None,
         metadata=dict(
             name="ArrivalTimeZone",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     on_time_performance: Optional["BookFlightSegmentType.OnTimePerformance"] = field(
         default=None,
         metadata=dict(
             name="OnTimePerformance",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     tpa_extensions: Optional["BookFlightSegmentType.TpaExtensions"] = field(
         default=None,
         metadata=dict(
             name="TPA_Extensions",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     departure_date_time: Optional[str] = field(
@@ -2071,6 +2114,7 @@ class BookFlightSegmentType:
             metadata=dict(
                 name="StopAirport",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=1,
                 max_occurs=9223372036854775807
             )
@@ -2187,21 +2231,24 @@ class BookFlightSegmentType:
             default=None,
             metadata=dict(
                 name="eTicket",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         data_element: Optional["BookFlightSegmentType.TpaExtensions.DataElement"] = field(
             default=None,
             metadata=dict(
                 name="DataElement",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         message: Optional["BookFlightSegmentType.TpaExtensions.Message"] = field(
             default=None,
             metadata=dict(
                 name="Message",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
 
@@ -2264,6 +2311,7 @@ class ErrorsType:
         metadata=dict(
             name="Error",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=1,
             max_occurs=9223372036854775807
         )
@@ -2301,7 +2349,8 @@ class FareInfoType:
         default=None,
         metadata=dict(
             name="DepartureDate",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     fare_reference: Optional[str] = field(
@@ -2309,6 +2358,7 @@ class FareInfoType:
         metadata=dict(
             name="FareReference",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True,
             min_length=1.0,
             max_length=8.0
@@ -2319,6 +2369,7 @@ class FareInfoType:
         metadata=dict(
             name="RuleInfo",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -2327,6 +2378,7 @@ class FareInfoType:
         metadata=dict(
             name="MarketingAirline",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=9223372036854775807
         )
@@ -2336,6 +2388,7 @@ class FareInfoType:
         metadata=dict(
             name="DepartureAirport",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -2344,6 +2397,7 @@ class FareInfoType:
         metadata=dict(
             name="ArrivalAirport",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -2388,6 +2442,7 @@ class FareType:
         metadata=dict(
             name="BaseFare",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -2395,56 +2450,64 @@ class FareType:
         default=None,
         metadata=dict(
             name="NonRefundableBaseFare",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     fare_construction: Optional[CurrencyAmountType] = field(
         default=None,
         metadata=dict(
             name="FareConstruction",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     equiv_fare: Optional["FareType.EquivFare"] = field(
         default=None,
         metadata=dict(
             name="EquivFare",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     taxes: Optional["FareType.Taxes"] = field(
         default=None,
         metadata=dict(
             name="Taxes",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     fees: Optional["FareType.Fees"] = field(
         default=None,
         metadata=dict(
             name="Fees",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     obfees: Optional["FareType.Obfees"] = field(
         default=None,
         metadata=dict(
             name="OBFees",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     rate_of_exchange: Optional[RateOfExchangeType] = field(
         default=None,
         metadata=dict(
             name="RateOfExchange",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     currency_conversions: Optional[CurrencyConversionsType] = field(
         default=None,
         metadata=dict(
             name="CurrencyConversions",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     total_fare: Optional[CurrencyAmountType] = field(
@@ -2452,6 +2515,7 @@ class FareType:
         metadata=dict(
             name="TotalFare",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -2459,21 +2523,24 @@ class FareType:
         default=None,
         metadata=dict(
             name="ReissueInfoList",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     penalties_info: Optional["FareType.PenaltiesInfo"] = field(
         default=None,
         metadata=dict(
             name="PenaltiesInfo",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     tpa_extensions: Optional["FareType.TpaExtensions"] = field(
         default=None,
         metadata=dict(
             name="TPA_Extensions",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
 
@@ -2503,14 +2570,16 @@ class FareType:
             default=None,
             metadata=dict(
                 name="FareComponentsTaxes",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         legs_taxes: Optional["FareType.Taxes.LegsTaxes"] = field(
             default=None,
             metadata=dict(
                 name="LegsTaxes",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         tax: List[AirTaxType] = field(
@@ -2518,6 +2587,7 @@ class FareType:
             metadata=dict(
                 name="Tax",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=1,
                 max_occurs=99
             )
@@ -2526,7 +2596,8 @@ class FareType:
             default=None,
             metadata=dict(
                 name="TotalTax",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
 
@@ -2540,6 +2611,7 @@ class FareType:
                 metadata=dict(
                     name="FareComponentTaxes",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=1,
                     max_occurs=99
                 )
@@ -2555,6 +2627,7 @@ class FareType:
                 metadata=dict(
                     name="LegTaxes",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=1,
                     max_occurs=99
                 )
@@ -2571,6 +2644,7 @@ class FareType:
                     metadata=dict(
                         name="Tax",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         min_occurs=1,
                         max_occurs=99
                     )
@@ -2593,6 +2667,7 @@ class FareType:
             metadata=dict(
                 name="Fee",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=1,
                 max_occurs=9
             )
@@ -2609,6 +2684,7 @@ class FareType:
             metadata=dict(
                 name="OBFee",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
                 max_occurs=9223372036854775807
             )
@@ -2632,6 +2708,7 @@ class FareType:
             metadata=dict(
                 name="ReissueInfo",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=1,
                 max_occurs=9223372036854775807
             )
@@ -2647,6 +2724,7 @@ class FareType:
             metadata=dict(
                 name="Penalty",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=1,
                 max_occurs=9223372036854775807
             )
@@ -2671,6 +2749,7 @@ class FareType:
                 metadata=dict(
                     name="Cat16TextOnly",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=0,
                     max_occurs=9223372036854775807
                 )
@@ -2783,6 +2862,7 @@ class FareType:
             metadata=dict(
                 name="Surcharges",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
                 max_occurs=9223372036854775807
             )
@@ -2791,42 +2871,48 @@ class FareType:
             default=None,
             metadata=dict(
                 name="Legs",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         fare_components: Optional["FareType.TpaExtensions.FareComponents"] = field(
             default=None,
             metadata=dict(
                 name="FareComponents",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         messages: Optional[FareMessagesType] = field(
             default=None,
             metadata=dict(
                 name="Messages",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         baggage_information_list: Optional[BaggageInformationListType] = field(
             default=None,
             metadata=dict(
                 name="BaggageInformationList",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         selling_fare_data_list: Optional["FareType.TpaExtensions.SellingFareDataList"] = field(
             default=None,
             metadata=dict(
                 name="SellingFareDataList",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         commission_data: Optional["FareType.TpaExtensions.CommissionData"] = field(
             default=None,
             metadata=dict(
                 name="CommissionData",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
 
@@ -2840,6 +2926,7 @@ class FareType:
                 metadata=dict(
                     name="Leg",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=1,
                     max_occurs=9223372036854775807
                 )
@@ -2861,6 +2948,7 @@ class FareType:
                     metadata=dict(
                         name="BaseFare",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         required=True
                     )
                 )
@@ -2868,14 +2956,16 @@ class FareType:
                     default=None,
                     metadata=dict(
                         name="EquivFare",
-                        type="Element"
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05"
                     )
                 )
                 taxes: Optional["FareType.TpaExtensions.Legs.Leg.Taxes"] = field(
                     default=None,
                     metadata=dict(
                         name="Taxes",
-                        type="Element"
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05"
                     )
                 )
                 total_fare: Optional[CurrencyAmountType] = field(
@@ -2883,6 +2973,7 @@ class FareType:
                     metadata=dict(
                         name="TotalFare",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         required=True
                     )
                 )
@@ -2890,7 +2981,8 @@ class FareType:
                     default=None,
                     metadata=dict(
                         name="TotalMileage",
-                        type="Element"
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05"
                     )
                 )
                 number: Optional[int] = field(
@@ -2932,6 +3024,7 @@ class FareType:
                         metadata=dict(
                             name="Tax",
                             type="Element",
+                            namespace="http://www.opentravel.org/OTA/2003/05",
                             required=True
                         )
                     )
@@ -2960,6 +3053,7 @@ class FareType:
                 metadata=dict(
                     name="FareComponent",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=1,
                     max_occurs=9223372036854775807
                 )
@@ -2985,28 +3079,32 @@ class FareType:
                     default=None,
                     metadata=dict(
                         name="BaseFare",
-                        type="Element"
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05"
                     )
                 )
                 equiv_fare: Optional["FareType.TpaExtensions.FareComponents.FareComponent.EquivFare"] = field(
                     default=None,
                     metadata=dict(
                         name="EquivFare",
-                        type="Element"
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05"
                     )
                 )
                 taxes: Optional["FareType.TpaExtensions.FareComponents.FareComponent.Taxes"] = field(
                     default=None,
                     metadata=dict(
                         name="Taxes",
-                        type="Element"
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05"
                     )
                 )
                 total_fare: Optional[CurrencyAmountType] = field(
                     default=None,
                     metadata=dict(
                         name="TotalFare",
-                        type="Element"
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05"
                     )
                 )
                 segment: List["FareType.TpaExtensions.FareComponents.FareComponent.Segment"] = field(
@@ -3014,6 +3112,7 @@ class FareType:
                     metadata=dict(
                         name="Segment",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         min_occurs=0,
                         max_occurs=9223372036854775807
                     )
@@ -3023,6 +3122,7 @@ class FareType:
                     metadata=dict(
                         name="HandlingMarkupDetail",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         min_occurs=0,
                         max_occurs=9223372036854775807
                     )
@@ -3032,6 +3132,7 @@ class FareType:
                     metadata=dict(
                         name="FareRetailerRule",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         min_occurs=0,
                         max_occurs=9223372036854775807
                     )
@@ -3096,6 +3197,7 @@ class FareType:
                         metadata=dict(
                             name="Tax",
                             type="Element",
+                            namespace="http://www.opentravel.org/OTA/2003/05",
                             required=True
                         )
                     )
@@ -3223,6 +3325,7 @@ class FareType:
                 metadata=dict(
                     name="SellingFareData",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=1,
                     max_occurs=9223372036854775807
                 )
@@ -3243,6 +3346,7 @@ class FareType:
                 metadata=dict(
                     name="VCCInformation",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=0,
                     max_occurs=23
                 )
@@ -3295,6 +3399,7 @@ class WarningsType:
         metadata=dict(
             name="Warning",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=1,
             max_occurs=9223372036854775807
         )
@@ -3313,28 +3418,32 @@ class ItinTotalFareType(FareType):
         default=None,
         metadata=dict(
             name="Extras",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     total_with_extras: Optional["ItinTotalFareType.TotalWithExtras"] = field(
         default=None,
         metadata=dict(
             name="TotalWithExtras",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     total_mileage: Optional["ItinTotalFareType.TotalMileage"] = field(
         default=None,
         metadata=dict(
             name="TotalMileage",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     service_fee: Optional["ItinTotalFareType.ServiceFee"] = field(
         default=None,
         metadata=dict(
             name="ServiceFee",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
 
@@ -3418,6 +3527,7 @@ class OriginDestinationOptionType:
         metadata=dict(
             name="FlightSegment",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=1,
             max_occurs=4
         )
@@ -3456,6 +3566,7 @@ class PtcfareBreakdownType:
         metadata=dict(
             name="PassengerTypeQuantity",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -3464,6 +3575,7 @@ class PtcfareBreakdownType:
         metadata=dict(
             name="FareBasisCodes",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -3472,6 +3584,7 @@ class PtcfareBreakdownType:
         metadata=dict(
             name="PassengerFare",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -3479,21 +3592,24 @@ class PtcfareBreakdownType:
         default=None,
         metadata=dict(
             name="Endorsements",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     tpa_extensions: Optional["PtcfareBreakdownType.TpaExtensions"] = field(
         default=None,
         metadata=dict(
             name="TPA_Extensions",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     fare_infos: Optional["PtcfareBreakdownType.FareInfos"] = field(
         default=None,
         metadata=dict(
             name="FareInfos",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     pricing_source: Optional[str] = field(
@@ -3544,6 +3660,7 @@ class PtcfareBreakdownType:
             metadata=dict(
                 name="FareBasisCode",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=1,
                 max_occurs=400
             )
@@ -3680,6 +3797,7 @@ class PtcfareBreakdownType:
             metadata=dict(
                 name="Endorsement",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
                 max_occurs=9
             )
@@ -3688,7 +3806,8 @@ class PtcfareBreakdownType:
             default=None,
             metadata=dict(
                 name="TPA_Extensions",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         non_refundable_indicator: Optional[bool] = field(
@@ -3720,14 +3839,16 @@ class PtcfareBreakdownType:
             default=None,
             metadata=dict(
                 name="FareCalcLine",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         fare_type: Optional["PtcfareBreakdownType.TpaExtensions.FareType"] = field(
             default=None,
             metadata=dict(
                 name="FareType",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
 
@@ -3762,6 +3883,7 @@ class PtcfareBreakdownType:
             metadata=dict(
                 name="FareInfo",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=1,
                 max_occurs=10
             )
@@ -3798,7 +3920,8 @@ class PtcfareBreakdownType:
                 default=None,
                 metadata=dict(
                     name="DepartureDate",
-                    type="Element"
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05"
                 )
             )
             fare_reference: Optional[str] = field(
@@ -3806,6 +3929,7 @@ class PtcfareBreakdownType:
                 metadata=dict(
                     name="FareReference",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     required=True,
                     min_length=1.0,
                     max_length=8.0
@@ -3815,7 +3939,8 @@ class PtcfareBreakdownType:
                 default=None,
                 metadata=dict(
                     name="RuleInfo",
-                    type="Element"
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05"
                 )
             )
             marketing_airline: List[CompanyNameType] = field(
@@ -3823,6 +3948,7 @@ class PtcfareBreakdownType:
                 metadata=dict(
                     name="MarketingAirline",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=0,
                     max_occurs=9223372036854775807
                 )
@@ -3831,21 +3957,24 @@ class PtcfareBreakdownType:
                 default=None,
                 metadata=dict(
                     name="DepartureAirport",
-                    type="Element"
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05"
                 )
             )
             arrival_airport: Optional[ResponseLocationType] = field(
                 default=None,
                 metadata=dict(
                     name="ArrivalAirport",
-                    type="Element"
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05"
                 )
             )
             tpa_extensions: Optional["PtcfareBreakdownType.FareInfos.FareInfo.TpaExtensions"] = field(
                 default=None,
                 metadata=dict(
                     name="TPA_Extensions",
-                    type="Element"
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05"
                 )
             )
 
@@ -3862,14 +3991,16 @@ class PtcfareBreakdownType:
                     default=None,
                     metadata=dict(
                         name="SeatsRemaining",
-                        type="Element"
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05"
                     )
                 )
                 cabin: Optional["PtcfareBreakdownType.FareInfos.FareInfo.TpaExtensions.Cabin"] = field(
                     default=None,
                     metadata=dict(
                         name="Cabin",
-                        type="Element"
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05"
                     )
                 )
                 fare_note: List["PtcfareBreakdownType.FareInfos.FareInfo.TpaExtensions.FareNote"] = field(
@@ -3877,6 +4008,7 @@ class PtcfareBreakdownType:
                     metadata=dict(
                         name="FareNote",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         min_occurs=0,
                         max_occurs=9223372036854775807
                     )
@@ -3885,7 +4017,8 @@ class PtcfareBreakdownType:
                     default=None,
                     metadata=dict(
                         name="Meal",
-                        type="Element"
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05"
                     )
                 )
                 rule: List["PtcfareBreakdownType.FareInfos.FareInfo.TpaExtensions.Rule"] = field(
@@ -3893,6 +4026,7 @@ class PtcfareBreakdownType:
                     metadata=dict(
                         name="Rule",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         min_occurs=0,
                         max_occurs=9223372036854775807
                     )
@@ -4144,28 +4278,32 @@ class AirItineraryPricingInfoType:
         default=None,
         metadata=dict(
             name="ItinTotalFare",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     ptc_fare_breakdowns: Optional["AirItineraryPricingInfoType.PtcFareBreakdowns"] = field(
         default=None,
         metadata=dict(
             name="PTC_FareBreakdowns",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     fare_infos: Optional["AirItineraryPricingInfoType.FareInfos"] = field(
         default=None,
         metadata=dict(
             name="FareInfos",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     tpa_extensions: Optional["AirItineraryPricingInfoType.TpaExtensions"] = field(
         default=None,
         metadata=dict(
             name="TPA_Extensions",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     last_ticket_date: Optional[str] = field(
@@ -4208,6 +4346,7 @@ class AirItineraryPricingInfoType:
             metadata=dict(
                 name="PTC_FareBreakdown",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=1,
                 max_occurs=20
             )
@@ -4223,6 +4362,7 @@ class AirItineraryPricingInfoType:
             metadata=dict(
                 name="FareInfo",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=1,
                 max_occurs=10
             )
@@ -4259,7 +4399,8 @@ class AirItineraryPricingInfoType:
                 default=None,
                 metadata=dict(
                     name="DepartureDate",
-                    type="Element"
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05"
                 )
             )
             fare_reference: Optional[str] = field(
@@ -4267,6 +4408,7 @@ class AirItineraryPricingInfoType:
                 metadata=dict(
                     name="FareReference",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     required=True,
                     min_length=1.0,
                     max_length=8.0
@@ -4276,7 +4418,8 @@ class AirItineraryPricingInfoType:
                 default=None,
                 metadata=dict(
                     name="RuleInfo",
-                    type="Element"
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05"
                 )
             )
             marketing_airline: List[CompanyNameType] = field(
@@ -4284,6 +4427,7 @@ class AirItineraryPricingInfoType:
                 metadata=dict(
                     name="MarketingAirline",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=0,
                     max_occurs=9223372036854775807
                 )
@@ -4292,21 +4436,24 @@ class AirItineraryPricingInfoType:
                 default=None,
                 metadata=dict(
                     name="DepartureAirport",
-                    type="Element"
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05"
                 )
             )
             arrival_airport: Optional[ResponseLocationType] = field(
                 default=None,
                 metadata=dict(
                     name="ArrivalAirport",
-                    type="Element"
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05"
                 )
             )
             tpa_extensions: Optional["AirItineraryPricingInfoType.FareInfos.FareInfo.TpaExtensions"] = field(
                 default=None,
                 metadata=dict(
                     name="TPA_Extensions",
-                    type="Element"
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05"
                 )
             )
 
@@ -4323,14 +4470,16 @@ class AirItineraryPricingInfoType:
                     default=None,
                     metadata=dict(
                         name="SeatsRemaining",
-                        type="Element"
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05"
                     )
                 )
                 cabin: Optional["AirItineraryPricingInfoType.FareInfos.FareInfo.TpaExtensions.Cabin"] = field(
                     default=None,
                     metadata=dict(
                         name="Cabin",
-                        type="Element"
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05"
                     )
                 )
                 fare_note: List["AirItineraryPricingInfoType.FareInfos.FareInfo.TpaExtensions.FareNote"] = field(
@@ -4338,6 +4487,7 @@ class AirItineraryPricingInfoType:
                     metadata=dict(
                         name="FareNote",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         min_occurs=0,
                         max_occurs=9223372036854775807
                     )
@@ -4346,7 +4496,8 @@ class AirItineraryPricingInfoType:
                     default=None,
                     metadata=dict(
                         name="Meal",
-                        type="Element"
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05"
                     )
                 )
                 rule: List["AirItineraryPricingInfoType.FareInfos.FareInfo.TpaExtensions.Rule"] = field(
@@ -4354,6 +4505,7 @@ class AirItineraryPricingInfoType:
                     metadata=dict(
                         name="Rule",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         min_occurs=0,
                         max_occurs=9223372036854775807
                     )
@@ -4474,14 +4626,16 @@ class AirItineraryPricingInfoType:
             default=None,
             metadata=dict(
                 name="DivideInParty",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         promo_offer: Optional["AirItineraryPricingInfoType.TpaExtensions.PromoOffer"] = field(
             default=None,
             metadata=dict(
                 name="PromoOffer",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         fare_note: List["AirItineraryPricingInfoType.TpaExtensions.FareNote"] = field(
@@ -4489,6 +4643,7 @@ class AirItineraryPricingInfoType:
             metadata=dict(
                 name="FareNote",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
                 max_occurs=9223372036854775807
             )
@@ -4497,7 +4652,8 @@ class AirItineraryPricingInfoType:
             default=None,
             metadata=dict(
                 name="PromoRedemption",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         rule: List["AirItineraryPricingInfoType.TpaExtensions.Rule"] = field(
@@ -4505,6 +4661,7 @@ class AirItineraryPricingInfoType:
             metadata=dict(
                 name="Rule",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
                 max_occurs=9223372036854775807
             )
@@ -4513,28 +4670,32 @@ class AirItineraryPricingInfoType:
             default=None,
             metadata=dict(
                 name="MultipleTravelerGroups",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         ancillary_fee_groups: Optional["AirItineraryPricingInfoType.TpaExtensions.AncillaryFeeGroups"] = field(
             default=None,
             metadata=dict(
                 name="AncillaryFeeGroups",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         legs: Optional["AirItineraryPricingInfoType.TpaExtensions.Legs"] = field(
             default=None,
             metadata=dict(
                 name="Legs",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         unflown_price: Optional[UnflownPriceType] = field(
             default=None,
             metadata=dict(
                 name="UnflownPrice",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         validating_carrier: List[ValidatingCarrierInfoType] = field(
@@ -4542,6 +4703,7 @@ class AirItineraryPricingInfoType:
             metadata=dict(
                 name="ValidatingCarrier",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
                 max_occurs=9223372036854775807
             )
@@ -4700,6 +4862,7 @@ class AirItineraryPricingInfoType:
                 metadata=dict(
                     name="AncillaryFeeGroup",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=0,
                     max_occurs=9223372036854775807
                 )
@@ -4725,6 +4888,7 @@ class AirItineraryPricingInfoType:
                     metadata=dict(
                         name="AncillaryFeeItem",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         min_occurs=0,
                         max_occurs=9223372036854775807
                     )
@@ -4767,6 +4931,7 @@ class AirItineraryPricingInfoType:
                 metadata=dict(
                     name="Leg",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=1,
                     max_occurs=9223372036854775807
                 )
@@ -4790,6 +4955,7 @@ class AirItineraryPricingInfoType:
                     metadata=dict(
                         name="Segment",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         min_occurs=0,
                         max_occurs=9223372036854775807
                     )
@@ -4925,7 +5091,8 @@ class AirItineraryType:
         default=None,
         metadata=dict(
             name="OriginDestinationOptions",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     direction_ind: Optional[str] = field(
@@ -4953,6 +5120,7 @@ class AirItineraryType:
             metadata=dict(
                 name="OriginDestinationOption",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=1,
                 max_occurs=99
             )
@@ -4975,6 +5143,7 @@ class TicketPricingType:
         metadata=dict(
             name="OriginDestinationOptions",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -4983,6 +5152,7 @@ class TicketPricingType:
         metadata=dict(
             name="AirItineraryPricingInfo",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
         )
     )
@@ -4991,6 +5161,7 @@ class TicketPricingType:
         metadata=dict(
             name="Notes",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=5
         )
@@ -4999,14 +5170,16 @@ class TicketPricingType:
         default=None,
         metadata=dict(
             name="TicketingInfo",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     tpa_extensions: Optional["TicketPricingType.TpaExtensions"] = field(
         default=None,
         metadata=dict(
             name="TPA_Extensions",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     number: Optional[int] = field(
@@ -5029,6 +5202,7 @@ class TicketPricingType:
             metadata=dict(
                 name="OriginDestinationOption",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=1,
                 max_occurs=99
             )
@@ -5044,6 +5218,7 @@ class TicketPricingType:
                 metadata=dict(
                     name="FlightSegment",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=1,
                     max_occurs=4
                 )
@@ -5061,6 +5236,7 @@ class TicketPricingType:
                     metadata=dict(
                         name="DepartureAirport",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         required=True
                     )
                 )
@@ -5069,6 +5245,7 @@ class TicketPricingType:
                     metadata=dict(
                         name="ArrivalAirport",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         required=True
                     )
                 )
@@ -5090,7 +5267,8 @@ class TicketPricingType:
             default=None,
             metadata=dict(
                 name="ValidatingCarrier",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
 
@@ -5121,6 +5299,7 @@ class TicketsPricingType:
         metadata=dict(
             name="Ticket",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=9223372036854775807
         )
@@ -5147,7 +5326,8 @@ class PricedItineraryType:
         default=None,
         metadata=dict(
             name="AirItinerary",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     air_itinerary_pricing_info: List["PricedItineraryType.AirItineraryPricingInfo"] = field(
@@ -5155,6 +5335,7 @@ class PricedItineraryType:
         metadata=dict(
             name="AirItineraryPricingInfo",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=9223372036854775807
         )
@@ -5164,6 +5345,7 @@ class PricedItineraryType:
         metadata=dict(
             name="Notes",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=5
         )
@@ -5172,14 +5354,16 @@ class PricedItineraryType:
         default=None,
         metadata=dict(
             name="TicketingInfo",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     tpa_extensions: Optional["PricedItineraryType.TpaExtensions"] = field(
         default=None,
         metadata=dict(
             name="TPA_Extensions",
-            type="Element"
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     is_from_custom_path: Optional[bool] = field(
@@ -5236,7 +5420,8 @@ class PricedItineraryType:
             default=None,
             metadata=dict(
                 name="Tickets",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
 
@@ -5257,6 +5442,7 @@ class PricedItineraryType:
             metadata=dict(
                 name="AdditionalFares",
                 type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
                 max_occurs=9223372036854775807
             )
@@ -5265,49 +5451,56 @@ class PricedItineraryType:
             default=None,
             metadata=dict(
                 name="Ops",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         itin_source: Optional["PricedItineraryType.TpaExtensions.ItinSource"] = field(
             default=None,
             metadata=dict(
                 name="ItinSource",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         value_bucket: Optional["PricedItineraryType.TpaExtensions.ValueBucket"] = field(
             default=None,
             metadata=dict(
                 name="ValueBucket",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         validating_carrier: Optional["PricedItineraryType.TpaExtensions.ValidatingCarrier"] = field(
             default=None,
             metadata=dict(
                 name="ValidatingCarrier",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         unflown_price: Optional[UnflownPriceType] = field(
             default=None,
             metadata=dict(
                 name="UnflownPrice",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         diversity_swapper: Optional["PricedItineraryType.TpaExtensions.DiversitySwapper"] = field(
             default=None,
             metadata=dict(
                 name="DiversitySwapper",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         failed: Optional["PricedItineraryType.TpaExtensions.Failed"] = field(
             default=None,
             metadata=dict(
                 name="Failed",
-                type="Element"
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
 
@@ -5323,7 +5516,8 @@ class PricedItineraryType:
                 default=None,
                 metadata=dict(
                     name="AirItineraryPricingInfo",
-                    type="Element"
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05"
                 )
             )
             notes: List[FreeTextType] = field(
@@ -5331,6 +5525,7 @@ class PricedItineraryType:
                 metadata=dict(
                     name="Notes",
                     type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=0,
                     max_occurs=5
                 )
@@ -5339,7 +5534,8 @@ class PricedItineraryType:
                 default=None,
                 metadata=dict(
                     name="TicketingInfo",
-                    type="Element"
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05"
                 )
             )
             multiple_tickets: Optional[bool] = field(
@@ -5359,7 +5555,8 @@ class PricedItineraryType:
                     default=None,
                     metadata=dict(
                         name="Tickets",
-                        type="Element"
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05"
                     )
                 )
 
@@ -5373,7 +5570,8 @@ class PricedItineraryType:
                 default=None,
                 metadata=dict(
                     name="FareTypes",
-                    type="Element"
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05"
                 )
             )
             action_code: Optional[int] = field(
@@ -5395,6 +5593,7 @@ class PricedItineraryType:
                     metadata=dict(
                         name="FareType",
                         type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
                         min_occurs=1,
                         max_occurs=9223372036854775807
                     )
@@ -6451,6 +6650,7 @@ class PricedItinerariesType:
         metadata=dict(
             name="PricedItinerary",
             type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=1,
             max_occurs=9223372036854775807
         )

@@ -2709,6 +2709,7 @@ class TypeRailPricingSolution:
         metadata=dict(
             name="RailJourney",
             type="Element",
+            namespace="http://www.travelport.com/schema/rail_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -2718,6 +2719,7 @@ class TypeRailPricingSolution:
         metadata=dict(
             name="RailJourneyRef",
             type="Element",
+            namespace="http://www.travelport.com/schema/rail_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -2727,6 +2729,7 @@ class TypeRailPricingSolution:
         metadata=dict(
             name="RailPricingInfo",
             type="Element",
+            namespace="http://www.travelport.com/schema/rail_v48_0",
             min_occurs=0,
             max_occurs=999
         )

@@ -1791,6 +1791,7 @@ class AirSearchReq(BaseSearchReq):
         metadata=dict(
             name="SearchAirLeg",
             type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             min_occurs=0,
             max_occurs=16
         )
@@ -1800,6 +1801,7 @@ class AirSearchReq(BaseSearchReq):
         metadata=dict(
             name="SearchSpecificAirSegment",
             type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -1808,14 +1810,16 @@ class AirSearchReq(BaseSearchReq):
         default=None,
         metadata=dict(
             name="AirSearchModifiers",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     journey_data: Optional[JourneyData] = field(
         default=None,
         metadata=dict(
             name="JourneyData",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
 
@@ -1985,7 +1989,8 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
         default=None,
         metadata=dict(
             name="ProviderReservationInfo",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     air_pricing_solution: List[AirPricingSolution] = field(
@@ -1993,6 +1998,7 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
         metadata=dict(
             name="AirPricingSolution",
             type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             min_occurs=0,
             max_occurs=2
         )
@@ -2001,14 +2007,16 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
         default=None,
         metadata=dict(
             name="RepricingModifiers",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     original_itinerary_details: Optional[OriginalItineraryDetails] = field(
         default=None,
         metadata=dict(
             name="OriginalItineraryDetails",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     override_pcc: Optional[OverridePcc] = field(
@@ -2076,7 +2084,8 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
         default=None,
         metadata=dict(
             name="ProviderReservationInfo",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     air_pricing_solution: List[AirPricingSolution] = field(
@@ -2084,6 +2093,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
         metadata=dict(
             name="AirPricingSolution",
             type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             min_occurs=0,
             max_occurs=2
         )
@@ -2092,7 +2102,8 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
         default=None,
         metadata=dict(
             name="AirExchangeModifiers",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     host_token: List[HostToken] = field(
@@ -2109,7 +2120,8 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
         default=None,
         metadata=dict(
             name="OptionalServices",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     form_of_payment: List[FormOfPayment] = field(
@@ -2126,21 +2138,24 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
         default=None,
         metadata=dict(
             name="RepricingModifiers",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     original_itinerary_details: Optional[OriginalItineraryDetails] = field(
         default=None,
         metadata=dict(
             name="OriginalItineraryDetails",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     pcc: Optional[Pcc] = field(
         default=None,
         metadata=dict(
             name="PCC",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     fare_rule_type: str = field(
@@ -2205,6 +2220,7 @@ class BaseAirPriceReq(BaseCoreReq):
         metadata=dict(
             name="AirItinerary",
             type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             required=True
         )
     )
@@ -2212,7 +2228,8 @@ class BaseAirPriceReq(BaseCoreReq):
         default=None,
         metadata=dict(
             name="AirPricingModifiers",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     search_passenger: List[SearchPassenger] = field(
@@ -2230,6 +2247,7 @@ class BaseAirPriceReq(BaseCoreReq):
         metadata=dict(
             name="AirPricingCommand",
             type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             min_occurs=1,
             max_occurs=16
         )
@@ -2238,14 +2256,16 @@ class BaseAirPriceReq(BaseCoreReq):
         default=None,
         metadata=dict(
             name="AirReservationLocatorCode",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     optional_services: Optional[OptionalServices] = field(
         default=None,
         metadata=dict(
             name="OptionalServices",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     form_of_payment: List[FormOfPayment] = field(
@@ -2262,7 +2282,8 @@ class BaseAirPriceReq(BaseCoreReq):
         default=None,
         metadata=dict(
             name="PCC",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     ssr: List[Ssr] = field(
@@ -2355,6 +2376,7 @@ class BaseAirPriceRsp(BaseRsp):
         metadata=dict(
             name="AirItinerary",
             type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             required=True
         )
     )
@@ -2363,6 +2385,7 @@ class BaseAirPriceRsp(BaseRsp):
         metadata=dict(
             name="AirPriceResult",
             type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             min_occurs=1,
             max_occurs=16
         )
@@ -2384,6 +2407,7 @@ class BaseAirSearchReq(BaseCoreSearchReq):
         metadata=dict(
             name="SearchAirLeg",
             type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             min_occurs=0,
             max_occurs=9
         )
@@ -2393,6 +2417,7 @@ class BaseAirSearchReq(BaseCoreSearchReq):
         metadata=dict(
             name="SearchSpecificAirSegment",
             type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -2401,21 +2426,24 @@ class BaseAirSearchReq(BaseCoreSearchReq):
         default=None,
         metadata=dict(
             name="AirSearchModifiers",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     split_ticketing_search: Optional[SplitTicketingSearch] = field(
         default=None,
         metadata=dict(
             name="SplitTicketingSearch",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     journey_data: Optional[JourneyData] = field(
         default=None,
         metadata=dict(
             name="JourneyData",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
 
@@ -2437,28 +2465,32 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
         default=None,
         metadata=dict(
             name="FlightDetailsList",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     air_segment_list: Optional[AirSegmentList] = field(
         default=None,
         metadata=dict(
             name="AirSegmentList",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     fare_info_list: Optional[FareInfoList] = field(
         default=None,
         metadata=dict(
             name="FareInfoList",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     fare_remark_list: Optional[FareRemarkList] = field(
         default=None,
         metadata=dict(
             name="FareRemarkList",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     air_itinerary_solution: List[AirItinerarySolution] = field(
@@ -2466,6 +2498,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
         metadata=dict(
             name="AirItinerarySolution",
             type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -2474,14 +2507,16 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
         default=None,
         metadata=dict(
             name="HostTokenList",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     apisrequirements_list: Optional[ApisrequirementsList] = field(
         default=None,
         metadata=dict(
             name="APISRequirementsList",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     distance_units: Optional[str] = field(
@@ -3232,35 +3267,40 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
         default=None,
         metadata=dict(
             name="FareNoteList",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     expert_solution_list: Optional[ExpertSolutionList] = field(
         default=None,
         metadata=dict(
             name="ExpertSolutionList",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     route_list: Optional[RouteList] = field(
         default=None,
         metadata=dict(
             name="RouteList",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     alternate_route_list: Optional[AlternateRouteList] = field(
         default=None,
         metadata=dict(
             name="AlternateRouteList",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     alternate_location_distance_list: Optional[AlternateLocationDistanceList] = field(
         default=None,
         metadata=dict(
             name="AlternateLocationDistanceList",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     fare_info_message: List[FareInfoMessage] = field(
@@ -3268,6 +3308,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
         metadata=dict(
             name="FareInfoMessage",
             type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             min_occurs=0,
             max_occurs=99
         )
@@ -3277,6 +3318,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
         metadata=dict(
             name="AirPricingSolution",
             type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -3285,7 +3327,8 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
         default=None,
         metadata=dict(
             name="AirPricePointList",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     rail_segment_list: Optional[RailSegmentList] = field(
@@ -3630,42 +3673,48 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
         default=None,
         metadata=dict(
             name="AirPricingModifiers",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     enumeration: Optional[Enumeration] = field(
         default=None,
         metadata=dict(
             name="Enumeration",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     air_exchange_modifiers: Optional[AirExchangeModifiers] = field(
         default=None,
         metadata=dict(
             name="AirExchangeModifiers",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     flex_explore_modifiers: Optional[FlexExploreModifiers] = field(
         default=None,
         metadata=dict(
             name="FlexExploreModifiers",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     pcc: Optional[Pcc] = field(
         default=None,
         metadata=dict(
             name="PCC",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     fare_rules_filter_category: Optional[FareRulesFilterCategory] = field(
         default=None,
         metadata=dict(
             name="FareRulesFilterCategory",
-            type="Element"
+            type="Element",
+            namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
     form_of_payment: List[FormOfPayment] = field(
