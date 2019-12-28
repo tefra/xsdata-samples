@@ -101,6 +101,7 @@ class Advtype:
     """
     class Meta:
         name = "ADVType"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     adv_rsvn_only_if_tk: Optional[bool] = field(
         default=None,
@@ -4005,6 +4006,7 @@ class Maxtype:
     """
     class Meta:
         name = "MAXType"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     hours_max: Optional[bool] = field(
         default=None,
@@ -4085,6 +4087,7 @@ class Mintype:
     """
     class Meta:
         name = "MINType"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     hours_min: Optional[bool] = field(
         default=None,
@@ -4217,6 +4220,9 @@ class MaxLayoverDurationType:
     :ivar gateway: It will be applied for all Domestic to International and International to Domestic connections.
     :ivar international: It will be applied for all International-to-International connections.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     domestic: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -4377,6 +4383,7 @@ class Othtype:
     """
     class Meta:
         name = "OTHType"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     cat0: Optional[bool] = field(
         default=None,
@@ -4984,6 +4991,9 @@ class PenFeeType:
     :ivar type: Type of penalty. If it is D then dollar. If it is P then percentage.
     :ivar currency: Currency code of penalty (e.g. USD).
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     dep_required: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -5314,6 +5324,9 @@ class PriceChangeType:
     :ivar carrier: Contains carrier code information
     :ivar segment_ref: Contains segment reference information
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -6711,6 +6724,9 @@ class ValueDetails:
     :ivar name:
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     name: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -7019,6 +7035,7 @@ class TypeAnchorFlightData:
     """
     class Meta:
         name = "typeAnchorFlightData"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     airline_code: Optional[str] = field(
         default=None,
@@ -7056,6 +7073,7 @@ class TypeApplicableSegment:
     """
     class Meta:
         name = "typeApplicableSegment"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     key: Optional[str] = field(
         default=None,
@@ -7170,6 +7188,7 @@ class TypeBulkTicketModifierType:
     """
     class Meta:
         name = "typeBulkTicketModifierType"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     suppress_on_fare_calc: Optional[bool] = field(
         default=None,
@@ -7249,6 +7268,7 @@ class TypeDaysOfOperation:
     """
     class Meta:
         name = "typeDaysOfOperation"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     mon: Optional[bool] = field(
         default=None,
@@ -7400,6 +7420,7 @@ class TypeFailureInfo:
     """
     class Meta:
         name = "typeFailureInfo"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     code: Optional[int] = field(
         default=None,
@@ -7505,6 +7526,7 @@ class TypeFarePenalty:
     """
     class Meta:
         name = "typeFarePenalty"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     amount: Optional[str] = field(
         default=None,
@@ -7822,6 +7844,7 @@ class TypeNativeSearchModifier:
     """
     class Meta:
         name = "typeNativeSearchModifier"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     value: Optional[str] = field(
         default=None,
@@ -7849,6 +7872,7 @@ class TypeNonAirReservationRef:
     """
     class Meta:
         name = "typeNonAirReservationRef"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     locator_code: Optional[str] = field(
         default=None,
@@ -7987,6 +8011,7 @@ class TypeRestrictionLengthOfStay:
     """
     class Meta:
         name = "typeRestrictionLengthOfStay"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     length: Optional[int] = field(
         default=None,
@@ -8071,6 +8096,7 @@ class TypeSegmentRef:
     """
     class Meta:
         name = "typeSegmentRef"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     key: Optional[str] = field(
         default=None,
@@ -8136,6 +8162,7 @@ class TypeTextElement:
     """
     class Meta:
         name = "typeTextElement"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     value: Optional[str] = field(
         default=None,
@@ -8169,6 +8196,7 @@ class TypeTicketModifierAccountingType:
     """
     class Meta:
         name = "typeTicketModifierAccountingType"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     value: Optional[str] = field(
         default=None,
@@ -8189,6 +8217,7 @@ class TypeTicketModifierAmountType:
     """
     class Meta:
         name = "typeTicketModifierAmountType"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     amount: Optional[str] = field(
         default=None,
@@ -8209,6 +8238,7 @@ class TypeTicketModifierPercentType:
     """
     class Meta:
         name = "typeTicketModifierPercentType"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     percent: Optional[str] = field(
         default=None,
@@ -8230,6 +8260,7 @@ class TypeTicketModifierValueType:
     """
     class Meta:
         name = "typeTicketModifierValueType"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     value: Optional[str] = field(
         default=None,
@@ -8280,6 +8311,7 @@ class TypeUnitOfMeasure:
     """
     class Meta:
         name = "typeUnitOfMeasure"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     value: Optional[float] = field(
         default=None,
@@ -8339,6 +8371,7 @@ class TypeWeight:
     """
     class Meta:
         name = "typeWeight"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     value: Optional[int] = field(
         default=None,
@@ -9515,6 +9548,9 @@ class BaseBaggageAllowanceInfo:
     :ivar destination:
     :ivar carrier:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     urlinfo: List[Urlinfo] = field(
         default_factory=list,
         metadata=dict(
@@ -9588,6 +9624,7 @@ class Chgtype:
     """
     class Meta:
         name = "CHGType"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     pen_fee: List[PenFeeType] = field(
         default_factory=list,
@@ -9693,6 +9730,9 @@ class CategoryDetailsType:
     :ivar category_details: For each category Details of Structured Fare Rules
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     category_details: List[ValueDetails] = field(
         default_factory=list,
         metadata=dict(
@@ -12558,6 +12598,7 @@ class TypeTaxInfoWithPaymentRef(TypeTaxInfo):
     """
     class Meta:
         name = "typeTaxInfoWithPaymentRef"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     payment_ref: List[PaymentRef] = field(
         default_factory=list,
@@ -12583,6 +12624,7 @@ class TypeTicketFailureInfo:
     """
     class Meta:
         name = "typeTicketFailureInfo"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     ticket_number: Optional[TicketNumber] = field(
         default=None,
@@ -12643,6 +12685,7 @@ class TypeTicketingModifiersRef:
     """
     class Meta:
         name = "typeTicketingModifiersRef"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     air_pricing_info_ref: List[AirPricingInfoRef] = field(
         default_factory=list,
@@ -15126,6 +15169,9 @@ class FareRuleCategoryTypes:
     :ivar variable_category_details: If the specified category of Structured Fare Rules is of variable lenght
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     category_details: List[ValueDetails] = field(
         default_factory=list,
         metadata=dict(
@@ -16525,6 +16571,7 @@ class TypeDefaultBrandDetail:
     """
     class Meta:
         name = "typeDefaultBrandDetail"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     text: List[Text] = field(
         default_factory=list,
@@ -18387,6 +18434,9 @@ class StructuredFareRulesType:
     """
     :ivar fare_rule_category_type: For FareRulesType element
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     fare_rule_category_type: List[FareRuleCategoryTypes] = field(
         default_factory=list,
         metadata=dict(
@@ -18804,6 +18854,7 @@ class TypeBaseAirSegment(Segment):
     """
     class Meta:
         name = "typeBaseAirSegment"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     sponsored_flt_info: Optional[SponsoredFltInfo] = field(
         default=None,
@@ -22426,6 +22477,7 @@ class TypeBaseAirReservation(BaseReservation):
     """
     class Meta:
         name = "typeBaseAirReservation"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     optional_services: Optional[OptionalServices] = field(
         default=None,
@@ -22777,6 +22829,7 @@ class TypeAirReservationWithFop(TypeBaseAirReservation):
     """
     class Meta:
         name = "typeAirReservationWithFOP"
+        namespace = "http://www.travelport.com/schema/air_v48_0"
 
     form_of_payment: List[FormOfPayment] = field(
         default_factory=list,

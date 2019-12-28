@@ -2,8 +2,8 @@ from pathlib import Path
 from unittest import TestCase
 
 from lxml import etree
-from xsdata.formats.dict.parser import DictParser
-from xsdata.formats.xml.serializer import XmlSerializer
+from xsdata.formats.dataclass.parsers import DictParser
+from xsdata.formats.dataclass.serializers import XmlSerializer
 
 from samples.sabre.output.bargain_finder_max_rq_v1_9_7 import (
     OtaAirLowFareSearchRq,

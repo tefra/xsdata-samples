@@ -652,6 +652,9 @@ class BaseAsyncProviderSpecificResponse:
     :ivar provider_code: Provider code of a specific host
     :ivar more_results: Identifies whether more results are available for specific host or not.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     provider_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1822,6 +1825,9 @@ class FormattedTextTextType:
     :ivar language: Language identification.
     :ivar text_format: Indicates the format of text used in the description e.g. unformatted or html.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2185,6 +2191,9 @@ class Location:
 
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2856,6 +2865,9 @@ class OptionalServiceApplicationLimitType:
     :ivar maximum_quantity: The maximum quantity allowed for the type
     :ivar minimum_quantity: Indicates the minimum number of the option that can be selected.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     applicable_level: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4086,6 +4098,9 @@ class SeatAssignment:
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar rail_coach_number: Coach number for which rail seatmap/coachmap is returned.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     key: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4964,6 +4979,7 @@ class TypeAgencyHierarchyReference:
     """
     class Meta:
         name = "typeAgencyHierarchyReference"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     profile_id: Optional[int] = field(
         default=None,
@@ -4993,6 +5009,7 @@ class TypeAgencyPayment:
     """
     class Meta:
         name = "typeAgencyPayment"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     agency_billing_identifier: Optional[str] = field(
         default=None,
@@ -5042,6 +5059,7 @@ class TypeAgentInfo:
     """
     class Meta:
         name = "typeAgentInfo"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
         default=None,
@@ -5059,6 +5077,7 @@ class TypeBookingTransactionsAllowed:
     """
     class Meta:
         name = "typeBookingTransactionsAllowed"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     booking_enabled: Optional[bool] = field(
         default=None,
@@ -5122,6 +5141,7 @@ class TypeDateRange:
     """
     class Meta:
         name = "typeDateRange"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     start_date: Optional[str] = field(
         default=None,
@@ -5331,6 +5351,7 @@ class TypeFormOfPaymentPnrreference:
     """
     class Meta:
         name = "typeFormOfPaymentPNRReference"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     key: Optional[str] = field(
         default=None,
@@ -5365,6 +5386,7 @@ class TypeFreeFormText:
     """
     class Meta:
         name = "typeFreeFormText"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
         default=None,
@@ -5451,6 +5473,7 @@ class TypeGeneralReference:
     """
     class Meta:
         name = "typeGeneralReference"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     key: Optional[str] = field(
         default=None,
@@ -5472,6 +5495,7 @@ class TypeGuaranteeInformation:
     """
     class Meta:
         name = "typeGuaranteeInformation"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     type: Optional[str] = field(
         default=None,
@@ -5586,6 +5610,7 @@ class TypeKeyBasedReference:
     """
     class Meta:
         name = "typeKeyBasedReference"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     key: Optional[str] = field(
         default=None,
@@ -5658,6 +5683,7 @@ class TypeNonAirReservationRef:
     """
     class Meta:
         name = "typeNonAirReservationRef"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     locator_code: Optional[str] = field(
         default=None,
@@ -5681,6 +5707,7 @@ class TypeOtasubKey:
     """
     class Meta:
         name = "typeOTASubKey"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     text: List[str] = field(
         default_factory=list,
@@ -5741,6 +5768,7 @@ class TypePolicyCodesList:
     """
     class Meta:
         name = "typePolicyCodesList"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     policy_code: List[str] = field(
         default_factory=list,
@@ -5907,6 +5935,7 @@ class TypeProfileRef:
     """
     class Meta:
         name = "typeProfileRef"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     profile_entity_id: Optional[str] = field(
         default=None,
@@ -5959,6 +5988,7 @@ class TypeProviderReservationDetail:
     """
     class Meta:
         name = "typeProviderReservationDetail"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     provider_code: Optional[str] = field(
         default=None,
@@ -6063,6 +6093,7 @@ class TypeRateDescription:
     """
     class Meta:
         name = "typeRateDescription"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     text: List[str] = field(
         default_factory=list,
@@ -6144,6 +6175,7 @@ class TypeRemark:
     """
     class Meta:
         name = "typeRemark"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
         default=None,
@@ -6180,6 +6212,7 @@ class TypeRemarkWithTravelerRef:
     """
     class Meta:
         name = "typeRemarkWithTravelerRef"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     remark_data: Optional[str] = field(
         default=None,
@@ -6271,6 +6304,7 @@ class TypeResultMessage:
     """
     class Meta:
         name = "typeResultMessage"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
         default=None,
@@ -6303,6 +6337,7 @@ class TypeSearchTimeSpec:
     """
     class Meta:
         name = "typeSearchTimeSpec"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
         default=None,
@@ -6320,6 +6355,7 @@ class TypeSegmentRef:
     """
     class Meta:
         name = "typeSegmentRef"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     key: Optional[str] = field(
         default=None,
@@ -6354,6 +6390,7 @@ class TypeSpecificTime:
     """
     class Meta:
         name = "typeSpecificTime"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     time: Optional[str] = field(
         default=None,
@@ -6387,6 +6424,7 @@ class TypeSubKey:
     """
     class Meta:
         name = "typeSubKey"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     text: List[str] = field(
         default_factory=list,
@@ -6422,6 +6460,7 @@ class TypeTax:
     """
     class Meta:
         name = "typeTax"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     amount: Optional[str] = field(
         default=None,
@@ -6470,6 +6509,7 @@ class TypeTimeRange:
     """
     class Meta:
         name = "typeTimeRange"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     earliest_time: Optional[str] = field(
         default=None,
@@ -6704,6 +6744,7 @@ class TypeVendorLocation:
     """
     class Meta:
         name = "typeVendorLocation"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     provider_code: Optional[str] = field(
         default=None,
@@ -6771,6 +6812,7 @@ class TypeVoucherInformation:
     """
     class Meta:
         name = "typeVoucherInformation"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     voucher_type: Optional[str] = field(
         default=None,
@@ -8186,6 +8228,9 @@ class Segment:
     :ivar travel_order: To identify the appropriate travel sequence for Air/Car/Hotel segments/reservations based on travel dates. This ordering is applicable across the UR not provider or traveler specific
     :ivar provider_segment_order: To identify the appropriate travel sequence for Air/Car/Hotel/Rail segments/reservations in the provider reservation.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     el_stat: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -8464,6 +8509,7 @@ class TypeAgencyHierarchyLongReference(TypeAgencyHierarchyReference):
     """
     class Meta:
         name = "typeAgencyHierarchyLongReference"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     profile_version: Optional[int] = field(
         default=None,
@@ -8494,6 +8540,7 @@ class TypeAssociatedRemark(TypeRemarkWithTravelerRef):
     """
     class Meta:
         name = "typeAssociatedRemark"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     el_stat: Optional[str] = field(
         default=None,
@@ -8534,6 +8581,7 @@ class TypeErrorInfo:
     """
     class Meta:
         name = "typeErrorInfo"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     code: Optional[str] = field(
         default=None,
@@ -8630,6 +8678,7 @@ class TypeFeeInfo:
     """
     class Meta:
         name = "typeFeeInfo"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     provider_code: Optional[str] = field(
         default=None,
@@ -8792,6 +8841,7 @@ class TypeKeyword:
     """
     class Meta:
         name = "typeKeyword"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     sub_key: List[TypeSubKey] = field(
         default_factory=list,
@@ -8855,6 +8905,7 @@ class TypeOtakeyword:
     """
     class Meta:
         name = "typeOTAKeyword"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     sub_key: List[TypeOtasubKey] = field(
         default_factory=list,
@@ -8909,6 +8960,7 @@ class TypeProviderReservationSpecificInfo:
     """
     class Meta:
         name = "typeProviderReservationSpecificInfo"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     operated_by: List[OperatedBy] = field(
         default_factory=list,
@@ -8959,6 +9011,7 @@ class TypeStructuredAddress:
     """
     class Meta:
         name = "typeStructuredAddress"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     el_stat: Optional[str] = field(
         default=None,
@@ -9067,6 +9120,7 @@ class TypeTaxInfo:
     """
     class Meta:
         name = "typeTaxInfo"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     tax_detail: List[TaxDetail] = field(
         default_factory=list,
@@ -9211,6 +9265,7 @@ class TypeTimeSpec:
     """
     class Meta:
         name = "typeTimeSpec"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     time_range: Optional[TypeTimeRange] = field(
         default=None,
@@ -9243,6 +9298,7 @@ class TypeTransactionsAllowed(TypeBookingTransactionsAllowed):
     """
     class Meta:
         name = "typeTransactionsAllowed"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     shopping_enabled: Optional[bool] = field(
         default=None,
@@ -9690,6 +9746,9 @@ class BaseReservation:
     :ivar modified_date: The date and time that this reservation was last modified for any reason.
     :ivar customer_number:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     accounting_remark: List[AccountingRemark] = field(
         default_factory=list,
         metadata=dict(
@@ -10103,6 +10162,7 @@ class Mcoinformation:
     """
     class Meta:
         name = "MCOInformation"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     passenger_info: List[PassengerInfo] = field(
         default_factory=list,
@@ -10622,6 +10682,7 @@ class TypeAssociatedRemarkWithSegmentRef(TypeAssociatedRemark):
     """
     class Meta:
         name = "typeAssociatedRemarkWithSegmentRef"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     segment_ref: Optional[str] = field(
         default=None,
@@ -10641,6 +10702,7 @@ class TypeFlexibleTimeSpec(TypeTimeSpec):
     """
     class Meta:
         name = "typeFlexibleTimeSpec"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     search_extra_days: Optional["TypeFlexibleTimeSpec.SearchExtraDays"] = field(
         default=None,
@@ -10681,6 +10743,7 @@ class TypeLocation:
     """
     class Meta:
         name = "typeLocation"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     airport: Optional[Airport] = field(
         default=None,
@@ -10720,6 +10783,7 @@ class TypePaymentCard:
     """
     class Meta:
         name = "typePaymentCard"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     phone_number: Optional[PhoneNumber] = field(
         default=None,
@@ -10799,6 +10863,7 @@ class TypeSearchLocation:
     """
     class Meta:
         name = "typeSearchLocation"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     airport: Optional[Airport] = field(
         default=None,
@@ -11581,6 +11646,9 @@ class ServiceRuleType:
     :ivar remarks: Adds text remarks / rules for the optional / additional service
     :ivar key: Unique ID to identify an optional service rule
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     application_rules: Optional["ServiceRuleType.ApplicationRules"] = field(
         default=None,
         metadata=dict(
@@ -11869,6 +11937,7 @@ class TypeCreditCardType(TypePaymentCard):
     """
     class Meta:
         name = "typeCreditCardType"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     extended_payment: Optional[str] = field(
         default=None,
@@ -11949,6 +12018,7 @@ class TypePassengerType:
     """
     class Meta:
         name = "typePassengerType"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
     name: Optional[Name] = field(
         default=None,

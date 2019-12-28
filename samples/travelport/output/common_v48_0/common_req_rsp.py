@@ -63,6 +63,9 @@ class BaseCoreReq:
     :ivar override_logging: Use to override the default logging level
     :ivar language_code: ISO 639 two-character language codes are used to retrieve specific information in the requested language. For Rich Content and Branding, language codes ZH-HANT (Chinese Traditional), ZH-HANS (Chinese Simplified), FR-CA (French Canadian) and PT-BR (Portuguese Brazil) can also be used. For RCH, language codes ENGB, ENUS, DEDE, DECH can also be used. Only certain services support this attribute. Providers: ACH, RCH, 1G, 1V, 1P, 1J.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     billing_point_of_sale_info: Optional[BillingPointOfSaleInfo] = field(
         default=None,
         metadata=dict(
@@ -143,6 +146,9 @@ class BaseRsp:
     :ivar response_time: The time (in ms) the system spent processing this request, not including transmission times.
     :ivar command_history: HTTP link to download command history and debugging information of the request that generated this response. Must be enabled on the system.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     response_message: List[ResponseMessage] = field(
         default_factory=list,
         metadata=dict(
@@ -196,6 +202,9 @@ class BaseCoreSearchReq(BaseCoreReq):
 
     :ivar next_result_reference:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     next_result_reference: List[NextResultReference] = field(
         default_factory=list,
         metadata=dict(
@@ -213,6 +222,9 @@ class BaseReq(BaseCoreReq):
     :ivar override_pcc:
     :ivar retrieve_provider_reservation_details:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     override_pcc: Optional[OverridePcc] = field(
         default=None,
         metadata=dict(
@@ -234,6 +246,9 @@ class BaseSearchRsp(BaseRsp):
     """
     :ivar next_result_reference:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     next_result_reference: List[NextResultReference] = field(
         default_factory=list,
         metadata=dict(
@@ -274,6 +289,9 @@ class BaseCreateReservationReq(BaseReq):
     :ivar customer_number: Optional client centric customer identifier
     :ivar version:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     linked_universal_record: List[LinkedUniversalRecord] = field(
         default_factory=list,
         metadata=dict(
@@ -479,6 +497,9 @@ class BaseSearchReq(BaseReq):
     """
     :ivar next_result_reference:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     next_result_reference: List[NextResultReference] = field(
         default_factory=list,
         metadata=dict(
@@ -496,6 +517,9 @@ class BaseCreateWithFormOfPaymentReq(BaseCreateReservationReq):
 
     :ivar form_of_payment: Provider:1G,1V,1P,1J,ACH,SDK.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
     form_of_payment: List[FormOfPayment] = field(
         default_factory=list,
         metadata=dict(

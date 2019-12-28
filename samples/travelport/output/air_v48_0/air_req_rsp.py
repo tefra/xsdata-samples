@@ -213,6 +213,9 @@ class SearchSpecificAirSegment:
 @dataclass
 class AirBaseReq(BaseReq):
     """Context for Requests and Responses."""
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
 
 
 @dataclass
@@ -1778,6 +1781,9 @@ class AirSearchReq(BaseSearchReq):
     :ivar air_search_modifiers:
     :ivar journey_data:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     point_of_commencement: Optional[PointOfCommencement] = field(
         default=None,
         metadata=dict(
@@ -1971,6 +1977,9 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
     :ivar original_itinerary_details:
     :ivar override_pcc:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     ticket_number: List[TicketNumber] = field(
         default_factory=list,
         metadata=dict(
@@ -2062,6 +2071,9 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
     :ivar pcc:
     :ivar fare_rule_type: Provider: ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     ticket_number: List[TicketNumber] = field(
         default_factory=list,
         metadata=dict(
@@ -2200,6 +2212,9 @@ class BaseAirPriceReq(BaseCoreReq):
     :ivar split_pricing: Indicates whether the AirSegments should be priced together or separately. Set ‘true’ for split pricing. Set ‘false’ for pricing together.SplitPricing is not supported with post book re-pricing.
     :ivar ignore_availability: Provides a method of pricing a book itinerary with the lowest fare regardless of the availability for the class of service. Only for providers 1P/1J.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_itinerary: Optional[AirItinerary] = field(
         default=None,
         metadata=dict(
@@ -2350,6 +2365,9 @@ class BaseAirPriceRsp(BaseRsp):
     :ivar air_itinerary: Provider: 1G,1V,1P,1J,ACH.
     :ivar air_price_result: Provider: 1G,1V,1P,1J,ACH.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     air_itinerary: Optional[AirItinerary] = field(
         default=None,
         metadata=dict(
@@ -2379,6 +2397,9 @@ class BaseAirSearchReq(BaseCoreSearchReq):
     :ivar split_ticketing_search:
     :ivar journey_data:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     search_air_leg: List[SearchAirLeg] = field(
         default_factory=list,
         metadata=dict(
@@ -2433,6 +2454,9 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
     :ivar apisrequirements_list:
     :ivar distance_units:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     flight_details_list: Optional[FlightDetailsList] = field(
         default=None,
         metadata=dict(
@@ -3228,6 +3252,9 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
     :ivar rail_fare_list:
     :ivar rail_pricing_solution:
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     fare_note_list: Optional[FareNoteList] = field(
         default=None,
         metadata=dict(
@@ -3616,6 +3643,9 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
     :ivar nscc: 1 to 3 numeric that defines a Search Control Console filter.This attribute is used to override that filter.
     :ivar fare_info_rules: Returns ChangePenalty and CancelPenalty values at the FareInfo level. If FareRulesFilterCategory is sent FareRulesFilter will be returned at FareInfo level. Provider: 1G/1V.
     """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
     search_passenger: List[SearchPassenger] = field(
         default_factory=list,
         metadata=dict(

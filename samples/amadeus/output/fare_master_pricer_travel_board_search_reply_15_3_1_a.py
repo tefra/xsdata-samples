@@ -11,6 +11,9 @@ class AdditionalFareQualifierDetailsTypeI:
     :ivar pricing_group: Pricing group
     :ivar second_rate_class: Second rate class
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     rate_class: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -59,6 +62,9 @@ class AdditionalProductDetailsType:
     :ivar tech_stop_number: Number of stops made in a journey if different from 0
     :ivar location_id: Location places of the stops
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     equipment_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -103,6 +109,9 @@ class ApplicationErrorInformationType:
     """
     :ivar error: The code assigned by the receiver of a message for identification of a data validation error condition.
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     error: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -122,6 +131,9 @@ class AttributeInformationType:
     :ivar fee_parameter_type: Type of parameter.
     :ivar fee_parameter_description: Reference to company Id.
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     fee_parameter_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -149,6 +161,9 @@ class AttributeInformationTypeU:
     :ivar attribute_type: Attribute type
     :ivar attribute_description: Attribute description
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     attribute_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -179,6 +194,7 @@ class AttributeInformationType97181C:
     """
     class Meta:
         name = "AttributeInformationType_97181C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     attribute_type: Optional[str] = field(
         default=None,
@@ -209,6 +225,9 @@ class BaggageDetailsType:
     :ivar quantity_code: Nature of the free allowance ( Number of pieces or weight)
     :ivar unit_qualifier: Unit qualifier
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     free_allowance: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -244,6 +263,9 @@ class BagtagDetailsType:
     :ivar identifier: Identifier
     :ivar number: Number
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     identifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -269,6 +291,9 @@ class BucketInformationType:
     :ivar number: Number
     :ivar name: Name
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     number: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -295,6 +320,9 @@ class CabinInformationType:
     :ivar service: Identify the features associated to the cabin/class
     :ivar cabin: Cabin code designator
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     service: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -326,6 +354,9 @@ class CabinProductDetailsType:
     :ivar cabin: Indicates the cabin related to the Booking code
     :ivar avl_status: Availibility status : posting level
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     rbd: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -375,6 +406,7 @@ class CabinProductDetailsType195516C:
     """
     class Meta:
         name = "CabinProductDetailsType_195516C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     rbd: Optional[str] = field(
         default=None,
@@ -425,6 +457,7 @@ class CabinProductDetailsType205138C:
     """
     class Meta:
         name = "CabinProductDetailsType_205138C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     rbd: Optional[str] = field(
         default=None,
@@ -472,6 +505,7 @@ class CabinProductDetailsType229142C:
     """
     class Meta:
         name = "CabinProductDetailsType_229142C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     rbd: Optional[str] = field(
         default=None,
@@ -508,6 +542,9 @@ class CategoryDescriptionType:
     :ivar number: Category number from ATPCO naming conventions (C05 for Advance Purchase restrictions, C06 for Minimun stay ...)
     :ivar code: Category Code (ATPCO component code, e.g ADV for Advance purchase, STP for stopover restrictions, ELG for eligibility restrictions...)
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     number: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -534,6 +571,9 @@ class ClassInformationType:
     :ivar service: Identify the features associated to the cabin/class
     :ivar rbd: Class designator
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     service: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -564,6 +604,9 @@ class CodedAttributeInformationType:
     :ivar attribute_type: Type of fee/reduction
     :ivar attribute_description: Fee Id Number
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     attribute_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -594,6 +637,7 @@ class CodedAttributeInformationType270108C:
     """
     class Meta:
         name = "CodedAttributeInformationType_270108C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     attribute_type: Optional[str] = field(
         default=None,
@@ -623,6 +667,9 @@ class CompanyIdentificationTextType:
     :ivar text_ref_number: Company Id Text reference.
     :ivar company_text: Company id free text.
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     text_ref_number: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -649,6 +696,9 @@ class CompanyIdentificationType:
     :ivar operating_carrier: Operating carrier
     :ivar alliance: airline alliance code
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     marketing_carrier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -687,6 +737,9 @@ class CompanyIdentificationTypeI:
     :ivar operating_company: Company
     :ivar other_company: Company
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     marketing_company: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -724,6 +777,9 @@ class CompanyRoleIdentificationType:
     :ivar airline_designator: company identification
     :ivar flight_number: flight number
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     code_share_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -761,6 +817,7 @@ class CompanyRoleIdentificationType120771C:
     """
     class Meta:
         name = "CompanyRoleIdentificationType_120771C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     transport_stage_qualifier: Optional[str] = field(
         default=None,
@@ -789,6 +846,9 @@ class ConversionRateDetailsTypeI:
     :ivar currency: Currency
     :ivar amount: amount
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     conversion_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -829,6 +889,7 @@ class ConversionRateDetailsTypeI179848C:
     """
     class Meta:
         name = "ConversionRateDetailsTypeI_179848C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     conversion_type: Optional[str] = field(
         default=None,
@@ -885,6 +946,9 @@ class CriteriaiDetaislType:
     :ivar type:
     :ivar value:
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -911,6 +975,9 @@ class DataInformationType:
 
     :ivar indicator: Ancillary services options
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     indicator: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -930,6 +997,9 @@ class DataTypeInformationType:
     :ivar sub_type: service group/sub-group/sub-code information
     :ivar option: Status (automated, manually added, exempted). Default is automated
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     sub_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -960,6 +1030,9 @@ class DateAndTimeDetailsType:
     :ivar equipement_type: Movement type.
     :ivar location_id: Place/location identification.
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     date_qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1016,6 +1089,7 @@ class DateAndTimeDetailsType256192C:
     """
     class Meta:
         name = "DateAndTimeDetailsType_256192C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     qualifier: Optional[str] = field(
         default=None,
@@ -1061,6 +1135,9 @@ class DateTimePeriodDetailsTypeI:
     :ivar qualifier: Qualifier
     :ivar value: Value
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1091,6 +1168,9 @@ class DiscountPenaltyInformationType:
     :ivar amount: Amount
     :ivar percentage: Percentage
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     fare_qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1136,6 +1216,9 @@ class DiscountPenaltyMonetaryInformationType:
     :ivar fee_amount: specify the value
     :ivar fee_currency: Fee currency code.
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     fee_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1179,6 +1262,9 @@ class DummySegmentTypeI:
 
     :ivar value:
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1198,6 +1284,9 @@ class FareCalculationCodeDetailsType:
     :ivar other_location_code: Other location code
     :ivar rate: Rate
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1248,6 +1337,9 @@ class FareCategoryCodesTypeI:
     :ivar fare_type: Fare type
     :ivar other_fare_type: Other fare type
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     fare_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1277,6 +1369,9 @@ class FareDetailsType:
 
     :ivar passenger_type_qualifier: Passenger Type qualifier
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     passenger_type_qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1297,6 +1392,9 @@ class FareDetailsTypeI:
     :ivar country: Country
     :ivar fare_category: Fare category
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1343,6 +1441,7 @@ class FareDetailsType193037C:
     """
     class Meta:
         name = "FareDetailsType_193037C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     qualifier: Optional[str] = field(
         default=None,
@@ -1385,6 +1484,9 @@ class FareFamilyDetailsType:
 
     :ivar commercial_family: Commercial fare Family Short name
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     commercial_family: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1404,6 +1506,9 @@ class FareInformationTypeI:
     :ivar value_qualifier: Value qualifier
     :ivar value: Value
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     value_qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1428,6 +1533,9 @@ class FareProductDetailsType:
     """
     :ivar fare_basis: Fare basis code
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     fare_basis: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1448,6 +1556,7 @@ class FareProductDetailsType248552C:
     """
     class Meta:
         name = "FareProductDetailsType_248552C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     fare_basis: Optional[str] = field(
         default=None,
@@ -1485,6 +1594,9 @@ class FareTypeGroupingInformationType:
     """
     :ivar pricing_group: Pricing Group
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     pricing_group: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1502,6 +1614,9 @@ class FreeTextQualificationType:
     :ivar text_subject_qualifier: Type of message
     :ivar information_type: Coded Text or type of information in 4440 (e.g. type of OSI or free text, canned message value)
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     text_subject_qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1530,6 +1645,9 @@ class FreeTextQualificationTypeI:
 
     :ivar text_subject_qualifier: Text subject qualifier
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     text_subject_qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1551,6 +1669,7 @@ class FreeTextQualificationType120769C:
     """
     class Meta:
         name = "FreeTextQualificationType_120769C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     text_subject_qualifier: Optional[str] = field(
         default=None,
@@ -1590,6 +1709,9 @@ class FrequentTravellerIdentificationType:
     :ivar tier_level: To specify a Tier linked to the FQTV
     :ivar priority_code: For example : priority code
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     carrier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1637,6 +1759,9 @@ class ItemNumberIdentificationType:
     :ivar qualifier: Qualifier
     :ivar responsible_agency: Responsible agency
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     number: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1683,6 +1808,7 @@ class ItemNumberIdentificationType191597C:
     """
     class Meta:
         name = "ItemNumberIdentificationType_191597C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     number: Optional[str] = field(
         default=None,
@@ -1715,6 +1841,7 @@ class ItemNumberIdentificationType192331C:
     """
     class Meta:
         name = "ItemNumberIdentificationType_192331C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     number: Optional[str] = field(
         default=None,
@@ -1763,6 +1890,7 @@ class ItemNumberIdentificationType234878C:
     """
     class Meta:
         name = "ItemNumberIdentificationType_234878C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     number: Optional[int] = field(
         default=None,
@@ -1791,6 +1919,7 @@ class ItemNumberIdentificationType248537C:
     """
     class Meta:
         name = "ItemNumberIdentificationType_248537C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     number: Optional[str] = field(
         default=None,
@@ -1810,6 +1939,9 @@ class ItemReferencesAndVersionsType:
     :ivar reference_type: Qualifies the type of the reference used.
     :ivar ref_number: Unique fee reference.
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     reference_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1838,6 +1970,7 @@ class ItemReferencesAndVersionsType78536S:
     """
     class Meta:
         name = "ItemReferencesAndVersionsType_78536S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     reference_type: Optional[str] = field(
         default=None,
@@ -1867,6 +2000,7 @@ class ItemReferencesAndVersionsType78564S:
     """
     class Meta:
         name = "ItemReferencesAndVersionsType_78564S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     reference_type: Optional[str] = field(
         default=None,
@@ -1894,6 +2028,9 @@ class ItineraryDetailsType:
     :ivar airport_city_qualifier: Airport/City Qualifier: the passenger wants to depart/arrive from/to the same airport or city in the specified requested segment
     :ivar segment_number: Requested segment number
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     airport_city_qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1922,6 +2059,9 @@ class LocationIdentificationDetailsType:
     :ivar airport_city_qualifier: Airport/city qualifier: the requested point is an airport when ambiguity exists (e.g. HOU)
     :ivar terminal: Terminal information
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     location_id: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1958,6 +2098,9 @@ class MiniRulesDetailsType:
     :ivar interpretation: Coded text (period or day)
     :ivar value: Data type coded or value of interpretation
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     interpretation: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1985,6 +2128,9 @@ class MiniRulesIndicatorType:
     """
     :ivar rule_indicator: See rule indicator and free form text indicator
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     rule_indicator: List[str] = field(
         default_factory=list,
         metadata=dict(
@@ -2004,6 +2150,9 @@ class MiniRulesType:
 
     :ivar category: Categoty of restriction: PTC, Max Adv Pur, Days, ...
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     category: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2023,6 +2172,9 @@ class MonetaryInformationDetailsType:
     :ivar amount: Amount
     :ivar currency: ISO currency code
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     amount_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2059,6 +2211,9 @@ class MonetaryInformationDetailsTypeI:
     :ivar amount: Amount
     :ivar currency: Currency
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     type_qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2100,6 +2255,7 @@ class MonetaryInformationDetailsType245528C:
     """
     class Meta:
         name = "MonetaryInformationDetailsType_245528C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     type_qualifier: Optional[str] = field(
         default=None,
@@ -2145,6 +2301,9 @@ class OnTimePerformanceType:
     :ivar percentage: Percentage
     :ivar accuracy: Accuracy
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     date_time_period: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2180,6 +2339,7 @@ class OriginAndDestinationRequestType134833S:
     """
     class Meta:
         name = "OriginAndDestinationRequestType_134833S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     seg_ref: Optional[int] = field(
         default=None,
@@ -2201,6 +2361,9 @@ class OriginatorIdentificationDetailsTypeI:
     :ivar confidential_office: Confidential Office Name.
     :ivar other_office: Other Office Name
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     office_name: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -2244,6 +2407,9 @@ class PricingTicketingInformationType:
 
     :ivar price_type: Price type qualifier
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     price_type: List[str] = field(
         default_factory=list,
         metadata=dict(
@@ -2263,6 +2429,9 @@ class PricingTicketingSubsequentType:
 
     :ivar pax_fare_num: Passenger fare product number
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     pax_fare_num: List[str] = field(
         default_factory=list,
         metadata=dict(
@@ -2284,6 +2453,9 @@ class ProcessingInformationType:
     :ivar reference_qualifier: Reference qualifier
     :ivar ref_num: Reference number
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     action_qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2322,6 +2494,9 @@ class ProductDateTimeType:
     :ivar time_of_arrival: Arrival time
     :ivar date_variation: Arrival date compared to departure date, only if different from 0
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     date_of_departure: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2374,6 +2549,9 @@ class ProductDetailsType:
     :ivar special_service:
     :ivar option:
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     designator: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2426,6 +2604,9 @@ class ProductFacilitiesType:
     :ivar product_detail_qualifier: Define whether a flight has been polled or not
     :ivar flight_characteristic: Add some flight restrictions (See code set list)
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     last_seat_available: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2490,6 +2671,9 @@ class ProductTypeDetailsType:
 
     :ivar availability_cnx_type: Availability connection type.
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     availability_cnx_type: List[str] = field(
         default_factory=list,
         metadata=dict(
@@ -2511,6 +2695,7 @@ class ProductTypeDetailsType205137C:
     """
     class Meta:
         name = "ProductTypeDetailsType_205137C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     avl: List[str] = field(
         default_factory=list,
@@ -2531,6 +2716,9 @@ class ProposedSegmentDetailsType:
     :ivar ref: Flight proposal reference
     :ivar unit_qualifier: Elapse Flying Time
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     ref: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2560,6 +2748,9 @@ class ReferenceType:
     :ivar first_item_identifier: Reference of segment starting range
     :ivar last_item_identifier: Reference of segment ending range
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     ref_of_leg: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2593,6 +2784,9 @@ class ReferencingDetailsType:
     :ivar ref_qualifier: Reference qualifier
     :ivar ref_number: Requested segment reference
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     ref_qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2622,6 +2816,7 @@ class ReferencingDetailsType191583C:
     """
     class Meta:
         name = "ReferencingDetailsType_191583C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     ref_qualifier: Optional[str] = field(
         default=None,
@@ -2652,6 +2847,7 @@ class ReferencingDetailsType195561C:
     """
     class Meta:
         name = "ReferencingDetailsType_195561C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     ref_qualifier: Optional[str] = field(
         default=None,
@@ -2682,6 +2878,7 @@ class ReferencingDetailsType234704C:
     """
     class Meta:
         name = "ReferencingDetailsType_234704C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     type: Optional[str] = field(
         default=None,
@@ -2710,6 +2907,9 @@ class SegmentRepetitionControlDetailsTypeI:
     :ivar quantity: traveller number
     :ivar number_of_units: range of traveller
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     quantity: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -2735,6 +2935,9 @@ class SelectionDetailsInformationType:
     :ivar type: Carrier fee type
     :ivar option_information: Carrier fee status
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2763,6 +2966,9 @@ class SequenceInformationTypeU:
     :ivar number: Number
     :ivar identification_code: Identification code
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     number: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2791,6 +2997,9 @@ class ServicesReferences:
     :ivar status: Status of the service
     :ivar from_price: Service lowest price
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     reference: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2827,6 +3036,9 @@ class SpecialRequirementsDataDetailsType:
     :ivar seat_characteristics: SSR seat characteristic
     :ivar dummy_net:
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     seat_characteristics: List[str] = field(
         default_factory=list,
         metadata=dict(
@@ -2858,6 +3070,9 @@ class SpecialRequirementsTypeDetailsType:
     :ivar service_sub_group: Specify the Service Sub-Group
     :ivar service_free_text: Free Text attached to the Service.
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     service_classification: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2931,6 +3146,9 @@ class SpecificTravellerDetailsType:
 
     :ivar reference_number: Reference number
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     reference_number: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2950,6 +3168,9 @@ class StatusDetailsType:
     :ivar notification2: CPU time,user type
     :ivar description: Capture and trace information
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     advisory_type_info: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2998,6 +3219,7 @@ class StatusDetailsType256255C:
     """
     class Meta:
         name = "StatusDetailsType_256255C"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     indicator: Optional[str] = field(
         default=None,
@@ -3029,6 +3251,9 @@ class TaxDetailsType:
     :ivar type: Type
     :ivar indicator: Indicator
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     rate: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3084,6 +3309,9 @@ class TravellerDetailsType:
     :ivar ref: Direct reference of passenger assigned by requesting system.
     :ivar infant_indicator: Traveller is an infant
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     ref: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -3109,6 +3337,9 @@ class ActionDetailsType:
     :ivar number_of_items_details: Number of items details
     :ivar last_items_details: Range of segments
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     number_of_items_details: Optional[ProcessingInformationType] = field(
         default=None,
         metadata=dict(
@@ -3135,6 +3366,7 @@ class ApplicationErrorInformationType78543S:
     """
     class Meta:
         name = "ApplicationErrorInformationType_78543S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     application_error_detail: Optional[ApplicationErrorInformationType] = field(
         default=None,
@@ -3153,6 +3385,9 @@ class AttributeType:
     :ivar attribute_qualifier: Criteria Set Type
     :ivar attribute_details: Criteria details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     attribute_qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3179,6 +3414,9 @@ class AttributeTypeU:
     :ivar attribute_function: provides the function of the attribute
     :ivar attribute_details: provides details for the Attribute
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     attribute_function: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3206,6 +3444,7 @@ class AttributeType78561S:
     """
     class Meta:
         name = "AttributeType_78561S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     fee_parameter: List[AttributeInformationType] = field(
         default_factory=list,
@@ -3225,6 +3464,9 @@ class CategDescrType:
     :ivar description_info: Category description information
     :ivar process_indicator: Category processing indicator
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     description_info: Optional[CategoryDescriptionType] = field(
         default=None,
         metadata=dict(
@@ -3250,6 +3492,9 @@ class CodedAttributeType:
 
     :ivar attribute_details: Fee/reduction Id
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     attribute_details: List[CodedAttributeInformationType] = field(
         default_factory=list,
         metadata=dict(
@@ -3269,6 +3514,9 @@ class CommercialAgreementsType:
     :ivar codeshare_details: Codeshare Details
     :ivar other_codeshare_details: Other codeshare details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     codeshare_details: Optional[CompanyRoleIdentificationType] = field(
         default=None,
         metadata=dict(
@@ -3293,6 +3541,9 @@ class ConversionRateTypeI:
 
     :ivar conversion_rate_detail: Detail of conversion rate of First Monetary Unit.
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     conversion_rate_detail: List[ConversionRateDetailsTypeI179848C] = field(
         default_factory=list,
         metadata=dict(
@@ -3312,6 +3563,7 @@ class ConversionRateTypeI78562S:
     """
     class Meta:
         name = "ConversionRateTypeI_78562S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     conversion_rate_detail: List[ConversionRateDetailsTypeI] = field(
         default_factory=list,
@@ -3331,6 +3583,9 @@ class DateAndTimeInformationType:
     :ivar stop_details: Details on date and time
     :ivar dummy_net:
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     stop_details: List[DateAndTimeDetailsType] = field(
         default_factory=list,
         metadata=dict(
@@ -3359,6 +3614,7 @@ class DateAndTimeInformationType182345S:
     """
     class Meta:
         name = "DateAndTimeInformationType_182345S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     date_and_time_details: List[DateAndTimeDetailsType256192C] = field(
         default_factory=list,
@@ -3385,6 +3641,9 @@ class DiscountAndPenaltyInformationType:
     :ivar fee_identification: Used to specify airline collected fee or agent collected fee.
     :ivar fee_information: Used to specify penalty information
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     fee_identification: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3409,6 +3668,9 @@ class ExcessBaggageType:
     :ivar baggage_details: Baggage details
     :ivar bag_tag_details: Free baggage allowance details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     baggage_details: Optional[BaggageDetailsType] = field(
         default=None,
         metadata=dict(
@@ -3440,6 +3702,9 @@ class FareFamilyType:
     :ivar carrier: Carrier code
     :ivar services: Reference to the services details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     ref_number: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -3523,6 +3788,9 @@ class FareInformationType:
     :ivar fare_type_grouping: Fare Type Grouping
     :ivar rate_category: Rate Category
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     value_qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3581,6 +3849,7 @@ class FareInformationType80868S:
     """
     class Meta:
         name = "FareInformationType_80868S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     fare_details: Optional[FareDetailsType] = field(
         default=None,
@@ -3601,6 +3870,9 @@ class FareQualifierDetailsType:
     :ivar additional_fare_details: Additional fare details
     :ivar discount_details: Discount details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     movement_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3649,6 +3921,9 @@ class FlightCharacteristicsType:
     :ivar on_time_performance: On-Time Performance
     :ivar in_flight_srv: In flight services
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     on_time_performance: Optional[OnTimePerformanceType] = field(
         default=None,
         metadata=dict(
@@ -3676,6 +3951,9 @@ class FlightProductInformationType:
     :ivar cabin_product: Indicates flight cabin details
     :ivar context_details: To specify additional characteristics.
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     cabin_product: List[CabinProductDetailsType195516C] = field(
         default_factory=list,
         metadata=dict(
@@ -3703,6 +3981,7 @@ class FlightProductInformationType141442S:
     """
     class Meta:
         name = "FlightProductInformationType_141442S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     cabin_product: List[CabinProductDetailsType205138C] = field(
         default_factory=list,
@@ -3731,6 +4010,7 @@ class FlightProductInformationType161491S:
     """
     class Meta:
         name = "FlightProductInformationType_161491S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     cabin_product: Optional[CabinProductDetailsType229142C] = field(
         default=None,
@@ -3760,6 +4040,7 @@ class FlightProductInformationType176659S:
     """
     class Meta:
         name = "FlightProductInformationType_176659S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     cabin_product: Optional[CabinProductDetailsType] = field(
         default=None,
@@ -3812,6 +4093,9 @@ class FlightServicesType:
     :ivar cabin_info:
     :ivar class_info:
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     service_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3848,6 +4132,9 @@ class FrequentTravellerIdentificationCodeType:
 
     :ivar frequent_traveller_details: Frequent Traveller Info
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     frequent_traveller_details: List[FrequentTravellerIdentificationType] = field(
         default_factory=list,
         metadata=dict(
@@ -3868,6 +4155,9 @@ class HeaderInformationTypeI:
     :ivar reference_number: Reference number
     :ivar product_identification: Contains product identification such as UIC code...
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     status: List[str] = field(
         default_factory=list,
         metadata=dict(
@@ -3915,6 +4205,9 @@ class InteractiveFreeTextType:
     :ivar free_text_qualification: Free text qualification
     :ivar free_text: Free text
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     free_text_qualification: Optional[FreeTextQualificationTypeI] = field(
         default=None,
         metadata=dict(
@@ -3942,6 +4235,7 @@ class InteractiveFreeTextType78534S:
     """
     class Meta:
         name = "InteractiveFreeTextType_78534S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     free_text_qualification: Optional[FreeTextQualificationType] = field(
         default=None,
@@ -3972,6 +4266,7 @@ class InteractiveFreeTextType78544S:
     """
     class Meta:
         name = "InteractiveFreeTextType_78544S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     free_text_qualification: Optional[FreeTextQualificationType120769C] = field(
         default=None,
@@ -4002,6 +4297,7 @@ class InteractiveFreeTextType78559S:
     """
     class Meta:
         name = "InteractiveFreeTextType_78559S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     free_text_qualification: Optional[FreeTextQualificationType120769C] = field(
         default=None,
@@ -4029,6 +4325,9 @@ class ItemNumberType:
 
     :ivar item_number: Item number details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     item_number: Optional[ItemNumberIdentificationType192331C] = field(
         default=None,
         metadata=dict(
@@ -4049,6 +4348,7 @@ class ItemNumberType161497S:
     """
     class Meta:
         name = "ItemNumberType_161497S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     item_number_id: Optional[ItemNumberIdentificationType191597C] = field(
         default=None,
@@ -4083,6 +4383,7 @@ class ItemNumberType166130S:
     """
     class Meta:
         name = "ItemNumberType_166130S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     item_number_details: List[ItemNumberIdentificationType234878C] = field(
         default_factory=list,
@@ -4103,6 +4404,7 @@ class ItemNumberType176648S:
     """
     class Meta:
         name = "ItemNumberType_176648S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     item_number_details: List[ItemNumberIdentificationType248537C] = field(
         default_factory=list,
@@ -4123,6 +4425,7 @@ class ItemNumberType80866S:
     """
     class Meta:
         name = "ItemNumberType_80866S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     item_number_details: Optional[ItemNumberIdentificationType] = field(
         default=None,
@@ -4145,6 +4448,7 @@ class MiniRulesType78547S:
     """
     class Meta:
         name = "MiniRulesType_78547S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     restriction_type: Optional[str] = field(
         default=None,
@@ -4189,6 +4493,9 @@ class MonetaryInformationType:
 
     :ivar monetary_detail: Monetary information.
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     monetary_detail: List[MonetaryInformationDetailsType] = field(
         default_factory=list,
         metadata=dict(
@@ -4206,6 +4513,9 @@ class MonetaryInformationTypeI:
 
     :ivar monetary_details: Monetary details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     monetary_details: List[MonetaryInformationDetailsTypeI] = field(
         default_factory=list,
         metadata=dict(
@@ -4226,6 +4536,7 @@ class MonetaryInformationType174241S:
     """
     class Meta:
         name = "MonetaryInformationType_174241S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     monetary_details: Optional[MonetaryInformationDetailsType245528C] = field(
         default=None,
@@ -4254,6 +4565,7 @@ class MonetaryInformationType185955S:
     """
     class Meta:
         name = "MonetaryInformationType_185955S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     monetary_detail: List[MonetaryInformationDetailsType] = field(
         default_factory=list,
@@ -4274,6 +4586,7 @@ class MonetaryInformationType193024S:
     """
     class Meta:
         name = "MonetaryInformationType_193024S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     monetary_detail: List[MonetaryInformationDetailsType] = field(
         default_factory=list,
@@ -4293,6 +4606,9 @@ class OriginAndDestinationRequestType:
     :ivar seg_ref: Requested segment number
     :ivar location_forcing: Forces arrival or departure, from/to the same airport/city
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     seg_ref: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -4326,6 +4642,7 @@ class PricingTicketingSubsequentType193023S:
     """
     class Meta:
         name = "PricingTicketingSubsequentType_193023S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     pax_fare_num: Optional[str] = field(
         default=None,
@@ -4386,6 +4703,9 @@ class ProductInformationType:
     :ivar product_details_qualifier: value of the Qualifier: INT for International DOM for Domestic EUR for European otherwise CM#10569 INVALID INTERNATIONAL INDICATOR is returned.
     :ivar booking_class_details:
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     product_details_qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4414,6 +4734,9 @@ class ProposedSegmentType:
     :ivar flight_characteristic: Flight characteristics.
     :ivar maj_cabin: Majority cabin
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     flight_proposal: List[ProposedSegmentDetailsType] = field(
         default_factory=list,
         metadata=dict(
@@ -4450,6 +4773,9 @@ class ReferenceInfoType:
     :ivar referencing_detail: Referencing details
     :ivar dummy_net:
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     referencing_detail: List[ReferencingDetailsType191583C] = field(
         default_factory=list,
         metadata=dict(
@@ -4477,6 +4803,7 @@ class ReferenceInfoType133176S:
     """
     class Meta:
         name = "ReferenceInfoType_133176S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     referencing_detail: List[ReferencingDetailsType] = field(
         default_factory=list,
@@ -4497,6 +4824,7 @@ class ReferenceInfoType134839S:
     """
     class Meta:
         name = "ReferenceInfoType_134839S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     referencing_detail: List[ReferencingDetailsType195561C] = field(
         default_factory=list,
@@ -4517,6 +4845,7 @@ class ReferenceInfoType134840S:
     """
     class Meta:
         name = "ReferenceInfoType_134840S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     referencing_detail: List[ReferencingDetailsType195561C] = field(
         default_factory=list,
@@ -4537,6 +4866,7 @@ class ReferenceInfoType165972S:
     """
     class Meta:
         name = "ReferenceInfoType_165972S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     reference_details: List[ReferencingDetailsType234704C] = field(
         default_factory=list,
@@ -4558,6 +4888,7 @@ class ReferenceInfoType176658S:
     """
     class Meta:
         name = "ReferenceInfoType_176658S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     referencing_detail: List[ReferencingDetailsType] = field(
         default_factory=list,
@@ -4576,6 +4907,9 @@ class SegmentRepetitionControlTypeI:
 
     :ivar segment_control_details: Segment control details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     segment_control_details: List[SegmentRepetitionControlDetailsTypeI] = field(
         default_factory=list,
         metadata=dict(
@@ -4593,6 +4927,9 @@ class SelectionDetailsType:
 
     :ivar carrier_fee_details: Carrier fees options
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     carrier_fee_details: Optional[SelectionDetailsInformationType] = field(
         default=None,
         metadata=dict(
@@ -4609,6 +4946,9 @@ class SequenceDetailsTypeU:
 
     :ivar sequence_details: Sequence details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     sequence_details: Optional[SequenceInformationTypeU] = field(
         default=None,
         metadata=dict(
@@ -4626,6 +4966,9 @@ class SpecialRequirementsDetailsType:
     :ivar service_requirements_info: To specify the Service Requirement of the customer
     :ivar seat_details: Seat details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     service_requirements_info: Optional[SpecialRequirementsTypeDetailsType] = field(
         default=None,
         metadata=dict(
@@ -4653,6 +4996,9 @@ class SpecificDataInformationType:
     :ivar data_type_information: Carrier fee description
     :ivar data_information: Data information
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     data_type_information: Optional[DataTypeInformationType] = field(
         default=None,
         metadata=dict(
@@ -4678,6 +5024,9 @@ class SpecificTravellerType:
 
     :ivar traveller_details: Traveller details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     traveller_details: List[SpecificTravellerDetailsType] = field(
         default_factory=list,
         metadata=dict(
@@ -4695,6 +5044,9 @@ class StatusType:
 
     :ivar status: Status details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     status: List[StatusDetailsType] = field(
         default_factory=list,
         metadata=dict(
@@ -4714,6 +5066,7 @@ class StatusType182386S:
     """
     class Meta:
         name = "StatusType_182386S"
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
     status_information: List[StatusDetailsType256255C] = field(
         default_factory=list,
@@ -4733,6 +5086,9 @@ class TaxType:
     :ivar tax_category: Tax category
     :ivar tax_details: Tax details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     tax_category: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4760,6 +5116,9 @@ class TransportIdentifierType:
 
     :ivar company_identification: Company identification
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     company_identification: Optional[CompanyIdentificationTypeI] = field(
         default=None,
         metadata=dict(
@@ -4782,6 +5141,9 @@ class TravelProductType:
     :ivar add_product_detail: Additional product details
     :ivar attribute_details: Attribute details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     product_date_time: Optional[ProductDateTimeType] = field(
         default=None,
         metadata=dict(
@@ -4847,6 +5209,9 @@ class TravellerReferenceInformationType:
     :ivar ptc: Requested passenger type
     :ivar traveller: Traveller details
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     ptc: List[str] = field(
         default_factory=list,
         metadata=dict(
@@ -4877,6 +5242,9 @@ class UserIdentificationType:
     :ivar office_type: Used to specify which kind of info is given in DE 9900.
     :ivar office_code: The code given to an agent by the originating reservation system.
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     office_identification: Optional[OriginatorIdentificationDetailsTypeI] = field(
         default=None,
         metadata=dict(
@@ -4912,6 +5280,9 @@ class ValueSearchCriteriaType:
     :ivar value:
     :ivar criteria_details:
     """
+    class Meta:
+        namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
+
     ref: Optional[str] = field(
         default=None,
         metadata=dict(

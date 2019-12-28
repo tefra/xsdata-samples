@@ -2703,6 +2703,7 @@ class TypeRailPricingSolution:
     """
     class Meta:
         name = "typeRailPricingSolution"
+        namespace = "http://www.travelport.com/schema/rail_v48_0"
 
     rail_journey: List[RailJourney] = field(
         default_factory=list,

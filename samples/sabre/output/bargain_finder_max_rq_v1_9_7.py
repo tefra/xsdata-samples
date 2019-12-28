@@ -17,6 +17,9 @@ class AirlineType:
     :ivar operating: Operating airline code
     :ivar marketing: Marketing airline code
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     operating: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -42,6 +45,9 @@ class AllianceType:
     """
     :ivar code: Identifies an alliance by the alliance code.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -70,6 +76,9 @@ class AltCitiesCombinationsType:
     :ivar origins: Which origins to process in live path (All or Main only)
     :ivar destinations: Which destinations to process in live path (All or Main only)
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     origins: str = field(
         default="Main",
         metadata=dict(
@@ -92,6 +101,9 @@ class ApplyResidentDiscountType:
 
     :ivar ind:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     ind: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -108,6 +120,9 @@ class AwardShoppingType:
     :ivar enable: Enable award shopping.
     :ivar use_ras: Use Redemption Availability Service
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     enable: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -136,6 +151,9 @@ class BillingInformationType:
     :ivar service_name:
     :ivar action_code:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     user_station: int = field(
         default=0,
         metadata=dict(
@@ -210,6 +228,9 @@ class BookingChannelType:
     :ivar type: The type of booking channel (e.g. Global Distribution System (GDS), Alternative Distribution System (ADS), Sales and Catering System (SCS), Property Management System (PMS), Central Reservation System (CRS), Tour Operator System (TOS), Internet and ALL). Refer to OTA Code List Booking Channel Type (BCT).
     :ivar primary: Indicates whether the enumerated booking channel is the primary means of connectivity used by the source.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -234,6 +255,9 @@ class BookingClassPrefType:
     :ivar prefer_level:
     :ivar res_book_desig_code: Booking class code
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     prefer_level: str = field(
         default="Preferred",
         metadata=dict(
@@ -257,6 +281,9 @@ class BrandType:
     """
     :ivar code:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -275,6 +302,9 @@ class CabinPrefType:
     :ivar prefer_level:
     :ivar cabin: Specify cabin type.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     prefer_level: str = field(
         default="Preferred",
         metadata=dict(
@@ -327,6 +357,9 @@ class CachePartitionType:
     """
     :ivar name:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     name: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -356,6 +389,9 @@ class CountryNameType:
     :ivar value:
     :ivar code: ISO 3166 code for a country.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -392,6 +428,9 @@ class CustLoyaltyType:
     :ivar expire_date: Indicates the ending date.
     :ivar rph: Reference place holder, to reference it back in the response.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     single_vendor_ind: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -484,6 +523,9 @@ class DateRangeType:
     :ivar outbound_date: Outbound date
     :ivar date_range: Number of date range
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     outbound_date: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -511,6 +553,9 @@ class DateTimeType:
     :ivar connection_time_min: Minimal amount of time between flights
     :ivar connection_time_max: Maximal amount of time between flights
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     time_window_start: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -570,6 +615,9 @@ class DepartureDaysType:
 
     :ivar value: Value format: First letter of the name of the day or '_', eg. 'SMT___S' means we are interested in departing at Saturday, Sunday, Monday or Tuesday. Even if there are schedules for Wednesday, Thursday or Friday, they won't be returned in ISell response.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -590,6 +638,9 @@ class DiversityControlType:
     :ivar low_fare_bucket:
     :ivar dimensions:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     low_fare_bucket: Optional["DiversityControlType.LowFareBucket"] = field(
         default=None,
         metadata=dict(
@@ -991,6 +1042,9 @@ class DocumentType:
     :ivar doc_id: Unique number assigned by authorities to document.
     :ivar doc_type: Indicates the type of document (e.g. Passport, Military ID, Drivers License, national ID, Vaccination Certificate). Refer to OTA Code List Document Type (DOC).
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     share_synch_ind: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1099,6 +1153,9 @@ class EmailType:
     :ivar default_ind:
     :ivar email_type: Defines the purpose of the e-mail address (e.g. personal, business, listserve). Refer to OTA Code List Email Address Type (EAT).
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1148,6 +1205,9 @@ class ExchangeFareType:
     :ivar validating_carrier: Validating carrier
     :ivar roe: Rate of Exchange override (note: doesn't need to be specified if FareCalc currency and BaseFare currency is the same).
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     base_fare_amount: Optional[float] = field(
         default=None,
         metadata=dict(
@@ -1210,6 +1270,9 @@ class ExchangeSettingsType:
     :ivar miptimeout_threshold: Hints MIP that it should return options within this amount of time (in seconds)
     :ivar request_type: Used to specify if the request is an usual Exchange request (basic) or an Exchange Context Shopping request (context). When not specified, basic is assumed.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     reprice_current_itin: bool = field(
         default=True,
         metadata=dict(
@@ -1271,6 +1334,9 @@ class FareDetailsType:
     :ivar basis_code: Fare basis code
     :ivar amount: Fare amount (note: last Flight in Fare Component)
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     vendor: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1361,6 +1427,9 @@ class FareOptionalDetailsType:
     :ivar basis_code: Fare basis code
     :ivar amount: Fare amount (note: last Flight in Fare Component)
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     vendor: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1440,6 +1509,9 @@ class FareRestrictPrefType:
     :ivar prefer_level:
     :ivar fare_restriction: Refer to OTA Code List Fare Restriction (FAR).
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     prefer_level: str = field(
         default="Preferred",
         metadata=dict(
@@ -1462,6 +1534,9 @@ class FlightStopsAsConnectionsType:
 
     :ivar ind:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     ind: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -1481,6 +1556,9 @@ class FlightTypePrefType:
     :ivar flight_type:
     :ivar max_connections: Indicates that if connection is chosen, then this attribute defines the maximum number of connections preferred.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     prefer_level: str = field(
         default="Preferred",
         metadata=dict(
@@ -1521,6 +1599,9 @@ class GoverningCarrierOverrideType:
     """
     :ivar airline_code: Airline Carrier Code - override the GOVERNING CARRIER to get the fare filed by that carrier.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     airline_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1538,6 +1619,9 @@ class IncludeVendorPrefType:
 
     :ivar code: Identifies a company by the company code.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1555,6 +1639,9 @@ class JumpCabinLogicType:
     """
     :ivar disabled: Controls if response could contain options with cabin class different than requested.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     disabled: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -1570,6 +1657,9 @@ class KeepSameCabinType:
     """
     :ivar enabled: Set to "true" guarantees that all segments within single shopping option belong to the requested cabin.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     enabled: Optional[bool] = field(
         default=None,
         metadata=dict(
@@ -1587,6 +1677,9 @@ class MileageDisplayType:
     :ivar city: Mileage display city
     :ivar surcharge: Mileage surcharge percentage
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1622,6 +1715,9 @@ class NumTripsType:
     :ivar per_market: Number of itineraries per market for alternate cities request. It allows to control market diversity only.
     :ivar per_month: In Advanced Calendar API: Maximum number of itineraries to be retrieved for each departure month and departure/arrival combination.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     number: int = field(
         default=9,
         metadata=dict(
@@ -1668,6 +1764,9 @@ class OptionsPerDatePairType:
     :ivar min: Minimum number of options per date/date pair
     :ivar max: Maximum number of options per date/date pair
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     departure: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1718,6 +1817,9 @@ class PersonNameType:
     :ivar share_market_ind:
     :ivar name_type: Type of name of the individual, such as former, nickname, alternate or alias name. Refer to OTA Code List Name Type (NAM).
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     name_prefix: List[str] = field(
         default_factory=list,
         metadata=dict(
@@ -1827,6 +1929,9 @@ class PlusUpType:
     :ivar message: Message
     :ivar country_of_payment: Country of payment
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     amount: Optional[float] = field(
         default=None,
         metadata=dict(
@@ -1900,6 +2005,9 @@ class PointOfSaleOverrideType:
     """
     :ivar code:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1917,6 +2025,9 @@ class PointOfTicketingOverrideType:
     """
     :ivar code:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1937,6 +2048,9 @@ class PositionType:
     :ivar longitude:
     :ivar altitude:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     latitude: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1989,6 +2103,9 @@ class RequestLocationType:
     :ivar airports_group: Name of the airports group
     :ivar code_context: Identifies the context of the identifying code, such as IATA, ARC, or internal code, etc.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2041,6 +2158,9 @@ class ReservationType:
     :ivar status: Reservation status
     :ivar real_status: Real reservation status
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     status: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2065,6 +2185,9 @@ class RetailerRulesType:
     :ivar retailer_rule:
     :ivar force: If set to true, only fares with a matched Business Rule containing the specified Retailer Rule Qualifier will be returned
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     retailer_rule: List["RetailerRulesType.RetailerRule"] = field(
         default_factory=list,
         metadata=dict(
@@ -2107,6 +2230,9 @@ class RoutingLegType:
     :ivar outbound_carrier:
     :ivar connect_point:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     inbound_outbound_carrier: List[str] = field(
         default_factory=list,
         metadata=dict(
@@ -2155,6 +2281,9 @@ class SeatStatusSimType:
     :ivar type:
     :ivar command:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2179,6 +2308,9 @@ class SideTripType:
     :ivar start: Side trip start
     :ivar end: Side trip end
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     number: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -2209,6 +2341,9 @@ class StateProvType:
     :ivar value:
     :ivar state_code: The postal service standard code or abbreviation for the state, province, or region.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2236,6 +2371,9 @@ class StreetNmbrType:
     :ivar value:
     :ivar po_box: Defines a Post Office Box number.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2262,6 +2400,9 @@ class TaxCodeType:
 
     :ivar tax_code: Identifies the code for the tax.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     tax_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2288,6 +2429,9 @@ class TelephoneType:
     :ivar share_market_ind:
     :ivar formatted_ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     phone_location_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2377,6 +2521,9 @@ class TicketDistribPrefType:
     :ivar distrib_type: Ticket distribution method; such as Fax, Email, Courier, Mail, Airport_Pickup, City_Office, Hotel_Desk, WillCall, etc.
     :ivar ticket_time: Ticket turnaround time desired, amount of time requested to deliver tickets.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2421,6 +2568,9 @@ class TravelDateTimeType:
     :ivar departure_window: This should be of the form HHMMHHMM.
     :ivar arrival_window: This should be of the form HHMMHHMM.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     departure_date_time: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2669,6 +2819,7 @@ class TravelerInfoSummaryTpaExtensionsType:
     """
     class Meta:
         name = "TravelerInfoSummary_TPA_ExtensionsType"
+        namespace = "http://www.opentravel.org/OTA/2003/05"
 
     traveler_rating: List["TravelerInfoSummaryTpaExtensionsType.TravelerRating"] = field(
         default_factory=list,
@@ -2758,6 +2909,9 @@ class TravelerRefNumberType:
 
     :ivar rph: Reference place holder.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     rph: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2785,6 +2939,9 @@ class ValidatingCarrierType:
     :ivar preference:
     :ivar code: Validating Carrier code
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     preference: List["ValidatingCarrierType.Preference"] = field(
         default_factory=list,
         metadata=dict(
@@ -2836,6 +2993,7 @@ class XofaresType:
     """
     class Meta:
         name = "XOFaresType"
+        namespace = "http://www.opentravel.org/OTA/2003/05"
 
     value: Optional[bool] = field(
         default=None,
@@ -2863,6 +3021,9 @@ class AddressType:
     :ivar formatted_ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
     :ivar type: Defines the type of address (e.g. home, business, other). Refer to OTA Code List Communication Location Type (CLT).
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     street_nmbr: Optional[StreetNmbrType] = field(
         default=None,
         metadata=dict(
@@ -2968,6 +3129,9 @@ class ArunkType:
     :ivar destination_location: Destination code
     :ivar side_trip: Side trip information
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     origin_location: Optional[RequestLocationType] = field(
         default=None,
         metadata=dict(
@@ -2998,6 +3162,9 @@ class CachePartitionGroupType:
     """
     :ivar partition:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     partition: List[CachePartitionType] = field(
         default_factory=list,
         metadata=dict(
@@ -3016,6 +3183,9 @@ class CompanyNamePrefType(CompanyNameType):
     :ivar prefer_level:
     :ivar type: Specify what type of carrier it comes to.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     prefer_level: str = field(
         default="Preferred",
         metadata=dict(
@@ -3039,6 +3209,9 @@ class ConnectionType:
 
     :ivar connection_location:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     connection_location: List["ConnectionType.ConnectionLocation"] = field(
         default_factory=list,
         metadata=dict(
@@ -3093,6 +3266,9 @@ class EquipmentTypePref(EquipmentType):
     :ivar prefer_level:
     :ivar wide_body: Specify if equipment should have a wide body or not.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     prefer_level: str = field(
         default="Preferred",
         metadata=dict(
@@ -3129,6 +3305,9 @@ class ExchangeOriginDestinationFlightType:
     :ivar plus_up:
     :ivar class_of_service: Class of service
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     origin_location: Optional[RequestLocationType] = field(
         default=None,
         metadata=dict(
@@ -3313,6 +3492,7 @@ class ExchangeTpaExtensionsType:
     """
     class Meta:
         name = "ExchangeTPA_ExtensionsType"
+        namespace = "http://www.opentravel.org/OTA/2003/05"
 
     award_shopping: Optional[AwardShoppingType] = field(
         default=None,
@@ -3328,6 +3508,9 @@ class FlexibleFaresType:
     """
     :ivar fare_parameters: This element specifies parameters for desired fare.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     fare_parameters: List["FlexibleFaresType.FareParameters"] = field(
         default_factory=list,
         metadata=dict(
@@ -3642,6 +3825,9 @@ class GlobalDateTimeType(DateTimeType):
     """
     :ivar date_time: This date should be of the form YYYY-MM-DDTHH:MM:SS.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     date_time: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3659,6 +3845,9 @@ class InterlineBrandsType:
     :ivar brand: Brand list to be returned
     :ivar change_brand_for_soldout: If specific XX brand is not available for requested date/flight, another cheapest brand will be returned combined with available XX brand.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     brand: List[BrandType] = field(
         default_factory=list,
         metadata=dict(
@@ -3698,6 +3887,9 @@ class OriginDestinationFlightType:
     :ivar class_of_service: Class of service
     :ivar shopped: Specify whether the flight is shopped.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     number: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -3840,6 +4032,9 @@ class OverrideDateTimeType(DateTimeType):
     """
     :ivar date_time: This date should be of the form YYYY-MM-DDTHH:MM:SS.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     date_time: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -3868,6 +4063,9 @@ class PriceRequestInformationType:
     :ivar account_code:
     :ivar tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     fare_qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4706,6 +4904,9 @@ class RoutingDefinitionType:
     :ivar routing_leg:
     :ivar add_wildcards: If true, wildcards will be automatically inserted between each two leg (RoutingLeg) elements. Will be set to 'false' if not present.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     routing_leg: List[RoutingLegType] = field(
         default_factory=list,
         metadata=dict(
@@ -4731,6 +4932,9 @@ class SourceBookingChannelType(BookingChannelType):
 
     :ivar company_name: Identifies the company that is associated with the booking channel.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     company_name: Optional[CompanyNameType] = field(
         default=None,
         metadata=dict(
@@ -4746,6 +4950,9 @@ class TaxCodeAmountType(TaxCodeType):
 
     :ivar amount:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     amount: Optional[float] = field(
         default=None,
         metadata=dict(
@@ -4771,6 +4978,7 @@ class UniqueIdType:
     """
     class Meta:
         name = "UniqueID_Type"
+        namespace = "http://www.opentravel.org/OTA/2003/05"
 
     url: Optional[str] = field(
         default=None,
@@ -4848,6 +5056,9 @@ class AirSearchPrefsType:
     :ivar all_flights_data: Return flights not combinable into roundtrips as one ways is a separate section.
     :ivar hybrid: If false no solutions priced outside of ATSE systems will be returned in response for carriers operating in hybrid content distribution model.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     vendor_pref: List[CompanyNamePrefType] = field(
         default_factory=list,
         metadata=dict(
@@ -7005,6 +7216,9 @@ class AirTravelerType:
     :ivar passenger_type_code: A three-letter code representing passenger type (e.g. .ADT. for adult, .CNN. for child)
     :ivar accompanied_by_infant: Indicates if an infant accompanying a traveler is with or without a seat.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     profile_ref: Optional["AirTravelerType.ProfileRef"] = field(
         default=None,
         metadata=dict(
@@ -7204,6 +7418,9 @@ class ExchangeSourceType:
     :ivar co_host_id: CoHostID
     :ivar booking_channel:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     agent_sine: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -7453,6 +7670,7 @@ class ExchangeTravelPreferencesTpaExtensionsType:
     """
     class Meta:
         name = "ExchangeTravelPreferencesTPA_ExtensionsType"
+        namespace = "http://www.opentravel.org/OTA/2003/05"
 
     exempt_all_taxes: Optional["ExchangeTravelPreferencesTpaExtensionsType.ExemptAllTaxes"] = field(
         default=None,
@@ -7546,6 +7764,9 @@ class OriginDestinationInformationType(TravelDateTimeType):
     :ivar destination_location: Travel Destination Location - for example, air uses the IATA 3 letter code.
     :ivar connection_locations: Travel Connection Location - for example, air uses the IATA 3 letter code.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     origin_location: Optional["OriginDestinationInformationType.OriginLocation"] = field(
         default=None,
         metadata=dict(
@@ -7630,6 +7851,9 @@ class SourceType:
     :ivar main_travel_agency_pcc: Main travel agency PCC
     :ivar home_pcc: Home PCC
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     requestor_id: Optional[UniqueIdType] = field(
         default=None,
         metadata=dict(
@@ -7893,6 +8117,9 @@ class TransactionType:
     :ivar chunk_number: Helps Forwarder in keeping track of response parts generated as a result of request processing (AB only).
     :ivar show_itin_source: If enabled, Intellisell will return source for each itinerary.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     request_type: Optional["TransactionType.RequestType"] = field(
         default=None,
         metadata=dict(
@@ -8386,6 +8613,9 @@ class ExchangeAirSearchPrefsType:
     :ivar tpa_extensions:
     :ivar valid_interline_ticket: Request itins that are validated on base of interline ticketing aggrement.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     tpa_extensions: Optional[ExchangeTravelPreferencesTpaExtensionsType] = field(
         default=None,
         metadata=dict(
@@ -8419,6 +8649,9 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
     :ivar total_travel_time: Total travel time settings
     :ivar flight:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     date_flexibility: List["ExchangeOriginDestinationInformationType.DateFlexibility"] = field(
         default_factory=list,
         metadata=dict(
@@ -8736,6 +8969,7 @@ class ExchangePostype:
     """
     class Meta:
         name = "ExchangePOSType"
+        namespace = "http://www.opentravel.org/OTA/2003/05"
 
     source: Optional[ExchangeSourceType] = field(
         default=None,
@@ -8756,6 +8990,7 @@ class PosType:
     """
     class Meta:
         name = "POS_Type"
+        namespace = "http://www.opentravel.org/OTA/2003/05"
 
     source: List[SourceType] = field(
         default_factory=list,
@@ -8775,6 +9010,9 @@ class TravelerInformationType:
     :ivar passenger_type_quantity: Specifies number of passengers using Passenger Type Codes.
     :ivar air_traveler: Information profiling the person traveling Gender - the gender of the customer, if needed BirthDate - Date of Birth Currency - the preferred currency in which monetary amounts should be returned.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     passenger_type_quantity: List[PassengerTypeQuantityType] = field(
         default_factory=list,
         metadata=dict(
@@ -8803,6 +9041,9 @@ class TravelerInfoSummaryType:
     :ivar tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
     :ivar specific_ptc_indicator: If true, this request is for a specific PTC and only fares applicable to that PTC will be checked and returned. It is the same as XOFares flag in Intellisell request.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     seats_requested: List[int] = field(
         default_factory=list,
         metadata=dict(
@@ -8861,6 +9102,9 @@ class ExchangeType:
     :ivar traveler_info_summary:
     :ivar tpa_extensions:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     original_tkt_issue_date_time: Optional[str] = field(
         default=None,
         metadata=dict(

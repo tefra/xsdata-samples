@@ -13,6 +13,9 @@ class AdvResTicketingType:
     :ivar adv_res_ind: Indicator for identifying whether or not advance reservation restrictions are involved in the request or response.
     :ivar adv_ticketing_ind: Indicator for identifying whether or not advance ticketing restrictions are involved in the request or response.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     adv_reservation: Optional["AdvResTicketingType.AdvReservation"] = field(
         default=None,
         metadata=dict(
@@ -154,6 +157,9 @@ class CompanyNameType:
     :ivar code_context: Identifies the context of the identifying code, such as DUNS, IATA or internal code, etc.
     :ivar value:
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     company_short_name: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -214,6 +220,9 @@ class EquipmentType:
     :ivar air_equip_type: This is the 3 character IATA code.
     :ivar changeof_gauge: Indicates there is an equipment change.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     value: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -266,6 +275,9 @@ class StayRestrictionsType:
     :ivar maximum_stay: Specifies restrictions for the longest length/period of time or last day to begin or complete the return.
     :ivar stay_restrictions_ind: True indicates that Stay Restrictions exist.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     minimum_stay: Optional["StayRestrictionsType.MinimumStay"] = field(
         default=None,
         metadata=dict(
@@ -417,6 +429,9 @@ class TravelerCountType:
     :ivar code_context: Identifies the source authority for the code.
     :ivar uri: Identifies the location of the code table
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     quantity: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -468,6 +483,9 @@ class VoluntaryChangesType:
     :ivar penalty: Specifies penalty charges as either a currency amount or a percentage of the fare.
     :ivar vol_change_ind: Indicator used to specify whether voluntary change and other penalties are involved in the search or response.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     penalty: Optional["VoluntaryChangesType.Penalty"] = field(
         default=None,
         metadata=dict(
@@ -549,6 +567,9 @@ class PassengerTypeQuantityType(TravelerCountType):
     :ivar changeable:
     :ivar index: Allows to identify which one of requested passengers this solution relates to.
     """
+    class Meta:
+        namespace = "http://www.opentravel.org/OTA/2003/05"
+
     tpa_extensions: Optional["PassengerTypeQuantityType.TpaExtensions"] = field(
         default=None,
         metadata=dict(
