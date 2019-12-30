@@ -120,7 +120,7 @@ class BaseCoreReq:
             max_length=25.0
         )
     )
-    override_logging: Optional[str] = field(
+    override_logging: Optional[TypeLoggingLevel] = field(
         default=None,
         metadata=dict(
             name="OverrideLogging",

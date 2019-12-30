@@ -94,6 +94,8 @@ from samples.travelport.output.air_v48_0.air import (
     TypeAirReservationWithFop,
     TypeApplicableSegment,
     TypeFailureInfo,
+    TypeFareRuleType,
+    TypeMileOrRouteBasedFare,
     TypeTicketFailureInfo,
     TypeTicketingModifiersRef,
 )
@@ -122,6 +124,7 @@ from samples.travelport.output.common_v48_0.common import (
     SearchPassenger,
     ServiceFeeInfo,
     TicketNumber,
+    TypeDistance,
     TypePassengerType,
 )
 from samples.travelport.output.common_v48_0.common_req_rsp import (
@@ -828,7 +831,7 @@ class AirFareDisplayReq(BaseReq):
             max_length=5.0
         )
     )
-    include_mile_route_information: Optional[str] = field(
+    include_mile_route_information: Optional[TypeMileOrRouteBasedFare] = field(
         default=None,
         metadata=dict(
             name="IncludeMileRouteInformation",
@@ -950,7 +953,7 @@ class AirFareRulesReq(BaseReq):
             max_occurs=16
         )
     )
-    fare_rule_type: str = field(
+    fare_rule_type: TypeFareRuleType = field(
         default="long",
         metadata=dict(
             name="FareRuleType",
@@ -2158,7 +2161,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
             namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
-    fare_rule_type: str = field(
+    fare_rule_type: TypeFareRuleType = field(
         default="none",
         metadata=dict(
             name="FareRuleType",
@@ -2303,7 +2306,7 @@ class BaseAirPriceReq(BaseCoreReq):
             type="Attribute"
         )
     )
-    fare_rule_type: str = field(
+    fare_rule_type: TypeFareRuleType = field(
         default="none",
         metadata=dict(
             name="FareRuleType",
@@ -2519,7 +2522,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
             namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
-    distance_units: Optional[str] = field(
+    distance_units: Optional[TypeDistance] = field(
         default=None,
         metadata=dict(
             name="DistanceUnits",
@@ -3228,7 +3231,7 @@ class AirRepriceReq(AirBaseReq):
             required=True
         )
     )
-    fare_rule_type: str = field(
+    fare_rule_type: TypeFareRuleType = field(
         default="none",
         metadata=dict(
             name="FareRuleType",

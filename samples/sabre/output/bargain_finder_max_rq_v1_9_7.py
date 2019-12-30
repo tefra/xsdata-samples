@@ -3,8 +3,11 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from samples.sabre.output.bargain_finder_max_common_types_v1_9_7 import (
     AdvResTicketingType,
+    AirTripType,
     CompanyNameType,
+    DepartureOrArrival,
     EquipmentType,
+    OutboundOrInbound,
     PassengerTypeQuantityType,
     StayRestrictionsType,
     VoluntaryChangesType,
@@ -60,30 +63,6 @@ class AltCitiesCombinationsLocationsType(Enum):
     """
     ALL = "All"
     MAIN = "Main"
-
-
-@dataclass
-class AltCitiesCombinationsType:
-    """Which (if any) alt cities locations should be handled in a special way (i.e.
-    Validate instead of precomputed path).
-
-    :ivar origins: Which origins to process in live path (All or Main only)
-    :ivar destinations: Which destinations to process in live path (All or Main only)
-    """
-    origins: str = field(
-        default="Main",
-        metadata=dict(
-            name="Origins",
-            type="Attribute"
-        )
-    )
-    destinations: str = field(
-        default="Main",
-        metadata=dict(
-            name="Destinations",
-            type="Attribute"
-        )
-    )
 
 
 @dataclass
@@ -227,32 +206,6 @@ class BookingChannelType:
 
 
 @dataclass
-class BookingClassPrefType:
-    """Booking class code and preference level for specifying booking classes
-    preferred/not preferred in a request.
-
-    :ivar prefer_level:
-    :ivar res_book_desig_code: Booking class code
-    """
-    prefer_level: str = field(
-        default="Preferred",
-        metadata=dict(
-            name="PreferLevel",
-            type="Attribute"
-        )
-    )
-    res_book_desig_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ResBookDesigCode",
-            type="Attribute",
-            required=True,
-            pattern=r"[A-Z]{1,2}"
-        )
-    )
-
-
-@dataclass
 class BrandType:
     """
     :ivar code:
@@ -263,30 +216,6 @@ class BrandType:
             name="Code",
             type="Attribute",
             required=True
-        )
-    )
-
-
-@dataclass
-class CabinPrefType:
-    """Indicates preferences for choice of airline cabin for a given travel
-    situation.
-
-    :ivar prefer_level:
-    :ivar cabin: Specify cabin type.
-    """
-    prefer_level: str = field(
-        default="Preferred",
-        metadata=dict(
-            name="PreferLevel",
-            type="Attribute"
-        )
-    )
-    cabin: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Cabin",
-            type="Attribute"
         )
     )
 
@@ -501,70 +430,6 @@ class DateRangeType:
 
 
 @dataclass
-class DateTimeType:
-    """
-    :ivar time_window_start: Allowed amount of time before specified time.
-    :ivar time_window_end: Allowed amount of time after specified time.
-    :ivar time_tolerance: Maximum time difference between actual and desired time.
-    :ivar date_flexibility: The number of alternate days around the travel date to search.
-    :ivar max_options_per_date: Number of options for requested date.
-    :ivar connection_time_min: Minimal amount of time between flights
-    :ivar connection_time_max: Maximal amount of time between flights
-    """
-    time_window_start: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TimeWindowStart",
-            type="Attribute",
-            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
-        )
-    )
-    time_window_end: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TimeWindowEnd",
-            type="Attribute",
-            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
-        )
-    )
-    time_tolerance: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="TimeTolerance",
-            type="Attribute"
-        )
-    )
-    date_flexibility: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="DateFlexibility",
-            type="Attribute"
-        )
-    )
-    max_options_per_date: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="MaxOptionsPerDate",
-            type="Attribute"
-        )
-    )
-    connection_time_min: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="ConnectionTimeMin",
-            type="Attribute"
-        )
-    )
-    connection_time_max: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="ConnectionTimeMax",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
 class DepartureDaysType:
     """Specify which days of week to consider for departure.
 
@@ -579,412 +444,6 @@ class DepartureDaysType:
             length=7
         )
     )
-
-
-@dataclass
-class DiversityControlType:
-    """These parameters control how IntellSell should select itineraries based not
-    necessarily on cheapest price, but also on other criteria that guarantee a
-    diverse response.
-
-    :ivar low_fare_bucket:
-    :ivar dimensions:
-    """
-    low_fare_bucket: Optional["DiversityControlType.LowFareBucket"] = field(
-        default=None,
-        metadata=dict(
-            name="LowFareBucket",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
-    )
-    dimensions: Optional["DiversityControlType.Dimensions"] = field(
-        default=None,
-        metadata=dict(
-            name="Dimensions",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
-    )
-
-    @dataclass
-    class LowFareBucket:
-        """
-        :ivar options:
-        :ivar fare_cut_off:
-        """
-        options: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="Options",
-                type="Attribute",
-                pattern=r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%"
-            )
-        )
-        fare_cut_off: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="FareCutOff",
-                type="Attribute",
-                pattern=r"(0|100|[1-9][0-9]?)%"
-            )
-        )
-
-    @dataclass
-    class Dimensions:
-        """
-        :ivar travel_time:
-        :ivar carrier:
-        :ivar operating_duplicate:
-        :ivar inbound_outbound_pairing:
-        :ivar time_of_day:
-        :ivar stops_number:
-        :ivar price_weight:
-        """
-        travel_time: Optional["DiversityControlType.Dimensions.TravelTime"] = field(
-            default=None,
-            metadata=dict(
-                name="TravelTime",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
-        )
-        carrier: Optional["DiversityControlType.Dimensions.Carrier"] = field(
-            default=None,
-            metadata=dict(
-                name="Carrier",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
-        )
-        operating_duplicate: Optional["DiversityControlType.Dimensions.OperatingDuplicate"] = field(
-            default=None,
-            metadata=dict(
-                name="OperatingDuplicate",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
-        )
-        inbound_outbound_pairing: Optional["DiversityControlType.Dimensions.InboundOutboundPairing"] = field(
-            default=None,
-            metadata=dict(
-                name="InboundOutboundPairing",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
-        )
-        time_of_day: Optional["DiversityControlType.Dimensions.TimeOfDay"] = field(
-            default=None,
-            metadata=dict(
-                name="TimeOfDay",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
-        )
-        stops_number: Optional["DiversityControlType.Dimensions.StopsNumber"] = field(
-            default=None,
-            metadata=dict(
-                name="StopsNumber",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
-        )
-        price_weight: int = field(
-            default=10,
-            metadata=dict(
-                name="PriceWeight",
-                type="Attribute",
-                min_inclusive=0.0,
-                max_inclusive=10.0
-            )
-        )
-
-        @dataclass
-        class TravelTime:
-            """
-            :ivar weight:
-            """
-            weight: Optional[int] = field(
-                default=None,
-                metadata=dict(
-                    name="Weight",
-                    type="Attribute",
-                    required=True,
-                    min_inclusive=1.0,
-                    max_inclusive=10.0
-                )
-            )
-
-        @dataclass
-        class Carrier:
-            """
-            :ivar default:
-            :ivar override:
-            :ivar weight:
-            :ivar online_indicator:
-            """
-            default: Optional["DiversityControlType.Dimensions.Carrier.Default"] = field(
-                default=None,
-                metadata=dict(
-                    name="Default",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05"
-                )
-            )
-            override: List["DiversityControlType.Dimensions.Carrier.Override"] = field(
-                default_factory=list,
-                metadata=dict(
-                    name="Override",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
-            )
-            weight: Optional[int] = field(
-                default=None,
-                metadata=dict(
-                    name="Weight",
-                    type="Attribute",
-                    required=True,
-                    min_inclusive=1.0,
-                    max_inclusive=10.0
-                )
-            )
-            online_indicator: bool = field(
-                default=False,
-                metadata=dict(
-                    name="OnlineIndicator",
-                    type="Attribute"
-                )
-            )
-
-            @dataclass
-            class Default:
-                """
-                :ivar options:
-                """
-                options: Optional[str] = field(
-                    default=None,
-                    metadata=dict(
-                        name="Options",
-                        type="Attribute",
-                        required=True,
-                        pattern=r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%"
-                    )
-                )
-
-            @dataclass
-            class Override:
-                """
-                :ivar code:
-                :ivar options:
-                """
-                code: Optional[str] = field(
-                    default=None,
-                    metadata=dict(
-                        name="Code",
-                        type="Attribute",
-                        required=True,
-                        pattern=r"[0-9A-Z]{2,3}"
-                    )
-                )
-                options: Optional[str] = field(
-                    default=None,
-                    metadata=dict(
-                        name="Options",
-                        type="Attribute",
-                        required=True,
-                        pattern=r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%"
-                    )
-                )
-
-        @dataclass
-        class OperatingDuplicate:
-            """
-            :ivar preferred_carrier:
-            :ivar weight:
-            """
-            preferred_carrier: List["DiversityControlType.Dimensions.OperatingDuplicate.PreferredCarrier"] = field(
-                default_factory=list,
-                metadata=dict(
-                    name="PreferredCarrier",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
-            )
-            weight: Optional[int] = field(
-                default=None,
-                metadata=dict(
-                    name="Weight",
-                    type="Attribute",
-                    required=True,
-                    min_inclusive=1.0,
-                    max_inclusive=10.0
-                )
-            )
-
-            @dataclass
-            class PreferredCarrier:
-                """
-                :ivar code:
-                """
-                code: Optional[str] = field(
-                    default=None,
-                    metadata=dict(
-                        name="Code",
-                        type="Attribute",
-                        required=True,
-                        pattern=r"[0-9A-Z]{2,3}"
-                    )
-                )
-
-        @dataclass
-        class InboundOutboundPairing:
-            """
-            :ivar weight:
-            :ivar duplicates:
-            """
-            weight: Optional[int] = field(
-                default=None,
-                metadata=dict(
-                    name="Weight",
-                    type="Attribute",
-                    required=True,
-                    min_inclusive=1.0,
-                    max_inclusive=10.0
-                )
-            )
-            duplicates: int = field(
-                default=1,
-                metadata=dict(
-                    name="Duplicates",
-                    type="Attribute"
-                )
-            )
-
-        @dataclass
-        class TimeOfDay:
-            """
-            :ivar distribution: Exactly one attribute: either Direction or Leg must be provided
-            :ivar weight:
-            """
-            distribution: List["DiversityControlType.Dimensions.TimeOfDay.Distribution"] = field(
-                default_factory=list,
-                metadata=dict(
-                    name="Distribution",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
-            )
-            weight: Optional[int] = field(
-                default=None,
-                metadata=dict(
-                    name="Weight",
-                    type="Attribute",
-                    required=True,
-                    min_inclusive=1.0,
-                    max_inclusive=10.0
-                )
-            )
-
-            @dataclass
-            class Distribution:
-                """
-                :ivar range:
-                :ivar direction:
-                :ivar leg:
-                :ivar endpoint:
-                """
-                range: List["DiversityControlType.Dimensions.TimeOfDay.Distribution.Range"] = field(
-                    default_factory=list,
-                    metadata=dict(
-                        name="Range",
-                        type="Element",
-                        namespace="http://www.opentravel.org/OTA/2003/05",
-                        min_occurs=0,
-                        max_occurs=4
-                    )
-                )
-                direction: Optional[str] = field(
-                    default=None,
-                    metadata=dict(
-                        name="Direction",
-                        type="Attribute"
-                    )
-                )
-                leg: Optional[int] = field(
-                    default=None,
-                    metadata=dict(
-                        name="Leg",
-                        type="Attribute"
-                    )
-                )
-                endpoint: str = field(
-                    default="Departure",
-                    metadata=dict(
-                        name="Endpoint",
-                        type="Attribute"
-                    )
-                )
-
-                @dataclass
-                class Range:
-                    """Either all Range elements shall contain attribute Options or none. Ranges
-                    shall not overlap.
-
-                    :ivar begin:
-                    :ivar end:
-                    :ivar options:
-                    """
-                    begin: Optional[str] = field(
-                        default=None,
-                        metadata=dict(
-                            name="Begin",
-                            type="Attribute",
-                            required=True,
-                            pattern=r"([0-1]?[0-9]|2[0-3]):[0-5][0-9]"
-                        )
-                    )
-                    end: Optional[str] = field(
-                        default=None,
-                        metadata=dict(
-                            name="End",
-                            type="Attribute",
-                            required=True,
-                            pattern=r"([0-1]?[0-9]|2[0-3]):[0-5][0-9]"
-                        )
-                    )
-                    options: Optional[str] = field(
-                        default=None,
-                        metadata=dict(
-                            name="Options",
-                            type="Attribute",
-                            pattern=r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%"
-                        )
-                    )
-
-        @dataclass
-        class StopsNumber:
-            """
-            :ivar weight:
-            """
-            weight: Optional[int] = field(
-                default=None,
-                metadata=dict(
-                    name="Weight",
-                    type="Attribute",
-                    required=True,
-                    min_inclusive=1.0,
-                    max_inclusive=10.0
-                )
-            )
 
 
 @dataclass
@@ -1448,30 +907,6 @@ class FareOptionalDetailsType:
 
 
 @dataclass
-class FareRestrictPrefType:
-    """Identifies preferences for airfare restrictions acceptable or not acceptable
-    for a given travel situation.
-
-    :ivar prefer_level:
-    :ivar fare_restriction: Refer to OTA Code List Fare Restriction (FAR).
-    """
-    prefer_level: str = field(
-        default="Preferred",
-        metadata=dict(
-            name="PreferLevel",
-            type="Attribute"
-        )
-    )
-    fare_restriction: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FareRestriction",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
 class FlightStopsAsConnectionsType:
     """Treat all stops as connections.
 
@@ -1487,38 +922,6 @@ class FlightStopsAsConnectionsType:
     )
 
 
-@dataclass
-class FlightTypePrefType:
-    """Indicates preferences for certain types of flights, such as connections or
-    stopovers, when used for a specific travel situation.
-
-    :ivar prefer_level:
-    :ivar flight_type:
-    :ivar max_connections: Indicates that if connection is chosen, then this attribute defines the maximum number of connections preferred.
-    """
-    prefer_level: str = field(
-        default="Preferred",
-        metadata=dict(
-            name="PreferLevel",
-            type="Attribute"
-        )
-    )
-    flight_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FlightType",
-            type="Attribute"
-        )
-    )
-    max_connections: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="MaxConnections",
-            type="Attribute"
-        )
-    )
-
-
 class FlightTypeType(Enum):
     """
     Identifies a particular type of flight - Direct, Stopover etc.
@@ -1529,6 +932,80 @@ class FlightTypeType(Enum):
     NONSTOP = "Nonstop"
     DIRECT = "Direct"
     CONNECTION = "Connection"
+
+
+@dataclass
+class GlobalDateTimeType:
+    """
+    :ivar time_window_start: Allowed amount of time before specified time.
+    :ivar time_window_end: Allowed amount of time after specified time.
+    :ivar time_tolerance: Maximum time difference between actual and desired time.
+    :ivar date_flexibility: The number of alternate days around the travel date to search.
+    :ivar max_options_per_date: Number of options for requested date.
+    :ivar connection_time_min: Minimal amount of time between flights
+    :ivar connection_time_max: Maximal amount of time between flights
+    :ivar date_time: This date should be of the form YYYY-MM-DDTHH:MM:SS.
+    """
+    time_window_start: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TimeWindowStart",
+            type="Attribute",
+            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
+        )
+    )
+    time_window_end: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TimeWindowEnd",
+            type="Attribute",
+            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
+        )
+    )
+    time_tolerance: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="TimeTolerance",
+            type="Attribute"
+        )
+    )
+    date_flexibility: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="DateFlexibility",
+            type="Attribute"
+        )
+    )
+    max_options_per_date: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="MaxOptionsPerDate",
+            type="Attribute"
+        )
+    )
+    connection_time_min: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="ConnectionTimeMin",
+            type="Attribute"
+        )
+    )
+    connection_time_max: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="ConnectionTimeMax",
+            type="Attribute"
+        )
+    )
+    date_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DateTime",
+            type="Attribute",
+            required=True,
+            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"
+        )
+    )
 
 
 @dataclass
@@ -1714,6 +1191,79 @@ class OptionsPerDatePairType:
             name="Max",
             type="Attribute",
             required=True
+        )
+    )
+
+
+@dataclass
+class OverrideDateTimeType:
+    """
+    :ivar time_window_start: Allowed amount of time before specified time.
+    :ivar time_window_end: Allowed amount of time after specified time.
+    :ivar time_tolerance: Maximum time difference between actual and desired time.
+    :ivar date_flexibility: The number of alternate days around the travel date to search.
+    :ivar max_options_per_date: Number of options for requested date.
+    :ivar connection_time_min: Minimal amount of time between flights
+    :ivar connection_time_max: Maximal amount of time between flights
+    :ivar date_time: This date should be of the form YYYY-MM-DDTHH:MM:SS.
+    """
+    time_window_start: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TimeWindowStart",
+            type="Attribute",
+            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
+        )
+    )
+    time_window_end: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TimeWindowEnd",
+            type="Attribute",
+            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
+        )
+    )
+    time_tolerance: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="TimeTolerance",
+            type="Attribute"
+        )
+    )
+    date_flexibility: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="DateFlexibility",
+            type="Attribute"
+        )
+    )
+    max_options_per_date: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="MaxOptionsPerDate",
+            type="Attribute"
+        )
+    )
+    connection_time_min: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="ConnectionTimeMin",
+            type="Attribute"
+        )
+    )
+    connection_time_max: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="ConnectionTimeMax",
+            type="Attribute"
+        )
+    )
+    date_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DateTime",
+            type="Attribute",
+            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"
         )
     )
 
@@ -2396,47 +1946,6 @@ class TelephoneType:
 
 
 @dataclass
-class TicketDistribPrefType:
-    """Type of ticket distribution to be used with this collection of preferences.
-
-    :ivar value:
-    :ivar prefer_level:
-    :ivar distrib_type: Ticket distribution method; such as Fax, Email, Courier, Mail, Airport_Pickup, City_Office, Hotel_Desk, WillCall, etc.
-    :ivar ticket_time: Ticket turnaround time desired, amount of time requested to deliver tickets.
-    """
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Restriction",
-            min_length=0.0,
-            max_length=64.0
-        )
-    )
-    prefer_level: str = field(
-        default="Preferred",
-        metadata=dict(
-            name="PreferLevel",
-            type="Attribute"
-        )
-    )
-    distrib_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DistribType",
-            type="Attribute"
-        )
-    )
-    ticket_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketTime",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
 class TravelDateTimeType:
     """Date and time of trip, that allows specifying a time window before and after
     the given date.
@@ -2822,56 +2331,6 @@ class ValidatingCarrierPreferLevelType(Enum):
 
 
 @dataclass
-class ValidatingCarrierType:
-    """
-    :ivar preference:
-    :ivar code: Validating Carrier code
-    """
-    preference: List["ValidatingCarrierType.Preference"] = field(
-        default_factory=list,
-        metadata=dict(
-            name="Preference",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
-    )
-    code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            pattern=r"[0-9A-Z]{2,3}"
-        )
-    )
-
-    @dataclass
-    class Preference:
-        """
-        :ivar code:
-        :ivar level:
-        """
-        code: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="Code",
-                type="Attribute",
-                required=True,
-                pattern=r"[0-9A-Z]{2,3}"
-            )
-        )
-        level: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="Level",
-                type="Attribute",
-                required=True
-            )
-        )
-
-
-@dataclass
 class XofaresType:
     """XOFares indicator.
 
@@ -3013,6 +2472,30 @@ class AddressType:
 
 
 @dataclass
+class AltCitiesCombinationsType:
+    """Which (if any) alt cities locations should be handled in a special way (i.e.
+    Validate instead of precomputed path).
+
+    :ivar origins: Which origins to process in live path (All or Main only)
+    :ivar destinations: Which destinations to process in live path (All or Main only)
+    """
+    origins: AltCitiesCombinationsLocationsType = field(
+        default="Main",
+        metadata=dict(
+            name="Origins",
+            type="Attribute"
+        )
+    )
+    destinations: AltCitiesCombinationsLocationsType = field(
+        default="Main",
+        metadata=dict(
+            name="Destinations",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class ArunkType:
     """
     :ivar origin_location: Origin code
@@ -3048,6 +2531,56 @@ class ArunkType:
 
 
 @dataclass
+class BookingClassPrefType:
+    """Booking class code and preference level for specifying booking classes
+    preferred/not preferred in a request.
+
+    :ivar prefer_level:
+    :ivar res_book_desig_code: Booking class code
+    """
+    prefer_level: PreferLevelType = field(
+        default="Preferred",
+        metadata=dict(
+            name="PreferLevel",
+            type="Attribute"
+        )
+    )
+    res_book_desig_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ResBookDesigCode",
+            type="Attribute",
+            required=True,
+            pattern=r"[A-Z]{1,2}"
+        )
+    )
+
+
+@dataclass
+class CabinPrefType:
+    """Indicates preferences for choice of airline cabin for a given travel
+    situation.
+
+    :ivar prefer_level:
+    :ivar cabin: Specify cabin type.
+    """
+    prefer_level: PreferLevelType = field(
+        default="Preferred",
+        metadata=dict(
+            name="PreferLevel",
+            type="Attribute"
+        )
+    )
+    cabin: Optional[CabinType] = field(
+        default=None,
+        metadata=dict(
+            name="Cabin",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class CachePartitionGroupType:
     """
     :ivar partition:
@@ -3071,14 +2604,14 @@ class CompanyNamePrefType(CompanyNameType):
     :ivar prefer_level:
     :ivar type: Specify what type of carrier it comes to.
     """
-    prefer_level: str = field(
+    prefer_level: PreferLevelType = field(
         default="Preferred",
         metadata=dict(
             name="PreferLevel",
             type="Attribute"
         )
     )
-    type: Optional[str] = field(
+    type: Optional[CarrierType] = field(
         default=None,
         metadata=dict(
             name="Type",
@@ -3120,7 +2653,7 @@ class ConnectionType:
                 type="Attribute"
             )
         )
-        prefer_level: str = field(
+        prefer_level: PreferLevelType = field(
             default="Preferred",
             metadata=dict(
                 name="PreferLevel",
@@ -3144,12 +2677,418 @@ class ConnectionType:
 
 
 @dataclass
+class DiversityControlType:
+    """These parameters control how IntellSell should select itineraries based not
+    necessarily on cheapest price, but also on other criteria that guarantee a
+    diverse response.
+
+    :ivar low_fare_bucket:
+    :ivar dimensions:
+    """
+    low_fare_bucket: Optional["DiversityControlType.LowFareBucket"] = field(
+        default=None,
+        metadata=dict(
+            name="LowFareBucket",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            required=True
+        )
+    )
+    dimensions: Optional["DiversityControlType.Dimensions"] = field(
+        default=None,
+        metadata=dict(
+            name="Dimensions",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            required=True
+        )
+    )
+
+    @dataclass
+    class LowFareBucket:
+        """
+        :ivar options:
+        :ivar fare_cut_off:
+        """
+        options: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Options",
+                type="Attribute",
+                pattern=r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%"
+            )
+        )
+        fare_cut_off: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="FareCutOff",
+                type="Attribute",
+                pattern=r"(0|100|[1-9][0-9]?)%"
+            )
+        )
+
+    @dataclass
+    class Dimensions:
+        """
+        :ivar travel_time:
+        :ivar carrier:
+        :ivar operating_duplicate:
+        :ivar inbound_outbound_pairing:
+        :ivar time_of_day:
+        :ivar stops_number:
+        :ivar price_weight:
+        """
+        travel_time: Optional["DiversityControlType.Dimensions.TravelTime"] = field(
+            default=None,
+            metadata=dict(
+                name="TravelTime",
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
+            )
+        )
+        carrier: Optional["DiversityControlType.Dimensions.Carrier"] = field(
+            default=None,
+            metadata=dict(
+                name="Carrier",
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
+            )
+        )
+        operating_duplicate: Optional["DiversityControlType.Dimensions.OperatingDuplicate"] = field(
+            default=None,
+            metadata=dict(
+                name="OperatingDuplicate",
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
+            )
+        )
+        inbound_outbound_pairing: Optional["DiversityControlType.Dimensions.InboundOutboundPairing"] = field(
+            default=None,
+            metadata=dict(
+                name="InboundOutboundPairing",
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
+            )
+        )
+        time_of_day: Optional["DiversityControlType.Dimensions.TimeOfDay"] = field(
+            default=None,
+            metadata=dict(
+                name="TimeOfDay",
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
+            )
+        )
+        stops_number: Optional["DiversityControlType.Dimensions.StopsNumber"] = field(
+            default=None,
+            metadata=dict(
+                name="StopsNumber",
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
+            )
+        )
+        price_weight: int = field(
+            default=10,
+            metadata=dict(
+                name="PriceWeight",
+                type="Attribute",
+                min_inclusive=0.0,
+                max_inclusive=10.0
+            )
+        )
+
+        @dataclass
+        class TravelTime:
+            """
+            :ivar weight:
+            """
+            weight: Optional[int] = field(
+                default=None,
+                metadata=dict(
+                    name="Weight",
+                    type="Attribute",
+                    required=True,
+                    min_inclusive=1.0,
+                    max_inclusive=10.0
+                )
+            )
+
+        @dataclass
+        class Carrier:
+            """
+            :ivar default:
+            :ivar override:
+            :ivar weight:
+            :ivar online_indicator:
+            """
+            default: Optional["DiversityControlType.Dimensions.Carrier.Default"] = field(
+                default=None,
+                metadata=dict(
+                    name="Default",
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05"
+                )
+            )
+            override: List["DiversityControlType.Dimensions.Carrier.Override"] = field(
+                default_factory=list,
+                metadata=dict(
+                    name="Override",
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
+                    min_occurs=0,
+                    max_occurs=9223372036854775807
+                )
+            )
+            weight: Optional[int] = field(
+                default=None,
+                metadata=dict(
+                    name="Weight",
+                    type="Attribute",
+                    required=True,
+                    min_inclusive=1.0,
+                    max_inclusive=10.0
+                )
+            )
+            online_indicator: bool = field(
+                default=False,
+                metadata=dict(
+                    name="OnlineIndicator",
+                    type="Attribute"
+                )
+            )
+
+            @dataclass
+            class Default:
+                """
+                :ivar options:
+                """
+                options: Optional[str] = field(
+                    default=None,
+                    metadata=dict(
+                        name="Options",
+                        type="Attribute",
+                        required=True,
+                        pattern=r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%"
+                    )
+                )
+
+            @dataclass
+            class Override:
+                """
+                :ivar code:
+                :ivar options:
+                """
+                code: Optional[str] = field(
+                    default=None,
+                    metadata=dict(
+                        name="Code",
+                        type="Attribute",
+                        required=True,
+                        pattern=r"[0-9A-Z]{2,3}"
+                    )
+                )
+                options: Optional[str] = field(
+                    default=None,
+                    metadata=dict(
+                        name="Options",
+                        type="Attribute",
+                        required=True,
+                        pattern=r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%"
+                    )
+                )
+
+        @dataclass
+        class OperatingDuplicate:
+            """
+            :ivar preferred_carrier:
+            :ivar weight:
+            """
+            preferred_carrier: List["DiversityControlType.Dimensions.OperatingDuplicate.PreferredCarrier"] = field(
+                default_factory=list,
+                metadata=dict(
+                    name="PreferredCarrier",
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
+                    min_occurs=0,
+                    max_occurs=9223372036854775807
+                )
+            )
+            weight: Optional[int] = field(
+                default=None,
+                metadata=dict(
+                    name="Weight",
+                    type="Attribute",
+                    required=True,
+                    min_inclusive=1.0,
+                    max_inclusive=10.0
+                )
+            )
+
+            @dataclass
+            class PreferredCarrier:
+                """
+                :ivar code:
+                """
+                code: Optional[str] = field(
+                    default=None,
+                    metadata=dict(
+                        name="Code",
+                        type="Attribute",
+                        required=True,
+                        pattern=r"[0-9A-Z]{2,3}"
+                    )
+                )
+
+        @dataclass
+        class InboundOutboundPairing:
+            """
+            :ivar weight:
+            :ivar duplicates:
+            """
+            weight: Optional[int] = field(
+                default=None,
+                metadata=dict(
+                    name="Weight",
+                    type="Attribute",
+                    required=True,
+                    min_inclusive=1.0,
+                    max_inclusive=10.0
+                )
+            )
+            duplicates: int = field(
+                default=1,
+                metadata=dict(
+                    name="Duplicates",
+                    type="Attribute"
+                )
+            )
+
+        @dataclass
+        class TimeOfDay:
+            """
+            :ivar distribution: Exactly one attribute: either Direction or Leg must be provided
+            :ivar weight:
+            """
+            distribution: List["DiversityControlType.Dimensions.TimeOfDay.Distribution"] = field(
+                default_factory=list,
+                metadata=dict(
+                    name="Distribution",
+                    type="Element",
+                    namespace="http://www.opentravel.org/OTA/2003/05",
+                    min_occurs=0,
+                    max_occurs=9223372036854775807
+                )
+            )
+            weight: Optional[int] = field(
+                default=None,
+                metadata=dict(
+                    name="Weight",
+                    type="Attribute",
+                    required=True,
+                    min_inclusive=1.0,
+                    max_inclusive=10.0
+                )
+            )
+
+            @dataclass
+            class Distribution:
+                """
+                :ivar range:
+                :ivar direction:
+                :ivar leg:
+                :ivar endpoint:
+                """
+                range: List["DiversityControlType.Dimensions.TimeOfDay.Distribution.Range"] = field(
+                    default_factory=list,
+                    metadata=dict(
+                        name="Range",
+                        type="Element",
+                        namespace="http://www.opentravel.org/OTA/2003/05",
+                        min_occurs=0,
+                        max_occurs=4
+                    )
+                )
+                direction: Optional[OutboundOrInbound] = field(
+                    default=None,
+                    metadata=dict(
+                        name="Direction",
+                        type="Attribute"
+                    )
+                )
+                leg: Optional[int] = field(
+                    default=None,
+                    metadata=dict(
+                        name="Leg",
+                        type="Attribute"
+                    )
+                )
+                endpoint: DepartureOrArrival = field(
+                    default="Departure",
+                    metadata=dict(
+                        name="Endpoint",
+                        type="Attribute"
+                    )
+                )
+
+                @dataclass
+                class Range:
+                    """Either all Range elements shall contain attribute Options or none. Ranges
+                    shall not overlap.
+
+                    :ivar begin:
+                    :ivar end:
+                    :ivar options:
+                    """
+                    begin: Optional[str] = field(
+                        default=None,
+                        metadata=dict(
+                            name="Begin",
+                            type="Attribute",
+                            required=True,
+                            pattern=r"([0-1]?[0-9]|2[0-3]):[0-5][0-9]"
+                        )
+                    )
+                    end: Optional[str] = field(
+                        default=None,
+                        metadata=dict(
+                            name="End",
+                            type="Attribute",
+                            required=True,
+                            pattern=r"([0-1]?[0-9]|2[0-3]):[0-5][0-9]"
+                        )
+                    )
+                    options: Optional[str] = field(
+                        default=None,
+                        metadata=dict(
+                            name="Options",
+                            type="Attribute",
+                            pattern=r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%"
+                        )
+                    )
+
+        @dataclass
+        class StopsNumber:
+            """
+            :ivar weight:
+            """
+            weight: Optional[int] = field(
+                default=None,
+                metadata=dict(
+                    name="Weight",
+                    type="Attribute",
+                    required=True,
+                    min_inclusive=1.0,
+                    max_inclusive=10.0
+                )
+            )
+
+
+@dataclass
 class EquipmentTypePref(EquipmentType):
     """
     :ivar prefer_level:
     :ivar wide_body: Specify if equipment should have a wide body or not.
     """
-    prefer_level: str = field(
+    prefer_level: PreferLevelType = field(
         default="Preferred",
         metadata=dict(
             name="PreferLevel",
@@ -3386,6 +3325,30 @@ class ExchangeTpaExtensionsType:
             name="AwardShopping",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05"
+        )
+    )
+
+
+@dataclass
+class FareRestrictPrefType:
+    """Identifies preferences for airfare restrictions acceptable or not acceptable
+    for a given travel situation.
+
+    :ivar prefer_level:
+    :ivar fare_restriction: Refer to OTA Code List Fare Restriction (FAR).
+    """
+    prefer_level: PreferLevelType = field(
+        default="Preferred",
+        metadata=dict(
+            name="PreferLevel",
+            type="Attribute"
+        )
+    )
+    fare_restriction: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FareRestriction",
+            type="Attribute"
         )
     )
 
@@ -3637,7 +3600,7 @@ class FlexibleFaresType:
             """
             :ivar type:
             """
-            type: Optional[str] = field(
+            type: Optional[CabinType] = field(
                 default=None,
                 metadata=dict(
                     name="Type",
@@ -3721,17 +3684,33 @@ class FlexibleFaresType:
 
 
 @dataclass
-class GlobalDateTimeType(DateTimeType):
+class FlightTypePrefType:
+    """Indicates preferences for certain types of flights, such as connections or
+    stopovers, when used for a specific travel situation.
+
+    :ivar prefer_level:
+    :ivar flight_type:
+    :ivar max_connections: Indicates that if connection is chosen, then this attribute defines the maximum number of connections preferred.
     """
-    :ivar date_time: This date should be of the form YYYY-MM-DDTHH:MM:SS.
-    """
-    date_time: Optional[str] = field(
+    prefer_level: PreferLevelType = field(
+        default="Preferred",
+        metadata=dict(
+            name="PreferLevel",
+            type="Attribute"
+        )
+    )
+    flight_type: Optional[FlightTypeType] = field(
         default=None,
         metadata=dict(
-            name="DateTime",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"
+            name="FlightType",
+            type="Attribute"
+        )
+    )
+    max_connections: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="MaxConnections",
+            type="Attribute"
         )
     )
 
@@ -3929,21 +3908,6 @@ class OriginDestinationFlightType:
 
 
 @dataclass
-class OverrideDateTimeType(DateTimeType):
-    """
-    :ivar date_time: This date should be of the form YYYY-MM-DDTHH:MM:SS.
-    """
-    date_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DateTime",
-            type="Attribute",
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"
-        )
-    )
-
-
-@dataclass
 class PriceRequestInformationType:
     """Identify pricing source, if negotiated fares are requested and if it is a
     reprice request.
@@ -3983,7 +3947,7 @@ class PriceRequestInformationType:
             pattern=r"[a-zA-Z]{3}"
         )
     )
-    pricing_source: Optional[str] = field(
+    pricing_source: Optional[RequestPricingSourceType] = field(
         default=None,
         metadata=dict(
             name="PricingSource",
@@ -4890,6 +4854,47 @@ class TaxCodeAmountType(TaxCodeType):
 
 
 @dataclass
+class TicketDistribPrefType:
+    """Type of ticket distribution to be used with this collection of preferences.
+
+    :ivar value:
+    :ivar prefer_level:
+    :ivar distrib_type: Ticket distribution method; such as Fax, Email, Courier, Mail, Airport_Pickup, City_Office, Hotel_Desk, WillCall, etc.
+    :ivar ticket_time: Ticket turnaround time desired, amount of time requested to deliver tickets.
+    """
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Restriction",
+            min_length=0.0,
+            max_length=64.0
+        )
+    )
+    prefer_level: PreferLevelType = field(
+        default="Preferred",
+        metadata=dict(
+            name="PreferLevel",
+            type="Attribute"
+        )
+    )
+    distrib_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DistribType",
+            type="Attribute"
+        )
+    )
+    ticket_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketTime",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class UniqueIdType:
     """An identifier used to uniquely reference an object in a system (e.g. an
     airline reservation reference, customer profile reference, booking confirmation
@@ -4956,6 +4961,56 @@ class UniqueIdType:
             namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
+
+
+@dataclass
+class ValidatingCarrierType:
+    """
+    :ivar preference:
+    :ivar code: Validating Carrier code
+    """
+    preference: List["ValidatingCarrierType.Preference"] = field(
+        default_factory=list,
+        metadata=dict(
+            name="Preference",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            min_occurs=0,
+            max_occurs=9223372036854775807
+        )
+    )
+    code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Code",
+            type="Attribute",
+            pattern=r"[0-9A-Z]{2,3}"
+        )
+    )
+
+    @dataclass
+    class Preference:
+        """
+        :ivar code:
+        :ivar level:
+        """
+        code: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Code",
+                type="Attribute",
+                required=True,
+                pattern=r"[0-9A-Z]{2,3}"
+            )
+        )
+        level: Optional[ValidatingCarrierPreferLevelType] = field(
+            default=None,
+            metadata=dict(
+                name="Level",
+                type="Attribute",
+                required=True
+            )
+        )
 
 
 @dataclass
@@ -5956,7 +6011,7 @@ class AirSearchPrefsType:
             """
             :ivar value:
             """
-            value: Optional[str] = field(
+            value: Optional[AirTripType] = field(
                 default=None,
                 metadata=dict(
                     name="Value",
@@ -9814,7 +9869,7 @@ class OtaAirLowFareSearchRq:
                             max_length=8.0
                         )
                     )
-                    prefer_level: str = field(
+                    prefer_level: PreferLevelType = field(
                         default="Preferred",
                         metadata=dict(
                             name="PreferLevel",
@@ -10649,14 +10704,14 @@ class OtaAirLowFareSearchRq:
             :ivar preference_level:
             :ivar type: Specifies cabin type.
             """
-            preference_level: str = field(
+            preference_level: PreferLevelType = field(
                 default="Preferred",
                 metadata=dict(
                     name="PreferenceLevel",
                     type="Attribute"
                 )
             )
-            type: Optional[str] = field(
+            type: Optional[CabinType] = field(
                 default=None,
                 metadata=dict(
                     name="Type",

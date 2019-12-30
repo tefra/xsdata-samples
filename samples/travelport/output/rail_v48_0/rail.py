@@ -11,38 +11,12 @@ from samples.travelport.output.common_v48_0.common import (
     Remark,
     Segment,
     SupplierLocator,
+    TypeElementStatus,
     TypeFlexibleTimeSpec,
     TypePassengerType,
     TypeSearchLocation,
     TypeTimeSpec,
 )
-
-
-@dataclass
-class Characteristic:
-    """Defines coach characteristics such as accommodation class, smoking choice,
-    etc.
-
-    :ivar smoking:
-    :ivar class_value:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/rail_v48_0"
-
-    smoking: bool = field(
-        default=False,
-        metadata=dict(
-            name="Smoking",
-            type="Attribute"
-        )
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Class",
-            type="Attribute"
-        )
-    )
 
 
 @dataclass
@@ -351,57 +325,6 @@ class RailExchangeInfo:
 
 
 @dataclass
-class RailFareId:
-    """
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar value:
-    :ivar key:
-    :ivar category:
-    """
-    class Meta:
-        name = "RailFareID"
-        namespace = "http://www.travelport.com/schema/rail_v48_0"
-
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
-    )
-    category: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Category",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
 class RailFareIdref:
     """Reference to a complete FareID from a shared list.
 
@@ -415,58 +338,6 @@ class RailFareIdref:
         default=None,
         metadata=dict(
             name="Key",
-            type="Attribute",
-            required=True
-        )
-    )
-
-
-@dataclass
-class RailFareNote:
-    """A simple textual fare note. Used within several other objects.
-
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar value:
-    :ivar key:
-    :ivar note_name:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/rail_v48_0"
-
-    el_stat: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
-    )
-    note_name: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="NoteName",
             type="Attribute",
             required=True
         )
@@ -687,42 +558,6 @@ class RailRefundInfo:
         metadata=dict(
             name="NetAmount",
             type="Attribute"
-        )
-    )
-
-
-@dataclass
-class RailSegmentInfo:
-    """A textual remark container to hold any printable text. (max 512 chars) Holds
-    the ExtraSegmentInfo and VendorMessages from RCH response.
-
-    :ivar value:
-    :ivar category: Supplier specific category.
-    :ivar type: Either Extra for ExtraSegmentInfo or Vendor for VendorMessages.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/rail_v48_0"
-
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
-    )
-    category: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Category",
-            type="Attribute"
-        )
-    )
-    type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
         )
     )
 
@@ -1012,37 +847,27 @@ class TypeTransportMode(Enum):
 
 
 @dataclass
-class Coach:
-    """Captures rail seat map/coach map information.
+class Characteristic:
+    """Defines coach characteristics such as accommodation class, smoking choice,
+    etc.
 
-    :ivar characteristic:
-    :ivar remark:
-    :ivar coach_number: Coach number for which seat map/coach map is returned.
+    :ivar smoking:
+    :ivar class_value:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    characteristic: Optional[Characteristic] = field(
-        default=None,
+    smoking: bool = field(
+        default=False,
         metadata=dict(
-            name="Characteristic",
-            type="Element"
+            name="Smoking",
+            type="Attribute"
         )
     )
-    remark: List[Remark] = field(
-        default_factory=list,
-        metadata=dict(
-            name="Remark",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    coach_number: Optional[str] = field(
+    class_value: Optional[TypeCoachClassType] = field(
         default=None,
         metadata=dict(
-            name="CoachNumber",
+            name="Class",
             type="Attribute"
         )
     )
@@ -1144,42 +969,104 @@ class RailFareComponent:
 
 
 @dataclass
-class RailFareIdlist:
-    """The shared object list of FareIDs.
-
-    :ivar rail_fare_id:
+class RailFareId:
+    """
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar value:
+    :ivar key:
+    :ivar category:
     """
     class Meta:
-        name = "RailFareIDList"
+        name = "RailFareID"
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_fare_id: List[RailFareId] = field(
-        default_factory=list,
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
         metadata=dict(
-            name="RailFareID",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute",
+            required=True
+        )
+    )
+    category: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Category",
+            type="Attribute"
         )
     )
 
 
 @dataclass
-class RailFareNoteList:
-    """The shared object list of Notes.
+class RailFareNote:
+    """A simple textual fare note. Used within several other objects.
 
-    :ivar rail_fare_note:
+    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    :ivar value:
+    :ivar key:
+    :ivar note_name:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_fare_note: List[RailFareNote] = field(
-        default_factory=list,
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
         metadata=dict(
-            name="RailFareNote",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute",
+            required=True
+        )
+    )
+    note_name: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="NoteName",
+            type="Attribute",
+            required=True
         )
     )
 
@@ -1332,7 +1219,7 @@ class RailSearchModifiers:
             max_inclusive=3.0
         )
     )
-    direction: Optional[str] = field(
+    direction: Optional[TypeRailDirection] = field(
         default=None,
         metadata=dict(
             name="Direction",
@@ -1371,220 +1258,37 @@ class RailSearchModifiers:
 
 
 @dataclass
-class RailSegment(Segment):
-    """Rail Segment.
+class RailSegmentInfo:
+    """A textual remark container to hold any printable text. (max 512 chars) Holds
+    the ExtraSegmentInfo and VendorMessages from RCH response.
 
-    :ivar rail_segment_info:
-    :ivar operating_company:
-    :ivar rail_avail_info:
-    :ivar ful_fillment_type:
-    :ivar train_number:
-    :ivar origin: The IATA location code for this origination of this entity.
-    :ivar destination: The IATA location code for this destination of this entity.
-    :ivar departure_time: The date and time at which this entity departs. This does not include time zone information since it can be derived from the origin location.
-    :ivar arrival_time: The date and time at which this entity arrives at the destination. This does not include time zone information since it can be derived from the origin location.
-    :ivar origin_station_name: The origin station name for the Journey.
-    :ivar destination_station_name: The destination station name for the Journey.
-    :ivar rail_loc_origin: RCH specific origin code (a.k.a UCodes) which uniquely identifies a train station.
-    :ivar rail_loc_destination: RCH specific destination code (a.k.a UCodes) which uniquely identifies a train station.
-    :ivar train_type: Type of train used. Same as TrainServiceType.
-    :ivar train_type_code: Code for type of train used. Same as TrainServiceType.
-    :ivar transport_mode: Type of Transport Mode used.
-    :ivar seat_assignable: Set to true if there exists seats to be booked
-    :ivar transport_code: Supplier specific train code
-    :ivar reservation_required: Set to true if a reservation is required for booking.
-    :ivar travel_time: Total time spent (minutes) traveling
-    :ivar host_token_ref: The reference key for the host token. From the HostTokenList Providers RCH.
-    :ivar cabin_class: Rail Cabin class specification. The valid values are Economy, Business, First and Other
-    :ivar class_code: A booking code or fare basis code or fare class.
+    :ivar value:
+    :ivar category: Supplier specific category.
+    :ivar type: Either Extra for ExtraSegmentInfo or Vendor for VendorMessages.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_segment_info: List[RailSegmentInfo] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailSegmentInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    operating_company: Optional[OperatingCompany] = field(
+    value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="OperatingCompany",
-            type="Element"
+            name="value",
+            type="Extension"
         )
     )
-    rail_avail_info: List[RailAvailInfo] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailAvailInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    ful_fillment_type: List[FulFillmentType] = field(
-        default_factory=list,
-        metadata=dict(
-            name="FulFillmentType",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    train_number: Optional[str] = field(
+    category: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="TrainNumber",
-            type="Attribute",
-            min_length=1.0,
-            max_length=8.0
+            name="Category",
+            type="Attribute"
         )
     )
-    origin: Optional[str] = field(
+    type: Optional[TypeRailSegmentInfo] = field(
         default=None,
         metadata=dict(
-            name="Origin",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
-    )
-    destination: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Destination",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
-    )
-    departure_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DepartureTime",
+            name="Type",
             type="Attribute",
             required=True
-        )
-    )
-    arrival_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ArrivalTime",
-            type="Attribute"
-        )
-    )
-    origin_station_name: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="OriginStationName",
-            type="Attribute"
-        )
-    )
-    destination_station_name: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DestinationStationName",
-            type="Attribute"
-        )
-    )
-    rail_loc_origin: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RailLocOrigin",
-            type="Attribute",
-            min_length=3.0,
-            max_length=8.0,
-            white_space="collapse"
-        )
-    )
-    rail_loc_destination: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RailLocDestination",
-            type="Attribute",
-            min_length=3.0,
-            max_length=8.0,
-            white_space="collapse"
-        )
-    )
-    train_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TrainType",
-            type="Attribute"
-        )
-    )
-    train_type_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TrainTypeCode",
-            type="Attribute",
-            min_length=1.0,
-            max_length=8.0
-        )
-    )
-    transport_mode: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TransportMode",
-            type="Attribute"
-        )
-    )
-    seat_assignable: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="SeatAssignable",
-            type="Attribute"
-        )
-    )
-    transport_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TransportCode",
-            type="Attribute"
-        )
-    )
-    reservation_required: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="ReservationRequired",
-            type="Attribute"
-        )
-    )
-    travel_time: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="TravelTime",
-            type="Attribute"
-        )
-    )
-    host_token_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="HostTokenRef",
-            type="Attribute"
-        )
-    )
-    cabin_class: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CabinClass",
-            type="Attribute",
-            min_length=1.0,
-            max_length=128.0
-        )
-    )
-    class_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ClassCode",
-            type="Attribute",
-            min_length=1.0,
-            max_length=8.0
         )
     )
 
@@ -1696,6 +1400,43 @@ class RailTicketInfo:
 
 
 @dataclass
+class Coach:
+    """Captures rail seat map/coach map information.
+
+    :ivar characteristic:
+    :ivar remark:
+    :ivar coach_number: Coach number for which seat map/coach map is returned.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/rail_v48_0"
+
+    characteristic: Optional[Characteristic] = field(
+        default=None,
+        metadata=dict(
+            name="Characteristic",
+            type="Element"
+        )
+    )
+    remark: List[Remark] = field(
+        default_factory=list,
+        metadata=dict(
+            name="Remark",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    coach_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CoachNumber",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class RailFare:
     """Information about this fare component.
 
@@ -1730,7 +1471,7 @@ class RailFare:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -1924,7 +1665,7 @@ class RailFare:
             type="Attribute"
         )
     )
-    journey_direction: Optional[str] = field(
+    journey_direction: Optional[TypeJourneyDirection] = field(
         default=None,
         metadata=dict(
             name="JourneyDirection",
@@ -1949,6 +1690,286 @@ class RailFare:
             min_length=3.0,
             max_length=8.0,
             white_space="collapse"
+        )
+    )
+
+
+@dataclass
+class RailFareIdlist:
+    """The shared object list of FareIDs.
+
+    :ivar rail_fare_id:
+    """
+    class Meta:
+        name = "RailFareIDList"
+        namespace = "http://www.travelport.com/schema/rail_v48_0"
+
+    rail_fare_id: List[RailFareId] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailFareID",
+            type="Element",
+            min_occurs=1,
+            max_occurs=999
+        )
+    )
+
+
+@dataclass
+class RailFareNoteList:
+    """The shared object list of Notes.
+
+    :ivar rail_fare_note:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/rail_v48_0"
+
+    rail_fare_note: List[RailFareNote] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailFareNote",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+
+
+@dataclass
+class RailSegment(Segment):
+    """Rail Segment.
+
+    :ivar rail_segment_info:
+    :ivar operating_company:
+    :ivar rail_avail_info:
+    :ivar ful_fillment_type:
+    :ivar train_number:
+    :ivar origin: The IATA location code for this origination of this entity.
+    :ivar destination: The IATA location code for this destination of this entity.
+    :ivar departure_time: The date and time at which this entity departs. This does not include time zone information since it can be derived from the origin location.
+    :ivar arrival_time: The date and time at which this entity arrives at the destination. This does not include time zone information since it can be derived from the origin location.
+    :ivar origin_station_name: The origin station name for the Journey.
+    :ivar destination_station_name: The destination station name for the Journey.
+    :ivar rail_loc_origin: RCH specific origin code (a.k.a UCodes) which uniquely identifies a train station.
+    :ivar rail_loc_destination: RCH specific destination code (a.k.a UCodes) which uniquely identifies a train station.
+    :ivar train_type: Type of train used. Same as TrainServiceType.
+    :ivar train_type_code: Code for type of train used. Same as TrainServiceType.
+    :ivar transport_mode: Type of Transport Mode used.
+    :ivar seat_assignable: Set to true if there exists seats to be booked
+    :ivar transport_code: Supplier specific train code
+    :ivar reservation_required: Set to true if a reservation is required for booking.
+    :ivar travel_time: Total time spent (minutes) traveling
+    :ivar host_token_ref: The reference key for the host token. From the HostTokenList Providers RCH.
+    :ivar cabin_class: Rail Cabin class specification. The valid values are Economy, Business, First and Other
+    :ivar class_code: A booking code or fare basis code or fare class.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/rail_v48_0"
+
+    rail_segment_info: List[RailSegmentInfo] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailSegmentInfo",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    operating_company: Optional[OperatingCompany] = field(
+        default=None,
+        metadata=dict(
+            name="OperatingCompany",
+            type="Element"
+        )
+    )
+    rail_avail_info: List[RailAvailInfo] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailAvailInfo",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    ful_fillment_type: List[FulFillmentType] = field(
+        default_factory=list,
+        metadata=dict(
+            name="FulFillmentType",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    train_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TrainNumber",
+            type="Attribute",
+            min_length=1.0,
+            max_length=8.0
+        )
+    )
+    origin: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Origin",
+            type="Attribute",
+            length=3,
+            white_space="collapse"
+        )
+    )
+    destination: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Destination",
+            type="Attribute",
+            length=3,
+            white_space="collapse"
+        )
+    )
+    departure_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DepartureTime",
+            type="Attribute",
+            required=True
+        )
+    )
+    arrival_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ArrivalTime",
+            type="Attribute"
+        )
+    )
+    origin_station_name: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="OriginStationName",
+            type="Attribute"
+        )
+    )
+    destination_station_name: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DestinationStationName",
+            type="Attribute"
+        )
+    )
+    rail_loc_origin: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RailLocOrigin",
+            type="Attribute",
+            min_length=3.0,
+            max_length=8.0,
+            white_space="collapse"
+        )
+    )
+    rail_loc_destination: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RailLocDestination",
+            type="Attribute",
+            min_length=3.0,
+            max_length=8.0,
+            white_space="collapse"
+        )
+    )
+    train_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TrainType",
+            type="Attribute"
+        )
+    )
+    train_type_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TrainTypeCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=8.0
+        )
+    )
+    transport_mode: Optional[TypeTransportMode] = field(
+        default=None,
+        metadata=dict(
+            name="TransportMode",
+            type="Attribute"
+        )
+    )
+    seat_assignable: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="SeatAssignable",
+            type="Attribute"
+        )
+    )
+    transport_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TransportCode",
+            type="Attribute"
+        )
+    )
+    reservation_required: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="ReservationRequired",
+            type="Attribute"
+        )
+    )
+    travel_time: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="TravelTime",
+            type="Attribute"
+        )
+    )
+    host_token_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="HostTokenRef",
+            type="Attribute"
+        )
+    )
+    cabin_class: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CabinClass",
+            type="Attribute",
+            min_length=1.0,
+            max_length=128.0
+        )
+    )
+    class_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ClassCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=8.0
+        )
+    )
+
+
+@dataclass
+class RailFareList:
+    """The shared object list of FareInfos.
+
+    :ivar rail_fare:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/rail_v48_0"
+
+    rail_fare: List[RailFare] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailFare",
+            type="Element",
+            min_occurs=1,
+            max_occurs=999
         )
     )
 
@@ -2130,7 +2151,7 @@ class RailJourney:
             type="Attribute"
         )
     )
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -2219,7 +2240,7 @@ class RailJourney:
             max_length=255.0
         )
     )
-    journey_direction: Optional[str] = field(
+    journey_direction: Optional[TypeJourneyDirection] = field(
         default=None,
         metadata=dict(
             name="JourneyDirection",
@@ -2275,66 +2296,6 @@ class RailJourney:
         metadata=dict(
             name="Operation",
             type="Attribute"
-        )
-    )
-
-
-@dataclass
-class RailSegmentList:
-    """List of Rail Segments.
-
-    :ivar rail_segment:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/rail_v48_0"
-
-    rail_segment: List[RailSegment] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailSegment",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-
-
-@dataclass
-class RailFareList:
-    """The shared object list of FareInfos.
-
-    :ivar rail_fare:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/rail_v48_0"
-
-    rail_fare: List[RailFare] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailFare",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
-    )
-
-
-@dataclass
-class RailJourneyList:
-    """List of Rail Journeys.
-
-    :ivar rail_journey:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/rail_v48_0"
-
-    rail_journey: List[RailJourney] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailJourney",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
         )
     )
 
@@ -2437,7 +2398,7 @@ class RailPricingInfo:
             type="Attribute"
         )
     )
-    el_stat: Optional[str] = field(
+    el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
             name="ElStat",
@@ -2522,103 +2483,68 @@ class RailPricingInfo:
 
 
 @dataclass
-class SearchRailLeg:
-    """Holds Origin, Destination, and Departure times for a Rail Leg to search for.
+class RailSegmentList:
+    """List of Rail Segments.
 
-    :ivar search_origin:
-    :ivar search_destination:
-    :ivar rail_segment_list:
-    :ivar search_dep_time:
-    :ivar search_arv_time:
-    :ivar rail_leg_modifiers:
+    :ivar rail_segment:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    search_origin: List[TypeSearchLocation] = field(
+    rail_segment: List[RailSegment] = field(
         default_factory=list,
         metadata=dict(
-            name="SearchOrigin",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
-    )
-    search_destination: List[TypeSearchLocation] = field(
-        default_factory=list,
-        metadata=dict(
-            name="SearchDestination",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
-    )
-    rail_segment_list: Optional[RailSegmentList] = field(
-        default=None,
-        metadata=dict(
-            name="RailSegmentList",
-            type="Element"
-        )
-    )
-    search_dep_time: List[TypeFlexibleTimeSpec] = field(
-        default_factory=list,
-        metadata=dict(
-            name="SearchDepTime",
+            name="RailSegment",
             type="Element",
             min_occurs=0,
             max_occurs=999
-        )
-    )
-    search_arv_time: List[TypeTimeSpec] = field(
-        default_factory=list,
-        metadata=dict(
-            name="SearchArvTime",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    rail_leg_modifiers: Optional[RailLegModifiers] = field(
-        default=None,
-        metadata=dict(
-            name="RailLegModifiers",
-            type="Element"
         )
     )
 
 
 @dataclass
-class RailReservation(BaseReservation):
-    """The parent container for all Rail booking data.
+class RailExchangeSolution:
+    """Contains the fares and segments for a particular offer.
 
-    :ivar booking_traveler_ref:
     :ivar rail_journey:
+    :ivar rail_journey_ref:
     :ivar rail_pricing_info:
-    :ivar payment:
-    :ivar rail_ticket_info:
-    :ivar rail_fare_note_list: List of RailFareNote(s) that is referenced by key in RailFare.
-    :ivar supplier_locator:
-    :ivar booking_status: The Current Status of the rail booking.
+    :ivar key:
+    :ivar offer_id: OfferID must be included if the RailCreateReq contains a price. If the RailCreateReq is used for the Direct Book function, the OfferID is not included.
+    :ivar total_price: The total price for this entity including base price and all taxes.
+    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
+    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
+    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
+    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
+    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
+    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
+    :ivar services: The total cost for all optional services.
+    :ivar approximate_taxes: The Converted tax amount in Default Currency.
+    :ivar approximate_fees: The Converted fee amount in Default Currency.
+    :ivar provider_code:
+    :ivar supplier_code:
+    :ivar host_token_ref: HostTokenRef will reference the value in HostTokenList/HostToken @ Key
+    :ivar reference: Offer Reference required for Booking(eg.TL).
+    :ivar rail_exchange_info:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    booking_traveler_ref: List[BookingTravelerRef] = field(
-        default_factory=list,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=1,
-            max_occurs=9
-        )
-    )
     rail_journey: List[RailJourney] = field(
         default_factory=list,
         metadata=dict(
             name="RailJourney",
             type="Element",
-            min_occurs=1,
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    rail_journey_ref: List[RailJourneyRef] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailJourneyRef",
+            type="Element",
+            min_occurs=0,
             max_occurs=999
         )
     )
@@ -2631,55 +2557,157 @@ class RailReservation(BaseReservation):
             max_occurs=999
         )
     )
-    payment: List[Payment] = field(
-        default_factory=list,
-        metadata=dict(
-            name="Payment",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    rail_ticket_info: List[RailTicketInfo] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailTicketInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    rail_fare_note_list: Optional[RailFareNoteList] = field(
+    key: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="RailFareNoteList",
-            type="Element"
-        )
-    )
-    supplier_locator: List[SupplierLocator] = field(
-        default_factory=list,
-        metadata=dict(
-            name="SupplierLocator",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    booking_status: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BookingStatus",
+            name="Key",
             type="Attribute",
             required=True
+        )
+    )
+    offer_id: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="OfferId",
+            type="Attribute"
+        )
+    )
+    total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TotalPrice",
+            type="Attribute"
+        )
+    )
+    base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BasePrice",
+            type="Attribute"
+        )
+    )
+    approximate_total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTotalPrice",
+            type="Attribute"
+        )
+    )
+    approximate_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateBasePrice",
+            type="Attribute"
+        )
+    )
+    equivalent_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EquivalentBasePrice",
+            type="Attribute"
+        )
+    )
+    taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Taxes",
+            type="Attribute"
+        )
+    )
+    fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Fees",
+            type="Attribute"
+        )
+    )
+    services: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Services",
+            type="Attribute"
+        )
+    )
+    approximate_taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTaxes",
+            type="Attribute"
+        )
+    )
+    approximate_fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateFees",
+            type="Attribute"
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            required=True,
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierCode",
+            type="Attribute",
+            required=True,
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
+    host_token_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="HostTokenRef",
+            type="Attribute"
+        )
+    )
+    reference: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Reference",
+            type="Attribute"
+        )
+    )
+    rail_exchange_info: Optional[RailExchangeInfo] = field(
+        default=None,
+        metadata=dict(
+            name="RailExchangeInfo",
+            type="Element"
         )
     )
 
 
 @dataclass
-class TypeRailPricingSolution:
-    """Common RailPricingSolution container.
+class RailJourneyList:
+    """List of Rail Journeys.
+
+    :ivar rail_journey:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/rail_v48_0"
+
+    rail_journey: List[RailJourney] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailJourney",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+
+
+@dataclass
+class RailPricingSolution:
+    """Contains the fares and segments for a particular offer.
 
     :ivar rail_journey:
     :ivar rail_journey_ref:
@@ -2702,14 +2730,13 @@ class TypeRailPricingSolution:
     :ivar reference: Offer Reference required for Booking(eg.TL).
     """
     class Meta:
-        name = "typeRailPricingSolution"
+        namespace = "http://www.travelport.com/schema/rail_v48_0"
 
     rail_journey: List[RailJourney] = field(
         default_factory=list,
         metadata=dict(
             name="RailJourney",
             type="Element",
-            namespace="http://www.travelport.com/schema/rail_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -2719,7 +2746,6 @@ class TypeRailPricingSolution:
         metadata=dict(
             name="RailJourneyRef",
             type="Element",
-            namespace="http://www.travelport.com/schema/rail_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -2729,7 +2755,6 @@ class TypeRailPricingSolution:
         metadata=dict(
             name="RailPricingInfo",
             type="Element",
-            namespace="http://www.travelport.com/schema/rail_v48_0",
             min_occurs=0,
             max_occurs=999
         )
@@ -2856,29 +2881,159 @@ class TypeRailPricingSolution:
 
 
 @dataclass
-class RailExchangeSolution(TypeRailPricingSolution):
-    """Contains the fares and segments for a particular offer.
+class RailReservation(BaseReservation):
+    """The parent container for all Rail booking data.
 
-    :ivar rail_exchange_info:
+    :ivar booking_traveler_ref:
+    :ivar rail_journey:
+    :ivar rail_pricing_info:
+    :ivar payment:
+    :ivar rail_ticket_info:
+    :ivar rail_fare_note_list: List of RailFareNote(s) that is referenced by key in RailFare.
+    :ivar supplier_locator:
+    :ivar booking_status: The Current Status of the rail booking.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_exchange_info: Optional[RailExchangeInfo] = field(
+    booking_traveler_ref: List[BookingTravelerRef] = field(
+        default_factory=list,
+        metadata=dict(
+            name="BookingTravelerRef",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            min_occurs=1,
+            max_occurs=9
+        )
+    )
+    rail_journey: List[RailJourney] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailJourney",
+            type="Element",
+            min_occurs=1,
+            max_occurs=999
+        )
+    )
+    rail_pricing_info: List[RailPricingInfo] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailPricingInfo",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    payment: List[Payment] = field(
+        default_factory=list,
+        metadata=dict(
+            name="Payment",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    rail_ticket_info: List[RailTicketInfo] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailTicketInfo",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    rail_fare_note_list: Optional[RailFareNoteList] = field(
         default=None,
         metadata=dict(
-            name="RailExchangeInfo",
+            name="RailFareNoteList",
             type="Element"
+        )
+    )
+    supplier_locator: List[SupplierLocator] = field(
+        default_factory=list,
+        metadata=dict(
+            name="SupplierLocator",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    booking_status: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BookingStatus",
+            type="Attribute",
+            required=True
         )
     )
 
 
 @dataclass
-class RailPricingSolution(TypeRailPricingSolution):
-    """Contains the fares and segments for a particular offer."""
+class SearchRailLeg:
+    """Holds Origin, Destination, and Departure times for a Rail Leg to search for.
+
+    :ivar search_origin:
+    :ivar search_destination:
+    :ivar rail_segment_list:
+    :ivar search_dep_time:
+    :ivar search_arv_time:
+    :ivar rail_leg_modifiers:
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
+    search_origin: List[TypeSearchLocation] = field(
+        default_factory=list,
+        metadata=dict(
+            name="SearchOrigin",
+            type="Element",
+            min_occurs=1,
+            max_occurs=999
+        )
+    )
+    search_destination: List[TypeSearchLocation] = field(
+        default_factory=list,
+        metadata=dict(
+            name="SearchDestination",
+            type="Element",
+            min_occurs=1,
+            max_occurs=999
+        )
+    )
+    rail_segment_list: Optional[RailSegmentList] = field(
+        default=None,
+        metadata=dict(
+            name="RailSegmentList",
+            type="Element"
+        )
+    )
+    search_dep_time: List[TypeFlexibleTimeSpec] = field(
+        default_factory=list,
+        metadata=dict(
+            name="SearchDepTime",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    search_arv_time: List[TypeTimeSpec] = field(
+        default_factory=list,
+        metadata=dict(
+            name="SearchArvTime",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    rail_leg_modifiers: Optional[RailLegModifiers] = field(
+        default=None,
+        metadata=dict(
+            name="RailLegModifiers",
+            type="Element"
+        )
+    )
 
 
 @dataclass

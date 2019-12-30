@@ -3,8 +3,10 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from samples.sabre.output.bargain_finder_max_common_types_v1_9_7 import (
     AdvResTicketingType,
+    AirTripType,
     CompanyNameType,
     EquipmentType,
+    FareDirectionality,
     PassengerTypeQuantityType,
     StayRestrictionsType,
 )
@@ -1507,7 +1509,7 @@ class ErrorType(FreeTextType):
             max_length=32.0
         )
     )
-    message_class: Optional[str] = field(
+    message_class: Optional[MessageClassType] = field(
         default=None,
         metadata=dict(
             name="MessageClass",
@@ -1736,7 +1738,7 @@ class TicketingInfoRsType:
             type="Attribute"
         )
     )
-    ticket_type: Optional[str] = field(
+    ticket_type: Optional[TicketType] = field(
         default=None,
         metadata=dict(
             name="TicketType",
@@ -1744,7 +1746,7 @@ class TicketingInfoRsType:
             required=True
         )
     )
-    valid_interline: str = field(
+    valid_interline: ValidInterlineType = field(
         default="Unknown",
         metadata=dict(
             name="ValidInterline",
@@ -1871,7 +1873,7 @@ class WarningType(FreeTextType):
             max_length=32.0
         )
     )
-    message_class: Optional[str] = field(
+    message_class: Optional[MessageClassType] = field(
         default=None,
         metadata=dict(
             name="MessageClass",
@@ -2082,7 +2084,7 @@ class BookFlightSegmentType:
             pattern=r"[A-Z\s]{1,2}"
         )
     )
-    action_code: Optional[str] = field(
+    action_code: Optional[ActionCodeType] = field(
         default=None,
         metadata=dict(
             name="ActionCode",
@@ -3768,7 +3770,7 @@ class PtcfareBreakdownType:
                     pattern=r"[A-Z]{3}"
                 )
             )
-            fare_component_directionality: Optional[str] = field(
+            fare_component_directionality: Optional[FareDirectionality] = field(
                 default=None,
                 metadata=dict(
                     name="FareComponentDirectionality",
@@ -5095,7 +5097,7 @@ class AirItineraryType:
             namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
-    direction_ind: Optional[str] = field(
+    direction_ind: Optional[AirTripType] = field(
         default=None,
         metadata=dict(
             name="DirectionInd",

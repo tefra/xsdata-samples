@@ -3,133 +3,6 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 
 
-@dataclass
-class AdvResTicketingType:
-    """Container used to hold information regarding advance reservation and/or
-    advance ticketing.
-
-    :ivar adv_reservation: Specifies constraints on date of advance reservations.
-    :ivar adv_ticketing: Specifies advance ticketing restrictions.
-    :ivar adv_res_ind: Indicator for identifying whether or not advance reservation restrictions are involved in the request or response.
-    :ivar adv_ticketing_ind: Indicator for identifying whether or not advance ticketing restrictions are involved in the request or response.
-    """
-    adv_reservation: Optional["AdvResTicketingType.AdvReservation"] = field(
-        default=None,
-        metadata=dict(
-            name="AdvReservation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
-    )
-    adv_ticketing: Optional["AdvResTicketingType.AdvTicketing"] = field(
-        default=None,
-        metadata=dict(
-            name="AdvTicketing",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
-    )
-    adv_res_ind: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="AdvResInd",
-            type="Attribute"
-        )
-    )
-    adv_ticketing_ind: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="AdvTicketingInd",
-            type="Attribute"
-        )
-    )
-
-    @dataclass
-    class AdvReservation:
-        """
-        :ivar latest_time_of_day: The time of day by which reservations must be made on the last day that advance reservations can be made.
-        :ivar latest_period: The amount of elapsed time or number of occurrences of a day of the week before departure needed to satisfy an advance reservation requirement.
-        :ivar latest_unit: The unit of elapsed time or the day of the week to be applied to the LatestPeriod value.
-        """
-        latest_time_of_day: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="LatestTimeOfDay",
-                type="Attribute"
-            )
-        )
-        latest_period: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="LatestPeriod",
-                type="Attribute",
-                pattern=r"[0-9]{1,3}"
-            )
-        )
-        latest_unit: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="LatestUnit",
-                type="Attribute"
-            )
-        )
-
-    @dataclass
-    class AdvTicketing:
-        """
-        :ivar from_res_time_of_day: The time of day after reservations are made by which a ticket must be purchased.
-        :ivar from_res_period: A length of time expressed as either an amount of time or the number of occurrences of a day of the week after reservations are made that a ticket must be purchased.
-        :ivar from_res_unit: The unit of elapsed time or the day of the week to be applied to the period after reservation are made that a ticket must be purchased.
-        :ivar from_depart_time_of_day: The time of day prior to departure when the ticket must be purchased.
-        :ivar from_depart_period: A length of time expressed as either an amount of time or the number of occurrences of a day of the week before departure that a ticket must be purchased.
-        :ivar from_depart_unit: The unit of elapsed time or the day of the week to be applied to the the period before departure that a ticket must be purchased.
-        """
-        from_res_time_of_day: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="FromResTimeOfDay",
-                type="Attribute"
-            )
-        )
-        from_res_period: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="FromResPeriod",
-                type="Attribute",
-                pattern=r"[0-9]{1,3}"
-            )
-        )
-        from_res_unit: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="FromResUnit",
-                type="Attribute"
-            )
-        )
-        from_depart_time_of_day: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="FromDepartTimeOfDay",
-                type="Attribute"
-            )
-        )
-        from_depart_period: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="FromDepartPeriod",
-                type="Attribute",
-                pattern=r"[0-9]{1,3}"
-            )
-        )
-        from_depart_unit: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="FromDepartUnit",
-                type="Attribute"
-            )
-        )
-
-
 class AirTripType(Enum):
     """
     Identifies the trip type - one way, return, circle trip, open jaw.
@@ -258,127 +131,6 @@ class OutboundOrInbound(Enum):
     """
     OUTBOUND = "Outbound"
     INBOUND = "Inbound"
-
-
-@dataclass
-class StayRestrictionsType:
-    """Type defining Min and Max Stay Restrictions.
-
-    :ivar minimum_stay: Specifies restrictions for the shortest length/period of time or earliest day return travel can commence or be completed.
-    :ivar maximum_stay: Specifies restrictions for the longest length/period of time or last day to begin or complete the return.
-    :ivar stay_restrictions_ind: True indicates that Stay Restrictions exist.
-    """
-    minimum_stay: Optional["StayRestrictionsType.MinimumStay"] = field(
-        default=None,
-        metadata=dict(
-            name="MinimumStay",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
-    )
-    maximum_stay: Optional["StayRestrictionsType.MaximumStay"] = field(
-        default=None,
-        metadata=dict(
-            name="MaximumStay",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
-    )
-    stay_restrictions_ind: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="StayRestrictionsInd",
-            type="Attribute"
-        )
-    )
-
-    @dataclass
-    class MinimumStay:
-        """
-        :ivar return_time_of_day: The time of day when return travel may commence.
-        :ivar min_stay: The amount of elapsed time or number of occurrences of a day of the week needed to satisfy a minimum stay requirement.
-        :ivar stay_unit: The unit of elapsed time or the day of the week applied to the MinStay value.
-        :ivar min_stay_date: The specific date for the minimum stay requirement.
-        """
-        return_time_of_day: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="ReturnTimeOfDay",
-                type="Attribute"
-            )
-        )
-        min_stay: Optional[int] = field(
-            default=None,
-            metadata=dict(
-                name="MinStay",
-                type="Attribute",
-                min_inclusive=1.0,
-                max_inclusive=99.0
-            )
-        )
-        stay_unit: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="StayUnit",
-                type="Attribute"
-            )
-        )
-        min_stay_date: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="MinStayDate",
-                type="Attribute"
-            )
-        )
-
-    @dataclass
-    class MaximumStay:
-        """
-        :ivar return_type: Code indicating whether travel must commence or be completed in order to satisfy the stay restriction.
-        :ivar return_time_of_day: The time of day when return travel may commence.
-        :ivar max_stay: The amount of elapsed time or number of occurrences of a day of the week that must occur to satisfy a maximum stay requirement.
-        :ivar stay_unit: The unit of elapsed time or the day of the week applied to the MaxStay value.
-        :ivar max_stay_date: The specific date for the maximum stay requirement.
-        """
-        return_type: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="ReturnType",
-                type="Attribute"
-            )
-        )
-        return_time_of_day: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="ReturnTimeOfDay",
-                type="Attribute"
-            )
-        )
-        max_stay: Optional[int] = field(
-            default=None,
-            metadata=dict(
-                name="MaxStay",
-                type="Attribute",
-                min_inclusive=1.0,
-                max_inclusive=99.0
-            )
-        )
-        stay_unit: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="StayUnit",
-                type="Attribute"
-            )
-        )
-        max_stay_date: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="MaxStayDate",
-                type="Attribute"
-            )
-        )
 
 
 class StayUnitType(Enum):
@@ -542,6 +294,133 @@ class VoluntaryChangesType:
                 type="Attribute",
                 min_inclusive=0.01,
                 max_inclusive=100.0
+            )
+        )
+
+
+@dataclass
+class AdvResTicketingType:
+    """Container used to hold information regarding advance reservation and/or
+    advance ticketing.
+
+    :ivar adv_reservation: Specifies constraints on date of advance reservations.
+    :ivar adv_ticketing: Specifies advance ticketing restrictions.
+    :ivar adv_res_ind: Indicator for identifying whether or not advance reservation restrictions are involved in the request or response.
+    :ivar adv_ticketing_ind: Indicator for identifying whether or not advance ticketing restrictions are involved in the request or response.
+    """
+    adv_reservation: Optional["AdvResTicketingType.AdvReservation"] = field(
+        default=None,
+        metadata=dict(
+            name="AdvReservation",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
+        )
+    )
+    adv_ticketing: Optional["AdvResTicketingType.AdvTicketing"] = field(
+        default=None,
+        metadata=dict(
+            name="AdvTicketing",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
+        )
+    )
+    adv_res_ind: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="AdvResInd",
+            type="Attribute"
+        )
+    )
+    adv_ticketing_ind: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="AdvTicketingInd",
+            type="Attribute"
+        )
+    )
+
+    @dataclass
+    class AdvReservation:
+        """
+        :ivar latest_time_of_day: The time of day by which reservations must be made on the last day that advance reservations can be made.
+        :ivar latest_period: The amount of elapsed time or number of occurrences of a day of the week before departure needed to satisfy an advance reservation requirement.
+        :ivar latest_unit: The unit of elapsed time or the day of the week to be applied to the LatestPeriod value.
+        """
+        latest_time_of_day: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="LatestTimeOfDay",
+                type="Attribute"
+            )
+        )
+        latest_period: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="LatestPeriod",
+                type="Attribute",
+                pattern=r"[0-9]{1,3}"
+            )
+        )
+        latest_unit: Optional[StayUnitType] = field(
+            default=None,
+            metadata=dict(
+                name="LatestUnit",
+                type="Attribute"
+            )
+        )
+
+    @dataclass
+    class AdvTicketing:
+        """
+        :ivar from_res_time_of_day: The time of day after reservations are made by which a ticket must be purchased.
+        :ivar from_res_period: A length of time expressed as either an amount of time or the number of occurrences of a day of the week after reservations are made that a ticket must be purchased.
+        :ivar from_res_unit: The unit of elapsed time or the day of the week to be applied to the period after reservation are made that a ticket must be purchased.
+        :ivar from_depart_time_of_day: The time of day prior to departure when the ticket must be purchased.
+        :ivar from_depart_period: A length of time expressed as either an amount of time or the number of occurrences of a day of the week before departure that a ticket must be purchased.
+        :ivar from_depart_unit: The unit of elapsed time or the day of the week to be applied to the the period before departure that a ticket must be purchased.
+        """
+        from_res_time_of_day: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="FromResTimeOfDay",
+                type="Attribute"
+            )
+        )
+        from_res_period: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="FromResPeriod",
+                type="Attribute",
+                pattern=r"[0-9]{1,3}"
+            )
+        )
+        from_res_unit: Optional[StayUnitType] = field(
+            default=None,
+            metadata=dict(
+                name="FromResUnit",
+                type="Attribute"
+            )
+        )
+        from_depart_time_of_day: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="FromDepartTimeOfDay",
+                type="Attribute"
+            )
+        )
+        from_depart_period: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="FromDepartPeriod",
+                type="Attribute",
+                pattern=r"[0-9]{1,3}"
+            )
+        )
+        from_depart_unit: Optional[StayUnitType] = field(
+            default=None,
+            metadata=dict(
+                name="FromDepartUnit",
+                type="Attribute"
             )
         )
 
@@ -762,3 +641,124 @@ class PassengerTypeQuantityType(TravelerCountType):
                         type="Attribute"
                     )
                 )
+
+
+@dataclass
+class StayRestrictionsType:
+    """Type defining Min and Max Stay Restrictions.
+
+    :ivar minimum_stay: Specifies restrictions for the shortest length/period of time or earliest day return travel can commence or be completed.
+    :ivar maximum_stay: Specifies restrictions for the longest length/period of time or last day to begin or complete the return.
+    :ivar stay_restrictions_ind: True indicates that Stay Restrictions exist.
+    """
+    minimum_stay: Optional["StayRestrictionsType.MinimumStay"] = field(
+        default=None,
+        metadata=dict(
+            name="MinimumStay",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            required=True
+        )
+    )
+    maximum_stay: Optional["StayRestrictionsType.MaximumStay"] = field(
+        default=None,
+        metadata=dict(
+            name="MaximumStay",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            required=True
+        )
+    )
+    stay_restrictions_ind: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="StayRestrictionsInd",
+            type="Attribute"
+        )
+    )
+
+    @dataclass
+    class MinimumStay:
+        """
+        :ivar return_time_of_day: The time of day when return travel may commence.
+        :ivar min_stay: The amount of elapsed time or number of occurrences of a day of the week needed to satisfy a minimum stay requirement.
+        :ivar stay_unit: The unit of elapsed time or the day of the week applied to the MinStay value.
+        :ivar min_stay_date: The specific date for the minimum stay requirement.
+        """
+        return_time_of_day: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ReturnTimeOfDay",
+                type="Attribute"
+            )
+        )
+        min_stay: Optional[int] = field(
+            default=None,
+            metadata=dict(
+                name="MinStay",
+                type="Attribute",
+                min_inclusive=1.0,
+                max_inclusive=99.0
+            )
+        )
+        stay_unit: Optional[StayUnitType] = field(
+            default=None,
+            metadata=dict(
+                name="StayUnit",
+                type="Attribute"
+            )
+        )
+        min_stay_date: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="MinStayDate",
+                type="Attribute"
+            )
+        )
+
+    @dataclass
+    class MaximumStay:
+        """
+        :ivar return_type: Code indicating whether travel must commence or be completed in order to satisfy the stay restriction.
+        :ivar return_time_of_day: The time of day when return travel may commence.
+        :ivar max_stay: The amount of elapsed time or number of occurrences of a day of the week that must occur to satisfy a maximum stay requirement.
+        :ivar stay_unit: The unit of elapsed time or the day of the week applied to the MaxStay value.
+        :ivar max_stay_date: The specific date for the maximum stay requirement.
+        """
+        return_type: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ReturnType",
+                type="Attribute"
+            )
+        )
+        return_time_of_day: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="ReturnTimeOfDay",
+                type="Attribute"
+            )
+        )
+        max_stay: Optional[int] = field(
+            default=None,
+            metadata=dict(
+                name="MaxStay",
+                type="Attribute",
+                min_inclusive=1.0,
+                max_inclusive=99.0
+            )
+        )
+        stay_unit: Optional[StayUnitType] = field(
+            default=None,
+            metadata=dict(
+                name="StayUnit",
+                type="Attribute"
+            )
+        )
+        max_stay_date: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="MaxStayDate",
+                type="Attribute"
+            )
+        )
