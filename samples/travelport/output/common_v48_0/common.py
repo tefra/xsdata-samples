@@ -1587,72 +1587,6 @@ class MealRequest:
 
 
 @dataclass
-class MediaItem:
-    """Photos and other media urls for the property referenced above.
-
-    :ivar caption:
-    :ivar height:
-    :ivar width:
-    :ivar type:
-    :ivar url:
-    :ivar icon:
-    :ivar size_code:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    caption: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="caption",
-            type="Attribute"
-        )
-    )
-    height: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="height",
-            type="Attribute"
-        )
-    )
-    width: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="width",
-            type="Attribute"
-        )
-    )
-    type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="type",
-            type="Attribute"
-        )
-    )
-    url: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="url",
-            type="Attribute"
-        )
-    )
-    icon: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="icon",
-            type="Attribute"
-        )
-    )
-    size_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="sizeCode",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
 class MetaData:
     """Extra data to elaborate the parent element. This data is primarily
     informative and is not persisted.
@@ -4571,6 +4505,40 @@ class TypeResidency(Enum):
     RESIDENT = "Resident"
 
 
+class TypeResponseImageSize(Enum):
+    """Allowable images sizes in response.
+
+    :cvar X:
+    :cvar T:
+    :cvar I:
+    :cvar S:
+    :cvar M:
+    :cvar L:
+    :cvar E:
+    :cvar G:
+    :cvar F:
+    :cvar B:
+    :cvar J:
+    :cvar O:
+    :cvar H:
+    :cvar C:
+    """
+    X = "X"
+    T = "T"
+    I = "I"
+    S = "S"
+    M = "M"
+    L = "L"
+    E = "E"
+    G = "G"
+    F = "F"
+    B = "B"
+    J = "J"
+    O = "O"
+    H = "H"
+    C = "C"
+
+
 @dataclass
 class TypeResultMessage:
     """Used to identify the results of a requests.
@@ -6471,6 +6439,72 @@ class Mcotext(TypeFreeFormText):
 
 
 @dataclass
+class MediaItem:
+    """Photos and other media urls for the property referenced above.
+
+    :ivar caption:
+    :ivar height:
+    :ivar width:
+    :ivar type:
+    :ivar url:
+    :ivar icon:
+    :ivar size_code:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    caption: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="caption",
+            type="Attribute"
+        )
+    )
+    height: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="height",
+            type="Attribute"
+        )
+    )
+    width: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="width",
+            type="Attribute"
+        )
+    )
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="type",
+            type="Attribute"
+        )
+    )
+    url: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="url",
+            type="Attribute"
+        )
+    )
+    icon: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="icon",
+            type="Attribute"
+        )
+    )
+    size_code: Optional[TypeResponseImageSize] = field(
+        default=None,
+        metadata=dict(
+            name="sizeCode",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class NameRemark:
     """Text that support Name Remarks.
 
@@ -7751,35 +7785,6 @@ class Segment:
             name="ProviderSegmentOrder",
             type="Attribute",
             max_inclusive=999.0
-        )
-    )
-
-
-@dataclass
-class ServiceInfo:
-    """
-    :ivar description: Description of the Service. Usually used in tandem with one or more media items.
-    :ivar media_item:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    description: List[str] = field(
-        default_factory=list,
-        metadata=dict(
-            name="Description",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
-    )
-    media_item: List[MediaItem] = field(
-        default_factory=list,
-        metadata=dict(
-            name="MediaItem",
-            type="Element",
-            min_occurs=0,
-            max_occurs=3
         )
     )
 
@@ -10283,6 +10288,35 @@ class ServiceData:
         metadata=dict(
             name="EMDCouponRef",
             type="Attribute"
+        )
+    )
+
+
+@dataclass
+class ServiceInfo:
+    """
+    :ivar description: Description of the Service. Usually used in tandem with one or more media items.
+    :ivar media_item:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    description: List[str] = field(
+        default_factory=list,
+        metadata=dict(
+            name="Description",
+            type="Element",
+            min_occurs=1,
+            max_occurs=999
+        )
+    )
+    media_item: List[MediaItem] = field(
+        default_factory=list,
+        metadata=dict(
+            name="MediaItem",
+            type="Element",
+            min_occurs=0,
+            max_occurs=3
         )
     )
 

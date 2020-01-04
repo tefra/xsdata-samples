@@ -711,7 +711,7 @@ samples.travelport.output.common_v48_0.common.MediaItem()
     caption: Optional[str] = [('default', None)]
     height: Optional[int] = [('default', None)]
     icon: Optional[str] = [('default', None)]
-    size_code: Optional[str] = [('default', None)]
+    size_code: Optional[TypeResponseImageSize] = [('default', None)]
     type: Optional[str] = [('default', None)]
     url: Optional[str] = [('default', None)]
     width: Optional[int] = [('default', None)]
@@ -1844,6 +1844,22 @@ samples.travelport.output.common_v48_0.common.TypeResidency(str)
     EMPLOYEE: xs:string = [('default', '"Employee"')]
     NATIONAL: xs:string = [('default', '"National"')]
     RESIDENT: xs:string = [('default', '"Resident"')]
+
+samples.travelport.output.common_v48_0.common.TypeResponseImageSize()
+    B: xs:string = [('default', '"B"')]
+    C: xs:string = [('default', '"C"')]
+    E: xs:string = [('default', '"E"')]
+    F: xs:string = [('default', '"F"')]
+    G: xs:string = [('default', '"G"')]
+    H: xs:string = [('default', '"H"')]
+    I: xs:string = [('default', '"I"')]
+    J: xs:string = [('default', '"J"')]
+    L: xs:string = [('default', '"L"')]
+    M: xs:string = [('default', '"M"')]
+    O: xs:string = [('default', '"O"')]
+    S: xs:string = [('default', '"S"')]
+    T: xs:string = [('default', '"T"')]
+    X: xs:string = [('default', '"X"')]
 
 samples.travelport.output.common_v48_0.common.TypeResultMessage()
     code: Optional[int] = [('default', None), ('required', True)]

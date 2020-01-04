@@ -118,7 +118,7 @@ samples.sabre.output.bargain_finder_max_common_types_v1_9_7.StayUnitType(str)
 
 samples.sabre.output.bargain_finder_max_common_types_v1_9_7.TravelerCountType()
     age: Optional[int] = [('default', None), ('max_inclusive', 999.0), ('min_inclusive', 0.0)]
-    code: Optional[str] = [('default', None)]
+    code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0)]
     code_context: Optional[str] = [('default', None), ('max_length', 32.0), ('min_length', 1.0)]
     quantity: Optional[int] = [('default', None), ('max_inclusive', 999.0), ('min_inclusive', 1.0)]
     uri: Optional[str] = [('default', None)]
@@ -970,7 +970,7 @@ samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType()
             ind: Optional[bool] = [('default', None), ('required', True)]
 
         samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters.PassengerType()
-            code: Optional[str] = [('default', None), ('required', True)]
+            code: Optional[str] = [('default', None), ('max_length', 8.0), ('min_length', 1.0), ('required', True)]
 
         samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlexibleFaresType.FareParameters.PrivateFare()
             ind: Optional[bool] = [('default', None), ('required', True)]
@@ -992,7 +992,7 @@ samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlightStopsAsConnectionsType()
 
 samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlightTypePrefType()
     flight_type: Optional[FlightTypeType] = [('default', None)]
-    max_connections: Optional[str] = [('default', None)]
+    max_connections: Optional[Union[int, bool]] = [('default', None)]
     prefer_level: PreferLevelType = [('default', '"Preferred"')]
 
 samples.sabre.output.bargain_finder_max_rq_v1_9_7.FlightTypeType(str)
@@ -1078,16 +1078,16 @@ samples.sabre.output.bargain_finder_max_rq_v1_9_7.OtaAirLowFareSearchRq()
     alt_lang_id: Optional[str] = [('default', None)]
     available_flights_only: bool = [('default', True)]
     direct_flights_only: bool = [('default', False)]
-    echo_token: Optional[str] = [('default', None)]
+    echo_token: Optional[str] = [('default', None), ('max_length', 64.0), ('min_length', 1.0)]
     leg: List["OtaAirLowFareSearchRq.Leg"] = [('default', 'list'), ('max_occurs', 9223372036854775807), ('min_occurs', 0)]
-    max_responses: Optional[str] = [('default', None)]
+    max_responses: Optional[int] = [('default', None)]
     origin_destination_information: List["OtaAirLowFareSearchRq.OriginDestinationInformation"] = [('default', 'list'), ('max_occurs', 10), ('min_occurs', 0)]
     pos: Optional[PosType] = [('default', None), ('required', True)]
     primary_lang_id: Optional[str] = [('default', None)]
     response_type: Optional[str] = [('default', None)]
     response_version: Optional[str] = [('default', None)]
     separate_messages: bool = [('default', False)]
-    sequence_nmbr: Optional[str] = [('default', None)]
+    sequence_nmbr: Optional[Union[bool, int]] = [('default', None)]
     target: str = [('default', '"Production"')]
     time_stamp: Optional[str] = [('default', None)]
     tpa_extensions: Optional["OtaAirLowFareSearchRq.TpaExtensions"] = [('default', None)]

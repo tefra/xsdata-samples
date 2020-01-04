@@ -1,6 +1,6 @@
 from enum import Enum
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from samples.sabre.output.bargain_finder_max_common_types_v1_9_7 import (
     AdvResTicketingType,
     AirTripType,
@@ -5808,7 +5808,9 @@ class OtaAirLowFareSearchRs:
         default=None,
         metadata=dict(
             name="EchoToken",
-            type="Attribute"
+            type="Attribute",
+            min_length=1.0,
+            max_length=64.0
         )
     )
     time_stamp: Optional[str] = field(
@@ -5842,7 +5844,7 @@ class OtaAirLowFareSearchRs:
             max_length=32.0
         )
     )
-    sequence_nmbr: Optional[str] = field(
+    sequence_nmbr: Optional[Union[bool, int]] = field(
         default=None,
         metadata=dict(
             name="SequenceNmbr",

@@ -195,7 +195,9 @@ class TravelerCountType:
         default=None,
         metadata=dict(
             name="Code",
-            type="Attribute"
+            type="Attribute",
+            min_length=1.0,
+            max_length=8.0
         )
     )
     code_context: Optional[str] = field(
