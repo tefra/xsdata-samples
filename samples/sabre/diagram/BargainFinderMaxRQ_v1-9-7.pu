@@ -1,0 +1,1880 @@
+@startuml
+
+class AddressType {
+    +StreetNmbr : StreetNmbrType
+    +BldgRoom : xs:string
+    +AddressLine : xs:string[]
+    +CityName : xs:string
+    +PostalCode : xs:string
+    +County : xs:string
+    +StateProv : StateProvType
+    +CountryName : CountryNameType
+    +ShareSynchInd : xs:NMTOKEN
+    +ShareMarketInd : xs:NMTOKEN
+    +FormattedInd : xs:boolean
+    +Type : xs:string
+}
+class AirSearchPrefsType {
+    +VendorPref : CompanyNamePrefType[]
+    +FlightTypePref : FlightTypePrefType
+    +FareRestrictPref : FareRestrictPref[]
+    +EquipPref : EquipmentTypePref[]
+    +CabinPref : CabinPrefType[]
+    +TicketDistribPref : TicketDistribPrefType[]
+    +TPA_Extensions : TPA_Extensions
+    +AncillaryFees : AncillaryFees
+    +FrequentFlyer : FrequentFlyer[]
+    +SpanishFamilyDiscount : SpanishFamilyDiscount
+    +InterlineBrands : InterlineBrandsType
+    +SmokingAllowed : xs:boolean
+    +OnTimeRate : xs:decimal
+    +ETicketDesired : xs:boolean
+    +ValidInterlineTicket : xs:boolean
+    +MaxStopsQuantity : xs:integer
+    +UseAllFlights : xs:boolean
+    +AllFlightsData : xs:boolean
+    +Hybrid : xs:boolean
+}
+AirSearchPrefsType +-- FareRestrictPref
+class FareRestrictPref {
+    +AdvResTicketing : AdvResTicketingType
+    +StayRestrictions : StayRestrictionsType
+    +VoluntaryChanges : VoluntaryChangesType
+}
+FareRestrictPref *- FareRestrictPrefType
+AirSearchPrefsType +-- TPA_Extensions
+class TPA_Extensions {
+    +ExemptAllTaxes : ExemptAllTaxes
+    +ExemptAllTaxesAndFees : ExemptAllTaxesAndFees
+    +Taxes : Taxes
+    +ExemptTax : TaxCodeType[]
+    +OnlineIndicator : OnlineIndicator
+    +InterlineIndicator : InterlineIndicator
+    +DepartureWindow : xs:string
+    +ArrivalWindow : xs:string
+    +ExcludeVendorPref : ExcludeVendorPref[]
+    +IncludeAlliancePref : AllianceType[]
+    +ExcludeAlliancePref : AllianceType[]
+    +NumTrips : NumTripsType
+    +AltCitiesCombinations : AltCitiesCombinationsType
+    +NumTripsWithRouting : NumTripsWithRouting
+    +TripType : TripType
+    +MaxPrice : MaxPrice
+    +ContentType : ContentType
+    +DomesticLayoverTime : DomesticLayoverTime
+    +LongConnectTime : LongConnectTime
+    +LongConnectPoints : LongConnectPoints
+    +AirServiceOnly : AirServiceOnly
+    +JetServiceOnly : JetServiceOnly
+    +SameConnectionAirportOnly : SameConnectionAirportOnly
+    +SameOriginAirportOnly : SameOriginAirportOnly
+    +SameTurnaroundAirportOnly : SameTurnaroundAirportOnly
+    +AircraftTypePenalty : AircraftTypePenalty
+    +AlternateAirportPenalty : AlternateAirportPenalty
+    +FareAmountThreshold : FareAmountThreshold
+    +numOfLowFareSol : numOfLowFareSol
+    +numOfMustPriceOnlSol : numOfMustPriceOnlSol
+    +numOfMustPriceInrlSol : numOfMustPriceInrlSol
+    +numOfMustPriceNStpOnlSol : numOfMustPriceNStpOnlSol
+    +numOfMustPriceNStpInrlSol : numOfMustPriceNStpInrlSol
+    +numOfMustPriceSStopOnlSol : numOfMustPriceSStopOnlSol
+    +stpPenaltyInUSD : stpPenaltyInUSD
+    +durPenaltyInUSD : durPenaltyInUSD
+    +depPenaltyInUSD : depPenaltyInUSD
+    +maxAllowedMustPriceOveragePerCrr : maxAllowedMustPriceOveragePerCrr
+    +fltOptMustPriceReuseLimit : fltOptMustPriceReuseLimit
+    +upperBoundMustPriceFactorForNotNonStp : upperBoundMustPriceFactorForNotNonStp
+    +upperBoundLFSFactor : upperBoundLFSFactor
+    +numOfMustPriceNStp1StpOnlSol : numOfMustPriceNStp1StpOnlSol
+    +numOfMustPriceNStp1StpInrlSol : numOfMustPriceNStp1StpInrlSol
+    +upperBoundMustPriceFactorForNonStp : upperBoundMustPriceFactorForNonStp
+    +maxAllowedLFSOveragePerCrrPercent : maxAllowedLFSOveragePerCrrPercent
+    +targetMinNumOfLFSOnlSolPerCrr : targetMinNumOfLFSOnlSolPerCrr
+    +targetMinNumOfLFSTotOnlSolPercent : targetMinNumOfLFSTotOnlSolPercent
+    +fltOptLFSReuseLimitForNonAVS : fltOptLFSReuseLimitForNonAVS
+    +fltOptLFSReuseLimitForAVS : fltOptLFSReuseLimitForAVS
+    +avsPenaltyCrrs : avsPenaltyCrrs
+    +maxNumOfNonStpOnlSol : maxNumOfNonStpOnlSol
+    +maxNumOfNonStpInrlSol : maxNumOfNonStpInrlSol
+    +maxNumOfSingleStpOnlSol : maxNumOfSingleStpOnlSol
+    +maxNumOf2PlusStpSol : maxNumOf2PlusStpSol
+    +minAllowedOveragePerCrrPercent : minAllowedOveragePerCrrPercent
+    +minAllowedOveragePerCrr : minAllowedOveragePerCrr
+    +maxRelFareLvlOfxForNonStp : maxRelFareLvlOfxForNonStp
+    +maxRelFareLvlOfxForCnx : maxRelFareLvlOfxForCnx
+    +numOfMustPrice2PlusStpSol : numOfMustPrice2PlusStpSol
+    +ItineraryNumberThreshold : ItineraryNumberThreshold
+    +XOFares : XOFaresType
+    +FlightStopsAsConnections : FlightStopsAsConnectionsType
+    +TicketingSumOfLocals : TicketingSumOfLocals
+    +MultiAirportCodes : MultiAirportCodes
+    +JumpCabinLogic : JumpCabinLogicType
+    +KeepSameCabin : KeepSameCabinType
+    +GoverningCarrierOverride : GoverningCarrierOverrideType
+    +ExcludeCallDirectCarriers : ExcludeCallDirectCarriers
+    +ValidatingCarrier : ValidatingCarrierType
+    +ValidatingCarrierCheck : ValidatingCarrierCheck
+    +SettlementMethod : xs:string
+    +FlightRepeatLimit : FlightRepeatLimit
+    +FlexibleFares : FlexibleFaresType
+    +DiversityParameters : DiversityParameters
+    +AdditionalFareLimit : AdditionalFareLimit
+    +FareFocusRules : FareFocusRules
+    +SellingLevels : SellingLevels
+    +Budget : Budget
+    +OptionsPerDatePairList : OptionsPerDatePairList
+    +CountryPref : CountryPref[]
+    +RetailerRules : RetailerRulesType
+}
+TPA_Extensions +-- ExcludeVendorPref
+class ExcludeVendorPref {
+    +Code : xs:string
+}
+TPA_Extensions +-- NumTripsWithRouting
+class NumTripsWithRouting {
+    +Number : xs:short
+}
+TPA_Extensions +-- TripType
+class TripType {
+    +Value : AirTripType
+}
+TPA_Extensions +-- MaxPrice
+class MaxPrice {
+    +Value : xs:decimal
+}
+TPA_Extensions +-- ContentType
+class ContentType {
+    +Type : xs:string
+}
+TPA_Extensions +-- DomesticLayoverTime
+class DomesticLayoverTime {
+    +Hours : xs:short
+}
+TPA_Extensions +-- LongConnectTime
+class LongConnectTime {
+    +Min : xs:short
+    +Max : xs:short
+    +Enable : xs:boolean
+}
+TPA_Extensions +-- LongConnectPoints
+class LongConnectPoints {
+    +Min : xs:short
+    +Max : xs:short
+}
+TPA_Extensions +-- AirServiceOnly
+class AirServiceOnly {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- JetServiceOnly
+class JetServiceOnly {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- SameConnectionAirportOnly
+class SameConnectionAirportOnly {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- SameOriginAirportOnly
+class SameOriginAirportOnly {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- SameTurnaroundAirportOnly
+class SameTurnaroundAirportOnly {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- AircraftTypePenalty
+class AircraftTypePenalty {
+    +Value : xs:short
+}
+TPA_Extensions +-- AlternateAirportPenalty
+class AlternateAirportPenalty {
+    +Value : xs:short
+}
+TPA_Extensions +-- FareAmountThreshold
+class FareAmountThreshold {
+    +Value : xs:float
+}
+TPA_Extensions +-- numOfLowFareSol
+class numOfLowFareSol {
+    +Value : xs:short
+}
+TPA_Extensions +-- numOfMustPriceOnlSol
+class numOfMustPriceOnlSol {
+    +Value : xs:short
+}
+TPA_Extensions +-- numOfMustPriceInrlSol
+class numOfMustPriceInrlSol {
+    +Value : xs:short
+}
+TPA_Extensions +-- numOfMustPriceNStpOnlSol
+class numOfMustPriceNStpOnlSol {
+    +Value : xs:short
+}
+TPA_Extensions +-- numOfMustPriceNStpInrlSol
+class numOfMustPriceNStpInrlSol {
+    +Value : xs:short
+}
+TPA_Extensions +-- numOfMustPriceSStopOnlSol
+class numOfMustPriceSStopOnlSol {
+    +Value : xs:short
+}
+TPA_Extensions +-- stpPenaltyInUSD
+class stpPenaltyInUSD {
+    +Value : xs:short
+}
+TPA_Extensions +-- durPenaltyInUSD
+class durPenaltyInUSD {
+    +Value : xs:short
+}
+TPA_Extensions +-- depPenaltyInUSD
+class depPenaltyInUSD {
+    +Value : xs:short
+}
+TPA_Extensions +-- maxAllowedMustPriceOveragePerCrr
+class maxAllowedMustPriceOveragePerCrr {
+    +Value : xs:float
+}
+TPA_Extensions +-- fltOptMustPriceReuseLimit
+class fltOptMustPriceReuseLimit {
+    +Value : xs:short
+}
+TPA_Extensions +-- upperBoundMustPriceFactorForNotNonStp
+class upperBoundMustPriceFactorForNotNonStp {
+    +Value : xs:float
+}
+TPA_Extensions +-- upperBoundLFSFactor
+class upperBoundLFSFactor {
+    +Value : xs:float
+}
+TPA_Extensions +-- numOfMustPriceNStp1StpOnlSol
+class numOfMustPriceNStp1StpOnlSol {
+    +Value : xs:short
+}
+TPA_Extensions +-- numOfMustPriceNStp1StpInrlSol
+class numOfMustPriceNStp1StpInrlSol {
+    +Value : xs:short
+}
+TPA_Extensions +-- upperBoundMustPriceFactorForNonStp
+class upperBoundMustPriceFactorForNonStp {
+    +Value : xs:float
+}
+TPA_Extensions +-- maxAllowedLFSOveragePerCrrPercent
+class maxAllowedLFSOveragePerCrrPercent {
+    +Value : xs:float
+}
+TPA_Extensions +-- targetMinNumOfLFSOnlSolPerCrr
+class targetMinNumOfLFSOnlSolPerCrr {
+    +Value : xs:short
+}
+TPA_Extensions +-- targetMinNumOfLFSTotOnlSolPercent
+class targetMinNumOfLFSTotOnlSolPercent {
+    +Value : xs:float
+}
+TPA_Extensions +-- fltOptLFSReuseLimitForNonAVS
+class fltOptLFSReuseLimitForNonAVS {
+    +Value : xs:short
+}
+TPA_Extensions +-- fltOptLFSReuseLimitForAVS
+class fltOptLFSReuseLimitForAVS {
+    +Value : xs:short
+}
+TPA_Extensions +-- avsPenaltyCrrs
+class avsPenaltyCrrs {
+    +Value : xs:string
+}
+TPA_Extensions +-- maxNumOfNonStpOnlSol
+class maxNumOfNonStpOnlSol {
+    +Value : xs:short
+}
+TPA_Extensions +-- maxNumOfNonStpInrlSol
+class maxNumOfNonStpInrlSol {
+    +Value : xs:short
+}
+TPA_Extensions +-- maxNumOfSingleStpOnlSol
+class maxNumOfSingleStpOnlSol {
+    +Value : xs:short
+}
+TPA_Extensions +-- maxNumOf2PlusStpSol
+class maxNumOf2PlusStpSol {
+    +Value : xs:short
+}
+TPA_Extensions +-- minAllowedOveragePerCrrPercent
+class minAllowedOveragePerCrrPercent {
+    +Value : xs:float
+}
+TPA_Extensions +-- minAllowedOveragePerCrr
+class minAllowedOveragePerCrr {
+    +Value : xs:short
+}
+TPA_Extensions +-- maxRelFareLvlOfxForNonStp
+class maxRelFareLvlOfxForNonStp {
+    +Value : xs:float
+}
+TPA_Extensions +-- maxRelFareLvlOfxForCnx
+class maxRelFareLvlOfxForCnx {
+    +Value : xs:float
+}
+TPA_Extensions +-- numOfMustPrice2PlusStpSol
+class numOfMustPrice2PlusStpSol {
+    +Value : xs:short
+}
+TPA_Extensions +-- ItineraryNumberThreshold
+class ItineraryNumberThreshold {
+    +Value : xs:float
+}
+TPA_Extensions +-- TicketingSumOfLocals
+class TicketingSumOfLocals {
+    +Enable : xs:boolean
+}
+TPA_Extensions +-- MultiAirportCodes
+class MultiAirportCodes {
+    +EnableOpenJaw : xs:boolean
+}
+TPA_Extensions +-- ExcludeCallDirectCarriers
+class ExcludeCallDirectCarriers {
+    +Enabled : xs:boolean
+}
+TPA_Extensions +-- ValidatingCarrierCheck
+class ValidatingCarrierCheck {
+    +SettlementValidation : SettlementValidation
+    +IETValidation : IETValidation
+    +Carrier : Carrier[]
+    +Country : Country[]
+}
+ValidatingCarrierCheck +-- SettlementValidation
+class SettlementValidation {
+    +Ind : xs:boolean
+}
+ValidatingCarrierCheck +-- IETValidation
+class IETValidation {
+    +Ind : xs:boolean
+}
+ValidatingCarrierCheck +-- Carrier
+class Carrier {
+    +Code : xs:string
+}
+ValidatingCarrierCheck +-- Country
+class Country {
+    +Code : xs:string
+}
+TPA_Extensions +-- FlightRepeatLimit
+class FlightRepeatLimit {
+    +Value : xs:unsignedShort
+}
+TPA_Extensions +-- DiversityParameters
+class DiversityParameters {
+    +Weightings : Weightings
+    +TimeOfDayDistribution : TimeOfDayDistribution
+    +InboundOutboundPairing : xs:unsignedShort
+    +AdditionalNonStopsNumber : xs:unsignedShort
+    +AdditionalNonStopsPercentage : xs:unsignedShort
+}
+DiversityParameters +-- Weightings
+class Weightings {
+    +PriceWeight : xs:unsignedShort
+    +TravelTimeWeight : xs:unsignedShort
+}
+DiversityParameters +-- TimeOfDayDistribution
+class TimeOfDayDistribution {
+    +TimeOfDayRange : TimeOfDayRange[]
+}
+TimeOfDayDistribution +-- TimeOfDayRange
+class TimeOfDayRange {
+    +Begin : xs:string
+    +End : xs:string
+    +Percentage : xs:unsignedShort
+}
+TPA_Extensions +-- AdditionalFareLimit
+class AdditionalFareLimit {
+    +Value : xs:unsignedInt
+}
+TPA_Extensions +-- FareFocusRules
+class FareFocusRules {
+    +Exclude : xs:boolean
+}
+TPA_Extensions +-- SellingLevels
+class SellingLevels {
+    +SellingLevelRules : SellingLevelRules
+    +ShowFareAmounts : ShowFareAmounts
+}
+SellingLevels +-- SellingLevelRules
+class SellingLevelRules {
+    +Ignore : xs:boolean
+}
+SellingLevels +-- ShowFareAmounts
+class ShowFareAmounts {
+    +Original : xs:boolean
+    +Adjusted : xs:boolean
+}
+TPA_Extensions +-- Budget
+class Budget {
+    +MinimumPrice : xs:string
+    +MaximumPrice : xs:string
+    +RelativePriceThreshold : xs:string
+}
+TPA_Extensions +-- OptionsPerDatePairList
+class OptionsPerDatePairList {
+    +OptionsPerDatePair : OptionsPerDatePairType[]
+}
+TPA_Extensions +-- CountryPref
+class CountryPref {
+    +Code : xs:string
+    +PreferLevel : xs:string
+}
+TPA_Extensions +-- OnlineIndicator
+class OnlineIndicator {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- InterlineIndicator
+class InterlineIndicator {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- ExemptAllTaxes
+class ExemptAllTaxes {
+    +Value : xs:boolean
+}
+TPA_Extensions +-- ExemptAllTaxesAndFees
+class ExemptAllTaxesAndFees {
+    +Value : xs:boolean
+}
+TPA_Extensions +-- Taxes
+class Taxes {
+    +Tax : TaxCodeAmountType[]
+}
+AirSearchPrefsType +-- AncillaryFees
+class AncillaryFees {
+    +AncillaryFeeGroup : AncillaryFeeGroup[]
+    +Enable : xs:boolean
+    +Summary : xs:boolean
+}
+AncillaryFees +-- AncillaryFeeGroup
+class AncillaryFeeGroup {
+    +Code : xs:string
+    +Count : xs:string
+}
+AirSearchPrefsType +-- FrequentFlyer
+class FrequentFlyer {
+    +Status : xs:short
+    +AirlineCode : xs:string
+}
+AirSearchPrefsType +-- SpanishFamilyDiscount
+class SpanishFamilyDiscount {
+    +Level : xs:short
+}
+class AirTravelerType {
+    +ProfileRef : ProfileRef
+    +PersonName : PersonNameType
+    +Telephone : TelephoneType[]
+    +Email : EmailType[]
+    +Address : AddressType[]
+    +CustLoyalty : CustLoyaltyType[]
+    +Document : DocumentType[]
+    +PassengerTypeQuantity : PassengerTypeQuantityType
+    +TravelerRefNumber : TravelerRefNumberType
+    +FlightSegmentRPHs : FlightSegmentRPHs
+    +ShareSynchInd : xs:NMTOKEN
+    +ShareMarketInd : xs:NMTOKEN
+    +Gender : xs:NMTOKEN
+    +BirthDate : xs:date
+    +CurrencyCode : xs:string
+    +PassengerTypeCode : xs:string
+    +AccompaniedByInfant : xs:boolean
+}
+AirTravelerType +-- ProfileRef
+class ProfileRef {
+    +UniqueID : UniqueID_Type
+}
+AirTravelerType +-- FlightSegmentRPHs
+class FlightSegmentRPHs {
+    +FlightSegmentRPH : xs:string[]
+}
+class AirlineType {
+    +Operating : xs:string
+    +Marketing : xs:string
+}
+class AllianceType {
+    +Code : xs:string
+}
+enum AltCitiesCombinationsLocationsType {
+    All = All
+    Main = Main
+}
+class AltCitiesCombinationsType {
+    +Origins : AltCitiesCombinationsLocationsType
+    +Destinations : AltCitiesCombinationsLocationsType
+}
+class ApplyResidentDiscountType {
+    +Ind : xs:boolean
+}
+class ArunkType {
+    +OriginLocation : RequestLocationType
+    +DestinationLocation : RequestLocationType
+    +SideTrip : SideTripType
+}
+class AwardShoppingType {
+    +Enable : xs:boolean
+    +UseRAS : xs:boolean
+}
+class BillingInformationType {
+    +UserStation : xs:short
+    +UserBranch : xs:short
+    +PartitionID : xs:string
+    +UserSetAddress : xs:string
+    +AAACity : xs:string
+    +AgentSineIn : xs:string
+    +ServiceName : xs:string
+    +ActionCode : xs:string
+}
+class BookingChannelType {
+    +Type : xs:string
+    +Primary : xs:boolean
+}
+class BookingClassPrefType {
+    +PreferLevel : PreferLevelType
+    +ResBookDesigCode : xs:string
+}
+class BrandType {
+    +Code : xs:string
+}
+class CabinPrefType {
+    +PreferLevel : PreferLevelType
+    +Cabin : CabinType
+}
+enum CabinType {
+    PremiumFirst = PremiumFirst
+    First = First
+    PremiumBusiness = PremiumBusiness
+    Business = Business
+    PremiumEconomy = PremiumEconomy
+    Economy = Economy
+    Y = Y
+    S = S
+    C = C
+    J = J
+    F = F
+    P = P
+}
+class CachePartitionGroupType {
+    +Partition : CachePartitionType[]
+}
+class CachePartitionType {
+    +Name : xs:string
+}
+enum CarrierType {
+    Marketing = Marketing
+    Operating = Operating
+}
+class CompanyNamePrefType {
+    +PreferLevel : PreferLevelType
+    +Type : CarrierType
+}
+CompanyNamePrefType *- CompanyNameType
+class ConnectionType {
+    +ConnectionLocation : ConnectionLocation[]
+}
+ConnectionType +-- ConnectionLocation
+class ConnectionLocation {
+    +Inclusive : xs:boolean
+    +PreferLevel : PreferLevelType
+    +MinChangeTime : xs:nonNegativeInteger
+    +ConnectionInfo : xs:string
+}
+ConnectionLocation *- RequestLocationType
+class CountryNameType {
+    +value : xs:string
+    +Code : xs:string
+}
+class CustLoyaltyType {
+    +SingleVendorInd : xs:NMTOKEN
+    +SignupDate : xs:date
+    +ShareSynchInd : xs:NMTOKEN
+    +ShareMarketInd : xs:NMTOKEN
+    +ProgramID : xs:string
+    +MembershipID : xs:string
+    +TravelSector : xs:string
+    +LoyalLevel : xs:string
+    +EffectiveDate : xs:date
+    +ExpireDate : xs:date
+    +RPH : xs:string
+}
+class DateRangeType {
+    +OutboundDate : xs:date
+    +DateRange : xs:short
+}
+class DepartureDaysType {
+    +Value : xs:string
+}
+class DiversityControlType {
+    +LowFareBucket : LowFareBucket
+    +Dimensions : Dimensions
+}
+DiversityControlType +-- LowFareBucket
+class LowFareBucket {
+    +Options : xs:string
+    +FareCutOff : xs:string
+}
+DiversityControlType +-- Dimensions
+class Dimensions {
+    +TravelTime : TravelTime
+    +Carrier : Carrier
+    +OperatingDuplicate : OperatingDuplicate
+    +InboundOutboundPairing : InboundOutboundPairing
+    +TimeOfDay : TimeOfDay
+    +StopsNumber : StopsNumber
+    +PriceWeight : xs:unsignedShort
+}
+Dimensions +-- TravelTime
+class TravelTime {
+    +Weight : xs:integer
+}
+Dimensions +-- Carrier
+class Carrier {
+    +Default : Default
+    +Override : Override[]
+    +Weight : xs:integer
+    +OnlineIndicator : xs:boolean
+}
+Carrier +-- Default
+class Default {
+    +Options : xs:string
+}
+Carrier +-- Override
+class Override {
+    +Code : xs:string
+    +Options : xs:string
+}
+Dimensions +-- OperatingDuplicate
+class OperatingDuplicate {
+    +PreferredCarrier : PreferredCarrier[]
+    +Weight : xs:integer
+}
+OperatingDuplicate +-- PreferredCarrier
+class PreferredCarrier {
+    +Code : xs:string
+}
+Dimensions +-- InboundOutboundPairing
+class InboundOutboundPairing {
+    +Weight : xs:integer
+    +Duplicates : xs:positiveInteger
+}
+Dimensions +-- TimeOfDay
+class TimeOfDay {
+    +Distribution : Distribution[]
+    +Weight : xs:integer
+}
+TimeOfDay +-- Distribution
+class Distribution {
+    +Range : Range[]
+    +Direction : OutboundOrInbound
+    +Leg : xs:positiveInteger
+    +Endpoint : DepartureOrArrival
+}
+Distribution +-- Range
+class Range {
+    +Begin : xs:string
+    +End : xs:string
+    +Options : xs:string
+}
+Dimensions +-- StopsNumber
+class StopsNumber {
+    +Weight : xs:integer
+}
+class DocumentType {
+    +ShareSynchInd : xs:NMTOKEN
+    +ShareMarketInd : xs:NMTOKEN
+    +Gender : xs:NMTOKEN
+    +EffectiveDate : xs:date
+    +ExpireDate : xs:date
+    +BirthDate : xs:date
+    +DocHolderName : xs:string
+    +DocLimitations : xs:string[]
+    +DocIssueAuthority : xs:string
+    +DocIssueLocation : xs:string
+    +DocID : xs:string
+    +DocType : xs:string
+}
+class EmailType {
+    +value : xs:string
+    +ShareSynchInd : xs:NMTOKEN
+    +ShareMarketInd : xs:NMTOKEN
+    +DefaultInd : xs:boolean
+    +EmailType : xs:string
+}
+class EquipmentTypePref {
+    +PreferLevel : PreferLevelType
+    +WideBody : xs:boolean
+}
+EquipmentTypePref *- EquipmentType
+class ExchangeAirSearchPrefsType {
+    +TPA_Extensions : ExchangeTravelPreferencesTPA_ExtensionsType
+    +ValidInterlineTicket : xs:boolean
+}
+class ExchangeFareType {
+    +BaseFareAmount : xs:decimal
+    +NonRefundableAmount : xs:decimal
+    +BaseFareCurrency : xs:string
+    +FareCalcCurrency : xs:string
+    +ValidatingCarrier : xs:string
+    +ROE : xs:double
+}
+class ExchangeOriginDestinationFlightType {
+    +OriginLocation : RequestLocationType
+    +DestinationLocation : RequestLocationType
+    +Airline : AirlineType
+    +SideTrip : SideTripType
+    +Reservation : ReservationType
+    +MileageDisplay : MileageDisplayType[]
+    +BookingDateTime : xs:string
+    +Number : xs:short
+    +DepartureDateTime : xs:string
+    +ArrivalDateTime : xs:string
+    +MarriageStatus : xs:string
+    +Type : xs:string
+    +Flown : xs:boolean
+    +Fare : Fare
+    +PlusUp : PlusUpType[]
+    +ClassOfService : xs:string
+}
+ExchangeOriginDestinationFlightType +-- Fare
+class Fare {
+    +Adjustment : Adjustment
+}
+Fare *- FareDetailsType
+Fare +-- Adjustment
+class Adjustment {
+    +Value : xs:string
+    +Currency : xs:string
+    +Group : xs:short
+}
+class ExchangeOriginDestinationInformationType {
+    +DateFlexibility : DateFlexibility[]
+    +SisterDestinationLocation : RequestLocationType[]
+    +SisterDestinationMileage : SisterDestinationMileage
+    +SisterOriginLocation : RequestLocationType[]
+    +SisterOriginMileage : SisterOriginMileage
+    +SegmentType : SegmentType
+    +AlternateTime : AlternateTime
+    +MaxOneWayOptions : MaxOneWayOptions
+    +NumOneWayOptions : NumOneWayOptions
+    +CabinPref : CabinPrefType
+    +ConnectionTime : ConnectionTime
+    +TotalTravelTime : TotalTravelTime
+    +Flight : ExchangeOriginDestinationFlightType[]
+}
+ExchangeOriginDestinationInformationType *- OriginDestinationInformationType
+ExchangeOriginDestinationInformationType +-- DateFlexibility
+class DateFlexibility {
+    +NbrOfDays : xs:int
+    +Plus : xs:int
+    +Minus : xs:int
+    +Validate : xs:boolean
+}
+ExchangeOriginDestinationInformationType +-- SegmentType
+class SegmentType {
+    +Code : xs:string
+}
+ExchangeOriginDestinationInformationType +-- AlternateTime
+class AlternateTime {
+    +PlusMinus : xs:integer
+    +Plus : xs:integer
+    +Minus : xs:integer
+}
+ExchangeOriginDestinationInformationType +-- MaxOneWayOptions
+class MaxOneWayOptions {
+    +Value : xs:unsignedShort
+}
+ExchangeOriginDestinationInformationType +-- NumOneWayOptions
+class NumOneWayOptions {
+    +Number : xs:unsignedShort
+}
+ExchangeOriginDestinationInformationType +-- ConnectionTime
+class ConnectionTime {
+    +Min : xs:nonNegativeInteger
+    +Max : xs:nonNegativeInteger
+    +ExcludedConnectionBegin : xs:string
+    +ExcludedConnectionEnd : xs:string
+    +EnableExcludedConnection : xs:boolean
+}
+ExchangeOriginDestinationInformationType +-- TotalTravelTime
+class TotalTravelTime {
+    +Min : xs:unsignedInt
+    +Max : xs:unsignedInt
+}
+ExchangeOriginDestinationInformationType +-- SisterDestinationMileage
+class SisterDestinationMileage {
+    +Number : xs:nonNegativeInteger
+}
+ExchangeOriginDestinationInformationType +-- SisterOriginMileage
+class SisterOriginMileage {
+    +Number : xs:nonNegativeInteger
+}
+class ExchangePOSType {
+    +Source : ExchangeSourceType
+}
+class ExchangeSettingsType {
+    +RepriceCurrentItin : xs:boolean
+    +AttachExchangeInfo : xs:boolean
+    +ReissueExchange : xs:string
+    +BrandedResults : xs:boolean
+    +MIPTimeoutThreshold : xs:long
+    +RequestType : xs:string
+}
+class ExchangeSourceType {
+    +AgentSine : xs:string
+    +PseudoCityCode : xs:string
+    +ISOCountry : xs:string
+    +ISOCurrency : xs:string
+    +AgentDutyCode : xs:string
+    +AirlineVendorID : xs:string
+    +AirportCode : xs:string
+    +FirstDepartPoint : xs:string
+    +ERSP_UserID : xs:string
+    +PersonalCityCode : xs:string
+    +AccountingCode : xs:string
+    +OfficeCode : xs:string
+    +DefaultTicketingCarrier : xs:string
+    +AirlineChannelCode : xs:string
+    +AgentDepartmentCode : xs:string
+    +AgentFunction : xs:string
+    +TravelAgencyIATA : xs:string
+    +HomeAgencyIATA : xs:string
+    +AgentIATA : xs:string
+    +VendorCRSCode : xs:string
+    +AgentDuty : xs:string
+    +AbacusUser : xs:boolean
+    +AgentCity : xs:string
+    +MainTravelAgencyPCC : xs:string
+    +Carrier : xs:string
+    +HostCarrier : xs:string
+    +ETicketCapable : xs:boolean
+    +CoHostID : xs:short
+    +BookingChannel : SourceBookingChannelType
+}
+class ExchangeTPA_ExtensionsType {
+    +AwardShopping : AwardShoppingType
+}
+class ExchangeTravelPreferencesTPA_ExtensionsType {
+    +ExemptAllTaxes : ExemptAllTaxes
+    +ExemptAllTaxesAndFees : ExemptAllTaxesAndFees
+    +Taxes : Taxes
+    +ExemptTax : TaxCodeType[]
+    +SettlementMethod : xs:string
+}
+ExchangeTravelPreferencesTPA_ExtensionsType +-- ExemptAllTaxes
+class ExemptAllTaxes {
+    +Value : xs:boolean
+}
+ExchangeTravelPreferencesTPA_ExtensionsType +-- ExemptAllTaxesAndFees
+class ExemptAllTaxesAndFees {
+    +Value : xs:boolean
+}
+ExchangeTravelPreferencesTPA_ExtensionsType +-- Taxes
+class Taxes {
+    +Tax : TaxCodeAmountType[]
+}
+class ExchangeType {
+    +OriginalTktIssueDateTime : xs:string
+    +ExchangedTktIssueDateTime : xs:string
+    +PreviousExchangeDateTime : xs:string
+    +NumberOfTaxBoxes : xs:short
+    +BypassAdvancePurchaseOption : xs:string
+    +Fare : ExchangeFareType
+    +POS : ExchangePOSType
+    +OriginDestinationInformation : ExchangeOriginDestinationInformationType
+    +Arunk : ArunkType
+    +OriginDestinationInformation : ExchangeOriginDestinationInformationType
+    +TravelPreferences : ExchangeAirSearchPrefsType
+    +TravelerInfoSummary : TravelerInfoSummaryType
+    +TPA_Extensions : ExchangeTPA_ExtensionsType
+}
+class FareDetailsType {
+    +Vendor : xs:string
+    +SourceVendor : xs:string
+    +Tariff : xs:string
+    +RuleNumber : xs:string
+    +BrandID : xs:token
+    +ProgramID : xs:int
+    +ComponentNo : xs:short
+    +BasisCode : xs:string
+    +Amount : xs:decimal
+}
+class FareOptionalDetailsType {
+    +Vendor : xs:string
+    +SourceVendor : xs:string
+    +Tariff : xs:string
+    +RuleNumber : xs:string
+    +BrandID : xs:token
+    +ProgramID : xs:int
+    +ComponentNo : xs:short
+    +BasisCode : xs:string
+    +Amount : xs:decimal
+}
+class FareRestrictPrefType {
+    +PreferLevel : PreferLevelType
+    +FareRestriction : xs:string
+}
+class FlexibleFaresType {
+    +FareParameters : FareParameters[]
+}
+FlexibleFaresType +-- FareParameters
+class FareParameters {
+    +ExcludeRestricted : ExcludeRestricted
+    +ResTicketing : ResTicketing
+    +MinMaxStay : MinMaxStay
+    +RefundPenalty : RefundPenalty
+    +PublicFare : PublicFare
+    +PrivateFare : PrivateFare
+    +Cabin : Cabin
+    +PassengerType : PassengerType
+    +NegotiatedFaresOnly : NegotiatedFaresOnly
+    +XOFares : XOFares
+    +PassengerTypeQuantity : PassengerTypeQuantityType[]
+    +JumpCabinLogic : JumpCabinLogicType
+    +KeepSameCabin : KeepSameCabinType
+    +CorporateID : CorporateID
+    +AccountCode : AccountCode
+}
+FareParameters +-- ExcludeRestricted
+class ExcludeRestricted {
+    +Ind : xs:boolean
+}
+FareParameters +-- ResTicketing
+class ResTicketing {
+    +Ind : xs:boolean
+}
+FareParameters +-- MinMaxStay
+class MinMaxStay {
+    +Ind : xs:boolean
+}
+FareParameters +-- RefundPenalty
+class RefundPenalty {
+    +Ind : xs:boolean
+}
+FareParameters +-- PublicFare
+class PublicFare {
+    +Ind : xs:boolean
+}
+FareParameters +-- PrivateFare
+class PrivateFare {
+    +Ind : xs:boolean
+}
+FareParameters +-- Cabin
+class Cabin {
+    +Type : CabinType
+}
+FareParameters +-- PassengerType
+class PassengerType {
+    +Code : xs:string xs:string
+}
+FareParameters +-- NegotiatedFaresOnly
+class NegotiatedFaresOnly {
+    +Ind : xs:boolean
+}
+FareParameters +-- XOFares
+class XOFares {
+    +Ind : xs:boolean
+}
+FareParameters +-- CorporateID
+class CorporateID {
+    +Code : xs:string
+}
+FareParameters +-- AccountCode
+class AccountCode {
+    +Code : xs:string
+}
+class FlightStopsAsConnectionsType {
+    +Ind : xs:boolean
+}
+class FlightTypePrefType {
+    +PreferLevel : PreferLevelType
+    +FlightType : FlightTypeType
+    +MaxConnections : xs:nonNegativeInteger xs:boolean
+}
+enum FlightTypeType {
+    Nonstop = Nonstop
+    Direct = Direct
+    Connection = Connection
+}
+class GlobalDateTimeType {
+    +TimeWindowStart : xs:string
+    +TimeWindowEnd : xs:string
+    +TimeTolerance : xs:nonNegativeInteger
+    +DateFlexibility : xs:nonNegativeInteger
+    +MaxOptionsPerDate : xs:nonNegativeInteger
+    +ConnectionTimeMin : xs:nonNegativeInteger
+    +ConnectionTimeMax : xs:nonNegativeInteger
+    +DateTime : xs:string
+}
+class GoverningCarrierOverrideType {
+    +AirlineCode : xs:string
+}
+class IncludeVendorPrefType {
+    +Code : xs:string
+}
+class InterlineBrandsType {
+    +Brand : BrandType[]
+    +ChangeBrandForSoldout : xs:boolean
+}
+class JumpCabinLogicType {
+    +Disabled : xs:boolean
+}
+class KeepSameCabinType {
+    +Enabled : xs:boolean
+}
+class MileageDisplayType {
+    +Type : xs:string
+    +City : xs:string
+    +Surcharge : xs:short
+}
+class NumTripsType {
+    +Number : xs:short
+    +PerDateMin : xs:unsignedShort
+    +PerDateMax : xs:unsignedShort
+    +PerMarket : xs:unsignedShort
+    +PerMonth : xs:unsignedShort
+}
+class OTA_AirLowFareSearchRQ {
+    +POS : POS_Type
+    +OriginDestinationInformation : OriginDestinationInformation[]
+    +Leg : Leg[]
+    +TravelPreferences : AirSearchPrefsType
+    +TravelerInfoSummary : TravelerInfoSummaryType
+    +TPA_Extensions : TPA_Extensions
+    +PrimaryLangID : xs:language
+    +AltLangID : xs:language
+    +EchoToken : xs:string
+    +TimeStamp : xs:string
+    +Target : xs:NMTOKEN
+    +Version : xs:string
+    +TransactionIdentifier : xs:string
+    +SequenceNmbr : xs:boolean xs:positiveInteger
+    +TransactionStatusCode : xs:NMTOKEN
+    +MaxResponses : xs:positiveInteger xs:integer
+    +DirectFlightsOnly : xs:boolean
+    +AvailableFlightsOnly : xs:boolean
+    +ResponseType : xs:string
+    +ResponseVersion : xs:string
+    +SeparateMessages : xs:boolean
+    +TruncateMessages : xs:boolean
+}
+OTA_AirLowFareSearchRQ +-- TPA_Extensions
+class TPA_Extensions {
+    +IntelliSellTransaction : TransactionType
+    +DiversityControl : DiversityControlType
+    +MessagingDetails : MessagingDetails
+    +AlternateAirportCities : AlternateAirportCities[]
+    +AlternateAirportMileage : AlternateAirportMileage
+    +AwardShopping : AwardShoppingType
+    +Billing : BillingInformationType
+    +ExchangeSettings : ExchangeSettingsType
+    +Exchange : ExchangeType[]
+    +SplitTaxes : SplitTaxes
+    +AlternateDatesProcessing : AlternateDatesProcessing
+    +ItineraryCache : ItineraryCache
+    +MultiTicket : MultiTicket
+    +Partitions : Partitions
+    +ReservationData : ReservationData
+    +AlternatePCC : AlternatePCC[]
+}
+TPA_Extensions +-- MessagingDetails
+class MessagingDetails {
+    +MDRSubset : MDRSubset
+}
+MessagingDetails +-- MDRSubset
+class MDRSubset {
+    +Code : xs:string
+}
+TPA_Extensions +-- SplitTaxes
+class SplitTaxes {
+    +ByLeg : xs:boolean
+    +ByFareComponent : xs:boolean
+}
+TPA_Extensions +-- AlternateDatesProcessing
+class AlternateDatesProcessing {
+    +CalendarMode : xs:boolean
+    +NumOptionsPerAlternateDate : xs:int
+}
+TPA_Extensions +-- ItineraryCache
+class ItineraryCache {
+    +PublicTimeToLive : xs:unsignedInt
+    +RemovePreviousOnUpdate : xs:boolean
+}
+TPA_Extensions +-- MultiTicket
+class MultiTicket {
+    +DisplayPolicy : xs:string
+}
+TPA_Extensions +-- Partitions
+class Partitions {
+    +Partition : CachePartitionType
+    +Group : CachePartitionGroupType
+}
+TPA_Extensions +-- ReservationData
+class ReservationData {
+    +DKNumber : xs:string
+}
+TPA_Extensions +-- AlternatePCC
+class AlternatePCC {
+    +TravelPreferences : TravelPreferences
+    +PseudoCityCode : xs:string
+}
+AlternatePCC +-- TravelPreferences
+class TravelPreferences {
+    +VendorPref : VendorPref[]
+    +TPA_Extensions : TPA_Extensions
+}
+TravelPreferences +-- VendorPref
+class VendorPref {
+    +Code : xs:string
+    +PreferLevel : PreferLevelType
+}
+TravelPreferences +-- TPA_Extensions
+class TPA_Extensions {
+    +IncludeAlliancePref : AllianceType[]
+    +ExcludeAlliancePref : AllianceType[]
+}
+TPA_Extensions +-- AlternateAirportCities
+class AlternateAirportCities {
+    +SpecifiedLocation : SpecifiedLocation
+    +AlternateLocation : AlternateLocation[]
+}
+AlternateAirportCities +-- SpecifiedLocation
+class SpecifiedLocation {
+    +LocationCode : xs:string
+}
+AlternateAirportCities +-- AlternateLocation
+class AlternateLocation {
+    +LocationCode : xs:string
+}
+TPA_Extensions +-- AlternateAirportMileage
+class AlternateAirportMileage {
+    +Number : xs:string
+}
+OTA_AirLowFareSearchRQ +-- OriginDestinationInformation
+class OriginDestinationInformation {
+    +TPA_Extensions : TPA_Extensions
+    +RPH : xs:string
+    +Fixed : xs:boolean
+    +FullDiversity : xs:boolean
+}
+OriginDestinationInformation *- OriginDestinationInformationType
+OriginDestinationInformation +-- TPA_Extensions
+class TPA_Extensions {
+    +Flight : OriginDestinationFlightType[]
+    +Routing : RoutingDefinitionType[]
+    +DateFlexibility : DateFlexibility[]
+    +SisterDestinationLocation : RequestLocationType[]
+    +SisterDestinationMileage : SisterDestinationMileage
+    +SisterOriginLocation : RequestLocationType[]
+    +SisterOriginMileage : SisterOriginMileage
+    +SegmentType : SegmentType
+    +AlternateTime : AlternateTime
+    +MaxOneWayOptions : MaxOneWayOptions
+    +NumOneWayOptions : NumOneWayOptions
+    +CabinPref : CabinPrefType
+    +ConnectionTime : ConnectionTime
+    +TotalTravelTime : TotalTravelTime
+    +IncludeVendorPref : IncludeVendorPrefType[]
+    +IncludeAlliancePref : AllianceType[]
+    +DepartureDays : DepartureDaysType
+}
+TPA_Extensions +-- DateFlexibility
+class DateFlexibility {
+    +NbrOfDays : xs:int
+    +Plus : xs:int
+    +Minus : xs:int
+    +Validate : xs:boolean
+}
+TPA_Extensions +-- SegmentType
+class SegmentType {
+    +Code : xs:string
+}
+TPA_Extensions +-- AlternateTime
+class AlternateTime {
+    +PlusMinus : xs:integer
+    +Plus : xs:integer
+    +Minus : xs:integer
+}
+TPA_Extensions +-- MaxOneWayOptions
+class MaxOneWayOptions {
+    +Value : xs:unsignedShort
+}
+TPA_Extensions +-- NumOneWayOptions
+class NumOneWayOptions {
+    +Number : xs:unsignedShort
+}
+TPA_Extensions +-- ConnectionTime
+class ConnectionTime {
+    +Min : xs:nonNegativeInteger
+    +Max : xs:nonNegativeInteger
+    +ExcludedConnectionBegin : xs:string
+    +ExcludedConnectionEnd : xs:string
+    +EnableExcludedConnection : xs:boolean
+}
+TPA_Extensions +-- TotalTravelTime
+class TotalTravelTime {
+    +Min : xs:unsignedInt
+    +Max : xs:unsignedInt
+}
+TPA_Extensions +-- SisterDestinationMileage
+class SisterDestinationMileage {
+    +Number : xs:nonNegativeInteger
+}
+TPA_Extensions +-- SisterOriginMileage
+class SisterOriginMileage {
+    +Number : xs:nonNegativeInteger
+}
+OTA_AirLowFareSearchRQ +-- Leg
+class Leg {
+    +DepartureDateTime : DepartureDateTime
+    +ArrivalDateTime : GlobalDateTimeType
+    +Origins : Origins
+    +Destinations : Destinations
+    +ConnectionLocations : ConnectionType
+    +Carriers : Carriers
+    +Cabin : Cabin
+    +RPH : xs:string
+    +MaxOptions : xs:nonNegativeInteger
+}
+Leg +-- Origins
+class Origins {
+    +Origin : Origin[]
+}
+Origins +-- Origin
+class Origin {
+    +ConnectionLocations : ConnectionType
+    +Carriers : Carriers
+    +DepartureDateTimeOverride : OverrideDateTimeType
+    +AirportCode : xs:string
+    +AirportsGroup : xs:string
+}
+Origin +-- Carriers
+class Carriers {
+    +IncludeVendorPref : IncludeVendorPrefType[]
+    +ExcludeVendorPref : ExcludeVendorPref[]
+}
+Carriers +-- ExcludeVendorPref
+class ExcludeVendorPref {
+    +Code : xs:string
+}
+Leg +-- Destinations
+class Destinations {
+    +Destination : Destination[]
+}
+Destinations +-- Destination
+class Destination {
+    +ConnectionLocations : ConnectionType
+    +Carriers : Carriers
+    +ArrivalDateTimeOverride : OverrideDateTimeType
+    +AirportCode : xs:string
+    +AirportsGroup : xs:string
+}
+Destination +-- Carriers
+class Carriers {
+    +IncludeVendorPref : IncludeVendorPrefType[]
+    +ExcludeVendorPref : ExcludeVendorPref[]
+}
+Carriers +-- ExcludeVendorPref
+class ExcludeVendorPref {
+    +Code : xs:string
+}
+Leg +-- Carriers
+class Carriers {
+    +IncludeVendorPref : IncludeVendorPrefType[]
+    +ExcludeVendorPref : ExcludeVendorPref[]
+}
+Carriers +-- ExcludeVendorPref
+class ExcludeVendorPref {
+    +Code : xs:string
+}
+Leg +-- Cabin
+class Cabin {
+    +PreferenceLevel : PreferLevelType
+    +Type : CabinType
+}
+Leg +-- DepartureDateTime
+class DepartureDateTime {
+    +WeekDays : xs:string
+}
+DepartureDateTime *- GlobalDateTimeType
+class OptionsPerDatePairType {
+    +Departure : xs:string
+    +Return : xs:string
+    +Min : xs:unsignedShort
+    +Max : xs:unsignedShort
+}
+class OriginDestinationFlightType {
+    +Number : xs:short
+    +DepartureDateTime : xs:string
+    +ArrivalDateTime : xs:string
+    +MarriageStatus : xs:string
+    +Type : xs:string
+    +Flown : xs:boolean
+    +OriginLocation : RequestLocationType
+    +DestinationLocation : RequestLocationType
+    +Airline : AirlineType
+    +SideTrip : SideTripType
+    +Reservation : ReservationType
+    +MileageDisplay : MileageDisplayType[]
+    +BookingDateTime : xs:string
+    +Fare : FareOptionalDetailsType
+    +PlusUp : PlusUpType[]
+    +ClassOfService : xs:string
+    +Shopped : xs:boolean
+}
+class OriginDestinationInformationType {
+    +OriginLocation : OriginLocation
+    +DestinationLocation : DestinationLocation
+    +ConnectionLocations : ConnectionType
+}
+OriginDestinationInformationType *- TravelDateTimeType
+OriginDestinationInformationType +-- OriginLocation
+class OriginLocation {
+    +AllAirports : xs:boolean
+}
+OriginLocation *- RequestLocationType
+OriginDestinationInformationType +-- DestinationLocation
+class DestinationLocation {
+    +AllAirports : xs:boolean
+}
+DestinationLocation *- RequestLocationType
+class OverrideDateTimeType {
+    +TimeWindowStart : xs:string
+    +TimeWindowEnd : xs:string
+    +TimeTolerance : xs:nonNegativeInteger
+    +DateFlexibility : xs:nonNegativeInteger
+    +MaxOptionsPerDate : xs:nonNegativeInteger
+    +ConnectionTimeMin : xs:nonNegativeInteger
+    +ConnectionTimeMax : xs:nonNegativeInteger
+    +DateTime : xs:string
+}
+class POS_Type {
+    +Source : SourceType[]
+}
+class PersonNameType {
+    +NamePrefix : xs:string[]
+    +GivenName : xs:string[]
+    +MiddleName : xs:string[]
+    +SurnamePrefix : xs:string
+    +Surname : xs:string
+    +NameSuffix : xs:string[]
+    +NameTitle : xs:string[]
+    +ShareSynchInd : xs:NMTOKEN
+    +ShareMarketInd : xs:NMTOKEN
+    +NameType : xs:string
+}
+class PlusUpType {
+    +Amount : xs:decimal
+    +OriginCity : xs:string
+    +DestinationCity : xs:string
+    +FareOriginCity : xs:string
+    +FareDestinationCity : xs:string
+    +ViaCity : xs:string
+    +Message : xs:string
+    +CountryOfPayment : xs:string
+}
+class PointOfSaleOverrideType {
+    +Code : xs:string
+}
+class PointOfTicketingOverrideType {
+    +Code : xs:string
+}
+class PositionType {
+    +Latitude : xs:string
+    +Longitude : xs:string
+    +Altitude : xs:string
+}
+enum PreferLevelType {
+    Only = Only
+    Unacceptable = Unacceptable
+    Preferred = Preferred
+}
+class PriceRequestInformationType {
+    +FareQualifier : xs:string
+    +NegotiatedFaresOnly : xs:boolean
+    +CurrencyCode : xs:string
+    +PricingSource : RequestPricingSourceType
+    +Reprice : xs:boolean
+    +ProcessThruFaresOnly : xs:boolean
+    +PurchaseDate : xs:date
+    +PurchaseTime : xs:string
+    +NetFaresUsed : xs:boolean
+    +NegotiatedFareCode : NegotiatedFareCode
+    +AccountCode : AccountCode
+    +TPA_Extensions : TPA_Extensions
+}
+PriceRequestInformationType +-- TPA_Extensions
+class TPA_Extensions {
+    +PublicFare : PublicFare
+    +PrivateFare : PrivateFare
+    +IATAFare : IATAFare
+    +WebFare : WebFare
+    +Priority : Priority
+    +Indicators : Indicators
+    +PromoID : xs:string
+    +CustomerType : CustomerType
+    +MultipleTravelerGroups : MultipleTravelerGroups
+    +BrandedFareIndicators : BrandedFareIndicators
+    +PassengerStatus : PassengerStatus
+    +PointOfSaleOverride : PointOfSaleOverrideType
+    +PointOfTicketingOverride : PointOfTicketingOverrideType
+    +ApplyResidentDiscount : ApplyResidentDiscountType
+    +ETicketableOverride : ETicketableOverride
+    +Currency : Currency
+    +UseReducedConstructions : UseReducedConstructions
+    +OBFees : OBFees
+    +FareBreaksAtLegs : FareBreaksAtLegs
+    +FareAdjustment : FareAdjustment
+}
+TPA_Extensions +-- PublicFare
+class PublicFare {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- PrivateFare
+class PrivateFare {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- IATAFare
+class IATAFare {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- WebFare
+class WebFare {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- Priority
+class Priority {
+    +Price : Price
+    +DirectFlights : DirectFlights
+    +Time : Time
+    +Vendor : Vendor
+}
+Priority +-- Price
+class Price {
+    +Priority : xs:int
+}
+Priority +-- DirectFlights
+class DirectFlights {
+    +Priority : xs:int
+}
+Priority +-- Time
+class Time {
+    +Priority : xs:int
+}
+Priority +-- Vendor
+class Vendor {
+    +Priority : xs:int
+}
+TPA_Extensions +-- Indicators
+class Indicators {
+    +RetainFare : RetainFare
+    +MinMaxStay : MinMaxStay
+    +RefundPenalty : RefundPenalty
+    +ResTicketing : ResTicketing
+    +TravelPolicy : TravelPolicy
+}
+Indicators +-- RetainFare
+class RetainFare {
+    +Ind : xs:boolean
+}
+Indicators +-- MinMaxStay
+class MinMaxStay {
+    +Ind : xs:boolean
+}
+Indicators +-- RefundPenalty
+class RefundPenalty {
+    +Ind : xs:boolean
+}
+Indicators +-- ResTicketing
+class ResTicketing {
+    +Ind : xs:boolean
+}
+Indicators +-- TravelPolicy
+class TravelPolicy {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- CustomerType
+class CustomerType {
+    +Value : xs:string
+}
+TPA_Extensions +-- MultipleTravelerGroups
+class MultipleTravelerGroups {
+    +ItinerariesPerGroup : xs:integer
+}
+TPA_Extensions +-- BrandedFareIndicators
+class BrandedFareIndicators {
+    +ReturnCheapestUnbrandedFare : ReturnCheapestUnbrandedFare
+    +SingleBrandedFare : xs:boolean
+    +MultipleBrandedFares : xs:boolean
+}
+BrandedFareIndicators +-- ReturnCheapestUnbrandedFare
+class ReturnCheapestUnbrandedFare {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- PassengerStatus
+class PassengerStatus {
+    +StateCode : xs:string
+    +CountryCode : xs:string
+    +CityCode : xs:string
+    +Type : xs:string
+}
+TPA_Extensions +-- ETicketableOverride
+class ETicketableOverride {
+    +Value : xs:boolean
+}
+TPA_Extensions +-- Currency
+class Currency {
+    +Dual : xs:string
+    +MOverride : xs:boolean
+}
+TPA_Extensions +-- UseReducedConstructions
+class UseReducedConstructions {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- OBFees
+class OBFees {
+    +RType : xs:boolean
+    +TType : xs:boolean
+}
+TPA_Extensions +-- FareBreaksAtLegs
+class FareBreaksAtLegs {
+    +Ind : xs:boolean
+}
+TPA_Extensions +-- FareAdjustment
+class FareAdjustment {
+    +Value : xs:string
+    +Currency : xs:string
+}
+PriceRequestInformationType +-- NegotiatedFareCode
+class NegotiatedFareCode {
+    +Code : xs:string
+    +CodeContext : xs:string
+    +URI : xs:anyURI
+    +SecondaryCode : xs:string
+    +SupplierCode : xs:string
+    +Supplier : CompanyNameType[]
+    +TPA_Extensions : xs:string
+}
+PriceRequestInformationType +-- AccountCode
+class AccountCode {
+    +Code : xs:string
+}
+class RequestLocationType {
+    +value : xs:string
+    +LocationCode : xs:string
+    +AirportsGroup : xs:string
+    +CodeContext : xs:string
+}
+enum RequestPricingSourceType {
+    Published = Published
+    Private = Private
+    Both = Both
+}
+class ReservationType {
+    +Status : xs:string
+    +RealStatus : xs:string
+}
+class RetailerRulesType {
+    +RetailerRule : RetailerRule[]
+    +Force : xs:boolean
+}
+RetailerRulesType +-- RetailerRule
+class RetailerRule {
+    +Code : xs:string
+}
+class RoutingDefinitionType {
+    +RoutingLeg : RoutingLegType[]
+    +AddWildcards : xs:boolean
+}
+class RoutingLegType {
+    +InboundOutboundCarrier : xs:string[]
+    +InboundCarrier : xs:string[]
+    +OutboundCarrier : xs:string[]
+    +ConnectPoint : xs:string[]
+}
+class SeatStatusSimType {
+    +Type : xs:string
+    +Command : xs:string
+}
+class SideTripType {
+    +Number : xs:short
+    +Start : xs:boolean
+    +End : xs:boolean
+}
+class SourceBookingChannelType {
+    +CompanyName : CompanyNameType
+}
+SourceBookingChannelType *- BookingChannelType
+class SourceType {
+    +RequestorID : UniqueID_Type
+    +Position : PositionType
+    +BookingChannel : SourceBookingChannelType
+    +AgentSine : xs:string
+    +PseudoCityCode : xs:string
+    +ISOCountry : xs:string
+    +ISOCurrency : xs:string
+    +AgentDutyCode : xs:string
+    +AirlineVendorID : xs:string
+    +AirportCode : xs:string
+    +FirstDepartPoint : xs:string
+    +ERSP_UserID : xs:string
+    +PersonalCityCode : xs:string
+    +AccountingCode : xs:string
+    +OfficeCode : xs:string
+    +DefaultTicketingCarrier : xs:string
+    +AirlineChannelCode : xs:string
+    +AgentDepartmentCode : xs:string
+    +AgentFunction : xs:string
+    +TravelAgencyIATA : xs:string
+    +HomeAgencyIATA : xs:string
+    +AgentIATA : xs:string
+    +VendorCRSCode : xs:string
+    +AgentDuty : xs:string
+    +AbacusUser : xs:boolean
+    +AgentCity : xs:string
+    +Carrier : xs:string
+    +MainTravelAgencyPCC : xs:string
+    +HomePCC : xs:string
+}
+class StateProvType {
+    +value : xs:string
+    +StateCode : xs:string
+}
+class StreetNmbrType {
+    +value : xs:string
+    +PO_Box : xs:string
+}
+class TaxCodeAmountType {
+    +Amount : xs:decimal
+}
+TaxCodeAmountType *- TaxCodeType
+class TaxCodeType {
+    +TaxCode : xs:string
+}
+class TelephoneType {
+    +PhoneLocationType : xs:string
+    +PhoneTechType : xs:string
+    +CountryAccessCode : xs:string
+    +AreaCityCode : xs:string
+    +PhoneNumber : xs:string
+    +Extension : xs:string
+    +PIN : xs:string
+    +ShareSynchInd : xs:NMTOKEN
+    +ShareMarketInd : xs:NMTOKEN
+    +FormattedInd : xs:boolean
+}
+class TicketDistribPrefType {
+    +value : xs:string
+    +PreferLevel : PreferLevelType
+    +DistribType : xs:string
+    +TicketTime : xs:duration
+}
+class TransactionType {
+    +RequestType : RequestType
+    +ServiceTag : ServiceTag
+    +PurchaseType : PurchaseType
+    +SabreAth : SabreAth
+    +TranID : TranID
+    +ClientSessionID : ClientSessionID
+    +Branch : Branch
+    +CompressResponse : CompressResponse
+    +FareOverrides : FareOverrides
+    +Diagnostics : Diagnostics
+    +SubagentData : SubagentData
+    +ResponseSorting : ResponseSorting
+    +SeatStatusSim : SeatStatusSimType
+    +AvailableLevel : AvailableLevel
+    +ATSETest : ATSETest
+    +Debug : xs:boolean
+    +DebugKey : xs:string
+    +ConfigSet : xs:string
+    +DisableCache : xs:boolean
+    +ChunkNumber : xs:string
+    +ShowItinSource : xs:boolean
+}
+TransactionType +-- RequestType
+class RequestType {
+    +value : xs:string
+    +Name : xs:string
+}
+TransactionType +-- ServiceTag
+class ServiceTag {
+    +value : xs:string
+    +Name : xs:string
+}
+TransactionType +-- PurchaseType
+class PurchaseType {
+    +Name : xs:string
+}
+TransactionType +-- SabreAth
+class SabreAth {
+    +Value : xs:string
+    +BinarySecToken : xs:string
+    +ConversationID : xs:string
+}
+TransactionType +-- TranID
+class TranID {
+    +Value : xs:string
+}
+TransactionType +-- ClientSessionID
+class ClientSessionID {
+    +Value : xs:string
+}
+TransactionType +-- Branch
+class Branch {
+    +Name : xs:string
+}
+TransactionType +-- CompressResponse
+class CompressResponse {
+    +Value : xs:boolean
+}
+TransactionType +-- FareOverrides
+class FareOverrides {
+    +FareOverride : FareOverride[]
+}
+FareOverrides +-- FareOverride
+class FareOverride {
+    +VendorPref : CompanyNamePrefType[]
+    +TPA_Extensions : xs:string
+    +FareType : xs:string
+    +PseudoCityCode : xs:string
+    +CorporateID : xs:string
+    +Callable : xs:string
+}
+TransactionType +-- Diagnostics
+class Diagnostics {
+    +Diagnostic : Diagnostic[]
+}
+Diagnostics +-- Diagnostic
+class Diagnostic {
+    +DiagnosticArgument : DiagnosticArgument[]
+    +TPA_Extensions : xs:string
+    +Target : xs:string
+    +Code : xs:string
+}
+Diagnostic +-- DiagnosticArgument
+class DiagnosticArgument {
+    +Name : xs:string
+    +Value : xs:string
+}
+TransactionType +-- SubagentData
+class SubagentData {
+    +Code : xs:string
+}
+TransactionType +-- ResponseSorting
+class ResponseSorting {
+    +EnableChronologicalSorting : xs:boolean
+}
+TransactionType +-- AvailableLevel
+class AvailableLevel {
+    +Value : xs:string
+}
+TransactionType +-- ATSETest
+class ATSETest {
+    +Feature : xs:string
+}
+class TravelDateTimeType {
+    +DepartureDateTime : xs:string
+    +ArrivalDateTime : xs:string
+    +DepartureDates : DepartureDates
+    +ArrivalDates : ArrivalDates
+    +DepartureWindow : xs:string
+    +ArrivalWindow : xs:string
+}
+TravelDateTimeType +-- DepartureDates
+class DepartureDates {
+    +Day : Day
+    +DaysRange : DaysRange
+    +LengthOfStay : LengthOfStay
+    +LengthOfStayRange : LengthOfStayRange
+}
+DepartureDates +-- LengthOfStay
+class LengthOfStay {
+    +Days : xs:unsignedShort
+}
+DepartureDates +-- LengthOfStayRange
+class LengthOfStayRange {
+    +MinDays : xs:unsignedShort
+    +MaxDays : xs:unsignedShort
+}
+DepartureDates +-- Day
+class Day {
+    +Date : xs:string
+}
+DepartureDates +-- DaysRange
+class DaysRange {
+    +FromDate : xs:string
+    +ToDate : xs:string
+    +WeekDays : xs:string
+}
+TravelDateTimeType +-- ArrivalDates
+class ArrivalDates {
+    +Day : Day
+    +DaysRange : DaysRange
+}
+ArrivalDates +-- Day
+class Day {
+    +Date : xs:string
+}
+ArrivalDates +-- DaysRange
+class DaysRange {
+    +FromDate : xs:string
+    +ToDate : xs:string
+    +WeekDays : xs:string
+}
+class TravelerInfoSummaryType {
+    +SeatsRequested : xs:nonNegativeInteger[]
+    +AirTravelerAvail : TravelerInformationType[]
+    +PriceRequestInformation : PriceRequestInformationType
+    +TPA_Extensions : TravelerInfoSummary_TPA_ExtensionsType
+    +SpecificPTC_Indicator : xs:boolean
+}
+class TravelerInfoSummary_TPA_ExtensionsType {
+    +TravelerRating : TravelerRating[]
+}
+TravelerInfoSummary_TPA_ExtensionsType +-- TravelerRating
+class TravelerRating {
+    +Score : Score[]
+    +FrequentFlyer : FrequentFlyer[]
+}
+TravelerRating +-- Score
+class Score {
+    +Value : xs:integer
+    +Carrier : xs:string
+}
+TravelerRating +-- FrequentFlyer
+class FrequentFlyer {
+    +Tier : xs:integer
+    +Carrier : xs:string
+}
+class TravelerInformationType {
+    +PassengerTypeQuantity : PassengerTypeQuantityType[]
+    +AirTraveler : AirTravelerType
+}
+class TravelerRefNumberType {
+    +RPH : xs:string
+}
+class UniqueID_Type {
+    +URL : xs:anyURI
+    +Type : xs:string
+    +Instance : xs:string
+    +ID : xs:string
+    +ID_Context : xs:string
+    +CompanyName : CompanyNameType
+}
+enum ValidatingCarrierPreferLevelType {
+    Unacceptable = Unacceptable
+    Preferred = Preferred
+}
+class ValidatingCarrierType {
+    +Preference : Preference[]
+    +Code : xs:string
+}
+ValidatingCarrierType +-- Preference
+class Preference {
+    +Code : xs:string
+    +Level : ValidatingCarrierPreferLevelType
+}
+class XOFaresType {
+    +Value : xs:boolean
+}
+
+@enduml

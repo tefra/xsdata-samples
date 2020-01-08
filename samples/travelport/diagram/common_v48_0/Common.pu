@@ -1,0 +1,2164 @@
+@startuml
+
+class APIProvider {
+    +TransactionType : TransactionType
+    +AvailablePseudoCityCode : AvailablePseudoCityCode[]
+    +ProviderCode : xs:string
+    +SupplierCode : xs:string
+    +IATACode : xs:string
+}
+APIProvider +-- AvailablePseudoCityCode
+class AvailablePseudoCityCode {
+    +PseudoCityCode : xs:string
+}
+class ARCPayment {
+    +ARCIdentifier : xs:string
+    +ARCPassword : xs:string
+}
+class AccountCode {
+    +Code : xs:string
+    +ProviderCode : xs:string
+    +SupplierCode : xs:string
+    +Type : xs:string
+}
+class AccountInformation {
+    +Address : typeStructuredAddress
+    +PhoneNumber : PhoneNumber[]
+    +AccountName : xs:string
+}
+class AccountingRemark {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +RemarkData : xs:string
+    +BookingTravelerRef : xs:string[]
+    +Key : xs:string
+    +Category : xs:string
+    +TypeInGds : xs:string
+    +ProviderReservationInfoRef : xs:string
+    +ProviderCode : xs:string
+    +UseProviderNativeMode : xs:boolean
+}
+class ActionStatus {
+    +ProviderCode : xs:string
+    +SupplierCode : xs:string
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Remark : Remark
+    +Type : xs:string
+    +TicketDate : xs:string
+    +Key : xs:string
+    +ProviderReservationInfoRef : xs:string
+    +QueueCategory : xs:string
+    +AirportCode : xs:string
+    +PseudoCityCode : xs:string
+    +AccountCode : xs:string
+}
+class AddSvc {
+    +RFIC : xs:string
+    +RFISC : xs:string
+    +SvcDescription : xs:string
+    +Origin : xs:string
+    +Destination : xs:string
+    +StartDate : xs:date
+}
+class AddressRestriction {
+    +RequiredField : RequiredField[]
+}
+class AgencyContactInfo {
+    +PhoneNumber : PhoneNumber[]
+    +Key : xs:string
+}
+class AgencyInfo {
+    +AgentAction : AgentAction[]
+}
+class AgencyInformation {
+    +Address : typeStructuredAddress
+    +Email : Email[]
+    +PhoneNumber : PhoneNumber[]
+}
+class AgencyPayment {
+}
+AgencyPayment *- typeAgencyPayment
+class AgencySellInfo {
+    +IataCode : xs:string
+    +Country : xs:string
+    +CurrencyCode : xs:string
+    +ProviderCode : xs:string
+    +PseudoCityCode : xs:string
+    +CityCode : xs:string
+}
+class AgentAction {
+    +AgentOverride : xs:string
+    +ActionType : xs:string
+    +AgentCode : xs:string
+    +BranchCode : xs:string
+    +AgencyCode : xs:string
+    +AgentSine : xs:string
+    +EventTime : xs:dateTime
+}
+class AgentIDOverride {
+    +SupplierCode : xs:string
+    +ProviderCode : xs:string
+    +AgentID : xs:string
+}
+class AgentVoucher {
+    +Number : xs:string
+}
+class AirExchangeInfo {
+    +TotalPenaltyTaxInfo : TotalPenaltyTaxInfo
+    +PaidTax : typeTax[]
+    +TicketFeeInfo : TicketFeeInfo[]
+    +Reason : xs:string[]
+    +FeeInfo : typeFeeInfo[]
+    +TaxInfo : typeTaxInfo[]
+    +ExchangeAmount : xs:string
+    +BaseFare : xs:string
+    +EquivalentBaseFare : xs:string
+    +Taxes : xs:string
+    +ChangeFee : xs:string
+    +ForfeitAmount : xs:string
+    +Refundable : xs:boolean
+    +Exchangeable : xs:boolean
+    +FirstClassUpgrade : xs:boolean
+    +TicketByDate : xs:string
+    +PricingTag : xs:string
+    +EquivalentChangeFee : xs:string
+    +EquivalentExchangeAmount : xs:string
+    +AddCollection : xs:string
+    +ResidualValue : xs:string
+    +TotalResidualValue : xs:string
+    +OriginalFlightValue : xs:string
+    +FlownSegmentValue : xs:string
+    +BulkTicketAdvisory : xs:boolean
+    +FarePull : typeFarePull
+    +PassengerTypeCode : xs:string
+    +PassengerCount : xs:integer
+    +FormOfRefund : typeFormOfRefund
+    +Refund : xs:string
+}
+AirExchangeInfo +-- TotalPenaltyTaxInfo
+class TotalPenaltyTaxInfo {
+    +PenaltyTaxInfo : typeTax[]
+    +TotalPenaltyTax : xs:string
+}
+AirExchangeInfo +-- TicketFeeInfo
+class TicketFeeInfo {
+    +Base : xs:string
+    +Tax : xs:string
+    +Total : xs:string
+}
+class AirSearchParameters {
+    +NoAdvancePurchase : xs:boolean
+    +RefundableFares : xs:boolean
+    +NonPenaltyFares : xs:boolean
+    +UnRestrictedFares : xs:boolean
+}
+class AirSeatAssignment {
+}
+AirSeatAssignment *- SeatAssignment
+class Airport {
+    +Code : xs:string
+}
+Airport *- Location
+class AppliedProfile {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Key : xs:string
+    +TravelerID : xs:string
+    +TravelerName : xs:string
+    +AccountID : xs:string
+    +AccountName : xs:string
+    +ImmediateParentID : xs:string
+    +ImmediateParentName : xs:string
+}
+class Auxdata {
+    +Entry : Entry[]
+}
+Auxdata +-- Entry
+class Entry {
+    +Reason : xs:string
+    +Description : xs:string
+}
+class BSPPayment {
+    +BSPIdentifier : xs:string
+    +BSPPassword : xs:string
+}
+class BaseAsyncProviderSpecificResponse {
+    +ProviderCode : xs:string
+    +MoreResults : xs:boolean
+}
+class BaseReservation {
+    +AccountingRemark : AccountingRemark[]
+    +GeneralRemark : GeneralRemark[]
+    +Restriction : Restriction[]
+    +PassiveInfo : PassiveInfo
+    +LocatorCode : xs:string
+    +CreateDate : xs:string
+    +ModifiedDate : xs:string
+    +CustomerNumber : xs:string
+}
+class BillingPointOfSaleInfo {
+    +OriginApplication : xs:string
+    +CIDBNumber : xs:integer
+}
+class BookingDates {
+    +CheckInDate : xs:date
+    +CheckOutDate : xs:date
+}
+class BookingSource {
+    +Code : xs:string
+    +Type : xs:string
+}
+class BookingTraveler {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Key : xs:string
+    +TravelerType : xs:string
+    +Age : xs:integer
+    +VIP : xs:boolean
+    +DOB : xs:date
+    +Gender : xs:string
+    +Nationality : xs:string
+    +EmergencyInfo : xs:string
+    +Address : typeStructuredAddress[]
+    +DriversLicense : DriversLicense[]
+    +AppliedProfile : AppliedProfile[]
+    +CustomizedNameData : CustomizedNameData[]
+    +TravelComplianceData : TravelComplianceData[]
+    +TravelInfo : TravelInfo
+    +BookingTravelerName : BookingTravelerName
+    +DeliveryInfo : DeliveryInfo[]
+    +PhoneNumber : PhoneNumber[]
+    +Email : Email[]
+    +LoyaltyCard : LoyaltyCard[]
+    +DiscountCard : DiscountCard[]
+    +SSR : SSR[]
+    +NameRemark : NameRemark[]
+    +AirSeatAssignment : AirSeatAssignment[]
+    +RailSeatAssignment : RailSeatAssignment[]
+    +NameNumber : xs:string
+}
+class BookingTravelerInfo {
+    +BookingTravelerName : BookingTravelerName
+    +NameRemark : NameRemark
+    +DOB : xs:date
+    +TravelInfo : TravelInfo
+    +Email : Email
+    +PhoneNumber : PhoneNumber
+    +Address : typeStructuredAddress
+    +EmergencyInfo : xs:string
+    +DeliveryInfo : DeliveryInfo
+    +Age : xs:integer
+    +CustomizedNameData : CustomizedNameData
+    +AppliedProfile : AppliedProfile
+    +Key : xs:string
+    +TravelerType : xs:string
+    +Gender : xs:string
+}
+class BookingTravelerInformation {
+    +Name : Name
+    +BookingTravelerRef : xs:string
+}
+class BookingTravelerName {
+    +Prefix : xs:string
+    +First : xs:string
+    +Middle : xs:string
+    +Last : xs:string
+    +Suffix : xs:string
+}
+class BookingTravelerRef {
+    +LoyaltyCardRef : LoyaltyCardRef[]
+    +DriversLicenseRef : DriversLicenseRef
+    +DiscountCardRef : DiscountCardRef[]
+    +PaymentRef : PaymentRef[]
+    +Key : xs:string
+}
+class CabinClass {
+    +Type : xs:string
+}
+class CardRestriction {
+    +RequiredField : RequiredField[]
+    +Code : xs:string
+    +Name : xs:string
+}
+class Carrier {
+    +Code : xs:string
+}
+class Certificate {
+    +Number : xs:string
+    +Amount : xs:string
+    +DiscountAmount : xs:string
+    +DiscountPercentage : xs:integer
+    +NotValidBefore : xs:date
+    +NotValidAfter : xs:date
+}
+class Characteristic {
+    +SeatType : xs:string
+    +SeatDescription : xs:string
+    +SeatValue : xs:string
+    +SeatValueDescription : xs:string
+}
+class Check {
+    +MICRNumber : xs:string
+    +RoutingNumber : xs:string
+    +AccountNumber : xs:string
+    +CheckNumber : xs:string
+}
+class City {
+    +Code : xs:string
+}
+City *- Location
+class CityOrAirport {
+    +Code : xs:string
+    +PreferCity : xs:boolean
+}
+CityOrAirport *- Location
+class Commission {
+    +Key : xs:string
+    +Level : typeCommissionLevel
+    +Type : typeCommissionType
+    +Modifier : typeCommissionModifier
+    +Amount : xs:string
+    +Value : xs:string
+    +Percentage : xs:string
+    +BookingTravelerRef : xs:string
+    +CommissionOverride : xs:boolean
+}
+class CommissionRemark {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +ProviderReservationLevel : ProviderReservationLevel
+    +PassengerTypeLevel : PassengerTypeLevel[]
+    +Key : xs:string
+    +ProviderReservationInfoRef : xs:string
+    +ProviderCode : xs:string
+}
+CommissionRemark +-- ProviderReservationLevel
+class ProviderReservationLevel {
+    +Amount : xs:string
+    +Percentage : xs:string
+    +CommissionCap : xs:string
+}
+CommissionRemark +-- PassengerTypeLevel
+class PassengerTypeLevel {
+    +Amount : xs:string
+    +Percentage : xs:string
+    +CommissionCap : xs:string
+    +TravelerType : xs:string
+}
+class ConnectionPoint {
+}
+ConnectionPoint *- typeLocation
+class ConsolidatorRemark {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +PseudoCityCode : PseudoCityCode[]
+    +Key : xs:string
+    +ProviderReservationInfoRef : xs:string
+    +ProviderCode : xs:string
+}
+class ContinuityCheckOverride {
+    +value : xs:string
+    +Key : xs:string
+}
+class CoordinateLocation {
+    +latitude : xs:double
+    +longitude : xs:double
+}
+CoordinateLocation *- Location
+class CorporateDiscountID {
+    +value : xs:string
+    +NegotiatedRateCode : xs:boolean
+}
+class Credentials {
+    +UserId : xs:string
+}
+class CreditCard {
+    +ProfileID : xs:string
+    +Key : xs:string
+}
+CreditCard *- typeCreditCardType
+class CreditCardAuth {
+    +Key : xs:string
+    +PaymentRef : xs:string
+    +TransId : xs:string
+    +Number : xs:string
+    +Amount : xs:string
+    +AuthCode : xs:string
+    +AuthResultCode : xs:string
+    +AVSResultCode : xs:string
+    +Message : xs:string
+    +ProviderReservationInfoRef : xs:string
+    +FormOfPaymentRef : xs:string
+}
+class CustomProfileInformation {
+    +value : xs:string
+}
+class CustomerID {
+    +Key : xs:string
+}
+CustomerID *- typeRemark
+class CustomizedNameData {
+    +value : xs:string
+    +Key : xs:string
+    +ProviderReservationInfoRef : xs:string
+}
+class DebitCard {
+    +ProfileID : xs:string
+    +Key : xs:string
+    +IssueNumber : xs:string
+}
+DebitCard *- typePaymentCard
+class DeliveryInfo {
+    +ShippingAddress : ShippingAddress
+    +PhoneNumber : PhoneNumber
+    +Email : Email
+    +GeneralRemark : GeneralRemark[]
+    +ProviderReservationInfoRef : ProviderReservationInfoRef[]
+    +Type : xs:string
+    +SignatureRequired : xs:string
+    +TrackingNumber : xs:string
+}
+DeliveryInfo +-- ShippingAddress
+class ShippingAddress {
+}
+ShippingAddress *- typeStructuredAddress
+class DirectPayment {
+    +Text : xs:string
+}
+class DiscountCard {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Key : xs:string
+    +Code : xs:string
+    +Description : xs:string
+    +Number : xs:string
+}
+class DiscountCardRef {
+    +Key : xs:string
+}
+class Distance {
+    +Units : xs:string
+    +Value : xs:integer
+    +Direction : xs:string
+}
+class DriversLicense {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Key : xs:string
+    +LicenseNumber : xs:string
+}
+class DriversLicenseRef {
+    +Key : xs:string
+}
+class Email {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +ProviderReservationInfoRef : ProviderReservationInfoRef[]
+    +Key : xs:string
+    +Type : xs:string
+    +Comment : xs:string
+    +EmailID : xs:string
+}
+class EmailNotification {
+    +EmailRef : xs:string[]
+    +Recipients : xs:string
+}
+class Endorsement {
+    +Value : xs:string
+}
+class EnettVan {
+    +MinPercentage : xs:nonNegativeInteger
+    +MaxPercentage : xs:nonNegativeInteger
+    +ExpiryDays : xs:duration
+    +MultiUse : xs:boolean
+}
+class ExchangedCoupon {
+    +TicketNumber : xs:string
+    +CouponNumber : xs:string
+}
+class FileFinishingInfo {
+    +ShopInformation : ShopInformation
+    +PolicyInformation : PolicyInformation[]
+    +AccountInformation : AccountInformation
+    +AgencyInformation : AgencyInformation
+    +TravelerInformation : TravelerInformation[]
+    +CustomProfileInformation : CustomProfileInformation
+}
+class FormOfPayment {
+    +CreditCard : CreditCard
+    +DebitCard : DebitCard
+    +EnettVan : EnettVan
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Certificate : Certificate
+    +TicketNumber : TicketNumber
+    +Check : Check
+    +Requisition : Requisition
+    +MiscFormOfPayment : MiscFormOfPayment
+    +AgencyPayment : AgencyPayment
+    +UnitedNations : UnitedNations
+    +DirectPayment : DirectPayment
+    +AgentVoucher : AgentVoucher
+    +PaymentAdvice : PaymentAdvice
+    +ProviderReservationInfoRef : typeFormOfPaymentPNRReference[]
+    +SegmentRef : typeGeneralReference[]
+    +BSPPayment : BSPPayment
+    +ARCPayment : ARCPayment
+    +Key : xs:string
+    +Type : xs:string
+    +FulfillmentType : xs:string
+    +FulfillmentLocation : xs:string
+    +FulfillmentIDType : typeFulfillmentIDType
+    +FulfillmentIDNumber : xs:string
+    +IsAgentType : xs:boolean
+    +AgentText : xs:string
+    +ReuseFOP : xs:string
+    +ExternalReference : xs:string
+    +Reusable : xs:boolean
+    +ProfileID : xs:string
+    +ProfileKey : xs:string
+}
+class FormOfPaymentRef {
+    +Key : xs:string
+}
+class FormattedTextTextType {
+    +value : xs:string
+    +Formatted : xs:boolean
+    +Language : xs:language
+    +TextFormat : xs:NMTOKEN
+}
+class GeneralRemark {
+    +ProviderCode : xs:string
+    +SupplierCode : xs:string
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +RemarkData : xs:string
+    +BookingTravelerRef : xs:string[]
+    +Key : xs:string
+    +Category : xs:string
+    +TypeInGds : xs:string
+    +SupplierType : typeProduct
+    +ProviderReservationInfoRef : xs:string
+    +Direction : typeDirection
+    +CreateDate : xs:dateTime
+    +UseProviderNativeMode : xs:boolean
+}
+class Group {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Name : Name
+    +DeliveryInfo : DeliveryInfo
+    +PhoneNumber : PhoneNumber[]
+    +SSRRef : SSRRef[]
+    +Address : typeStructuredAddress
+    +BookingTravelerRef : BookingTravelerRef[]
+    +Key : xs:string
+    +TravelerType : xs:string
+    +GroupSize : xs:positiveInteger
+}
+Group +-- Name
+class Name {
+    +value : xs:string
+}
+Group +-- SSRRef
+class SSRRef {
+    +Key : xs:string
+}
+Group +-- BookingTravelerRef
+class BookingTravelerRef {
+    +Key : xs:string
+}
+class Guarantee {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +CreditCard : CreditCard
+    +OtherGuaranteeInfo : OtherGuaranteeInfo
+    +Type : xs:string
+    +Key : xs:string
+    +ReuseFOP : xs:string
+    +ExternalReference : xs:string
+    +Reusable : xs:boolean
+}
+class GuaranteeType {
+    +value : xs:string
+}
+class HostToken {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +value : xs:string
+    +Host : xs:string
+    +Key : xs:string
+}
+class HostTokenList {
+    +HostToken : HostToken[]
+}
+class IncludedInBase {
+    +Amount : xs:string
+}
+class IndustryStandardSSR {
+    +Code : xs:string
+}
+class InvoiceData {
+    +BookingTravelerInformation : BookingTravelerInformation[]
+    +Key : xs:string
+    +InvoiceNumber : xs:string
+    +IssueDate : xs:dateTime
+    +ProviderReservationInfoRef : xs:string
+}
+class InvoiceRemark {
+    +AirSegmentRef : typeSegmentRef
+    +HotelReservationRef : typeNonAirReservationRef
+    +VehicleReservationRef : typeNonAirReservationRef
+    +PassiveSegmentRef : typeSegmentRef
+}
+InvoiceRemark *- typeAssociatedRemark
+class KeyMapping {
+    +ElementName : xs:string
+    +OriginalKey : xs:string
+    +NewKey : xs:string
+}
+class Keyword {
+}
+Keyword *- typeKeyword
+class LinkedUniversalRecord {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +LocatorCode : xs:string
+    +Key : xs:string
+}
+class Location {
+    +value : xs:string
+}
+class LocationAddress {
+}
+LocationAddress *- typeStructuredAddress
+class LocatorCode {
+    +value : xs:string
+}
+class LoyaltyCard {
+    +ProviderReservationSpecificInfo : typeProviderReservationSpecificInfo[]
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Key : xs:string
+    +SupplierCode : xs:string
+    +AllianceLevel : xs:string
+    +MembershipProgram : xs:string
+    +CardNumber : xs:string
+    +Status : xs:string
+    +MembershipStatus : xs:string
+    +FreeText : xs:string
+    +SupplierType : typeProduct
+    +Level : xs:string
+    +PriorityCode : xs:string
+    +VendorLocationRef : xs:string
+}
+class LoyaltyCardRef {
+    +Key : xs:string
+}
+class LoyaltyProgram {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Key : xs:string
+    +SupplierCode : xs:string
+    +AllianceLevel : xs:string
+    +MembershipProgram : xs:string
+    +Level : xs:string
+}
+class MCO {
+    +FormOfPayment : FormOfPayment[]
+    +Endorsement : Endorsement
+    +MCOExchangeInfo : MCOExchangeInfo
+    +MCOFeeInfo : MCOFeeInfo
+    +MCORemark : MCORemark[]
+    +MCOPriceData : MCOPriceData
+    +StockControl : StockControl[]
+    +MCOText : MCOText[]
+    +TicketType : xs:string
+    +TicketNumber : xs:string
+    +MCOIssued : xs:boolean
+    +MCOIssueDate : xs:dateTime
+    +MCODocNum : xs:string
+    +IssueReasonCode : xs:string
+    +PlatingCarrier : xs:string
+    +TourOperator : xs:string
+    +Location : xs:string
+    +TourCode : xs:string
+    +ProviderCode : xs:string
+    +ProviderLocatorCode : xs:string
+    +PseudoCityCode : xs:string
+    +ExpiryDate : xs:date
+}
+MCO *- MCOInformation
+class MCOExchangeInfo {
+    +FormOfPayment : FormOfPayment
+    +ExchangedCoupon : ExchangedCoupon[]
+    +OriginalTicketNumber : xs:string
+    +OriginalCityCode : xs:string
+    +OriginalTicketDate : xs:date
+    +IATACode : xs:string
+}
+class MCOFeeInfo {
+    +Amount : xs:string
+    +Percentage : xs:string
+    +FeeAppliesToInd : xs:string
+}
+class MCOInformation {
+    +PassengerInfo : PassengerInfo[]
+    +MCONumber : xs:string
+    +Status : xs:string
+    +MCOType : xs:string
+}
+class MCOPriceData {
+    +TaxInfo : typeTaxInfo[]
+    +Commission : Commission
+    +MCOAmount : xs:string
+    +MCOEquivalentFare : xs:string
+    +MCOTotalAmount : xs:string
+}
+MCOPriceData +-- Commission
+class Commission {
+    +Amount : xs:string
+    +Percentage : xs:string
+}
+class MCORemark {
+    +value : xs:string
+    +AdditionalRmk : xs:boolean
+}
+class MCOText {
+    +Type : xs:string
+}
+MCOText *- typeFreeFormText
+class MarketingInformation {
+    +Text : xs:string[]
+}
+class MealRequest {
+    +Type : xs:string
+}
+class MediaItem {
+    +caption : xs:string
+    +height : xs:nonNegativeInteger
+    +width : xs:nonNegativeInteger
+    +type : xs:string
+    +url : xs:anyURI
+    +icon : xs:anyURI
+    +sizeCode : typeResponseImageSize
+}
+class MetaData {
+    +Key : xs:string
+    +Value : xs:string
+}
+class MiscFormOfPayment {
+    +CreditCardType : xs:string
+    +CreditCardNumber : xs:string
+    +ExpDate : xs:gYearMonth
+    +Text : xs:string
+    +Category : xs:string
+    +AcceptanceOverride : xs:boolean
+}
+enum ModificationType {
+    AddSegment = AddSegment
+    RemoveSegment = RemoveSegment
+    ReplaceSegment = ReplaceSegment
+    AddPassenger = AddPassenger
+    RemovePassenger = RemovePassenger
+    OptionsOnly = OptionsOnly
+    Other = Other
+}
+class Name {
+    +Prefix : xs:string
+    +First : xs:string
+    +Middle : xs:string
+    +Last : xs:string
+    +Suffix : xs:string
+    +TravelerProfileId : xs:integer
+}
+class NameOverride {
+    +First : xs:string
+    +Last : xs:string
+    +Age : xs:integer
+}
+class NameRemark {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +RemarkData : xs:string
+    +ProviderReservationInfoRef : ProviderReservationInfoRef[]
+    +Key : xs:string
+    +Category : xs:string
+}
+class NextResultReference {
+    +value : xs:string
+    +ProviderCode : xs:string
+}
+class OSI {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Key : xs:string
+    +Carrier : xs:string
+    +Code : xs:string
+    +Text : xs:string
+    +ProviderReservationInfoRef : xs:string
+    +ProviderCode : xs:string
+}
+class OperatedBy {
+    +value : xs:string
+}
+enum OptionalServiceApplicabilityType {
+    Itinerary = Itinerary
+    Passenger = Passenger
+    Segment = Segment
+    PassengerSegment = PassengerSegment
+    PassengerOD = PassengerOD
+    Other = Other
+}
+class OptionalServiceApplicationLimitType {
+    +ApplicableLevel : OptionalServiceApplicabilityType
+    +ProviderDefinedApplicableLevels : xs:string
+    +MaximumQuantity : xs:positiveInteger
+    +MinimumQuantity : xs:positiveInteger
+}
+class OtherGuaranteeInfo {
+    +value : xs:string
+    +Type : xs:string
+}
+class OverridePCC {
+    +ProviderCode : xs:string
+    +PseudoCityCode : xs:string
+}
+class OwnershipChange {
+    +OwningPCC : xs:string
+}
+class PassengerInfo {
+    +Name : Name
+    +BookingTravelerRef : xs:string
+    +PassengerType : xs:string
+}
+class PassiveInfo {
+    +TicketNumber : xs:string[]
+    +ConfirmationNumber : xs:string[]
+    +Commission : Commission
+    +ProviderCode : xs:string
+    +ProviderLocatorCode : xs:string
+    +SupplierCode : xs:string
+    +SupplierLocatorCode : xs:string
+}
+class Payment {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Key : xs:string
+    +Type : xs:string
+    +FormOfPaymentRef : xs:string
+    +BookingTravelerRef : xs:string
+    +Amount : xs:string
+    +AmountType : xs:string
+    +ApproximateAmount : xs:string
+    +Status : xs:string
+}
+class PaymentAdvice {
+    +Type : xs:string
+    +DocumentNumber : xs:string
+    +IssueDate : xs:date
+    +IssueCity : xs:string
+    +OriginalFOP : xs:string
+}
+class PaymentRef {
+    +Key : xs:string
+}
+class PaymentRestriction {
+    +CardRestriction : CardRestriction[]
+    +AddressRestriction : AddressRestriction
+}
+class Penalty {
+    +CancelRefund : xs:boolean
+    +NonRefundable : xs:boolean
+    +NonExchangeable : xs:boolean
+    +CancelationPenalty : xs:boolean
+    +ReissuePenalty : xs:boolean
+    +NonReissuePenalty : xs:boolean
+    +TicketRefundPenalty : xs:boolean
+    +ChargeApplicable : xs:boolean
+    +ChargePortion : xs:boolean
+    +PenaltyAmount : xs:string
+}
+class PermittedProviders {
+    +Provider : Provider
+}
+class PersonalGeography {
+    +CountryCode : xs:string
+    +StateProvinceCode : xs:string
+    +CityCode : xs:string
+}
+class PhoneNumber {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +ProviderReservationInfoRef : ProviderReservationInfoRef[]
+    +Key : xs:string
+    +Type : xs:string
+    +Location : xs:string
+    +CountryCode : xs:string
+    +AreaCode : xs:string
+    +Number : xs:string
+    +Extension : xs:string
+    +Text : xs:string
+}
+class PointOfCommencement {
+    +CityOrAirportCode : xs:string
+    +Time : xs:string
+}
+class PointOfSale {
+    +ProviderCode : xs:string
+    +PseudoCityCode : xs:string
+    +Key : xs:string
+    +IATA : xs:string
+}
+class PolicyInformation {
+    +ReasonCode : ReasonCode
+    +Type : typePolicy
+    +Name : xs:string
+    +OutOfPolicy : xs:boolean
+    +SegmentRef : xs:string
+}
+PolicyInformation +-- ReasonCode
+class ReasonCode {
+    +OutOfPolicy : xs:string
+    +PurposeOfTrip : xs:string
+    +Remark : Remark
+}
+class Postscript {
+    +Key : xs:string
+}
+Postscript *- typeRemark
+class PriceMatchError {
+    +ErrorMessage : xs:string
+    +VendorCode : xs:string
+    +HotelChain : xs:string
+    +HotelCode : xs:string
+    +ReqBase : xs:decimal
+    +RspBase : xs:decimal
+    +BaseDiff : xs:decimal
+    +ReqTotal : xs:decimal
+    +RspTotal : xs:decimal
+    +TotalDiff : xs:decimal
+}
+class Provider {
+    +Code : xs:string
+}
+class ProviderARNKSegment {
+    +PreviousSegment : PreviousSegment
+    +NextSegment : NextSegment
+    +Key : xs:string
+    +ProviderReservationInfoRef : xs:string
+    +ProviderSegmentOrder : xs:integer
+}
+ProviderARNKSegment +-- PreviousSegment
+class PreviousSegment {
+    +AirSegmentRef : typeSegmentRef
+    +HotelReservationRef : typeNonAirReservationRef
+    +VehicleReservationRef : typeNonAirReservationRef
+    +PassiveSegmentRef : typeSegmentRef
+}
+ProviderARNKSegment +-- NextSegment
+class NextSegment {
+    +AirSegmentRef : typeSegmentRef
+    +HotelReservationRef : typeNonAirReservationRef
+    +VehicleReservationRef : typeNonAirReservationRef
+    +PassiveSegmentRef : typeSegmentRef
+}
+class ProviderReservationDetail {
+}
+ProviderReservationDetail *- typeProviderReservationDetail
+class ProviderReservationInfoRef {
+    +Key : xs:string
+}
+class PseudoCityCode {
+    +value : xs:string
+}
+class QueuePlace {
+    +PseudoCityCode : xs:string
+    +QueueSelector : QueueSelector[]
+}
+class QueueSelector {
+    +Queue : xs:string
+    +Category : xs:string
+    +DateRange : xs:string
+}
+class RailLocation {
+    +Code : xs:string
+}
+RailLocation *- Location
+class RailSeatAssignment {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Characteristic : Characteristic[]
+    +Key : xs:string
+    +Status : xs:string
+    +Seat : xs:string
+    +RailSegmentRef : xs:string
+    +CoachNumber : xs:string
+}
+class ReferencePoint {
+    +value : xs:string
+}
+class RefundRemark {
+    +RemarkData : xs:string
+}
+class Remark {
+    +value : xs:string
+    +Key : xs:string
+}
+class RequestKeyMappings {
+    +KeyMapping : KeyMapping[]
+}
+class RequiredField {
+    +Name : xs:string
+}
+class Requisition {
+    +Number : xs:string
+    +Category : xs:string
+    +Type : xs:string
+}
+class ReservationName {
+    +BookingTravelerRef : BookingTravelerRef
+    +NameOverride : NameOverride
+}
+class ResponseMessage {
+    +ProviderCode : xs:string
+    +SupplierCode : xs:string
+    +value : xs:string
+    +Code : xs:integer
+    +Type : xs:string
+}
+class Restriction {
+    +Operation : xs:string
+    +Reason : xs:string
+}
+class ReviewBooking {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Key : xs:string
+    +Queue : xs:integer
+    +QueueCategory : xs:string
+    +DateTime : xs:dateTime
+    +PseudoCityCode : xs:string
+    +ProviderCode : xs:string
+    +ProviderReservationInfoRef : xs:string
+    +Remarks : xs:string
+}
+class RoleInfo {
+    +Id : xs:string
+    +Name : xs:string
+    +Source : xs:string
+    +Description : xs:string
+}
+class SSR {
+    +Key : xs:string
+    +SegmentRef : xs:string
+    +PassiveSegmentRef : xs:string
+    +ProviderReservationInfoRef : xs:string
+    +Type : xs:string
+    +Status : xs:string
+    +FreeText : xs:string
+    +Carrier : xs:string
+    +CarrierSpecificText : xs:string
+    +Description : xs:string
+    +ProviderDefinedType : xs:string
+    +SSRRuleRef : xs:string
+    +URL : xs:anyURI
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +ProfileID : xs:string
+    +ProfileSecureFlightDocKey : xs:string
+}
+class SSRInfo {
+    +SSR : SSR
+    +BookingTravelerRef : xs:string[]
+}
+class SearchEvent {
+    +Type : typeEventType
+}
+SearchEvent *- typeTimeRange
+class SearchPassenger {
+    +Key : xs:string
+}
+SearchPassenger *- typePassengerType
+class SearchTicketing {
+    +TicketStatus : xs:string
+    +ReservationStatus : xs:string
+    +TicketDate : xs:date
+}
+class SeatAssignment {
+    +Key : xs:string
+    +Status : xs:string
+    +Seat : xs:string
+    +SeatTypeCode : xs:string
+    +SegmentRef : xs:string
+    +FlightDetailsRef : xs:string
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +RailCoachNumber : xs:string
+}
+class SeatAttribute {
+    +Value : xs:string
+}
+class SeatAttributes {
+    +SeatAttribute : SeatAttribute[]
+}
+class Segment {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +SegmentRemark : SegmentRemark[]
+    +Key : xs:string
+    +Status : xs:string
+    +Passive : xs:boolean
+    +TravelOrder : xs:integer
+    +ProviderSegmentOrder : xs:integer
+}
+class SegmentRemark {
+    +value : xs:string
+    +Key : xs:string
+}
+class SellMessage {
+    +value : xs:string
+}
+class ServiceData {
+    +SeatAttributes : SeatAttributes
+    +CabinClass : CabinClass
+    +SSRRef : typeKeyBasedReference[]
+    +Data : xs:string
+    +AirSegmentRef : xs:string
+    +BookingTravelerRef : xs:string
+    +StopOver : xs:boolean
+    +TravelerType : xs:string
+    +EMDSummaryRef : xs:string
+    +EMDCouponRef : xs:string
+}
+class ServiceFeeInfo {
+    +FormOfPayment : FormOfPayment
+    +ServiceFeeTaxInfo : ServiceFeeTaxInfo[]
+    +CreditCardAuth : CreditCardAuth
+    +Payment : Payment
+    +Status : typeStatus
+    +Description : xs:string
+    +Key : xs:string
+    +Confirmation : xs:string
+    +TicketNumber : xs:string
+    +BookingTravelerRef : xs:string
+    +ProviderReservationInfoRef : xs:string
+    +PassiveProviderReservationInfoRef : xs:string
+    +TotalAmount : xs:string
+    +BaseAmount : xs:string
+    +Taxes : xs:string
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +BookingTravelerName : xs:string
+}
+class ServiceFeeTaxInfo {
+    +Category : xs:string
+    +Amount : xs:string
+}
+class ServiceInfo {
+    +Description : xs:string[]
+    +MediaItem : MediaItem[]
+}
+class ServiceRuleType {
+    +ApplicationRules : ApplicationRules
+    +ApplicationLevel : ApplicationLevel
+    +ModifyRules : ModifyRules
+    +SecondaryTypeRules : SecondaryTypeRules
+    +Remarks : FormattedTextTextType[]
+    +Key : xs:string
+}
+ServiceRuleType +-- ApplicationRules
+class ApplicationRules {
+    +RequiredForAllTravelers : xs:boolean
+    +RequiredForAllSegments : xs:boolean
+    +RequiredForAllSegmentsInOD : xs:boolean
+    +UnselectedOptionRequired : xs:boolean
+    +SecondaryOptionCodeRequired : xs:boolean
+}
+ServiceRuleType +-- ApplicationLevel
+class ApplicationLevel {
+    +ApplicationLimits : ApplicationLimits
+    +ServiceData : ServiceData[]
+    +ApplicableLevels : OptionalServiceApplicabilityType[]
+    +ProviderDefinedApplicableLevels : xs:string
+}
+ApplicationLevel +-- ApplicationLimits
+class ApplicationLimits {
+    +ApplicationLimit : OptionalServiceApplicationLimitType[]
+}
+ServiceRuleType +-- ModifyRules
+class ModifyRules {
+    +ModifyRule : ModifyRule[]
+    +SupportedModifications : ModificationType[]
+    +ProviderDefinedModificationType : xs:string
+}
+ModifyRules +-- ModifyRule
+class ModifyRule {
+    +Modification : ModificationType
+    +AutomaticallyAppliedOnAdd : xs:boolean
+    +CanDelete : xs:boolean
+    +CanAdd : xs:boolean
+    +Refundable : xs:boolean
+    +ProviderDefinedModificationType : xs:string
+}
+ServiceRuleType +-- SecondaryTypeRules
+class SecondaryTypeRules {
+    +SecondaryTypeRule : SecondaryTypeRule[]
+}
+SecondaryTypeRules +-- SecondaryTypeRule
+class SecondaryTypeRule {
+    +ApplicationLimit : OptionalServiceApplicationLimitType[]
+    +SecondaryType : xs:string
+}
+class ShopInformation {
+    +SearchRequest : SearchRequest[]
+    +FlightsOffered : FlightsOffered[]
+    +CabinShopped : xs:string
+    +CabinSelected : xs:string
+    +LowestFareOffered : xs:string
+}
+ShopInformation +-- SearchRequest
+class SearchRequest {
+    +Origin : xs:string
+    +Destination : xs:string
+    +DepartureTime : xs:string
+    +ClassOfService : xs:string
+}
+ShopInformation +-- FlightsOffered
+class FlightsOffered {
+    +Origin : xs:string
+    +Destination : xs:string
+    +DepartureTime : xs:string
+    +TravelOrder : xs:int
+    +Carrier : xs:string
+    +FlightNumber : xs:string
+    +ClassOfService : xs:string
+    +StopOver : xs:boolean
+    +Connection : xs:boolean
+}
+class SimpleName {
+    +value : xs:string
+}
+class SpecialEquipment {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Key : xs:string
+    +Type : xs:string
+}
+class State {
+    +value : xs:string
+}
+class StockControl {
+    +Type : xs:string
+    +Number : xs:string
+}
+class SupplierLocator {
+    +SegmentRef : typeGeneralReference[]
+    +SupplierCode : xs:string
+    +SupplierLocatorCode : xs:string
+    +ProviderReservationInfoRef : xs:string
+    +CreateDateTime : xs:dateTime
+}
+class TaxDetail {
+    +Amount : xs:string
+    +OriginAirport : xs:string
+    +DestinationAirport : xs:string
+    +CountryCode : xs:string
+    +FareInfoRef : xs:string
+}
+class TerminalSessionInfo {
+    +value : xs:string
+}
+class ThirdPartyInformation {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +SegmentRef : typeGeneralReference[]
+    +ThirdPartyCode : xs:string
+    +ThirdPartyLocatorCode : xs:string
+    +ThirdPartyName : xs:string
+    +ProviderReservationInfoRef : xs:string
+    +Key : xs:string
+}
+class TicketNumber {
+    +value : xs:string
+}
+class TransactionType {
+    +Air : Air
+    +Hotel : typeTransactionsAllowed
+    +Rail : typeTransactionsAllowed
+    +Vehicle : typeTransactionsAllowed
+    +Passive : typeBookingTransactionsAllowed
+    +BackgroundPassive : typeBookingTransactionsAllowed
+}
+TransactionType +-- Air
+class Air {
+    +Tier : xs:int
+    +DaysEnabled : xs:boolean
+    +WeekendsEnabled : xs:boolean
+    +AirportsEnabled : xs:boolean
+    +ODEnabled : xs:boolean
+    +OneWayShop : xs:boolean
+    +FlexExplore : xs:boolean
+    +RapidRepriceEnabled : xs:boolean
+    +ReturnUpsellFare : xs:boolean
+}
+Air *- typeTransactionsAllowed
+class TravelComplianceData {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +PolicyCompliance : PolicyCompliance[]
+    +ContractCompliance : ContractCompliance[]
+    +PreferredSupplier : PreferredSupplier[]
+    +Key : xs:string
+    +AirSegmentRef : xs:string
+    +PassiveSegmentRef : xs:string
+    +RailSegmentRef : xs:string
+    +ReservationLocatorRef : xs:string
+}
+TravelComplianceData +-- PolicyCompliance
+class PolicyCompliance {
+    +InPolicy : xs:boolean
+    +PolicyToken : xs:string
+}
+TravelComplianceData +-- ContractCompliance
+class ContractCompliance {
+    +InContract : xs:boolean
+    +ContractToken : xs:string
+}
+TravelComplianceData +-- PreferredSupplier
+class PreferredSupplier {
+    +Preferred : xs:boolean
+    +ProfileType : typeProfileType
+}
+class TravelInfo {
+    +TripName : xs:string
+    +TravelPurpose : xs:string
+}
+class TravelSegment {
+    +Origin : xs:string
+    +Destination : xs:string
+    +DepartureTime : xs:string
+    +ArrivalTime : xs:string
+}
+TravelSegment *- Segment
+class TravelerInformation {
+    +EmergencyContact : EmergencyContact
+    +HomeAirport : xs:string
+    +VisaExpirationDate : xs:date
+    +BookingTravelerRef : xs:string
+}
+TravelerInformation +-- EmergencyContact
+class EmergencyContact {
+    +PhoneNumber : PhoneNumber
+    +Name : xs:string
+    +Relationship : xs:string
+}
+class TravelerType {
+    +Code : xs:string
+}
+enum URTicketStatus {
+    Ticketed = Ticketed
+    Unticketed = Unticketed
+    Partially Ticketed = Partially Ticketed
+    Not Applicable = Not Applicable
+}
+class UnassociatedRemark {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Key : xs:string
+}
+UnassociatedRemark *- typeRemarkWithTravelerRef
+class UnitedNations {
+    +Number : xs:string
+}
+class VendorLocation {
+}
+VendorLocation *- typeVendorLocation
+class XMLRemark {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +value : xs:string
+    +Key : xs:string
+    +Category : xs:string
+}
+enum typeAdjustmentTarget {
+    Base = Base
+    Total = Total
+    Other = Other
+}
+enum typeAdjustmentType {
+    Amount = Amount
+    Percentage = Percentage
+}
+class typeAgencyHierarchyLongReference {
+    +ProfileVersion : xs:int
+    +ProfileName : xs:string
+}
+typeAgencyHierarchyLongReference *- typeAgencyHierarchyReference
+class typeAgencyHierarchyReference {
+    +ProfileID : xs:integer
+    +ProfileType : typeAgencyProfileLevel
+}
+class typeAgencyPayment {
+    +AgencyBillingIdentifier : xs:string
+    +AgencyBillingNumber : xs:string
+    +AgencyBillingPassword : xs:string
+}
+enum typeAgencyProfileLevel {
+    Agency = Agency
+    Branch = Branch
+    BranchGroup = BranchGroup
+    Agent = Agent
+}
+class typeAgentInfo {
+    +value : xs:string
+}
+class typeAssociatedRemark {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +Key : xs:string
+}
+typeAssociatedRemark *- typeRemarkWithTravelerRef
+class typeAssociatedRemarkWithSegmentRef {
+    +SegmentRef : xs:string
+}
+typeAssociatedRemarkWithSegmentRef *- typeAssociatedRemark
+class typeBookingTransactionsAllowed {
+    +BookingEnabled : xs:boolean
+}
+enum typeCommissionLevel {
+    Recalled = Recalled
+    Fare = Fare
+    Penalty = Penalty
+}
+enum typeCommissionModifier {
+    FarePercent = FarePercent
+    FareAmount = FareAmount
+    CommissionAmount = CommissionAmount
+    LessStandardCommission = LessStandardCommission
+    StandardPlusSupplementaryPercent = StandardPlusSupplementaryPercent
+    SupplementaryPercent = SupplementaryPercent
+    SupplementaryAmount = SupplementaryAmount
+}
+enum typeCommissionType {
+    Flat = Flat
+    PercentBase = PercentBase
+    PercentTotal = PercentTotal
+}
+class typeCreditCardType {
+    +ExtendedPayment : xs:string
+    +CustomerReference : xs:string
+    +AcceptanceOverride : xs:boolean
+    +ThirdPartyPayment : xs:boolean
+    +BankName : xs:string
+    +BankCountryCode : xs:string
+    +BankStateCode : xs:string
+    +Enett : xs:boolean
+}
+typeCreditCardType *- typePaymentCard
+class typeDateRange {
+    +StartDate : xs:date
+    +EndDate : xs:date
+}
+enum typeDirection {
+    Incoming = Incoming
+    Outgoing = Outgoing
+}
+enum typeDistance {
+    MI = MI
+    KM = KM
+}
+enum typeDoorCount {
+    TwoToThreeDoors = TwoToThreeDoors
+    TwoToFourDoors = TwoToFourDoors
+    FourToFiveDoors = FourToFiveDoors
+}
+enum typeElement {
+    Payment = Payment
+    CreditCardAuthorization = CreditCardAuthorization
+    DeliveryInfo = DeliveryInfo
+    FormOfPayment = FormOfPayment
+    ActionStatus = ActionStatus
+    OSI = OSI
+    GeneralRemark = GeneralRemark
+    UnassociatedRemark = UnassociatedRemark
+    AccountingRemark = AccountingRemark
+    PostScript = PostScript
+    AirReservationAirSegmentUpdate = AirReservationAirSegmentUpdate
+    AirSegment = AirSegment
+    PhoneNumber = PhoneNumber
+    Email = Email
+    LoyaltyCard = LoyaltyCard
+    SSR = SSR
+    SeatAssignment = SeatAssignment
+    SpecificSeatAssignment = SpecificSeatAssignment
+    AutoSeatAssignment = AutoSeatAssignment
+    AirPricingInfo = AirPricingInfo
+    VehicleSpecialRequest = VehicleSpecialRequest
+    SpecialEquipment = SpecialEquipment
+    XMLRemark = XMLRemark
+    Address = Address
+    TicketingModifiers = TicketingModifiers
+    Guarantee = Guarantee
+    DeliveryAddress = DeliveryAddress
+    ServiceFeeInfo = ServiceFeeInfo
+    LinkedUniversalRecord = LinkedUniversalRecord
+    NameRemark = NameRemark
+    PassiveSegment = PassiveSegment
+    PaymentInformation = PaymentInformation
+    CustomerID = CustomerID
+    DriversLicense = DriversLicense
+    AssociatedRemark = AssociatedRemark
+    CollectionAddress = CollectionAddress
+    HotelSpecialRequest = HotelSpecialRequest
+    CorporateDiscountID = CorporateDiscountID
+    CommissionRemark = CommissionRemark
+    PocketItineraryRemark = PocketItineraryRemark
+    CustomizedNameData = CustomizedNameData
+    InvoiceRemark = InvoiceRemark
+    ThirdPartyInformation = ThirdPartyInformation
+    TravelCompliance = TravelCompliance
+    ReviewBooking = ReviewBooking
+    ConsolidatorRemark = ConsolidatorRemark
+    BookingTraveler = BookingTraveler
+    AppliedProfile = AppliedProfile
+    TripName = TripName
+    TravelPurpose = TravelPurpose
+    BookingConfirmation = BookingConfirmation
+    Brand = Brand
+}
+enum typeElementStatus {
+    A = A
+    M = M
+    C = C
+}
+class typeErrorInfo {
+    +Code : xs:string
+    +Service : xs:string
+    +Type : xs:string
+    +Description : xs:string
+    +TransactionId : xs:string
+    +TraceId : xs:string
+    +CommandHistory : xs:string
+    +Auxdata : Auxdata
+    +StackTrace : xs:string
+}
+enum typeEventType {
+    Create = Create
+    Cancel = Cancel
+    Ticket = Ticket
+    Refund = Refund
+    Exchange = Exchange
+    Void = Void
+}
+enum typeFarePull {
+    ReverseOfOriginDestination = ReverseOfOriginDestination
+    SameAsOriginDestination = SameAsOriginDestination
+}
+class typeFeeInfo {
+    +ProviderCode : xs:string
+    +SupplierCode : xs:string
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +TaxInfoRef : TaxInfoRef[]
+    +IncludedInBase : IncludedInBase
+    +BaseAmount : xs:string
+    +Description : xs:string
+    +SubCode : xs:string
+    +Key : xs:string
+    +Amount : xs:string
+    +Code : xs:string
+    +FeeToken : xs:string
+    +PaymentRef : xs:string
+    +BookingTravelerRef : xs:string
+    +PassengerTypeCode : xs:string
+    +Text : xs:string
+}
+typeFeeInfo +-- TaxInfoRef
+class TaxInfoRef {
+    +Key : xs:string
+}
+class typeFlexibleTimeSpec {
+    +SearchExtraDays : SearchExtraDays
+}
+typeFlexibleTimeSpec *- typeTimeSpec
+typeFlexibleTimeSpec +-- SearchExtraDays
+class SearchExtraDays {
+    +DaysBefore : xs:int
+    +DaysAfter : xs:int
+}
+class typeFormOfPaymentPNRReference {
+    +Key : xs:string
+    +ProviderReservationLevel : xs:boolean
+}
+enum typeFormOfRefund {
+    MCO = MCO
+    FormOfPayment = FormOfPayment
+}
+class typeFreeFormText {
+    +value : xs:string
+}
+enum typeFuel {
+    Petrol = Petrol
+    Diesel = Diesel
+    Hybrid = Hybrid
+    Electric = Electric
+    LPGCNG = LPGCNG
+    Hydrogen = Hydrogen
+    MultiFuel = MultiFuel
+    Ethanol = Ethanol
+}
+enum typeFulfillmentIDType {
+    Bahn Card = Bahn Card
+    Credit Card = Credit Card
+    Euro Cheque Card = Euro Cheque Card
+    Collection Reference = Collection Reference
+}
+enum typeFulfillmentType {
+    Kiosk = Kiosk
+    Travel Agency = Travel Agency
+    Courier = Courier
+    Standard Mail = Standard Mail
+    Ticketless = Ticketless
+    Ticket Office = Ticket Office
+    Express Mail = Express Mail
+    Corporate Kiosk = Corporate Kiosk
+    Train Station Service Desk = Train Station Service Desk
+    Direct Printing of Ticket = Direct Printing of Ticket
+    Printing of Ticket at Home = Printing of Ticket at Home
+    Digital Printing of Ticket at Home = Digital Printing of Ticket at Home
+    Retrieve Ticket at Eurostar in London = Retrieve Ticket at Eurostar in London
+}
+class typeGeneralReference {
+    +Key : xs:string
+}
+class typeGuaranteeInformation {
+    +Type : xs:string
+    +AgencyType : xs:string
+    +IATANumber : xs:string
+}
+enum typeImageSize {
+    T = T
+    I = I
+    S = S
+    M = M
+    L = L
+    E = E
+    G = G
+    F = F
+    B = B
+    J = J
+    O = O
+    H = H
+    C = C
+}
+enum typeInvoiceRecordCategory {
+    Invoice = Invoice
+    Void = Void
+    Refund = Refund
+    Manual = Manual
+}
+enum typeItineraryCode {
+    International = International
+    Domestic = Domestic
+}
+enum typeItineraryType {
+    New = New
+    Original = Original
+}
+class typeKeyBasedReference {
+    +Key : xs:string
+}
+class typeKeyword {
+    +SubKey : typeSubKey[]
+    +Text : xs:string[]
+    +Name : xs:string
+    +Number : xs:string
+    +Description : xs:string
+    +LanguageCode : xs:language
+}
+enum typeLicenseCode {
+    Standard = Standard
+    Standard Plus = Standard Plus
+    Enterprise = Enterprise
+    TE Only = TE Only
+    uAPI = uAPI
+}
+class typeLocation {
+    +Airport : Airport
+    +City : City
+    +CityOrAirport : CityOrAirport
+}
+enum typeMCOFeeType {
+    CURRENTLY = CURRENTLY
+    UNDEFINED = UNDEFINED
+}
+enum typeMCOStatus {
+    Open = Open
+    Used = Used
+    Refunded = Refunded
+    Voided = Voided
+    Expired = Expired
+}
+enum typeMCOType {
+    AgencyServiceFee = AgencyServiceFee
+    ExchangeResidual = ExchangeResidual
+    AirlineServiceFee = AirlineServiceFee
+}
+class typeNonAirReservationRef {
+    +LocatorCode : xs:string
+}
+class typeOTAKeyword {
+    +SubKey : typeOTASubKey[]
+    +Text : xs:string[]
+    +Name : xs:string
+    +Number : xs:string
+    +Description : xs:string
+}
+class typeOTASubKey {
+    +Text : xs:string[]
+    +Name : xs:positiveInteger
+    +Description : xs:string
+}
+enum typeOtherImageSize {
+    X = X
+}
+class typePassengerType {
+    +Name : Name
+    +LoyaltyCard : LoyaltyCard[]
+    +DiscountCard : DiscountCard[]
+    +PersonalGeography : PersonalGeography
+    +Code : xs:string
+    +Age : xs:integer
+    +DOB : xs:date
+    +Gender : xs:string
+    +PricePTCOnly : xs:boolean
+    +BookingTravelerRef : xs:string
+    +AccompaniedPassenger : xs:boolean
+    +ResidencyType : typeResidency
+}
+class typePaymentCard {
+    +PhoneNumber : PhoneNumber
+    +BillingAddress : typeStructuredAddress
+    +Type : xs:string
+    +Number : xs:string
+    +ExpDate : xs:gYearMonth
+    +Name : xs:string
+    +CVV : xs:string
+    +ApprovalCode : xs:string
+}
+enum typePolicy {
+    Air = Air
+    Vehicle = Vehicle
+    Hotel = Hotel
+    Rail = Rail
+    Ticketing = Ticketing
+}
+class typePolicyCodesList {
+    +PolicyCode : xs:string[]
+    +MinPolicyCode : xs:string[]
+    +MaxPolicyCode : xs:string[]
+}
+enum typePriceClassOfService {
+    ClassBooked = ClassBooked
+    LowestClass = LowestClass
+}
+enum typePricingType {
+    ClassBooked = ClassBooked
+    LowestClass = LowestClass
+    LowestQuote = LowestQuote
+}
+enum typeProduct {
+    Air = Air
+    Vehicle = Vehicle
+    Hotel = Hotel
+    Rail = Rail
+    Cruise = Cruise
+    Other = Other
+}
+enum typeProfileApplicability {
+    Always = Always
+    Optional = Optional
+    Never = Never
+}
+enum typeProfileEntityStatus {
+    Active = Active
+    Inactive = Inactive
+}
+enum typeProfileEntityStatusWithDelete {
+    Deleted = Deleted
+    Active = Active
+    Inactive = Inactive
+}
+enum typeProfileLevel {
+    Agency = Agency
+    Branch = Branch
+    BranchGroup = BranchGroup
+    Agent = Agent
+    Account = Account
+    TravelerGroup = TravelerGroup
+    Traveler = Traveler
+}
+enum typeProfileLevelWithCredential {
+    Agency = Agency
+    Branch = Branch
+    Agent = Agent
+}
+enum typeProfileLevelWithSystem {
+    System = System
+    Agency = Agency
+    Branch = Branch
+    BranchGroup = BranchGroup
+    Agent = Agent
+    Account = Account
+    TravelerGroup = TravelerGroup
+    Traveler = Traveler
+}
+class typeProfileRef {
+    +ProfileEntityID : xs:string
+    +ProfileLevel : typeProfileLevel
+}
+enum typeProfileType {
+    AgencyGroup = AgencyGroup
+    Agency = Agency
+    BranchGroup = BranchGroup
+    Branch = Branch
+    Agent = Agent
+    Account = Account
+    TravelerGroup = TravelerGroup
+    Traveler = Traveler
+}
+class typeProviderReservationDetail {
+    +ProviderCode : xs:string
+    +ProviderLocatorCode : xs:string
+}
+class typeProviderReservationSpecificInfo {
+    +OperatedBy : OperatedBy[]
+    +ProviderReservationInfoRef : ProviderReservationInfoRef
+    +ProviderReservationLevel : xs:boolean
+    +ReservationLevel : xs:boolean
+}
+enum typeProviderToken {
+    Sabre = Sabre
+}
+enum typePurchaseWindow {
+    BookingOnly = BookingOnly
+    TicketingOnly = TicketingOnly
+    CheckInOnly = CheckInOnly
+    Anytime = Anytime
+    PostTicketing = PostTicketing
+}
+enum typeQueueModifyAction {
+    Remove = Remove
+    Requeue = Requeue
+    Move = Move
+    Add = Add
+    Unlock = Unlock
+}
+enum typeRateCategory {
+    Association = Association
+    Business = Business
+    Corporate = Corporate
+    Government = Government
+    Industry = Industry
+    Package = Package
+    Inclusive = Inclusive
+    Promotional = Promotional
+    Credential = Credential
+    Standard = Standard
+    Consortium = Consortium
+    Convention = Convention
+    Negotiated = Negotiated
+    Prepay = Prepay
+}
+class typeRateDescription {
+    +Text : xs:string[]
+    +Name : xs:string
+}
+enum typeRateGuarantee {
+    Rate Guaranteed = Rate Guaranteed
+    Rate Quoted = Rate Quoted
+    Agent Entered = Agent Entered
+}
+enum typeRateTimePeriod {
+    Hourly = Hourly
+    Daily = Daily
+    Weekly = Weekly
+    Monthly = Monthly
+    WeekendDay = WeekendDay
+    Other = Other
+    Package = Package
+    Bundle = Bundle
+    Total = Total
+}
+enum typeRecordStatus {
+    All = All
+    Past = Past
+    Current = Current
+    Canceled = Canceled
+    Unknown = Unknown
+}
+class typeRemark {
+    +value : xs:string
+    +ProviderReservationInfoRef : xs:string
+    +ProviderCode : xs:string
+}
+class typeRemarkWithTravelerRef {
+    +RemarkData : xs:string
+    +BookingTravelerRef : xs:string[]
+    +ProviderReservationInfoRef : xs:string
+    +ProviderCode : xs:string
+}
+enum typeReqSeat {
+    Any = Any
+    Aisle = Aisle
+    Bulkhead = Bulkhead
+    Exit = Exit
+    Window = Window
+    Middle = Middle
+}
+enum typeReserveRequirement {
+    Deposit = Deposit
+    Guarantee = Guarantee
+    Prepayment = Prepayment
+    Other = Other
+}
+enum typeResidency {
+    Employee = Employee
+    National = National
+    Resident = Resident
+}
+enum typeResponseImageSize {
+    X = X
+    T = T
+    I = I
+    S = S
+    M = M
+    L = L
+    E = E
+    G = G
+    F = F
+    B = B
+    J = J
+    O = O
+    H = H
+    C = C
+}
+class typeResultMessage {
+    +value : xs:string
+    +Code : xs:integer
+    +Type : xs:string
+}
+class typeSearchLocation {
+    +Airport : Airport
+    +City : City
+    +CityOrAirport : CityOrAirport
+    +CoordinateLocation : CoordinateLocation
+    +RailLocation : RailLocation
+    +Distance : Distance
+}
+class typeSearchTimeSpec {
+    +value : xs:string
+}
+class typeSegmentRef {
+    +Key : xs:string
+}
+enum typeSource {
+    Agency = Agency
+    BranchGroup = BranchGroup
+    Branch = Branch
+    Agent = Agent
+}
+class typeSpecificTime {
+    +Time : xs:string
+}
+enum typeStatus {
+    Issued = Issued
+    ReadyToIssue = ReadyToIssue
+    IssueLater = IssueLater
+}
+class typeStructuredAddress {
+    +ElStat : typeElementStatus
+    +KeyOverride : xs:boolean
+    +AddressName : xs:string
+    +Street : xs:string[]
+    +City : xs:string
+    +State : State
+    +PostalCode : xs:string
+    +Country : xs:string
+    +ProviderReservationInfoRef : ProviderReservationInfoRef[]
+    +Key : xs:string
+}
+class typeSubKey {
+    +Text : xs:string[]
+    +Name : xs:string
+    +Description : xs:string
+}
+class typeTax {
+    +Amount : xs:string
+    +Code : xs:string
+}
+class typeTaxInfo {
+    +TaxDetail : TaxDetail[]
+    +IncludedInBase : IncludedInBase
+    +Key : xs:string
+    +Category : xs:string
+    +CarrierDefinedCategory : xs:string
+    +SegmentRef : xs:string
+    +FlightDetailsRef : xs:string
+    +CouponRef : xs:string
+    +Amount : xs:string
+    +OriginAirport : xs:string
+    +DestinationAirport : xs:string
+    +CountryCode : xs:string
+    +FareInfoRef : xs:string
+    +TaxExempted : xs:boolean
+    +ProviderCode : xs:string
+    +SupplierCode : xs:string
+    +Text : xs:string
+}
+enum typeTicketStatus {
+    U = U
+    T = T
+    V = V
+    R = R
+    X = X
+    Z = Z
+    N = N
+    S = S
+}
+class typeTimeRange {
+    +EarliestTime : xs:string
+    +LatestTime : xs:string
+}
+class typeTimeSpec {
+    +TimeRange : typeTimeRange
+    +SpecificTime : typeSpecificTime
+    +PreferredTime : xs:string
+}
+class typeTransactionsAllowed {
+    +ShoppingEnabled : xs:boolean
+    +PricingEnabled : xs:boolean
+}
+typeTransactionsAllowed *- typeBookingTransactionsAllowed
+enum typeTrinary {
+    true = true
+    false = false
+    unknown = unknown
+}
+enum typeVehicleCategory {
+    Car = Car
+    Van = Van
+    SUV = SUV
+    Convertible = Convertible
+    Truck = Truck
+    StationWagon = StationWagon
+    Pickup = Pickup
+    AllTerrain = AllTerrain
+    Recreational = Recreational
+    Sport = Sport
+    Special = Special
+    ExtendedCabPickup = ExtendedCabPickup
+    RegularCabPickup = RegularCabPickup
+    SpecialOffer = SpecialOffer
+    Coupe = Coupe
+    Monospace = Monospace
+    Roadster = Roadster
+    Crossover = Crossover
+    Motorcycle = Motorcycle
+    Limo = Limo
+    Motorhome = Motorhome
+    TwoWheelVehicle = TwoWheelVehicle
+    CommercialVanOrTruck = CommercialVanOrTruck
+}
+enum typeVehicleClass {
+    Mini = Mini
+    Economy = Economy
+    Compact = Compact
+    Intermediate = Intermediate
+    Standard = Standard
+    Fullsize = Fullsize
+    Luxury = Luxury
+    Premium = Premium
+    Special = Special
+    MiniElite = MiniElite
+    EconomyElite = EconomyElite
+    CompactElite = CompactElite
+    IntermediateElite = IntermediateElite
+    StandardElite = StandardElite
+    FullsizeElite = FullsizeElite
+    PremiumElite = PremiumElite
+    LuxuryElite = LuxuryElite
+    Oversize = Oversize
+    Subcompact = Subcompact
+    Minivan = Minivan
+    TwelvePassengerVan = TwelvePassengerVan
+    MovingVan = MovingVan
+    FifteenPassengerVan = FifteenPassengerVan
+    CargoVan = CargoVan
+    TwelveFootTruck = TwelveFootTruck
+    TwentyFootTruck = TwentyFootTruck
+    TwentyfourFootTruck = TwentyfourFootTruck
+    TwentysixFootTruck = TwentysixFootTruck
+    Moped = Moped
+    Stretch = Stretch
+    Regular = Regular
+    Unique = Unique
+    Exotic = Exotic
+    SmallOrMediumTruck = SmallOrMediumTruck
+    LargeTruck = LargeTruck
+    SmallSUV = SmallSUV
+    MediumSUV = MediumSUV
+    LargeSUV = LargeSUV
+    ExoticSUV = ExoticSUV
+    FourWheelDrive = FourWheelDrive
+}
+enum typeVehicleLocation {
+    Terminal = Terminal
+    ShuttleOnAirport = ShuttleOnAirport
+    ShuttleOffAirport = ShuttleOffAirport
+    RailwayStation = RailwayStation
+    Hotel = Hotel
+    CarDealer = CarDealer
+    CityCenterDowntown = CityCenterDowntown
+    EastOfCityCenter = EastOfCityCenter
+    SouthOfCityCenter = SouthOfCityCenter
+    WestOfCityCenter = WestOfCityCenter
+    NorthOfCityCenter = NorthOfCityCenter
+    PortOrFerry = PortOrFerry
+    NearResort = NearResort
+    Airport = Airport
+    Unknown = Unknown
+}
+enum typeVehicleTransmission {
+    Automatic = Automatic
+    Automatic4WD = Automatic4WD
+    AutomaticAWD = AutomaticAWD
+    Manual = Manual
+    Manual4WD = Manual4WD
+    ManualAWD = ManualAWD
+}
+class typeVendorLocation {
+    +ProviderCode : xs:string
+    +VendorCode : xs:string
+    +PreferredOption : xs:boolean
+    +VendorLocationID : xs:string
+    +Key : xs:string
+    +MoreRatesToken : xs:string
+}
+class typeVoucherInformation {
+    +VoucherType : typeVoucherType
+    +Amount : xs:string
+    +ConfirmationNumber : xs:string
+    +AccountName : xs:string
+    +Number : xs:string
+}
+enum typeVoucherType {
+    FullCredit = FullCredit
+    GroupOrDay = GroupOrDay
+    SpecificValue = SpecificValue
+    RegularVoucher = RegularVoucher
+}
+
+@enduml

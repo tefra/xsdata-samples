@@ -1,0 +1,587 @@
+@startuml
+
+class AirBaseReq {
+}
+AirBaseReq *- common:BaseReq
+class AirExchangeEligibilityReq {
+    +ProviderReservationInfo : ProviderReservationInfo
+    +Type : xs:string
+}
+AirExchangeEligibilityReq *- common:BaseReq
+AirExchangeEligibilityReq +-- ProviderReservationInfo
+class ProviderReservationInfo {
+    +ProviderCode : xs:string
+    +ProviderLocatorCode : xs:string
+}
+class AirExchangeEligibilityRsp {
+    +ExchangeEligibilityInfo : ExchangeEligibilityInfo
+}
+AirExchangeEligibilityRsp *- common:BaseRsp
+class AirExchangeMultiQuoteReq {
+    +Type : xs:string
+}
+AirExchangeMultiQuoteReq *- BaseAirExchangeMultiQuoteReq
+class AirExchangeMultiQuoteRsp {
+    +AirSegmentList : AirSegmentList[]
+    +BrandList : BrandList[]
+    +AirExchangeMulitQuoteList : AirExchangeMulitQuoteList[]
+}
+AirExchangeMultiQuoteRsp *- common:BaseRsp
+class AirExchangeQuoteReq {
+}
+AirExchangeQuoteReq *- BaseAirExchangeQuoteReq
+class AirExchangeQuoteRsp {
+    +common:TicketNumber : common:TicketNumber[]
+    +AirPricingSolution : AirPricingSolution[]
+    +AirExchangeBundleTotal : AirExchangeBundleTotal
+    +AirExchangeBundle : AirExchangeBundle[]
+    +common:HostToken : common:HostToken[]
+    +OptionalServices : OptionalServices
+    +FareRule : FareRule[]
+}
+AirExchangeQuoteRsp *- common:BaseRsp
+class AirExchangeReq {
+    +AirReservationLocatorCode : AirReservationLocatorCode
+    +common:TicketNumber : common:TicketNumber[]
+    +SpecificSeatAssignment : SpecificSeatAssignment[]
+    +AirPricingSolution : AirPricingSolution[]
+    +AirExchangeModifiers : AirExchangeModifiers
+    +AirExchangeBundleTotal : AirExchangeBundleTotal
+    +AirExchangeBundle : AirExchangeBundle[]
+    +common:HostToken : common:HostToken[]
+    +OptionalServices : OptionalServices
+    +common:FormOfPayment : common:FormOfPayment
+    +common:FormOfPaymentRef : common:FormOfPaymentRef
+    +common:SSRInfo : common:SSRInfo[]
+    +common:AddSvc : common:AddSvc
+    +ReturnReservation : xs:boolean
+}
+AirExchangeReq *- common:BaseReq
+class AirExchangeRsp {
+    +common:TicketNumber : common:TicketNumber[]
+    +common:BookingTraveler : common:BookingTraveler[]
+    +AirReservation : typeAirReservationWithFOP
+    +ExchangeFailureInfo : typeTicketFailureInfo[]
+}
+AirExchangeRsp *- common:BaseRsp
+class AirExchangeTicketingReq {
+    +AirReservationLocatorCode : AirReservationLocatorCode
+    +common:TicketNumber : common:TicketNumber
+    +TicketingModifiersRef : typeTicketingModifiersRef[]
+    +WaiverCode : WaiverCode
+    +DetailedBillingInformation : DetailedBillingInformation[]
+    +AirTicketingModifiers : AirTicketingModifiers[]
+    +BulkTicket : xs:boolean
+    +ChangeFeeOnTicket : xs:boolean
+}
+AirExchangeTicketingReq *- common:BaseReq
+class AirExchangeTicketingRsp {
+    +AirSolutionChangedInfo : AirSolutionChangedInfo
+    +ETR : ETR
+    +TicketFailureInfo : TicketFailureInfo
+    +DetailedBillingInformation : DetailedBillingInformation
+}
+AirExchangeTicketingRsp *- common:BaseRsp
+class AirFareDisplayReq {
+    +FareType : FareType[]
+    +PassengerType : common:typePassengerType[]
+    +BookingCode : BookingCode[]
+    +IncludeAddlBookingCodeInfo : IncludeAddlBookingCodeInfo
+    +FareBasis : FareBasis
+    +common:Carrier : common:Carrier[]
+    +common:AccountCode : common:AccountCode[]
+    +ContractCode : ContractCode
+    +AirFareDisplayModifiers : AirFareDisplayModifiers
+    +common:PointOfSale : common:PointOfSale[]
+    +AirFareDisplayRuleKey : AirFareDisplayRuleKey
+    +Origin : xs:string
+    +Destination : xs:string
+    +ProviderCode : xs:string
+    +IncludeMileRouteInformation : typeMileOrRouteBasedFare
+    +UnSaleableFaresOnly : xs:boolean
+    +ChannelId : xs:string
+    +NSCC : xs:string
+    +ReturnMM : xs:boolean
+}
+AirFareDisplayReq *- common:BaseReq
+class AirFareDisplayRsp {
+    +FareDisplay : FareDisplay[]
+}
+AirFareDisplayRsp *- common:BaseRsp
+class AirFareRulesReq {
+    +AirReservationSelector : AirReservationSelector
+    +FareRuleLookup : FareRuleLookup
+    +FareRuleKey : FareRuleKey[]
+    +AirFareDisplayRuleKey : AirFareDisplayRuleKey
+    +AirFareRulesModifier : AirFareRulesModifier
+    +FareRulesFilterCategory : FareRulesFilterCategory[]
+    +FareRuleType : typeFareRuleType
+}
+AirFareRulesReq *- common:BaseReq
+AirFareRulesReq +-- FareRulesFilterCategory
+class FareRulesFilterCategory {
+    +CategoryCode : xs:string[]
+    +FareInfoRef : xs:string
+}
+AirFareRulesReq +-- AirReservationSelector
+class AirReservationSelector {
+    +FareInfoRef : FareInfoRef[]
+    +AirReservationLocatorCode : xs:string
+}
+class AirFareRulesRsp {
+    +FareRule : FareRule[]
+}
+AirFareRulesRsp *- common:BaseRsp
+class AirMerchandisingDetailsReq {
+    +MerchandisingDetails : MerchandisingDetails
+    +OptionalServiceModifiers : OptionalServiceModifiers
+    +MerchandisingAvailabilityDetails : MerchandisingAvailabilityDetails
+}
+AirMerchandisingDetailsReq *- common:BaseReq
+class AirMerchandisingDetailsRsp {
+    +OptionalServices : OptionalServices
+    +Brand : Brand[]
+    +UnassociatedBookingCodeList : UnassociatedBookingCodeList
+}
+AirMerchandisingDetailsRsp *- common:BaseRsp
+AirMerchandisingDetailsRsp +-- UnassociatedBookingCodeList
+class UnassociatedBookingCodeList {
+    +ApplicableSegment : typeApplicableSegment[]
+}
+class AirMerchandisingOfferAvailabilityReq {
+    +common:AgencySellInfo : common:AgencySellInfo
+    +AirSolution : AirSolution
+    +HostReservation : HostReservation[]
+    +OfferAvailabilityModifiers : OfferAvailabilityModifiers[]
+    +MerchandisingPricingModifiers : MerchandisingPricingModifiers
+}
+AirMerchandisingOfferAvailabilityReq *- common:BaseReq
+class AirMerchandisingOfferAvailabilityRsp {
+    +AirSolution : AirSolution
+    +common:Remark : common:Remark
+    +OptionalServices : OptionalServices
+    +EmbargoList : EmbargoList
+}
+AirMerchandisingOfferAvailabilityRsp *- common:BaseRsp
+class AirPrePayReq {
+    +ListSearch : ListSearch
+    +PrePayRetrieve : PrePayRetrieve
+}
+AirPrePayReq *- common:BaseReq
+AirPrePayReq +-- ListSearch
+class ListSearch {
+    +PersonNameSearch : PersonNameSearch
+    +common:LoyaltyCard : common:LoyaltyCard[]
+    +StartFromResult : xs:integer
+    +MaxResults : xs:integer
+}
+AirPrePayReq +-- PrePayRetrieve
+class PrePayRetrieve {
+    +Id : xs:string
+    +Type : xs:string
+}
+class AirPrePayRsp {
+    +PrePayProfileInfo : PrePayProfileInfo[]
+    +MaxResults : xs:integer
+    +MoreIndicator : xs:boolean
+    +MoreDataStartIndex : xs:string
+}
+AirPrePayRsp *- common:BaseRsp
+class AirPriceReq {
+}
+AirPriceReq *- BaseAirPriceReq
+class AirPriceRsp {
+}
+AirPriceRsp *- BaseAirPriceRsp
+class AirRefundQuoteReq {
+    +common:TicketNumber : common:TicketNumber[]
+    +TCRNumber : xs:string[]
+    +AirRefundModifiers : AirRefundModifiers
+    +common:HostToken : common:HostToken[]
+    +ProviderReservationInfo : ProviderReservationInfo[]
+    +Ignore : xs:boolean
+}
+AirRefundQuoteReq *- common:BaseReq
+AirRefundQuoteReq +-- ProviderReservationInfo
+class ProviderReservationInfo {
+    +ProviderCode : xs:string
+    +ProviderLocatorCode : xs:string
+}
+class AirRefundQuoteRsp {
+    +AirRefundBundle : AirRefundBundle[]
+    +TCRRefundBundle : TCRRefundBundle[]
+}
+AirRefundQuoteRsp *- common:BaseRsp
+class AirRefundReq {
+    +AirRefundBundle : AirRefundBundle[]
+    +TCRRefundBundle : TCRRefundBundle[]
+    +AirRefundModifiers : AirRefundModifiers
+    +common:Commission : common:Commission[]
+    +common:FormOfPayment : common:FormOfPayment
+}
+AirRefundReq *- common:BaseReq
+class AirRefundRsp {
+    +ETR : ETR[]
+    +TCR : TCR[]
+    +RefundFailureInfo : typeTicketFailureInfo[]
+}
+AirRefundRsp *- common:BaseRsp
+class AirRepriceReq {
+    +AirReservationLocatorCode : AirReservationLocatorCode
+    +AirPricingSolution : AirPricingSolution
+    +FareRuleType : typeFareRuleType
+    +IgnoreAvailability : xs:boolean
+}
+AirRepriceReq *- AirBaseReq
+class AirRepriceRsp {
+    +AirPricingSolution : AirPricingSolution
+    +FareRule : FareRule[]
+}
+AirRepriceRsp *- common:BaseRsp
+class AirRetrieveDocumentReq {
+    +UniversalRecordLocatorCode : xs:string
+    +ProviderCode : xs:string
+    +ProviderLocatorCode : xs:string
+    +AirReservationLocatorCode : AirReservationLocatorCode
+    +common:TicketNumber : common:TicketNumber[]
+    +TCRNumber : xs:string[]
+    +ReturnRestrictions : xs:boolean
+    +ReturnPricing : xs:boolean
+    +RetrieveMCO : xs:boolean
+}
+AirRetrieveDocumentReq *- common:BaseReq
+class AirRetrieveDocumentRsp {
+    +ETR : ETR[]
+    +common:MCO : common:MCO[]
+    +TCR : TCR[]
+    +DocumentFailureInfo : typeFailureInfo[]
+    +common:ServiceFeeInfo : common:ServiceFeeInfo[]
+    +UniversalRecordLocatorCode : xs:string
+}
+AirRetrieveDocumentRsp *- common:BaseRsp
+class AirSearchReq {
+    +common:PointOfCommencement : common:PointOfCommencement
+    +SearchAirLeg : SearchAirLeg[]
+    +SearchSpecificAirSegment : SearchSpecificAirSegment[]
+    +AirSearchModifiers : AirSearchModifiers
+    +JourneyData : JourneyData
+}
+AirSearchReq *- common:BaseSearchReq
+class AirSearchRsp {
+    +FareNoteList : FareNoteList
+    +ExpertSolutionList : ExpertSolutionList
+    +RouteList : RouteList
+    +AlternateRouteList : AlternateRouteList
+    +AlternateLocationDistanceList : AlternateLocationDistanceList
+    +FareInfoMessage : FareInfoMessage[]
+    +AirPricingSolution : AirPricingSolution[]
+    +AirPricePointList : AirPricePointList
+    +rail:RailSegmentList : rail:RailSegmentList
+    +rail:RailJourneyList : rail:RailJourneyList
+    +rail:RailFareNoteList : rail:RailFareNoteList
+    +rail:RailFareIDList : rail:RailFareIDList
+    +rail:RailFareList : rail:RailFareList
+    +rail:RailPricingSolution : rail:RailPricingSolution[]
+}
+AirSearchRsp *- BaseAvailabilitySearchRsp
+class AirTicketingReq {
+    +AirReservationLocatorCode : AirReservationLocatorCode
+    +AirPricingInfoRef : AirPricingInfoRef[]
+    +TicketingModifiersRef : typeTicketingModifiersRef[]
+    +WaiverCode : WaiverCode
+    +common:Commission : common:Commission[]
+    +DetailedBillingInformation : DetailedBillingInformation[]
+    +FaxDetailsInformation : FaxDetailsInformation
+    +AirTicketingModifiers : AirTicketingModifiers[]
+    +AirSegmentTicketingModifiers : AirSegmentTicketingModifiers[]
+    +ReturnInfoOnFail : xs:boolean
+    +BulkTicket : xs:boolean
+    +ValidateSpanishResidency : xs:boolean
+}
+AirTicketingReq *- AirBaseReq
+AirTicketingReq +-- AirPricingInfoRef
+class AirPricingInfoRef {
+    +common:BookingTravelerRef : common:BookingTravelerRef[]
+    +Key : xs:string
+}
+class AirTicketingRsp {
+    +AirSolutionChangedInfo : AirSolutionChangedInfo
+    +ETR : ETR[]
+    +TicketFailureInfo : TicketFailureInfo[]
+    +DetailedBillingInformation : DetailedBillingInformation[]
+}
+AirTicketingRsp *- common:BaseRsp
+class AirUpsellSearchReq {
+    +AirItinerary : AirItinerary
+    +AirPriceResult : AirPriceResult[]
+}
+AirUpsellSearchReq *- AirBaseReq
+class AirUpsellSearchRsp {
+}
+AirUpsellSearchRsp *- BaseAirPriceRsp
+class AirVoidDocumentReq {
+    +AirReservationLocatorCode : AirReservationLocatorCode
+    +VoidDocumentInfo : VoidDocumentInfo[]
+    +ShowETR : xs:boolean
+    +ProviderCode : xs:string
+    +ProviderLocatorCode : xs:string
+    +ValidateSpanishResidency : xs:boolean
+}
+AirVoidDocumentReq *- common:BaseReq
+class AirVoidDocumentRsp {
+    +ETR : ETR[]
+    +VoidResultInfo : VoidResultInfo[]
+}
+AirVoidDocumentRsp *- common:BaseRsp
+class AvailabilitySearchReq {
+    +common:SearchPassenger : common:SearchPassenger[]
+    +common:PointOfSale : common:PointOfSale[]
+    +ReturnBrandIndicator : xs:boolean
+    +ChannelId : xs:string
+    +NSCC : xs:string
+}
+AvailabilitySearchReq *- AirSearchReq
+class AvailabilitySearchRsp {
+}
+AvailabilitySearchRsp *- BaseAvailabilitySearchRsp
+class BaseAirExchangeMultiQuoteReq {
+    +common:TicketNumber : common:TicketNumber[]
+    +ProviderReservationInfo : ProviderReservationInfo
+    +AirPricingSolution : AirPricingSolution[]
+    +RepricingModifiers : RepricingModifiers
+    +OriginalItineraryDetails : OriginalItineraryDetails
+    +common:OverridePCC : common:OverridePCC
+}
+BaseAirExchangeMultiQuoteReq *- common:BaseCoreReq
+BaseAirExchangeMultiQuoteReq +-- ProviderReservationInfo
+class ProviderReservationInfo {
+    +ProviderCode : xs:string
+    +ProviderLocatorCode : xs:string
+}
+class BaseAirExchangeQuoteReq {
+    +common:TicketNumber : common:TicketNumber[]
+    +ProviderReservationInfo : ProviderReservationInfo
+    +AirPricingSolution : AirPricingSolution[]
+    +AirExchangeModifiers : AirExchangeModifiers
+    +common:HostToken : common:HostToken[]
+    +OptionalServices : OptionalServices
+    +common:FormOfPayment : common:FormOfPayment[]
+    +RepricingModifiers : RepricingModifiers
+    +OriginalItineraryDetails : OriginalItineraryDetails
+    +PCC : PCC
+    +FareRuleType : typeFareRuleType
+}
+BaseAirExchangeQuoteReq *- common:BaseCoreReq
+BaseAirExchangeQuoteReq +-- ProviderReservationInfo
+class ProviderReservationInfo {
+    +ProviderCode : xs:string
+    +ProviderLocatorCode : xs:string
+}
+class BaseAirPriceReq {
+    +AirItinerary : AirItinerary
+    +AirPricingModifiers : AirPricingModifiers
+    +common:SearchPassenger : common:SearchPassenger[]
+    +AirPricingCommand : AirPricingCommand[]
+    +AirReservationLocatorCode : AirReservationLocatorCode
+    +OptionalServices : OptionalServices
+    +common:FormOfPayment : common:FormOfPayment[]
+    +PCC : PCC
+    +common:SSR : common:SSR[]
+    +CheckOBFees : xs:string
+    +FareRuleType : typeFareRuleType
+    +SupplierCode : xs:string
+    +TicketDate : xs:date
+    +CheckFlightDetails : xs:boolean
+    +ReturnMM : xs:boolean
+    +NSCC : xs:string
+    +SplitPricing : xs:boolean
+    +IgnoreAvailability : xs:boolean
+}
+BaseAirPriceReq *- common:BaseCoreReq
+class BaseAirPriceRsp {
+    +AirItinerary : AirItinerary
+    +AirPriceResult : AirPriceResult[]
+}
+BaseAirPriceRsp *- common:BaseRsp
+class BaseAirSearchReq {
+    +SearchAirLeg : SearchAirLeg[]
+    +SearchSpecificAirSegment : SearchSpecificAirSegment[]
+    +AirSearchModifiers : AirSearchModifiers
+    +SplitTicketingSearch : SplitTicketingSearch
+    +JourneyData : JourneyData
+}
+BaseAirSearchReq *- common:BaseCoreSearchReq
+class BaseAvailabilitySearchRsp {
+    +FlightDetailsList : FlightDetailsList
+    +AirSegmentList : AirSegmentList
+    +FareInfoList : FareInfoList
+    +FareRemarkList : FareRemarkList
+    +AirItinerarySolution : AirItinerarySolution[]
+    +HostTokenList : HostTokenList
+    +APISRequirementsList : APISRequirementsList
+    +DistanceUnits : common:typeDistance
+}
+BaseAvailabilitySearchRsp *- common:BaseSearchRsp
+class BaseLowFareSearchReq {
+    +common:SearchPassenger : common:SearchPassenger[]
+    +AirPricingModifiers : AirPricingModifiers
+    +Enumeration : Enumeration
+    +AirExchangeModifiers : AirExchangeModifiers
+    +FlexExploreModifiers : FlexExploreModifiers
+    +PCC : PCC
+    +FareRulesFilterCategory : FareRulesFilterCategory
+    +common:FormOfPayment : common:FormOfPayment[]
+    +EnablePointToPointSearch : xs:boolean
+    +EnablePointToPointAlternates : xs:boolean
+    +MaxNumberOfExpertSolutions : xs:integer
+    +SolutionResult : xs:boolean
+    +PreferCompleteItinerary : xs:boolean
+    +MetaOptionIdentifier : xs:string
+    +ReturnUpsellFare : xs:boolean
+    +IncludeFareInfoMessages : xs:boolean
+    +ReturnBrandedFares : xs:boolean
+    +MultiGDSSearch : xs:boolean
+    +ReturnMM : xs:boolean
+    +CheckOBFees : xs:string
+    +NSCC : xs:string
+    +FareInfoRules : xs:boolean
+}
+BaseLowFareSearchReq *- BaseAirSearchReq
+class BrandList {
+    +Brand : Brand[]
+}
+class EMDIssuanceReq {
+    +common:ProviderReservationDetail : common:ProviderReservationDetail
+    +common:TicketNumber : common:TicketNumber
+    +IssuanceModifiers : IssuanceModifiers
+    +SelectionModifiers : SelectionModifiers
+    +UniversalRecordLocatorCode : xs:string
+    +ShowDetails : xs:boolean
+    +IssueAllOpenSVC : xs:boolean
+}
+EMDIssuanceReq *- common:BaseReq
+class EMDIssuanceRsp {
+    +EMDSummaryInfo : EMDSummaryInfo[]
+    +EMDInfo : EMDInfo[]
+}
+EMDIssuanceRsp *- common:BaseRsp
+class EMDRetrieveReq {
+    +ListRetrieve : ListRetrieve
+    +DetailRetrieve : DetailRetrieve
+}
+EMDRetrieveReq *- common:BaseReq
+EMDRetrieveReq +-- ListRetrieve
+class ListRetrieve {
+    +common:ProviderReservationDetail : common:ProviderReservationDetail
+}
+EMDRetrieveReq +-- DetailRetrieve
+class DetailRetrieve {
+    +common:ProviderReservationDetail : common:ProviderReservationDetail
+    +EMDNumber : xs:string
+}
+class EMDRetrieveRsp {
+    +EMDInfo : EMDInfo
+    +EMDSummaryInfo : EMDSummaryInfo[]
+}
+EMDRetrieveRsp *- common:BaseRsp
+class FlightDetailsReq {
+    +AirSegment : AirSegment[]
+}
+FlightDetailsReq *- common:BaseReq
+class FlightDetailsRsp {
+    +AirSegment : AirSegment[]
+    +CO2Emissions : CO2Emissions[]
+}
+FlightDetailsRsp *- common:BaseRsp
+class FlightInformationReq {
+    +FlightInfoCriteria : FlightInfoCriteria[]
+}
+FlightInformationReq *- common:BaseReq
+class FlightInformationRsp {
+    +FlightInfo : FlightInfo[]
+}
+FlightInformationRsp *- common:BaseRsp
+class FlightTimeTableReq {
+    +FlightTimeTableCriteria : FlightTimeTableCriteria
+}
+FlightTimeTableReq *- common:BaseSearchReq
+class FlightTimeTableRsp {
+    +FlightTimeTableList : FlightTimeTableList
+}
+FlightTimeTableRsp *- common:BaseSearchRsp
+FlightTimeTableRsp +-- FlightTimeTableList
+class FlightTimeTableList {
+    +FlightTimeDetail : FlightTimeDetail[]
+}
+class LowFareSearchAsynchReq {
+    +AirSearchAsynchModifiers : AirSearchAsynchModifiers
+}
+LowFareSearchAsynchReq *- BaseLowFareSearchReq
+class LowFareSearchAsynchRsp {
+    +AsyncProviderSpecificResponse : AsyncProviderSpecificResponse[]
+    +BrandList : BrandList
+    +SearchId : xs:string
+    +CurrencyType : xs:string
+}
+LowFareSearchAsynchRsp *- AirSearchRsp
+class LowFareSearchReq {
+    +PolicyReference : xs:string
+}
+LowFareSearchReq *- BaseLowFareSearchReq
+class LowFareSearchRsp {
+    +BrandList : BrandList
+    +CurrencyType : xs:string
+}
+LowFareSearchRsp *- AirSearchRsp
+class RetrieveLowFareSearchReq {
+    +SearchId : xs:string
+    +ProviderCode : xs:string
+}
+RetrieveLowFareSearchReq *- common:BaseReq
+class RetrieveLowFareSearchRsp {
+    +AsyncProviderSpecificResponse : AsyncProviderSpecificResponse[]
+    +BrandList : BrandList
+    +CurrencyType : xs:string
+}
+RetrieveLowFareSearchRsp *- AirSearchRsp
+class ScheduleSearchReq {
+}
+ScheduleSearchReq *- AirSearchReq
+class ScheduleSearchRsp {
+}
+ScheduleSearchRsp *- AirSearchRsp
+class SearchSpecificAirSegment {
+    +DepartureTime : xs:string
+    +Carrier : xs:string
+    +FlightNumber : xs:string
+    +Origin : xs:string
+    +Destination : xs:string
+    +SegmentIndex : xs:int
+}
+class SeatMapReq {
+    +common:AgencySellInfo : common:AgencySellInfo
+    +AirSegment : AirSegment[]
+    +common:HostToken : common:HostToken[]
+    +SearchTraveler : SearchTraveler[]
+    +HostReservation : HostReservation
+    +MerchandisingPricingModifiers : MerchandisingPricingModifiers
+    +ReturnSeatPricing : xs:boolean
+    +ReturnBrandingInfo : xs:boolean
+}
+SeatMapReq *- common:BaseReq
+class SeatMapRsp {
+    +common:HostToken : common:HostToken[]
+    +common:CabinClass : common:CabinClass
+    +AirSegment : AirSegment[]
+    +SearchTraveler : SearchTraveler[]
+    +OptionalServices : OptionalServices
+    +common:Remark : common:Remark
+    +Rows : Rows[]
+    +common:PaymentRestriction : common:PaymentRestriction[]
+    +SeatInformation : SeatInformation[]
+    +Copyright : xs:string
+    +GroupSeatPrice : xs:string
+}
+SeatMapRsp *- common:BaseRsp
+
+@enduml

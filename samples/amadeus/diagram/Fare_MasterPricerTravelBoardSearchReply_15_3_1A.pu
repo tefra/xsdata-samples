@@ -1,0 +1,944 @@
+@startuml
+
+class ActionDetailsType {
+    +numberOfItemsDetails : ProcessingInformationType
+    +lastItemsDetails : ReferenceType[]
+}
+class AdditionalFareQualifierDetailsTypeI {
+    +rateClass : xs:string
+    +ticketDesignator : xs:string
+    +pricingGroup : xs:string
+    +secondRateClass : xs:string[]
+}
+class AdditionalProductDetailsType {
+    +equipmentType : xs:string
+    +operatingDay : xs:string
+    +techStopNumber : xs:integer
+    +locationId : xs:string[]
+}
+class ApplicationErrorInformationType {
+    +error : xs:string
+}
+class ApplicationErrorInformationType_78543S {
+    +applicationErrorDetail : ApplicationErrorInformationType
+}
+class AttributeInformationType {
+    +feeParameterType : xs:string
+    +feeParameterDescription : xs:string
+}
+class AttributeInformationTypeU {
+    +attributeType : xs:string
+    +attributeDescription : xs:string
+}
+class AttributeInformationType_97181C {
+    +attributeType : xs:string
+    +attributeDescription : xs:string
+}
+class AttributeType {
+    +attributeQualifier : xs:string
+    +attributeDetails : AttributeInformationType_97181C[]
+}
+class AttributeTypeU {
+    +attributeFunction : xs:string
+    +attributeDetails : AttributeInformationTypeU
+}
+class AttributeType_78561S {
+    +feeParameter : AttributeInformationType[]
+}
+class BaggageDetailsType {
+    +freeAllowance : xs:integer
+    +quantityCode : xs:string
+    +unitQualifier : xs:string
+}
+class BagtagDetailsType {
+    +identifier : xs:string
+    +number : xs:integer
+}
+class BucketInformationType {
+    +number : xs:string
+    +name : xs:string
+}
+class CabinInformationType {
+    +service : xs:string
+    +cabin : xs:string[]
+}
+class CabinProductDetailsType {
+    +rbd : xs:string
+    +bookingModifier : xs:string
+    +cabin : xs:string
+    +avlStatus : xs:string
+}
+class CabinProductDetailsType_195516C {
+    +rbd : xs:string
+    +bookingModifier : xs:string
+    +cabin : xs:string
+    +avlStatus : xs:string
+}
+class CabinProductDetailsType_205138C {
+    +rbd : xs:string
+    +bookingModifier : xs:string
+    +cabin : xs:string
+    +avlStatus : xs:string
+}
+class CabinProductDetailsType_229142C {
+    +rbd : xs:string
+    +cabin : xs:string
+    +avlStatus : xs:string
+}
+class CategDescrType {
+    +descriptionInfo : CategoryDescriptionType
+    +processIndicator : xs:string
+}
+class CategoryDescriptionType {
+    +number : xs:integer
+    +code : xs:string
+}
+class ClassInformationType {
+    +service : xs:string
+    +rbd : xs:string[]
+}
+class CodedAttributeInformationType {
+    +attributeType : xs:string
+    +attributeDescription : xs:string
+}
+class CodedAttributeInformationType_270108C {
+    +attributeType : xs:string
+    +attributeDescription : xs:string
+}
+class CodedAttributeType {
+    +attributeDetails : CodedAttributeInformationType[]
+}
+class CommercialAgreementsType {
+    +codeshareDetails : CompanyRoleIdentificationType
+    +otherCodeshareDetails : CompanyRoleIdentificationType[]
+}
+class CompanyIdentificationTextType {
+    +textRefNumber : xs:integer
+    +companyText : xs:string
+}
+class CompanyIdentificationType {
+    +marketingCarrier : xs:string
+    +operatingCarrier : xs:string
+    +alliance : xs:string
+}
+class CompanyIdentificationTypeI {
+    +marketingCompany : xs:string
+    +operatingCompany : xs:string
+    +otherCompany : xs:string
+}
+class CompanyRoleIdentificationType {
+    +codeShareType : xs:string
+    +airlineDesignator : xs:string
+    +flightNumber : xs:integer
+}
+class CompanyRoleIdentificationType_120771C {
+    +transportStageQualifier : xs:string
+    +company : xs:string
+}
+class ConversionRateDetailsTypeI {
+    +conversionType : xs:string
+    +currency : xs:string
+    +amount : xs:string
+}
+class ConversionRateDetailsTypeI_179848C {
+    +conversionType : xs:string
+    +currency : xs:string
+    +rate : xs:string
+    +convertedAmountLink : xs:string
+    +taxQualifier : xs:string
+}
+class ConversionRateTypeI {
+    +conversionRateDetail : ConversionRateDetailsTypeI_179848C[]
+}
+class ConversionRateTypeI_78562S {
+    +conversionRateDetail : ConversionRateDetailsTypeI[]
+}
+class CriteriaiDetaislType {
+    +type : xs:string
+    +value : xs:string
+}
+class DataInformationType {
+    +indicator : xs:string
+}
+class DataTypeInformationType {
+    +subType : xs:string
+    +option : xs:string
+}
+class DateAndTimeDetailsType {
+    +dateQualifier : xs:string
+    +date : xs:string
+    +firstTime : xs:string
+    +equipementType : xs:string
+    +locationId : xs:string
+}
+class DateAndTimeDetailsType_256192C {
+    +qualifier : xs:string
+    +date : xs:string
+    +time : xs:string
+    +location : xs:string
+}
+class DateAndTimeInformationType {
+    +stopDetails : DateAndTimeDetailsType[]
+    +Dummy.NET : xs:string
+}
+class DateAndTimeInformationType_182345S {
+    +dateAndTimeDetails : DateAndTimeDetailsType_256192C[]
+    +Dummy.NET : xs:string
+}
+class DateTimePeriodDetailsTypeI {
+    +qualifier : xs:string
+    +value : xs:string
+}
+class DiscountAndPenaltyInformationType {
+    +feeIdentification : xs:string
+    +feeInformation : DiscountPenaltyMonetaryInformationType
+}
+class DiscountPenaltyInformationType {
+    +fareQualifier : xs:string
+    +rateCategory : xs:string
+    +amount : xs:decimal
+    +percentage : xs:decimal
+}
+class DiscountPenaltyMonetaryInformationType {
+    +feeType : xs:string
+    +feeAmountType : xs:string
+    +feeAmount : xs:decimal
+    +feeCurrency : xs:string
+}
+class DummySegmentTypeI {
+    +value : xs:string
+}
+class ExcessBaggageType {
+    +baggageDetails : BaggageDetailsType
+    +bagTagDetails : BagtagDetailsType[]
+}
+class FareCalculationCodeDetailsType {
+    +qualifier : xs:string
+    +amount : xs:decimal
+    +locationCode : xs:string
+    +otherLocationCode : xs:string
+    +rate : xs:decimal
+}
+class FareCategoryCodesTypeI {
+    +fareType : xs:string
+    +otherFareType : xs:string[]
+}
+class FareDetailsType {
+    +passengerTypeQualifier : xs:string
+}
+class FareDetailsTypeI {
+    +qualifier : xs:string
+    +rate : xs:decimal
+    +country : xs:string
+    +fareCategory : xs:string
+}
+class FareDetailsType_193037C {
+    +qualifier : xs:string
+    +rate : xs:integer
+    +country : xs:string
+    +fareCategory : xs:string
+}
+class FareFamilyDetailsType {
+    +commercialFamily : xs:string
+}
+class FareFamilyType {
+    +refNumber : xs:integer
+    +fareFamilyname : xs:string
+    +hierarchy : xs:integer
+    +cabin : xs:string
+    +commercialFamilyDetails : FareFamilyDetailsType[]
+    +description : xs:string
+    +carrier : xs:string
+    +services : ServicesReferences[]
+}
+class FareInformationType {
+    +valueQualifier : xs:string
+    +value : xs:integer
+    +fareDetails : FareDetailsType_193037C
+    +identityNumber : xs:string
+    +fareTypeGrouping : FareTypeGroupingInformationType
+    +rateCategory : xs:string
+}
+class FareInformationTypeI {
+    +valueQualifier : xs:string
+    +value : xs:integer
+}
+class FareInformationType_80868S {
+    +fareDetails : FareDetailsType
+}
+class FareProductDetailsType {
+    +fareBasis : xs:string
+}
+class FareProductDetailsType_248552C {
+    +fareBasis : xs:string
+    +passengerType : xs:string
+    +fareType : xs:string[]
+}
+class FareQualifierDetailsType {
+    +movementType : xs:string
+    +fareCategories : FareCategoryCodesTypeI
+    +fareDetails : FareDetailsTypeI
+    +additionalFareDetails : AdditionalFareQualifierDetailsTypeI
+    +discountDetails : DiscountPenaltyInformationType[]
+}
+class FareTypeGroupingInformationType {
+    +pricingGroup : xs:string
+}
+class Fare_MasterPricerTravelBoardSearchReply {
+    +replyStatus : StatusType
+    +errorMessage : errorMessage
+    +conversionRate : ConversionRateTypeI
+    +solutionFamily : FareInformationType[]
+    +familyInformation : FareFamilyType[]
+    +amountInfoForAllPax : amountInfoForAllPax
+    +amountInfoPerPax : amountInfoPerPax[]
+    +feeDetails : feeDetails[]
+    +bucketInfo : BucketInformationType[]
+    +companyIdText : CompanyIdentificationTextType[]
+    +officeIdDetails : officeIdDetails[]
+    +flightIndex : flightIndex[]
+    +recommendation : recommendation[]
+    +otherSolutions : otherSolutions[]
+    +warningInfo : warningInfo[]
+    +globalInformation : globalInformation[]
+    +serviceFeesGrp : serviceFeesGrp[]
+    +value : ValueSearchCriteriaType[]
+    +mnrGrp : mnrGrp
+}
+Fare_MasterPricerTravelBoardSearchReply +-- errorMessage
+class errorMessage {
+    +applicationError : ApplicationErrorInformationType_78543S
+    +errorMessageText : InteractiveFreeTextType_78544S
+}
+Fare_MasterPricerTravelBoardSearchReply +-- amountInfoForAllPax
+class amountInfoForAllPax {
+    +itineraryAmounts : MonetaryInformationType
+    +amountsPerSgt : amountsPerSgt[]
+}
+amountInfoForAllPax +-- amountsPerSgt
+class amountsPerSgt {
+    +sgtRef : ReferenceInfoType_133176S
+    +amounts : MonetaryInformationType
+}
+Fare_MasterPricerTravelBoardSearchReply +-- amountInfoPerPax
+class amountInfoPerPax {
+    +paxRef : SpecificTravellerType
+    +paxAttributes : FareInformationType_80868S
+    +itineraryAmounts : MonetaryInformationType
+    +amountsPerSgt : amountsPerSgt[]
+}
+amountInfoPerPax +-- amountsPerSgt
+class amountsPerSgt {
+    +sgtRef : ReferenceInfoType_133176S
+    +amounts : MonetaryInformationType
+}
+Fare_MasterPricerTravelBoardSearchReply +-- feeDetails
+class feeDetails {
+    +feeReference : ItemReferencesAndVersionsType_78564S
+    +feeInformation : DiscountAndPenaltyInformationType
+    +feeParameters : AttributeType_78561S
+    +convertedOrOriginalInfo : ConversionRateTypeI_78562S
+}
+Fare_MasterPricerTravelBoardSearchReply +-- officeIdDetails
+class officeIdDetails {
+    +officeIdInformation : UserIdentificationType
+    +officeIdReference : ItemReferencesAndVersionsType_78536S
+}
+Fare_MasterPricerTravelBoardSearchReply +-- flightIndex
+class flightIndex {
+    +requestedSegmentRef : OriginAndDestinationRequestType
+    +groupOfFlights : groupOfFlights[]
+}
+flightIndex +-- groupOfFlights
+class groupOfFlights {
+    +propFlightGrDetail : ProposedSegmentType
+    +flightDetails : flightDetails[]
+}
+groupOfFlights +-- flightDetails
+class flightDetails {
+    +flightInformation : TravelProductType
+    +avlInfo : FlightProductInformationType_141442S[]
+    +technicalStop : DateAndTimeInformationType[]
+    +commercialAgreement : CommercialAgreementsType
+    +addInfo : HeaderInformationTypeI
+    +flightCharacteristics : FlightCharacteristicsType
+    +flightServices : FlightServicesType[]
+}
+Fare_MasterPricerTravelBoardSearchReply +-- recommendation
+class recommendation {
+    +itemNumber : ItemNumberType_161497S
+    +warningMessage : InteractiveFreeTextType_78544S[]
+    +fareFamilyRef : ReferenceInfoType_133176S
+    +recPriceInfo : MonetaryInformationType_193024S
+    +miniRule : MiniRulesType_78547S[]
+    +segmentFlightRef : ReferenceInfoType[]
+    +recommandationSegmentsFareDetails : recommandationSegmentsFareDetails[]
+    +paxFareProduct : paxFareProduct[]
+    +specificRecDetails : specificRecDetails[]
+}
+recommendation +-- recommandationSegmentsFareDetails
+class recommandationSegmentsFareDetails {
+    +recommendationSegRef : OriginAndDestinationRequestType
+    +segmentMonetaryInformation : MonetaryInformationType
+}
+recommendation +-- paxFareProduct
+class paxFareProduct {
+    +paxFareDetail : PricingTicketingSubsequentType_193023S
+    +feeRef : ReferenceInfoType_134839S
+    +paxReference : TravellerReferenceInformationType[]
+    +passengerTaxDetails : TaxType
+    +fare : fare[]
+    +fareDetails : fareDetails[]
+}
+paxFareProduct +-- fare
+class fare {
+    +pricingMessage : InteractiveFreeTextType_78559S
+    +monetaryInformation : MonetaryInformationType_185955S
+}
+paxFareProduct +-- fareDetails
+class fareDetails {
+    +segmentRef : OriginAndDestinationRequestType
+    +groupOfFares : groupOfFares[]
+    +psgSegMonetaryInformation : MonetaryInformationType
+    +majCabin : ProductInformationType[]
+}
+fareDetails +-- groupOfFares
+class groupOfFares {
+    +productInformation : FlightProductInformationType_176659S
+    +fareCalculationCodeDetails : FareCalculationCodeDetailsType[]
+    +ticketInfos : FareQualifierDetailsType
+    +fareFamiliesRef : ReferenceInfoType_176658S
+}
+recommendation +-- specificRecDetails
+class specificRecDetails {
+    +specificRecItem : ItemReferencesAndVersionsType
+    +specificProductDetails : specificProductDetails[]
+}
+specificRecDetails +-- specificProductDetails
+class specificProductDetails {
+    +productReferences : PricingTicketingSubsequentType
+    +fareContextDetails : fareContextDetails[]
+}
+specificProductDetails +-- fareContextDetails
+class fareContextDetails {
+    +requestedSegmentInfo : OriginAndDestinationRequestType_134833S
+    +cnxContextDetails : cnxContextDetails[]
+}
+fareContextDetails +-- cnxContextDetails
+class cnxContextDetails {
+    +fareCnxInfo : FlightProductInformationType
+}
+Fare_MasterPricerTravelBoardSearchReply +-- otherSolutions
+class otherSolutions {
+    +reference : SequenceDetailsTypeU
+    +amtGroup : amtGroup[]
+    +psgInfo : psgInfo[]
+}
+otherSolutions +-- amtGroup
+class amtGroup {
+    +ref : ReferenceInfoType_165972S
+    +amount : MonetaryInformationTypeI
+}
+otherSolutions +-- psgInfo
+class psgInfo {
+    +ref : SegmentRepetitionControlTypeI
+    +description : FareInformationTypeI
+    +freqTraveller : FrequentTravellerIdentificationCodeType
+    +amount : MonetaryInformationTypeI
+    +fare : FlightProductInformationType_161491S
+    +attribute : AttributeTypeU[]
+}
+Fare_MasterPricerTravelBoardSearchReply +-- warningInfo
+class warningInfo {
+    +globalMessageMarker : DummySegmentTypeI
+    +globalMessage : InteractiveFreeTextType_78534S
+}
+Fare_MasterPricerTravelBoardSearchReply +-- globalInformation
+class globalInformation {
+    +attributes : CodedAttributeType
+}
+Fare_MasterPricerTravelBoardSearchReply +-- serviceFeesGrp
+class serviceFeesGrp {
+    +serviceTypeInfo : SelectionDetailsType
+    +serviceFeeRefGrp : serviceFeeRefGrp[]
+    +serviceCoverageInfoGrp : serviceCoverageInfoGrp[]
+    +globalMessageMarker : DummySegmentTypeI
+    +serviceFeeInfoGrp : serviceFeeInfoGrp[]
+    +serviceDetailsGrp : serviceDetailsGrp[]
+    +freeBagAllowanceGrp : freeBagAllowanceGrp[]
+}
+serviceFeesGrp +-- serviceFeeRefGrp
+class serviceFeeRefGrp {
+    +refInfo : ReferenceInfoType
+}
+serviceFeesGrp +-- serviceCoverageInfoGrp
+class serviceCoverageInfoGrp {
+    +itemNumberInfo : ItemNumberType
+    +serviceCovInfoGrp : serviceCovInfoGrp[]
+}
+serviceCoverageInfoGrp +-- serviceCovInfoGrp
+class serviceCovInfoGrp {
+    +paxRefInfo : SpecificTravellerType
+    +coveragePerFlightsInfo : ActionDetailsType[]
+    +carrierInfo : TransportIdentifierType
+    +refInfo : ReferenceInfoType_134840S
+}
+serviceFeesGrp +-- serviceFeeInfoGrp
+class serviceFeeInfoGrp {
+    +itemNumberInfo : ItemNumberType
+    +serviceDetailsGrp : serviceDetailsGrp[]
+}
+serviceFeeInfoGrp +-- serviceDetailsGrp
+class serviceDetailsGrp {
+    +refInfo : ReferenceInfoType_134840S
+    +serviceMatchedInfoGroup : serviceMatchedInfoGroup[]
+}
+serviceDetailsGrp +-- serviceMatchedInfoGroup
+class serviceMatchedInfoGroup {
+    +paxRefInfo : SpecificTravellerType
+    +pricingInfo : FareInformationType_80868S
+    +amountInfo : MonetaryInformationType_193024S
+}
+serviceFeesGrp +-- serviceDetailsGrp
+class serviceDetailsGrp {
+    +serviceOptionInfo : SpecificDataInformationType
+    +feeDescriptionGrp : feeDescriptionGrp
+}
+serviceDetailsGrp +-- feeDescriptionGrp
+class feeDescriptionGrp {
+    +itemNumberInfo : ItemNumberType_80866S
+    +serviceAttributesInfo : AttributeType
+    +serviceDescriptionInfo : SpecialRequirementsDetailsType
+    +commercialName : InteractiveFreeTextType
+}
+serviceFeesGrp +-- freeBagAllowanceGrp
+class freeBagAllowanceGrp {
+    +freeBagAllownceInfo : ExcessBaggageType
+    +itemNumberInfo : ItemNumberType_166130S
+}
+Fare_MasterPricerTravelBoardSearchReply +-- mnrGrp
+class mnrGrp {
+    +mnr : MiniRulesType
+    +mnrDetails : mnrDetails[]
+}
+mnrGrp +-- mnrDetails
+class mnrDetails {
+    +mnrRef : ItemNumberType_176648S
+    +dateInfo : DateAndTimeInformationType_182345S[]
+    +catGrp : catGrp[]
+}
+mnrDetails +-- catGrp
+class catGrp {
+    +catInfo : CategDescrType
+    +monInfo : MonetaryInformationType_174241S
+    +statusInfo : StatusType_182386S
+}
+class FlightCharacteristicsType {
+    +onTimePerformance : OnTimePerformanceType
+    +inFlightSrv : xs:string[]
+}
+class FlightProductInformationType {
+    +cabinProduct : CabinProductDetailsType_195516C[]
+    +contextDetails : ProductTypeDetailsType
+}
+class FlightProductInformationType_141442S {
+    +cabinProduct : CabinProductDetailsType_205138C[]
+    +contextDetails : ProductTypeDetailsType_205137C
+}
+class FlightProductInformationType_161491S {
+    +cabinProduct : CabinProductDetailsType_229142C
+    +fareProductDetail : FareProductDetailsType
+}
+class FlightProductInformationType_176659S {
+    +cabinProduct : CabinProductDetailsType
+    +fareProductDetail : FareProductDetailsType_248552C
+    +corporateId : xs:string[]
+    +breakPoint : xs:string
+    +contextDetails : ProductTypeDetailsType
+}
+class FlightServicesType {
+    +serviceType : xs:string
+    +cabinInfo : CabinInformationType[]
+    +classInfo : ClassInformationType[]
+}
+class FreeTextQualificationType {
+    +textSubjectQualifier : xs:string
+    +informationType : xs:string
+}
+class FreeTextQualificationTypeI {
+    +textSubjectQualifier : xs:string
+}
+class FreeTextQualificationType_120769C {
+    +textSubjectQualifier : xs:string
+    +informationType : xs:string
+    +language : xs:string
+}
+class FrequentTravellerIdentificationCodeType {
+    +frequentTravellerDetails : FrequentTravellerIdentificationType[]
+}
+class FrequentTravellerIdentificationType {
+    +carrier : xs:string
+    +number : xs:string
+    +tierLevel : xs:string
+    +priorityCode : xs:string
+}
+class HeaderInformationTypeI {
+    +status : xs:string[]
+    +dateTimePeriodDetails : DateTimePeriodDetailsTypeI
+    +referenceNumber : xs:string
+    +productIdentification : xs:string[]
+}
+class InteractiveFreeTextType {
+    +freeTextQualification : FreeTextQualificationTypeI
+    +freeText : xs:string
+}
+class InteractiveFreeTextType_78534S {
+    +freeTextQualification : FreeTextQualificationType
+    +description : xs:string[]
+}
+class InteractiveFreeTextType_78544S {
+    +freeTextQualification : FreeTextQualificationType_120769C
+    +description : xs:string[]
+}
+class InteractiveFreeTextType_78559S {
+    +freeTextQualification : FreeTextQualificationType_120769C
+    +description : xs:string[]
+}
+class ItemNumberIdentificationType {
+    +number : xs:string
+    +type : xs:string
+    +qualifier : xs:string
+    +responsibleAgency : xs:string
+}
+class ItemNumberIdentificationType_191597C {
+    +number : xs:string
+    +numberType : xs:string
+}
+class ItemNumberIdentificationType_192331C {
+    +number : xs:string
+    +type : xs:string
+    +qualifier : xs:string
+    +responsibleAgency : xs:string
+}
+class ItemNumberIdentificationType_234878C {
+    +number : xs:integer
+    +type : xs:string
+}
+class ItemNumberIdentificationType_248537C {
+    +number : xs:string
+}
+class ItemNumberType {
+    +itemNumber : ItemNumberIdentificationType_192331C
+}
+class ItemNumberType_161497S {
+    +itemNumberId : ItemNumberIdentificationType_191597C
+    +codeShareDetails : CompanyRoleIdentificationType_120771C[]
+    +priceTicketing : PricingTicketingInformationType
+}
+class ItemNumberType_166130S {
+    +itemNumberDetails : ItemNumberIdentificationType_234878C[]
+}
+class ItemNumberType_176648S {
+    +itemNumberDetails : ItemNumberIdentificationType_248537C[]
+}
+class ItemNumberType_80866S {
+    +itemNumberDetails : ItemNumberIdentificationType
+}
+class ItemReferencesAndVersionsType {
+    +referenceType : xs:string
+    +refNumber : xs:integer
+}
+class ItemReferencesAndVersionsType_78536S {
+    +referenceType : xs:string
+    +refNumber : xs:integer
+}
+class ItemReferencesAndVersionsType_78564S {
+    +referenceType : xs:string
+    +feeRefNumber : xs:integer
+}
+class ItineraryDetailsType {
+    +airportCityQualifier : xs:string
+    +segmentNumber : xs:integer
+}
+class LocationIdentificationDetailsType {
+    +locationId : xs:string
+    +airportCityQualifier : xs:string
+    +terminal : xs:string
+}
+class MiniRulesDetailsType {
+    +interpretation : xs:string
+    +value : xs:string[]
+}
+class MiniRulesIndicatorType {
+    +ruleIndicator : xs:string[]
+}
+class MiniRulesType {
+    +category : xs:string
+}
+class MiniRulesType_78547S {
+    +restrictionType : xs:string
+    +category : xs:string
+    +indicator : MiniRulesIndicatorType
+    +miniRules : MiniRulesDetailsType[]
+}
+class MonetaryInformationDetailsType {
+    +amountType : xs:string
+    +amount : xs:decimal
+    +currency : xs:string
+}
+class MonetaryInformationDetailsTypeI {
+    +typeQualifier : xs:string
+    +amount : xs:string
+    +currency : xs:string
+}
+class MonetaryInformationDetailsType_245528C {
+    +typeQualifier : xs:string
+    +amount : xs:decimal
+    +currency : xs:string
+    +location : xs:string
+}
+class MonetaryInformationType {
+    +monetaryDetail : MonetaryInformationDetailsType[]
+}
+class MonetaryInformationTypeI {
+    +monetaryDetails : MonetaryInformationDetailsTypeI[]
+}
+class MonetaryInformationType_174241S {
+    +monetaryDetails : MonetaryInformationDetailsType_245528C
+    +otherMonetaryDetails : MonetaryInformationDetailsType_245528C[]
+}
+class MonetaryInformationType_185955S {
+    +monetaryDetail : MonetaryInformationDetailsType[]
+}
+class MonetaryInformationType_193024S {
+    +monetaryDetail : MonetaryInformationDetailsType[]
+}
+class OnTimePerformanceType {
+    +dateTimePeriod : xs:string
+    +percentage : xs:decimal
+    +accuracy : xs:string
+}
+class OriginAndDestinationRequestType {
+    +segRef : xs:integer
+    +locationForcing : ItineraryDetailsType[]
+}
+class OriginAndDestinationRequestType_134833S {
+    +segRef : xs:integer
+}
+class OriginatorIdentificationDetailsTypeI {
+    +officeName : xs:integer
+    +agentSignin : xs:string
+    +confidentialOffice : xs:string
+    +otherOffice : xs:string
+}
+class PricingTicketingInformationType {
+    +priceType : xs:string[]
+}
+class PricingTicketingSubsequentType {
+    +paxFareNum : xs:string[]
+}
+class PricingTicketingSubsequentType_193023S {
+    +paxFareNum : xs:string
+    +totalFareAmount : xs:decimal
+    +totalTaxAmount : xs:decimal
+    +codeShareDetails : CompanyRoleIdentificationType_120771C[]
+    +monetaryDetails : MonetaryInformationDetailsType[]
+    +pricingTicketing : PricingTicketingInformationType
+}
+class ProcessingInformationType {
+    +actionQualifier : xs:string
+    +referenceQualifier : xs:string
+    +refNum : xs:string
+}
+class ProductDateTimeType {
+    +dateOfDeparture : xs:string
+    +timeOfDeparture : xs:string
+    +dateOfArrival : xs:string
+    +timeOfArrival : xs:string
+    +dateVariation : xs:integer
+}
+class ProductDetailsType {
+    +designator : xs:string
+    +availabilityStatus : xs:string
+    +specialService : xs:string
+    +option : xs:string[]
+}
+class ProductFacilitiesType {
+    +lastSeatAvailable : xs:string
+    +levelOfAccess : xs:string
+    +electronicTicketing : xs:string
+    +operationalSuffix : xs:string
+    +productDetailQualifier : xs:string
+    +flightCharacteristic : xs:string[]
+}
+class ProductInformationType {
+    +productDetailsQualifier : xs:string
+    +bookingClassDetails : ProductDetailsType[]
+}
+class ProductTypeDetailsType {
+    +availabilityCnxType : xs:string[]
+}
+class ProductTypeDetailsType_205137C {
+    +avl : xs:string[]
+}
+class ProposedSegmentDetailsType {
+    +ref : xs:string
+    +unitQualifier : xs:string
+}
+class ProposedSegmentType {
+    +flightProposal : ProposedSegmentDetailsType[]
+    +flightCharacteristic : xs:string
+    +majCabin : xs:string
+}
+class ReferenceInfoType {
+    +referencingDetail : ReferencingDetailsType_191583C[]
+    +Dummy.NET : xs:string
+}
+class ReferenceInfoType_133176S {
+    +referencingDetail : ReferencingDetailsType[]
+}
+class ReferenceInfoType_134839S {
+    +referencingDetail : ReferencingDetailsType_195561C[]
+}
+class ReferenceInfoType_134840S {
+    +referencingDetail : ReferencingDetailsType_195561C[]
+}
+class ReferenceInfoType_165972S {
+    +referenceDetails : ReferencingDetailsType_234704C[]
+}
+class ReferenceInfoType_176658S {
+    +referencingDetail : ReferencingDetailsType[]
+}
+class ReferenceType {
+    +refOfLeg : xs:string
+    +firstItemIdentifier : xs:integer
+    +lastItemIdentifier : xs:integer
+}
+class ReferencingDetailsType {
+    +refQualifier : xs:string
+    +refNumber : xs:integer
+}
+class ReferencingDetailsType_191583C {
+    +refQualifier : xs:string
+    +refNumber : xs:integer
+}
+class ReferencingDetailsType_195561C {
+    +refQualifier : xs:string
+    +refNumber : xs:integer
+}
+class ReferencingDetailsType_234704C {
+    +type : xs:string
+    +value : xs:string
+}
+class SegmentRepetitionControlDetailsTypeI {
+    +quantity : xs:integer
+    +numberOfUnits : xs:integer
+}
+class SegmentRepetitionControlTypeI {
+    +segmentControlDetails : SegmentRepetitionControlDetailsTypeI[]
+}
+class SelectionDetailsInformationType {
+    +type : xs:string
+    +optionInformation : xs:string
+}
+class SelectionDetailsType {
+    +carrierFeeDetails : SelectionDetailsInformationType
+}
+class SequenceDetailsTypeU {
+    +sequenceDetails : SequenceInformationTypeU
+}
+class SequenceInformationTypeU {
+    +number : xs:string
+    +identificationCode : xs:string
+}
+class ServicesReferences {
+    +reference : xs:string
+    +status : xs:string
+    +fromPrice : xs:string
+}
+class SpecialRequirementsDataDetailsType {
+    +seatCharacteristics : xs:string[]
+    +Dummy.NET : xs:string
+}
+class SpecialRequirementsDetailsType {
+    +serviceRequirementsInfo : SpecialRequirementsTypeDetailsType
+    +seatDetails : SpecialRequirementsDataDetailsType[]
+}
+class SpecialRequirementsTypeDetailsType {
+    +serviceClassification : xs:string
+    +serviceStatus : xs:string
+    +serviceNumberOfInstances : xs:integer
+    +serviceMarketingCarrier : xs:string
+    +serviceGroup : xs:string
+    +serviceSubGroup : xs:string
+    +serviceFreeText : xs:string[]
+}
+class SpecificDataInformationType {
+    +dataTypeInformation : DataTypeInformationType
+    +dataInformation : DataInformationType[]
+}
+class SpecificTravellerDetailsType {
+    +referenceNumber : xs:string
+}
+class SpecificTravellerType {
+    +travellerDetails : SpecificTravellerDetailsType[]
+}
+class StatusDetailsType {
+    +advisoryTypeInfo : xs:string
+    +notification : xs:string
+    +notification2 : xs:string
+    +description : xs:string
+}
+class StatusDetailsType_256255C {
+    +indicator : xs:string
+    +action : xs:string
+}
+class StatusType {
+    +status : StatusDetailsType[]
+}
+class StatusType_182386S {
+    +statusInformation : StatusDetailsType_256255C[]
+}
+class TaxDetailsType {
+    +rate : xs:string
+    +countryCode : xs:string
+    +currencyCode : xs:string
+    +type : xs:string
+    +indicator : xs:string[]
+}
+class TaxType {
+    +taxCategory : xs:string
+    +taxDetails : TaxDetailsType[]
+}
+class TransportIdentifierType {
+    +companyIdentification : CompanyIdentificationTypeI
+}
+class TravelProductType {
+    +productDateTime : ProductDateTimeType
+    +location : LocationIdentificationDetailsType[]
+    +companyId : CompanyIdentificationType
+    +flightOrtrainNumber : xs:string
+    +productDetail : AdditionalProductDetailsType
+    +addProductDetail : ProductFacilitiesType
+    +attributeDetails : CodedAttributeInformationType_270108C[]
+}
+class TravellerDetailsType {
+    +ref : xs:integer
+    +infantIndicator : xs:integer
+}
+class TravellerReferenceInformationType {
+    +ptc : xs:string[]
+    +traveller : TravellerDetailsType[]
+}
+class UserIdentificationType {
+    +officeIdentification : OriginatorIdentificationDetailsTypeI
+    +officeType : xs:string
+    +officeCode : xs:string
+}
+class ValueSearchCriteriaType {
+    +ref : xs:string
+    +value : xs:string
+    +criteriaDetails : CriteriaiDetaislType[]
+}
+
+@enduml

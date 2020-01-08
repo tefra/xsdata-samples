@@ -1,0 +1,1564 @@
+@startuml
+
+class Fare_MasterPricerTravelBoardSearch {
+    +numberOfUnit : numberOfUnit
+    +globalOptions : globalOptions
+    +paxReference : paxReference[]
+    +customerRef : customerRef
+    +formOfPaymentByPassenger : formOfPaymentByPassenger[]
+    +solutionFamily : solutionFamily[]
+    +passengerInfoGrp : passengerInfoGrp[]
+    +fareFamilies : fareFamilies[]
+    +fareOptions : fareOptions
+    +priceToBeat : priceToBeat
+    +taxInfo : taxInfo[]
+    +travelFlightInfo : travelFlightInfo
+    +valueSearch : valueSearch[]
+    +buckets : buckets[]
+    +itinerary : itinerary[]
+    +ticketChangeInfo : ticketChangeInfo
+    +combinationFareFamilies : combinationFareFamilies[]
+    +feeOption : feeOption[]
+    +officeIdDetails : officeIdDetails[]
+}
+Fare_MasterPricerTravelBoardSearch +-- numberOfUnit
+class numberOfUnit {
+    +unitNumberDetail : unitNumberDetail[]
+}
+numberOfUnit +-- unitNumberDetail
+class unitNumberDetail {
+    +numberOfUnits : xs:decimal
+    +typeOfUnit : xs:string
+}
+Fare_MasterPricerTravelBoardSearch +-- globalOptions
+class globalOptions {
+    +selectionDetails : selectionDetails[]
+}
+globalOptions +-- selectionDetails
+class selectionDetails {
+    +option : xs:string
+    +optionInformation : xs:string
+}
+Fare_MasterPricerTravelBoardSearch +-- paxReference
+class paxReference {
+    +ptc : xs:string[]
+    +traveller : traveller[]
+}
+paxReference +-- traveller
+class traveller {
+    +ref : xs:decimal
+    +infantIndicator : xs:string
+}
+Fare_MasterPricerTravelBoardSearch +-- customerRef
+class customerRef {
+    +customerReferences : customerReferences[]
+}
+customerRef +-- customerReferences
+class customerReferences {
+    +referenceQualifier : xs:string
+    +referenceNumber : xs:string
+    +referencePartyName : xs:string
+    +travellerReferenceNbr : xs:string
+}
+Fare_MasterPricerTravelBoardSearch +-- formOfPaymentByPassenger
+class formOfPaymentByPassenger {
+    +formOfPaymentDetails : formOfPaymentDetails
+    +passengerFeeReference : passengerFeeReference
+}
+formOfPaymentByPassenger +-- formOfPaymentDetails
+class formOfPaymentDetails {
+    +formOfPaymentDetails : formOfPaymentDetails[]
+}
+formOfPaymentDetails +-- formOfPaymentDetails
+class formOfPaymentDetails {
+    +type : xs:string
+    +chargedAmount : xs:decimal
+    +creditCardNumber : xs:string
+}
+formOfPaymentByPassenger +-- passengerFeeReference
+class passengerFeeReference {
+    +passengerFeeRefType : xs:string
+    +passengerFeeRefNumber : xs:decimal
+    +otherCharacteristics : otherCharacteristics
+}
+passengerFeeReference +-- otherCharacteristics
+class otherCharacteristics {
+    +passengerFeeRefQualif : xs:string
+}
+Fare_MasterPricerTravelBoardSearch +-- solutionFamily
+class solutionFamily {
+    +valueQualifier : xs:string
+    +value : xs:decimal
+    +fareDetails : fareDetails
+    +identityNumber : xs:string
+    +fareTypeGrouping : fareTypeGrouping
+    +rateCategory : xs:string
+}
+solutionFamily +-- fareDetails
+class fareDetails {
+    +qualifier : xs:string
+    +rate : xs:decimal
+    +country : xs:string
+    +fareCategory : xs:string
+}
+solutionFamily +-- fareTypeGrouping
+class fareTypeGrouping {
+    +pricingGroup : xs:string
+}
+Fare_MasterPricerTravelBoardSearch +-- passengerInfoGrp
+class passengerInfoGrp {
+    +passengerReference : passengerReference
+    +psgDetailsInfo : psgDetailsInfo[]
+}
+passengerInfoGrp +-- passengerReference
+class passengerReference {
+    +segmentControlDetails : segmentControlDetails[]
+}
+passengerReference +-- segmentControlDetails
+class segmentControlDetails {
+    +quantity : xs:decimal
+}
+passengerInfoGrp +-- psgDetailsInfo
+class psgDetailsInfo {
+    +discountPtc : discountPtc
+    +flequentFlyerDetails : flequentFlyerDetails
+}
+psgDetailsInfo +-- discountPtc
+class discountPtc {
+    +valueQualifier : xs:string
+    +value : xs:decimal
+}
+psgDetailsInfo +-- flequentFlyerDetails
+class flequentFlyerDetails {
+    +frequentTravellerDetails : frequentTravellerDetails[]
+}
+flequentFlyerDetails +-- frequentTravellerDetails
+class frequentTravellerDetails {
+    +carrier : xs:string
+    +number : xs:string
+    +customerReference : xs:string
+    +status : xs:string
+    +tierLevel : xs:string
+    +priorityCode : xs:string
+    +tierDescription : xs:string
+    +companyCode : xs:string
+    +customerValue : xs:decimal
+    +type : xs:string
+}
+Fare_MasterPricerTravelBoardSearch +-- fareFamilies
+class fareFamilies {
+    +familyInformation : familyInformation
+    +familyCriteria : familyCriteria
+    +fareFamilySegment : fareFamilySegment[]
+    +otherPossibleCriteria : otherPossibleCriteria[]
+}
+fareFamilies +-- familyInformation
+class familyInformation {
+    +refNumber : xs:decimal
+    +fareFamilyname : xs:string
+    +hierarchy : xs:decimal
+    +commercialFamilyDetails : commercialFamilyDetails[]
+}
+familyInformation +-- commercialFamilyDetails
+class commercialFamilyDetails {
+    +commercialFamily : xs:string
+}
+fareFamilies +-- familyCriteria
+class familyCriteria {
+    +carrierId : xs:string[]
+    +rdb : xs:string[]
+    +fareFamilyInfo : fareFamilyInfo
+    +fareProductDetail : fareProductDetail[]
+    +corporateInfo : corporateInfo[]
+    +cabinProduct : cabinProduct[]
+    +cabinProcessingIdentifier : xs:string
+    +dateTimeDetails : dateTimeDetails[]
+    +otherCriteria : otherCriteria[]
+}
+familyCriteria +-- fareFamilyInfo
+class fareFamilyInfo {
+    +fareFamilyQual : xs:string[]
+}
+familyCriteria +-- fareProductDetail
+class fareProductDetail {
+    +fareBasis : xs:string
+    +fareType : xs:string[]
+}
+familyCriteria +-- corporateInfo
+class corporateInfo {
+    +corporateNumberIdentifier : xs:string
+    +corporateName : xs:string
+}
+familyCriteria +-- cabinProduct
+class cabinProduct {
+    +cabinDesignator : xs:string
+}
+familyCriteria +-- dateTimeDetails
+class dateTimeDetails {
+    +date : xs:string
+    +otherDate : xs:decimal
+}
+familyCriteria +-- otherCriteria
+class otherCriteria {
+    +name : xs:string
+    +value : xs:string[]
+}
+fareFamilies +-- fareFamilySegment
+class fareFamilySegment {
+    +referenceInfo : referenceInfo
+    +familyCriteria : familyCriteria
+}
+fareFamilySegment +-- referenceInfo
+class referenceInfo {
+    +referencingDetail : referencingDetail[]
+}
+referenceInfo +-- referencingDetail
+class referencingDetail {
+    +refQualifier : xs:string
+    +refNumber : xs:decimal
+}
+fareFamilySegment +-- familyCriteria
+class familyCriteria {
+    +carrierId : xs:string[]
+    +rdb : xs:string[]
+    +fareFamilyInfo : fareFamilyInfo
+    +fareProductDetail : fareProductDetail[]
+    +corporateInfo : corporateInfo[]
+    +cabinProduct : cabinProduct[]
+    +cabinProcessingIdentifier : xs:string
+    +dateTimeDetails : dateTimeDetails[]
+    +otherCriteria : otherCriteria[]
+}
+familyCriteria +-- fareFamilyInfo
+class fareFamilyInfo {
+    +fareFamilyQual : xs:string[]
+}
+familyCriteria +-- fareProductDetail
+class fareProductDetail {
+    +fareBasis : xs:string
+    +fareType : xs:string[]
+}
+familyCriteria +-- corporateInfo
+class corporateInfo {
+    +corporateNumberIdentifier : xs:string
+    +corporateName : xs:string
+}
+familyCriteria +-- cabinProduct
+class cabinProduct {
+    +cabinDesignator : xs:string
+}
+familyCriteria +-- dateTimeDetails
+class dateTimeDetails {
+    +date : xs:string
+    +otherDate : xs:decimal
+}
+familyCriteria +-- otherCriteria
+class otherCriteria {
+    +name : xs:string
+    +value : xs:string[]
+}
+fareFamilies +-- otherPossibleCriteria
+class otherPossibleCriteria {
+    +logicalLink : logicalLink
+    +familyCriteria : familyCriteria
+    +fareFamilySegment : fareFamilySegment[]
+}
+otherPossibleCriteria +-- logicalLink
+class logicalLink {
+    +booleanExpression : booleanExpression
+}
+logicalLink +-- booleanExpression
+class booleanExpression {
+    +codeOperator : xs:string
+}
+otherPossibleCriteria +-- familyCriteria
+class familyCriteria {
+    +carrierId : xs:string[]
+    +rdb : xs:string[]
+    +fareFamilyInfo : fareFamilyInfo
+    +fareProductDetail : fareProductDetail[]
+    +corporateInfo : corporateInfo[]
+    +cabinProduct : cabinProduct[]
+    +cabinProcessingIdentifier : xs:string
+    +dateTimeDetails : dateTimeDetails[]
+    +otherCriteria : otherCriteria[]
+}
+familyCriteria +-- fareFamilyInfo
+class fareFamilyInfo {
+    +fareFamilyQual : xs:string[]
+}
+familyCriteria +-- fareProductDetail
+class fareProductDetail {
+    +fareBasis : xs:string
+    +fareType : xs:string[]
+}
+familyCriteria +-- corporateInfo
+class corporateInfo {
+    +corporateNumberIdentifier : xs:string
+    +corporateName : xs:string
+}
+familyCriteria +-- cabinProduct
+class cabinProduct {
+    +cabinDesignator : xs:string
+}
+familyCriteria +-- dateTimeDetails
+class dateTimeDetails {
+    +date : xs:string
+    +otherDate : xs:decimal
+}
+familyCriteria +-- otherCriteria
+class otherCriteria {
+    +name : xs:string
+    +value : xs:string[]
+}
+otherPossibleCriteria +-- fareFamilySegment
+class fareFamilySegment {
+    +referenceInfo : referenceInfo
+    +familyCriteria : familyCriteria
+}
+fareFamilySegment +-- referenceInfo
+class referenceInfo {
+    +referencingDetail : referencingDetail[]
+}
+referenceInfo +-- referencingDetail
+class referencingDetail {
+    +refQualifier : xs:string
+    +refNumber : xs:decimal
+}
+fareFamilySegment +-- familyCriteria
+class familyCriteria {
+    +carrierId : xs:string[]
+    +rdb : xs:string[]
+    +fareFamilyInfo : fareFamilyInfo
+    +fareProductDetail : fareProductDetail[]
+    +corporateInfo : corporateInfo[]
+    +cabinProduct : cabinProduct[]
+    +cabinProcessingIdentifier : xs:string
+    +dateTimeDetails : dateTimeDetails[]
+    +otherCriteria : otherCriteria[]
+}
+familyCriteria +-- fareFamilyInfo
+class fareFamilyInfo {
+    +fareFamilyQual : xs:string[]
+}
+familyCriteria +-- fareProductDetail
+class fareProductDetail {
+    +fareBasis : xs:string
+    +fareType : xs:string[]
+}
+familyCriteria +-- corporateInfo
+class corporateInfo {
+    +corporateNumberIdentifier : xs:string
+    +corporateName : xs:string
+}
+familyCriteria +-- cabinProduct
+class cabinProduct {
+    +cabinDesignator : xs:string
+}
+familyCriteria +-- dateTimeDetails
+class dateTimeDetails {
+    +date : xs:string
+    +otherDate : xs:decimal
+}
+familyCriteria +-- otherCriteria
+class otherCriteria {
+    +name : xs:string
+    +value : xs:string[]
+}
+Fare_MasterPricerTravelBoardSearch +-- fareOptions
+class fareOptions {
+    +pricingTickInfo : pricingTickInfo
+    +corporate : corporate
+    +ticketingPriceScheme : ticketingPriceScheme
+    +feeIdDescription : feeIdDescription
+    +conversionRate : conversionRate
+    +formOfPayment : formOfPayment
+    +frequentTravellerInfo : frequentTravellerInfo
+    +monetaryCabinInfo : monetaryCabinInfo
+}
+fareOptions +-- pricingTickInfo
+class pricingTickInfo {
+    +pricingTicketing : pricingTicketing
+    +ticketingDate : ticketingDate
+    +companyId : companyId
+    +sellingPoint : sellingPoint
+    +ticketingPoint : ticketingPoint
+    +journeyOriginPoint : journeyOriginPoint
+    +corporateId : corporateId
+}
+pricingTickInfo +-- pricingTicketing
+class pricingTicketing {
+    +priceType : xs:string[]
+}
+pricingTickInfo +-- ticketingDate
+class ticketingDate {
+    +date : xs:string
+    +rtcDate : xs:string
+}
+pricingTickInfo +-- companyId
+class companyId {
+    +value : xs:string
+}
+pricingTickInfo +-- sellingPoint
+class sellingPoint {
+    +locationId : xs:string
+    +country : xs:string
+}
+pricingTickInfo +-- ticketingPoint
+class ticketingPoint {
+    +locationId : xs:string
+    +country : xs:string
+}
+pricingTickInfo +-- journeyOriginPoint
+class journeyOriginPoint {
+    +locationId : xs:string
+    +country : xs:string
+}
+pricingTickInfo +-- corporateId
+class corporateId {
+    +arcNumber : xs:string
+    +erspNumber : xs:string
+    +iataNumber : xs:string
+}
+fareOptions +-- corporate
+class corporate {
+    +corporateId : corporateId[]
+}
+corporate +-- corporateId
+class corporateId {
+    +corporateQualifier : xs:string
+    +identity : xs:string[]
+}
+fareOptions +-- ticketingPriceScheme
+class ticketingPriceScheme {
+    +referenceNumber : xs:string
+    +name : xs:string
+    +status : xs:string
+    +description : xs:string
+}
+fareOptions +-- feeIdDescription
+class feeIdDescription {
+    +feeId : feeId[]
+}
+feeIdDescription +-- feeId
+class feeId {
+    +feeType : xs:string
+    +feeIdNumber : xs:string
+}
+fareOptions +-- conversionRate
+class conversionRate {
+    +conversionRateDetail : conversionRateDetail[]
+}
+conversionRate +-- conversionRateDetail
+class conversionRateDetail {
+    +conversionType : xs:string
+    +currency : xs:string
+}
+fareOptions +-- formOfPayment
+class formOfPayment {
+    +formOfPaymentDetails : formOfPaymentDetails[]
+}
+formOfPayment +-- formOfPaymentDetails
+class formOfPaymentDetails {
+    +type : xs:string
+    +chargedAmount : xs:decimal
+    +creditCardNumber : xs:string
+}
+fareOptions +-- frequentTravellerInfo
+class frequentTravellerInfo {
+    +frequentTravellerDetails : frequentTravellerDetails[]
+}
+frequentTravellerInfo +-- frequentTravellerDetails
+class frequentTravellerDetails {
+    +carrier : xs:string
+    +number : xs:string
+    +customerReference : xs:string
+    +tierLevel : xs:string
+    +priorityCode : xs:string
+    +tierDescription : xs:string
+    +type : xs:string
+}
+fareOptions +-- monetaryCabinInfo
+class monetaryCabinInfo {
+    +moneyAndCabinInfo : moneyAndCabinInfo[]
+}
+monetaryCabinInfo +-- moneyAndCabinInfo
+class moneyAndCabinInfo {
+    +amountType : xs:string
+    +amount : xs:decimal
+    +currency : xs:string
+    +locationId : xs:string
+    +cabinClassDesignator : xs:string[]
+}
+Fare_MasterPricerTravelBoardSearch +-- priceToBeat
+class priceToBeat {
+    +moneyInfo : moneyInfo
+    +additionalMoneyInfo : additionalMoneyInfo[]
+}
+priceToBeat +-- moneyInfo
+class moneyInfo {
+    +qualifier : xs:string
+    +amount : xs:decimal
+    +currency : xs:string
+}
+priceToBeat +-- additionalMoneyInfo
+class additionalMoneyInfo {
+    +qualifier : xs:string
+    +amount : xs:decimal
+    +currency : xs:string
+    +locationId : xs:string
+}
+Fare_MasterPricerTravelBoardSearch +-- taxInfo
+class taxInfo {
+    +withholdTaxSurcharge : xs:string
+    +taxDetail : taxDetail[]
+}
+taxInfo +-- taxDetail
+class taxDetail {
+    +rate : xs:string
+    +country : xs:string
+    +currency : xs:string
+    +type : xs:string
+    +amountQualifier : xs:string
+}
+Fare_MasterPricerTravelBoardSearch +-- travelFlightInfo
+class travelFlightInfo {
+    +cabinId : cabinId
+    +companyIdentity : companyIdentity[]
+    +flightDetail : flightDetail
+    +inclusionDetail : inclusionDetail[]
+    +exclusionDetail : exclusionDetail[]
+    +unitNumberDetail : unitNumberDetail[]
+}
+travelFlightInfo +-- cabinId
+class cabinId {
+    +cabinQualifier : xs:string
+    +cabin : xs:string[]
+}
+travelFlightInfo +-- companyIdentity
+class companyIdentity {
+    +carrierQualifier : xs:string
+    +carrierId : xs:string[]
+}
+travelFlightInfo +-- flightDetail
+class flightDetail {
+    +flightType : xs:string[]
+}
+travelFlightInfo +-- inclusionDetail
+class inclusionDetail {
+    +inclusionIdentifier : xs:string
+    +locationId : xs:string
+    +airportCityQualifier : xs:string
+}
+travelFlightInfo +-- exclusionDetail
+class exclusionDetail {
+    +exclusionIdentifier : xs:string
+    +locationId : xs:string
+    +airportCityQualifier : xs:string
+}
+travelFlightInfo +-- unitNumberDetail
+class unitNumberDetail {
+    +numberOfUnits : xs:decimal
+    +typeOfUnit : xs:string
+}
+Fare_MasterPricerTravelBoardSearch +-- valueSearch
+class valueSearch {
+    +criteriaName : xs:string
+    +criteriaCode : xs:string
+    +value : xs:string
+    +criteriaDetails : criteriaDetails[]
+}
+valueSearch +-- criteriaDetails
+class criteriaDetails {
+    +type : xs:string
+    +value : xs:string
+    +attribute : xs:string[]
+}
+Fare_MasterPricerTravelBoardSearch +-- buckets
+class buckets {
+    +bucketInfo : bucketInfo
+    +bucketDetails : bucketDetails[]
+}
+buckets +-- bucketInfo
+class bucketInfo {
+    +number : xs:string
+    +name : xs:string
+    +completion : xs:string
+    +mode : xs:string
+    +valueRef : xs:string
+    +weight : xs:decimal
+    +count : xs:decimal
+    +attributeCount : xs:decimal
+}
+buckets +-- bucketDetails
+class bucketDetails {
+    +code : xs:string
+    +type : xs:string
+    +attribute : attribute[]
+}
+bucketDetails +-- attribute
+class attribute {
+    +requestedSgt : xs:string
+    +value : xs:string[]
+}
+Fare_MasterPricerTravelBoardSearch +-- itinerary
+class itinerary {
+    +requestedSegmentRef : requestedSegmentRef
+    +departureLocalization : departureLocalization
+    +arrivalLocalization : arrivalLocalization
+    +timeDetails : timeDetails
+    +flightInfo : flightInfo
+    +familyInformation : familyInformation
+    +valueSearch : valueSearch[]
+    +groupOfFlights : groupOfFlights[]
+    +flightInfoPNR : flightInfoPNR[]
+    +requestedSegmentAction : requestedSegmentAction
+    +attributes : attributes
+}
+itinerary +-- requestedSegmentRef
+class requestedSegmentRef {
+    +segRef : xs:decimal
+    +locationForcing : locationForcing[]
+}
+requestedSegmentRef +-- locationForcing
+class locationForcing {
+    +airportCityQualifier : xs:string
+    +segmentNumber : xs:decimal
+}
+itinerary +-- departureLocalization
+class departureLocalization {
+    +departurePoint : departurePoint
+    +depMultiCity : depMultiCity[]
+    +firstPnrSegmentRef : firstPnrSegmentRef
+    +attributeDetails : attributeDetails[]
+}
+departureLocalization +-- departurePoint
+class departurePoint {
+    +distance : xs:decimal
+    +distanceUnit : xs:string
+    +locationId : xs:string
+    +airportCityQualifier : xs:string
+    +latitude : xs:string
+    +longitude : xs:string
+}
+departureLocalization +-- depMultiCity
+class depMultiCity {
+    +locationId : xs:string
+    +airportCityQualifier : xs:string
+}
+departureLocalization +-- firstPnrSegmentRef
+class firstPnrSegmentRef {
+    +pnrSegmentTattoo : xs:decimal
+    +pnrSegmentQualifier : xs:string
+}
+departureLocalization +-- attributeDetails
+class attributeDetails {
+    +type : xs:string
+    +value : xs:string[]
+}
+itinerary +-- arrivalLocalization
+class arrivalLocalization {
+    +arrivalPointDetails : arrivalPointDetails
+    +arrivalMultiCity : arrivalMultiCity[]
+    +attributeDetails : attributeDetails[]
+}
+arrivalLocalization +-- arrivalPointDetails
+class arrivalPointDetails {
+    +distance : xs:decimal
+    +distanceUnit : xs:string
+    +locationId : xs:string
+    +airportCityQualifier : xs:string
+    +latitude : xs:string
+    +longitude : xs:string
+}
+arrivalLocalization +-- arrivalMultiCity
+class arrivalMultiCity {
+    +locationId : xs:string
+    +airportCityQualifier : xs:string
+}
+arrivalLocalization +-- attributeDetails
+class attributeDetails {
+    +type : xs:string
+    +value : xs:string[]
+}
+itinerary +-- timeDetails
+class timeDetails {
+    +firstDateTimeDetail : firstDateTimeDetail
+    +rangeOfDate : rangeOfDate
+    +tripDetails : tripDetails
+}
+timeDetails +-- firstDateTimeDetail
+class firstDateTimeDetail {
+    +timeQualifier : xs:string
+    +date : xs:string
+    +time : xs:string
+    +timeWindow : xs:string
+}
+timeDetails +-- rangeOfDate
+class rangeOfDate {
+    +rangeQualifier : xs:string
+    +dayInterval : xs:decimal
+    +timeAtdestination : xs:string
+}
+timeDetails +-- tripDetails
+class tripDetails {
+    +flexibilityQualifier : xs:string
+    +tripInterval : xs:decimal
+    +tripDuration : xs:decimal
+}
+itinerary +-- flightInfo
+class flightInfo {
+    +cabinId : cabinId
+    +companyIdentity : companyIdentity[]
+    +flightDetail : flightDetail
+    +inclusionDetail : inclusionDetail[]
+    +exclusionDetail : exclusionDetail[]
+    +unitNumberDetail : unitNumberDetail[]
+}
+flightInfo +-- cabinId
+class cabinId {
+    +cabinQualifier : xs:string
+    +cabin : xs:string[]
+}
+flightInfo +-- companyIdentity
+class companyIdentity {
+    +carrierQualifier : xs:string
+    +carrierId : xs:string[]
+}
+flightInfo +-- flightDetail
+class flightDetail {
+    +flightType : xs:string[]
+}
+flightInfo +-- inclusionDetail
+class inclusionDetail {
+    +inclusionIdentifier : xs:string
+    +locationId : xs:string
+    +airportCityQualifier : xs:string
+}
+flightInfo +-- exclusionDetail
+class exclusionDetail {
+    +exclusionIdentifier : xs:string
+    +locationId : xs:string
+    +airportCityQualifier : xs:string
+}
+flightInfo +-- unitNumberDetail
+class unitNumberDetail {
+    +numberOfUnits : xs:decimal
+    +typeOfUnit : xs:string
+}
+itinerary +-- familyInformation
+class familyInformation {
+    +commercialFamilyDetails : commercialFamilyDetails[]
+}
+familyInformation +-- commercialFamilyDetails
+class commercialFamilyDetails {
+    +commercialFamily : xs:string
+}
+itinerary +-- valueSearch
+class valueSearch {
+    +criteriaName : xs:string
+    +criteriaCode : xs:string
+    +value : xs:string
+    +criteriaDetails : criteriaDetails[]
+}
+valueSearch +-- criteriaDetails
+class criteriaDetails {
+    +type : xs:string
+    +value : xs:string
+    +attribute : xs:string[]
+}
+itinerary +-- groupOfFlights
+class groupOfFlights {
+    +propFlightGrDetail : propFlightGrDetail
+    +priceToBeat : priceToBeat
+    +flightDetails : flightDetails[]
+}
+groupOfFlights +-- propFlightGrDetail
+class propFlightGrDetail {
+    +flightProposal : flightProposal[]
+    +flightCharacteristic : xs:string
+    +majCabin : xs:string
+}
+propFlightGrDetail +-- flightProposal
+class flightProposal {
+    +ref : xs:string
+    +unitQualifier : xs:string
+}
+groupOfFlights +-- priceToBeat
+class priceToBeat {
+    +moneyInfo : moneyInfo
+    +additionalMoneyInfo : additionalMoneyInfo[]
+}
+priceToBeat +-- moneyInfo
+class moneyInfo {
+    +qualifier : xs:string
+    +amount : xs:decimal
+    +currency : xs:string
+}
+priceToBeat +-- additionalMoneyInfo
+class additionalMoneyInfo {
+    +qualifier : xs:string
+    +amount : xs:decimal
+    +currency : xs:string
+    +locationId : xs:string
+}
+groupOfFlights +-- flightDetails
+class flightDetails {
+    +flightInformation : flightInformation
+    +avlInfo : avlInfo[]
+    +technicalStop : technicalStop[]
+    +commercialAgreement : commercialAgreement
+    +addInfo : addInfo
+    +terminalEquipmentDetails : terminalEquipmentDetails[]
+    +reservationInfo : reservationInfo
+    +priceToBeat : priceToBeat
+}
+flightDetails +-- flightInformation
+class flightInformation {
+    +productDateTime : productDateTime
+    +location : location[]
+    +companyId : companyId
+    +flightOrtrainNumber : xs:string
+    +productDetail : productDetail
+    +addProductDetail : addProductDetail
+    +attributeDetails : attributeDetails[]
+}
+flightInformation +-- productDateTime
+class productDateTime {
+    +dateOfDeparture : xs:string
+    +timeOfDeparture : xs:string
+    +dateOfArrival : xs:string
+    +timeOfArrival : xs:string
+    +dateVariation : xs:string
+}
+flightInformation +-- location
+class location {
+    +locationId : xs:string
+    +airportCityQualifier : xs:string
+    +terminal : xs:string
+}
+flightInformation +-- companyId
+class companyId {
+    +marketingCarrier : xs:string
+    +operatingCarrier : xs:string
+}
+flightInformation +-- productDetail
+class productDetail {
+    +equipmentType : xs:string
+    +operatingDay : xs:string
+    +techStopNumber : xs:decimal
+    +locationId : xs:string[]
+}
+flightInformation +-- addProductDetail
+class addProductDetail {
+    +lastSeatAvailable : xs:string
+    +levelOfAccess : xs:string
+    +electronicTicketing : xs:string
+    +operationalSuffix : xs:string
+    +productDetailQualifier : xs:string
+    +flightCharacteristic : xs:string[]
+}
+flightInformation +-- attributeDetails
+class attributeDetails {
+    +attributeType : xs:string
+    +attributeDescription : xs:string
+}
+flightDetails +-- avlInfo
+class avlInfo {
+    +cabinProduct : cabinProduct[]
+    +contextDetails : contextDetails
+}
+avlInfo +-- cabinProduct
+class cabinProduct {
+    +rbd : xs:string
+    +bookingModifier : xs:string
+    +cabin : xs:string
+    +avlStatus : xs:string
+}
+avlInfo +-- contextDetails
+class contextDetails {
+    +avl : xs:string[]
+}
+flightDetails +-- technicalStop
+class technicalStop {
+    +stopDetails : stopDetails[]
+    +Dummy.NET : xs:string
+}
+technicalStop +-- stopDetails
+class stopDetails {
+    +dateQualifier : xs:string
+    +date : xs:string
+    +firstTime : xs:string
+    +equipementType : xs:string
+    +locationId : xs:string
+}
+flightDetails +-- commercialAgreement
+class commercialAgreement {
+    +codeshareDetails : codeshareDetails
+    +otherCodeshareDetails : otherCodeshareDetails[]
+}
+commercialAgreement +-- codeshareDetails
+class codeshareDetails {
+    +codeShareType : xs:string
+    +airlineDesignator : xs:string
+    +flightNumber : xs:decimal
+}
+commercialAgreement +-- otherCodeshareDetails
+class otherCodeshareDetails {
+    +codeShareType : xs:string
+    +airlineDesignator : xs:string
+    +flightNumber : xs:decimal
+}
+flightDetails +-- addInfo
+class addInfo {
+    +status : xs:string[]
+    +dateTimePeriodDetails : dateTimePeriodDetails
+    +referenceNumber : xs:string
+    +productIdentification : xs:string[]
+}
+addInfo +-- dateTimePeriodDetails
+class dateTimePeriodDetails {
+    +qualifier : xs:string
+    +value : xs:string
+}
+flightDetails +-- terminalEquipmentDetails
+class terminalEquipmentDetails {
+    +legDetails : legDetails
+    +departureStationInfo : departureStationInfo
+    +arrivalStationInfo : arrivalStationInfo
+    +mileageTimeDetails : mileageTimeDetails
+}
+terminalEquipmentDetails +-- legDetails
+class legDetails {
+    +equipment : xs:string
+    +duration : xs:decimal
+    +complexingFlightIndicator : xs:string
+}
+terminalEquipmentDetails +-- departureStationInfo
+class departureStationInfo {
+    +terminal : xs:string
+}
+terminalEquipmentDetails +-- arrivalStationInfo
+class arrivalStationInfo {
+    +terminal : xs:string
+}
+terminalEquipmentDetails +-- mileageTimeDetails
+class mileageTimeDetails {
+    +elapsedGroundTime : xs:decimal
+}
+flightDetails +-- reservationInfo
+class reservationInfo {
+    +booking : xs:string
+    +identifier : xs:string
+    +status : xs:string
+    +itemNumber : xs:decimal
+    +dateTimeDetails : dateTimeDetails
+    +designator : xs:string
+    +movementType : xs:string
+    +productTypeDetails : productTypeDetails
+}
+reservationInfo +-- dateTimeDetails
+class dateTimeDetails {
+    +date : xs:string
+    +time : xs:string
+}
+reservationInfo +-- productTypeDetails
+class productTypeDetails {
+    +sequenceNumber : xs:string
+    +availabilityContext : xs:string
+}
+flightDetails +-- priceToBeat
+class priceToBeat {
+    +moneyInfo : moneyInfo
+    +additionalMoneyInfo : additionalMoneyInfo[]
+}
+priceToBeat +-- moneyInfo
+class moneyInfo {
+    +qualifier : xs:string
+    +amount : xs:decimal
+    +currency : xs:string
+}
+priceToBeat +-- additionalMoneyInfo
+class additionalMoneyInfo {
+    +qualifier : xs:string
+    +amount : xs:decimal
+    +currency : xs:string
+    +locationId : xs:string
+}
+itinerary +-- flightInfoPNR
+class flightInfoPNR {
+    +travelResponseDetails : travelResponseDetails
+    +timeTableDate : timeTableDate
+    +terminalEquipmentDetails : terminalEquipmentDetails[]
+    +codeshareData : codeshareData
+    +disclosure : disclosure
+    +stopDetails : stopDetails
+    +trafficRestrictionData : trafficRestrictionData
+    +reservationInfo : reservationInfo
+    +incidentalStopInfo : incidentalStopInfo[]
+}
+flightInfoPNR +-- travelResponseDetails
+class travelResponseDetails {
+    +flightDate : flightDate
+    +boardPointDetails : boardPointDetails
+    +offpointDetails : offpointDetails
+    +companyDetails : companyDetails
+    +flightIdentification : flightIdentification
+    +flightTypeDetails : flightTypeDetails
+}
+travelResponseDetails +-- flightDate
+class flightDate {
+    +departureDate : xs:string
+    +departureTime : xs:string
+    +arrivalDate : xs:string
+    +arrivalTime : xs:string
+    +dateVariation : xs:string
+}
+travelResponseDetails +-- boardPointDetails
+class boardPointDetails {
+    +trueLocationId : xs:string
+}
+travelResponseDetails +-- offpointDetails
+class offpointDetails {
+    +trueLocationId : xs:string
+}
+travelResponseDetails +-- companyDetails
+class companyDetails {
+    +marketingCompany : xs:string
+}
+travelResponseDetails +-- flightIdentification
+class flightIdentification {
+    +flightNumber : xs:decimal
+    +operationalSuffix : xs:string
+}
+travelResponseDetails +-- flightTypeDetails
+class flightTypeDetails {
+    +flightIndicator : xs:string[]
+}
+flightInfoPNR +-- timeTableDate
+class timeTableDate {
+    +beginDateTime : beginDateTime
+    +endDateTime : endDateTime
+    +frequency : frequency
+}
+timeTableDate +-- beginDateTime
+class beginDateTime {
+    +year : xs:string
+    +month : xs:decimal
+    +day : xs:decimal
+}
+timeTableDate +-- endDateTime
+class endDateTime {
+    +year : xs:string
+    +month : xs:decimal
+    +day : xs:decimal
+}
+timeTableDate +-- frequency
+class frequency {
+    +qualifier : xs:string
+    +value : xs:string[]
+}
+flightInfoPNR +-- terminalEquipmentDetails
+class terminalEquipmentDetails {
+    +legDetails : legDetails
+    +departureStationInfo : departureStationInfo
+    +arrivalStationInfo : arrivalStationInfo
+    +mileageTimeDetails : mileageTimeDetails
+}
+terminalEquipmentDetails +-- legDetails
+class legDetails {
+    +equipment : xs:string
+    +duration : xs:decimal
+    +complexingFlightIndicator : xs:string
+}
+terminalEquipmentDetails +-- departureStationInfo
+class departureStationInfo {
+    +terminal : xs:string
+}
+terminalEquipmentDetails +-- arrivalStationInfo
+class arrivalStationInfo {
+    +terminal : xs:string
+}
+terminalEquipmentDetails +-- mileageTimeDetails
+class mileageTimeDetails {
+    +elapsedGroundTime : xs:decimal
+}
+flightInfoPNR +-- codeshareData
+class codeshareData {
+    +codeshareDetails : codeshareDetails
+    +otherCodeshareDetails : otherCodeshareDetails[]
+}
+codeshareData +-- codeshareDetails
+class codeshareDetails {
+    +transportStageQualifier : xs:string
+    +airlineDesignator : xs:string
+    +flightNumber : xs:decimal
+    +operationalSuffix : xs:string
+}
+codeshareData +-- otherCodeshareDetails
+class otherCodeshareDetails {
+    +transportStageQualifier : xs:string
+    +airlineDesignator : xs:string
+    +flightNumber : xs:decimal
+    +operationalSuffix : xs:string
+}
+flightInfoPNR +-- disclosure
+class disclosure {
+    +freeTextDetails : freeTextDetails
+    +freeText : xs:string
+}
+disclosure +-- freeTextDetails
+class freeTextDetails {
+    +textSubjectQualifier : xs:string
+    +informationType : xs:string
+    +source : xs:string
+    +encoding : xs:string
+}
+flightInfoPNR +-- stopDetails
+class stopDetails {
+    +routingDetails : routingDetails[]
+}
+stopDetails +-- routingDetails
+class routingDetails {
+    +station : xs:string
+}
+flightInfoPNR +-- trafficRestrictionData
+class trafficRestrictionData {
+    +trafficRestrictionDetails : trafficRestrictionDetails[]
+}
+trafficRestrictionData +-- trafficRestrictionDetails
+class trafficRestrictionDetails {
+    +code : xs:string
+}
+flightInfoPNR +-- reservationInfo
+class reservationInfo {
+    +booking : xs:string
+    +identifier : xs:string
+    +status : xs:string
+    +itemNumber : xs:decimal
+    +dateTimeDetails : dateTimeDetails
+    +designator : xs:string
+    +movementType : xs:string
+    +productTypeDetails : productTypeDetails
+}
+reservationInfo +-- dateTimeDetails
+class dateTimeDetails {
+    +date : xs:string
+    +time : xs:string
+}
+reservationInfo +-- productTypeDetails
+class productTypeDetails {
+    +sequenceNumber : xs:string
+    +availabilityContext : xs:string
+}
+flightInfoPNR +-- incidentalStopInfo
+class incidentalStopInfo {
+    +dateTimeInfo : dateTimeInfo
+}
+incidentalStopInfo +-- dateTimeInfo
+class dateTimeInfo {
+    +dateTimeDetails : dateTimeDetails[]
+}
+dateTimeInfo +-- dateTimeDetails
+class dateTimeDetails {
+    +qualifier : xs:string
+    +date : xs:string
+    +time : xs:string
+    +qualifier2 : xs:string
+    +reserved1 : xs:string
+    +reserved2 : xs:string
+}
+itinerary +-- requestedSegmentAction
+class requestedSegmentAction {
+    +actionRequestCode : xs:string
+    +productDetails : productDetails
+}
+requestedSegmentAction +-- productDetails
+class productDetails {
+    +flightNumber : xs:string
+    +bookingClass : xs:string
+    +operationalSuffix : xs:string
+    +modifier : xs:string[]
+}
+itinerary +-- attributes
+class attributes {
+    +attributeDetails : attributeDetails[]
+}
+attributes +-- attributeDetails
+class attributeDetails {
+    +attributeType : xs:string
+    +attributeDescription : xs:string
+}
+Fare_MasterPricerTravelBoardSearch +-- ticketChangeInfo
+class ticketChangeInfo {
+    +ticketNumberDetails : ticketNumberDetails
+    +ticketRequestedSegments : ticketRequestedSegments[]
+}
+ticketChangeInfo +-- ticketNumberDetails
+class ticketNumberDetails {
+    +documentDetails : documentDetails[]
+}
+ticketNumberDetails +-- documentDetails
+class documentDetails {
+    +number : xs:string
+}
+ticketChangeInfo +-- ticketRequestedSegments
+class ticketRequestedSegments {
+    +actionIdentification : actionIdentification
+    +connectPointDetails : connectPointDetails
+}
+ticketRequestedSegments +-- actionIdentification
+class actionIdentification {
+    +actionRequestCode : xs:string
+    +productDetails : productDetails
+}
+actionIdentification +-- productDetails
+class productDetails {
+    +flightNumber : xs:string
+    +bookingClass : xs:string
+    +operationalSuffix : xs:string
+    +modifier : xs:string[]
+}
+ticketRequestedSegments +-- connectPointDetails
+class connectPointDetails {
+    +connectionDetails : connectionDetails[]
+}
+connectPointDetails +-- connectionDetails
+class connectionDetails {
+    +location : xs:string
+}
+Fare_MasterPricerTravelBoardSearch +-- combinationFareFamilies
+class combinationFareFamilies {
+    +itemFFCNumber : itemFFCNumber
+    +nbOfUnits : nbOfUnits
+    +referenceInfo : referenceInfo[]
+}
+combinationFareFamilies +-- itemFFCNumber
+class itemFFCNumber {
+    +itemNumberId : itemNumberId
+}
+itemFFCNumber +-- itemNumberId
+class itemNumberId {
+    +number : xs:string
+    +type : xs:string
+    +qualifier : xs:string
+    +responsibleAgency : xs:string
+}
+combinationFareFamilies +-- nbOfUnits
+class nbOfUnits {
+    +unitNumberDetail : unitNumberDetail[]
+}
+nbOfUnits +-- unitNumberDetail
+class unitNumberDetail {
+    +numberOfUnits : xs:decimal
+    +typeOfUnit : xs:string
+}
+combinationFareFamilies +-- referenceInfo
+class referenceInfo {
+    +referencingDetail : referencingDetail[]
+    +Dummy.NET : xs:string
+}
+referenceInfo +-- referencingDetail
+class referencingDetail {
+    +refQualifier : xs:string
+    +refNumber : xs:decimal
+}
+Fare_MasterPricerTravelBoardSearch +-- feeOption
+class feeOption {
+    +feeTypeInfo : feeTypeInfo
+    +rateTax : rateTax
+    +feeDetails : feeDetails[]
+}
+feeOption +-- feeTypeInfo
+class feeTypeInfo {
+    +carrierFeeDetails : carrierFeeDetails
+    +otherSelectionDetails : otherSelectionDetails[]
+}
+feeTypeInfo +-- carrierFeeDetails
+class carrierFeeDetails {
+    +type : xs:string
+    +optionInformation : xs:string
+}
+feeTypeInfo +-- otherSelectionDetails
+class otherSelectionDetails {
+    +option : xs:string
+    +optionInformation : xs:string
+}
+feeOption +-- rateTax
+class rateTax {
+    +monetaryDetails : monetaryDetails[]
+}
+rateTax +-- monetaryDetails
+class monetaryDetails {
+    +typeQualifier : xs:string
+    +amount : xs:string
+    +currency : xs:string
+}
+feeOption +-- feeDetails
+class feeDetails {
+    +feeInfo : feeInfo
+    +associatedAmounts : associatedAmounts
+    +feeDescriptionGrp : feeDescriptionGrp
+}
+feeDetails +-- feeInfo
+class feeInfo {
+    +dataTypeInformation : dataTypeInformation
+    +dataInformation : dataInformation[]
+}
+feeInfo +-- dataTypeInformation
+class dataTypeInformation {
+    +subType : xs:string
+    +option : xs:string
+}
+feeInfo +-- dataInformation
+class dataInformation {
+    +indicator : xs:string
+}
+feeDetails +-- associatedAmounts
+class associatedAmounts {
+    +monetaryDetails : monetaryDetails[]
+}
+associatedAmounts +-- monetaryDetails
+class monetaryDetails {
+    +typeQualifier : xs:string
+    +amount : xs:string
+    +currency : xs:string
+    +location : xs:string
+}
+feeDetails +-- feeDescriptionGrp
+class feeDescriptionGrp {
+    +itemNumberInfo : itemNumberInfo
+    +serviceAttributesInfo : serviceAttributesInfo
+    +serviceDescriptionInfo : serviceDescriptionInfo
+}
+feeDescriptionGrp +-- itemNumberInfo
+class itemNumberInfo {
+    +itemNumberDetails : itemNumberDetails
+}
+itemNumberInfo +-- itemNumberDetails
+class itemNumberDetails {
+    +number : xs:string
+    +type : xs:string
+    +qualifier : xs:string
+    +responsibleAgency : xs:string
+}
+feeDescriptionGrp +-- serviceAttributesInfo
+class serviceAttributesInfo {
+    +attributeQualifier : xs:string
+    +attributeDetails : attributeDetails[]
+}
+serviceAttributesInfo +-- attributeDetails
+class attributeDetails {
+    +attributeType : xs:string
+    +attributeDescription : xs:string
+}
+feeDescriptionGrp +-- serviceDescriptionInfo
+class serviceDescriptionInfo {
+    +serviceRequirementsInfo : serviceRequirementsInfo
+    +seatDetails : seatDetails[]
+}
+serviceDescriptionInfo +-- serviceRequirementsInfo
+class serviceRequirementsInfo {
+    +serviceClassification : xs:string
+    +serviceStatus : xs:string
+    +serviceNumberOfInstances : xs:decimal
+    +serviceMarketingCarrier : xs:string
+    +serviceGroup : xs:string
+    +serviceSubGroup : xs:string
+    +serviceFreeText : xs:string[]
+}
+serviceDescriptionInfo +-- seatDetails
+class seatDetails {
+    +seatCharacteristics : xs:string[]
+}
+Fare_MasterPricerTravelBoardSearch +-- officeIdDetails
+class officeIdDetails {
+    +officeIdInformation : officeIdInformation
+    +nbOfUnits : nbOfUnits
+    +uidOption : uidOption
+    +pricingTickInfo : pricingTickInfo
+    +corporateFareInfo : corporateFareInfo
+    +travelFlightInfo : travelFlightInfo
+    +airlineDistributionDetails : airlineDistributionDetails[]
+}
+officeIdDetails +-- officeIdInformation
+class officeIdInformation {
+    +officeIdentification : officeIdentification
+    +officeType : xs:string
+    +officeCode : xs:string
+}
+officeIdInformation +-- officeIdentification
+class officeIdentification {
+    +officeName : xs:decimal
+    +agentSignin : xs:string
+    +confidentialOffice : xs:string
+    +otherOffice : xs:string
+}
+officeIdDetails +-- nbOfUnits
+class nbOfUnits {
+    +unitNumberDetail : unitNumberDetail[]
+}
+nbOfUnits +-- unitNumberDetail
+class unitNumberDetail {
+    +numberOfUnits : xs:decimal
+    +typeOfUnit : xs:string
+}
+officeIdDetails +-- uidOption
+class uidOption {
+    +attributeDetails : attributeDetails[]
+}
+uidOption +-- attributeDetails
+class attributeDetails {
+    +attributeType : xs:string
+    +attributeDescription : xs:string
+}
+officeIdDetails +-- pricingTickInfo
+class pricingTickInfo {
+    +pricingTicketing : pricingTicketing
+    +ticketingDate : ticketingDate
+    +companyId : companyId
+    +sellingPoint : sellingPoint
+    +ticketingPoint : ticketingPoint
+    +journeyOriginPoint : journeyOriginPoint
+    +corporateId : corporateId
+}
+pricingTickInfo +-- pricingTicketing
+class pricingTicketing {
+    +priceType : xs:string[]
+}
+pricingTickInfo +-- ticketingDate
+class ticketingDate {
+    +date : xs:string
+    +rtcDate : xs:string
+}
+pricingTickInfo +-- companyId
+class companyId {
+    +value : xs:string
+}
+pricingTickInfo +-- sellingPoint
+class sellingPoint {
+    +locationId : xs:string
+    +country : xs:string
+}
+pricingTickInfo +-- ticketingPoint
+class ticketingPoint {
+    +locationId : xs:string
+    +country : xs:string
+}
+pricingTickInfo +-- journeyOriginPoint
+class journeyOriginPoint {
+    +locationId : xs:string
+    +country : xs:string
+}
+pricingTickInfo +-- corporateId
+class corporateId {
+    +arcNumber : xs:string
+    +erspNumber : xs:string
+    +iataNumber : xs:string
+}
+officeIdDetails +-- corporateFareInfo
+class corporateFareInfo {
+    +corporateFareIdentifiers : corporateFareIdentifiers
+}
+corporateFareInfo +-- corporateFareIdentifiers
+class corporateFareIdentifiers {
+    +fareQualifier : xs:string
+    +identifyNumber : xs:string[]
+}
+officeIdDetails +-- travelFlightInfo
+class travelFlightInfo {
+    +cabinId : cabinId
+    +companyIdentity : companyIdentity[]
+    +flightDetail : flightDetail
+    +inclusionDetail : inclusionDetail[]
+    +exclusionDetail : exclusionDetail[]
+    +unitNumberDetail : unitNumberDetail[]
+}
+travelFlightInfo +-- cabinId
+class cabinId {
+    +cabinQualifier : xs:string
+    +cabin : xs:string[]
+}
+travelFlightInfo +-- companyIdentity
+class companyIdentity {
+    +carrierQualifier : xs:string
+    +carrierId : xs:string[]
+}
+travelFlightInfo +-- flightDetail
+class flightDetail {
+    +flightType : xs:string[]
+}
+travelFlightInfo +-- inclusionDetail
+class inclusionDetail {
+    +inclusionIdentifier : xs:string
+    +locationId : xs:string
+    +airportCityQualifier : xs:string
+}
+travelFlightInfo +-- exclusionDetail
+class exclusionDetail {
+    +exclusionIdentifier : xs:string
+    +locationId : xs:string
+    +airportCityQualifier : xs:string
+}
+travelFlightInfo +-- unitNumberDetail
+class unitNumberDetail {
+    +numberOfUnits : xs:decimal
+    +typeOfUnit : xs:string
+}
+officeIdDetails +-- airlineDistributionDetails
+class airlineDistributionDetails {
+    +requestedSegmentRef : requestedSegmentRef
+    +flightInfo : flightInfo
+}
+airlineDistributionDetails +-- requestedSegmentRef
+class requestedSegmentRef {
+    +segRef : xs:decimal
+    +locationForcing : locationForcing[]
+}
+requestedSegmentRef +-- locationForcing
+class locationForcing {
+    +airportCityQualifier : xs:string
+    +segmentNumber : xs:decimal
+}
+airlineDistributionDetails +-- flightInfo
+class flightInfo {
+    +cabinId : cabinId
+    +companyIdentity : companyIdentity[]
+    +flightDetail : flightDetail
+    +inclusionDetail : inclusionDetail[]
+    +exclusionDetail : exclusionDetail[]
+    +unitNumberDetail : unitNumberDetail[]
+}
+flightInfo +-- cabinId
+class cabinId {
+    +cabinQualifier : xs:string
+    +cabin : xs:string[]
+}
+flightInfo +-- companyIdentity
+class companyIdentity {
+    +carrierQualifier : xs:string
+    +carrierId : xs:string[]
+}
+flightInfo +-- flightDetail
+class flightDetail {
+    +flightType : xs:string[]
+}
+flightInfo +-- inclusionDetail
+class inclusionDetail {
+    +inclusionIdentifier : xs:string
+    +locationId : xs:string
+    +airportCityQualifier : xs:string
+}
+flightInfo +-- exclusionDetail
+class exclusionDetail {
+    +exclusionIdentifier : xs:string
+    +locationId : xs:string
+    +airportCityQualifier : xs:string
+}
+flightInfo +-- unitNumberDetail
+class unitNumberDetail {
+    +numberOfUnits : xs:decimal
+    +typeOfUnit : xs:string
+}
+
+@enduml

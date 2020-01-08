@@ -1,0 +1,82 @@
+@startuml
+
+class BaseCoreReq {
+    +BillingPointOfSaleInfo : BillingPointOfSaleInfo
+    +AgentIDOverride : AgentIDOverride[]
+    +TerminalSessionInfo : TerminalSessionInfo
+    +TraceId : xs:string
+    +TokenId : xs:string
+    +AuthorizedBy : xs:string
+    +TargetBranch : xs:string
+    +OverrideLogging : typeLoggingLevel
+    +LanguageCode : xs:language
+}
+class BaseCoreSearchReq {
+    +NextResultReference : NextResultReference[]
+}
+BaseCoreSearchReq *- BaseCoreReq
+class BaseCreateReservationReq {
+    +LinkedUniversalRecord : LinkedUniversalRecord[]
+    +BookingTraveler : BookingTraveler[]
+    +OSI : OSI[]
+    +AccountingRemark : AccountingRemark[]
+    +GeneralRemark : GeneralRemark[]
+    +XMLRemark : XMLRemark[]
+    +UnassociatedRemark : UnassociatedRemark[]
+    +Postscript : Postscript
+    +PassiveInfo : PassiveInfo
+    +ContinuityCheckOverride : ContinuityCheckOverride
+    +AgencyContactInfo : AgencyContactInfo
+    +CustomerID : CustomerID
+    +FileFinishingInfo : FileFinishingInfo
+    +CommissionRemark : CommissionRemark
+    +ConsolidatorRemark : ConsolidatorRemark
+    +InvoiceRemark : InvoiceRemark[]
+    +SSR : SSR[]
+    +EmailNotification : EmailNotification
+    +QueuePlace : QueuePlace
+    +RuleName : xs:string
+    +UniversalRecordLocatorCode : xs:string
+    +ProviderLocatorCode : xs:string
+    +ProviderCode : xs:string
+    +CustomerNumber : xs:string
+    +Version : xs:integer
+}
+BaseCreateReservationReq *- BaseReq
+class BaseCreateWithFormOfPaymentReq {
+    +FormOfPayment : FormOfPayment[]
+}
+BaseCreateWithFormOfPaymentReq *- BaseCreateReservationReq
+class BaseReq {
+    +OverridePCC : OverridePCC
+    +RetrieveProviderReservationDetails : xs:boolean
+}
+BaseReq *- BaseCoreReq
+class BaseRsp {
+    +ResponseMessage : ResponseMessage[]
+    +TraceId : xs:string
+    +TransactionId : xs:string
+    +ResponseTime : xs:integer
+    +CommandHistory : xs:string
+}
+class BaseSearchReq {
+    +NextResultReference : NextResultReference[]
+}
+BaseSearchReq *- BaseReq
+class BaseSearchRsp {
+    +NextResultReference : NextResultReference[]
+}
+BaseSearchRsp *- BaseRsp
+class ErrorInfo {
+}
+ErrorInfo *- typeErrorInfo
+enum typeLoggingLevel {
+    TRACE = TRACE
+    DEBUG = DEBUG
+    INFO = INFO
+    WARN = WARN
+    ERROR = ERROR
+    FATAL = FATAL
+}
+
+@enduml

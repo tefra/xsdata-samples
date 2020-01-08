@@ -1,0 +1,153 @@
+@startuml
+
+class AdvResTicketingType {
+    +AdvReservation : AdvReservation
+    +AdvTicketing : AdvTicketing
+    +AdvResInd : xs:boolean
+    +AdvTicketingInd : xs:boolean
+}
+AdvResTicketingType +-- AdvReservation
+class AdvReservation {
+    +LatestTimeOfDay : xs:string xs:time
+    +LatestPeriod : xs:string
+    +LatestUnit : StayUnitType
+}
+AdvResTicketingType +-- AdvTicketing
+class AdvTicketing {
+    +FromResTimeOfDay : xs:string xs:time
+    +FromResPeriod : xs:string
+    +FromResUnit : StayUnitType
+    +FromDepartTimeOfDay : xs:string xs:time
+    +FromDepartPeriod : xs:string
+    +FromDepartUnit : StayUnitType
+}
+enum AirTripType {
+    OneWay = OneWay
+    Return = Return
+    Circle = Circle
+    OpenJaw = OpenJaw
+    Other = Other
+}
+class CompanyNameType {
+    +CompanyShortName : xs:string
+    +TravelSector : xs:string
+    +Code : xs:string
+    +CodeContext : xs:string
+    +value : xs:string
+}
+enum DepartureOrArrival {
+    Departure = Departure
+    Arrival = Arrival
+}
+class EquipmentType {
+    +value : xs:string
+    +AirEquipType : xs:string
+    +ChangeofGauge : xs:boolean
+}
+enum FareDirectionality {
+    TO = TO
+    FROM = FROM
+}
+enum OutboundOrInbound {
+    Outbound = Outbound
+    Inbound = Inbound
+}
+class PassengerTypeQuantityType {
+    +TPA_Extensions : TPA_Extensions
+    +Changeable : xs:boolean
+    +Index : xs:int
+}
+PassengerTypeQuantityType *- TravelerCountType
+PassengerTypeQuantityType +-- TPA_Extensions
+class TPA_Extensions {
+    +BirthDate : BirthDate
+    +Age : Age
+    +State : State
+    +TotalNumber : TotalNumber
+    +VoluntaryChanges : VoluntaryChanges
+}
+TPA_Extensions +-- BirthDate
+class BirthDate {
+    +Date : xs:date
+}
+TPA_Extensions +-- Age
+class Age {
+    +Years : xs:short
+}
+TPA_Extensions +-- State
+class State {
+    +Code : xs:string
+}
+TPA_Extensions +-- TotalNumber
+class TotalNumber {
+    +Value : xs:short
+}
+TPA_Extensions +-- VoluntaryChanges
+class VoluntaryChanges {
+    +Penalty : Penalty[]
+    +Match : xs:string
+}
+VoluntaryChanges +-- Penalty
+class Penalty {
+    +CurrencyCode : xs:string
+    +DecimalPlaces : xs:nonNegativeInteger
+    +Amount : xs:decimal
+    +Type : xs:string
+    +Exclude : xs:boolean
+    +Application : xs:string
+}
+class StayRestrictionsType {
+    +MinimumStay : MinimumStay
+    +MaximumStay : MaximumStay
+    +StayRestrictionsInd : xs:boolean
+}
+StayRestrictionsType +-- MinimumStay
+class MinimumStay {
+    +ReturnTimeOfDay : xs:string xs:time
+    +MinStay : xs:integer
+    +StayUnit : StayUnitType
+    +MinStayDate : xs:string xs:time
+}
+StayRestrictionsType +-- MaximumStay
+class MaximumStay {
+    +ReturnType : xs:string
+    +ReturnTimeOfDay : xs:string xs:time
+    +MaxStay : xs:integer
+    +StayUnit : StayUnitType
+    +MaxStayDate : xs:string xs:time
+}
+enum StayUnitType {
+    Minutes = Minutes
+    Hours = Hours
+    Days = Days
+    Months = Months
+    MON = MON
+    TUES = TUES
+    WED = WED
+    THU = THU
+    FRI = FRI
+    SAT = SAT
+    SUN = SUN
+}
+class TravelerCountType {
+    +Quantity : xs:integer
+    +Age : xs:integer
+    +Code : xs:string xs:string
+    +CodeContext : xs:string
+    +URI : xs:anyURI
+}
+class VoluntaryChangesType {
+    +Penalty : Penalty
+    +VolChangeInd : xs:boolean
+}
+VoluntaryChangesType +-- Penalty
+class Penalty {
+    +PenaltyType : xs:string
+    +DepartureStatus : xs:string
+    +CurrencyCode : xs:string
+    +DecimalPlaces : xs:nonNegativeInteger
+    +Amount : xs:decimal
+    +Percent : xs:decimal
+}
+
+@enduml
