@@ -208,7 +208,7 @@ class AirLegModifiers {
     +AllowDirectAccess : xs:boolean
     +ProhibitMultiAirportConnection : xs:boolean
     +PreferNonStop : xs:boolean
-    +OrderBy : xs:string
+    +OrderBy : OrderBy
     +MaxJourneyTime : xs:nonNegativeInteger
 }
 AirLegModifiers +-- PermittedConnectionPoints
@@ -239,6 +239,13 @@ AirLegModifiers +-- DisfavoredAlliances
 class DisfavoredAlliances {
     +Alliance : Alliance[]
 }
+AirLegModifiers +-- OrderBy
+class OrderBy {
+    +JourneyTime : xs:string
+    +DepartureTime : xs:string
+    +ArrivalTime : xs:string
+}
+OrderBy *- xs:string
 class AirPricePoint {
     +AirPricingInfo : AirPricingInfo[]
     +AirPricingResultMessage : common:typeResultMessage[]
@@ -441,8 +448,14 @@ class AirPricingSolution {
     +Services : xs:string
     +ApproximateTaxes : xs:string
     +ApproximateFees : xs:string
-    +Itinerary : xs:string
+    +Itinerary : Itinerary
 }
+AirPricingSolution +-- Itinerary
+class Itinerary {
+    +New : xs:string
+    +Original : xs:string
+}
+Itinerary *- xs:string
 class AirPricingTicketingModifiers {
     +AirPricingInfoRef : AirPricingInfoRef[]
     +TicketingModifiers : TicketingModifiers
@@ -454,8 +467,14 @@ class AirRefundBundle {
     +WaiverCode : WaiverCode
     +TicketNumber : xs:string
     +PTC : xs:string
-    +RefundType : xs:string
+    +RefundType : RefundType
 }
+AirRefundBundle +-- RefundType
+class RefundType {
+    +Auto : xs:string
+    +Manual : xs:string
+}
+RefundType *- xs:string
 class AirRefundInfo {
     +common:RefundRemark : common:RefundRemark[]
     +RefundAmount : xs:string
@@ -518,7 +537,7 @@ class AirSearchModifiers {
     +IncludeExtraSolutions : xs:boolean
     +ProhibitMultiAirportConnection : xs:boolean
     +PreferNonStop : xs:boolean
-    +OrderBy : xs:string
+    +OrderBy : OrderBy
     +ExcludeOpenJawAirport : xs:boolean
     +ExcludeGroundTransportation : xs:boolean
     +MaxJourneyTime : xs:nonNegativeInteger
@@ -552,6 +571,13 @@ AirSearchModifiers +-- ProhibitedBookingCodes
 class ProhibitedBookingCodes {
     +BookingCode : BookingCode[]
 }
+AirSearchModifiers +-- OrderBy
+class OrderBy {
+    +JourneyTime : xs:string
+    +DepartureTime : xs:string
+    +ArrivalTime : xs:string
+}
+OrderBy *- xs:string
 class AirSegment {
 }
 AirSegment *- typeBaseAirSegment
@@ -621,8 +647,15 @@ class AirSolution {
 }
 class AirSolutionChangedInfo {
     +AirPricingSolution : AirPricingSolution
-    +ReasonCode : xs:string
+    +ReasonCode : ReasonCode
 }
+AirSolutionChangedInfo +-- ReasonCode
+class ReasonCode {
+    +Price : xs:string
+    +Schedule : xs:string
+    +Both : xs:string
+}
+ReasonCode *- xs:string
 class AirTicketingModifiers {
     +DocumentModifiers : DocumentModifiers
     +AirPricingInfoRef : AirPricingInfoRef[]
@@ -1051,8 +1084,8 @@ class EMD {
     +FulfillmentType : xs:integer
     +FulfillmentTypeDescription : xs:string
     +AssociatedItem : xs:string
-    +AvailabilityChargeIndicator : xs:string
-    +RefundReissueIndicator : xs:string
+    +AvailabilityChargeIndicator : AvailabilityChargeIndicator
+    +RefundReissueIndicator : RefundReissueIndicator
     +Commissionable : xs:boolean
     +MileageIndicator : xs:boolean
     +Location : xs:string
@@ -1061,6 +1094,22 @@ class EMD {
     +DisplayCategory : typeDisplayCategory
     +Reusable : xs:boolean
 }
+EMD +-- AvailabilityChargeIndicator
+class AvailabilityChargeIndicator {
+    +X : xs:string
+    +E : xs:string
+    +F : xs:string
+    +G : xs:string
+    +H : xs:string
+}
+AvailabilityChargeIndicator *- xs:string
+EMD +-- RefundReissueIndicator
+class RefundReissueIndicator {
+    +Refundable : xs:string
+    +NonRefundable : xs:string
+    +Reuse : xs:string
+}
+RefundReissueIndicator *- xs:string
 class EMDCommission {
     +Type : common:typeAdjustmentType
     +Value : xs:decimal
@@ -1455,8 +1504,14 @@ class FareRestrictionDate {
     +Direction : typeFareDirectionality
     +StartDate : xs:string
     +EndDate : xs:string
-    +EndDateIndicator : xs:string
+    +EndDateIndicator : EndDateIndicator
 }
+FareRestrictionDate +-- EndDateIndicator
+class EndDateIndicator {
+    +Commence : xs:string
+    +Complete : xs:string
+}
+EndDateIndicator *- xs:string
 class FareRestrictionDaysOfWeek {
     +Direction : typeFareDirectionality
     +TripType : typeFareTripType
@@ -1610,10 +1665,23 @@ class FeeInfo {
 FeeInfo *- common:typeFeeInfo
 class FlexExploreModifiers {
     +Destination : xs:string[]
-    +Type : xs:string
+    +Type : Type
     +Radius : xs:integer
     +GroupName : xs:string
 }
+FlexExploreModifiers +-- Type
+class Type {
+    +AnyWhere : xs:string
+    +Area : xs:string
+    +Zone : xs:string
+    +Country : xs:string
+    +State : xs:string
+    +DistanceInMiles : xs:string
+    +DistanceInKilometers : xs:string
+    +Destination : xs:string
+    +Group : xs:string
+}
+Type *- xs:string
 class FlightDetails {
     +Origin : xs:string
     +Destination : xs:string
@@ -2308,7 +2376,7 @@ class RepricingModifiers {
     +BrandModifier : xs:string
     +JetServiceOnly : xs:boolean
     +TimeWindow : xs:integer
-    +FlightType : xs:string
+    +FlightType : FlightType
     +MultiAirportSearch : xs:boolean
     +ConnectionPoint : xs:string
 }
@@ -2317,6 +2385,14 @@ class OverrideCurrency {
     +CurrencyCode : xs:string
     +CountryCode : xs:string
 }
+RepricingModifiers +-- FlightType
+class FlightType {
+    +Direct : xs:string
+    +NonStop : xs:string
+    +SingleConnection : xs:string
+    +NoRestrictions : xs:string
+}
+FlightType *- xs:string
 class Restriction {
     +DaysOfWeekRestriction : DaysOfWeekRestriction[]
     +RestrictionPassengerTypes : RestrictionPassengerTypes[]
@@ -2359,8 +2435,14 @@ class Routing {
 Routing +-- DirectionInfo
 class DirectionInfo {
     +LocationCode : xs:string
-    +Direction : xs:string
+    +Direction : Direction
 }
+DirectionInfo +-- Direction
+class Direction {
+    +To : xs:string
+    +From : xs:string
+}
+Direction *- xs:string
 class Row {
     +Facility : Facility[]
     +Characteristic : Characteristic[]
@@ -2590,9 +2672,16 @@ class TCRRefundBundle {
     +TaxInfo : TaxInfo[]
     +common:HostToken : common:HostToken[]
     +TCRNumber : xs:string
-    +RefundType : xs:string
+    +RefundType : RefundType
     +RefundAccessCode : xs:string
 }
+TCRRefundBundle +-- RefundType
+class RefundType {
+    +Auto : xs:string
+    +Manual : xs:string
+    +Ignored : xs:string
+}
+RefundType *- xs:string
 class Tax {
     +Category : xs:string
     +Amount : xs:string
@@ -2741,8 +2830,16 @@ class Variance {
 }
 class VoidDocumentInfo {
     +DocumentNumber : xs:string
-    +DocumentType : xs:string
+    +DocumentType : common:DocumentType
 }
+VoidDocumentInfo +-- DocumentType
+class DocumentType {
+    +Service Fee : xs:string
+    +Paper Ticket : xs:string
+    +MCO : xs:string
+    +E-Ticket : xs:string
+}
+DocumentType *- xs:string
 class VoidFailureInfo {
     +value : xs:string
     +TicketNumber : xs:string
@@ -2751,9 +2848,17 @@ class VoidFailureInfo {
 class VoidResultInfo {
     +FailureRemark : xs:string
     +DocumentNumber : xs:string
-    +DocumentType : xs:string
+    +DocumentType : common:DocumentType
     +ResultType : xs:string
 }
+VoidResultInfo +-- DocumentType
+class DocumentType {
+    +Service Fee : xs:string
+    +Paper Ticket : xs:string
+    +MCO : xs:string
+    +E-Ticket : xs:string
+}
+DocumentType *- xs:string
 class WaiverCode {
     +TourCode : xs:string
     +TicketDesignator : xs:string
@@ -3042,9 +3147,16 @@ enum typeFareGuarantee {
 class typeFarePenalty {
     +Amount : xs:string
     +Percentage : xs:string
-    +PenaltyApplies : xs:string
+    +PenaltyApplies : PenaltyApplies
     +NoShow : xs:boolean
 }
+typeFarePenalty +-- PenaltyApplies
+class PenaltyApplies {
+    +Anytime : xs:string
+    +Before Departure : xs:string
+    +After Departure : xs:string
+}
+PenaltyApplies *- xs:string
 enum typeFareRestrictionType {
     DayOfWeek = DayOfWeek
     FlightTimeOfDay = FlightTimeOfDay

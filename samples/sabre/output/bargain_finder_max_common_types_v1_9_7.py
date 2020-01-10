@@ -581,7 +581,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                     max_occurs=2
                 )
             )
-            match: Optional[str] = field(
+            match: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Match"] = field(
                 default=None,
                 metadata=dict(
                     name="Match",
@@ -622,7 +622,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                         fraction_digits=3
                     )
                 )
-                type: Optional[str] = field(
+                type: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty.Type"] = field(
                     default=None,
                     metadata=dict(
                         name="Type",
@@ -636,13 +636,39 @@ class PassengerTypeQuantityType(TravelerCountType):
                         type="Attribute"
                     )
                 )
-                application: Optional[str] = field(
+                application: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty.Application"] = field(
                     default=None,
                     metadata=dict(
                         name="Application",
                         type="Attribute"
                     )
                 )
+
+                class Type(Enum):
+                    """
+                    :cvar REFUND:
+                    :cvar EXCHANGE:
+                    """
+                    REFUND = "Refund"
+                    EXCHANGE = "Exchange"
+
+                class Application(Enum):
+                    """
+                    :cvar AFTER:
+                    :cvar BEFORE:
+                    """
+                    AFTER = "After"
+                    BEFORE = "Before"
+
+            class Match(Enum):
+                """
+                :cvar ALL: Conditions are joined by logical conjunction - fare needs to fulfill all the conditions to be returned in response.
+                :cvar ANY: Conditions are joined by logical disjunction - fare needs to fulfill at least one of the conditions to be returned in response.
+                :cvar INFO: Return penalty information
+                """
+                ALL = "All"
+                ANY = "Any"
+                INFO = "Info"
 
 
 @dataclass
@@ -727,7 +753,7 @@ class StayRestrictionsType:
         :ivar stay_unit: The unit of elapsed time or the day of the week applied to the MaxStay value.
         :ivar max_stay_date: The specific date for the maximum stay requirement.
         """
-        return_type: Optional[str] = field(
+        return_type: Optional["StayRestrictionsType.MaximumStay.ReturnType"] = field(
             default=None,
             metadata=dict(
                 name="ReturnType",
@@ -764,3 +790,11 @@ class StayRestrictionsType:
                 type="Attribute"
             )
         )
+
+        class ReturnType(Enum):
+            """
+            :cvar C: Return travel must be Completed.
+            :cvar S: Return travel must be Started.
+            """
+            C = "C"
+            S = "S"

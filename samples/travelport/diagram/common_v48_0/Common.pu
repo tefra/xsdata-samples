@@ -44,7 +44,7 @@ class ActionStatus {
     +ElStat : typeElementStatus
     +KeyOverride : xs:boolean
     +Remark : Remark
-    +Type : xs:string
+    +Type : Type
     +TicketDate : xs:string
     +Key : xs:string
     +ProviderReservationInfoRef : xs:string
@@ -53,6 +53,17 @@ class ActionStatus {
     +PseudoCityCode : xs:string
     +AccountCode : xs:string
 }
+ActionStatus +-- Type
+class Type {
+    +TAW : xs:string
+    +TTL : xs:string
+    +TLCXL : xs:string
+    +ACTIVE : xs:string
+    +CXL : xs:string
+    +TAU : xs:string
+    +TRH : xs:string
+}
+Type *- xs:string
 class AddSvc {
     +RFIC : xs:string
     +RFISC : xs:string
@@ -89,13 +100,20 @@ class AgencySellInfo {
 }
 class AgentAction {
     +AgentOverride : xs:string
-    +ActionType : xs:string
+    +ActionType : ActionType
     +AgentCode : xs:string
     +BranchCode : xs:string
     +AgencyCode : xs:string
     +AgentSine : xs:string
     +EventTime : xs:dateTime
 }
+AgentAction +-- ActionType
+class ActionType {
+    +Created : xs:string
+    +Modified : xs:string
+    +Ticketed : xs:string
+}
+ActionType *- xs:string
 class AgentIDOverride {
     +SupplierCode : xs:string
     +ProviderCode : xs:string
@@ -207,8 +225,17 @@ class BookingDates {
 }
 class BookingSource {
     +Code : xs:string
-    +Type : xs:string
+    +Type : Type
 }
+BookingSource +-- Type
+class Type {
+    +PseudoCityCode : xs:string
+    +ArcNumber : xs:string
+    +IataNumber : xs:string
+    +CustomerId : xs:string
+    +BookingSourceOverride : xs:string
+}
+Type *- xs:string
 class BookingTraveler {
     +ElStat : typeElementStatus
     +KeyOverride : xs:boolean
@@ -438,10 +465,16 @@ class DiscountCardRef {
     +Key : xs:string
 }
 class Distance {
-    +Units : xs:string
+    +Units : Units
     +Value : xs:integer
     +Direction : xs:string
 }
+Distance +-- Units
+class Units {
+    +MI : xs:string
+    +KM : xs:string
+}
+Units *- xs:string
 class DriversLicense {
     +ElStat : typeElementStatus
     +KeyOverride : xs:boolean
@@ -462,8 +495,15 @@ class Email {
 }
 class EmailNotification {
     +EmailRef : xs:string[]
-    +Recipients : xs:string
+    +Recipients : Recipients
 }
+EmailNotification +-- Recipients
+class Recipients {
+    +All : xs:string
+    +Default : xs:string
+    +Specific : xs:string
+}
+Recipients *- xs:string
 class Endorsement {
     +Value : xs:string
 }
@@ -526,8 +566,14 @@ class FormattedTextTextType {
     +value : xs:string
     +Formatted : xs:boolean
     +Language : xs:language
-    +TextFormat : xs:NMTOKEN
+    +TextFormat : TextFormat
 }
+FormattedTextTextType +-- TextFormat
+class TextFormat {
+    +PlainText : xs:string
+    +HTML : xs:string
+}
+TextFormat *- xs:NMTOKEN
 class GeneralRemark {
     +ProviderCode : xs:string
     +SupplierCode : xs:string
@@ -701,8 +747,14 @@ class MCOExchangeInfo {
 class MCOFeeInfo {
     +Amount : xs:string
     +Percentage : xs:string
-    +FeeAppliesToInd : xs:string
+    +FeeAppliesToInd : FeeAppliesToInd
 }
+MCOFeeInfo +-- FeeAppliesToInd
+class FeeAppliesToInd {
+    +Per-Person : xs:string
+    +Per-MCO : xs:string
+}
+FeeAppliesToInd *- xs:string
 class MCOInformation {
     +PassengerInfo : PassengerInfo[]
     +MCONumber : xs:string
@@ -819,8 +871,16 @@ class OptionalServiceApplicationLimitType {
 }
 class OtherGuaranteeInfo {
     +value : xs:string
-    +Type : xs:string
+    +Type : Type
 }
+OtherGuaranteeInfo +-- Type
+class Type {
+    +IATA/ARC Number : xs:string
+    +Agency Address : xs:string
+    +Deposit Taken : xs:string
+    +Others : xs:string
+}
+Type *- xs:string
 class OverridePCC {
     +ProviderCode : xs:string
     +PseudoCityCode : xs:string
@@ -846,7 +906,7 @@ class Payment {
     +ElStat : typeElementStatus
     +KeyOverride : xs:boolean
     +Key : xs:string
-    +Type : xs:string
+    +Type : Type
     +FormOfPaymentRef : xs:string
     +BookingTravelerRef : xs:string
     +Amount : xs:string
@@ -854,6 +914,17 @@ class Payment {
     +ApproximateAmount : xs:string
     +Status : xs:string
 }
+Payment +-- Type
+class Type {
+    +AirlineFee : xs:string
+    +DeliveryFee : xs:string
+    +Itinerary : xs:string
+    +Passenger : xs:string
+    +ServiceFee : xs:string
+    +OptionalService : xs:string
+    +TicketFee : xs:string
+}
+Type *- xs:string
 class PaymentAdvice {
     +Type : xs:string
     +DocumentNumber : xs:string
@@ -893,7 +964,7 @@ class PhoneNumber {
     +KeyOverride : xs:boolean
     +ProviderReservationInfoRef : ProviderReservationInfoRef[]
     +Key : xs:string
-    +Type : xs:string
+    +Type : Type
     +Location : xs:string
     +CountryCode : xs:string
     +AreaCode : xs:string
@@ -901,6 +972,20 @@ class PhoneNumber {
     +Extension : xs:string
     +Text : xs:string
 }
+PhoneNumber +-- Type
+class Type {
+    +Agency : xs:string
+    +Business : xs:string
+    +Mobile : xs:string
+    +Home : xs:string
+    +Fax : xs:string
+    +Hotel : xs:string
+    +Other : xs:string
+    +None : xs:string
+    +Email : xs:string
+    +Reservations : xs:string
+}
+Type *- xs:string
 class PointOfCommencement {
     +CityOrAirportCode : xs:string
     +Time : xs:string
@@ -1010,13 +1095,42 @@ class RequestKeyMappings {
     +KeyMapping : KeyMapping[]
 }
 class RequiredField {
-    +Name : xs:string
+    +Name : Name
 }
+RequiredField +-- Name
+class Name {
+    +CardType : xs:string
+    +Number : xs:string
+    +CustomerReference : xs:string
+    +IssueNumber : xs:string
+    +StartDate : xs:string
+    +NameOnCard : xs:string
+    +ExpirationDate : xs:string
+    +CVV : xs:string
+    +AddressLine1 : xs:string
+    +AddressLine2 : xs:string
+    +City : xs:string
+    +State : xs:string
+    +PostalCode : xs:string
+}
+Name *- xs:string
 class Requisition {
     +Number : xs:string
-    +Category : xs:string
-    +Type : xs:string
+    +Category : Category
+    +Type : Type
 }
+Requisition +-- Category
+class Category {
+    +Government : xs:string
+    +Other : xs:string
+}
+Category *- xs:string
+Requisition +-- Type
+class Type {
+    +Cash : xs:string
+    +Credit : xs:string
+}
+Type *- xs:string
 class ReservationName {
     +BookingTravelerRef : BookingTravelerRef
     +NameOverride : NameOverride
@@ -1026,8 +1140,15 @@ class ResponseMessage {
     +SupplierCode : xs:string
     +value : xs:string
     +Code : xs:integer
-    +Type : xs:string
+    +Type : Type
 }
+ResponseMessage +-- Type
+class Type {
+    +Warning : xs:string
+    +Error : xs:string
+    +Info : xs:string
+}
+Type *- xs:string
 class Restriction {
     +Operation : xs:string
     +Reason : xs:string
@@ -1082,10 +1203,24 @@ class SearchPassenger {
 }
 SearchPassenger *- typePassengerType
 class SearchTicketing {
-    +TicketStatus : xs:string
-    +ReservationStatus : xs:string
+    +TicketStatus : TicketStatus
+    +ReservationStatus : ReservationStatus
     +TicketDate : xs:date
 }
+SearchTicketing +-- TicketStatus
+class TicketStatus {
+    +Ticketed : xs:string
+    +Unticketed : xs:string
+    +Both : xs:string
+}
+TicketStatus *- xs:string
+SearchTicketing +-- ReservationStatus
+class ReservationStatus {
+    +OnHold : xs:string
+    +SetForTicketing : xs:string
+    +Both : xs:string
+}
+ReservationStatus *- xs:string
 class SeatAssignment {
     +Key : xs:string
     +Status : xs:string
@@ -1293,7 +1428,7 @@ class TransactionType {
 }
 TransactionType +-- Air
 class Air {
-    +Tier : xs:int
+    +Tier : Tier
     +DaysEnabled : xs:boolean
     +WeekendsEnabled : xs:boolean
     +AirportsEnabled : xs:boolean
@@ -1304,6 +1439,13 @@ class Air {
     +ReturnUpsellFare : xs:boolean
 }
 Air *- typeTransactionsAllowed
+Air +-- Tier
+class Tier {
+    +1 : xs:string
+    +2 : xs:string
+    +3 : xs:string
+}
+Tier *- xs:int
 class TravelComplianceData {
     +ElStat : typeElementStatus
     +KeyOverride : xs:boolean
@@ -1634,10 +1776,22 @@ class typeGeneralReference {
     +Key : xs:string
 }
 class typeGuaranteeInformation {
-    +Type : xs:string
-    +AgencyType : xs:string
+    +Type : Type
+    +AgencyType : AgencyType
     +IATANumber : xs:string
 }
+typeGuaranteeInformation +-- Type
+class Type {
+    +Guarantee : xs:string
+    +Deposit : xs:string
+}
+Type *- xs:string
+typeGuaranteeInformation +-- AgencyType
+class AgencyType {
+    +AgencyIATA : xs:string
+    +OtherAgencyIATA : xs:string
+}
+AgencyType *- xs:string
 enum typeImageSize {
     T = T
     I = I
@@ -1948,8 +2102,15 @@ enum typeResponseImageSize {
 class typeResultMessage {
     +value : xs:string
     +Code : xs:integer
-    +Type : xs:string
+    +Type : Type
 }
+typeResultMessage +-- Type
+class Type {
+    +Warning : xs:string
+    +Error : xs:string
+    +Info : xs:string
+}
+Type *- xs:string
 class typeSearchLocation {
     +Airport : Airport
     +City : City

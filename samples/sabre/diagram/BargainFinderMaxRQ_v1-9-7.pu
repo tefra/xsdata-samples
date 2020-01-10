@@ -9,11 +9,25 @@ class AddressType {
     +County : xs:string
     +StateProv : StateProvType
     +CountryName : CountryNameType
-    +ShareSynchInd : xs:NMTOKEN
-    +ShareMarketInd : xs:NMTOKEN
+    +ShareSynchInd : ShareSynchInd
+    +ShareMarketInd : ShareMarketInd
     +FormattedInd : xs:boolean
     +Type : xs:string
 }
+AddressType +-- ShareSynchInd
+class ShareSynchInd {
+    +Yes : xs:string
+    +No : xs:string
+    +Inherit : xs:string
+}
+ShareSynchInd *- xs:NMTOKEN
+AddressType +-- ShareMarketInd
+class ShareMarketInd {
+    +Yes : xs:string
+    +No : xs:string
+    +Inherit : xs:string
+}
+ShareMarketInd *- xs:NMTOKEN
 class AirSearchPrefsType {
     +VendorPref : CompanyNamePrefType[]
     +FlightTypePref : FlightTypePrefType
@@ -144,8 +158,14 @@ class MaxPrice {
 }
 TPA_Extensions +-- ContentType
 class ContentType {
-    +Type : xs:string
+    +Type : Type
 }
+ContentType +-- Type
+class Type {
+    +Air : xs:string
+    +Rail : xs:string
+}
+Type *- xs:string
 TPA_Extensions +-- DomesticLayoverTime
 class DomesticLayoverTime {
     +Hours : xs:short
@@ -458,8 +478,14 @@ class FrequentFlyer {
 }
 AirSearchPrefsType +-- SpanishFamilyDiscount
 class SpanishFamilyDiscount {
-    +Level : xs:short
+    +Level : Level
 }
+SpanishFamilyDiscount +-- Level
+class Level {
+    +1 : xs:string
+    +2 : xs:string
+}
+Level *- xs:short
 class AirTravelerType {
     +ProfileRef : ProfileRef
     +PersonName : PersonNameType
@@ -471,9 +497,9 @@ class AirTravelerType {
     +PassengerTypeQuantity : PassengerTypeQuantityType
     +TravelerRefNumber : TravelerRefNumberType
     +FlightSegmentRPHs : FlightSegmentRPHs
-    +ShareSynchInd : xs:NMTOKEN
-    +ShareMarketInd : xs:NMTOKEN
-    +Gender : xs:NMTOKEN
+    +ShareSynchInd : ShareSynchInd
+    +ShareMarketInd : ShareMarketInd
+    +Gender : Gender
     +BirthDate : xs:date
     +CurrencyCode : xs:string
     +PassengerTypeCode : xs:string
@@ -487,6 +513,27 @@ AirTravelerType +-- FlightSegmentRPHs
 class FlightSegmentRPHs {
     +FlightSegmentRPH : xs:string[]
 }
+AirTravelerType +-- Gender
+class Gender {
+    +Male : xs:string
+    +Female : xs:string
+    +Unknown : xs:string
+}
+Gender *- xs:NMTOKEN
+AirTravelerType +-- ShareSynchInd
+class ShareSynchInd {
+    +Yes : xs:string
+    +No : xs:string
+    +Inherit : xs:string
+}
+ShareSynchInd *- xs:NMTOKEN
+AirTravelerType +-- ShareMarketInd
+class ShareMarketInd {
+    +Yes : xs:string
+    +No : xs:string
+    +Inherit : xs:string
+}
+ShareMarketInd *- xs:NMTOKEN
 class AirlineType {
     +Operating : xs:string
     +Marketing : xs:string
@@ -576,18 +623,25 @@ class ConnectionLocation {
     +Inclusive : xs:boolean
     +PreferLevel : PreferLevelType
     +MinChangeTime : xs:nonNegativeInteger
-    +ConnectionInfo : xs:string
+    +ConnectionInfo : ConnectionInfo
 }
 ConnectionLocation *- RequestLocationType
+ConnectionLocation +-- ConnectionInfo
+class ConnectionInfo {
+    +Via : xs:string
+    +Stop : xs:string
+    +Change : xs:string
+}
+ConnectionInfo *- xs:string
 class CountryNameType {
     +value : xs:string
     +Code : xs:string
 }
 class CustLoyaltyType {
-    +SingleVendorInd : xs:NMTOKEN
+    +SingleVendorInd : SingleVendorInd
     +SignupDate : xs:date
-    +ShareSynchInd : xs:NMTOKEN
-    +ShareMarketInd : xs:NMTOKEN
+    +ShareSynchInd : ShareSynchInd
+    +ShareMarketInd : ShareMarketInd
     +ProgramID : xs:string
     +MembershipID : xs:string
     +TravelSector : xs:string
@@ -596,6 +650,26 @@ class CustLoyaltyType {
     +ExpireDate : xs:date
     +RPH : xs:string
 }
+CustLoyaltyType +-- ShareSynchInd
+class ShareSynchInd {
+    +Yes : xs:string
+    +No : xs:string
+    +Inherit : xs:string
+}
+ShareSynchInd *- xs:NMTOKEN
+CustLoyaltyType +-- ShareMarketInd
+class ShareMarketInd {
+    +Yes : xs:string
+    +No : xs:string
+    +Inherit : xs:string
+}
+ShareMarketInd *- xs:NMTOKEN
+CustLoyaltyType +-- SingleVendorInd
+class SingleVendorInd {
+    +SingleVndr : xs:string
+    +Alliance : xs:string
+}
+SingleVendorInd *- xs:NMTOKEN
 class DateRangeType {
     +OutboundDate : xs:date
     +DateRange : xs:short
@@ -679,9 +753,9 @@ class StopsNumber {
     +Weight : xs:integer
 }
 class DocumentType {
-    +ShareSynchInd : xs:NMTOKEN
-    +ShareMarketInd : xs:NMTOKEN
-    +Gender : xs:NMTOKEN
+    +ShareSynchInd : ShareSynchInd
+    +ShareMarketInd : ShareMarketInd
+    +Gender : Gender
     +EffectiveDate : xs:date
     +ExpireDate : xs:date
     +BirthDate : xs:date
@@ -692,13 +766,48 @@ class DocumentType {
     +DocID : xs:string
     +DocType : xs:string
 }
+DocumentType +-- Gender
+class Gender {
+    +Male : xs:string
+    +Female : xs:string
+    +Unknown : xs:string
+}
+Gender *- xs:NMTOKEN
+DocumentType +-- ShareSynchInd
+class ShareSynchInd {
+    +Yes : xs:string
+    +No : xs:string
+    +Inherit : xs:string
+}
+ShareSynchInd *- xs:NMTOKEN
+DocumentType +-- ShareMarketInd
+class ShareMarketInd {
+    +Yes : xs:string
+    +No : xs:string
+    +Inherit : xs:string
+}
+ShareMarketInd *- xs:NMTOKEN
 class EmailType {
     +value : xs:string
-    +ShareSynchInd : xs:NMTOKEN
-    +ShareMarketInd : xs:NMTOKEN
+    +ShareSynchInd : ShareSynchInd
+    +ShareMarketInd : ShareMarketInd
     +DefaultInd : xs:boolean
     +EmailType : xs:string
 }
+EmailType +-- ShareSynchInd
+class ShareSynchInd {
+    +Yes : xs:string
+    +No : xs:string
+    +Inherit : xs:string
+}
+ShareSynchInd *- xs:NMTOKEN
+EmailType +-- ShareMarketInd
+class ShareMarketInd {
+    +Yes : xs:string
+    +No : xs:string
+    +Inherit : xs:string
+}
+ShareMarketInd *- xs:NMTOKEN
 class EquipmentTypePref {
     +PreferLevel : PreferLevelType
     +WideBody : xs:boolean
@@ -770,8 +879,15 @@ class DateFlexibility {
 }
 ExchangeOriginDestinationInformationType +-- SegmentType
 class SegmentType {
-    +Code : xs:string
+    +Code : Code
 }
+SegmentType +-- Code
+class Code {
+    +ARUNK : xs:string
+    +O : xs:string
+    +X : xs:string
+}
+Code *- xs:string
 ExchangeOriginDestinationInformationType +-- AlternateTime
 class AlternateTime {
     +PlusMinus : xs:integer
@@ -813,11 +929,22 @@ class ExchangePOSType {
 class ExchangeSettingsType {
     +RepriceCurrentItin : xs:boolean
     +AttachExchangeInfo : xs:boolean
-    +ReissueExchange : xs:string
+    +ReissueExchange : ReissueExchange
     +BrandedResults : xs:boolean
     +MIPTimeoutThreshold : xs:long
-    +RequestType : xs:string
+    +RequestType : RequestType
 }
+ExchangeSettingsType +-- ReissueExchange
+class ReissueExchange {
+    +A : xs:string
+}
+ReissueExchange *- xs:string
+ExchangeSettingsType +-- RequestType
+class RequestType {
+    +basic : xs:string
+    +context : xs:string
+}
+RequestType *- xs:string
 class ExchangeSourceType {
     +AgentSine : xs:string
     +PseudoCityCode : xs:string
@@ -1043,11 +1170,11 @@ class OTA_AirLowFareSearchRQ {
     +AltLangID : xs:language
     +EchoToken : xs:string
     +TimeStamp : xs:string
-    +Target : xs:NMTOKEN
+    +Target : Target
     +Version : xs:string
     +TransactionIdentifier : xs:string
     +SequenceNmbr : xs:boolean xs:positiveInteger
-    +TransactionStatusCode : xs:NMTOKEN
+    +TransactionStatusCode : TransactionStatusCode
     +MaxResponses : xs:positiveInteger xs:integer
     +DirectFlightsOnly : xs:boolean
     +AvailableFlightsOnly : xs:boolean
@@ -1100,8 +1227,15 @@ class ItineraryCache {
 }
 TPA_Extensions +-- MultiTicket
 class MultiTicket {
-    +DisplayPolicy : xs:string
+    +DisplayPolicy : DisplayPolicy
 }
+MultiTicket +-- DisplayPolicy
+class DisplayPolicy {
+    +SOW : xs:string
+    +GOW2RT : xs:string
+    +SCHS : xs:string
+}
+DisplayPolicy *- xs:string
 TPA_Extensions +-- Partitions
 class Partitions {
     +Partition : CachePartitionType
@@ -1185,8 +1319,15 @@ class DateFlexibility {
 }
 TPA_Extensions +-- SegmentType
 class SegmentType {
-    +Code : xs:string
+    +Code : Code
 }
+SegmentType +-- Code
+class Code {
+    +ARUNK : xs:string
+    +O : xs:string
+    +X : xs:string
+}
+Code *- xs:string
 TPA_Extensions +-- AlternateTime
 class AlternateTime {
     +PlusMinus : xs:integer
@@ -1295,6 +1436,20 @@ class DepartureDateTime {
     +WeekDays : xs:string
 }
 DepartureDateTime *- GlobalDateTimeType
+OTA_AirLowFareSearchRQ +-- Target
+class Target {
+    +Test : xs:string
+    +Production : xs:string
+}
+Target *- xs:NMTOKEN
+OTA_AirLowFareSearchRQ +-- TransactionStatusCode
+class TransactionStatusCode {
+    +Start : xs:string
+    +End : xs:string
+    +Rollback : xs:string
+    +InSeries : xs:string
+}
+TransactionStatusCode *- xs:NMTOKEN
 class OptionsPerDatePairType {
     +Departure : xs:string
     +Return : xs:string
@@ -1357,10 +1512,24 @@ class PersonNameType {
     +Surname : xs:string
     +NameSuffix : xs:string[]
     +NameTitle : xs:string[]
-    +ShareSynchInd : xs:NMTOKEN
-    +ShareMarketInd : xs:NMTOKEN
+    +ShareSynchInd : ShareSynchInd
+    +ShareMarketInd : ShareMarketInd
     +NameType : xs:string
 }
+PersonNameType +-- ShareSynchInd
+class ShareSynchInd {
+    +Yes : xs:string
+    +No : xs:string
+    +Inherit : xs:string
+}
+ShareSynchInd *- xs:NMTOKEN
+PersonNameType +-- ShareMarketInd
+class ShareMarketInd {
+    +Yes : xs:string
+    +No : xs:string
+    +Inherit : xs:string
+}
+ShareMarketInd *- xs:NMTOKEN
 class PlusUpType {
     +Amount : xs:decimal
     +OriginCity : xs:string
@@ -1493,8 +1662,16 @@ class TravelPolicy {
 }
 TPA_Extensions +-- CustomerType
 class CustomerType {
-    +Value : xs:string
+    +Value : Value
 }
+CustomerType +-- Value
+class Value {
+    +REGULAR : xs:string
+    +TVLYPREF : xs:string
+    +PREFELITE : xs:string
+    +LOYALTY : xs:string
+}
+Value *- xs:string
 TPA_Extensions +-- MultipleTravelerGroups
 class MultipleTravelerGroups {
     +ItinerariesPerGroup : xs:integer
@@ -1514,8 +1691,15 @@ class PassengerStatus {
     +StateCode : xs:string
     +CountryCode : xs:string
     +CityCode : xs:string
-    +Type : xs:string
+    +Type : Type
 }
+PassengerStatus +-- Type
+class Type {
+    +R : xs:string
+    +E : xs:string
+    +N : xs:string
+}
+Type *- xs:string
 TPA_Extensions +-- ETicketableOverride
 class ETicketableOverride {
     +Value : xs:boolean
@@ -1657,10 +1841,24 @@ class TelephoneType {
     +PhoneNumber : xs:string
     +Extension : xs:string
     +PIN : xs:string
-    +ShareSynchInd : xs:NMTOKEN
-    +ShareMarketInd : xs:NMTOKEN
+    +ShareSynchInd : ShareSynchInd
+    +ShareMarketInd : ShareMarketInd
     +FormattedInd : xs:boolean
 }
+TelephoneType +-- ShareSynchInd
+class ShareSynchInd {
+    +Yes : xs:string
+    +No : xs:string
+    +Inherit : xs:string
+}
+ShareSynchInd *- xs:NMTOKEN
+TelephoneType +-- ShareMarketInd
+class ShareMarketInd {
+    +Yes : xs:string
+    +No : xs:string
+    +Inherit : xs:string
+}
+ShareMarketInd *- xs:NMTOKEN
 class TicketDistribPrefType {
     +value : xs:string
     +PreferLevel : PreferLevelType

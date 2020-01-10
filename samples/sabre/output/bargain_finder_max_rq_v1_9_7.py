@@ -321,7 +321,7 @@ class CustLoyaltyType:
     :ivar expire_date: Indicates the ending date.
     :ivar rph: Reference place holder, to reference it back in the response.
     """
-    single_vendor_ind: Optional[str] = field(
+    single_vendor_ind: Optional["CustLoyaltyType.SingleVendorInd"] = field(
         default=None,
         metadata=dict(
             name="SingleVendorInd",
@@ -335,14 +335,14 @@ class CustLoyaltyType:
             type="Attribute"
         )
     )
-    share_synch_ind: Optional[str] = field(
+    share_synch_ind: Optional["CustLoyaltyType.ShareSynchInd"] = field(
         default=None,
         metadata=dict(
             name="ShareSynchInd",
             type="Attribute"
         )
     )
-    share_market_ind: Optional[str] = field(
+    share_market_ind: Optional["CustLoyaltyType.ShareMarketInd"] = field(
         default=None,
         metadata=dict(
             name="ShareMarketInd",
@@ -406,6 +406,37 @@ class CustLoyaltyType:
         )
     )
 
+    class ShareSynchInd(Enum):
+        """value="Inherit" Permission for sharing data for synchronization of
+        information held by other travel service providers.
+
+        :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
+        """
+        YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
+
+    class ShareMarketInd(Enum):
+        """value="Inherit" Permission for sharing data for marketing purposes.
+
+        :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
+        """
+        YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
+
+    class SingleVendorInd(Enum):
+        """
+        :cvar SINGLE_VNDR:
+        :cvar ALLIANCE:
+        """
+        SINGLE_VNDR = "SingleVndr"
+        ALLIANCE = "Alliance"
+
 
 @dataclass
 class DateRangeType:
@@ -463,21 +494,21 @@ class DocumentType:
     :ivar doc_id: Unique number assigned by authorities to document.
     :ivar doc_type: Indicates the type of document (e.g. Passport, Military ID, Drivers License, national ID, Vaccination Certificate). Refer to OTA Code List Document Type (DOC).
     """
-    share_synch_ind: Optional[str] = field(
+    share_synch_ind: Optional["DocumentType.ShareSynchInd"] = field(
         default=None,
         metadata=dict(
             name="ShareSynchInd",
             type="Attribute"
         )
     )
-    share_market_ind: Optional[str] = field(
+    share_market_ind: Optional["DocumentType.ShareMarketInd"] = field(
         default=None,
         metadata=dict(
             name="ShareMarketInd",
             type="Attribute"
         )
     )
-    gender: Optional[str] = field(
+    gender: Optional["DocumentType.Gender"] = field(
         default=None,
         metadata=dict(
             name="Gender",
@@ -562,6 +593,39 @@ class DocumentType:
         )
     )
 
+    class Gender(Enum):
+        """
+        :cvar MALE:
+        :cvar FEMALE:
+        :cvar UNKNOWN:
+        """
+        MALE = "Male"
+        FEMALE = "Female"
+        UNKNOWN = "Unknown"
+
+    class ShareSynchInd(Enum):
+        """value="Inherit" Permission for sharing data for synchronization of
+        information held by other travel service providers.
+
+        :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
+        """
+        YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
+
+    class ShareMarketInd(Enum):
+        """value="Inherit" Permission for sharing data for marketing purposes.
+
+        :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
+        """
+        YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
+
 
 @dataclass
 class EmailType:
@@ -582,14 +646,14 @@ class EmailType:
             max_length=128.0
         )
     )
-    share_synch_ind: Optional[str] = field(
+    share_synch_ind: Optional["EmailType.ShareSynchInd"] = field(
         default=None,
         metadata=dict(
             name="ShareSynchInd",
             type="Attribute"
         )
     )
-    share_market_ind: Optional[str] = field(
+    share_market_ind: Optional["EmailType.ShareMarketInd"] = field(
         default=None,
         metadata=dict(
             name="ShareMarketInd",
@@ -610,6 +674,29 @@ class EmailType:
             type="Attribute"
         )
     )
+
+    class ShareSynchInd(Enum):
+        """value="Inherit" Permission for sharing data for synchronization of
+        information held by other travel service providers.
+
+        :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
+        """
+        YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
+
+    class ShareMarketInd(Enum):
+        """value="Inherit" Permission for sharing data for marketing purposes.
+
+        :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
+        """
+        YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
 
 @dataclass
@@ -698,7 +785,7 @@ class ExchangeSettingsType:
             type="Attribute"
         )
     )
-    reissue_exchange: Optional[str] = field(
+    reissue_exchange: Optional["ExchangeSettingsType.ReissueExchange"] = field(
         default=None,
         metadata=dict(
             name="ReissueExchange",
@@ -719,13 +806,27 @@ class ExchangeSettingsType:
             type="Attribute"
         )
     )
-    request_type: Optional[str] = field(
+    request_type: Optional["ExchangeSettingsType.RequestType"] = field(
         default=None,
         metadata=dict(
             name="RequestType",
             type="Attribute"
         )
     )
+
+    class ReissueExchange(Enum):
+        """
+        :cvar A:
+        """
+        A = "A"
+
+    class RequestType(Enum):
+        """
+        :cvar BASIC:
+        :cvar CONTEXT:
+        """
+        BASIC = "basic"
+        CONTEXT = "context"
 
 
 @dataclass
@@ -1364,14 +1465,14 @@ class PersonNameType:
             max_length=16.0
         )
     )
-    share_synch_ind: Optional[str] = field(
+    share_synch_ind: Optional["PersonNameType.ShareSynchInd"] = field(
         default=None,
         metadata=dict(
             name="ShareSynchInd",
             type="Attribute"
         )
     )
-    share_market_ind: Optional[str] = field(
+    share_market_ind: Optional["PersonNameType.ShareMarketInd"] = field(
         default=None,
         metadata=dict(
             name="ShareMarketInd",
@@ -1385,6 +1486,29 @@ class PersonNameType:
             type="Attribute"
         )
     )
+
+    class ShareSynchInd(Enum):
+        """value="Inherit" Permission for sharing data for synchronization of
+        information held by other travel service providers.
+
+        :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
+        """
+        YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
+
+    class ShareMarketInd(Enum):
+        """value="Inherit" Permission for sharing data for marketing purposes.
+
+        :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
+        """
+        YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
 
 @dataclass
@@ -1922,14 +2046,14 @@ class TelephoneType:
             max_length=8.0
         )
     )
-    share_synch_ind: Optional[str] = field(
+    share_synch_ind: Optional["TelephoneType.ShareSynchInd"] = field(
         default=None,
         metadata=dict(
             name="ShareSynchInd",
             type="Attribute"
         )
     )
-    share_market_ind: Optional[str] = field(
+    share_market_ind: Optional["TelephoneType.ShareMarketInd"] = field(
         default=None,
         metadata=dict(
             name="ShareMarketInd",
@@ -1943,6 +2067,29 @@ class TelephoneType:
             type="Attribute"
         )
     )
+
+    class ShareSynchInd(Enum):
+        """value="Inherit" Permission for sharing data for synchronization of
+        information held by other travel service providers.
+
+        :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
+        """
+        YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
+
+    class ShareMarketInd(Enum):
+        """value="Inherit" Permission for sharing data for marketing purposes.
+
+        :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
+        """
+        YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
 
 @dataclass
@@ -2441,14 +2588,14 @@ class AddressType:
             namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
-    share_synch_ind: Optional[str] = field(
+    share_synch_ind: Optional["AddressType.ShareSynchInd"] = field(
         default=None,
         metadata=dict(
             name="ShareSynchInd",
             type="Attribute"
         )
     )
-    share_market_ind: Optional[str] = field(
+    share_market_ind: Optional["AddressType.ShareMarketInd"] = field(
         default=None,
         metadata=dict(
             name="ShareMarketInd",
@@ -2469,6 +2616,29 @@ class AddressType:
             type="Attribute"
         )
     )
+
+    class ShareSynchInd(Enum):
+        """value="Inherit" Permission for sharing data for synchronization of
+        information held by other travel service providers.
+
+        :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
+        """
+        YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
+
+    class ShareMarketInd(Enum):
+        """value="Inherit" Permission for sharing data for marketing purposes.
+
+        :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
+        """
+        YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
 
 @dataclass
@@ -2667,13 +2837,23 @@ class ConnectionType:
                 type="Attribute"
             )
         )
-        connection_info: Optional[str] = field(
+        connection_info: Optional["ConnectionType.ConnectionLocation.ConnectionInfo"] = field(
             default=None,
             metadata=dict(
                 name="ConnectionInfo",
                 type="Attribute"
             )
         )
+
+        class ConnectionInfo(Enum):
+            """
+            :cvar VIA: Location without stopping or changing.
+            :cvar STOP: Location is for stopping.
+            :cvar CHANGE: Location is for changing.
+            """
+            VIA = "Via"
+            STOP = "Stop"
+            CHANGE = "Change"
 
 
 @dataclass
@@ -4487,7 +4667,7 @@ class PriceRequestInformationType:
             """
             :ivar value:
             """
-            value: Optional[str] = field(
+            value: Optional["PriceRequestInformationType.TpaExtensions.CustomerType.Value"] = field(
                 default=None,
                 metadata=dict(
                     name="Value",
@@ -4495,6 +4675,18 @@ class PriceRequestInformationType:
                     required=True
                 )
             )
+
+            class Value(Enum):
+                """
+                :cvar REGULAR: Regular customer type.
+                :cvar TVLYPREF: TVLY_PREFERRED customer type.
+                :cvar PREFELITE: PREFERED_ELITE customer type.
+                :cvar LOYALTY: LOYALTY customer type.
+                """
+                REGULAR = "REGULAR"
+                TVLYPREF = "TVLYPREF"
+                PREFELITE = "PREFELITE"
+                LOYALTY = "LOYALTY"
 
         @dataclass
         class MultipleTravelerGroups:
@@ -4592,7 +4784,7 @@ class PriceRequestInformationType:
                     pattern=r"[a-zA-Z]{3}"
                 )
             )
-            type: Optional[str] = field(
+            type: Optional["PriceRequestInformationType.TpaExtensions.PassengerStatus.Type"] = field(
                 default=None,
                 metadata=dict(
                     name="Type",
@@ -4600,6 +4792,16 @@ class PriceRequestInformationType:
                     required=True
                 )
             )
+
+            class Type(Enum):
+                """
+                :cvar R: Residency.
+                :cvar E: Employment.
+                :cvar N: Nationality.
+                """
+                R = "R"
+                E = "E"
+                N = "N"
 
         @dataclass
         class EticketableOverride:
@@ -6040,13 +6242,21 @@ class AirSearchPrefsType:
             """
             :ivar type:
             """
-            type: Optional[str] = field(
+            type: Optional["AirSearchPrefsType.TpaExtensions.ContentType.Type"] = field(
                 default=None,
                 metadata=dict(
                     name="Type",
                     type="Attribute"
                 )
             )
+
+            class Type(Enum):
+                """
+                :cvar AIR:
+                :cvar RAIL:
+                """
+                AIR = "Air"
+                RAIL = "Rail"
 
         @dataclass
         class DomesticLayoverTime:
@@ -7271,7 +7481,7 @@ class AirSearchPrefsType:
         """
         :ivar level: Spanish Large Family Discount Level. Valid values are 1 or 2.
         """
-        level: Optional[int] = field(
+        level: Optional["AirSearchPrefsType.SpanishFamilyDiscount.Level"] = field(
             default=None,
             metadata=dict(
                 name="Level",
@@ -7279,6 +7489,14 @@ class AirSearchPrefsType:
                 required=True
             )
         )
+
+        class Level(Enum):
+            """
+            :cvar VALUE_1:
+            :cvar VALUE_2:
+            """
+            VALUE_1 = 1
+            VALUE_2 = 2
 
 
 @dataclass
@@ -7395,21 +7613,21 @@ class AirTravelerType:
             namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
-    share_synch_ind: Optional[str] = field(
+    share_synch_ind: Optional["AirTravelerType.ShareSynchInd"] = field(
         default=None,
         metadata=dict(
             name="ShareSynchInd",
             type="Attribute"
         )
     )
-    share_market_ind: Optional[str] = field(
+    share_market_ind: Optional["AirTravelerType.ShareMarketInd"] = field(
         default=None,
         metadata=dict(
             name="ShareMarketInd",
             type="Attribute"
         )
     )
-    gender: Optional[str] = field(
+    gender: Optional["AirTravelerType.Gender"] = field(
         default=None,
         metadata=dict(
             name="Gender",
@@ -7479,6 +7697,39 @@ class AirTravelerType:
                 pattern=r"[0-9]{1,8}"
             )
         )
+
+    class Gender(Enum):
+        """
+        :cvar MALE:
+        :cvar FEMALE:
+        :cvar UNKNOWN:
+        """
+        MALE = "Male"
+        FEMALE = "Female"
+        UNKNOWN = "Unknown"
+
+    class ShareSynchInd(Enum):
+        """value="Inherit" Permission for sharing data for synchronization of
+        information held by other travel service providers.
+
+        :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
+        """
+        YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
+
+    class ShareMarketInd(Enum):
+        """value="Inherit" Permission for sharing data for marketing purposes.
+
+        :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
+        """
+        YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
 
 @dataclass
@@ -8919,13 +9170,23 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
         """
         :ivar code: "Code" can be "ARUNK", "O" for normal, or "X" for connection.
         """
-        code: Optional[str] = field(
+        code: Optional["ExchangeOriginDestinationInformationType.SegmentType.Code"] = field(
             default=None,
             metadata=dict(
                 name="Code",
                 type="Attribute"
             )
         )
+
+        class Code(Enum):
+            """
+            :cvar ARUNK: Arrival unknown
+            :cvar O: Normal
+            :cvar X: Connection. Collapses this and subsequent OriginDestinationInformation so that they are treated as single leg.
+            """
+            ARUNK = "ARUNK"
+            O = "O"
+            X = "X"
 
     @dataclass
     class AlternateTime:
@@ -9447,7 +9708,7 @@ class OtaAirLowFareSearchRq:
             type="Attribute"
         )
     )
-    target: str = field(
+    target: "OtaAirLowFareSearchRq.Target" = field(
         default="Production",
         metadata=dict(
             name="Target",
@@ -9478,7 +9739,7 @@ class OtaAirLowFareSearchRq:
             type="Attribute"
         )
     )
-    transaction_status_code: Optional[str] = field(
+    transaction_status_code: Optional["OtaAirLowFareSearchRq.TransactionStatusCode"] = field(
         default=None,
         metadata=dict(
             name="TransactionStatusCode",
@@ -9768,13 +10029,23 @@ class OtaAirLowFareSearchRq:
             """
             :ivar display_policy: Display Option Policy, takes values: - SOW - Show OneWays separately - GOW2RT - Group OneWays and match to RoundTrip - SCHS - Group OneWays, match to RoundTrip and show cheaper solution
             """
-            display_policy: Optional[str] = field(
+            display_policy: Optional["OtaAirLowFareSearchRq.TpaExtensions.MultiTicket.DisplayPolicy"] = field(
                 default=None,
                 metadata=dict(
                     name="DisplayPolicy",
                     type="Attribute"
                 )
             )
+
+            class DisplayPolicy(Enum):
+                """
+                :cvar SOW:
+                :cvar GOW2_RT:
+                :cvar SCHS:
+                """
+                SOW = "SOW"
+                GOW2_RT = "GOW2RT"
+                SCHS = "SCHS"
 
         @dataclass
         class Partitions:
@@ -10207,13 +10478,23 @@ class OtaAirLowFareSearchRq:
                 """
                 :ivar code: "Code" can be "ARUNK", "O" for normal, or "X" for connection.
                 """
-                code: Optional[str] = field(
+                code: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SegmentType.Code"] = field(
                     default=None,
                     metadata=dict(
                         name="Code",
                         type="Attribute"
                     )
                 )
+
+                class Code(Enum):
+                    """
+                    :cvar ARUNK: Arrival unknown
+                    :cvar O: Normal
+                    :cvar X: Connection. Collapses this and subsequent OriginDestinationInformation so that they are treated as single leg.
+                    """
+                    ARUNK = "ARUNK"
+                    O = "O"
+                    X = "X"
 
             @dataclass
             class AlternateTime:
@@ -10736,3 +11017,23 @@ class OtaAirLowFareSearchRq:
                     length=7
                 )
             )
+
+    class Target(Enum):
+        """
+        :cvar TEST:
+        :cvar PRODUCTION:
+        """
+        TEST = "Test"
+        PRODUCTION = "Production"
+
+    class TransactionStatusCode(Enum):
+        """
+        :cvar START: This is the first message within a transaction.
+        :cvar END: This is the last message within a transaction.
+        :cvar ROLLBACK: This indicates that all messages within the current transaction must be ignored.
+        :cvar IN_SERIES: This is any message that is not the first or last message within a transaction.
+        """
+        START = "Start"
+        END = "End"
+        ROLLBACK = "Rollback"
+        IN_SERIES = "InSeries"

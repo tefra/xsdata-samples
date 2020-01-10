@@ -335,8 +335,15 @@ class RailSegmentRef {
 }
 class RailSolutionChangedInfo {
     +RailPricingSolution : RailPricingSolution
-    +ReasonCode : xs:string
+    +ReasonCode : ReasonCode
 }
+RailSolutionChangedInfo +-- ReasonCode
+class ReasonCode {
+    +Price : xs:string
+    +Schedule : xs:string
+    +Both : xs:string
+}
+ReasonCode *- xs:string
 class RailSpecificSeatAssignment {
     +CoachLabel : xs:string
     +PlaceLabel : xs:string

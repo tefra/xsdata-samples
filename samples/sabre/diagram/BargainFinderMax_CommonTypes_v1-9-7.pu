@@ -85,17 +85,36 @@ class TotalNumber {
 TPA_Extensions +-- VoluntaryChanges
 class VoluntaryChanges {
     +Penalty : Penalty[]
-    +Match : xs:string
+    +Match : Match
 }
 VoluntaryChanges +-- Penalty
 class Penalty {
     +CurrencyCode : xs:string
     +DecimalPlaces : xs:nonNegativeInteger
     +Amount : xs:decimal
-    +Type : xs:string
+    +Type : Type
     +Exclude : xs:boolean
-    +Application : xs:string
+    +Application : Application
 }
+Penalty +-- Type
+class Type {
+    +Refund : xs:string
+    +Exchange : xs:string
+}
+Type *- xs:string
+Penalty +-- Application
+class Application {
+    +After : xs:string
+    +Before : xs:string
+}
+Application *- xs:string
+VoluntaryChanges +-- Match
+class Match {
+    +All : xs:string
+    +Any : xs:string
+    +Info : xs:string
+}
+Match *- xs:string
 class StayRestrictionsType {
     +MinimumStay : MinimumStay
     +MaximumStay : MaximumStay
@@ -110,12 +129,18 @@ class MinimumStay {
 }
 StayRestrictionsType +-- MaximumStay
 class MaximumStay {
-    +ReturnType : xs:string
+    +ReturnType : ReturnType
     +ReturnTimeOfDay : xs:string xs:time
     +MaxStay : xs:integer
     +StayUnit : StayUnitType
     +MaxStayDate : xs:string xs:time
 }
+MaximumStay +-- ReturnType
+class ReturnType {
+    +C : xs:string
+    +S : xs:string
+}
+ReturnType *- xs:string
 enum StayUnitType {
     Minutes = Minutes
     Hours = Hours

@@ -3058,7 +3058,7 @@ class RailSolutionChangedInfo:
             required=True
         )
     )
-    reason_code: Optional[str] = field(
+    reason_code: Optional["RailSolutionChangedInfo.ReasonCode"] = field(
         default=None,
         metadata=dict(
             name="ReasonCode",
@@ -3066,3 +3066,13 @@ class RailSolutionChangedInfo:
             required=True
         )
     )
+
+    class ReasonCode(Enum):
+        """
+        :cvar PRICE:
+        :cvar SCHEDULE:
+        :cvar BOTH:
+        """
+        PRICE = "Price"
+        SCHEDULE = "Schedule"
+        BOTH = "Both"

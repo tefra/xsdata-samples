@@ -2400,7 +2400,7 @@ class FlexExploreModifiers:
             white_space="collapse"
         )
     )
-    type: Optional[str] = field(
+    type: Optional["FlexExploreModifiers.Type"] = field(
         default=None,
         metadata=dict(
             name="Type",
@@ -2423,6 +2423,28 @@ class FlexExploreModifiers:
             max_length=15.0
         )
     )
+
+    class Type(Enum):
+        """
+        :cvar ANY_WHERE:
+        :cvar AREA:
+        :cvar ZONE:
+        :cvar COUNTRY:
+        :cvar STATE:
+        :cvar DISTANCE_IN_MILES:
+        :cvar DISTANCE_IN_KILOMETERS:
+        :cvar DESTINATION:
+        :cvar GROUP:
+        """
+        ANY_WHERE = "AnyWhere"
+        AREA = "Area"
+        ZONE = "Zone"
+        COUNTRY = "Country"
+        STATE = "State"
+        DISTANCE_IN_MILES = "DistanceInMiles"
+        DISTANCE_IN_KILOMETERS = "DistanceInKilometers"
+        DESTINATION = "Destination"
+        GROUP = "Group"
 
 
 @dataclass
@@ -4496,13 +4518,21 @@ class RoutingRules:
                     white_space="collapse"
                 )
             )
-            direction: Optional[str] = field(
+            direction: Optional["RoutingRules.Routing.DirectionInfo.Direction"] = field(
                 default=None,
                 metadata=dict(
                     name="Direction",
                     type="Attribute"
                 )
             )
+
+            class Direction(Enum):
+                """
+                :cvar TO:
+                :cvar FROM_VALUE:
+                """
+                TO = "To"
+                FROM_VALUE = "From"
 
 
 @dataclass
@@ -5292,13 +5322,25 @@ class VoidDocumentInfo:
             max_length=13.0
         )
     )
-    document_type: Optional[str] = field(
+    document_type: Optional["VoidDocumentInfo.DocumentType"] = field(
         default=None,
         metadata=dict(
             name="DocumentType",
             type="Attribute"
         )
     )
+
+    class DocumentType(Enum):
+        """
+        :cvar SERVICE_FEE:
+        :cvar PAPER_TICKET:
+        :cvar MCO:
+        :cvar E_TICKET:
+        """
+        SERVICE_FEE = "Service Fee"
+        PAPER_TICKET = "Paper Ticket"
+        MCO = "MCO"
+        E_TICKET = "E-Ticket"
 
 
 @dataclass
@@ -5363,7 +5405,7 @@ class VoidResultInfo:
             max_length=13.0
         )
     )
-    document_type: Optional[str] = field(
+    document_type: Optional["VoidResultInfo.DocumentType"] = field(
         default=None,
         metadata=dict(
             name="DocumentType",
@@ -5377,6 +5419,18 @@ class VoidResultInfo:
             type="Attribute"
         )
     )
+
+    class DocumentType(Enum):
+        """
+        :cvar SERVICE_FEE:
+        :cvar PAPER_TICKET:
+        :cvar MCO:
+        :cvar E_TICKET:
+        """
+        SERVICE_FEE = "Service Fee"
+        PAPER_TICKET = "Paper Ticket"
+        MCO = "MCO"
+        E_TICKET = "E-Ticket"
 
 
 @dataclass
@@ -6024,7 +6078,7 @@ class TypeFarePenalty:
             pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
         )
     )
-    penalty_applies: Optional[str] = field(
+    penalty_applies: Optional["TypeFarePenalty.PenaltyApplies"] = field(
         default=None,
         metadata=dict(
             name="PenaltyApplies",
@@ -6038,6 +6092,17 @@ class TypeFarePenalty:
             type="Attribute"
         )
     )
+
+    class PenaltyApplies(Enum):
+        """The values can be "Anytime", "Before Departure" or "After Departure".
+
+        :cvar ANYTIME:
+        :cvar BEFORE_DEPARTURE:
+        :cvar AFTER_DEPARTURE:
+        """
+        ANYTIME = "Anytime"
+        BEFORE_DEPARTURE = "Before Departure"
+        AFTER_DEPARTURE = "After Departure"
 
 
 class TypeFareRestrictionType(Enum):
@@ -8870,14 +8935,14 @@ class Emd:
             type="Attribute"
         )
     )
-    availability_charge_indicator: Optional[str] = field(
+    availability_charge_indicator: Optional["Emd.AvailabilityChargeIndicator"] = field(
         default=None,
         metadata=dict(
             name="AvailabilityChargeIndicator",
             type="Attribute"
         )
     )
-    refund_reissue_indicator: Optional[str] = field(
+    refund_reissue_indicator: Optional["Emd.RefundReissueIndicator"] = field(
         default=None,
         metadata=dict(
             name="RefundReissueIndicator",
@@ -8935,6 +9000,30 @@ class Emd:
             type="Attribute"
         )
     )
+
+    class AvailabilityChargeIndicator(Enum):
+        """
+        :cvar X:
+        :cvar E:
+        :cvar F:
+        :cvar G:
+        :cvar H:
+        """
+        X = "X"
+        E = "E"
+        F = "F"
+        G = "G"
+        H = "H"
+
+    class RefundReissueIndicator(Enum):
+        """
+        :cvar REFUNDABLE:
+        :cvar NON_REFUNDABLE:
+        :cvar REUSE:
+        """
+        REFUNDABLE = "Refundable"
+        NON_REFUNDABLE = "NonRefundable"
+        REUSE = "Reuse"
 
 
 @dataclass
@@ -9426,13 +9515,21 @@ class FareRestrictionDate:
             type="Attribute"
         )
     )
-    end_date_indicator: Optional[str] = field(
+    end_date_indicator: Optional["FareRestrictionDate.EndDateIndicator"] = field(
         default=None,
         metadata=dict(
             name="EndDateIndicator",
             type="Attribute"
         )
     )
+
+    class EndDateIndicator(Enum):
+        """
+        :cvar COMMENCE:
+        :cvar COMPLETE:
+        """
+        COMMENCE = "Commence"
+        COMPLETE = "Complete"
 
 
 @dataclass
@@ -12297,7 +12394,7 @@ class AirLegModifiers:
             type="Attribute"
         )
     )
-    order_by: Optional[str] = field(
+    order_by: Optional["AirLegModifiers.OrderBy"] = field(
         default=None,
         metadata=dict(
             name="OrderBy",
@@ -12421,6 +12518,16 @@ class AirLegModifiers:
                 max_occurs=999
             )
         )
+
+    class OrderBy(Enum):
+        """
+        :cvar JOURNEY_TIME:
+        :cvar DEPARTURE_TIME:
+        :cvar ARRIVAL_TIME:
+        """
+        JOURNEY_TIME = "JourneyTime"
+        DEPARTURE_TIME = "DepartureTime"
+        ARRIVAL_TIME = "ArrivalTime"
 
 
 @dataclass
@@ -12863,13 +12970,21 @@ class AirRefundBundle:
             type="Attribute"
         )
     )
-    refund_type: Optional[str] = field(
+    refund_type: Optional["AirRefundBundle.RefundType"] = field(
         default=None,
         metadata=dict(
             name="RefundType",
             type="Attribute"
         )
     )
+
+    class RefundType(Enum):
+        """
+        :cvar AUTO:
+        :cvar MANUAL:
+        """
+        AUTO = "Auto"
+        MANUAL = "Manual"
 
 
 @dataclass
@@ -13093,7 +13208,7 @@ class AirSearchModifiers:
             type="Attribute"
         )
     )
-    order_by: Optional[str] = field(
+    order_by: Optional["AirSearchModifiers.OrderBy"] = field(
         default=None,
         metadata=dict(
             name="OrderBy",
@@ -13238,6 +13353,16 @@ class AirSearchModifiers:
                 max_occurs=999
             )
         )
+
+    class OrderBy(Enum):
+        """
+        :cvar JOURNEY_TIME:
+        :cvar DEPARTURE_TIME:
+        :cvar ARRIVAL_TIME:
+        """
+        JOURNEY_TIME = "JourneyTime"
+        DEPARTURE_TIME = "DepartureTime"
+        ARRIVAL_TIME = "ArrivalTime"
 
 
 @dataclass
@@ -15361,7 +15486,7 @@ class RepricingModifiers:
             max_inclusive=12.0
         )
     )
-    flight_type: str = field(
+    flight_type: "RepricingModifiers.FlightType" = field(
         default="Direct",
         metadata=dict(
             name="FlightType",
@@ -15407,6 +15532,18 @@ class RepricingModifiers:
                 length=2
             )
         )
+
+    class FlightType(Enum):
+        """
+        :cvar DIRECT:
+        :cvar NON_STOP:
+        :cvar SINGLE_CONNECTION:
+        :cvar NO_RESTRICTIONS:
+        """
+        DIRECT = "Direct"
+        NON_STOP = "NonStop"
+        SINGLE_CONNECTION = "SingleConnection"
+        NO_RESTRICTIONS = "NoRestrictions"
 
 
 @dataclass
@@ -20639,7 +20776,7 @@ class TcrrefundBundle:
             required=True
         )
     )
-    refund_type: Optional[str] = field(
+    refund_type: Optional["TcrrefundBundle.RefundType"] = field(
         default=None,
         metadata=dict(
             name="RefundType",
@@ -20656,6 +20793,16 @@ class TcrrefundBundle:
             max_length=32.0
         )
     )
+
+    class RefundType(Enum):
+        """
+        :cvar AUTO:
+        :cvar MANUAL:
+        :cvar IGNORED:
+        """
+        AUTO = "Auto"
+        MANUAL = "Manual"
+        IGNORED = "Ignored"
 
 
 @dataclass
@@ -21815,13 +21962,21 @@ class AirPricingSolution:
             type="Attribute"
         )
     )
-    itinerary: Optional[str] = field(
+    itinerary: Optional["AirPricingSolution.Itinerary"] = field(
         default=None,
         metadata=dict(
             name="Itinerary",
             type="Attribute"
         )
     )
+
+    class Itinerary(Enum):
+        """
+        :cvar NEW:
+        :cvar ORIGINAL:
+        """
+        NEW = "New"
+        ORIGINAL = "Original"
 
 
 @dataclass
@@ -22769,7 +22924,7 @@ class AirSolutionChangedInfo:
             required=True
         )
     )
-    reason_code: Optional[str] = field(
+    reason_code: Optional["AirSolutionChangedInfo.ReasonCode"] = field(
         default=None,
         metadata=dict(
             name="ReasonCode",
@@ -22777,6 +22932,16 @@ class AirSolutionChangedInfo:
             required=True
         )
     )
+
+    class ReasonCode(Enum):
+        """
+        :cvar PRICE:
+        :cvar SCHEDULE:
+        :cvar BOTH:
+        """
+        PRICE = "Price"
+        SCHEDULE = "Schedule"
+        BOTH = "Both"
 
 
 @dataclass

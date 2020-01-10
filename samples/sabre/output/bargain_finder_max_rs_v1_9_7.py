@@ -308,13 +308,21 @@ class BaggageInformationType:
                 type="Attribute"
             )
         )
-        unit: Optional[str] = field(
+        unit: Optional["BaggageInformationType.Allowance.Unit"] = field(
             default=None,
             metadata=dict(
                 name="Unit",
                 type="Attribute"
             )
         )
+
+        class Unit(Enum):
+            """
+            :cvar KG:
+            :cvar LBS:
+            """
+            KG = "kg"
+            LBS = "lbs"
 
 
 @dataclass
@@ -2756,14 +2764,14 @@ class FareType:
                     max_occurs=9223372036854775807
                 )
             )
-            type: Optional[str] = field(
+            type: Optional["FareType.PenaltiesInfo.Penalty.Type"] = field(
                 default=None,
                 metadata=dict(
                     name="Type",
                     type="Attribute"
                 )
             )
-            applicability: Optional[str] = field(
+            applicability: Optional["FareType.PenaltiesInfo.Penalty.Applicability"] = field(
                 default=None,
                 metadata=dict(
                     name="Applicability",
@@ -2847,6 +2855,22 @@ class FareType:
                         required=True
                     )
                 )
+
+            class Type(Enum):
+                """
+                :cvar REFUND:
+                :cvar EXCHANGE:
+                """
+                REFUND = "Refund"
+                EXCHANGE = "Exchange"
+
+            class Applicability(Enum):
+                """
+                :cvar AFTER:
+                :cvar BEFORE:
+                """
+                AFTER = "After"
+                BEFORE = "Before"
 
     @dataclass
     class TpaExtensions:
@@ -3644,7 +3668,7 @@ class PtcfareBreakdownType:
             type="Attribute"
         )
     )
-    reissue_exchange: Optional[int] = field(
+    reissue_exchange: Optional["PtcfareBreakdownType.ReissueExchange"] = field(
         default=None,
         metadata=dict(
             name="ReissueExchange",
@@ -4131,6 +4155,14 @@ class PtcfareBreakdownType:
                         )
                     )
 
+    class ReissueExchange(Enum):
+        """
+        :cvar VALUE_1: Priced as Reissue
+        :cvar VALUE_2: Priced as Exchange
+        """
+        VALUE_1 = 1
+        VALUE_2 = 2
+
 
 @dataclass
 class AirItineraryPricingInfoType:
@@ -4255,7 +4287,7 @@ class AirItineraryPricingInfoType:
             type="Attribute"
         )
     )
-    reissue_exchange: Optional[int] = field(
+    reissue_exchange: Optional["AirItineraryPricingInfoType.ReissueExchange"] = field(
         default=None,
         metadata=dict(
             name="ReissueExchange",
@@ -4323,7 +4355,7 @@ class AirItineraryPricingInfoType:
             length=1
         )
     )
-    spanish_family_discount_indicator: Optional[str] = field(
+    spanish_family_discount_indicator: Optional["AirItineraryPricingInfoType.SpanishFamilyDiscountIndicator"] = field(
         default=None,
         metadata=dict(
             name="SpanishFamilyDiscountIndicator",
@@ -5080,6 +5112,24 @@ class AirItineraryPricingInfoType:
                         )
                     )
 
+    class SpanishFamilyDiscountIndicator(Enum):
+        """
+        :cvar A:
+        :cvar B:
+        :cvar C:
+        """
+        A = "A"
+        B = "B"
+        C = "C"
+
+    class ReissueExchange(Enum):
+        """
+        :cvar VALUE_1: Priced as Reissue
+        :cvar VALUE_2: Priced as Exchange
+        """
+        VALUE_1 = 1
+        VALUE_2 = 2
+
 
 @dataclass
 class AirItineraryType:
@@ -5820,7 +5870,7 @@ class OtaAirLowFareSearchRs:
             type="Attribute"
         )
     )
-    target: str = field(
+    target: "OtaAirLowFareSearchRs.Target" = field(
         default="Production",
         metadata=dict(
             name="Target",
@@ -5851,7 +5901,7 @@ class OtaAirLowFareSearchRs:
             type="Attribute"
         )
     )
-    transaction_status_code: Optional[str] = field(
+    transaction_status_code: Optional["OtaAirLowFareSearchRs.TransactionStatusCode"] = field(
         default=None,
         metadata=dict(
             name="TransactionStatusCode",
@@ -6641,6 +6691,26 @@ class OtaAirLowFareSearchRs:
                         required=True
                     )
                 )
+
+    class Target(Enum):
+        """
+        :cvar TEST:
+        :cvar PRODUCTION:
+        """
+        TEST = "Test"
+        PRODUCTION = "Production"
+
+    class TransactionStatusCode(Enum):
+        """
+        :cvar START: This is the first message within a transaction.
+        :cvar END: This is the last message within a transaction.
+        :cvar ROLLBACK: This indicates that all messages within the current transaction must be ignored.
+        :cvar IN_SERIES: This is any message that is not the first or last message within a transaction.
+        """
+        START = "Start"
+        END = "End"
+        ROLLBACK = "Rollback"
+        IN_SERIES = "InSeries"
 
 
 @dataclass

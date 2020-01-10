@@ -236,7 +236,7 @@ class AgentAction:
             max_length=32.0
         )
     )
-    action_type: Optional[str] = field(
+    action_type: Optional["AgentAction.ActionType"] = field(
         default=None,
         metadata=dict(
             name="ActionType",
@@ -285,6 +285,16 @@ class AgentAction:
             required=True
         )
     )
+
+    class ActionType(Enum):
+        """
+        :cvar CREATED:
+        :cvar MODIFIED:
+        :cvar TICKETED:
+        """
+        CREATED = "Created"
+        MODIFIED = "Modified"
+        TICKETED = "Ticketed"
 
 
 @dataclass
@@ -566,7 +576,7 @@ class BookingSource:
             min_length=1.0
         )
     )
-    type: Optional[str] = field(
+    type: Optional["BookingSource.Type"] = field(
         default=None,
         metadata=dict(
             name="Type",
@@ -574,6 +584,20 @@ class BookingSource:
             required=True
         )
     )
+
+    class Type(Enum):
+        """
+        :cvar PSEUDO_CITY_CODE:
+        :cvar ARC_NUMBER:
+        :cvar IATA_NUMBER:
+        :cvar CUSTOMER_ID:
+        :cvar BOOKING_SOURCE_OVERRIDE: The Booking Source Override is usually used when the car supplier has assigned a number (which can be alpha/numeric) to the agency/e-commerce to use in place of an IATA number. Supported provider(s) : 1P/1J
+        """
+        PSEUDO_CITY_CODE = "PseudoCityCode"
+        ARC_NUMBER = "ArcNumber"
+        IATA_NUMBER = "IataNumber"
+        CUSTOMER_ID = "CustomerId"
+        BOOKING_SOURCE_OVERRIDE = "BookingSourceOverride"
 
 
 @dataclass
@@ -1108,12 +1132,11 @@ class Distance:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    units: str = field(
+    units: "Distance.Units" = field(
         default="MI",
         metadata=dict(
             name="Units",
-            type="Attribute",
-            length=2
+            type="Attribute"
         )
     )
     value: Optional[int] = field(
@@ -1132,6 +1155,14 @@ class Distance:
             max_length=2.0
         )
     )
+
+    class Units(Enum):
+        """
+        :cvar MI:
+        :cvar KM:
+        """
+        MI = "MI"
+        KM = "KM"
 
 
 @dataclass
@@ -1171,7 +1202,7 @@ class EmailNotification:
             max_occurs=999
         )
     )
-    recipients: Optional[str] = field(
+    recipients: Optional["EmailNotification.Recipients"] = field(
         default=None,
         metadata=dict(
             name="Recipients",
@@ -1179,6 +1210,16 @@ class EmailNotification:
             required=True
         )
     )
+
+    class Recipients(Enum):
+        """
+        :cvar ALL:
+        :cvar DEFAULT:
+        :cvar SPECIFIC:
+        """
+        ALL = "All"
+        DEFAULT = "Default"
+        SPECIFIC = "Specific"
 
 
 @dataclass
@@ -1327,13 +1368,21 @@ class FormattedTextTextType:
             type="Attribute"
         )
     )
-    text_format: Optional[str] = field(
+    text_format: Optional["FormattedTextTextType.TextFormat"] = field(
         default=None,
         metadata=dict(
             name="TextFormat",
             type="Attribute"
         )
     )
+
+    class TextFormat(Enum):
+        """
+        :cvar PLAIN_TEXT: Textual data that is in ASCII format.
+        :cvar HTML: HTML formatted text.
+        """
+        PLAIN_TEXT = "PlainText"
+        HTML = "HTML"
 
 
 @dataclass
@@ -1510,13 +1559,21 @@ class McofeeInfo:
             pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
         )
     )
-    fee_applies_to_ind: Optional[str] = field(
+    fee_applies_to_ind: Optional["McofeeInfo.FeeAppliesToInd"] = field(
         default=None,
         metadata=dict(
             name="FeeAppliesToInd",
             type="Attribute"
         )
     )
+
+    class FeeAppliesToInd(Enum):
+        """
+        :cvar PER_PERSON:
+        :cvar PER_MCO:
+        """
+        PER_PERSON = "Per-Person"
+        PER_MCO = "Per-MCO"
 
 
 @dataclass
@@ -1897,7 +1954,7 @@ class OtherGuaranteeInfo:
             type="Extension"
         )
     )
-    type: Optional[str] = field(
+    type: Optional["OtherGuaranteeInfo.Type"] = field(
         default=None,
         metadata=dict(
             name="Type",
@@ -1905,6 +1962,18 @@ class OtherGuaranteeInfo:
             required=True
         )
     )
+
+    class Type(Enum):
+        """
+        :cvar IATA_ARC_NUMBER:
+        :cvar AGENCY_ADDRESS:
+        :cvar DEPOSIT_TAKEN:
+        :cvar OTHERS:
+        """
+        IATA_ARC_NUMBER = "IATA/ARC Number"
+        AGENCY_ADDRESS = "Agency Address"
+        DEPOSIT_TAKEN = "Deposit Taken"
+        OTHERS = "Others"
 
 
 @dataclass
@@ -2507,7 +2576,7 @@ class RequiredField:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    name: Optional[str] = field(
+    name: Optional["RequiredField.Name"] = field(
         default=None,
         metadata=dict(
             name="Name",
@@ -2515,6 +2584,36 @@ class RequiredField:
             required=True
         )
     )
+
+    class Name(Enum):
+        """
+        :cvar CARD_TYPE:
+        :cvar NUMBER:
+        :cvar CUSTOMER_REFERENCE:
+        :cvar ISSUE_NUMBER:
+        :cvar START_DATE:
+        :cvar NAME_ON_CARD:
+        :cvar EXPIRATION_DATE:
+        :cvar CVV:
+        :cvar ADDRESS_LINE1:
+        :cvar ADDRESS_LINE2:
+        :cvar CITY:
+        :cvar STATE:
+        :cvar POSTAL_CODE:
+        """
+        CARD_TYPE = "CardType"
+        NUMBER = "Number"
+        CUSTOMER_REFERENCE = "CustomerReference"
+        ISSUE_NUMBER = "IssueNumber"
+        START_DATE = "StartDate"
+        NAME_ON_CARD = "NameOnCard"
+        EXPIRATION_DATE = "ExpirationDate"
+        CVV = "CVV"
+        ADDRESS_LINE1 = "AddressLine1"
+        ADDRESS_LINE2 = "AddressLine2"
+        CITY = "City"
+        STATE = "State"
+        POSTAL_CODE = "PostalCode"
 
 
 @dataclass
@@ -2535,20 +2634,36 @@ class Requisition:
             type="Attribute"
         )
     )
-    category: Optional[str] = field(
+    category: Optional["Requisition.Category"] = field(
         default=None,
         metadata=dict(
             name="Category",
             type="Attribute"
         )
     )
-    type: Optional[str] = field(
+    type: Optional["Requisition.Type"] = field(
         default=None,
         metadata=dict(
             name="Type",
             type="Attribute"
         )
     )
+
+    class Category(Enum):
+        """
+        :cvar GOVERNMENT:
+        :cvar OTHER:
+        """
+        GOVERNMENT = "Government"
+        OTHER = "Other"
+
+    class Type(Enum):
+        """
+        :cvar CASH:
+        :cvar CREDIT:
+        """
+        CASH = "Cash"
+        CREDIT = "Credit"
 
 
 @dataclass
@@ -2597,13 +2712,23 @@ class ResponseMessage:
             required=True
         )
     )
-    type: Optional[str] = field(
+    type: Optional["ResponseMessage.Type"] = field(
         default=None,
         metadata=dict(
             name="Type",
             type="Attribute"
         )
     )
+
+    class Type(Enum):
+        """
+        :cvar WARNING:
+        :cvar ERROR:
+        :cvar INFO:
+        """
+        WARNING = "Warning"
+        ERROR = "Error"
+        INFO = "Info"
 
 
 @dataclass
@@ -2691,14 +2816,14 @@ class SearchTicketing:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    ticket_status: str = field(
+    ticket_status: "SearchTicketing.TicketStatus" = field(
         default="Both",
         metadata=dict(
             name="TicketStatus",
             type="Attribute"
         )
     )
-    reservation_status: str = field(
+    reservation_status: "SearchTicketing.ReservationStatus" = field(
         default="Both",
         metadata=dict(
             name="ReservationStatus",
@@ -2712,6 +2837,26 @@ class SearchTicketing:
             type="Attribute"
         )
     )
+
+    class TicketStatus(Enum):
+        """
+        :cvar TICKETED:
+        :cvar UNTICKETED:
+        :cvar BOTH:
+        """
+        TICKETED = "Ticketed"
+        UNTICKETED = "Unticketed"
+        BOTH = "Both"
+
+    class ReservationStatus(Enum):
+        """
+        :cvar ON_HOLD:
+        :cvar SET_FOR_TICKETING:
+        :cvar BOTH:
+        """
+        ON_HOLD = "OnHold"
+        SET_FOR_TICKETING = "SetForTicketing"
+        BOTH = "Both"
 
 
 @dataclass
@@ -3738,7 +3883,7 @@ class TypeGuaranteeInformation:
     class Meta:
         name = "typeGuaranteeInformation"
 
-    type: Optional[str] = field(
+    type: Optional["TypeGuaranteeInformation.Type"] = field(
         default=None,
         metadata=dict(
             name="Type",
@@ -3746,7 +3891,7 @@ class TypeGuaranteeInformation:
             required=True
         )
     )
-    agency_type: Optional[str] = field(
+    agency_type: Optional["TypeGuaranteeInformation.AgencyType"] = field(
         default=None,
         metadata=dict(
             name="AgencyType",
@@ -3764,6 +3909,22 @@ class TypeGuaranteeInformation:
             max_length=128.0
         )
     )
+
+    class Type(Enum):
+        """
+        :cvar GUARANTEE:
+        :cvar DEPOSIT:
+        """
+        GUARANTEE = "Guarantee"
+        DEPOSIT = "Deposit"
+
+    class AgencyType(Enum):
+        """
+        :cvar AGENCY_IATA:
+        :cvar OTHER_AGENCY_IATA:
+        """
+        AGENCY_IATA = "AgencyIATA"
+        OTHER_AGENCY_IATA = "OtherAgencyIATA"
 
 
 class TypeImageSize(Enum):
@@ -4565,13 +4726,23 @@ class TypeResultMessage:
             required=True
         )
     )
-    type: Optional[str] = field(
+    type: Optional["TypeResultMessage.Type"] = field(
         default=None,
         metadata=dict(
             name="Type",
             type="Attribute"
         )
     )
+
+    class Type(Enum):
+        """
+        :cvar WARNING:
+        :cvar ERROR:
+        :cvar INFO:
+        """
+        WARNING = "Warning"
+        ERROR = "Error"
+        INFO = "Info"
 
 
 @dataclass
@@ -5209,7 +5380,7 @@ class ActionStatus:
             type="Element"
         )
     )
-    type: Optional[str] = field(
+    type: Optional["ActionStatus.Type"] = field(
         default=None,
         metadata=dict(
             name="Type",
@@ -5271,6 +5442,24 @@ class ActionStatus:
             type="Attribute"
         )
     )
+
+    class Type(Enum):
+        """
+        :cvar TAW:
+        :cvar TTL:
+        :cvar TLCXL:
+        :cvar ACTIVE:
+        :cvar CXL:
+        :cvar TAU: Equivalent to TAX in Worldspan
+        :cvar TRH:
+        """
+        TAW = "TAW"
+        TTL = "TTL"
+        TLCXL = "TLCXL"
+        ACTIVE = "ACTIVE"
+        CXL = "CXL"
+        TAU = "TAU"
+        TRH = "TRH"
 
 
 @dataclass
@@ -6763,7 +6952,7 @@ class Payment:
             type="Attribute"
         )
     )
-    type: Optional[str] = field(
+    type: Optional["Payment.Type"] = field(
         default=None,
         metadata=dict(
             name="Type",
@@ -6817,6 +7006,24 @@ class Payment:
             type="Attribute"
         )
     )
+
+    class Type(Enum):
+        """
+        :cvar AIRLINE_FEE: Payment for all airline based fees (paper ticket fee, SSR, etc.)
+        :cvar DELIVERY_FEE: Payment for agency ticket delivery fee
+        :cvar ITINERARY: Payment for all passengers
+        :cvar PASSENGER: Payment for a single passenger. The BookingTravelerRef attribute must be set.
+        :cvar SERVICE_FEE: Payment for a service fee other than an MCO
+        :cvar OPTIONAL_SERVICE: Payment for an optional service
+        :cvar TICKET_FEE: Deprecated
+        """
+        AIRLINE_FEE = "AirlineFee"
+        DELIVERY_FEE = "DeliveryFee"
+        ITINERARY = "Itinerary"
+        PASSENGER = "Passenger"
+        SERVICE_FEE = "ServiceFee"
+        OPTIONAL_SERVICE = "OptionalService"
+        TICKET_FEE = "TicketFee"
 
 
 @dataclass
@@ -6887,7 +7094,7 @@ class PhoneNumber:
             type="Attribute"
         )
     )
-    type: Optional[str] = field(
+    type: Optional["PhoneNumber.Type"] = field(
         default=None,
         metadata=dict(
             name="Type",
@@ -6944,6 +7151,30 @@ class PhoneNumber:
             max_length=1024.0
         )
     )
+
+    class Type(Enum):
+        """
+        :cvar AGENCY:
+        :cvar BUSINESS:
+        :cvar MOBILE:
+        :cvar HOME:
+        :cvar FAX:
+        :cvar HOTEL:
+        :cvar OTHER:
+        :cvar NONE_VALUE:
+        :cvar EMAIL:
+        :cvar RESERVATIONS:
+        """
+        AGENCY = "Agency"
+        BUSINESS = "Business"
+        MOBILE = "Mobile"
+        HOME = "Home"
+        FAX = "Fax"
+        HOTEL = "Hotel"
+        OTHER = "Other"
+        NONE_VALUE = "None"
+        EMAIL = "Email"
+        RESERVATIONS = "Reservations"
 
 
 @dataclass
@@ -10391,7 +10622,7 @@ class TransactionType:
         :ivar rapid_reprice_enabled: Allows or prohibits rapid reprice functionality for the associated provisioning provider configuration. Providers: 1G/1V
         :ivar return_upsell_fare: When set to “true”, Upsell information will be returned in the shop response. Provider: 1G, 1V, 1P, 1J, ACH
         """
-        tier: Optional[int] = field(
+        tier: Optional["TransactionType.Air.Tier"] = field(
             default=None,
             metadata=dict(
                 name="Tier",
@@ -10454,6 +10685,16 @@ class TransactionType:
                 type="Attribute"
             )
         )
+
+        class Tier(Enum):
+            """
+            :cvar VALUE_1:
+            :cvar VALUE_2:
+            :cvar VALUE_3:
+            """
+            VALUE_1 = 1
+            VALUE_2 = 2
+            VALUE_3 = 3
 
 
 @dataclass

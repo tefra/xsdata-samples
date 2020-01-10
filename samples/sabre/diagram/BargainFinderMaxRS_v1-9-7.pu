@@ -26,7 +26,7 @@ class AirItineraryPricingInfoType {
     +TimeToLive : xs:integer
     +AlternateCityOption : xs:boolean
     +PreviousExchangeDate : xs:date
-    +ReissueExchange : xs:int
+    +ReissueExchange : ReissueExchange
     +AdvancedPurchaseDate : xs:date
     +PurchaseByDate : xs:date
     +ItinTotalFare : ItinTotalFareType
@@ -35,7 +35,7 @@ class AirItineraryPricingInfoType {
     +TPA_Extensions : TPA_Extensions
     +LastTicketDate : xs:string xs:time
     +PrivateFareType : xs:string
-    +SpanishFamilyDiscountIndicator : xs:string
+    +SpanishFamilyDiscountIndicator : SpanishFamilyDiscountIndicator
     +FlexibleFareID : xs:positiveInteger
 }
 AirItineraryPricingInfoType +-- PTC_FareBreakdowns
@@ -177,6 +177,19 @@ class Segment {
     +BrandName : xs:string
     +FareStatus : xs:string
 }
+AirItineraryPricingInfoType +-- SpanishFamilyDiscountIndicator
+class SpanishFamilyDiscountIndicator {
+    +A : xs:string
+    +B : xs:string
+    +C : xs:string
+}
+SpanishFamilyDiscountIndicator *- xs:string
+AirItineraryPricingInfoType +-- ReissueExchange
+class ReissueExchange {
+    +1 : xs:string
+    +2 : xs:string
+}
+ReissueExchange *- xs:int
 class AirItineraryType {
     +OriginDestinationOptions : OriginDestinationOptions
     +DirectionInd : AirTripType
@@ -242,8 +255,14 @@ BaggageInformationType +-- Allowance
 class Allowance {
     +Pieces : xs:int
     +Weight : xs:short
-    +Unit : xs:string
+    +Unit : Unit
 }
+Allowance +-- Unit
+class Unit {
+    +kg : xs:string
+    +lbs : xs:string
+}
+Unit *- xs:string
 class BookFlightSegmentType {
     +DepartureAirport : AirportInformationType
     +ArrivalAirport : AirportInformationType
@@ -462,8 +481,8 @@ class PenaltiesInfo {
 PenaltiesInfo +-- Penalty
 class Penalty {
     +Cat16TextOnly : Cat16TextOnly[]
-    +Type : xs:string
-    +Applicability : xs:string
+    +Type : Type
+    +Applicability : Applicability
     +Refundable : xs:boolean
     +Changeable : xs:boolean
     +ConditionsApply : xs:boolean
@@ -477,6 +496,18 @@ class Cat16TextOnly {
     +FareBasisCode : xs:string
     +FareComponentID : xs:integer
 }
+Penalty +-- Type
+class Type {
+    +Refund : xs:string
+    +Exchange : xs:string
+}
+Type *- xs:string
+Penalty +-- Applicability
+class Applicability {
+    +After : xs:string
+    +Before : xs:string
+}
+Applicability *- xs:string
 FareType +-- TPA_Extensions
 class TPA_Extensions {
     +Surcharges : SurchargesType[]
@@ -646,11 +677,11 @@ class OTA_AirLowFareSearchRS {
     +AltLangID : xs:language
     +EchoToken : xs:string
     +TimeStamp : xs:string
-    +Target : xs:NMTOKEN
+    +Target : Target
     +Version : xs:string
     +TransactionIdentifier : xs:string
     +SequenceNmbr : xs:boolean xs:positiveInteger
-    +TransactionStatusCode : xs:NMTOKEN
+    +TransactionStatusCode : TransactionStatusCode
     +PricedItinCount : xs:short
     +BrandedOneWayItinCount : xs:short
     +SimpleOneWayItinCount : xs:short
@@ -822,6 +853,20 @@ class AirlineOrder {
     +SequenceNumber : xs:short
 }
 AirlineOrder *- CompanyNameType
+OTA_AirLowFareSearchRS +-- Target
+class Target {
+    +Test : xs:string
+    +Production : xs:string
+}
+Target *- xs:NMTOKEN
+OTA_AirLowFareSearchRS +-- TransactionStatusCode
+class TransactionStatusCode {
+    +Start : xs:string
+    +End : xs:string
+    +Rollback : xs:string
+    +InSeries : xs:string
+}
+TransactionStatusCode *- xs:NMTOKEN
 class OneWayProcessingMessageType {
     +DepartureDate : xs:date
     +DepartureAirport : xs:string
@@ -847,7 +892,7 @@ class PTCFareBreakdownType {
     +PrivateFareType : xs:string
     +LastTicketDate : xs:string xs:time
     +PreviousExchangeDate : xs:date
-    +ReissueExchange : xs:int
+    +ReissueExchange : ReissueExchange
 }
 PTCFareBreakdownType +-- FareBasisCodes
 class FareBasisCodes {
@@ -938,6 +983,12 @@ class Rule {
     +Type : xs:string
     +ID : xs:int
 }
+PTCFareBreakdownType +-- ReissueExchange
+class ReissueExchange {
+    +1 : xs:string
+    +2 : xs:string
+}
+ReissueExchange *- xs:int
 enum PollingStatusType {
     received = received
     in progress = in progress
