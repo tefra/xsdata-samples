@@ -5894,7 +5894,7 @@ class OtaAirLowFareSearchRs:
             max_length=32.0
         )
     )
-    sequence_nmbr: Optional[Union[bool, int]] = field(
+    sequence_nmbr: Optional[Union[int, bool]] = field(
         default=None,
         metadata=dict(
             name="SequenceNmbr",

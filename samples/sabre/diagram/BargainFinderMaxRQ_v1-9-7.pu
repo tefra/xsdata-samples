@@ -1168,12 +1168,12 @@ class OTA_AirLowFareSearchRQ {
     +TPA_Extensions : TPA_Extensions
     +PrimaryLangID : xs:language
     +AltLangID : xs:language
-    +EchoToken : xs:string
+    +EchoToken : xs:string xs:string
     +TimeStamp : xs:string
     +Target : Target
     +Version : xs:string
     +TransactionIdentifier : xs:string
-    +SequenceNmbr : xs:boolean xs:positiveInteger
+    +SequenceNmbr : xs:positiveInteger xs:boolean
     +TransactionStatusCode : TransactionStatusCode
     +MaxResponses : xs:positiveInteger xs:integer
     +DirectFlightsOnly : xs:boolean
@@ -1557,7 +1557,7 @@ enum PreferLevelType {
     Preferred = Preferred
 }
 class PriceRequestInformationType {
-    +FareQualifier : xs:string
+    +FareQualifier : xs:string xs:boolean
     +NegotiatedFaresOnly : xs:boolean
     +CurrencyCode : xs:string
     +PricingSource : RequestPricingSourceType

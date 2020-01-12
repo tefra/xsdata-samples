@@ -1,6 +1,6 @@
 from enum import Enum
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 
 
 @dataclass
@@ -4666,40 +4666,6 @@ class TypeResidency(Enum):
     RESIDENT = "Resident"
 
 
-class TypeResponseImageSize(Enum):
-    """Allowable images sizes in response.
-
-    :cvar X:
-    :cvar T:
-    :cvar I:
-    :cvar S:
-    :cvar M:
-    :cvar L:
-    :cvar E:
-    :cvar G:
-    :cvar F:
-    :cvar B:
-    :cvar J:
-    :cvar O:
-    :cvar H:
-    :cvar C:
-    """
-    X = "X"
-    T = "T"
-    I = "I"
-    S = "S"
-    M = "M"
-    L = "L"
-    E = "E"
-    G = "G"
-    F = "F"
-    B = "B"
-    J = "J"
-    O = "O"
-    H = "H"
-    C = "C"
-
-
 @dataclass
 class TypeResultMessage:
     """Used to identify the results of a requests.
@@ -6684,7 +6650,7 @@ class MediaItem:
             type="Attribute"
         )
     )
-    size_code: Optional[TypeResponseImageSize] = field(
+    size_code: Optional[Union[TypeImageSize, TypeOtherImageSize]] = field(
         default=None,
         metadata=dict(
             name="sizeCode",

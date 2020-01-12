@@ -1924,7 +1924,7 @@ class StateProvType:
         metadata=dict(
             name="StateCode",
             type="Attribute",
-            min_length=1.0,
+            min_length=2.0,
             max_length=8.0
         )
     )
@@ -4107,7 +4107,7 @@ class PriceRequestInformationType:
     :ivar account_code:
     :ivar tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
     """
-    fare_qualifier: Optional[str] = field(
+    fare_qualifier: Optional[Union[str, bool]] = field(
         default=None,
         metadata=dict(
             name="FareQualifier",
@@ -4761,7 +4761,7 @@ class PriceRequestInformationType:
                     name="StateCode",
                     type="Element",
                     namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_length=1.0,
+                    min_length=2.0,
                     max_length=8.0
                 )
             )
@@ -9732,7 +9732,7 @@ class OtaAirLowFareSearchRq:
             max_length=32.0
         )
     )
-    sequence_nmbr: Optional[Union[bool, int]] = field(
+    sequence_nmbr: Optional[Union[int, bool]] = field(
         default=None,
         metadata=dict(
             name="SequenceNmbr",

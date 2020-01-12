@@ -675,12 +675,12 @@ class OTA_AirLowFareSearchRS {
     +TPA_Extensions : TPA_Extensions
     +PrimaryLangID : xs:language
     +AltLangID : xs:language
-    +EchoToken : xs:string
+    +EchoToken : xs:string xs:string
     +TimeStamp : xs:string
     +Target : Target
     +Version : xs:string
     +TransactionIdentifier : xs:string
-    +SequenceNmbr : xs:boolean xs:positiveInteger
+    +SequenceNmbr : xs:positiveInteger xs:boolean
     +TransactionStatusCode : TransactionStatusCode
     +PricedItinCount : xs:short
     +BrandedOneWayItinCount : xs:short
