@@ -684,8 +684,7 @@ class StayRestrictionsType:
         metadata=dict(
             name="MinimumStay",
             type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     maximum_stay: Optional["StayRestrictionsType.MaximumStay"] = field(
@@ -693,8 +692,7 @@ class StayRestrictionsType:
         metadata=dict(
             name="MaximumStay",
             type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
+            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
     stay_restrictions_ind: Optional[bool] = field(

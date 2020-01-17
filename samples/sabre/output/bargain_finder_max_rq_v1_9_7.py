@@ -2165,36 +2165,44 @@ class TravelDateTimeType:
         :ivar length_of_stay: Amount of days between previous leg's DEPARTURE date and current leg's DEPARTURE date. NOTE: Allowed only in 2nd or further "OriginDestinationInformation". Example: for outbound departing on Jan 20, LengthOfStay/@Days="2" means inbound departing on Jan 22.
         :ivar length_of_stay_range: See comment on "LengthOfStay" element.
         """
-        day: Optional["TravelDateTimeType.DepartureDates.Day"] = field(
-            default=None,
+        day: List["TravelDateTimeType.DepartureDates.Day"] = field(
+            default_factory=list,
             metadata=dict(
                 name="Day",
                 type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                min_occurs=0,
+                max_occurs=9223372036854775807
             )
         )
-        days_range: Optional["TravelDateTimeType.DepartureDates.DaysRange"] = field(
-            default=None,
+        days_range: List["TravelDateTimeType.DepartureDates.DaysRange"] = field(
+            default_factory=list,
             metadata=dict(
                 name="DaysRange",
                 type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                min_occurs=0,
+                max_occurs=9223372036854775807
             )
         )
-        length_of_stay: Optional["TravelDateTimeType.DepartureDates.LengthOfStay"] = field(
-            default=None,
+        length_of_stay: List["TravelDateTimeType.DepartureDates.LengthOfStay"] = field(
+            default_factory=list,
             metadata=dict(
                 name="LengthOfStay",
                 type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                min_occurs=0,
+                max_occurs=9223372036854775807
             )
         )
-        length_of_stay_range: Optional["TravelDateTimeType.DepartureDates.LengthOfStayRange"] = field(
-            default=None,
+        length_of_stay_range: List["TravelDateTimeType.DepartureDates.LengthOfStayRange"] = field(
+            default_factory=list,
             metadata=dict(
                 name="LengthOfStayRange",
                 type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                min_occurs=0,
+                max_occurs=9223372036854775807
             )
         )
 
@@ -2290,20 +2298,24 @@ class TravelDateTimeType:
         :ivar day:
         :ivar days_range:
         """
-        day: Optional["TravelDateTimeType.ArrivalDates.Day"] = field(
-            default=None,
+        day: List["TravelDateTimeType.ArrivalDates.Day"] = field(
+            default_factory=list,
             metadata=dict(
                 name="Day",
                 type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                min_occurs=0,
+                max_occurs=9223372036854775807
             )
         )
-        days_range: Optional["TravelDateTimeType.ArrivalDates.DaysRange"] = field(
-            default=None,
+        days_range: List["TravelDateTimeType.ArrivalDates.DaysRange"] = field(
+            default_factory=list,
             metadata=dict(
                 name="DaysRange",
                 type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                min_occurs=0,
+                max_occurs=9223372036854775807
             )
         )
 
@@ -3674,20 +3686,24 @@ class FlexibleFaresType:
                 namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
-        corporate_id: Optional["FlexibleFaresType.FareParameters.CorporateId"] = field(
-            default=None,
+        corporate_id: List["FlexibleFaresType.FareParameters.CorporateId"] = field(
+            default_factory=list,
             metadata=dict(
                 name="CorporateID",
                 type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                min_occurs=0,
+                max_occurs=9223372036854775807
             )
         )
-        account_code: Optional["FlexibleFaresType.FareParameters.AccountCode"] = field(
-            default=None,
+        account_code: List["FlexibleFaresType.FareParameters.AccountCode"] = field(
+            default_factory=list,
             metadata=dict(
                 name="AccountCode",
                 type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                min_occurs=0,
+                max_occurs=9223372036854775807
             )
         )
 
@@ -4171,20 +4187,24 @@ class PriceRequestInformationType:
             type="Attribute"
         )
     )
-    negotiated_fare_code: Optional["PriceRequestInformationType.NegotiatedFareCode"] = field(
-        default=None,
+    negotiated_fare_code: List["PriceRequestInformationType.NegotiatedFareCode"] = field(
+        default_factory=list,
         metadata=dict(
             name="NegotiatedFareCode",
             type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
-    account_code: Optional["PriceRequestInformationType.AccountCode"] = field(
-        default=None,
+    account_code: List["PriceRequestInformationType.AccountCode"] = field(
+        default_factory=list,
         metadata=dict(
             name="AccountCode",
             type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     tpa_extensions: Optional["PriceRequestInformationType.TpaExtensions"] = field(
@@ -9555,21 +9575,24 @@ class ExchangeType:
             required=True
         )
     )
-    arunk: Optional[ArunkType] = field(
-        default=None,
+    arunk: List[ArunkType] = field(
+        default_factory=list,
         metadata=dict(
             name="Arunk",
             type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
-    origin_destination_information: Optional[ExchangeOriginDestinationInformationType] = field(
-        default=None,
+    origin_destination_information: List[ExchangeOriginDestinationInformationType] = field(
+        default_factory=list,
         metadata=dict(
             name="OriginDestinationInformation",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     travel_preferences: Optional[ExchangeAirSearchPrefsType] = field(
@@ -10053,18 +10076,22 @@ class OtaAirLowFareSearchRq:
             :ivar partition:
             :ivar group:
             """
-            partition: Optional[CachePartitionType] = field(
-                default=None,
+            partition: List[CachePartitionType] = field(
+                default_factory=list,
                 metadata=dict(
                     name="Partition",
-                    type="Element"
+                    type="Element",
+                    min_occurs=0,
+                    max_occurs=9223372036854775807
                 )
             )
-            group: Optional[CachePartitionGroupType] = field(
-                default=None,
+            group: List[CachePartitionGroupType] = field(
+                default_factory=list,
                 metadata=dict(
                     name="Group",
-                    type="Element"
+                    type="Element",
+                    min_occurs=0,
+                    max_occurs=9223372036854775807
                 )
             )
 

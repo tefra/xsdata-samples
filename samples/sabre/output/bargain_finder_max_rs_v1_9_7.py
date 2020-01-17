@@ -403,13 +403,14 @@ class CurrencyConversionsType:
     """
     :ivar conversion:
     """
-    conversion: Optional["CurrencyConversionsType.Conversion"] = field(
-        default=None,
+    conversion: List["CurrencyConversionsType.Conversion"] = field(
+        default_factory=list,
         metadata=dict(
             name="Conversion",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
+            min_occurs=1,
+            max_occurs=9223372036854775807
         )
     )
 
@@ -528,13 +529,14 @@ class FareMessagesType:
     """
     :ivar message:
     """
-    message: Optional["FareMessagesType.Message"] = field(
-        default=None,
+    message: List["FareMessagesType.Message"] = field(
+        default_factory=list,
         metadata=dict(
             name="Message",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
+            min_occurs=1,
+            max_occurs=9223372036854775807
         )
     )
 
