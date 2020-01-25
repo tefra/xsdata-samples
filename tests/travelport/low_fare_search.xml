@@ -1,29 +1,29 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<LowFareSearchReq xmlns="http://www.travelport.com/schema/air_v48_0" xmlns:ns0="http://www.travelport.com/schema/common_v48_0" TraceId="c0716df8-12f5-11ea-9d04-000c293dfa64" TargetBranch="P107695" SolutionResult="true" PreferCompleteItinerary="true" ReturnBrandedFares="true" CheckOBFees="All">
+<ns1:LowFareSearchReq xmlns:ns0="http://www.travelport.com/schema/common_v48_0" xmlns:ns1="http://www.travelport.com/schema/air_v48_0" TraceId="c0716df8-12f5-11ea-9d04-000c293dfa64" TargetBranch="P107695" SolutionResult="true" PreferCompleteItinerary="true" ReturnBrandedFares="true" CheckOBFees="All">
   <ns0:BillingPointOfSaleInfo OriginApplication="UAPI"/>
-  <SearchAirLeg>
-    <SearchOrigin>
+  <ns1:SearchAirLeg>
+    <ns1:SearchOrigin>
       <ns0:CityOrAirport Code="LON"/>
-    </SearchOrigin>
-    <SearchDestination>
+    </ns1:SearchOrigin>
+    <ns1:SearchDestination>
       <ns0:CityOrAirport Code="NYC"/>
-    </SearchDestination>
-    <SearchDepTime PreferredTime="2019-12-15"/>
-    <AirLegModifiers AllowDirectAccess="true"/>
-  </SearchAirLeg>
-  <AirSearchModifiers DistanceType="MI" IncludeFlightDetails="true" AllowChangeOfAirport="true" MaxSolutions="250">
-    <PreferredProviders>
+    </ns1:SearchDestination>
+    <ns1:SearchDepTime PreferredTime="2019-12-15"/>
+    <ns1:AirLegModifiers AllowDirectAccess="true"/>
+  </ns1:SearchAirLeg>
+  <ns1:AirSearchModifiers DistanceType="MI" IncludeFlightDetails="true" AllowChangeOfAirport="true" MaxSolutions="250">
+    <ns1:PreferredProviders>
       <ns0:Provider Code="1P"/>
-    </PreferredProviders>
-  </AirSearchModifiers>
+    </ns1:PreferredProviders>
+  </ns1:AirSearchModifiers>
   <ns0:SearchPassenger Code="ADT" Age="30"/>
   <ns0:SearchPassenger Code="ADT" Age="30"/>
   <ns0:SearchPassenger Code="ADT" Age="30"/>
   <ns0:SearchPassenger Code="CNN" Age="7"/>
   <ns0:SearchPassenger Code="CNN" Age="7"/>
   <ns0:SearchPassenger Code="INF"/>
-  <AirPricingModifiers CurrencyType="EUR" FaresIndicator="PublicAndPrivateFares" ETicketability="Yes" ReturnServices="true"/>
+  <ns1:AirPricingModifiers CurrencyType="EUR" FaresIndicator="PublicAndPrivateFares" ETicketability="Yes" ReturnServices="true"/>
   <ns0:FormOfPayment Type="Credit">
     <ns0:CreditCard Type="CA" Number="5234123412341234" ExpDate="2020-11" Name="Thug Life" CVV="123"/>
   </ns0:FormOfPayment>
-</LowFareSearchReq>
+</ns1:LowFareSearchReq>
