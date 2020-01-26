@@ -33,7 +33,7 @@ class AirItineraryPricingInfoType {
     +PTC_FareBreakdowns : PTC_FareBreakdowns
     +FareInfos : FareInfos
     +TPA_Extensions : TPA_Extensions
-    +LastTicketDate : xs:string xs:time
+    +LastTicketDate : xs:string, xs:time
     +PrivateFareType : xs:string
     +SpanishFamilyDiscountIndicator : SpanishFamilyDiscountIndicator
     +FlexibleFareID : xs:positiveInteger
@@ -354,7 +354,7 @@ class CurrencyAmountType {
     +Amount : xs:decimal
 }
 class CurrencyConversionsType {
-    +Conversion : Conversion
+    +Conversion : Conversion[]
 }
 CurrencyConversionsType +-- Conversion
 class Conversion {
@@ -410,7 +410,7 @@ class FareInfoType {
     +ArrivalAirport : ResponseLocationType
 }
 class FareMessagesType {
-    +Message : Message
+    +Message : Message[]
 }
 FareMessagesType +-- Message
 class Message {
@@ -675,12 +675,12 @@ class OTA_AirLowFareSearchRS {
     +TPA_Extensions : TPA_Extensions
     +PrimaryLangID : xs:language
     +AltLangID : xs:language
-    +EchoToken : xs:string xs:string
+    +EchoToken : xs:string, xs:string
     +TimeStamp : xs:string
     +Target : Target
     +Version : xs:string
     +TransactionIdentifier : xs:string
-    +SequenceNmbr : xs:positiveInteger xs:boolean
+    +SequenceNmbr : xs:positiveInteger, xs:boolean
     +TransactionStatusCode : TransactionStatusCode
     +PricedItinCount : xs:short
     +BrandedOneWayItinCount : xs:short
@@ -890,7 +890,7 @@ class PTCFareBreakdownType {
     +FareInfos : FareInfos
     +PricingSource : xs:string
     +PrivateFareType : xs:string
-    +LastTicketDate : xs:string xs:time
+    +LastTicketDate : xs:string, xs:time
     +PreviousExchangeDate : xs:date
     +ReissueExchange : ReissueExchange
 }

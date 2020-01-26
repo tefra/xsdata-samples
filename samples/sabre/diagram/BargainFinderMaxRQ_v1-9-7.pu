@@ -1007,8 +1007,8 @@ class ExchangeType {
     +Fare : ExchangeFareType
     +POS : ExchangePOSType
     +OriginDestinationInformation : ExchangeOriginDestinationInformationType
-    +Arunk : ArunkType
-    +OriginDestinationInformation : ExchangeOriginDestinationInformationType
+    +Arunk : ArunkType[]
+    +OriginDestinationInformation : ExchangeOriginDestinationInformationType[]
     +TravelPreferences : ExchangeAirSearchPrefsType
     +TravelerInfoSummary : TravelerInfoSummaryType
     +TPA_Extensions : ExchangeTPA_ExtensionsType
@@ -1057,8 +1057,8 @@ class FareParameters {
     +PassengerTypeQuantity : PassengerTypeQuantityType[]
     +JumpCabinLogic : JumpCabinLogicType
     +KeepSameCabin : KeepSameCabinType
-    +CorporateID : CorporateID
-    +AccountCode : AccountCode
+    +CorporateID : CorporateID[]
+    +AccountCode : AccountCode[]
 }
 FareParameters +-- ExcludeRestricted
 class ExcludeRestricted {
@@ -1090,7 +1090,7 @@ class Cabin {
 }
 FareParameters +-- PassengerType
 class PassengerType {
-    +Code : xs:string xs:string
+    +Code : xs:string, xs:string
 }
 FareParameters +-- NegotiatedFaresOnly
 class NegotiatedFaresOnly {
@@ -1114,7 +1114,7 @@ class FlightStopsAsConnectionsType {
 class FlightTypePrefType {
     +PreferLevel : PreferLevelType
     +FlightType : FlightTypeType
-    +MaxConnections : xs:nonNegativeInteger xs:boolean
+    +MaxConnections : xs:nonNegativeInteger, xs:boolean
 }
 enum FlightTypeType {
     Nonstop = Nonstop
@@ -1168,14 +1168,14 @@ class OTA_AirLowFareSearchRQ {
     +TPA_Extensions : TPA_Extensions
     +PrimaryLangID : xs:language
     +AltLangID : xs:language
-    +EchoToken : xs:string xs:string
+    +EchoToken : xs:string, xs:string
     +TimeStamp : xs:string
     +Target : Target
     +Version : xs:string
     +TransactionIdentifier : xs:string
-    +SequenceNmbr : xs:positiveInteger xs:boolean
+    +SequenceNmbr : xs:positiveInteger, xs:boolean
     +TransactionStatusCode : TransactionStatusCode
-    +MaxResponses : xs:positiveInteger xs:integer
+    +MaxResponses : xs:positiveInteger, xs:integer
     +DirectFlightsOnly : xs:boolean
     +AvailableFlightsOnly : xs:boolean
     +ResponseType : xs:string
@@ -1238,8 +1238,8 @@ class DisplayPolicy {
 DisplayPolicy *- xs:string
 TPA_Extensions +-- Partitions
 class Partitions {
-    +Partition : CachePartitionType
-    +Group : CachePartitionGroupType
+    +Partition : CachePartitionType[]
+    +Group : CachePartitionGroupType[]
 }
 TPA_Extensions +-- ReservationData
 class ReservationData {
@@ -1557,7 +1557,7 @@ enum PreferLevelType {
     Preferred = Preferred
 }
 class PriceRequestInformationType {
-    +FareQualifier : xs:string xs:boolean
+    +FareQualifier : xs:string, xs:boolean
     +NegotiatedFaresOnly : xs:boolean
     +CurrencyCode : xs:string
     +PricingSource : RequestPricingSourceType
@@ -1566,8 +1566,8 @@ class PriceRequestInformationType {
     +PurchaseDate : xs:date
     +PurchaseTime : xs:string
     +NetFaresUsed : xs:boolean
-    +NegotiatedFareCode : NegotiatedFareCode
-    +AccountCode : AccountCode
+    +NegotiatedFareCode : NegotiatedFareCode[]
+    +AccountCode : AccountCode[]
     +TPA_Extensions : TPA_Extensions
 }
 PriceRequestInformationType +-- TPA_Extensions
@@ -1979,10 +1979,10 @@ class TravelDateTimeType {
 }
 TravelDateTimeType +-- DepartureDates
 class DepartureDates {
-    +Day : Day
-    +DaysRange : DaysRange
-    +LengthOfStay : LengthOfStay
-    +LengthOfStayRange : LengthOfStayRange
+    +Day : Day[]
+    +DaysRange : DaysRange[]
+    +LengthOfStay : LengthOfStay[]
+    +LengthOfStayRange : LengthOfStayRange[]
 }
 DepartureDates +-- LengthOfStay
 class LengthOfStay {
@@ -2005,8 +2005,8 @@ class DaysRange {
 }
 TravelDateTimeType +-- ArrivalDates
 class ArrivalDates {
-    +Day : Day
-    +DaysRange : DaysRange
+    +Day : Day[]
+    +DaysRange : DaysRange[]
 }
 ArrivalDates +-- Day
 class Day {

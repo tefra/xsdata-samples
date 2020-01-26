@@ -8,16 +8,16 @@ class AdvResTicketingType {
 }
 AdvResTicketingType +-- AdvReservation
 class AdvReservation {
-    +LatestTimeOfDay : xs:string xs:time
+    +LatestTimeOfDay : xs:string, xs:time
     +LatestPeriod : xs:string
     +LatestUnit : StayUnitType
 }
 AdvResTicketingType +-- AdvTicketing
 class AdvTicketing {
-    +FromResTimeOfDay : xs:string xs:time
+    +FromResTimeOfDay : xs:string, xs:time
     +FromResPeriod : xs:string
     +FromResUnit : StayUnitType
-    +FromDepartTimeOfDay : xs:string xs:time
+    +FromDepartTimeOfDay : xs:string, xs:time
     +FromDepartPeriod : xs:string
     +FromDepartUnit : StayUnitType
 }
@@ -122,18 +122,18 @@ class StayRestrictionsType {
 }
 StayRestrictionsType +-- MinimumStay
 class MinimumStay {
-    +ReturnTimeOfDay : xs:string xs:time
+    +ReturnTimeOfDay : xs:string, xs:time
     +MinStay : xs:integer
     +StayUnit : StayUnitType
-    +MinStayDate : xs:string xs:time
+    +MinStayDate : xs:string, xs:time
 }
 StayRestrictionsType +-- MaximumStay
 class MaximumStay {
     +ReturnType : ReturnType
-    +ReturnTimeOfDay : xs:string xs:time
+    +ReturnTimeOfDay : xs:string, xs:time
     +MaxStay : xs:integer
     +StayUnit : StayUnitType
-    +MaxStayDate : xs:string xs:time
+    +MaxStayDate : xs:string, xs:time
 }
 MaximumStay +-- ReturnType
 class ReturnType {
@@ -157,7 +157,7 @@ enum StayUnitType {
 class TravelerCountType {
     +Quantity : xs:integer
     +Age : xs:integer
-    +Code : xs:string xs:string
+    +Code : xs:string, xs:string
     +CodeContext : xs:string
     +URI : xs:anyURI
 }

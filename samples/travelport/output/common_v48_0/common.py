@@ -1,6 +1,6 @@
 from enum import Enum
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import List, Optional
 
 
 @dataclass
@@ -4666,6 +4666,40 @@ class TypeResidency(Enum):
     RESIDENT = "Resident"
 
 
+class TypeResponseImageSize(Enum):
+    """Allowable images sizes in response.
+
+    :cvar T:
+    :cvar I:
+    :cvar S:
+    :cvar M:
+    :cvar L:
+    :cvar E:
+    :cvar G:
+    :cvar F:
+    :cvar B:
+    :cvar J:
+    :cvar O:
+    :cvar H:
+    :cvar C:
+    :cvar X:
+    """
+    T = "T"
+    I = "I"
+    S = "S"
+    M = "M"
+    L = "L"
+    E = "E"
+    G = "G"
+    F = "F"
+    B = "B"
+    J = "J"
+    O = "O"
+    H = "H"
+    C = "C"
+    X = "X"
+
+
 @dataclass
 class TypeResultMessage:
     """Used to identify the results of a requests.
@@ -6650,7 +6684,7 @@ class MediaItem:
             type="Attribute"
         )
     )
-    size_code: Optional[Union[TypeImageSize, TypeOtherImageSize]] = field(
+    size_code: Optional[TypeResponseImageSize] = field(
         default=None,
         metadata=dict(
             name="sizeCode",
@@ -11998,13 +12032,11 @@ class ServiceRuleType:
                 max_occurs=999
             )
         )
-        applicable_levels: List[OptionalServiceApplicabilityType] = field(
-            default_factory=list,
+        applicable_levels: Optional[str] = field(
+            default=None,
             metadata=dict(
                 name="ApplicableLevels",
-                type="Attribute",
-                min_occurs=0,
-                max_occurs=9223372036854775807
+                type="Attribute"
             )
         )
         provider_defined_applicable_levels: Optional[str] = field(
@@ -12048,13 +12080,11 @@ class ServiceRuleType:
                 max_occurs=999
             )
         )
-        supported_modifications: List[ModificationType] = field(
-            default_factory=list,
+        supported_modifications: Optional[str] = field(
+            default=None,
             metadata=dict(
                 name="SupportedModifications",
-                type="Attribute",
-                min_occurs=0,
-                max_occurs=9223372036854775807
+                type="Attribute"
             )
         )
         provider_defined_modification_type: Optional[str] = field(
