@@ -12201,7 +12201,7 @@ class TypeCreditCardType(TypePaymentCard):
     :ivar bank_name: Issuing bank name for this credit card
     :ivar bank_country_code: ISO Country code associated with the issuing bank
     :ivar bank_state_code: State code associated with the issuing bank.
-    :ivar enett:
+    :ivar enett: Acceptable values are true or false. If set to true it will denote that the credit card used has been issued through Enett. For all other credit card payments this value will be set to false.
     """
     class Meta:
         name = "typeCreditCardType"
@@ -12273,7 +12273,7 @@ class TypePassengerType:
     :ivar name: Optional passenger Name with associated LoyaltyCard may provide benefit when pricing itineraries using Low Cost Carriers. In general, most carriers do not consider passenger LoyalyCard information when initially pricing itineraries.
     :ivar loyalty_card:
     :ivar discount_card:
-    :ivar personal_geography:
+    :ivar personal_geography: Passenger personal geography detail to be sent to Host for accessing location specific fares
     :ivar code: The 3-char IATA passenger type code
     :ivar age:
     :ivar dob: Passenger Date of Birth
@@ -12461,7 +12461,7 @@ class FormOfPayment:
     :ivar fulfillment_idnumber: Identification number, e.g. card number, to define how the customer will identify himself when collecting the ticket
     :ivar is_agent_type: If this is true then FormOfPayment mention in Type is anAgent type FormOfPayment.
     :ivar agent_text: This is only relevent when IsAgentType is specified as true. Otherwise this will be ignored.
-    :ivar reuse_fop:
+    :ivar reuse_fop: Key of the FOP Key to be reused as this Form of Payment.Only Credit and Debit Card will be supported for FOP Reuse.
     :ivar external_reference:
     :ivar reusable: Indicates whether the form of payment can be reused or not. Currently applicable for Credit and Debit form of payment
     :ivar profile_id: The unique ID of the profile that contains the payment details to use.

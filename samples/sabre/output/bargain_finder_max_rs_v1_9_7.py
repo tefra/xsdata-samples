@@ -1404,7 +1404,8 @@ class AlternateLocationLowestFaresType:
 
 @dataclass
 class BaggageInformationListType:
-    """
+    """Baggage information list.
+
     :ivar baggage_information:
     """
     baggage_information: List[BaggageInformationType] = field(
@@ -2969,7 +2970,7 @@ class FareType:
                 :ivar total_fare: The total price that the passenger would pay (includes fare, taxes, fees)
                 :ivar total_mileage:
                 :ivar number:
-                :ivar fare_status:
+                :ivar fare_status: Detailed reason why fare could not be returned (when FareReturned="false"). "A" means "Class is not available", "O" - "Class is not offered", "F" - "No fare found or applicable", "N" - unknown status.
                 """
                 base_fare: Optional[CurrencyAmountType] = field(
                     default=None,

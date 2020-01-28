@@ -3865,7 +3865,7 @@ class LowFareSearchAsynchRsp(AirSearchRsp):
     """Asynchronous Low Fare Search Response contains only the 1st Provider
     response unless time out occurs.
 
-    :ivar async_provider_specific_response:
+    :ivar async_provider_specific_response: Provider: 1G,1V,1P,1J,ACH-Identifies pending responses from a specific provider using MoreResults attribute
     :ivar brand_list:
     :ivar search_id: Provider: 1G,1V,1P,1J,ACH-Indicates the Search Id of the LFS search
     :ivar currency_type: Provider: 1G,1V,1P,1J,ACH-Specifies the default Currency Type in the response.

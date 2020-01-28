@@ -4174,7 +4174,7 @@ class PriceChangeType:
 @dataclass
 class PriceRange:
     """
-    :ivar default_currency:
+    :ivar default_currency: Indicates if the currency code of StartPrice / EndPrice is the default currency code
     :ivar start_price: Price range start value
     :ivar end_price: Price range end value
     """
@@ -5514,7 +5514,7 @@ class TypeAtpcoglobalIndicator(Enum):
     :cvar NA: FareByRule for North America incl US/CA/TB/PV
     :cvar PA: Via Pacific
     :cvar PN: Via Pacific and via North America
-    :cvar PO:
+    :cvar PO: Via Polar Route.
     :cvar RU: Russia - Area 3
     :cvar RW: Round The World.
     :cvar SA: South Atlantic only
