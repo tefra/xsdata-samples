@@ -28,6 +28,7 @@ from samples.travelport.output.common_v48_0.common import (
     LoyaltyProgram,
     Mcoinformation,
     MetaData,
+    Name,
     OverridePcc,
     Payment,
     Penalty as CommonPenalty,
@@ -10826,7 +10827,7 @@ class RefundFailureInfo:
             required=True
         )
     )
-    name: Optional[str] = field(
+    name: Optional[Name] = field(
         default=None,
         metadata=dict(
             name="Name",
@@ -11614,7 +11615,7 @@ class TicketFailureInfo:
             max_occurs=999
         )
     )
-    name: Optional[str] = field(
+    name: Optional[Name] = field(
         default=None,
         metadata=dict(
             name="Name",
@@ -11787,7 +11788,7 @@ class TypeTicketFailureInfo:
             required=True
         )
     )
-    name: Optional[str] = field(
+    name: Optional[Name] = field(
         default=None,
         metadata=dict(
             name="Name",
@@ -12930,7 +12931,7 @@ class AirRefundBundle:
             required=True
         )
     )
-    name: List[str] = field(
+    name: List[Name] = field(
         default_factory=list,
         metadata=dict(
             name="Name",
@@ -15784,7 +15785,7 @@ class TicketInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    name: Optional[str] = field(
+    name: Optional[Name] = field(
         default=None,
         metadata=dict(
             name="Name",
