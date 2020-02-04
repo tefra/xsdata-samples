@@ -1,47 +1,47 @@
 @startuml
 
 class ADVType {
-    +AdvRsvnOnlyIfTk : xs:boolean
-    +AdvRsvnAnyTm : xs:boolean
-    +AdvRsvnHrs : xs:boolean
-    +AdvRsvnDays : xs:boolean
-    +AdvRsvnMonths : xs:boolean
-    +AdvRsvnEarliestTm : xs:boolean
-    +AdvRsvnLatestTm : xs:boolean
-    +AdvRsvnWaived : xs:boolean
-    +AdvRsvnDataExists : xs:boolean
-    +AdvRsvnEndItem : xs:boolean
-    +AdvTkEarliestTm : xs:boolean
-    +AdvTkLatestTm : xs:boolean
-    +AdvTkRsvnHrs : xs:boolean
-    +AdvTkRsvnDays : xs:boolean
-    +AdvTkRsvnMonths : xs:boolean
-    +AdvTkStartHrs : xs:boolean
-    +AdvTkStartDays : xs:boolean
-    +AdvTkStartMonths : xs:boolean
-    +AdvTkWaived : xs:boolean
-    +AdvTkAnyTm : xs:boolean
-    +AdvTkEndItem : xs:boolean
-    +AdvRsvnTm : xs:integer
-    +AdvTkRsvnTm : xs:integer
-    +AdvTkStartTm : xs:integer
-    +EarliestRsvnDtPresent : xs:boolean
-    +EarliestTkDtPresent : xs:boolean
-    +LatestRsvnDtPresent : xs:boolean
-    +LatestTkDtPresent : xs:boolean
-    +EarliestRsvnDt : xs:date
-    +EarliestTkDt : xs:date
-    +LatestRsvnDt : xs:date
-    +LatestTkDt : xs:date
+    +AdvRsvnOnlyIfTk : boolean
+    +AdvRsvnAnyTm : boolean
+    +AdvRsvnHrs : boolean
+    +AdvRsvnDays : boolean
+    +AdvRsvnMonths : boolean
+    +AdvRsvnEarliestTm : boolean
+    +AdvRsvnLatestTm : boolean
+    +AdvRsvnWaived : boolean
+    +AdvRsvnDataExists : boolean
+    +AdvRsvnEndItem : boolean
+    +AdvTkEarliestTm : boolean
+    +AdvTkLatestTm : boolean
+    +AdvTkRsvnHrs : boolean
+    +AdvTkRsvnDays : boolean
+    +AdvTkRsvnMonths : boolean
+    +AdvTkStartHrs : boolean
+    +AdvTkStartDays : boolean
+    +AdvTkStartMonths : boolean
+    +AdvTkWaived : boolean
+    +AdvTkAnyTm : boolean
+    +AdvTkEndItem : boolean
+    +AdvRsvnTm : integer
+    +AdvTkRsvnTm : integer
+    +AdvTkStartTm : integer
+    +EarliestRsvnDtPresent : boolean
+    +EarliestTkDtPresent : boolean
+    +LatestRsvnDtPresent : boolean
+    +LatestTkDtPresent : boolean
+    +EarliestRsvnDt : date
+    +EarliestTkDt : date
+    +LatestRsvnDt : date
+    +LatestTkDt : date
 }
 class APISRequirements {
     +Document : Document[]
-    +Key : xs:string
-    +Level : xs:string
-    +GenderRequired : xs:boolean
-    +DateOfBirthRequired : xs:boolean
-    +RequiredDocuments : xs:string
-    +NationalityRequired : xs:boolean
+    +Key : string
+    +Level : string
+    +GenderRequired : boolean
+    +DateOfBirthRequired : boolean
+    +RequiredDocuments : string
+    +NationalityRequired : boolean
 }
 class APISRequirementsList {
     +APISRequirements : APISRequirements[]
@@ -51,24 +51,24 @@ class AccountRelatedRules {
     +RoutingRules : RoutingRules
 }
 class ActionDetails {
-    +PseudoCityCode : xs:string
-    +AgentSine : xs:string
-    +EventDate : xs:date
-    +EventTime : xs:time
-    +Text : xs:string
+    +PseudoCityCode : string
+    +AgentSine : string
+    +EventDate : date
+    +EventTime : time
+    +Text : string
 }
 class AdditionalInfo {
-    +Category : xs:string
+    +Category : string
 }
 class AddlBookingCodeInformation {
-    +value : xs:string
+    +value : string
 }
 class Adjustment {
-    +Amount : xs:string
-    +Percent : xs:float
-    +AdjustedTotalPrice : xs:string
-    +ApproximateAdjustedTotalPrice : xs:string
-    +BookingTravelerRef : xs:string
+    +Amount : string
+    +Percent : float
+    +AdjustedTotalPrice : string
+    +ApproximateAdjustedTotalPrice : string
+    +BookingTravelerRef : string
 }
 class Affiliations {
     +TravelArranger : TravelArranger[]
@@ -76,13 +76,13 @@ class Affiliations {
 class AirAvailInfo {
     +BookingCodeInfo : BookingCodeInfo[]
     +FareTokenInfo : FareTokenInfo[]
-    +ProviderCode : xs:string
-    +HostTokenRef : xs:string
+    +ProviderCode : string
+    +HostTokenRef : string
 }
 AirAvailInfo +-- FareTokenInfo
 class FareTokenInfo {
-    +FareInfoRef : xs:string
-    +HostTokenRef : xs:string
+    +FareInfoRef : string
+    +HostTokenRef : string
 }
 class AirExchangeBundle {
     +common:AirExchangeInfo : common:AirExchangeInfo
@@ -99,15 +99,15 @@ class AirExchangeBundleTotal {
 }
 class AirExchangeModifiers {
     +ContractCodes : ContractCodes
-    +BookingDate : xs:string
-    +TicketingDate : xs:string
-    +AccountCode : xs:string
-    +TicketDesignator : xs:string
-    +AllowPenaltyFares : xs:boolean
-    +PrivateFaresOnly : xs:boolean
-    +UniversalRecordLocatorCode : xs:string
-    +ProviderLocatorCode : xs:string
-    +ProviderCode : xs:string
+    +BookingDate : string
+    +TicketingDate : string
+    +AccountCode : string
+    +TicketDesignator : string
+    +AllowPenaltyFares : boolean
+    +PrivateFaresOnly : boolean
+    +UniversalRecordLocatorCode : string
+    +ProviderLocatorCode : string
+    +ProviderCode : string
 }
 AirExchangeModifiers +-- ContractCodes
 class ContractCodes {
@@ -128,8 +128,8 @@ class AirExchangeTicketBundle {
     +WaiverCode : WaiverCode
 }
 class AirFareDiscount {
-    +Percentage : xs:double
-    +Amount : xs:string
+    +Percentage : double
+    +Amount : string
     +DiscountMethod : typeFareDiscount
 }
 class AirFareDisplayModifiers {
@@ -137,33 +137,33 @@ class AirFareDisplayModifiers {
     +common:CabinClass : common:CabinClass
     +PenaltyFareInformation : PenaltyFareInformation
     +FareSearchOption : typeFareSearchOption[]
-    +MaxResponses : xs:integer
-    +DepartureDate : xs:date
-    +TicketingDate : xs:date
-    +ReturnDate : xs:date
-    +BaseFareOnly : xs:boolean
-    +UnrestrictedFaresOnly : xs:boolean
+    +MaxResponses : integer
+    +DepartureDate : date
+    +TicketingDate : date
+    +ReturnDate : date
+    +BaseFareOnly : boolean
+    +UnrestrictedFaresOnly : boolean
     +FaresIndicator : typeFaresIndicator
-    +CurrencyType : xs:string
-    +IncludeTaxes : xs:boolean
-    +IncludeEstimatedTaxes : xs:boolean
-    +IncludeSurcharges : xs:boolean
+    +CurrencyType : string
+    +IncludeTaxes : boolean
+    +IncludeEstimatedTaxes : boolean
+    +IncludeSurcharges : boolean
     +GlobalIndicator : typeATPCOGlobalIndicator
-    +ProhibitMinStayFares : xs:boolean
-    +ProhibitMaxStayFares : xs:boolean
-    +ProhibitAdvancePurchaseFares : xs:boolean
-    +ProhibitNonRefundableFares : xs:boolean
-    +ValidatedFaresOnly : xs:boolean
-    +ProhibitTravelRestrictedFares : xs:boolean
-    +FiledCurrency : xs:string
+    +ProhibitMinStayFares : boolean
+    +ProhibitMaxStayFares : boolean
+    +ProhibitAdvancePurchaseFares : boolean
+    +ProhibitNonRefundableFares : boolean
+    +ValidatedFaresOnly : boolean
+    +ProhibitTravelRestrictedFares : boolean
+    +FiledCurrency : string
 }
 class AirFareDisplayRuleKey {
-    +value : xs:string
-    +ProviderCode : xs:string
+    +value : string
+    +ProviderCode : string
 }
 class AirFareRuleCategory {
     +CategoryCode : typeFareRuleCategoryCode[]
-    +FareInfoRef : xs:string
+    +FareInfoRef : string
 }
 class AirFareRulesModifier {
     +AirFareRuleCategory : AirFareRuleCategory[]
@@ -176,15 +176,15 @@ class AirItinerary {
 class AirItineraryDetails {
     +AirSegmentDetails : AirSegmentDetails[]
     +PassengerDetails : PassengerDetails[]
-    +Key : xs:string
+    +Key : string
 }
 class AirItinerarySolution {
     +AirSegmentRef : AirSegmentRef[]
     +Connection : Connection[]
-    +Key : xs:string
+    +Key : string
 }
 class AirItinerarySolutionRef {
-    +Key : xs:string
+    +Key : string
 }
 class AirLegModifiers {
     +PermittedCabins : PermittedCabins
@@ -202,14 +202,14 @@ class AirLegModifiers {
     +DisfavoredAlliances : DisfavoredAlliances
     +FlightType : FlightType
     +AnchorFlightData : typeAnchorFlightData
-    +ProhibitOvernightLayovers : xs:boolean
-    +MaxConnectionTime : xs:integer
-    +ReturnFirstAvailableOnly : xs:boolean
-    +AllowDirectAccess : xs:boolean
-    +ProhibitMultiAirportConnection : xs:boolean
-    +PreferNonStop : xs:boolean
+    +ProhibitOvernightLayovers : boolean
+    +MaxConnectionTime : integer
+    +ReturnFirstAvailableOnly : boolean
+    +AllowDirectAccess : boolean
+    +ProhibitMultiAirportConnection : boolean
+    +PreferNonStop : boolean
     +OrderBy : OrderBy
-    +MaxJourneyTime : xs:nonNegativeInteger
+    +MaxJourneyTime : nonNegativeInteger
 }
 AirLegModifiers +-- PermittedConnectionPoints
 class PermittedConnectionPoints {
@@ -241,29 +241,29 @@ class DisfavoredAlliances {
 }
 AirLegModifiers +-- OrderBy
 class OrderBy {
-    +JourneyTime : xs:string
-    +DepartureTime : xs:string
-    +ArrivalTime : xs:string
+    +JourneyTime : string
+    +DepartureTime : string
+    +ArrivalTime : string
 }
-OrderBy *- xs:string
+OrderBy *- string
 class AirPricePoint {
     +AirPricingInfo : AirPricingInfo[]
     +AirPricingResultMessage : common:typeResultMessage[]
     +FeeInfo : FeeInfo[]
     +FareNote : FareNote[]
     +TaxInfo : TaxInfo[]
-    +Key : xs:string
-    +TotalPrice : xs:string
-    +BasePrice : xs:string
-    +ApproximateTotalPrice : xs:string
-    +ApproximateBasePrice : xs:string
-    +EquivalentBasePrice : xs:string
-    +Taxes : xs:string
-    +Fees : xs:string
-    +Services : xs:string
-    +ApproximateTaxes : xs:string
-    +ApproximateFees : xs:string
-    +CompleteItinerary : xs:boolean
+    +Key : string
+    +TotalPrice : string
+    +BasePrice : string
+    +ApproximateTotalPrice : string
+    +ApproximateBasePrice : string
+    +EquivalentBasePrice : string
+    +Taxes : string
+    +Fees : string
+    +Services : string
+    +ApproximateTaxes : string
+    +ApproximateFees : string
+    +CompleteItinerary : boolean
 }
 class AirPricePointList {
     +AirPricePoint : AirPricePoint[]
@@ -272,17 +272,17 @@ class AirPriceResult {
     +AirPricingSolution : AirPricingSolution[]
     +FareRule : FareRule[]
     +AirPriceError : common:typeResultMessage
-    +CommandKey : xs:string
+    +CommandKey : string
 }
 class AirPricingAdjustment {
     +Adjustment : Adjustment
-    +Key : xs:string
+    +Key : string
 }
 class AirPricingCommand {
     +AirPricingModifiers : AirPricingModifiers
     +AirSegmentPricingModifiers : AirSegmentPricingModifiers[]
-    +CommandKey : xs:string
-    +CabinClass : xs:string
+    +CommandKey : string
+    +CabinClass : string
 }
 class AirPricingInfo {
     +FareInfo : FareInfo[]
@@ -311,51 +311,51 @@ class AirPricingInfo {
     +PriceChange : PriceChangeType[]
     +ActionDetails : ActionDetails
     +common:Commission : common:Commission[]
-    +Origin : xs:string
-    +Destination : xs:string
-    +Key : xs:string
-    +CommandKey : xs:string
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
-    +TotalPrice : xs:string
-    +BasePrice : xs:string
-    +ApproximateTotalPrice : xs:string
-    +ApproximateBasePrice : xs:string
-    +EquivalentBasePrice : xs:string
-    +Taxes : xs:string
-    +Fees : xs:string
-    +Services : xs:string
-    +ApproximateTaxes : xs:string
-    +ApproximateFees : xs:string
-    +AmountType : xs:string
-    +IncludesVAT : xs:boolean
-    +ExchangeAmount : xs:string
-    +ForfeitAmount : xs:string
-    +Refundable : xs:boolean
-    +Exchangeable : xs:boolean
-    +LatestTicketingTime : xs:string
+    +Origin : string
+    +Destination : string
+    +Key : string
+    +CommandKey : string
+    +ProviderCode : string
+    +SupplierCode : string
+    +TotalPrice : string
+    +BasePrice : string
+    +ApproximateTotalPrice : string
+    +ApproximateBasePrice : string
+    +EquivalentBasePrice : string
+    +Taxes : string
+    +Fees : string
+    +Services : string
+    +ApproximateTaxes : string
+    +ApproximateFees : string
+    +AmountType : string
+    +IncludesVAT : boolean
+    +ExchangeAmount : string
+    +ForfeitAmount : string
+    +Refundable : boolean
+    +Exchangeable : boolean
+    +LatestTicketingTime : string
     +PricingMethod : typePricingMethod
-    +Checksum : xs:string
+    +Checksum : string
     +ETicketability : typeEticketability
-    +PlatingCarrier : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +AirPricingInfoGroup : xs:int
-    +TotalNetPrice : xs:string
-    +Ticketed : xs:boolean
-    +PricingType : xs:string
-    +TrueLastDateToTicket : xs:string
+    +PlatingCarrier : string
+    +ProviderReservationInfoRef : string
+    +AirPricingInfoGroup : int
+    +TotalNetPrice : string
+    +Ticketed : boolean
+    +PricingType : string
+    +TrueLastDateToTicket : string
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
-    +InPolicy : xs:boolean
-    +PreferredOption : xs:boolean
-    +FareCalculationInd : xs:string
-    +Cat35Indicator : xs:boolean
+    +KeyOverride : boolean
+    +InPolicy : boolean
+    +PreferredOption : boolean
+    +FareCalculationInd : string
+    +Cat35Indicator : boolean
 }
 class AirPricingInfoList {
     +AirPricingInfo : AirPricingInfo[]
 }
 class AirPricingInfoRef {
-    +Key : xs:string
+    +Key : string
 }
 class AirPricingModifiers {
     +ProhibitedRuleCategories : ProhibitedRuleCategories
@@ -371,29 +371,29 @@ class AirPricingModifiers {
     +BrandModifiers : BrandModifiers
     +MultiGDSSearchIndicator : MultiGDSSearchIndicator[]
     +PreferredCabins : PreferredCabins[]
-    +ProhibitMinStayFares : xs:boolean
-    +ProhibitMaxStayFares : xs:boolean
-    +CurrencyType : xs:string
-    +ProhibitAdvancePurchaseFares : xs:boolean
-    +ProhibitNonRefundableFares : xs:boolean
-    +ProhibitRestrictedFares : xs:boolean
+    +ProhibitMinStayFares : boolean
+    +ProhibitMaxStayFares : boolean
+    +CurrencyType : string
+    +ProhibitAdvancePurchaseFares : boolean
+    +ProhibitNonRefundableFares : boolean
+    +ProhibitRestrictedFares : boolean
     +FaresIndicator : typeFaresIndicator
-    +FiledCurrency : xs:string
-    +PlatingCarrier : xs:string
-    +OverrideCarrier : xs:string
+    +FiledCurrency : string
+    +PlatingCarrier : string
+    +OverrideCarrier : string
     +ETicketability : typeEticketability
-    +AccountCodeFaresOnly : xs:boolean
-    +Key : xs:string
-    +ProhibitNonExchangeableFares : xs:boolean
-    +ForceSegmentSelect : xs:boolean
+    +AccountCodeFaresOnly : boolean
+    +Key : string
+    +ProhibitNonExchangeableFares : boolean
+    +ForceSegmentSelect : boolean
     +InventoryRequestType : typeInventoryRequest
-    +OneWayShop : xs:boolean
-    +ProhibitUnbundledFareTypes : xs:boolean
-    +ReturnServices : xs:boolean
-    +ChannelId : xs:string
-    +ReturnFareAttributes : xs:boolean
-    +SellCheck : xs:boolean
-    +ReturnFailedSegments : xs:boolean
+    +OneWayShop : boolean
+    +ProhibitUnbundledFareTypes : boolean
+    +ReturnServices : boolean
+    +ChannelId : string
+    +ReturnFareAttributes : boolean
+    +SellCheck : boolean
+    +ReturnFailedSegments : boolean
 }
 AirPricingModifiers +-- ProhibitedRuleCategories
 class ProhibitedRuleCategories {
@@ -435,27 +435,27 @@ class AirPricingSolution {
     +OptionalServices : OptionalServices
     +AvailableSSR : AvailableSSR
     +PricingDetails : PricingDetails
-    +Key : xs:string
-    +CompleteItinerary : xs:boolean
-    +QuoteDate : xs:date
-    +TotalPrice : xs:string
-    +BasePrice : xs:string
-    +ApproximateTotalPrice : xs:string
-    +ApproximateBasePrice : xs:string
-    +EquivalentBasePrice : xs:string
-    +Taxes : xs:string
-    +Fees : xs:string
-    +Services : xs:string
-    +ApproximateTaxes : xs:string
-    +ApproximateFees : xs:string
+    +Key : string
+    +CompleteItinerary : boolean
+    +QuoteDate : date
+    +TotalPrice : string
+    +BasePrice : string
+    +ApproximateTotalPrice : string
+    +ApproximateBasePrice : string
+    +EquivalentBasePrice : string
+    +Taxes : string
+    +Fees : string
+    +Services : string
+    +ApproximateTaxes : string
+    +ApproximateFees : string
     +Itinerary : Itinerary
 }
 AirPricingSolution +-- Itinerary
 class Itinerary {
-    +New : xs:string
-    +Original : xs:string
+    +New : string
+    +Original : string
 }
-Itinerary *- xs:string
+Itinerary *- string
 class AirPricingTicketingModifiers {
     +AirPricingInfoRef : AirPricingInfoRef[]
     +TicketingModifiers : TicketingModifiers
@@ -465,40 +465,40 @@ class AirRefundBundle {
     +common:Name : common:Name[]
     +TaxInfo : TaxInfo[]
     +WaiverCode : WaiverCode
-    +TicketNumber : xs:string
-    +PTC : xs:string
+    +TicketNumber : string
+    +PTC : string
     +RefundType : RefundType
 }
 AirRefundBundle +-- RefundType
 class RefundType {
-    +Auto : xs:string
-    +Manual : xs:string
+    +Auto : string
+    +Manual : string
 }
-RefundType *- xs:string
+RefundType *- string
 class AirRefundInfo {
     +common:RefundRemark : common:RefundRemark[]
-    +RefundAmount : xs:string
-    +RetainAmount : xs:string
-    +RefundFee : xs:string
-    +RefundableTaxes : xs:string
-    +FiledCurrency : xs:string
-    +ConversionRate : xs:decimal
-    +Taxes : xs:string
-    +OriginalTicketTotal : xs:string
-    +ForfeitAmount : xs:string
-    +Retain : xs:boolean
-    +Refund : xs:boolean
+    +RefundAmount : string
+    +RetainAmount : string
+    +RefundFee : string
+    +RefundableTaxes : string
+    +FiledCurrency : string
+    +ConversionRate : decimal
+    +Taxes : string
+    +OriginalTicketTotal : string
+    +ForfeitAmount : string
+    +Retain : boolean
+    +Refund : boolean
 }
 class AirRefundModifiers {
-    +RefundDate : xs:string
-    +AccountCode : xs:string
-    +TicketDesignator : xs:string
+    +RefundDate : string
+    +AccountCode : string
+    +TicketDesignator : string
 }
 class AirReservation {
 }
 AirReservation *- typeBaseAirReservation
 class AirReservationLocatorCode {
-    +value : xs:string
+    +value : string
 }
 class AirScheduleChangedInfo {
     +AirPricingSolution : AirPricingSolution
@@ -508,7 +508,7 @@ class AirSearchAsynchModifiers {
 }
 AirSearchAsynchModifiers +-- InitialAsynchResult
 class InitialAsynchResult {
-    +MaxWait : xs:positiveInteger
+    +MaxWait : positiveInteger
 }
 class AirSearchModifiers {
     +DisfavoredProviders : DisfavoredProviders
@@ -528,20 +528,20 @@ class AirSearchModifiers {
     +MaxLayoverDuration : MaxLayoverDurationType
     +NativeSearchModifier : typeNativeSearchModifier
     +DistanceType : common:typeDistance
-    +IncludeFlightDetails : xs:boolean
-    +AllowChangeOfAirport : xs:boolean
-    +ProhibitOvernightLayovers : xs:boolean
-    +MaxSolutions : xs:integer
-    +MaxConnectionTime : xs:integer
-    +SearchWeekends : xs:boolean
-    +IncludeExtraSolutions : xs:boolean
-    +ProhibitMultiAirportConnection : xs:boolean
-    +PreferNonStop : xs:boolean
+    +IncludeFlightDetails : boolean
+    +AllowChangeOfAirport : boolean
+    +ProhibitOvernightLayovers : boolean
+    +MaxSolutions : integer
+    +MaxConnectionTime : integer
+    +SearchWeekends : boolean
+    +IncludeExtraSolutions : boolean
+    +ProhibitMultiAirportConnection : boolean
+    +PreferNonStop : boolean
     +OrderBy : OrderBy
-    +ExcludeOpenJawAirport : xs:boolean
-    +ExcludeGroundTransportation : xs:boolean
-    +MaxJourneyTime : xs:nonNegativeInteger
-    +JetServiceOnly : xs:boolean
+    +ExcludeOpenJawAirport : boolean
+    +ExcludeGroundTransportation : boolean
+    +MaxJourneyTime : nonNegativeInteger
+    +JetServiceOnly : boolean
 }
 AirSearchModifiers +-- DisfavoredProviders
 class DisfavoredProviders {
@@ -573,11 +573,11 @@ class ProhibitedBookingCodes {
 }
 AirSearchModifiers +-- OrderBy
 class OrderBy {
-    +JourneyTime : xs:string
-    +DepartureTime : xs:string
-    +ArrivalTime : xs:string
+    +JourneyTime : string
+    +DepartureTime : string
+    +ArrivalTime : string
 }
-OrderBy *- xs:string
+OrderBy *- string
 class AirSegment {
 }
 AirSegment *- typeBaseAirSegment
@@ -585,59 +585,59 @@ class AirSegmentData {
     +AirSegmentRef : AirSegmentRef[]
     +BaggageAllowance : BaggageAllowance[]
     +Brand : Brand[]
-    +CabinClass : xs:string
-    +ClassOfService : xs:string
+    +CabinClass : string
+    +ClassOfService : string
 }
 class AirSegmentDetails {
     +PassengerDetailsRef : PassengerDetailsRef[]
     +BrandID : BrandID[]
-    +BookingCodeList : xs:string
-    +Key : xs:string
-    +ProviderCode : xs:string
-    +Carrier : xs:string
-    +Origin : xs:string
-    +Destination : xs:string
-    +DepartureTime : xs:dateTime
-    +ArrivalTime : xs:dateTime
-    +Equipment : xs:string
-    +ClassOfService : xs:string
-    +CabinClass : xs:string
-    +OperatingCarrier : xs:string
-    +FlightNumber : xs:string
+    +BookingCodeList : string
+    +Key : string
+    +ProviderCode : string
+    +Carrier : string
+    +Origin : string
+    +Destination : string
+    +DepartureTime : dateTime
+    +ArrivalTime : dateTime
+    +Equipment : string
+    +ClassOfService : string
+    +CabinClass : string
+    +OperatingCarrier : string
+    +FlightNumber : string
 }
 class AirSegmentError {
     +AirSegment : AirSegment
-    +ErrorMessage : xs:string
+    +ErrorMessage : string
 }
 class AirSegmentList {
     +AirSegment : AirSegment[]
 }
 class AirSegmentPricingModifiers {
     +PermittedBookingCodes : PermittedBookingCodes
-    +AirSegmentRef : xs:string
-    +CabinClass : xs:string
-    +AccountCode : xs:string
-    +ProhibitAdvancePurchaseFares : xs:boolean
-    +ProhibitNonRefundableFares : xs:boolean
-    +ProhibitPenaltyFares : xs:boolean
-    +FareBasisCode : xs:string
+    +AirSegmentRef : string
+    +CabinClass : string
+    +AccountCode : string
+    +ProhibitAdvancePurchaseFares : boolean
+    +ProhibitNonRefundableFares : boolean
+    +ProhibitPenaltyFares : boolean
+    +FareBasisCode : string
     +FareBreak : typeFareBreak
     +ConnectionIndicator : typeConnectionIndicator
-    +BrandTier : xs:string
+    +BrandTier : string
 }
 AirSegmentPricingModifiers +-- PermittedBookingCodes
 class PermittedBookingCodes {
     +BookingCode : BookingCode[]
 }
 class AirSegmentRef {
-    +Key : xs:string
+    +Key : string
 }
 class AirSegmentSellFailureInfo {
     +AirSegmentError : AirSegmentError[]
 }
 class AirSegmentTicketingModifiers {
-    +AirSegmentRef : xs:string
-    +BrandTier : xs:string
+    +AirSegmentRef : string
+    +BrandTier : string
 }
 class AirSolution {
     +SearchTraveler : SearchTraveler[]
@@ -651,11 +651,11 @@ class AirSolutionChangedInfo {
 }
 AirSolutionChangedInfo +-- ReasonCode
 class ReasonCode {
-    +Price : xs:string
-    +Schedule : xs:string
-    +Both : xs:string
+    +Price : string
+    +Schedule : string
+    +Both : string
 }
-ReasonCode *- xs:string
+ReasonCode *- string
 class AirTicketingModifiers {
     +DocumentModifiers : DocumentModifiers
     +AirPricingInfoRef : AirPricingInfoRef[]
@@ -665,29 +665,29 @@ class AirTicketingModifiers {
     +common:FormOfPayment : common:FormOfPayment[]
     +common:CreditCardAuth : common:CreditCardAuth[]
     +common:Payment : common:Payment[]
-    +PlatingCarrier : xs:string
-    +TicketedFareOverride : xs:boolean
-    +SuppressTaxAndFee : xs:boolean
-    +NoComparisonSFQ : xs:boolean
+    +PlatingCarrier : string
+    +TicketedFareOverride : boolean
+    +SuppressTaxAndFee : boolean
+    +NoComparisonSFQ : boolean
 }
 class Alliance {
-    +Code : xs:string
+    +Code : string
 }
 class AlternateLocationDistance {
     +common:Distance : common:Distance
-    +Key : xs:string
-    +SearchLocation : xs:string
-    +AlternateLocation : xs:string
+    +Key : string
+    +SearchLocation : string
+    +AlternateLocation : string
 }
 class AlternateLocationDistanceList {
     +AlternateLocationDistance : AlternateLocationDistance[]
 }
 class AlternateLocationDistanceRef {
-    +Key : xs:string
+    +Key : string
 }
 class AlternateRoute {
     +Leg : Leg[]
-    +Key : xs:string
+    +Key : string
 }
 class AlternateRouteList {
     +AlternateRoute : AlternateRoute[]
@@ -702,36 +702,36 @@ class AsyncProviderSpecificResponse {
 }
 AsyncProviderSpecificResponse *- common:BaseAsyncProviderSpecificResponse
 class AuditData {
-    +TotalPrice : xs:string
-    +BasePrice : xs:string
-    +ApproximateTotalPrice : xs:string
-    +ApproximateBasePrice : xs:string
-    +EquivalentBasePrice : xs:string
-    +Taxes : xs:string
-    +Fees : xs:string
-    +Services : xs:string
-    +ApproximateTaxes : xs:string
-    +ApproximateFees : xs:string
+    +TotalPrice : string
+    +BasePrice : string
+    +ApproximateTotalPrice : string
+    +ApproximateBasePrice : string
+    +EquivalentBasePrice : string
+    +Taxes : string
+    +Fees : string
+    +Services : string
+    +ApproximateTaxes : string
+    +ApproximateFees : string
     +TaxInfo : TaxInfo[]
-    +Key : xs:string
+    +Key : string
 }
 class AutoPricingInfo {
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +AirSegmentRef : AirSegmentRef[]
     +common:BookingTravelerRef : common:BookingTravelerRef[]
     +AirPricingModifiers : AirPricingModifiers
     +AirSegmentPricingModifiers : AirSegmentPricingModifiers[]
-    +Key : xs:string
-    +PricingType : xs:string
-    +PlatingCarrier : xs:string
+    +Key : string
+    +PricingType : string
+    +PlatingCarrier : string
 }
 class AutoSeatAssignment {
-    +SegmentRef : xs:string
-    +Smoking : xs:boolean
+    +SegmentRef : string
+    +Smoking : boolean
     +SeatType : common:typeReqSeat
-    +Group : xs:boolean
-    +BookingTravelerRef : xs:string
+    +Group : boolean
+    +BookingTravelerRef : string
 }
 class AvailabilityErrorInfo {
     +AirSegmentError : AirSegmentError[]
@@ -739,10 +739,10 @@ class AvailabilityErrorInfo {
 AvailabilityErrorInfo *- common:typeErrorInfo
 class AvailableDiscount {
     +common:LoyaltyProgram : common:LoyaltyProgram[]
-    +Amount : xs:string
-    +Percent : xs:string
-    +Description : xs:string
-    +DiscountQualifier : xs:string
+    +Amount : string
+    +Percent : string
+    +Description : string
+    +DiscountQualifier : string
 }
 class AvailableSSR {
     +common:SSR : common:SSR[]
@@ -751,27 +751,27 @@ class AvailableSSR {
 }
 class BackOfficeHandOff {
     +Type : typeBackOffice
-    +Location : xs:string
-    +PseudoCityCode : xs:string
+    +Location : string
+    +PseudoCityCode : string
 }
 class BagDetails {
     +BaggageRestriction : BaggageRestriction[]
     +AvailableDiscount : AvailableDiscount[]
-    +ApplicableBags : xs:string
-    +BasePrice : xs:string
-    +ApproximateBasePrice : xs:string
-    +Taxes : xs:string
-    +TotalPrice : xs:string
-    +ApproximateTotalPrice : xs:string
+    +ApplicableBags : string
+    +BasePrice : string
+    +ApproximateBasePrice : string
+    +Taxes : string
+    +TotalPrice : string
+    +ApproximateTotalPrice : string
 }
 class BaggageAllowance {
-    +NumberOfPieces : xs:integer
+    +NumberOfPieces : integer
     +MaxWeight : typeWeight
 }
 class BaggageAllowanceInfo {
     +BagDetails : BagDetails[]
-    +TravelerType : xs:string
-    +FareInfoRef : xs:string
+    +TravelerType : string
+    +FareInfoRef : string
 }
 BaggageAllowanceInfo *- BaseBaggageAllowanceInfo
 class BaggageAllowances {
@@ -787,52 +787,52 @@ class BaggageRestriction {
 class BaseBaggageAllowanceInfo {
     +URLInfo : URLInfo[]
     +TextInfo : TextInfo[]
-    +Origin : xs:string
-    +Destination : xs:string
-    +Carrier : xs:string
+    +Origin : string
+    +Destination : string
+    +Carrier : string
 }
 class BillingDetailItem {
     +Name : typeBillingDetailsName
     +DataType : typeBillingDetailsDataType
-    +MinLength : xs:string
-    +MaxLength : xs:string
-    +Value : xs:string
+    +MinLength : string
+    +MaxLength : string
+    +Value : string
 }
 class BookingCode {
-    +Code : xs:string
+    +Code : string
 }
 class BookingCodeInfo {
-    +CabinClass : xs:string
-    +BookingCounts : xs:string
+    +CabinClass : string
+    +BookingCounts : string
 }
 class BookingInfo {
-    +BookingCode : xs:string
-    +BookingCount : xs:string
-    +CabinClass : xs:string
-    +FareInfoRef : xs:string
-    +SegmentRef : xs:string
-    +CouponRef : xs:string
-    +AirItinerarySolutionRef : xs:string
-    +HostTokenRef : xs:string
+    +BookingCode : string
+    +BookingCount : string
+    +CabinClass : string
+    +FareInfoRef : string
+    +SegmentRef : string
+    +CouponRef : string
+    +AirItinerarySolutionRef : string
+    +HostTokenRef : string
 }
 class BookingRules {
     +BookingRulesFareReference : BookingRulesFareReference[]
     +RuleInfo : RuleInfo[]
     +Restriction : Restriction[]
     +DocumentRequired : DocumentRequired[]
-    +GenderDobRequired : xs:boolean
+    +GenderDobRequired : boolean
 }
 BookingRules +-- RuleInfo
 class RuleInfo {
     +ChargesRules : ChargesRules
 }
 class BookingRulesFareReference {
-    +value : xs:string
-    +ClassOfService : xs:string
-    +TicketDesignatorCode : xs:string
-    +AccountCode : xs:string
-    +UpgrageAllowed : xs:boolean
-    +UpgradeClassOfService : xs:string
+    +value : string
+    +ClassOfService : string
+    +TicketDesignatorCode : string
+    +AccountCode : string
+    +UpgrageAllowed : boolean
+    +UpgradeClassOfService : string
 }
 class Brand {
     +Title : Title[]
@@ -844,26 +844,26 @@ class Brand {
     +UpsellBrand : UpsellBrand
     +ApplicableSegment : typeApplicableSegment[]
     +DefaultBrandDetail : DefaultBrandDetail[]
-    +Key : xs:string
-    +BrandID : xs:string
-    +Name : xs:string
-    +AirItineraryDetailsRef : xs:string
-    +UpSellBrandID : xs:string
-    +BrandFound : xs:boolean
-    +UpSellBrandFound : xs:boolean
-    +BrandedDetailsAvailable : xs:boolean
-    +Carrier : xs:string
-    +BrandTier : xs:string
-    +BrandMaintained : xs:string
+    +Key : string
+    +BrandID : string
+    +Name : string
+    +AirItineraryDetailsRef : string
+    +UpSellBrandID : string
+    +BrandFound : boolean
+    +UpSellBrandFound : boolean
+    +BrandedDetailsAvailable : boolean
+    +Carrier : string
+    +BrandTier : string
+    +BrandMaintained : string
 }
 class BrandID {
-    +Id : xs:string
+    +Id : string
 }
 class BrandInfo {
-    +Key : xs:string
-    +BrandID : xs:string
-    +AirPricingInfoRef : xs:string
-    +FareInfoRef : xs:string
+    +Key : string
+    +BrandID : string
+    +AirPricingInfoRef : string
+    +FareInfoRef : string
 }
 class BrandModifiers {
     +FareFamilyDisplay : FareFamilyDisplay
@@ -871,11 +871,11 @@ class BrandModifiers {
 }
 BrandModifiers +-- FareFamilyDisplay
 class FareFamilyDisplay {
-    +ModifierType : xs:string
+    +ModifierType : string
 }
 BrandModifiers +-- BasicDetailsOnly
 class BasicDetailsOnly {
-    +ReturnBasicDetails : xs:boolean
+    +ReturnBasicDetails : boolean
 }
 class BrandingInfo {
     +PriceRange : PriceRange[]
@@ -884,21 +884,21 @@ class BrandingInfo {
     +ImageLocation : ImageLocation[]
     +ServiceGroup : ServiceGroup
     +AirSegmentRef : common:typeSegmentRef[]
-    +Key : xs:string
-    +ServiceSubCode : xs:string
-    +ExternalServiceName : xs:string
-    +ServiceType : xs:string
-    +CommercialName : xs:string
-    +Chargeable : xs:string
+    +Key : string
+    +ServiceSubCode : string
+    +ExternalServiceName : string
+    +ServiceType : string
+    +CommercialName : string
+    +Chargeable : string
 }
 class BundledService {
-    +Carrier : xs:string
-    +CarrierSubCode : xs:boolean
-    +ServiceType : xs:string
-    +ServiceSubCode : xs:string
-    +Name : xs:string
+    +Carrier : string
+    +CarrierSubCode : boolean
+    +ServiceType : string
+    +ServiceSubCode : string
+    +Name : string
     +Booking : typeBooking
-    +Occurrence : xs:positiveInteger
+    +Occurrence : positiveInteger
 }
 class BundledServices {
     +BundledService : BundledService[]
@@ -907,22 +907,22 @@ class CHGType {
     +PenFee : PenFeeType[]
 }
 class CO2Emission {
-    +AirSegmentRef : xs:string
-    +Value : xs:float
+    +AirSegmentRef : string
+    +Value : float
 }
 class CO2Emissions {
     +CO2Emission : CO2Emission[]
-    +TotalValue : xs:float
-    +Unit : xs:string
-    +Category : xs:string
-    +Source : xs:string
+    +TotalValue : float
+    +Unit : string
+    +Category : string
+    +Source : string
 }
 class CarrierCode {
-    +value : xs:string
+    +value : string
 }
 class CarrierList {
     +CarrierCode : CarrierCode[]
-    +IncludeCarrier : xs:boolean
+    +IncludeCarrier : boolean
 }
 class CarryOnAllowanceInfo {
     +CarryOnDetails : CarryOnDetails[]
@@ -931,22 +931,22 @@ CarryOnAllowanceInfo *- BaseBaggageAllowanceInfo
 CarryOnAllowanceInfo +-- CarryOnDetails
 class CarryOnDetails {
     +BaggageRestriction : BaggageRestriction[]
-    +ApplicableCarryOnBags : xs:string
-    +BasePrice : xs:string
-    +ApproximateBasePrice : xs:string
-    +Taxes : xs:string
-    +TotalPrice : xs:string
-    +ApproximateTotalPrice : xs:string
+    +ApplicableCarryOnBags : string
+    +BasePrice : string
+    +ApproximateBasePrice : string
+    +Taxes : string
+    +TotalPrice : string
+    +ApproximateTotalPrice : string
 }
 class CategoryDetailsType {
     +CategoryDetails : ValueDetails[]
-    +Value : xs:string
+    +Value : string
 }
 class Characteristic {
-    +Value : xs:string
+    +Value : string
     +Position : typePosition
     +RowLocation : typeRowLocation
-    +PADISCode : xs:string
+    +PADISCode : string
 }
 class ChargesRules {
     +VoluntaryChanges : VoluntaryChanges[]
@@ -955,81 +955,81 @@ class ChargesRules {
 ChargesRules +-- VoluntaryChanges
 class VoluntaryChanges {
     +Penalty : Penalty
-    +VolChangeInd : xs:boolean
+    +VolChangeInd : boolean
 }
 ChargesRules +-- VoluntaryRefunds
 class VoluntaryRefunds {
     +Penalty : Penalty
-    +VolChangeInd : xs:boolean
+    +VolChangeInd : boolean
 }
 class CodeshareInfo {
-    +value : xs:string
-    +OperatingCarrier : xs:string
-    +OperatingFlightNumber : xs:string
+    +value : string
+    +OperatingCarrier : string
+    +OperatingFlightNumber : string
 }
 class CompanyName {
-    +SupplierCode : xs:string
+    +SupplierCode : string
 }
 class ConjunctedTicketInfo {
-    +Number : xs:string
-    +IATANumber : xs:string
-    +TicketIssueDate : xs:dateTime
-    +TicketingAgentSignOn : xs:string
-    +CountryCode : xs:string
+    +Number : string
+    +IATANumber : string
+    +TicketIssueDate : dateTime
+    +TicketingAgentSignOn : string
+    +CountryCode : string
     +Status : common:typeTicketStatus
 }
 class Connection {
     +FareNote : FareNote
-    +ChangeOfPlane : xs:boolean
-    +ChangeOfTerminal : xs:boolean
-    +ChangeOfAirport : xs:boolean
-    +StopOver : xs:boolean
-    +MinConnectionTime : xs:int
-    +Duration : xs:int
-    +SegmentIndex : xs:int
-    +FlightDetailsIndex : xs:int
+    +ChangeOfPlane : boolean
+    +ChangeOfTerminal : boolean
+    +ChangeOfAirport : boolean
+    +StopOver : boolean
+    +MinConnectionTime : int
+    +Duration : int
+    +SegmentIndex : int
+    +FlightDetailsIndex : int
     +IncludeStopOverToFareQuote : typeIgnoreStopOver
 }
 class ContractCode {
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
-    +Code : xs:string
-    +CompanyName : xs:string
+    +ProviderCode : string
+    +SupplierCode : string
+    +Code : string
+    +CompanyName : string
 }
 class Coupon {
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +TicketDesignator : TicketDesignator[]
-    +Key : xs:string
-    +CouponNumber : xs:integer
-    +OperatingCarrier : xs:string
-    +OperatingFlightNumber : xs:string
-    +MarketingCarrier : xs:string
-    +MarketingFlightNumber : xs:string
-    +Origin : xs:string
-    +Destination : xs:string
-    +DepartureTime : xs:string
-    +ArrivalTime : xs:string
-    +StopoverCode : xs:boolean
-    +BookingClass : xs:string
-    +FareBasis : xs:string
-    +NotValidBefore : xs:date
-    +NotValidAfter : xs:date
-    +Status : xs:string
-    +SegmentGroup : xs:integer
-    +MarriageGroup : xs:integer
+    +Key : string
+    +CouponNumber : integer
+    +OperatingCarrier : string
+    +OperatingFlightNumber : string
+    +MarketingCarrier : string
+    +MarketingFlightNumber : string
+    +Origin : string
+    +Destination : string
+    +DepartureTime : string
+    +ArrivalTime : string
+    +StopoverCode : boolean
+    +BookingClass : string
+    +FareBasis : string
+    +NotValidBefore : date
+    +NotValidAfter : date
+    +Status : string
+    +SegmentGroup : integer
+    +MarriageGroup : integer
 }
 class CreditSummary {
-    +CurrencyCode : xs:string
-    +CurrentBalance : xs:decimal
-    +InitialCredit : xs:decimal
+    +CurrencyCode : string
+    +CurrentBalance : decimal
+    +InitialCredit : decimal
 }
 class CustomerReceiptInfo {
-    +BookingTravelerRef : xs:string
-    +EmailRef : xs:string
+    +BookingTravelerRef : string
+    +EmailRef : string
 }
 class CustomerSearch {
-    +value : xs:string
+    +value : string
 }
 class DefaultBrandDetail {
 }
@@ -1044,13 +1044,13 @@ class DetailedBillingInformation {
     +BillingDetailItem : BillingDetailItem[]
 }
 class Dimension {
-    +type : xs:string
+    +type : string
 }
 Dimension *- typeUnitOfMeasure
 class Document {
-    +Sequence : xs:positiveInteger
-    +Type : xs:string
-    +Level : xs:string
+    +Sequence : positiveInteger
+    +Type : string
+    +Level : string
 }
 class DocumentInfo {
     +TicketInfo : TicketInfo[]
@@ -1058,88 +1058,88 @@ class DocumentInfo {
     +TCRInfo : TCRInfo[]
 }
 class DocumentModifiers {
-    +GenerateItineraryInvoice : xs:boolean
-    +GenerateAccountingInterface : xs:boolean
+    +GenerateItineraryInvoice : boolean
+    +GenerateAccountingInterface : boolean
 }
 class DocumentOptions {
     +PassengerReceiptOverride : PassengerReceiptOverride
-    +OverrideOption : xs:string[]
-    +SuppressItineraryRemarks : xs:boolean
-    +GenerateItinNumbers : xs:boolean
+    +OverrideOption : string[]
+    +SuppressItineraryRemarks : boolean
+    +GenerateItinNumbers : boolean
 }
 class DocumentRequired {
-    +DocType : xs:string
-    +IncludeExcludeUseInd : xs:boolean
-    +DocId : xs:string
-    +AllowedIds : xs:string
+    +DocType : string
+    +IncludeExcludeUseInd : boolean
+    +DocId : string
+    +AllowedIds : string
 }
 class DocumentSelect {
     +BackOfficeHandOff : BackOfficeHandOff
     +Itinerary : Itinerary
-    +IssueTicketOnly : xs:boolean
-    +IssueElectronicTicket : xs:boolean
-    +FaxIndicator : xs:boolean
+    +IssueTicketOnly : boolean
+    +IssueElectronicTicket : boolean
+    +FaxIndicator : boolean
 }
 class EMD {
-    +FulfillmentType : xs:integer
-    +FulfillmentTypeDescription : xs:string
-    +AssociatedItem : xs:string
+    +FulfillmentType : integer
+    +FulfillmentTypeDescription : string
+    +AssociatedItem : string
     +AvailabilityChargeIndicator : AvailabilityChargeIndicator
     +RefundReissueIndicator : RefundReissueIndicator
-    +Commissionable : xs:boolean
-    +MileageIndicator : xs:boolean
-    +Location : xs:string
-    +Date : xs:dateTime
+    +Commissionable : boolean
+    +MileageIndicator : boolean
+    +Location : string
+    +Date : dateTime
     +Booking : typeBooking
     +DisplayCategory : typeDisplayCategory
-    +Reusable : xs:boolean
+    +Reusable : boolean
 }
 EMD +-- AvailabilityChargeIndicator
 class AvailabilityChargeIndicator {
-    +X : xs:string
-    +E : xs:string
-    +F : xs:string
-    +G : xs:string
-    +H : xs:string
+    +X : string
+    +E : string
+    +F : string
+    +G : string
+    +H : string
 }
-AvailabilityChargeIndicator *- xs:string
+AvailabilityChargeIndicator *- string
 EMD +-- RefundReissueIndicator
 class RefundReissueIndicator {
-    +Refundable : xs:string
-    +NonRefundable : xs:string
-    +Reuse : xs:string
+    +Refundable : string
+    +NonRefundable : string
+    +Reuse : string
 }
-RefundReissueIndicator *- xs:string
+RefundReissueIndicator *- string
 class EMDCommission {
     +Type : common:typeAdjustmentType
-    +Value : xs:decimal
-    +CurrencyCode : xs:string
+    +Value : decimal
+    +CurrencyCode : string
 }
 class EMDCoupon {
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
-    +Number : xs:integer
-    +Status : xs:string
-    +SvcDescription : xs:string
-    +ConsumedAtIssuanceInd : xs:boolean
-    +RFIC : xs:string
-    +RFISC : xs:string
-    +RFIDescription : xs:string
-    +Origin : xs:string
-    +Destination : xs:string
-    +FlightNumber : xs:string
-    +PresentTo : xs:string
-    +PresentAt : xs:string
-    +NonRefundableInd : xs:boolean
-    +MarketingCarrier : xs:string
-    +Key : xs:string
+    +KeyOverride : boolean
+    +Number : integer
+    +Status : string
+    +SvcDescription : string
+    +ConsumedAtIssuanceInd : boolean
+    +RFIC : string
+    +RFISC : string
+    +RFIDescription : string
+    +Origin : string
+    +Destination : string
+    +FlightNumber : string
+    +PresentTo : string
+    +PresentAt : string
+    +NonRefundableInd : boolean
+    +MarketingCarrier : string
+    +Key : string
 }
 class EMDEndorsement {
-    +value : xs:string
+    +value : string
 }
 class EMDInfo {
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +EMDTravelerInfo : EMDTravelerInfo
     +common:SupplierLocator : common:SupplierLocator[]
     +ElectronicMiscDocument : ElectronicMiscDocument[]
@@ -1149,64 +1149,64 @@ class EMDInfo {
     +EMDEndorsement : EMDEndorsement[]
     +FareCalc : FareCalc
     +EMDCommission : EMDCommission
-    +ProviderCode : xs:string
-    +ProviderLocatorCode : xs:string
-    +Key : xs:string
+    +ProviderCode : string
+    +ProviderLocatorCode : string
+    +Key : string
 }
 class EMDPricingInfo {
     +TaxInfo : TaxInfo[]
-    +BaseFare : xs:string
-    +TotalFare : xs:string
-    +TotalTax : xs:string
-    +EquivFare : xs:string
+    +BaseFare : string
+    +TotalFare : string
+    +TotalTax : string
+    +EquivFare : string
 }
 class EMDSummary {
     +EMDCoupon : EMDCoupon[]
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
-    +Number : xs:string
-    +PrimaryDocumentIndicator : xs:boolean
-    +InConjunctionWith : xs:string
-    +AssociatedTicketNumber : xs:string
-    +PlatingCarrier : xs:string
-    +IssueDate : xs:dateTime
-    +Key : xs:string
+    +KeyOverride : boolean
+    +Number : string
+    +PrimaryDocumentIndicator : boolean
+    +InConjunctionWith : string
+    +AssociatedTicketNumber : string
+    +PlatingCarrier : string
+    +IssueDate : dateTime
+    +Key : string
 }
 class EMDSummaryInfo {
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +EMDSummary : EMDSummary[]
     +EMDTravelerInfo : EMDTravelerInfo
     +common:Payment : common:Payment
-    +ProviderReservationInfoRef : xs:string
-    +Key : xs:string
+    +ProviderReservationInfoRef : string
+    +Key : string
 }
 class EMDTravelerInfo {
     +NameInfo : NameInfo
-    +TravelerType : xs:string
-    +Age : xs:integer
+    +TravelerType : string
+    +Age : integer
 }
 EMDTravelerInfo +-- NameInfo
 class NameInfo {
-    +Prefix : xs:string
-    +First : xs:string
-    +Middle : xs:string
-    +Last : xs:string
-    +Suffix : xs:string
+    +Prefix : string
+    +First : string
+    +Middle : string
+    +Last : string
+    +Suffix : string
 }
 class ETR {
-    +TotalPrice : xs:string
-    +BasePrice : xs:string
-    +ApproximateTotalPrice : xs:string
-    +ApproximateBasePrice : xs:string
-    +EquivalentBasePrice : xs:string
-    +Taxes : xs:string
-    +Fees : xs:string
-    +Services : xs:string
-    +ApproximateTaxes : xs:string
-    +ApproximateFees : xs:string
+    +TotalPrice : string
+    +BasePrice : string
+    +ApproximateTotalPrice : string
+    +ApproximateBasePrice : string
+    +EquivalentBasePrice : string
+    +Taxes : string
+    +Fees : string
+    +Services : string
+    +ApproximateTaxes : string
+    +ApproximateFees : string
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +AirReservationLocatorCode : AirReservationLocatorCode
     +common:AgencyInfo : common:AgencyInfo
     +common:BookingTraveler : common:BookingTraveler
@@ -1222,42 +1222,42 @@ class ETR {
     +common:Restriction : common:Restriction[]
     +WaiverCode : WaiverCode
     +BaggageAllowances : BaggageAllowances
-    +Key : xs:string
-    +Refundable : xs:boolean
-    +Exchangeable : xs:boolean
-    +TourCode : xs:string
-    +IssuedDate : xs:string
-    +BulkTicket : xs:boolean
-    +ProviderCode : xs:string
-    +ProviderLocatorCode : xs:string
-    +IATANumber : xs:string
-    +PseudoCityCode : xs:string
-    +CountryCode : xs:string
-    +PlatingCarrier : xs:string
+    +Key : string
+    +Refundable : boolean
+    +Exchangeable : boolean
+    +TourCode : string
+    +IssuedDate : string
+    +BulkTicket : boolean
+    +ProviderCode : string
+    +ProviderLocatorCode : string
+    +IATANumber : string
+    +PseudoCityCode : string
+    +CountryCode : string
+    +PlatingCarrier : string
 }
 class ElectronicMiscDocument {
     +EMDCoupon : EMDCoupon[]
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
-    +Number : xs:string
-    +PrimaryDocumentIndicator : xs:boolean
-    +InConjunctionWith : xs:string
-    +AssociatedTicketNumber : xs:string
-    +PlatingCarrier : xs:string
-    +IssueDate : xs:dateTime
-    +Status : xs:string
-    +Key : xs:string
+    +KeyOverride : boolean
+    +Number : string
+    +PrimaryDocumentIndicator : boolean
+    +InConjunctionWith : string
+    +AssociatedTicketNumber : string
+    +PlatingCarrier : string
+    +IssueDate : dateTime
+    +Status : string
+    +Key : string
 }
 class Embargo {
-    +Key : xs:string
-    +Carrier : xs:string
-    +SegmentRef : xs:string
-    +Name : xs:string
-    +Text : xs:string
-    +SecondaryType : xs:string
-    +Type : xs:string
-    +Url : xs:anyURI
-    +ServiceSubCode : xs:string
+    +Key : string
+    +Carrier : string
+    +SegmentRef : string
+    +Name : string
+    +Text : string
+    +SecondaryType : string
+    +Type : string
+    +Url : anyURI
+    +ServiceSubCode : string
 }
 class EmbargoInfo {
 }
@@ -1271,42 +1271,42 @@ class Enumeration {
 class ExchangeAirSegment {
     +AirSegment : AirSegment
     +common:CabinClass : common:CabinClass
-    +FareBasisCode : xs:string
+    +FareBasisCode : string
 }
 class ExchangeEligibilityInfo {
     +ExchangePenaltyInfo : ExchangePenaltyInfo[]
-    +EligibleFares : xs:string
-    +RefundableFares : xs:string
-    +PassedAutomationChecks : xs:boolean
+    +EligibleFares : string
+    +RefundableFares : string
+    +PassedAutomationChecks : boolean
 }
 class ExchangePenaltyInfo {
     +PenaltyInformation : PenaltyInformation[]
-    +PTC : xs:string
-    +MinimumChangeFee : xs:string
-    +MaximumChangeFee : xs:string
+    +PTC : string
+    +MinimumChangeFee : string
+    +MaximumChangeFee : string
 }
 class ExchangedTicketInfo {
-    +Number : xs:string
+    +Number : string
 }
 class ExcludeTicketing {
-    +BookingTravelerRef : xs:string[]
+    +BookingTravelerRef : string[]
 }
 class ExemptOBFee {
-    +SubCode : xs:string[]
+    +SubCode : string[]
 }
 class ExemptTaxes {
-    +CountryCode : xs:string[]
-    +TaxCategory : xs:string[]
-    +AllTaxes : xs:boolean
-    +TaxTerritory : xs:string
-    +CompanyName : xs:string
+    +CountryCode : string[]
+    +TaxCategory : string[]
+    +AllTaxes : boolean
+    +TaxTerritory : string
+    +CompanyName : string
 }
 class ExpertSolution {
     +LegPrice : LegPrice[]
-    +Key : xs:string
-    +TotalPrice : xs:string
-    +ApproximateTotalPrice : xs:string
-    +CreatedDate : xs:date
+    +Key : string
+    +TotalPrice : string
+    +ApproximateTotalPrice : string
+    +CreatedDate : date
 }
 class ExpertSolutionList {
     +ExpertSolution : ExpertSolution[]
@@ -1320,39 +1320,39 @@ class Facility {
     +common:ServiceData : common:ServiceData[]
     +TourCode : TourCode
     +Type : typeFacility
-    +SeatCode : xs:string
+    +SeatCode : string
     +Availability : typeSeatAvailability
-    +SeatPrice : xs:string
-    +Paid : xs:boolean
-    +ServiceSubCode : xs:string
-    +SSRCode : xs:string
-    +IssuanceReason : xs:string
-    +BaseSeatPrice : xs:string
-    +Taxes : xs:string
-    +Quantity : xs:integer
-    +SequenceNumber : xs:integer
-    +InclusiveOfTax : xs:boolean
-    +InterlineSettlementAllowed : xs:boolean
-    +GeographySpecification : xs:string
-    +Source : xs:string
-    +OptionalServiceRef : xs:string
-    +SeatInformationRef : xs:string
+    +SeatPrice : string
+    +Paid : boolean
+    +ServiceSubCode : string
+    +SSRCode : string
+    +IssuanceReason : string
+    +BaseSeatPrice : string
+    +Taxes : string
+    +Quantity : integer
+    +SequenceNumber : integer
+    +InclusiveOfTax : boolean
+    +InterlineSettlementAllowed : boolean
+    +GeographySpecification : string
+    +Source : string
+    +OptionalServiceRef : string
+    +SeatInformationRef : string
 }
 class FareBasis {
-    +Code : xs:string
-    +SegmentRef : xs:string
+    +Code : string
+    +SegmentRef : string
 }
 class FareCalc {
-    +value : xs:string
+    +value : string
 }
 class FareDetails {
     +FareTicketDesignator : FareTicketDesignator
-    +Key : xs:string
-    +PassengerDetailRef : xs:string
-    +FareBasis : xs:string
+    +Key : string
+    +PassengerDetailRef : string
+    +FareBasis : string
 }
 class FareDetailsRef {
-    +Key : xs:string
+    +Key : string
 }
 class FareDisplay {
     +FareDisplayRule : FareDisplayRule
@@ -1366,36 +1366,36 @@ class FareDisplay {
     +AddlBookingCodeInformation : AddlBookingCodeInformation
     +FareRuleFailureInfo : FareRuleFailureInfo
     +PriceChange : PriceChangeType[]
-    +Carrier : xs:string
-    +FareBasis : xs:string
-    +Amount : xs:string
+    +Carrier : string
+    +FareBasis : string
+    +Amount : string
     +TripType : typeFareTripType
-    +FareTypeCode : xs:string
-    +SpecialFare : xs:boolean
-    +InstantPurchase : xs:boolean
-    +EligibilityRestricted : xs:boolean
-    +FlightRestricted : xs:boolean
-    +StopoversRestricted : xs:boolean
-    +TransfersRestricted : xs:boolean
-    +BlackoutsExist : xs:boolean
-    +AccompaniedTravel : xs:boolean
+    +FareTypeCode : string
+    +SpecialFare : boolean
+    +InstantPurchase : boolean
+    +EligibilityRestricted : boolean
+    +FlightRestricted : boolean
+    +StopoversRestricted : boolean
+    +TransfersRestricted : boolean
+    +BlackoutsExist : boolean
+    +AccompaniedTravel : boolean
     +MileOrRouteBasedFare : typeMileOrRouteBasedFare
     +GlobalIndicator : typeATPCOGlobalIndicator
-    +Origin : xs:string
-    +Destination : xs:string
-    +FareTicketingCode : xs:string
-    +FareTicketingDesignator : xs:string
+    +Origin : string
+    +Destination : string
+    +FareTicketingCode : string
+    +FareTicketingDesignator : string
 }
 class FareDisplayRule {
     +RuleAdvancedPurchase : RuleAdvancedPurchase
     +RuleLengthOfStay : RuleLengthOfStay
     +RuleCharges : RuleCharges
-    +RuleNumber : xs:string
-    +Source : xs:string
-    +TariffNumber : xs:string
+    +RuleNumber : string
+    +Source : string
+    +TariffNumber : string
 }
 class FareGuaranteeInfo {
-    +GuaranteeDate : xs:date
+    +GuaranteeDate : date
     +GuaranteeType : typeFareGuarantee
 }
 class FareInfo {
@@ -1410,88 +1410,88 @@ class FareInfo {
     +FareRemarkRef : FareRemarkRef[]
     +Brand : Brand
     +common:Commission : common:Commission
-    +FareAttributes : xs:string
+    +FareAttributes : string
     +ChangePenalty : typeFarePenalty
     +CancelPenalty : typeFarePenalty
     +FareRulesFilter : FareRulesFilter
-    +Key : xs:string
-    +FareBasis : xs:string
-    +PassengerTypeCode : xs:string
-    +Origin : xs:string
-    +Destination : xs:string
-    +EffectiveDate : xs:string
-    +TravelDate : xs:date
-    +DepartureDate : xs:date
-    +Amount : xs:string
+    +Key : string
+    +FareBasis : string
+    +PassengerTypeCode : string
+    +Origin : string
+    +Destination : string
+    +EffectiveDate : string
+    +TravelDate : date
+    +DepartureDate : date
+    +Amount : string
     +PrivateFare : typePrivateFare
-    +NegotiatedFare : xs:boolean
-    +TourCode : xs:string
-    +WaiverCode : xs:string
-    +NotValidBefore : xs:date
-    +NotValidAfter : xs:date
-    +PseudoCityCode : xs:string
-    +FareFamily : xs:string
-    +PromotionalFare : xs:boolean
-    +CarCode : xs:string
-    +ValueCode : xs:string
+    +NegotiatedFare : boolean
+    +TourCode : string
+    +WaiverCode : string
+    +NotValidBefore : date
+    +NotValidAfter : date
+    +PseudoCityCode : string
+    +FareFamily : string
+    +PromotionalFare : boolean
+    +CarCode : string
+    +ValueCode : string
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
-    +BulkTicket : xs:boolean
-    +InclusiveTour : xs:boolean
-    +Value : xs:string
-    +SupplierCode : xs:string
-    +TaxAmount : xs:string
+    +KeyOverride : boolean
+    +BulkTicket : boolean
+    +InclusiveTour : boolean
+    +Value : string
+    +SupplierCode : string
+    +TaxAmount : string
 }
 class FareInfoList {
     +FareInfo : FareInfo[]
 }
 class FareInfoMessage {
-    +value : xs:string
-    +Key : xs:string
+    +value : string
+    +Key : string
 }
 class FareInfoRef {
-    +Key : xs:string
+    +Key : string
 }
 class FareMileageInformation {
-    +value : xs:string
+    +value : string
 }
 class FareNote {
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
-    +value : xs:string
-    +Key : xs:string
-    +Precedence : xs:integer
-    +NoteName : xs:string
-    +FareInfoMessageRef : xs:string
+    +KeyOverride : boolean
+    +value : string
+    +Key : string
+    +Precedence : integer
+    +NoteName : string
+    +FareInfoMessageRef : string
 }
 class FareNoteList {
     +FareNote : FareNote[]
 }
 class FareNoteRef {
-    +Key : xs:string
+    +Key : string
 }
 class FarePricing {
-    +PassengerType : xs:string
-    +TotalFareAmount : xs:string
-    +PrivateFare : xs:boolean
-    +NegotiatedFare : xs:boolean
-    +AutoPriceable : xs:boolean
-    +TotalNetFareAmount : xs:string
-    +BaseFare : xs:string
-    +Taxes : xs:string
-    +MMid : xs:string
+    +PassengerType : string
+    +TotalFareAmount : string
+    +PrivateFare : boolean
+    +NegotiatedFare : boolean
+    +AutoPriceable : boolean
+    +TotalNetFareAmount : string
+    +BaseFare : string
+    +Taxes : string
+    +MMid : string
 }
 class FareRemark {
-    +Text : xs:string[]
+    +Text : string[]
     +URL : URL[]
-    +Key : xs:string
-    +Name : xs:string
+    +Key : string
+    +Name : string
 }
 class FareRemarkList {
     +FareRemark : FareRemark[]
 }
 class FareRemarkRef {
-    +Key : xs:string
+    +Key : string
 }
 class FareRestriction {
     +FareRestrictionDaysOfWeek : FareRestrictionDaysOfWeek[]
@@ -1502,47 +1502,47 @@ class FareRestriction {
 }
 class FareRestrictionDate {
     +Direction : typeFareDirectionality
-    +StartDate : xs:string
-    +EndDate : xs:string
+    +StartDate : string
+    +EndDate : string
     +EndDateIndicator : EndDateIndicator
 }
 FareRestrictionDate +-- EndDateIndicator
 class EndDateIndicator {
-    +Commence : xs:string
-    +Complete : xs:string
+    +Commence : string
+    +Complete : string
 }
-EndDateIndicator *- xs:string
+EndDateIndicator *- string
 class FareRestrictionDaysOfWeek {
     +Direction : typeFareDirectionality
     +TripType : typeFareTripType
-    +Monday : xs:boolean
-    +Tuesday : xs:boolean
-    +Wednesday : xs:boolean
-    +Thursday : xs:boolean
-    +Friday : xs:boolean
-    +Saturday : xs:boolean
-    +Sunday : xs:boolean
+    +Monday : boolean
+    +Tuesday : boolean
+    +Wednesday : boolean
+    +Thursday : boolean
+    +Friday : boolean
+    +Saturday : boolean
+    +Sunday : boolean
 }
 class FareRestrictionSaleDate {
-    +StartDate : xs:date
-    +EndDate : xs:date
+    +StartDate : date
+    +EndDate : date
 }
 class FareRestrictionSeasonal {
-    +Comment : xs:string
-    +VariationByTravelDates : xs:string
-    +SeasonalRange1Ind : xs:string
-    +SeasonalRange1StartDate : xs:string
-    +SeasonalRange1EndDate : xs:string
-    +SeasonalRange2Ind : xs:string
-    +SeasonalRange2StartDate : xs:string
-    +SeasonalRange2EndDate : xs:string
+    +Comment : string
+    +VariationByTravelDates : string
+    +SeasonalRange1Ind : string
+    +SeasonalRange1StartDate : string
+    +SeasonalRange1EndDate : string
+    +SeasonalRange2Ind : string
+    +SeasonalRange2StartDate : string
+    +SeasonalRange2EndDate : string
 }
 class FareRoutingInformation {
-    +value : xs:string
+    +value : string
 }
 class FareRule {
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
+    +ProviderCode : string
+    +SupplierCode : string
     +FareRuleLong : FareRuleLong[]
     +FareRuleShort : FareRuleShort[]
     +RuleAdvancedPurchase : RuleAdvancedPurchase
@@ -1550,61 +1550,61 @@ class FareRule {
     +RuleCharges : RuleCharges
     +FareRuleResultMessage : common:typeResultMessage[]
     +StructuredFareRules : StructuredFareRulesType
-    +FareInfoRef : xs:string
-    +RuleNumber : xs:string
-    +Source : xs:string
-    +TariffNumber : xs:string
+    +FareInfoRef : string
+    +RuleNumber : string
+    +Source : string
+    +TariffNumber : string
 }
 class FareRuleCategory {
-    +Category : xs:integer
+    +Category : integer
 }
 class FareRuleCategoryTypes {
     +CategoryDetails : ValueDetails[]
     +VariableCategoryDetails : CategoryDetailsType[]
-    +Value : xs:string
+    +Value : string
 }
 class FareRuleFailureInfo {
-    +Reason : xs:string[]
+    +Reason : string[]
 }
 class FareRuleKey {
-    +value : xs:string
-    +FareInfoRef : xs:string
-    +ProviderCode : xs:string
+    +value : string
+    +FareInfoRef : string
+    +ProviderCode : string
 }
 class FareRuleLong {
-    +value : xs:string
-    +Category : xs:integer
-    +Type : xs:string
+    +value : string
+    +Category : integer
+    +Type : string
 }
 class FareRuleLongRef {
-    +Key : xs:string
+    +Key : string
 }
 class FareRuleLookup {
     +common:AccountCode : common:AccountCode
     +common:PointOfSale : common:PointOfSale
-    +Origin : xs:string
-    +Destination : xs:string
-    +Carrier : xs:string
-    +FareBasis : xs:string
-    +ProviderCode : xs:string
-    +DepartureDate : xs:date
-    +TicketingDate : xs:date
+    +Origin : string
+    +Destination : string
+    +Carrier : string
+    +FareBasis : string
+    +ProviderCode : string
+    +DepartureDate : date
+    +TicketingDate : date
 }
 class FareRuleNameValue {
-    +Name : xs:string
-    +Value : xs:string
+    +Name : string
+    +Value : string
 }
 class FareRuleShort {
     +FareRuleNameValue : FareRuleNameValue[]
-    +Category : xs:integer
-    +TableNumber : xs:string
+    +Category : integer
+    +TableNumber : string
 }
 class FareRuleShortRef {
-    +Key : xs:string
+    +Key : string
 }
 class FareRulesFilter {
     +Refundability : Refundability
-    +LatestTicketingTime : xs:dateTime
+    +LatestTicketingTime : dateTime
     +CHG : CHGType
     +MIN : MINType
     +MAX : MAXType
@@ -1613,145 +1613,145 @@ class FareRulesFilter {
 }
 FareRulesFilter +-- Refundability
 class Refundability {
-    +Value : xs:string
+    +Value : string
 }
 class FareRulesFilterCategory {
-    +CategoryCode : xs:string[]
-    +FareInfoRef : xs:string
+    +CategoryCode : string[]
+    +FareInfoRef : string
 }
 class FareStatus {
     +FareStatusFailureInfo : FareStatusFailureInfo
     +Code : typeFareStatusCode
 }
 class FareStatusFailureInfo {
-    +Code : xs:string
-    +Reason : xs:string
+    +Code : string
+    +Reason : string
 }
 class FareSurcharge {
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
-    +Key : xs:string
-    +Type : xs:string
-    +Amount : xs:string
-    +SegmentRef : xs:string
-    +CouponRef : xs:string
+    +KeyOverride : boolean
+    +Key : string
+    +Type : string
+    +Amount : string
+    +SegmentRef : string
+    +CouponRef : string
 }
 class FareTicketDesignator {
-    +Value : xs:string
+    +Value : string
 }
 class FareType {
-    +Code : xs:string
+    +Code : string
 }
 class FaxDetails {
     +common:PhoneNumber : common:PhoneNumber
     +TermConditions : TermConditions
     +common:Remark : common:Remark[]
-    +IncludeCoverSheet : xs:boolean
-    +To : xs:string
-    +From : xs:string
-    +DeptBillingCode : xs:string
-    +InvoiceNumber : xs:string
+    +IncludeCoverSheet : boolean
+    +To : string
+    +From : string
+    +DeptBillingCode : string
+    +InvoiceNumber : string
 }
 class FaxDetailsInformation {
     +AirPricingInfoRef : AirPricingInfoRef[]
     +FaxDetails : FaxDetails
 }
 class FeeApplication {
-    +value : xs:string
-    +Code : xs:string
+    +value : string
+    +Code : string
 }
 class FeeInfo {
 }
 FeeInfo *- common:typeFeeInfo
 class FlexExploreModifiers {
-    +Destination : xs:string[]
+    +Destination : string[]
     +Type : Type
-    +Radius : xs:integer
-    +GroupName : xs:string
+    +Radius : integer
+    +GroupName : string
 }
 FlexExploreModifiers +-- Type
 class Type {
-    +AnyWhere : xs:string
-    +Area : xs:string
-    +Zone : xs:string
-    +Country : xs:string
-    +State : xs:string
-    +DistanceInMiles : xs:string
-    +DistanceInKilometers : xs:string
-    +Destination : xs:string
-    +Group : xs:string
+    +AnyWhere : string
+    +Area : string
+    +Zone : string
+    +Country : string
+    +State : string
+    +DistanceInMiles : string
+    +DistanceInKilometers : string
+    +Destination : string
+    +Group : string
 }
-Type *- xs:string
+Type *- string
 class FlightDetails {
-    +Origin : xs:string
-    +Destination : xs:string
-    +DepartureTime : xs:string
-    +ArrivalTime : xs:string
-    +FlightTime : xs:integer
-    +TravelTime : xs:integer
-    +Distance : xs:integer
+    +Origin : string
+    +Destination : string
+    +DepartureTime : string
+    +ArrivalTime : string
+    +FlightTime : integer
+    +TravelTime : integer
+    +Distance : integer
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +Connection : Connection
     +Meals : Meals[]
     +InFlightServices : InFlightServices[]
-    +Key : xs:string
-    +Equipment : xs:string
-    +OnTimePerformance : xs:integer
-    +OriginTerminal : xs:string
-    +DestinationTerminal : xs:string
-    +GroundTime : xs:integer
-    +AutomatedCheckin : xs:boolean
+    +Key : string
+    +Equipment : string
+    +OnTimePerformance : integer
+    +OriginTerminal : string
+    +DestinationTerminal : string
+    +GroundTime : integer
+    +AutomatedCheckin : boolean
 }
 class FlightDetailsList {
     +FlightDetails : FlightDetails[]
 }
 class FlightDetailsRef {
-    +Key : xs:string
+    +Key : string
 }
 class FlightInfo {
     +FlightInfoDetail : FlightInfoDetail[]
     +FlightInfoErrorMessage : common:typeResultMessage[]
-    +CriteriaKey : xs:string
-    +Carrier : xs:string
-    +FlightNumber : xs:string
-    +Origin : xs:string
-    +Destination : xs:string
-    +DepartureDate : xs:date
-    +ClassOfService : xs:string
+    +CriteriaKey : string
+    +Carrier : string
+    +FlightNumber : string
+    +Origin : string
+    +Destination : string
+    +DepartureDate : date
+    +ClassOfService : string
 }
 class FlightInfoCriteria {
-    +Key : xs:string
-    +Carrier : xs:string
-    +FlightNumber : xs:string
-    +Origin : xs:string
-    +Destination : xs:string
-    +DepartureDate : xs:date
-    +ClassOfService : xs:string
+    +Key : string
+    +Carrier : string
+    +FlightNumber : string
+    +Origin : string
+    +Destination : string
+    +DepartureDate : date
+    +ClassOfService : string
 }
 class FlightInfoDetail {
     +CodeshareInfo : CodeshareInfo
     +Meals : Meals[]
     +InFlightServices : InFlightServices[]
     +Variance : Variance[]
-    +Origin : xs:string
-    +Destination : xs:string
-    +ScheduledDepartureTime : xs:string
-    +ScheduledArrivalTime : xs:string
-    +TravelTime : xs:integer
+    +Origin : string
+    +Destination : string
+    +ScheduledDepartureTime : string
+    +ScheduledArrivalTime : string
+    +TravelTime : integer
     +ETicketability : typeEticketability
-    +Equipment : xs:string
-    +OriginTerminal : xs:string
-    +OriginGate : xs:string
-    +DestinationTerminal : xs:string
-    +DestinationGate : xs:string
-    +AutomatedCheckin : xs:boolean
+    +Equipment : string
+    +OriginTerminal : string
+    +OriginGate : string
+    +DestinationTerminal : string
+    +DestinationGate : string
+    +AutomatedCheckin : boolean
 }
 class FlightOption {
     +Option : Option[]
-    +LegRef : xs:string
-    +Origin : xs:string
-    +Destination : xs:string
+    +LegRef : string
+    +Origin : string
+    +Destination : string
 }
 class FlightOptionsList {
     +FlightOption : FlightOption[]
@@ -1759,87 +1759,87 @@ class FlightOptionsList {
 class FlightTimeDetail {
     +DaysOfOperation : typeDaysOfOperation
     +Connection : Connection
-    +Key : xs:string
-    +VendorCode : xs:string
-    +FlightNumber : xs:string
-    +Origin : xs:string
-    +Destination : xs:string
-    +DepartureTime : xs:time
-    +ArrivalTime : xs:time
-    +StopCount : xs:integer
-    +Equipment : xs:string
-    +ScheduleStartDate : xs:date
-    +ScheduleEndDate : xs:date
-    +DisplayOption : xs:boolean
-    +OnTimePerformance : xs:integer
-    +DayChange : xs:integer
-    +JourneyTime : xs:integer
-    +FlightTime : xs:integer
-    +StartTerminal : xs:string
-    +EndTerminal : xs:string
-    +FirstIntermediateStop : xs:string
-    +LastIntermediateStop : xs:string
-    +InsideAvailability : xs:string
-    +SecureSell : xs:string
-    +AvailabilitySource : xs:string
+    +Key : string
+    +VendorCode : string
+    +FlightNumber : string
+    +Origin : string
+    +Destination : string
+    +DepartureTime : time
+    +ArrivalTime : time
+    +StopCount : integer
+    +Equipment : string
+    +ScheduleStartDate : date
+    +ScheduleEndDate : date
+    +DisplayOption : boolean
+    +OnTimePerformance : integer
+    +DayChange : integer
+    +JourneyTime : integer
+    +FlightTime : integer
+    +StartTerminal : string
+    +EndTerminal : string
+    +FirstIntermediateStop : string
+    +LastIntermediateStop : string
+    +InsideAvailability : string
+    +SecureSell : string
+    +AvailabilitySource : string
 }
 class FlightTimeTableCriteria {
     +GeneralTimeTable : GeneralTimeTable
     +SpecificTimeTable : SpecificTimeTable
 }
 class FlightType {
-    +RequireSingleCarrier : xs:boolean
-    +MaxConnections : xs:integer
-    +MaxStops : xs:integer
-    +NonStopDirects : xs:boolean
-    +StopDirects : xs:boolean
-    +SingleOnlineCon : xs:boolean
-    +DoubleOnlineCon : xs:boolean
-    +TripleOnlineCon : xs:boolean
-    +SingleInterlineCon : xs:boolean
-    +DoubleInterlineCon : xs:boolean
-    +TripleInterlineCon : xs:boolean
+    +RequireSingleCarrier : boolean
+    +MaxConnections : integer
+    +MaxStops : integer
+    +NonStopDirects : boolean
+    +StopDirects : boolean
+    +SingleOnlineCon : boolean
+    +DoubleOnlineCon : boolean
+    +TripleOnlineCon : boolean
+    +SingleInterlineCon : boolean
+    +DoubleInterlineCon : boolean
+    +TripleInterlineCon : boolean
 }
 class GeneralTimeTable {
     +DaysOfOperation : typeDaysOfOperation
     +FlightOrigin : common:typeLocation
     +FlightDestination : common:typeLocation
     +CarrierList : CarrierList
-    +StartDate : xs:string
-    +EndDate : xs:string
-    +StartTime : xs:time
-    +EndTime : xs:time
-    +IncludeConnection : xs:boolean
+    +StartDate : string
+    +EndDate : string
+    +StartTime : time
+    +EndTime : time
+    +IncludeConnection : boolean
 }
 class GroupedOption {
-    +OptionalServiceRef : xs:string
+    +OptionalServiceRef : string
 }
 class GroupedOptionInfo {
     +GroupedOption : GroupedOption[]
 }
 class HostReservation {
-    +Carrier : xs:string
-    +CarrierLocatorCode : xs:string
-    +ProviderCode : xs:string
-    +ProviderLocatorCode : xs:string
-    +UniversalLocatorCode : xs:string
-    +ETicket : xs:boolean
+    +Carrier : string
+    +CarrierLocatorCode : string
+    +ProviderCode : string
+    +ProviderLocatorCode : string
+    +UniversalLocatorCode : string
+    +ETicket : boolean
 }
 class HostTokenList {
     +common:HostToken : common:HostToken[]
 }
 class ImageLocation {
-    +value : xs:string
-    +Type : xs:string
-    +ImageWidth : xs:nonNegativeInteger
-    +ImageHeight : xs:nonNegativeInteger
+    +value : string
+    +Type : string
+    +ImageWidth : nonNegativeInteger
+    +ImageHeight : nonNegativeInteger
 }
 class InFlightServices {
-    +value : xs:string
+    +value : string
 }
 class IncludeAddlBookingCodeInfo {
     +Type : typeCarrierCode
-    +SecondaryCarrier : xs:string
+    +SecondaryCarrier : string
 }
 class InvoluntaryChange {
     +TicketEndorsement : TicketEndorsement
@@ -1850,93 +1850,93 @@ class IssuanceModifiers {
     +CustomerReceiptInfo : CustomerReceiptInfo
     +EMDEndorsement : EMDEndorsement
     +EMDCommission : EMDCommission
-    +PlatingCarrier : xs:string
+    +PlatingCarrier : string
 }
 class Itinerary {
     +Type : typeItinerary
     +Option : typeItineraryOption
-    +SeparateIndicator : xs:boolean
+    +SeparateIndicator : boolean
 }
 class Journey {
     +AirSegmentRef : AirSegmentRef[]
-    +TravelTime : xs:duration
+    +TravelTime : duration
 }
 class JourneyData {
     +AirSegment : AirSegment[]
 }
 class LandCharges {
     +Tax : Tax[]
-    +Base : xs:string
-    +Total : xs:string
-    +Miscellaneous : xs:string
-    +PrePaid : xs:string
-    +Deposit : xs:string
+    +Base : string
+    +Total : string
+    +Miscellaneous : string
+    +PrePaid : string
+    +Deposit : string
 }
 class LanguageOption {
-    +Language : xs:string
-    +Country : xs:string
+    +Language : string
+    +Country : string
 }
 class Leg {
     +LegDetail : LegDetail[]
-    +Key : xs:string
-    +Group : xs:int
-    +Origin : xs:string
-    +Destination : xs:string
+    +Key : string
+    +Group : int
+    +Origin : string
+    +Destination : string
 }
 class LegDetail {
-    +Key : xs:string
-    +OriginAirport : xs:string
-    +DestinationAirport : xs:string
-    +Carrier : xs:string
-    +TravelDate : xs:string
-    +FlightNumber : xs:string
+    +Key : string
+    +OriginAirport : string
+    +DestinationAirport : string
+    +Carrier : string
+    +TravelDate : string
+    +FlightNumber : string
 }
 class LegPrice {
     +LegDetail : LegDetail[]
-    +Key : xs:string
-    +TotalPrice : xs:string
-    +ApproximateTotalPrice : xs:string
+    +Key : string
+    +TotalPrice : string
+    +ApproximateTotalPrice : string
 }
 class LegRef {
-    +Key : xs:string
+    +Key : string
 }
 class LoyaltyCardDetails {
-    +SupplierCode : xs:string
-    +PriorityCode : xs:string
+    +SupplierCode : string
+    +PriorityCode : string
 }
 class MAXType {
-    +HoursMax : xs:boolean
-    +DaysMax : xs:boolean
-    +MonthsMax : xs:boolean
-    +OccurIndMax : xs:boolean
-    +SameDayMax : xs:boolean
-    +StartIndMax : xs:boolean
-    +CompletionInd : xs:boolean
-    +TmDOWMax : xs:integer
-    +NumOccurMax : xs:integer
+    +HoursMax : boolean
+    +DaysMax : boolean
+    +MonthsMax : boolean
+    +OccurIndMax : boolean
+    +SameDayMax : boolean
+    +StartIndMax : boolean
+    +CompletionInd : boolean
+    +TmDOWMax : integer
+    +NumOccurMax : integer
 }
 class MINType {
-    +HoursMin : xs:boolean
-    +DaysMin : xs:boolean
-    +MonthsMin : xs:boolean
-    +OccurIndMin : xs:boolean
-    +SameDayMin : xs:boolean
-    +TmDOWMin : xs:integer
-    +FareComponent : xs:integer
-    +NumOccurMin : xs:integer
+    +HoursMin : boolean
+    +DaysMin : boolean
+    +MonthsMin : boolean
+    +OccurIndMin : boolean
+    +SameDayMin : boolean
+    +TmDOWMin : integer
+    +FareComponent : integer
+    +NumOccurMin : integer
 }
 class ManualFareAdjustment {
     +AppliedOn : common:typeAdjustmentTarget
     +AdjustmentType : common:typeAdjustmentType
-    +Value : xs:decimal
-    +PassengerRef : xs:string
-    +TicketDesignator : xs:string
-    +FareType : xs:string
+    +Value : decimal
+    +PassengerRef : string
+    +TicketDesignator : string
+    +FareType : string
 }
 class MaxLayoverDurationType {
-    +Domestic : xs:integer
-    +Gateway : xs:integer
-    +International : xs:integer
+    +Domestic : integer
+    +Gateway : integer
+    +International : integer
 }
 enum Meals {
     Meal = Meal
@@ -1967,60 +1967,60 @@ class MerchandisingPricingModifiers {
     +common:AccountCode : common:AccountCode[]
 }
 class MultiGDSSearchIndicator {
-    +Type : xs:string
-    +ProviderCode : xs:string
-    +DefaultProvider : xs:boolean
-    +PrivateFareCode : xs:string
-    +PrivateFareCodeOnly : xs:boolean
+    +Type : string
+    +ProviderCode : string
+    +DefaultProvider : boolean
+    +PrivateFareCode : string
+    +PrivateFareCodeOnly : boolean
 }
 class OTHType {
-    +Cat0 : xs:boolean
-    +Cat1 : xs:boolean
-    +Cat2 : xs:boolean
-    +Cat3 : xs:boolean
-    +Cat4 : xs:boolean
-    +Cat5 : xs:boolean
-    +Cat6 : xs:boolean
-    +Cat7 : xs:boolean
-    +Cat8 : xs:boolean
-    +Cat9 : xs:boolean
-    +Cat10 : xs:boolean
-    +Cat11 : xs:boolean
-    +Cat12 : xs:boolean
-    +Cat13 : xs:boolean
-    +Cat14 : xs:boolean
-    +Cat15 : xs:boolean
-    +Cat16 : xs:boolean
-    +Cat17 : xs:boolean
-    +Cat18 : xs:boolean
-    +Cat19 : xs:boolean
-    +Cat20 : xs:boolean
-    +Cat21 : xs:boolean
-    +Cat22 : xs:boolean
-    +Cat23 : xs:boolean
-    +Cat24 : xs:boolean
-    +Cat25 : xs:boolean
-    +Cat26 : xs:boolean
-    +Cat27 : xs:boolean
-    +Cat28 : xs:boolean
-    +Cat29 : xs:boolean
-    +Cat30 : xs:boolean
-    +Cat31 : xs:boolean
-    +RestrictiveDt : xs:date
-    +SurchargeAmt : xs:decimal
-    +NotUSACity : xs:boolean
-    +MissingRules : xs:boolean
+    +Cat0 : boolean
+    +Cat1 : boolean
+    +Cat2 : boolean
+    +Cat3 : boolean
+    +Cat4 : boolean
+    +Cat5 : boolean
+    +Cat6 : boolean
+    +Cat7 : boolean
+    +Cat8 : boolean
+    +Cat9 : boolean
+    +Cat10 : boolean
+    +Cat11 : boolean
+    +Cat12 : boolean
+    +Cat13 : boolean
+    +Cat14 : boolean
+    +Cat15 : boolean
+    +Cat16 : boolean
+    +Cat17 : boolean
+    +Cat18 : boolean
+    +Cat19 : boolean
+    +Cat20 : boolean
+    +Cat21 : boolean
+    +Cat22 : boolean
+    +Cat23 : boolean
+    +Cat24 : boolean
+    +Cat25 : boolean
+    +Cat26 : boolean
+    +Cat27 : boolean
+    +Cat28 : boolean
+    +Cat29 : boolean
+    +Cat30 : boolean
+    +Cat31 : boolean
+    +RestrictiveDt : date
+    +SurchargeAmt : decimal
+    +NotUSACity : boolean
+    +MissingRules : boolean
 }
 class OfferAvailabilityModifiers {
-    +ServiceType : xs:string[]
-    +Carrier : xs:string[]
-    +CurrencyType : xs:string
+    +ServiceType : string[]
+    +Carrier : string[]
+    +CurrencyType : string
 }
 class Option {
     +BookingInfo : BookingInfo[]
     +Connection : Connection[]
-    +Key : xs:string
-    +TravelTime : xs:duration
+    +Key : string
+    +TravelTime : duration
 }
 class OptionalService {
     +common:ServiceData : common:ServiceData[]
@@ -2037,79 +2037,79 @@ class OptionalService {
     +TourCode : TourCode
     +BrandingInfo : BrandingInfo
     +Title : Title[]
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
-    +OptionalServicesRuleRef : xs:string
-    +Type : xs:string
-    +Confirmation : xs:string
-    +SecondaryType : xs:string
+    +ProviderCode : string
+    +SupplierCode : string
+    +OptionalServicesRuleRef : string
+    +Type : string
+    +Confirmation : string
+    +SecondaryType : string
     +PurchaseWindow : common:typePurchaseWindow
-    +Priority : xs:integer
-    +Available : xs:boolean
-    +Entitled : xs:boolean
-    +PerTraveler : xs:boolean
-    +CreateDate : xs:dateTime
-    +PaymentRef : xs:string
-    +ServiceStatus : xs:string
-    +Quantity : xs:integer
-    +SequenceNumber : xs:integer
-    +ServiceSubCode : xs:string
-    +SSRCode : xs:string
-    +IssuanceReason : xs:string
-    +ProviderDefinedType : xs:string
-    +TotalPrice : xs:string
-    +BasePrice : xs:string
-    +ApproximateTotalPrice : xs:string
-    +ApproximateBasePrice : xs:string
-    +EquivalentBasePrice : xs:string
-    +Taxes : xs:string
-    +Fees : xs:string
-    +Services : xs:string
-    +ApproximateTaxes : xs:string
-    +ApproximateFees : xs:string
-    +Key : xs:string
+    +Priority : integer
+    +Available : boolean
+    +Entitled : boolean
+    +PerTraveler : boolean
+    +CreateDate : dateTime
+    +PaymentRef : string
+    +ServiceStatus : string
+    +Quantity : integer
+    +SequenceNumber : integer
+    +ServiceSubCode : string
+    +SSRCode : string
+    +IssuanceReason : string
+    +ProviderDefinedType : string
+    +TotalPrice : string
+    +BasePrice : string
+    +ApproximateTotalPrice : string
+    +ApproximateBasePrice : string
+    +EquivalentBasePrice : string
+    +Taxes : string
+    +Fees : string
+    +Services : string
+    +ApproximateTaxes : string
+    +ApproximateFees : string
+    +Key : string
     +AssessIndicator : typeAssessIndicator
-    +Mileage : xs:integer
-    +ApplicableFFLevel : xs:integer
-    +Private : xs:boolean
-    +SSRFreeText : xs:string
-    +IsPricingApproximate : xs:boolean
+    +Mileage : integer
+    +ApplicableFFLevel : integer
+    +Private : boolean
+    +SSRFreeText : string
+    +IsPricingApproximate : boolean
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
-    +Chargeable : xs:string
-    +InclusiveOfTax : xs:boolean
-    +InterlineSettlementAllowed : xs:boolean
-    +GeographySpecification : xs:string
-    +ExcessWeightRate : xs:string
-    +Source : xs:string
-    +ViewableOnly : xs:boolean
-    +DisplayText : xs:string
-    +WeightInExcess : xs:string
-    +TotalWeight : xs:string
-    +BaggageUnitPrice : xs:string
-    +FirstPiece : xs:int
-    +LastPiece : xs:int
-    +Restricted : xs:boolean
-    +IsRepriceRequired : xs:boolean
-    +BookedQuantity : xs:string
-    +Group : xs:string
-    +PseudoCityCode : xs:string
-    +Tag : xs:string
-    +DisplayOrder : xs:integer
+    +KeyOverride : boolean
+    +Chargeable : string
+    +InclusiveOfTax : boolean
+    +InterlineSettlementAllowed : boolean
+    +GeographySpecification : string
+    +ExcessWeightRate : string
+    +Source : string
+    +ViewableOnly : boolean
+    +DisplayText : string
+    +WeightInExcess : string
+    +TotalWeight : string
+    +BaggageUnitPrice : string
+    +FirstPiece : int
+    +LastPiece : int
+    +Restricted : boolean
+    +IsRepriceRequired : boolean
+    +BookedQuantity : string
+    +Group : string
+    +PseudoCityCode : string
+    +Tag : string
+    +DisplayOrder : integer
 }
 class OptionalServiceModifier {
-    +Type : xs:string
-    +SecondaryType : xs:string
-    +SupplierCode : xs:string
-    +ServiceSubCode : xs:string
-    +TravelDate : xs:date
-    +Description : xs:string
+    +Type : string
+    +SecondaryType : string
+    +SupplierCode : string
+    +ServiceSubCode : string
+    +TravelDate : date
+    +Description : string
 }
 class OptionalServiceModifiers {
     +OptionalServiceModifier : OptionalServiceModifier[]
 }
 class OptionalServiceRef {
-    +value : xs:string
+    +value : string
 }
 class OptionalServices {
     +OptionalServicesTotal : OptionalServicesTotal
@@ -2119,16 +2119,16 @@ class OptionalServices {
 }
 OptionalServices +-- OptionalServicesTotal
 class OptionalServicesTotal {
-    +TotalPrice : xs:string
-    +BasePrice : xs:string
-    +ApproximateTotalPrice : xs:string
-    +ApproximateBasePrice : xs:string
-    +EquivalentBasePrice : xs:string
-    +Taxes : xs:string
-    +Fees : xs:string
-    +Services : xs:string
-    +ApproximateTaxes : xs:string
-    +ApproximateFees : xs:string
+    +TotalPrice : string
+    +BasePrice : string
+    +ApproximateTotalPrice : string
+    +ApproximateBasePrice : string
+    +EquivalentBasePrice : string
+    +Taxes : string
+    +Fees : string
+    +Services : string
+    +ApproximateTaxes : string
+    +ApproximateFees : string
     +TaxInfo : TaxInfo[]
     +FeeInfo : FeeInfo[]
 }
@@ -2139,15 +2139,15 @@ class OptionalServicesInfo {
 }
 class OriginalItineraryDetails {
     +ItineraryType : common:typeItineraryCode
-    +BulkTicket : xs:boolean
-    +TicketingPCC : xs:string
-    +TicketingIATA : xs:string
-    +TicketingCountry : xs:string
-    +TourCode : xs:string
-    +TicketingDate : xs:date
+    +BulkTicket : boolean
+    +TicketingPCC : string
+    +TicketingIATA : string
+    +TicketingCountry : string
+    +TourCode : string
+    +TicketingDate : date
 }
 class OverrideCode {
-    +value : xs:string
+    +value : string
 }
 class PCC {
     +common:OverridePCC : common:OverridePCC
@@ -2156,68 +2156,68 @@ class PCC {
 }
 class PassengerDetails {
     +LoyaltyCardDetails : LoyaltyCardDetails[]
-    +Key : xs:string
-    +Code : xs:string
-    +Age : xs:integer
+    +Key : string
+    +Code : string
+    +Age : integer
 }
 class PassengerDetailsRef {
-    +Key : xs:string
+    +Key : string
 }
 class PassengerReceiptOverride {
-    +value : xs:string
+    +value : string
 }
 class PassengerSeatPrice {
-    +BookingTravelerRef : xs:string
-    +Amount : xs:string
+    +BookingTravelerRef : string
+    +Amount : string
 }
 class PassengerTicketNumber {
-    +TicketNumber : xs:string
-    +BookingTravelerRef : xs:string
+    +TicketNumber : string
+    +BookingTravelerRef : string
 }
 class PassengerType {
     +FareGuaranteeInfo : FareGuaranteeInfo
 }
 PassengerType *- common:typePassengerType
 class PaymentRef {
-    +Key : xs:string
+    +Key : string
 }
 class PenFeeType {
-    +DepRequired : xs:boolean
-    +DepNonRef : xs:boolean
-    +TkNonRef : xs:boolean
-    +AirVFee : xs:boolean
-    +Cancellation : xs:boolean
-    +FailConfirmSpace : xs:boolean
-    +ItinChg : xs:boolean
-    +ReplaceTk : xs:boolean
-    +Applicable : xs:boolean
-    +ApplicableTo : xs:boolean
-    +Amt : xs:decimal
-    +Type : xs:string
-    +Currency : xs:string
+    +DepRequired : boolean
+    +DepNonRef : boolean
+    +TkNonRef : boolean
+    +AirVFee : boolean
+    +Cancellation : boolean
+    +FailConfirmSpace : boolean
+    +ItinChg : boolean
+    +ReplaceTk : boolean
+    +Applicable : boolean
+    +ApplicableTo : boolean
+    +Amt : decimal
+    +Type : string
+    +Currency : string
 }
 class Penalty {
-    +Amount : xs:string
-    +PenaltyType : xs:string
+    +Amount : string
+    +PenaltyType : string
 }
 class PenaltyFareInformation {
     +PenaltyInfo : typeFarePenalty
-    +ProhibitPenaltyFares : xs:boolean
+    +ProhibitPenaltyFares : boolean
 }
 class PenaltyInformation {
-    +value : xs:string
-    +Carrier : xs:string
-    +FareBasis : xs:string
-    +FareComponent : xs:integer
-    +PriceableUnit : xs:integer
-    +BoardPoint : xs:string
-    +OffPoint : xs:string
-    +MinimumChangeFee : xs:string
-    +MaximumChangeFee : xs:string
-    +FiledCurrency : xs:string
-    +ConversionRate : xs:decimal
-    +Refundable : xs:boolean
-    +ChangeFeeApplicationCode : xs:string
+    +value : string
+    +Carrier : string
+    +FareBasis : string
+    +FareComponent : integer
+    +PriceableUnit : integer
+    +BoardPoint : string
+    +OffPoint : string
+    +MinimumChangeFee : string
+    +MaximumChangeFee : string
+    +FiledCurrency : string
+    +ConversionRate : decimal
+    +Refundable : boolean
+    +ChangeFeeApplicationCode : string
 }
 class PermittedCabins {
     +common:CabinClass : common:CabinClass[]
@@ -2226,27 +2226,27 @@ class PermittedCarriers {
     +common:Carrier : common:Carrier[]
 }
 class PersonName {
-    +First : xs:string
-    +Last : xs:string
-    +Prefix : xs:string
+    +First : string
+    +Last : string
+    +Prefix : string
 }
 class PersonNameSearch {
-    +Last : xs:string
+    +Last : string
 }
 class PocketItineraryRemark {
 }
 PocketItineraryRemark *- common:typeAssociatedRemarkWithSegmentRef
 class PolicyCodesList {
-    +PolicyCode : xs:int[]
+    +PolicyCode : int[]
 }
 class PrePayAccount {
     +CreditSummary : CreditSummary
     +PrePayPriceInfo : PrePayPriceInfo
-    +ProgramTitle : xs:string
-    +CertificateNumber : xs:string
-    +ProgramName : xs:string
-    +EffectiveDate : xs:date
-    +ExpireDate : xs:date
+    +ProgramTitle : string
+    +CertificateNumber : string
+    +ProgramName : string
+    +EffectiveDate : date
+    +ExpireDate : date
 }
 class PrePayCustomer {
     +PersonName : PersonName
@@ -2257,14 +2257,14 @@ class PrePayCustomer {
 }
 class PrePayId {
     +CompanyName : CompanyName
-    +Id : xs:string
-    +Type : xs:string
+    +Id : string
+    +Type : string
 }
 class PrePayPriceInfo {
     +TaxInfo : TaxInfo[]
-    +BaseFare : xs:string
-    +TotalFare : xs:string
-    +TotalTax : xs:string
+    +BaseFare : string
+    +TotalFare : string
+    +TotalTax : string
 }
 class PrePayProfileInfo {
     +PrePayId : PrePayId
@@ -2272,8 +2272,8 @@ class PrePayProfileInfo {
     +PrePayAccount : PrePayAccount
     +Affiliations : Affiliations
     +AccountRelatedRules : AccountRelatedRules
-    +StatusCode : xs:string
-    +CreatorID : xs:string
+    +StatusCode : string
+    +CreatorID : string
 }
 class PreferredBookingCodes {
     +BookingCode : BookingCode[]
@@ -2285,39 +2285,39 @@ class PreferredCarriers {
     +common:Carrier : common:Carrier[]
 }
 class PriceChangeType {
-    +value : xs:string
-    +Amount : xs:string
-    +Carrier : xs:string
-    +SegmentRef : xs:string
+    +value : string
+    +Amount : string
+    +Carrier : string
+    +SegmentRef : string
 }
 class PriceRange {
-    +DefaultCurrency : xs:boolean
-    +StartPrice : xs:string
-    +EndPrice : xs:string
+    +DefaultCurrency : boolean
+    +StartPrice : string
+    +EndPrice : string
 }
 class PricingDetails {
-    +AdvisoryMessage : xs:string[]
-    +EndorsementText : xs:string[]
-    +WaiverText : xs:string
-    +LowFarePricing : xs:boolean
-    +LowFareFound : xs:boolean
-    +PenaltyApplies : xs:boolean
-    +DiscountApplies : xs:boolean
+    +AdvisoryMessage : string[]
+    +EndorsementText : string[]
+    +WaiverText : string
+    +LowFarePricing : boolean
+    +LowFareFound : boolean
+    +PenaltyApplies : boolean
+    +DiscountApplies : boolean
     +ItineraryType : common:typeItineraryCode
-    +ValidatingVendorCode : xs:string
-    +ForTicketingOnDate : xs:date
-    +LastDateToTicket : xs:date
+    +ValidatingVendorCode : string
+    +ForTicketingOnDate : date
+    +LastDateToTicket : date
     +FormOfRefund : common:typeFormOfRefund
-    +AccountCode : xs:string
-    +BankersSellingRate : xs:decimal
+    +AccountCode : string
+    +BankersSellingRate : decimal
     +PricingType : common:typePricingType
-    +ConversionRate : xs:decimal
-    +RateOfExchange : xs:decimal
-    +OriginalTicketCurrency : xs:string
+    +ConversionRate : decimal
+    +RateOfExchange : decimal
+    +OriginalTicketCurrency : string
 }
 class PrintBlankFormItinerary {
-    +IncludeDescription : xs:boolean
-    +IncludeHeader : xs:boolean
+    +IncludeDescription : boolean
+    +IncludeHeader : boolean
 }
 class ProhibitedCabins {
     +common:CabinClass : common:CabinClass[]
@@ -2326,98 +2326,98 @@ class ProhibitedCarriers {
     +common:Carrier : common:Carrier[]
 }
 class PromoCode {
-    +Code : xs:string
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
+    +Code : string
+    +ProviderCode : string
+    +SupplierCode : string
 }
 class RailCoachDetails {
-    +RailCoachNumber : xs:string
-    +AvailableRailSeats : xs:string
-    +RailSeatMapAvailability : xs:boolean
+    +RailCoachNumber : string
+    +AvailableRailSeats : string
+    +RailSeatMapAvailability : boolean
 }
 class RefundFailureInfo {
     +common:TicketNumber : common:TicketNumber
     +common:Name : common:Name
-    +TCRNumber : xs:string
-    +BookingTravelerRef : xs:string[]
-    +Code : xs:integer
-    +Message : xs:string
+    +TCRNumber : string
+    +BookingTravelerRef : string[]
+    +Code : integer
+    +Message : string
 }
 class RelatedTraveler {
     +common:LoyaltyCard : common:LoyaltyCard[]
     +PersonName : PersonName
     +CreditsUsed : CreditsUsed
-    +StatusCode : xs:string
-    +Relation : xs:string
+    +StatusCode : string
+    +Relation : string
 }
 RelatedTraveler +-- CreditsUsed
 class CreditsUsed {
-    +UsedCredit : xs:decimal
-    +CurrencyCode : xs:string
+    +UsedCredit : decimal
+    +CurrencyCode : string
 }
 class RepricingModifiers {
-    +PrivateFareOptions : xs:string
+    +PrivateFareOptions : string
     +FareType : FareType[]
     +FareTicketDesignator : FareTicketDesignator
     +OverrideCurrency : OverrideCurrency
     +AirSegmentPricingModifiers : AirSegmentPricingModifiers[]
-    +WithholdTaxCode : xs:string[]
+    +WithholdTaxCode : string[]
     +PriceClassOfService : common:typePriceClassOfService
-    +CreateDate : xs:date
-    +ReissueLocCityCode : xs:string
-    +ReissueLocCountryCode : xs:string
-    +BulkTicket : xs:boolean
-    +AccountCode : xs:string
-    +PenaltyAsTaxCode : xs:string
-    +AirPricingSolutionRef : xs:string
-    +PenaltyToFare : xs:boolean
-    +PricePTCOnly : xs:boolean
-    +BrandDetails : xs:boolean
-    +BrandModifier : xs:string
-    +JetServiceOnly : xs:boolean
-    +TimeWindow : xs:integer
+    +CreateDate : date
+    +ReissueLocCityCode : string
+    +ReissueLocCountryCode : string
+    +BulkTicket : boolean
+    +AccountCode : string
+    +PenaltyAsTaxCode : string
+    +AirPricingSolutionRef : string
+    +PenaltyToFare : boolean
+    +PricePTCOnly : boolean
+    +BrandDetails : boolean
+    +BrandModifier : string
+    +JetServiceOnly : boolean
+    +TimeWindow : integer
     +FlightType : FlightType
-    +MultiAirportSearch : xs:boolean
-    +ConnectionPoint : xs:string
+    +MultiAirportSearch : boolean
+    +ConnectionPoint : string
 }
 RepricingModifiers +-- OverrideCurrency
 class OverrideCurrency {
-    +CurrencyCode : xs:string
-    +CountryCode : xs:string
+    +CurrencyCode : string
+    +CountryCode : string
 }
 RepricingModifiers +-- FlightType
 class FlightType {
-    +Direct : xs:string
-    +NonStop : xs:string
-    +SingleConnection : xs:string
-    +NoRestrictions : xs:string
+    +Direct : string
+    +NonStop : string
+    +SingleConnection : string
+    +NoRestrictions : string
 }
-FlightType *- xs:string
+FlightType *- string
 class Restriction {
     +DaysOfWeekRestriction : DaysOfWeekRestriction[]
     +RestrictionPassengerTypes : RestrictionPassengerTypes[]
 }
 Restriction +-- DaysOfWeekRestriction
 class DaysOfWeekRestriction {
-    +Mon : xs:boolean
-    +Tue : xs:boolean
-    +Wed : xs:boolean
-    +Thu : xs:boolean
-    +Fri : xs:boolean
-    +Sat : xs:boolean
-    +Sun : xs:boolean
-    +RestrictionExistsInd : xs:boolean
-    +Application : xs:string
-    +IncludeExcludeUseInd : xs:boolean
+    +Mon : boolean
+    +Tue : boolean
+    +Wed : boolean
+    +Thu : boolean
+    +Fri : boolean
+    +Sat : boolean
+    +Sun : boolean
+    +RestrictionExistsInd : boolean
+    +Application : string
+    +IncludeExcludeUseInd : boolean
 }
 Restriction +-- RestrictionPassengerTypes
 class RestrictionPassengerTypes {
-    +MaxNbrTravelers : xs:string
-    +TotalNbrPTC : xs:string
+    +MaxNbrTravelers : string
+    +TotalNbrPTC : string
 }
 class Route {
     +Leg : Leg[]
-    +Key : xs:string
+    +Key : string
 }
 class RouteList {
     +Route : Route[]
@@ -2428,51 +2428,51 @@ class RoutingRules {
 RoutingRules +-- Routing
 class Routing {
     +DirectionInfo : DirectionInfo[]
-    +RoutingConstructedInd : xs:boolean
-    +Number : xs:string
-    +RoutingRestriction : xs:string
+    +RoutingConstructedInd : boolean
+    +Number : string
+    +RoutingRestriction : string
 }
 Routing +-- DirectionInfo
 class DirectionInfo {
-    +LocationCode : xs:string
+    +LocationCode : string
     +Direction : Direction
 }
 DirectionInfo +-- Direction
 class Direction {
-    +To : xs:string
-    +From : xs:string
+    +To : string
+    +From : string
 }
-Direction *- xs:string
+Direction *- string
 class Row {
     +Facility : Facility[]
     +Characteristic : Characteristic[]
-    +Number : xs:integer
-    +SearchTravelerRef : xs:string
+    +Number : integer
+    +SearchTravelerRef : string
 }
 class Rows {
     +Row : Row[]
-    +SegmentRef : xs:string
+    +SegmentRef : string
 }
 class RuleAdvancedPurchase {
-    +ReservationLatestPeriod : xs:string
+    +ReservationLatestPeriod : string
     +ReservationLatestUnit : typeStayUnit
-    +TicketingEarliestDate : xs:string
-    +TicketingLatestDate : xs:string
-    +MoreRulesPresent : xs:boolean
+    +TicketingEarliestDate : string
+    +TicketingLatestDate : string
+    +MoreRulesPresent : boolean
 }
 class RuleCharges {
-    +PenaltyType : xs:string
-    +DepartureStatus : xs:string
-    +Amount : xs:string
-    +Percent : xs:decimal
-    +MoreRulesPresent : xs:boolean
+    +PenaltyType : string
+    +DepartureStatus : string
+    +Amount : string
+    +Percent : decimal
+    +MoreRulesPresent : boolean
 }
 class RuleLengthOfStay {
     +MinimumStay : typeRestrictionLengthOfStay
     +MaximumStay : typeRestrictionLengthOfStay
 }
 class Rules {
-    +RulesText : xs:string
+    +RulesText : string
 }
 class SearchAirLeg {
     +SearchOrigin : common:typeSearchLocation[]
@@ -2483,47 +2483,47 @@ class SearchAirLeg {
 }
 class SearchTraveler {
     +common:AirSeatAssignment : common:AirSeatAssignment[]
-    +Key : xs:string
+    +Key : string
 }
 SearchTraveler *- common:typePassengerType
 class SeatInformation {
-    +Power : xs:string
-    +Video : xs:string
-    +Type : xs:string
-    +Description : xs:string
+    +Power : string
+    +Video : string
+    +Type : string
+    +Description : string
     +Rating : Rating
-    +Key : xs:string
+    +Key : string
 }
 SeatInformation +-- Rating
 class Rating {
-    +value : xs:string
-    +Number : xs:integer
+    +value : string
+    +Number : integer
 }
 class SegmentIndex {
-    +value : xs:int
+    +value : int
 }
 class SegmentModifiers {
     +AirSegmentRef : AirSegmentRef
     +TicketValidity : TicketValidity
     +BaggageAllowance : BaggageAllowance
-    +TicketDesignator : xs:string
+    +TicketDesignator : string
 }
 class SegmentSelect {
     +AirSegmentRef : typeSegmentRef[]
     +HotelReservationRef : typeNonAirReservationRef[]
     +VehicleReservationRef : typeNonAirReservationRef[]
     +PassiveSegmentRef : typeSegmentRef[]
-    +AllConfirmedAir : xs:boolean
-    +AllWaitlistedAir : xs:boolean
-    +AllHotel : xs:boolean
-    +AllVehicle : xs:boolean
-    +AllPassive : xs:boolean
+    +AllConfirmedAir : boolean
+    +AllWaitlistedAir : boolean
+    +AllHotel : boolean
+    +AllVehicle : boolean
+    +AllPassive : boolean
 }
 class SelectionModifiers {
     +AirSegmentRef : AirSegmentRef[]
-    +SvcSegmentRef : xs:string[]
-    +SupplierCode : xs:string
-    +RFIC : xs:string
+    +SvcSegmentRef : string[]
+    +SupplierCode : string
+    +RFIC : string
 }
 class ServiceAssociations {
     +ApplicableSegment : ApplicableSegment[]
@@ -2532,14 +2532,14 @@ ServiceAssociations +-- ApplicableSegment
 class ApplicableSegment {
     +common:ResponseMessage : common:ResponseMessage
     +OptionalServiceRef : OptionalServiceRef
-    +Key : xs:string
+    +Key : string
 }
 class ServiceGroup {
     +ServiceSubGroup : ServiceSubGroup[]
-    +Code : xs:string
+    +Code : string
 }
 class ServiceSubGroup {
-    +Code : xs:string
+    +Code : string
 }
 class SolutionGroup {
     +PermittedAccountCodes : PermittedAccountCodes
@@ -2547,11 +2547,11 @@ class SolutionGroup {
     +ProhibitedAccountCodes : ProhibitedAccountCodes
     +PermittedPointOfSales : PermittedPointOfSales
     +ProhibitedPointOfSales : ProhibitedPointOfSales
-    +Count : xs:integer
+    +Count : integer
     +TripType : typeTripType
     +Diversification : typeDiversity
-    +Tag : xs:string
-    +Primary : xs:boolean
+    +Tag : string
+    +Primary : boolean
 }
 SolutionGroup +-- PermittedAccountCodes
 class PermittedAccountCodes {
@@ -2574,18 +2574,18 @@ class ProhibitedPointOfSales {
     +common:PointOfSale : common:PointOfSale[]
 }
 class SpecificSeatAssignment {
-    +BookingTravelerRef : xs:string
-    +SegmentRef : xs:string
-    +FlightDetailRef : xs:string
-    +SeatId : xs:string
-    +RailCoachNumber : xs:string
+    +BookingTravelerRef : string
+    +SegmentRef : string
+    +FlightDetailRef : string
+    +SeatId : string
+    +RailCoachNumber : string
 }
 class SpecificTimeTable {
     +FlightOrigin : FlightOrigin
     +FlightDestination : FlightDestination
-    +StartDate : xs:string
-    +Carrier : xs:string
-    +FlightNumber : xs:string
+    +StartDate : string
+    +Carrier : string
+    +FlightNumber : string
 }
 SpecificTimeTable +-- FlightOrigin
 class FlightOrigin {
@@ -2596,31 +2596,31 @@ class FlightDestination {
     +common:Airport : common:Airport
 }
 class SplitTicketingSearch {
-    +RoundTrip : xs:integer
+    +RoundTrip : integer
 }
 class SponsoredFltInfo {
-    +SponsoredLNB : xs:nonNegativeInteger
-    +NeutralLNB : xs:nonNegativeInteger
-    +FltKey : xs:string
+    +SponsoredLNB : nonNegativeInteger
+    +NeutralLNB : nonNegativeInteger
+    +FltKey : string
 }
 class StructuredFareRulesType {
     +FareRuleCategoryType : FareRuleCategoryTypes[]
 }
 class SvcSegment {
-    +Key : xs:string
-    +Carrier : xs:string
-    +Status : xs:string
-    +NumberOfItems : xs:integer
-    +Origin : xs:string
-    +Destination : xs:string
-    +StartDate : xs:date
-    +TravelOrder : xs:integer
-    +BookingTravelerRef : xs:string
-    +RFIC : xs:string
-    +RFISC : xs:string
-    +SvcDescription : xs:string
-    +Fee : xs:string
-    +EMDNumber : xs:string
+    +Key : string
+    +Carrier : string
+    +Status : string
+    +NumberOfItems : integer
+    +Origin : string
+    +Destination : string
+    +StartDate : date
+    +TravelOrder : integer
+    +BookingTravelerRef : string
+    +RFIC : string
+    +RFISC : string
+    +SvcDescription : string
+    +Fee : string
+    +EMDNumber : string
 }
 class TCR {
     +common:FormOfPayment : common:FormOfPayment[]
@@ -2632,23 +2632,23 @@ class TCR {
     +AirReservationLocatorCode : AirReservationLocatorCode
     +common:SupplierLocator : common:SupplierLocator[]
     +common:RefundRemark : common:RefundRemark[]
-    +TCRNumber : xs:string
+    +TCRNumber : string
     +Status : typeTCRStatus
-    +ModifiedDate : xs:string
-    +ConfirmedDate : xs:string
-    +BasePrice : xs:string
-    +Taxes : xs:string
-    +Fees : xs:string
-    +Refundable : xs:boolean
-    +Exchangeable : xs:boolean
-    +Voidable : xs:boolean
-    +Modifiable : xs:boolean
-    +ProviderCode : xs:string
-    +ProviderLocatorCode : xs:string
-    +RefundAccessCode : xs:string
-    +RefundAmount : xs:string
-    +RefundFee : xs:string
-    +ForfeitAmount : xs:string
+    +ModifiedDate : string
+    +ConfirmedDate : string
+    +BasePrice : string
+    +Taxes : string
+    +Fees : string
+    +Refundable : boolean
+    +Exchangeable : boolean
+    +Voidable : boolean
+    +Modifiable : boolean
+    +ProviderCode : string
+    +ProviderLocatorCode : string
+    +RefundAccessCode : string
+    +RefundAmount : string
+    +RefundFee : string
+    +ForfeitAmount : string
 }
 class TCRExchangeBundle {
     +common:AirExchangeInfo : common:AirExchangeInfo
@@ -2656,13 +2656,13 @@ class TCRExchangeBundle {
     +FeeInfo : FeeInfo[]
     +TaxInfo : TaxInfo[]
     +common:Penalty : common:Penalty[]
-    +TCRNumber : xs:string
+    +TCRNumber : string
 }
 class TCRInfo {
     +Status : typeTCRStatus
-    +Date : xs:dateTime
-    +TCRNumber : xs:string
-    +ProviderReservationInfoRef : xs:string
+    +Date : dateTime
+    +TCRNumber : string
+    +ProviderReservationInfoRef : string
 }
 class TCRRefundBundle {
     +AirRefundInfo : AirRefundInfo
@@ -2671,85 +2671,85 @@ class TCRRefundBundle {
     +FeeInfo : FeeInfo[]
     +TaxInfo : TaxInfo[]
     +common:HostToken : common:HostToken[]
-    +TCRNumber : xs:string
+    +TCRNumber : string
     +RefundType : RefundType
-    +RefundAccessCode : xs:string
+    +RefundAccessCode : string
 }
 TCRRefundBundle +-- RefundType
 class RefundType {
-    +Auto : xs:string
-    +Manual : xs:string
-    +Ignored : xs:string
+    +Auto : string
+    +Manual : string
+    +Ignored : string
 }
-RefundType *- xs:string
+RefundType *- string
 class Tax {
-    +Category : xs:string
-    +Amount : xs:string
+    +Category : string
+    +Amount : string
 }
 class TaxInfo {
 }
 TaxInfo *- common:typeTaxInfo
 class TermConditions {
     +LanguageOption : LanguageOption[]
-    +IncludeTermConditions : xs:boolean
+    +IncludeTermConditions : boolean
 }
 class Text {
 }
 Text *- typeTextElement
 class TextInfo {
-    +Text : xs:string[]
-    +Title : xs:string
+    +Text : string[]
+    +Title : string
 }
 class Ticket {
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +Coupon : Coupon[]
     +TicketEndorsement : TicketEndorsement[]
     +TourCode : TourCode[]
     +ExchangedTicketInfo : ExchangedTicketInfo[]
-    +Key : xs:string
-    +TicketNumber : xs:string
+    +Key : string
+    +TicketNumber : string
     +TicketStatus : common:typeTicketStatus
 }
 class TicketAgency {
-    +ProviderCode : xs:string
-    +PseudoCityCode : xs:string
+    +ProviderCode : string
+    +PseudoCityCode : string
 }
 class TicketDesignator {
-    +Value : xs:string
+    +Value : string
 }
 class TicketEndorsement {
-    +Value : xs:string
+    +Value : string
 }
 class TicketFailureInfo {
     +AirPricingInfoRef : AirPricingInfoRef[]
     +common:Name : common:Name
-    +Code : xs:integer
-    +Message : xs:string
-    +BookingTravelerRef : xs:string
+    +Code : integer
+    +Message : string
+    +BookingTravelerRef : string
 }
 class TicketInfo {
     +common:Name : common:Name
     +ConjunctedTicketInfo : ConjunctedTicketInfo[]
     +ExchangedTicketInfo : ExchangedTicketInfo[]
-    +Number : xs:string
-    +IATANumber : xs:string
-    +TicketIssueDate : xs:dateTime
-    +TicketingAgentSignOn : xs:string
-    +CountryCode : xs:string
+    +Number : string
+    +IATANumber : string
+    +TicketIssueDate : dateTime
+    +TicketingAgentSignOn : string
+    +CountryCode : string
     +Status : common:typeTicketStatus
-    +BulkTicket : xs:boolean
-    +BookingTravelerRef : xs:string
-    +AirPricingInfoRef : xs:string
+    +BulkTicket : boolean
+    +BookingTravelerRef : string
+    +AirPricingInfoRef : string
 }
 class TicketValidity {
-    +NotValidBefore : xs:date
-    +NotValidAfter : xs:date
+    +NotValidBefore : date
+    +NotValidAfter : date
 }
 class TicketingModifiers {
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
-    +BookingTravelerRef : xs:string[]
+    +KeyOverride : boolean
+    +BookingTravelerRef : string[]
     +NetRemit : typeTicketModifierAmountType
     +NetFare : typeTicketModifierAmountType
     +ActualSellingFare : typeTicketModifierAmountType
@@ -2773,100 +2773,100 @@ class TicketingModifiers {
     +PrintBlankFormItinerary : PrintBlankFormItinerary
     +ExcludeTicketing : ExcludeTicketing
     +ExemptOBFee : ExemptOBFee
-    +IsPrimaryDI : xs:boolean
-    +DocumentInstructionNumber : xs:string
-    +Reference : xs:string
-    +Status : xs:string
-    +FreeText : xs:string
-    +NameNumber : xs:string
-    +TicketRecord : xs:string
-    +PlatingCarrier : xs:string
-    +ExemptVAT : xs:boolean
-    +NetRemitApplied : xs:boolean
-    +FreeTicket : xs:boolean
-    +CurrencyOverrideCode : xs:string
-    +Key : xs:string
+    +IsPrimaryDI : boolean
+    +DocumentInstructionNumber : string
+    +Reference : string
+    +Status : string
+    +FreeText : string
+    +NameNumber : string
+    +TicketRecord : string
+    +PlatingCarrier : string
+    +ExemptVAT : boolean
+    +NetRemitApplied : boolean
+    +FreeTicket : boolean
+    +CurrencyOverrideCode : string
+    +Key : string
 }
 TicketingModifiers +-- BulkTicket
 class BulkTicket {
-    +NonRefundable : xs:boolean
+    +NonRefundable : boolean
 }
 BulkTicket *- typeBulkTicketModifierType
 class TicketingModifiersRef {
-    +Key : xs:string
+    +Key : string
 }
 class Title {
 }
 Title *- typeTextElement
 class TourCode {
-    +Value : xs:string
+    +Value : string
 }
 class TravelArranger {
-    +value : xs:string
-    +CompanyShortName : xs:string
-    +Code : xs:string
+    +value : string
+    +CompanyShortName : string
+    +Code : string
 }
 class URL {
-    +value : xs:string
-    +Type : xs:string
+    +value : string
+    +Type : string
 }
 class URLInfo {
-    +Text : xs:string[]
-    +URL : xs:anyURI[]
+    +Text : string[]
+    +URL : anyURI[]
 }
 class UpsellBrand {
-    +FareBasis : xs:string
-    +FareInfoRef : xs:string
+    +FareBasis : string
+    +FareInfoRef : string
 }
 class ValueDetails {
-    +Name : xs:string
-    +Value : xs:string
+    +Name : string
+    +Value : string
 }
 class Variance {
     +Type : typeVarianceType
-    +Time : xs:string
+    +Time : string
     +Indicator : typeVarianceIndicator
-    +Reason : xs:string
+    +Reason : string
 }
 class VoidDocumentInfo {
-    +DocumentNumber : xs:string
+    +DocumentNumber : string
     +DocumentType : common:DocumentType
 }
 VoidDocumentInfo +-- DocumentType
 class DocumentType {
-    +Service Fee : xs:string
-    +Paper Ticket : xs:string
-    +MCO : xs:string
-    +E-Ticket : xs:string
+    +Service Fee : string
+    +Paper Ticket : string
+    +MCO : string
+    +E-Ticket : string
 }
-DocumentType *- xs:string
+DocumentType *- string
 class VoidFailureInfo {
-    +value : xs:string
-    +TicketNumber : xs:string
-    +Code : xs:integer
+    +value : string
+    +TicketNumber : string
+    +Code : integer
 }
 class VoidResultInfo {
-    +FailureRemark : xs:string
-    +DocumentNumber : xs:string
+    +FailureRemark : string
+    +DocumentNumber : string
     +DocumentType : common:DocumentType
-    +ResultType : xs:string
+    +ResultType : string
 }
 VoidResultInfo +-- DocumentType
 class DocumentType {
-    +Service Fee : xs:string
-    +Paper Ticket : xs:string
-    +MCO : xs:string
-    +E-Ticket : xs:string
+    +Service Fee : string
+    +Paper Ticket : string
+    +MCO : string
+    +E-Ticket : string
 }
-DocumentType *- xs:string
+DocumentType *- string
 class WaiverCode {
-    +TourCode : xs:string
-    +TicketDesignator : xs:string
-    +Endorsement : xs:string
+    +TourCode : string
+    +TicketDesignator : string
+    +Endorsement : string
 }
 class Yield {
-    +Amount : xs:string
-    +BookingTravelerRef : xs:string
+    +Amount : string
+    +BookingTravelerRef : string
 }
 enum typeATPCOGlobalIndicator {
     AL = AL
@@ -2903,14 +2903,14 @@ enum typeAlliance {
     OWCode = OWCode
 }
 class typeAnchorFlightData {
-    +AirlineCode : xs:string
-    +FlightNumber : xs:string
-    +ConnectionIndicator : xs:boolean
+    +AirlineCode : string
+    +FlightNumber : string
+    +ConnectionIndicator : boolean
 }
 class typeApplicableSegment {
-    +Key : xs:string
-    +AirItineraryDetailsRef : xs:string
-    +BookingCounts : xs:string
+    +Key : string
+    +AirItineraryDetailsRef : string
+    +BookingCounts : string
 }
 enum typeAssessIndicator {
     MileageAndCurrency = MileageAndCurrency
@@ -2955,46 +2955,46 @@ class typeBaseAirSegment {
     +Connection : Connection
     +common:SellMessage : common:SellMessage[]
     +RailCoachDetails : RailCoachDetails[]
-    +OpenSegment : xs:boolean
-    +Group : xs:int
-    +Carrier : xs:string
-    +CabinClass : xs:string
-    +FlightNumber : xs:string
-    +ParticipantLevel : xs:string
-    +LinkAvailability : xs:boolean
-    +PolledAvailabilityOption : xs:string
-    +AvailabilityDisplayType : xs:string
-    +FlightTime : xs:integer
-    +TravelTime : xs:integer
-    +Distance : xs:integer
-    +Origin : xs:string
-    +Destination : xs:string
-    +DepartureTime : xs:string
-    +ArrivalTime : xs:string
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
-    +ClassOfService : xs:string
+    +OpenSegment : boolean
+    +Group : int
+    +Carrier : string
+    +CabinClass : string
+    +FlightNumber : string
+    +ParticipantLevel : string
+    +LinkAvailability : boolean
+    +PolledAvailabilityOption : string
+    +AvailabilityDisplayType : string
+    +FlightTime : integer
+    +TravelTime : integer
+    +Distance : integer
+    +Origin : string
+    +Destination : string
+    +DepartureTime : string
+    +ArrivalTime : string
+    +ProviderCode : string
+    +SupplierCode : string
+    +ClassOfService : string
     +ETicketability : typeEticketability
-    +Equipment : xs:string
-    +MarriageGroup : xs:int
-    +NumberOfStops : xs:int
-    +Seamless : xs:boolean
-    +ChangeOfPlane : xs:boolean
-    +GuaranteedPaymentCarrier : xs:string
-    +HostTokenRef : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +PassiveProviderReservationInfoRef : xs:string
-    +OptionalServicesIndicator : xs:boolean
-    +AvailabilitySource : xs:string
-    +APISRequirementsRef : xs:string
-    +BlackListed : xs:boolean
-    +OperationalStatus : xs:string
-    +NumberInParty : xs:positiveInteger
-    +RailCoachNumber : xs:string
-    +BookingDate : xs:date
-    +FlownSegment : xs:boolean
-    +ScheduleChange : xs:boolean
-    +BrandIndicator : xs:string
+    +Equipment : string
+    +MarriageGroup : int
+    +NumberOfStops : int
+    +Seamless : boolean
+    +ChangeOfPlane : boolean
+    +GuaranteedPaymentCarrier : string
+    +HostTokenRef : string
+    +ProviderReservationInfoRef : string
+    +PassiveProviderReservationInfoRef : string
+    +OptionalServicesIndicator : boolean
+    +AvailabilitySource : string
+    +APISRequirementsRef : string
+    +BlackListed : boolean
+    +OperationalStatus : string
+    +NumberInParty : positiveInteger
+    +RailCoachNumber : string
+    +BookingDate : date
+    +FlownSegment : boolean
+    +ScheduleChange : boolean
+    +BrandIndicator : string
 }
 typeBaseAirSegment *- common:Segment
 enum typeBillingDetailsDataType {
@@ -3024,7 +3024,7 @@ enum typeBooking {
     Apply booking per service = Apply booking per service
 }
 class typeBulkTicketModifierType {
-    +SuppressOnFareCalc : xs:boolean
+    +SuppressOnFareCalc : boolean
 }
 enum typeCarrierCode {
     Primary = Primary
@@ -3052,19 +3052,19 @@ enum typeCouponStatus {
     D = D
 }
 class typeDaysOfOperation {
-    +Mon : xs:boolean
-    +Tue : xs:boolean
-    +Wed : xs:boolean
-    +Thu : xs:boolean
-    +Fri : xs:boolean
-    +Sat : xs:boolean
-    +Sun : xs:boolean
+    +Mon : boolean
+    +Tue : boolean
+    +Wed : boolean
+    +Thu : boolean
+    +Fri : boolean
+    +Sat : boolean
+    +Sun : boolean
 }
 class typeDefaultBrandDetail {
     +Text : Text[]
     +ImageLocation : ImageLocation[]
     +ApplicableSegment : ApplicableSegment[]
-    +BrandID : xs:string
+    +BrandID : string
 }
 enum typeDestinationCode {
     MexicoCostRicaCentralAmerica = MexicoCostRicaCentralAmerica
@@ -3108,8 +3108,8 @@ enum typeFacility {
     Unknown = Unknown
 }
 class typeFailureInfo {
-    +Code : xs:integer
-    +Message : xs:string
+    +Code : integer
+    +Message : string
 }
 enum typeFareBreak {
     MustBreak = MustBreak
@@ -3145,18 +3145,18 @@ enum typeFareGuarantee {
     Unknown = Unknown
 }
 class typeFarePenalty {
-    +Amount : xs:string
-    +Percentage : xs:string
+    +Amount : string
+    +Percentage : string
     +PenaltyApplies : PenaltyApplies
-    +NoShow : xs:boolean
+    +NoShow : boolean
 }
 typeFarePenalty +-- PenaltyApplies
 class PenaltyApplies {
-    +Anytime : xs:string
-    +Before Departure : xs:string
-    +After Departure : xs:string
+    +Anytime : string
+    +Before Departure : string
+    +After Departure : string
 }
-PenaltyApplies *- xs:string
+PenaltyApplies *- string
 enum typeFareRestrictionType {
     DayOfWeek = DayOfWeek
     FlightTimeOfDay = FlightTimeOfDay
@@ -3281,11 +3281,11 @@ enum typeMileOrRouteBasedFare {
     Both = Both
 }
 class typeNativeSearchModifier {
-    +value : xs:string
-    +ProviderCode : xs:string
+    +value : string
+    +ProviderCode : string
 }
 class typeNonAirReservationRef {
-    +LocatorCode : xs:string
+    +LocatorCode : string
 }
 enum typePosition {
     Left = Left
@@ -3336,10 +3336,10 @@ enum typeReportingType {
     ScheduleDiscrepancies = ScheduleDiscrepancies
 }
 class typeRestrictionLengthOfStay {
-    +Length : xs:integer
+    +Length : integer
     +StayUnit : typeStayUnit
-    +StayDate : xs:date
-    +MoreRulesPresent : xs:boolean
+    +StayDate : date
+    +MoreRulesPresent : boolean
 }
 enum typeRowLocation {
     Rear = Rear
@@ -3363,7 +3363,7 @@ enum typeSeatAvailability {
     UnoccupiedButNotEligible = UnoccupiedButNotEligible
 }
 class typeSegmentRef {
-    +Key : xs:string
+    +Key : string
 }
 enum typeStayUnit {
     Minutes = Minutes
@@ -3391,34 +3391,34 @@ class typeTaxInfoWithPaymentRef {
 }
 typeTaxInfoWithPaymentRef *- common:typeTaxInfo
 class typeTextElement {
-    +value : xs:string
-    +Type : xs:string
-    +LanguageCode : xs:language
+    +value : string
+    +Type : string
+    +LanguageCode : language
 }
 class typeTicketFailureInfo {
     +common:TicketNumber : common:TicketNumber
     +common:Name : common:Name
-    +TCRNumber : xs:string
-    +BookingTravelerRef : xs:string[]
-    +Code : xs:integer
-    +Message : xs:string
+    +TCRNumber : string
+    +BookingTravelerRef : string[]
+    +Code : integer
+    +Message : string
 }
 class typeTicketModifierAccountingType {
-    +Value : xs:string
+    +Value : string
 }
 class typeTicketModifierAmountType {
-    +Amount : xs:string
+    +Amount : string
 }
 class typeTicketModifierPercentType {
-    +Percent : xs:string
+    +Percent : string
 }
 class typeTicketModifierValueType {
-    +Value : xs:string
-    +NetFareValue : xs:boolean
+    +Value : string
+    +NetFareValue : boolean
 }
 class typeTicketingModifiersRef {
     +AirPricingInfoRef : AirPricingInfoRef[]
-    +Key : xs:string
+    +Key : string
 }
 enum typeTripType {
     Cheapest = Cheapest
@@ -3432,8 +3432,8 @@ enum typeTripType {
     NoPenalty = NoPenalty
 }
 class typeUnitOfMeasure {
-    +Value : xs:float
-    +Unit : xs:string
+    +Value : float
+    +Unit : string
 }
 enum typeUnitWeight {
     Kilograms = Kilograms
@@ -3450,7 +3450,7 @@ enum typeVarianceType {
     Diversion = Diversion
 }
 class typeWeight {
-    +Value : xs:integer
+    +Value : integer
     +Unit : typeUnitWeight
 }
 

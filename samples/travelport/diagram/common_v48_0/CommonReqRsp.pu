@@ -4,12 +4,12 @@ class BaseCoreReq {
     +BillingPointOfSaleInfo : BillingPointOfSaleInfo
     +AgentIDOverride : AgentIDOverride[]
     +TerminalSessionInfo : TerminalSessionInfo
-    +TraceId : xs:string
-    +TokenId : xs:string
-    +AuthorizedBy : xs:string
-    +TargetBranch : xs:string
+    +TraceId : string
+    +TokenId : string
+    +AuthorizedBy : string
+    +TargetBranch : string
     +OverrideLogging : typeLoggingLevel
-    +LanguageCode : xs:language
+    +LanguageCode : language
 }
 class BaseCoreSearchReq {
     +NextResultReference : NextResultReference[]
@@ -35,12 +35,12 @@ class BaseCreateReservationReq {
     +SSR : SSR[]
     +EmailNotification : EmailNotification
     +QueuePlace : QueuePlace
-    +RuleName : xs:string
-    +UniversalRecordLocatorCode : xs:string
-    +ProviderLocatorCode : xs:string
-    +ProviderCode : xs:string
-    +CustomerNumber : xs:string
-    +Version : xs:integer
+    +RuleName : string
+    +UniversalRecordLocatorCode : string
+    +ProviderLocatorCode : string
+    +ProviderCode : string
+    +CustomerNumber : string
+    +Version : integer
 }
 BaseCreateReservationReq *- BaseReq
 class BaseCreateWithFormOfPaymentReq {
@@ -49,15 +49,15 @@ class BaseCreateWithFormOfPaymentReq {
 BaseCreateWithFormOfPaymentReq *- BaseCreateReservationReq
 class BaseReq {
     +OverridePCC : OverridePCC
-    +RetrieveProviderReservationDetails : xs:boolean
+    +RetrieveProviderReservationDetails : boolean
 }
 BaseReq *- BaseCoreReq
 class BaseRsp {
     +ResponseMessage : ResponseMessage[]
-    +TraceId : xs:string
-    +TransactionId : xs:string
-    +ResponseTime : xs:integer
-    +CommandHistory : xs:string
+    +TraceId : string
+    +TransactionId : string
+    +ResponseTime : integer
+    +CommandHistory : string
 }
 class BaseSearchReq {
     +NextResultReference : NextResultReference[]

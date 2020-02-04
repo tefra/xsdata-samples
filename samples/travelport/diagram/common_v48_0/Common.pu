@@ -3,81 +3,81 @@
 class APIProvider {
     +TransactionType : TransactionType
     +AvailablePseudoCityCode : AvailablePseudoCityCode[]
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
-    +IATACode : xs:string
+    +ProviderCode : string
+    +SupplierCode : string
+    +IATACode : string
 }
 APIProvider +-- AvailablePseudoCityCode
 class AvailablePseudoCityCode {
-    +PseudoCityCode : xs:string
+    +PseudoCityCode : string
 }
 class ARCPayment {
-    +ARCIdentifier : xs:string
-    +ARCPassword : xs:string
+    +ARCIdentifier : string
+    +ARCPassword : string
 }
 class AccountCode {
-    +Code : xs:string
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
-    +Type : xs:string
+    +Code : string
+    +ProviderCode : string
+    +SupplierCode : string
+    +Type : string
 }
 class AccountInformation {
     +Address : typeStructuredAddress
     +PhoneNumber : PhoneNumber[]
-    +AccountName : xs:string
+    +AccountName : string
 }
 class AccountingRemark {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +RemarkData : xs:string
-    +BookingTravelerRef : xs:string[]
-    +Key : xs:string
-    +Category : xs:string
-    +TypeInGds : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +ProviderCode : xs:string
-    +UseProviderNativeMode : xs:boolean
+    +KeyOverride : boolean
+    +RemarkData : string
+    +BookingTravelerRef : string[]
+    +Key : string
+    +Category : string
+    +TypeInGds : string
+    +ProviderReservationInfoRef : string
+    +ProviderCode : string
+    +UseProviderNativeMode : boolean
 }
 class ActionStatus {
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
+    +ProviderCode : string
+    +SupplierCode : string
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +Remark : Remark
     +Type : Type
-    +TicketDate : xs:string
-    +Key : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +QueueCategory : xs:string
-    +AirportCode : xs:string
-    +PseudoCityCode : xs:string
-    +AccountCode : xs:string
+    +TicketDate : string
+    +Key : string
+    +ProviderReservationInfoRef : string
+    +QueueCategory : string
+    +AirportCode : string
+    +PseudoCityCode : string
+    +AccountCode : string
 }
 ActionStatus +-- Type
 class Type {
-    +TAW : xs:string
-    +TTL : xs:string
-    +TLCXL : xs:string
-    +ACTIVE : xs:string
-    +CXL : xs:string
-    +TAU : xs:string
-    +TRH : xs:string
+    +TAW : string
+    +TTL : string
+    +TLCXL : string
+    +ACTIVE : string
+    +CXL : string
+    +TAU : string
+    +TRH : string
 }
-Type *- xs:string
+Type *- string
 class AddSvc {
-    +RFIC : xs:string
-    +RFISC : xs:string
-    +SvcDescription : xs:string
-    +Origin : xs:string
-    +Destination : xs:string
-    +StartDate : xs:date
+    +RFIC : string
+    +RFISC : string
+    +SvcDescription : string
+    +Origin : string
+    +Destination : string
+    +StartDate : date
 }
 class AddressRestriction {
     +RequiredField : RequiredField[]
 }
 class AgencyContactInfo {
     +PhoneNumber : PhoneNumber[]
-    +Key : xs:string
+    +Key : string
 }
 class AgencyInfo {
     +AgentAction : AgentAction[]
@@ -91,162 +91,162 @@ class AgencyPayment {
 }
 AgencyPayment *- typeAgencyPayment
 class AgencySellInfo {
-    +IataCode : xs:string
-    +Country : xs:string
-    +CurrencyCode : xs:string
-    +ProviderCode : xs:string
-    +PseudoCityCode : xs:string
-    +CityCode : xs:string
+    +IataCode : string
+    +Country : string
+    +CurrencyCode : string
+    +ProviderCode : string
+    +PseudoCityCode : string
+    +CityCode : string
 }
 class AgentAction {
-    +AgentOverride : xs:string
+    +AgentOverride : string
     +ActionType : ActionType
-    +AgentCode : xs:string
-    +BranchCode : xs:string
-    +AgencyCode : xs:string
-    +AgentSine : xs:string
-    +EventTime : xs:dateTime
+    +AgentCode : string
+    +BranchCode : string
+    +AgencyCode : string
+    +AgentSine : string
+    +EventTime : dateTime
 }
 AgentAction +-- ActionType
 class ActionType {
-    +Created : xs:string
-    +Modified : xs:string
-    +Ticketed : xs:string
+    +Created : string
+    +Modified : string
+    +Ticketed : string
 }
-ActionType *- xs:string
+ActionType *- string
 class AgentIDOverride {
-    +SupplierCode : xs:string
-    +ProviderCode : xs:string
-    +AgentID : xs:string
+    +SupplierCode : string
+    +ProviderCode : string
+    +AgentID : string
 }
 class AgentVoucher {
-    +Number : xs:string
+    +Number : string
 }
 class AirExchangeInfo {
     +TotalPenaltyTaxInfo : TotalPenaltyTaxInfo
     +PaidTax : typeTax[]
     +TicketFeeInfo : TicketFeeInfo[]
-    +Reason : xs:string[]
+    +Reason : string[]
     +FeeInfo : typeFeeInfo[]
     +TaxInfo : typeTaxInfo[]
-    +ExchangeAmount : xs:string
-    +BaseFare : xs:string
-    +EquivalentBaseFare : xs:string
-    +Taxes : xs:string
-    +ChangeFee : xs:string
-    +ForfeitAmount : xs:string
-    +Refundable : xs:boolean
-    +Exchangeable : xs:boolean
-    +FirstClassUpgrade : xs:boolean
-    +TicketByDate : xs:string
-    +PricingTag : xs:string
-    +EquivalentChangeFee : xs:string
-    +EquivalentExchangeAmount : xs:string
-    +AddCollection : xs:string
-    +ResidualValue : xs:string
-    +TotalResidualValue : xs:string
-    +OriginalFlightValue : xs:string
-    +FlownSegmentValue : xs:string
-    +BulkTicketAdvisory : xs:boolean
+    +ExchangeAmount : string
+    +BaseFare : string
+    +EquivalentBaseFare : string
+    +Taxes : string
+    +ChangeFee : string
+    +ForfeitAmount : string
+    +Refundable : boolean
+    +Exchangeable : boolean
+    +FirstClassUpgrade : boolean
+    +TicketByDate : string
+    +PricingTag : string
+    +EquivalentChangeFee : string
+    +EquivalentExchangeAmount : string
+    +AddCollection : string
+    +ResidualValue : string
+    +TotalResidualValue : string
+    +OriginalFlightValue : string
+    +FlownSegmentValue : string
+    +BulkTicketAdvisory : boolean
     +FarePull : typeFarePull
-    +PassengerTypeCode : xs:string
-    +PassengerCount : xs:integer
+    +PassengerTypeCode : string
+    +PassengerCount : integer
     +FormOfRefund : typeFormOfRefund
-    +Refund : xs:string
+    +Refund : string
 }
 AirExchangeInfo +-- TotalPenaltyTaxInfo
 class TotalPenaltyTaxInfo {
     +PenaltyTaxInfo : typeTax[]
-    +TotalPenaltyTax : xs:string
+    +TotalPenaltyTax : string
 }
 AirExchangeInfo +-- TicketFeeInfo
 class TicketFeeInfo {
-    +Base : xs:string
-    +Tax : xs:string
-    +Total : xs:string
+    +Base : string
+    +Tax : string
+    +Total : string
 }
 class AirSearchParameters {
-    +NoAdvancePurchase : xs:boolean
-    +RefundableFares : xs:boolean
-    +NonPenaltyFares : xs:boolean
-    +UnRestrictedFares : xs:boolean
+    +NoAdvancePurchase : boolean
+    +RefundableFares : boolean
+    +NonPenaltyFares : boolean
+    +UnRestrictedFares : boolean
 }
 class AirSeatAssignment {
 }
 AirSeatAssignment *- SeatAssignment
 class Airport {
-    +Code : xs:string
+    +Code : string
 }
 Airport *- Location
 class AppliedProfile {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +Key : xs:string
-    +TravelerID : xs:string
-    +TravelerName : xs:string
-    +AccountID : xs:string
-    +AccountName : xs:string
-    +ImmediateParentID : xs:string
-    +ImmediateParentName : xs:string
+    +KeyOverride : boolean
+    +Key : string
+    +TravelerID : string
+    +TravelerName : string
+    +AccountID : string
+    +AccountName : string
+    +ImmediateParentID : string
+    +ImmediateParentName : string
 }
 class Auxdata {
     +Entry : Entry[]
 }
 Auxdata +-- Entry
 class Entry {
-    +Reason : xs:string
-    +Description : xs:string
+    +Reason : string
+    +Description : string
 }
 class BSPPayment {
-    +BSPIdentifier : xs:string
-    +BSPPassword : xs:string
+    +BSPIdentifier : string
+    +BSPPassword : string
 }
 class BaseAsyncProviderSpecificResponse {
-    +ProviderCode : xs:string
-    +MoreResults : xs:boolean
+    +ProviderCode : string
+    +MoreResults : boolean
 }
 class BaseReservation {
     +AccountingRemark : AccountingRemark[]
     +GeneralRemark : GeneralRemark[]
     +Restriction : Restriction[]
     +PassiveInfo : PassiveInfo
-    +LocatorCode : xs:string
-    +CreateDate : xs:string
-    +ModifiedDate : xs:string
-    +CustomerNumber : xs:string
+    +LocatorCode : string
+    +CreateDate : string
+    +ModifiedDate : string
+    +CustomerNumber : string
 }
 class BillingPointOfSaleInfo {
-    +OriginApplication : xs:string
-    +CIDBNumber : xs:integer
+    +OriginApplication : string
+    +CIDBNumber : integer
 }
 class BookingDates {
-    +CheckInDate : xs:date
-    +CheckOutDate : xs:date
+    +CheckInDate : date
+    +CheckOutDate : date
 }
 class BookingSource {
-    +Code : xs:string
+    +Code : string
     +Type : Type
 }
 BookingSource +-- Type
 class Type {
-    +PseudoCityCode : xs:string
-    +ArcNumber : xs:string
-    +IataNumber : xs:string
-    +CustomerId : xs:string
-    +BookingSourceOverride : xs:string
+    +PseudoCityCode : string
+    +ArcNumber : string
+    +IataNumber : string
+    +CustomerId : string
+    +BookingSourceOverride : string
 }
-Type *- xs:string
+Type *- string
 class BookingTraveler {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +Key : xs:string
-    +TravelerType : xs:string
-    +Age : xs:integer
-    +VIP : xs:boolean
-    +DOB : xs:date
-    +Gender : xs:string
-    +Nationality : xs:string
-    +EmergencyInfo : xs:string
+    +KeyOverride : boolean
+    +Key : string
+    +TravelerType : string
+    +Age : integer
+    +VIP : boolean
+    +DOB : date
+    +Gender : string
+    +Nationality : string
+    +EmergencyInfo : string
     +Address : typeStructuredAddress[]
     +DriversLicense : DriversLicense[]
     +AppliedProfile : AppliedProfile[]
@@ -263,177 +263,177 @@ class BookingTraveler {
     +NameRemark : NameRemark[]
     +AirSeatAssignment : AirSeatAssignment[]
     +RailSeatAssignment : RailSeatAssignment[]
-    +NameNumber : xs:string
+    +NameNumber : string
 }
 class BookingTravelerInfo {
     +BookingTravelerName : BookingTravelerName
     +NameRemark : NameRemark
-    +DOB : xs:date
+    +DOB : date
     +TravelInfo : TravelInfo
     +Email : Email
     +PhoneNumber : PhoneNumber
     +Address : typeStructuredAddress
-    +EmergencyInfo : xs:string
+    +EmergencyInfo : string
     +DeliveryInfo : DeliveryInfo
-    +Age : xs:integer
+    +Age : integer
     +CustomizedNameData : CustomizedNameData
     +AppliedProfile : AppliedProfile
-    +Key : xs:string
-    +TravelerType : xs:string
-    +Gender : xs:string
+    +Key : string
+    +TravelerType : string
+    +Gender : string
 }
 class BookingTravelerInformation {
     +Name : Name
-    +BookingTravelerRef : xs:string
+    +BookingTravelerRef : string
 }
 class BookingTravelerName {
-    +Prefix : xs:string
-    +First : xs:string
-    +Middle : xs:string
-    +Last : xs:string
-    +Suffix : xs:string
+    +Prefix : string
+    +First : string
+    +Middle : string
+    +Last : string
+    +Suffix : string
 }
 class BookingTravelerRef {
     +LoyaltyCardRef : LoyaltyCardRef[]
     +DriversLicenseRef : DriversLicenseRef
     +DiscountCardRef : DiscountCardRef[]
     +PaymentRef : PaymentRef[]
-    +Key : xs:string
+    +Key : string
 }
 class CabinClass {
-    +Type : xs:string
+    +Type : string
 }
 class CardRestriction {
     +RequiredField : RequiredField[]
-    +Code : xs:string
-    +Name : xs:string
+    +Code : string
+    +Name : string
 }
 class Carrier {
-    +Code : xs:string
+    +Code : string
 }
 class Certificate {
-    +Number : xs:string
-    +Amount : xs:string
-    +DiscountAmount : xs:string
-    +DiscountPercentage : xs:integer
-    +NotValidBefore : xs:date
-    +NotValidAfter : xs:date
+    +Number : string
+    +Amount : string
+    +DiscountAmount : string
+    +DiscountPercentage : integer
+    +NotValidBefore : date
+    +NotValidAfter : date
 }
 class Characteristic {
-    +SeatType : xs:string
-    +SeatDescription : xs:string
-    +SeatValue : xs:string
-    +SeatValueDescription : xs:string
+    +SeatType : string
+    +SeatDescription : string
+    +SeatValue : string
+    +SeatValueDescription : string
 }
 class Check {
-    +MICRNumber : xs:string
-    +RoutingNumber : xs:string
-    +AccountNumber : xs:string
-    +CheckNumber : xs:string
+    +MICRNumber : string
+    +RoutingNumber : string
+    +AccountNumber : string
+    +CheckNumber : string
 }
 class City {
-    +Code : xs:string
+    +Code : string
 }
 City *- Location
 class CityOrAirport {
-    +Code : xs:string
-    +PreferCity : xs:boolean
+    +Code : string
+    +PreferCity : boolean
 }
 CityOrAirport *- Location
 class Commission {
-    +Key : xs:string
+    +Key : string
     +Level : typeCommissionLevel
     +Type : typeCommissionType
     +Modifier : typeCommissionModifier
-    +Amount : xs:string
-    +Value : xs:string
-    +Percentage : xs:string
-    +BookingTravelerRef : xs:string
-    +CommissionOverride : xs:boolean
+    +Amount : string
+    +Value : string
+    +Percentage : string
+    +BookingTravelerRef : string
+    +CommissionOverride : boolean
 }
 class CommissionRemark {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +ProviderReservationLevel : ProviderReservationLevel
     +PassengerTypeLevel : PassengerTypeLevel[]
-    +Key : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +ProviderCode : xs:string
+    +Key : string
+    +ProviderReservationInfoRef : string
+    +ProviderCode : string
 }
 CommissionRemark +-- ProviderReservationLevel
 class ProviderReservationLevel {
-    +Amount : xs:string
-    +Percentage : xs:string
-    +CommissionCap : xs:string
+    +Amount : string
+    +Percentage : string
+    +CommissionCap : string
 }
 CommissionRemark +-- PassengerTypeLevel
 class PassengerTypeLevel {
-    +Amount : xs:string
-    +Percentage : xs:string
-    +CommissionCap : xs:string
-    +TravelerType : xs:string
+    +Amount : string
+    +Percentage : string
+    +CommissionCap : string
+    +TravelerType : string
 }
 class ConnectionPoint {
 }
 ConnectionPoint *- typeLocation
 class ConsolidatorRemark {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +PseudoCityCode : PseudoCityCode[]
-    +Key : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +ProviderCode : xs:string
+    +Key : string
+    +ProviderReservationInfoRef : string
+    +ProviderCode : string
 }
 class ContinuityCheckOverride {
-    +value : xs:string
-    +Key : xs:string
+    +value : string
+    +Key : string
 }
 class CoordinateLocation {
-    +latitude : xs:double
-    +longitude : xs:double
+    +latitude : double
+    +longitude : double
 }
 CoordinateLocation *- Location
 class CorporateDiscountID {
-    +value : xs:string
-    +NegotiatedRateCode : xs:boolean
+    +value : string
+    +NegotiatedRateCode : boolean
 }
 class Credentials {
-    +UserId : xs:string
+    +UserId : string
 }
 class CreditCard {
-    +ProfileID : xs:string
-    +Key : xs:string
+    +ProfileID : string
+    +Key : string
 }
 CreditCard *- typeCreditCardType
 class CreditCardAuth {
-    +Key : xs:string
-    +PaymentRef : xs:string
-    +TransId : xs:string
-    +Number : xs:string
-    +Amount : xs:string
-    +AuthCode : xs:string
-    +AuthResultCode : xs:string
-    +AVSResultCode : xs:string
-    +Message : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +FormOfPaymentRef : xs:string
+    +Key : string
+    +PaymentRef : string
+    +TransId : string
+    +Number : string
+    +Amount : string
+    +AuthCode : string
+    +AuthResultCode : string
+    +AVSResultCode : string
+    +Message : string
+    +ProviderReservationInfoRef : string
+    +FormOfPaymentRef : string
 }
 class CustomProfileInformation {
-    +value : xs:string
+    +value : string
 }
 class CustomerID {
-    +Key : xs:string
+    +Key : string
 }
 CustomerID *- typeRemark
 class CustomizedNameData {
-    +value : xs:string
-    +Key : xs:string
-    +ProviderReservationInfoRef : xs:string
+    +value : string
+    +Key : string
+    +ProviderReservationInfoRef : string
 }
 class DebitCard {
-    +ProfileID : xs:string
-    +Key : xs:string
-    +IssueNumber : xs:string
+    +ProfileID : string
+    +Key : string
+    +IssueNumber : string
 }
 DebitCard *- typePaymentCard
 class DeliveryInfo {
@@ -442,80 +442,80 @@ class DeliveryInfo {
     +Email : Email
     +GeneralRemark : GeneralRemark[]
     +ProviderReservationInfoRef : ProviderReservationInfoRef[]
-    +Type : xs:string
-    +SignatureRequired : xs:string
-    +TrackingNumber : xs:string
+    +Type : string
+    +SignatureRequired : string
+    +TrackingNumber : string
 }
 DeliveryInfo +-- ShippingAddress
 class ShippingAddress {
 }
 ShippingAddress *- typeStructuredAddress
 class DirectPayment {
-    +Text : xs:string
+    +Text : string
 }
 class DiscountCard {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +Key : xs:string
-    +Code : xs:string
-    +Description : xs:string
-    +Number : xs:string
+    +KeyOverride : boolean
+    +Key : string
+    +Code : string
+    +Description : string
+    +Number : string
 }
 class DiscountCardRef {
-    +Key : xs:string
+    +Key : string
 }
 class Distance {
     +Units : Units
-    +Value : xs:integer
-    +Direction : xs:string
+    +Value : integer
+    +Direction : string
 }
 Distance +-- Units
 class Units {
-    +MI : xs:string
-    +KM : xs:string
+    +MI : string
+    +KM : string
 }
-Units *- xs:string
+Units *- string
 class DriversLicense {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +Key : xs:string
-    +LicenseNumber : xs:string
+    +KeyOverride : boolean
+    +Key : string
+    +LicenseNumber : string
 }
 class DriversLicenseRef {
-    +Key : xs:string
+    +Key : string
 }
 class Email {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +ProviderReservationInfoRef : ProviderReservationInfoRef[]
-    +Key : xs:string
-    +Type : xs:string
-    +Comment : xs:string
-    +EmailID : xs:string
+    +Key : string
+    +Type : string
+    +Comment : string
+    +EmailID : string
 }
 class EmailNotification {
-    +EmailRef : xs:string[]
+    +EmailRef : string[]
     +Recipients : Recipients
 }
 EmailNotification +-- Recipients
 class Recipients {
-    +All : xs:string
-    +Default : xs:string
-    +Specific : xs:string
+    +All : string
+    +Default : string
+    +Specific : string
 }
-Recipients *- xs:string
+Recipients *- string
 class Endorsement {
-    +Value : xs:string
+    +Value : string
 }
 class EnettVan {
-    +MinPercentage : xs:nonNegativeInteger
-    +MaxPercentage : xs:nonNegativeInteger
-    +ExpiryDays : xs:duration
-    +MultiUse : xs:boolean
+    +MinPercentage : nonNegativeInteger
+    +MaxPercentage : nonNegativeInteger
+    +ExpiryDays : duration
+    +MultiUse : boolean
 }
 class ExchangedCoupon {
-    +TicketNumber : xs:string
-    +CouponNumber : xs:string
+    +TicketNumber : string
+    +CouponNumber : string
 }
 class FileFinishingInfo {
     +ShopInformation : ShopInformation
@@ -530,7 +530,7 @@ class FormOfPayment {
     +DebitCard : DebitCard
     +EnettVan : EnettVan
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +Certificate : Certificate
     +TicketNumber : TicketNumber
     +Check : Check
@@ -545,112 +545,112 @@ class FormOfPayment {
     +SegmentRef : typeGeneralReference[]
     +BSPPayment : BSPPayment
     +ARCPayment : ARCPayment
-    +Key : xs:string
-    +Type : xs:string
-    +FulfillmentType : xs:string
-    +FulfillmentLocation : xs:string
+    +Key : string
+    +Type : string
+    +FulfillmentType : string
+    +FulfillmentLocation : string
     +FulfillmentIDType : typeFulfillmentIDType
-    +FulfillmentIDNumber : xs:string
-    +IsAgentType : xs:boolean
-    +AgentText : xs:string
-    +ReuseFOP : xs:string
-    +ExternalReference : xs:string
-    +Reusable : xs:boolean
-    +ProfileID : xs:string
-    +ProfileKey : xs:string
+    +FulfillmentIDNumber : string
+    +IsAgentType : boolean
+    +AgentText : string
+    +ReuseFOP : string
+    +ExternalReference : string
+    +Reusable : boolean
+    +ProfileID : string
+    +ProfileKey : string
 }
 class FormOfPaymentRef {
-    +Key : xs:string
+    +Key : string
 }
 class FormattedTextTextType {
-    +value : xs:string
-    +Formatted : xs:boolean
-    +Language : xs:language
+    +value : string
+    +Formatted : boolean
+    +Language : language
     +TextFormat : TextFormat
 }
 FormattedTextTextType +-- TextFormat
 class TextFormat {
-    +PlainText : xs:string
-    +HTML : xs:string
+    +PlainText : string
+    +HTML : string
 }
-TextFormat *- xs:NMTOKEN
+TextFormat *- NMTOKEN
 class GeneralRemark {
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
+    +ProviderCode : string
+    +SupplierCode : string
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +RemarkData : xs:string
-    +BookingTravelerRef : xs:string[]
-    +Key : xs:string
-    +Category : xs:string
-    +TypeInGds : xs:string
+    +KeyOverride : boolean
+    +RemarkData : string
+    +BookingTravelerRef : string[]
+    +Key : string
+    +Category : string
+    +TypeInGds : string
     +SupplierType : typeProduct
-    +ProviderReservationInfoRef : xs:string
+    +ProviderReservationInfoRef : string
     +Direction : typeDirection
-    +CreateDate : xs:dateTime
-    +UseProviderNativeMode : xs:boolean
+    +CreateDate : dateTime
+    +UseProviderNativeMode : boolean
 }
 class Group {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +Name : Name
     +DeliveryInfo : DeliveryInfo
     +PhoneNumber : PhoneNumber[]
     +SSRRef : SSRRef[]
     +Address : typeStructuredAddress
     +BookingTravelerRef : BookingTravelerRef[]
-    +Key : xs:string
-    +TravelerType : xs:string
-    +GroupSize : xs:positiveInteger
+    +Key : string
+    +TravelerType : string
+    +GroupSize : positiveInteger
 }
 Group +-- Name
 class Name {
-    +value : xs:string
+    +value : string
 }
 Group +-- SSRRef
 class SSRRef {
-    +Key : xs:string
+    +Key : string
 }
 Group +-- BookingTravelerRef
 class BookingTravelerRef {
-    +Key : xs:string
+    +Key : string
 }
 class Guarantee {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +CreditCard : CreditCard
     +OtherGuaranteeInfo : OtherGuaranteeInfo
-    +Type : xs:string
-    +Key : xs:string
-    +ReuseFOP : xs:string
-    +ExternalReference : xs:string
-    +Reusable : xs:boolean
+    +Type : string
+    +Key : string
+    +ReuseFOP : string
+    +ExternalReference : string
+    +Reusable : boolean
 }
 class GuaranteeType {
-    +value : xs:string
+    +value : string
 }
 class HostToken {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +value : xs:string
-    +Host : xs:string
-    +Key : xs:string
+    +KeyOverride : boolean
+    +value : string
+    +Host : string
+    +Key : string
 }
 class HostTokenList {
     +HostToken : HostToken[]
 }
 class IncludedInBase {
-    +Amount : xs:string
+    +Amount : string
 }
 class IndustryStandardSSR {
-    +Code : xs:string
+    +Code : string
 }
 class InvoiceData {
     +BookingTravelerInformation : BookingTravelerInformation[]
-    +Key : xs:string
-    +InvoiceNumber : xs:string
-    +IssueDate : xs:dateTime
-    +ProviderReservationInfoRef : xs:string
+    +Key : string
+    +InvoiceNumber : string
+    +IssueDate : dateTime
+    +ProviderReservationInfoRef : string
 }
 class InvoiceRemark {
     +AirSegmentRef : typeSegmentRef
@@ -660,56 +660,56 @@ class InvoiceRemark {
 }
 InvoiceRemark *- typeAssociatedRemark
 class KeyMapping {
-    +ElementName : xs:string
-    +OriginalKey : xs:string
-    +NewKey : xs:string
+    +ElementName : string
+    +OriginalKey : string
+    +NewKey : string
 }
 class Keyword {
 }
 Keyword *- typeKeyword
 class LinkedUniversalRecord {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +LocatorCode : xs:string
-    +Key : xs:string
+    +KeyOverride : boolean
+    +LocatorCode : string
+    +Key : string
 }
 class Location {
-    +value : xs:string
+    +value : string
 }
 class LocationAddress {
 }
 LocationAddress *- typeStructuredAddress
 class LocatorCode {
-    +value : xs:string
+    +value : string
 }
 class LoyaltyCard {
     +ProviderReservationSpecificInfo : typeProviderReservationSpecificInfo[]
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +Key : xs:string
-    +SupplierCode : xs:string
-    +AllianceLevel : xs:string
-    +MembershipProgram : xs:string
-    +CardNumber : xs:string
-    +Status : xs:string
-    +MembershipStatus : xs:string
-    +FreeText : xs:string
+    +KeyOverride : boolean
+    +Key : string
+    +SupplierCode : string
+    +AllianceLevel : string
+    +MembershipProgram : string
+    +CardNumber : string
+    +Status : string
+    +MembershipStatus : string
+    +FreeText : string
     +SupplierType : typeProduct
-    +Level : xs:string
-    +PriorityCode : xs:string
-    +VendorLocationRef : xs:string
+    +Level : string
+    +PriorityCode : string
+    +VendorLocationRef : string
 }
 class LoyaltyCardRef {
-    +Key : xs:string
+    +Key : string
 }
 class LoyaltyProgram {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +Key : xs:string
-    +SupplierCode : xs:string
-    +AllianceLevel : xs:string
-    +MembershipProgram : xs:string
-    +Level : xs:string
+    +KeyOverride : boolean
+    +Key : string
+    +SupplierCode : string
+    +AllianceLevel : string
+    +MembershipProgram : string
+    +Level : string
 }
 class MCO {
     +FormOfPayment : FormOfPayment[]
@@ -720,93 +720,93 @@ class MCO {
     +MCOPriceData : MCOPriceData
     +StockControl : StockControl[]
     +MCOText : MCOText[]
-    +TicketType : xs:string
-    +TicketNumber : xs:string
-    +MCOIssued : xs:boolean
-    +MCOIssueDate : xs:dateTime
-    +MCODocNum : xs:string
-    +IssueReasonCode : xs:string
-    +PlatingCarrier : xs:string
-    +TourOperator : xs:string
-    +Location : xs:string
-    +TourCode : xs:string
-    +ProviderCode : xs:string
-    +ProviderLocatorCode : xs:string
-    +PseudoCityCode : xs:string
-    +ExpiryDate : xs:date
+    +TicketType : string
+    +TicketNumber : string
+    +MCOIssued : boolean
+    +MCOIssueDate : dateTime
+    +MCODocNum : string
+    +IssueReasonCode : string
+    +PlatingCarrier : string
+    +TourOperator : string
+    +Location : string
+    +TourCode : string
+    +ProviderCode : string
+    +ProviderLocatorCode : string
+    +PseudoCityCode : string
+    +ExpiryDate : date
 }
 MCO *- MCOInformation
 class MCOExchangeInfo {
     +FormOfPayment : FormOfPayment
     +ExchangedCoupon : ExchangedCoupon[]
-    +OriginalTicketNumber : xs:string
-    +OriginalCityCode : xs:string
-    +OriginalTicketDate : xs:date
-    +IATACode : xs:string
+    +OriginalTicketNumber : string
+    +OriginalCityCode : string
+    +OriginalTicketDate : date
+    +IATACode : string
 }
 class MCOFeeInfo {
-    +Amount : xs:string
-    +Percentage : xs:string
+    +Amount : string
+    +Percentage : string
     +FeeAppliesToInd : FeeAppliesToInd
 }
 MCOFeeInfo +-- FeeAppliesToInd
 class FeeAppliesToInd {
-    +Per-Person : xs:string
-    +Per-MCO : xs:string
+    +Per-Person : string
+    +Per-MCO : string
 }
-FeeAppliesToInd *- xs:string
+FeeAppliesToInd *- string
 class MCOInformation {
     +PassengerInfo : PassengerInfo[]
-    +MCONumber : xs:string
-    +Status : xs:string
-    +MCOType : xs:string
+    +MCONumber : string
+    +Status : string
+    +MCOType : string
 }
 class MCOPriceData {
     +TaxInfo : typeTaxInfo[]
     +Commission : Commission
-    +MCOAmount : xs:string
-    +MCOEquivalentFare : xs:string
-    +MCOTotalAmount : xs:string
+    +MCOAmount : string
+    +MCOEquivalentFare : string
+    +MCOTotalAmount : string
 }
 MCOPriceData +-- Commission
 class Commission {
-    +Amount : xs:string
-    +Percentage : xs:string
+    +Amount : string
+    +Percentage : string
 }
 class MCORemark {
-    +value : xs:string
-    +AdditionalRmk : xs:boolean
+    +value : string
+    +AdditionalRmk : boolean
 }
 class MCOText {
-    +Type : xs:string
+    +Type : string
 }
 MCOText *- typeFreeFormText
 class MarketingInformation {
-    +Text : xs:string[]
+    +Text : string[]
 }
 class MealRequest {
-    +Type : xs:string
+    +Type : string
 }
 class MediaItem {
-    +caption : xs:string
-    +height : xs:nonNegativeInteger
-    +width : xs:nonNegativeInteger
-    +type : xs:string
-    +url : xs:anyURI
-    +icon : xs:anyURI
+    +caption : string
+    +height : nonNegativeInteger
+    +width : nonNegativeInteger
+    +type : string
+    +url : anyURI
+    +icon : anyURI
     +sizeCode : typeResponseImageSize
 }
 class MetaData {
-    +Key : xs:string
-    +Value : xs:string
+    +Key : string
+    +Value : string
 }
 class MiscFormOfPayment {
-    +CreditCardType : xs:string
-    +CreditCardNumber : xs:string
-    +ExpDate : xs:gYearMonth
-    +Text : xs:string
-    +Category : xs:string
-    +AcceptanceOverride : xs:boolean
+    +CreditCardType : string
+    +CreditCardNumber : string
+    +ExpDate : gYearMonth
+    +Text : string
+    +Category : string
+    +AcceptanceOverride : boolean
 }
 enum ModificationType {
     AddSegment = AddSegment
@@ -818,42 +818,42 @@ enum ModificationType {
     Other = Other
 }
 class Name {
-    +Prefix : xs:string
-    +First : xs:string
-    +Middle : xs:string
-    +Last : xs:string
-    +Suffix : xs:string
-    +TravelerProfileId : xs:integer
+    +Prefix : string
+    +First : string
+    +Middle : string
+    +Last : string
+    +Suffix : string
+    +TravelerProfileId : integer
 }
 class NameOverride {
-    +First : xs:string
-    +Last : xs:string
-    +Age : xs:integer
+    +First : string
+    +Last : string
+    +Age : integer
 }
 class NameRemark {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +RemarkData : xs:string
+    +KeyOverride : boolean
+    +RemarkData : string
     +ProviderReservationInfoRef : ProviderReservationInfoRef[]
-    +Key : xs:string
-    +Category : xs:string
+    +Key : string
+    +Category : string
 }
 class NextResultReference {
-    +value : xs:string
-    +ProviderCode : xs:string
+    +value : string
+    +ProviderCode : string
 }
 class OSI {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +Key : xs:string
-    +Carrier : xs:string
-    +Code : xs:string
-    +Text : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +ProviderCode : xs:string
+    +KeyOverride : boolean
+    +Key : string
+    +Carrier : string
+    +Code : string
+    +Text : string
+    +ProviderReservationInfoRef : string
+    +ProviderCode : string
 }
 class OperatedBy {
-    +value : xs:string
+    +value : string
 }
 enum OptionalServiceApplicabilityType {
     Itinerary = Itinerary
@@ -865,175 +865,175 @@ enum OptionalServiceApplicabilityType {
 }
 class OptionalServiceApplicationLimitType {
     +ApplicableLevel : OptionalServiceApplicabilityType
-    +ProviderDefinedApplicableLevels : xs:string
-    +MaximumQuantity : xs:positiveInteger
-    +MinimumQuantity : xs:positiveInteger
+    +ProviderDefinedApplicableLevels : string
+    +MaximumQuantity : positiveInteger
+    +MinimumQuantity : positiveInteger
 }
 class OtherGuaranteeInfo {
-    +value : xs:string
+    +value : string
     +Type : Type
 }
 OtherGuaranteeInfo +-- Type
 class Type {
-    +IATA/ARC Number : xs:string
-    +Agency Address : xs:string
-    +Deposit Taken : xs:string
-    +Others : xs:string
+    +IATA/ARC Number : string
+    +Agency Address : string
+    +Deposit Taken : string
+    +Others : string
 }
-Type *- xs:string
+Type *- string
 class OverridePCC {
-    +ProviderCode : xs:string
-    +PseudoCityCode : xs:string
+    +ProviderCode : string
+    +PseudoCityCode : string
 }
 class OwnershipChange {
-    +OwningPCC : xs:string
+    +OwningPCC : string
 }
 class PassengerInfo {
     +Name : Name
-    +BookingTravelerRef : xs:string
-    +PassengerType : xs:string
+    +BookingTravelerRef : string
+    +PassengerType : string
 }
 class PassiveInfo {
-    +TicketNumber : xs:string[]
-    +ConfirmationNumber : xs:string[]
+    +TicketNumber : string[]
+    +ConfirmationNumber : string[]
     +Commission : Commission
-    +ProviderCode : xs:string
-    +ProviderLocatorCode : xs:string
-    +SupplierCode : xs:string
-    +SupplierLocatorCode : xs:string
+    +ProviderCode : string
+    +ProviderLocatorCode : string
+    +SupplierCode : string
+    +SupplierLocatorCode : string
 }
 class Payment {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +Key : xs:string
+    +KeyOverride : boolean
+    +Key : string
     +Type : Type
-    +FormOfPaymentRef : xs:string
-    +BookingTravelerRef : xs:string
-    +Amount : xs:string
-    +AmountType : xs:string
-    +ApproximateAmount : xs:string
-    +Status : xs:string
+    +FormOfPaymentRef : string
+    +BookingTravelerRef : string
+    +Amount : string
+    +AmountType : string
+    +ApproximateAmount : string
+    +Status : string
 }
 Payment +-- Type
 class Type {
-    +AirlineFee : xs:string
-    +DeliveryFee : xs:string
-    +Itinerary : xs:string
-    +Passenger : xs:string
-    +ServiceFee : xs:string
-    +OptionalService : xs:string
-    +TicketFee : xs:string
+    +AirlineFee : string
+    +DeliveryFee : string
+    +Itinerary : string
+    +Passenger : string
+    +ServiceFee : string
+    +OptionalService : string
+    +TicketFee : string
 }
-Type *- xs:string
+Type *- string
 class PaymentAdvice {
-    +Type : xs:string
-    +DocumentNumber : xs:string
-    +IssueDate : xs:date
-    +IssueCity : xs:string
-    +OriginalFOP : xs:string
+    +Type : string
+    +DocumentNumber : string
+    +IssueDate : date
+    +IssueCity : string
+    +OriginalFOP : string
 }
 class PaymentRef {
-    +Key : xs:string
+    +Key : string
 }
 class PaymentRestriction {
     +CardRestriction : CardRestriction[]
     +AddressRestriction : AddressRestriction
 }
 class Penalty {
-    +CancelRefund : xs:boolean
-    +NonRefundable : xs:boolean
-    +NonExchangeable : xs:boolean
-    +CancelationPenalty : xs:boolean
-    +ReissuePenalty : xs:boolean
-    +NonReissuePenalty : xs:boolean
-    +TicketRefundPenalty : xs:boolean
-    +ChargeApplicable : xs:boolean
-    +ChargePortion : xs:boolean
-    +PenaltyAmount : xs:string
+    +CancelRefund : boolean
+    +NonRefundable : boolean
+    +NonExchangeable : boolean
+    +CancelationPenalty : boolean
+    +ReissuePenalty : boolean
+    +NonReissuePenalty : boolean
+    +TicketRefundPenalty : boolean
+    +ChargeApplicable : boolean
+    +ChargePortion : boolean
+    +PenaltyAmount : string
 }
 class PermittedProviders {
     +Provider : Provider
 }
 class PersonalGeography {
-    +CountryCode : xs:string
-    +StateProvinceCode : xs:string
-    +CityCode : xs:string
+    +CountryCode : string
+    +StateProvinceCode : string
+    +CityCode : string
 }
 class PhoneNumber {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +ProviderReservationInfoRef : ProviderReservationInfoRef[]
-    +Key : xs:string
+    +Key : string
     +Type : Type
-    +Location : xs:string
-    +CountryCode : xs:string
-    +AreaCode : xs:string
-    +Number : xs:string
-    +Extension : xs:string
-    +Text : xs:string
+    +Location : string
+    +CountryCode : string
+    +AreaCode : string
+    +Number : string
+    +Extension : string
+    +Text : string
 }
 PhoneNumber +-- Type
 class Type {
-    +Agency : xs:string
-    +Business : xs:string
-    +Mobile : xs:string
-    +Home : xs:string
-    +Fax : xs:string
-    +Hotel : xs:string
-    +Other : xs:string
-    +None : xs:string
-    +Email : xs:string
-    +Reservations : xs:string
+    +Agency : string
+    +Business : string
+    +Mobile : string
+    +Home : string
+    +Fax : string
+    +Hotel : string
+    +Other : string
+    +None : string
+    +Email : string
+    +Reservations : string
 }
-Type *- xs:string
+Type *- string
 class PointOfCommencement {
-    +CityOrAirportCode : xs:string
-    +Time : xs:string
+    +CityOrAirportCode : string
+    +Time : string
 }
 class PointOfSale {
-    +ProviderCode : xs:string
-    +PseudoCityCode : xs:string
-    +Key : xs:string
-    +IATA : xs:string
+    +ProviderCode : string
+    +PseudoCityCode : string
+    +Key : string
+    +IATA : string
 }
 class PolicyInformation {
     +ReasonCode : ReasonCode
     +Type : typePolicy
-    +Name : xs:string
-    +OutOfPolicy : xs:boolean
-    +SegmentRef : xs:string
+    +Name : string
+    +OutOfPolicy : boolean
+    +SegmentRef : string
 }
 PolicyInformation +-- ReasonCode
 class ReasonCode {
-    +OutOfPolicy : xs:string
-    +PurposeOfTrip : xs:string
+    +OutOfPolicy : string
+    +PurposeOfTrip : string
     +Remark : Remark
 }
 class Postscript {
-    +Key : xs:string
+    +Key : string
 }
 Postscript *- typeRemark
 class PriceMatchError {
-    +ErrorMessage : xs:string
-    +VendorCode : xs:string
-    +HotelChain : xs:string
-    +HotelCode : xs:string
-    +ReqBase : xs:decimal
-    +RspBase : xs:decimal
-    +BaseDiff : xs:decimal
-    +ReqTotal : xs:decimal
-    +RspTotal : xs:decimal
-    +TotalDiff : xs:decimal
+    +ErrorMessage : string
+    +VendorCode : string
+    +HotelChain : string
+    +HotelCode : string
+    +ReqBase : decimal
+    +RspBase : decimal
+    +BaseDiff : decimal
+    +ReqTotal : decimal
+    +RspTotal : decimal
+    +TotalDiff : decimal
 }
 class Provider {
-    +Code : xs:string
+    +Code : string
 }
 class ProviderARNKSegment {
     +PreviousSegment : PreviousSegment
     +NextSegment : NextSegment
-    +Key : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +ProviderSegmentOrder : xs:integer
+    +Key : string
+    +ProviderReservationInfoRef : string
+    +ProviderSegmentOrder : integer
 }
 ProviderARNKSegment +-- PreviousSegment
 class PreviousSegment {
@@ -1053,43 +1053,43 @@ class ProviderReservationDetail {
 }
 ProviderReservationDetail *- typeProviderReservationDetail
 class ProviderReservationInfoRef {
-    +Key : xs:string
+    +Key : string
 }
 class PseudoCityCode {
-    +value : xs:string
+    +value : string
 }
 class QueuePlace {
-    +PseudoCityCode : xs:string
+    +PseudoCityCode : string
     +QueueSelector : QueueSelector[]
 }
 class QueueSelector {
-    +Queue : xs:string
-    +Category : xs:string
-    +DateRange : xs:string
+    +Queue : string
+    +Category : string
+    +DateRange : string
 }
 class RailLocation {
-    +Code : xs:string
+    +Code : string
 }
 RailLocation *- Location
 class RailSeatAssignment {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +Characteristic : Characteristic[]
-    +Key : xs:string
-    +Status : xs:string
-    +Seat : xs:string
-    +RailSegmentRef : xs:string
-    +CoachNumber : xs:string
+    +Key : string
+    +Status : string
+    +Seat : string
+    +RailSegmentRef : string
+    +CoachNumber : string
 }
 class ReferencePoint {
-    +value : xs:string
+    +value : string
 }
 class RefundRemark {
-    +RemarkData : xs:string
+    +RemarkData : string
 }
 class Remark {
-    +value : xs:string
-    +Key : xs:string
+    +value : string
+    +Key : string
 }
 class RequestKeyMappings {
     +KeyMapping : KeyMapping[]
@@ -1099,173 +1099,173 @@ class RequiredField {
 }
 RequiredField +-- Name
 class Name {
-    +CardType : xs:string
-    +Number : xs:string
-    +CustomerReference : xs:string
-    +IssueNumber : xs:string
-    +StartDate : xs:string
-    +NameOnCard : xs:string
-    +ExpirationDate : xs:string
-    +CVV : xs:string
-    +AddressLine1 : xs:string
-    +AddressLine2 : xs:string
-    +City : xs:string
-    +State : xs:string
-    +PostalCode : xs:string
+    +CardType : string
+    +Number : string
+    +CustomerReference : string
+    +IssueNumber : string
+    +StartDate : string
+    +NameOnCard : string
+    +ExpirationDate : string
+    +CVV : string
+    +AddressLine1 : string
+    +AddressLine2 : string
+    +City : string
+    +State : string
+    +PostalCode : string
 }
-Name *- xs:string
+Name *- string
 class Requisition {
-    +Number : xs:string
+    +Number : string
     +Category : Category
     +Type : Type
 }
 Requisition +-- Category
 class Category {
-    +Government : xs:string
-    +Other : xs:string
+    +Government : string
+    +Other : string
 }
-Category *- xs:string
+Category *- string
 Requisition +-- Type
 class Type {
-    +Cash : xs:string
-    +Credit : xs:string
+    +Cash : string
+    +Credit : string
 }
-Type *- xs:string
+Type *- string
 class ReservationName {
     +BookingTravelerRef : BookingTravelerRef
     +NameOverride : NameOverride
 }
 class ResponseMessage {
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
-    +value : xs:string
-    +Code : xs:integer
+    +ProviderCode : string
+    +SupplierCode : string
+    +value : string
+    +Code : integer
     +Type : Type
 }
 ResponseMessage +-- Type
 class Type {
-    +Warning : xs:string
-    +Error : xs:string
-    +Info : xs:string
+    +Warning : string
+    +Error : string
+    +Info : string
 }
-Type *- xs:string
+Type *- string
 class Restriction {
-    +Operation : xs:string
-    +Reason : xs:string
+    +Operation : string
+    +Reason : string
 }
 class ReviewBooking {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +Key : xs:string
-    +Queue : xs:integer
-    +QueueCategory : xs:string
-    +DateTime : xs:dateTime
-    +PseudoCityCode : xs:string
-    +ProviderCode : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +Remarks : xs:string
+    +KeyOverride : boolean
+    +Key : string
+    +Queue : integer
+    +QueueCategory : string
+    +DateTime : dateTime
+    +PseudoCityCode : string
+    +ProviderCode : string
+    +ProviderReservationInfoRef : string
+    +Remarks : string
 }
 class RoleInfo {
-    +Id : xs:string
-    +Name : xs:string
-    +Source : xs:string
-    +Description : xs:string
+    +Id : string
+    +Name : string
+    +Source : string
+    +Description : string
 }
 class SSR {
-    +Key : xs:string
-    +SegmentRef : xs:string
-    +PassiveSegmentRef : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +Type : xs:string
-    +Status : xs:string
-    +FreeText : xs:string
-    +Carrier : xs:string
-    +CarrierSpecificText : xs:string
-    +Description : xs:string
-    +ProviderDefinedType : xs:string
-    +SSRRuleRef : xs:string
-    +URL : xs:anyURI
+    +Key : string
+    +SegmentRef : string
+    +PassiveSegmentRef : string
+    +ProviderReservationInfoRef : string
+    +Type : string
+    +Status : string
+    +FreeText : string
+    +Carrier : string
+    +CarrierSpecificText : string
+    +Description : string
+    +ProviderDefinedType : string
+    +SSRRuleRef : string
+    +URL : anyURI
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +ProfileID : xs:string
-    +ProfileSecureFlightDocKey : xs:string
+    +KeyOverride : boolean
+    +ProfileID : string
+    +ProfileSecureFlightDocKey : string
 }
 class SSRInfo {
     +SSR : SSR
-    +BookingTravelerRef : xs:string[]
+    +BookingTravelerRef : string[]
 }
 class SearchEvent {
     +Type : typeEventType
 }
 SearchEvent *- typeTimeRange
 class SearchPassenger {
-    +Key : xs:string
+    +Key : string
 }
 SearchPassenger *- typePassengerType
 class SearchTicketing {
     +TicketStatus : TicketStatus
     +ReservationStatus : ReservationStatus
-    +TicketDate : xs:date
+    +TicketDate : date
 }
 SearchTicketing +-- TicketStatus
 class TicketStatus {
-    +Ticketed : xs:string
-    +Unticketed : xs:string
-    +Both : xs:string
+    +Ticketed : string
+    +Unticketed : string
+    +Both : string
 }
-TicketStatus *- xs:string
+TicketStatus *- string
 SearchTicketing +-- ReservationStatus
 class ReservationStatus {
-    +OnHold : xs:string
-    +SetForTicketing : xs:string
-    +Both : xs:string
+    +OnHold : string
+    +SetForTicketing : string
+    +Both : string
 }
-ReservationStatus *- xs:string
+ReservationStatus *- string
 class SeatAssignment {
-    +Key : xs:string
-    +Status : xs:string
-    +Seat : xs:string
-    +SeatTypeCode : xs:string
-    +SegmentRef : xs:string
-    +FlightDetailsRef : xs:string
+    +Key : string
+    +Status : string
+    +Seat : string
+    +SeatTypeCode : string
+    +SegmentRef : string
+    +FlightDetailsRef : string
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +RailCoachNumber : xs:string
+    +KeyOverride : boolean
+    +RailCoachNumber : string
 }
 class SeatAttribute {
-    +Value : xs:string
+    +Value : string
 }
 class SeatAttributes {
     +SeatAttribute : SeatAttribute[]
 }
 class Segment {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +SegmentRemark : SegmentRemark[]
-    +Key : xs:string
-    +Status : xs:string
-    +Passive : xs:boolean
-    +TravelOrder : xs:integer
-    +ProviderSegmentOrder : xs:integer
+    +Key : string
+    +Status : string
+    +Passive : boolean
+    +TravelOrder : integer
+    +ProviderSegmentOrder : integer
 }
 class SegmentRemark {
-    +value : xs:string
-    +Key : xs:string
+    +value : string
+    +Key : string
 }
 class SellMessage {
-    +value : xs:string
+    +value : string
 }
 class ServiceData {
     +SeatAttributes : SeatAttributes
     +CabinClass : CabinClass
     +SSRRef : typeKeyBasedReference[]
-    +Data : xs:string
-    +AirSegmentRef : xs:string
-    +BookingTravelerRef : xs:string
-    +StopOver : xs:boolean
-    +TravelerType : xs:string
-    +EMDSummaryRef : xs:string
-    +EMDCouponRef : xs:string
+    +Data : string
+    +AirSegmentRef : string
+    +BookingTravelerRef : string
+    +StopOver : boolean
+    +TravelerType : string
+    +EMDSummaryRef : string
+    +EMDCouponRef : string
 }
 class ServiceFeeInfo {
     +FormOfPayment : FormOfPayment
@@ -1273,26 +1273,26 @@ class ServiceFeeInfo {
     +CreditCardAuth : CreditCardAuth
     +Payment : Payment
     +Status : typeStatus
-    +Description : xs:string
-    +Key : xs:string
-    +Confirmation : xs:string
-    +TicketNumber : xs:string
-    +BookingTravelerRef : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +PassiveProviderReservationInfoRef : xs:string
-    +TotalAmount : xs:string
-    +BaseAmount : xs:string
-    +Taxes : xs:string
+    +Description : string
+    +Key : string
+    +Confirmation : string
+    +TicketNumber : string
+    +BookingTravelerRef : string
+    +ProviderReservationInfoRef : string
+    +PassiveProviderReservationInfoRef : string
+    +TotalAmount : string
+    +BaseAmount : string
+    +Taxes : string
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +BookingTravelerName : xs:string
+    +KeyOverride : boolean
+    +BookingTravelerName : string
 }
 class ServiceFeeTaxInfo {
-    +Category : xs:string
-    +Amount : xs:string
+    +Category : string
+    +Amount : string
 }
 class ServiceInfo {
-    +Description : xs:string[]
+    +Description : string[]
     +MediaItem : MediaItem[]
 }
 class ServiceRuleType {
@@ -1301,22 +1301,22 @@ class ServiceRuleType {
     +ModifyRules : ModifyRules
     +SecondaryTypeRules : SecondaryTypeRules
     +Remarks : FormattedTextTextType[]
-    +Key : xs:string
+    +Key : string
 }
 ServiceRuleType +-- ApplicationRules
 class ApplicationRules {
-    +RequiredForAllTravelers : xs:boolean
-    +RequiredForAllSegments : xs:boolean
-    +RequiredForAllSegmentsInOD : xs:boolean
-    +UnselectedOptionRequired : xs:boolean
-    +SecondaryOptionCodeRequired : xs:boolean
+    +RequiredForAllTravelers : boolean
+    +RequiredForAllSegments : boolean
+    +RequiredForAllSegmentsInOD : boolean
+    +UnselectedOptionRequired : boolean
+    +SecondaryOptionCodeRequired : boolean
 }
 ServiceRuleType +-- ApplicationLevel
 class ApplicationLevel {
     +ApplicationLimits : ApplicationLimits
     +ServiceData : ServiceData[]
-    +ApplicableLevels : xs:string
-    +ProviderDefinedApplicableLevels : xs:string
+    +ApplicableLevels : string
+    +ProviderDefinedApplicableLevels : string
 }
 ApplicationLevel +-- ApplicationLimits
 class ApplicationLimits {
@@ -1325,17 +1325,17 @@ class ApplicationLimits {
 ServiceRuleType +-- ModifyRules
 class ModifyRules {
     +ModifyRule : ModifyRule[]
-    +SupportedModifications : xs:string
-    +ProviderDefinedModificationType : xs:string
+    +SupportedModifications : string
+    +ProviderDefinedModificationType : string
 }
 ModifyRules +-- ModifyRule
 class ModifyRule {
     +Modification : ModificationType
-    +AutomaticallyAppliedOnAdd : xs:boolean
-    +CanDelete : xs:boolean
-    +CanAdd : xs:boolean
-    +Refundable : xs:boolean
-    +ProviderDefinedModificationType : xs:string
+    +AutomaticallyAppliedOnAdd : boolean
+    +CanDelete : boolean
+    +CanAdd : boolean
+    +Refundable : boolean
+    +ProviderDefinedModificationType : string
 }
 ServiceRuleType +-- SecondaryTypeRules
 class SecondaryTypeRules {
@@ -1344,79 +1344,79 @@ class SecondaryTypeRules {
 SecondaryTypeRules +-- SecondaryTypeRule
 class SecondaryTypeRule {
     +ApplicationLimit : OptionalServiceApplicationLimitType[]
-    +SecondaryType : xs:string
+    +SecondaryType : string
 }
 class ShopInformation {
     +SearchRequest : SearchRequest[]
     +FlightsOffered : FlightsOffered[]
-    +CabinShopped : xs:string
-    +CabinSelected : xs:string
-    +LowestFareOffered : xs:string
+    +CabinShopped : string
+    +CabinSelected : string
+    +LowestFareOffered : string
 }
 ShopInformation +-- SearchRequest
 class SearchRequest {
-    +Origin : xs:string
-    +Destination : xs:string
-    +DepartureTime : xs:string
-    +ClassOfService : xs:string
+    +Origin : string
+    +Destination : string
+    +DepartureTime : string
+    +ClassOfService : string
 }
 ShopInformation +-- FlightsOffered
 class FlightsOffered {
-    +Origin : xs:string
-    +Destination : xs:string
-    +DepartureTime : xs:string
-    +TravelOrder : xs:int
-    +Carrier : xs:string
-    +FlightNumber : xs:string
-    +ClassOfService : xs:string
-    +StopOver : xs:boolean
-    +Connection : xs:boolean
+    +Origin : string
+    +Destination : string
+    +DepartureTime : string
+    +TravelOrder : int
+    +Carrier : string
+    +FlightNumber : string
+    +ClassOfService : string
+    +StopOver : boolean
+    +Connection : boolean
 }
 class SimpleName {
-    +value : xs:string
+    +value : string
 }
 class SpecialEquipment {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +Key : xs:string
-    +Type : xs:string
+    +KeyOverride : boolean
+    +Key : string
+    +Type : string
 }
 class State {
-    +value : xs:string
+    +value : string
 }
 class StockControl {
-    +Type : xs:string
-    +Number : xs:string
+    +Type : string
+    +Number : string
 }
 class SupplierLocator {
     +SegmentRef : typeGeneralReference[]
-    +SupplierCode : xs:string
-    +SupplierLocatorCode : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +CreateDateTime : xs:dateTime
+    +SupplierCode : string
+    +SupplierLocatorCode : string
+    +ProviderReservationInfoRef : string
+    +CreateDateTime : dateTime
 }
 class TaxDetail {
-    +Amount : xs:string
-    +OriginAirport : xs:string
-    +DestinationAirport : xs:string
-    +CountryCode : xs:string
-    +FareInfoRef : xs:string
+    +Amount : string
+    +OriginAirport : string
+    +DestinationAirport : string
+    +CountryCode : string
+    +FareInfoRef : string
 }
 class TerminalSessionInfo {
-    +value : xs:string
+    +value : string
 }
 class ThirdPartyInformation {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +SegmentRef : typeGeneralReference[]
-    +ThirdPartyCode : xs:string
-    +ThirdPartyLocatorCode : xs:string
-    +ThirdPartyName : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +Key : xs:string
+    +ThirdPartyCode : string
+    +ThirdPartyLocatorCode : string
+    +ThirdPartyName : string
+    +ProviderReservationInfoRef : string
+    +Key : string
 }
 class TicketNumber {
-    +value : xs:string
+    +value : string
 }
 class TransactionType {
     +Air : Air
@@ -1429,75 +1429,75 @@ class TransactionType {
 TransactionType +-- Air
 class Air {
     +Tier : Tier
-    +DaysEnabled : xs:boolean
-    +WeekendsEnabled : xs:boolean
-    +AirportsEnabled : xs:boolean
-    +ODEnabled : xs:boolean
-    +OneWayShop : xs:boolean
-    +FlexExplore : xs:boolean
-    +RapidRepriceEnabled : xs:boolean
-    +ReturnUpsellFare : xs:boolean
+    +DaysEnabled : boolean
+    +WeekendsEnabled : boolean
+    +AirportsEnabled : boolean
+    +ODEnabled : boolean
+    +OneWayShop : boolean
+    +FlexExplore : boolean
+    +RapidRepriceEnabled : boolean
+    +ReturnUpsellFare : boolean
 }
 Air *- typeTransactionsAllowed
 Air +-- Tier
 class Tier {
-    +1 : xs:string
-    +2 : xs:string
-    +3 : xs:string
+    +1 : string
+    +2 : string
+    +3 : string
 }
-Tier *- xs:int
+Tier *- int
 class TravelComplianceData {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +PolicyCompliance : PolicyCompliance[]
     +ContractCompliance : ContractCompliance[]
     +PreferredSupplier : PreferredSupplier[]
-    +Key : xs:string
-    +AirSegmentRef : xs:string
-    +PassiveSegmentRef : xs:string
-    +RailSegmentRef : xs:string
-    +ReservationLocatorRef : xs:string
+    +Key : string
+    +AirSegmentRef : string
+    +PassiveSegmentRef : string
+    +RailSegmentRef : string
+    +ReservationLocatorRef : string
 }
 TravelComplianceData +-- PolicyCompliance
 class PolicyCompliance {
-    +InPolicy : xs:boolean
-    +PolicyToken : xs:string
+    +InPolicy : boolean
+    +PolicyToken : string
 }
 TravelComplianceData +-- ContractCompliance
 class ContractCompliance {
-    +InContract : xs:boolean
-    +ContractToken : xs:string
+    +InContract : boolean
+    +ContractToken : string
 }
 TravelComplianceData +-- PreferredSupplier
 class PreferredSupplier {
-    +Preferred : xs:boolean
+    +Preferred : boolean
     +ProfileType : typeProfileType
 }
 class TravelInfo {
-    +TripName : xs:string
-    +TravelPurpose : xs:string
+    +TripName : string
+    +TravelPurpose : string
 }
 class TravelSegment {
-    +Origin : xs:string
-    +Destination : xs:string
-    +DepartureTime : xs:string
-    +ArrivalTime : xs:string
+    +Origin : string
+    +Destination : string
+    +DepartureTime : string
+    +ArrivalTime : string
 }
 TravelSegment *- Segment
 class TravelerInformation {
     +EmergencyContact : EmergencyContact
-    +HomeAirport : xs:string
-    +VisaExpirationDate : xs:date
-    +BookingTravelerRef : xs:string
+    +HomeAirport : string
+    +VisaExpirationDate : date
+    +BookingTravelerRef : string
 }
 TravelerInformation +-- EmergencyContact
 class EmergencyContact {
     +PhoneNumber : PhoneNumber
-    +Name : xs:string
-    +Relationship : xs:string
+    +Name : string
+    +Relationship : string
 }
 class TravelerType {
-    +Code : xs:string
+    +Code : string
 }
 enum URTicketStatus {
     Ticketed = Ticketed
@@ -1507,22 +1507,22 @@ enum URTicketStatus {
 }
 class UnassociatedRemark {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +Key : xs:string
+    +KeyOverride : boolean
+    +Key : string
 }
 UnassociatedRemark *- typeRemarkWithTravelerRef
 class UnitedNations {
-    +Number : xs:string
+    +Number : string
 }
 class VendorLocation {
 }
 VendorLocation *- typeVendorLocation
 class XMLRemark {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +value : xs:string
-    +Key : xs:string
-    +Category : xs:string
+    +KeyOverride : boolean
+    +value : string
+    +Key : string
+    +Category : string
 }
 enum typeAdjustmentTarget {
     Base = Base
@@ -1534,18 +1534,18 @@ enum typeAdjustmentType {
     Percentage = Percentage
 }
 class typeAgencyHierarchyLongReference {
-    +ProfileVersion : xs:int
-    +ProfileName : xs:string
+    +ProfileVersion : int
+    +ProfileName : string
 }
 typeAgencyHierarchyLongReference *- typeAgencyHierarchyReference
 class typeAgencyHierarchyReference {
-    +ProfileID : xs:integer
+    +ProfileID : integer
     +ProfileType : typeAgencyProfileLevel
 }
 class typeAgencyPayment {
-    +AgencyBillingIdentifier : xs:string
-    +AgencyBillingNumber : xs:string
-    +AgencyBillingPassword : xs:string
+    +AgencyBillingIdentifier : string
+    +AgencyBillingNumber : string
+    +AgencyBillingPassword : string
 }
 enum typeAgencyProfileLevel {
     Agency = Agency
@@ -1554,20 +1554,20 @@ enum typeAgencyProfileLevel {
     Agent = Agent
 }
 class typeAgentInfo {
-    +value : xs:string
+    +value : string
 }
 class typeAssociatedRemark {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +Key : xs:string
+    +KeyOverride : boolean
+    +Key : string
 }
 typeAssociatedRemark *- typeRemarkWithTravelerRef
 class typeAssociatedRemarkWithSegmentRef {
-    +SegmentRef : xs:string
+    +SegmentRef : string
 }
 typeAssociatedRemarkWithSegmentRef *- typeAssociatedRemark
 class typeBookingTransactionsAllowed {
-    +BookingEnabled : xs:boolean
+    +BookingEnabled : boolean
 }
 enum typeCommissionLevel {
     Recalled = Recalled
@@ -1589,19 +1589,19 @@ enum typeCommissionType {
     PercentTotal = PercentTotal
 }
 class typeCreditCardType {
-    +ExtendedPayment : xs:string
-    +CustomerReference : xs:string
-    +AcceptanceOverride : xs:boolean
-    +ThirdPartyPayment : xs:boolean
-    +BankName : xs:string
-    +BankCountryCode : xs:string
-    +BankStateCode : xs:string
-    +Enett : xs:boolean
+    +ExtendedPayment : string
+    +CustomerReference : string
+    +AcceptanceOverride : boolean
+    +ThirdPartyPayment : boolean
+    +BankName : string
+    +BankCountryCode : string
+    +BankStateCode : string
+    +Enett : boolean
 }
 typeCreditCardType *- typePaymentCard
 class typeDateRange {
-    +StartDate : xs:date
-    +EndDate : xs:date
+    +StartDate : date
+    +EndDate : date
 }
 enum typeDirection {
     Incoming = Incoming
@@ -1676,15 +1676,15 @@ enum typeElementStatus {
     C = C
 }
 class typeErrorInfo {
-    +Code : xs:string
-    +Service : xs:string
-    +Type : xs:string
-    +Description : xs:string
-    +TransactionId : xs:string
-    +TraceId : xs:string
-    +CommandHistory : xs:string
+    +Code : string
+    +Service : string
+    +Type : string
+    +Description : string
+    +TransactionId : string
+    +TraceId : string
+    +CommandHistory : string
     +Auxdata : Auxdata
-    +StackTrace : xs:string
+    +StackTrace : string
 }
 enum typeEventType {
     Create = Create
@@ -1699,27 +1699,27 @@ enum typeFarePull {
     SameAsOriginDestination = SameAsOriginDestination
 }
 class typeFeeInfo {
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
+    +ProviderCode : string
+    +SupplierCode : string
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +TaxInfoRef : TaxInfoRef[]
     +IncludedInBase : IncludedInBase
-    +BaseAmount : xs:string
-    +Description : xs:string
-    +SubCode : xs:string
-    +Key : xs:string
-    +Amount : xs:string
-    +Code : xs:string
-    +FeeToken : xs:string
-    +PaymentRef : xs:string
-    +BookingTravelerRef : xs:string
-    +PassengerTypeCode : xs:string
-    +Text : xs:string
+    +BaseAmount : string
+    +Description : string
+    +SubCode : string
+    +Key : string
+    +Amount : string
+    +Code : string
+    +FeeToken : string
+    +PaymentRef : string
+    +BookingTravelerRef : string
+    +PassengerTypeCode : string
+    +Text : string
 }
 typeFeeInfo +-- TaxInfoRef
 class TaxInfoRef {
-    +Key : xs:string
+    +Key : string
 }
 class typeFlexibleTimeSpec {
     +SearchExtraDays : SearchExtraDays
@@ -1727,19 +1727,19 @@ class typeFlexibleTimeSpec {
 typeFlexibleTimeSpec *- typeTimeSpec
 typeFlexibleTimeSpec +-- SearchExtraDays
 class SearchExtraDays {
-    +DaysBefore : xs:int
-    +DaysAfter : xs:int
+    +DaysBefore : int
+    +DaysAfter : int
 }
 class typeFormOfPaymentPNRReference {
-    +Key : xs:string
-    +ProviderReservationLevel : xs:boolean
+    +Key : string
+    +ProviderReservationLevel : boolean
 }
 enum typeFormOfRefund {
     MCO = MCO
     FormOfPayment = FormOfPayment
 }
 class typeFreeFormText {
-    +value : xs:string
+    +value : string
 }
 enum typeFuel {
     Petrol = Petrol
@@ -1773,25 +1773,25 @@ enum typeFulfillmentType {
     Retrieve Ticket at Eurostar in London = Retrieve Ticket at Eurostar in London
 }
 class typeGeneralReference {
-    +Key : xs:string
+    +Key : string
 }
 class typeGuaranteeInformation {
     +Type : Type
     +AgencyType : AgencyType
-    +IATANumber : xs:string
+    +IATANumber : string
 }
 typeGuaranteeInformation +-- Type
 class Type {
-    +Guarantee : xs:string
-    +Deposit : xs:string
+    +Guarantee : string
+    +Deposit : string
 }
-Type *- xs:string
+Type *- string
 typeGuaranteeInformation +-- AgencyType
 class AgencyType {
-    +AgencyIATA : xs:string
-    +OtherAgencyIATA : xs:string
+    +AgencyIATA : string
+    +OtherAgencyIATA : string
 }
-AgencyType *- xs:string
+AgencyType *- string
 enum typeImageSize {
     T = T
     I = I
@@ -1822,15 +1822,15 @@ enum typeItineraryType {
     Original = Original
 }
 class typeKeyBasedReference {
-    +Key : xs:string
+    +Key : string
 }
 class typeKeyword {
     +SubKey : typeSubKey[]
-    +Text : xs:string[]
-    +Name : xs:string
-    +Number : xs:string
-    +Description : xs:string
-    +LanguageCode : xs:language
+    +Text : string[]
+    +Name : string
+    +Number : string
+    +Description : string
+    +LanguageCode : language
 }
 enum typeLicenseCode {
     Standard = Standard
@@ -1861,19 +1861,19 @@ enum typeMCOType {
     AirlineServiceFee = AirlineServiceFee
 }
 class typeNonAirReservationRef {
-    +LocatorCode : xs:string
+    +LocatorCode : string
 }
 class typeOTAKeyword {
     +SubKey : typeOTASubKey[]
-    +Text : xs:string[]
-    +Name : xs:string
-    +Number : xs:string
-    +Description : xs:string
+    +Text : string[]
+    +Name : string
+    +Number : string
+    +Description : string
 }
 class typeOTASubKey {
-    +Text : xs:string[]
-    +Name : xs:positiveInteger
-    +Description : xs:string
+    +Text : string[]
+    +Name : positiveInteger
+    +Description : string
 }
 enum typeOtherImageSize {
     X = X
@@ -1883,24 +1883,24 @@ class typePassengerType {
     +LoyaltyCard : LoyaltyCard[]
     +DiscountCard : DiscountCard[]
     +PersonalGeography : PersonalGeography
-    +Code : xs:string
-    +Age : xs:integer
-    +DOB : xs:date
-    +Gender : xs:string
-    +PricePTCOnly : xs:boolean
-    +BookingTravelerRef : xs:string
-    +AccompaniedPassenger : xs:boolean
+    +Code : string
+    +Age : integer
+    +DOB : date
+    +Gender : string
+    +PricePTCOnly : boolean
+    +BookingTravelerRef : string
+    +AccompaniedPassenger : boolean
     +ResidencyType : typeResidency
 }
 class typePaymentCard {
     +PhoneNumber : PhoneNumber
     +BillingAddress : typeStructuredAddress
-    +Type : xs:string
-    +Number : xs:string
-    +ExpDate : xs:gYearMonth
-    +Name : xs:string
-    +CVV : xs:string
-    +ApprovalCode : xs:string
+    +Type : string
+    +Number : string
+    +ExpDate : gYearMonth
+    +Name : string
+    +CVV : string
+    +ApprovalCode : string
 }
 enum typePolicy {
     Air = Air
@@ -1910,9 +1910,9 @@ enum typePolicy {
     Ticketing = Ticketing
 }
 class typePolicyCodesList {
-    +PolicyCode : xs:string[]
-    +MinPolicyCode : xs:string[]
-    +MaxPolicyCode : xs:string[]
+    +PolicyCode : string[]
+    +MinPolicyCode : string[]
+    +MaxPolicyCode : string[]
 }
 enum typePriceClassOfService {
     ClassBooked = ClassBooked
@@ -1970,7 +1970,7 @@ enum typeProfileLevelWithSystem {
     Traveler = Traveler
 }
 class typeProfileRef {
-    +ProfileEntityID : xs:string
+    +ProfileEntityID : string
     +ProfileLevel : typeProfileLevel
 }
 enum typeProfileType {
@@ -1984,14 +1984,14 @@ enum typeProfileType {
     Traveler = Traveler
 }
 class typeProviderReservationDetail {
-    +ProviderCode : xs:string
-    +ProviderLocatorCode : xs:string
+    +ProviderCode : string
+    +ProviderLocatorCode : string
 }
 class typeProviderReservationSpecificInfo {
     +OperatedBy : OperatedBy[]
     +ProviderReservationInfoRef : ProviderReservationInfoRef
-    +ProviderReservationLevel : xs:boolean
-    +ReservationLevel : xs:boolean
+    +ProviderReservationLevel : boolean
+    +ReservationLevel : boolean
 }
 enum typeProviderToken {
     Sabre = Sabre
@@ -2027,8 +2027,8 @@ enum typeRateCategory {
     Prepay = Prepay
 }
 class typeRateDescription {
-    +Text : xs:string[]
-    +Name : xs:string
+    +Text : string[]
+    +Name : string
 }
 enum typeRateGuarantee {
     Rate Guaranteed = Rate Guaranteed
@@ -2054,15 +2054,15 @@ enum typeRecordStatus {
     Unknown = Unknown
 }
 class typeRemark {
-    +value : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +ProviderCode : xs:string
+    +value : string
+    +ProviderReservationInfoRef : string
+    +ProviderCode : string
 }
 class typeRemarkWithTravelerRef {
-    +RemarkData : xs:string
-    +BookingTravelerRef : xs:string[]
-    +ProviderReservationInfoRef : xs:string
-    +ProviderCode : xs:string
+    +RemarkData : string
+    +BookingTravelerRef : string[]
+    +ProviderReservationInfoRef : string
+    +ProviderCode : string
 }
 enum typeReqSeat {
     Any = Any
@@ -2100,17 +2100,17 @@ enum typeResponseImageSize {
     X = X
 }
 class typeResultMessage {
-    +value : xs:string
-    +Code : xs:integer
+    +value : string
+    +Code : integer
     +Type : Type
 }
 typeResultMessage +-- Type
 class Type {
-    +Warning : xs:string
-    +Error : xs:string
-    +Info : xs:string
+    +Warning : string
+    +Error : string
+    +Info : string
 }
-Type *- xs:string
+Type *- string
 class typeSearchLocation {
     +Airport : Airport
     +City : City
@@ -2120,10 +2120,10 @@ class typeSearchLocation {
     +Distance : Distance
 }
 class typeSearchTimeSpec {
-    +value : xs:string
+    +value : string
 }
 class typeSegmentRef {
-    +Key : xs:string
+    +Key : string
 }
 enum typeSource {
     Agency = Agency
@@ -2132,7 +2132,7 @@ enum typeSource {
     Agent = Agent
 }
 class typeSpecificTime {
-    +Time : xs:string
+    +Time : string
 }
 enum typeStatus {
     Issued = Issued
@@ -2141,43 +2141,43 @@ enum typeStatus {
 }
 class typeStructuredAddress {
     +ElStat : typeElementStatus
-    +KeyOverride : xs:boolean
-    +AddressName : xs:string
-    +Street : xs:string[]
-    +City : xs:string
+    +KeyOverride : boolean
+    +AddressName : string
+    +Street : string[]
+    +City : string
     +State : State
-    +PostalCode : xs:string
-    +Country : xs:string
+    +PostalCode : string
+    +Country : string
     +ProviderReservationInfoRef : ProviderReservationInfoRef[]
-    +Key : xs:string
+    +Key : string
 }
 class typeSubKey {
-    +Text : xs:string[]
-    +Name : xs:string
-    +Description : xs:string
+    +Text : string[]
+    +Name : string
+    +Description : string
 }
 class typeTax {
-    +Amount : xs:string
-    +Code : xs:string
+    +Amount : string
+    +Code : string
 }
 class typeTaxInfo {
     +TaxDetail : TaxDetail[]
     +IncludedInBase : IncludedInBase
-    +Key : xs:string
-    +Category : xs:string
-    +CarrierDefinedCategory : xs:string
-    +SegmentRef : xs:string
-    +FlightDetailsRef : xs:string
-    +CouponRef : xs:string
-    +Amount : xs:string
-    +OriginAirport : xs:string
-    +DestinationAirport : xs:string
-    +CountryCode : xs:string
-    +FareInfoRef : xs:string
-    +TaxExempted : xs:boolean
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
-    +Text : xs:string
+    +Key : string
+    +Category : string
+    +CarrierDefinedCategory : string
+    +SegmentRef : string
+    +FlightDetailsRef : string
+    +CouponRef : string
+    +Amount : string
+    +OriginAirport : string
+    +DestinationAirport : string
+    +CountryCode : string
+    +FareInfoRef : string
+    +TaxExempted : boolean
+    +ProviderCode : string
+    +SupplierCode : string
+    +Text : string
 }
 enum typeTicketStatus {
     U = U
@@ -2190,17 +2190,17 @@ enum typeTicketStatus {
     S = S
 }
 class typeTimeRange {
-    +EarliestTime : xs:string
-    +LatestTime : xs:string
+    +EarliestTime : string
+    +LatestTime : string
 }
 class typeTimeSpec {
     +TimeRange : typeTimeRange
     +SpecificTime : typeSpecificTime
-    +PreferredTime : xs:string
+    +PreferredTime : string
 }
 class typeTransactionsAllowed {
-    +ShoppingEnabled : xs:boolean
-    +PricingEnabled : xs:boolean
+    +ShoppingEnabled : boolean
+    +PricingEnabled : boolean
 }
 typeTransactionsAllowed *- typeBookingTransactionsAllowed
 enum typeTrinary {
@@ -2301,19 +2301,19 @@ enum typeVehicleTransmission {
     ManualAWD = ManualAWD
 }
 class typeVendorLocation {
-    +ProviderCode : xs:string
-    +VendorCode : xs:string
-    +PreferredOption : xs:boolean
-    +VendorLocationID : xs:string
-    +Key : xs:string
-    +MoreRatesToken : xs:string
+    +ProviderCode : string
+    +VendorCode : string
+    +PreferredOption : boolean
+    +VendorLocationID : string
+    +Key : string
+    +MoreRatesToken : string
 }
 class typeVoucherInformation {
     +VoucherType : typeVoucherType
-    +Amount : xs:string
-    +ConfirmationNumber : xs:string
-    +AccountName : xs:string
-    +Number : xs:string
+    +Amount : string
+    +ConfirmationNumber : string
+    +AccountName : string
+    +Number : string
 }
 enum typeVoucherType {
     FullCredit = FullCredit

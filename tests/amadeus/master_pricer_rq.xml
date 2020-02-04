@@ -41,6 +41,7 @@
       </ns0:conversionRateDetail>
     </ns0:conversionRate>
   </ns0:fareOptions>
+  <ns0:travelFlightInfo/>
   <ns0:itinerary>
     <ns0:requestedSegmentRef>
       <ns0:segRef>1.0</ns0:segRef>

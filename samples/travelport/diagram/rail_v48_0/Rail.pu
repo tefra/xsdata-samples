@@ -1,81 +1,81 @@
 @startuml
 
 class Characteristic {
-    +Smoking : xs:boolean
+    +Smoking : boolean
     +Class : typeCoachClassType
 }
 class Coach {
     +Characteristic : Characteristic
     +common:Remark : common:Remark[]
-    +CoachNumber : xs:string
+    +CoachNumber : string
 }
 class FareValidity {
-    +RailJourneyRef : xs:string
-    +NotValidBefore : xs:date
-    +NotValidAfter : xs:date
+    +RailJourneyRef : string
+    +NotValidBefore : date
+    +NotValidAfter : date
 }
 class FulFillmentType {
-    +value : xs:string
+    +value : string
 }
 class JourneyRemark {
-    +value : xs:string
-    +Category : xs:string
+    +value : string
+    +Category : string
 }
 class OperatingCompany {
-    +value : xs:string
-    +Code : xs:string
-    +Name : xs:string
+    +value : string
+    +Code : string
+    +Name : string
 }
 class RailAutoSeatAssignment {
-    +SeatType : xs:string
-    +SeatValue : xs:string
-    +RailSegmentRef : xs:string
-    +BookingTravelerRef : xs:string
+    +SeatType : string
+    +SeatValue : string
+    +RailSegmentRef : string
+    +BookingTravelerRef : string
 }
 class RailAvailInfo {
-    +ClassCode : xs:string
-    +Quantity : xs:integer
-    +CabinClass : xs:string
+    +ClassCode : string
+    +Quantity : integer
+    +CabinClass : string
 }
 class RailBookingInfo {
-    +RailFareRef : xs:string
-    +RailJourneyRef : xs:string
-    +OptionalService : xs:boolean
+    +RailFareRef : string
+    +RailJourneyRef : string
+    +OptionalService : boolean
 }
 class RailExchangeInfo {
-    +RefundAmount : xs:string
-    +CancellationFee : xs:string
-    +ExchangeAmount : xs:string
-    +ApproximateRefundAmount : xs:string
-    +ApproximateCancellationFee : xs:string
-    +ApproximateExchangeAmount : xs:string
-    +RetainAmount : xs:string
+    +RefundAmount : string
+    +CancellationFee : string
+    +ExchangeAmount : string
+    +ApproximateRefundAmount : string
+    +ApproximateCancellationFee : string
+    +ApproximateExchangeAmount : string
+    +RetainAmount : string
 }
 class RailExchangeSolution {
     +RailJourney : RailJourney[]
     +RailJourneyRef : RailJourneyRef[]
     +RailPricingInfo : RailPricingInfo[]
-    +Key : xs:string
-    +OfferId : xs:integer
-    +TotalPrice : xs:string
-    +BasePrice : xs:string
-    +ApproximateTotalPrice : xs:string
-    +ApproximateBasePrice : xs:string
-    +EquivalentBasePrice : xs:string
-    +Taxes : xs:string
-    +Fees : xs:string
-    +Services : xs:string
-    +ApproximateTaxes : xs:string
-    +ApproximateFees : xs:string
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
-    +HostTokenRef : xs:string
-    +Reference : xs:string
+    +Key : string
+    +OfferId : integer
+    +TotalPrice : string
+    +BasePrice : string
+    +ApproximateTotalPrice : string
+    +ApproximateBasePrice : string
+    +EquivalentBasePrice : string
+    +Taxes : string
+    +Fees : string
+    +Services : string
+    +ApproximateTaxes : string
+    +ApproximateFees : string
+    +ProviderCode : string
+    +SupplierCode : string
+    +HostTokenRef : string
+    +Reference : string
     +RailExchangeInfo : RailExchangeInfo
 }
 class RailFare {
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +RailFareNoteRef : RailFareNoteRef[]
     +RailFareID : RailFareID[]
     +RailFareIDRef : RailFareIDRef[]
@@ -83,130 +83,130 @@ class RailFare {
     +common:HostToken : common:HostToken
     +FulFillmentType : FulFillmentType[]
     +RailFareComponent : RailFareComponent[]
-    +Key : xs:string
-    +FareBasis : xs:string
-    +CabinClass : xs:string
-    +PassengerTypeCode : xs:string
-    +Origin : xs:string
-    +Destination : xs:string
-    +EffectiveDate : xs:string
-    +Amount : xs:string
-    +RouteDescription : xs:string
-    +TicketTypeCode : xs:string
-    +FareReference : xs:string
-    +CrossCityFare : xs:boolean
-    +OriginStationName : xs:string
-    +DestinationStationName : xs:string
-    +ReservationRequired : xs:boolean
+    +Key : string
+    +FareBasis : string
+    +CabinClass : string
+    +PassengerTypeCode : string
+    +Origin : string
+    +Destination : string
+    +EffectiveDate : string
+    +Amount : string
+    +RouteDescription : string
+    +TicketTypeCode : string
+    +FareReference : string
+    +CrossCityFare : boolean
+    +OriginStationName : string
+    +DestinationStationName : string
+    +ReservationRequired : boolean
     +JourneyDirection : typeJourneyDirection
-    +RailLocOrigin : xs:string
-    +RailLocDestination : xs:string
+    +RailLocOrigin : string
+    +RailLocDestination : string
 }
 class RailFareComponent {
     +Discount : Discount[]
-    +Key : xs:string
-    +Amount : xs:string
-    +Age : xs:integer
-    +PassengerTypeCode : xs:string
-    +SupplierPassengerType : xs:string
-    +Quantity : xs:integer
+    +Key : string
+    +Amount : string
+    +Age : integer
+    +PassengerTypeCode : string
+    +SupplierPassengerType : string
+    +Quantity : integer
 }
 RailFareComponent +-- Discount
 class Discount {
     +common:DiscountCard : common:DiscountCard[]
-    +Key : xs:string
+    +Key : string
 }
 class RailFareID {
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
-    +value : xs:string
-    +Key : xs:string
-    +Category : xs:string
+    +KeyOverride : boolean
+    +value : string
+    +Key : string
+    +Category : string
 }
 class RailFareIDList {
     +RailFareID : RailFareID[]
 }
 class RailFareIDRef {
-    +Key : xs:string
+    +Key : string
 }
 class RailFareList {
     +RailFare : RailFare[]
 }
 class RailFareNote {
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
-    +value : xs:string
-    +Key : xs:string
-    +NoteName : xs:string
+    +KeyOverride : boolean
+    +value : string
+    +Key : string
+    +NoteName : string
 }
 class RailFareNoteList {
     +RailFareNote : RailFareNote[]
 }
 class RailFareNoteRef {
-    +Key : xs:string
+    +Key : string
 }
 class RailFareRef {
-    +Key : xs:string
+    +Key : string
 }
 class RailInfo {
-    +Origin : xs:string
-    +RailLocOrigin : xs:string
-    +Destination : xs:string
-    +RailLocDestination : xs:string
-    +DepartureTime : xs:string
-    +ArrivalTime : xs:string
-    +TrainNumber : xs:string
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
+    +Origin : string
+    +RailLocOrigin : string
+    +Destination : string
+    +RailLocDestination : string
+    +DepartureTime : string
+    +ArrivalTime : string
+    +TrainNumber : string
+    +ProviderCode : string
+    +SupplierCode : string
 }
 class RailJourney {
     +RailSegment : RailSegment[]
     +RailSegmentRef : RailSegmentRef[]
     +JourneyRemark : JourneyRemark[]
     +common:HostToken : common:HostToken[]
-    +Key : xs:string
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
-    +TotalPrice : xs:string
-    +BasePrice : xs:string
-    +ApproximateTotalPrice : xs:string
-    +ApproximateBasePrice : xs:string
-    +EquivalentBasePrice : xs:string
-    +Taxes : xs:string
-    +Fees : xs:string
-    +Services : xs:string
-    +ApproximateTaxes : xs:string
-    +ApproximateFees : xs:string
+    +Key : string
+    +ProviderCode : string
+    +SupplierCode : string
+    +TotalPrice : string
+    +BasePrice : string
+    +ApproximateTotalPrice : string
+    +ApproximateBasePrice : string
+    +EquivalentBasePrice : string
+    +Taxes : string
+    +Fees : string
+    +Services : string
+    +ApproximateTaxes : string
+    +ApproximateFees : string
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
-    +Origin : xs:string
-    +Destination : xs:string
-    +DepartureTime : xs:string
-    +ArrivalTime : xs:string
-    +OriginStationName : xs:string
-    +DestinationStationName : xs:string
-    +RailLocOrigin : xs:string
-    +RailLocDestination : xs:string
-    +RouteDescription : xs:string
+    +KeyOverride : boolean
+    +Origin : string
+    +Destination : string
+    +DepartureTime : string
+    +ArrivalTime : string
+    +OriginStationName : string
+    +DestinationStationName : string
+    +RailLocOrigin : string
+    +RailLocDestination : string
+    +RouteDescription : string
     +JourneyDirection : typeJourneyDirection
-    +JourneyDuration : xs:integer
-    +Status : xs:string
-    +ProviderReservationInfoRef : xs:string
-    +PassiveProviderReservationInfoRef : xs:string
-    +TravelOrder : xs:integer
-    +RouteReference : xs:string
-    +Operation : xs:string
+    +JourneyDuration : integer
+    +Status : string
+    +ProviderReservationInfoRef : string
+    +PassiveProviderReservationInfoRef : string
+    +TravelOrder : integer
+    +RouteReference : string
+    +Operation : string
 }
 class RailJourneyList {
     +RailJourney : RailJourney[]
 }
 class RailJourneyRef {
-    +Key : xs:string
+    +Key : string
 }
 class RailLegModifiers {
     +PermittedConnectionPoints : PermittedConnectionPoints
     +ProhibitedConnectionPoints : ProhibitedConnectionPoints
-    +Class : xs:string
+    +Class : string
 }
 RailLegModifiers +-- PermittedConnectionPoints
 class PermittedConnectionPoints {
@@ -217,62 +217,62 @@ class ProhibitedConnectionPoints {
     +common:ConnectionPoint : common:ConnectionPoint[]
 }
 class RailPricingInfo {
-    +TotalPrice : xs:string
-    +BasePrice : xs:string
-    +ApproximateTotalPrice : xs:string
-    +ApproximateBasePrice : xs:string
-    +EquivalentBasePrice : xs:string
-    +Taxes : xs:string
-    +Fees : xs:string
-    +Services : xs:string
-    +ApproximateTaxes : xs:string
-    +ApproximateFees : xs:string
+    +TotalPrice : string
+    +BasePrice : string
+    +ApproximateTotalPrice : string
+    +ApproximateBasePrice : string
+    +EquivalentBasePrice : string
+    +Taxes : string
+    +Fees : string
+    +Services : string
+    +ApproximateTaxes : string
+    +ApproximateFees : string
     +ElStat : common:typeElementStatus
-    +KeyOverride : xs:boolean
+    +KeyOverride : boolean
     +RailFare : RailFare[]
     +RailFareRef : RailFareRef[]
     +RailBookingInfo : RailBookingInfo[]
     +PassengerType : common:typePassengerType[]
     +common:BookingTravelerRef : common:BookingTravelerRef[]
-    +Key : xs:string
-    +ExchangeAmount : xs:string
-    +ApproximateExchangeAmount : xs:string
+    +Key : string
+    +ExchangeAmount : string
+    +ApproximateExchangeAmount : string
 }
 class RailPricingModifiers {
     +common:DiscountCard : common:DiscountCard[]
-    +ProhibitNonRefundableFares : xs:boolean
-    +ProhibitNonExchangeableFares : xs:boolean
-    +CurrencyType : xs:string
-    +RailSearchType : xs:string
+    +ProhibitNonRefundableFares : boolean
+    +ProhibitNonExchangeableFares : boolean
+    +CurrencyType : string
+    +RailSearchType : string
 }
 class RailPricingSolution {
     +RailJourney : RailJourney[]
     +RailJourneyRef : RailJourneyRef[]
     +RailPricingInfo : RailPricingInfo[]
-    +Key : xs:string
-    +OfferId : xs:integer
-    +TotalPrice : xs:string
-    +BasePrice : xs:string
-    +ApproximateTotalPrice : xs:string
-    +ApproximateBasePrice : xs:string
-    +EquivalentBasePrice : xs:string
-    +Taxes : xs:string
-    +Fees : xs:string
-    +Services : xs:string
-    +ApproximateTaxes : xs:string
-    +ApproximateFees : xs:string
-    +ProviderCode : xs:string
-    +SupplierCode : xs:string
-    +HostTokenRef : xs:string
-    +Reference : xs:string
+    +Key : string
+    +OfferId : integer
+    +TotalPrice : string
+    +BasePrice : string
+    +ApproximateTotalPrice : string
+    +ApproximateBasePrice : string
+    +EquivalentBasePrice : string
+    +Taxes : string
+    +Fees : string
+    +Services : string
+    +ApproximateTaxes : string
+    +ApproximateFees : string
+    +ProviderCode : string
+    +SupplierCode : string
+    +HostTokenRef : string
+    +Reference : string
 }
 class RailRefundInfo {
-    +RefundAmount : xs:string
-    +CancellationFee : xs:string
-    +Refund : xs:boolean
-    +Retain : xs:boolean
-    +RetainAmount : xs:string
-    +NetAmount : xs:string
+    +RefundAmount : string
+    +CancellationFee : string
+    +Refund : boolean
+    +Retain : boolean
+    +RetainAmount : string
+    +NetAmount : string
 }
 class RailReservation {
     +common:BookingTravelerRef : common:BookingTravelerRef[]
@@ -282,15 +282,15 @@ class RailReservation {
     +RailTicketInfo : RailTicketInfo[]
     +RailFareNoteList : RailFareNoteList
     +common:SupplierLocator : common:SupplierLocator[]
-    +BookingStatus : xs:string
+    +BookingStatus : string
 }
 RailReservation *- common:BaseReservation
 class RailSearchModifiers {
     +PreferredSuppliers : PreferredSuppliers
-    +MaxChanges : xs:integer
+    +MaxChanges : integer
     +Direction : typeRailDirection
-    +Class : xs:string
-    +MaxSolutions : xs:integer
+    +Class : string
+    +MaxSolutions : integer
 }
 RailSearchModifiers +-- PreferredSuppliers
 class PreferredSuppliers {
@@ -301,37 +301,37 @@ class RailSegment {
     +OperatingCompany : OperatingCompany
     +RailAvailInfo : RailAvailInfo[]
     +FulFillmentType : FulFillmentType[]
-    +TrainNumber : xs:string
-    +Origin : xs:string
-    +Destination : xs:string
-    +DepartureTime : xs:string
-    +ArrivalTime : xs:string
-    +OriginStationName : xs:string
-    +DestinationStationName : xs:string
-    +RailLocOrigin : xs:string
-    +RailLocDestination : xs:string
-    +TrainType : xs:string
-    +TrainTypeCode : xs:string
+    +TrainNumber : string
+    +Origin : string
+    +Destination : string
+    +DepartureTime : string
+    +ArrivalTime : string
+    +OriginStationName : string
+    +DestinationStationName : string
+    +RailLocOrigin : string
+    +RailLocDestination : string
+    +TrainType : string
+    +TrainTypeCode : string
     +TransportMode : typeTransportMode
-    +SeatAssignable : xs:boolean
-    +TransportCode : xs:string
-    +ReservationRequired : xs:boolean
-    +TravelTime : xs:integer
-    +HostTokenRef : xs:string
-    +CabinClass : xs:string
-    +ClassCode : xs:string
+    +SeatAssignable : boolean
+    +TransportCode : string
+    +ReservationRequired : boolean
+    +TravelTime : integer
+    +HostTokenRef : string
+    +CabinClass : string
+    +ClassCode : string
 }
 RailSegment *- common:Segment
 class RailSegmentInfo {
-    +value : xs:string
-    +Category : xs:string
+    +value : string
+    +Category : string
     +Type : typeRailSegmentInfo
 }
 class RailSegmentList {
     +RailSegment : RailSegment[]
 }
 class RailSegmentRef {
-    +Key : xs:string
+    +Key : string
 }
 class RailSolutionChangedInfo {
     +RailPricingSolution : RailPricingSolution
@@ -339,32 +339,32 @@ class RailSolutionChangedInfo {
 }
 RailSolutionChangedInfo +-- ReasonCode
 class ReasonCode {
-    +Price : xs:string
-    +Schedule : xs:string
-    +Both : xs:string
+    +Price : string
+    +Schedule : string
+    +Both : string
 }
-ReasonCode *- xs:string
+ReasonCode *- string
 class RailSpecificSeatAssignment {
-    +CoachLabel : xs:string
-    +PlaceLabel : xs:string
-    +Assignment : xs:string
-    +RailSegmentRef : xs:string
-    +BookingTravelerRef : xs:string
+    +CoachLabel : string
+    +PlaceLabel : string
+    +Assignment : string
+    +RailSegmentRef : string
+    +BookingTravelerRef : string
 }
 class RailSupplier {
-    +Code : xs:string
+    +Code : string
 }
 class RailTicketInfo {
     +RailJourneyRef : RailJourneyRef[]
     +TicketAdvisory : TicketAdvisory[]
-    +Number : xs:string
-    +IssueLocation : xs:string
-    +TicketStatus : xs:string
-    +TicketFormType : xs:string
-    +TrafficType : xs:string
-    +IssuedDate : xs:dateTime
-    +TicketType : xs:string
-    +BookingTravelerRef : xs:string
+    +Number : string
+    +IssueLocation : string
+    +TicketStatus : string
+    +TicketFormType : string
+    +TrafficType : string
+    +IssuedDate : dateTime
+    +TicketType : string
+    +BookingTravelerRef : string
 }
 class SearchRailLeg {
     +SearchOrigin : common:typeSearchLocation[]
@@ -375,9 +375,9 @@ class SearchRailLeg {
     +RailLegModifiers : RailLegModifiers
 }
 class TicketAdvisory {
-    +value : xs:string
-    +Key : xs:string
-    +LanguageCode : xs:language
+    +value : string
+    +Key : string
+    +LanguageCode : language
 }
 enum typeCoachClassType {
     First Class = First Class

@@ -5,20 +5,20 @@ class AirBaseReq {
 AirBaseReq *- common:BaseReq
 class AirExchangeEligibilityReq {
     +ProviderReservationInfo : ProviderReservationInfo
-    +Type : xs:string
+    +Type : string
 }
 AirExchangeEligibilityReq *- common:BaseReq
 AirExchangeEligibilityReq +-- ProviderReservationInfo
 class ProviderReservationInfo {
-    +ProviderCode : xs:string
-    +ProviderLocatorCode : xs:string
+    +ProviderCode : string
+    +ProviderLocatorCode : string
 }
 class AirExchangeEligibilityRsp {
     +ExchangeEligibilityInfo : ExchangeEligibilityInfo
 }
 AirExchangeEligibilityRsp *- common:BaseRsp
 class AirExchangeMultiQuoteReq {
-    +Type : xs:string
+    +Type : string
 }
 AirExchangeMultiQuoteReq *- BaseAirExchangeMultiQuoteReq
 class AirExchangeMultiQuoteRsp {
@@ -54,7 +54,7 @@ class AirExchangeReq {
     +common:FormOfPaymentRef : common:FormOfPaymentRef
     +common:SSRInfo : common:SSRInfo[]
     +common:AddSvc : common:AddSvc
-    +ReturnReservation : xs:boolean
+    +ReturnReservation : boolean
 }
 AirExchangeReq *- common:BaseReq
 class AirExchangeRsp {
@@ -71,8 +71,8 @@ class AirExchangeTicketingReq {
     +WaiverCode : WaiverCode
     +DetailedBillingInformation : DetailedBillingInformation[]
     +AirTicketingModifiers : AirTicketingModifiers[]
-    +BulkTicket : xs:boolean
-    +ChangeFeeOnTicket : xs:boolean
+    +BulkTicket : boolean
+    +ChangeFeeOnTicket : boolean
 }
 AirExchangeTicketingReq *- common:BaseReq
 class AirExchangeTicketingRsp {
@@ -94,14 +94,14 @@ class AirFareDisplayReq {
     +AirFareDisplayModifiers : AirFareDisplayModifiers
     +common:PointOfSale : common:PointOfSale[]
     +AirFareDisplayRuleKey : AirFareDisplayRuleKey
-    +Origin : xs:string
-    +Destination : xs:string
-    +ProviderCode : xs:string
+    +Origin : string
+    +Destination : string
+    +ProviderCode : string
     +IncludeMileRouteInformation : typeMileOrRouteBasedFare
-    +UnSaleableFaresOnly : xs:boolean
-    +ChannelId : xs:string
-    +NSCC : xs:string
-    +ReturnMM : xs:boolean
+    +UnSaleableFaresOnly : boolean
+    +ChannelId : string
+    +NSCC : string
+    +ReturnMM : boolean
 }
 AirFareDisplayReq *- common:BaseReq
 class AirFareDisplayRsp {
@@ -120,13 +120,13 @@ class AirFareRulesReq {
 AirFareRulesReq *- common:BaseReq
 AirFareRulesReq +-- FareRulesFilterCategory
 class FareRulesFilterCategory {
-    +CategoryCode : xs:string[]
-    +FareInfoRef : xs:string
+    +CategoryCode : string[]
+    +FareInfoRef : string
 }
 AirFareRulesReq +-- AirReservationSelector
 class AirReservationSelector {
     +FareInfoRef : FareInfoRef[]
-    +AirReservationLocatorCode : xs:string
+    +AirReservationLocatorCode : string
 }
 class AirFareRulesRsp {
     +FareRule : FareRule[]
@@ -172,19 +172,19 @@ AirPrePayReq +-- ListSearch
 class ListSearch {
     +PersonNameSearch : PersonNameSearch
     +common:LoyaltyCard : common:LoyaltyCard[]
-    +StartFromResult : xs:integer
-    +MaxResults : xs:integer
+    +StartFromResult : integer
+    +MaxResults : integer
 }
 AirPrePayReq +-- PrePayRetrieve
 class PrePayRetrieve {
-    +Id : xs:string
-    +Type : xs:string
+    +Id : string
+    +Type : string
 }
 class AirPrePayRsp {
     +PrePayProfileInfo : PrePayProfileInfo[]
-    +MaxResults : xs:integer
-    +MoreIndicator : xs:boolean
-    +MoreDataStartIndex : xs:string
+    +MaxResults : integer
+    +MoreIndicator : boolean
+    +MoreDataStartIndex : string
 }
 AirPrePayRsp *- common:BaseRsp
 class AirPriceReq {
@@ -195,17 +195,17 @@ class AirPriceRsp {
 AirPriceRsp *- BaseAirPriceRsp
 class AirRefundQuoteReq {
     +common:TicketNumber : common:TicketNumber[]
-    +TCRNumber : xs:string[]
+    +TCRNumber : string[]
     +AirRefundModifiers : AirRefundModifiers
     +common:HostToken : common:HostToken[]
     +ProviderReservationInfo : ProviderReservationInfo[]
-    +Ignore : xs:boolean
+    +Ignore : boolean
 }
 AirRefundQuoteReq *- common:BaseReq
 AirRefundQuoteReq +-- ProviderReservationInfo
 class ProviderReservationInfo {
-    +ProviderCode : xs:string
-    +ProviderLocatorCode : xs:string
+    +ProviderCode : string
+    +ProviderLocatorCode : string
 }
 class AirRefundQuoteRsp {
     +AirRefundBundle : AirRefundBundle[]
@@ -230,7 +230,7 @@ class AirRepriceReq {
     +AirReservationLocatorCode : AirReservationLocatorCode
     +AirPricingSolution : AirPricingSolution
     +FareRuleType : typeFareRuleType
-    +IgnoreAvailability : xs:boolean
+    +IgnoreAvailability : boolean
 }
 AirRepriceReq *- AirBaseReq
 class AirRepriceRsp {
@@ -239,15 +239,15 @@ class AirRepriceRsp {
 }
 AirRepriceRsp *- common:BaseRsp
 class AirRetrieveDocumentReq {
-    +UniversalRecordLocatorCode : xs:string
-    +ProviderCode : xs:string
-    +ProviderLocatorCode : xs:string
+    +UniversalRecordLocatorCode : string
+    +ProviderCode : string
+    +ProviderLocatorCode : string
     +AirReservationLocatorCode : AirReservationLocatorCode
     +common:TicketNumber : common:TicketNumber[]
-    +TCRNumber : xs:string[]
-    +ReturnRestrictions : xs:boolean
-    +ReturnPricing : xs:boolean
-    +RetrieveMCO : xs:boolean
+    +TCRNumber : string[]
+    +ReturnRestrictions : boolean
+    +ReturnPricing : boolean
+    +RetrieveMCO : boolean
 }
 AirRetrieveDocumentReq *- common:BaseReq
 class AirRetrieveDocumentRsp {
@@ -256,7 +256,7 @@ class AirRetrieveDocumentRsp {
     +TCR : TCR[]
     +DocumentFailureInfo : typeFailureInfo[]
     +common:ServiceFeeInfo : common:ServiceFeeInfo[]
-    +UniversalRecordLocatorCode : xs:string
+    +UniversalRecordLocatorCode : string
 }
 AirRetrieveDocumentRsp *- common:BaseRsp
 class AirSearchReq {
@@ -294,15 +294,15 @@ class AirTicketingReq {
     +FaxDetailsInformation : FaxDetailsInformation
     +AirTicketingModifiers : AirTicketingModifiers[]
     +AirSegmentTicketingModifiers : AirSegmentTicketingModifiers[]
-    +ReturnInfoOnFail : xs:boolean
-    +BulkTicket : xs:boolean
-    +ValidateSpanishResidency : xs:boolean
+    +ReturnInfoOnFail : boolean
+    +BulkTicket : boolean
+    +ValidateSpanishResidency : boolean
 }
 AirTicketingReq *- AirBaseReq
 AirTicketingReq +-- AirPricingInfoRef
 class AirPricingInfoRef {
     +common:BookingTravelerRef : common:BookingTravelerRef[]
-    +Key : xs:string
+    +Key : string
 }
 class AirTicketingRsp {
     +AirSolutionChangedInfo : AirSolutionChangedInfo
@@ -322,10 +322,10 @@ AirUpsellSearchRsp *- BaseAirPriceRsp
 class AirVoidDocumentReq {
     +AirReservationLocatorCode : AirReservationLocatorCode
     +VoidDocumentInfo : VoidDocumentInfo[]
-    +ShowETR : xs:boolean
-    +ProviderCode : xs:string
-    +ProviderLocatorCode : xs:string
-    +ValidateSpanishResidency : xs:boolean
+    +ShowETR : boolean
+    +ProviderCode : string
+    +ProviderLocatorCode : string
+    +ValidateSpanishResidency : boolean
 }
 AirVoidDocumentReq *- common:BaseReq
 class AirVoidDocumentRsp {
@@ -336,9 +336,9 @@ AirVoidDocumentRsp *- common:BaseRsp
 class AvailabilitySearchReq {
     +common:SearchPassenger : common:SearchPassenger[]
     +common:PointOfSale : common:PointOfSale[]
-    +ReturnBrandIndicator : xs:boolean
-    +ChannelId : xs:string
-    +NSCC : xs:string
+    +ReturnBrandIndicator : boolean
+    +ChannelId : string
+    +NSCC : string
 }
 AvailabilitySearchReq *- AirSearchReq
 class AvailabilitySearchRsp {
@@ -355,8 +355,8 @@ class BaseAirExchangeMultiQuoteReq {
 BaseAirExchangeMultiQuoteReq *- common:BaseCoreReq
 BaseAirExchangeMultiQuoteReq +-- ProviderReservationInfo
 class ProviderReservationInfo {
-    +ProviderCode : xs:string
-    +ProviderLocatorCode : xs:string
+    +ProviderCode : string
+    +ProviderLocatorCode : string
 }
 class BaseAirExchangeQuoteReq {
     +common:TicketNumber : common:TicketNumber[]
@@ -374,8 +374,8 @@ class BaseAirExchangeQuoteReq {
 BaseAirExchangeQuoteReq *- common:BaseCoreReq
 BaseAirExchangeQuoteReq +-- ProviderReservationInfo
 class ProviderReservationInfo {
-    +ProviderCode : xs:string
-    +ProviderLocatorCode : xs:string
+    +ProviderCode : string
+    +ProviderLocatorCode : string
 }
 class BaseAirPriceReq {
     +AirItinerary : AirItinerary
@@ -387,15 +387,15 @@ class BaseAirPriceReq {
     +common:FormOfPayment : common:FormOfPayment[]
     +PCC : PCC
     +common:SSR : common:SSR[]
-    +CheckOBFees : xs:string
+    +CheckOBFees : string
     +FareRuleType : typeFareRuleType
-    +SupplierCode : xs:string
-    +TicketDate : xs:date
-    +CheckFlightDetails : xs:boolean
-    +ReturnMM : xs:boolean
-    +NSCC : xs:string
-    +SplitPricing : xs:boolean
-    +IgnoreAvailability : xs:boolean
+    +SupplierCode : string
+    +TicketDate : date
+    +CheckFlightDetails : boolean
+    +ReturnMM : boolean
+    +NSCC : string
+    +SplitPricing : boolean
+    +IgnoreAvailability : boolean
 }
 BaseAirPriceReq *- common:BaseCoreReq
 class BaseAirPriceRsp {
@@ -431,20 +431,20 @@ class BaseLowFareSearchReq {
     +PCC : PCC
     +FareRulesFilterCategory : FareRulesFilterCategory
     +common:FormOfPayment : common:FormOfPayment[]
-    +EnablePointToPointSearch : xs:boolean
-    +EnablePointToPointAlternates : xs:boolean
-    +MaxNumberOfExpertSolutions : xs:integer
-    +SolutionResult : xs:boolean
-    +PreferCompleteItinerary : xs:boolean
-    +MetaOptionIdentifier : xs:string
-    +ReturnUpsellFare : xs:boolean
-    +IncludeFareInfoMessages : xs:boolean
-    +ReturnBrandedFares : xs:boolean
-    +MultiGDSSearch : xs:boolean
-    +ReturnMM : xs:boolean
-    +CheckOBFees : xs:string
-    +NSCC : xs:string
-    +FareInfoRules : xs:boolean
+    +EnablePointToPointSearch : boolean
+    +EnablePointToPointAlternates : boolean
+    +MaxNumberOfExpertSolutions : integer
+    +SolutionResult : boolean
+    +PreferCompleteItinerary : boolean
+    +MetaOptionIdentifier : string
+    +ReturnUpsellFare : boolean
+    +IncludeFareInfoMessages : boolean
+    +ReturnBrandedFares : boolean
+    +MultiGDSSearch : boolean
+    +ReturnMM : boolean
+    +CheckOBFees : string
+    +NSCC : string
+    +FareInfoRules : boolean
 }
 BaseLowFareSearchReq *- BaseAirSearchReq
 class BrandList {
@@ -455,9 +455,9 @@ class EMDIssuanceReq {
     +common:TicketNumber : common:TicketNumber
     +IssuanceModifiers : IssuanceModifiers
     +SelectionModifiers : SelectionModifiers
-    +UniversalRecordLocatorCode : xs:string
-    +ShowDetails : xs:boolean
-    +IssueAllOpenSVC : xs:boolean
+    +UniversalRecordLocatorCode : string
+    +ShowDetails : boolean
+    +IssueAllOpenSVC : boolean
 }
 EMDIssuanceReq *- common:BaseReq
 class EMDIssuanceRsp {
@@ -477,7 +477,7 @@ class ListRetrieve {
 EMDRetrieveReq +-- DetailRetrieve
 class DetailRetrieve {
     +common:ProviderReservationDetail : common:ProviderReservationDetail
-    +EMDNumber : xs:string
+    +EMDNumber : string
 }
 class EMDRetrieveRsp {
     +EMDInfo : EMDInfo
@@ -520,28 +520,28 @@ LowFareSearchAsynchReq *- BaseLowFareSearchReq
 class LowFareSearchAsynchRsp {
     +AsyncProviderSpecificResponse : AsyncProviderSpecificResponse[]
     +BrandList : BrandList
-    +SearchId : xs:string
-    +CurrencyType : xs:string
+    +SearchId : string
+    +CurrencyType : string
 }
 LowFareSearchAsynchRsp *- AirSearchRsp
 class LowFareSearchReq {
-    +PolicyReference : xs:string
+    +PolicyReference : string
 }
 LowFareSearchReq *- BaseLowFareSearchReq
 class LowFareSearchRsp {
     +BrandList : BrandList
-    +CurrencyType : xs:string
+    +CurrencyType : string
 }
 LowFareSearchRsp *- AirSearchRsp
 class RetrieveLowFareSearchReq {
-    +SearchId : xs:string
-    +ProviderCode : xs:string
+    +SearchId : string
+    +ProviderCode : string
 }
 RetrieveLowFareSearchReq *- common:BaseReq
 class RetrieveLowFareSearchRsp {
     +AsyncProviderSpecificResponse : AsyncProviderSpecificResponse[]
     +BrandList : BrandList
-    +CurrencyType : xs:string
+    +CurrencyType : string
 }
 RetrieveLowFareSearchRsp *- AirSearchRsp
 class ScheduleSearchReq {
@@ -551,12 +551,12 @@ class ScheduleSearchRsp {
 }
 ScheduleSearchRsp *- AirSearchRsp
 class SearchSpecificAirSegment {
-    +DepartureTime : xs:string
-    +Carrier : xs:string
-    +FlightNumber : xs:string
-    +Origin : xs:string
-    +Destination : xs:string
-    +SegmentIndex : xs:int
+    +DepartureTime : string
+    +Carrier : string
+    +FlightNumber : string
+    +Origin : string
+    +Destination : string
+    +SegmentIndex : int
 }
 class SeatMapReq {
     +common:AgencySellInfo : common:AgencySellInfo
@@ -565,8 +565,8 @@ class SeatMapReq {
     +SearchTraveler : SearchTraveler[]
     +HostReservation : HostReservation
     +MerchandisingPricingModifiers : MerchandisingPricingModifiers
-    +ReturnSeatPricing : xs:boolean
-    +ReturnBrandingInfo : xs:boolean
+    +ReturnSeatPricing : boolean
+    +ReturnBrandingInfo : boolean
 }
 SeatMapReq *- common:BaseReq
 class SeatMapRsp {
@@ -579,8 +579,8 @@ class SeatMapRsp {
     +Rows : Rows[]
     +common:PaymentRestriction : common:PaymentRestriction[]
     +SeatInformation : SeatInformation[]
-    +Copyright : xs:string
-    +GroupSeatPrice : xs:string
+    +Copyright : string
+    +GroupSeatPrice : string
 }
 SeatMapRsp *- common:BaseRsp
 

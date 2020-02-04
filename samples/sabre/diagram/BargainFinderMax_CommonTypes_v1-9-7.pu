@@ -3,22 +3,22 @@
 class AdvResTicketingType {
     +AdvReservation : AdvReservation
     +AdvTicketing : AdvTicketing
-    +AdvResInd : xs:boolean
-    +AdvTicketingInd : xs:boolean
+    +AdvResInd : boolean
+    +AdvTicketingInd : boolean
 }
 AdvResTicketingType +-- AdvReservation
 class AdvReservation {
-    +LatestTimeOfDay : xs:string, xs:time
-    +LatestPeriod : xs:string
+    +LatestTimeOfDay : string, time
+    +LatestPeriod : string
     +LatestUnit : StayUnitType
 }
 AdvResTicketingType +-- AdvTicketing
 class AdvTicketing {
-    +FromResTimeOfDay : xs:string, xs:time
-    +FromResPeriod : xs:string
+    +FromResTimeOfDay : string, time
+    +FromResPeriod : string
     +FromResUnit : StayUnitType
-    +FromDepartTimeOfDay : xs:string, xs:time
-    +FromDepartPeriod : xs:string
+    +FromDepartTimeOfDay : string, time
+    +FromDepartPeriod : string
     +FromDepartUnit : StayUnitType
 }
 enum AirTripType {
@@ -29,20 +29,20 @@ enum AirTripType {
     Other = Other
 }
 class CompanyNameType {
-    +CompanyShortName : xs:string
-    +TravelSector : xs:string
-    +Code : xs:string
-    +CodeContext : xs:string
-    +value : xs:string
+    +CompanyShortName : string
+    +TravelSector : string
+    +Code : string
+    +CodeContext : string
+    +value : string
 }
 enum DepartureOrArrival {
     Departure = Departure
     Arrival = Arrival
 }
 class EquipmentType {
-    +value : xs:string
-    +AirEquipType : xs:string
-    +ChangeofGauge : xs:boolean
+    +value : string
+    +AirEquipType : string
+    +ChangeofGauge : boolean
 }
 enum FareDirectionality {
     TO = TO
@@ -54,8 +54,8 @@ enum OutboundOrInbound {
 }
 class PassengerTypeQuantityType {
     +TPA_Extensions : TPA_Extensions
-    +Changeable : xs:boolean
-    +Index : xs:int
+    +Changeable : boolean
+    +Index : int
 }
 PassengerTypeQuantityType *- TravelerCountType
 PassengerTypeQuantityType +-- TPA_Extensions
@@ -68,19 +68,19 @@ class TPA_Extensions {
 }
 TPA_Extensions +-- BirthDate
 class BirthDate {
-    +Date : xs:date
+    +Date : date
 }
 TPA_Extensions +-- Age
 class Age {
-    +Years : xs:short
+    +Years : short
 }
 TPA_Extensions +-- State
 class State {
-    +Code : xs:string
+    +Code : string
 }
 TPA_Extensions +-- TotalNumber
 class TotalNumber {
-    +Value : xs:short
+    +Value : short
 }
 TPA_Extensions +-- VoluntaryChanges
 class VoluntaryChanges {
@@ -89,58 +89,58 @@ class VoluntaryChanges {
 }
 VoluntaryChanges +-- Penalty
 class Penalty {
-    +CurrencyCode : xs:string
-    +DecimalPlaces : xs:nonNegativeInteger
-    +Amount : xs:decimal
+    +CurrencyCode : string
+    +DecimalPlaces : nonNegativeInteger
+    +Amount : decimal
     +Type : Type
-    +Exclude : xs:boolean
+    +Exclude : boolean
     +Application : Application
 }
 Penalty +-- Type
 class Type {
-    +Refund : xs:string
-    +Exchange : xs:string
+    +Refund : string
+    +Exchange : string
 }
-Type *- xs:string
+Type *- string
 Penalty +-- Application
 class Application {
-    +After : xs:string
-    +Before : xs:string
+    +After : string
+    +Before : string
 }
-Application *- xs:string
+Application *- string
 VoluntaryChanges +-- Match
 class Match {
-    +All : xs:string
-    +Any : xs:string
-    +Info : xs:string
+    +All : string
+    +Any : string
+    +Info : string
 }
-Match *- xs:string
+Match *- string
 class StayRestrictionsType {
     +MinimumStay : MinimumStay
     +MaximumStay : MaximumStay
-    +StayRestrictionsInd : xs:boolean
+    +StayRestrictionsInd : boolean
 }
 StayRestrictionsType +-- MinimumStay
 class MinimumStay {
-    +ReturnTimeOfDay : xs:string, xs:time
-    +MinStay : xs:integer
+    +ReturnTimeOfDay : string, time
+    +MinStay : integer
     +StayUnit : StayUnitType
-    +MinStayDate : xs:string, xs:time
+    +MinStayDate : string, time
 }
 StayRestrictionsType +-- MaximumStay
 class MaximumStay {
     +ReturnType : ReturnType
-    +ReturnTimeOfDay : xs:string, xs:time
-    +MaxStay : xs:integer
+    +ReturnTimeOfDay : string, time
+    +MaxStay : integer
     +StayUnit : StayUnitType
-    +MaxStayDate : xs:string, xs:time
+    +MaxStayDate : string, time
 }
 MaximumStay +-- ReturnType
 class ReturnType {
-    +C : xs:string
-    +S : xs:string
+    +C : string
+    +S : string
 }
-ReturnType *- xs:string
+ReturnType *- string
 enum StayUnitType {
     Minutes = Minutes
     Hours = Hours
@@ -155,24 +155,24 @@ enum StayUnitType {
     SUN = SUN
 }
 class TravelerCountType {
-    +Quantity : xs:integer
-    +Age : xs:integer
-    +Code : xs:string, xs:string
-    +CodeContext : xs:string
-    +URI : xs:anyURI
+    +Quantity : integer
+    +Age : integer
+    +Code : string, string
+    +CodeContext : string
+    +URI : anyURI
 }
 class VoluntaryChangesType {
     +Penalty : Penalty
-    +VolChangeInd : xs:boolean
+    +VolChangeInd : boolean
 }
 VoluntaryChangesType +-- Penalty
 class Penalty {
-    +PenaltyType : xs:string
-    +DepartureStatus : xs:string
-    +CurrencyCode : xs:string
-    +DecimalPlaces : xs:nonNegativeInteger
-    +Amount : xs:decimal
-    +Percent : xs:decimal
+    +PenaltyType : string
+    +DepartureStatus : string
+    +CurrencyCode : string
+    +DecimalPlaces : nonNegativeInteger
+    +Amount : decimal
+    +Percent : decimal
 }
 
 @enduml

@@ -27,8 +27,8 @@ class numberOfUnit {
 }
 numberOfUnit +-- unitNumberDetail
 class unitNumberDetail {
-    +numberOfUnits : xs:decimal
-    +typeOfUnit : xs:string
+    +numberOfUnits : decimal
+    +typeOfUnit : string
 }
 Fare_MasterPricerTravelBoardSearch +-- globalOptions
 class globalOptions {
@@ -36,18 +36,18 @@ class globalOptions {
 }
 globalOptions +-- selectionDetails
 class selectionDetails {
-    +option : xs:string
-    +optionInformation : xs:string
+    +option : string
+    +optionInformation : string
 }
 Fare_MasterPricerTravelBoardSearch +-- paxReference
 class paxReference {
-    +ptc : xs:string[]
+    +ptc : string[]
     +traveller : traveller[]
 }
 paxReference +-- traveller
 class traveller {
-    +ref : xs:decimal
-    +infantIndicator : xs:string
+    +ref : decimal
+    +infantIndicator : string
 }
 Fare_MasterPricerTravelBoardSearch +-- customerRef
 class customerRef {
@@ -55,10 +55,10 @@ class customerRef {
 }
 customerRef +-- customerReferences
 class customerReferences {
-    +referenceQualifier : xs:string
-    +referenceNumber : xs:string
-    +referencePartyName : xs:string
-    +travellerReferenceNbr : xs:string
+    +referenceQualifier : string
+    +referenceNumber : string
+    +referencePartyName : string
+    +travellerReferenceNbr : string
 }
 Fare_MasterPricerTravelBoardSearch +-- formOfPaymentByPassenger
 class formOfPaymentByPassenger {
@@ -71,39 +71,39 @@ class formOfPaymentDetails {
 }
 formOfPaymentDetails +-- formOfPaymentDetails
 class formOfPaymentDetails {
-    +type : xs:string
-    +chargedAmount : xs:decimal
-    +creditCardNumber : xs:string
+    +type : string
+    +chargedAmount : decimal
+    +creditCardNumber : string
 }
 formOfPaymentByPassenger +-- passengerFeeReference
 class passengerFeeReference {
-    +passengerFeeRefType : xs:string
-    +passengerFeeRefNumber : xs:decimal
+    +passengerFeeRefType : string
+    +passengerFeeRefNumber : decimal
     +otherCharacteristics : otherCharacteristics
 }
 passengerFeeReference +-- otherCharacteristics
 class otherCharacteristics {
-    +passengerFeeRefQualif : xs:string
+    +passengerFeeRefQualif : string
 }
 Fare_MasterPricerTravelBoardSearch +-- solutionFamily
 class solutionFamily {
-    +valueQualifier : xs:string
-    +value : xs:decimal
+    +valueQualifier : string
+    +value : decimal
     +fareDetails : fareDetails
-    +identityNumber : xs:string
+    +identityNumber : string
     +fareTypeGrouping : fareTypeGrouping
-    +rateCategory : xs:string
+    +rateCategory : string
 }
 solutionFamily +-- fareDetails
 class fareDetails {
-    +qualifier : xs:string
-    +rate : xs:decimal
-    +country : xs:string
-    +fareCategory : xs:string
+    +qualifier : string
+    +rate : decimal
+    +country : string
+    +fareCategory : string
 }
 solutionFamily +-- fareTypeGrouping
 class fareTypeGrouping {
-    +pricingGroup : xs:string
+    +pricingGroup : string
 }
 Fare_MasterPricerTravelBoardSearch +-- passengerInfoGrp
 class passengerInfoGrp {
@@ -116,7 +116,7 @@ class passengerReference {
 }
 passengerReference +-- segmentControlDetails
 class segmentControlDetails {
-    +quantity : xs:decimal
+    +quantity : decimal
 }
 passengerInfoGrp +-- psgDetailsInfo
 class psgDetailsInfo {
@@ -125,8 +125,8 @@ class psgDetailsInfo {
 }
 psgDetailsInfo +-- discountPtc
 class discountPtc {
-    +valueQualifier : xs:string
-    +value : xs:decimal
+    +valueQualifier : string
+    +value : decimal
 }
 psgDetailsInfo +-- flequentFlyerDetails
 class flequentFlyerDetails {
@@ -134,16 +134,16 @@ class flequentFlyerDetails {
 }
 flequentFlyerDetails +-- frequentTravellerDetails
 class frequentTravellerDetails {
-    +carrier : xs:string
-    +number : xs:string
-    +customerReference : xs:string
-    +status : xs:string
-    +tierLevel : xs:string
-    +priorityCode : xs:string
-    +tierDescription : xs:string
-    +companyCode : xs:string
-    +customerValue : xs:decimal
-    +type : xs:string
+    +carrier : string
+    +number : string
+    +customerReference : string
+    +status : string
+    +tierLevel : string
+    +priorityCode : string
+    +tierDescription : string
+    +companyCode : string
+    +customerValue : decimal
+    +type : string
 }
 Fare_MasterPricerTravelBoardSearch +-- fareFamilies
 class fareFamilies {
@@ -154,54 +154,54 @@ class fareFamilies {
 }
 fareFamilies +-- familyInformation
 class familyInformation {
-    +refNumber : xs:decimal
-    +fareFamilyname : xs:string
-    +hierarchy : xs:decimal
+    +refNumber : decimal
+    +fareFamilyname : string
+    +hierarchy : decimal
     +commercialFamilyDetails : commercialFamilyDetails[]
 }
 familyInformation +-- commercialFamilyDetails
 class commercialFamilyDetails {
-    +commercialFamily : xs:string
+    +commercialFamily : string
 }
 fareFamilies +-- familyCriteria
 class familyCriteria {
-    +carrierId : xs:string[]
-    +rdb : xs:string[]
+    +carrierId : string[]
+    +rdb : string[]
     +fareFamilyInfo : fareFamilyInfo
     +fareProductDetail : fareProductDetail[]
     +corporateInfo : corporateInfo[]
     +cabinProduct : cabinProduct[]
-    +cabinProcessingIdentifier : xs:string
+    +cabinProcessingIdentifier : string
     +dateTimeDetails : dateTimeDetails[]
     +otherCriteria : otherCriteria[]
 }
 familyCriteria +-- fareFamilyInfo
 class fareFamilyInfo {
-    +fareFamilyQual : xs:string[]
+    +fareFamilyQual : string[]
 }
 familyCriteria +-- fareProductDetail
 class fareProductDetail {
-    +fareBasis : xs:string
-    +fareType : xs:string[]
+    +fareBasis : string
+    +fareType : string[]
 }
 familyCriteria +-- corporateInfo
 class corporateInfo {
-    +corporateNumberIdentifier : xs:string
-    +corporateName : xs:string
+    +corporateNumberIdentifier : string
+    +corporateName : string
 }
 familyCriteria +-- cabinProduct
 class cabinProduct {
-    +cabinDesignator : xs:string
+    +cabinDesignator : string
 }
 familyCriteria +-- dateTimeDetails
 class dateTimeDetails {
-    +date : xs:string
-    +otherDate : xs:decimal
+    +date : string
+    +otherDate : decimal
 }
 familyCriteria +-- otherCriteria
 class otherCriteria {
-    +name : xs:string
-    +value : xs:string[]
+    +name : string
+    +value : string[]
 }
 fareFamilies +-- fareFamilySegment
 class fareFamilySegment {
@@ -214,48 +214,48 @@ class referenceInfo {
 }
 referenceInfo +-- referencingDetail
 class referencingDetail {
-    +refQualifier : xs:string
-    +refNumber : xs:decimal
+    +refQualifier : string
+    +refNumber : decimal
 }
 fareFamilySegment +-- familyCriteria
 class familyCriteria {
-    +carrierId : xs:string[]
-    +rdb : xs:string[]
+    +carrierId : string[]
+    +rdb : string[]
     +fareFamilyInfo : fareFamilyInfo
     +fareProductDetail : fareProductDetail[]
     +corporateInfo : corporateInfo[]
     +cabinProduct : cabinProduct[]
-    +cabinProcessingIdentifier : xs:string
+    +cabinProcessingIdentifier : string
     +dateTimeDetails : dateTimeDetails[]
     +otherCriteria : otherCriteria[]
 }
 familyCriteria +-- fareFamilyInfo
 class fareFamilyInfo {
-    +fareFamilyQual : xs:string[]
+    +fareFamilyQual : string[]
 }
 familyCriteria +-- fareProductDetail
 class fareProductDetail {
-    +fareBasis : xs:string
-    +fareType : xs:string[]
+    +fareBasis : string
+    +fareType : string[]
 }
 familyCriteria +-- corporateInfo
 class corporateInfo {
-    +corporateNumberIdentifier : xs:string
-    +corporateName : xs:string
+    +corporateNumberIdentifier : string
+    +corporateName : string
 }
 familyCriteria +-- cabinProduct
 class cabinProduct {
-    +cabinDesignator : xs:string
+    +cabinDesignator : string
 }
 familyCriteria +-- dateTimeDetails
 class dateTimeDetails {
-    +date : xs:string
-    +otherDate : xs:decimal
+    +date : string
+    +otherDate : decimal
 }
 familyCriteria +-- otherCriteria
 class otherCriteria {
-    +name : xs:string
-    +value : xs:string[]
+    +name : string
+    +value : string[]
 }
 fareFamilies +-- otherPossibleCriteria
 class otherPossibleCriteria {
@@ -269,47 +269,47 @@ class logicalLink {
 }
 logicalLink +-- booleanExpression
 class booleanExpression {
-    +codeOperator : xs:string
+    +codeOperator : string
 }
 otherPossibleCriteria +-- familyCriteria
 class familyCriteria {
-    +carrierId : xs:string[]
-    +rdb : xs:string[]
+    +carrierId : string[]
+    +rdb : string[]
     +fareFamilyInfo : fareFamilyInfo
     +fareProductDetail : fareProductDetail[]
     +corporateInfo : corporateInfo[]
     +cabinProduct : cabinProduct[]
-    +cabinProcessingIdentifier : xs:string
+    +cabinProcessingIdentifier : string
     +dateTimeDetails : dateTimeDetails[]
     +otherCriteria : otherCriteria[]
 }
 familyCriteria +-- fareFamilyInfo
 class fareFamilyInfo {
-    +fareFamilyQual : xs:string[]
+    +fareFamilyQual : string[]
 }
 familyCriteria +-- fareProductDetail
 class fareProductDetail {
-    +fareBasis : xs:string
-    +fareType : xs:string[]
+    +fareBasis : string
+    +fareType : string[]
 }
 familyCriteria +-- corporateInfo
 class corporateInfo {
-    +corporateNumberIdentifier : xs:string
-    +corporateName : xs:string
+    +corporateNumberIdentifier : string
+    +corporateName : string
 }
 familyCriteria +-- cabinProduct
 class cabinProduct {
-    +cabinDesignator : xs:string
+    +cabinDesignator : string
 }
 familyCriteria +-- dateTimeDetails
 class dateTimeDetails {
-    +date : xs:string
-    +otherDate : xs:decimal
+    +date : string
+    +otherDate : decimal
 }
 familyCriteria +-- otherCriteria
 class otherCriteria {
-    +name : xs:string
-    +value : xs:string[]
+    +name : string
+    +value : string[]
 }
 otherPossibleCriteria +-- fareFamilySegment
 class fareFamilySegment {
@@ -322,48 +322,48 @@ class referenceInfo {
 }
 referenceInfo +-- referencingDetail
 class referencingDetail {
-    +refQualifier : xs:string
-    +refNumber : xs:decimal
+    +refQualifier : string
+    +refNumber : decimal
 }
 fareFamilySegment +-- familyCriteria
 class familyCriteria {
-    +carrierId : xs:string[]
-    +rdb : xs:string[]
+    +carrierId : string[]
+    +rdb : string[]
     +fareFamilyInfo : fareFamilyInfo
     +fareProductDetail : fareProductDetail[]
     +corporateInfo : corporateInfo[]
     +cabinProduct : cabinProduct[]
-    +cabinProcessingIdentifier : xs:string
+    +cabinProcessingIdentifier : string
     +dateTimeDetails : dateTimeDetails[]
     +otherCriteria : otherCriteria[]
 }
 familyCriteria +-- fareFamilyInfo
 class fareFamilyInfo {
-    +fareFamilyQual : xs:string[]
+    +fareFamilyQual : string[]
 }
 familyCriteria +-- fareProductDetail
 class fareProductDetail {
-    +fareBasis : xs:string
-    +fareType : xs:string[]
+    +fareBasis : string
+    +fareType : string[]
 }
 familyCriteria +-- corporateInfo
 class corporateInfo {
-    +corporateNumberIdentifier : xs:string
-    +corporateName : xs:string
+    +corporateNumberIdentifier : string
+    +corporateName : string
 }
 familyCriteria +-- cabinProduct
 class cabinProduct {
-    +cabinDesignator : xs:string
+    +cabinDesignator : string
 }
 familyCriteria +-- dateTimeDetails
 class dateTimeDetails {
-    +date : xs:string
-    +otherDate : xs:decimal
+    +date : string
+    +otherDate : decimal
 }
 familyCriteria +-- otherCriteria
 class otherCriteria {
-    +name : xs:string
-    +value : xs:string[]
+    +name : string
+    +value : string[]
 }
 Fare_MasterPricerTravelBoardSearch +-- fareOptions
 class fareOptions {
@@ -388,37 +388,37 @@ class pricingTickInfo {
 }
 pricingTickInfo +-- pricingTicketing
 class pricingTicketing {
-    +priceType : xs:string[]
+    +priceType : string[]
 }
 pricingTickInfo +-- ticketingDate
 class ticketingDate {
-    +date : xs:string
-    +rtcDate : xs:string
+    +date : string
+    +rtcDate : string
 }
 pricingTickInfo +-- companyId
 class companyId {
-    +value : xs:string
+    +value : string
 }
 pricingTickInfo +-- sellingPoint
 class sellingPoint {
-    +locationId : xs:string
-    +country : xs:string
+    +locationId : string
+    +country : string
 }
 pricingTickInfo +-- ticketingPoint
 class ticketingPoint {
-    +locationId : xs:string
-    +country : xs:string
+    +locationId : string
+    +country : string
 }
 pricingTickInfo +-- journeyOriginPoint
 class journeyOriginPoint {
-    +locationId : xs:string
-    +country : xs:string
+    +locationId : string
+    +country : string
 }
 pricingTickInfo +-- corporateId
 class corporateId {
-    +arcNumber : xs:string
-    +erspNumber : xs:string
-    +iataNumber : xs:string
+    +arcNumber : string
+    +erspNumber : string
+    +iataNumber : string
 }
 fareOptions +-- corporate
 class corporate {
@@ -426,15 +426,15 @@ class corporate {
 }
 corporate +-- corporateId
 class corporateId {
-    +corporateQualifier : xs:string
-    +identity : xs:string[]
+    +corporateQualifier : string
+    +identity : string[]
 }
 fareOptions +-- ticketingPriceScheme
 class ticketingPriceScheme {
-    +referenceNumber : xs:string
-    +name : xs:string
-    +status : xs:string
-    +description : xs:string
+    +referenceNumber : string
+    +name : string
+    +status : string
+    +description : string
 }
 fareOptions +-- feeIdDescription
 class feeIdDescription {
@@ -442,8 +442,8 @@ class feeIdDescription {
 }
 feeIdDescription +-- feeId
 class feeId {
-    +feeType : xs:string
-    +feeIdNumber : xs:string
+    +feeType : string
+    +feeIdNumber : string
 }
 fareOptions +-- conversionRate
 class conversionRate {
@@ -451,8 +451,8 @@ class conversionRate {
 }
 conversionRate +-- conversionRateDetail
 class conversionRateDetail {
-    +conversionType : xs:string
-    +currency : xs:string
+    +conversionType : string
+    +currency : string
 }
 fareOptions +-- formOfPayment
 class formOfPayment {
@@ -460,9 +460,9 @@ class formOfPayment {
 }
 formOfPayment +-- formOfPaymentDetails
 class formOfPaymentDetails {
-    +type : xs:string
-    +chargedAmount : xs:decimal
-    +creditCardNumber : xs:string
+    +type : string
+    +chargedAmount : decimal
+    +creditCardNumber : string
 }
 fareOptions +-- frequentTravellerInfo
 class frequentTravellerInfo {
@@ -470,13 +470,13 @@ class frequentTravellerInfo {
 }
 frequentTravellerInfo +-- frequentTravellerDetails
 class frequentTravellerDetails {
-    +carrier : xs:string
-    +number : xs:string
-    +customerReference : xs:string
-    +tierLevel : xs:string
-    +priorityCode : xs:string
-    +tierDescription : xs:string
-    +type : xs:string
+    +carrier : string
+    +number : string
+    +customerReference : string
+    +tierLevel : string
+    +priorityCode : string
+    +tierDescription : string
+    +type : string
 }
 fareOptions +-- monetaryCabinInfo
 class monetaryCabinInfo {
@@ -484,11 +484,11 @@ class monetaryCabinInfo {
 }
 monetaryCabinInfo +-- moneyAndCabinInfo
 class moneyAndCabinInfo {
-    +amountType : xs:string
-    +amount : xs:decimal
-    +currency : xs:string
-    +locationId : xs:string
-    +cabinClassDesignator : xs:string[]
+    +amountType : string
+    +amount : decimal
+    +currency : string
+    +locationId : string
+    +cabinClassDesignator : string[]
 }
 Fare_MasterPricerTravelBoardSearch +-- priceToBeat
 class priceToBeat {
@@ -497,29 +497,29 @@ class priceToBeat {
 }
 priceToBeat +-- moneyInfo
 class moneyInfo {
-    +qualifier : xs:string
-    +amount : xs:decimal
-    +currency : xs:string
+    +qualifier : string
+    +amount : decimal
+    +currency : string
 }
 priceToBeat +-- additionalMoneyInfo
 class additionalMoneyInfo {
-    +qualifier : xs:string
-    +amount : xs:decimal
-    +currency : xs:string
-    +locationId : xs:string
+    +qualifier : string
+    +amount : decimal
+    +currency : string
+    +locationId : string
 }
 Fare_MasterPricerTravelBoardSearch +-- taxInfo
 class taxInfo {
-    +withholdTaxSurcharge : xs:string
+    +withholdTaxSurcharge : string
     +taxDetail : taxDetail[]
 }
 taxInfo +-- taxDetail
 class taxDetail {
-    +rate : xs:string
-    +country : xs:string
-    +currency : xs:string
-    +type : xs:string
-    +amountQualifier : xs:string
+    +rate : string
+    +country : string
+    +currency : string
+    +type : string
+    +amountQualifier : string
 }
 Fare_MasterPricerTravelBoardSearch +-- travelFlightInfo
 class travelFlightInfo {
@@ -532,47 +532,47 @@ class travelFlightInfo {
 }
 travelFlightInfo +-- cabinId
 class cabinId {
-    +cabinQualifier : xs:string
-    +cabin : xs:string[]
+    +cabinQualifier : string
+    +cabin : string[]
 }
 travelFlightInfo +-- companyIdentity
 class companyIdentity {
-    +carrierQualifier : xs:string
-    +carrierId : xs:string[]
+    +carrierQualifier : string
+    +carrierId : string[]
 }
 travelFlightInfo +-- flightDetail
 class flightDetail {
-    +flightType : xs:string[]
+    +flightType : string[]
 }
 travelFlightInfo +-- inclusionDetail
 class inclusionDetail {
-    +inclusionIdentifier : xs:string
-    +locationId : xs:string
-    +airportCityQualifier : xs:string
+    +inclusionIdentifier : string
+    +locationId : string
+    +airportCityQualifier : string
 }
 travelFlightInfo +-- exclusionDetail
 class exclusionDetail {
-    +exclusionIdentifier : xs:string
-    +locationId : xs:string
-    +airportCityQualifier : xs:string
+    +exclusionIdentifier : string
+    +locationId : string
+    +airportCityQualifier : string
 }
 travelFlightInfo +-- unitNumberDetail
 class unitNumberDetail {
-    +numberOfUnits : xs:decimal
-    +typeOfUnit : xs:string
+    +numberOfUnits : decimal
+    +typeOfUnit : string
 }
 Fare_MasterPricerTravelBoardSearch +-- valueSearch
 class valueSearch {
-    +criteriaName : xs:string
-    +criteriaCode : xs:string
-    +value : xs:string
+    +criteriaName : string
+    +criteriaCode : string
+    +value : string
     +criteriaDetails : criteriaDetails[]
 }
 valueSearch +-- criteriaDetails
 class criteriaDetails {
-    +type : xs:string
-    +value : xs:string
-    +attribute : xs:string[]
+    +type : string
+    +value : string
+    +attribute : string[]
 }
 Fare_MasterPricerTravelBoardSearch +-- buckets
 class buckets {
@@ -581,25 +581,25 @@ class buckets {
 }
 buckets +-- bucketInfo
 class bucketInfo {
-    +number : xs:string
-    +name : xs:string
-    +completion : xs:string
-    +mode : xs:string
-    +valueRef : xs:string
-    +weight : xs:decimal
-    +count : xs:decimal
-    +attributeCount : xs:decimal
+    +number : string
+    +name : string
+    +completion : string
+    +mode : string
+    +valueRef : string
+    +weight : decimal
+    +count : decimal
+    +attributeCount : decimal
 }
 buckets +-- bucketDetails
 class bucketDetails {
-    +code : xs:string
-    +type : xs:string
+    +code : string
+    +type : string
     +attribute : attribute[]
 }
 bucketDetails +-- attribute
 class attribute {
-    +requestedSgt : xs:string
-    +value : xs:string[]
+    +requestedSgt : string
+    +value : string[]
 }
 Fare_MasterPricerTravelBoardSearch +-- itinerary
 class itinerary {
@@ -617,13 +617,13 @@ class itinerary {
 }
 itinerary +-- requestedSegmentRef
 class requestedSegmentRef {
-    +segRef : xs:decimal
+    +segRef : decimal
     +locationForcing : locationForcing[]
 }
 requestedSegmentRef +-- locationForcing
 class locationForcing {
-    +airportCityQualifier : xs:string
-    +segmentNumber : xs:decimal
+    +airportCityQualifier : string
+    +segmentNumber : decimal
 }
 itinerary +-- departureLocalization
 class departureLocalization {
@@ -634,27 +634,27 @@ class departureLocalization {
 }
 departureLocalization +-- departurePoint
 class departurePoint {
-    +distance : xs:decimal
-    +distanceUnit : xs:string
-    +locationId : xs:string
-    +airportCityQualifier : xs:string
-    +latitude : xs:string
-    +longitude : xs:string
+    +distance : decimal
+    +distanceUnit : string
+    +locationId : string
+    +airportCityQualifier : string
+    +latitude : string
+    +longitude : string
 }
 departureLocalization +-- depMultiCity
 class depMultiCity {
-    +locationId : xs:string
-    +airportCityQualifier : xs:string
+    +locationId : string
+    +airportCityQualifier : string
 }
 departureLocalization +-- firstPnrSegmentRef
 class firstPnrSegmentRef {
-    +pnrSegmentTattoo : xs:decimal
-    +pnrSegmentQualifier : xs:string
+    +pnrSegmentTattoo : decimal
+    +pnrSegmentQualifier : string
 }
 departureLocalization +-- attributeDetails
 class attributeDetails {
-    +type : xs:string
-    +value : xs:string[]
+    +type : string
+    +value : string[]
 }
 itinerary +-- arrivalLocalization
 class arrivalLocalization {
@@ -664,22 +664,22 @@ class arrivalLocalization {
 }
 arrivalLocalization +-- arrivalPointDetails
 class arrivalPointDetails {
-    +distance : xs:decimal
-    +distanceUnit : xs:string
-    +locationId : xs:string
-    +airportCityQualifier : xs:string
-    +latitude : xs:string
-    +longitude : xs:string
+    +distance : decimal
+    +distanceUnit : string
+    +locationId : string
+    +airportCityQualifier : string
+    +latitude : string
+    +longitude : string
 }
 arrivalLocalization +-- arrivalMultiCity
 class arrivalMultiCity {
-    +locationId : xs:string
-    +airportCityQualifier : xs:string
+    +locationId : string
+    +airportCityQualifier : string
 }
 arrivalLocalization +-- attributeDetails
 class attributeDetails {
-    +type : xs:string
-    +value : xs:string[]
+    +type : string
+    +value : string[]
 }
 itinerary +-- timeDetails
 class timeDetails {
@@ -689,22 +689,22 @@ class timeDetails {
 }
 timeDetails +-- firstDateTimeDetail
 class firstDateTimeDetail {
-    +timeQualifier : xs:string
-    +date : xs:string
-    +time : xs:string
-    +timeWindow : xs:string
+    +timeQualifier : string
+    +date : string
+    +time : string
+    +timeWindow : string
 }
 timeDetails +-- rangeOfDate
 class rangeOfDate {
-    +rangeQualifier : xs:string
-    +dayInterval : xs:decimal
-    +timeAtdestination : xs:string
+    +rangeQualifier : string
+    +dayInterval : decimal
+    +timeAtdestination : string
 }
 timeDetails +-- tripDetails
 class tripDetails {
-    +flexibilityQualifier : xs:string
-    +tripInterval : xs:decimal
-    +tripDuration : xs:decimal
+    +flexibilityQualifier : string
+    +tripInterval : decimal
+    +tripDuration : decimal
 }
 itinerary +-- flightInfo
 class flightInfo {
@@ -717,34 +717,34 @@ class flightInfo {
 }
 flightInfo +-- cabinId
 class cabinId {
-    +cabinQualifier : xs:string
-    +cabin : xs:string[]
+    +cabinQualifier : string
+    +cabin : string[]
 }
 flightInfo +-- companyIdentity
 class companyIdentity {
-    +carrierQualifier : xs:string
-    +carrierId : xs:string[]
+    +carrierQualifier : string
+    +carrierId : string[]
 }
 flightInfo +-- flightDetail
 class flightDetail {
-    +flightType : xs:string[]
+    +flightType : string[]
 }
 flightInfo +-- inclusionDetail
 class inclusionDetail {
-    +inclusionIdentifier : xs:string
-    +locationId : xs:string
-    +airportCityQualifier : xs:string
+    +inclusionIdentifier : string
+    +locationId : string
+    +airportCityQualifier : string
 }
 flightInfo +-- exclusionDetail
 class exclusionDetail {
-    +exclusionIdentifier : xs:string
-    +locationId : xs:string
-    +airportCityQualifier : xs:string
+    +exclusionIdentifier : string
+    +locationId : string
+    +airportCityQualifier : string
 }
 flightInfo +-- unitNumberDetail
 class unitNumberDetail {
-    +numberOfUnits : xs:decimal
-    +typeOfUnit : xs:string
+    +numberOfUnits : decimal
+    +typeOfUnit : string
 }
 itinerary +-- familyInformation
 class familyInformation {
@@ -752,20 +752,20 @@ class familyInformation {
 }
 familyInformation +-- commercialFamilyDetails
 class commercialFamilyDetails {
-    +commercialFamily : xs:string
+    +commercialFamily : string
 }
 itinerary +-- valueSearch
 class valueSearch {
-    +criteriaName : xs:string
-    +criteriaCode : xs:string
-    +value : xs:string
+    +criteriaName : string
+    +criteriaCode : string
+    +value : string
     +criteriaDetails : criteriaDetails[]
 }
 valueSearch +-- criteriaDetails
 class criteriaDetails {
-    +type : xs:string
-    +value : xs:string
-    +attribute : xs:string[]
+    +type : string
+    +value : string
+    +attribute : string[]
 }
 itinerary +-- groupOfFlights
 class groupOfFlights {
@@ -776,13 +776,13 @@ class groupOfFlights {
 groupOfFlights +-- propFlightGrDetail
 class propFlightGrDetail {
     +flightProposal : flightProposal[]
-    +flightCharacteristic : xs:string
-    +majCabin : xs:string
+    +flightCharacteristic : string
+    +majCabin : string
 }
 propFlightGrDetail +-- flightProposal
 class flightProposal {
-    +ref : xs:string
-    +unitQualifier : xs:string
+    +ref : string
+    +unitQualifier : string
 }
 groupOfFlights +-- priceToBeat
 class priceToBeat {
@@ -791,16 +791,16 @@ class priceToBeat {
 }
 priceToBeat +-- moneyInfo
 class moneyInfo {
-    +qualifier : xs:string
-    +amount : xs:decimal
-    +currency : xs:string
+    +qualifier : string
+    +amount : decimal
+    +currency : string
 }
 priceToBeat +-- additionalMoneyInfo
 class additionalMoneyInfo {
-    +qualifier : xs:string
-    +amount : xs:decimal
-    +currency : xs:string
-    +locationId : xs:string
+    +qualifier : string
+    +amount : decimal
+    +currency : string
+    +locationId : string
 }
 groupOfFlights +-- flightDetails
 class flightDetails {
@@ -818,50 +818,50 @@ class flightInformation {
     +productDateTime : productDateTime
     +location : location[]
     +companyId : companyId
-    +flightOrtrainNumber : xs:string
+    +flightOrtrainNumber : string
     +productDetail : productDetail
     +addProductDetail : addProductDetail
     +attributeDetails : attributeDetails[]
 }
 flightInformation +-- productDateTime
 class productDateTime {
-    +dateOfDeparture : xs:string
-    +timeOfDeparture : xs:string
-    +dateOfArrival : xs:string
-    +timeOfArrival : xs:string
-    +dateVariation : xs:string
+    +dateOfDeparture : string
+    +timeOfDeparture : string
+    +dateOfArrival : string
+    +timeOfArrival : string
+    +dateVariation : string
 }
 flightInformation +-- location
 class location {
-    +locationId : xs:string
-    +airportCityQualifier : xs:string
-    +terminal : xs:string
+    +locationId : string
+    +airportCityQualifier : string
+    +terminal : string
 }
 flightInformation +-- companyId
 class companyId {
-    +marketingCarrier : xs:string
-    +operatingCarrier : xs:string
+    +marketingCarrier : string
+    +operatingCarrier : string
 }
 flightInformation +-- productDetail
 class productDetail {
-    +equipmentType : xs:string
-    +operatingDay : xs:string
-    +techStopNumber : xs:decimal
-    +locationId : xs:string[]
+    +equipmentType : string
+    +operatingDay : string
+    +techStopNumber : decimal
+    +locationId : string[]
 }
 flightInformation +-- addProductDetail
 class addProductDetail {
-    +lastSeatAvailable : xs:string
-    +levelOfAccess : xs:string
-    +electronicTicketing : xs:string
-    +operationalSuffix : xs:string
-    +productDetailQualifier : xs:string
-    +flightCharacteristic : xs:string[]
+    +lastSeatAvailable : string
+    +levelOfAccess : string
+    +electronicTicketing : string
+    +operationalSuffix : string
+    +productDetailQualifier : string
+    +flightCharacteristic : string[]
 }
 flightInformation +-- attributeDetails
 class attributeDetails {
-    +attributeType : xs:string
-    +attributeDescription : xs:string
+    +attributeType : string
+    +attributeDescription : string
 }
 flightDetails +-- avlInfo
 class avlInfo {
@@ -870,27 +870,27 @@ class avlInfo {
 }
 avlInfo +-- cabinProduct
 class cabinProduct {
-    +rbd : xs:string
-    +bookingModifier : xs:string
-    +cabin : xs:string
-    +avlStatus : xs:string
+    +rbd : string
+    +bookingModifier : string
+    +cabin : string
+    +avlStatus : string
 }
 avlInfo +-- contextDetails
 class contextDetails {
-    +avl : xs:string[]
+    +avl : string[]
 }
 flightDetails +-- technicalStop
 class technicalStop {
     +stopDetails : stopDetails[]
-    +Dummy.NET : xs:string
+    +Dummy.NET : string
 }
 technicalStop +-- stopDetails
 class stopDetails {
-    +dateQualifier : xs:string
-    +date : xs:string
-    +firstTime : xs:string
-    +equipementType : xs:string
-    +locationId : xs:string
+    +dateQualifier : string
+    +date : string
+    +firstTime : string
+    +equipementType : string
+    +locationId : string
 }
 flightDetails +-- commercialAgreement
 class commercialAgreement {
@@ -899,27 +899,27 @@ class commercialAgreement {
 }
 commercialAgreement +-- codeshareDetails
 class codeshareDetails {
-    +codeShareType : xs:string
-    +airlineDesignator : xs:string
-    +flightNumber : xs:decimal
+    +codeShareType : string
+    +airlineDesignator : string
+    +flightNumber : decimal
 }
 commercialAgreement +-- otherCodeshareDetails
 class otherCodeshareDetails {
-    +codeShareType : xs:string
-    +airlineDesignator : xs:string
-    +flightNumber : xs:decimal
+    +codeShareType : string
+    +airlineDesignator : string
+    +flightNumber : decimal
 }
 flightDetails +-- addInfo
 class addInfo {
-    +status : xs:string[]
+    +status : string[]
     +dateTimePeriodDetails : dateTimePeriodDetails
-    +referenceNumber : xs:string
-    +productIdentification : xs:string[]
+    +referenceNumber : string
+    +productIdentification : string[]
 }
 addInfo +-- dateTimePeriodDetails
 class dateTimePeriodDetails {
-    +qualifier : xs:string
-    +value : xs:string
+    +qualifier : string
+    +value : string
 }
 flightDetails +-- terminalEquipmentDetails
 class terminalEquipmentDetails {
@@ -930,42 +930,42 @@ class terminalEquipmentDetails {
 }
 terminalEquipmentDetails +-- legDetails
 class legDetails {
-    +equipment : xs:string
-    +duration : xs:decimal
-    +complexingFlightIndicator : xs:string
+    +equipment : string
+    +duration : decimal
+    +complexingFlightIndicator : string
 }
 terminalEquipmentDetails +-- departureStationInfo
 class departureStationInfo {
-    +terminal : xs:string
+    +terminal : string
 }
 terminalEquipmentDetails +-- arrivalStationInfo
 class arrivalStationInfo {
-    +terminal : xs:string
+    +terminal : string
 }
 terminalEquipmentDetails +-- mileageTimeDetails
 class mileageTimeDetails {
-    +elapsedGroundTime : xs:decimal
+    +elapsedGroundTime : decimal
 }
 flightDetails +-- reservationInfo
 class reservationInfo {
-    +booking : xs:string
-    +identifier : xs:string
-    +status : xs:string
-    +itemNumber : xs:decimal
+    +booking : string
+    +identifier : string
+    +status : string
+    +itemNumber : decimal
     +dateTimeDetails : dateTimeDetails
-    +designator : xs:string
-    +movementType : xs:string
+    +designator : string
+    +movementType : string
     +productTypeDetails : productTypeDetails
 }
 reservationInfo +-- dateTimeDetails
 class dateTimeDetails {
-    +date : xs:string
-    +time : xs:string
+    +date : string
+    +time : string
 }
 reservationInfo +-- productTypeDetails
 class productTypeDetails {
-    +sequenceNumber : xs:string
-    +availabilityContext : xs:string
+    +sequenceNumber : string
+    +availabilityContext : string
 }
 flightDetails +-- priceToBeat
 class priceToBeat {
@@ -974,16 +974,16 @@ class priceToBeat {
 }
 priceToBeat +-- moneyInfo
 class moneyInfo {
-    +qualifier : xs:string
-    +amount : xs:decimal
-    +currency : xs:string
+    +qualifier : string
+    +amount : decimal
+    +currency : string
 }
 priceToBeat +-- additionalMoneyInfo
 class additionalMoneyInfo {
-    +qualifier : xs:string
-    +amount : xs:decimal
-    +currency : xs:string
-    +locationId : xs:string
+    +qualifier : string
+    +amount : decimal
+    +currency : string
+    +locationId : string
 }
 itinerary +-- flightInfoPNR
 class flightInfoPNR {
@@ -1008,32 +1008,32 @@ class travelResponseDetails {
 }
 travelResponseDetails +-- flightDate
 class flightDate {
-    +departureDate : xs:string
-    +departureTime : xs:string
-    +arrivalDate : xs:string
-    +arrivalTime : xs:string
-    +dateVariation : xs:string
+    +departureDate : string
+    +departureTime : string
+    +arrivalDate : string
+    +arrivalTime : string
+    +dateVariation : string
 }
 travelResponseDetails +-- boardPointDetails
 class boardPointDetails {
-    +trueLocationId : xs:string
+    +trueLocationId : string
 }
 travelResponseDetails +-- offpointDetails
 class offpointDetails {
-    +trueLocationId : xs:string
+    +trueLocationId : string
 }
 travelResponseDetails +-- companyDetails
 class companyDetails {
-    +marketingCompany : xs:string
+    +marketingCompany : string
 }
 travelResponseDetails +-- flightIdentification
 class flightIdentification {
-    +flightNumber : xs:decimal
-    +operationalSuffix : xs:string
+    +flightNumber : decimal
+    +operationalSuffix : string
 }
 travelResponseDetails +-- flightTypeDetails
 class flightTypeDetails {
-    +flightIndicator : xs:string[]
+    +flightIndicator : string[]
 }
 flightInfoPNR +-- timeTableDate
 class timeTableDate {
@@ -1043,20 +1043,20 @@ class timeTableDate {
 }
 timeTableDate +-- beginDateTime
 class beginDateTime {
-    +year : xs:string
-    +month : xs:decimal
-    +day : xs:decimal
+    +year : string
+    +month : decimal
+    +day : decimal
 }
 timeTableDate +-- endDateTime
 class endDateTime {
-    +year : xs:string
-    +month : xs:decimal
-    +day : xs:decimal
+    +year : string
+    +month : decimal
+    +day : decimal
 }
 timeTableDate +-- frequency
 class frequency {
-    +qualifier : xs:string
-    +value : xs:string[]
+    +qualifier : string
+    +value : string[]
 }
 flightInfoPNR +-- terminalEquipmentDetails
 class terminalEquipmentDetails {
@@ -1067,21 +1067,21 @@ class terminalEquipmentDetails {
 }
 terminalEquipmentDetails +-- legDetails
 class legDetails {
-    +equipment : xs:string
-    +duration : xs:decimal
-    +complexingFlightIndicator : xs:string
+    +equipment : string
+    +duration : decimal
+    +complexingFlightIndicator : string
 }
 terminalEquipmentDetails +-- departureStationInfo
 class departureStationInfo {
-    +terminal : xs:string
+    +terminal : string
 }
 terminalEquipmentDetails +-- arrivalStationInfo
 class arrivalStationInfo {
-    +terminal : xs:string
+    +terminal : string
 }
 terminalEquipmentDetails +-- mileageTimeDetails
 class mileageTimeDetails {
-    +elapsedGroundTime : xs:decimal
+    +elapsedGroundTime : decimal
 }
 flightInfoPNR +-- codeshareData
 class codeshareData {
@@ -1090,29 +1090,29 @@ class codeshareData {
 }
 codeshareData +-- codeshareDetails
 class codeshareDetails {
-    +transportStageQualifier : xs:string
-    +airlineDesignator : xs:string
-    +flightNumber : xs:decimal
-    +operationalSuffix : xs:string
+    +transportStageQualifier : string
+    +airlineDesignator : string
+    +flightNumber : decimal
+    +operationalSuffix : string
 }
 codeshareData +-- otherCodeshareDetails
 class otherCodeshareDetails {
-    +transportStageQualifier : xs:string
-    +airlineDesignator : xs:string
-    +flightNumber : xs:decimal
-    +operationalSuffix : xs:string
+    +transportStageQualifier : string
+    +airlineDesignator : string
+    +flightNumber : decimal
+    +operationalSuffix : string
 }
 flightInfoPNR +-- disclosure
 class disclosure {
     +freeTextDetails : freeTextDetails
-    +freeText : xs:string
+    +freeText : string
 }
 disclosure +-- freeTextDetails
 class freeTextDetails {
-    +textSubjectQualifier : xs:string
-    +informationType : xs:string
-    +source : xs:string
-    +encoding : xs:string
+    +textSubjectQualifier : string
+    +informationType : string
+    +source : string
+    +encoding : string
 }
 flightInfoPNR +-- stopDetails
 class stopDetails {
@@ -1120,7 +1120,7 @@ class stopDetails {
 }
 stopDetails +-- routingDetails
 class routingDetails {
-    +station : xs:string
+    +station : string
 }
 flightInfoPNR +-- trafficRestrictionData
 class trafficRestrictionData {
@@ -1128,28 +1128,28 @@ class trafficRestrictionData {
 }
 trafficRestrictionData +-- trafficRestrictionDetails
 class trafficRestrictionDetails {
-    +code : xs:string
+    +code : string
 }
 flightInfoPNR +-- reservationInfo
 class reservationInfo {
-    +booking : xs:string
-    +identifier : xs:string
-    +status : xs:string
-    +itemNumber : xs:decimal
+    +booking : string
+    +identifier : string
+    +status : string
+    +itemNumber : decimal
     +dateTimeDetails : dateTimeDetails
-    +designator : xs:string
-    +movementType : xs:string
+    +designator : string
+    +movementType : string
     +productTypeDetails : productTypeDetails
 }
 reservationInfo +-- dateTimeDetails
 class dateTimeDetails {
-    +date : xs:string
-    +time : xs:string
+    +date : string
+    +time : string
 }
 reservationInfo +-- productTypeDetails
 class productTypeDetails {
-    +sequenceNumber : xs:string
-    +availabilityContext : xs:string
+    +sequenceNumber : string
+    +availabilityContext : string
 }
 flightInfoPNR +-- incidentalStopInfo
 class incidentalStopInfo {
@@ -1161,24 +1161,24 @@ class dateTimeInfo {
 }
 dateTimeInfo +-- dateTimeDetails
 class dateTimeDetails {
-    +qualifier : xs:string
-    +date : xs:string
-    +time : xs:string
-    +qualifier2 : xs:string
-    +reserved1 : xs:string
-    +reserved2 : xs:string
+    +qualifier : string
+    +date : string
+    +time : string
+    +qualifier2 : string
+    +reserved1 : string
+    +reserved2 : string
 }
 itinerary +-- requestedSegmentAction
 class requestedSegmentAction {
-    +actionRequestCode : xs:string
+    +actionRequestCode : string
     +productDetails : productDetails
 }
 requestedSegmentAction +-- productDetails
 class productDetails {
-    +flightNumber : xs:string
-    +bookingClass : xs:string
-    +operationalSuffix : xs:string
-    +modifier : xs:string[]
+    +flightNumber : string
+    +bookingClass : string
+    +operationalSuffix : string
+    +modifier : string[]
 }
 itinerary +-- attributes
 class attributes {
@@ -1186,8 +1186,8 @@ class attributes {
 }
 attributes +-- attributeDetails
 class attributeDetails {
-    +attributeType : xs:string
-    +attributeDescription : xs:string
+    +attributeType : string
+    +attributeDescription : string
 }
 Fare_MasterPricerTravelBoardSearch +-- ticketChangeInfo
 class ticketChangeInfo {
@@ -1200,7 +1200,7 @@ class ticketNumberDetails {
 }
 ticketNumberDetails +-- documentDetails
 class documentDetails {
-    +number : xs:string
+    +number : string
 }
 ticketChangeInfo +-- ticketRequestedSegments
 class ticketRequestedSegments {
@@ -1209,15 +1209,15 @@ class ticketRequestedSegments {
 }
 ticketRequestedSegments +-- actionIdentification
 class actionIdentification {
-    +actionRequestCode : xs:string
+    +actionRequestCode : string
     +productDetails : productDetails
 }
 actionIdentification +-- productDetails
 class productDetails {
-    +flightNumber : xs:string
-    +bookingClass : xs:string
-    +operationalSuffix : xs:string
-    +modifier : xs:string[]
+    +flightNumber : string
+    +bookingClass : string
+    +operationalSuffix : string
+    +modifier : string[]
 }
 ticketRequestedSegments +-- connectPointDetails
 class connectPointDetails {
@@ -1225,7 +1225,7 @@ class connectPointDetails {
 }
 connectPointDetails +-- connectionDetails
 class connectionDetails {
-    +location : xs:string
+    +location : string
 }
 Fare_MasterPricerTravelBoardSearch +-- combinationFareFamilies
 class combinationFareFamilies {
@@ -1239,10 +1239,10 @@ class itemFFCNumber {
 }
 itemFFCNumber +-- itemNumberId
 class itemNumberId {
-    +number : xs:string
-    +type : xs:string
-    +qualifier : xs:string
-    +responsibleAgency : xs:string
+    +number : string
+    +type : string
+    +qualifier : string
+    +responsibleAgency : string
 }
 combinationFareFamilies +-- nbOfUnits
 class nbOfUnits {
@@ -1250,18 +1250,18 @@ class nbOfUnits {
 }
 nbOfUnits +-- unitNumberDetail
 class unitNumberDetail {
-    +numberOfUnits : xs:decimal
-    +typeOfUnit : xs:string
+    +numberOfUnits : decimal
+    +typeOfUnit : string
 }
 combinationFareFamilies +-- referenceInfo
 class referenceInfo {
     +referencingDetail : referencingDetail[]
-    +Dummy.NET : xs:string
+    +Dummy.NET : string
 }
 referenceInfo +-- referencingDetail
 class referencingDetail {
-    +refQualifier : xs:string
-    +refNumber : xs:decimal
+    +refQualifier : string
+    +refNumber : decimal
 }
 Fare_MasterPricerTravelBoardSearch +-- feeOption
 class feeOption {
@@ -1276,13 +1276,13 @@ class feeTypeInfo {
 }
 feeTypeInfo +-- carrierFeeDetails
 class carrierFeeDetails {
-    +type : xs:string
-    +optionInformation : xs:string
+    +type : string
+    +optionInformation : string
 }
 feeTypeInfo +-- otherSelectionDetails
 class otherSelectionDetails {
-    +option : xs:string
-    +optionInformation : xs:string
+    +option : string
+    +optionInformation : string
 }
 feeOption +-- rateTax
 class rateTax {
@@ -1290,9 +1290,9 @@ class rateTax {
 }
 rateTax +-- monetaryDetails
 class monetaryDetails {
-    +typeQualifier : xs:string
-    +amount : xs:string
-    +currency : xs:string
+    +typeQualifier : string
+    +amount : string
+    +currency : string
 }
 feeOption +-- feeDetails
 class feeDetails {
@@ -1307,12 +1307,12 @@ class feeInfo {
 }
 feeInfo +-- dataTypeInformation
 class dataTypeInformation {
-    +subType : xs:string
-    +option : xs:string
+    +subType : string
+    +option : string
 }
 feeInfo +-- dataInformation
 class dataInformation {
-    +indicator : xs:string
+    +indicator : string
 }
 feeDetails +-- associatedAmounts
 class associatedAmounts {
@@ -1320,10 +1320,10 @@ class associatedAmounts {
 }
 associatedAmounts +-- monetaryDetails
 class monetaryDetails {
-    +typeQualifier : xs:string
-    +amount : xs:string
-    +currency : xs:string
-    +location : xs:string
+    +typeQualifier : string
+    +amount : string
+    +currency : string
+    +location : string
 }
 feeDetails +-- feeDescriptionGrp
 class feeDescriptionGrp {
@@ -1337,20 +1337,20 @@ class itemNumberInfo {
 }
 itemNumberInfo +-- itemNumberDetails
 class itemNumberDetails {
-    +number : xs:string
-    +type : xs:string
-    +qualifier : xs:string
-    +responsibleAgency : xs:string
+    +number : string
+    +type : string
+    +qualifier : string
+    +responsibleAgency : string
 }
 feeDescriptionGrp +-- serviceAttributesInfo
 class serviceAttributesInfo {
-    +attributeQualifier : xs:string
+    +attributeQualifier : string
     +attributeDetails : attributeDetails[]
 }
 serviceAttributesInfo +-- attributeDetails
 class attributeDetails {
-    +attributeType : xs:string
-    +attributeDescription : xs:string
+    +attributeType : string
+    +attributeDescription : string
 }
 feeDescriptionGrp +-- serviceDescriptionInfo
 class serviceDescriptionInfo {
@@ -1359,17 +1359,17 @@ class serviceDescriptionInfo {
 }
 serviceDescriptionInfo +-- serviceRequirementsInfo
 class serviceRequirementsInfo {
-    +serviceClassification : xs:string
-    +serviceStatus : xs:string
-    +serviceNumberOfInstances : xs:decimal
-    +serviceMarketingCarrier : xs:string
-    +serviceGroup : xs:string
-    +serviceSubGroup : xs:string
-    +serviceFreeText : xs:string[]
+    +serviceClassification : string
+    +serviceStatus : string
+    +serviceNumberOfInstances : decimal
+    +serviceMarketingCarrier : string
+    +serviceGroup : string
+    +serviceSubGroup : string
+    +serviceFreeText : string[]
 }
 serviceDescriptionInfo +-- seatDetails
 class seatDetails {
-    +seatCharacteristics : xs:string[]
+    +seatCharacteristics : string[]
 }
 Fare_MasterPricerTravelBoardSearch +-- officeIdDetails
 class officeIdDetails {
@@ -1384,15 +1384,15 @@ class officeIdDetails {
 officeIdDetails +-- officeIdInformation
 class officeIdInformation {
     +officeIdentification : officeIdentification
-    +officeType : xs:string
-    +officeCode : xs:string
+    +officeType : string
+    +officeCode : string
 }
 officeIdInformation +-- officeIdentification
 class officeIdentification {
-    +officeName : xs:decimal
-    +agentSignin : xs:string
-    +confidentialOffice : xs:string
-    +otherOffice : xs:string
+    +officeName : decimal
+    +agentSignin : string
+    +confidentialOffice : string
+    +otherOffice : string
 }
 officeIdDetails +-- nbOfUnits
 class nbOfUnits {
@@ -1400,8 +1400,8 @@ class nbOfUnits {
 }
 nbOfUnits +-- unitNumberDetail
 class unitNumberDetail {
-    +numberOfUnits : xs:decimal
-    +typeOfUnit : xs:string
+    +numberOfUnits : decimal
+    +typeOfUnit : string
 }
 officeIdDetails +-- uidOption
 class uidOption {
@@ -1409,8 +1409,8 @@ class uidOption {
 }
 uidOption +-- attributeDetails
 class attributeDetails {
-    +attributeType : xs:string
-    +attributeDescription : xs:string
+    +attributeType : string
+    +attributeDescription : string
 }
 officeIdDetails +-- pricingTickInfo
 class pricingTickInfo {
@@ -1424,37 +1424,37 @@ class pricingTickInfo {
 }
 pricingTickInfo +-- pricingTicketing
 class pricingTicketing {
-    +priceType : xs:string[]
+    +priceType : string[]
 }
 pricingTickInfo +-- ticketingDate
 class ticketingDate {
-    +date : xs:string
-    +rtcDate : xs:string
+    +date : string
+    +rtcDate : string
 }
 pricingTickInfo +-- companyId
 class companyId {
-    +value : xs:string
+    +value : string
 }
 pricingTickInfo +-- sellingPoint
 class sellingPoint {
-    +locationId : xs:string
-    +country : xs:string
+    +locationId : string
+    +country : string
 }
 pricingTickInfo +-- ticketingPoint
 class ticketingPoint {
-    +locationId : xs:string
-    +country : xs:string
+    +locationId : string
+    +country : string
 }
 pricingTickInfo +-- journeyOriginPoint
 class journeyOriginPoint {
-    +locationId : xs:string
-    +country : xs:string
+    +locationId : string
+    +country : string
 }
 pricingTickInfo +-- corporateId
 class corporateId {
-    +arcNumber : xs:string
-    +erspNumber : xs:string
-    +iataNumber : xs:string
+    +arcNumber : string
+    +erspNumber : string
+    +iataNumber : string
 }
 officeIdDetails +-- corporateFareInfo
 class corporateFareInfo {
@@ -1462,8 +1462,8 @@ class corporateFareInfo {
 }
 corporateFareInfo +-- corporateFareIdentifiers
 class corporateFareIdentifiers {
-    +fareQualifier : xs:string
-    +identifyNumber : xs:string[]
+    +fareQualifier : string
+    +identifyNumber : string[]
 }
 officeIdDetails +-- travelFlightInfo
 class travelFlightInfo {
@@ -1476,34 +1476,34 @@ class travelFlightInfo {
 }
 travelFlightInfo +-- cabinId
 class cabinId {
-    +cabinQualifier : xs:string
-    +cabin : xs:string[]
+    +cabinQualifier : string
+    +cabin : string[]
 }
 travelFlightInfo +-- companyIdentity
 class companyIdentity {
-    +carrierQualifier : xs:string
-    +carrierId : xs:string[]
+    +carrierQualifier : string
+    +carrierId : string[]
 }
 travelFlightInfo +-- flightDetail
 class flightDetail {
-    +flightType : xs:string[]
+    +flightType : string[]
 }
 travelFlightInfo +-- inclusionDetail
 class inclusionDetail {
-    +inclusionIdentifier : xs:string
-    +locationId : xs:string
-    +airportCityQualifier : xs:string
+    +inclusionIdentifier : string
+    +locationId : string
+    +airportCityQualifier : string
 }
 travelFlightInfo +-- exclusionDetail
 class exclusionDetail {
-    +exclusionIdentifier : xs:string
-    +locationId : xs:string
-    +airportCityQualifier : xs:string
+    +exclusionIdentifier : string
+    +locationId : string
+    +airportCityQualifier : string
 }
 travelFlightInfo +-- unitNumberDetail
 class unitNumberDetail {
-    +numberOfUnits : xs:decimal
-    +typeOfUnit : xs:string
+    +numberOfUnits : decimal
+    +typeOfUnit : string
 }
 officeIdDetails +-- airlineDistributionDetails
 class airlineDistributionDetails {
@@ -1512,13 +1512,13 @@ class airlineDistributionDetails {
 }
 airlineDistributionDetails +-- requestedSegmentRef
 class requestedSegmentRef {
-    +segRef : xs:decimal
+    +segRef : decimal
     +locationForcing : locationForcing[]
 }
 requestedSegmentRef +-- locationForcing
 class locationForcing {
-    +airportCityQualifier : xs:string
-    +segmentNumber : xs:decimal
+    +airportCityQualifier : string
+    +segmentNumber : decimal
 }
 airlineDistributionDetails +-- flightInfo
 class flightInfo {
@@ -1531,34 +1531,34 @@ class flightInfo {
 }
 flightInfo +-- cabinId
 class cabinId {
-    +cabinQualifier : xs:string
-    +cabin : xs:string[]
+    +cabinQualifier : string
+    +cabin : string[]
 }
 flightInfo +-- companyIdentity
 class companyIdentity {
-    +carrierQualifier : xs:string
-    +carrierId : xs:string[]
+    +carrierQualifier : string
+    +carrierId : string[]
 }
 flightInfo +-- flightDetail
 class flightDetail {
-    +flightType : xs:string[]
+    +flightType : string[]
 }
 flightInfo +-- inclusionDetail
 class inclusionDetail {
-    +inclusionIdentifier : xs:string
-    +locationId : xs:string
-    +airportCityQualifier : xs:string
+    +inclusionIdentifier : string
+    +locationId : string
+    +airportCityQualifier : string
 }
 flightInfo +-- exclusionDetail
 class exclusionDetail {
-    +exclusionIdentifier : xs:string
-    +locationId : xs:string
-    +airportCityQualifier : xs:string
+    +exclusionIdentifier : string
+    +locationId : string
+    +airportCityQualifier : string
 }
 flightInfo +-- unitNumberDetail
 class unitNumberDetail {
-    +numberOfUnits : xs:decimal
-    +typeOfUnit : xs:string
+    +numberOfUnits : decimal
+    +typeOfUnit : string
 }
 
 @enduml
