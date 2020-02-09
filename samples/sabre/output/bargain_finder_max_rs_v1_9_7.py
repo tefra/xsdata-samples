@@ -1456,7 +1456,7 @@ class ErrorType(FreeTextType):
     """Standard way to indicate that an error occurred during the processing of an
     OTA message.
 
-    :ivar type: The Error element MUST contain the Type attribute that uses a recommended set of values to indicate the error type. The validating XSD can expect to accept values that it has NOT been explicitly coded for and process them by using Type ="Unknown". Refer to OTA Code List Error Warning Type (EWT).
+    :ivar type: The Error element MUST contain the Type attribute that uses a recommended set of values to indicate the error type. The validating XSD can expect to accept values that it has NOT been explicitly coded for and process them by using Type ="Unknown".  Refer to OTA Code List Error Warning Type (EWT).
     :ivar short_text:
     :ivar code: If present, this refers to a table of coded values exchanged between applications to identify errors or warnings. Refer to OTA Code List Error Codes (ERR).
     :ivar doc_url: If present, this URL refers to an online description of the error that occurred.
@@ -1464,7 +1464,7 @@ class ErrorType(FreeTextType):
     :ivar tag: If present, this attribute may identify an unknown or misspelled tag that caused an error in processing. It is recommended that the Tag attribute use XPath notation to identify the location of a tag in the event that more than one tag of the same name is present in the document. Alternatively, the tag name alone can be used to identify missing data [Type=ReqFieldMissing].
     :ivar record_id: If present, this attribute allows for batch processing and the identification of the record that failed amongst a group of records.
     :ivar message_class: If present specify the message class.
-    :ivar node_list: An XPath expression that selects all the nodes whose data caused this error. Further, this expression should have an additional contraint which contains the data of the node. This will provide the offending data back to systems that cannot maintain the original message.
+    :ivar node_list: An XPath expression that selects all the nodes whose data caused this error.  Further, this expression should have an   additional contraint which contains the data of the node.  This will provide the offending data back to systems that cannot maintain the original message.
     """
     type: Optional[str] = field(
         default=None,
@@ -1638,10 +1638,10 @@ class OperatingAirlineType(CompanyNameType):
 @dataclass
 class RuleInfoType:
     """Contains summary fare rule information as well as detailed Rule Information
-    for Fare Basis Codes. Information may be actual rules data or the results
+    for Fare Basis Codes.  Information may be actual rules data or the results
     returned from a rules-based inquiry.
 
-    :ivar res_ticketing_rules: General container for rules regarding fare reservation, ticketing and sale restrictions
+    :ivar res_ticketing_rules: General container for rules regarding fare reservation,  ticketing and sale restrictions
     :ivar length_of_stay_rules: Rules providing minimum or maximum stay restrictions.
     """
     res_ticketing_rules: Optional["RuleInfoType.ResTicketingRules"] = field(
@@ -1711,7 +1711,8 @@ class TicketingInfoRsType:
     :ivar e_ticket_number: If reservation is electronically ticketed at time of booking, this is the field for the eTicket number.
     :ivar ticket_time_limit: TicketTimeLimit - Indicates the ticketing arrangement, and allows for the requirement that an itinerary must be ticketed by a certain date and time.
     :ivar ticket_type: TicketType - Indicates the type of ticket (Paper, eTicket)
-    :ivar valid_interline: ValidInterline - Indicates validation of interline ticketing aggrement, possible values (Yes, No, Unknown), default=unknown
+    :ivar valid_interline: ValidInterline - Indicates validation of interline ticketing aggrement,
+            possible values (Yes, No, Unknown), default=unknown
     """
     class Meta:
         name = "TicketingInfoRS_Type"
@@ -1836,7 +1837,7 @@ class WarningType(FreeTextType):
     :ivar tag: If present, this attribute may identify an unknown or misspelled tag that caused an error in processing. It is recommended that the Tag attribute use XPath notation to identify the location of a tag in the event that more than one tag of the same name is present in the document. Alternatively, the tag name alone can be used to identify missing data [Type=ReqFieldMissing].
     :ivar record_id: If present, this attribute allows for batch processing and the identification of the record that failed amongst a group of records.
     :ivar message_class: If present specify the message class.
-    :ivar type: The Warning element MUST contain the Type attribute that uses a recommended set of values to indicate the warning type. The validating XSD can expect to accept values that it has NOT been explicitly coded for and process them by using Type ="Unknown". Refer to OTA Code List Error Warning Type (EWT).
+    :ivar type: The Warning element MUST contain the Type attribute that uses a recommended set of values to indicate the warning type. The validating XSD can expect to accept values that it has NOT been explicitly coded for and process them by using Type ="Unknown".  Refer to OTA Code List Error Warning Type (EWT).
     """
     short_text: Optional[str] = field(
         default=None,
@@ -1907,11 +1908,11 @@ class BookFlightSegmentType:
 
     :ivar departure_airport: Departure point of flight segment.
     :ivar arrival_airport: Arrival point of flight segment.
-    :ivar operating_airline: The operating airline of the flight if it is a codeshare flight.
-    :ivar equipment: The type of equipment used for the flight..
+    :ivar operating_airline: The operating airline of the flight if it is a codeshare  flight.
+    :ivar equipment: The type of equipment  used for the  flight..
     :ivar marketing_airline: The marketing airline. This is required for use with scheduled airline messages but may be omitted for requests by tour operators.
     :ivar disclosure_airline: The disclosure airline. This is required by the DOT mandate.
-    :ivar marriage_grp: Many airlines link connection flights together by terming them married segments. When two or more segments are married, they must be processed as one unit. The segments must be moved, cancelled, and/or priced together. The value of the marriage group must be the same for all segments.
+    :ivar marriage_grp: Many airlines link connection flights together by terming them married segments.  When two or more segments are married, they must be processed as one unit. The segments must be moved, cancelled, and/or priced together. The value of the marriage group must be the same for all segments.
     :ivar stop_airports:
     :ivar departure_time_zone:
     :ivar arrival_time_zone:
@@ -4193,7 +4194,10 @@ class AirItineraryPricingInfoType:
     :ivar tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
     :ivar last_ticket_date: Last day to ticket.
     :ivar private_fare_type: Private fare type symbol.
-    :ivar spanish_family_discount_indicator: Spanish Discount indicator with values of "A", "B", "C" where "A" indicates Spanish Large Family discount only "B" indicates Spanish Large Family discount   Spanish Islander discount "C" indicates Spanish Islander discount only
+    :ivar spanish_family_discount_indicator: Spanish Discount indicator with values of "A", "B", "C" where
+                                            "A" indicates Spanish Large Family discount only
+                                            "B" indicates Spanish Large Family discount + Spanish Islander discount
+                                            "C" indicates Spanish Islander discount only
     :ivar flexible_fare_id: If the fare is an additional flexible fare, this is the fare group ID
     """
     pricing_source: Optional[str] = field(
@@ -4651,7 +4655,7 @@ class AirItineraryPricingInfoType:
         :ivar divide_in_party: Indicates if different passenger types are booked in different inventories.
         :ivar promo_offer: Promotional offer
         :ivar fare_note:
-        :ivar promo_redemption: Populated if "Coupon Redemption" rule has been hit. This had been developed for Travelocity but never used.
+        :ivar promo_redemption: Populated if  "Coupon Redemption" rule has been hit. This had been developed for Travelocity but never used.
         :ivar rule: Describes a rule that was hit.
         :ivar multiple_traveler_groups:
         :ivar ancillary_fee_groups: Ancillary fee groups returned
@@ -5138,7 +5142,7 @@ class AirItineraryPricingInfoType:
 class AirItineraryType:
     """Specifies the origin and destination of the traveler.
 
-    :ivar origin_destination_options: A collection of OriginDestinationOption
+    :ivar origin_destination_options: A collection of  OriginDestinationOption
     :ivar direction_ind: A directional indicator that identifies a type of air booking (e.g. one-way, round-trip, open-jaw).
     :ivar departure_date: Itinerary departure date
     """
@@ -5749,8 +5753,14 @@ class PricedItineraryType:
 
 @dataclass
 class OtaAirLowFareSearchRs:
-    """
-    The Low Fare Search Response message contains a number of .Priced Itinerary. options. Each includes: - A set of available flights matching the client.s request. - Pricing information including taxes and full fare breakdown for each passenger type - Ticketing information - Fare Basis Codes and the information necessary to make a rules entry. This message contains similar information to a standard airline CRS or GDS Low Fare Search Response message.
+    """The Low Fare Search Response message contains a number of .Priced Itinerary.
+    options. Each includes:
+
+            - A set of available flights matching the client.s request.
+            - Pricing information including taxes and full fare breakdown for each passenger type
+            - Ticketing information
+            - Fare Basis Codes and the information necessary to make a rules entry.
+            This message contains similar information to a standard airline CRS or GDS Low Fare Search Response message.
     :ivar errors: In case of failure errors are returned.
     :ivar success: In case of success this element is returned.
     :ivar warnings: In case of any warnings this element is returned.

@@ -148,12 +148,18 @@ from samples.travelport.output.rail_v48_0.rail import (
 @dataclass
 class SearchSpecificAirSegment:
     """
-    :ivar departure_time: The date and time at which this entity departs. This does not include time zone information since it can be derived from the origin location.
+    :ivar departure_time: The date and time at which this entity departs.
+                        This does not include time zone information since it can be derived
+                        from the origin location.
     :ivar carrier: The carrier that is marketing this segment
-    :ivar flight_number: The flight number under which the marketing carrier is marketing this flight
-    :ivar origin: The IATA location code for this origination of this entity.
-    :ivar destination: The IATA location code for this destination of this entity.
-    :ivar segment_index: The sequential AirSegment number that this segment connected to.
+    :ivar flight_number: The flight number under which the marketing
+                        carrier is marketing this flight
+    :ivar origin: The IATA location code for this origination of
+                        this entity.
+    :ivar destination: The IATA location code for this destination of
+                        this entity.
+    :ivar segment_index: The sequential AirSegment number that this segment
+                        connected to.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -223,7 +229,7 @@ class AirExchangeEligibilityReq(BaseReq):
     """Request to determine if the fares in an itinerary are exchangeable.
 
     :ivar provider_reservation_info: Provider:1P - Represents a valid Provider Reservation/PNR whose itinerary is to be exchanged
-    :ivar type: Type choices are "Detail" or "Summary" Default will be Summary
+    :ivar type: Type choices are "Detail" or "Summary"  Default will be Summary
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -897,7 +903,7 @@ class AirFareRulesReq(BaseReq):
     """Request to display the full text fare rules.
 
     :ivar air_reservation_selector: Provider: 1G,1V,1P,1J,ACH-Parameters to use for a fare rule lookup associated with an Air Reservation Locator Code
-    :ivar fare_rule_lookup: Used to look up fare rules based on the origin, destination, and carrier of the air segment, the fare basis code and the provider code. Providers: 1P, 1J.
+    :ivar fare_rule_lookup: Used to look up fare rules based on the origin, destination, and carrier of the air segment, the fare basis code and the provider code.  Providers: 1P, 1J.
     :ivar fare_rule_key: Used to look up fare rules based on a fare rule key. Providers: 1G, 1V, 1P, 1J, ACH.
     :ivar air_fare_display_rule_key: Provider: 1G,1V,1P,1J.
     :ivar air_fare_rules_modifier: Provider: 1G,1V.
@@ -964,7 +970,7 @@ class AirFareRulesReq(BaseReq):
     @dataclass
     class FareRulesFilterCategory:
         """
-        :ivar category_code: Structured Fare Rules can be requested for "ADV", "MIN", "MAX", "STP", and "CHG".
+        :ivar category_code: Structured Fare Rules can be requested for "ADV", "MIN", "MAX",  "STP", and "CHG".
         :ivar fare_info_ref: Key reference for multiple fare rule
         """
         category_code: List[str] = field(
@@ -1290,7 +1296,7 @@ class AirPrePayReq(BaseReq):
     @dataclass
     class PrePayRetrieve:
         """
-        :ivar id: Pre pay id to retrieved,example flight pass number
+        :ivar id: Pre pay id to retrieved,example flight pass  number
         :ivar type: Pre pay id type,example 'FlightPass'
         """
         id: Optional[str] = field(
@@ -1884,7 +1890,8 @@ class AirVoidDocumentReq(BaseReq):
     :ivar show_etr: Provider: 1G,1V-If set as true, response will display the detailed ETR for successfully voided E-Tickets.
     :ivar provider_code: Provider: 1G,1V-Provider code of a specific host.
     :ivar provider_locator_code: Provider: 1G,1V-Contains the locator of the host reservation.
-    :ivar validate_spanish_residency: Provider: 1G - If set as true, Spanish Residency will be validated for Provisioned Customers.
+    :ivar validate_spanish_residency: Provider: 1G - If set as true, Spanish Residency will be validated for
+                                                                            Provisioned Customers.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2201,21 +2208,21 @@ class BaseAirPriceReq(BaseCoreReq):
     """
     :ivar air_itinerary: Provider: 1G,1V,1P,1J,ACH.
     :ivar air_pricing_modifiers: Provider: 1G,1V,1P,1J,ACH.
-    :ivar search_passenger: Provider: 1G,1V,1P,1J,ACH-Maxinumber of passenger increased in to 18 to support 9 INF passenger along with 9 ADT,CHD,INS passenger
+    :ivar search_passenger: Provider: 1G,1V,1P,1J,ACH-Maxinumber of passenger increased in to 18 to support 9 INF passenger along with 9 ADT,CHD,INS 					passenger
     :ivar air_pricing_command: Provider: 1G,1V,1P,1J,ACH.
     :ivar air_reservation_locator_code: Provider: ACH,1P,1J
     :ivar optional_services: Provider: ACH.
     :ivar form_of_payment: Provider: 1G,1V,1P,1J,ACH.
     :ivar pcc:
     :ivar ssr: Special Service Request for GST tax details. Provider: ACH
-    :ivar check_obfees: A flag to return fees for ticketing and for various forms of payment. The default is “TicketingOnly” and will return only ticketing fees. The value “All” will return ticketing fees and the applicable form of payment fees for the form of payment information specified in the request. “FOPOnly” will return the applicable form of payment fees for the form of payment information specified in the request. Form of payment fees are never included in the total unless specific card details are in the request.Provider notes:ACH - CheckOBFees is valid only for LowFareSearch. The valid values are “All”, “TicketingOnly” and “None” and the default value is “None”. 1P/1J -The valid values are “All”, “None” and “TicketingOnly”.1G – All four values are supported.1V/RCH – CheckOBFees are not supported.”
+    :ivar check_obfees: A flag to return fees for ticketing and for various forms of payment. The default is &#8220;TicketingOnly&#8221; and will return only ticketing fees.  The value &#8220;All&#8221; will return ticketing fees and the applicable form of payment fees for the form of payment information specified in the request.  &#8220;FOPOnly&#8221; will return the applicable form of payment fees for the form of payment information specified in the request. Form of payment fees are never included in the total unless specific card details are in the request.Provider notes:ACH - CheckOBFees is valid only for LowFareSearch.  The valid values are &#8220;All&#8221;, &#8220;TicketingOnly&#8221; and &#8220;None&#8221; and the default value is &#8220;None&#8221;. 1P/1J -The valid values are &#8220;All&#8221;, &#8220;None&#8221; and &#8220;TicketingOnly&#8221;.1G &#8211; All four values are supported.1V/RCH &#8211; CheckOBFees are not supported.&#8221;
     :ivar fare_rule_type: Provider: 1G,1V,1P,1J,ACH.
     :ivar supplier_code: Specifies the supplier/ vendor for vendor specific price requests
     :ivar ticket_date: YYYY-MM-DD Using a date in the past is a request for an historical fare
-    :ivar check_flight_details: To Include FlightDetails in Response set to “true” the Default value is “false”.
-    :ivar return_mm: If this attribute is set to “true”, Fare Control Manager processing will be invoked.
+    :ivar check_flight_details: To Include FlightDetails in Response set to &#8220;true&#8221; the Default value is &#8220;false&#8221;.
+    :ivar return_mm: If this attribute is set to &#8220;true&#8221;, Fare Control Manager processing will be invoked.
     :ivar nscc: 1 to 3 numeric that defines a Search Control Console filter.This attribute is used to override that filter.
-    :ivar split_pricing: Indicates whether the AirSegments should be priced together or separately. Set ‘true’ for split pricing. Set ‘false’ for pricing together.SplitPricing is not supported with post book re-pricing.
+    :ivar split_pricing: Indicates whether the AirSegments should be priced together or separately. Set &#8216;true&#8217; for split pricing. Set &#8216;false&#8217; for pricing together.SplitPricing is not supported with post book re-pricing.
     :ivar ignore_availability: Provides a method of pricing a book itinerary with the lowest fare regardless of the availability for the class of service. Only for providers 1P/1J.
     """
     air_itinerary: Optional[AirItinerary] = field(
@@ -3014,7 +3021,8 @@ class SeatMapRsp(BaseRsp):
     :ivar cabin_class: Provider: 1G,1V,1P,1J,ACH,MCH.
     :ivar air_segment: Provider: ACH,MCH.
     :ivar search_traveler: Provider: ACH,MCH.
-    :ivar optional_services: A wrapper for all the information regarding each of the Optional Services. Provider: 1G,1V,1P,1J,ACH.
+    :ivar optional_services: A wrapper for all the information regarding each of the Optional Services.
+                                    	Provider: 1G,1V,1P,1J,ACH.
     :ivar remark: Provider: 1G,1V,1P,1J,ACH,MCH.
     :ivar rows:
     :ivar payment_restriction: Provider: MCH-Information regarding valid payment types, if restrictions apply(supplier specific)
@@ -3125,7 +3133,7 @@ class AirExchangeMultiQuoteReq(BaseAirExchangeMultiQuoteReq):
     """Request multiple quotes for the exchange of an itinerary. 1P transactions
     only.
 
-    :ivar type: Type choices are "Detail" or "Summary" Default will be Summary
+    :ivar type: Type choices are "Detail" or "Summary"  Default will be Summary
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -3401,7 +3409,8 @@ class AirTicketingReq(AirBaseReq):
     :ivar air_segment_ticketing_modifiers: Provider: 1P,1J.
     :ivar return_info_on_fail:
     :ivar bulk_ticket: Provider: 1G,1V,1P,1J.
-    :ivar validate_spanish_residency: Provider: 1G - If set as true, Spanish Residency will be validated for Provisioned Customers.
+    :ivar validate_spanish_residency: Provider: 1G - If set as true, Spanish Residency will be validated for
+                                                                            Provisioned Customers.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -3572,9 +3581,9 @@ class AirUpsellSearchRsp(BaseAirPriceRsp):
 class AvailabilitySearchReq(AirSearchReq):
     """Availability Search request.
 
-    :ivar search_passenger: Provider: 1G,1V,1P,1J,ACH-Maxinumber of passenger increased in to 18 to support 9 INF passenger along with 9 ADT,CHD,INS passenger
+    :ivar search_passenger: Provider: 1G,1V,1P,1J,ACH-Maxinumber of passenger increased in to 18 to support 9 INF passenger along with 9 ADT,CHD,INS                                                passenger
     :ivar point_of_sale: Provider: ACH.
-    :ivar return_brand_indicator: When set to “true”, the Brand Indicator can be returned in the availability search response. Provider: 1G, 1V, 1P, 1J, ACH
+    :ivar return_brand_indicator: When set to &#8220;true&#8221;, the Brand Indicator can be returned in the availability search response. Provider: 1G, 1V, 1P, 1J, ACH
     :ivar channel_id: A Channel ID is 4 alpha-numeric characters used to activate the Search Control Console filter for a specific group of travelers being served by the agency credential.
     :ivar nscc: Allows the agency to bypass/override the Search Control Console rule.
     """
@@ -3639,7 +3648,7 @@ class AvailabilitySearchRsp(BaseAvailabilitySearchRsp):
 class BaseLowFareSearchReq(BaseAirSearchReq):
     """Base Low Fare Search Request.
 
-    :ivar search_passenger: Provider: 1G,1V,1P,1J,ACH-Maxinumber of passenger increased in to 18 to support 9 INF passenger along with 9 ADT,CHD,INS passenger
+    :ivar search_passenger: Provider: 1G,1V,1P,1J,ACH-Maxinumber of passenger increased in to 18 to support 9 INF passenger along with 9 ADT,CHD,INS                                        passenger
     :ivar air_pricing_modifiers: Provider: 1G,1V,1P,1J,ACH.
     :ivar enumeration: Provider: 1G,1V,1P,1J,ACH.
     :ivar air_exchange_modifiers: Provider: ACH.
@@ -3652,15 +3661,15 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
     :ivar max_number_of_expert_solutions: Provider: 1G,1V,1P,1J,ACH-Indicates the Maximum Number of Expert Solutions to be returned from the Knowledge Base for the provided search criteria
     :ivar solution_result: Provider: 1G,1V,1P,1J,ACH-Indicates whether the response will contain Solution result (AirPricingSolution) or Non Solution Result (AirPricingPoints). The default value is false. This attribute cannot be combined with EnablePointToPointSearch, EnablePointToPointAlternates and MaxNumberOfExpertSolutions.
     :ivar prefer_complete_itinerary: Provider: ACH-This attribute is only supported for ACH .It works in conjunction with the @SolutionResult flag
-    :ivar meta_option_identifier: Invoke Meta Search. Valid values are 00 to 99, or D for the default meta search configuration. When Meta Search not requested, normal LowFareSearch applies. Supported Providers; 1g/1v/1p/1j
-    :ivar return_upsell_fare: When set to “true”, Upsell information will be returned in the shop response. Provider supported : 1G, 1V, 1P, 1J
+    :ivar meta_option_identifier: Invoke Meta Search.  Valid values are 00 to 99, or D for the default meta search configuration.  When Meta Search not requested, normal LowFareSearch applies.  Supported Providers;  1g/1v/1p/1j
+    :ivar return_upsell_fare: When set to &#8220;true&#8221;, Upsell information will be returned in the shop response. Provider supported : 1G, 1V, 1P, 1J
     :ivar include_fare_info_messages: Set to True to return FareInfoMessageList. Providers supported: 1G/1V/1P/1J
-    :ivar return_branded_fares: When ReturnBrandedFares is set to “false”, Rich Content and Branding will not be returned in the shop response. When ReturnBrandedFares it is set to “true” or is not sent, Rich Content and Branding will be returned in the shop response. Provider: 1P/1J/ACH.
+    :ivar return_branded_fares: When ReturnBrandedFares is set to &#8220;false&#8221;, Rich Content and Branding will not be returned in the shop response.  When ReturnBrandedFares it is set to &#8220;true&#8221; or is not sent, Rich Content and Branding will be returned in the shop response.  Provider: 1P/1J/ACH.
     :ivar multi_gdssearch: A "true" value indicates MultiGDSSearch. Specific provisioning is required.
-    :ivar return_mm: If this attribute is set to “true”, Fare Control Manager processing will be invoked.
-    :ivar check_obfees: A flag to return fees for ticketing and for various forms of payment. The default is “TicketingOnly” and will return only ticketing fees. The value “All” will return ticketing fees and the applicable form of payment fees for the form of payment information specified in the request. “FOPOnly” will return the applicable form of payment fees for the form of payment information specified in the request. Form of payment fees are never included in the total unless specific card details are in the request.Provider notes:ACH - CheckOBFees is valid only for LowFareSearch. The valid values are “All”, “TicketingOnly” and “None” and the default value is “None”. 1P/1J -The valid values are “All”, “None” and “TicketingOnly”.1G – All four values are supported.1V/RCH – CheckOBFees are not supported.”
+    :ivar return_mm: If this attribute is set to &#8220;true&#8221;, Fare Control Manager processing will be invoked.
+    :ivar check_obfees: A flag to return fees for ticketing and for various forms of payment. The default is &#8220;TicketingOnly&#8221; and will return only ticketing fees.  The value &#8220;All&#8221; will return ticketing fees and the applicable form of payment fees for the form of payment information specified in the request.  &#8220;FOPOnly&#8221; will return the applicable form of payment fees for the form of payment information specified in the request. Form of payment fees are never included in the total unless specific card details are in the request.Provider notes:ACH - CheckOBFees is valid only for LowFareSearch.  The valid values are &#8220;All&#8221;, &#8220;TicketingOnly&#8221; and &#8220;None&#8221; and the default value is &#8220;None&#8221;. 1P/1J -The valid values are &#8220;All&#8221;, &#8220;None&#8221; and &#8220;TicketingOnly&#8221;.1G &#8211; All four values are supported.1V/RCH &#8211; CheckOBFees are not supported.&#8221;
     :ivar nscc: 1 to 3 numeric that defines a Search Control Console filter.This attribute is used to override that filter.
-    :ivar fare_info_rules: Returns ChangePenalty and CancelPenalty values at the FareInfo level. If FareRulesFilterCategory is sent FareRulesFilter will be returned at FareInfo level. Provider: 1G/1V.
+    :ivar fare_info_rules: Returns ChangePenalty and CancelPenalty values at the FareInfo level. If FareRulesFilterCategory is sent FareRulesFilter will be returned at FareInfo level.  Provider: 1G/1V.
     """
     search_passenger: List[SearchPassenger] = field(
         default_factory=list,
@@ -3911,7 +3920,7 @@ class LowFareSearchAsynchRsp(AirSearchRsp):
 class LowFareSearchReq(BaseLowFareSearchReq):
     """Low Fare Search request.
 
-    :ivar policy_reference: This attribute will be used to pass in a value on the request which would be used to link to a ‘Policy Group’ in a policy engine external to UAPI.
+    :ivar policy_reference: This attribute will be used to pass in a value on the request which would be used to link to a &#8216;Policy Group&#8217; in a policy engine external to UAPI.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"

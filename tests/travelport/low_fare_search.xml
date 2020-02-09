@@ -1,29 +1,29 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ns0:LowFareSearchReq xmlns:ns0="http://www.travelport.com/schema/air_v48_0" xmlns:ns1="http://www.travelport.com/schema/common_v48_0" TraceId="c0716df8-12f5-11ea-9d04-000c293dfa64" TargetBranch="P107695" SolutionResult="true" PreferCompleteItinerary="true" ReturnBrandedFares="true" CheckOBFees="All">
+<ns0:LowFareSearchReq xmlns:ns0="http://www.travelport.com/schema/air_v48_0" xmlns:ns1="http://www.travelport.com/schema/common_v48_0" TraceId="c0716df8-12f5-11ea-9d04-000c293dfa64" TargetBranch="P107695" EnablePointToPointSearch="false" EnablePointToPointAlternates="false" MaxNumberOfExpertSolutions="0" SolutionResult="false" PreferCompleteItinerary="true" ReturnUpsellFare="false" IncludeFareInfoMessages="false" ReturnBrandedFares="true" MultiGDSSearch="false" ReturnMM="false" CheckOBFees="All" FareInfoRules="false">
   <ns1:BillingPointOfSaleInfo OriginApplication="UAPI"/>
   <ns0:SearchAirLeg>
     <ns0:SearchOrigin>
-      <ns1:CityOrAirport Code="LON"/>
+      <ns1:CityOrAirport Code="LON" PreferCity="false"/>
     </ns0:SearchOrigin>
     <ns0:SearchDestination>
-      <ns1:CityOrAirport Code="NYC"/>
+      <ns1:CityOrAirport Code="NYC" PreferCity="false"/>
     </ns0:SearchDestination>
     <ns0:SearchDepTime PreferredTime="2019-12-15"/>
-    <ns0:AirLegModifiers AllowDirectAccess="true"/>
+    <ns0:AirLegModifiers ProhibitOvernightLayovers="false" AllowDirectAccess="true" PreferNonStop="false"/>
   </ns0:SearchAirLeg>
-  <ns0:AirSearchModifiers DistanceType="MI" IncludeFlightDetails="true" AllowChangeOfAirport="true" MaxSolutions="250">
+  <ns0:AirSearchModifiers DistanceType="MI" IncludeFlightDetails="true" AllowChangeOfAirport="true" ProhibitOvernightLayovers="false" MaxSolutions="250" PreferNonStop="false" ExcludeOpenJawAirport="false" ExcludeGroundTransportation="false">
     <ns0:PreferredProviders>
       <ns1:Provider Code="1P"/>
     </ns0:PreferredProviders>
   </ns0:AirSearchModifiers>
-  <ns1:SearchPassenger Code="ADT" Age="30"/>
-  <ns1:SearchPassenger Code="ADT" Age="30"/>
-  <ns1:SearchPassenger Code="ADT" Age="30"/>
-  <ns1:SearchPassenger Code="CNN" Age="7"/>
-  <ns1:SearchPassenger Code="CNN" Age="7"/>
-  <ns1:SearchPassenger Code="INF"/>
-  <ns0:AirPricingModifiers CurrencyType="EUR" FaresIndicator="PublicAndPrivateFares" ETicketability="Yes" ReturnServices="true"/>
-  <ns1:FormOfPayment Type="Credit">
-    <ns1:CreditCard Type="CA" Number="5234123412341234" ExpDate="2020-11" Name="Thug Life" CVV="123"/>
+  <ns1:SearchPassenger Code="ADT" Age="30" AccompaniedPassenger="false"/>
+  <ns1:SearchPassenger Code="ADT" Age="30" AccompaniedPassenger="false"/>
+  <ns1:SearchPassenger Code="ADT" Age="30" AccompaniedPassenger="false"/>
+  <ns1:SearchPassenger Code="CNN" Age="7" AccompaniedPassenger="false"/>
+  <ns1:SearchPassenger Code="CNN" Age="7" AccompaniedPassenger="false"/>
+  <ns1:SearchPassenger Code="INF" Age="0" AccompaniedPassenger="false"/>
+  <ns0:AirPricingModifiers ProhibitMinStayFares="false" ProhibitMaxStayFares="false" CurrencyType="EUR" ProhibitAdvancePurchaseFares="false" ProhibitNonRefundableFares="false" ProhibitRestrictedFares="false" FaresIndicator="PublicAndPrivateFares" ETicketability="Yes" ProhibitNonExchangeableFares="false" ForceSegmentSelect="false" OneWayShop="false" ReturnServices="true" ReturnFareAttributes="false" SellCheck="false" ReturnFailedSegments="false"/>
+  <ns1:FormOfPayment Type="Credit" IsAgentType="false" Reusable="false">
+    <ns1:CreditCard Type="CA" Number="5234123412341234" ExpDate="2020-11" Name="Thug Life" CVV="123" ThirdPartyPayment="false" Enett="false"/>
   </ns1:FormOfPayment>
 </ns0:LowFareSearchReq>

@@ -676,7 +676,7 @@ class StayRestrictionsType:
     """Type defining Min and Max Stay Restrictions.
 
     :ivar minimum_stay: Specifies restrictions for the shortest length/period of time or earliest day return travel can commence or be completed.
-    :ivar maximum_stay: Specifies restrictions for the longest length/period of time or last day to begin or complete the return.
+    :ivar maximum_stay: Specifies restrictions for the  longest length/period of time or last day to begin or complete the return.
     :ivar stay_restrictions_ind: True indicates that Stay Restrictions exist.
     """
     minimum_stay: Optional["StayRestrictionsType.MinimumStay"] = field(

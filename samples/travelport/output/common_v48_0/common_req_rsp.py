@@ -275,7 +275,7 @@ class BaseCreateReservationReq(BaseReq):
     :ivar email_notification:
     :ivar queue_place: Allow queue placement of a PNR at the time of booking in AirCreateReservationReq,HotelCreateReservationReq,PassiveCreateReservationReq and VehicleCreateReservationReq for providers 1G,1V,1P and 1J.
     :ivar rule_name: This attribute is meant to attach a mandatory custom check rule name to a PNR. A non-mandatory custom check rule too can be attached to a PNR.
-    :ivar universal_record_locator_code: Which UniversalRecord should this new reservation be applied to. If blank, then a new one is created.
+    :ivar universal_record_locator_code: Which UniversalRecord should this new reservation be applied to.  If blank, then a new one is created.
     :ivar provider_locator_code: Which Provider reservation does this reservation get added to.
     :ivar provider_code: To be used with ProviderLocatorCode, which host the reservation being added to belongs to.
     :ivar customer_number: Optional client centric customer identifier

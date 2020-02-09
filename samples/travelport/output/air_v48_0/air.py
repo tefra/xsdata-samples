@@ -105,7 +105,7 @@ class Advtype:
     :ivar earliest_rsvn_dt_present: Earliest reservation date. True if date is present. False if date is not present.
     :ivar earliest_tk_dt_present: Earliest ticketing date. True if date is present. False if date is not present.
     :ivar latest_rsvn_dt_present: Latest reservation date. True if date is present. False if date is not present.
-    :ivar latest_tk_dt_present: Latest ticketing date. True if date is present. False if date is not present.
+    :ivar latest_tk_dt_present: Latest ticketing date.  True if date is present. False if date is not present.
     :ivar earliest_rsvn_dt: Earliest reservation date.
     :ivar earliest_tk_dt: Earliest ticketing date.
     :ivar latest_rsvn_dt: Latest reservation date.
@@ -437,10 +437,14 @@ class Adjustment:
     a flat amount or percentage of original price. The value of Amount/Percent can
     be negetive. Negative value implies a discount.
 
-    :ivar amount: Implies a flat amount to be adjusted. Negetive value implies a discount.
-    :ivar percent: Implies an adjustment to be made on original price. Negetive value implies a discount.
-    :ivar adjusted_total_price: The adjusted price after applying adjustment on Total price
-    :ivar approximate_adjusted_total_price: The Converted adjusted total price in Default Currency for this entity.
+    :ivar amount: Implies a flat amount to be adjusted.
+                                Negetive value implies a discount.
+    :ivar percent: Implies an adjustment to be made on
+                                original price. Negetive value implies a discount.
+    :ivar adjusted_total_price: The adjusted price after applying adjustment
+                            on Total price
+    :ivar approximate_adjusted_total_price: The Converted adjusted total price in Default
+                            Currency for this entity.
     :ivar booking_traveler_ref: Reference to a booking traveler for which adjustment is applied.
     """
     class Meta:
@@ -754,8 +758,11 @@ class BookingCodeInfo:
     """Details Cabin class info and class of service information with availability
     counts. Only provided on search results and grouped by Cabin class.
 
-    :ivar cabin_class: Specifies Cabin class for a group of class of services. Cabin class is not identified if it is not present.
-    :ivar booking_counts: Lists class of service and their counts for specific cabin class
+    :ivar cabin_class: Specifies Cabin class for a group of
+                            class of services. Cabin class is not identified if it is not
+                            present.
+    :ivar booking_counts: Lists class of service and their counts for
+                            specific cabin class
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -785,7 +792,8 @@ class BookingInfo:
     :ivar cabin_class:
     :ivar fare_info_ref:
     :ivar segment_ref:
-    :ivar coupon_ref: The coupon to which that booking is relative (if applicable)
+    :ivar coupon_ref: The coupon to which that booking is relative
+                            (if applicable)
     :ivar air_itinerary_solution_ref: Reference to an Air Itinerary Solution
     :ivar host_token_ref: HostToken Reference for this segment and fare combination.
     """
@@ -1012,7 +1020,9 @@ class BrandModifiers:
     @dataclass
     class FareFamilyDisplay:
         """
-        :ivar modifier_type: "FareFamily" returns the lowest branded fares in a fare family. "MaintainBookingCode" attempts to return the lowest branded fare in a fare family display based on the permitted booking code. Any brand that does not have a fare for the permitted booking code will then have the lowest fare returned. "LowestFareInBrand" returns the lowest fare within each branded fare in a fare family display.
+        :ivar modifier_type: "FareFamily" returns the lowest branded fares in a fare family.
+        													"MaintainBookingCode" attempts to return the lowest branded fare in a fare family display based on the permitted booking code. Any brand that does not have a fare for the permitted booking code will then have the lowest fare returned.
+        													"LowestFareInBrand" returns the lowest fare within each branded fare in a fare family display.
         """
         modifier_type: Optional[str] = field(
             default=None,
@@ -1089,8 +1099,10 @@ class CodeshareInfo:
     operating flight information (as attributes).
 
     :ivar value:
-    :ivar operating_carrier: The actual carrier that is operating the flight.
-    :ivar operating_flight_number: The actual flight number of the carrier that is operating the flight.
+    :ivar operating_carrier: The actual carrier that is operating the
+                                    flight.
+    :ivar operating_flight_number: The actual flight number of the carrier that
+                                    is operating the flight.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1146,7 +1158,8 @@ class ContractCode:
 
     :ivar provider_code:
     :ivar supplier_code:
-    :ivar code: The 1-64 character string which uniquely identifies a Contract.
+    :ivar code: The 1-64 character string which uniquely
+                            identifies a Contract.
     :ivar company_name: Providers supported : ACH
     """
     class Meta:
@@ -1278,8 +1291,10 @@ class Document:
     """APIS Document Details.
 
     :ivar sequence: Sequence number for the document.
-    :ivar type: Type of the Document. Visa, Passport, DriverLicense etc.
-    :ivar level: Applicability level of the Document. Required, Supported, API_Supported or Unknown.
+    :ivar type: Type of the Document. Visa, Passport,
+                            DriverLicense etc.
+    :ivar level: Applicability level of the Document.
+                            Required, Supported, API_Supported or Unknown.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1310,7 +1325,8 @@ class Document:
 @dataclass
 class DocumentModifiers:
     """
-    :ivar generate_itinerary_invoice: Generate itinerary/invoice documents along with ticket
+    :ivar generate_itinerary_invoice: Generate itinerary/invoice documents along with
+                            ticket
     :ivar generate_accounting_interface: Generate interface message along with ticket
     """
     class Meta:
@@ -1497,12 +1513,15 @@ class Embargo:
     :ivar key:
     :ivar carrier:
     :ivar segment_ref:
-    :ivar name: The commercial name of the optional service on which the embargo applies. Provider: 1G, 1V, 1P, 1J
-    :ivar text: Brief description of the embargo. Provider: 1G, 1V, 1P, 1J
-    :ivar secondary_type: The secondary type of the optional service on which the embargo applies. Provider: 1G, 1V, 1P, 1J
-    :ivar type: The type of optional service on which the embargo applies. Provider: 1G, 1V, 1P, 1J
-    :ivar url: Website of the operating carrier. Provider: 1G, 1V, 1P, 1J
-    :ivar service_sub_code: The service sub code of the optional service on which the embargo applies. Provider: 1G, 1V, 1P, 1J
+    :ivar name: The commercial name of the optional service on
+                        which the embargo applies. Provider: 1G, 1V, 1P, 1J
+    :ivar text: Brief description of the embargo. Provider: 1G,
+                        1V, 1P, 1J
+    :ivar secondary_type: The secondary type of the optional service on which the embargo applies.  Provider: 1G, 1V, 1P, 1J
+    :ivar type: The type of optional service on which the embargo applies.  Provider: 1G, 1V, 1P, 1J
+    :ivar url: Website of the operating carrier. Provider: 1G,
+                        1V, 1P, 1J
+    :ivar service_sub_code: The service sub code of the optional service on which the embargo applies.  Provider: 1G, 1V, 1P, 1J
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1644,8 +1663,10 @@ class ExemptTaxes:
     """Request tax exemption for specific tax category and/or all taxes of a
     specific country.
 
-    :ivar country_code: Specify ISO country code for which tax exemption is requested.
-    :ivar tax_category: Specify tax category for which tax exemption is requested.
+    :ivar country_code: Specify ISO country code for which tax
+                             exemption is requested.
+    :ivar tax_category: Specify tax category for which tax
+                             exemption is requested.
     :ivar all_taxes: Request exemption of all taxes.
     :ivar tax_territory: exemption is achieved by sending in the TaxTerritory in the tax exempt price request.
     :ivar company_name: The federal government body name must be provided in this element. This field is required by AC
@@ -1703,7 +1724,8 @@ class FareBasis:
     """Fare Basis Code.
 
     :ivar code: The fare basis code for this fare
-    :ivar segment_ref: The segment to which this FareBasis Code is to connected
+    :ivar segment_ref: The segment to which this FareBasis Code is to
+                            connected
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1851,13 +1873,17 @@ class FarePricing:
 
     :ivar passenger_type:
     :ivar total_fare_amount:
-    :ivar private_fare: NegotiatedFare attribute from earlier version of schema used to imply whether the fare is private fare or not. So, this attribute is renamed to PrivateFare as it best suited.
-    :ivar negotiated_fare: Identifies the fare as a Negotiated Fare.
+    :ivar private_fare: NegotiatedFare attribute from
+                            earlier version of schema used to imply whether the fare is
+                            private fare or not. So, this attribute is renamed to PrivateFare
+                            as it best suited.
+    :ivar negotiated_fare: Identifies the fare as a Negotiated
+                            Fare.
     :ivar auto_priceable: Identifies the fare as Autopriceable or not. False value means the fare filing is incomplete and the fare should not be used.
     :ivar total_net_fare_amount: Total Net fare amount.
     :ivar base_fare: Base fare amount.
     :ivar taxes:
-    :ivar mmid: Contains the Reference id which is generated when the request was ReturnMM=”true”.
+    :ivar mmid: Contains the Reference id which is generated when the request was ReturnMM=&#8221;true&#8221;.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2116,7 +2142,8 @@ class FareRuleKey:
     This Key is returned in Low Fare Shop or Air Price Response.
 
     :ivar value:
-    :ivar fare_info_ref: The Fare Component to which this Rule Key applies
+    :ivar fare_info_ref: The Fare Component to which this Rule Key
+                                    applies
     :ivar provider_code:
     """
     class Meta:
@@ -2257,7 +2284,7 @@ class FareRulesFilterCategory:
     """Fare Rules Filter if requested will return rules for requested category in
     the response. Applicable for providers 1G,1V,1P,1J.
 
-    :ivar category_code: Fare Rules Filter category can be requested. Currently only '˜MIN, MAX, ADV, CHG, OTH' is supported. Applicable for Providers 1G,1V,1P,1J.
+    :ivar category_code: Fare Rules Filter category can be requested. Currently only '&#732;MIN, MAX, ADV, CHG, OTH' is supported. Applicable for Providers 1G,1V,1P,1J.
     :ivar fare_info_ref: This tells if Low Fare Finder was used.
     """
     class Meta:
@@ -2353,7 +2380,7 @@ class FareType:
 class FeeApplication:
     """
     :ivar value:
-    :ivar code: The code associated to the fee application. The choices are: 1, 2, 3, 4, 5, K, F
+    :ivar code: The code associated to the fee application. The  choices are: 1, 2, 3, 4, 5, K, F
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2385,7 +2412,7 @@ class FlexExploreModifiers:
     :ivar destination: List of specific destinations for performing flex explore. Applicable only with flex explore type - Destination
     :ivar type: Type of flex explore to be performed
     :ivar radius: Radius around the destination of actual itinerary in which the search would be performed. Supported only with types - DistanceInMiles and DistanceInKilometers
-    :ivar group_name: Group name for a set of destinations to be searched. Use with Type=Group. Group names are defined in the Search Control Console. Supported Providers: 1G/1V/1P
+    :ivar group_name: Group name for a set of destinations to be searched.  Use with Type=Group. Group names are defined in the Search Control Console. Supported Providers:  1G/1V/1P
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2470,12 +2497,19 @@ class FlightDetailsRef:
 @dataclass
 class FlightInfoCriteria:
     """
-    :ivar key: An identifier to link the flightinfo responses to the criteria. The value passed here will be returned in the resulting flightinfo(s) from this command.
+    :ivar key: An identifier to link the flightinfo responses
+                            to the criteria. The value passed here will be returned in the
+                            resulting flightinfo(s) from this command.
     :ivar carrier: The carrier that is marketing this segment
-    :ivar flight_number: The flight number under which the marketing carrier is marketing this flight
-    :ivar origin: The IATA location code for this origination of this entity.
-    :ivar destination: The IATA location code for this destination of this entity.
-    :ivar departure_date: The date at which this entity departs. This does not include time zone information since it can be derived from the origin location.
+    :ivar flight_number: The flight number under which the marketing
+                            carrier is marketing this flight
+    :ivar origin: The IATA location code for this origination of
+                            this entity.
+    :ivar destination: The IATA location code for this destination of
+                            this entity.
+    :ivar departure_date: The date at which this entity departs. This
+                            does not include time zone information since it can be derived
+                            from the origin location.
     :ivar class_of_service:
     """
     class Meta:
@@ -2550,8 +2584,10 @@ class FlightType:
     direct only, include single online connection etc.
 
     :ivar require_single_carrier:
-    :ivar max_connections: The maximum number of connections within a segment group.
-    :ivar max_stops: The maximum number of stops within a connection.
+    :ivar max_connections: The maximum number of connections within a
+                            segment group.
+    :ivar max_stops: The maximum number of stops within a
+                            connection.
     :ivar non_stop_directs:
     :ivar stop_directs:
     :ivar single_online_con:
@@ -2671,11 +2707,18 @@ class HostReservation:
     using Galileo Desktop already booked a reservation on Midwest in Sabre host
     system).
 
-    :ivar carrier: The carrier code (e.g. YX, UA, ...) that is providing the merchandising
-    :ivar carrier_locator_code: The locator code in the supplier system (also could be defined as locator in the carrier host system).
-    :ivar provider_code: Contains the GDS or other provider code of the entity actually housing the reservation. This is optional when used on Merchandising Availability but required on MerchandisingFulfillment.
-    :ivar provider_locator_code: Contains the locator of the reservation actually housed in the provider.
-    :ivar universal_locator_code: The locator of the Universal Record, if one exists.
+    :ivar carrier: The carrier code (e.g. YX, UA, ...) that is
+                            providing the merchandising
+    :ivar carrier_locator_code: The locator code in the supplier system (also
+                            could be defined as locator in the carrier host system).
+    :ivar provider_code: Contains the GDS or other provider code
+                            of the entity actually housing the reservation. This is optional
+                            when used on Merchandising Availability but required on
+                            MerchandisingFulfillment.
+    :ivar provider_locator_code: Contains the locator of the reservation
+                            actually housed in the provider.
+    :ivar universal_locator_code: The locator of the Universal Record, if one
+                            exists.
     :ivar eticket: An flag to indicate if ticket has been issued for the PNR.
     """
     class Meta:
@@ -2841,10 +2884,13 @@ class LegDetail:
     """Information about the journey Leg, Shared by Leg and LegPrice Elements.
 
     :ivar key:
-    :ivar origin_airport: Returns the origin airport code for the Leg Detail.
-    :ivar destination_airport: Returns the destination airport code for the Leg Detail.
+    :ivar origin_airport: Returns the origin airport code for the
+                            Leg Detail.
+    :ivar destination_airport: Returns the destination airport code for
+                            the Leg Detail.
     :ivar carrier: Carrier for the Search Leg Detail.
-    :ivar travel_date: The Departure date and time for this Leg Detail.
+    :ivar travel_date: The Departure date and time for this Leg
+                            Detail.
     :ivar flight_number: Flight Number for the Search Leg Detail.
     """
     class Meta:
@@ -3037,7 +3083,7 @@ class Maxtype:
 @dataclass
 class Mintype:
     """
-    :ivar hours_min: Minimum hours. True if unit of time is hours. False if unit of time is not hours.
+    :ivar hours_min: Minimum hours. True if unit of time is hours.  False if unit of time is not hours.
     :ivar days_min: Minimum days. True if unit of time is days. False if unit of time is not days.
     :ivar months_min: Minimum months. True if unit of time is months. False if unit of time is not months.
     :ivar occur_ind_min: Minimum occurance indicator. True if day of the week is used. False if day of the week is not used.
@@ -3187,9 +3233,9 @@ class MultiGdssearchIndicator:
 
     :ivar type: Indicates whether only public fares or both public and private fares should be returned or a specific type of private fares. Examples of valid values are PublicFaresOnly, PrivateFaresOnly, AirlinePrivateFaresOnly, AgencyPrivateFaresOnly, PublicandPrivateFares, and NetFaresOnly.
     :ivar provider_code:
-    :ivar default_provider: Use the value “true” if the provider is the default (primary) provider. Use the value “false” if the provider is the alternate (secondary). Use of this attribute requires specifically provisioned credentials.
-    :ivar private_fare_code: The code of the corporate private fare. This is the same as an account code. Use of this attribute requires specifically provisioned credentials.
-    :ivar private_fare_code_only: : Indicates whether or not the private fares returned should be restricted to only those specific to the PrivateFareCode in the previous attribute. This has the same validation as the AccountCodeFaresOnly attribute. Use of this attribute requires specifically provisioned credentials.
+    :ivar default_provider: Use the value &#8220;true&#8221; if the provider is the default (primary) provider.  Use the value &#8220;false&#8221; if the provider is the alternate (secondary).  Use of this attribute requires specifically provisioned credentials.
+    :ivar private_fare_code: The code of the corporate private fare.  This is the same as an account code.  Use of this attribute requires specifically provisioned credentials.
+    :ivar private_fare_code_only: :  Indicates whether or not the private fares returned should be restricted to only those specific to the PrivateFareCode in the previous attribute.  This has the same validation as the AccountCodeFaresOnly attribute.  Use of this attribute requires specifically provisioned credentials.
     """
     class Meta:
         name = "MultiGDSSearchIndicator"
@@ -3237,42 +3283,42 @@ class MultiGdssearchIndicator:
 @dataclass
 class Othtype:
     """
-    :ivar cat0: Category 0 rules. True if category applies. False if rules do not apply.
-    :ivar cat1: Category 1 rules. True if category applies. False if rules do not apply.
-    :ivar cat2: Category 2 rules. True if category applies. False if rules do not apply.
-    :ivar cat3: Category 3 rules. True if category applies. False if rules do not apply.
-    :ivar cat4: Category 4 rules. True if category applies. False if rules do not apply.
-    :ivar cat5: Category 5 rules. True if category applies. False if rules do not apply.
-    :ivar cat6: Category 6 rules. True if category applies. False if rules do not apply.
-    :ivar cat7: Category 7 rules. True if category applies. False if rules do not apply.
-    :ivar cat8: Category 8 rules. True if category applies. False if rules do not apply.
-    :ivar cat9: Category 9 rules. True if category applies. False if rules do not apply.
-    :ivar cat10: Category 10 rules. True if category applies. False if rules do not apply.
-    :ivar cat11: Category 11 rules. True if category applies. False if rules do not apply.
-    :ivar cat12: Category 12 rules. True if category applies. False if rules do not apply.
-    :ivar cat13: Category 13 rules. True if category applies. False if rules do not apply.
-    :ivar cat14: Category 14 rules. True if category applies. False if rules do not apply.
-    :ivar cat15: Category 15 rules. True if category applies. False if rules do not apply.
-    :ivar cat16: Category 16 rules. True if category applies. False if rules do not apply.
-    :ivar cat17: Category 17 rules. True if category applies. False if rules do not apply.
-    :ivar cat18: Category 18 rules. True if category applies. False if rules do not apply.
-    :ivar cat19: Category 19 rules. True if category applies. False if rules do not apply.
-    :ivar cat20: Category 20 rules. True if category applies. False if rules do not apply.
-    :ivar cat21: Category 21 rules. True if category applies. False if rules do not apply.
-    :ivar cat22: Category 22 rules. True if category applies. False if rules do not apply.
-    :ivar cat23: Category 23 rules. True if category applies. False if rules do not apply.
-    :ivar cat24: Category 24 rules. True if category applies. False if rules do not apply.
-    :ivar cat25: Category 25 rules. True if category applies. False if rules do not apply.
-    :ivar cat26: Category 26 rules. True if category applies. False if rules do not apply.
-    :ivar cat27: Category 27 rules. True if category applies. False if rules do not apply.
-    :ivar cat28: Category 28 rules. True if category applies. False if rules do not apply.
-    :ivar cat29: Category 29 rules. True if category applies. False if rules do not apply.
-    :ivar cat30: Category 30 rules. True if category applies. False if rules do not apply.
-    :ivar cat31: Category 31 rules. True if category applies. False if rules do not apply.
+    :ivar cat0: Category 0 rules. True if category applies.  False if rules do not apply.
+    :ivar cat1: Category 1 rules. True if category applies.  False if rules do not apply.
+    :ivar cat2: Category 2 rules. True if category applies.  False if rules do not apply.
+    :ivar cat3: Category 3 rules. True if category applies.  False if rules do not apply.
+    :ivar cat4: Category 4 rules. True if category applies.  False if rules do not apply.
+    :ivar cat5: Category 5 rules. True if category applies.  False if rules do not apply.
+    :ivar cat6: Category 6 rules. True if category applies.  False if rules do not apply.
+    :ivar cat7: Category 7 rules. True if category applies.  False if rules do not apply.
+    :ivar cat8: Category 8 rules. True if category applies.  False if rules do not apply.
+    :ivar cat9: Category 9 rules. True if category applies.  False if rules do not apply.
+    :ivar cat10: Category 10 rules. True if category applies.  False if rules do not apply.
+    :ivar cat11: Category 11 rules. True if category applies.  False if rules do not apply.
+    :ivar cat12: Category 12 rules. True if category applies.  False if rules do not apply.
+    :ivar cat13: Category 13 rules. True if category applies.  False if rules do not apply.
+    :ivar cat14: Category 14 rules. True if category applies.  False if rules do not apply.
+    :ivar cat15: Category 15 rules. True if category applies.  False if rules do not apply.
+    :ivar cat16: Category 16 rules. True if category applies.  False if rules do not apply.
+    :ivar cat17: Category 17 rules. True if category applies.  False if rules do not apply.
+    :ivar cat18: Category 18 rules. True if category applies.  False if rules do not apply.
+    :ivar cat19: Category 19 rules. True if category applies.  False if rules do not apply.
+    :ivar cat20: Category 20 rules. True if category applies.  False if rules do not apply.
+    :ivar cat21: Category 21 rules. True if category applies.  False if rules do not apply.
+    :ivar cat22: Category 22 rules. True if category applies.  False if rules do not apply.
+    :ivar cat23: Category 23 rules. True if category applies.  False if rules do not apply.
+    :ivar cat24: Category 24 rules. True if category applies.  False if rules do not apply.
+    :ivar cat25: Category 25 rules. True if category applies.  False if rules do not apply.
+    :ivar cat26: Category 26 rules. True if category applies.  False if rules do not apply.
+    :ivar cat27: Category 27 rules. True if category applies.  False if rules do not apply.
+    :ivar cat28: Category 28 rules. True if category applies.  False if rules do not apply.
+    :ivar cat29: Category 29 rules. True if category applies.  False if rules do not apply.
+    :ivar cat30: Category 30 rules. True if category applies.  False if rules do not apply.
+    :ivar cat31: Category 31 rules. True if category applies.  False if rules do not apply.
     :ivar restrictive_dt: Most restrictive ticketing date.
     :ivar surcharge_amt: Surcharge amount
-    :ivar not_usacity: Not USA city. True if Origin or final destination not a continental U.S. City. False if Origin or final destination a continental U.S. City.
-    :ivar missing_rules: Missing rules. True if rules are missing. False if rules are not missing.
+    :ivar not_usacity: Not USA city.  True if Origin or final destination not a continental U.S. City. False if Origin or final destination a continental U.S. City.
+    :ivar missing_rules: Missing rules.  True if rules are missing.  False if rules are not missing.
     """
     class Meta:
         name = "OTHType"
@@ -3751,8 +3797,10 @@ class PassengerSeatPrice:
 class PassengerTicketNumber:
     """Information related to Ticket Number.
 
-    :ivar ticket_number: The identifying number for a Ticket for a passenger.
-    :ivar booking_traveler_ref: Reference to a passenger associated with a ticket.
+    :ivar ticket_number: The identifying number for a Ticket for a
+                            passenger.
+    :ivar booking_traveler_ref: Reference to a passenger associated with
+                            a ticket.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -3798,7 +3846,7 @@ class PaymentRef:
 class PenFeeType:
     """
     :ivar dep_required: Deposit required. True if require. False if not required.
-    :ivar dep_non_ref: Deposit non-refundable. True is non-refundanbe. False is refundable.
+    :ivar dep_non_ref: Deposit non-refundable.  True is  non-refundanbe.  False is refundable.
     :ivar tk_non_ref: Ticket non-refundable. True if non-refundanbe. False if refundable.
     :ivar air_vfee: Carrier fee. True if carrier fee is assessed should passenger for complete all conditions for travel at fare. False if it does not exist.
     :ivar cancellation: Cancellation. True if subject to penalty. False if no penalty.
@@ -3807,8 +3855,8 @@ class PenFeeType:
     :ivar replace_tk: Replace ticket. True if subject to penalty, if replacement of lost ticket / exchange order. False if no penalty, if replacement of lost ticket or exchange order.
     :ivar applicable: Applicable. True if amount specified is applicable. Flase if amount specified is not applicable.
     :ivar applicable_to: Applicable to penalty or deposit. True if amount specified applies to penalty. False if amount specified applies to deposit.
-    :ivar amt: Amount of penalty. If XXX.XX then it is an amount. If it is XX then is is a percenatge. Eg 100.00 or 000100.
-    :ivar type: Type of penalty. If it is D then dollar. If it is P then percentage.
+    :ivar amt: Amount of penalty.  If XXX.XX then it is an amount.  If it is XX then is is a percenatge.  Eg 100.00 or 000100.
+    :ivar type: Type of penalty.  If it is D then dollar.  If it is P then percentage.
     :ivar currency: Currency code of penalty (e.g. USD).
     """
     dep_required: Optional[bool] = field(
@@ -3939,8 +3987,8 @@ class PenaltyInformation:
     :ivar priceable_unit: Identifies FareComponents that are priced together
     :ivar board_point: Origin for the FareComponent
     :ivar off_point: Destination for the FareComponent
-    :ivar minimum_change_fee: Estimated minimum change fee associated with the fare component. Can be overridden by ChangeFeeApplicationCodes for other fare components.
-    :ivar maximum_change_fee: Estimated maximum change fee associated with the fare component. Can be overridden by ChangeFeeApplicationCodes for other fare components.
+    :ivar minimum_change_fee: Estimated minimum change fee associated with the fare component.  Can be overridden by ChangeFeeApplicationCodes for other fare components.
+    :ivar maximum_change_fee: Estimated maximum change fee associated with the fare component.  Can be overridden by ChangeFeeApplicationCodes for other fare components.
     :ivar filed_currency: Currency of the filed change fee
     :ivar conversion_rate: Conversion rate from filed change fee currency to reissue location currency
     :ivar refundable: Answers whether the FareComponent is refundable
@@ -4114,7 +4162,7 @@ class PersonNameSearch:
 @dataclass
 class PolicyCodesList:
     """
-    :ivar policy_code: A code that indicates why an item was determined to be ‘out of policy’.
+    :ivar policy_code: A code that indicates why an item was determined to be &#8216;out of policy&#8217;.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4137,7 +4185,8 @@ class PriceChangeType:
     """Indicates a price change is found in Fare Control Manager.
 
     :ivar value:
-    :ivar amount: Contains the currency and amount information. Assume the amount is added unless a hyphen is present to indicate subtraction.
+    :ivar amount: Contains the currency and amount information.
+                            Assume the amount is added unless a hyphen is present to indicate subtraction.
     :ivar carrier: Contains carrier code information
     :ivar segment_ref: Contains segment reference information
     """
@@ -4545,7 +4594,8 @@ class RuleCharges:
     :ivar departure_status:
     :ivar amount:
     :ivar percent:
-    :ivar more_rules_present: If true, specifies that advance purchase information will be present in fare rules.
+    :ivar more_rules_present: If true, specifies that advance purchase
+                            information will be present in fare rules.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4710,10 +4760,10 @@ class SegmentIndex:
 
 @dataclass
 class ServiceSubGroup:
-    """The Service Sub Group of the Ancillary Service. Providers: 1G, 1V, 1P, 1J,
+    """The Service Sub Group of the Ancillary Service.  Providers: 1G, 1V, 1P, 1J,
     ACH.
 
-    :ivar code: The Service Sub Group Code of the Ancillary Service. Providers: 1G, 1V, 1P, 1J, ACH
+    :ivar code: The Service Sub Group Code of the Ancillary Service.  Providers: 1G, 1V, 1P, 1J, ACH
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4733,8 +4783,10 @@ class SpecificSeatAssignment:
 
     :ivar booking_traveler_ref: The passenger that this seat assignment is for
     :ivar segment_ref: The segment that we will assign this seat on
-    :ivar flight_detail_ref: The Flight Detail ref of the AirSegment used when requesting seats on Change of Guage flights
-    :ivar seat_id: The actual seat ID that is being requested. Special Characters are not supported in this field.
+    :ivar flight_detail_ref: The Flight Detail ref of the AirSegment used
+                            when requesting seats on Change of Guage flights
+    :ivar seat_id: The actual seat ID that is being requested.
+                            Special Characters are not supported in this field.
     :ivar rail_coach_number: Coach number for which rail seatmap/coachmap is returned.
     """
     class Meta:
@@ -4852,8 +4904,12 @@ class SvcSegment:
     :ivar number_of_items:
     :ivar origin: Origin location - Airport code. 1P only.
     :ivar destination: Destination location - Airport code. 1P only.
-    :ivar start_date: Start date of the segment. Generally it is the next date after the last air segment. 1P only
-    :ivar travel_order: To identify the appropriate travel sequence for Air/Car/Hotel/Passive segments/reservations based on travel dates. This ordering is applicable across the UR not provider or traveler specific
+    :ivar start_date: Start date of the segment. Generally it is the
+                                                    next date after the last air segment. 1P only
+    :ivar travel_order: To identify the appropriate travel sequence for
+                                                    Air/Car/Hotel/Passive segments/reservations based on travel dates.
+                                                    This ordering is applicable across the UR not provider or traveler
+                                                    specific
     :ivar booking_traveler_ref:
     :ivar rfic: 1P - Reason for issuance
     :ivar rfisc: 1P - Resaon for issuance sub-code
@@ -5440,7 +5496,8 @@ class WaiverCode:
 
     :ivar tour_code:
     :ivar ticket_designator:
-    :ivar endorsement: Endorsement. Size can be up to 100 characters
+    :ivar endorsement: Endorsement. Size can be up to 100
+                            characters
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -5479,7 +5536,8 @@ class Yield:
     flat amount of original price. The value of Amount can be negative. Negative
     value implies a discount.
 
-    :ivar amount: Yield per passenger level in Default Currency for this entity.
+    :ivar amount: Yield per passenger level in Default
+                            Currency for this entity.
     :ivar booking_traveler_ref: Reference to a booking traveler for which Yield is applied.
     """
     class Meta:
@@ -5511,8 +5569,10 @@ class TypeAtpcoglobalIndicator(Enum):
     :cvar CT: Circle trip.
     :cvar EH: Within Eastern Hemisphere
     :cvar FE: Far East
-    :cvar IN_VALUE: FareByRule - For int'l incl. AT/PA/WH/CT/RW
-    :cvar NA: FareByRule for North America incl US/CA/TB/PV
+    :cvar IN_VALUE: FareByRule - For int'l incl.
+                            AT/PA/WH/CT/RW
+    :cvar NA: FareByRule for North America incl
+                            US/CA/TB/PV
     :cvar PA: Via Pacific
     :cvar PN: Via Pacific and via North America
     :cvar PO: Via Polar Route.
@@ -5722,7 +5782,10 @@ class TypeBooking(Enum):
 class TypeBulkTicketModifierType:
     """Bulk ticketing modifier type.
 
-    :ivar suppress_on_fare_calc: Optional attribute to allow a modifier impact such as Bulk Ticketing to have information suppressed on the Fare Calc when generating supporting documents Check the specific host system which may or may not support this function
+    :ivar suppress_on_fare_calc: Optional attribute to allow a modifier
+                        impact such as Bulk Ticketing to have information suppressed on the
+                        Fare Calc when generating supporting documents Check the specific
+                        host system which may or may not support this function
     """
     class Meta:
         name = "typeBulkTicketModifierType"
@@ -5748,7 +5811,10 @@ class TypeCarrierCode(Enum):
 
 class TypeConnectionIndicator(Enum):
     """
-    Types of connection indicator : AvailabilityAndPricing : Specified availability and pricing connection; TurnAround : Specified turn around; Stopover : Specified stopover;
+    Types of connection indicator :
+                         AvailabilityAndPricing : Specified availability and pricing connection;
+                         TurnAround : Specified turn around;
+                         Stopover : Specified stopover;
     :cvar AVAILABILITY_AND_PRICING:
     :cvar TURN_AROUND:
     :cvar STOPOVER:
@@ -5770,7 +5836,8 @@ class TypeCouponStatus(Enum):
     :cvar R: Code="R" Status="Refunded"
     :cvar E: Code="E" Status="Exchanged"
     :cvar V: Code="V" Status="Void"
-    :cvar Z: Code="Z" Status="Archived/Carrier Modified"
+    :cvar Z: Code="Z" Status="Archived/Carrier
+                            Modified"
     :cvar U: Code="U" Status="Unavailable"
     :cvar S: Code="S" Status="Suspended"
     :cvar I: Code="I" Status="Irregular Ops"
@@ -5860,7 +5927,8 @@ class TypeDaysOfOperation:
 class TypeDestinationCode(Enum):
     """List of valid Destination Codes.
 
-    :cvar MEXICO_COST_RICA_CENTRAL_AMERICA: Mexico/Central America/Canal Zone/Costa Rica
+    :cvar MEXICO_COST_RICA_CENTRAL_AMERICA: Mexico/Central America/Canal
+                            Zone/Costa Rica
     :cvar CARIBBEAN: Island and Countries of The Caribbean
     :cvar SOUTH_AMERICA: South America
     :cvar EUROPE: Europe
@@ -5978,9 +6046,13 @@ class TypeFailureInfo:
 class TypeFareBreak(Enum):
     """Types of fare break.
 
-    :cvar MUST_BREAK: Break Fare at the associated segment. Multiple Breaks or No Breaks may be allowed.
-    :cvar MUST_ONLY_BREAK: Only Break Fare at the associated segment. Fare Break in the entire itinerary is allowed only at the concerned segment.
-    :cvar MUST_NOT_BREAK: No Fare Break allowed at the associated segment.
+    :cvar MUST_BREAK: Break Fare at the associated segment.
+                            Multiple Breaks or No Breaks may be allowed.
+    :cvar MUST_ONLY_BREAK: Only Break Fare at the associated segment.
+                            Fare Break in the entire itinerary is allowed only at the
+                            concerned segment.
+    :cvar MUST_NOT_BREAK: No Fare Break allowed at the associated
+                            segment.
     """
     MUST_BREAK = "MustBreak"
     MUST_ONLY_BREAK = "MustOnlyBreak"
@@ -6018,7 +6090,8 @@ class TypeFareGuarantee(Enum):
     :cvar MANUAL: Agent has overridden default(s)
     :cvar MANUAL_FARE: Fare has been constructed by agent
     :cvar GUARANTEED: Fare is guaranteed
-    :cvar INVALID: Invalid fare, e.g. due to name or itinerary change
+    :cvar INVALID: Invalid fare, e.g. due to name or
+                      itinerary change
     :cvar RESTORED: Ticketed stored fare has been restored
     :cvar TICKETED:
     :cvar UNTICKETABLE: Unable to ticket
@@ -6054,8 +6127,10 @@ class TypeFarePenalty:
     """Penalty applicable on a Fare for change/ cancellation etc- expressed in both
     Money and Percentage.
 
-    :ivar amount: The penalty (if any) - expressed as the actual amount of money. Both Amount and Percentage can be present.
-    :ivar percentage: The penalty (if any) - expressed in percentage. Both Amount and Percentage can be present.
+    :ivar amount: The penalty (if any) - expressed as the actual
+                            amount of money. Both Amount and Percentage can be present.
+    :ivar percentage: The penalty (if any) - expressed in
+                            percentage. Both Amount and Percentage can be present.
     :ivar penalty_applies:
     :ivar no_show: The No Show penalty (if any) to change/cancel the fare.
     """
@@ -6247,9 +6322,11 @@ class TypeFareTripType(Enum):
     """Type of trip for this fare ( One-way, Return, etc..)
 
     OneWay - one way fare
-    OneWayOnly - one way fare only. Do not double
+    OneWayOnly - one way fare only. Do not
+                    double
     Return - round trip fare
-    ReturnOnly -- Round Trip fare only. Cannot be divided for use in half Round Trip
+    ReturnOnly -- Round Trip fare only.
+                    Cannot be divided for use in half Round Trip
     HalfReturn - Half roundtrip fare
     CircleTrip -- circle trip fare
     RoundTheWorld -- round the world fare
@@ -6433,7 +6510,7 @@ class TypeNonAirReservationRef:
 
 class TypePosition(Enum):
     """Facility position with respect to position within the aircraft cabin.
-    Possible values are – Left, Right, Center, Left Center, Right Center.
+    Possible values are &#8211; Left, Right, Center, Left Center, Right Center.
 
     :cvar LEFT:
     :cvar RIGHT:
@@ -6455,7 +6532,8 @@ class TypePricingMethod(Enum):
     :cvar MANUAL: Agent has overridden default(s)
     :cvar MANUAL_FARE: Fare has been constructed by agent
     :cvar GUARANTEED: Fare is guaranteed
-    :cvar INVALID: Invalid fare, e.g. due to name or itinerary change
+    :cvar INVALID: Invalid fare, e.g. due to name or
+                      itinerary change
     :cvar RESTORED: Ticketed stored fare has been restored
     :cvar TICKETED:
     :cvar UNTICKETABLE: Unable to ticket
@@ -6467,11 +6545,11 @@ class TypePricingMethod(Enum):
     :cvar AGENT_ASSISTED: Fare is created using Agent Asisted Pricing.
     Worldspan TKG FAX Line Documentation - AGENT ASSISTEDPRICED
     :cvar VERIFY_PRICE: Verify existing saved price on PNR .
-    Worldspan TKG FAX Line Documentation - AWAITING PRICE VERIFICATION
+    Worldspan TKG FAX Line Documentation -  AWAITING PRICE VERIFICATION
     :cvar ALT_SEGMENT_REMOVED_REPRICE: ALT Segment removed, Reprice pricing.
     Worldspan TKG FAX Line Documentation - AWAITING REPRICING ALT SEGS RMVD
     :cvar AUXILIARY_SEGMENT_REMOVED_REPRICE: AUX Segment removed, Reprice pricing.
-    Worldspan TKG FAX Line Documentation - AWAITING REPRICING AUX SEGS REMOVED
+    Worldspan TKG FAX Line Documentation -  AWAITING REPRICING AUX SEGS REMOVED
     :cvar DUPLICATE_SEGMENT_REMOVED_REPRICE: Duplicate Segment removed, Reprice pricing.
     Worldspan TKG FAX Line Documentation - AWAITING REPRICING DUPE SEGS REMOVED
     :cvar UNKNOWN: Any other kind of Pricing Method which is not supported by API.
@@ -6690,8 +6768,9 @@ class TypeTextElement:
 
 @dataclass
 class TypeTicketModifierAccountingType:
-    """
-    Ticketing Modifier used to add accounting - discount information.
+    """Ticketing Modifier used to add accounting.
+
+                    - discount information.
     :ivar value:
     """
     class Meta:
@@ -6733,7 +6812,8 @@ class TypeTicketModifierPercentType:
     """Ticketing Modifier used to alter a fare percentage before or during the
     ticketing operation.
 
-    :ivar percent: Percent associated with a ticketing modifier
+    :ivar percent: Percent associated with a ticketing
+                        modifier
     """
     class Meta:
         name = "typeTicketModifierPercentType"
@@ -6754,7 +6834,8 @@ class TypeTicketModifierValueType:
     """Ticketing Modifier used to add value discount information.
 
     :ivar value:
-    :ivar net_fare_value: Treat the value as net fare discount information
+    :ivar net_fare_value: Treat the value as net fare discount
+                        information
     """
     class Meta:
         name = "typeTicketModifierValueType"
@@ -6865,11 +6946,15 @@ class Apisrequirements:
     """Specific details for APIS Requirements.
 
     :ivar document:
-    :ivar key: Unique identifier for this APIS Requirements - use this key when a single APIS Requirements is shared by multiple elements.
-    :ivar level: Applicability level of the Document. Required, Supported, API_Supported or Unknown
+    :ivar key: Unique identifier for this APIS
+                            Requirements - use this key when a single APIS Requirements is
+                            shared by multiple elements.
+    :ivar level: Applicability level of the Document.
+                            Required, Supported, API_Supported or Unknown
     :ivar gender_required:
     :ivar date_of_birth_required:
-    :ivar required_documents: What are required documents for the APIS Requirement. One, FirstAndOneOther or All
+    :ivar required_documents: What are required documents for the APIS
+                            Requirement. One, FirstAndOneOther or All
     :ivar nationality_required: Nationality of the traveler is required for booking for some suppliers.
     """
     class Meta:
@@ -7063,9 +7148,13 @@ class AirExchangeModifiers:
     :ivar ticket_designator:
     :ivar allow_penalty_fares:
     :ivar private_fares_only:
-    :ivar universal_record_locator_code: Which UniversalRecord should this new reservation be applied to. If blank, then a new one is created.
-    :ivar provider_locator_code: Which Provider reservation does this reservation get added to.
-    :ivar provider_code: To be used with ProviderLocatorCode, which host the reservation being added to belongs to.
+    :ivar universal_record_locator_code: Which UniversalRecord should this new reservation
+                            be applied to. If blank, then a new one is created.
+    :ivar provider_locator_code: Which Provider reservation does this reservation
+                            get added to.
+    :ivar provider_code: To be used with ProviderLocatorCode, which host
+                            the
+                            reservation being added to belongs to.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -7304,7 +7393,9 @@ class AirPricingAdjustment:
 @dataclass
 class AirPricingPayment:
     """
-    AirPricing Payment information - used to associate a FormOfPayment withiin the UR with one or more AirPricingInfos
+    AirPricing Payment information - used to
+                    associate a FormOfPayment withiin the UR with one or more
+                    AirPricingInfos
     :ivar payment:
     :ivar form_of_payment:
     :ivar form_of_payment_ref:
@@ -7360,9 +7451,12 @@ class AirRefundInfo:
     :ivar refund_amount:
     :ivar retain_amount:
     :ivar refund_fee: Refund fee for ACH/1P
-    :ivar refundable_taxes: 1P - None : All taxes are not refundable. Unknown : Refundability of taxes are not known.
-    :ivar filed_currency: 1P Currency of filed CAT33 refund fee
-    :ivar conversion_rate: 1P - Currency conversion rate used for conversion between FiledCurrency and PCC base currency in which the response is returned.
+    :ivar refundable_taxes: 1P - None : All taxes are not refundable.
+                                            Unknown : Refundability of taxes are not known.
+    :ivar filed_currency: 1P  Currency of filed CAT33 refund fee
+    :ivar conversion_rate: 1P - Currency conversion rate used for conversion
+                                            between FiledCurrency and PCC base currency in which the response is
+                                            returned.
     :ivar taxes: 1P - The total value of taxes.
     :ivar original_ticket_total: 1P - The original ticket amount.
     :ivar forfeit_amount:
@@ -7629,8 +7723,10 @@ class AirSegmentPricingModifiers:
     :ivar prohibit_non_refundable_fares:
     :ivar prohibit_penalty_fares:
     :ivar fare_basis_code: The fare basis code to be used for pricing.
-    :ivar fare_break: Fare break point modifier to instruct Fares where it should or should not break the fare.
-    :ivar connection_indicator: ConnectionIndicator attribute will be used to map connection indicators AvailabilityAndPricing, TurnAround and Stopover. This attribute is for Wordspan/1P only.
+    :ivar fare_break: Fare break point modifier to instruct Fares
+                            where it should or should not break the fare.
+    :ivar connection_indicator: ConnectionIndicator attribute will be used to map connection indicators
+                            AvailabilityAndPricing, TurnAround and Stopover. This attribute is for Wordspan/1P only.
     :ivar brand_tier: Modifier to price by specific brand tier number.
     """
     class Meta:
@@ -7739,15 +7835,19 @@ class AirTicketingModifiers:
     :ivar document_modifiers:
     :ivar air_pricing_info_ref:
     :ivar tour_code: Allows an agency to modify the tour code information during ticket issuance. Providers supported: Worldspan and JAL.
-    :ivar ticket_endorsement: Allows an agency to add user defined ticketing endorsements in the ticket. Providers supported: Worldspan and JAL.
-    :ivar commission: Allows an agency to add the commission to a new or different commission rate which will be applied at time of ticketing. The commission Modifier allows the user specify how the commission change is to applied. Providers supported: Worldspan and JAL.
+    :ivar ticket_endorsement: Allows an agency to add user defined
+                                           ticketing endorsements in the ticket. Providers supported: Worldspan and JAL.
+    :ivar commission: Allows an agency to add the commission
+                                           to a new or different commission rate which will be applied at
+                                           time of ticketing. The commission Modifier allows the user
+                                           specify how the commission change is to applied. Providers supported: Worldspan and JAL.
     :ivar form_of_payment: FormOfPayment information to be used as ticketing modifier at the time of ticketing. Providers supported: Galileo, Apollo, Worldspan and JAL.
     :ivar credit_card_auth: CreditCardAuth information to be used as ticketing modifier at the time of ticketing. Providers supported: Galileo, Apollo, Worldspan and JAL.
     :ivar payment: Provide Payment for FOP. Providers supported: Galileo, Apollo, Worldspan and JAL.
     :ivar plating_carrier: The Plating Carrier used for this ticket
     :ivar ticketed_fare_override: It is a modifier to allow re-issuance of tickets for stored fares which are already ticketed. Providers supported are 1P/1J
     :ivar suppress_tax_and_fee: Allow to suppress Taxand Fee in ticketing response.Providers supported: Worldspan and JAL.
-    :ivar no_comparison_sfq: 1P/1J - Set to "true" to include the no comparison overide #NC to override the existing SFQ and issue the ticket. Only valid for AirTicketingReq, not valid for AirExchangeTicketingReq.
+    :ivar no_comparison_sfq: 1P/1J - Set to "true" to include the no comparison overide #NC to override the existing SFQ and issue the ticket. Only valid for AirTicketingReq, not valid  for AirExchangeTicketingReq.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -7859,8 +7959,10 @@ class AlternateLocationDistance:
 
     :ivar distance:
     :ivar key:
-    :ivar search_location: The Searching City or Airport specified in the Request.
-    :ivar alternate_location: The nearby Alternate City or Airport to SearchLocation.
+    :ivar search_location: The Searching City or Airport specified in the
+                            Request.
+    :ivar alternate_location: The nearby Alternate City or Airport to
+                            SearchLocation.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -7933,10 +8035,15 @@ class AutoSeatAssignment:
     """Request object used to request seats automatically by seat type.
 
     :ivar segment_ref: The segment that this assignment belongs to
-    :ivar smoking: Indicates that the requested seat type should be a smoking seat.
+    :ivar smoking: Indicates that the requested seat type
+                            should be a smoking seat.
     :ivar seat_type: The type of seat that is requested
-    :ivar group: Indicates that this seat request is for group seating for all passengers. If no SegmentRef is included, group seating will be requested for all segments.
-    :ivar booking_traveler_ref: The booking traveler that this seat assignment is for. If not entered, this applies to the primary booking traveler and other passengers are adjacent.
+    :ivar group: Indicates that this seat request is for
+                            group seating for all passengers. If no SegmentRef is included,
+                            group seating will be requested for all segments.
+    :ivar booking_traveler_ref: The booking traveler that this seat assignment
+                            is for. If not entered, this applies to the primary booking
+                            traveler and other passengers are adjacent.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -8037,7 +8144,8 @@ class AvailableSsr:
     """A wrapper for all the information regarding each of the available SSR.
 
     :ivar ssr:
-    :ivar ssrrules: Holds the rules for selecting the SSR in the itinerary
+    :ivar ssrrules: Holds the rules for selecting the SSR in
+                                the itinerary
     :ivar industry_standard_ssr:
     """
     class Meta:
@@ -8080,9 +8188,12 @@ class BackOfficeHandOff:
     """Allows an agency to select the back office documents and also route to
     different host to produce for the itinerary.
 
-    :ivar type: The type of back office document,valid options are Accounting,Global,NonAccounting,NonAccountingRemote,Dual.
-    :ivar location: This is required for NonAccountingRemote,Dual and Global type back office.
-    :ivar pseudo_city_code: The PCC of the host system where it would be routed.
+    :ivar type: The type of back office document,valid options
+                            are Accounting,Global,NonAccounting,NonAccountingRemote,Dual.
+    :ivar location: This is required for NonAccountingRemote,Dual
+                            and Global type back office.
+    :ivar pseudo_city_code: The PCC of the host system where it would be
+                            routed.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -8176,10 +8287,14 @@ class BaseBaggageAllowanceInfo:
 class BillingDetailItem:
     """The Billing Details Information.
 
-    :ivar name: Detailed Billing Information Name(e.g Personal ID, Account Number)
-    :ivar data_type: Detailed Billing Information DataType (Alpha, Numeric, etc.)
-    :ivar min_length: Detailed Billing Information Minimum Length.
-    :ivar max_length: Detailed Billing Information Maximum Length.
+    :ivar name: Detailed Billing Information Name(e.g
+                            Personal ID, Account Number)
+    :ivar data_type: Detailed Billing Information DataType
+                            (Alpha, Numeric, etc.)
+    :ivar min_length: Detailed Billing Information Minimum
+                            Length.
+    :ivar max_length: Detailed Billing Information Maximum
+                            Length.
     :ivar value: Detailed Billing Information Value
     """
     class Meta:
@@ -8321,7 +8436,7 @@ class Co2Emissions:
     :ivar co2_emission:
     :ivar total_value: The total CO2 emission value for the journey
     :ivar unit: The unit used in the TotalValue attribute
-    :ivar category: The category name of the type of cabin, either Economy or Premium. Premium is any cabin that is not considered Economy
+    :ivar category: The category name of the type of cabin, either Economy or Premium.  Premium is any cabin that is not considered Economy
     :ivar source: The source responsible for the values
     """
     class Meta:
@@ -8404,7 +8519,8 @@ class CarrierList:
 @dataclass
 class CategoryDetailsType:
     """
-    :ivar category_details: For each category Details of Structured Fare Rules
+    :ivar category_details: For each category Details of Structured Fare
+    						Rules
     :ivar value:
     """
     category_details: List[ValueDetails] = field(
@@ -8550,7 +8666,7 @@ class ConjunctedTicketInfo:
     :ivar iatanumber:
     :ivar ticket_issue_date:
     :ivar ticketing_agent_sign_on:
-    :ivar country_code: Contains Ticketed PCC’s Country code.
+    :ivar country_code: Contains Ticketed PCC&#8217;s Country code.
     :ivar status:
     """
     class Meta:
@@ -8609,26 +8725,54 @@ class ConjunctedTicketInfo:
 class Coupon:
     """The flight coupon that resulted from the ticketing operation.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar ticket_designator:
     :ivar key:
     :ivar coupon_number: The sequential number of this coupon.
     :ivar operating_carrier: The true carrier.
     :ivar operating_flight_number: The true carrier's flight number.
-    :ivar marketing_carrier: If codeshare applies to this, this is the marketing carrier (as opposed to the operating carrier).
-    :ivar marketing_flight_number: If codeshare applies to this, this is the marketing flight number (as opposed to the operating flight number).
-    :ivar origin: Returns the airport or city code that defines the origin market for this fare.
-    :ivar destination: Returns the airport or city code that defines the destination market for this fare.
-    :ivar departure_time: The date and time at which this entity departs. This does not include time zone information since it can be derived from the origin location. In case of open segment this will not be returned.
-    :ivar arrival_time: The date and time at which this entity arrives at the destination. This does not include time zone information since it can be derived from the origin location.
-    :ivar stopover_code: Stopover code - indicator that stopover is allowed at Origin Airport or City.
+    :ivar marketing_carrier: If codeshare applies to this, this is the
+                            marketing carrier (as opposed to the operating carrier).
+    :ivar marketing_flight_number: If codeshare applies to this, this is the
+                            marketing flight number (as opposed to the operating flight
+                            number).
+    :ivar origin: Returns the airport or city code that
+                            defines the origin market for this fare.
+    :ivar destination: Returns the airport or city code that
+                            defines the destination market for this fare.
+    :ivar departure_time: The date and time at which this entity
+                            departs. This does not include time zone information since it can
+                            be derived from the origin location. In case of open segment this
+                            will not be returned.
+    :ivar arrival_time: The date and time at which this entity arrives
+                            at the destination. This does not include time zone information
+                            since it can be derived from the origin location.
+    :ivar stopover_code: Stopover code - indicator that stopover
+                            is allowed at Origin Airport or City.
     :ivar booking_class: Booked fare class for coupon.
     :ivar fare_basis: The fare basis code for this fare
     :ivar not_valid_before: Fare not valid before this date.
     :ivar not_valid_after: Fare not valid after this date.
-    :ivar status: The status of this coupon returend from host is mapped as follows Code="A" Status="Airport Controlled" Code="C" Status="Checked In" Code="F" Status="Flown/Used" Code="L" Status="Boarded/Lifted" Code="O" Status="Open" Code="P" Status="Printed" Code="R" Status="Refunded" Code="E" Status="Exchanged" Code="V" Status="Void" Code="Z" Status="Archived/Carrier Modified" Code="U" Status="Unavailable" Code="S" Status="Suspended" Code="I" Status="Irregular Ops" Code="D" Status="Deleted/Removed" Code="X" Status="Unknown"
-    :ivar segment_group: Indicates the grouping in which this segment resides based on Origin/Destination pairs in itinerary
+    :ivar status: The status of this coupon returend from host is mapped as follows
+                                  Code="A" Status="Airport Controlled"
+                                  Code="C" Status="Checked In"
+                                  Code="F" Status="Flown/Used"
+                                  Code="L" Status="Boarded/Lifted"
+                                  Code="O" Status="Open"
+                                  Code="P" Status="Printed"
+                                  Code="R" Status="Refunded"
+                                  Code="E" Status="Exchanged"
+                                  Code="V" Status="Void"
+                                  Code="Z" Status="Archived/Carrier Modified"
+                                  Code="U" Status="Unavailable"
+                                  Code="S" Status="Suspended"
+                                  Code="I" Status="Irregular Ops"
+                                  Code="D" Status="Deleted/Removed"
+                                  Code="X" Status="Unknown"
+    :ivar segment_group: Indicates the grouping in which this
+                            segment resides based on Origin/Destination pairs in itinerary
     :ivar marriage_group: Airline Marrraige group indicator
     """
     class Meta:
@@ -8855,7 +8999,8 @@ class DocumentOptions:
     :ivar passenger_receipt_override:
     :ivar override_option: Allows an agency to override print options for documents during document generation.
     :ivar suppress_itinerary_remarks: True when itinerary remarks are suppressed.
-    :ivar generate_itin_numbers: True when itinerary numbers are system generated.
+    :ivar generate_itin_numbers: True when itinerary numbers are system
+                            generated.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -8896,13 +9041,29 @@ class DocumentOptions:
 @dataclass
 class Emd:
     """
-    :ivar fulfillment_type: A one digit code specifying how the service must be fulfilled. See FulfillmentTypeDescription for the description of this value.
+    :ivar fulfillment_type: A one digit code specifying how the service must be fulfilled.
+                            See FulfillmentTypeDescription for the description of this value.
     :ivar fulfillment_type_description: EMD description.
-    :ivar associated_item: The type of Optional Service. The choices are Flight, Ticket, Merchandising, Rule Buster, Allowance, Chargeable Baggage, Carry On Baggage Allowance, Prepaid Baggage. Provider: 1G, 1V, 1P, 1J
-    :ivar availability_charge_indicator: A one-letter code specifying whether the service is available or if there is a charge associated with it. X = Service not available F = No charge for service (free) and an EMD is not issued to reflect free service E = No charge for service (free) and an EMD is issued to reflect the free service. G = No charge for service (free), booking is not required and an EMD is not issued to reflect free service H = No charge for service (free), booking is not required, and an EMD is issued to reflect the free service. Blank = No application. Charges apply according to the data in the Service Fee fields.
-    :ivar refund_reissue_indicator: An attribute specifying whether the service is refundable or reissuable.
-    :ivar commissionable: True/False value to whether or not the service is comissionable.
-    :ivar mileage_indicator: True/False value to whether or not the service has miles.
+    :ivar associated_item: The type of Optional Service.  The choices are Flight, Ticket, Merchandising, Rule Buster, Allowance, Chargeable Baggage, Carry On Baggage Allowance, Prepaid Baggage.  Provider: 1G, 1V, 1P, 1J
+    :ivar availability_charge_indicator: A one-letter code specifying whether the service
+                            is available or if there is a charge associated with it.
+                            X = Service not available
+                            F = No charge for service (free) and an EMD is not issued to
+                            reflect free service
+                            E = No charge for service (free) and an EMD is issued to reflect
+                            the free service.
+                            G = No charge for service (free), booking is not required and an
+                            EMD is not issued to reflect free service
+                            H = No charge for service (free), booking is not required, and an
+                            EMD is issued to reflect the free service.
+                            Blank = No application. Charges apply according to the data in the
+                            Service Fee fields.
+    :ivar refund_reissue_indicator: An attribute specifying whether the service is
+                            refundable or reissuable.
+    :ivar commissionable: True/False value to whether or not the
+                            service is comissionable.
+    :ivar mileage_indicator: True/False value to whether or not the
+                            service has miles.
     :ivar location: 3 letter location code where the service will be availed.
     :ivar date: The date at which the service will be used.
     :ivar booking: Holds the booking description for the service, e.g., SSR.
@@ -9071,7 +9232,8 @@ class Emdcoupon:
     """The coupon information for the EMD issued. Supported providers are
     1G/1V/1P/1J.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar number: Number of the EMD coupon
     :ivar status: Status of the coupon. Possible values Open, Void, Refunded, Exchanged, Irregular Operations,Airport Control, Checked In, Flown/Used, Boarded/Lifted, Suspended, Unknown
@@ -9256,7 +9418,7 @@ class ExchangePenaltyInfo:
     :ivar penalty_information:
     :ivar ptc:
     :ivar minimum_change_fee: Minimum change fee for changes to the itinerary.
-    :ivar maximum_change_fee: Maximum change fee for changes to the itinerary.
+    :ivar maximum_change_fee: Maximum change fee for changes  to the itinerary.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -9372,7 +9534,8 @@ class FareGuaranteeInfo:
 class FareNote:
     """A simple textual fare note. Used within several other objects.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar value:
     :ivar key:
@@ -9490,7 +9653,9 @@ class FareRestrictionDate:
     :ivar direction:
     :ivar start_date:
     :ivar end_date:
-    :ivar end_date_indicator: This field indicates the end date/last date for which travel on the fare component being validated must be commenced or completed
+    :ivar end_date_indicator: This field indicates the end date/last date
+                            for which travel on the fare component being validated must be
+                            commenced or completed
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -9780,13 +9945,15 @@ class FareStatus:
 class FareSurcharge:
     """Surcharges for a fare component.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     :ivar type:
     :ivar amount:
     :ivar segment_ref:
-    :ivar coupon_ref: The coupon to which that surcharge is relative (if applicable)
+    :ivar coupon_ref: The coupon to which that surcharge is relative
+                            (if applicable)
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -9897,8 +10064,10 @@ class HostTokenList:
 class IncludeAddlBookingCodeInfo:
     """Used to include primary or secondary carrier's booking code details.
 
-    :ivar type: The type defines that the booking code info is for primary or secondary carrier.
-    :ivar secondary_carrier: The secondary carrier code is required when type is secondary .
+    :ivar type: The type defines that the booking code info is
+                            for primary or secondary carrier.
+    :ivar secondary_carrier: The secondary carrier code is required when
+                            type is secondary .
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -9944,9 +10113,12 @@ class InvoluntaryChange:
 class Itinerary:
     """Allows an agency to select the itinenary option for ticket.
 
-    :ivar type: Specifies the type of itinenary option for ticket like Invoice type or Pocket itinenary.
-    :ivar option: Specifies the itinerary option like NoFare,NoAmount.
-    :ivar separate_indicator: Set to true if one itinerary to be printed per passenger.
+    :ivar type: Specifies the type of itinenary option
+                            for ticket like Invoice type or Pocket itinenary.
+    :ivar option: Specifies the itinerary option like
+                            NoFare,NoAmount.
+    :ivar separate_indicator: Set to true if one itinerary to be printed per
+                            passenger.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10069,8 +10241,10 @@ class Leg:
     :ivar leg_detail:
     :ivar key:
     :ivar group: Returns the Group Number for the leg.
-    :ivar origin: Returns the origin airport or city code for the leg.
-    :ivar destination: Returns the destination airport or city code for the leg.
+    :ivar origin: Returns the origin airport or city code
+                            for the leg.
+    :ivar destination: Returns the destination airport or city
+                            code for the leg.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10130,8 +10304,10 @@ class LegPrice:
 
     :ivar leg_detail:
     :ivar key:
-    :ivar total_price: The Total Prices for the Combination of Journey legs for this Price.
-    :ivar approximate_total_price: The Converted Total Price in Agency's Default Currency Value
+    :ivar total_price: The Total Prices for the Combination of
+                            Journey legs for this Price.
+    :ivar approximate_total_price: The Converted Total Price in Agency's Default
+                            Currency Value
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10280,7 +10456,9 @@ class OriginalItineraryDetails:
     itinerary. Providers: 1G/1V/1P/1S/1A.
 
     :ivar itinerary_type: Values allowed are International or Domestic. This tells if the itinerary is international or domestic.
-    :ivar bulk_ticket: Set to true and the itinerary is/will be a bulk ticket. Set to false and the itinerary being repriced will not be a bulk ticket. Default is false.
+    :ivar bulk_ticket: Set to true and the itinerary is/will be a bulk ticket.
+                                            Set to false and the itinerary being repriced will not be a bulk ticket.
+                                            Default is false.
     :ivar ticketing_pcc: This is the PCC or SID where the ticket was issued
     :ivar ticketing_iata: This is the IATA where the ticket was issued.
     :ivar ticketing_country: This is the country where the ticket was issued.
@@ -10437,7 +10615,8 @@ class PassengerDetails:
 class PenaltyFareInformation:
     """
     :ivar penalty_info: Penalty Limit if requested.
-    :ivar prohibit_penalty_fares: Indicates whether user wants penalty fares to be returned.
+    :ivar prohibit_penalty_fares: Indicates whether user wants penalty
+                            fares to be returned.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10604,8 +10783,8 @@ class PreferredCarriers:
 
 @dataclass
 class PricingDetails:
-    """Used for rapid reprice. This is a response element. Additional information
-    about how pricing was obtain, messages, etc. Providers: 1G/1V/1P/1S/1A.
+    """Used for rapid reprice. This is a response element.  Additional information
+    about how pricing was obtain, messages, etc.  Providers: 1G/1V/1P/1S/1A.
 
     :ivar advisory_message: Advisory messages returned from the host.
     :ivar endorsement_text: Endorsement text returned from the host.
@@ -10810,7 +10989,8 @@ class RefundFailureInfo:
 
     :ivar ticket_number:
     :ivar name:
-    :ivar tcrnumber: The identifying number for a Ticketless Air Reservation.
+    :ivar tcrnumber: The identifying number for a Ticketless Air
+                                    Reservation.
     :ivar booking_traveler_ref:
     :ivar code:
     :ivar message:
@@ -10956,7 +11136,8 @@ class RuleAdvancedPurchase:
     :ivar reservation_latest_unit:
     :ivar ticketing_earliest_date:
     :ivar ticketing_latest_date:
-    :ivar more_rules_present: If true, specifies that advance purchase information will be present in fare rules.
+    :ivar more_rules_present: If true, specifies that advance purchase
+                            information will be present in fare rules.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11216,10 +11397,10 @@ class ServiceAssociations:
 
 @dataclass
 class ServiceGroup:
-    """The Service Group of the Ancillary Service. Providers: 1G, 1V, 1P, 1J, ACH.
+    """The Service Group of the Ancillary Service.  Providers: 1G, 1V, 1P, 1J, ACH.
 
     :ivar service_sub_group:
-    :ivar code: The Service Group Code of the Ancillary Service. Providers: 1G, 1V, 1P, 1J, ACH
+    :ivar code: The Service Group Code of the Ancillary Service.  Providers: 1G, 1V, 1P, 1J, ACH
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11253,11 +11434,20 @@ class SolutionGroup:
     :ivar prohibited_account_codes:
     :ivar permitted_point_of_sales:
     :ivar prohibited_point_of_sales:
-    :ivar count: The number of solution to include in this group. If only one group specified, this can be left blank. If multiple groups specified, all counts must add up to the MaxResults of the request.
-    :ivar trip_type: Specifies the trip type for this group of results. Allows targeting a result set to a particular set of characterists.
-    :ivar diversification: Specifies the diversification of this group of results, if specified. Allows targeting a result set to ensure they contain more unique results.
-    :ivar tag: An arbitrary name for this group of solutions. Will be returned with the solution for idetification.
-    :ivar primary: Indicates that this is a primary SolutionGroup when using alternate pricing concepts
+    :ivar count: The number of solution to include in this
+                            group. If only one group specified, this can be left blank. If
+                            multiple groups specified, all counts must add up to the
+                            MaxResults of the request.
+    :ivar trip_type: Specifies the trip type for this group
+                            of results. Allows targeting a result set to a particular set of
+                            characterists.
+    :ivar diversification: Specifies the diversification of this
+                            group of results, if specified. Allows targeting a result set to
+                            ensure they contain more unique results.
+    :ivar tag: An arbitrary name for this group of solutions.
+                            Will be returned with the solution for idetification.
+    :ivar primary: Indicates that this is a primary
+                            SolutionGroup when using alternate pricing concepts
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11505,7 +11695,8 @@ class Tcrinfo:
     """
     :ivar status:
     :ivar date:
-    :ivar tcrnumber: The identifying number for a Ticketless Air Reservation.
+    :ivar tcrnumber: The identifying number for a Ticketless Air
+                            Reservation.
     :ivar provider_reservation_info_ref: Provider reservation reference key.
     """
     class Meta:
@@ -11664,9 +11855,11 @@ class Title(TypeTextElement):
 class Variance:
     """Indicates any variance in the requested flight.
 
-    :ivar type: Indicates type Variance, i.e. Actual, Estimated, Canceled and Diversion.
+    :ivar type: Indicates type Variance, i.e. Actual,
+                            Estimated, Canceled and Diversion.
     :ivar time: Indicates time for Variance.
-    :ivar indicator: Indicates VAriance Indicator, i.e. Early, Late.
+    :ivar indicator: Indicates VAriance Indicator, i.e.
+                            Early, Late.
     :ivar reason: Reason for Variance
     """
     class Meta:
@@ -11710,7 +11903,8 @@ class TypeRestrictionLengthOfStay:
     :ivar length:
     :ivar stay_unit:
     :ivar stay_date:
-    :ivar more_rules_present: If true, specifies that advance purchase information will be present in fare rules.
+    :ivar more_rules_present: If true, specifies that advance purchase
+                        information will be present in fare rules.
     """
     class Meta:
         name = "typeRestrictionLengthOfStay"
@@ -11771,7 +11965,8 @@ class TypeTicketFailureInfo:
 
     :ivar ticket_number:
     :ivar name:
-    :ivar tcrnumber: The identifying number for a Ticketless Air Reservation.
+    :ivar tcrnumber: The identifying number for a Ticketless Air
+                                Reservation.
     :ivar booking_traveler_ref:
     :ivar code:
     :ivar message:
@@ -11964,7 +12159,8 @@ class AirFareDisplayModifiers:
     """
     :ivar trip_type:
     :ivar cabin_class:
-    :ivar penalty_fare_information: Request Fares with specific Penalty Information.
+    :ivar penalty_fare_information: Request Fares with specific Penalty
+                                Information.
     :ivar fare_search_option:
     :ivar max_responses:
     :ivar departure_date:
@@ -11972,18 +12168,28 @@ class AirFareDisplayModifiers:
     :ivar return_date:
     :ivar base_fare_only:
     :ivar unrestricted_fares_only:
-    :ivar fares_indicator: Indicates whether only public fares should be returned or specific type of private fares
+    :ivar fares_indicator: Indicates whether only public fares
+                            should be returned or specific type of private fares
     :ivar currency_type:
     :ivar include_taxes:
-    :ivar include_estimated_taxes: Indicates to include estimated taxes i.e. if set to true estimated total fare,base fare and taxes would be returned.
+    :ivar include_estimated_taxes: Indicates to include estimated taxes i.e. if set to true
+                            estimated total fare,base fare and taxes would be
+                            returned.
     :ivar include_surcharges:
     :ivar global_indicator:
     :ivar prohibit_min_stay_fares:
     :ivar prohibit_max_stay_fares:
     :ivar prohibit_advance_purchase_fares:
-    :ivar prohibit_non_refundable_fares: Indicates whether it prohibits NonRefundable Fares.
-    :ivar validated_fares_only: Indicates that the requested Fares should be Validated Fares only. If set to true, then only valid fares will be returned. If set to false, both valid and non valid fares will be returned. If not sent, then no validation will be done. All fares will be returned.
-    :ivar prohibit_travel_restricted_fares: Indicates that the Fares not complying Travel Restrictions and Seasonality fare rules are prohibited
+    :ivar prohibit_non_refundable_fares: Indicates whether it prohibits
+                            NonRefundable Fares.
+    :ivar validated_fares_only: Indicates that the requested Fares
+                            should be Validated Fares only.
+                            If set to true, then only valid fares will be returned.
+                            If set to false, both valid and non valid fares will be returned.
+                            If not sent, then no validation will be done. All fares will be
+                            returned.
+    :ivar prohibit_travel_restricted_fares: Indicates that the Fares not complying
+                            Travel Restrictions and Seasonality fare rules are prohibited
     :ivar filed_currency: Represents the filed currency of the fare
     """
     class Meta:
@@ -12236,12 +12442,18 @@ class AirLegModifiers:
     :ivar disfavored_alliances:
     :ivar flight_type:
     :ivar anchor_flight_data:
-    :ivar prohibit_overnight_layovers: If true, excludes connections if arrival time of first flight and departure time of second flight is on 2 different calendar days. When used in conjunction with MaxConnectionTime, it would exclude all connections if the connecting flights wait time exceeds the time specified in MaxConnectionTime.
+    :ivar prohibit_overnight_layovers: If true, excludes connections if arrival time of first flight and departure time of second flight
+                       is on 2 different calendar days. When used in conjunction with MaxConnectionTime, it would exclude all connections if the
+                       connecting flights wait time exceeds the time specified in MaxConnectionTime.
     :ivar max_connection_time:
-    :ivar return_first_available_only: If it is true then it will search for first available for the booking code designated or any booking code in same cabin.
+    :ivar return_first_available_only: If it is true then it will search for first
+                            available for the booking code designated or any booking code in
+                            same cabin.
     :ivar allow_direct_access: If it is true request will be sent directly to the carrier.
     :ivar prohibit_multi_airport_connection: Indicates whether to restrict multi-airport connections
-    :ivar prefer_non_stop: When non-stops are preferred, the distribution of search results should skew heavily toward non-stop flights while still returning some one stop flights for comparison and price competitiveness. The search request will ‘boost' the preference towards non-stops. If true then Non Stop flights will be preferred.
+    :ivar prefer_non_stop: When non-stops are preferred, the distribution of search results should skew heavily toward non-stop flights while still returning
+                      some one stop flights for comparison and price competitiveness. The search request will &#8216;boost' the preference towards non-stops. If true then Non Stop
+                      flights will be preferred.
     :ivar order_by: Indicates whether to sort by Journey Time, Deparature Time or Arrival Time
     :ivar max_journey_time: Maximum Journey Time for this leg (in hours) 0-99. Supported Providers 1G,1V.
     """
@@ -12541,7 +12753,8 @@ class AirPricingModifiers:
     :ivar permitted_cabins:
     :ivar contract_codes:
     :ivar exempt_taxes:
-    :ivar penalty_fare_information: Request Fares with specific Penalty Information.
+    :ivar penalty_fare_information: Request Fares with specific Penalty
+                                Information.
     :ivar discount_card: Discount request for rail.
     :ivar promo_codes:
     :ivar manual_fare_adjustment: Represents increment/discount applied manually by agent.
@@ -12555,18 +12768,22 @@ class AirPricingModifiers:
     :ivar prohibit_advance_purchase_fares:
     :ivar prohibit_non_refundable_fares:
     :ivar prohibit_restricted_fares:
-    :ivar fares_indicator: Indicates whether only public fares should be returned or specific type of private fares
+    :ivar fares_indicator: Indicates whether only public fares
+                            should be returned or specific type of private fares
     :ivar filed_currency: Currency in which Fares/Prices will be filed if supported by the supplier else approximated to.
     :ivar plating_carrier: The Plating Carrier for this journey.
     :ivar override_carrier: The Plating Carrier for this journey.
-    :ivar eticketability: Request a search based on whether only E-ticketable fares are required.
-    :ivar account_code_fares_only: Indicates whether or not the private fares returned should be restricted to only those specific to the input account code and contract code.
+    :ivar eticketability: Request a search based on whether only
+                            E-ticketable fares are required.
+    :ivar account_code_fares_only: Indicates whether or not the private
+                            fares returned should be restricted to only those specific to the
+                            input account code and contract code.
     :ivar key:
     :ivar prohibit_non_exchangeable_fares:
     :ivar force_segment_select: This indicator allows agent to force segment select option in host while selecting all air segments to store price on a PNR. This is relevent only when agent selects all air segmnets to price. if agent selects specific segments to price then this attribute will be ignored by the system. This is currently used by Worldspan only.
     :ivar inventory_request_type: This allows user to make request for a particular source of inventory for pricing modifier purposes. This is currently used by Worldspan only.
     :ivar one_way_shop: Via this attribute one way shop can be requested. Applicable provider is 1G
-    :ivar prohibit_unbundled_fare_types: A "True" value wiill remove fares with EOU and ERU fare types from consideration. A "False" value is the same as no value. Default is no value. Applicable providers: 1P/1J/1G/1V
+    :ivar prohibit_unbundled_fare_types: A "True" value wiill remove fares with EOU and ERU fare types from consideration. A "False" value is the same as no value.  Default is no value. Applicable providers:  1P/1J/1G/1V
     :ivar return_services: When set to false, ATPCO filed Optional Services will not be returned. Default is true. Provider: 1G, 1V, 1P, 1J
     :ivar channel_id: A Channel ID is 2 to 4 alpha-numeric characters used to activate the Search Control Console filter for a specific group of travelers being served by the agency credential.
     :ivar return_fare_attributes: Returns attributes that are associated to a fare
@@ -12918,7 +13135,8 @@ class AirRefundBundle:
     :ivar waiver_code:
     :ivar ticket_number:
     :ivar ptc: Specifies the passenger type code for 1P
-    :ivar refund_type: Specifies whether this bundle was auto or manually generated
+    :ivar refund_type: Specifies whether this bundle was auto
+                            or manually generated
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -13011,13 +13229,24 @@ class AirSearchModifiers:
     :ivar distance_type:
     :ivar include_flight_details:
     :ivar allow_change_of_airport:
-    :ivar prohibit_overnight_layovers: If true, excludes connections if arrival time of first flight and departure time of second flight is on 2 different calendar days. When used in conjunction with MaxConnectionTime, it would exclude all connections if the connecting flights wait time exceeds the time specified in MaxConnectionTime.
-    :ivar max_solutions: The maximum number of solutions to return. Decreasing this number
-    :ivar max_connection_time: The maximum anount of time (in minutes) that a solution can contain for connections between flights.
-    :ivar search_weekends: A value of true indicates that search should be expanded to include weekend combinations, if applicable.
-    :ivar include_extra_solutions: If true, indicates that search should be made for returning more solutions, if available. For example, for certain providers, premium members may have the facility to get more solutions. This attribute may have to be combined with other applicable modifiers (like SearchWeekends) to return more results.
+    :ivar prohibit_overnight_layovers: If true, excludes connections if arrival time of first flight and departure time of second flight
+                       is on 2 different calendar days. When used in conjunction with MaxConnectionTime, it would exclude all connections if the
+                       connecting flights wait time exceeds the time specified in MaxConnectionTime.
+    :ivar max_solutions: The maximum number of solutions to return.
+                            Decreasing this number
+    :ivar max_connection_time: The maximum anount of time (in minutes) that a
+                            solution can contain for connections between flights.
+    :ivar search_weekends: A value of true indicates that search should be
+                            expanded to include weekend combinations, if applicable.
+    :ivar include_extra_solutions: If true, indicates that search should be made
+                            for returning more solutions, if available. For example, for
+                            certain providers, premium members may have the facility to get
+                            more solutions. This attribute may have to be combined with other
+                            applicable modifiers (like SearchWeekends) to return more results.
     :ivar prohibit_multi_airport_connection: Indicates whether to restrict multi-airport connections
-    :ivar prefer_non_stop: When non-stops are preferred, the distribution of search results should skew heavily toward non-stop flights while still returning some one stop flights for comparison and price competitiveness. The search request will ‘boost' the preference towards non-stops. If true then Non Stop flights will be preferred.
+    :ivar prefer_non_stop: When non-stops are preferred, the distribution of search results should skew heavily toward non-stop flights while still returning
+                      some one stop flights for comparison and price competitiveness. The search request will &#8216;boost' the preference towards non-stops. If true then Non Stop
+                      flights will be preferred.
     :ivar order_by: Indicates whether to sort by Journey Time, Deparature Time or Arrival Time. Applicable to air availability only.
     :ivar exclude_open_jaw_airport: This option ensures that travel into/out of each location will be into/out of the same airport of that location. Values are true or false. Default value is 'false'. If value is true then open jaws are exclude. If false the open jaws are included. The supported providers: 1P, 1J
     :ivar exclude_ground_transportation: Indicates whether to allow the user to exclude ground transportation or not. Default value is 'false'. If value is true then ground transportations are excluded. If false then ground transportations are included. The supported providers: 1P, 1J
@@ -13552,7 +13781,7 @@ class BaggageAllowance:
 
 @dataclass
 class BaggageRestriction:
-    """Information related to Baggage restriction rules .
+    """Information related to  Baggage restriction rules .
 
     :ivar dimension:
     :ivar max_weight:
@@ -13663,21 +13892,21 @@ class BookingRules:
 
 @dataclass
 class BrandingInfo:
-    """Branding information for the Ancillary Service. Returned in Seat Map only.
+    """Branding information for the Ancillary Service.  Returned in Seat Map only.
     Providers: 1G, 1V, 1P, 1J, ACH.
 
-    :ivar price_range: The price range of the Ancillary Service. Providers: 1G, 1V, 1P, 1J, ACH
+    :ivar price_range: The price range of the Ancillary Service.  Providers: 1G, 1V, 1P, 1J, ACH
     :ivar text:
     :ivar title: The additional titles associated to the brand or optional service. Providers: ACH, 1G, 1V, 1P, 1J
     :ivar image_location:
     :ivar service_group:
     :ivar air_segment_ref: Specifies the AirSegment the branding information is for. Providers: ACH, 1G, 1V, 1P, 1J
     :ivar key:
-    :ivar service_sub_code: The Service Sub Code of the Ancillary Service. Providers: 1G, 1V, 1P, 1J, ACH
-    :ivar external_service_name: The external name of the Ancillary Service. Providers: 1G, 1V, 1P, 1J, ACH
-    :ivar service_type: The type of Ancillary Service. Providers: 1G, 1V, 1P, 1J, ACH
-    :ivar commercial_name: The commercial name of the Ancillary Service. Providers: 1G, 1V, 1P, 1J, ACH
-    :ivar chargeable: Indicates if the optional service is not offered, is available for a charge, or is included in the brand. Providers: 1G, 1V, 1P, 1J, ACH
+    :ivar service_sub_code: The Service Sub Code of the Ancillary Service.  Providers: 1G, 1V, 1P, 1J, ACH
+    :ivar external_service_name: The external name of the Ancillary Service.  Providers: 1G, 1V, 1P, 1J, ACH
+    :ivar service_type: The type of Ancillary Service.  Providers: 1G, 1V, 1P, 1J, ACH
+    :ivar commercial_name: The commercial name of the Ancillary Service.  Providers: 1G, 1V, 1P, 1J, ACH
+    :ivar chargeable: Indicates if the optional service is not offered, is available for a charge, or is included in the brand.  Providers: 1G, 1V, 1P, 1J, ACH
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -13803,15 +14032,25 @@ class Connection:
     """Flight Connection Information.
 
     :ivar fare_note:
-    :ivar change_of_plane: Indicates the traveler must change planes between flights.
-    :ivar change_of_terminal: Indicates the traveler must change terminals between flights.
-    :ivar change_of_airport: Indicates the traveler must change airports between flights.
-    :ivar stop_over: Indicates that there is a significant delay between flights (usually 12 hours or more)
-    :ivar min_connection_time: The minimum time needed to connect between the two different destinations.
-    :ivar duration: The actual duration (in minutes) between flights.
-    :ivar segment_index: The sequential AirSegment number that this connection information applies to.
-    :ivar flight_details_index: The sequential FlightDetails number that this connection information applies to.
-    :ivar include_stop_over_to_fare_quote: The field determines to quote fares with or without stop overs,the values can be NoStopOver,StopOver and IgnoreSegment.
+    :ivar change_of_plane: Indicates the traveler must change
+                            planes between flights.
+    :ivar change_of_terminal: Indicates the traveler must change
+                            terminals between flights.
+    :ivar change_of_airport: Indicates the traveler must change
+                            airports between flights.
+    :ivar stop_over: Indicates that there is a significant
+                            delay between flights (usually 12 hours or more)
+    :ivar min_connection_time: The minimum time needed to connect between the
+                            two different destinations.
+    :ivar duration: The actual duration (in minutes) between
+                            flights.
+    :ivar segment_index: The sequential AirSegment number that this
+                            connection information applies to.
+    :ivar flight_details_index: The sequential FlightDetails number that this
+                            connection information applies to.
+    :ivar include_stop_over_to_fare_quote: The field determines to quote fares with or
+                            without stop overs,the values can be NoStopOver,StopOver and
+                            IgnoreSegment.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -13933,7 +14172,8 @@ class DocumentSelect:
 
     :ivar back_office_hand_off:
     :ivar itinerary:
-    :ivar issue_ticket_only: Set to true to alter system default of itinerary,ticket and back office.
+    :ivar issue_ticket_only: Set to true to alter system default of
+                            itinerary,ticket and back office.
     :ivar issue_electronic_ticket: Set to true for electronic tickets.
     :ivar fax_indicator: Set to true for providing fax details.
     """
@@ -14036,7 +14276,8 @@ class Emdsummary:
     """EMD summary information. Supported providers are 1G/1V/1P/1J.
 
     :ivar emdcoupon: The coupon information for the EMD issued.
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar number: EMD Number
     :ivar primary_document_indicator: Indicates whether the EMD is a primary EMD.
@@ -14134,7 +14375,8 @@ class ElectronicMiscDocument:
     """Electronic miscellaneous document. Supported providers are 1G/1V/1P/1J.
 
     :ivar emdcoupon: The coupon information for the EMD issued.
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar number: EMD Number
     :ivar primary_document_indicator: Indicates whether the EMD is a primary EMD.
@@ -14314,7 +14556,8 @@ class ExpertSolution:
     :ivar leg_price:
     :ivar key:
     :ivar total_price: The Total Price for the Solution.
-    :ivar approximate_total_price: The Converted Total Price in Agency's Default Currency Value
+    :ivar approximate_total_price: The Converted Total Price in Agency's Default
+                            Currency Value
     :ivar created_date: The Date on which this solution was created
     """
     class Meta:
@@ -14377,13 +14620,20 @@ class Facility:
     :ivar availability: If a seat type, the availability of the seat
     :ivar seat_price: The price of the seat, if applicable.
     :ivar paid: Set to True if either SeatPrice or GroupSeatPrice are returned.
-    :ivar service_sub_code: The service subcode associated with the Facility
-    :ivar ssrcode: The SSR Code associated with the Facility
-    :ivar issuance_reason: A one-letter RFIC value filed by the airline in each Optional Service will be mapped to this attribute. RFIC is IATA Reason for Issuance Code. Possible codes are A (Air transportation),B (Surface Transportation),C(Bagage), D(Financial Impact),E(Airport Services),F(Merchandise),G(Inflight Services),I (Individual Airline use).
+    :ivar service_sub_code: The service subcode associated with the
+                            Facility
+    :ivar ssrcode: The SSR Code associated with the
+                            Facility
+    :ivar issuance_reason: A one-letter RFIC value filed by the airline in each Optional Service will be mapped to this attribute.
+                           RFIC is IATA Reason for Issuance Code. Possible codes are A (Air transportation),B (Surface Transportation),C(Bagage),
+                           D(Financial Impact),E(Airport Services),F(Merchandise),G(Inflight Services),I (Individual Airline use).
     :ivar base_seat_price: Price of the seats excluding Taxes.
     :ivar taxes: Tax amount for the seat price.
-    :ivar quantity: The number of units availed for each optional service (e.g. 2 baggage availed will be specified as 2 in quantity for optional service BAGGAGE)
-    :ivar sequence_number: The sequence number associated with the OptionalService
+    :ivar quantity: The number of units availed for each optional
+                            service (e.g. 2 baggage availed will be specified as 2 in quantity
+                            for optional service BAGGAGE)
+    :ivar sequence_number: The sequence number associated with the
+                            OptionalService
     :ivar inclusive_of_tax: Identifies if the service was filed with a fee that is inclusive of tax.
     :ivar interline_settlement_allowed: Identifies if the interline settlement is allowed in service .
     :ivar geography_specification: Sector, Portion, Journey.
@@ -14689,7 +14939,8 @@ class FareRestriction:
 class FareRuleCategoryTypes:
     """
     :ivar category_details: To indicate details of which category is displayed
-    :ivar variable_category_details: If the specified category of Structured Fare Rules is of variable lenght
+    :ivar variable_category_details: If the specified category of Structured Fare
+    						Rules is of variable lenght
     :ivar value:
     """
     category_details: List[ValueDetails] = field(
@@ -14791,7 +15042,7 @@ class FareRulesFilter:
     @dataclass
     class Refundability:
         """
-        :ivar value: Currently returned: FullyRefundable (1G,1V), RefundableWithPenalty (1G,1V), Refundable (1P,1J), NonRefundable (1G,1V,1P,1J).Refundable.
+        :ivar value: Currently returned: FullyRefundable (1G,1V), RefundableWithPenalty (1G,1V), Refundable (1P,1J),  NonRefundable (1G,1V,1P,1J).Refundable.
         """
         value: Optional[str] = field(
             default=None,
@@ -14889,18 +15140,26 @@ class FlightInfoDetail:
     :ivar meals:
     :ivar in_flight_services:
     :ivar variance:
-    :ivar origin: The IATA location code for this origination of this entity.
-    :ivar destination: The IATA location code for this destination of this entity.
-    :ivar scheduled_departure_time: The date and time at which this entity is scheduled to depart. This does not include time zone information since it can be derived from the origin location.
-    :ivar scheduled_arrival_time: The date and time at which this entity is scheduled to arrive at the destination. This does not include time zone information since it can be derived from the origin location.
-    :ivar travel_time: Total time spent (minutes) traveling including flight time and ground time.
-    :ivar eticketability: Identifies if this particular segment is E-Ticketable
+    :ivar origin: The IATA location code for this origination of
+                            this entity.
+    :ivar destination: The IATA location code for this destination of
+                            this entity.
+    :ivar scheduled_departure_time: The date and time at which this entity is
+                            scheduled to depart. This does not include time zone information
+                            since it can be derived from the origin location.
+    :ivar scheduled_arrival_time: The date and time at which this entity is
+                            scheduled to arrive at the destination. This does not include time
+                            zone information since it can be derived from the origin location.
+    :ivar travel_time: Total time spent (minutes) traveling
+                            including flight time and ground time.
+    :ivar eticketability: Identifies if this particular segment
+                            is E-Ticketable
     :ivar equipment:
     :ivar origin_terminal:
     :ivar origin_gate: To be used to display origin flight gate number
     :ivar destination_terminal:
     :ivar destination_gate: To be used to display destination flight gate number
-    :ivar automated_checkin: “True” indicates that the flight allows automated check-in. The default is “False”.
+    :ivar automated_checkin: &#8220;True&#8221; indicates that the flight allows automated check-in. The default is &#8220;False&#8221;.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -15307,17 +15566,18 @@ class RepricingModifiers:
     """Used for rapid reprice to provide additional options for the reprice.
     Providers: 1G/1V/1P/1S/1A.
 
-    :ivar private_fare_options: Public and/or Private Fares requested for pricing. Currently supported: AccountCodeOnly, PrivateFaresOnly, PublicPrivateFaresOnly.
+    :ivar private_fare_options: Public and/or Private Fares requested for pricing.            Currently supported: AccountCodeOnly, PrivateFaresOnly, PublicPrivateFaresOnly.
     :ivar fare_type:
     :ivar fare_ticket_designator:
     :ivar override_currency:
     :ivar air_segment_pricing_modifiers:
     :ivar withhold_tax_code: Used to request tax withholding for the tax code specified. Providers supported 1G/1P
     :ivar price_class_of_service: Values allowed are ClassBooked or LowestClass. This tells how to price the new itinerary.
-    :ivar create_date: This is either today’s date or the date the repriced itinerary was created
+    :ivar create_date: This is either today&#8217;s date or the date the repriced itinerary was created
     :ivar reissue_loc_city_code: This is the city code of the reissue location
     :ivar reissue_loc_country_code: This is the country code of the reissue location
-    :ivar bulk_ticket: Set to true and the itinerary is/will be a bulk ticket. Set to false and the itinerary being repriced will not be a bulk ticket.
+    :ivar bulk_ticket: Set to true and the itinerary is/will be a bulk ticket.
+                                            Set to false and the itinerary being repriced will not be a bulk ticket.
     :ivar account_code: May be used in conjunction with PrivateFareOptions
     :ivar penalty_as_tax_code: Used to request that the penalty be applied as a tax, to the tax code specified. Providers supported 1G/1P
     :ivar air_pricing_solution_ref: A reference to a AirPricingSolution. Providers: 1G, 1V, 1P, 1J.
@@ -15612,7 +15872,8 @@ class TcrexchangeBundle:
     :ivar fee_info:
     :ivar tax_info: Itinerary level taxes
     :ivar penalty: Only used within an AirExchangeQuoteRsp
-    :ivar tcrnumber: The identifying number for a Ticketless Air Reservation.
+    :ivar tcrnumber: The identifying number for a Ticketless Air
+                            Reservation.
     """
     class Meta:
         name = "TCRExchangeBundle"
@@ -15678,7 +15939,8 @@ class TcrexchangeBundle:
 class Ticket:
     """The ticket that resulted from an air booking.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar coupon:
     :ivar ticket_endorsement:
@@ -15776,7 +16038,7 @@ class TicketInfo:
     :ivar iatanumber:
     :ivar ticket_issue_date:
     :ivar ticketing_agent_sign_on:
-    :ivar country_code: Contains Ticketed PCC’s Country code.
+    :ivar country_code: Contains Ticketed PCC&#8217;s Country code.
     :ivar status:
     :ivar bulk_ticket: Whether the ticket was issued as bulk.
     :ivar booking_traveler_ref: A reference to a passenger.
@@ -16028,8 +16290,12 @@ class AirPricingCommand:
 
     :ivar air_pricing_modifiers:
     :ivar air_segment_pricing_modifiers:
-    :ivar command_key: An identifier to link the pricing responses to the pricing commands. The value passed here will be returned in the resulting AirPricingInfo(s) from this command.
-    :ivar cabin_class: Specify the cabin type to price the entire itinerary in. If segment level cabin selection is required, this attribute should not be used.
+    :ivar command_key: An identifier to link the pricing responses to
+                            the pricing commands. The value passed here will be returned in
+                            the resulting AirPricingInfo(s) from this command.
+    :ivar cabin_class: Specify the cabin type to price the entire
+                            itinerary in. If segment level cabin selection is required, this
+                            attribute should not be used.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -16091,14 +16357,16 @@ class AlternateRouteList:
 class AutoPricingInfo:
     """Auto Pricing based on Segment and Traveler Association.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar air_segment_ref:
     :ivar booking_traveler_ref:
     :ivar air_pricing_modifiers:
     :ivar air_segment_pricing_modifiers:
     :ivar key:
-    :ivar pricing_type: Indicates the Pricing Type used. The possible values are TicketRecord, StoredFare, PricingInstruction.
+    :ivar pricing_type: Indicates the Pricing Type used.
+                            The possible values are TicketRecord, StoredFare, PricingInstruction.
     :ivar plating_carrier: The Plating Carrier for this journey
     """
     class Meta:
@@ -16395,7 +16663,8 @@ class Emdinfo:
     multiple unique EMDs inside this container indicate that those EMDs are
     conjunctive to each other. Supported providers are 1G/1V/1P/1J.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar emdtraveler_info: Basic information of the traveler associated with this EMDInfo.
     :ivar supplier_locator: List of Supplier Locator information that is associated with this document
@@ -16533,7 +16802,8 @@ class Emdinfo:
 class EmdsummaryInfo:
     """Container for EMD summary information. Supported providers are 1G/1V/1P/1J.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar emdsummary: Summary information for EMDs conjuncted to each other.
     :ivar emdtraveler_info: EMD traveler information.
@@ -16718,18 +16988,20 @@ class FlightDetails:
     :ivar flight_time: Time spent (minutes) traveling in flight, including airport taxi time.
     :ivar travel_time: Total time spent (minutes) traveling including flight time and ground time.
     :ivar distance: The distance traveled. Units are specified in the parent response element.
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar connection:
     :ivar meals:
     :ivar in_flight_services:
     :ivar key:
     :ivar equipment:
-    :ivar on_time_performance: Represents flight on time performance as a percentage from 0 to 100
+    :ivar on_time_performance: Represents flight on time performance
+                            as a percentage from 0 to 100
     :ivar origin_terminal:
     :ivar destination_terminal:
     :ivar ground_time:
-    :ivar automated_checkin: “True” indicates that the flight allows automated check-in. The default is “False”.
+    :ivar automated_checkin: &#8220;True&#8221; indicates that the flight allows automated check-in. The default is &#8220;False&#8221;.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -16885,13 +17157,21 @@ class FlightDetails:
 class FlightInfo:
     """
     :ivar flight_info_detail:
-    :ivar flight_info_error_message: Errors, Warnings and informational messages for the Flight referenced above.
-    :ivar criteria_key: An identifier to link the flightinfo responses to the criteria in request. The value populated here is passed in request.
+    :ivar flight_info_error_message: Errors, Warnings and informational
+                                messages for the Flight referenced above.
+    :ivar criteria_key: An identifier to link the flightinfo responses
+                            to the criteria in request. The value populated here is passed in
+                            request.
     :ivar carrier: The carrier that is marketing this segment
-    :ivar flight_number: The flight number under which the marketing carrier is marketing this flight
-    :ivar origin: The IATA location code for this origination of this entity.
-    :ivar destination: The IATA location code for this destination of this entity.
-    :ivar departure_date: The date at which this entity departs. This does not include time zone information since it can be derived from the origin location.
+    :ivar flight_number: The flight number under which the marketing
+                            carrier is marketing this flight
+    :ivar origin: The IATA location code for this origination of
+                            this entity.
+    :ivar destination: The IATA location code for this destination of
+                            this entity.
+    :ivar departure_date: The date at which this entity departs. This
+                            does not include time zone information since it can be derived
+                            from the origin location.
     :ivar class_of_service:
     """
     class Meta:
@@ -16997,7 +17277,7 @@ class FlightTimeDetail:
     :ivar schedule_end_date: Flight time table search end date
     :ivar display_option: Indicates if carrier has link (carrier specific) display option.
     :ivar on_time_performance: On time performance indicator in percentage.
-    :ivar day_change: Indicates if flight arrives on same day as departure, previous day, or next day. Like values 00 means Same day , 01 means next day, -1 mean Previous day etc.
+    :ivar day_change: Indicates if flight arrives on same day as departure, previous day, or next day. Like values  00 means Same day ,  01 means next day, -1 mean Previous day etc.
     :ivar journey_time: Indicates total journey time in minutes.
     :ivar flight_time: Indicates total flight time in minutes.
     :ivar start_terminal: Flight start terminal code.
@@ -17339,13 +17619,14 @@ class OptionalService:
     """
     :ivar service_data:
     :ivar service_info:
-    :ivar remark: Information regarding any specific for this service.
+    :ivar remark: Information regarding any specific
+                                for this service.
     :ivar tax_info:
     :ivar fee_info:
     :ivar emd:
     :ivar bundled_services:
     :ivar additional_info:
-    :ivar fee_application: Specifies how the Optional Service fee is to be applied. The choices are Per One Way, Per Round Trip, Per Item (Per Piece), Per Travel, Per Ticket, Per 1 Kilo, Per 5 Kilos. Provider: 1G, 1V, 1P, 1J
+    :ivar fee_application: Specifies how the Optional Service fee is to be applied.  The choices are Per One Way, Per Round Trip, Per Item (Per Piece), Per Travel, Per Ticket, Per 1 Kilo, Per 5 Kilos.  Provider: 1G, 1V, 1P, 1J
     :ivar text:
     :ivar price_range:
     :ivar tour_code:
@@ -17353,23 +17634,42 @@ class OptionalService:
     :ivar title:
     :ivar provider_code:
     :ivar supplier_code:
-    :ivar optional_services_rule_ref: UniqueID to associate a rule to the Optional Service
-    :ivar type: Specify the type of service offered (e.g. seats, baggage, etc.)
-    :ivar confirmation: Confirmation number provided by the supplier
-    :ivar secondary_type: The secondary option code type required for certain options
-    :ivar purchase_window: Describes when the Service is available for confirmation or purchase (e.g. Booking Only, Check-in Only, Anytime, etc.)
-    :ivar priority: Numeric value that represents the priority order of the Service
-    :ivar available: Boolean to describe whether the Service is available for sale or not
-    :ivar entitled: Boolean to describe whether the passenger is entitled for the service without charge or not
-    :ivar per_traveler: Boolean to describe whether the Amount on the Service is charged per traveler.
-    :ivar create_date: Timestamp when this service/offer got created.
-    :ivar payment_ref: Reference to a payment for merchandising services.
-    :ivar service_status: Specify the service status (e.g. active, canceled, etc.)
-    :ivar quantity: The number of units availed for each optional service (e.g. 2 baggage availed will be specified as 2 in quantity for optional service BAGGAGE)
-    :ivar sequence_number: The sequence number associated with the OptionalService
-    :ivar service_sub_code: The service subcode associated with the OptionalService
-    :ivar ssrcode: The SSR Code associated with the OptionalService
-    :ivar issuance_reason: A one-letter code specifying the reason for issuance of the OptionalService
+    :ivar optional_services_rule_ref: UniqueID to associate a rule to the
+                            Optional Service
+    :ivar type: Specify the type of service offered (e.g.
+                            seats, baggage, etc.)
+    :ivar confirmation: Confirmation number provided by the
+                            supplier
+    :ivar secondary_type: The secondary option code type required for
+                            certain options
+    :ivar purchase_window: Describes when the Service is available
+                            for confirmation or purchase (e.g. Booking Only, Check-in Only,
+                            Anytime, etc.)
+    :ivar priority: Numeric value that represents the priority
+                            order of the Service
+    :ivar available: Boolean to describe whether the Service is
+                            available for sale or not
+    :ivar entitled: Boolean to describe whether the passenger
+                            is entitled for the service without charge or not
+    :ivar per_traveler: Boolean to describe whether the Amount on
+                            the Service is charged per traveler.
+    :ivar create_date: Timestamp when this service/offer got
+                            created.
+    :ivar payment_ref: Reference to a payment for merchandising
+                            services.
+    :ivar service_status: Specify the service status (e.g. active,
+                            canceled, etc.)
+    :ivar quantity: The number of units availed for each optional
+                            service (e.g. 2 baggage availed will be specified as 2 in quantity
+                            for optional service BAGGAGE)
+    :ivar sequence_number: The sequence number associated with the
+                            OptionalService
+    :ivar service_sub_code: The service subcode associated with the
+                            OptionalService
+    :ivar ssrcode: The SSR Code associated with the
+                            OptionalService
+    :ivar issuance_reason: A one-letter code specifying the reason for
+                            issuance of the OptionalService
     :ivar provider_defined_type: Original Type as sent by the provider
     :ivar total_price: The total price for this entity including base price and all taxes.
     :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
@@ -17388,7 +17688,8 @@ class OptionalService:
     :ivar private: Describes if service is private or not.
     :ivar ssrfree_text: Certain SSR types sent in OptionalService SSRCode require a free text message. For example, PETC Pet in Cabin.
     :ivar is_pricing_approximate: When set to True indicates that the pricing returned is approximate. Supported providers are MCH/ACH
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar chargeable: Indicates if the optional service is not offered, is available for a charge, or is included in the brand
     :ivar inclusive_of_tax: Identifies if the service was filed with a fee that is inclusive of tax.
@@ -17396,15 +17697,16 @@ class OptionalService:
     :ivar geography_specification: Sector, Portion, Journey.
     :ivar excess_weight_rate: The cost of the bag per unit weight.
     :ivar source: The Source of the optional service. The source can be ACH, MCE, or MCH.
-    :ivar viewable_only: Describes if the OptionalService is viewable only or not. If viewable only then the service cannot be sold.
-    :ivar display_text: Title of the Optional Service. Provider: ACH
+    :ivar viewable_only: Describes if the OptionalService is viewable only or not.
+                               If viewable only then the service cannot be sold.
+    :ivar display_text: Title of the Optional Service.  Provider: ACH
     :ivar weight_in_excess: The excess weight of a bag. Providers: 1G, 1V, 1P, 1J
     :ivar total_weight: The total weight of a bag. Providers: 1G, 1V, 1P, 1J
     :ivar baggage_unit_price: The per unit price of baggage. Providers: 1G, 1V, 1P, 1J
     :ivar first_piece: Indicates the minimum occurrence of excess baggage.Provider: 1G, 1V, 1P, 1J.
     :ivar last_piece: Indicates the maximum occurrence of excess baggage. Provider: 1G, 1V, 1P, 1J.
-    :ivar restricted: When set to “true”, the Optional Service is restricted by an embargo. Provider: 1G, 1V, 1P, 1J
-    :ivar is_reprice_required: When set to “true”, the Optional Service must be re-priced. Provider: 1G, 1V, 1P, 1J
+    :ivar restricted: When set to &#8220;true&#8221;, the Optional Service is restricted by an embargo. Provider: 1G, 1V, 1P, 1J
+    :ivar is_reprice_required: When set to &#8220;true&#8221;, the Optional Service must be re-priced. Provider: 1G, 1V, 1P, 1J
     :ivar booked_quantity: Indicates the Optional Service quantity already booked. Provider: 1G, 1V, 1P, 1J
     :ivar group: Associates Optional Services with the same ServiceSub Code, Air Segment, Passenger, and EMD Associated Item. Provider:1G, 1V, 1P, 1J
     :ivar pseudo_city_code: The PCC or SID that booked the Optional Service.
@@ -18272,7 +18574,8 @@ class FareDisplay:
     :ivar booking_code:
     :ivar account_code:
     :ivar addl_booking_code_information:
-    :ivar fare_rule_failure_info: Returns fare rule failure info for Non Valid fares.
+    :ivar fare_rule_failure_info: Returns fare rule failure info for Non
+                                Valid fares.
     :ivar price_change: Indicates a price change is found in Fare Control Manager
     :ivar carrier:
     :ivar fare_basis:
@@ -18289,8 +18592,10 @@ class FareDisplay:
     :ivar accompanied_travel:
     :ivar mile_or_route_based_fare:
     :ivar global_indicator:
-    :ivar origin: Returns the origin airport or city code for which this tariff is applicable.
-    :ivar destination: Returns the destination airport or city code for which this tariff is applicable.
+    :ivar origin: Returns the origin airport or city code
+                            for which this tariff is applicable.
+    :ivar destination: Returns the destination airport or city
+                            code for which this tariff is applicable.
     :ivar fare_ticketing_code: Returns the ticketing code for which this tariff is applicable.
     :ivar fare_ticketing_designator: Returns the ticketing designator for which this tariff is applicable.
     """
@@ -18731,10 +19036,12 @@ class FlightOption:
 class OptionalServices:
     """A wrapper for all the information regarding each of the Optional services.
 
-    :ivar optional_services_total: The total fares, fees and taxes associated with the Optional Services
+    :ivar optional_services_total: The total fares, fees and taxes associated
+                                with the Optional Services
     :ivar optional_service:
     :ivar grouped_option_info: Details about an unselected or "other" option when optional services are grouped together.
-    :ivar optional_service_rules: Holds the rules for selecting the optional service in the itinerary
+    :ivar optional_service_rules: Holds the rules for selecting the optional
+                                service in the itinerary
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -18884,9 +19191,9 @@ class OptionalServices:
 class PrePayProfileInfo:
     """PrePay Profile associated with the customer.
 
-    :ivar pre_pay_id: Pre pay unique identifier detail.This information block is returned both in list and detail retrieve transactions.Example flight pass number
-    :ivar pre_pay_customer: Pre pay customer detail.This information block is returned both in list and detail retrieve transactions.
-    :ivar pre_pay_account: Pre pay account detail.This information block is returned both in list and detail retrieve transactions.
+    :ivar pre_pay_id: Pre pay unique identifier detail.This information block is returned both in list and  detail retrieve transactions.Example flight pass number
+    :ivar pre_pay_customer: Pre pay customer detail.This information block is returned both in list and  detail retrieve transactions.
+    :ivar pre_pay_account: Pre pay account detail.This information block is returned both in list and  detail retrieve transactions.
     :ivar affiliations: Pre pay affiliations detail.This information block is returned only in detail retrieve transactions.
     :ivar account_related_rules: Pre pay account related rules.This information block is returned only in detail retrieve transactions.
     :ivar status_code: Customer pre pay profile status code(One of Marked for deletion,Lapsed,Terminated,Active,Inactive)
@@ -18982,21 +19289,39 @@ class Rows:
 class TicketingModifiers:
     """A container to identify individual ticketing modifiers.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar booking_traveler_ref: Reference to a booking traveler for which ticketing modifier is applied.
-    :ivar net_remit: Allows an agency to override the net remittance amount - varies by BSP agreement
+    :ivar net_remit: Allows an agency to override the net
+                         remittance amount - varies by BSP agreement
     :ivar net_fare: Net Fare amount for a ticketed fare
-    :ivar actual_selling_fare: Allows an agency to report an Actual Selling Fare as part of the net remittance BSP agreement
-    :ivar invoice_fare: Allows an agency to report an Invoice Fare as part of the net remittance BSP agreement
-    :ivar corporate_discount: Allows an agency to add a corporate discount to the itinerary to be ticketed
-    :ivar accounting_info: Allows an agency to report Accounting Information as part of the net remittance BSP agreement
-    :ivar bulk_ticket: Allows an agency to update the fare as a Bulk ticket - Optional SuppressOnFareCalc attribute will control how fare calculation is printed on the ticket
-    :ivar group_tour: Allows an agency to update the fare as a Group Tour (inclusive tour) ticket - Optional SuppressOnFareCalc attribute will control how fare calculation is printed on the ticket
-    :ivar commission: Allows an agency to update the commission to a new or different commission rate which will be applied at time of ticketing. The commission Modifier allows the user specify how the commission change is to applied
-    :ivar tour_code: Allows an agency to modify the tour code information on the ticket
-    :ivar ticket_endorsement: Allows an agency to add user defined ticketing endorsements the ticket
-    :ivar value_modifier: Allows an agency to modify value or commission of the ticket. The modifier is generic and depends on the specific GDS and BSP implementation
+    :ivar actual_selling_fare: Allows an agency to report an Actual
+                         Selling Fare as part of the net remittance BSP agreement
+    :ivar invoice_fare: Allows an agency to report an Invoice Fare
+                         as part of the net remittance BSP agreement
+    :ivar corporate_discount: Allows an agency to add a corporate
+                         discount to the itinerary to be ticketed
+    :ivar accounting_info: Allows an agency to report Accounting
+                         Information as part of the net remittance BSP agreement
+    :ivar bulk_ticket: Allows an agency to update the fare as a
+                         Bulk ticket - Optional SuppressOnFareCalc attribute will control
+                         how fare calculation is printed on the ticket
+    :ivar group_tour: Allows an agency to update the fare as a
+                         Group Tour (inclusive tour) ticket - Optional SuppressOnFareCalc
+                         attribute will control how fare calculation is printed on the
+                         ticket
+    :ivar commission: Allows an agency to update the commission
+                         to a new or different commission rate which will be applied at
+                         time of ticketing. The commission Modifier allows the user
+                         specify how the commission change is to applied
+    :ivar tour_code: Allows an agency to modify the tour code
+                         information on the ticket
+    :ivar ticket_endorsement: Allows an agency to add user defined
+                         ticketing endorsements the ticket
+    :ivar value_modifier: Allows an agency to modify value or
+                         commission of the ticket. The modifier is generic and depends on
+                         the specific GDS and BSP implementation
     :ivar document_select:
     :ivar document_options:
     :ivar segment_select:
@@ -19015,9 +19340,12 @@ class TicketingModifiers:
     :ivar free_text: DI line information shown as free text as in Host. 1P only
     :ivar name_number: Host Name Number
     :ivar ticket_record: Ticket Record Number
-    :ivar plating_carrier: Allows an agency to specify the Plating Carrier for ticketing
-    :ivar exempt_vat: Allows an agency to update if VAT is Exemtped on the fare.
-    :ivar net_remit_applied: Indicator to the BSP net remittance scheme applies to ticketed fare.
+    :ivar plating_carrier: Allows an agency to specify the Plating
+                      Carrier for ticketing
+    :ivar exempt_vat: Allows an agency to update if VAT is
+                      Exemtped on the fare.
+    :ivar net_remit_applied: Indicator to the BSP net remittance
+                      scheme applies to ticketed fare.
     :ivar free_ticket: Indicates free ticket.
     :ivar currency_override_code: This modifier allows an agency to specify the currency like L for Local, E for Euro, U for USD, C for CAD (Canadian dollars).
     :ivar key:
@@ -19318,7 +19646,8 @@ class TicketingModifiers:
     @dataclass
     class BulkTicket(TypeBulkTicketModifierType):
         """
-        :ivar non_refundable: Indicates bulk ticket being non-refundable
+        :ivar non_refundable: Indicates bulk ticket being
+                                         non-refundable
         """
         non_refundable: Optional[bool] = field(
             default=None,
@@ -19342,14 +19671,28 @@ class TypeBaseAirSegment(Segment):
     :ivar sell_message:
     :ivar rail_coach_details:
     :ivar open_segment: Indicates OpenSegment when True
-    :ivar group: The Origin Destination Grouping of this segment.
+    :ivar group: The Origin Destination Grouping of this
+                                    segment.
     :ivar carrier: The carrier that is marketing this segment
-    :ivar cabin_class: Specifies Cabin class for a group of class of services. Cabin class is not identified if it is not present.
-    :ivar flight_number: The flight number under which the marketing carrier is marketing this flight
-    :ivar participant_level: Type of sell agreement between host and link carrier.
-    :ivar link_availability: Indicates if carrier has link (carrier specific) display option.
-    :ivar polled_availability_option: Indicates if carrier has Inside (polled)Availability option.
-    :ivar availability_display_type: The type of availability from which the segment is sold.Possible Values (List): G - General S - Flight Specific L - Carrier Specific/Direct Access M - Manual Sell F - Fare Shop/Optimal Shop Q - Fare Specific Fare Quote unbooked R - Redemption Availability used to complete the sell. Supported Providers: 1G,1V.
+    :ivar cabin_class: Specifies Cabin class for a group of
+                                    class of services. Cabin class is not identified if it is not
+                                    present.
+    :ivar flight_number: The flight number under which the marketing
+                                    carrier is marketing this flight
+    :ivar participant_level: Type of sell agreement between host and link
+                        carrier.
+    :ivar link_availability: Indicates if carrier has link (carrier
+                        specific) display option.
+    :ivar polled_availability_option: Indicates if carrier has Inside
+                        (polled)Availability option.
+    :ivar availability_display_type: The type of availability from which the segment is sold.Possible Values (List):
+                                        G - General
+                                        S - Flight Specific
+                                        L - Carrier Specific/Direct Access
+                                        M - Manual Sell
+                                        F - Fare Shop/Optimal Shop
+                                        Q - Fare Specific Fare Quote unbooked
+                                        R - Redemption Availability used to complete the sell. Supported Providers: 1G,1V.
     :ivar flight_time: Time spent (minutes) traveling in flight, including airport taxi time.
     :ivar travel_time: Total time spent (minutes) traveling including flight time and ground time.
     :ivar distance: The distance traveled. Units are specified in the parent response element.
@@ -19360,27 +19703,46 @@ class TypeBaseAirSegment(Segment):
     :ivar provider_code:
     :ivar supplier_code:
     :ivar class_of_service:
-    :ivar eticketability: Identifies if this particular segment is E-Ticketable
-    :ivar equipment: Identifies the equipment that this segment is operating under.
-    :ivar marriage_group: Identifies this segment as being a married segment. It is paired with other segments of the same value.
-    :ivar number_of_stops: Identifies the number of stops for each within the segment.
-    :ivar seamless: Identifies that this segment was sold via a direct access channel to the marketing carrier.
-    :ivar change_of_plane: Indicates the traveler must change planes between flights.
-    :ivar guaranteed_payment_carrier: Identifies that this segment has Guaranteed Payment Carrier.
-    :ivar host_token_ref: Identifies that this segment has Guaranteed Payment Carrier.
+    :ivar eticketability: Identifies if this particular segment
+                                    is E-Ticketable
+    :ivar equipment: Identifies the equipment that this
+                                    segment is operating under.
+    :ivar marriage_group: Identifies this segment as being a
+                                    married segment. It is paired with other segments of the same
+                                    value.
+    :ivar number_of_stops: Identifies the number of stops for
+                                    each within the segment.
+    :ivar seamless: Identifies that this segment was sold
+                                    via a direct access channel to the marketing carrier.
+    :ivar change_of_plane: Indicates the traveler must change
+                                    planes between flights.
+    :ivar guaranteed_payment_carrier: Identifies that this segment has
+                                    Guaranteed Payment Carrier.
+    :ivar host_token_ref: Identifies that this segment has
+                                    Guaranteed Payment Carrier.
     :ivar provider_reservation_info_ref: Provider reservation reference key.
     :ivar passive_provider_reservation_info_ref: Provider reservation reference key.
-    :ivar optional_services_indicator: Indicates true if flight provides optional services.
-    :ivar availability_source: Indicates Availability source of AirSegment.
-    :ivar apisrequirements_ref: Reference to the APIS Requirements for this AirSegment.
+    :ivar optional_services_indicator: Indicates true if flight provides
+                                    optional services.
+    :ivar availability_source: Indicates Availability source of
+                                    AirSegment.
+    :ivar apisrequirements_ref: Reference to the APIS Requirements for
+                                    this AirSegment.
     :ivar black_listed: Indicates blacklisted carriers which are banned from servicing points to, from and within the European Community.
-    :ivar operational_status: Refers to the flight operational status for the segment. This attribute will only be returned in the AvailabilitySearchRsp and not used/returned in any other request/responses. If this attribute is not returned back in the response, it means the flight is operational and not past scheduled departure.
+    :ivar operational_status: Refers to the flight operational status for the segment.
+                                This attribute will only be returned in the AvailabilitySearchRsp and not used/returned in any other request/responses.
+                                If this attribute is not returned back in the response, it means the flight is operational and not past scheduled departure.
     :ivar number_in_party: Number of person traveling in this air segment excluding the number of infants on lap.
     :ivar rail_coach_number: Coach number for which rail seatmap/coachmap is returned.
-    :ivar booking_date: Used for rapid reprice. The date the booking was made. Providers: 1G/1V/1P/1S/1A
-    :ivar flown_segment: Used for rapid reprice. Tells whether or not the air segment has been flown. Providers: 1G/1V/1P/1S/1A
-    :ivar schedule_change: Used for rapid reprice. Tells whether or not the air segment had a schedule change by the carrier. This tells rapid reprice that the change in the air segment was involuntary and because of a schedule change, not because the user is changing the segment. Providers: 1G/1V/1P/1S/1A
-    :ivar brand_indicator: Value “B” specifies that the carrier supports Rich Content and Branding. The Brand Indicator is only returned in the availability search response. Provider: 1G, 1V, 1P, 1J, ACH
+    :ivar booking_date: Used for rapid reprice. The date the booking was made.
+                            Providers: 1G/1V/1P/1S/1A
+    :ivar flown_segment: Used for rapid reprice. Tells whether or not the air segment has been flown.
+                            Providers: 1G/1V/1P/1S/1A
+    :ivar schedule_change: Used for rapid reprice. Tells whether or not the air segment had a
+                            schedule change by the carrier. This tells rapid reprice that the change in the air
+                            segment was involuntary and because of a schedule change, not because the user is
+                            changing the segment. Providers: 1G/1V/1P/1S/1A
+    :ivar brand_indicator: Value &#8220;B&#8221; specifies that the carrier supports Rich Content and Branding.  The Brand Indicator is only returned in the availability search response.  Provider: 1G, 1V, 1P, 1J, ACH
     """
     class Meta:
         name = "typeBaseAirSegment"
@@ -19773,8 +20135,10 @@ class TypeBaseAirSegment(Segment):
 
 @dataclass
 class AirPricingTicketingModifiers:
-    """
-    AirPricing TicketingModifier information - used to associate Ticketing Modifiers with one or more AirPricingInfos/ProviderReservationInfo
+    """AirPricing TicketingModifier information.
+
+                    - used to associate Ticketing Modifiers with one or more
+                    AirPricingInfos/ProviderReservationInfo
     :ivar air_pricing_info_ref:
     :ivar ticketing_modifiers:
     """
@@ -20265,7 +20629,8 @@ class ExchangeAirSegment:
 
     :ivar air_segment:
     :ivar cabin_class:
-    :ivar fare_basis_code: The fare basis code to be used for exchange of this segment.
+    :ivar fare_basis_code: The fare basis code to be used for exchange of
+                            this segment.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -20311,34 +20676,47 @@ class FareInfo:
     :ivar fare_remark_ref:
     :ivar brand:
     :ivar commission: Specifies the Commission for Agency for a particular Fare component. Apllicable Providers are 1G and 1V.
-    :ivar fare_attributes: Returns all fare attributes separated by pipe ‘|’. Attribute information is returned by comma separated values for each attribute. These information include attribute number, chargeable indicator and supplementary info. Attribute numbers: 1 - Checked Bag, 2 - Carry On, 3 - Rebooking, 4 - Refund, 5 - Seats, 6 - Meals, 7 - WiFi. Chargeable Indicator: Y - Chargeable, N - Not Chargeable. Supplementary Information that will be returned is : For 1 and 2 - Baggage weights. For 3 – Changeable Info. For 4 – Refundable Info. For 5 - Seat description. For 6 – Meal description. For 7 – WiFi description. Example: 1,Y,23|1,N,50|2,N,8|3,N,CHANGEABLE|4,Y,REFUNDABLE|5,N,SEATING|5,N,MIDDLE|6,Y,SOFT DRINK|6,N,ALCOHOLIC DRINK|6,Y,SNACK|7,X,WIFI
+    :ivar fare_attributes: Returns all fare attributes separated by pipe &#8216;|&#8217;. Attribute information is returned by comma separated values for each attribute. These information include attribute number, chargeable indicator and supplementary info. Attribute numbers: 1 - Checked Bag, 2 - Carry On, 3 - Rebooking, 4 - Refund, 5 - Seats, 6 - Meals, 7 - WiFi. Chargeable Indicator: Y - Chargeable, N - Not Chargeable. Supplementary Information that will be returned is : For 1 and 2 - Baggage weights. For 3 &#8211; Changeable Info. For 4 &#8211; Refundable Info. For 5 - Seat description. For 6 &#8211; Meal description. For 7 &#8211; WiFi description. Example: 1,Y,23|1,N,50|2,N,8|3,N,CHANGEABLE|4,Y,REFUNDABLE|5,N,SEATING|5,N,MIDDLE|6,Y,SOFT DRINK|6,N,ALCOHOLIC DRINK|6,Y,SNACK|7,X,WIFI
     :ivar change_penalty: The penalty (if any) to change the itinerary
     :ivar cancel_penalty: The penalty (if any) to cancel the fare
     :ivar fare_rules_filter:
     :ivar key:
     :ivar fare_basis: The fare basis code for this fare
     :ivar passenger_type_code: The PTC that is associated with this fare.
-    :ivar origin: Returns the airport or city code that defines the origin market for this fare.
-    :ivar destination: Returns the airport or city code that defines the destination market for this fare.
-    :ivar effective_date: Returns the date on which this fare was quoted
-    :ivar travel_date: Returns the departure date of the first segment that uses this fare.
-    :ivar departure_date: Returns the departure date of the first segment of the journey.
+    :ivar origin: Returns the airport or city code that
+                            defines the origin market for this fare.
+    :ivar destination: Returns the airport or city code that
+                            defines the destination market for this fare.
+    :ivar effective_date: Returns the date on which this fare was
+                            quoted
+    :ivar travel_date: Returns the departure date of the first
+                            segment that uses this fare.
+    :ivar departure_date: Returns the departure date of the first
+                            segment of the journey.
     :ivar amount:
     :ivar private_fare:
-    :ivar negotiated_fare: Identifies the fare as a Negotiated Fare.
+    :ivar negotiated_fare: Identifies the fare as a Negotiated
+                            Fare.
     :ivar tour_code:
     :ivar waiver_code:
     :ivar not_valid_before: Fare not valid before this date.
     :ivar not_valid_after: Fare not valid after this date.
-    :ivar pseudo_city_code: Provider PseudoCityCode associated with private fare.
-    :ivar fare_family: An alpha-numeric string which denotes fare family. Some carriers may return this in lieu of or in addition to the CabinClass.
+    :ivar pseudo_city_code: Provider PseudoCityCode associated with
+                            private fare.
+    :ivar fare_family: An alpha-numeric string which denotes fare
+                            family. Some carriers may return this in lieu of or in addition to
+                            the CabinClass.
     :ivar promotional_fare: Boolean to describe whether the Fare is Promotional fare or not.
     :ivar car_code:
     :ivar value_code:
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar bulk_ticket: Whether the ticket can be issued as bulk for this fare. Providers supported: Worldspan and JAL
-    :ivar inclusive_tour: Whether the ticket can be issued as part of included package for this fare. Providers supported: Worldspan and JAL
+    :ivar bulk_ticket: Whether the ticket can be issued as bulk for this
+                            fare. Providers supported: Worldspan and JAL
+    :ivar inclusive_tour: Whether the ticket can be issued as part of
+                            included package for this fare. Providers supported: Worldspan and
+                            JAL
     :ivar value: Used in rapid reprice
     :ivar supplier_code: Code of the provider returning this fare info
     :ivar tax_amount: Currency code and value for the approximate tax amount for this fare component.
@@ -20709,8 +21087,10 @@ class TcrrefundBundle:
     :ivar fee_info:
     :ivar tax_info: Itinerary level taxes
     :ivar host_token:
-    :ivar tcrnumber: The identifying number for a Ticketless Air Reservation.
-    :ivar refund_type: Specifies whether this bundle was auto or manually generated
+    :ivar tcrnumber: The identifying number for a Ticketless Air
+                            Reservation.
+    :ivar refund_type: Specifies whether this bundle was auto
+                            or manually generated
     :ivar refund_access_code:
     """
     class Meta:
@@ -20858,7 +21238,8 @@ class AirPricingInfo:
     :ivar passenger_type:
     :ivar booking_traveler_ref:
     :ivar waiver_code:
-    :ivar payment_ref: The reference to the Payment if Air Pricing is charged
+    :ivar payment_ref: The reference to the Payment if Air Pricing
+                                is charged
     :ivar change_penalty: The penalty (if any) to change the itinerary
     :ivar cancel_penalty: The penalty (if any) to cancel the fare
     :ivar no_show_penalty: The NoShow penalty (if any)
@@ -20871,14 +21252,19 @@ class AirPricingInfo:
     :ivar flight_options_list:
     :ivar baggage_allowances:
     :ivar fare_rules_filter:
-    :ivar policy_codes_list: A list of codes that indicate why an item was determined to be ‘out of policy’
+    :ivar policy_codes_list: A list of codes that indicate why an item was determined to be &#8216;out of policy&#8217;
     :ivar price_change: Indicates a price change is found in Fare Control Manager
     :ivar action_details:
-    :ivar commission: Allows an agency to update the commission to a new or different commission rate which will be applied at time of ticketing. The commission Modifier allows the user specify how the commission change is to applied
+    :ivar commission: Allows an agency to update the commission
+                         to a new or different commission rate which will be applied at
+                         time of ticketing. The commission Modifier allows the user
+                         specify how the commission change is to applied
     :ivar origin: The IATA location code for this origination of this entity.
     :ivar destination: The IATA location code for this destination of this entity.
     :ivar key:
-    :ivar command_key: The command identifier used when this is in response to an AirPricingCommand. Not used in any request processing.
+    :ivar command_key: The command identifier used when this is in
+                            response to an AirPricingCommand. Not used in any request
+                            processing.
     :ivar provider_code:
     :ivar supplier_code:
     :ivar total_price: The total price for this entity including base price and all taxes.
@@ -20892,28 +21278,41 @@ class AirPricingInfo:
     :ivar approximate_taxes: The Converted tax amount in Default Currency.
     :ivar approximate_fees: The Converted fee amount in Default Currency.
     :ivar amount_type: This field displays type of payment amount when it is non-monetary. Presently available/supported value is "Flight Pass Credits".
-    :ivar includes_vat: Indicates whether the Base Price includes VAT.
-    :ivar exchange_amount: The amount to pay to cover the exchange of the fare (includes penalties).
-    :ivar forfeit_amount: The amount forfeited when the fare is exchanged.
+    :ivar includes_vat: Indicates whether the Base Price
+                            includes VAT.
+    :ivar exchange_amount: The amount to pay to cover the exchange of the
+                            fare (includes penalties).
+    :ivar forfeit_amount: The amount forfeited when the fare is
+                            exchanged.
     :ivar refundable: Indicates whether the fare is refundable
-    :ivar exchangeable: Indicates whether the fare is exchangeable
-    :ivar latest_ticketing_time: The latest date/time at which this pricing information is valid
+    :ivar exchangeable: Indicates whether the fare is
+                            exchangeable
+    :ivar latest_ticketing_time: The latest date/time at which this pricing
+                            information is valid
     :ivar pricing_method:
-    :ivar checksum: A security value used to guarantee that the pricing data sent in matches the pricing data previously returned
+    :ivar checksum: A security value used to guarantee that the
+                            pricing data sent in matches the pricing data previously returned
     :ivar eticketability: The E-Ticketability of this AirPricing
     :ivar plating_carrier: The Plating Carrier for this journey
     :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar air_pricing_info_group: This attribute is added to support multiple store fare in Host. All AirPricingInfo with same group number will be stored together.
+    :ivar air_pricing_info_group: This attribute is added to support multiple
+                            store fare in Host. All AirPricingInfo with same group number will
+                            be stored together.
     :ivar total_net_price: The total price of a negotiated fare.
-    :ivar ticketed: Indicates if the associated stored fare is ticketed or not.
-    :ivar pricing_type: Indicates the Pricing Type used. The possible values are TicketRecord, StoredFare, PricingInstruction.
-    :ivar true_last_date_to_ticket: This date indicates the true last date/time to ticket for the fare. This date comes from the filed fare . There is no guarantee the fare will still be available on that date or that the fare amount may change. It is merely the last date to purchase a ticket based on the carriers fare rules at the time the itinerary was quoted and stored
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar ticketed: Indicates if the associated stored fare
+                            is ticketed or not.
+    :ivar pricing_type: Indicates the Pricing Type used.
+                            The possible values are TicketRecord, StoredFare, PricingInstruction.
+    :ivar true_last_date_to_ticket: This date indicates the true last date/time to ticket for the fare. This date comes from the filed fare . There is no guarantee the fare will still be available on that date or that the fare amount may change.
+        It is merely the last date to purchase a ticket based on the carriers fare rules at the time the itinerary was quoted and stored
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar in_policy: This attribute will be used to indicate if a fare or rate has been determined to be ‘in policy’ based on the associated policy settings.
-    :ivar preferred_option: This attribute is used to indicate if the vendors responsible for the fare or rate being returned have been determined to be ‘preferred’ based on the associated policy settings.
+    :ivar in_policy: This attribute will be used to indicate if a fare or rate has been determined to be &#8216;in policy&#8217; based on the associated policy settings.
+    :ivar preferred_option: This attribute is used to indicate if the vendors responsible for the fare or rate being returned have been determined to be &#8216;preferred&#8217; based on the associated policy settings.
     :ivar fare_calculation_ind: Fare calculation that was used to price the itinerary.
-    :ivar cat35_indicator: A true value indicates that the fare has a Cat35 rule. A false valud indicates that the fare does not have a Cat35 rule
+    :ivar cat35_indicator: A true value indicates that the fare has a Cat35 rule.
+                                    A false valud indicates that the fare does not have a Cat35 rule
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -21994,7 +22393,8 @@ class Etr:
     :ivar services: The total cost for all optional services.
     :ivar approximate_taxes: The Converted tax amount in Default Currency.
     :ivar approximate_fees: The Converted fee amount in Default Currency.
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar air_reservation_locator_code:
     :ivar agency_info:
@@ -22021,7 +22421,7 @@ class Etr:
     :ivar provider_locator_code: Contains the Locator Code of the Provider Reservation that houses this ETR.
     :ivar iatanumber: Contains the IATA Number of the agent initiating the request.
     :ivar pseudo_city_code: Contain Pseudo City, city/office number, branch ID, etc.
-    :ivar country_code: Contains Ticketed PCC’s Country code.
+    :ivar country_code: Contains Ticketed PCC&#8217;s Country code.
     :ivar plating_carrier: Contains the Plating Carrier of this ETR.
     """
     class Meta:
@@ -22350,17 +22750,29 @@ class Tcr:
     :ivar air_reservation_locator_code:
     :ivar supplier_locator:
     :ivar refund_remark:
-    :ivar tcrnumber: The identifying number for a Ticketless Air Reservation.
-    :ivar status: The current status of this TCR. Some status values are not applicable by some Airlines.
-    :ivar modified_date: The date at which the status was changed on this TCR due to an action event (itemized from the booleans below).
-    :ivar confirmed_date: The date at which this TCR was confirmed (not created). This mean the payment was approved and processed and travel for this TCR is confirmed.
-    :ivar base_price: The base price of this TCR as a whole as it was when it was first booked.
-    :ivar taxes: The taxes of this TCR as a whole as it was when it was first booked.
-    :ivar fees: The fees of this TCR as a whole as it was when it was first booked.
-    :ivar refundable: Is it possible to perform a Refund for this TCR.
-    :ivar exchangeable: Is it possible to perform an Exchange for this TCR.
+    :ivar tcrnumber: The identifying number for a Ticketless Air
+                            Reservation.
+    :ivar status: The current status of this TCR. Some status
+                            values are not applicable by some Airlines.
+    :ivar modified_date: The date at which the status was changed on
+                            this TCR due to an action event (itemized from the booleans
+                            below).
+    :ivar confirmed_date: The date at which this TCR was confirmed (not
+                            created). This mean the payment was approved and processed and
+                            travel for this TCR is confirmed.
+    :ivar base_price: The base price of this TCR as a whole as it
+                            was when it was first booked.
+    :ivar taxes: The taxes of this TCR as a whole as it was
+                            when it was first booked.
+    :ivar fees: The fees of this TCR as a whole as it was when
+                            it was first booked.
+    :ivar refundable: Is it possible to perform a Refund for this
+                            TCR.
+    :ivar exchangeable: Is it possible to perform an Exchange for this
+                            TCR.
     :ivar voidable: Is it possible to perform a Void on this TCR.
-    :ivar modifiable: Is it possible to modify this TCR (opposed to Refund/Exchange/Void).
+    :ivar modifiable: Is it possible to modify this TCR (opposed to
+                            Refund/Exchange/Void).
     :ivar provider_code:
     :ivar provider_locator_code:
     :ivar refund_access_code:
@@ -22834,7 +23246,9 @@ class AirPriceResult:
     :ivar air_pricing_solution:
     :ivar fare_rule:
     :ivar air_price_error:
-    :ivar command_key: The command identifier used when this is in response to an AirPricingCommand. Not used in any request processing.
+    :ivar command_key: The command identifier used when this is in
+                            response to an AirPricingCommand. Not used in any request
+                            processing.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -22908,8 +23322,8 @@ class AirSolutionChangedInfo:
     """If RetainReservation is None, this will contain the new values returned from
     the provider. If RetainReservation is Price, Schedule, or Both and there is a
     price/schedule change, this will contain the new values that were returned from
-    the provider. If RetainReservation is Price, Schedule, or Both and there isn’t
-    a price/schedule change, this element will not be returned.
+    the provider. If RetainReservation is Price, Schedule, or Both and there
+    isn&#8217;t a price/schedule change, this element will not be returned.
 
     :ivar air_pricing_solution:
     :ivar reason_code:

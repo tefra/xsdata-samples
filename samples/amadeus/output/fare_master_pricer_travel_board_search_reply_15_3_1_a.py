@@ -2752,7 +2752,7 @@ class ReferenceType:
     """To specify which number in a sequence of references and/or the reference
     number.
 
-    :ivar ref_of_leg: Reference of leg
+    :ivar ref_of_leg: Reference  of leg
     :ivar first_item_identifier: Reference of segment starting range
     :ivar last_item_identifier: Reference of segment ending range
     """
@@ -3223,7 +3223,7 @@ class StatusDetailsType256255C:
     """To specify a status, the action to be taken, and an additional qualification
     of the status.
 
-    :ivar indicator: list of status/qualifiers Either His for Historical or Crt for Current
+    :ivar indicator: list of status/qualifiers Either His for Historical or     Crt for Current
     :ivar action:
     """
     class Meta:
@@ -3513,7 +3513,7 @@ class CodedAttributeType:
 
 @dataclass
 class CommercialAgreementsType:
-    """To specify commercial agreements between two or more companies related to
+    """To specify commercial agreements between two  or more companies related to
     joint, shared, lease operations etc.
 
     :ivar codeshare_details: Codeshare Details
@@ -4719,7 +4719,7 @@ class PricingTicketingSubsequentType193023S:
 class ProductInformationType:
     """To specify details related to routing status of a product.
 
-    :ivar product_details_qualifier: value of the Qualifier: INT for International DOM for Domestic EUR for European otherwise CM#10569 INVALID INTERNATIONAL INDICATOR is returned.
+    :ivar product_details_qualifier: value of the Qualifier: INT for International DOM for Domestic EUR for European  otherwise CM#10569 INVALID INTERNATIONAL INDICATOR is returned.
     :ivar booking_class_details:
     """
     product_details_qualifier: Optional[str] = field(
@@ -6331,7 +6331,7 @@ class FareMasterPricerTravelBoardSearchReply:
     class ServiceFeesGrp:
         """
         :ivar service_type_info: Service fee type (OC)
-        :ivar service_fee_ref_grp: Service fee reference (OC ,OCM, OCC)
+        :ivar service_fee_ref_grp: Service fee reference  (OC ,OCM, OCC)
         :ivar service_coverage_info_grp: Service coverage information per passenger
         :ivar global_message_marker: Globalmessage marker
         :ivar service_fee_info_grp: Service fee information per passenger
@@ -6582,7 +6582,7 @@ class FareMasterPricerTravelBoardSearchReply:
             class FeeDescriptionGrp:
                 """
                 :ivar item_number_info: Specification of the item number
-                :ivar service_attributes_info: Attributes (SSR code EMD, RFIC, SSIM)
+                :ivar service_attributes_info: Attributes  (SSR code EMD, RFIC, SSIM)
                 :ivar service_description_info: Other service information (service description, ...)
                 :ivar commercial_name: Commercial name
                 """

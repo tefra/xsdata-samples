@@ -268,7 +268,7 @@ class CachePartitionType:
 
 
 class CarrierType(Enum):
-    """Used to specify if carrier type is marketing or operating.
+    """Used to specify if carrier type is  marketing or operating.
 
     :cvar MARKETING:
     :cvar OPERATING:
@@ -462,7 +462,7 @@ class DateRangeType:
 
 @dataclass
 class DepartureDaysType:
-    """Specify which days of week to consider for departure.
+    """Specify which days of week  to consider for departure.
 
     :ivar value: Value format: First letter of the name of the day or '_', eg. 'SMT___S' means we are interested in departing at Saturday, Sunday, Monday or Tuesday. Even if there are schedules for Wednesday, Thursday or Friday, they won't be returned in ISell response.
     """
@@ -765,7 +765,8 @@ class ExchangeFareType:
 class ExchangeSettingsType:
     """
     :ivar reprice_current_itin: If set to ''false'', disables processing of Current Itin path.
-    :ivar attach_exchange_info: If set to ''true'', adds exchange-specific information to the response. The information includes richer Tax elements, ReissueVsExchange attribute and currency conversion rates.
+    :ivar attach_exchange_info: If set to ''true'', adds exchange-specific information to the response.
+    					The information includes richer Tax elements, ReissueVsExchange attribute and currency conversion rates.
     :ivar reissue_exchange: Process Type Indicator for Primary Request Type
     :ivar branded_results: Enables branded results (if brands are available for returned options)
     :ivar miptimeout_threshold: Hints MIP that it should return options within this amount of time (in seconds)
@@ -2162,7 +2163,9 @@ class TravelDateTimeType:
         """
         :ivar day:
         :ivar days_range:
-        :ivar length_of_stay: Amount of days between previous leg's DEPARTURE date and current leg's DEPARTURE date. NOTE: Allowed only in 2nd or further "OriginDestinationInformation". Example: for outbound departing on Jan 20, LengthOfStay/@Days="2" means inbound departing on Jan 22.
+        :ivar length_of_stay: Amount of days between previous leg's DEPARTURE date and current leg's DEPARTURE date. NOTE: Allowed only in 2nd or further "OriginDestinationInformation".
+
+        											Example: for outbound departing on Jan 20, LengthOfStay/@Days="2" means inbound departing on Jan 22.
         :ivar length_of_stay_range: See comment on "LengthOfStay" element.
         """
         day: List["TravelDateTimeType.DepartureDates.Day"] = field(
@@ -2784,7 +2787,7 @@ class CompanyNamePrefType(CompanyNameType):
     """Identifies a preferred company by name.
 
     :ivar prefer_level:
-    :ivar type: Specify what type of carrier it comes to.
+    :ivar type: Specify what type  of carrier it comes to.
     """
     prefer_level: PreferLevelType = field(
         default="Preferred",
@@ -5510,12 +5513,12 @@ class AirSearchPrefsType:
         :ivar max_num_of_non_stp_onl_sol: Max number of nonstop online solutions for ESV2
         :ivar max_num_of_non_stp_inrl_sol: Max number of nonstop interline solutions for ESV2
         :ivar max_num_of_single_stp_onl_sol: Max number of single stop online solutions for ESV2
-        :ivar max_num_of2_plus_stp_sol: Max number of 2  stops solutions for ESV2
+        :ivar max_num_of2_plus_stp_sol: Max number of 2+ stops solutions for ESV2
         :ivar min_allowed_overage_per_crr_percent: Min allowed overage per carrier % for ESV2
         :ivar min_allowed_overage_per_crr: Min allowed overage per carrier for ESV2
         :ivar max_rel_fare_lvl_ofx_for_non_stp: Max relative fare level of x for nonstops for ESV2
         :ivar max_rel_fare_lvl_ofx_for_cnx: Max relative fare level of x for carrier for ESV2
-        :ivar num_of_must_price2_plus_stp_sol: Number of must price 2  stops solutions for ESV2
+        :ivar num_of_must_price2_plus_stp_sol: Number of must price 2+ stops solutions for ESV2
         :ivar itinerary_number_threshold: Number of preffered/good itins to price
         :ivar xofares:
         :ivar flight_stops_as_connections:
@@ -10050,7 +10053,10 @@ class OtaAirLowFareSearchRq:
         @dataclass
         class MultiTicket:
             """
-            :ivar display_policy: Display Option Policy, takes values: - SOW - Show OneWays separately - GOW2RT - Group OneWays and match to RoundTrip - SCHS - Group OneWays, match to RoundTrip and show cheaper solution
+            :ivar display_policy: Display Option Policy, takes values:
+            												- SOW - Show OneWays separately
+            												- GOW2RT - Group OneWays and match to RoundTrip
+            												- SCHS - Group OneWays, match to RoundTrip and show cheaper solution
             """
             display_policy: Optional["OtaAirLowFareSearchRq.TpaExtensions.MultiTicket.DisplayPolicy"] = field(
                 default=None,
@@ -11034,7 +11040,7 @@ class OtaAirLowFareSearchRq:
         @dataclass
         class DepartureDateTime(GlobalDateTimeType):
             """
-            :ivar week_days: Specify which days of week to consider for departure. Value format: First letter of the name of the day or '_', eg. 'SMT___S' means we are interested in departing at Saturday, Sunday, Monday or Tuesday. Even if there are schedules for Wednesday, Thursday or Friday, they won't be returned in ISell response.
+            :ivar week_days: Specify which days of week  to consider for departure. Value format: First letter of the name of the day or '_', eg. 'SMT___S' means we are interested in departing at Saturday, Sunday, Monday or Tuesday. Even if there are schedules for Wednesday, Thursday or Friday, they won't be returned in ISell response.
             """
             week_days: Optional[str] = field(
                 default=None,

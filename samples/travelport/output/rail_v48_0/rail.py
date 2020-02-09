@@ -228,7 +228,7 @@ class RailBookingInfo:
 
     :ivar rail_fare_ref: Reference to a fare that applies to the journey below.
     :ivar rail_journey_ref: Reference to a journeys on which the above fare applies.
-    :ivar optional_service: Indicate the OfferFareItem elements will be Optional or not.
+    :ivar optional_service: Indicate the OfferFareItem elements  will be Optional or not.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -268,7 +268,7 @@ class RailExchangeInfo:
     :ivar approximate_refund_amount:
     :ivar approximate_cancellation_fee:
     :ivar approximate_exchange_amount: The Converted total price in Default Currency for this entity including base price and all taxes.
-    :ivar retain_amount: Amount retained by a rail vendor for future use at the vendor’s site.
+    :ivar retain_amount: Amount retained by a rail vendor for future use at the vendor&#8217;s site.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -588,7 +588,7 @@ class RailSpecificSeatAssignment:
 
     :ivar coach_label: The coach number of the train being requested.
     :ivar place_label: The actual seat number or the close-to seat number based on the Assignment.
-    :ivar assignment: Defines how the PlaceLabel should be applied. The values are 6.STP for actual seat or 2.STP for close-to seat. Default is 2.STP.
+    :ivar assignment: Defines how the PlaceLabel should be applied.  The values are &#147;6.STP&#148; for actual seat or &#147;2.STP&#148; for close-to seat. Default is 2.STP.
     :ivar rail_segment_ref: The rail segment to which this assignment belongs.
     :ivar booking_traveler_ref: The BookingTraveler for this seat assignment.
     """
@@ -757,9 +757,11 @@ class TypeRailTicketStatus(Enum):
 
 class TypeResponseType(Enum):
     """Indicates the type of information to be returned in
-    RailShopModifyAPIResponse. Values are “Schedules” or “Availability” or “Fares”.
-    If not sent, “Fares” will be mapped if the request is for a specific rail
-    segments, otherwise “Availability” will be mapped. Provider Supported RCH.
+    RailShopModifyAPIResponse.  Values are &#8220;Schedules&#8221; or
+    &#8220;Availability&#8221; or &#8220;Fares&#8221;.  If not sent,
+    &#8220;Fares&#8221; will be mapped if the request is for a specific rail
+    segments, otherwise &#8220;Availability&#8221; will be mapped. Provider
+    Supported RCH.
 
     :cvar AVAILABILITY:
     :cvar SCHEDULES:
@@ -971,7 +973,8 @@ class RailFareComponent:
 @dataclass
 class RailFareId:
     """
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar value:
     :ivar key:
@@ -1023,7 +1026,8 @@ class RailFareId:
 class RailFareNote:
     """A simple textual fare note. Used within several other objects.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar value:
     :ivar key:
@@ -1144,7 +1148,7 @@ class RailPricingModifiers:
     :ivar prohibit_non_refundable_fares: Indicates whether it prohibits NonRefundable Fares.
     :ivar prohibit_non_exchangeable_fares: Indicates whether it prohibits NonExchangeable Fares .
     :ivar currency_type: 3 Letter Currency Code
-    :ivar rail_search_type: RailSearchType options are "All Fares" "Fastest" "Lowest Fare" "One Fare Per Class" "Seasons". Supported by NTV/VF only for "All Fares" "Lowest Fare" and "One Fare Per Class". Provider : RCH
+    :ivar rail_search_type: RailSearchType options are "All Fares"  "Fastest"  "Lowest Fare" "One Fare Per Class" "Seasons".  Supported by NTV/VF only for "All Fares" "Lowest Fare" and "One Fare Per Class". Provider : RCH
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -1440,7 +1444,8 @@ class Coach:
 class RailFare:
     """Information about this fare component.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar rail_fare_note_ref: Key reference to RailFareNote present in RailFareNotList
     :ivar rail_fare_id:
@@ -1450,7 +1455,7 @@ class RailFare:
     :ivar ful_fillment_type:
     :ivar rail_fare_component:
     :ivar key:
-    :ivar fare_basis: The fare basis code or fare description for this fare
+    :ivar fare_basis: The fare basis code  or fare description for this fare
     :ivar cabin_class: The fare basis code or fare class for this fare
     :ivar passenger_type_code: The PTC that is associated with this fare. Default to ADT
     :ivar origin: Returns the airport or city code that defines the origin market for this fare.
@@ -1995,7 +2000,8 @@ class RailJourney:
     :ivar services: The total cost for all optional services.
     :ivar approximate_taxes: The Converted tax amount in Default Currency.
     :ivar approximate_fees: The Converted fee amount in Default Currency.
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar origin: The IATA location code for this origination of this entity.
     :ivar destination: The IATA location code for this destination of this entity.
@@ -2314,7 +2320,8 @@ class RailPricingInfo:
     :ivar services: The total cost for all optional services.
     :ivar approximate_taxes: The Converted tax amount in Default Currency.
     :ivar approximate_fees: The Converted fee amount in Default Currency.
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar rail_fare:
     :ivar rail_fare_ref:
@@ -2510,7 +2517,7 @@ class RailExchangeSolution:
     :ivar rail_journey_ref:
     :ivar rail_pricing_info:
     :ivar key:
-    :ivar offer_id: OfferID must be included if the RailCreateReq contains a price. If the RailCreateReq is used for the Direct Book function, the OfferID is not included.
+    :ivar offer_id: OfferID must be included if the RailCreateReq contains a price.  If the RailCreateReq is used for the Direct Book function, the OfferID is not included.
     :ivar total_price: The total price for this entity including base price and all taxes.
     :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
     :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
@@ -2713,7 +2720,7 @@ class RailPricingSolution:
     :ivar rail_journey_ref:
     :ivar rail_pricing_info:
     :ivar key:
-    :ivar offer_id: OfferID must be included if the RailCreateReq contains a price. If the RailCreateReq is used for the Direct Book function, the OfferID is not included.
+    :ivar offer_id: OfferID must be included if the RailCreateReq contains a price.  If the RailCreateReq is used for the Direct Book function, the OfferID is not included.
     :ivar total_price: The total price for this entity including base price and all taxes.
     :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
     :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
@@ -3039,10 +3046,10 @@ class SearchRailLeg:
 @dataclass
 class RailSolutionChangedInfo:
     """If RetainReservation is None, this will contain the new values returned from
-    the provider. If RetainReservation is Price, Schedule, or Both and there is a
+    the provider.  If RetainReservation is Price, Schedule, or Both and there is a
     price/schedule change, this will contain the new values that were returned from
-    the provider. If RetainReservation is Price, Schedule, or Both and there isn’t
-    a price/schedule change, this element will not be returned.
+    the provider.  If RetainReservation is Price, Schedule, or Both and there
+    isn&#8217;t a price/schedule change, this element will not be returned.
 
     :ivar rail_pricing_solution:
     :ivar reason_code:

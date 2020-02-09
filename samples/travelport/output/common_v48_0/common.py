@@ -89,9 +89,13 @@ class AddSvc:
     :ivar rfic: 1P - Reason for issuance
     :ivar rfisc: 1P - Resaon for issuance sub-code
     :ivar svc_description: 1P - SVC fee description
-    :ivar origin: Origin location - Airport code. If this value not provided, the last air segment arrival location is taken as default. 1P only.
+    :ivar origin: Origin location - Airport code. If this value not
+    					provided, the last air segment arrival location is taken as
+    					default. 1P only.
     :ivar destination: Destination location - Airport code.
-    :ivar start_date: The start date of the SVC segment. If the value not specified, the default value is set as the date next to the last airsegment arrival date. 1P only
+    :ivar start_date: The start date of the SVC segment. If the value
+    					not specified, the default value is set as the date next to the
+    					last airsegment arrival date. 1P only
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -480,7 +484,8 @@ class BaseAsyncProviderSpecificResponse:
     attribute.
 
     :ivar provider_code: Provider code of a specific host
-    :ivar more_results: Identifies whether more results are available for specific host or not.
+    :ivar more_results: Identifies whether more results are available for
+                      specific host or not.
     """
     provider_code: Optional[str] = field(
         default=None,
@@ -562,7 +567,7 @@ class BookingDates:
 class BookingSource:
     """
     :ivar code: Alternate booking source code or number.
-    :ivar type: Type of booking source sent in the Code attribute. Possible values are “PseudoCityCode”,” ArcNumber”,” IataNumber”, “CustomerId” and “BookingSourceOverrride”. “BookingSourceOverrride” is only applicable in VehicleCreateReservationReq. 1P/1J.
+    :ivar type: Type of booking source sent in the Code attribute. Possible values are &#8220;PseudoCityCode&#8221;,&#8221; ArcNumber&#8221;,&#8221; IataNumber&#8221;, &#8220;CustomerId&#8221; and &#8220;BookingSourceOverrride&#8221;. &#8220;BookingSourceOverrride&#8221; is only applicable in VehicleCreateReservationReq. 1P/1J.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -591,7 +596,8 @@ class BookingSource:
         :cvar ARC_NUMBER:
         :cvar IATA_NUMBER:
         :cvar CUSTOMER_ID:
-        :cvar BOOKING_SOURCE_OVERRIDE: The Booking Source Override is usually used when the car supplier has assigned a number (which can be alpha/numeric) to the agency/e-commerce to use in place of an IATA number. Supported provider(s) : 1P/1J
+        :cvar BOOKING_SOURCE_OVERRIDE: The Booking Source Override is usually used when the car supplier has assigned a number (which can be alpha/numeric)
+        								to the agency/e-commerce to use in place of an IATA number. Supported provider(s) : 1P/1J
         """
         PSEUDO_CITY_CODE = "PseudoCityCode"
         ARC_NUMBER = "ArcNumber"
@@ -887,7 +893,9 @@ class CorporateDiscountId:
     """These are zero or more negotiated rate codes.
 
     :ivar value:
-    :ivar negotiated_rate_code: When set to true, the data in the CorporateDiscountID is a negotiated rate code. Otherwise, this data is a Corporate Discount ID rate.
+    :ivar negotiated_rate_code: When set to true,
+                                the data in the CorporateDiscountID is a negotiated rate code.
+                                Otherwise, this data is a Corporate Discount ID rate.
     """
     class Meta:
         name = "CorporateDiscountID"
@@ -1188,7 +1196,10 @@ class EmailNotification:
     """
     Send Email Notification to the emails specified in Booking Traveler. Supported Provider : 1G/1V
     :ivar email_ref: Reference to Booking Traveler Email.
-    :ivar recipients: Indicates the recipients of the mail addresses for which the user requires the system to send the itinerary.List of Possible Values: All = Send Email to All addresses Default = Send Email to Primary Booking Traveler Specific = Send Email to specific address Referred in EmailRef.
+    :ivar recipients: Indicates the recipients of the mail addresses for which the user requires the system to send the itinerary.List of Possible Values:
+    						All = Send Email to All addresses
+    						Default = Send Email to Primary Booking Traveler
+    						Specific = Send Email to specific address Referred in EmailRef.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1248,7 +1259,7 @@ class EnettVan:
     """Container for all eNett Van information.
 
     :ivar min_percentage: The minimum percentage that will be applied on the Total price and sent to enett,which will denote the minimum authorized amount approved by eNett.uApi will default this to zero for multi-use Van's.
-    :ivar max_percentage: The maximum percentage that will be applied on the Total price and sent to enett, which will denote the maximum authorized amount as approved by eNett. This value will be ignored and not used for Multi-Use VAN’s.
+    :ivar max_percentage: The maximum percentage that will be applied on the Total price and sent to enett, which will denote the maximum authorized amount as approved by eNett. This value will be ignored and not used for Multi-Use VAN&#8217;s.
     :ivar expiry_days: The number of days from the VAN generation date that the VAN will be active for, after which the VAN cannot be used.
     :ivar multi_use: Acceptable values are true or false. If set to true it will denote that the VAN being requested is multi-use else it will indicate a single -use VAN.A Single use VAN can only be debited once while the multiple use VAN's can be debited multiple times subjected to the maximum value it has been authorized for. The default value will be TRUE to indicate a multi-use VAN is being issued.
     """
@@ -1345,7 +1356,7 @@ class FormattedTextTextType:
     :ivar value:
     :ivar formatted: Textual information, which may be formatted as a line of information, or unformatted, as a paragraph of text.
     :ivar language: Language identification.
-    :ivar text_format: Indicates the format of text used in the description e.g. unformatted or html.
+    :ivar text_format: Indicates the format of text used in the description e.g. unformatted  or html.
     """
     value: Optional[str] = field(
         default=None,
@@ -1680,12 +1691,21 @@ class MetaData:
 class MiscFormOfPayment:
     """Miscellaneous Form of Payments.
 
-    :ivar credit_card_type: The 2 letter credit/ debit card type or code which may not have been issued using the standard bank card types - i.e. an airline issued card
+    :ivar credit_card_type: The 2 letter credit/ debit card type or code which may not have been issued using the standard bank card types  - i.e. an airline issued card
     :ivar credit_card_number:
     :ivar exp_date: The Expiration date of this card in YYYY-MM format.
     :ivar text: Any free form text which may be associated with the Miscellaneous Form of Payment. This text may be provider or GDS specific
     :ivar category: Indicates what Category the Miscellaneous Form Of Payment is being used for payment - The category may vary by GDS.
-    Allowable values are "Text" "Credit" "CreditCard" "FreeFormCreditCard" "Invoice" "NonRefundable" "MultipleReceivables" "Exchange" "Cash"
+    Allowable values are
+                            "Text"
+                            "Credit"
+                            "CreditCard"
+                            "FreeFormCreditCard"
+                            "Invoice"
+                            "NonRefundable"
+                            "MultipleReceivables"
+                            "Exchange"
+                            "Cash"
     :ivar acceptance_override: Override airline restriction on the credit card.
     """
     class Meta:
@@ -1942,7 +1962,10 @@ class OptionalServiceApplicabilityType(Enum):
 class OtherGuaranteeInfo:
     """
     :ivar value:
-    :ivar type: 1) IATA/ARC Number 2) Agency Address 2) Deposit Taken 3) Others
+    :ivar type: 1) IATA/ARC Number
+    							2) Agency Address
+    							2) Deposit Taken
+    							3) Others
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1978,7 +2001,7 @@ class OtherGuaranteeInfo:
 
 @dataclass
 class OverridePcc:
-    """Used to emulate to another PCC or SID. Providers: 1G, 1V, 1P, 1J.
+    """Used to emulate to another PCC or SID.  Providers: 1G, 1V, 1P, 1J.
 
     :ivar provider_code: The code of the provider (e.g. 1G, 1S)
     :ivar pseudo_city_code: The PCC in the host system.
@@ -2033,8 +2056,12 @@ class OwnershipChange:
 class PaymentAdvice:
     """Contains other form of payment for Cruise Reservations.
 
-    :ivar type: Other Payment Yype. Possible Values: AGC - Agency Check, AGG - Agency Guarantee, AWC - Award Check, CSH - Cash Equivalent, DBC - Denied Boarding Compensation, MCO - Miscellaneous Charge Order, TOO - Tour Order, TOV - Tour Voucher
-    :ivar document_number: Payment Document Number Examples: 1234567890, R7777
+    :ivar type: Other Payment Yype. Possible Values: AGC - Agency
+                                                    Check, AGG - Agency Guarantee, AWC - Award Check, CSH - Cash
+                                                    Equivalent, DBC - Denied Boarding Compensation, MCO -
+                                                    Miscellaneous Charge Order, TOO - Tour Order, TOV - Tour Voucher
+    :ivar document_number: Payment Document Number Examples: 1234567890,
+                                                    R7777
     :ivar issue_date: Document Issuance date
     :ivar issue_city: City code of document issuance
     :ivar original_fop: Original form of payment Examples: CHECK 3500
@@ -2268,7 +2295,7 @@ class PointOfCommencement:
 class PointOfSale:
     """User can use this node to send a specific PCC to access fares allowed only
     for that PCC. This node gives the capability for fare redistribution at UR
-    level. For fare redistribution at the stored fare level see
+    level.  For fare redistribution at the stored fare level see
     AirPricingSolution/AirPricingInfo/AirPricingModifiers/PointOfSale.
 
     :ivar provider_code: The provider in which the PCC is defined.
@@ -2320,7 +2347,7 @@ class PointOfSale:
 class PriceMatchError:
     """
     :ivar error_message:
-    :ivar vendor_code: The code of the vendor (e.g. HZ, etc.)
+    :ivar vendor_code: The code of the vendor (e.g.  HZ, etc.)
     :ivar hotel_chain: 2 Letter Hotel Chain Code
     :ivar hotel_code: Unique hotel identifier for the channel.
     :ivar req_base: BaseRate in the request.
@@ -2958,8 +2985,10 @@ class ServiceFeeTaxInfo:
 class ShopInformation:
     """Shopping Information required for File Finishing.
 
-    :ivar search_request: Search parameters that were used in LFS request
-    :ivar flights_offered: Flights with lowest logical airfare returned as response to LFS request
+    :ivar search_request: Search parameters that were used in LFS
+                                                            request
+    :ivar flights_offered: Flights with lowest logical airfare
+                                                            returned as response to LFS request
     :ivar cabin_shopped:
     :ivar cabin_selected:
     :ivar lowest_fare_offered:
@@ -3012,7 +3041,9 @@ class ShopInformation:
         """
         :ivar origin:
         :ivar destination:
-        :ivar departure_time: Date and Time at which this entity departs. This does not include Time Zone information since it can be derived from origin location
+        :ivar departure_time: Date and Time at which this entity
+        									departs. This does not include Time Zone information since it
+        									can be derived from origin location
         :ivar class_of_service:
         """
         origin: Optional[str] = field(
@@ -3055,7 +3086,9 @@ class ShopInformation:
         """
         :ivar origin:
         :ivar destination:
-        :ivar departure_time: Date and Time at which this entity departs. This does not include Time Zone information since it can be derived from origin location
+        :ivar departure_time: Date and Time at which this entity
+        									departs. This does not include Time Zone information since it
+        									can be derived from origin location
         :ivar travel_order:
         :ivar carrier:
         :ivar flight_number:
@@ -4162,9 +4195,9 @@ class TypePolicy(Enum):
 @dataclass
 class TypePolicyCodesList:
     """
-    :ivar policy_code: A code that indicates why an item was determined to be ‘out of policy’.
-    :ivar min_policy_code: A code that indicates why the minimum fare or rate was determined to be ‘out of policy’.
-    :ivar max_policy_code: A code that indicates why the maximum fare or rate was determined to be ‘out of policy’.
+    :ivar policy_code: A code that indicates why an item was determined to be &#8216;out of policy&#8217;.
+    :ivar min_policy_code: A code that indicates why the minimum fare or rate was determined to be &#8216;out of policy&#8217;.
+    :ivar max_policy_code: A code that indicates why the maximum fare or rate was determined to be &#8216;out of policy&#8217;.
     """
     class Meta:
         name = "typePolicyCodesList"
@@ -5146,11 +5179,11 @@ class TypeVehicleTransmission(Enum):
 class TypeVendorLocation:
     """
     :ivar provider_code: The code of the provider (e.g. 1G, 1S)
-    :ivar vendor_code: The code of the vendor (e.g. HZ, etc.)
+    :ivar vendor_code: The code of the vendor (e.g.  HZ, etc.)
     :ivar preferred_option: Preferred Option marker for Location.
     :ivar vendor_location_id: Location identifier
     :ivar key: Key which maps vendor location with vehicles
-    :ivar more_rates_token: Enter the Token when provided by hotel property, more rates exist. HADS/HSS support only.
+    :ivar more_rates_token: Enter the Token when provided by hotel property, more rates exist. HADS/HSS  support only.
     """
     class Meta:
         name = "typeVendorLocation"
@@ -5226,16 +5259,20 @@ class TypeVoucherType(Enum):
 class AccountingRemark:
     """An accounting remark container to hold any printable text.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar remark_data: Actual remarks data.
     :ivar booking_traveler_ref: Reference to Booking Traveler.
     :ivar key:
-    :ivar category: A category to group and organize the various remarks. This is not required, but it is recommended.
+    :ivar category: A category to group and organize the various
+                        remarks. This is not required, but it is recommended.
     :ivar type_in_gds:
     :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar provider_code: Contains the Provider Code of the provider for which this accounting remark is used
-    :ivar use_provider_native_mode: Will be true when terminal process required, else false
+    :ivar provider_code: Contains the Provider Code of the provider
+                        for which this accounting remark is used
+    :ivar use_provider_native_mode: Will be true when terminal process required,
+                        else false
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5326,12 +5363,15 @@ class ActionStatus:
 
     :ivar provider_code:
     :ivar supplier_code:
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar remark:
     :ivar type: Identifies the type of action (if any) to take on this air reservation. Only TTL, TAU, TAX and TAW can be set by the user.
-    :ivar ticket_date: Identifies when the action type will happen, or has happened according to the type.
-    :ivar key: Identifies when the action type will happen, or has happened according to the type.
+    :ivar ticket_date: Identifies when the action type will happen, or
+                            has happened according to the type.
+    :ivar key: Identifies when the action type will happen, or
+                            has happened according to the type.
     :ivar provider_reservation_info_ref: Provider reservation reference key.
     :ivar queue_category: Add Category placement to ticketing queue (required in 1P - default is 00)
     :ivar airport_code: Used with Time Limit to specify the airport location where the ticket is to be issued.
@@ -5535,7 +5575,8 @@ class AppliedProfile:
     """A simple container to specify the profiles that were applied to a
     reservation.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key: Key for update/delete of the element
     :ivar traveler_id: The ID of the TravelerProfile that was applied
@@ -5877,13 +5918,17 @@ class Commission:
 class CommissionRemark:
     """Identifies the agency commision remarks. Specifically used for Worldspan.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar provider_reservation_level: Specify commission which is applicable to PNR level.
-    :ivar passenger_type_level: Specify commission which is applicable to per PTC level.
+    :ivar provider_reservation_level: Specify commission which is applicable to
+                                                            PNR level.
+    :ivar passenger_type_level: Specify commission which is applicable to
+                                                            per PTC level.
     :ivar key: Key to be used for internal processing.
     :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar provider_code: Contains the Provider Code of the provider for which this accounting remark is used
+    :ivar provider_code: Contains the Provider Code of the provider
+                                                    for which this accounting remark is used
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6017,10 +6062,11 @@ class CommissionRemark:
 @dataclass
 class ConsolidatorRemark:
     """Authorization remark for Consolidator access to a PNR . Contains PCC
-    information created by retail agent to allow a consolidator or other Axess
+    information created by retail agent to  allow a consolidator or other Axess
     users to service their PNR. PROVIDER SUPPORTED: Worldspan and JAL.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar pseudo_city_code:
     :ivar key: Key to be used for internal processing.
@@ -6130,7 +6176,8 @@ class CustomerId(TypeRemark):
 class DiscountCard:
     """Rail Discount Card Information.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     :ivar code:
@@ -6195,7 +6242,8 @@ class DiscountCard:
 class DriversLicense:
     """Details of drivers license.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     :ivar license_number: The driving license number of the booking traveler.
@@ -6238,7 +6286,8 @@ class DriversLicense:
 class Email:
     """Container for an email address with a type specifier (max 128 chars)
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar provider_reservation_info_ref: Tagging provider reservation info with Email.
     :ivar key:
@@ -6312,7 +6361,8 @@ class GeneralRemark:
 
     :ivar provider_code:
     :ivar supplier_code:
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar remark_data: Actual remarks data.
     :ivar booking_traveler_ref: Reference to Booking Traveler.
@@ -6447,7 +6497,8 @@ class HostToken:
     know how to route the command(s). You can have multiple active sessions between
     one or more hosts.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar value:
     :ivar host: The host associated with this token
@@ -6498,7 +6549,8 @@ class HostToken:
 @dataclass
 class LinkedUniversalRecord:
     """
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar locator_code: A Universal Record that need to be linked to the current Universal Record.
     :ivar key:
@@ -6542,7 +6594,8 @@ class LinkedUniversalRecord:
 @dataclass
 class LoyaltyProgram:
     """
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     :ivar supplier_code: The code used to identify the Loyalty supplier, e.g. AA, ZE, MC
@@ -6697,7 +6750,8 @@ class MediaItem:
 class NameRemark:
     """Text that support Name Remarks.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar remark_data: Actual remarks data.
     :ivar provider_reservation_info_ref: Tagging provider reservation info with NameRemark.
@@ -6758,7 +6812,8 @@ class NameRemark:
 class Osi:
     """Other Service information sent to the carriers during air bookings.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     :ivar carrier:
@@ -6917,7 +6972,8 @@ class PassengerInfo:
 class Payment:
     """
     Payment information - must be used in conjunction with credit card info
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     :ivar type: Identifies the type of payment. This can be for an itinerary, a traveler, or a service fee for example.
@@ -7049,7 +7105,8 @@ class PhoneNumber:
     """Consists of type (office, home, fax), location (city code), the country
     code, the number, and an extension.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar provider_reservation_info_ref:
     :ivar key:
@@ -7182,7 +7239,8 @@ class PolicyInformation:
     """Policy Information required for File Finishing.
 
     :ivar reason_code: Reason Code
-    :ivar type: Policy Type - Air, Hotel, Car, Rail, Ticketing
+    :ivar type: Policy Type - Air, Hotel, Car, Rail,
+                                                    Ticketing
     :ivar name: Policy Name
     :ivar out_of_policy: In Policy / Out of Policy Indicator
     :ivar segment_ref:
@@ -7329,10 +7387,13 @@ class ProviderArnksegment:
     @dataclass
     class PreviousSegment:
         """
-        :ivar air_segment_ref: Reference to AirSegment from an Air Reservation.
+        :ivar air_segment_ref: Reference to AirSegment from an Air
+        										Reservation.
         :ivar hotel_reservation_ref: Specify the locator code of Hotel reservation.
-        :ivar vehicle_reservation_ref: Specify the locator code of Vehicle reservation.
-        :ivar passive_segment_ref: Reference to PassiveSegment from a Passive Reservation.
+        :ivar vehicle_reservation_ref: Specify the locator code of Vehicle
+        										reservation.
+        :ivar passive_segment_ref: Reference to PassiveSegment from a Passive
+        										Reservation.
         """
         air_segment_ref: Optional[TypeSegmentRef] = field(
             default=None,
@@ -7366,10 +7427,13 @@ class ProviderArnksegment:
     @dataclass
     class NextSegment:
         """
-        :ivar air_segment_ref: Reference to AirSegment from an Air Reservation.
+        :ivar air_segment_ref: Reference to AirSegment from an Air
+        										Reservation.
         :ivar hotel_reservation_ref: Specify the locator code of Hotel reservation.
-        :ivar vehicle_reservation_ref: Specify the locator code of Vehicle reservation.
-        :ivar passive_segment_ref: Reference to PassiveSegment from a Passive Reservation.
+        :ivar vehicle_reservation_ref: Specify the locator code of Vehicle
+        										reservation.
+        :ivar passive_segment_ref: Reference to PassiveSegment from a Passive
+        										Reservation.
         """
         air_segment_ref: Optional[TypeSegmentRef] = field(
             default=None,
@@ -7468,7 +7532,8 @@ class RailLocation(Location):
 class RailSeatAssignment:
     """Identifies the seat assignment for a passenger on RailSegment.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar characteristic:
     :ivar key:
@@ -7571,7 +7636,8 @@ class ReviewBooking:
     Reservation along with the date time and Queue details. On the date time
     defined in reminders, the message along with the PNR goes to the desired Queue.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key: Returned in response. Use it for update of saved review booking.
     :ivar queue: Queue number, Must be numeric and less than 100.
@@ -7684,7 +7750,8 @@ class Ssr:
     :ivar provider_defined_type: Original Type as sent by the provider
     :ivar ssrrule_ref: UniqueID to associate a rule to the SSR
     :ivar url:
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar profile_id: Key assigned for Secure Flight Document value from the specified profile
     :ivar profile_secure_flight_doc_key: Unique ID of Booking Traveler's Profile that contains the Secure flight Detail
@@ -7849,7 +7916,8 @@ class SeatAssignment:
     :ivar seat_type_code: The 4 letter SSR code like SMSW,NSSW,SMST etc.
     :ivar segment_ref:
     :ivar flight_details_ref:
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar rail_coach_number: Coach number for which rail seatmap/coachmap is returned.
     """
@@ -7948,7 +8016,8 @@ class SeatAttributes:
 class Segment:
     """The base segment type.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar segment_remark:
     :ivar key:
@@ -8023,7 +8092,8 @@ class Segment:
 @dataclass
 class SpecialEquipment:
     """
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     :ivar type: Special equipment associated with a specific vehicle
@@ -8069,7 +8139,7 @@ class SupplierLocator:
     :ivar segment_ref: Air/Passive Segment Reference
     :ivar supplier_code: Carrier Code
     :ivar supplier_locator_code: Carrier reservation locator code
-    :ivar provider_reservation_info_ref: Provider Reservation reference
+    :ivar provider_reservation_info_ref: Provider Reservation  reference
     :ivar create_date_time: The Date and Time which the reservation is received from the Vendor as a SupplierLocator creation Date.
     """
     class Meta:
@@ -8122,13 +8192,14 @@ class ThirdPartyInformation:
     """Third party supplier locator information. Specifically applicable for SDK
     booking.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar segment_ref: Air/Passive Segment Reference
     :ivar third_party_code: Third party supplier code.
     :ivar third_party_locator_code: Confirmation number for third party supplier.
     :ivar third_party_name: Third party supplier name.
-    :ivar provider_reservation_info_ref: Provider Reservation reference
+    :ivar provider_reservation_info_ref: Provider Reservation  reference
     :ivar key: Unique identifier of the third party supplier. Key can be used to modify or delete saved third party information.
     """
     class Meta:
@@ -8203,7 +8274,8 @@ class TravelComplianceData:
     """Travel Compliance and Preferred Supplier information of the traveler
     specific to a segment.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar policy_compliance:
     :ivar contract_compliance:
@@ -8372,7 +8444,8 @@ class TravelComplianceData:
 class UnassociatedRemark(TypeRemarkWithTravelerRef):
     """A textual remark container to hold non-associated itinerary remarks.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     """
@@ -8416,7 +8489,8 @@ class Xmlremark:
     """A remark container to hold an XML document. (max 1024 chars) This will be
     encoded with xml encoding.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar value:
     :ivar key:
@@ -8495,7 +8569,8 @@ class TypeAgencyHierarchyReference:
 class TypeAssociatedRemark(TypeRemarkWithTravelerRef):
     """A textual remark container to hold Associated itinerary remarks.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     """
@@ -8628,7 +8703,8 @@ class TypeFeeInfo:
 
     :ivar provider_code:
     :ivar supplier_code:
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar tax_info_ref: This reference elements will associate relevant taxes to this fee
     :ivar included_in_base:
@@ -8639,10 +8715,11 @@ class TypeFeeInfo:
     :ivar amount:
     :ivar code:
     :ivar fee_token:
-    :ivar payment_ref: The reference to the one of the air reservation payments if fee included in charge
+    :ivar payment_ref: The reference to the one of the air
+                      reservation payments if fee included in charge
     :ivar booking_traveler_ref: Reference to booking traveler
     :ivar passenger_type_code:
-    :ivar text: Additional Information returned from Supplier.(ACH only)
+    :ivar text: Additional Information returned from Supplier.(ACH  only)
     """
     class Meta:
         name = "typeFeeInfo"
@@ -8998,7 +9075,8 @@ class TypeProviderReservationSpecificInfo:
 class TypeStructuredAddress:
     """A fully structured address.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar address_name:
     :ivar street: The Address street and number, e.g. 105 Main St.
@@ -9109,20 +9187,27 @@ class TypeTaxInfo:
     :ivar tax_detail:
     :ivar included_in_base:
     :ivar key: The tax key represents a valid key of tax
-    :ivar category: The tax category represents a valid IATA tax code.
-    :ivar carrier_defined_category: Optional category, where a carrier has used a non-standard IATA tax category. The tax category will be set to "DU"
-    :ivar segment_ref: The segment to which that tax is relative (if applicable)
-    :ivar flight_details_ref: The flight details that this tax is relative to (if applicable)
-    :ivar coupon_ref: The coupon to which that tax is relative (if applicable)
+    :ivar category: The tax category represents a valid IATA tax
+                     code.
+    :ivar carrier_defined_category: Optional category, where a carrier has
+                       used a non-standard IATA tax category. The tax category will be
+                       set to "DU"
+    :ivar segment_ref: The segment to which that tax is relative (if
+                       applicable)
+    :ivar flight_details_ref: The flight details that this tax is relative
+                     to (if applicable)
+    :ivar coupon_ref: The coupon to which that tax is relative (if
+                     applicable)
     :ivar amount:
     :ivar origin_airport:
     :ivar destination_airport:
     :ivar country_code:
     :ivar fare_info_ref:
-    :ivar tax_exempted: This indicates whether the tax specified by tax category is exempted.
+    :ivar tax_exempted: This indicates whether the tax specified by
+                     tax category is exempted.
     :ivar provider_code: Code of the provider returning this TaxInfo.
     :ivar supplier_code: Code of the supplier returning this TaxInfo.
-    :ivar text: Additional Information returned from Supplier.(ACH only)
+    :ivar text: Additional Information returned from Supplier.(ACH  only)
     """
     class Meta:
         name = "typeTaxInfo"
@@ -9331,7 +9416,7 @@ class TypeVoucherInformation:
     :ivar amount: Amount associated with the Voucher.
     :ivar confirmation_number: Confirmation from the vendor for the voucher
     :ivar account_name: Associated account name for the voucher
-    :ivar number: To advise car associates of the voucher number and store in the car segment. It is required when VoucherType selected as "RegularVoucher" for 1P, 1J only.
+    :ivar number: To advise car associates of the voucher number and store in the car segment. It is required when VoucherType selected as   "RegularVoucher" for 1P, 1J only.
     """
     class Meta:
         name = "typeVoucherInformation"
@@ -9414,7 +9499,7 @@ class AccountInformation:
 
 @dataclass
 class AgencyContactInfo:
-    """Generic agency contact information container. It must contain at least one
+    """Generic agency contact information container. It must contain  at least one
     phone number to be used by an agency.
 
     :ivar phone_number:
@@ -9486,7 +9571,9 @@ class AirExchangeInfo:
     :ivar total_penalty_tax_info:
     :ivar paid_tax:
     :ivar ticket_fee_info: Used for rapid reprice. Providers: 1G/1V/1P/1S/1A
-    :ivar reason: Used for rapid reprice. The reason code or text is returned if the PricingTag is not equal to A, and explains why A was not returned. Providers: 1G/1V/1P/1S/1A
+    :ivar reason: Used for rapid reprice. The reason code or text is returned if the
+                                                    PricingTag is not equal to A, and explains why A was not returned.
+                                                    Providers: 1G/1V/1P/1S/1A
     :ivar fee_info:
     :ivar tax_info: Itinerary level taxes
     :ivar exchange_amount:
@@ -10020,7 +10107,8 @@ class LoyaltyCard:
     """Provider loyalty card information.
 
     :ivar provider_reservation_specific_info:
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     :ivar supplier_code: The code used to identify the Loyalty supplier, e.g. AA, ZE, MC
@@ -10439,7 +10527,8 @@ class ServiceData:
     :ivar data: Data that specifies the details of the merchandising offering (e.g. seat number for seat service)
     :ivar air_segment_ref: Reference to a segment if the merchandising offering only pertains to that segment. If no segment reference is present this means this offering is for the whole itinerary.
     :ivar booking_traveler_ref: Reference to a passenger if the merchandising offering only pertains to that passenger. If no passenger reference is present this means this offering is for all passengers.
-    :ivar stop_over: Indicates that there is a significant delay between flights (usually 12 hours or more)
+    :ivar stop_over: Indicates that there is a significant
+                            delay between flights (usually 12 hours or more)
     :ivar traveler_type: Passenger Type Code.
     :ivar emdsummary_ref: Reference to the corresponding EMD issued. Supported providers are 1G/1V/1P/1J
     :ivar emdcoupon_ref: Reference to the corresponding EMD coupon issued. Supported providers are 1G/1V/1P/1J
@@ -10526,7 +10615,7 @@ class ServiceData:
 @dataclass
 class ServiceInfo:
     """
-    :ivar description: Description of the Service. Usually used in tandem with one or more media items.
+    :ivar description: Description of the Service.  Usually used in tandem with  one or more media items.
     :ivar media_item:
     """
     class Meta:
@@ -10620,7 +10709,7 @@ class TransactionType:
         :ivar one_way_shop: Allows or prohibits one way shopping functionality for the associated provisioning provider configuration
         :ivar flex_explore: Allows or prohibits flex explore functionality for the associated provisioning provider configuration
         :ivar rapid_reprice_enabled: Allows or prohibits rapid reprice functionality for the associated provisioning provider configuration. Providers: 1G/1V
-        :ivar return_upsell_fare: When set to “true”, Upsell information will be returned in the shop response. Provider: 1G, 1V, 1P, 1J, ACH
+        :ivar return_upsell_fare: When set to &#8220;true&#8221;, Upsell information will be returned in the shop response.&#160; Provider: 1G, 1V, 1P, 1J, ACH
         """
         tier: Optional["TransactionType.Air.Tier"] = field(
             default=None,
@@ -10792,7 +10881,8 @@ class TravelerInformation:
         """
         :ivar phone_number:
         :ivar name: Name of Emergency Contact Person
-        :ivar relationship: Relationship between Traveler and Emergency Contact Person
+        :ivar relationship: Relationship between Traveler and
+        									Emergency Contact Person
         """
         phone_number: Optional[PhoneNumber] = field(
             default=None,
@@ -10821,7 +10911,7 @@ class TravelerInformation:
 class TypeAgencyHierarchyLongReference(TypeAgencyHierarchyReference):
     """
     :ivar profile_version:
-    :ivar profile_name: Initially: Agent: Last, First, Branch: BranchCode, Agency: Name. After new profile implementation: Agent: UserName, others levels: Name.
+    :ivar profile_name: Initially: Agent: Last, First, Branch: BranchCode, Agency: Name. After new profile  implementation: Agent: UserName, others levels: Name.
     """
     class Meta:
         name = "typeAgencyHierarchyLongReference"
@@ -10946,7 +11036,8 @@ class TypePaymentCard:
     """Container for all credit and debit card information.
 
     :ivar phone_number:
-    :ivar billing_address: The address to where the billing statements for this card are sent. Used for address verification purposes.
+    :ivar billing_address: The address to where the billing statements
+                            for this card are sent. Used for address verification purposes.
     :ivar type: The 2 letter credit/ debit card type.
     :ivar number:
     :ivar exp_date: The Expiration date of this card in YYYY-MM format.
@@ -11250,7 +11341,8 @@ class BaseReservation:
 class BookingTraveler:
     """A traveler and all their accompanying data.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar key:
     :ivar traveler_type: Defines the type of traveler used for booking which could be a non-defining type (Companion, Web-fare, etc), or a standard type (Adult, Child, etc).
@@ -11690,7 +11782,8 @@ class FileFinishingInfo:
     in database.
 
     :ivar shop_information:
-    :ivar policy_information: Policy Information required for File Finishing. Would repeat per Policy Type
+    :ivar policy_information: Policy Information required for File
+                                                            Finishing. Would repeat per Policy Type
     :ivar account_information:
     :ivar agency_information:
     :ivar traveler_information:
@@ -11752,7 +11845,8 @@ class Group:
     """Represents a traveler group for Group booking and all their accompanying
     data. SUPPORTED PROVIDER: Worldspan and JAL.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar name: Name of the group in group booking.
     :ivar delivery_info:
@@ -11761,7 +11855,9 @@ class Group:
     :ivar address:
     :ivar booking_traveler_ref: Reference Element for Booking Traveler.
     :ivar key:
-    :ivar traveler_type: Defines the type of traveler used for booking which could be a non-defining type (Companion, Web-fare, etc), or a standard type (Adult, Child, etc).
+    :ivar traveler_type: Defines the type of traveler used for booking
+                        which could be a non-defining type (Companion, Web-fare, etc), or a
+                        standard type (Adult, Child, etc).
     :ivar group_size: Represents size of the group
     """
     class Meta:
@@ -11967,7 +12063,7 @@ class ServiceRuleType:
         :ivar required_for_all_travelers: Indicates if the option needs to be applied to all travelers in the itinerary if selected
         :ivar required_for_all_segments: Indicates if the option needs to be applied to all segments in the itinerary if selected
         :ivar required_for_all_segments_in_od: Indicates if the option needs to be applied to all segments in a origin / destination (connection flights) if selected for one segment in the OD
-        :ivar unselected_option_required: If an UnselectedOption is present in the option, then the Unselected option needs to be selected even if the option is not selected when this flag is set to true
+        :ivar unselected_option_required: If an UnselectedOption is present in the option, then the Unselected option  needs to be selected even if the option is not selected when this flag is set to true
         :ivar secondary_option_code_required: If set to true, the secondary option code is required for this option
         """
         required_for_all_travelers: Optional[bool] = field(
@@ -12436,7 +12532,8 @@ class FormOfPayment:
     :ivar credit_card:
     :ivar debit_card:
     :ivar enett_van:
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar certificate:
     :ivar ticket_number:
@@ -12454,7 +12551,19 @@ class FormOfPayment:
     :ivar arcpayment:
     :ivar key:
     :ivar type:
-    :ivar fulfillment_type: Defines how the client wishes to receive travel documents. Type does not define where or how payment is made. The supported values are "Ticket on Departure", "Travel Agency", "Courier", "Standard Mail", "Ticketless", "Ticket Office", "Express Mail", "Corporate Kiosk", "Train Station Service Desk", "Direct Printing of Ticket", "Ticket by Email", "Digital Printing of Ticket at Home", "Retrieve Ticket at Eurostar in London"
+    :ivar fulfillment_type: Defines how the client wishes to receive travel documents. Type does not define where or how payment is made. The supported values are  "Ticket on Departure",
+                                                            "Travel Agency",
+                                                            "Courier",
+                                                            "Standard Mail",
+                                                            "Ticketless",
+                                                            "Ticket Office",
+                                                            "Express Mail",
+                                                            "Corporate Kiosk",
+                                                            "Train Station Service Desk",
+                                                            "Direct Printing of Ticket",
+                                                            "Ticket by Email",
+                                                            "Digital Printing of Ticket at Home",
+                                                            "Retrieve Ticket at Eurostar in London"
     Collect booking ticket at a Kiosk, print in agency.
     :ivar fulfillment_location: Information about the location of the printer.
     :ivar fulfillment_idtype: Identification type, e.g. credit card, to define how the customer will identify himself when collecting the ticket
@@ -12707,7 +12816,8 @@ class FormOfPayment:
 class Guarantee:
     """Payment Guarantee Guarantee, Deposit or PrePayment.
 
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar credit_card:
     :ivar other_guarantee_info:
@@ -12861,7 +12971,7 @@ class ServiceFeeInfo:
     :ivar service_fee_tax_info:
     :ivar credit_card_auth:
     :ivar payment:
-    :ivar status: Status of the service fee. Possible Values – Issued, ReadyToIssue, IssueLater.
+    :ivar status: Status of the service fee. Possible Values &#8211; Issued, ReadyToIssue, IssueLater.
     :ivar description: The description of the service fee.
     :ivar key:
     :ivar confirmation: The confirmation number of the service fee in the merchant host system.
@@ -12872,7 +12982,8 @@ class ServiceFeeInfo:
     :ivar total_amount: The total amount for this Service Fee including base amount and all taxes.
     :ivar base_amount: Represents the base price for this entity. This does not include any taxes.
     :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated Service Fee TaxInfo array for a breakdown of the individual taxes.
-    :ivar el_stat: This attribute is used to show the action results of an element. Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar booking_traveler_name: The name of the passenger.
     """
@@ -13037,7 +13148,7 @@ class Mco(Mcoinformation):
     :ivar provider_code: Contains the Provider Code of the provider that houses this MCO.
     :ivar provider_locator_code: Contains the Provider Locator Code of the Provider Reservation that houses this MCO.
     :ivar pseudo_city_code: The PCC in the host system.
-    :ivar expiry_date: E-Voucher’s Expiry Date. This expiry date is specific to Rail product
+    :ivar expiry_date: E-Voucher&#8217;s Expiry Date. This expiry date is specific to Rail product
     """
     class Meta:
         name = "MCO"

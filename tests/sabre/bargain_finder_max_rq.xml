@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ns0:OTA_AirLowFareSearchRQ xmlns:ns0="http://www.opentravel.org/OTA/2003/05" Target="Production" Version="1.9.7" AvailableFlightsOnly="true" TruncateMessages="true">
+<ns0:OTA_AirLowFareSearchRQ xmlns:ns0="http://www.opentravel.org/OTA/2003/05" Target="Production" Version="1.9.7" DirectFlightsOnly="false" AvailableFlightsOnly="true" SeparateMessages="false" TruncateMessages="true">
   <ns0:POS>
-    <ns0:Source PseudoCityCode="C9QH">
+    <ns0:Source PseudoCityCode="C9QH" AbacusUser="false">
       <ns0:RequestorID Type="1" ID="1">
         <ns0:CompanyName Code="TN"/>
       </ns0:RequestorID>
     </ns0:Source>
   </ns0:POS>
-  <ns0:OriginDestinationInformation RPH="1">
+  <ns0:OriginDestinationInformation RPH="1" Fixed="false" FullDiversity="false">
     <ns0:DepartureDateTime>2019-12-19T00:00:00</ns0:DepartureDateTime>
     <ns0:OriginLocation LocationCode="ATH" CodeContext="IATA"/>
     <ns0:DestinationLocation LocationCode="LON" CodeContext="IATA"/>
@@ -15,7 +15,7 @@
       <ns0:SegmentType Code="O"/>
     </ns0:TPA_Extensions>
   </ns0:OriginDestinationInformation>
-  <ns0:TravelPreferences ValidInterlineTicket="true" Hybrid="true">
+  <ns0:TravelPreferences SmokingAllowed="false" ETicketDesired="false" ValidInterlineTicket="true" UseAllFlights="false" AllFlightsData="false" Hybrid="true">
     <ns0:TPA_Extensions>
       <ns0:TripType Value="OneWay"/>
       <ns0:ExcludeCallDirectCarriers Enabled="true"/>
