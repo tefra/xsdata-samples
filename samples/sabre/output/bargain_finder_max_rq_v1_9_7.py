@@ -224,31 +224,31 @@ class CabinType(Enum):
     """A cabin is either Premium First (P), First (F), Premium Business (J),
     Business (C), Premium Economy (S) or Economy (Y)
 
-    :cvar PREMIUM_FIRST:
-    :cvar FIRST:
-    :cvar PREMIUM_BUSINESS:
     :cvar BUSINESS:
-    :cvar PREMIUM_ECONOMY:
-    :cvar ECONOMY:
-    :cvar Y:
-    :cvar S:
     :cvar C:
-    :cvar J:
+    :cvar ECONOMY:
     :cvar F:
+    :cvar FIRST:
+    :cvar J:
     :cvar P:
+    :cvar PREMIUM_BUSINESS:
+    :cvar PREMIUM_ECONOMY:
+    :cvar PREMIUM_FIRST:
+    :cvar S:
+    :cvar Y:
     """
-    PREMIUM_FIRST = "PremiumFirst"
-    FIRST = "First"
-    PREMIUM_BUSINESS = "PremiumBusiness"
     BUSINESS = "Business"
-    PREMIUM_ECONOMY = "PremiumEconomy"
-    ECONOMY = "Economy"
-    Y = "Y"
-    S = "S"
     C = "C"
-    J = "J"
+    ECONOMY = "Economy"
     F = "F"
+    FIRST = "First"
+    J = "J"
     P = "P"
+    PREMIUM_BUSINESS = "PremiumBusiness"
+    PREMIUM_ECONOMY = "PremiumEconomy"
+    PREMIUM_FIRST = "PremiumFirst"
+    S = "S"
+    Y = "Y"
 
 
 @dataclass
@@ -410,32 +410,32 @@ class CustLoyaltyType:
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
 
-        :cvar YES:
-        :cvar NO:
         :cvar INHERIT:
+        :cvar NO:
+        :cvar YES:
         """
-        YES = "Yes"
-        NO = "No"
         INHERIT = "Inherit"
+        NO = "No"
+        YES = "Yes"
 
     class ShareMarketInd(Enum):
         """value="Inherit" Permission for sharing data for marketing purposes.
 
-        :cvar YES:
-        :cvar NO:
         :cvar INHERIT:
+        :cvar NO:
+        :cvar YES:
         """
-        YES = "Yes"
-        NO = "No"
         INHERIT = "Inherit"
+        NO = "No"
+        YES = "Yes"
 
     class SingleVendorInd(Enum):
         """
-        :cvar SINGLE_VNDR:
         :cvar ALLIANCE:
+        :cvar SINGLE_VNDR:
         """
-        SINGLE_VNDR = "SingleVndr"
         ALLIANCE = "Alliance"
+        SINGLE_VNDR = "SingleVndr"
 
 
 @dataclass
@@ -595,36 +595,36 @@ class DocumentType:
 
     class Gender(Enum):
         """
-        :cvar MALE:
         :cvar FEMALE:
+        :cvar MALE:
         :cvar UNKNOWN:
         """
-        MALE = "Male"
         FEMALE = "Female"
+        MALE = "Male"
         UNKNOWN = "Unknown"
 
     class ShareSynchInd(Enum):
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
 
-        :cvar YES:
-        :cvar NO:
         :cvar INHERIT:
+        :cvar NO:
+        :cvar YES:
         """
-        YES = "Yes"
-        NO = "No"
         INHERIT = "Inherit"
+        NO = "No"
+        YES = "Yes"
 
     class ShareMarketInd(Enum):
         """value="Inherit" Permission for sharing data for marketing purposes.
 
-        :cvar YES:
-        :cvar NO:
         :cvar INHERIT:
+        :cvar NO:
+        :cvar YES:
         """
-        YES = "Yes"
-        NO = "No"
         INHERIT = "Inherit"
+        NO = "No"
+        YES = "Yes"
 
 
 @dataclass
@@ -679,24 +679,24 @@ class EmailType:
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
 
-        :cvar YES:
-        :cvar NO:
         :cvar INHERIT:
+        :cvar NO:
+        :cvar YES:
         """
-        YES = "Yes"
-        NO = "No"
         INHERIT = "Inherit"
+        NO = "No"
+        YES = "Yes"
 
     class ShareMarketInd(Enum):
         """value="Inherit" Permission for sharing data for marketing purposes.
 
-        :cvar YES:
-        :cvar NO:
         :cvar INHERIT:
+        :cvar NO:
+        :cvar YES:
         """
-        YES = "Yes"
-        NO = "No"
         INHERIT = "Inherit"
+        NO = "No"
+        YES = "Yes"
 
 
 @dataclass
@@ -1027,13 +1027,13 @@ class FlightStopsAsConnectionsType:
 class FlightTypeType(Enum):
     """
     Identifies a particular type of flight - Direct, Stopover etc.
-    :cvar NONSTOP: Flight without plane change and without intermediate landing.
-    :cvar DIRECT: Flight without plane change and possible intermediate landing.
     :cvar CONNECTION: Flight with plane changes, allowing maximum of 24 hours for each change
+    :cvar DIRECT: Flight without plane change and possible intermediate landing.
+    :cvar NONSTOP: Flight without plane change and without intermediate landing.
     """
-    NONSTOP = "Nonstop"
-    DIRECT = "Direct"
     CONNECTION = "Connection"
+    DIRECT = "Direct"
+    NONSTOP = "Nonstop"
 
 
 @dataclass
@@ -1492,24 +1492,24 @@ class PersonNameType:
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
 
-        :cvar YES:
-        :cvar NO:
         :cvar INHERIT:
+        :cvar NO:
+        :cvar YES:
         """
-        YES = "Yes"
-        NO = "No"
         INHERIT = "Inherit"
+        NO = "No"
+        YES = "Yes"
 
     class ShareMarketInd(Enum):
         """value="Inherit" Permission for sharing data for marketing purposes.
 
-        :cvar YES:
-        :cvar NO:
         :cvar INHERIT:
+        :cvar NO:
+        :cvar YES:
         """
-        YES = "Yes"
-        NO = "No"
         INHERIT = "Inherit"
+        NO = "No"
+        YES = "Yes"
 
 
 @dataclass
@@ -1669,12 +1669,12 @@ class PreferLevelType(Enum):
     etc.).
 
     :cvar ONLY:
-    :cvar UNACCEPTABLE:
     :cvar PREFERRED:
+    :cvar UNACCEPTABLE:
     """
     ONLY = "Only"
-    UNACCEPTABLE = "Unacceptable"
     PREFERRED = "Preferred"
+    UNACCEPTABLE = "Unacceptable"
 
 
 @dataclass
@@ -1723,13 +1723,13 @@ class RequestLocationType:
 class RequestPricingSourceType(Enum):
     """It can be used to indicate whether the fare is public or private.
 
-    :cvar PUBLISHED:
-    :cvar PRIVATE:
     :cvar BOTH:
+    :cvar PRIVATE:
+    :cvar PUBLISHED:
     """
-    PUBLISHED = "Published"
-    PRIVATE = "Private"
     BOTH = "Both"
+    PRIVATE = "Private"
+    PUBLISHED = "Published"
 
 
 @dataclass
@@ -2073,24 +2073,24 @@ class TelephoneType:
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
 
-        :cvar YES:
-        :cvar NO:
         :cvar INHERIT:
+        :cvar NO:
+        :cvar YES:
         """
-        YES = "Yes"
-        NO = "No"
         INHERIT = "Inherit"
+        NO = "No"
+        YES = "Yes"
 
     class ShareMarketInd(Enum):
         """value="Inherit" Permission for sharing data for marketing purposes.
 
-        :cvar YES:
-        :cvar NO:
         :cvar INHERIT:
+        :cvar NO:
+        :cvar YES:
         """
-        YES = "Yes"
-        NO = "No"
         INHERIT = "Inherit"
+        NO = "No"
+        YES = "Yes"
 
 
 @dataclass
@@ -2485,11 +2485,11 @@ class ValidatingCarrierPreferLevelType(Enum):
     """Used to specify a preference level for ValidatingCarrier. For adding new
     enums see PreferLevelType.
 
-    :cvar UNACCEPTABLE:
     :cvar PREFERRED:
+    :cvar UNACCEPTABLE:
     """
-    UNACCEPTABLE = "Unacceptable"
     PREFERRED = "Preferred"
+    UNACCEPTABLE = "Unacceptable"
 
 
 @dataclass
@@ -2636,24 +2636,24 @@ class AddressType:
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
 
-        :cvar YES:
-        :cvar NO:
         :cvar INHERIT:
+        :cvar NO:
+        :cvar YES:
         """
-        YES = "Yes"
-        NO = "No"
         INHERIT = "Inherit"
+        NO = "No"
+        YES = "Yes"
 
     class ShareMarketInd(Enum):
         """value="Inherit" Permission for sharing data for marketing purposes.
 
-        :cvar YES:
-        :cvar NO:
         :cvar INHERIT:
+        :cvar NO:
+        :cvar YES:
         """
-        YES = "Yes"
-        NO = "No"
         INHERIT = "Inherit"
+        NO = "No"
+        YES = "Yes"
 
 
 @dataclass
@@ -2862,13 +2862,13 @@ class ConnectionType:
 
         class ConnectionInfo(Enum):
             """
-            :cvar VIA: Location without stopping or changing.
-            :cvar STOP: Location is for stopping.
             :cvar CHANGE: Location is for changing.
+            :cvar STOP: Location is for stopping.
+            :cvar VIA: Location without stopping or changing.
             """
-            VIA = "Via"
-            STOP = "Stop"
             CHANGE = "Change"
+            STOP = "Stop"
+            VIA = "Via"
 
 
 @dataclass
@@ -4701,15 +4701,15 @@ class PriceRequestInformationType:
 
             class Value(Enum):
                 """
+                :cvar LOYALTY: LOYALTY customer type.
+                :cvar PREFELITE: PREFERED_ELITE customer type.
                 :cvar REGULAR: Regular customer type.
                 :cvar TVLYPREF: TVLY_PREFERRED customer type.
-                :cvar PREFELITE: PREFERED_ELITE customer type.
-                :cvar LOYALTY: LOYALTY customer type.
                 """
+                LOYALTY = "LOYALTY"
+                PREFELITE = "PREFELITE"
                 REGULAR = "REGULAR"
                 TVLYPREF = "TVLYPREF"
-                PREFELITE = "PREFELITE"
-                LOYALTY = "LOYALTY"
 
         @dataclass
         class MultipleTravelerGroups:
@@ -4818,13 +4818,13 @@ class PriceRequestInformationType:
 
             class Type(Enum):
                 """
-                :cvar R: Residency.
                 :cvar E: Employment.
                 :cvar N: Nationality.
+                :cvar R: Residency.
                 """
-                R = "R"
                 E = "E"
                 N = "N"
+                R = "R"
 
         @dataclass
         class EticketableOverride:
@@ -7723,36 +7723,36 @@ class AirTravelerType:
 
     class Gender(Enum):
         """
-        :cvar MALE:
         :cvar FEMALE:
+        :cvar MALE:
         :cvar UNKNOWN:
         """
-        MALE = "Male"
         FEMALE = "Female"
+        MALE = "Male"
         UNKNOWN = "Unknown"
 
     class ShareSynchInd(Enum):
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
 
-        :cvar YES:
-        :cvar NO:
         :cvar INHERIT:
+        :cvar NO:
+        :cvar YES:
         """
-        YES = "Yes"
-        NO = "No"
         INHERIT = "Inherit"
+        NO = "No"
+        YES = "Yes"
 
     class ShareMarketInd(Enum):
         """value="Inherit" Permission for sharing data for marketing purposes.
 
-        :cvar YES:
-        :cvar NO:
         :cvar INHERIT:
+        :cvar NO:
+        :cvar YES:
         """
-        YES = "Yes"
-        NO = "No"
         INHERIT = "Inherit"
+        NO = "No"
+        YES = "Yes"
 
 
 @dataclass
@@ -10068,13 +10068,13 @@ class OtaAirLowFareSearchRq:
 
             class DisplayPolicy(Enum):
                 """
-                :cvar SOW:
                 :cvar GOW2_RT:
                 :cvar SCHS:
+                :cvar SOW:
                 """
-                SOW = "SOW"
                 GOW2_RT = "GOW2RT"
                 SCHS = "SCHS"
+                SOW = "SOW"
 
         @dataclass
         class Partitions:
@@ -11053,20 +11053,20 @@ class OtaAirLowFareSearchRq:
 
     class Target(Enum):
         """
-        :cvar TEST:
         :cvar PRODUCTION:
+        :cvar TEST:
         """
-        TEST = "Test"
         PRODUCTION = "Production"
+        TEST = "Test"
 
     class TransactionStatusCode(Enum):
         """
-        :cvar START: This is the first message within a transaction.
         :cvar END: This is the last message within a transaction.
-        :cvar ROLLBACK: This indicates that all messages within the current transaction must be ignored.
         :cvar IN_SERIES: This is any message that is not the first or last message within a transaction.
+        :cvar ROLLBACK: This indicates that all messages within the current transaction must be ignored.
+        :cvar START: This is the first message within a transaction.
         """
-        START = "Start"
         END = "End"
-        ROLLBACK = "Rollback"
         IN_SERIES = "InSeries"
+        ROLLBACK = "Rollback"
+        START = "Start"

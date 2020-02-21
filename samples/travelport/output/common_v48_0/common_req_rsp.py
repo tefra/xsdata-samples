@@ -35,19 +35,19 @@ from samples.travelport.output.common_v48_0.common import (
 class TypeLoggingLevel(Enum):
     """The type of various Logging levels.
 
-    :cvar TRACE:
     :cvar DEBUG:
-    :cvar INFO:
-    :cvar WARN:
     :cvar ERROR:
     :cvar FATAL:
+    :cvar INFO:
+    :cvar TRACE:
+    :cvar WARN:
     """
-    TRACE = "TRACE"
     DEBUG = "DEBUG"
-    INFO = "INFO"
-    WARN = "WARN"
     ERROR = "ERROR"
     FATAL = "FATAL"
+    INFO = "INFO"
+    TRACE = "TRACE"
+    WARN = "WARN"
 
 
 @dataclass

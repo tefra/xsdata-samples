@@ -1938,22 +1938,8 @@ class MaxLayoverDurationType {
     +Gateway : integer
     +International : integer
 }
-enum Meals {
-    Meal = Meal
-    ColdMeal = ColdMeal
-    HotMeal = HotMeal
-    Breakfast = Breakfast
-    ContinentalBreakfast = ContinentalBreakfast
-    Lunch = Lunch
-    Dinner = Dinner
-    SnackOrBrunch = SnackOrBrunch
-    FoodForPurchase = FoodForPurchase
-    ComplimentaryRefreshments = ComplimentaryRefreshments
-    AlcoholicBeveragesForPurchase = AlcoholicBeveragesForPurchase
-    ComplimentaryAlcoholicBeverages = ComplimentaryAlcoholicBeverages
-    FoodAndBeveragesForPurchase = FoodAndBeveragesForPurchase
-    NoMealService = NoMealService
-    RefreshmentsForPurchase = RefreshmentsForPurchase
+class Meals {
+    +value : typeMealService
 }
 class MerchandisingAvailabilityDetails {
     +AirItineraryDetails : AirItineraryDetails

@@ -16,12 +16,12 @@ class ActionCodeType(Enum):
     """
     Identifies the action code for a booking - OK, Waitlist etc.
     :cvar OK:
-    :cvar WAITLIST:
     :cvar OTHER:
+    :cvar WAITLIST:
     """
     OK = "OK"
-    WAITLIST = "Waitlist"
     OTHER = "Other"
+    WAITLIST = "Waitlist"
 
 
 @dataclass
@@ -642,15 +642,15 @@ class HandlingMarkupSummaryType:
 class MessageClassType(Enum):
     """Definies the available messaage class type.
 
-    :cvar E: Error
-    :cvar W: Warrning
     :cvar D: Diagnostic
+    :cvar E: Error
     :cvar I: Info
+    :cvar W: Warrning
     """
-    E = "E"
-    W = "W"
     D = "D"
+    E = "E"
     I = "I"
+    W = "W"
 
 
 @dataclass
@@ -804,15 +804,15 @@ class OcfeeType:
 
 class PollingStatusType(Enum):
     """
-    :cvar RECEIVED:
-    :cvar IN_PROGRESS:
     :cvar COMPLETE:
     :cvar ERROR:
+    :cvar IN_PROGRESS:
+    :cvar RECEIVED:
     """
-    RECEIVED = "received"
-    IN_PROGRESS = "in progress"
     COMPLETE = "complete"
     ERROR = "error"
+    IN_PROGRESS = "in progress"
+    RECEIVED = "received"
 
 
 @dataclass
@@ -1090,11 +1090,11 @@ class SurchargesType:
 class TicketType(Enum):
     """Paper or e-ticket.
 
-    :cvar E_TICKET:
     :cvar PAPER:
+    :cvar E_TICKET:
     """
-    E_TICKET = "eTicket"
     PAPER = "Paper"
+    E_TICKET = "eTicket"
 
 
 @dataclass
@@ -1132,13 +1132,13 @@ class UnflownPriceType:
 
 class ValidInterlineType(Enum):
     """
-    :cvar YES:
     :cvar NO:
     :cvar UNKNOWN:
+    :cvar YES:
     """
-    YES = "Yes"
     NO = "No"
     UNKNOWN = "Unknown"
+    YES = "Yes"
 
 
 @dataclass
@@ -2862,11 +2862,11 @@ class FareType:
 
             class Type(Enum):
                 """
-                :cvar REFUND:
                 :cvar EXCHANGE:
+                :cvar REFUND:
                 """
-                REFUND = "Refund"
                 EXCHANGE = "Exchange"
+                REFUND = "Refund"
 
             class Applicability(Enum):
                 """
@@ -6707,23 +6707,23 @@ class OtaAirLowFareSearchRs:
 
     class Target(Enum):
         """
-        :cvar TEST:
         :cvar PRODUCTION:
+        :cvar TEST:
         """
-        TEST = "Test"
         PRODUCTION = "Production"
+        TEST = "Test"
 
     class TransactionStatusCode(Enum):
         """
-        :cvar START: This is the first message within a transaction.
         :cvar END: This is the last message within a transaction.
-        :cvar ROLLBACK: This indicates that all messages within the current transaction must be ignored.
         :cvar IN_SERIES: This is any message that is not the first or last message within a transaction.
+        :cvar ROLLBACK: This indicates that all messages within the current transaction must be ignored.
+        :cvar START: This is the first message within a transaction.
         """
-        START = "Start"
         END = "End"
-        ROLLBACK = "Rollback"
         IN_SERIES = "InSeries"
+        ROLLBACK = "Rollback"
+        START = "Start"
 
 
 @dataclass

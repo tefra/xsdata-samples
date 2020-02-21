@@ -2456,23 +2456,23 @@ class FlexExploreModifiers:
         """
         :cvar ANY_WHERE:
         :cvar AREA:
-        :cvar ZONE:
         :cvar COUNTRY:
-        :cvar STATE:
-        :cvar DISTANCE_IN_MILES:
-        :cvar DISTANCE_IN_KILOMETERS:
         :cvar DESTINATION:
+        :cvar DISTANCE_IN_KILOMETERS:
+        :cvar DISTANCE_IN_MILES:
         :cvar GROUP:
+        :cvar STATE:
+        :cvar ZONE:
         """
         ANY_WHERE = "AnyWhere"
         AREA = "Area"
-        ZONE = "Zone"
         COUNTRY = "Country"
-        STATE = "State"
-        DISTANCE_IN_MILES = "DistanceInMiles"
-        DISTANCE_IN_KILOMETERS = "DistanceInKilometers"
         DESTINATION = "Destination"
+        DISTANCE_IN_KILOMETERS = "DistanceInKilometers"
+        DISTANCE_IN_MILES = "DistanceInMiles"
         GROUP = "Group"
+        STATE = "State"
+        ZONE = "Zone"
 
 
 @dataclass
@@ -3189,42 +3189,6 @@ class MaxLayoverDurationType:
             max_inclusive=9999.0
         )
     )
-
-
-class Meals(Enum):
-    """Available Meal Service.
-
-    :cvar MEAL:
-    :cvar COLD_MEAL:
-    :cvar HOT_MEAL:
-    :cvar BREAKFAST:
-    :cvar CONTINENTAL_BREAKFAST:
-    :cvar LUNCH:
-    :cvar DINNER:
-    :cvar SNACK_OR_BRUNCH:
-    :cvar FOOD_FOR_PURCHASE:
-    :cvar COMPLIMENTARY_REFRESHMENTS:
-    :cvar ALCOHOLIC_BEVERAGES_FOR_PURCHASE:
-    :cvar COMPLIMENTARY_ALCOHOLIC_BEVERAGES:
-    :cvar FOOD_AND_BEVERAGES_FOR_PURCHASE:
-    :cvar NO_MEAL_SERVICE:
-    :cvar REFRESHMENTS_FOR_PURCHASE:
-    """
-    MEAL = "Meal"
-    COLD_MEAL = "ColdMeal"
-    HOT_MEAL = "HotMeal"
-    BREAKFAST = "Breakfast"
-    CONTINENTAL_BREAKFAST = "ContinentalBreakfast"
-    LUNCH = "Lunch"
-    DINNER = "Dinner"
-    SNACK_OR_BRUNCH = "SnackOrBrunch"
-    FOOD_FOR_PURCHASE = "FoodForPurchase"
-    COMPLIMENTARY_REFRESHMENTS = "ComplimentaryRefreshments"
-    ALCOHOLIC_BEVERAGES_FOR_PURCHASE = "AlcoholicBeveragesForPurchase"
-    COMPLIMENTARY_ALCOHOLIC_BEVERAGES = "ComplimentaryAlcoholicBeverages"
-    FOOD_AND_BEVERAGES_FOR_PURCHASE = "FoodAndBeveragesForPurchase"
-    NO_MEAL_SERVICE = "NoMealService"
-    REFRESHMENTS_FOR_PURCHASE = "RefreshmentsForPurchase"
 
 
 @dataclass
@@ -4578,11 +4542,11 @@ class RoutingRules:
 
             class Direction(Enum):
                 """
-                :cvar TO:
                 :cvar FROM_VALUE:
+                :cvar TO:
                 """
-                TO = "To"
                 FROM_VALUE = "From"
+                TO = "To"
 
 
 @dataclass
@@ -5389,15 +5353,15 @@ class VoidDocumentInfo:
 
     class DocumentType(Enum):
         """
-        :cvar SERVICE_FEE:
-        :cvar PAPER_TICKET:
-        :cvar MCO:
         :cvar E_TICKET:
+        :cvar MCO:
+        :cvar PAPER_TICKET:
+        :cvar SERVICE_FEE:
         """
-        SERVICE_FEE = "Service Fee"
-        PAPER_TICKET = "Paper Ticket"
-        MCO = "MCO"
         E_TICKET = "E-Ticket"
+        MCO = "MCO"
+        PAPER_TICKET = "Paper Ticket"
+        SERVICE_FEE = "Service Fee"
 
 
 @dataclass
@@ -5479,15 +5443,15 @@ class VoidResultInfo:
 
     class DocumentType(Enum):
         """
-        :cvar SERVICE_FEE:
-        :cvar PAPER_TICKET:
-        :cvar MCO:
         :cvar E_TICKET:
+        :cvar MCO:
+        :cvar PAPER_TICKET:
+        :cvar SERVICE_FEE:
         """
-        SERVICE_FEE = "Service Fee"
-        PAPER_TICKET = "Paper Ticket"
-        MCO = "MCO"
         E_TICKET = "E-Ticket"
+        MCO = "MCO"
+        PAPER_TICKET = "Paper Ticket"
+        SERVICE_FEE = "Service Fee"
 
 
 @dataclass
@@ -5611,17 +5575,17 @@ class TypeAtpcoglobalIndicator(Enum):
 
 class TypeAlliance(Enum):
     """
-    :cvar STAR_ALLIANCE:
-    :cvar ONE_WORLD:
     :cvar KLMNORTHWEST_ALLIANCE:
-    :cvar SKY_TEAM:
     :cvar OWCODE:
+    :cvar ONE_WORLD:
+    :cvar SKY_TEAM:
+    :cvar STAR_ALLIANCE:
     """
-    STAR_ALLIANCE = "StarAlliance"
-    ONE_WORLD = "OneWorld"
     KLMNORTHWEST_ALLIANCE = "KLMNorthwestAlliance"
-    SKY_TEAM = "SkyTeam"
     OWCODE = "OWCode"
+    ONE_WORLD = "OneWorld"
+    SKY_TEAM = "SkyTeam"
+    STAR_ALLIANCE = "StarAlliance"
 
 
 @dataclass
@@ -5710,72 +5674,72 @@ class TypeAssessIndicator(Enum):
 class TypeBackOffice(Enum):
     """
     :cvar ACCOUNTING:
+    :cvar DUAL:
     :cvar GLOBAL_VALUE:
     :cvar NON_ACCOUNTING:
     :cvar NON_ACCOUNTING_REMOTE:
-    :cvar DUAL:
     """
     ACCOUNTING = "Accounting"
+    DUAL = "Dual"
     GLOBAL_VALUE = "Global"
     NON_ACCOUNTING = "NonAccounting"
     NON_ACCOUNTING_REMOTE = "NonAccountingRemote"
-    DUAL = "Dual"
 
 
 class TypeBillingDetailsDataType(Enum):
     """
     :cvar ALPHA:
-    :cvar NUMERIC:
     :cvar ALPHA_NUMERIC:
     :cvar DATE:
+    :cvar NUMERIC:
     """
     ALPHA = "Alpha"
-    NUMERIC = "Numeric"
     ALPHA_NUMERIC = "AlphaNumeric"
     DATE = "Date"
+    NUMERIC = "Numeric"
 
 
 class TypeBillingDetailsName(Enum):
     """
-    :cvar PERSONAL_ID:
-    :cvar COST_ACCOUNT_NUMBER:
     :cvar ACCOUNT_NUMBER:
-    :cvar PROJECT_NUMBER:
-    :cvar ACTION_CODE:
-    :cvar DEPARTMENT_CODE:
     :cvar ACCOUNTING_UNIT:
-    :cvar ORDER_NUMBER:
+    :cvar ACTION_CODE:
+    :cvar COST_ACCOUNT_NUMBER:
+    :cvar DEPARTMENT_CODE:
     :cvar DESTINATION:
     :cvar FILE_DATE:
+    :cvar ORDER_NUMBER:
+    :cvar PERSONAL_ID:
+    :cvar PROJECT_NUMBER:
     """
-    PERSONAL_ID = "PersonalId"
-    COST_ACCOUNT_NUMBER = "CostAccountNumber"
     ACCOUNT_NUMBER = "AccountNumber"
-    PROJECT_NUMBER = "ProjectNumber"
-    ACTION_CODE = "ActionCode"
-    DEPARTMENT_CODE = "DepartmentCode"
     ACCOUNTING_UNIT = "AccountingUnit"
-    ORDER_NUMBER = "OrderNumber"
+    ACTION_CODE = "ActionCode"
+    COST_ACCOUNT_NUMBER = "CostAccountNumber"
+    DEPARTMENT_CODE = "DepartmentCode"
     DESTINATION = "Destination"
     FILE_DATE = "FileDate"
+    ORDER_NUMBER = "OrderNumber"
+    PERSONAL_ID = "PersonalId"
+    PROJECT_NUMBER = "ProjectNumber"
 
 
 class TypeBooking(Enum):
     """Type of booking.
 
-    :cvar SSR:
+    :cvar APPLY_BOOKING_PER_SERVICE:
     :cvar AUXILLARY_SEGMENT:
     :cvar AVAILABLE_FOR_DISPLAY_PRICING:
     :cvar CONTACT_CARRIER_FOR_BOOKING:
     :cvar NO_BOOKING_REQUIRED:
-    :cvar APPLY_BOOKING_PER_SERVICE:
+    :cvar SSR:
     """
-    SSR = "SSR"
+    APPLY_BOOKING_PER_SERVICE = "Apply booking per service"
     AUXILLARY_SEGMENT = "Auxillary Segment"
     AVAILABLE_FOR_DISPLAY_PRICING = "Available for Display/Pricing"
     CONTACT_CARRIER_FOR_BOOKING = "Contact Carrier for Booking"
     NO_BOOKING_REQUIRED = "No Booking Required"
-    APPLY_BOOKING_PER_SERVICE = "Apply booking per service"
+    SSR = "SSR"
 
 
 @dataclass
@@ -5816,12 +5780,12 @@ class TypeConnectionIndicator(Enum):
                          TurnAround : Specified turn around;
                          Stopover : Specified stopover;
     :cvar AVAILABILITY_AND_PRICING:
-    :cvar TURN_AROUND:
     :cvar STOPOVER:
+    :cvar TURN_AROUND:
     """
     AVAILABILITY_AND_PRICING = "AvailabilityAndPricing"
-    TURN_AROUND = "TurnAround"
     STOPOVER = "Stopover"
+    TURN_AROUND = "TurnAround"
 
 
 class TypeCouponStatus(Enum):
@@ -5829,34 +5793,34 @@ class TypeCouponStatus(Enum):
 
     :cvar A: Code="A" Status="Airport Controlled".
     :cvar C: Code="C" Status="Checked In"
+    :cvar D: Code="D" "Deleted/Removed"
+    :cvar E: Code="E" Status="Exchanged"
     :cvar F: Code="F" Status="Flown/Used"
+    :cvar I: Code="I" Status="Irregular Ops"
     :cvar L: Code="L" Status="Boarded/Lifted"
     :cvar O: Code="O" Status="Open"
     :cvar P: Code="P" Status="Printed"
     :cvar R: Code="R" Status="Refunded"
-    :cvar E: Code="E" Status="Exchanged"
+    :cvar S: Code="S" Status="Suspended"
+    :cvar U: Code="U" Status="Unavailable"
     :cvar V: Code="V" Status="Void"
     :cvar Z: Code="Z" Status="Archived/Carrier
                             Modified"
-    :cvar U: Code="U" Status="Unavailable"
-    :cvar S: Code="S" Status="Suspended"
-    :cvar I: Code="I" Status="Irregular Ops"
-    :cvar D: Code="D" "Deleted/Removed"
     """
     A = "A"
     C = "C"
+    D = "D"
+    E = "E"
     F = "F"
+    I = "I"
     L = "L"
     O = "O"
     P = "P"
     R = "R"
-    E = "E"
+    S = "S"
+    U = "U"
     V = "V"
     Z = "Z"
-    U = "U"
-    S = "S"
-    I = "I"
-    D = "D"
 
 
 @dataclass
@@ -5927,92 +5891,92 @@ class TypeDaysOfOperation:
 class TypeDestinationCode(Enum):
     """List of valid Destination Codes.
 
-    :cvar MEXICO_COST_RICA_CENTRAL_AMERICA: Mexico/Central America/Canal
-                            Zone/Costa Rica
-    :cvar CARIBBEAN: Island and Countries of The Caribbean
-    :cvar SOUTH_AMERICA: South America
-    :cvar EUROPE: Europe
     :cvar AFRICA: Africa
-    :cvar MIDDLE_EAST_WESTERN_ASIA: Middle East/Western Asia
     :cvar ASIA: Asia
     :cvar AUSTRALIA_NEW_ZEALAND_PACIFIC_ISLANDS: Australia/New Zealand/Pacific Islands
     :cvar CANADA_GREENLAND: Canada and Greenland
+    :cvar CARIBBEAN: Island and Countries of The Caribbean
+    :cvar EUROPE: Europe
+    :cvar MEXICO_COST_RICA_CENTRAL_AMERICA: Mexico/Central America/Canal
+                            Zone/Costa Rica
+    :cvar MIDDLE_EAST_WESTERN_ASIA: Middle East/Western Asia
+    :cvar SOUTH_AMERICA: South America
     :cvar USA: United States of America
     """
-    MEXICO_COST_RICA_CENTRAL_AMERICA = "MexicoCostRicaCentralAmerica"
-    CARIBBEAN = "Caribbean"
-    SOUTH_AMERICA = "SouthAmerica"
-    EUROPE = "Europe"
     AFRICA = "Africa"
-    MIDDLE_EAST_WESTERN_ASIA = "MiddleEastWesternAsia"
     ASIA = "Asia"
     AUSTRALIA_NEW_ZEALAND_PACIFIC_ISLANDS = "AustraliaNewZealandPacificIslands"
     CANADA_GREENLAND = "CanadaGreenland"
+    CARIBBEAN = "Caribbean"
+    EUROPE = "Europe"
+    MEXICO_COST_RICA_CENTRAL_AMERICA = "MexicoCostRicaCentralAmerica"
+    MIDDLE_EAST_WESTERN_ASIA = "MiddleEastWesternAsia"
+    SOUTH_AMERICA = "SouthAmerica"
     USA = "USA"
 
 
 class TypeDisplayCategory(Enum):
     """Type of booking.
 
-    :cvar WITH_ITINERARY_PRICING:
-    :cvar STORE:
     :cvar SPECIAL_SERVICE:
+    :cvar STORE:
+    :cvar WITH_ITINERARY_PRICING:
     """
-    WITH_ITINERARY_PRICING = "With Itinerary Pricing"
-    STORE = "Store"
     SPECIAL_SERVICE = "SpecialService"
+    STORE = "Store"
+    WITH_ITINERARY_PRICING = "With Itinerary Pricing"
 
 
 class TypeDiversity(Enum):
     """Used in Low Fare Search to better promote unique results.
 
-    :cvar BLEND:
     :cvar AIRPORTS:
+    :cvar BLEND:
     :cvar CARRIER:
-    :cvar ORIGIN:
-    :cvar DESTINATION:
     :cvar DATE_COMBINATION:
-    :cvar FIRST_ODDATE:
-    :cvar SECOND_ODDATE:
+    :cvar DESTINATION:
     :cvar FIRST_OD:
+    :cvar FIRST_ODDATE:
+    :cvar ORIGIN:
     :cvar SECOND_OD:
+    :cvar SECOND_ODDATE:
     """
-    BLEND = "Blend"
     AIRPORTS = "Airports"
+    BLEND = "Blend"
     CARRIER = "Carrier"
-    ORIGIN = "Origin"
-    DESTINATION = "Destination"
     DATE_COMBINATION = "DateCombination"
-    FIRST_ODDATE = "FirstODDate"
-    SECOND_ODDATE = "SecondODDate"
+    DESTINATION = "Destination"
     FIRST_OD = "FirstOD"
+    FIRST_ODDATE = "FirstODDate"
+    ORIGIN = "Origin"
     SECOND_OD = "SecondOD"
+    SECOND_ODDATE = "SecondODDate"
 
 
 class TypeEticketability(Enum):
     """Defines the ability to eticket an entity (Yes, No, Required, Ticketless)
 
-    :cvar YES:
     :cvar NO:
     :cvar REQUIRED:
     :cvar TICKETLESS:
+    :cvar YES:
     """
-    YES = "Yes"
     NO = "No"
     REQUIRED = "Required"
     TICKETLESS = "Ticketless"
+    YES = "Yes"
 
 
 class TypeFacility(Enum):
     """
-    :cvar SEAT:
     :cvar AISLE:
     :cvar OPEN:
+    :cvar SEAT:
     :cvar UNKNOWN:
     """
-    SEAT = "Seat"
     AISLE = "Aisle"
     OPEN = "Open"
+    SEAT = "Seat"
     UNKNOWN = "Unknown"
 
 
@@ -6048,78 +6012,78 @@ class TypeFareBreak(Enum):
 
     :cvar MUST_BREAK: Break Fare at the associated segment.
                             Multiple Breaks or No Breaks may be allowed.
+    :cvar MUST_NOT_BREAK: No Fare Break allowed at the associated
+                            segment.
     :cvar MUST_ONLY_BREAK: Only Break Fare at the associated segment.
                             Fare Break in the entire itinerary is allowed only at the
                             concerned segment.
-    :cvar MUST_NOT_BREAK: No Fare Break allowed at the associated
-                            segment.
     """
     MUST_BREAK = "MustBreak"
-    MUST_ONLY_BREAK = "MustOnlyBreak"
     MUST_NOT_BREAK = "MustNotBreak"
+    MUST_ONLY_BREAK = "MustOnlyBreak"
 
 
 class TypeFareDirectionality(Enum):
     """A fare's directionality (e.g. one-way, return )
 
+    :cvar ALL:
     :cvar OUTBOUND:
     :cvar RETURN_VALUE:
-    :cvar ALL:
     """
+    ALL = "All"
     OUTBOUND = "Outbound"
     RETURN_VALUE = "Return"
-    ALL = "All"
 
 
 class TypeFareDiscount(Enum):
     """Fare Discount Calculation Method.
 
-    :cvar BASE_RE_CALC_USTAXES:
     :cvar BASE_NO_RE_CALC_USTAXES:
+    :cvar BASE_RE_CALC_USTAXES:
     :cvar BASE_TAX:
     """
-    BASE_RE_CALC_USTAXES = "BaseReCalcUSTaxes"
     BASE_NO_RE_CALC_USTAXES = "BaseNoReCalcUSTaxes"
+    BASE_RE_CALC_USTAXES = "BaseReCalcUSTaxes"
     BASE_TAX = "BaseTax"
 
 
 class TypeFareGuarantee(Enum):
     """The status of a fare.
 
+    :cvar AGENCY_PRIVATE_FARE_NO_OVERRIDE: Agency Private Fare with no rules override
+    :cvar AIRLINE: Fare guaranteed by Airline.
     :cvar AUTO: Automatically generated
-    :cvar MANUAL: Agent has overridden default(s)
-    :cvar MANUAL_FARE: Fare has been constructed by agent
+    :cvar AUTO_USING_PRIVATE_FARE: Agency private fares that are not guaranteed
+    :cvar EXPIRED: Expired fare due to older fare guarantee date typically older than 7 days
+    :cvar GUARANTEE_EXPIRED: Guaranteed fare recently got expired as ticketing hadn't been done within a time frame typically midnight local time of POS .
     :cvar GUARANTEED: Fare is guaranteed
+    :cvar GUARANTEED_USING_AIRLINE_PRIVATE_FARE: Guaranteed fare using Airline private fare that was filed with a fare distributor.
     :cvar INVALID: Invalid fare, e.g. due to name or
                       itinerary change
+    :cvar MANUAL: Agent has overridden default(s)
+    :cvar MANUAL_FARE: Fare has been constructed by agent
+    :cvar REPRICE: Need requote to ticket
     :cvar RESTORED: Ticketed stored fare has been restored
     :cvar TICKETED:
-    :cvar UNTICKETABLE: Unable to ticket
-    :cvar REPRICE: Need requote to ticket
-    :cvar EXPIRED: Expired fare due to older fare guarantee date typically older than 7 days
-    :cvar AUTO_USING_PRIVATE_FARE: Agency private fares that are not guaranteed
-    :cvar GUARANTEED_USING_AIRLINE_PRIVATE_FARE: Guaranteed fare using Airline private fare that was filed with a fare distributor.
-    :cvar AIRLINE: Fare guaranteed by Airline.
-    :cvar GUARANTEE_EXPIRED: Guaranteed fare recently got expired as ticketing hadn't been done within a time frame typically midnight local time of POS .
-    :cvar AGENCY_PRIVATE_FARE_NO_OVERRIDE: Agency Private Fare with no rules override
     :cvar UNKNOWN: To handle new enumerations added by provider but currently not recognized by API
+    :cvar UNTICKETABLE: Unable to ticket
     """
+    AGENCY_PRIVATE_FARE_NO_OVERRIDE = "AgencyPrivateFareNoOverride"
+    AIRLINE = "Airline"
     AUTO = "Auto"
+    AUTO_USING_PRIVATE_FARE = "AutoUsingPrivateFare"
+    EXPIRED = "Expired"
+    GUARANTEE_EXPIRED = "GuaranteeExpired"
+    GUARANTEED = "Guaranteed"
+    GUARANTEED_USING_AIRLINE_PRIVATE_FARE = "GuaranteedUsingAirlinePrivateFare"
+    INVALID = "Invalid"
     MANUAL = "Manual"
     MANUAL_FARE = "ManualFare"
-    GUARANTEED = "Guaranteed"
-    INVALID = "Invalid"
+    REPRICE = "Reprice"
     RESTORED = "Restored"
     TICKETED = "Ticketed"
-    UNTICKETABLE = "Unticketable"
-    REPRICE = "Reprice"
-    EXPIRED = "Expired"
-    AUTO_USING_PRIVATE_FARE = "AutoUsingPrivateFare"
-    GUARANTEED_USING_AIRLINE_PRIVATE_FARE = "GuaranteedUsingAirlinePrivateFare"
-    AIRLINE = "Airline"
-    GUARANTEE_EXPIRED = "GuaranteeExpired"
-    AGENCY_PRIVATE_FARE_NO_OVERRIDE = "AgencyPrivateFareNoOverride"
     UNKNOWN = "Unknown"
+    UNTICKETABLE = "Unticketable"
 
 
 @dataclass
@@ -6172,149 +6136,149 @@ class TypeFarePenalty:
     class PenaltyApplies(Enum):
         """The values can be "Anytime", "Before Departure" or "After Departure".
 
+        :cvar AFTER_DEPARTURE:
         :cvar ANYTIME:
         :cvar BEFORE_DEPARTURE:
-        :cvar AFTER_DEPARTURE:
         """
+        AFTER_DEPARTURE = "After Departure"
         ANYTIME = "Anytime"
         BEFORE_DEPARTURE = "Before Departure"
-        AFTER_DEPARTURE = "After Departure"
 
 
 class TypeFareRestrictionType(Enum):
     """The type of fare restriction.
 
+    :cvar BOTH:
     :cvar DAY_OF_WEEK:
     :cvar FLIGHT_TIME_OF_DAY:
-    :cvar BOTH:
     """
+    BOTH = "Both"
     DAY_OF_WEEK = "DayOfWeek"
     FLIGHT_TIME_OF_DAY = "FlightTimeOfDay"
-    BOTH = "Both"
 
 
 class TypeFareRuleCategoryCode(Enum):
     """Kestrel Long Fare Rule Category Codes.
 
-    :cvar APP: Rule App/Other Conditions
-    :cvar WHO: Eligibility
-    :cvar DAY: Day/Time
-    :cvar SEA: Seasonal
-    :cvar FLT: Flight App
-    :cvar ADV: Advance Res/Tkt
-    :cvar MIN: Minimum Stay
-    :cvar MAX: Maximum Stay
-    :cvar STP: Stopovers
-    :cvar TRF: Transfers/Routing
-    :cvar CMB: Combinability
-    :cvar BLA: Blackouts
-    :cvar SUR: Surcharges
     :cvar ACC: Accompanied
-    :cvar TVL: Travel Restrictions
-    :cvar TKT: Sales Restrictions
-    :cvar CHG: Penalties
-    :cvar HIP: HIP and Mileage Exceptions
-    :cvar END: Ticket Endorsements
-    :cvar CHD: Children"s Discounts
-    :cvar TUC: Tour Conductor Disc
+    :cvar ADV: Advance Res/Tkt
     :cvar AGT: Agent Discounts
-    :cvar DSC: All Other Disc
-    :cvar MIS: Misc Fare Tags
-    :cvar FBR: Fare By Rule
-    :cvar GRP: Groups
-    :cvar TUR: Tours
-    :cvar VAC: Visit Another Country
+    :cvar APP: Rule App/Other Conditions
+    :cvar BLA: Blackouts
+    :cvar CHD: Children"s Discounts
+    :cvar CHG: Penalties
+    :cvar CMB: Combinability
+    :cvar DAY: Day/Time
     :cvar DEP: Deposits
-    :cvar VOL: Voluntary Changes
+    :cvar DSC: All Other Disc
+    :cvar END: Ticket Endorsements
+    :cvar FBR: Fare By Rule
+    :cvar FLT: Flight App
+    :cvar GRP: Groups
+    :cvar HIP: HIP and Mileage Exceptions
     :cvar IVE: Involuntary Exchanges
-    :cvar VOR: Voluntary Refunds
     :cvar IVR: Involuntary Refunds
+    :cvar MAX: Maximum Stay
+    :cvar MIN: Minimum Stay
+    :cvar MIS: Misc Fare Tags
     :cvar NET: Negotiated Fares
     :cvar OTH: Other
+    :cvar SEA: Seasonal
+    :cvar STP: Stopovers
+    :cvar SUR: Surcharges
+    :cvar TKT: Sales Restrictions
+    :cvar TRF: Transfers/Routing
+    :cvar TUC: Tour Conductor Disc
+    :cvar TUR: Tours
+    :cvar TVL: Travel Restrictions
+    :cvar VAC: Visit Another Country
+    :cvar VOL: Voluntary Changes
+    :cvar VOR: Voluntary Refunds
+    :cvar WHO: Eligibility
     """
-    APP = "APP"
-    WHO = "WHO"
-    DAY = "DAY"
-    SEA = "SEA"
-    FLT = "FLT"
-    ADV = "ADV"
-    MIN = "MIN"
-    MAX = "MAX"
-    STP = "STP"
-    TRF = "TRF"
-    CMB = "CMB"
-    BLA = "BLA"
-    SUR = "SUR"
     ACC = "ACC"
-    TVL = "TVL"
-    TKT = "TKT"
-    CHG = "CHG"
-    HIP = "HIP"
-    END = "END"
-    CHD = "CHD"
-    TUC = "TUC"
+    ADV = "ADV"
     AGT = "AGT"
-    DSC = "DSC"
-    MIS = "MIS"
-    FBR = "FBR"
-    GRP = "GRP"
-    TUR = "TUR"
-    VAC = "VAC"
+    APP = "APP"
+    BLA = "BLA"
+    CHD = "CHD"
+    CHG = "CHG"
+    CMB = "CMB"
+    DAY = "DAY"
     DEP = "DEP"
-    VOL = "VOL"
+    DSC = "DSC"
+    END = "END"
+    FBR = "FBR"
+    FLT = "FLT"
+    GRP = "GRP"
+    HIP = "HIP"
     IVE = "IVE"
-    VOR = "VOR"
     IVR = "IVR"
+    MAX = "MAX"
+    MIN = "MIN"
+    MIS = "MIS"
     NET = "NET"
     OTH = "OTH"
+    SEA = "SEA"
+    STP = "STP"
+    SUR = "SUR"
+    TKT = "TKT"
+    TRF = "TRF"
+    TUC = "TUC"
+    TUR = "TUR"
+    TVL = "TVL"
+    VAC = "VAC"
+    VOL = "VOL"
+    VOR = "VOR"
+    WHO = "WHO"
 
 
 class TypeFareRuleType(Enum):
     """The valid rule types.
 
+    :cvar LONG:
     :cvar NONE_VALUE:
     :cvar SHORT:
-    :cvar LONG:
     """
+    LONG = "long"
     NONE_VALUE = "none"
     SHORT = "short"
-    LONG = "long"
 
 
 class TypeFareSearchOption(Enum):
     """Fare Search option indicator.
 
+    :cvar ADVANCE_PURCHASE:
+    :cvar BLACKOUT:
+    :cvar DAY_OF_WEEK:
+    :cvar EFFECTIVE_DATE:
     :cvar LEAVE:
     :cvar RETURN_VALUE:
     :cvar SEASONAL:
-    :cvar BLACKOUT:
-    :cvar ADVANCE_PURCHASE:
-    :cvar DAY_OF_WEEK:
-    :cvar EFFECTIVE_DATE:
     """
+    ADVANCE_PURCHASE = "Advance Purchase"
+    BLACKOUT = "Blackout"
+    DAY_OF_WEEK = "Day-of-week"
+    EFFECTIVE_DATE = "Effective Date"
     LEAVE = "Leave"
     RETURN_VALUE = "Return"
     SEASONAL = "Seasonal"
-    BLACKOUT = "Blackout"
-    ADVANCE_PURCHASE = "Advance Purchase"
-    DAY_OF_WEEK = "Day-of-week"
-    EFFECTIVE_DATE = "Effective Date"
 
 
 class TypeFareStatusCode(Enum):
     """
     :cvar READY_TO_TICKET: Fare is enabled and available for ticketing
-    :cvar UNABLE_TO_TICKET: Fare could not be ticketed
     :cvar REPRICE: Fare needs to be repriced
     :cvar TICKETED: Fare is ticketed
     :cvar UNABLE: Fare is not enabled
+    :cvar UNABLE_TO_TICKET: Fare could not be ticketed
     :cvar UNKNOWN: To handle new enumerations added by provider but currently not recognized by API
     """
     READY_TO_TICKET = "ReadyToTicket"
-    UNABLE_TO_TICKET = "UnableToTicket"
     REPRICE = "Reprice"
     TICKETED = "Ticketed"
     UNABLE = "Unable"
+    UNABLE_TO_TICKET = "UnableToTicket"
     UNKNOWN = "Unknown"
 
 
@@ -6330,20 +6294,20 @@ class TypeFareTripType(Enum):
     HalfReturn - Half roundtrip fare
     CircleTrip -- circle trip fare
     RoundTheWorld -- round the world fare
+    :cvar CIRCLE_TRIP:
+    :cvar HALF_RETURN:
     :cvar ONE_WAY:
     :cvar ONE_WAY_ONLY:
     :cvar RETURN_VALUE:
     :cvar RETURN_ONLY:
-    :cvar HALF_RETURN:
-    :cvar CIRCLE_TRIP:
     :cvar ROUND_THE_WORLD:
     """
+    CIRCLE_TRIP = "CircleTrip"
+    HALF_RETURN = "HalfReturn"
     ONE_WAY = "OneWay"
     ONE_WAY_ONLY = "OneWayOnly"
     RETURN_VALUE = "Return"
     RETURN_ONLY = "ReturnOnly"
-    HALF_RETURN = "HalfReturn"
-    CIRCLE_TRIP = "CircleTrip"
     ROUND_THE_WORLD = "RoundTheWorld"
 
 
@@ -6351,45 +6315,45 @@ class TypeFaresIndicator(Enum):
     """Defines the type of fares to return (Only public fares, Only private fares,
     Only agency private fares, Only airline private fares or all fares)
 
-    :cvar PUBLIC_FARES_ONLY:
-    :cvar PRIVATE_FARES_ONLY:
     :cvar AGENCY_PRIVATE_FARES_ONLY:
     :cvar AIRLINE_PRIVATE_FARES_ONLY:
-    :cvar PUBLIC_AND_PRIVATE_FARES:
-    :cvar NET_FARES_ONLY:
     :cvar ALL_FARES: Applicable for 1G/1V air shop only
+    :cvar NET_FARES_ONLY:
+    :cvar PRIVATE_FARES_ONLY:
+    :cvar PUBLIC_AND_PRIVATE_FARES:
+    :cvar PUBLIC_FARES_ONLY:
     """
-    PUBLIC_FARES_ONLY = "PublicFaresOnly"
-    PRIVATE_FARES_ONLY = "PrivateFaresOnly"
     AGENCY_PRIVATE_FARES_ONLY = "AgencyPrivateFaresOnly"
     AIRLINE_PRIVATE_FARES_ONLY = "AirlinePrivateFaresOnly"
-    PUBLIC_AND_PRIVATE_FARES = "PublicAndPrivateFares"
-    NET_FARES_ONLY = "NetFaresOnly"
     ALL_FARES = "AllFares"
+    NET_FARES_ONLY = "NetFaresOnly"
+    PRIVATE_FARES_ONLY = "PrivateFaresOnly"
+    PUBLIC_AND_PRIVATE_FARES = "PublicAndPrivateFares"
+    PUBLIC_FARES_ONLY = "PublicFaresOnly"
 
 
 class TypeIgnoreStopOver(Enum):
     """The stop over inluded to quote fare.
 
+    :cvar IGNORE_SEGMENT: Segment Ignored.
     :cvar NO_STOP_OVER: No Stop over included.
     :cvar STOP_OVER: Stop over included.
-    :cvar IGNORE_SEGMENT: Segment Ignored.
     """
+    IGNORE_SEGMENT = "IgnoreSegment"
     NO_STOP_OVER = "NoStopOver"
     STOP_OVER = "StopOver"
-    IGNORE_SEGMENT = "IgnoreSegment"
 
 
 class TypeInventoryRequest(Enum):
     """
     The valid inventory types are Seamless - A, DirectAccess - B, Basic - C
-    :cvar SEAMLESS:
-    :cvar DIRECT_ACCESS:
     :cvar BASIC:
+    :cvar DIRECT_ACCESS:
+    :cvar SEAMLESS:
     """
-    SEAMLESS = "Seamless"
-    DIRECT_ACCESS = "DirectAccess"
     BASIC = "Basic"
+    DIRECT_ACCESS = "DirectAccess"
+    SEAMLESS = "Seamless"
 
 
 class TypeItinerary(Enum):
@@ -6403,61 +6367,61 @@ class TypeItinerary(Enum):
 
 class TypeItineraryOption(Enum):
     """
-    :cvar NO_FARE:
     :cvar NO_AMOUNT:
+    :cvar NO_FARE:
     :cvar SEQUENCE_NUMBER:
     """
-    NO_FARE = "NoFare"
     NO_AMOUNT = "NoAmount"
+    NO_FARE = "NoFare"
     SEQUENCE_NUMBER = "SequenceNumber"
 
 
 class TypeMealService(Enum):
     """Available Meal Service.
 
-    :cvar MEAL:
-    :cvar COLD_MEAL:
-    :cvar HOT_MEAL:
-    :cvar BREAKFAST:
-    :cvar CONTINENTAL_BREAKFAST:
-    :cvar LUNCH:
-    :cvar DINNER:
-    :cvar SNACK_OR_BRUNCH:
-    :cvar FOOD_FOR_PURCHASE:
-    :cvar COMPLIMENTARY_REFRESHMENTS:
     :cvar ALCOHOLIC_BEVERAGES_FOR_PURCHASE:
+    :cvar BREAKFAST:
+    :cvar COLD_MEAL:
     :cvar COMPLIMENTARY_ALCOHOLIC_BEVERAGES:
+    :cvar COMPLIMENTARY_REFRESHMENTS:
+    :cvar CONTINENTAL_BREAKFAST:
+    :cvar DINNER:
     :cvar FOOD_AND_BEVERAGES_FOR_PURCHASE:
+    :cvar FOOD_FOR_PURCHASE:
+    :cvar HOT_MEAL:
+    :cvar LUNCH:
+    :cvar MEAL:
     :cvar NO_MEAL_SERVICE:
     :cvar REFRESHMENTS_FOR_PURCHASE:
+    :cvar SNACK_OR_BRUNCH:
     """
-    MEAL = "Meal"
-    COLD_MEAL = "ColdMeal"
-    HOT_MEAL = "HotMeal"
-    BREAKFAST = "Breakfast"
-    CONTINENTAL_BREAKFAST = "ContinentalBreakfast"
-    LUNCH = "Lunch"
-    DINNER = "Dinner"
-    SNACK_OR_BRUNCH = "SnackOrBrunch"
-    FOOD_FOR_PURCHASE = "FoodForPurchase"
-    COMPLIMENTARY_REFRESHMENTS = "ComplimentaryRefreshments"
     ALCOHOLIC_BEVERAGES_FOR_PURCHASE = "AlcoholicBeveragesForPurchase"
+    BREAKFAST = "Breakfast"
+    COLD_MEAL = "ColdMeal"
     COMPLIMENTARY_ALCOHOLIC_BEVERAGES = "ComplimentaryAlcoholicBeverages"
+    COMPLIMENTARY_REFRESHMENTS = "ComplimentaryRefreshments"
+    CONTINENTAL_BREAKFAST = "ContinentalBreakfast"
+    DINNER = "Dinner"
     FOOD_AND_BEVERAGES_FOR_PURCHASE = "FoodAndBeveragesForPurchase"
+    FOOD_FOR_PURCHASE = "FoodForPurchase"
+    HOT_MEAL = "HotMeal"
+    LUNCH = "Lunch"
+    MEAL = "Meal"
     NO_MEAL_SERVICE = "NoMealService"
     REFRESHMENTS_FOR_PURCHASE = "RefreshmentsForPurchase"
+    SNACK_OR_BRUNCH = "SnackOrBrunch"
 
 
 class TypeMileOrRouteBasedFare(Enum):
     """Whether the fare is Mile or Route based.
 
+    :cvar BOTH:
     :cvar MILE:
     :cvar ROUTE:
-    :cvar BOTH:
     """
+    BOTH = "Both"
     MILE = "Mile"
     ROUTE = "Route"
-    BOTH = "Both"
 
 
 @dataclass
@@ -6512,71 +6476,71 @@ class TypePosition(Enum):
     """Facility position with respect to position within the aircraft cabin.
     Possible values are &#8211; Left, Right, Center, Left Center, Right Center.
 
-    :cvar LEFT:
-    :cvar RIGHT:
     :cvar CENTER:
+    :cvar LEFT:
     :cvar LEFT_CENTER:
+    :cvar RIGHT:
     :cvar RIGHT_CENTER:
     """
-    LEFT = "Left"
-    RIGHT = "Right"
     CENTER = "Center"
+    LEFT = "Left"
     LEFT_CENTER = "LeftCenter"
+    RIGHT = "Right"
     RIGHT_CENTER = "RightCenter"
 
 
 class TypePricingMethod(Enum):
     """The method at which the pricing data was acquired.
 
-    :cvar AUTO: Automatically generated
-    :cvar MANUAL: Agent has overridden default(s)
-    :cvar MANUAL_FARE: Fare has been constructed by agent
-    :cvar GUARANTEED: Fare is guaranteed
-    :cvar INVALID: Invalid fare, e.g. due to name or
-                      itinerary change
-    :cvar RESTORED: Ticketed stored fare has been restored
-    :cvar TICKETED:
-    :cvar UNTICKETABLE: Unable to ticket
-    :cvar REPRICE: Need requote to ticket
-    :cvar EXPIRED: Expired fare, older than 7 days
-    :cvar AUTO_USING_PRIVATE_FARE: Agency private fares that are not guaranteed
-    :cvar GUARANTEED_USING_AIRLINE_PRIVATE_FARE: Guaranteed fare using Airline private fare that was filed with a fare distributor.
-    :cvar AIRLINE: Fare created as a result of Claim PNR which transfers data to GDS for ticketing purposes.
     :cvar AGENT_ASSISTED: Fare is created using Agent Asisted Pricing.
     Worldspan TKG FAX Line Documentation - AGENT ASSISTEDPRICED
-    :cvar VERIFY_PRICE: Verify existing saved price on PNR .
-    Worldspan TKG FAX Line Documentation -  AWAITING PRICE VERIFICATION
+    :cvar AIRLINE: Fare created as a result of Claim PNR which transfers data to GDS for ticketing purposes.
     :cvar ALT_SEGMENT_REMOVED_REPRICE: ALT Segment removed, Reprice pricing.
     Worldspan TKG FAX Line Documentation - AWAITING REPRICING ALT SEGS RMVD
+    :cvar AUTO: Automatically generated
+    :cvar AUTO_RAPID_REPRICE: Auto priced by rapid reprice. Provider 1P FCI code 4 .
+    :cvar AUTO_USING_PRIVATE_FARE: Agency private fares that are not guaranteed
     :cvar AUXILIARY_SEGMENT_REMOVED_REPRICE: AUX Segment removed, Reprice pricing.
     Worldspan TKG FAX Line Documentation -  AWAITING REPRICING AUX SEGS REMOVED
     :cvar DUPLICATE_SEGMENT_REMOVED_REPRICE: Duplicate Segment removed, Reprice pricing.
     Worldspan TKG FAX Line Documentation - AWAITING REPRICING DUPE SEGS REMOVED
-    :cvar UNKNOWN: Any other kind of Pricing Method which is not supported by API.
+    :cvar EXPIRED: Expired fare, older than 7 days
+    :cvar GUARANTEED: Fare is guaranteed
     :cvar GUARANTEED_USING_AGENCY_PRIVATE_FARE: Guaranteed fare using Agency private fare that was filed with a fare distributor.
-    :cvar AUTO_RAPID_REPRICE: Auto priced by rapid reprice. Provider 1P FCI code 4 .
+    :cvar GUARANTEED_USING_AIRLINE_PRIVATE_FARE: Guaranteed fare using Airline private fare that was filed with a fare distributor.
+    :cvar INVALID: Invalid fare, e.g. due to name or
+                      itinerary change
+    :cvar MANUAL: Agent has overridden default(s)
+    :cvar MANUAL_FARE: Fare has been constructed by agent
+    :cvar REPRICE: Need requote to ticket
+    :cvar RESTORED: Ticketed stored fare has been restored
+    :cvar TICKETED:
+    :cvar UNKNOWN: Any other kind of Pricing Method which is not supported by API.
+    :cvar UNTICKETABLE: Unable to ticket
+    :cvar VERIFY_PRICE: Verify existing saved price on PNR .
+    Worldspan TKG FAX Line Documentation -  AWAITING PRICE VERIFICATION
     """
-    AUTO = "Auto"
-    MANUAL = "Manual"
-    MANUAL_FARE = "ManualFare"
-    GUARANTEED = "Guaranteed"
-    INVALID = "Invalid"
-    RESTORED = "Restored"
-    TICKETED = "Ticketed"
-    UNTICKETABLE = "Unticketable"
-    REPRICE = "Reprice"
-    EXPIRED = "Expired"
-    AUTO_USING_PRIVATE_FARE = "AutoUsingPrivateFare"
-    GUARANTEED_USING_AIRLINE_PRIVATE_FARE = "GuaranteedUsingAirlinePrivateFare"
-    AIRLINE = "Airline"
     AGENT_ASSISTED = "AgentAssisted"
-    VERIFY_PRICE = "VerifyPrice"
+    AIRLINE = "Airline"
     ALT_SEGMENT_REMOVED_REPRICE = "AltSegmentRemovedReprice"
+    AUTO = "Auto"
+    AUTO_RAPID_REPRICE = "AutoRapidReprice"
+    AUTO_USING_PRIVATE_FARE = "AutoUsingPrivateFare"
     AUXILIARY_SEGMENT_REMOVED_REPRICE = "AuxiliarySegmentRemovedReprice"
     DUPLICATE_SEGMENT_REMOVED_REPRICE = "DuplicateSegmentRemovedReprice"
-    UNKNOWN = "Unknown"
+    EXPIRED = "Expired"
+    GUARANTEED = "Guaranteed"
     GUARANTEED_USING_AGENCY_PRIVATE_FARE = "GuaranteedUsingAgencyPrivateFare"
-    AUTO_RAPID_REPRICE = "AutoRapidReprice"
+    GUARANTEED_USING_AIRLINE_PRIVATE_FARE = "GuaranteedUsingAirlinePrivateFare"
+    INVALID = "Invalid"
+    MANUAL = "Manual"
+    MANUAL_FARE = "ManualFare"
+    REPRICE = "Reprice"
+    RESTORED = "Restored"
+    TICKETED = "Ticketed"
+    UNKNOWN = "Unknown"
+    UNTICKETABLE = "Unticketable"
+    VERIFY_PRICE = "VerifyPrice"
 
 
 class TypePrivateFare(Enum):
@@ -6584,88 +6548,88 @@ class TypePrivateFare(Enum):
     and Unknown. Also, this enumaration list includes PrivateFare to indetify
     private fares for GDSs where we can not identify specific private fares.
 
-    :cvar UNKNOWN_TYPE:
-    :cvar PRIVATE_FARE:
     :cvar AGENCY_PRIVATE_FARE:
     :cvar AIRLINE_PRIVATE_FARE:
+    :cvar PRIVATE_FARE:
+    :cvar UNKNOWN_TYPE:
     """
-    UNKNOWN_TYPE = "UnknownType"
-    PRIVATE_FARE = "PrivateFare"
     AGENCY_PRIVATE_FARE = "AgencyPrivateFare"
     AIRLINE_PRIVATE_FARE = "AirlinePrivateFare"
+    PRIVATE_FARE = "PrivateFare"
+    UNKNOWN_TYPE = "UnknownType"
 
 
 class TypePurposeCode(Enum):
     """List of valid Purpose Codes.
 
     :cvar BUSINESS: Business
-    :cvar PLEASURE: Pleasure
     :cvar CHARTER_SERVICE: Charter Service
+    :cvar PLEASURE: Pleasure
     """
     BUSINESS = "Business"
-    PLEASURE = "Pleasure"
     CHARTER_SERVICE = "CharterService"
+    PLEASURE = "Pleasure"
 
 
 class TypeReportingType(Enum):
     """The valid reporting types.
 
     :cvar AVAILABILITY_FAILURE:
-    :cvar PRICE_DISCREPANCIES:
     :cvar MARRIAGE_DISCREPANCIES:
-    :cvar SUCCESS:
+    :cvar PRICE_DISCREPANCIES:
     :cvar SCHEDULE_DISCREPANCIES:
+    :cvar SUCCESS:
     """
     AVAILABILITY_FAILURE = "AvailabilityFailure"
-    PRICE_DISCREPANCIES = "PriceDiscrepancies"
     MARRIAGE_DISCREPANCIES = "MarriageDiscrepancies"
-    SUCCESS = "Success"
+    PRICE_DISCREPANCIES = "PriceDiscrepancies"
     SCHEDULE_DISCREPANCIES = "ScheduleDiscrepancies"
+    SUCCESS = "Success"
 
 
 class TypeRowLocation(Enum):
     """Facility Position with respect to a Row. Possible values are Rear, Front.
 
-    :cvar REAR:
     :cvar FRONT:
+    :cvar REAR:
     """
-    REAR = "Rear"
     FRONT = "Front"
+    REAR = "Rear"
 
 
 class TypeSeatAvailability(Enum):
     """Seat availability info of a seat map.
 
-    :cvar AVAILABLE:
-    :cvar OCCUPIED:
-    :cvar RESERVED:
-    :cvar ADVANCED_BOARDING_PASS:
-    :cvar INTERLINE_CHECKIN:
-    :cvar CODESHARE:
-    :cvar PROTECTED:
-    :cvar PARTNER_AIRLINE:
     :cvar ADV_SEAT_SELECTION:
+    :cvar ADVANCED_BOARDING_PASS:
+    :cvar AVAILABLE:
     :cvar BLOCKED:
+    :cvar CODESHARE:
     :cvar EXTRA:
-    :cvar RBDRESTRICTION:
     :cvar GROUP:
+    :cvar INTERLINE_CHECKIN:
     :cvar NO_SEAT:
+    :cvar OCCUPIED:
+    :cvar PARTNER_AIRLINE:
+    :cvar PROTECTED:
+    :cvar RBDRESTRICTION:
+    :cvar RESERVED:
     :cvar UNOCCUPIED_BUT_NOT_ELIGIBLE:
     """
-    AVAILABLE = "Available"
-    OCCUPIED = "Occupied"
-    RESERVED = "Reserved"
-    ADVANCED_BOARDING_PASS = "AdvancedBoardingPass"
-    INTERLINE_CHECKIN = "InterlineCheckin"
-    CODESHARE = "Codeshare"
-    PROTECTED = "Protected"
-    PARTNER_AIRLINE = "PartnerAirline"
     ADV_SEAT_SELECTION = "AdvSeatSelection"
+    ADVANCED_BOARDING_PASS = "AdvancedBoardingPass"
+    AVAILABLE = "Available"
     BLOCKED = "Blocked"
+    CODESHARE = "Codeshare"
     EXTRA = "Extra"
-    RBDRESTRICTION = "RBDRestriction"
     GROUP = "Group"
+    INTERLINE_CHECKIN = "InterlineCheckin"
     NO_SEAT = "NoSeat"
+    OCCUPIED = "Occupied"
+    PARTNER_AIRLINE = "PartnerAirline"
+    PROTECTED = "Protected"
+    RBDRESTRICTION = "RBDRestriction"
+    RESERVED = "Reserved"
     UNOCCUPIED_BUT_NOT_ELIGIBLE = "UnoccupiedButNotEligible"
 
 
@@ -6690,46 +6654,46 @@ class TypeSegmentRef:
 class TypeStayUnit(Enum):
     """Units for the Length of Stay.
 
-    :cvar MINUTES:
-    :cvar HOURS:
     :cvar DAYS:
-    :cvar MONTHS:
-    :cvar MONDAY:
-    :cvar TUESDAY:
-    :cvar WEDNESDAY:
-    :cvar THURSDAY:
     :cvar FRIDAY:
+    :cvar HOURS:
+    :cvar MINUTES:
+    :cvar MONDAY:
+    :cvar MONTHS:
     :cvar SATURDAY:
     :cvar SUNDAY:
+    :cvar THURSDAY:
+    :cvar TUESDAY:
+    :cvar WEDNESDAY:
     """
-    MINUTES = "Minutes"
-    HOURS = "Hours"
     DAYS = "Days"
-    MONTHS = "Months"
-    MONDAY = "Monday"
-    TUESDAY = "Tuesday"
-    WEDNESDAY = "Wednesday"
-    THURSDAY = "Thursday"
     FRIDAY = "Friday"
+    HOURS = "Hours"
+    MINUTES = "Minutes"
+    MONDAY = "Monday"
+    MONTHS = "Months"
     SATURDAY = "Saturday"
     SUNDAY = "Sunday"
+    THURSDAY = "Thursday"
+    TUESDAY = "Tuesday"
+    WEDNESDAY = "Wednesday"
 
 
 class TypeTcrstatus(Enum):
     """
-    :cvar UNKNOWN:
-    :cvar CONFIRMED:
-    :cvar REFUNDED:
-    :cvar EXCHANGED:
     :cvar CANCELLED:
+    :cvar CONFIRMED:
+    :cvar EXCHANGED:
     :cvar PENDING:
+    :cvar REFUNDED:
+    :cvar UNKNOWN:
     """
-    UNKNOWN = "Unknown"
-    CONFIRMED = "Confirmed"
-    REFUNDED = "Refunded"
-    EXCHANGED = "Exchanged"
     CANCELLED = "Cancelled"
+    CONFIRMED = "Confirmed"
+    EXCHANGED = "Exchanged"
     PENDING = "Pending"
+    REFUNDED = "Refunded"
+    UNKNOWN = "Unknown"
 
 
 @dataclass
@@ -6861,25 +6825,25 @@ class TypeTicketModifierValueType:
 class TypeTripType(Enum):
     """Used in Low Fare Search to better target the results.
 
-    :cvar CHEAPEST:
-    :cvar QUICKEST:
-    :cvar MOST_CONVENIENT:
-    :cvar LEISURE:
     :cvar BUSINESS:
-    :cvar LUXURY:
-    :cvar PREFER_FIRST:
     :cvar BUSINESS_OR_FIRST:
+    :cvar CHEAPEST:
+    :cvar LEISURE:
+    :cvar LUXURY:
+    :cvar MOST_CONVENIENT:
     :cvar NO_PENALTY:
+    :cvar PREFER_FIRST:
+    :cvar QUICKEST:
     """
-    CHEAPEST = "Cheapest"
-    QUICKEST = "Quickest"
-    MOST_CONVENIENT = "MostConvenient"
-    LEISURE = "Leisure"
     BUSINESS = "Business"
-    LUXURY = "Luxury"
-    PREFER_FIRST = "PreferFirst"
     BUSINESS_OR_FIRST = "BusinessOrFirst"
+    CHEAPEST = "Cheapest"
+    LEISURE = "Leisure"
+    LUXURY = "Luxury"
+    MOST_CONVENIENT = "MostConvenient"
     NO_PENALTY = "NoPenalty"
+    PREFER_FIRST = "PreferFirst"
+    QUICKEST = "Quickest"
 
 
 @dataclass
@@ -6931,14 +6895,14 @@ class TypeVarianceType(Enum):
     """Type code for Variance.
 
     :cvar ACTUAL:
-    :cvar ESTIMATED:
     :cvar CANCELED:
     :cvar DIVERSION:
+    :cvar ESTIMATED:
     """
     ACTUAL = "Actual"
-    ESTIMATED = "Estimated"
     CANCELED = "Canceled"
     DIVERSION = "Diversion"
+    ESTIMATED = "Estimated"
 
 
 @dataclass
@@ -9165,26 +9129,26 @@ class Emd:
 
     class AvailabilityChargeIndicator(Enum):
         """
-        :cvar X:
         :cvar E:
         :cvar F:
         :cvar G:
         :cvar H:
+        :cvar X:
         """
-        X = "X"
         E = "E"
         F = "F"
         G = "G"
         H = "H"
+        X = "X"
 
     class RefundReissueIndicator(Enum):
         """
-        :cvar REFUNDABLE:
         :cvar NON_REFUNDABLE:
+        :cvar REFUNDABLE:
         :cvar REUSE:
         """
-        REFUNDABLE = "Refundable"
         NON_REFUNDABLE = "NonRefundable"
+        REFUNDABLE = "Refundable"
         REUSE = "Reuse"
 
 
@@ -10406,6 +10370,24 @@ class ManualFareAdjustment:
             type="Attribute",
             min_length=1.0,
             max_length=5.0
+        )
+    )
+
+
+@dataclass
+class Meals:
+    """Available Meal Service.
+
+    :ivar value:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    value: Optional[TypeMealService] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
         )
     )
 
@@ -12734,13 +12716,13 @@ class AirLegModifiers:
 
     class OrderBy(Enum):
         """
-        :cvar JOURNEY_TIME:
-        :cvar DEPARTURE_TIME:
         :cvar ARRIVAL_TIME:
+        :cvar DEPARTURE_TIME:
+        :cvar JOURNEY_TIME:
         """
-        JOURNEY_TIME = "JourneyTime"
-        DEPARTURE_TIME = "DepartureTime"
         ARRIVAL_TIME = "ArrivalTime"
+        DEPARTURE_TIME = "DepartureTime"
+        JOURNEY_TIME = "JourneyTime"
 
 
 @dataclass
@@ -13586,13 +13568,13 @@ class AirSearchModifiers:
 
     class OrderBy(Enum):
         """
-        :cvar JOURNEY_TIME:
-        :cvar DEPARTURE_TIME:
         :cvar ARRIVAL_TIME:
+        :cvar DEPARTURE_TIME:
+        :cvar JOURNEY_TIME:
         """
-        JOURNEY_TIME = "JourneyTime"
-        DEPARTURE_TIME = "DepartureTime"
         ARRIVAL_TIME = "ArrivalTime"
+        DEPARTURE_TIME = "DepartureTime"
+        JOURNEY_TIME = "JourneyTime"
 
 
 @dataclass
@@ -15797,14 +15779,14 @@ class RepricingModifiers:
     class FlightType(Enum):
         """
         :cvar DIRECT:
+        :cvar NO_RESTRICTIONS:
         :cvar NON_STOP:
         :cvar SINGLE_CONNECTION:
-        :cvar NO_RESTRICTIONS:
         """
         DIRECT = "Direct"
+        NO_RESTRICTIONS = "NoRestrictions"
         NON_STOP = "NonStop"
         SINGLE_CONNECTION = "SingleConnection"
-        NO_RESTRICTIONS = "NoRestrictions"
 
 
 @dataclass
@@ -21178,12 +21160,12 @@ class TcrrefundBundle:
     class RefundType(Enum):
         """
         :cvar AUTO:
-        :cvar MANUAL:
         :cvar IGNORED:
+        :cvar MANUAL:
         """
         AUTO = "Auto"
-        MANUAL = "Manual"
         IGNORED = "Ignored"
+        MANUAL = "Manual"
 
 
 @dataclass
@@ -23350,13 +23332,13 @@ class AirSolutionChangedInfo:
 
     class ReasonCode(Enum):
         """
+        :cvar BOTH:
         :cvar PRICE:
         :cvar SCHEDULE:
-        :cvar BOTH:
         """
+        BOTH = "Both"
         PRICE = "Price"
         SCHEDULE = "Schedule"
-        BOTH = "Both"
 
 
 @dataclass

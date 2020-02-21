@@ -2,23 +2,23 @@
 <ns0:Fare_MasterPricerTravelBoardSearch xmlns:ns0="http://xml.amadeus.com/FMPTBQ_15_3_1A">
   <ns0:numberOfUnit>
     <ns0:unitNumberDetail>
-      <ns0:numberOfUnits>1.0</ns0:numberOfUnits>
+      <ns0:numberOfUnits>1</ns0:numberOfUnits>
       <ns0:typeOfUnit>PX</ns0:typeOfUnit>
     </ns0:unitNumberDetail>
     <ns0:unitNumberDetail>
-      <ns0:numberOfUnits>250.0</ns0:numberOfUnits>
+      <ns0:numberOfUnits>250</ns0:numberOfUnits>
       <ns0:typeOfUnit>RC</ns0:typeOfUnit>
     </ns0:unitNumberDetail>
     <ns0:unitNumberDetail>
-      <ns0:numberOfUnits>75.0</ns0:numberOfUnits>
+      <ns0:numberOfUnits>75</ns0:numberOfUnits>
       <ns0:typeOfUnit>OWO</ns0:typeOfUnit>
     </ns0:unitNumberDetail>
     <ns0:unitNumberDetail>
-      <ns0:numberOfUnits>75.0</ns0:numberOfUnits>
+      <ns0:numberOfUnits>75</ns0:numberOfUnits>
       <ns0:typeOfUnit>OWI</ns0:typeOfUnit>
     </ns0:unitNumberDetail>
     <ns0:unitNumberDetail>
-      <ns0:numberOfUnits>100.0</ns0:numberOfUnits>
+      <ns0:numberOfUnits>100</ns0:numberOfUnits>
       <ns0:typeOfUnit>RT</ns0:typeOfUnit>
     </ns0:unitNumberDetail>
   </ns0:numberOfUnit>
@@ -44,7 +44,7 @@
   <ns0:travelFlightInfo/>
   <ns0:itinerary>
     <ns0:requestedSegmentRef>
-      <ns0:segRef>1.0</ns0:segRef>
+      <ns0:segRef>1</ns0:segRef>
     </ns0:requestedSegmentRef>
     <ns0:departureLocalization>
       <ns0:departurePoint>
@@ -71,7 +71,7 @@
   </ns0:itinerary>
   <ns0:itinerary>
     <ns0:requestedSegmentRef>
-      <ns0:segRef>2.0</ns0:segRef>
+      <ns0:segRef>2</ns0:segRef>
     </ns0:requestedSegmentRef>
     <ns0:departureLocalization>
       <ns0:departurePoint>
