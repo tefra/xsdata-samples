@@ -1,3 +1,4 @@
+from decimal import Decimal
 from dataclasses import dataclass, field
 from typing import List, Optional
 
@@ -208,7 +209,7 @@ class FareMasterPricerTravelBoardSearch:
             :ivar number_of_units:
             :ivar type_of_unit:
             """
-            number_of_units: Optional[float] = field(
+            number_of_units: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="numberOfUnits",
@@ -301,7 +302,7 @@ class FareMasterPricerTravelBoardSearch:
             :ivar ref:
             :ivar infant_indicator:
             """
-            ref: Optional[float] = field(
+            ref: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="ref",
@@ -434,7 +435,7 @@ class FareMasterPricerTravelBoardSearch:
                         max_length=3.0
                     )
                 )
-                charged_amount: Optional[float] = field(
+                charged_amount: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="chargedAmount",
@@ -467,7 +468,7 @@ class FareMasterPricerTravelBoardSearch:
                     max_length=3.0
                 )
             )
-            passenger_fee_ref_number: Optional[float] = field(
+            passenger_fee_ref_number: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="passengerFeeRefNumber",
@@ -516,7 +517,7 @@ class FareMasterPricerTravelBoardSearch:
                 max_length=3.0
             )
         )
-        value: Optional[float] = field(
+        value: Optional[Decimal] = field(
             default=None,
             metadata=dict(
                 name="value",
@@ -573,7 +574,7 @@ class FareMasterPricerTravelBoardSearch:
                     max_length=3.0
                 )
             )
-            rate: Optional[float] = field(
+            rate: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="rate",
@@ -658,7 +659,7 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 :ivar quantity:
                 """
-                quantity: Optional[float] = field(
+                quantity: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="quantity",
@@ -703,7 +704,7 @@ class FareMasterPricerTravelBoardSearch:
                         max_length=3.0
                     )
                 )
-                value: Optional[float] = field(
+                value: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="value",
@@ -812,7 +813,7 @@ class FareMasterPricerTravelBoardSearch:
                             max_length=35.0
                         )
                     )
-                    customer_value: Optional[float] = field(
+                    customer_value: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="customerValue",
@@ -879,7 +880,7 @@ class FareMasterPricerTravelBoardSearch:
             :ivar hierarchy:
             :ivar commercial_family_details:
             """
-            ref_number: Optional[float] = field(
+            ref_number: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="refNumber",
@@ -895,7 +896,7 @@ class FareMasterPricerTravelBoardSearch:
                     max_length=10.0
                 )
             )
-            hierarchy: Optional[float] = field(
+            hierarchy: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="hierarchy",
@@ -1126,7 +1127,7 @@ class FareMasterPricerTravelBoardSearch:
                         max_length=6.0
                     )
                 )
-                other_date: Optional[float] = field(
+                other_date: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="otherDate",
@@ -1214,7 +1215,7 @@ class FareMasterPricerTravelBoardSearch:
                             max_length=3.0
                         )
                     )
-                    ref_number: Optional[float] = field(
+                    ref_number: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="refNumber",
@@ -1421,7 +1422,7 @@ class FareMasterPricerTravelBoardSearch:
                             max_length=6.0
                         )
                     )
-                    other_date: Optional[float] = field(
+                    other_date: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="otherDate",
@@ -1716,7 +1717,7 @@ class FareMasterPricerTravelBoardSearch:
                             max_length=6.0
                         )
                     )
-                    other_date: Optional[float] = field(
+                    other_date: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="otherDate",
@@ -1804,7 +1805,7 @@ class FareMasterPricerTravelBoardSearch:
                                 max_length=3.0
                             )
                         )
-                        ref_number: Optional[float] = field(
+                        ref_number: Optional[Decimal] = field(
                             default=None,
                             metadata=dict(
                                 name="refNumber",
@@ -2011,7 +2012,7 @@ class FareMasterPricerTravelBoardSearch:
                                 max_length=6.0
                             )
                         )
-                        other_date: Optional[float] = field(
+                        other_date: Optional[Decimal] = field(
                             default=None,
                             metadata=dict(
                                 name="otherDate",
@@ -2551,7 +2552,7 @@ class FareMasterPricerTravelBoardSearch:
                         max_length=3.0
                     )
                 )
-                charged_amount: Optional[float] = field(
+                charged_amount: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="chargedAmount",
@@ -2692,7 +2693,7 @@ class FareMasterPricerTravelBoardSearch:
                         max_length=3.0
                     )
                 )
-                amount: Optional[float] = field(
+                amount: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="amount",
@@ -2770,7 +2771,7 @@ class FareMasterPricerTravelBoardSearch:
                     max_length=3.0
                 )
             )
-            amount: Optional[float] = field(
+            amount: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="amount",
@@ -2805,7 +2806,7 @@ class FareMasterPricerTravelBoardSearch:
                     max_length=3.0
                 )
             )
-            amount: Optional[float] = field(
+            amount: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="amount",
@@ -3125,7 +3126,7 @@ class FareMasterPricerTravelBoardSearch:
             :ivar number_of_units:
             :ivar type_of_unit:
             """
-            number_of_units: Optional[float] = field(
+            number_of_units: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="numberOfUnits",
@@ -3307,21 +3308,21 @@ class FareMasterPricerTravelBoardSearch:
                     max_length=3.0
                 )
             )
-            weight: Optional[float] = field(
+            weight: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="weight",
                     type="Element"
                 )
             )
-            count: Optional[float] = field(
+            count: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="count",
                     type="Element"
                 )
             )
-            attribute_count: Optional[float] = field(
+            attribute_count: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="attributeCount",
@@ -3497,7 +3498,7 @@ class FareMasterPricerTravelBoardSearch:
             :ivar seg_ref:
             :ivar location_forcing:
             """
-            seg_ref: Optional[float] = field(
+            seg_ref: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="segRef",
@@ -3531,7 +3532,7 @@ class FareMasterPricerTravelBoardSearch:
                         max_length=1.0
                     )
                 )
-                segment_number: Optional[float] = field(
+                segment_number: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="segmentNumber",
@@ -3591,7 +3592,7 @@ class FareMasterPricerTravelBoardSearch:
                 :ivar latitude:
                 :ivar longitude:
                 """
-                distance: Optional[float] = field(
+                distance: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="distance",
@@ -3676,7 +3677,7 @@ class FareMasterPricerTravelBoardSearch:
                 :ivar pnr_segment_tattoo:
                 :ivar pnr_segment_qualifier:
                 """
-                pnr_segment_tattoo: Optional[float] = field(
+                pnr_segment_tattoo: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="pnrSegmentTattoo",
@@ -3763,7 +3764,7 @@ class FareMasterPricerTravelBoardSearch:
                 :ivar latitude:
                 :ivar longitude:
                 """
-                distance: Optional[float] = field(
+                distance: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="distance",
@@ -3960,7 +3961,7 @@ class FareMasterPricerTravelBoardSearch:
                         max_length=3.0
                     )
                 )
-                day_interval: Optional[float] = field(
+                day_interval: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="dayInterval",
@@ -3993,14 +3994,14 @@ class FareMasterPricerTravelBoardSearch:
                         max_length=3.0
                     )
                 )
-                trip_interval: Optional[float] = field(
+                trip_interval: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="tripInterval",
                         type="Element"
                     )
                 )
-                trip_duration: Optional[float] = field(
+                trip_duration: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="tripDuration",
@@ -4221,7 +4222,7 @@ class FareMasterPricerTravelBoardSearch:
                 :ivar number_of_units:
                 :ivar type_of_unit:
                 """
-                number_of_units: Optional[float] = field(
+                number_of_units: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="numberOfUnits",
@@ -4485,7 +4486,7 @@ class FareMasterPricerTravelBoardSearch:
                             max_length=3.0
                         )
                     )
-                    amount: Optional[float] = field(
+                    amount: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="amount",
@@ -4520,7 +4521,7 @@ class FareMasterPricerTravelBoardSearch:
                             max_length=3.0
                         )
                     )
-                    amount: Optional[float] = field(
+                    amount: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="amount",
@@ -4835,7 +4836,7 @@ class FareMasterPricerTravelBoardSearch:
                                 max_length=7.0
                             )
                         )
-                        tech_stop_number: Optional[float] = field(
+                        tech_stop_number: Optional[Decimal] = field(
                             default=None,
                             metadata=dict(
                                 name="techStopNumber",
@@ -5159,7 +5160,7 @@ class FareMasterPricerTravelBoardSearch:
                                 max_length=3.0
                             )
                         )
-                        flight_number: Optional[float] = field(
+                        flight_number: Optional[Decimal] = field(
                             default=None,
                             metadata=dict(
                                 name="flightNumber",
@@ -5192,7 +5193,7 @@ class FareMasterPricerTravelBoardSearch:
                                 max_length=3.0
                             )
                         )
-                        flight_number: Optional[float] = field(
+                        flight_number: Optional[Decimal] = field(
                             default=None,
                             metadata=dict(
                                 name="flightNumber",
@@ -5326,7 +5327,7 @@ class FareMasterPricerTravelBoardSearch:
                                 max_length=3.0
                             )
                         )
-                        duration: Optional[float] = field(
+                        duration: Optional[Decimal] = field(
                             default=None,
                             metadata=dict(
                                 name="duration",
@@ -5378,7 +5379,7 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         :ivar elapsed_ground_time:
                         """
-                        elapsed_ground_time: Optional[float] = field(
+                        elapsed_ground_time: Optional[Decimal] = field(
                             default=None,
                             metadata=dict(
                                 name="elapsedGroundTime",
@@ -5425,7 +5426,7 @@ class FareMasterPricerTravelBoardSearch:
                             max_length=3.0
                         )
                     )
-                    item_number: Optional[float] = field(
+                    item_number: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="itemNumber",
@@ -5556,7 +5557,7 @@ class FareMasterPricerTravelBoardSearch:
                                 max_length=3.0
                             )
                         )
-                        amount: Optional[float] = field(
+                        amount: Optional[Decimal] = field(
                             default=None,
                             metadata=dict(
                                 name="amount",
@@ -5591,7 +5592,7 @@ class FareMasterPricerTravelBoardSearch:
                                 max_length=3.0
                             )
                         )
-                        amount: Optional[float] = field(
+                        amount: Optional[Decimal] = field(
                             default=None,
                             metadata=dict(
                                 name="amount",
@@ -5865,7 +5866,7 @@ class FareMasterPricerTravelBoardSearch:
                     :ivar flight_number:
                     :ivar operational_suffix:
                     """
-                    flight_number: Optional[float] = field(
+                    flight_number: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="flightNumber",
@@ -5945,14 +5946,14 @@ class FareMasterPricerTravelBoardSearch:
                             max_length=4.0
                         )
                     )
-                    month: Optional[float] = field(
+                    month: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="month",
                             type="Element"
                         )
                     )
-                    day: Optional[float] = field(
+                    day: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="day",
@@ -5976,14 +5977,14 @@ class FareMasterPricerTravelBoardSearch:
                             max_length=4.0
                         )
                     )
-                    month: Optional[float] = field(
+                    month: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="month",
                             type="Element"
                         )
                     )
-                    day: Optional[float] = field(
+                    day: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="day",
@@ -6072,7 +6073,7 @@ class FareMasterPricerTravelBoardSearch:
                             max_length=3.0
                         )
                     )
-                    duration: Optional[float] = field(
+                    duration: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="duration",
@@ -6124,7 +6125,7 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     :ivar elapsed_ground_time:
                     """
-                    elapsed_ground_time: Optional[float] = field(
+                    elapsed_ground_time: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="elapsedGroundTime",
@@ -6183,7 +6184,7 @@ class FareMasterPricerTravelBoardSearch:
                             max_length=3.0
                         )
                     )
-                    flight_number: Optional[float] = field(
+                    flight_number: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="flightNumber",
@@ -6227,7 +6228,7 @@ class FareMasterPricerTravelBoardSearch:
                             max_length=3.0
                         )
                     )
-                    flight_number: Optional[float] = field(
+                    flight_number: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="flightNumber",
@@ -6416,7 +6417,7 @@ class FareMasterPricerTravelBoardSearch:
                         max_length=3.0
                     )
                 )
-                item_number: Optional[float] = field(
+                item_number: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="itemNumber",
@@ -7005,7 +7006,7 @@ class FareMasterPricerTravelBoardSearch:
                 :ivar number_of_units:
                 :ivar type_of_unit:
                 """
-                number_of_units: Optional[float] = field(
+                number_of_units: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="numberOfUnits",
@@ -7061,7 +7062,7 @@ class FareMasterPricerTravelBoardSearch:
                         max_length=3.0
                     )
                 )
-                ref_number: Optional[float] = field(
+                ref_number: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="refNumber",
@@ -7579,7 +7580,7 @@ class FareMasterPricerTravelBoardSearch:
                                 max_length=3.0
                             )
                         )
-                        service_number_of_instances: Optional[float] = field(
+                        service_number_of_instances: Optional[Decimal] = field(
                             default=None,
                             metadata=dict(
                                 name="serviceNumberOfInstances",
@@ -7747,7 +7748,7 @@ class FareMasterPricerTravelBoardSearch:
                 :ivar confidential_office:
                 :ivar other_office:
                 """
-                office_name: Optional[float] = field(
+                office_name: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="officeName",
@@ -7803,7 +7804,7 @@ class FareMasterPricerTravelBoardSearch:
                 :ivar number_of_units:
                 :ivar type_of_unit:
                 """
-                number_of_units: Optional[float] = field(
+                number_of_units: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="numberOfUnits",
@@ -8345,7 +8346,7 @@ class FareMasterPricerTravelBoardSearch:
                 :ivar number_of_units:
                 :ivar type_of_unit:
                 """
-                number_of_units: Optional[float] = field(
+                number_of_units: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="numberOfUnits",
@@ -8392,7 +8393,7 @@ class FareMasterPricerTravelBoardSearch:
                 :ivar seg_ref:
                 :ivar location_forcing:
                 """
-                seg_ref: Optional[float] = field(
+                seg_ref: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="segRef",
@@ -8426,7 +8427,7 @@ class FareMasterPricerTravelBoardSearch:
                             max_length=1.0
                         )
                     )
-                    segment_number: Optional[float] = field(
+                    segment_number: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="segmentNumber",
@@ -8648,7 +8649,7 @@ class FareMasterPricerTravelBoardSearch:
                     :ivar number_of_units:
                     :ivar type_of_unit:
                     """
-                    number_of_units: Optional[float] = field(
+                    number_of_units: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="numberOfUnits",

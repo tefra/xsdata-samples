@@ -1,3 +1,4 @@
+from decimal import Decimal
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional
@@ -874,7 +875,7 @@ class ContinuityCheckOverride:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             min_length=1.0,
             white_space="collapse"
         )
@@ -1409,7 +1410,7 @@ class GuaranteeType:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             max_length=250.0
         )
     )
@@ -1518,7 +1519,7 @@ class LocatorCode:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             min_length=1.0
         )
     )
@@ -1904,7 +1905,7 @@ class NextResultReference:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             min_length=1.0,
             white_space="collapse"
         )
@@ -1933,7 +1934,7 @@ class OperatedBy:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             min_length=1.0,
             white_space="collapse"
         )
@@ -2393,42 +2394,42 @@ class PriceMatchError:
             max_length=32.0
         )
     )
-    req_base: Optional[float] = field(
+    req_base: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="ReqBase",
             type="Attribute"
         )
     )
-    rsp_base: Optional[float] = field(
+    rsp_base: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="RspBase",
             type="Attribute"
         )
     )
-    base_diff: Optional[float] = field(
+    base_diff: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="BaseDiff",
             type="Attribute"
         )
     )
-    req_total: Optional[float] = field(
+    req_total: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="ReqTotal",
             type="Attribute"
         )
     )
-    rsp_total: Optional[float] = field(
+    rsp_total: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="RspTotal",
             type="Attribute"
         )
     )
-    total_diff: Optional[float] = field(
+    total_diff: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="TotalDiff",
@@ -2489,7 +2490,7 @@ class PseudoCityCode:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             min_length=2.0,
             max_length=10.0
         )
@@ -2544,7 +2545,7 @@ class ReferencePoint:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             max_length=30.0
         )
     )
@@ -3316,7 +3317,7 @@ class TicketNumber:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             min_length=1.0,
             max_length=13.0
         )
@@ -11445,7 +11446,8 @@ class BookingTraveler:
         default=None,
         metadata=dict(
             name="EmergencyInfo",
-            type="Element"
+            type="Element",
+            required=True
         )
     )
     address: List[TypeStructuredAddress] = field(
@@ -11497,7 +11499,8 @@ class BookingTraveler:
         default=None,
         metadata=dict(
             name="TravelInfo",
-            type="Element"
+            type="Element",
+            required=True
         )
     )
     booking_traveler_name: Optional[BookingTravelerName] = field(
@@ -11960,7 +11963,7 @@ class Group:
             default=None,
             metadata=dict(
                 name="value",
-                type="Restriction",
+                type="Extension",
                 min_length=1.0,
                 white_space="collapse"
             )

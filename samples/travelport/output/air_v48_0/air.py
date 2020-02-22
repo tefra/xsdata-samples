@@ -1,3 +1,4 @@
+from decimal import Decimal
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional
@@ -424,7 +425,7 @@ class AddlBookingCodeInformation:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             min_length=1.0,
             white_space="collapse"
         )
@@ -504,7 +505,7 @@ class AirFareDisplayRuleKey:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             min_length=1.0,
             white_space="collapse"
         )
@@ -607,7 +608,7 @@ class AirReservationLocatorCode:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             min_length=5.0,
             max_length=8.0
         )
@@ -1087,7 +1088,7 @@ class CarrierCode:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             length=2
         )
     )
@@ -1221,7 +1222,7 @@ class CreditSummary:
             length=3
         )
     )
-    current_balance: Optional[float] = field(
+    current_balance: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="CurrentBalance",
@@ -1229,7 +1230,7 @@ class CreditSummary:
             required=True
         )
     )
-    initial_credit: Optional[float] = field(
+    initial_credit: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="InitialCredit",
@@ -1404,7 +1405,7 @@ class Emdendorsement:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             min_length=1.0,
             max_length=255.0
         )
@@ -2153,7 +2154,7 @@ class FareRuleKey:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             min_length=1.0,
             white_space="collapse"
         )
@@ -2389,7 +2390,7 @@ class FeeApplication:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction"
+            type="Extension"
         )
     )
     code: Optional[str] = field(
@@ -3518,7 +3519,7 @@ class Othtype:
             type="Attribute"
         )
     )
-    surcharge_amt: Optional[float] = field(
+    surcharge_amt: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="SurchargeAmt",
@@ -3664,7 +3665,7 @@ class OptionalServiceRef:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction"
+            type="Extension"
         )
     )
 
@@ -3683,7 +3684,7 @@ class OverrideCode:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             length=4
         )
     )
@@ -3722,7 +3723,7 @@ class PassengerReceiptOverride:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             min_length=1.0,
             white_space="collapse"
         )
@@ -3893,7 +3894,7 @@ class PenFeeType:
             type="Attribute"
         )
     )
-    amt: Optional[float] = field(
+    amt: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="Amt",
@@ -4037,7 +4038,7 @@ class PenaltyInformation:
             length=3
         )
     )
-    conversion_rate: Optional[float] = field(
+    conversion_rate: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="ConversionRate",
@@ -4585,7 +4586,7 @@ class RuleCharges:
             type="Attribute"
         )
     )
-    percent: Optional[float] = field(
+    percent: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="Percent",
@@ -7393,7 +7394,8 @@ class AirPricingPayment:
         metadata=dict(
             name="FormOfPaymentRef",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            required=True
         )
     )
     air_pricing_info_ref: List[AirPricingInfoRef] = field(
@@ -7476,7 +7478,7 @@ class AirRefundInfo:
             length=3
         )
     )
-    conversion_rate: Optional[float] = field(
+    conversion_rate: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="ConversionRate",
@@ -9173,7 +9175,7 @@ class Emdcommission:
             required=True
         )
     )
-    value: Optional[float] = field(
+    value: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="Value",
@@ -10339,7 +10341,7 @@ class ManualFareAdjustment:
             required=True
         )
     )
-    value: Optional[float] = field(
+    value: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="Value",
@@ -10886,7 +10888,7 @@ class PricingDetails:
             type="Attribute"
         )
     )
-    bankers_selling_rate: Optional[float] = field(
+    bankers_selling_rate: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="BankersSellingRate",
@@ -10900,14 +10902,14 @@ class PricingDetails:
             type="Attribute"
         )
     )
-    conversion_rate: Optional[float] = field(
+    conversion_rate: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="ConversionRate",
             type="Attribute"
         )
     )
-    rate_of_exchange: Optional[float] = field(
+    rate_of_exchange: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="RateOfExchange",
@@ -11089,7 +11091,7 @@ class RelatedTraveler:
         :ivar used_credit:
         :ivar currency_code:
         """
-        used_credit: Optional[float] = field(
+        used_credit: Optional[Decimal] = field(
             default=None,
             metadata=dict(
                 name="UsedCredit",

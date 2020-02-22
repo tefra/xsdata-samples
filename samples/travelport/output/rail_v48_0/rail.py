@@ -68,7 +68,7 @@ class FulFillmentType:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             min_length=0.0,
             max_length=255.0
         )
@@ -672,7 +672,7 @@ class TicketAdvisory:
         default=None,
         metadata=dict(
             name="value",
-            type="Restriction",
+            type="Extension",
             min_length=1.0,
             max_length=500.0
         )

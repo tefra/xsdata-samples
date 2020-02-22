@@ -1,3 +1,4 @@
+from decimal import Decimal
 from dataclasses import dataclass, field
 from typing import List, Optional
 
@@ -1196,7 +1197,7 @@ class DiscountPenaltyInformationType:
             max_length=35.0
         )
     )
-    amount: Optional[float] = field(
+    amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="amount",
@@ -1204,7 +1205,7 @@ class DiscountPenaltyInformationType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
     )
-    percentage: Optional[float] = field(
+    percentage: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="percentage",
@@ -1244,7 +1245,7 @@ class DiscountPenaltyMonetaryInformationType:
             max_length=3.0
         )
     )
-    fee_amount: Optional[float] = field(
+    fee_amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="feeAmount",
@@ -1300,7 +1301,7 @@ class FareCalculationCodeDetailsType:
             max_length=3.0
         )
     )
-    amount: Optional[float] = field(
+    amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="amount",
@@ -1328,7 +1329,7 @@ class FareCalculationCodeDetailsType:
             max_length=3.0
         )
     )
-    rate: Optional[float] = field(
+    rate: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="rate",
@@ -1407,7 +1408,7 @@ class FareDetailsTypeI:
             max_length=3.0
         )
     )
-    rate: Optional[float] = field(
+    rate: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="rate",
@@ -2187,7 +2188,7 @@ class MonetaryInformationDetailsType:
             max_length=3.0
         )
     )
-    amount: Optional[float] = field(
+    amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="amount",
@@ -2272,7 +2273,7 @@ class MonetaryInformationDetailsType245528C:
             max_length=3.0
         )
     )
-    amount: Optional[float] = field(
+    amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="amount",
@@ -2319,7 +2320,7 @@ class OnTimePerformanceType:
             max_length=35.0
         )
     )
-    percentage: Optional[float] = field(
+    percentage: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="percentage",
@@ -4668,7 +4669,7 @@ class PricingTicketingSubsequentType193023S:
             max_length=3.0
         )
     )
-    total_fare_amount: Optional[float] = field(
+    total_fare_amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="totalFareAmount",
@@ -4677,7 +4678,7 @@ class PricingTicketingSubsequentType193023S:
             required=True
         )
     )
-    total_tax_amount: Optional[float] = field(
+    total_tax_amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="totalTaxAmount",

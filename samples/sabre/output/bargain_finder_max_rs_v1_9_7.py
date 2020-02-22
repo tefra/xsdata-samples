@@ -1,3 +1,4 @@
+from decimal import Decimal
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
@@ -49,7 +50,7 @@ class AirFeeType:
             type="Attribute"
         )
     )
-    amount: Optional[float] = field(
+    amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="Amount",
@@ -191,7 +192,7 @@ class AirTaxType:
             type="Attribute"
         )
     )
-    amount: Optional[float] = field(
+    amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="Amount",
@@ -388,7 +389,7 @@ class CurrencyAmountType:
             type="Attribute"
         )
     )
-    amount: Optional[float] = field(
+    amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="Amount",
@@ -478,7 +479,7 @@ class FareComponentBreakdownType:
             type="Attribute"
         )
     )
-    fare_component_commission: Optional[float] = field(
+    fare_component_commission: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="FareComponentCommission",
@@ -628,7 +629,7 @@ class HandlingMarkupSummaryType:
             required=True
         )
     )
-    monetary_amount_value: Optional[float] = field(
+    monetary_amount_value: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="MonetaryAmountValue",
@@ -681,7 +682,7 @@ class ObfeeType:
             type="Attribute"
         )
     )
-    amount: Optional[float] = field(
+    amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="Amount",
@@ -722,7 +723,7 @@ class OcfeeType:
     class Meta:
         name = "OCFeeType"
 
-    amount: Optional[float] = field(
+    amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="Amount",
@@ -981,7 +982,7 @@ class ReissueInfoType:
                     type="Attribute"
                 )
             )
-            amount: Optional[float] = field(
+            amount: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="Amount",
@@ -1120,7 +1121,7 @@ class UnflownPriceType:
             type="Attribute"
         )
     )
-    amount: Optional[float] = field(
+    amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="Amount",
@@ -1798,7 +1799,7 @@ class VccinformationType:
             pattern=r"[0-9A-Z]{2,3}"
         )
     )
-    commission_amount: Optional[float] = field(
+    commission_amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="CommissionAmount",
@@ -1807,7 +1808,7 @@ class VccinformationType:
             fraction_digits=3
         )
     )
-    total_amount_including_mark_up: Optional[float] = field(
+    total_amount_including_mark_up: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="TotalAmountIncludingMarkUp",
@@ -1815,7 +1816,7 @@ class VccinformationType:
             fraction_digits=3
         )
     )
-    commission_percent: Optional[float] = field(
+    commission_percent: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="CommissionPercent",
@@ -2563,7 +2564,7 @@ class FareType:
         """
         :ivar effective_price_deviation: Effective Price Deviation
         """
-        effective_price_deviation: Optional[float] = field(
+        effective_price_deviation: Optional[Decimal] = field(
             default=None,
             metadata=dict(
                 name="EffectivePriceDeviation",
@@ -2703,7 +2704,7 @@ class FareType:
                 max_occurs=9223372036854775807
             )
         )
-        ttype_amount: Optional[float] = field(
+        ttype_amount: Optional[Decimal] = field(
             default=None,
             metadata=dict(
                 name="TTypeAmount",
@@ -2818,7 +2819,7 @@ class FareType:
                     type="Attribute"
                 )
             )
-            amount: Optional[float] = field(
+            amount: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="Amount",
@@ -3035,7 +3036,7 @@ class FareType:
                     """
                     :ivar effective_price_deviation: Effective Price Deviation
                     """
-                    effective_price_deviation: Optional[float] = field(
+                    effective_price_deviation: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="EffectivePriceDeviation",
@@ -3208,7 +3209,7 @@ class FareType:
                     """
                     :ivar effective_price_deviation: Effective Price Deviation
                     """
-                    effective_price_deviation: Optional[float] = field(
+                    effective_price_deviation: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="EffectivePriceDeviation",
@@ -3280,7 +3281,7 @@ class FareType:
                             type="Attribute"
                         )
                     )
-                    fare_amount_after_markup: Optional[float] = field(
+                    fare_amount_after_markup: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="FareAmountAfterMarkup",
@@ -3288,7 +3289,7 @@ class FareType:
                             fraction_digits=3
                         )
                     )
-                    markup_amount: Optional[float] = field(
+                    markup_amount: Optional[Decimal] = field(
                         default=None,
                         metadata=dict(
                             name="MarkupAmount",
@@ -3381,28 +3382,28 @@ class FareType:
                     max_occurs=23
                 )
             )
-            cat35_commission_percentage: Optional[float] = field(
+            cat35_commission_percentage: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="Cat35CommissionPercentage",
                     type="Attribute"
                 )
             )
-            cat35_commission_amount: Optional[float] = field(
+            cat35_commission_amount: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="Cat35CommissionAmount",
                     type="Attribute"
                 )
             )
-            cat35_markup_amount: Optional[float] = field(
+            cat35_markup_amount: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="Cat35MarkupAmount",
                     type="Attribute"
                 )
             )
-            commission_amount_in_equivalent: Optional[float] = field(
+            commission_amount_in_equivalent: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="CommissionAmountInEquivalent",
@@ -3525,7 +3526,7 @@ class ItinTotalFareType(FareType):
         :ivar amount: Service Fee Amount
         :ivar tax_amount: Service Fee Tax
         """
-        amount: Optional[float] = field(
+        amount: Optional[Decimal] = field(
             default=None,
             metadata=dict(
                 name="Amount",
@@ -3534,7 +3535,7 @@ class ItinTotalFareType(FareType):
                 fraction_digits=3
             )
         )
-        tax_amount: Optional[float] = field(
+        tax_amount: Optional[Decimal] = field(
             default=None,
             metadata=dict(
                 name="TaxAmount",
@@ -3717,7 +3718,7 @@ class PtcfareBreakdownType:
                 default=None,
                 metadata=dict(
                     name="value",
-                    type="Restriction",
+                    type="Extension",
                     min_length=1.0,
                     max_length=16.0
                 )

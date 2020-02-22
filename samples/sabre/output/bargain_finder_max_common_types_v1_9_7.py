@@ -1,3 +1,4 @@
+from decimal import Decimal
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional
@@ -281,7 +282,7 @@ class VoluntaryChangesType:
                 type="Attribute"
             )
         )
-        amount: Optional[float] = field(
+        amount: Optional[Decimal] = field(
             default=None,
             metadata=dict(
                 name="Amount",
@@ -289,7 +290,7 @@ class VoluntaryChangesType:
                 fraction_digits=3
             )
         )
-        percent: Optional[float] = field(
+        percent: Optional[Decimal] = field(
             default=None,
             metadata=dict(
                 name="Percent",
@@ -614,7 +615,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                         type="Attribute"
                     )
                 )
-                amount: Optional[float] = field(
+                amount: Optional[Decimal] = field(
                     default=None,
                     metadata=dict(
                         name="Amount",
