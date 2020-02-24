@@ -1729,6 +1729,7 @@ class FareAdjustment {
 }
 PriceRequestInformationType +-- NegotiatedFareCode
 class NegotiatedFareCode {
+    +Quantity : integer
     +Code : string
     +CodeContext : string
     +URI : anyURI
