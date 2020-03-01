@@ -21154,6 +21154,7 @@ class TcrrefundBundle:
         metadata=dict(
             name="RefundAccessCode",
             type="Attribute",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             min_length=1.0,
             max_length=32.0
         )
@@ -22962,6 +22963,7 @@ class Tcr:
         metadata=dict(
             name="RefundAccessCode",
             type="Attribute",
+            namespace="http://www.travelport.com/schema/air_v48_0",
             min_length=1.0,
             max_length=32.0
         )

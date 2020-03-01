@@ -4792,7 +4792,7 @@ class PriceRequestInformationType:
                     name="StateCode",
                     type="Element",
                     namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_length=1.0,
+                    min_length=2.0,
                     max_length=8.0
                 )
             )
@@ -9545,7 +9545,6 @@ class ExchangeType:
     :ivar pos:
     :ivar origin_destination_information:
     :ivar arunk:
-    :ivar origin_destination_information:
     :ivar travel_preferences:
     :ivar traveler_info_summary:
     :ivar tpa_extensions:
@@ -9621,16 +9620,6 @@ class ExchangeType:
         default_factory=list,
         metadata=dict(
             name="Arunk",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
-    )
-    origin_destination_information: List[ExchangeOriginDestinationInformationType] = field(
-        default_factory=list,
-        metadata=dict(
-            name="OriginDestinationInformation",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,

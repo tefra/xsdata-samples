@@ -4061,14 +4061,14 @@ class TypeLicenseCode(Enum):
     """The type of license assigned to an agent.
 
     :cvar ENTERPRISE:
-    :cvar STANDARD_PLUS:
     :cvar STANDARD:
+    :cvar STANDARD_PLUS:
     :cvar TE_ONLY:
     :cvar U_API:
     """
     ENTERPRISE = "Enterprise"
-    STANDARD_PLUS = "Standard Plus"
     STANDARD = "Standard"
+    STANDARD_PLUS = "Standard Plus"
     TE_ONLY = "TE Only"
     U_API = "uAPI"
 
