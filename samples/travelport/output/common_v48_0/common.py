@@ -1411,6 +1411,7 @@ class GuaranteeType:
         metadata=dict(
             name="value",
             type="Extension",
+            required=True,
             max_length=250.0
         )
     )
@@ -2546,6 +2547,7 @@ class ReferencePoint:
         metadata=dict(
             name="value",
             type="Extension",
+            required=True,
             max_length=30.0
         )
     )
@@ -2949,7 +2951,8 @@ class SellMessage:
         default=None,
         metadata=dict(
             name="value",
-            type="Extension"
+            type="Extension",
+            required=True
         )
     )
 
@@ -3183,7 +3186,8 @@ class SimpleName:
         default=None,
         metadata=dict(
             name="value",
-            type="Extension"
+            type="Extension",
+            required=True
         )
     )
 
@@ -3299,7 +3303,8 @@ class TerminalSessionInfo:
         default=None,
         metadata=dict(
             name="value",
-            type="Extension"
+            type="Extension",
+            required=True
         )
     )
 
@@ -3318,6 +3323,7 @@ class TicketNumber:
         metadata=dict(
             name="value",
             type="Extension",
+            required=True,
             min_length=1.0,
             max_length=13.0
         )
@@ -4278,11 +4284,11 @@ class TypeProfileApplicability(Enum):
 
     :cvar ALWAYS:
     :cvar NEVER:
-    :cvar OPTIONAL:
+    :cvar OPTIONAL_VALUE:
     """
     ALWAYS = "Always"
     NEVER = "Never"
-    OPTIONAL = "Optional"
+    OPTIONAL_VALUE = "Optional"
 
 
 class TypeProfileEntityStatus(Enum):

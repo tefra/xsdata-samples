@@ -1761,7 +1761,8 @@ class FareCalc:
         default=None,
         metadata=dict(
             name="value",
-            type="Extension"
+            type="Extension",
+            required=True
         )
     )
 
@@ -1844,7 +1845,8 @@ class FareMileageInformation:
         default=None,
         metadata=dict(
             name="value",
-            type="Extension"
+            type="Extension",
+            required=True
         )
     )
 
@@ -2090,7 +2092,8 @@ class FareRoutingInformation:
         default=None,
         metadata=dict(
             name="value",
-            type="Extension"
+            type="Extension",
+            required=True
         )
     )
 
@@ -2845,7 +2848,8 @@ class InFlightServices:
         default=None,
         metadata=dict(
             name="value",
-            type="Extension"
+            type="Extension",
+            required=True
         )
     )
 
@@ -3665,7 +3669,8 @@ class OptionalServiceRef:
         default=None,
         metadata=dict(
             name="value",
-            type="Extension"
+            type="Extension",
+            required=True
         )
     )
 
@@ -4718,7 +4723,8 @@ class SegmentIndex:
         default=None,
         metadata=dict(
             name="value",
-            type="Extension"
+            type="Extension",
+            required=True
         )
     )
 
@@ -5496,7 +5502,7 @@ class WaiverCode:
 
 
 @dataclass
-class Yield:
+class YieldType:
     """An identifier which identifies yield made on original pricing. It can be a
     flat amount of original price. The value of Amount can be negative. Negative
     value implies a discount.
@@ -5506,6 +5512,7 @@ class Yield:
     :ivar booking_traveler_ref: Reference to a booking traveler for which Yield is applied.
     """
     class Meta:
+        name = "Yield"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
     amount: Optional[str] = field(
@@ -10389,7 +10396,8 @@ class Meals:
         default=None,
         metadata=dict(
             name="value",
-            type="Extension"
+            type="Extension",
+            required=True
         )
     )
 
@@ -21432,7 +21440,7 @@ class AirPricingInfo:
             max_occurs=999
         )
     )
-    yield_value: List[Yield] = field(
+    yield_value: List[YieldType] = field(
         default_factory=list,
         metadata=dict(
             name="Yield",
