@@ -1043,20 +1043,10 @@ class CreditCardAuth:
 
 @dataclass
 class CustomProfileInformation:
-    """Custom Profile Field Data required for File Finishing.
-
-    :ivar value:
-    """
+    """Custom Profile Field Data required for File Finishing."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
-    )
 
 
 @dataclass
@@ -1494,17 +1484,7 @@ class KeyMapping:
 
 @dataclass
 class Location:
-    """Used during search to specify an origin or destination location.
-
-    :ivar value:
-    """
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
-    )
+    """Used during search to specify an origin or destination location."""
 
 
 @dataclass
@@ -2700,15 +2680,22 @@ class Requisition:
 class ResponseMessage:
     """A simple textual fare note. Used within several other objects.
 
+    :ivar value:
     :ivar provider_code:
     :ivar supplier_code:
-    :ivar value:
     :ivar code:
     :ivar type: Indicates the type of message (Warning, Error, Info)
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     provider_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2725,13 +2712,6 @@ class ResponseMessage:
             type="Attribute",
             min_length=1.0,
             max_length=5.0
-        )
-    )
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
         )
     )
     code: Optional[int] = field(
@@ -3487,19 +3467,9 @@ class TypeAgencyProfileLevel(Enum):
 
 @dataclass
 class TypeAgentInfo:
-    """
-    :ivar value:
-    """
     class Meta:
         name = "typeAgentInfo"
 
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
-    )
 
 
 @dataclass
@@ -4787,19 +4757,9 @@ class TypeResultMessage:
 
 @dataclass
 class TypeSearchTimeSpec:
-    """
-    :ivar value:
-    """
     class Meta:
         name = "typeSearchTimeSpec"
 
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
-    )
 
 
 @dataclass
@@ -6504,16 +6464,23 @@ class HostToken:
     know how to route the command(s). You can have multiple active sessions between
     one or more hosts.
 
+    :ivar value:
     :ivar el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar value:
     :ivar host: The host associated with this token
     :ivar key: Unique identifier for this token - use this key when a single HostToken is shared by multiple elements.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
@@ -6526,13 +6493,6 @@ class HostToken:
         metadata=dict(
             name="KeyOverride",
             type="Attribute"
-        )
-    )
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
         )
     )
     host: Optional[str] = field(
@@ -8496,10 +8456,10 @@ class Xmlremark:
     """A remark container to hold an XML document. (max 1024 chars) This will be
     encoded with xml encoding.
 
+    :ivar value:
     :ivar el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar value:
     :ivar key:
     :ivar category: A category to group and organize the various remarks. This is not required, but it is recommended.
     """
@@ -8507,6 +8467,13 @@ class Xmlremark:
         name = "XMLRemark"
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
@@ -8519,13 +8486,6 @@ class Xmlremark:
         metadata=dict(
             name="KeyOverride",
             type="Attribute"
-        )
-    )
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
         )
     )
     key: Optional[str] = field(

@@ -1268,17 +1268,7 @@ class DiscountPenaltyMonetaryInformationType:
 @dataclass
 class DummySegmentTypeI:
     """To serve the purpose of a mandatory segment at the beginning of a group and
-    to avoid segment collision.
-
-    :ivar value:
-    """
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
-    )
+    to avoid segment collision."""
 
 
 @dataclass

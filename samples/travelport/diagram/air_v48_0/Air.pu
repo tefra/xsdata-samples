@@ -1029,7 +1029,6 @@ class CustomerReceiptInfo {
     +EmailRef : string
 }
 class CustomerSearch {
-    +value : string
 }
 class DefaultBrandDetail {
 }
@@ -1456,9 +1455,9 @@ class FareMileageInformation {
     +value : string
 }
 class FareNote {
+    +value : string
     +ElStat : common:typeElementStatus
     +KeyOverride : boolean
-    +value : string
     +Key : string
     +Precedence : integer
     +NoteName : string

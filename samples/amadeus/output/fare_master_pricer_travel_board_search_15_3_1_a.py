@@ -2224,16 +2224,7 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CompanyId:
-                """
-                :ivar value:
-                """
-                value: Optional[str] = field(
-                    default=None,
-                    metadata=dict(
-                        name="value",
-                        type="Extension"
-                    )
-                )
+                pass
 
             @dataclass
             class SellingPoint:
@@ -7969,16 +7960,7 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CompanyId:
-                """
-                :ivar value:
-                """
-                value: Optional[str] = field(
-                    default=None,
-                    metadata=dict(
-                        name="value",
-                        type="Extension"
-                    )
-                )
+                pass
 
             @dataclass
             class SellingPoint:

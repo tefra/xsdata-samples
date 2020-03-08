@@ -29,11 +29,11 @@ enum AirTripType {
     Other = Other
 }
 class CompanyNameType {
+    +value : string
     +CompanyShortName : string
     +TravelSector : string
     +Code : string
     +CodeContext : string
-    +value : string
 }
 enum DepartureOrArrival {
     Departure = Departure

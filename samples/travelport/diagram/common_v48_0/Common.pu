@@ -419,7 +419,6 @@ class CreditCardAuth {
     +FormOfPaymentRef : string
 }
 class CustomProfileInformation {
-    +value : string
 }
 class CustomerID {
     +Key : string
@@ -630,9 +629,9 @@ class GuaranteeType {
     +value : string
 }
 class HostToken {
+    +value : string
     +ElStat : typeElementStatus
     +KeyOverride : boolean
-    +value : string
     +Host : string
     +Key : string
 }
@@ -674,7 +673,6 @@ class LinkedUniversalRecord {
     +Key : string
 }
 class Location {
-    +value : string
 }
 class LocationAddress {
 }
@@ -1136,9 +1134,9 @@ class ReservationName {
     +NameOverride : NameOverride
 }
 class ResponseMessage {
+    +value : string
     +ProviderCode : string
     +SupplierCode : string
-    +value : string
     +Code : integer
     +Type : Type
 }
@@ -1518,9 +1516,9 @@ class VendorLocation {
 }
 VendorLocation *- typeVendorLocation
 class XMLRemark {
+    +value : string
     +ElStat : typeElementStatus
     +KeyOverride : boolean
-    +value : string
     +Key : string
     +Category : string
 }
@@ -1554,7 +1552,6 @@ enum typeAgencyProfileLevel {
     Agent = Agent
 }
 class typeAgentInfo {
-    +value : string
 }
 class typeAssociatedRemark {
     +ElStat : typeElementStatus
@@ -2120,7 +2117,6 @@ class typeSearchLocation {
     +Distance : Distance
 }
 class typeSearchTimeSpec {
-    +value : string
 }
 class typeSegmentRef {
     +Key : string

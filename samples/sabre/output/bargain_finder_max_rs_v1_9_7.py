@@ -29,12 +29,19 @@ class ActionCodeType(Enum):
 class AirFeeType:
     """Defines the data fields available for the fees.
 
+    :ivar value:
     :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
     :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
     :ivar amount:
-    :ivar value:
     :ivar fee_code: Identifies the code for the fee.
     """
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     currency_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -58,13 +65,6 @@ class AirFeeType:
             fraction_digits=3
         )
     )
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
-    )
     fee_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -81,6 +81,7 @@ class AirFeeType:
 class AirTaxType:
     """Defines the data fields available for air tax.
 
+    :ivar value:
     :ivar reissue_tax_type: Reissue tax type
     :ivar reissue_restriction_applies:
     :ivar reissue_tax_refundable:
@@ -89,7 +90,6 @@ class AirTaxType:
     :ivar reissue_currency: Reissue tax max amount currency
     :ivar published_amount:
     :ivar published_currency:
-    :ivar value:
     :ivar tax_code: Identifies the code for the tax.
     :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
     :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
@@ -101,6 +101,13 @@ class AirTaxType:
     :ivar rate_used: Tax rate used
     :ivar station_code: Airport code at which the tax or surcharge is being applied
     """
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     reissue_tax_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -158,13 +165,6 @@ class AirTaxType:
             name="PublishedCurrency",
             type="Attribute",
             pattern=r"[a-zA-Z]{3}"
-        )
-    )
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
         )
     )
     tax_code: Optional[str] = field(
@@ -586,21 +586,21 @@ class FareMessagesType:
 class FreeTextType:
     """Textual information to provide descriptions and/or additional information.
 
-    :ivar language: Language identification.
     :ivar value:
+    :ivar language: Language identification.
     """
-    language: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Language",
-            type="Attribute"
-        )
-    )
     value: Optional[str] = field(
         default=None,
         metadata=dict(
             name="value",
             type="Extension"
+        )
+    )
+    language: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Language",
+            type="Attribute"
         )
     )
 
@@ -1044,18 +1044,10 @@ class ResponseLocationType:
 
 @dataclass
 class SuccessType:
-    """Standard way to indicate successful processing of an OTA message. Returning
-    an empty element of this type indicates success.
+    """Standard way to indicate successful processing of an OTA message.
 
-    :ivar value:
+    Returning an empty element of this type indicates success.
     """
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
-    )
 
 
 @dataclass

@@ -206,7 +206,6 @@ class DiscountPenaltyMonetaryInformationType {
     +feeCurrency : string
 }
 class DummySegmentTypeI {
-    +value : string
 }
 class ExcessBaggageType {
     +baggageDetails : BaggageDetailsType

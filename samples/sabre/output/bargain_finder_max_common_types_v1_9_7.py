@@ -24,12 +24,19 @@ class AirTripType(Enum):
 class CompanyNameType:
     """Identifies a company by name.
 
+    :ivar value:
     :ivar company_short_name:
     :ivar travel_sector: Refer to OTA Code List Travel Sector (TVS).
     :ivar code: Identifies a company by the company code.
     :ivar code_context: Identifies the context of the identifying code, such as DUNS, IATA or internal code, etc.
-    :ivar value:
     """
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     company_short_name: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -62,13 +69,6 @@ class CompanyNameType:
             type="Attribute",
             min_length=1.0,
             max_length=32.0
-        )
-    )
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
         )
     )
 

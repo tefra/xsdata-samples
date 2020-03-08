@@ -397,7 +397,6 @@ class ticketingDate {
 }
 pricingTickInfo +-- companyId
 class companyId {
-    +value : string
 }
 pricingTickInfo +-- sellingPoint
 class sellingPoint {
@@ -1433,7 +1432,6 @@ class ticketingDate {
 }
 pricingTickInfo +-- companyId
 class companyId {
-    +value : string
 }
 pricingTickInfo +-- sellingPoint
 class sellingPoint {

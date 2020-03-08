@@ -1271,20 +1271,10 @@ class CustomerReceiptInfo:
 
 @dataclass
 class CustomerSearch:
-    """Detailed customer information for searching pre pay profiles.
-
-    :ivar value:
-    """
+    """Detailed customer information for searching pre pay profiles."""
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
-    )
 
 
 @dataclass
@@ -9507,10 +9497,10 @@ class FareGuaranteeInfo:
 class FareNote:
     """A simple textual fare note. Used within several other objects.
 
+    :ivar value:
     :ivar el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar value:
     :ivar key:
     :ivar precedence:
     :ivar note_name:
@@ -9519,6 +9509,13 @@ class FareNote:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
+        )
+    )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
@@ -9531,13 +9528,6 @@ class FareNote:
         metadata=dict(
             name="KeyOverride",
             type="Attribute"
-        )
-    )
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
         )
     )
     key: Optional[str] = field(

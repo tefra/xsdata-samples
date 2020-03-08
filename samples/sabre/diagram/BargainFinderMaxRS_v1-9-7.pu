@@ -6,10 +6,10 @@ enum ActionCodeType {
     Other = Other
 }
 class AirFeeType {
+    +value : string
     +CurrencyCode : string
     +DecimalPlaces : nonNegativeInteger
     +Amount : decimal
-    +value : string
     +FeeCode : string
 }
 class AirItineraryPricingInfoType {
@@ -200,6 +200,7 @@ class OriginDestinationOptions {
     +OriginDestinationOption : OriginDestinationOptionType[]
 }
 class AirTaxType {
+    +value : string
     +ReissueTaxType : string
     +ReissueRestrictionApplies : boolean
     +ReissueTaxRefundable : boolean
@@ -208,7 +209,6 @@ class AirTaxType {
     +ReissueCurrency : string
     +PublishedAmount : double
     +PublishedCurrency : string
-    +value : string
     +TaxCode : string
     +CurrencyCode : string
     +DecimalPlaces : nonNegativeInteger
@@ -607,8 +607,8 @@ class CommissionData {
     +CommissionSource : string
 }
 class FreeTextType {
-    +Language : language
     +value : string
+    +Language : language
 }
 class HandlingMarkupSummaryType {
     +TypeCode : string
@@ -1122,7 +1122,6 @@ class SellingFareDataType {
     +LayerTypeName : string
 }
 class SuccessType {
-    +value : string
 }
 class SurchargesType {
     +value : string
