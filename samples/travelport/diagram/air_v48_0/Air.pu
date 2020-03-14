@@ -315,8 +315,6 @@ class AirPricingInfo {
     +Destination : string
     +Key : string
     +CommandKey : string
-    +ProviderCode : string
-    +SupplierCode : string
     +TotalPrice : string
     +BasePrice : string
     +ApproximateTotalPrice : string
@@ -327,6 +325,8 @@ class AirPricingInfo {
     +Services : string
     +ApproximateTaxes : string
     +ApproximateFees : string
+    +ProviderCode : string
+    +SupplierCode : string
     +AmountType : string
     +IncludesVAT : boolean
     +ExchangeAmount : string
@@ -702,6 +702,8 @@ class AsyncProviderSpecificResponse {
 }
 AsyncProviderSpecificResponse *- common:BaseAsyncProviderSpecificResponse
 class AuditData {
+    +TaxInfo : TaxInfo[]
+    +Key : string
     +TotalPrice : string
     +BasePrice : string
     +ApproximateTotalPrice : string
@@ -712,12 +714,8 @@ class AuditData {
     +Services : string
     +ApproximateTaxes : string
     +ApproximateFees : string
-    +TaxInfo : TaxInfo[]
-    +Key : string
 }
 class AutoPricingInfo {
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +AirSegmentRef : AirSegmentRef[]
     +common:BookingTravelerRef : common:BookingTravelerRef[]
     +AirPricingModifiers : AirPricingModifiers
@@ -725,6 +723,8 @@ class AutoPricingInfo {
     +Key : string
     +PricingType : string
     +PlatingCarrier : string
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 class AutoSeatAssignment {
     +SegmentRef : string
@@ -991,14 +991,12 @@ class Connection {
     +IncludeStopOverToFareQuote : typeIgnoreStopOver
 }
 class ContractCode {
-    +ProviderCode : string
-    +SupplierCode : string
     +Code : string
     +CompanyName : string
+    +ProviderCode : string
+    +SupplierCode : string
 }
 class Coupon {
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +TicketDesignator : TicketDesignator[]
     +Key : string
     +CouponNumber : integer
@@ -1018,6 +1016,8 @@ class Coupon {
     +Status : string
     +SegmentGroup : integer
     +MarriageGroup : integer
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 class CreditSummary {
     +CurrencyCode : string
@@ -1115,8 +1115,6 @@ class EMDCommission {
     +CurrencyCode : string
 }
 class EMDCoupon {
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +Number : integer
     +Status : string
     +SvcDescription : string
@@ -1132,13 +1130,13 @@ class EMDCoupon {
     +NonRefundableInd : boolean
     +MarketingCarrier : string
     +Key : string
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 class EMDEndorsement {
     +value : string
 }
 class EMDInfo {
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +EMDTravelerInfo : EMDTravelerInfo
     +common:SupplierLocator : common:SupplierLocator[]
     +ElectronicMiscDocument : ElectronicMiscDocument[]
@@ -1151,6 +1149,8 @@ class EMDInfo {
     +ProviderCode : string
     +ProviderLocatorCode : string
     +Key : string
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 class EMDPricingInfo {
     +TaxInfo : TaxInfo[]
@@ -1161,8 +1161,6 @@ class EMDPricingInfo {
 }
 class EMDSummary {
     +EMDCoupon : EMDCoupon[]
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +Number : string
     +PrimaryDocumentIndicator : boolean
     +InConjunctionWith : string
@@ -1170,15 +1168,17 @@ class EMDSummary {
     +PlatingCarrier : string
     +IssueDate : dateTime
     +Key : string
-}
-class EMDSummaryInfo {
     +ElStat : common:typeElementStatus
     +KeyOverride : boolean
+}
+class EMDSummaryInfo {
     +EMDSummary : EMDSummary[]
     +EMDTravelerInfo : EMDTravelerInfo
     +common:Payment : common:Payment
     +ProviderReservationInfoRef : string
     +Key : string
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 class EMDTravelerInfo {
     +NameInfo : NameInfo
@@ -1194,18 +1194,6 @@ class NameInfo {
     +Suffix : string
 }
 class ETR {
-    +TotalPrice : string
-    +BasePrice : string
-    +ApproximateTotalPrice : string
-    +ApproximateBasePrice : string
-    +EquivalentBasePrice : string
-    +Taxes : string
-    +Fees : string
-    +Services : string
-    +ApproximateTaxes : string
-    +ApproximateFees : string
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +AirReservationLocatorCode : AirReservationLocatorCode
     +common:AgencyInfo : common:AgencyInfo
     +common:BookingTraveler : common:BookingTraveler
@@ -1222,6 +1210,16 @@ class ETR {
     +WaiverCode : WaiverCode
     +BaggageAllowances : BaggageAllowances
     +Key : string
+    +TotalPrice : string
+    +BasePrice : string
+    +ApproximateTotalPrice : string
+    +ApproximateBasePrice : string
+    +EquivalentBasePrice : string
+    +Taxes : string
+    +Fees : string
+    +Services : string
+    +ApproximateTaxes : string
+    +ApproximateFees : string
     +Refundable : boolean
     +Exchangeable : boolean
     +TourCode : string
@@ -1233,11 +1231,11 @@ class ETR {
     +PseudoCityCode : string
     +CountryCode : string
     +PlatingCarrier : string
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 class ElectronicMiscDocument {
     +EMDCoupon : EMDCoupon[]
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +Number : string
     +PrimaryDocumentIndicator : boolean
     +InConjunctionWith : string
@@ -1246,6 +1244,8 @@ class ElectronicMiscDocument {
     +IssueDate : dateTime
     +Status : string
     +Key : string
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 class Embargo {
     +Key : string
@@ -1456,12 +1456,12 @@ class FareMileageInformation {
 }
 class FareNote {
     +value : string
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +Key : string
     +Precedence : integer
     +NoteName : string
     +FareInfoMessageRef : string
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 class FareNoteList {
     +FareNote : FareNote[]
@@ -1540,8 +1540,6 @@ class FareRoutingInformation {
     +value : string
 }
 class FareRule {
-    +ProviderCode : string
-    +SupplierCode : string
     +FareRuleLong : FareRuleLong[]
     +FareRuleShort : FareRuleShort[]
     +RuleAdvancedPurchase : RuleAdvancedPurchase
@@ -1553,6 +1551,8 @@ class FareRule {
     +RuleNumber : string
     +Source : string
     +TariffNumber : string
+    +ProviderCode : string
+    +SupplierCode : string
 }
 class FareRuleCategory {
     +Category : integer
@@ -1627,13 +1627,13 @@ class FareStatusFailureInfo {
     +Reason : string
 }
 class FareSurcharge {
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +Key : string
     +Type : string
     +Amount : string
     +SegmentRef : string
     +CouponRef : string
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 class FareTicketDesignator {
     +Value : string
@@ -1682,6 +1682,10 @@ class Type {
 }
 Type *- string
 class FlightDetails {
+    +Connection : Connection
+    +Meals : Meals[]
+    +InFlightServices : InFlightServices[]
+    +Key : string
     +Origin : string
     +Destination : string
     +DepartureTime : string
@@ -1689,18 +1693,14 @@ class FlightDetails {
     +FlightTime : integer
     +TravelTime : integer
     +Distance : integer
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
-    +Connection : Connection
-    +Meals : Meals[]
-    +InFlightServices : InFlightServices[]
-    +Key : string
     +Equipment : string
     +OnTimePerformance : integer
     +OriginTerminal : string
     +DestinationTerminal : string
     +GroundTime : integer
     +AutomatedCheckin : boolean
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 class FlightDetailsList {
     +FlightDetails : FlightDetails[]
@@ -2104,6 +2104,8 @@ class OptionalServices {
 }
 OptionalServices +-- OptionalServicesTotal
 class OptionalServicesTotal {
+    +TaxInfo : TaxInfo[]
+    +FeeInfo : FeeInfo[]
     +TotalPrice : string
     +BasePrice : string
     +ApproximateTotalPrice : string
@@ -2114,8 +2116,6 @@ class OptionalServicesTotal {
     +Services : string
     +ApproximateTaxes : string
     +ApproximateFees : string
-    +TaxInfo : TaxInfo[]
-    +FeeInfo : FeeInfo[]
 }
 class OptionalServicesInfo {
     +AirPricingSolution : AirPricingSolution
@@ -2686,8 +2686,6 @@ class TextInfo {
     +Title : string
 }
 class Ticket {
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +Coupon : Coupon[]
     +TicketEndorsement : TicketEndorsement[]
     +TourCode : TourCode[]
@@ -2695,6 +2693,8 @@ class Ticket {
     +Key : string
     +TicketNumber : string
     +TicketStatus : common:typeTicketStatus
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 class TicketAgency {
     +ProviderCode : string
@@ -2732,8 +2732,6 @@ class TicketValidity {
     +NotValidAfter : date
 }
 class TicketingModifiers {
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +BookingTravelerRef : string[]
     +NetRemit : typeTicketModifierAmountType
     +NetFare : typeTicketModifierAmountType
@@ -2771,6 +2769,8 @@ class TicketingModifiers {
     +FreeTicket : boolean
     +CurrencyOverrideCode : string
     +Key : string
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 TicketingModifiers +-- BulkTicket
 class BulkTicket {
@@ -2949,6 +2949,8 @@ class typeBaseAirSegment {
     +LinkAvailability : boolean
     +PolledAvailabilityOption : string
     +AvailabilityDisplayType : string
+    +ProviderCode : string
+    +SupplierCode : string
     +FlightTime : integer
     +TravelTime : integer
     +Distance : integer
@@ -2956,8 +2958,6 @@ class typeBaseAirSegment {
     +Destination : string
     +DepartureTime : string
     +ArrivalTime : string
-    +ProviderCode : string
-    +SupplierCode : string
     +ClassOfService : string
     +ETicketability : typeEticketability
     +Equipment : string

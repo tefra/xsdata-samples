@@ -89,12 +89,12 @@ class VoluntaryChanges {
 }
 VoluntaryChanges +-- Penalty
 class Penalty {
-    +CurrencyCode : string
-    +DecimalPlaces : nonNegativeInteger
-    +Amount : decimal
     +Type : Type
     +Exclude : boolean
     +Application : Application
+    +Amount : decimal
+    +CurrencyCode : string
+    +DecimalPlaces : nonNegativeInteger
 }
 Penalty +-- Type
 class Type {
@@ -155,11 +155,11 @@ enum StayUnitType {
     SUN = SUN
 }
 class TravelerCountType {
-    +Quantity : integer
     +Age : integer
     +Code : string, string
     +CodeContext : string
     +URI : anyURI
+    +Quantity : integer
 }
 class VoluntaryChangesType {
     +Penalty : Penalty
@@ -169,9 +169,9 @@ VoluntaryChangesType +-- Penalty
 class Penalty {
     +PenaltyType : string
     +DepartureStatus : string
+    +Amount : decimal
     +CurrencyCode : string
     +DecimalPlaces : nonNegativeInteger
-    +Amount : decimal
     +Percent : decimal
 }
 

@@ -168,21 +168,12 @@ class TravelerCountType:
     be either one of: Adult, YoungDriver, YoungerDriver, or it may be a code that
     is acceptable to both Trading Partners).
 
-    :ivar quantity: Used to define a quantity of an associated element or attribute.
     :ivar age:
     :ivar code: Specify traveler type code.
     :ivar code_context: Identifies the source authority for the code.
     :ivar uri: Identifies the location of the code table
+    :ivar quantity: Used to define a quantity of an associated element or attribute.
     """
-    quantity: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="Quantity",
-            type="Attribute",
-            min_inclusive=1.0,
-            max_inclusive=999.0
-        )
-    )
     age: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -217,6 +208,15 @@ class TravelerCountType:
             type="Attribute"
         )
     )
+    quantity: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Quantity",
+            type="Attribute",
+            min_inclusive=1.0,
+            max_inclusive=999.0
+        )
+    )
 
 
 @dataclass
@@ -248,9 +248,9 @@ class VoluntaryChangesType:
         """
         :ivar penalty_type: Indicates the type of penalty involved in the search or response.
         :ivar departure_status: Identifier used to indicate whether the change occurs before or after departure from the origin city.
+        :ivar amount:
         :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
         :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
-        :ivar amount:
         :ivar percent: The penalty charge conveyed as a percent of the total fare.
         """
         penalty_type: Optional[str] = field(
@@ -267,6 +267,14 @@ class VoluntaryChangesType:
                 type="Attribute"
             )
         )
+        amount: Optional[Decimal] = field(
+            default=None,
+            metadata=dict(
+                name="Amount",
+                type="Attribute",
+                fraction_digits=3
+            )
+        )
         currency_code: Optional[str] = field(
             default=None,
             metadata=dict(
@@ -280,14 +288,6 @@ class VoluntaryChangesType:
             metadata=dict(
                 name="DecimalPlaces",
                 type="Attribute"
-            )
-        )
-        amount: Optional[Decimal] = field(
-            default=None,
-            metadata=dict(
-                name="Amount",
-                type="Attribute",
-                fraction_digits=3
             )
         )
         percent: Optional[Decimal] = field(
@@ -593,36 +593,13 @@ class PassengerTypeQuantityType(TravelerCountType):
             @dataclass
             class Penalty:
                 """
-                :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
-                :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
-                :ivar amount:
                 :ivar type: Indicates the type (Refund or Exchange) of penalty involved in the search or response.
                 :ivar exclude: Indicate that specific penalty type should be excluded from the response.
                 :ivar application: Identifier used to indicate whether the change occurs before or after departure from the origin city.
+                :ivar amount:
+                :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
+                :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
                 """
-                currency_code: Optional[str] = field(
-                    default=None,
-                    metadata=dict(
-                        name="CurrencyCode",
-                        type="Attribute",
-                        pattern=r"[a-zA-Z]{3}"
-                    )
-                )
-                decimal_places: Optional[int] = field(
-                    default=None,
-                    metadata=dict(
-                        name="DecimalPlaces",
-                        type="Attribute"
-                    )
-                )
-                amount: Optional[Decimal] = field(
-                    default=None,
-                    metadata=dict(
-                        name="Amount",
-                        type="Attribute",
-                        fraction_digits=3
-                    )
-                )
                 type: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty.Type"] = field(
                     default=None,
                     metadata=dict(
@@ -641,6 +618,29 @@ class PassengerTypeQuantityType(TravelerCountType):
                     default=None,
                     metadata=dict(
                         name="Application",
+                        type="Attribute"
+                    )
+                )
+                amount: Optional[Decimal] = field(
+                    default=None,
+                    metadata=dict(
+                        name="Amount",
+                        type="Attribute",
+                        fraction_digits=3
+                    )
+                )
+                currency_code: Optional[str] = field(
+                    default=None,
+                    metadata=dict(
+                        name="CurrencyCode",
+                        type="Attribute",
+                        pattern=r"[a-zA-Z]{3}"
+                    )
+                )
+                decimal_places: Optional[int] = field(
+                    default=None,
+                    metadata=dict(
+                        name="DecimalPlaces",
                         type="Attribute"
                     )
                 )

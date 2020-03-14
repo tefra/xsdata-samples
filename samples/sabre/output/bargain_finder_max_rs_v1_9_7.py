@@ -30,16 +30,34 @@ class AirFeeType:
     """Defines the data fields available for the fees.
 
     :ivar value:
+    :ivar fee_code: Identifies the code for the fee.
+    :ivar amount:
     :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
     :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
-    :ivar amount:
-    :ivar fee_code: Identifies the code for the fee.
     """
     value: Optional[str] = field(
         default=None,
         metadata=dict(
             name="value",
             type="Extension"
+        )
+    )
+    fee_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="FeeCode",
+            type="Attribute",
+            required=True,
+            min_length=1.0,
+            max_length=16.0
+        )
+    )
+    amount: Optional[Decimal] = field(
+        default=None,
+        metadata=dict(
+            name="Amount",
+            type="Attribute",
+            fraction_digits=3
         )
     )
     currency_code: Optional[str] = field(
@@ -57,24 +75,6 @@ class AirFeeType:
             type="Attribute"
         )
     )
-    amount: Optional[Decimal] = field(
-        default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            fraction_digits=3
-        )
-    )
-    fee_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="FeeCode",
-            type="Attribute",
-            required=True,
-            min_length=1.0,
-            max_length=16.0
-        )
-    )
 
 
 @dataclass
@@ -82,6 +82,16 @@ class AirTaxType:
     """Defines the data fields available for air tax.
 
     :ivar value:
+    :ivar tax_code: Identifies the code for the tax.
+    :ivar amount:
+    :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
+    :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
+    :ivar carrier_code: carrier used for this tax
+    :ivar min_amount: Minumum tax amount
+    :ivar max_amount: Maximum tax amount
+    :ivar min_max_currency: Min/Max tax currency code
+    :ivar rate_used: Tax rate used
+    :ivar station_code: Airport code at which the tax or surcharge is being applied
     :ivar reissue_tax_type: Reissue tax type
     :ivar reissue_restriction_applies:
     :ivar reissue_tax_refundable:
@@ -90,22 +100,90 @@ class AirTaxType:
     :ivar reissue_currency: Reissue tax max amount currency
     :ivar published_amount:
     :ivar published_currency:
-    :ivar tax_code: Identifies the code for the tax.
-    :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
-    :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
-    :ivar amount:
-    :ivar carrier_code: carrier used for this tax
-    :ivar min_amount: Minumum tax amount
-    :ivar max_amount: Maximum tax amount
-    :ivar min_max_currency: Min/Max tax currency code
-    :ivar rate_used: Tax rate used
-    :ivar station_code: Airport code at which the tax or surcharge is being applied
     """
     value: Optional[str] = field(
         default=None,
         metadata=dict(
             name="value",
             type="Extension"
+        )
+    )
+    tax_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TaxCode",
+            type="Attribute",
+            required=True,
+            min_length=1.0,
+            max_length=16.0
+        )
+    )
+    amount: Optional[Decimal] = field(
+        default=None,
+        metadata=dict(
+            name="Amount",
+            type="Attribute",
+            fraction_digits=3
+        )
+    )
+    currency_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CurrencyCode",
+            type="Attribute",
+            pattern=r"[a-zA-Z]{3}"
+        )
+    )
+    decimal_places: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="DecimalPlaces",
+            type="Attribute"
+        )
+    )
+    carrier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="CarrierCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=8.0
+        )
+    )
+    min_amount: Optional[float] = field(
+        default=None,
+        metadata=dict(
+            name="MinAmount",
+            type="Attribute"
+        )
+    )
+    max_amount: Optional[float] = field(
+        default=None,
+        metadata=dict(
+            name="MaxAmount",
+            type="Attribute"
+        )
+    )
+    min_max_currency: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="MinMaxCurrency",
+            type="Attribute",
+            pattern=r"[a-zA-Z]{3}"
+        )
+    )
+    rate_used: Optional[float] = field(
+        default=None,
+        metadata=dict(
+            name="RateUsed",
+            type="Attribute"
+        )
+    )
+    station_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="StationCode",
+            type="Attribute"
         )
     )
     reissue_tax_type: Optional[str] = field(
@@ -165,84 +243,6 @@ class AirTaxType:
             name="PublishedCurrency",
             type="Attribute",
             pattern=r"[a-zA-Z]{3}"
-        )
-    )
-    tax_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TaxCode",
-            type="Attribute",
-            required=True,
-            min_length=1.0,
-            max_length=16.0
-        )
-    )
-    currency_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CurrencyCode",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{3}"
-        )
-    )
-    decimal_places: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="DecimalPlaces",
-            type="Attribute"
-        )
-    )
-    amount: Optional[Decimal] = field(
-        default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            fraction_digits=3
-        )
-    )
-    carrier_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="CarrierCode",
-            type="Attribute",
-            min_length=1.0,
-            max_length=8.0
-        )
-    )
-    min_amount: Optional[float] = field(
-        default=None,
-        metadata=dict(
-            name="MinAmount",
-            type="Attribute"
-        )
-    )
-    max_amount: Optional[float] = field(
-        default=None,
-        metadata=dict(
-            name="MaxAmount",
-            type="Attribute"
-        )
-    )
-    min_max_currency: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="MinMaxCurrency",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{3}"
-        )
-    )
-    rate_used: Optional[float] = field(
-        default=None,
-        metadata=dict(
-            name="RateUsed",
-            type="Attribute"
-        )
-    )
-    station_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="StationCode",
-            type="Attribute"
         )
     )
 
@@ -370,10 +370,18 @@ class CurrencyAmountType:
     """Provides a monetary amount and the code of the currency in which this amount
     is expressed.
 
+    :ivar amount:
     :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
     :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
-    :ivar amount:
     """
+    amount: Optional[Decimal] = field(
+        default=None,
+        metadata=dict(
+            name="Amount",
+            type="Attribute",
+            fraction_digits=3
+        )
+    )
     currency_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -387,14 +395,6 @@ class CurrencyAmountType:
         metadata=dict(
             name="DecimalPlaces",
             type="Attribute"
-        )
-    )
-    amount: Optional[Decimal] = field(
-        default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            fraction_digits=3
         )
     )
 
@@ -658,15 +658,37 @@ class MessageClassType(Enum):
 class ObfeeType:
     """Defines the data fields available for the ob fees.
 
-    :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
-    :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
-    :ivar amount:
     :ivar type: OB Fee sub type code
     :ivar description: OB Fee description
+    :ivar amount:
+    :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
+    :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
     """
     class Meta:
         name = "OBFeeType"
 
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute"
+        )
+    )
+    description: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Description",
+            type="Attribute"
+        )
+    )
+    amount: Optional[Decimal] = field(
+        default=None,
+        metadata=dict(
+            name="Amount",
+            type="Attribute",
+            fraction_digits=3
+        )
+    )
     currency_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -679,28 +701,6 @@ class ObfeeType:
         default=None,
         metadata=dict(
             name="DecimalPlaces",
-            type="Attribute"
-        )
-    )
-    amount: Optional[Decimal] = field(
-        default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            fraction_digits=3
-        )
-    )
-    type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute"
-        )
-    )
-    description: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Description",
             type="Attribute"
         )
     )
@@ -954,9 +954,9 @@ class ReissueInfoType:
         class ChangeFee:
             """
             :ivar highest_change_fee:
+            :ivar amount:
             :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
             :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
-            :ivar amount:
             :ivar change_fee_waived:
             :ivar change_fee_not_applicable:
             """
@@ -965,6 +965,14 @@ class ReissueInfoType:
                 metadata=dict(
                     name="HighestChangeFee",
                     type="Attribute"
+                )
+            )
+            amount: Optional[Decimal] = field(
+                default=None,
+                metadata=dict(
+                    name="Amount",
+                    type="Attribute",
+                    fraction_digits=3
                 )
             )
             currency_code: Optional[str] = field(
@@ -980,14 +988,6 @@ class ReissueInfoType:
                 metadata=dict(
                     name="DecimalPlaces",
                     type="Attribute"
-                )
-            )
-            amount: Optional[Decimal] = field(
-                default=None,
-                metadata=dict(
-                    name="Amount",
-                    type="Attribute",
-                    fraction_digits=3
                 )
             )
             change_fee_waived: Optional[bool] = field(
@@ -1094,10 +1094,18 @@ class TicketType(Enum):
 class UnflownPriceType:
     """Totally Unflown Itinerary Price Information.
 
+    :ivar amount:
     :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
     :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
-    :ivar amount:
     """
+    amount: Optional[Decimal] = field(
+        default=None,
+        metadata=dict(
+            name="Amount",
+            type="Attribute",
+            fraction_digits=3
+        )
+    )
     currency_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1111,14 +1119,6 @@ class UnflownPriceType:
         metadata=dict(
             name="DecimalPlaces",
             type="Attribute"
-        )
-    )
-    amount: Optional[Decimal] = field(
-        default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            fraction_digits=3
         )
     )
 
@@ -1823,6 +1823,7 @@ class WarningType(FreeTextType):
     """Standard way to indicate successful processing of an OTA message, but one in
     which warnings are generated.
 
+    :ivar type: The Warning element MUST contain the Type attribute that uses a recommended set of values to indicate the warning type. The validating XSD can expect to accept values that it has NOT been explicitly coded for and process them by using Type ="Unknown".  Refer to OTA Code List Error Warning Type (EWT).
     :ivar short_text:
     :ivar code: If present, this refers to a table of coded values exchanged between applications to identify errors or warnings. Refer to OTA Code List Error Codes (ERR).
     :ivar doc_url: If present, this URL refers to an online description of the error that occurred.
@@ -1830,8 +1831,15 @@ class WarningType(FreeTextType):
     :ivar tag: If present, this attribute may identify an unknown or misspelled tag that caused an error in processing. It is recommended that the Tag attribute use XPath notation to identify the location of a tag in the event that more than one tag of the same name is present in the document. Alternatively, the tag name alone can be used to identify missing data [Type=ReqFieldMissing].
     :ivar record_id: If present, this attribute allows for batch processing and the identification of the record that failed amongst a group of records.
     :ivar message_class: If present specify the message class.
-    :ivar type: The Warning element MUST contain the Type attribute that uses a recommended set of values to indicate the warning type. The validating XSD can expect to accept values that it has NOT been explicitly coded for and process them by using Type ="Unknown".  Refer to OTA Code List Error Warning Type (EWT).
     """
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute",
+            required=True
+        )
+    )
     short_text: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -1883,14 +1891,6 @@ class WarningType(FreeTextType):
         metadata=dict(
             name="MessageClass",
             type="Attribute"
-        )
-    )
-    type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
         )
     )
 
@@ -2329,29 +2329,15 @@ class ErrorsType:
 class FareInfoType:
     """Rules for this priced option.
 
-    :ivar negotiated_fare: Indicator to show if this is a private fare.
-    :ivar negotiated_fare_code: Code used to identify the private fare.
     :ivar departure_date: Departure Date for this priced fare.
     :ivar fare_reference: FareReferenceCode can be used for either the Fare Basis Code or the Fare Class Code.
     :ivar rule_info: Information regarding restrictions governing use of the fare.
     :ivar marketing_airline: The marketing airline.
     :ivar departure_airport: Departure point of flight segment.
     :ivar arrival_airport: Arrival point of flight segment.
+    :ivar negotiated_fare: Indicator to show if this is a private fare.
+    :ivar negotiated_fare_code: Code used to identify the private fare.
     """
-    negotiated_fare: bool = field(
-        default=False,
-        metadata=dict(
-            name="NegotiatedFare",
-            type="Attribute"
-        )
-    )
-    negotiated_fare_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="NegotiatedFareCode",
-            type="Attribute"
-        )
-    )
     departure_date: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2408,28 +2394,6 @@ class FareInfoType:
             required=True
         )
     )
-
-
-@dataclass
-class FareType:
-    """Holds a base fare, tax, total and currency information on a price.
-
-    :ivar negotiated_fare: Indicator to show if this is a private fare.
-    :ivar negotiated_fare_code: Code used to identify the private fare.
-    :ivar base_fare: Price of the inventory excluding taxes and fees.
-    :ivar non_refundable_base_fare: Non-refundable base fare amount
-    :ivar fare_construction: Fare construction total amount.
-    :ivar equiv_fare: Price of the inventory excluding taxes and fees in the payable currency.
-    :ivar taxes: This is a collection of Taxes
-    :ivar fees: This is a collection of Fees
-    :ivar obfees: This is a collection of ob Fees
-    :ivar rate_of_exchange:
-    :ivar currency_conversions:
-    :ivar total_fare: The total price that the passenger would pay (includes fare, taxes, fees)
-    :ivar reissue_info_list: Reissue information
-    :ivar penalties_info: Penalties information
-    :ivar tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
-    """
     negotiated_fare: bool = field(
         default=False,
         metadata=dict(
@@ -2444,6 +2408,28 @@ class FareType:
             type="Attribute"
         )
     )
+
+
+@dataclass
+class FareType:
+    """Holds a base fare, tax, total and currency information on a price.
+
+    :ivar base_fare: Price of the inventory excluding taxes and fees.
+    :ivar non_refundable_base_fare: Non-refundable base fare amount
+    :ivar fare_construction: Fare construction total amount.
+    :ivar equiv_fare: Price of the inventory excluding taxes and fees in the payable currency.
+    :ivar taxes: This is a collection of Taxes
+    :ivar fees: This is a collection of Fees
+    :ivar obfees: This is a collection of ob Fees
+    :ivar rate_of_exchange:
+    :ivar currency_conversions:
+    :ivar total_fare: The total price that the passenger would pay (includes fare, taxes, fees)
+    :ivar reissue_info_list: Reissue information
+    :ivar penalties_info: Penalties information
+    :ivar tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
+    :ivar negotiated_fare: Indicator to show if this is a private fare.
+    :ivar negotiated_fare_code: Code used to identify the private fare.
+    """
     base_fare: Optional[CurrencyAmountType] = field(
         default=None,
         metadata=dict(
@@ -2548,6 +2534,20 @@ class FareType:
             name="TPA_Extensions",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05"
+        )
+    )
+    negotiated_fare: bool = field(
+        default=False,
+        metadata=dict(
+            name="NegotiatedFare",
+            type="Attribute"
+        )
+    )
+    negotiated_fare_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="NegotiatedFareCode",
+            type="Attribute"
         )
     )
 
@@ -2746,9 +2746,9 @@ class FareType:
             :ivar refundable:
             :ivar changeable:
             :ivar conditions_apply:
+            :ivar amount:
             :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
             :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
-            :ivar amount:
             :ivar cat16_info:
             """
             cat16_text_only: List["FareType.PenaltiesInfo.Penalty.Cat16TextOnly"] = field(
@@ -2796,6 +2796,14 @@ class FareType:
                     type="Attribute"
                 )
             )
+            amount: Optional[Decimal] = field(
+                default=None,
+                metadata=dict(
+                    name="Amount",
+                    type="Attribute",
+                    fraction_digits=3
+                )
+            )
             currency_code: Optional[str] = field(
                 default=None,
                 metadata=dict(
@@ -2809,14 +2817,6 @@ class FareType:
                 metadata=dict(
                     name="DecimalPlaces",
                     type="Attribute"
-                )
-            )
-            amount: Optional[Decimal] = field(
-                default=None,
-                metadata=dict(
-                    name="Amount",
-                    type="Attribute",
-                    fraction_digits=3
                 )
             )
             cat16_info: bool = field(
@@ -3915,8 +3915,6 @@ class PtcfareBreakdownType:
         @dataclass
         class FareInfo:
             """
-            :ivar negotiated_fare: Indicator to show if this is a private fare.
-            :ivar negotiated_fare_code: Code used to identify the private fare.
             :ivar departure_date: Departure Date for this priced fare.
             :ivar fare_reference: FareReference is the booking code.
             :ivar rule_info: Information regarding restrictions governing use of the fare.
@@ -3924,21 +3922,9 @@ class PtcfareBreakdownType:
             :ivar departure_airport: Departure point of flight segment.
             :ivar arrival_airport: Arrival point of flight segment.
             :ivar tpa_extensions:
+            :ivar negotiated_fare: Indicator to show if this is a private fare.
+            :ivar negotiated_fare_code: Code used to identify the private fare.
             """
-            negotiated_fare: bool = field(
-                default=False,
-                metadata=dict(
-                    name="NegotiatedFare",
-                    type="Attribute"
-                )
-            )
-            negotiated_fare_code: Optional[str] = field(
-                default=None,
-                metadata=dict(
-                    name="NegotiatedFareCode",
-                    type="Attribute"
-                )
-            )
             departure_date: Optional[str] = field(
                 default=None,
                 metadata=dict(
@@ -3998,6 +3984,20 @@ class PtcfareBreakdownType:
                     name="TPA_Extensions",
                     type="Element",
                     namespace="http://www.opentravel.org/OTA/2003/05"
+                )
+            )
+            negotiated_fare: bool = field(
+                default=False,
+                metadata=dict(
+                    name="NegotiatedFare",
+                    type="Attribute"
+                )
+            )
+            negotiated_fare_code: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    name="NegotiatedFareCode",
+                    type="Attribute"
                 )
             )
 
@@ -4165,6 +4165,10 @@ class PtcfareBreakdownType:
 class AirItineraryPricingInfoType:
     """Pricing Information for an Air Itinerary.
 
+    :ivar itin_total_fare: Total price of the itinerary
+    :ivar ptc_fare_breakdowns: This is a collection of PTC Fare Breakdowns
+    :ivar fare_infos: This is a collection of FareInfo
+    :ivar tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
     :ivar pricing_source: Used to indicate whether the pricing is public or private
     :ivar pricing_sub_source: Pricing sub source.
     :ivar pseudo_city_code: (MultiPCC) Information about Pseudo City Code for wich the fare was produced.
@@ -4177,14 +4181,6 @@ class AirItineraryPricingInfoType:
     :ivar cache_version: Indicates source version of cached itin
     :ivar time_to_live: Time to live in cache (in minutes).
     :ivar alternate_city_option: Indicates that this option is alternate dates option.
-    :ivar previous_exchange_date: Previous Exchange Date
-    :ivar reissue_exchange: Indicates whether priced as Reissue or Exchange
-    :ivar advanced_purchase_date:
-    :ivar purchase_by_date:
-    :ivar itin_total_fare: Total price of the itinerary
-    :ivar ptc_fare_breakdowns: This is a collection of PTC Fare Breakdowns
-    :ivar fare_infos: This is a collection of FareInfo
-    :ivar tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
     :ivar last_ticket_date: Last day to ticket.
     :ivar private_fare_type: Private fare type symbol.
     :ivar spanish_family_discount_indicator: Spanish Discount indicator with values of "A", "B", "C" where
@@ -4192,7 +4188,43 @@ class AirItineraryPricingInfoType:
                                             "B" indicates Spanish Large Family discount + Spanish Islander discount
                                             "C" indicates Spanish Islander discount only
     :ivar flexible_fare_id: If the fare is an additional flexible fare, this is the fare group ID
+    :ivar previous_exchange_date: Previous Exchange Date
+    :ivar reissue_exchange: Indicates whether priced as Reissue or Exchange
+    :ivar advanced_purchase_date:
+    :ivar purchase_by_date:
     """
+    itin_total_fare: Optional[ItinTotalFareType] = field(
+        default=None,
+        metadata=dict(
+            name="ItinTotalFare",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
+        )
+    )
+    ptc_fare_breakdowns: Optional["AirItineraryPricingInfoType.PtcFareBreakdowns"] = field(
+        default=None,
+        metadata=dict(
+            name="PTC_FareBreakdowns",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
+        )
+    )
+    fare_infos: Optional["AirItineraryPricingInfoType.FareInfos"] = field(
+        default=None,
+        metadata=dict(
+            name="FareInfos",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
+        )
+    )
+    tpa_extensions: Optional["AirItineraryPricingInfoType.TpaExtensions"] = field(
+        default=None,
+        metadata=dict(
+            name="TPA_Extensions",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
+        )
+    )
     pricing_source: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4280,66 +4312,6 @@ class AirItineraryPricingInfoType:
             type="Attribute"
         )
     )
-    previous_exchange_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PreviousExchangeDate",
-            type="Attribute"
-        )
-    )
-    reissue_exchange: Optional["AirItineraryPricingInfoType.ReissueExchange"] = field(
-        default=None,
-        metadata=dict(
-            name="ReissueExchange",
-            type="Attribute"
-        )
-    )
-    advanced_purchase_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AdvancedPurchaseDate",
-            type="Attribute"
-        )
-    )
-    purchase_by_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PurchaseByDate",
-            type="Attribute"
-        )
-    )
-    itin_total_fare: Optional[ItinTotalFareType] = field(
-        default=None,
-        metadata=dict(
-            name="ItinTotalFare",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
-    )
-    ptc_fare_breakdowns: Optional["AirItineraryPricingInfoType.PtcFareBreakdowns"] = field(
-        default=None,
-        metadata=dict(
-            name="PTC_FareBreakdowns",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
-    )
-    fare_infos: Optional["AirItineraryPricingInfoType.FareInfos"] = field(
-        default=None,
-        metadata=dict(
-            name="FareInfos",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
-    )
-    tpa_extensions: Optional["AirItineraryPricingInfoType.TpaExtensions"] = field(
-        default=None,
-        metadata=dict(
-            name="TPA_Extensions",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
-    )
     last_ticket_date: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -4366,6 +4338,34 @@ class AirItineraryPricingInfoType:
         default=None,
         metadata=dict(
             name="FlexibleFareID",
+            type="Attribute"
+        )
+    )
+    previous_exchange_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PreviousExchangeDate",
+            type="Attribute"
+        )
+    )
+    reissue_exchange: Optional["AirItineraryPricingInfoType.ReissueExchange"] = field(
+        default=None,
+        metadata=dict(
+            name="ReissueExchange",
+            type="Attribute"
+        )
+    )
+    advanced_purchase_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AdvancedPurchaseDate",
+            type="Attribute"
+        )
+    )
+    purchase_by_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PurchaseByDate",
             type="Attribute"
         )
     )
@@ -4405,8 +4405,6 @@ class AirItineraryPricingInfoType:
         @dataclass
         class FareInfo:
             """
-            :ivar negotiated_fare: Indicator to show if this is a private fare.
-            :ivar negotiated_fare_code: Code used to identify the private fare.
             :ivar departure_date: Departure Date for this priced fare.
             :ivar fare_reference: FareReference is the booking code.
             :ivar rule_info: Information regarding restrictions governing use of the fare.
@@ -4414,21 +4412,9 @@ class AirItineraryPricingInfoType:
             :ivar departure_airport: Departure point of flight segment.
             :ivar arrival_airport: Arrival point of flight segment.
             :ivar tpa_extensions:
+            :ivar negotiated_fare: Indicator to show if this is a private fare.
+            :ivar negotiated_fare_code: Code used to identify the private fare.
             """
-            negotiated_fare: bool = field(
-                default=False,
-                metadata=dict(
-                    name="NegotiatedFare",
-                    type="Attribute"
-                )
-            )
-            negotiated_fare_code: Optional[str] = field(
-                default=None,
-                metadata=dict(
-                    name="NegotiatedFareCode",
-                    type="Attribute"
-                )
-            )
             departure_date: Optional[str] = field(
                 default=None,
                 metadata=dict(
@@ -4488,6 +4474,20 @@ class AirItineraryPricingInfoType:
                     name="TPA_Extensions",
                     type="Element",
                     namespace="http://www.opentravel.org/OTA/2003/05"
+                )
+            )
+            negotiated_fare: bool = field(
+                default=False,
+                metadata=dict(
+                    name="NegotiatedFare",
+                    type="Attribute"
+                )
+            )
+            negotiated_fare_code: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    name="NegotiatedFareCode",
+                    type="Attribute"
                 )
             )
 
@@ -5763,8 +5763,6 @@ class OtaAirLowFareSearchRs:
     :ivar sold_out_itineraries: Sold Out Itineraries
     :ivar available_itineraries: Available Itineraries
     :ivar tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
-    :ivar primary_lang_id: Identifes the primary language preference for the form of travel represented in a collection. The human language is identified by ISO 639 codes.
-    :ivar alt_lang_id:
     :ivar echo_token: A sequence number for additional message identification, assigned by the requesting host system. When a request message includes an echo token the corresponding response message MUST include an echo token with an identical value.
     :ivar time_stamp: Indicates the creation date and time of the message in UTC using the following format specified by ISO 8601; YYYY-MM-DDThh:mm:ssZ with time values using the 24 hour clock (e.g. 20 November 2003, 1:59:38 pm UTC becomes 2003-11-20T13:59:38Z).
     :ivar target: Used to indicate whether the request is for the Test or Production system.
@@ -5772,6 +5770,8 @@ class OtaAirLowFareSearchRs:
     :ivar transaction_identifier: A unique identifier to relate all messages within a transaction (e.g. this would be sent in all request and response messages that are part of an on-going transaction).
     :ivar sequence_nmbr: Used to identify the sequence number of the transaction as assigned by the sending system; allows for an application to process messages in a certain order or to request a resynchronization of messages in the event that a system has been off-line and needs to retrieve messages that were missed.
     :ivar transaction_status_code: This indicates where this message falls within a sequence of messages.
+    :ivar alt_lang_id:
+    :ivar primary_lang_id: Identifes the primary language preference for the form of travel represented in a collection. The human language is identified by ISO 639 codes.
     :ivar priced_itin_count: Itinerary count for Priced Round-Trip itineraries
     :ivar branded_one_way_itin_count: Itinerary count for Branded One-Way itineraries
     :ivar simple_one_way_itin_count: Itinerary count for Simple One-Way itineraries
@@ -5846,20 +5846,6 @@ class OtaAirLowFareSearchRs:
             type="Element"
         )
     )
-    primary_lang_id: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PrimaryLangID",
-            type="Attribute"
-        )
-    )
-    alt_lang_id: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AltLangID",
-            type="Attribute"
-        )
-    )
     echo_token: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -5911,6 +5897,20 @@ class OtaAirLowFareSearchRs:
         default=None,
         metadata=dict(
             name="TransactionStatusCode",
+            type="Attribute"
+        )
+    )
+    alt_lang_id: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AltLangID",
+            type="Attribute"
+        )
+    )
+    primary_lang_id: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PrimaryLangID",
             type="Attribute"
         )
     )

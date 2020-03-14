@@ -310,32 +310,18 @@ class CustLoyaltyType:
     """Program rewarding frequent use by accumulating credits for services provided
     by vendors.
 
-    :ivar single_vendor_ind: Indicates if program is affiliated with a group of related offers accumulating credits.
-    :ivar signup_date: Indicates when the member signed up for the loyalty program.
     :ivar share_synch_ind:
     :ivar share_market_ind:
     :ivar program_id: Identifier to indicate the company owner of the loyalty program.
     :ivar membership_id: Unique identifier of the member in the program (membership number, account number, etc.).
     :ivar travel_sector: Identifies the travel sector. Refer to OTA Code List Travel Sector (TVS).
     :ivar loyal_level: Indicates special privileges in program assigned to individual.
+    :ivar single_vendor_ind: Indicates if program is affiliated with a group of related offers accumulating credits.
+    :ivar signup_date: Indicates when the member signed up for the loyalty program.
     :ivar effective_date: Indicates the starting date.
     :ivar expire_date: Indicates the ending date.
     :ivar rph: Reference place holder, to reference it back in the response.
     """
-    single_vendor_ind: Optional["CustLoyaltyType.SingleVendorInd"] = field(
-        default=None,
-        metadata=dict(
-            name="SingleVendorInd",
-            type="Attribute"
-        )
-    )
-    signup_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SignupDate",
-            type="Attribute"
-        )
-    )
     share_synch_ind: Optional["CustLoyaltyType.ShareSynchInd"] = field(
         default=None,
         metadata=dict(
@@ -384,6 +370,20 @@ class CustLoyaltyType:
             max_length=16.0
         )
     )
+    single_vendor_ind: Optional["CustLoyaltyType.SingleVendorInd"] = field(
+        default=None,
+        metadata=dict(
+            name="SingleVendorInd",
+            type="Attribute"
+        )
+    )
+    signup_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SignupDate",
+            type="Attribute"
+        )
+    )
     effective_date: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -407,6 +407,14 @@ class CustLoyaltyType:
         )
     )
 
+    class SingleVendorInd(Enum):
+        """
+        :cvar ALLIANCE:
+        :cvar SINGLE_VNDR:
+        """
+        ALLIANCE = "Alliance"
+        SINGLE_VNDR = "SingleVndr"
+
     class ShareSynchInd(Enum):
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
@@ -429,14 +437,6 @@ class CustLoyaltyType:
         INHERIT = "Inherit"
         NO = "No"
         YES = "Yes"
-
-    class SingleVendorInd(Enum):
-        """
-        :cvar ALLIANCE:
-        :cvar SINGLE_VNDR:
-        """
-        ALLIANCE = "Alliance"
-        SINGLE_VNDR = "SingleVndr"
 
 
 @dataclass
@@ -482,61 +482,19 @@ class DepartureDaysType:
 class DocumentType:
     """Provides information on a specific documents.
 
-    :ivar share_synch_ind:
-    :ivar share_market_ind:
-    :ivar gender:
-    :ivar effective_date: Indicates the starting date.
-    :ivar expire_date: Indicates the ending date.
-    :ivar birth_date: Indicates the date of birth as indicated in the document, in ISO 8601 prescribed format.
     :ivar doc_holder_name: Specify document holder name.
     :ivar doc_limitations: Used to indicate any limitations on the document (e.g. as a person may only be allowed to spend a max of 30 days in country on a visitor's visa).
+    :ivar share_synch_ind:
+    :ivar share_market_ind:
     :ivar doc_issue_authority: Indicates the group or association that granted the document.
     :ivar doc_issue_location: Indicates the location where the document was issued.
     :ivar doc_id: Unique number assigned by authorities to document.
     :ivar doc_type: Indicates the type of document (e.g. Passport, Military ID, Drivers License, national ID, Vaccination Certificate). Refer to OTA Code List Document Type (DOC).
+    :ivar gender:
+    :ivar birth_date: Indicates the date of birth as indicated in the document, in ISO 8601 prescribed format.
+    :ivar effective_date: Indicates the starting date.
+    :ivar expire_date: Indicates the ending date.
     """
-    share_synch_ind: Optional["DocumentType.ShareSynchInd"] = field(
-        default=None,
-        metadata=dict(
-            name="ShareSynchInd",
-            type="Attribute"
-        )
-    )
-    share_market_ind: Optional["DocumentType.ShareMarketInd"] = field(
-        default=None,
-        metadata=dict(
-            name="ShareMarketInd",
-            type="Attribute"
-        )
-    )
-    gender: Optional["DocumentType.Gender"] = field(
-        default=None,
-        metadata=dict(
-            name="Gender",
-            type="Attribute"
-        )
-    )
-    effective_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="EffectiveDate",
-            type="Attribute"
-        )
-    )
-    expire_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ExpireDate",
-            type="Attribute"
-        )
-    )
-    birth_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BirthDate",
-            type="Attribute"
-        )
-    )
     doc_holder_name: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -557,6 +515,20 @@ class DocumentType:
             max_occurs=9,
             min_length=1.0,
             max_length=64.0
+        )
+    )
+    share_synch_ind: Optional["DocumentType.ShareSynchInd"] = field(
+        default=None,
+        metadata=dict(
+            name="ShareSynchInd",
+            type="Attribute"
+        )
+    )
+    share_market_ind: Optional["DocumentType.ShareMarketInd"] = field(
+        default=None,
+        metadata=dict(
+            name="ShareMarketInd",
+            type="Attribute"
         )
     )
     doc_issue_authority: Optional[str] = field(
@@ -590,6 +562,34 @@ class DocumentType:
         default=None,
         metadata=dict(
             name="DocType",
+            type="Attribute"
+        )
+    )
+    gender: Optional["DocumentType.Gender"] = field(
+        default=None,
+        metadata=dict(
+            name="Gender",
+            type="Attribute"
+        )
+    )
+    birth_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BirthDate",
+            type="Attribute"
+        )
+    )
+    effective_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EffectiveDate",
+            type="Attribute"
+        )
+    )
+    expire_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ExpireDate",
             type="Attribute"
         )
     )
@@ -838,60 +838,16 @@ class FareDetailsType:
     fare component. For details, see notes below --- the attributes are annotated
     with ,,last Flight in Fare Component''.
 
+    :ivar component_no: Fare component number
+    :ivar basis_code: Fare basis code
+    :ivar amount: Fare amount (note: last Flight in Fare Component)
     :ivar vendor: Vendor (note: last Flight in Fare Component)
     :ivar source_vendor: Fare Source Vendor (note: last Flight in Fare Component)
     :ivar tariff: Tariff (note: last Flight in Fare Component)
     :ivar rule_number: Rule Number (note: last Flight in Fare Component)
     :ivar brand_id: Used to indicate brand code
     :ivar program_id:
-    :ivar component_no: Fare component number
-    :ivar basis_code: Fare basis code
-    :ivar amount: Fare amount (note: last Flight in Fare Component)
     """
-    vendor: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Vendor",
-            type="Attribute"
-        )
-    )
-    source_vendor: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SourceVendor",
-            type="Attribute",
-            pattern=r"[0-9A-Z]{2,3}"
-        )
-    )
-    tariff: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Tariff",
-            type="Attribute"
-        )
-    )
-    rule_number: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="RuleNumber",
-            type="Attribute"
-        )
-    )
-    brand_id: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BrandID",
-            type="Attribute",
-            min_length=1.0
-        )
-    )
-    program_id: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="ProgramID",
-            type="Attribute"
-        )
-    )
     component_no: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -919,25 +875,6 @@ class FareDetailsType:
             fraction_digits=3
         )
     )
-
-
-@dataclass
-class FareOptionalDetailsType:
-    """You don't need to specify all of these attributes for a given flight. For
-    some of them it is sufficient to be specified in the last flight of a given
-    fare component. For details, see notes below --- the attributes are annotated
-    with ,,last Flight in Fare Component''.
-
-    :ivar vendor: Vendor (note: last Flight in Fare Component)
-    :ivar source_vendor: Fare Source Vendor (note: last Flight in Fare Component)
-    :ivar tariff: Tariff (note: last Flight in Fare Component)
-    :ivar rule_number: Rule Number (note: last Flight in Fare Component)
-    :ivar brand_id: Used to indicate brand code
-    :ivar program_id:
-    :ivar component_no: Fare component number
-    :ivar basis_code: Fare basis code
-    :ivar amount: Fare amount (note: last Flight in Fare Component)
-    """
     vendor: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -982,6 +919,25 @@ class FareOptionalDetailsType:
             type="Attribute"
         )
     )
+
+
+@dataclass
+class FareOptionalDetailsType:
+    """You don't need to specify all of these attributes for a given flight. For
+    some of them it is sufficient to be specified in the last flight of a given
+    fare component. For details, see notes below --- the attributes are annotated
+    with ,,last Flight in Fare Component''.
+
+    :ivar component_no: Fare component number
+    :ivar basis_code: Fare basis code
+    :ivar amount: Fare amount (note: last Flight in Fare Component)
+    :ivar vendor: Vendor (note: last Flight in Fare Component)
+    :ivar source_vendor: Fare Source Vendor (note: last Flight in Fare Component)
+    :ivar tariff: Tariff (note: last Flight in Fare Component)
+    :ivar rule_number: Rule Number (note: last Flight in Fare Component)
+    :ivar brand_id: Used to indicate brand code
+    :ivar program_id:
+    """
     component_no: Optional[int] = field(
         default=None,
         metadata=dict(
@@ -1005,6 +961,50 @@ class FareOptionalDetailsType:
             name="Amount",
             type="Attribute",
             fraction_digits=3
+        )
+    )
+    vendor: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Vendor",
+            type="Attribute"
+        )
+    )
+    source_vendor: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SourceVendor",
+            type="Attribute",
+            pattern=r"[0-9A-Z]{2,3}"
+        )
+    )
+    tariff: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Tariff",
+            type="Attribute"
+        )
+    )
+    rule_number: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="RuleNumber",
+            type="Attribute"
+        )
+    )
+    brand_id: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BrandID",
+            type="Attribute",
+            min_length=1.0
+        )
+    )
+    program_id: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="ProgramID",
+            type="Attribute"
         )
     )
 
@@ -1980,6 +1980,8 @@ class TaxCodeType:
 class TelephoneType:
     """Construct for holding a telephone number.
 
+    :ivar share_synch_ind:
+    :ivar share_market_ind:
     :ivar phone_location_type: Refer to OTA Code List Phone Location Type (PLT).
     :ivar phone_tech_type: Indicates type of technology associated with this telephone number, such as Voice, Data, Fax, Pager, Mobile, TTY, etc. Refer to OTA Code List Phone Technology Type (PTT).
     :ivar country_access_code: Code assigned by telecommunications authorities for international country access identifier.
@@ -1987,10 +1989,22 @@ class TelephoneType:
     :ivar phone_number: Telephone number assigned to a single location.
     :ivar extension: Extension to reach a specific party at the phone number.
     :ivar pin: Additional codes used for pager or telephone access rights.
-    :ivar share_synch_ind:
-    :ivar share_market_ind:
     :ivar formatted_ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
     """
+    share_synch_ind: Optional["TelephoneType.ShareSynchInd"] = field(
+        default=None,
+        metadata=dict(
+            name="ShareSynchInd",
+            type="Attribute"
+        )
+    )
+    share_market_ind: Optional["TelephoneType.ShareMarketInd"] = field(
+        default=None,
+        metadata=dict(
+            name="ShareMarketInd",
+            type="Attribute"
+        )
+    )
     phone_location_type: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2046,20 +2060,6 @@ class TelephoneType:
             type="Attribute",
             min_length=1.0,
             max_length=8.0
-        )
-    )
-    share_synch_ind: Optional["TelephoneType.ShareSynchInd"] = field(
-        default=None,
-        metadata=dict(
-            name="ShareSynchInd",
-            type="Attribute"
-        )
-    )
-    share_market_ind: Optional["TelephoneType.ShareMarketInd"] = field(
-        default=None,
-        metadata=dict(
-            name="ShareMarketInd",
-            type="Attribute"
         )
     )
     formatted_ind: bool = field(
@@ -2523,9 +2523,9 @@ class AddressType:
     :ivar county: County Name eg. Fairfax
     :ivar state_prov: State name eg. Texas
     :ivar country_name: Country name eg. Ireland
+    :ivar formatted_ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
     :ivar share_synch_ind:
     :ivar share_market_ind:
-    :ivar formatted_ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
     :ivar type: Defines the type of address (e.g. home, business, other). Refer to OTA Code List Communication Location Type (CLT).
     """
     street_nmbr: Optional[StreetNmbrType] = field(
@@ -2604,6 +2604,13 @@ class AddressType:
             namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
+    formatted_ind: bool = field(
+        default=False,
+        metadata=dict(
+            name="FormattedInd",
+            type="Attribute"
+        )
+    )
     share_synch_ind: Optional["AddressType.ShareSynchInd"] = field(
         default=None,
         metadata=dict(
@@ -2615,13 +2622,6 @@ class AddressType:
         default=None,
         metadata=dict(
             name="ShareMarketInd",
-            type="Attribute"
-        )
-    )
-    formatted_ind: bool = field(
-        default=False,
-        metadata=dict(
-            name="FormattedInd",
             type="Attribute"
         )
     )
@@ -2721,16 +2721,9 @@ class BookingClassPrefType:
     """Booking class code and preference level for specifying booking classes
     preferred/not preferred in a request.
 
-    :ivar prefer_level:
     :ivar res_book_desig_code: Booking class code
+    :ivar prefer_level:
     """
-    prefer_level: PreferLevelType = field(
-        default="Preferred",
-        metadata=dict(
-            name="PreferLevel",
-            type="Attribute"
-        )
-    )
     res_book_desig_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2738,6 +2731,13 @@ class BookingClassPrefType:
             type="Attribute",
             required=True,
             pattern=r"[A-Z]{1,2}"
+        )
+    )
+    prefer_level: PreferLevelType = field(
+        default="Preferred",
+        metadata=dict(
+            name="PreferLevel",
+            type="Attribute"
         )
     )
 
@@ -3303,13 +3303,7 @@ class EquipmentTypePref(EquipmentType):
 @dataclass
 class ExchangeOriginDestinationFlightType:
     """
-    :ivar origin_location: Flight origin code
-    :ivar destination_location: Flight destination code
-    :ivar airline: Airline information
-    :ivar side_trip: Side trip information
-    :ivar reservation: Reservation information
-    :ivar mileage_display: Mileage information
-    :ivar booking_date_time: Booking date and time
+    :ivar class_of_service: Class of service
     :ivar number: Flight number
     :ivar departure_date_time: Departure date and time
     :ivar arrival_date_time: Arrival date and time
@@ -3318,71 +3312,21 @@ class ExchangeOriginDestinationFlightType:
     :ivar flown: Specify whether the flight is flown.
     :ivar fare:
     :ivar plus_up:
-    :ivar class_of_service: Class of service
+    :ivar origin_location: Flight origin code
+    :ivar destination_location: Flight destination code
+    :ivar airline: Airline information
+    :ivar side_trip: Side trip information
+    :ivar reservation: Reservation information
+    :ivar mileage_display: Mileage information
+    :ivar booking_date_time: Booking date and time
     """
-    origin_location: Optional[RequestLocationType] = field(
+    class_of_service: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="OriginLocation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
-    )
-    destination_location: Optional[RequestLocationType] = field(
-        default=None,
-        metadata=dict(
-            name="DestinationLocation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
-    )
-    airline: Optional[AirlineType] = field(
-        default=None,
-        metadata=dict(
-            name="Airline",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
-    )
-    side_trip: Optional[SideTripType] = field(
-        default=None,
-        metadata=dict(
-            name="SideTrip",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
-    )
-    reservation: Optional[ReservationType] = field(
-        default=None,
-        metadata=dict(
-            name="Reservation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
-    )
-    mileage_display: List[MileageDisplayType] = field(
-        default_factory=list,
-        metadata=dict(
-            name="MileageDisplay",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
-    )
-    booking_date_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BookingDateTime",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
+            name="ClassOfService",
+            type="Attribute",
             required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
+            pattern=r"[A-Z]{1,2}"
         )
     )
     number: Optional[int] = field(
@@ -3453,13 +3397,69 @@ class ExchangeOriginDestinationFlightType:
             max_occurs=9223372036854775807
         )
     )
-    class_of_service: Optional[str] = field(
+    origin_location: Optional[RequestLocationType] = field(
         default=None,
         metadata=dict(
-            name="ClassOfService",
-            type="Attribute",
+            name="OriginLocation",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            required=True
+        )
+    )
+    destination_location: Optional[RequestLocationType] = field(
+        default=None,
+        metadata=dict(
+            name="DestinationLocation",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            required=True
+        )
+    )
+    airline: Optional[AirlineType] = field(
+        default=None,
+        metadata=dict(
+            name="Airline",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            required=True
+        )
+    )
+    side_trip: Optional[SideTripType] = field(
+        default=None,
+        metadata=dict(
+            name="SideTrip",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            required=True
+        )
+    )
+    reservation: Optional[ReservationType] = field(
+        default=None,
+        metadata=dict(
+            name="Reservation",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            required=True
+        )
+    )
+    mileage_display: List[MileageDisplayType] = field(
+        default_factory=list,
+        metadata=dict(
+            name="MileageDisplay",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            min_occurs=0,
+            max_occurs=9223372036854775807
+        )
+    )
+    booking_date_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BookingDateTime",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
             required=True,
-            pattern=r"[A-Z]{1,2}"
+            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
         )
     )
 
@@ -4121,6 +4121,9 @@ class PriceRequestInformationType:
     """Identify pricing source, if negotiated fares are requested and if it is a
     reprice request.
 
+    :ivar negotiated_fare_code:
+    :ivar account_code:
+    :ivar tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
     :ivar fare_qualifier: Fare Type is specific to a specific fare and this is a request for a set of fares based on these qualifiers.
     :ivar negotiated_fares_only: If set to true then returned fares need to match requested AcccountCode/CorpID on all fare components
     :ivar currency_code: Type of funds preferred for reviewing monetary values, in ISO 4217 codes.
@@ -4130,10 +4133,35 @@ class PriceRequestInformationType:
     :ivar purchase_date: Specify purchase date. Fares returned will be based on the purchase date.
     :ivar purchase_time: Specify purchase time. Fares returned will be based on the purchase time.
     :ivar net_fares_used: Set to true when exchange ticket uses net fare.
-    :ivar negotiated_fare_code:
-    :ivar account_code:
-    :ivar tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
     """
+    negotiated_fare_code: List["PriceRequestInformationType.NegotiatedFareCode"] = field(
+        default_factory=list,
+        metadata=dict(
+            name="NegotiatedFareCode",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            min_occurs=0,
+            max_occurs=9223372036854775807
+        )
+    )
+    account_code: List["PriceRequestInformationType.AccountCode"] = field(
+        default_factory=list,
+        metadata=dict(
+            name="AccountCode",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            min_occurs=0,
+            max_occurs=9223372036854775807
+        )
+    )
+    tpa_extensions: Optional["PriceRequestInformationType.TpaExtensions"] = field(
+        default=None,
+        metadata=dict(
+            name="TPA_Extensions",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
+        )
+    )
     fare_qualifier: Optional[Union[str, bool]] = field(
         default=None,
         metadata=dict(
@@ -4196,34 +4224,6 @@ class PriceRequestInformationType:
         metadata=dict(
             name="NetFaresUsed",
             type="Attribute"
-        )
-    )
-    negotiated_fare_code: List["PriceRequestInformationType.NegotiatedFareCode"] = field(
-        default_factory=list,
-        metadata=dict(
-            name="NegotiatedFareCode",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
-    )
-    account_code: List["PriceRequestInformationType.AccountCode"] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AccountCode",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
-    )
-    tpa_extensions: Optional["PriceRequestInformationType.TpaExtensions"] = field(
-        default=None,
-        metadata=dict(
-            name="TPA_Extensions",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
 
@@ -4943,22 +4943,31 @@ class PriceRequestInformationType:
     @dataclass
     class NegotiatedFareCode:
         """
-        :ivar quantity: Used to define a quantity of an associated element or attribute.
+        :ivar supplier: This element indicates the supplier associated with a negotiated fare code.
+        :ivar tpa_extensions: This is a place holder for additional elements.
         :ivar code: Any code used to specify an item, for example, type of traveler, service code, room amenity, etc.
         :ivar code_context: Identifies the source authority for the code.
         :ivar uri: Identifies the location of the code table
+        :ivar quantity: Used to define a quantity of an associated element or attribute.
         :ivar secondary_code: An additional attribute to allow flexibility for particular organizations who require an additional code.
         :ivar supplier_code: An additional attribute to allow flexibility for particular organizations who require an additional supplier code.
-        :ivar supplier: This element indicates the supplier associated with a negotiated fare code.
-        :ivar tpa_extensions: This is a place holder for additional elements.
         """
-        quantity: Optional[int] = field(
+        supplier: List[CompanyNameType] = field(
+            default_factory=list,
+            metadata=dict(
+                name="Supplier",
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                min_occurs=0,
+                max_occurs=9223372036854775807
+            )
+        )
+        tpa_extensions: Optional[str] = field(
             default=None,
             metadata=dict(
-                name="Quantity",
-                type="Attribute",
-                min_inclusive=1.0,
-                max_inclusive=999.0
+                name="TPA_Extensions",
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
         code: Optional[str] = field(
@@ -4985,6 +4994,15 @@ class PriceRequestInformationType:
                 type="Attribute"
             )
         )
+        quantity: Optional[int] = field(
+            default=None,
+            metadata=dict(
+                name="Quantity",
+                type="Attribute",
+                min_inclusive=1.0,
+                max_inclusive=999.0
+            )
+        )
         secondary_code: Optional[str] = field(
             default=None,
             metadata=dict(
@@ -5001,24 +5019,6 @@ class PriceRequestInformationType:
                 type="Attribute",
                 min_length=1.0,
                 max_length=16.0
-            )
-        )
-        supplier: List[CompanyNameType] = field(
-            default_factory=list,
-            metadata=dict(
-                name="Supplier",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
-        )
-        tpa_extensions: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="TPA_Extensions",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
             )
         )
 
@@ -5145,16 +5145,24 @@ class UniqueIdType:
     airline reservation reference, customer profile reference, booking confirmation
     number, or a reference to a previous availability quote).
 
+    :ivar company_name: Identifies the company that is associated with the UniqueID.
     :ivar url: URL that identifies the location associated with the record identified by the UniqueID.
     :ivar type: A reference to the type of object defined by the UniqueID element. Refer to OTA Code List Unique ID Type (UIT).
     :ivar instance: The identification of a record as it exists at a point in time. An instance is used in update messages where the sender must assure the server that the update sent refers to the most recent modification level of the object being updated.
     :ivar id: A unique identifying value assigned by the creating system. The ID attribute may be used to reference a primary-key value within a database or in a particular implementation.
     :ivar id_context: Used to identify the source of the identifier (e.g. IATA, ABTA, etc.).
-    :ivar company_name: Identifies the company that is associated with the UniqueID.
     """
     class Meta:
         name = "UniqueID_Type"
 
+    company_name: Optional[CompanyNameType] = field(
+        default=None,
+        metadata=dict(
+            name="CompanyName",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
+        )
+    )
     url: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -5196,14 +5204,6 @@ class UniqueIdType:
             type="Attribute",
             min_length=1.0,
             max_length=32.0
-        )
-    )
-    company_name: Optional[CompanyNameType] = field(
-        default=None,
-        metadata=dict(
-            name="CompanyName",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
 
@@ -5478,12 +5478,6 @@ class AirSearchPrefsType:
     @dataclass
     class TpaExtensions:
         """
-        :ivar exempt_all_taxes: Exempt all taxes (/TE)
-        :ivar exempt_all_taxes_and_fees: Exempt all taxes and fees (/TN)
-        :ivar taxes: Specify Taxes (/TX)
-        :ivar exempt_tax: Exempt Tax (/TE)
-        :ivar online_indicator:
-        :ivar interline_indicator:
         :ivar departure_window: This should be of the form HHMMHHMM.
         :ivar arrival_window: This should be of the form HHMMHHMM.
         :ivar exclude_vendor_pref: This element allows a user to exclude certain carriers from the search.
@@ -5492,6 +5486,8 @@ class AirSearchPrefsType:
         :ivar num_trips:
         :ivar alt_cities_combinations:
         :ivar num_trips_with_routing: This element allows a user to specify the number of itineraries with special routing returned.
+        :ivar online_indicator:
+        :ivar interline_indicator:
         :ivar trip_type: Specify air trip type.
         :ivar max_price: Maximum price returned from LFE service.
         :ivar content_type: Restrict content type returned by LFE service.
@@ -5539,6 +5535,10 @@ class AirSearchPrefsType:
         :ivar num_of_must_price2_plus_stp_sol: Number of must price 2+ stops solutions for ESV2
         :ivar itinerary_number_threshold: Number of preffered/good itins to price
         :ivar xofares:
+        :ivar exempt_all_taxes: Exempt all taxes (/TE)
+        :ivar exempt_all_taxes_and_fees: Exempt all taxes and fees (/TN)
+        :ivar taxes: Specify Taxes (/TX)
+        :ivar exempt_tax: Exempt Tax (/TE)
         :ivar flight_stops_as_connections:
         :ivar ticketing_sum_of_locals: Settings specific to Ticketing Sum of Locals processing
         :ivar multi_airport_codes: Settings specific to Multi Airport Codes processing
@@ -5560,61 +5560,6 @@ class AirSearchPrefsType:
         :ivar country_pref: List of countries to be excluded from processing
         :ivar retailer_rules:
         """
-        exempt_all_taxes: Optional["AirSearchPrefsType.TpaExtensions.ExemptAllTaxes"] = field(
-            default=None,
-            metadata=dict(
-                name="ExemptAllTaxes",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                required=True
-            )
-        )
-        exempt_all_taxes_and_fees: Optional["AirSearchPrefsType.TpaExtensions.ExemptAllTaxesAndFees"] = field(
-            default=None,
-            metadata=dict(
-                name="ExemptAllTaxesAndFees",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                required=True
-            )
-        )
-        taxes: Optional["AirSearchPrefsType.TpaExtensions.Taxes"] = field(
-            default=None,
-            metadata=dict(
-                name="Taxes",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                required=True
-            )
-        )
-        exempt_tax: List[TaxCodeType] = field(
-            default_factory=list,
-            metadata=dict(
-                name="ExemptTax",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
-        )
-        online_indicator: Optional["AirSearchPrefsType.TpaExtensions.OnlineIndicator"] = field(
-            default=None,
-            metadata=dict(
-                name="OnlineIndicator",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                required=True
-            )
-        )
-        interline_indicator: Optional["AirSearchPrefsType.TpaExtensions.InterlineIndicator"] = field(
-            default=None,
-            metadata=dict(
-                name="InterlineIndicator",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                required=True
-            )
-        )
         departure_window: Optional[str] = field(
             default=None,
             metadata=dict(
@@ -5687,6 +5632,24 @@ class AirSearchPrefsType:
                 name="NumTripsWithRouting",
                 type="Element",
                 namespace="http://www.opentravel.org/OTA/2003/05"
+            )
+        )
+        online_indicator: Optional["AirSearchPrefsType.TpaExtensions.OnlineIndicator"] = field(
+            default=None,
+            metadata=dict(
+                name="OnlineIndicator",
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                required=True
+            )
+        )
+        interline_indicator: Optional["AirSearchPrefsType.TpaExtensions.InterlineIndicator"] = field(
+            default=None,
+            metadata=dict(
+                name="InterlineIndicator",
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                required=True
             )
         )
         trip_type: Optional["AirSearchPrefsType.TpaExtensions.TripType"] = field(
@@ -6063,6 +6026,43 @@ class AirSearchPrefsType:
                 name="XOFares",
                 type="Element",
                 namespace="http://www.opentravel.org/OTA/2003/05"
+            )
+        )
+        exempt_all_taxes: Optional["AirSearchPrefsType.TpaExtensions.ExemptAllTaxes"] = field(
+            default=None,
+            metadata=dict(
+                name="ExemptAllTaxes",
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                required=True
+            )
+        )
+        exempt_all_taxes_and_fees: Optional["AirSearchPrefsType.TpaExtensions.ExemptAllTaxesAndFees"] = field(
+            default=None,
+            metadata=dict(
+                name="ExemptAllTaxesAndFees",
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                required=True
+            )
+        )
+        taxes: Optional["AirSearchPrefsType.TpaExtensions.Taxes"] = field(
+            default=None,
+            metadata=dict(
+                name="Taxes",
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                required=True
+            )
+        )
+        exempt_tax: List[TaxCodeType] = field(
+            default_factory=list,
+            metadata=dict(
+                name="ExemptTax",
+                type="Element",
+                namespace="http://www.opentravel.org/OTA/2003/05",
+                min_occurs=0,
+                max_occurs=9223372036854775807
             )
         )
         flight_stops_as_connections: Optional[FlightStopsAsConnectionsType] = field(
@@ -7378,32 +7378,6 @@ class AirSearchPrefsType:
             )
 
         @dataclass
-        class OnlineIndicator:
-            """
-            :ivar ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
-            """
-            ind: Optional[bool] = field(
-                default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute"
-                )
-            )
-
-        @dataclass
-        class InterlineIndicator:
-            """
-            :ivar ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
-            """
-            ind: Optional[bool] = field(
-                default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute"
-                )
-            )
-
-        @dataclass
         class ExemptAllTaxes:
             """
             :ivar value:
@@ -7444,6 +7418,32 @@ class AirSearchPrefsType:
                     namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=0,
                     max_occurs=9223372036854775807
+                )
+            )
+
+        @dataclass
+        class OnlineIndicator:
+            """
+            :ivar ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
+            """
+            ind: Optional[bool] = field(
+                default=None,
+                metadata=dict(
+                    name="Ind",
+                    type="Attribute"
+                )
+            )
+
+        @dataclass
+        class InterlineIndicator:
+            """
+            :ivar ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
+            """
+            ind: Optional[bool] = field(
+                default=None,
+                metadata=dict(
+                    name="Ind",
+                    type="Attribute"
                 )
             )
 
@@ -7561,9 +7561,9 @@ class AirTravelerType:
     :ivar passenger_type_quantity: Define information on the number of passengers of a specific type.
     :ivar traveler_ref_number: Direct reference of traveler assigned by requesting system. Used as a cross reference between data segments.
     :ivar flight_segment_rphs: Reference pointers to flight segments
+    :ivar gender:
     :ivar share_synch_ind:
     :ivar share_market_ind:
-    :ivar gender:
     :ivar birth_date: Date of Birth.
     :ivar currency_code: The preferred currency in which monetary amounts should be returned.
     :ivar passenger_type_code: A three-letter code representing passenger type (e.g. .ADT. for adult, .CNN. for child)
@@ -7661,6 +7661,13 @@ class AirTravelerType:
             namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
+    gender: Optional["AirTravelerType.Gender"] = field(
+        default=None,
+        metadata=dict(
+            name="Gender",
+            type="Attribute"
+        )
+    )
     share_synch_ind: Optional["AirTravelerType.ShareSynchInd"] = field(
         default=None,
         metadata=dict(
@@ -7672,13 +7679,6 @@ class AirTravelerType:
         default=None,
         metadata=dict(
             name="ShareMarketInd",
-            type="Attribute"
-        )
-    )
-    gender: Optional["AirTravelerType.Gender"] = field(
-        default=None,
-        metadata=dict(
-            name="Gender",
             type="Attribute"
         )
     )
@@ -7746,16 +7746,6 @@ class AirTravelerType:
             )
         )
 
-    class Gender(Enum):
-        """
-        :cvar FEMALE:
-        :cvar MALE:
-        :cvar UNKNOWN:
-        """
-        FEMALE = "Female"
-        MALE = "Male"
-        UNKNOWN = "Unknown"
-
     class ShareSynchInd(Enum):
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
@@ -7779,10 +7769,27 @@ class AirTravelerType:
         NO = "No"
         YES = "Yes"
 
+    class Gender(Enum):
+        """
+        :cvar FEMALE:
+        :cvar MALE:
+        :cvar UNKNOWN:
+        """
+        FEMALE = "Female"
+        MALE = "Male"
+        UNKNOWN = "Unknown"
+
 
 @dataclass
 class ExchangeSourceType:
     """
+    :ivar booking_channel:
+    :ivar agent_city: Agent city
+    :ivar main_travel_agency_pcc: Main travel agency PCC
+    :ivar carrier: Carrier
+    :ivar host_carrier: PCC Host Carrier
+    :ivar eticket_capable: Agency is Eticket capable
+    :ivar co_host_id: CoHostID
     :ivar agent_sine: Identifies the party within the requesting entity.
     :ivar pseudo_city_code: An identification code assigned to an office/agency by a reservation system.
     :ivar isocountry: The country code of the requesting party.
@@ -7805,14 +7812,65 @@ class ExchangeSourceType:
     :ivar vendor_crscode: Vendor CRS code
     :ivar agent_duty: Agent duty
     :ivar abacus_user: Abacus user
-    :ivar agent_city: Agent city
-    :ivar main_travel_agency_pcc: Main travel agency PCC
-    :ivar carrier: Carrier
-    :ivar host_carrier: PCC Host Carrier
-    :ivar eticket_capable: Agency is Eticket capable
-    :ivar co_host_id: CoHostID
-    :ivar booking_channel:
     """
+    booking_channel: Optional[SourceBookingChannelType] = field(
+        default=None,
+        metadata=dict(
+            name="BookingChannel",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05"
+        )
+    )
+    agent_city: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AgentCity",
+            type="Attribute",
+            required=True,
+            pattern=r"[a-zA-Z]{3}"
+        )
+    )
+    main_travel_agency_pcc: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="MainTravelAgencyPCC",
+            type="Attribute",
+            required=True,
+            min_length=1.0,
+            max_length=16.0
+        )
+    )
+    carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Carrier",
+            type="Attribute",
+            required=True,
+            pattern=r"[0-9A-Z]{2,3}"
+        )
+    )
+    host_carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="HostCarrier",
+            type="Attribute",
+            pattern=r"[0-9A-Z]{2,3}"
+        )
+    )
+    eticket_capable: bool = field(
+        default=False,
+        metadata=dict(
+            name="ETicketCapable",
+            type="Attribute"
+        )
+    )
+    co_host_id: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="CoHostID",
+            type="Attribute"
+        )
+    )
     agent_sine: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -7990,64 +8048,6 @@ class ExchangeSourceType:
         metadata=dict(
             name="AbacusUser",
             type="Attribute"
-        )
-    )
-    agent_city: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AgentCity",
-            type="Attribute",
-            required=True,
-            pattern=r"[a-zA-Z]{3}"
-        )
-    )
-    main_travel_agency_pcc: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="MainTravelAgencyPCC",
-            type="Attribute",
-            required=True,
-            min_length=1.0,
-            max_length=16.0
-        )
-    )
-    carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Carrier",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9A-Z]{2,3}"
-        )
-    )
-    host_carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="HostCarrier",
-            type="Attribute",
-            pattern=r"[0-9A-Z]{2,3}"
-        )
-    )
-    eticket_capable: bool = field(
-        default=False,
-        metadata=dict(
-            name="ETicketCapable",
-            type="Attribute"
-        )
-    )
-    co_host_id: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="CoHostID",
-            type="Attribute"
-        )
-    )
-    booking_channel: Optional[SourceBookingChannelType] = field(
-        default=None,
-        metadata=dict(
-            name="BookingChannel",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
 
@@ -9054,6 +9054,7 @@ class ExchangeAirSearchPrefsType:
 @dataclass
 class ExchangeOriginDestinationInformationType(OriginDestinationInformationType):
     """
+    :ivar flight:
     :ivar date_flexibility: The number of alternate days around the travel date to search.
     :ivar sister_destination_location: List of alternate destination cities to search
     :ivar sister_destination_mileage:
@@ -9066,8 +9067,17 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
     :ivar cabin_pref: Defines preferred cabin to be used in a search for this leg level (if SegmentType is "O") or segment (if SegmentType is "X"). The cabin type specified in this element will override the cabin type specified at the request level for this leg/segment. If a cabin type is not specified for this element the cabin type at request level will be used as default for this leg or segment. If the cabin type is not specified at both the leg/segment level and request level a default cabin of "Economy" will be used?
     :ivar connection_time: Connection time between segments.
     :ivar total_travel_time: Total travel time settings
-    :ivar flight:
     """
+    flight: List[ExchangeOriginDestinationFlightType] = field(
+        default_factory=list,
+        metadata=dict(
+            name="Flight",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            min_occurs=1,
+            max_occurs=9223372036854775807
+        )
+    )
     date_flexibility: List["ExchangeOriginDestinationInformationType.DateFlexibility"] = field(
         default_factory=list,
         metadata=dict(
@@ -9177,16 +9187,6 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
             required=True
-        )
-    )
-    flight: List[ExchangeOriginDestinationFlightType] = field(
-        default_factory=list,
-        metadata=dict(
-            name="Flight",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=1,
-            max_occurs=9223372036854775807
         )
     )
 
@@ -9536,11 +9536,6 @@ class TravelerInfoSummaryType:
 @dataclass
 class ExchangeType:
     """
-    :ivar original_tkt_issue_date_time: Original ticket issue date and time
-    :ivar exchanged_tkt_issue_date_time: Exchanged ticket issue date and time
-    :ivar previous_exchange_date_time: Previous exchange date and time
-    :ivar number_of_tax_boxes: Number of tax boxes
-    :ivar bypass_advance_purchase_option: Bypass Advance Purchase Option
     :ivar fare:
     :ivar pos:
     :ivar origin_destination_information:
@@ -9548,47 +9543,12 @@ class ExchangeType:
     :ivar travel_preferences:
     :ivar traveler_info_summary:
     :ivar tpa_extensions:
+    :ivar original_tkt_issue_date_time: Original ticket issue date and time
+    :ivar exchanged_tkt_issue_date_time: Exchanged ticket issue date and time
+    :ivar previous_exchange_date_time: Previous exchange date and time
+    :ivar number_of_tax_boxes: Number of tax boxes
+    :ivar bypass_advance_purchase_option: Bypass Advance Purchase Option
     """
-    original_tkt_issue_date_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="OriginalTktIssueDateTime",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?"
-        )
-    )
-    exchanged_tkt_issue_date_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ExchangedTktIssueDateTime",
-            type="Attribute",
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?"
-        )
-    )
-    previous_exchange_date_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PreviousExchangeDateTime",
-            type="Attribute",
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?"
-        )
-    )
-    number_of_tax_boxes: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="NumberOfTaxBoxes",
-            type="Attribute"
-        )
-    )
-    bypass_advance_purchase_option: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BypassAdvancePurchaseOption",
-            type="Attribute",
-            length=1
-        )
-    )
     fare: Optional[ExchangeFareType] = field(
         default=None,
         metadata=dict(
@@ -9651,6 +9611,46 @@ class ExchangeType:
             namespace="http://www.opentravel.org/OTA/2003/05"
         )
     )
+    original_tkt_issue_date_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="OriginalTktIssueDateTime",
+            type="Attribute",
+            required=True,
+            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?"
+        )
+    )
+    exchanged_tkt_issue_date_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ExchangedTktIssueDateTime",
+            type="Attribute",
+            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?"
+        )
+    )
+    previous_exchange_date_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PreviousExchangeDateTime",
+            type="Attribute",
+            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?"
+        )
+    )
+    number_of_tax_boxes: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="NumberOfTaxBoxes",
+            type="Attribute"
+        )
+    )
+    bypass_advance_purchase_option: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BypassAdvancePurchaseOption",
+            type="Attribute",
+            length=1
+        )
+    )
 
 
 @dataclass
@@ -9663,8 +9663,6 @@ class OtaAirLowFareSearchRq:
     :ivar travel_preferences: Air Low Fare Search Request preference information.
     :ivar traveler_info_summary: Specifies the number of passengers and types for Air Low Fare Search.
     :ivar tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
-    :ivar primary_lang_id: Identifes the primary language preference for the form of travel represented in a collection. The human language is identified by ISO 639 codes.
-    :ivar alt_lang_id:
     :ivar echo_token: A sequence number for additional message identification, assigned by the requesting host system. When a request message includes an echo token the corresponding response message MUST include an echo token with an identical value.
     :ivar time_stamp: Indicates the creation date and time of the message in UTC using the following format specified by ISO 8601; YYYY-MM-DDThh:mm:ssZ with time values using the 24 hour clock (e.g. 20 November 2003, 1:59:38 pm UTC becomes 2003-11-20T13:59:38Z).
     :ivar target: Used to indicate whether the request is for the Test or Production system.
@@ -9672,6 +9670,8 @@ class OtaAirLowFareSearchRq:
     :ivar transaction_identifier: A unique identifier to relate all messages within a transaction (e.g. this would be sent in all request and response messages that are part of an on-going transaction).
     :ivar sequence_nmbr: Used to identify the sequence number of the transaction as assigned by the sending system; allows for an application to process messages in a certain order or to request a resynchronization of messages in the event that a system has been off-line and needs to retrieve messages that were missed.
     :ivar transaction_status_code: This indicates where this message falls within a sequence of messages.
+    :ivar alt_lang_id:
+    :ivar primary_lang_id: Identifes the primary language preference for the form of travel represented in a collection. The human language is identified by ISO 639 codes.
     :ivar max_responses: A positive integer value that indicates the maximum number of responses desired in the return.
     :ivar direct_flights_only: Request direct flights between given locations. This defaults to false.
     :ivar available_flights_only: Include only flights with available booking codes (when True or when attribute not present).
@@ -9732,20 +9732,6 @@ class OtaAirLowFareSearchRq:
             type="Element"
         )
     )
-    primary_lang_id: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PrimaryLangID",
-            type="Attribute"
-        )
-    )
-    alt_lang_id: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AltLangID",
-            type="Attribute"
-        )
-    )
     echo_token: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -9797,6 +9783,20 @@ class OtaAirLowFareSearchRq:
         default=None,
         metadata=dict(
             name="TransactionStatusCode",
+            type="Attribute"
+        )
+    )
+    alt_lang_id: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AltLangID",
+            type="Attribute"
+        )
+    )
+    primary_lang_id: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PrimaryLangID",
             type="Attribute"
         )
     )

@@ -239,15 +239,15 @@ class AirRepriceRsp {
 }
 AirRepriceRsp *- common:BaseRsp
 class AirRetrieveDocumentReq {
-    +UniversalRecordLocatorCode : string
-    +ProviderCode : string
-    +ProviderLocatorCode : string
     +AirReservationLocatorCode : AirReservationLocatorCode
     +common:TicketNumber : common:TicketNumber[]
     +TCRNumber : string[]
     +ReturnRestrictions : boolean
     +ReturnPricing : boolean
     +RetrieveMCO : boolean
+    +UniversalRecordLocatorCode : string
+    +ProviderCode : string
+    +ProviderLocatorCode : string
 }
 AirRetrieveDocumentReq *- common:BaseReq
 class AirRetrieveDocumentRsp {

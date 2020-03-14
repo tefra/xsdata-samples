@@ -25,7 +25,7 @@
   <ns0:TravelerInfoSummary>
     <ns0:SeatsRequested>1</ns0:SeatsRequested>
     <ns0:AirTravelerAvail>
-      <ns0:PassengerTypeQuantity Quantity="1" Code="ADT" Changeable="true"/>
+      <ns0:PassengerTypeQuantity Code="ADT" Quantity="1" Changeable="true"/>
     </ns0:AirTravelerAvail>
     <ns0:PriceRequestInformation CurrencyCode="EUR">
       <ns0:TPA_Extensions>

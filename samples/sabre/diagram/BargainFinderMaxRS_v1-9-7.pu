@@ -7,12 +7,16 @@ enum ActionCodeType {
 }
 class AirFeeType {
     +value : string
+    +FeeCode : string
+    +Amount : decimal
     +CurrencyCode : string
     +DecimalPlaces : nonNegativeInteger
-    +Amount : decimal
-    +FeeCode : string
 }
 class AirItineraryPricingInfoType {
+    +ItinTotalFare : ItinTotalFareType
+    +PTC_FareBreakdowns : PTC_FareBreakdowns
+    +FareInfos : FareInfos
+    +TPA_Extensions : TPA_Extensions
     +PricingSource : string
     +PricingSubSource : string
     +PseudoCityCode : string
@@ -25,18 +29,14 @@ class AirItineraryPricingInfoType {
     +CacheVersion : string
     +TimeToLive : integer
     +AlternateCityOption : boolean
-    +PreviousExchangeDate : date
-    +ReissueExchange : ReissueExchange
-    +AdvancedPurchaseDate : date
-    +PurchaseByDate : date
-    +ItinTotalFare : ItinTotalFareType
-    +PTC_FareBreakdowns : PTC_FareBreakdowns
-    +FareInfos : FareInfos
-    +TPA_Extensions : TPA_Extensions
     +LastTicketDate : string, time
     +PrivateFareType : string
     +SpanishFamilyDiscountIndicator : SpanishFamilyDiscountIndicator
     +FlexibleFareID : positiveInteger
+    +PreviousExchangeDate : date
+    +ReissueExchange : ReissueExchange
+    +AdvancedPurchaseDate : date
+    +PurchaseByDate : date
 }
 AirItineraryPricingInfoType +-- PTC_FareBreakdowns
 class PTC_FareBreakdowns {
@@ -48,8 +48,6 @@ class FareInfos {
 }
 FareInfos +-- FareInfo
 class FareInfo {
-    +NegotiatedFare : boolean
-    +NegotiatedFareCode : string
     +DepartureDate : string
     +FareReference : string
     +RuleInfo : RuleInfoType
@@ -57,6 +55,8 @@ class FareInfo {
     +DepartureAirport : ResponseLocationType
     +ArrivalAirport : ResponseLocationType
     +TPA_Extensions : TPA_Extensions
+    +NegotiatedFare : boolean
+    +NegotiatedFareCode : string
 }
 FareInfo +-- TPA_Extensions
 class TPA_Extensions {
@@ -201,6 +201,16 @@ class OriginDestinationOptions {
 }
 class AirTaxType {
     +value : string
+    +TaxCode : string
+    +Amount : decimal
+    +CurrencyCode : string
+    +DecimalPlaces : nonNegativeInteger
+    +CarrierCode : string
+    +MinAmount : double
+    +MaxAmount : double
+    +MinMaxCurrency : string
+    +RateUsed : double
+    +StationCode : string
     +ReissueTaxType : string
     +ReissueRestrictionApplies : boolean
     +ReissueTaxRefundable : boolean
@@ -209,16 +219,6 @@ class AirTaxType {
     +ReissueCurrency : string
     +PublishedAmount : double
     +PublishedCurrency : string
-    +TaxCode : string
-    +CurrencyCode : string
-    +DecimalPlaces : nonNegativeInteger
-    +Amount : decimal
-    +CarrierCode : string
-    +MinAmount : double
-    +MaxAmount : double
-    +MinMaxCurrency : string
-    +RateUsed : double
-    +StationCode : string
 }
 class AirlineLowestFaresType {
     +Airline : CompanyNameType
@@ -349,9 +349,9 @@ class CouponOfferType {
     +discount_pctg : string
 }
 class CurrencyAmountType {
+    +Amount : decimal
     +CurrencyCode : string
     +DecimalPlaces : nonNegativeInteger
-    +Amount : decimal
 }
 class CurrencyConversionsType {
     +Conversion : Conversion[]
@@ -400,14 +400,14 @@ class FareGroupType {
     +FareTypeName : string
 }
 class FareInfoType {
-    +NegotiatedFare : boolean
-    +NegotiatedFareCode : string
     +DepartureDate : string
     +FareReference : string
     +RuleInfo : RuleInfoType
     +MarketingAirline : CompanyNameType[]
     +DepartureAirport : ResponseLocationType
     +ArrivalAirport : ResponseLocationType
+    +NegotiatedFare : boolean
+    +NegotiatedFareCode : string
 }
 class FareMessagesType {
     +Message : Message[]
@@ -420,8 +420,6 @@ class Message {
     +Info : string
 }
 class FareType {
-    +NegotiatedFare : boolean
-    +NegotiatedFareCode : string
     +BaseFare : CurrencyAmountType
     +NonRefundableBaseFare : CurrencyAmountType
     +FareConstruction : CurrencyAmountType
@@ -435,6 +433,8 @@ class FareType {
     +ReissueInfoList : ReissueInfoList
     +PenaltiesInfo : PenaltiesInfo
     +TPA_Extensions : TPA_Extensions
+    +NegotiatedFare : boolean
+    +NegotiatedFareCode : string
 }
 FareType +-- EquivFare
 class EquivFare {
@@ -486,9 +486,9 @@ class Penalty {
     +Refundable : boolean
     +Changeable : boolean
     +ConditionsApply : boolean
+    +Amount : decimal
     +CurrencyCode : string
     +DecimalPlaces : nonNegativeInteger
-    +Amount : decimal
     +Cat16Info : boolean
 }
 Penalty +-- Cat16TextOnly
@@ -646,11 +646,11 @@ enum MessageClassType {
     I = I
 }
 class OBFeeType {
-    +CurrencyCode : string
-    +DecimalPlaces : nonNegativeInteger
-    +Amount : decimal
     +Type : string
     +Description : string
+    +Amount : decimal
+    +CurrencyCode : string
+    +DecimalPlaces : nonNegativeInteger
 }
 class OCFeeType {
     +Amount : decimal
@@ -673,8 +673,6 @@ class OTA_AirLowFareSearchRS {
     +SoldOutItineraries : SoldOutItineraries
     +AvailableItineraries : AvailableItineraries
     +TPA_Extensions : TPA_Extensions
-    +PrimaryLangID : language
-    +AltLangID : language
     +EchoToken : string, string
     +TimeStamp : string
     +Target : Target
@@ -682,6 +680,8 @@ class OTA_AirLowFareSearchRS {
     +TransactionIdentifier : string
     +SequenceNmbr : positiveInteger, boolean
     +TransactionStatusCode : TransactionStatusCode
+    +AltLangID : language
+    +PrimaryLangID : language
     +PricedItinCount : short
     +BrandedOneWayItinCount : short
     +SimpleOneWayItinCount : short
@@ -941,8 +941,6 @@ class FareInfos {
 }
 FareInfos +-- FareInfo
 class FareInfo {
-    +NegotiatedFare : boolean
-    +NegotiatedFareCode : string
     +DepartureDate : string
     +FareReference : string
     +RuleInfo : RuleInfoType
@@ -950,6 +948,8 @@ class FareInfo {
     +DepartureAirport : ResponseLocationType
     +ArrivalAirport : ResponseLocationType
     +TPA_Extensions : TPA_Extensions
+    +NegotiatedFare : boolean
+    +NegotiatedFareCode : string
 }
 FareInfo +-- TPA_Extensions
 class TPA_Extensions {
@@ -1098,9 +1098,9 @@ class ChangeFees {
 ChangeFees +-- ChangeFee
 class ChangeFee {
     +HighestChangeFee : boolean
+    +Amount : decimal
     +CurrencyCode : string
     +DecimalPlaces : nonNegativeInteger
-    +Amount : decimal
     +ChangeFeeWaived : boolean
     +ChangeFeeNotApplicable : boolean
 }
@@ -1174,9 +1174,9 @@ class TicketsPricingType {
     +Ticket : TicketPricingType[]
 }
 class UnflownPriceType {
+    +Amount : decimal
     +CurrencyCode : string
     +DecimalPlaces : nonNegativeInteger
-    +Amount : decimal
 }
 class VCCInformationType {
     +FareComponentBreakdown : FareComponentBreakdownType[]
@@ -1215,6 +1215,7 @@ class Country {
     +Code : string
 }
 class WarningType {
+    +Type : string
     +ShortText : string
     +Code : string
     +DocURL : anyURI
@@ -1222,7 +1223,6 @@ class WarningType {
     +Tag : string
     +RecordID : string
     +MessageClass : MessageClassType
-    +Type : string
 }
 WarningType *- FreeTextType
 class WarningsType {

@@ -6,8 +6,8 @@ dataclass:
 	xsdata xsd/sabre/BargainFinderMaxRS_v1-9-7.xsd --package samples.sabre.output
 
 plantuml:
-	xsdata xsd/travelport/air_v48_0/AirReqRsp.xsd --package samples.travelport.diagram.air_v48_0 --format plantuml
-	xsdata xsd/amadeus/Fare_MasterPricerTravelBoardSearch_15_3_1A.xsd --package samples.amadeus.diagram --format plantuml
-	xsdata xsd/amadeus/Fare_MasterPricerTravelBoardSearchReply_15_3_1A.xsd --package samples.amadeus.diagram --format plantuml
-	xsdata xsd/sabre/BargainFinderMaxRQ_v1-9-7.xsd --package samples.sabre.diagram --format plantuml
-	xsdata xsd/sabre/BargainFinderMaxRS_v1-9-7.xsd --package samples.sabre.diagram --format plantuml
+	xsdata xsd/travelport/air_v48_0/AirReqRsp.xsd --package samples.travelport.diagram.air_v48_0 --output plantuml
+	xsdata xsd/amadeus/Fare_MasterPricerTravelBoardSearch_15_3_1A.xsd --package samples.amadeus.diagram --output plantuml
+	xsdata xsd/amadeus/Fare_MasterPricerTravelBoardSearchReply_15_3_1A.xsd --package samples.amadeus.diagram --output plantuml
+	xsdata xsd/sabre/BargainFinderMaxRQ_v1-9-7.xsd --package samples.sabre.diagram --output plantuml
+	xsdata xsd/sabre/BargainFinderMaxRS_v1-9-7.xsd --package samples.sabre.diagram --output plantuml

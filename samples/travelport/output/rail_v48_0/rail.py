@@ -974,11 +974,11 @@ class RailFareComponent:
 class RailFareId:
     """
     :ivar value:
+    :ivar key:
+    :ivar category:
     :ivar el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar key:
-    :ivar category:
     """
     class Meta:
         name = "RailFareID"
@@ -989,20 +989,6 @@ class RailFareId:
         metadata=dict(
             name="value",
             type="Extension"
-        )
-    )
-    el_stat: Optional[TypeElementStatus] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
         )
     )
     key: Optional[str] = field(
@@ -1020,29 +1006,6 @@ class RailFareId:
             type="Attribute"
         )
     )
-
-
-@dataclass
-class RailFareNote:
-    """A simple textual fare note. Used within several other objects.
-
-    :ivar value:
-    :ivar el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar key:
-    :ivar note_name:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/rail_v48_0"
-
-    value: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
-    )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
         metadata=dict(
@@ -1055,6 +1018,29 @@ class RailFareNote:
         metadata=dict(
             name="KeyOverride",
             type="Attribute"
+        )
+    )
+
+
+@dataclass
+class RailFareNote:
+    """A simple textual fare note. Used within several other objects.
+
+    :ivar value:
+    :ivar key:
+    :ivar note_name:
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/rail_v48_0"
+
+    value: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="value",
+            type="Extension"
         )
     )
     key: Optional[str] = field(
@@ -1071,6 +1057,20 @@ class RailFareNote:
             name="NoteName",
             type="Attribute",
             required=True
+        )
+    )
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
         )
     )
 
@@ -1444,9 +1444,6 @@ class Coach:
 class RailFare:
     """Information about this fare component.
 
-    :ivar el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar rail_fare_note_ref: Key reference to RailFareNote present in RailFareNotList
     :ivar rail_fare_id:
     :ivar rail_fare_idref:
@@ -1472,24 +1469,13 @@ class RailFare:
     :ivar journey_direction: The direction of the Journey (Outward or Return) associated with the Rail fare.
     :ivar rail_loc_origin: RCH specific origin code (a.k.a UCodes) which uniquely identifies a train station.
     :ivar rail_loc_destination: RCH specific destination code (a.k.a UCodes) which uniquely identifies a train station.
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    el_stat: Optional[TypeElementStatus] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
     rail_fare_note_ref: List[RailFareNoteRef] = field(
         default_factory=list,
         metadata=dict(
@@ -1695,6 +1681,20 @@ class RailFare:
             min_length=3.0,
             max_length=8.0,
             white_space="collapse"
+        )
+    )
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
         )
     )
 
@@ -1988,21 +1988,6 @@ class RailJourney:
     :ivar journey_remark:
     :ivar host_token:
     :ivar key:
-    :ivar provider_code:
-    :ivar supplier_code:
-    :ivar total_price: The total price for this entity including base price and all taxes.
-    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
-    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
-    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
-    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
-    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
-    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
-    :ivar services: The total cost for all optional services.
-    :ivar approximate_taxes: The Converted tax amount in Default Currency.
-    :ivar approximate_fees: The Converted fee amount in Default Currency.
-    :ivar el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar origin: The IATA location code for this origination of this entity.
     :ivar destination: The IATA location code for this destination of this entity.
     :ivar departure_time: The date and time at which this entity departs. This does not include time zone information since it can be derived from the origin location.
@@ -2014,11 +1999,26 @@ class RailJourney:
     :ivar route_description: The description of the route.
     :ivar journey_direction: The direction of the Journey (Outward or Return).
     :ivar journey_duration: The duration of the entire Journey in minutes
+    :ivar total_price: The total price for this entity including base price and all taxes.
+    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
+    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
+    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
+    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
+    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
+    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
+    :ivar services: The total cost for all optional services.
+    :ivar approximate_taxes: The Converted tax amount in Default Currency.
+    :ivar approximate_fees: The Converted fee amount in Default Currency.
+    :ivar provider_code:
+    :ivar supplier_code:
     :ivar status: Status of this Journey.
     :ivar provider_reservation_info_ref: Provider reservation reference key.
     :ivar passive_provider_reservation_info_ref: Passive provider reservation reference key.
     :ivar travel_order: To identify the appropriate travel sequence for Air/Car/Hotel/Rail segments/reservations/Journeys based on travel dates. This ordering is applicable across the UR not provider or traveler specific
     :ivar route_reference: RouteReference is required in seat assignment purpose
+    :ivar el_stat: This attribute is used to show the action results of an element.
+                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
+    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     :ivar operation: "Type of exchange. Add - Add new Journey. Update - Modify existing Journey. Delete - Remove existing Journey"
     """
     class Meta:
@@ -2067,108 +2067,6 @@ class RailJourney:
             name="Key",
             type="Attribute",
             required=True
-        )
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2.0,
-            max_length=5.0
-        )
-    )
-    supplier_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            min_length=1.0,
-            max_length=5.0
-        )
-    )
-    total_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TotalPrice",
-            type="Attribute"
-        )
-    )
-    base_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BasePrice",
-            type="Attribute"
-        )
-    )
-    approximate_total_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApproximateTotalPrice",
-            type="Attribute"
-        )
-    )
-    approximate_base_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApproximateBasePrice",
-            type="Attribute"
-        )
-    )
-    equivalent_base_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="EquivalentBasePrice",
-            type="Attribute"
-        )
-    )
-    taxes: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Taxes",
-            type="Attribute"
-        )
-    )
-    fees: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Fees",
-            type="Attribute"
-        )
-    )
-    services: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Services",
-            type="Attribute"
-        )
-    )
-    approximate_taxes: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApproximateTaxes",
-            type="Attribute"
-        )
-    )
-    approximate_fees: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApproximateFees",
-            type="Attribute"
-        )
-    )
-    el_stat: Optional[TypeElementStatus] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
         )
     )
     origin: Optional[str] = field(
@@ -2260,6 +2158,94 @@ class RailJourney:
             type="Attribute"
         )
     )
+    total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TotalPrice",
+            type="Attribute"
+        )
+    )
+    base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BasePrice",
+            type="Attribute"
+        )
+    )
+    approximate_total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTotalPrice",
+            type="Attribute"
+        )
+    )
+    approximate_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateBasePrice",
+            type="Attribute"
+        )
+    )
+    equivalent_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EquivalentBasePrice",
+            type="Attribute"
+        )
+    )
+    taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Taxes",
+            type="Attribute"
+        )
+    )
+    fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Fees",
+            type="Attribute"
+        )
+    )
+    services: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Services",
+            type="Attribute"
+        )
+    )
+    approximate_taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTaxes",
+            type="Attribute"
+        )
+    )
+    approximate_fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateFees",
+            type="Attribute"
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
     status: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2297,6 +2283,20 @@ class RailJourney:
             max_length=255.0
         )
     )
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
+        )
+    )
     operation: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2310,6 +2310,14 @@ class RailJourney:
 class RailPricingInfo:
     """Per traveler type pricing breakdown.
 
+    :ivar rail_fare:
+    :ivar rail_fare_ref:
+    :ivar rail_booking_info:
+    :ivar passenger_type:
+    :ivar booking_traveler_ref:
+    :ivar key:
+    :ivar exchange_amount: The amount to pay to cover the exchange of the fare (includes penalties).
+    :ivar approximate_exchange_amount:
     :ivar total_price: The total price for this entity including base price and all taxes.
     :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
     :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
@@ -2323,18 +2331,78 @@ class RailPricingInfo:
     :ivar el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar rail_fare:
-    :ivar rail_fare_ref:
-    :ivar rail_booking_info:
-    :ivar passenger_type:
-    :ivar booking_traveler_ref:
-    :ivar key:
-    :ivar exchange_amount: The amount to pay to cover the exchange of the fare (includes penalties).
-    :ivar approximate_exchange_amount:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
+    rail_fare: List[RailFare] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailFare",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    rail_fare_ref: List[RailFareRef] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailFareRef",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    rail_booking_info: List[RailBookingInfo] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailBookingInfo",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    passenger_type: List[TypePassengerType] = field(
+        default_factory=list,
+        metadata=dict(
+            name="PassengerType",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    booking_traveler_ref: List[BookingTravelerRef] = field(
+        default_factory=list,
+        metadata=dict(
+            name="BookingTravelerRef",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute",
+            required=True
+        )
+    )
+    exchange_amount: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ExchangeAmount",
+            type="Attribute"
+        )
+    )
+    approximate_exchange_amount: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateExchangeAmount",
+            type="Attribute"
+        )
+    )
     total_price: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -2416,74 +2484,6 @@ class RailPricingInfo:
         default=None,
         metadata=dict(
             name="KeyOverride",
-            type="Attribute"
-        )
-    )
-    rail_fare: List[RailFare] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailFare",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    rail_fare_ref: List[RailFareRef] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailFareRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    rail_booking_info: List[RailBookingInfo] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailBookingInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    passenger_type: List[TypePassengerType] = field(
-        default_factory=list,
-        metadata=dict(
-            name="PassengerType",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    booking_traveler_ref: List[BookingTravelerRef] = field(
-        default_factory=list,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
-    )
-    exchange_amount: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ExchangeAmount",
-            type="Attribute"
-        )
-    )
-    approximate_exchange_amount: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApproximateExchangeAmount",
             type="Attribute"
         )
     )

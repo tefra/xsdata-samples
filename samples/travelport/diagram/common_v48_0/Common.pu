@@ -27,8 +27,6 @@ class AccountInformation {
     +AccountName : string
 }
 class AccountingRemark {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +RemarkData : string
     +BookingTravelerRef : string[]
     +Key : string
@@ -37,12 +35,10 @@ class AccountingRemark {
     +ProviderReservationInfoRef : string
     +ProviderCode : string
     +UseProviderNativeMode : boolean
-}
-class ActionStatus {
-    +ProviderCode : string
-    +SupplierCode : string
     +ElStat : typeElementStatus
     +KeyOverride : boolean
+}
+class ActionStatus {
     +Remark : Remark
     +Type : Type
     +TicketDate : string
@@ -50,8 +46,12 @@ class ActionStatus {
     +ProviderReservationInfoRef : string
     +QueueCategory : string
     +AirportCode : string
+    +ProviderCode : string
+    +SupplierCode : string
     +PseudoCityCode : string
     +AccountCode : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 ActionStatus +-- Type
 class Type {
@@ -99,13 +99,13 @@ class AgencySellInfo {
     +CityCode : string
 }
 class AgentAction {
-    +AgentOverride : string
     +ActionType : ActionType
     +AgentCode : string
     +BranchCode : string
     +AgencyCode : string
     +AgentSine : string
     +EventTime : dateTime
+    +AgentOverride : string
 }
 AgentAction +-- ActionType
 class ActionType {
@@ -179,8 +179,6 @@ class Airport {
 }
 Airport *- Location
 class AppliedProfile {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +Key : string
     +TravelerID : string
     +TravelerName : string
@@ -188,6 +186,8 @@ class AppliedProfile {
     +AccountName : string
     +ImmediateParentID : string
     +ImmediateParentName : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class Auxdata {
     +Entry : Entry[]
@@ -237,22 +237,6 @@ class Type {
 }
 Type *- string
 class BookingTraveler {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
-    +Key : string
-    +TravelerType : string
-    +Age : integer
-    +VIP : boolean
-    +DOB : date
-    +Gender : string
-    +Nationality : string
-    +EmergencyInfo : string
-    +Address : typeStructuredAddress[]
-    +DriversLicense : DriversLicense[]
-    +AppliedProfile : AppliedProfile[]
-    +CustomizedNameData : CustomizedNameData[]
-    +TravelComplianceData : TravelComplianceData[]
-    +TravelInfo : TravelInfo
     +BookingTravelerName : BookingTravelerName
     +DeliveryInfo : DeliveryInfo[]
     +PhoneNumber : PhoneNumber[]
@@ -263,6 +247,22 @@ class BookingTraveler {
     +NameRemark : NameRemark[]
     +AirSeatAssignment : AirSeatAssignment[]
     +RailSeatAssignment : RailSeatAssignment[]
+    +EmergencyInfo : string
+    +Address : typeStructuredAddress[]
+    +DriversLicense : DriversLicense[]
+    +AppliedProfile : AppliedProfile[]
+    +CustomizedNameData : CustomizedNameData[]
+    +TravelComplianceData : TravelComplianceData[]
+    +TravelInfo : TravelInfo
+    +Key : string
+    +TravelerType : string
+    +Age : integer
+    +VIP : boolean
+    +DOB : date
+    +Gender : string
+    +Nationality : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
     +NameNumber : string
 }
 class BookingTravelerInfo {
@@ -352,13 +352,13 @@ class Commission {
     +CommissionOverride : boolean
 }
 class CommissionRemark {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +ProviderReservationLevel : ProviderReservationLevel
     +PassengerTypeLevel : PassengerTypeLevel[]
     +Key : string
     +ProviderReservationInfoRef : string
     +ProviderCode : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 CommissionRemark +-- ProviderReservationLevel
 class ProviderReservationLevel {
@@ -368,21 +368,21 @@ class ProviderReservationLevel {
 }
 CommissionRemark +-- PassengerTypeLevel
 class PassengerTypeLevel {
+    +TravelerType : string
     +Amount : string
     +Percentage : string
     +CommissionCap : string
-    +TravelerType : string
 }
 class ConnectionPoint {
 }
 ConnectionPoint *- typeLocation
 class ConsolidatorRemark {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +PseudoCityCode : PseudoCityCode[]
     +Key : string
     +ProviderReservationInfoRef : string
     +ProviderCode : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class ContinuityCheckOverride {
     +value : string
@@ -430,9 +430,9 @@ class CustomizedNameData {
     +ProviderReservationInfoRef : string
 }
 class DebitCard {
+    +IssueNumber : string
     +ProfileID : string
     +Key : string
-    +IssueNumber : string
 }
 DebitCard *- typePaymentCard
 class DeliveryInfo {
@@ -453,12 +453,12 @@ class DirectPayment {
     +Text : string
 }
 class DiscountCard {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +Key : string
     +Code : string
     +Description : string
     +Number : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class DiscountCardRef {
     +Key : string
@@ -475,22 +475,22 @@ class Units {
 }
 Units *- string
 class DriversLicense {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +Key : string
     +LicenseNumber : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class DriversLicenseRef {
     +Key : string
 }
 class Email {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +ProviderReservationInfoRef : ProviderReservationInfoRef[]
     +Key : string
     +Type : string
     +Comment : string
     +EmailID : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class EmailNotification {
     +EmailRef : string[]
@@ -528,8 +528,6 @@ class FormOfPayment {
     +CreditCard : CreditCard
     +DebitCard : DebitCard
     +EnettVan : EnettVan
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +Certificate : Certificate
     +TicketNumber : TicketNumber
     +Check : Check
@@ -557,6 +555,8 @@ class FormOfPayment {
     +Reusable : boolean
     +ProfileID : string
     +ProfileKey : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class FormOfPaymentRef {
     +Key : string
@@ -574,10 +574,6 @@ class TextFormat {
 }
 TextFormat *- NMTOKEN
 class GeneralRemark {
-    +ProviderCode : string
-    +SupplierCode : string
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +RemarkData : string
     +BookingTravelerRef : string[]
     +Key : string
@@ -585,13 +581,15 @@ class GeneralRemark {
     +TypeInGds : string
     +SupplierType : typeProduct
     +ProviderReservationInfoRef : string
+    +ProviderCode : string
+    +SupplierCode : string
     +Direction : typeDirection
     +CreateDate : dateTime
     +UseProviderNativeMode : boolean
-}
-class Group {
     +ElStat : typeElementStatus
     +KeyOverride : boolean
+}
+class Group {
     +Name : Name
     +DeliveryInfo : DeliveryInfo
     +PhoneNumber : PhoneNumber[]
@@ -601,6 +599,8 @@ class Group {
     +Key : string
     +TravelerType : string
     +GroupSize : positiveInteger
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 Group +-- Name
 class Name {
@@ -615,8 +615,6 @@ class BookingTravelerRef {
     +Key : string
 }
 class Guarantee {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +CreditCard : CreditCard
     +OtherGuaranteeInfo : OtherGuaranteeInfo
     +Type : string
@@ -624,16 +622,18 @@ class Guarantee {
     +ReuseFOP : string
     +ExternalReference : string
     +Reusable : boolean
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class GuaranteeType {
     +value : string
 }
 class HostToken {
     +value : string
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +Host : string
     +Key : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class HostTokenList {
     +HostToken : HostToken[]
@@ -667,10 +667,10 @@ class Keyword {
 }
 Keyword *- typeKeyword
 class LinkedUniversalRecord {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +LocatorCode : string
     +Key : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class Location {
 }
@@ -682,12 +682,12 @@ class LocatorCode {
 }
 class LoyaltyCard {
     +ProviderReservationSpecificInfo : typeProviderReservationSpecificInfo[]
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +Key : string
     +SupplierCode : string
     +AllianceLevel : string
     +MembershipProgram : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
     +CardNumber : string
     +Status : string
     +MembershipStatus : string
@@ -701,12 +701,12 @@ class LoyaltyCardRef {
     +Key : string
 }
 class LoyaltyProgram {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +Key : string
     +SupplierCode : string
     +AllianceLevel : string
     +MembershipProgram : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
     +Level : string
 }
 class MCO {
@@ -829,26 +829,26 @@ class NameOverride {
     +Age : integer
 }
 class NameRemark {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +RemarkData : string
     +ProviderReservationInfoRef : ProviderReservationInfoRef[]
     +Key : string
     +Category : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class NextResultReference {
     +value : string
     +ProviderCode : string
 }
 class OSI {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +Key : string
     +Carrier : string
     +Code : string
     +Text : string
     +ProviderReservationInfoRef : string
     +ProviderCode : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class OperatedBy {
     +value : string
@@ -901,8 +901,6 @@ class PassiveInfo {
     +SupplierLocatorCode : string
 }
 class Payment {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +Key : string
     +Type : Type
     +FormOfPaymentRef : string
@@ -911,6 +909,8 @@ class Payment {
     +AmountType : string
     +ApproximateAmount : string
     +Status : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 Payment +-- Type
 class Type {
@@ -958,8 +958,6 @@ class PersonalGeography {
     +CityCode : string
 }
 class PhoneNumber {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +ProviderReservationInfoRef : ProviderReservationInfoRef[]
     +Key : string
     +Type : Type
@@ -969,6 +967,8 @@ class PhoneNumber {
     +Number : string
     +Extension : string
     +Text : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 PhoneNumber +-- Type
 class Type {
@@ -1070,14 +1070,14 @@ class RailLocation {
 }
 RailLocation *- Location
 class RailSeatAssignment {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +Characteristic : Characteristic[]
     +Key : string
     +Status : string
     +Seat : string
     +RailSegmentRef : string
     +CoachNumber : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class ReferencePoint {
     +value : string
@@ -1135,10 +1135,10 @@ class ReservationName {
 }
 class ResponseMessage {
     +value : string
-    +ProviderCode : string
-    +SupplierCode : string
     +Code : integer
     +Type : Type
+    +ProviderCode : string
+    +SupplierCode : string
 }
 ResponseMessage +-- Type
 class Type {
@@ -1152,8 +1152,6 @@ class Restriction {
     +Reason : string
 }
 class ReviewBooking {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +Key : string
     +Queue : integer
     +QueueCategory : string
@@ -1162,6 +1160,8 @@ class ReviewBooking {
     +ProviderCode : string
     +ProviderReservationInfoRef : string
     +Remarks : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class RoleInfo {
     +Id : string
@@ -1237,14 +1237,14 @@ class SeatAttributes {
     +SeatAttribute : SeatAttribute[]
 }
 class Segment {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +SegmentRemark : SegmentRemark[]
     +Key : string
     +Status : string
     +Passive : boolean
     +TravelOrder : integer
     +ProviderSegmentOrder : integer
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class SegmentRemark {
     +value : string
@@ -1374,10 +1374,10 @@ class SimpleName {
     +value : string
 }
 class SpecialEquipment {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +Key : string
     +Type : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class State {
     +value : string
@@ -1404,14 +1404,14 @@ class TerminalSessionInfo {
     +value : string
 }
 class ThirdPartyInformation {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +SegmentRef : typeGeneralReference[]
     +ThirdPartyCode : string
     +ThirdPartyLocatorCode : string
     +ThirdPartyName : string
     +ProviderReservationInfoRef : string
     +Key : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class TicketNumber {
     +value : string
@@ -1445,8 +1445,6 @@ class Tier {
 }
 Tier *- int
 class TravelComplianceData {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +PolicyCompliance : PolicyCompliance[]
     +ContractCompliance : ContractCompliance[]
     +PreferredSupplier : PreferredSupplier[]
@@ -1455,6 +1453,8 @@ class TravelComplianceData {
     +PassiveSegmentRef : string
     +RailSegmentRef : string
     +ReservationLocatorRef : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 TravelComplianceData +-- PolicyCompliance
 class PolicyCompliance {
@@ -1504,9 +1504,9 @@ enum URTicketStatus {
     Not Applicable = Not Applicable
 }
 class UnassociatedRemark {
+    +Key : string
     +ElStat : typeElementStatus
     +KeyOverride : boolean
-    +Key : string
 }
 UnassociatedRemark *- typeRemarkWithTravelerRef
 class UnitedNations {
@@ -1517,10 +1517,10 @@ class VendorLocation {
 VendorLocation *- typeVendorLocation
 class XMLRemark {
     +value : string
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +Key : string
     +Category : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 enum typeAdjustmentTarget {
     Base = Base
@@ -1554,9 +1554,9 @@ enum typeAgencyProfileLevel {
 class typeAgentInfo {
 }
 class typeAssociatedRemark {
+    +Key : string
     +ElStat : typeElementStatus
     +KeyOverride : boolean
-    +Key : string
 }
 typeAssociatedRemark *- typeRemarkWithTravelerRef
 class typeAssociatedRemarkWithSegmentRef {
@@ -1696,10 +1696,6 @@ enum typeFarePull {
     SameAsOriginDestination = SameAsOriginDestination
 }
 class typeFeeInfo {
-    +ProviderCode : string
-    +SupplierCode : string
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +TaxInfoRef : TaxInfoRef[]
     +IncludedInBase : IncludedInBase
     +BaseAmount : string
@@ -1713,6 +1709,10 @@ class typeFeeInfo {
     +BookingTravelerRef : string
     +PassengerTypeCode : string
     +Text : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
+    +ProviderCode : string
+    +SupplierCode : string
 }
 typeFeeInfo +-- TaxInfoRef
 class TaxInfoRef {
@@ -2136,8 +2136,6 @@ enum typeStatus {
     IssueLater = IssueLater
 }
 class typeStructuredAddress {
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +AddressName : string
     +Street : string[]
     +City : string
@@ -2146,6 +2144,8 @@ class typeStructuredAddress {
     +Country : string
     +ProviderReservationInfoRef : ProviderReservationInfoRef[]
     +Key : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 class typeSubKey {
     +Text : string[]

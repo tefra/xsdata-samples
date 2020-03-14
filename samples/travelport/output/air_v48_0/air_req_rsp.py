@@ -1618,45 +1618,19 @@ class AirRetrieveDocumentReq(BaseReq):
     standard carriers. TCRs will be returned for Ticketless carriers. If the
     locator is send on a standard carrier, all ETRs will be retrieved.
 
-    :ivar universal_record_locator_code: Contains the Locator Code of the Universal Record that houses this reservation.
-    :ivar provider_code: Contains the Provider Code of the provider that houses this reservation.
-    :ivar provider_locator_code: Contains the Locator Code of the Provider Reservation that houses this reservation.
     :ivar air_reservation_locator_code: Provider: 1G,1V,1P,1J.
     :ivar ticket_number: Provider: 1G,1V,1P,1J.
     :ivar tcrnumber: Provider: 1G,1V,1P,1J-The identifying number for a Ticketless Air Reservation.
     :ivar return_restrictions: Will return a response which includes a set of restrictions associated with the document.
     :ivar return_pricing: Provider: 1G,1V,1P,1J-Will return a response which includes the pricing associated with the ETR.
     :ivar retrieve_mco: When true, returns MCO Information. The default value is false.
+    :ivar universal_record_locator_code: Contains the Locator Code of the Universal Record that houses this reservation.
+    :ivar provider_code: Contains the Provider Code of the provider that houses this reservation.
+    :ivar provider_locator_code: Contains the Locator Code of the Provider Reservation that houses this reservation.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    universal_record_locator_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="UniversalRecordLocatorCode",
-            type="Attribute",
-            min_length=5.0,
-            max_length=8.0
-        )
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2.0,
-            max_length=5.0
-        )
-    )
-    provider_locator_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderLocatorCode",
-            type="Attribute",
-            max_length=15.0
-        )
-    )
     air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
         default=None,
         metadata=dict(
@@ -1702,6 +1676,32 @@ class AirRetrieveDocumentReq(BaseReq):
         metadata=dict(
             name="RetrieveMCO",
             type="Attribute"
+        )
+    )
+    universal_record_locator_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="UniversalRecordLocatorCode",
+            type="Attribute",
+            min_length=5.0,
+            max_length=8.0
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    provider_locator_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderLocatorCode",
+            type="Attribute",
+            max_length=15.0
         )
     )
 

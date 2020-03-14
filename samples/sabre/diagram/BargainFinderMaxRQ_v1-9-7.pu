@@ -9,9 +9,9 @@ class AddressType {
     +County : string
     +StateProv : StateProvType
     +CountryName : CountryNameType
+    +FormattedInd : boolean
     +ShareSynchInd : ShareSynchInd
     +ShareMarketInd : ShareMarketInd
-    +FormattedInd : boolean
     +Type : string
 }
 AddressType +-- ShareSynchInd
@@ -58,12 +58,6 @@ class FareRestrictPref {
 FareRestrictPref *- FareRestrictPrefType
 AirSearchPrefsType +-- TPA_Extensions
 class TPA_Extensions {
-    +ExemptAllTaxes : ExemptAllTaxes
-    +ExemptAllTaxesAndFees : ExemptAllTaxesAndFees
-    +Taxes : Taxes
-    +ExemptTax : TaxCodeType[]
-    +OnlineIndicator : OnlineIndicator
-    +InterlineIndicator : InterlineIndicator
     +DepartureWindow : string
     +ArrivalWindow : string
     +ExcludeVendorPref : ExcludeVendorPref[]
@@ -72,6 +66,8 @@ class TPA_Extensions {
     +NumTrips : NumTripsType
     +AltCitiesCombinations : AltCitiesCombinationsType
     +NumTripsWithRouting : NumTripsWithRouting
+    +OnlineIndicator : OnlineIndicator
+    +InterlineIndicator : InterlineIndicator
     +TripType : TripType
     +MaxPrice : MaxPrice
     +ContentType : ContentType
@@ -119,6 +115,10 @@ class TPA_Extensions {
     +numOfMustPrice2PlusStpSol : numOfMustPrice2PlusStpSol
     +ItineraryNumberThreshold : ItineraryNumberThreshold
     +XOFares : XOFaresType
+    +ExemptAllTaxes : ExemptAllTaxes
+    +ExemptAllTaxesAndFees : ExemptAllTaxesAndFees
+    +Taxes : Taxes
+    +ExemptTax : TaxCodeType[]
     +FlightStopsAsConnections : FlightStopsAsConnectionsType
     +TicketingSumOfLocals : TicketingSumOfLocals
     +MultiAirportCodes : MultiAirportCodes
@@ -440,14 +440,6 @@ class CountryPref {
     +Code : string
     +PreferLevel : string
 }
-TPA_Extensions +-- OnlineIndicator
-class OnlineIndicator {
-    +Ind : boolean
-}
-TPA_Extensions +-- InterlineIndicator
-class InterlineIndicator {
-    +Ind : boolean
-}
 TPA_Extensions +-- ExemptAllTaxes
 class ExemptAllTaxes {
     +Value : boolean
@@ -459,6 +451,14 @@ class ExemptAllTaxesAndFees {
 TPA_Extensions +-- Taxes
 class Taxes {
     +Tax : TaxCodeAmountType[]
+}
+TPA_Extensions +-- OnlineIndicator
+class OnlineIndicator {
+    +Ind : boolean
+}
+TPA_Extensions +-- InterlineIndicator
+class InterlineIndicator {
+    +Ind : boolean
 }
 AirSearchPrefsType +-- AncillaryFees
 class AncillaryFees {
@@ -497,9 +497,9 @@ class AirTravelerType {
     +PassengerTypeQuantity : PassengerTypeQuantityType
     +TravelerRefNumber : TravelerRefNumberType
     +FlightSegmentRPHs : FlightSegmentRPHs
+    +Gender : Gender
     +ShareSynchInd : ShareSynchInd
     +ShareMarketInd : ShareMarketInd
-    +Gender : Gender
     +BirthDate : date
     +CurrencyCode : string
     +PassengerTypeCode : string
@@ -513,13 +513,6 @@ AirTravelerType +-- FlightSegmentRPHs
 class FlightSegmentRPHs {
     +FlightSegmentRPH : string[]
 }
-AirTravelerType +-- Gender
-class Gender {
-    +Male : string
-    +Female : string
-    +Unknown : string
-}
-Gender *- NMTOKEN
 AirTravelerType +-- ShareSynchInd
 class ShareSynchInd {
     +Yes : string
@@ -534,6 +527,13 @@ class ShareMarketInd {
     +Inherit : string
 }
 ShareMarketInd *- NMTOKEN
+AirTravelerType +-- Gender
+class Gender {
+    +Male : string
+    +Female : string
+    +Unknown : string
+}
+Gender *- NMTOKEN
 class AirlineType {
     +Operating : string
     +Marketing : string
@@ -576,8 +576,8 @@ class BookingChannelType {
     +Primary : boolean
 }
 class BookingClassPrefType {
-    +PreferLevel : PreferLevelType
     +ResBookDesigCode : string
+    +PreferLevel : PreferLevelType
 }
 class BrandType {
     +Code : string
@@ -638,18 +638,24 @@ class CountryNameType {
     +Code : string
 }
 class CustLoyaltyType {
-    +SingleVendorInd : SingleVendorInd
-    +SignupDate : date
     +ShareSynchInd : ShareSynchInd
     +ShareMarketInd : ShareMarketInd
     +ProgramID : string
     +MembershipID : string
     +TravelSector : string
     +LoyalLevel : string
+    +SingleVendorInd : SingleVendorInd
+    +SignupDate : date
     +EffectiveDate : date
     +ExpireDate : date
     +RPH : string
 }
+CustLoyaltyType +-- SingleVendorInd
+class SingleVendorInd {
+    +SingleVndr : string
+    +Alliance : string
+}
+SingleVendorInd *- NMTOKEN
 CustLoyaltyType +-- ShareSynchInd
 class ShareSynchInd {
     +Yes : string
@@ -664,12 +670,6 @@ class ShareMarketInd {
     +Inherit : string
 }
 ShareMarketInd *- NMTOKEN
-CustLoyaltyType +-- SingleVendorInd
-class SingleVendorInd {
-    +SingleVndr : string
-    +Alliance : string
-}
-SingleVendorInd *- NMTOKEN
 class DateRangeType {
     +OutboundDate : date
     +DateRange : short
@@ -753,18 +753,18 @@ class StopsNumber {
     +Weight : integer
 }
 class DocumentType {
-    +ShareSynchInd : ShareSynchInd
-    +ShareMarketInd : ShareMarketInd
-    +Gender : Gender
-    +EffectiveDate : date
-    +ExpireDate : date
-    +BirthDate : date
     +DocHolderName : string
     +DocLimitations : string[]
+    +ShareSynchInd : ShareSynchInd
+    +ShareMarketInd : ShareMarketInd
     +DocIssueAuthority : string
     +DocIssueLocation : string
     +DocID : string
     +DocType : string
+    +Gender : Gender
+    +BirthDate : date
+    +EffectiveDate : date
+    +ExpireDate : date
 }
 DocumentType +-- Gender
 class Gender {
@@ -826,13 +826,7 @@ class ExchangeFareType {
     +ROE : double
 }
 class ExchangeOriginDestinationFlightType {
-    +OriginLocation : RequestLocationType
-    +DestinationLocation : RequestLocationType
-    +Airline : AirlineType
-    +SideTrip : SideTripType
-    +Reservation : ReservationType
-    +MileageDisplay : MileageDisplayType[]
-    +BookingDateTime : string
+    +ClassOfService : string
     +Number : short
     +DepartureDateTime : string
     +ArrivalDateTime : string
@@ -841,7 +835,13 @@ class ExchangeOriginDestinationFlightType {
     +Flown : boolean
     +Fare : Fare
     +PlusUp : PlusUpType[]
-    +ClassOfService : string
+    +OriginLocation : RequestLocationType
+    +DestinationLocation : RequestLocationType
+    +Airline : AirlineType
+    +SideTrip : SideTripType
+    +Reservation : ReservationType
+    +MileageDisplay : MileageDisplayType[]
+    +BookingDateTime : string
 }
 ExchangeOriginDestinationFlightType +-- Fare
 class Fare {
@@ -855,6 +855,7 @@ class Adjustment {
     +Group : short
 }
 class ExchangeOriginDestinationInformationType {
+    +Flight : ExchangeOriginDestinationFlightType[]
     +DateFlexibility : DateFlexibility[]
     +SisterDestinationLocation : RequestLocationType[]
     +SisterDestinationMileage : SisterDestinationMileage
@@ -867,7 +868,6 @@ class ExchangeOriginDestinationInformationType {
     +CabinPref : CabinPrefType
     +ConnectionTime : ConnectionTime
     +TotalTravelTime : TotalTravelTime
-    +Flight : ExchangeOriginDestinationFlightType[]
 }
 ExchangeOriginDestinationInformationType *- OriginDestinationInformationType
 ExchangeOriginDestinationInformationType +-- DateFlexibility
@@ -946,6 +946,13 @@ class RequestType {
 }
 RequestType *- string
 class ExchangeSourceType {
+    +BookingChannel : SourceBookingChannelType
+    +AgentCity : string
+    +MainTravelAgencyPCC : string
+    +Carrier : string
+    +HostCarrier : string
+    +ETicketCapable : boolean
+    +CoHostID : short
     +AgentSine : string
     +PseudoCityCode : string
     +ISOCountry : string
@@ -968,13 +975,6 @@ class ExchangeSourceType {
     +VendorCRSCode : string
     +AgentDuty : string
     +AbacusUser : boolean
-    +AgentCity : string
-    +MainTravelAgencyPCC : string
-    +Carrier : string
-    +HostCarrier : string
-    +ETicketCapable : boolean
-    +CoHostID : short
-    +BookingChannel : SourceBookingChannelType
 }
 class ExchangeTPA_ExtensionsType {
     +AwardShopping : AwardShoppingType
@@ -999,11 +999,6 @@ class Taxes {
     +Tax : TaxCodeAmountType[]
 }
 class ExchangeType {
-    +OriginalTktIssueDateTime : string
-    +ExchangedTktIssueDateTime : string
-    +PreviousExchangeDateTime : string
-    +NumberOfTaxBoxes : short
-    +BypassAdvancePurchaseOption : string
     +Fare : ExchangeFareType
     +POS : ExchangePOSType
     +OriginDestinationInformation : ExchangeOriginDestinationInformationType
@@ -1012,28 +1007,33 @@ class ExchangeType {
     +TravelPreferences : ExchangeAirSearchPrefsType
     +TravelerInfoSummary : TravelerInfoSummaryType
     +TPA_Extensions : ExchangeTPA_ExtensionsType
+    +OriginalTktIssueDateTime : string
+    +ExchangedTktIssueDateTime : string
+    +PreviousExchangeDateTime : string
+    +NumberOfTaxBoxes : short
+    +BypassAdvancePurchaseOption : string
 }
 class FareDetailsType {
+    +ComponentNo : short
+    +BasisCode : string
+    +Amount : decimal
     +Vendor : string
     +SourceVendor : string
     +Tariff : string
     +RuleNumber : string
     +BrandID : token
     +ProgramID : int
-    +ComponentNo : short
-    +BasisCode : string
-    +Amount : decimal
 }
 class FareOptionalDetailsType {
+    +ComponentNo : short
+    +BasisCode : string
+    +Amount : decimal
     +Vendor : string
     +SourceVendor : string
     +Tariff : string
     +RuleNumber : string
     +BrandID : token
     +ProgramID : int
-    +ComponentNo : short
-    +BasisCode : string
-    +Amount : decimal
 }
 class FareRestrictPrefType {
     +PreferLevel : PreferLevelType
@@ -1166,8 +1166,6 @@ class OTA_AirLowFareSearchRQ {
     +TravelPreferences : AirSearchPrefsType
     +TravelerInfoSummary : TravelerInfoSummaryType
     +TPA_Extensions : TPA_Extensions
-    +PrimaryLangID : language
-    +AltLangID : language
     +EchoToken : string, string
     +TimeStamp : string
     +Target : Target
@@ -1175,6 +1173,8 @@ class OTA_AirLowFareSearchRQ {
     +TransactionIdentifier : string
     +SequenceNmbr : positiveInteger, boolean
     +TransactionStatusCode : TransactionStatusCode
+    +AltLangID : language
+    +PrimaryLangID : language
     +MaxResponses : positiveInteger, integer
     +DirectFlightsOnly : boolean
     +AvailableFlightsOnly : boolean
@@ -1557,6 +1557,9 @@ enum PreferLevelType {
     Preferred = Preferred
 }
 class PriceRequestInformationType {
+    +NegotiatedFareCode : NegotiatedFareCode[]
+    +AccountCode : AccountCode[]
+    +TPA_Extensions : TPA_Extensions
     +FareQualifier : string, boolean
     +NegotiatedFaresOnly : boolean
     +CurrencyCode : string
@@ -1566,9 +1569,6 @@ class PriceRequestInformationType {
     +PurchaseDate : date
     +PurchaseTime : string
     +NetFaresUsed : boolean
-    +NegotiatedFareCode : NegotiatedFareCode[]
-    +AccountCode : AccountCode[]
-    +TPA_Extensions : TPA_Extensions
 }
 PriceRequestInformationType +-- TPA_Extensions
 class TPA_Extensions {
@@ -1729,14 +1729,14 @@ class FareAdjustment {
 }
 PriceRequestInformationType +-- NegotiatedFareCode
 class NegotiatedFareCode {
-    +Quantity : integer
+    +Supplier : CompanyNameType[]
+    +TPA_Extensions : string
     +Code : string
     +CodeContext : string
     +URI : anyURI
+    +Quantity : integer
     +SecondaryCode : string
     +SupplierCode : string
-    +Supplier : CompanyNameType[]
-    +TPA_Extensions : string
 }
 PriceRequestInformationType +-- AccountCode
 class AccountCode {
@@ -1835,6 +1835,8 @@ class TaxCodeType {
     +TaxCode : string
 }
 class TelephoneType {
+    +ShareSynchInd : ShareSynchInd
+    +ShareMarketInd : ShareMarketInd
     +PhoneLocationType : string
     +PhoneTechType : string
     +CountryAccessCode : string
@@ -1842,8 +1844,6 @@ class TelephoneType {
     +PhoneNumber : string
     +Extension : string
     +PIN : string
-    +ShareSynchInd : ShareSynchInd
-    +ShareMarketInd : ShareMarketInd
     +FormattedInd : boolean
 }
 TelephoneType +-- ShareSynchInd
@@ -2052,12 +2052,12 @@ class TravelerRefNumberType {
     +RPH : string
 }
 class UniqueID_Type {
+    +CompanyName : CompanyNameType
     +URL : anyURI
     +Type : string
     +Instance : string
     +ID : string
     +ID_Context : string
-    +CompanyName : CompanyNameType
 }
 enum ValidatingCarrierPreferLevelType {
     Unacceptable = Unacceptable

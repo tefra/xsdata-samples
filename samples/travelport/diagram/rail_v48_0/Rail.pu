@@ -74,8 +74,6 @@ class RailExchangeSolution {
     +RailExchangeInfo : RailExchangeInfo
 }
 class RailFare {
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +RailFareNoteRef : RailFareNoteRef[]
     +RailFareID : RailFareID[]
     +RailFareIDRef : RailFareIDRef[]
@@ -101,6 +99,8 @@ class RailFare {
     +JourneyDirection : typeJourneyDirection
     +RailLocOrigin : string
     +RailLocDestination : string
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 class RailFareComponent {
     +Discount : Discount[]
@@ -118,10 +118,10 @@ class Discount {
 }
 class RailFareID {
     +value : string
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +Key : string
     +Category : string
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 class RailFareIDList {
     +RailFareID : RailFareID[]
@@ -134,10 +134,10 @@ class RailFareList {
 }
 class RailFareNote {
     +value : string
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +Key : string
     +NoteName : string
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
 }
 class RailFareNoteList {
     +RailFareNote : RailFareNote[]
@@ -165,20 +165,6 @@ class RailJourney {
     +JourneyRemark : JourneyRemark[]
     +common:HostToken : common:HostToken[]
     +Key : string
-    +ProviderCode : string
-    +SupplierCode : string
-    +TotalPrice : string
-    +BasePrice : string
-    +ApproximateTotalPrice : string
-    +ApproximateBasePrice : string
-    +EquivalentBasePrice : string
-    +Taxes : string
-    +Fees : string
-    +Services : string
-    +ApproximateTaxes : string
-    +ApproximateFees : string
-    +ElStat : common:typeElementStatus
-    +KeyOverride : boolean
     +Origin : string
     +Destination : string
     +DepartureTime : string
@@ -190,11 +176,25 @@ class RailJourney {
     +RouteDescription : string
     +JourneyDirection : typeJourneyDirection
     +JourneyDuration : integer
+    +TotalPrice : string
+    +BasePrice : string
+    +ApproximateTotalPrice : string
+    +ApproximateBasePrice : string
+    +EquivalentBasePrice : string
+    +Taxes : string
+    +Fees : string
+    +Services : string
+    +ApproximateTaxes : string
+    +ApproximateFees : string
+    +ProviderCode : string
+    +SupplierCode : string
     +Status : string
     +ProviderReservationInfoRef : string
     +PassiveProviderReservationInfoRef : string
     +TravelOrder : integer
     +RouteReference : string
+    +ElStat : common:typeElementStatus
+    +KeyOverride : boolean
     +Operation : string
 }
 class RailJourneyList {
@@ -217,6 +217,14 @@ class ProhibitedConnectionPoints {
     +common:ConnectionPoint : common:ConnectionPoint[]
 }
 class RailPricingInfo {
+    +RailFare : RailFare[]
+    +RailFareRef : RailFareRef[]
+    +RailBookingInfo : RailBookingInfo[]
+    +PassengerType : common:typePassengerType[]
+    +common:BookingTravelerRef : common:BookingTravelerRef[]
+    +Key : string
+    +ExchangeAmount : string
+    +ApproximateExchangeAmount : string
     +TotalPrice : string
     +BasePrice : string
     +ApproximateTotalPrice : string
@@ -229,14 +237,6 @@ class RailPricingInfo {
     +ApproximateFees : string
     +ElStat : common:typeElementStatus
     +KeyOverride : boolean
-    +RailFare : RailFare[]
-    +RailFareRef : RailFareRef[]
-    +RailBookingInfo : RailBookingInfo[]
-    +PassengerType : common:typePassengerType[]
-    +common:BookingTravelerRef : common:BookingTravelerRef[]
-    +Key : string
-    +ExchangeAmount : string
-    +ApproximateExchangeAmount : string
 }
 class RailPricingModifiers {
     +common:DiscountCard : common:DiscountCard[]
