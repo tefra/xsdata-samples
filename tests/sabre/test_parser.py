@@ -1,12 +1,12 @@
+import json
 from pathlib import Path
 from unittest import TestCase
 
 from xsdata.formats.dataclass.parsers import XmlParser
-from xsdata.formats.dataclass.serializers import DictFactory, JsonSerializer
+from xsdata.formats.dataclass.serializers import DictFactory
+from xsdata.formats.dataclass.serializers import JsonSerializer
 
-from samples.sabre.output.bargain_finder_max_rs_v1_9_7 import (
-    OtaAirLowFareSearchRs,
-)
+from samples.sabre.output.bargain_finder_max_rs_v1_9_7 import OtaAirLowFareSearchRs
 
 parser = XmlParser()
 serializer = JsonSerializer(indent=2, dict_factory=DictFactory.FILTER_NONE)
@@ -27,6 +27,6 @@ class ParserTests(TestCase):
 
         expected = json_fixture.read_text()
         result = serializer.render(obj)
-        self.assertEqual(expected, result)
 
-        # json_fixture.write_text(result)
+        self.assertEqual(json.loads(expected), json.loads(result))
+        json_fixture.write_text(result)

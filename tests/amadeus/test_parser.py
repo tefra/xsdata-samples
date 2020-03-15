@@ -1,12 +1,10 @@
+import json
 from pathlib import Path
 from unittest import TestCase
 
 from xsdata.formats.dataclass.parsers import XmlParser
-from xsdata.formats.dataclass.serializers import (
-    DictFactory,
-    DictSerializer,
-    JsonSerializer,
-)
+from xsdata.formats.dataclass.serializers import DictFactory
+from xsdata.formats.dataclass.serializers import JsonSerializer
 
 from samples.amadeus.output.fare_master_pricer_travel_board_search_reply_15_3_1_a import (
     FareMasterPricerTravelBoardSearchReply,
@@ -27,12 +25,11 @@ class ParserTests(TestCase):
         xml_fixture = cwd.joinpath(f"{fixture}.xml")
         json_fixture = cwd.joinpath(f"{fixture}.json")
 
-        obj = parser.from_path(
-            xml_fixture, FareMasterPricerTravelBoardSearchReply
-        )
+        obj = parser.from_path(xml_fixture, FareMasterPricerTravelBoardSearchReply)
 
         expected = json_fixture.read_text()
         result = serializer.render(obj)
         self.assertEqual(expected, result)
+        self.assertEqual(json.loads(expected), json.loads(result))
 
-        # json_fixture.write_text(result)
+        json_fixture.write_text(result)
