@@ -753,7 +753,7 @@ class ExchangeFareType:
             pattern=r"[0-9A-Z]{2,3}"
         )
     )
-    roe: Optional[float] = field(
+    roe: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="ROE",

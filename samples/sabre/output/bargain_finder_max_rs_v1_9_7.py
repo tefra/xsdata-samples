@@ -150,14 +150,14 @@ class AirTaxType:
             max_length=8.0
         )
     )
-    min_amount: Optional[float] = field(
+    min_amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="MinAmount",
             type="Attribute"
         )
     )
-    max_amount: Optional[float] = field(
+    max_amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="MaxAmount",
@@ -172,7 +172,7 @@ class AirTaxType:
             pattern=r"[a-zA-Z]{3}"
         )
     )
-    rate_used: Optional[float] = field(
+    rate_used: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="RateUsed",
@@ -215,7 +215,7 @@ class AirTaxType:
             type="Attribute"
         )
     )
-    reissue_max_amount: Optional[float] = field(
+    reissue_max_amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="ReissueMaxAmount",
@@ -230,7 +230,7 @@ class AirTaxType:
             pattern=r"[a-zA-Z]{3}"
         )
     )
-    published_amount: Optional[float] = field(
+    published_amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="PublishedAmount",
@@ -438,7 +438,7 @@ class CurrencyConversionsType:
                 pattern=r"[a-zA-Z]{3}"
             )
         )
-        rate_of_exchange: Optional[float] = field(
+        rate_of_exchange: Optional[Decimal] = field(
             default=None,
             metadata=dict(
                 name="RateOfExchange",
@@ -847,7 +847,7 @@ class RateOfExchangeType:
     """
     :ivar value: Exchange rate
     """
-    value: Optional[float] = field(
+    value: Optional[Decimal] = field(
         default=None,
         metadata=dict(
             name="Value",
@@ -5686,7 +5686,7 @@ class PricedItineraryType:
             :ivar price_time_value_rank: Price Time Value rank.
             :ivar value_bucket_number: Price Time Value Bucket number.
             """
-            price_time_value_rank: Optional[float] = field(
+            price_time_value_rank: Optional[Decimal] = field(
                 default=None,
                 metadata=dict(
                     name="PriceTimeValueRank",

@@ -1585,6 +1585,49 @@ class AirRefundRsp(BaseRsp):
 
 
 @dataclass
+class AirRepriceReq:
+    """Request to reprice a solution.
+
+    :ivar air_reservation_locator_code:
+    :ivar air_pricing_solution:
+    :ivar fare_rule_type:
+    :ivar ignore_availability:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
+        default=None,
+        metadata=dict(
+            name="AirReservationLocatorCode",
+            type="Element"
+        )
+    )
+    air_pricing_solution: Optional[AirPricingSolution] = field(
+        default=None,
+        metadata=dict(
+            name="AirPricingSolution",
+            type="Element",
+            required=True
+        )
+    )
+    fare_rule_type: TypeFareRuleType = field(
+        default="none",
+        metadata=dict(
+            name="FareRuleType",
+            type="Attribute"
+        )
+    )
+    ignore_availability: bool = field(
+        default=False,
+        metadata=dict(
+            name="IgnoreAvailability",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class AirRepriceRsp(BaseRsp):
     """
     :ivar air_pricing_solution:
@@ -1834,6 +1877,152 @@ class AirSearchReq(BaseSearchReq):
 
 
 @dataclass
+class AirTicketingReq:
+    """Request to ticket a previously stored reservation.
+
+    :ivar air_reservation_locator_code: Provider: 1G,1V,1P,1J.
+    :ivar air_pricing_info_ref: Provider: 1G,1V,1P,1J-Indicates air pricing infos to be ticketed.
+    :ivar ticketing_modifiers_ref: Provider: 1P,1J-Reference to a shared list of Ticketing Modifiers. This is supported for Worldspan and JAL providers only. When AirPricingInfoRef is used along with TicketingModifiersRef means that particular TicketingModifiers will to be applied while ticketing the Stored fare corresponding to the AirPricingInfo. Absence of AirPricingInfoRef means that particular TicketingModifiers will be applied to all Stored fares which are requested to be ticketed.
+    :ivar waiver_code:
+    :ivar commission:
+    :ivar detailed_billing_information: Provider: 1G,1V.
+    :ivar fax_details_information: Provider: 1V.
+    :ivar air_ticketing_modifiers: Provider: 1G,1V,1P,1J.
+    :ivar air_segment_ticketing_modifiers: Provider: 1P,1J.
+    :ivar return_info_on_fail:
+    :ivar bulk_ticket: Provider: 1G,1V,1P,1J.
+    :ivar validate_spanish_residency: Provider: 1G - If set as true, Spanish Residency will be validated for
+                                                                            Provisioned Customers.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
+        default=None,
+        metadata=dict(
+            name="AirReservationLocatorCode",
+            type="Element",
+            required=True
+        )
+    )
+    air_pricing_info_ref: List["AirTicketingReq.AirPricingInfoRef"] = field(
+        default_factory=list,
+        metadata=dict(
+            name="AirPricingInfoRef",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    ticketing_modifiers_ref: List[TypeTicketingModifiersRef] = field(
+        default_factory=list,
+        metadata=dict(
+            name="TicketingModifiersRef",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    waiver_code: Optional[WaiverCode] = field(
+        default=None,
+        metadata=dict(
+            name="WaiverCode",
+            type="Element"
+        )
+    )
+    commission: List[Commission] = field(
+        default_factory=list,
+        metadata=dict(
+            name="Commission",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            min_occurs=0,
+            max_occurs=18
+        )
+    )
+    detailed_billing_information: List[DetailedBillingInformation] = field(
+        default_factory=list,
+        metadata=dict(
+            name="DetailedBillingInformation",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    fax_details_information: Optional[FaxDetailsInformation] = field(
+        default=None,
+        metadata=dict(
+            name="FaxDetailsInformation",
+            type="Element"
+        )
+    )
+    air_ticketing_modifiers: List[AirTicketingModifiers] = field(
+        default_factory=list,
+        metadata=dict(
+            name="AirTicketingModifiers",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    air_segment_ticketing_modifiers: List[AirSegmentTicketingModifiers] = field(
+        default_factory=list,
+        metadata=dict(
+            name="AirSegmentTicketingModifiers",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    return_info_on_fail: bool = field(
+        default=True,
+        metadata=dict(
+            name="ReturnInfoOnFail",
+            type="Attribute"
+        )
+    )
+    bulk_ticket: bool = field(
+        default=False,
+        metadata=dict(
+            name="BulkTicket",
+            type="Attribute"
+        )
+    )
+    validate_spanish_residency: bool = field(
+        default=False,
+        metadata=dict(
+            name="ValidateSpanishResidency",
+            type="Attribute"
+        )
+    )
+
+    @dataclass
+    class AirPricingInfoRef:
+        """
+        :ivar booking_traveler_ref:
+        :ivar key:
+        """
+        booking_traveler_ref: List[BookingTravelerRef] = field(
+            default_factory=list,
+            metadata=dict(
+                name="BookingTravelerRef",
+                type="Element",
+                namespace="http://www.travelport.com/schema/common_v48_0",
+                min_occurs=0,
+                max_occurs=9
+            )
+        )
+        key: Optional[str] = field(
+            default=None,
+            metadata=dict(
+                name="Key",
+                type="Attribute",
+                required=True
+            )
+        )
+
+
+@dataclass
 class AirTicketingRsp(BaseRsp):
     """Response to ticket a previously stored reservation.
 
@@ -1877,6 +2066,35 @@ class AirTicketingRsp(BaseRsp):
             type="Element",
             min_occurs=0,
             max_occurs=999
+        )
+    )
+
+
+@dataclass
+class AirUpsellSearchReq:
+    """Request to search for Upsell Offers based on the Itinerary.
+
+    :ivar air_itinerary: Provider: 1G,1V,1P,1J,ACH-AirItinerary of the pricing request.
+    :ivar air_price_result: Provider: 1G,1V,1P,1J,ACH-Result of AirPrice request. Upsell uses this to search for new offer.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    air_itinerary: Optional[AirItinerary] = field(
+        default=None,
+        metadata=dict(
+            name="AirItinerary",
+            type="Element",
+            required=True
+        )
+    )
+    air_price_result: List[AirPriceResult] = field(
+        default_factory=list,
+        metadata=dict(
+            name="AirPriceResult",
+            type="Element",
+            min_occurs=1,
+            max_occurs=16
         )
     )
 
@@ -3213,49 +3431,6 @@ class AirPriceRsp(BaseAirPriceRsp):
 
 
 @dataclass
-class AirRepriceReq(AirBaseReq):
-    """Request to reprice a solution.
-
-    :ivar air_reservation_locator_code:
-    :ivar air_pricing_solution:
-    :ivar fare_rule_type:
-    :ivar ignore_availability:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
-        default=None,
-        metadata=dict(
-            name="AirReservationLocatorCode",
-            type="Element"
-        )
-    )
-    air_pricing_solution: Optional[AirPricingSolution] = field(
-        default=None,
-        metadata=dict(
-            name="AirPricingSolution",
-            type="Element",
-            required=True
-        )
-    )
-    fare_rule_type: TypeFareRuleType = field(
-        default="none",
-        metadata=dict(
-            name="FareRuleType",
-            type="Attribute"
-        )
-    )
-    ignore_availability: bool = field(
-        default=False,
-        metadata=dict(
-            name="IgnoreAvailability",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
 class AirSearchRsp(BaseAvailabilitySearchRsp):
     """Base Response for Air Search.
 
@@ -3390,181 +3565,6 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             namespace="http://www.travelport.com/schema/rail_v48_0",
             min_occurs=0,
             max_occurs=999
-        )
-    )
-
-
-@dataclass
-class AirTicketingReq(AirBaseReq):
-    """Request to ticket a previously stored reservation.
-
-    :ivar air_reservation_locator_code: Provider: 1G,1V,1P,1J.
-    :ivar air_pricing_info_ref: Provider: 1G,1V,1P,1J-Indicates air pricing infos to be ticketed.
-    :ivar ticketing_modifiers_ref: Provider: 1P,1J-Reference to a shared list of Ticketing Modifiers. This is supported for Worldspan and JAL providers only. When AirPricingInfoRef is used along with TicketingModifiersRef means that particular TicketingModifiers will to be applied while ticketing the Stored fare corresponding to the AirPricingInfo. Absence of AirPricingInfoRef means that particular TicketingModifiers will be applied to all Stored fares which are requested to be ticketed.
-    :ivar waiver_code:
-    :ivar commission:
-    :ivar detailed_billing_information: Provider: 1G,1V.
-    :ivar fax_details_information: Provider: 1V.
-    :ivar air_ticketing_modifiers: Provider: 1G,1V,1P,1J.
-    :ivar air_segment_ticketing_modifiers: Provider: 1P,1J.
-    :ivar return_info_on_fail:
-    :ivar bulk_ticket: Provider: 1G,1V,1P,1J.
-    :ivar validate_spanish_residency: Provider: 1G - If set as true, Spanish Residency will be validated for
-                                                                            Provisioned Customers.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
-        default=None,
-        metadata=dict(
-            name="AirReservationLocatorCode",
-            type="Element",
-            required=True
-        )
-    )
-    air_pricing_info_ref: List["AirTicketingReq.AirPricingInfoRef"] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AirPricingInfoRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    ticketing_modifiers_ref: List[TypeTicketingModifiersRef] = field(
-        default_factory=list,
-        metadata=dict(
-            name="TicketingModifiersRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    waiver_code: Optional[WaiverCode] = field(
-        default=None,
-        metadata=dict(
-            name="WaiverCode",
-            type="Element"
-        )
-    )
-    commission: List[Commission] = field(
-        default_factory=list,
-        metadata=dict(
-            name="Commission",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=18
-        )
-    )
-    detailed_billing_information: List[DetailedBillingInformation] = field(
-        default_factory=list,
-        metadata=dict(
-            name="DetailedBillingInformation",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    fax_details_information: Optional[FaxDetailsInformation] = field(
-        default=None,
-        metadata=dict(
-            name="FaxDetailsInformation",
-            type="Element"
-        )
-    )
-    air_ticketing_modifiers: List[AirTicketingModifiers] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AirTicketingModifiers",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    air_segment_ticketing_modifiers: List[AirSegmentTicketingModifiers] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AirSegmentTicketingModifiers",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    return_info_on_fail: bool = field(
-        default=True,
-        metadata=dict(
-            name="ReturnInfoOnFail",
-            type="Attribute"
-        )
-    )
-    bulk_ticket: bool = field(
-        default=False,
-        metadata=dict(
-            name="BulkTicket",
-            type="Attribute"
-        )
-    )
-    validate_spanish_residency: bool = field(
-        default=False,
-        metadata=dict(
-            name="ValidateSpanishResidency",
-            type="Attribute"
-        )
-    )
-
-    @dataclass
-    class AirPricingInfoRef:
-        """
-        :ivar booking_traveler_ref:
-        :ivar key:
-        """
-        booking_traveler_ref: List[BookingTravelerRef] = field(
-            default_factory=list,
-            metadata=dict(
-                name="BookingTravelerRef",
-                type="Element",
-                namespace="http://www.travelport.com/schema/common_v48_0",
-                min_occurs=0,
-                max_occurs=9
-            )
-        )
-        key: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                name="Key",
-                type="Attribute",
-                required=True
-            )
-        )
-
-
-@dataclass
-class AirUpsellSearchReq(AirBaseReq):
-    """Request to search for Upsell Offers based on the Itinerary.
-
-    :ivar air_itinerary: Provider: 1G,1V,1P,1J,ACH-AirItinerary of the pricing request.
-    :ivar air_price_result: Provider: 1G,1V,1P,1J,ACH-Result of AirPrice request. Upsell uses this to search for new offer.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    air_itinerary: Optional[AirItinerary] = field(
-        default=None,
-        metadata=dict(
-            name="AirItinerary",
-            type="Element",
-            required=True
-        )
-    )
-    air_price_result: List[AirPriceResult] = field(
-        default_factory=list,
-        metadata=dict(
-            name="AirPriceResult",
-            type="Element",
-            min_occurs=1,
-            max_occurs=16
         )
     )
 

@@ -177,7 +177,6 @@ AirSeatAssignment *- SeatAssignment
 class Airport {
     +Code : string
 }
-Airport *- Location
 class AppliedProfile {
     +Key : string
     +TravelerID : string
@@ -334,12 +333,10 @@ class Check {
 class City {
     +Code : string
 }
-City *- Location
 class CityOrAirport {
     +Code : string
     +PreferCity : boolean
 }
-CityOrAirport *- Location
 class Commission {
     +Key : string
     +Level : typeCommissionLevel
@@ -392,7 +389,6 @@ class CoordinateLocation {
     +latitude : double
     +longitude : double
 }
-CoordinateLocation *- Location
 class CorporateDiscountID {
     +value : string
     +NegotiatedRateCode : boolean
@@ -1068,7 +1064,6 @@ class QueueSelector {
 class RailLocation {
     +Code : string
 }
-RailLocation *- Location
 class RailSeatAssignment {
     +Characteristic : Characteristic[]
     +Key : string

@@ -232,7 +232,6 @@ class AirRepriceReq {
     +FareRuleType : typeFareRuleType
     +IgnoreAvailability : boolean
 }
-AirRepriceReq *- AirBaseReq
 class AirRepriceRsp {
     +AirPricingSolution : AirPricingSolution
     +FareRule : FareRule[]
@@ -298,7 +297,6 @@ class AirTicketingReq {
     +BulkTicket : boolean
     +ValidateSpanishResidency : boolean
 }
-AirTicketingReq *- AirBaseReq
 AirTicketingReq +-- AirPricingInfoRef
 class AirPricingInfoRef {
     +common:BookingTravelerRef : common:BookingTravelerRef[]
@@ -315,7 +313,6 @@ class AirUpsellSearchReq {
     +AirItinerary : AirItinerary
     +AirPriceResult : AirPriceResult[]
 }
-AirUpsellSearchReq *- AirBaseReq
 class AirUpsellSearchRsp {
 }
 AirUpsellSearchRsp *- BaseAirPriceRsp
