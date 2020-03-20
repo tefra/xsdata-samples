@@ -9567,13 +9567,14 @@ class ExchangeType:
             required=True
         )
     )
-    origin_destination_information: Optional[ExchangeOriginDestinationInformationType] = field(
-        default=None,
+    origin_destination_information: List[ExchangeOriginDestinationInformationType] = field(
+        default_factory=list,
         metadata=dict(
             name="OriginDestinationInformation",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
+            min_occurs=0,
+            max_occurs=9223372036854775808
         )
     )
     arunk: List[ArunkType] = field(

@@ -1001,9 +1001,8 @@ class Taxes {
 class ExchangeType {
     +Fare : ExchangeFareType
     +POS : ExchangePOSType
-    +OriginDestinationInformation : ExchangeOriginDestinationInformationType
-    +Arunk : ArunkType[]
     +OriginDestinationInformation : ExchangeOriginDestinationInformationType[]
+    +Arunk : ArunkType[]
     +TravelPreferences : ExchangeAirSearchPrefsType
     +TravelerInfoSummary : TravelerInfoSummaryType
     +TPA_Extensions : ExchangeTPA_ExtensionsType
