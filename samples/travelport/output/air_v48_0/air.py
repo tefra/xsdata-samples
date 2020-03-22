@@ -19661,6 +19661,15 @@ class TypeBaseAirSegment(Segment):
                                     present.
     :ivar flight_number: The flight number under which the marketing
                                     carrier is marketing this flight
+    :ivar origin: The IATA location code for this origination of this entity.
+    :ivar destination: The IATA location code for this destination of this entity.
+    :ivar departure_time: The date and time at which this entity departs. Date and time are represented as Airport Local Time at the place of departure. The correct time zone offset is also included.
+    :ivar arrival_time: The date and time at which this entity arrives at the destination. Date and time are represented as Airport Local Time at the place of arrival. The correct time zone offset is also included.
+    :ivar flight_time: Time spent (minutes) traveling in flight, including airport taxi time.
+    :ivar travel_time: Total time spent (minutes) traveling including flight time and ground time.
+    :ivar distance: The distance traveled. Units are specified in the parent response element.
+    :ivar provider_code:
+    :ivar supplier_code:
     :ivar participant_level: Type of sell agreement between host and link
                         carrier.
     :ivar link_availability: Indicates if carrier has link (carrier
@@ -19675,15 +19684,6 @@ class TypeBaseAirSegment(Segment):
                                         F - Fare Shop/Optimal Shop
                                         Q - Fare Specific Fare Quote unbooked
                                         R - Redemption Availability used to complete the sell. Supported Providers: 1G,1V.
-    :ivar provider_code:
-    :ivar supplier_code:
-    :ivar flight_time: Time spent (minutes) traveling in flight, including airport taxi time.
-    :ivar travel_time: Total time spent (minutes) traveling including flight time and ground time.
-    :ivar distance: The distance traveled. Units are specified in the parent response element.
-    :ivar origin: The IATA location code for this origination of this entity.
-    :ivar destination: The IATA location code for this destination of this entity.
-    :ivar departure_time: The date and time at which this entity departs. Date and time are represented as Airport Local Time at the place of departure. The correct time zone offset is also included.
-    :ivar arrival_time: The date and time at which this entity arrives at the destination. Date and time are represented as Airport Local Time at the place of arrival. The correct time zone offset is also included.
     :ivar class_of_service:
     :ivar eticketability: Identifies if this particular segment
                                     is E-Ticketable
@@ -19851,73 +19851,6 @@ class TypeBaseAirSegment(Segment):
             max_length=5.0
         )
     )
-    participant_level: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ParticipantLevel",
-            type="Attribute"
-        )
-    )
-    link_availability: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="LinkAvailability",
-            type="Attribute"
-        )
-    )
-    polled_availability_option: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="PolledAvailabilityOption",
-            type="Attribute"
-        )
-    )
-    availability_display_type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AvailabilityDisplayType",
-            type="Attribute"
-        )
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2.0,
-            max_length=5.0
-        )
-    )
-    supplier_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            min_length=1.0,
-            max_length=5.0
-        )
-    )
-    flight_time: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="FlightTime",
-            type="Attribute"
-        )
-    )
-    travel_time: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="TravelTime",
-            type="Attribute"
-        )
-    )
-    distance: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="Distance",
-            type="Attribute"
-        )
-    )
     origin: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -19949,6 +19882,73 @@ class TypeBaseAirSegment(Segment):
         default=None,
         metadata=dict(
             name="ArrivalTime",
+            type="Attribute"
+        )
+    )
+    flight_time: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="FlightTime",
+            type="Attribute"
+        )
+    )
+    travel_time: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="TravelTime",
+            type="Attribute"
+        )
+    )
+    distance: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Distance",
+            type="Attribute"
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierCode",
+            type="Attribute",
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
+    participant_level: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ParticipantLevel",
+            type="Attribute"
+        )
+    )
+    link_availability: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="LinkAvailability",
+            type="Attribute"
+        )
+    )
+    polled_availability_option: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PolledAvailabilityOption",
+            type="Attribute"
+        )
+    )
+    availability_display_type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AvailabilityDisplayType",
             type="Attribute"
         )
     )

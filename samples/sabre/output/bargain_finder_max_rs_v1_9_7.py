@@ -5770,8 +5770,8 @@ class OtaAirLowFareSearchRs:
     :ivar transaction_identifier: A unique identifier to relate all messages within a transaction (e.g. this would be sent in all request and response messages that are part of an on-going transaction).
     :ivar sequence_nmbr: Used to identify the sequence number of the transaction as assigned by the sending system; allows for an application to process messages in a certain order or to request a resynchronization of messages in the event that a system has been off-line and needs to retrieve messages that were missed.
     :ivar transaction_status_code: This indicates where this message falls within a sequence of messages.
-    :ivar alt_lang_id:
     :ivar primary_lang_id: Identifes the primary language preference for the form of travel represented in a collection. The human language is identified by ISO 639 codes.
+    :ivar alt_lang_id:
     :ivar priced_itin_count: Itinerary count for Priced Round-Trip itineraries
     :ivar branded_one_way_itin_count: Itinerary count for Branded One-Way itineraries
     :ivar simple_one_way_itin_count: Itinerary count for Simple One-Way itineraries
@@ -5900,17 +5900,17 @@ class OtaAirLowFareSearchRs:
             type="Attribute"
         )
     )
-    alt_lang_id: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AltLangID",
-            type="Attribute"
-        )
-    )
     primary_lang_id: Optional[str] = field(
         default=None,
         metadata=dict(
             name="PrimaryLangID",
+            type="Attribute"
+        )
+    )
+    alt_lang_id: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AltLangID",
             type="Attribute"
         )
     )

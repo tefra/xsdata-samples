@@ -407,14 +407,6 @@ class CustLoyaltyType:
         )
     )
 
-    class SingleVendorInd(Enum):
-        """
-        :cvar ALLIANCE:
-        :cvar SINGLE_VNDR:
-        """
-        ALLIANCE = "Alliance"
-        SINGLE_VNDR = "SingleVndr"
-
     class ShareSynchInd(Enum):
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
@@ -437,6 +429,14 @@ class CustLoyaltyType:
         INHERIT = "Inherit"
         NO = "No"
         YES = "Yes"
+
+    class SingleVendorInd(Enum):
+        """
+        :cvar ALLIANCE:
+        :cvar SINGLE_VNDR:
+        """
+        ALLIANCE = "Alliance"
+        SINGLE_VNDR = "SingleVndr"
 
 
 @dataclass
@@ -594,16 +594,6 @@ class DocumentType:
         )
     )
 
-    class Gender(Enum):
-        """
-        :cvar FEMALE:
-        :cvar MALE:
-        :cvar UNKNOWN:
-        """
-        FEMALE = "Female"
-        MALE = "Male"
-        UNKNOWN = "Unknown"
-
     class ShareSynchInd(Enum):
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
@@ -626,6 +616,16 @@ class DocumentType:
         INHERIT = "Inherit"
         NO = "No"
         YES = "Yes"
+
+    class Gender(Enum):
+        """
+        :cvar FEMALE:
+        :cvar MALE:
+        :cvar UNKNOWN:
+        """
+        FEMALE = "Female"
+        MALE = "Male"
+        UNKNOWN = "Unknown"
 
 
 @dataclass
@@ -3303,15 +3303,6 @@ class EquipmentTypePref(EquipmentType):
 @dataclass
 class ExchangeOriginDestinationFlightType:
     """
-    :ivar class_of_service: Class of service
-    :ivar number: Flight number
-    :ivar departure_date_time: Departure date and time
-    :ivar arrival_date_time: Arrival date and time
-    :ivar marriage_status: Marriage status
-    :ivar type: Flight type (A: Air Segment, K: ARUNK, O: Open Segment)
-    :ivar flown: Specify whether the flight is flown.
-    :ivar fare:
-    :ivar plus_up:
     :ivar origin_location: Flight origin code
     :ivar destination_location: Flight destination code
     :ivar airline: Airline information
@@ -3319,84 +3310,16 @@ class ExchangeOriginDestinationFlightType:
     :ivar reservation: Reservation information
     :ivar mileage_display: Mileage information
     :ivar booking_date_time: Booking date and time
+    :ivar fare:
+    :ivar plus_up:
+    :ivar number: Flight number
+    :ivar departure_date_time: Departure date and time
+    :ivar arrival_date_time: Arrival date and time
+    :ivar marriage_status: Marriage status
+    :ivar type: Flight type (A: Air Segment, K: ARUNK, O: Open Segment)
+    :ivar flown: Specify whether the flight is flown.
+    :ivar class_of_service: Class of service
     """
-    class_of_service: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ClassOfService",
-            type="Attribute",
-            required=True,
-            pattern=r"[A-Z]{1,2}"
-        )
-    )
-    number: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            required=True
-        )
-    )
-    departure_date_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DepartureDateTime",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
-        )
-    )
-    arrival_date_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ArrivalDateTime",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
-        )
-    )
-    marriage_status: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="MarriageStatus",
-            type="Attribute"
-        )
-    )
-    type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True,
-            pattern=r"[AKO]"
-        )
-    )
-    flown: bool = field(
-        default=False,
-        metadata=dict(
-            name="Flown",
-            type="Attribute"
-        )
-    )
-    fare: Optional["ExchangeOriginDestinationFlightType.Fare"] = field(
-        default=None,
-        metadata=dict(
-            name="Fare",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
-    )
-    plus_up: List[PlusUpType] = field(
-        default_factory=list,
-        metadata=dict(
-            name="PlusUp",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
-    )
     origin_location: Optional[RequestLocationType] = field(
         default=None,
         metadata=dict(
@@ -3460,6 +3383,83 @@ class ExchangeOriginDestinationFlightType:
             namespace="http://www.opentravel.org/OTA/2003/05",
             required=True,
             pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
+        )
+    )
+    fare: Optional["ExchangeOriginDestinationFlightType.Fare"] = field(
+        default=None,
+        metadata=dict(
+            name="Fare",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            required=True
+        )
+    )
+    plus_up: List[PlusUpType] = field(
+        default_factory=list,
+        metadata=dict(
+            name="PlusUp",
+            type="Element",
+            namespace="http://www.opentravel.org/OTA/2003/05",
+            min_occurs=0,
+            max_occurs=9223372036854775807
+        )
+    )
+    number: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Number",
+            type="Attribute",
+            required=True
+        )
+    )
+    departure_date_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DepartureDateTime",
+            type="Attribute",
+            required=True,
+            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
+        )
+    )
+    arrival_date_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ArrivalDateTime",
+            type="Attribute",
+            required=True,
+            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
+        )
+    )
+    marriage_status: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="MarriageStatus",
+            type="Attribute"
+        )
+    )
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute",
+            required=True,
+            pattern=r"[AKO]"
+        )
+    )
+    flown: bool = field(
+        default=False,
+        metadata=dict(
+            name="Flown",
+            type="Attribute"
+        )
+    )
+    class_of_service: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ClassOfService",
+            type="Attribute",
+            required=True,
+            pattern=r"[A-Z]{1,2}"
         )
     )
 
@@ -3948,12 +3948,6 @@ class InterlineBrandsType:
 @dataclass
 class OriginDestinationFlightType:
     """
-    :ivar number: Flight number
-    :ivar departure_date_time: Departure date and time
-    :ivar arrival_date_time: Arrival date and time
-    :ivar marriage_status: Marriage status
-    :ivar type: Flight type (A: Air Segment, K: ARUNK, O: Open Segment)
-    :ivar flown: Specify whether the flight is flown.
     :ivar origin_location: Flight origin code
     :ivar destination_location: Flight destination code
     :ivar airline: Airline information
@@ -3963,58 +3957,15 @@ class OriginDestinationFlightType:
     :ivar booking_date_time: Booking date and time
     :ivar fare:
     :ivar plus_up:
+    :ivar number: Flight number
+    :ivar departure_date_time: Departure date and time
+    :ivar arrival_date_time: Arrival date and time
+    :ivar marriage_status: Marriage status
+    :ivar type: Flight type (A: Air Segment, K: ARUNK, O: Open Segment)
+    :ivar flown: Specify whether the flight is flown.
     :ivar class_of_service: Class of service
     :ivar shopped: Specify whether the flight is shopped.
     """
-    number: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            required=True
-        )
-    )
-    departure_date_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DepartureDateTime",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
-        )
-    )
-    arrival_date_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ArrivalDateTime",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
-        )
-    )
-    marriage_status: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="MarriageStatus",
-            type="Attribute"
-        )
-    )
-    type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True,
-            pattern=r"[AKO]"
-        )
-    )
-    flown: bool = field(
-        default=False,
-        metadata=dict(
-            name="Flown",
-            type="Attribute"
-        )
-    )
     origin_location: Optional[RequestLocationType] = field(
         default=None,
         metadata=dict(
@@ -4097,6 +4048,55 @@ class OriginDestinationFlightType:
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=9223372036854775807
+        )
+    )
+    number: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Number",
+            type="Attribute",
+            required=True
+        )
+    )
+    departure_date_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DepartureDateTime",
+            type="Attribute",
+            required=True,
+            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
+        )
+    )
+    arrival_date_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ArrivalDateTime",
+            type="Attribute",
+            required=True,
+            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
+        )
+    )
+    marriage_status: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="MarriageStatus",
+            type="Attribute"
+        )
+    )
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute",
+            required=True,
+            pattern=r"[AKO]"
+        )
+    )
+    flown: bool = field(
+        default=False,
+        metadata=dict(
+            name="Flown",
+            type="Attribute"
         )
     )
     class_of_service: Optional[str] = field(
@@ -7378,6 +7378,32 @@ class AirSearchPrefsType:
             )
 
         @dataclass
+        class OnlineIndicator:
+            """
+            :ivar ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
+            """
+            ind: Optional[bool] = field(
+                default=None,
+                metadata=dict(
+                    name="Ind",
+                    type="Attribute"
+                )
+            )
+
+        @dataclass
+        class InterlineIndicator:
+            """
+            :ivar ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
+            """
+            ind: Optional[bool] = field(
+                default=None,
+                metadata=dict(
+                    name="Ind",
+                    type="Attribute"
+                )
+            )
+
+        @dataclass
         class ExemptAllTaxes:
             """
             :ivar value:
@@ -7418,32 +7444,6 @@ class AirSearchPrefsType:
                     namespace="http://www.opentravel.org/OTA/2003/05",
                     min_occurs=0,
                     max_occurs=9223372036854775807
-                )
-            )
-
-        @dataclass
-        class OnlineIndicator:
-            """
-            :ivar ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
-            """
-            ind: Optional[bool] = field(
-                default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute"
-                )
-            )
-
-        @dataclass
-        class InterlineIndicator:
-            """
-            :ivar ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
-            """
-            ind: Optional[bool] = field(
-                default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute"
                 )
             )
 
@@ -7746,6 +7746,16 @@ class AirTravelerType:
             )
         )
 
+    class Gender(Enum):
+        """
+        :cvar FEMALE:
+        :cvar MALE:
+        :cvar UNKNOWN:
+        """
+        FEMALE = "Female"
+        MALE = "Male"
+        UNKNOWN = "Unknown"
+
     class ShareSynchInd(Enum):
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
@@ -7769,27 +7779,11 @@ class AirTravelerType:
         NO = "No"
         YES = "Yes"
 
-    class Gender(Enum):
-        """
-        :cvar FEMALE:
-        :cvar MALE:
-        :cvar UNKNOWN:
-        """
-        FEMALE = "Female"
-        MALE = "Male"
-        UNKNOWN = "Unknown"
-
 
 @dataclass
 class ExchangeSourceType:
     """
     :ivar booking_channel:
-    :ivar agent_city: Agent city
-    :ivar main_travel_agency_pcc: Main travel agency PCC
-    :ivar carrier: Carrier
-    :ivar host_carrier: PCC Host Carrier
-    :ivar eticket_capable: Agency is Eticket capable
-    :ivar co_host_id: CoHostID
     :ivar agent_sine: Identifies the party within the requesting entity.
     :ivar pseudo_city_code: An identification code assigned to an office/agency by a reservation system.
     :ivar isocountry: The country code of the requesting party.
@@ -7812,6 +7806,12 @@ class ExchangeSourceType:
     :ivar vendor_crscode: Vendor CRS code
     :ivar agent_duty: Agent duty
     :ivar abacus_user: Abacus user
+    :ivar agent_city: Agent city
+    :ivar main_travel_agency_pcc: Main travel agency PCC
+    :ivar carrier: Carrier
+    :ivar host_carrier: PCC Host Carrier
+    :ivar eticket_capable: Agency is Eticket capable
+    :ivar co_host_id: CoHostID
     """
     booking_channel: Optional[SourceBookingChannelType] = field(
         default=None,
@@ -7819,56 +7819,6 @@ class ExchangeSourceType:
             name="BookingChannel",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05"
-        )
-    )
-    agent_city: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AgentCity",
-            type="Attribute",
-            required=True,
-            pattern=r"[a-zA-Z]{3}"
-        )
-    )
-    main_travel_agency_pcc: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="MainTravelAgencyPCC",
-            type="Attribute",
-            required=True,
-            min_length=1.0,
-            max_length=16.0
-        )
-    )
-    carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Carrier",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9A-Z]{2,3}"
-        )
-    )
-    host_carrier: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="HostCarrier",
-            type="Attribute",
-            pattern=r"[0-9A-Z]{2,3}"
-        )
-    )
-    eticket_capable: bool = field(
-        default=False,
-        metadata=dict(
-            name="ETicketCapable",
-            type="Attribute"
-        )
-    )
-    co_host_id: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="CoHostID",
-            type="Attribute"
         )
     )
     agent_sine: Optional[str] = field(
@@ -8047,6 +7997,56 @@ class ExchangeSourceType:
         default=False,
         metadata=dict(
             name="AbacusUser",
+            type="Attribute"
+        )
+    )
+    agent_city: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AgentCity",
+            type="Attribute",
+            required=True,
+            pattern=r"[a-zA-Z]{3}"
+        )
+    )
+    main_travel_agency_pcc: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="MainTravelAgencyPCC",
+            type="Attribute",
+            required=True,
+            min_length=1.0,
+            max_length=16.0
+        )
+    )
+    carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Carrier",
+            type="Attribute",
+            required=True,
+            pattern=r"[0-9A-Z]{2,3}"
+        )
+    )
+    host_carrier: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="HostCarrier",
+            type="Attribute",
+            pattern=r"[0-9A-Z]{2,3}"
+        )
+    )
+    eticket_capable: bool = field(
+        default=False,
+        metadata=dict(
+            name="ETicketCapable",
+            type="Attribute"
+        )
+    )
+    co_host_id: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="CoHostID",
             type="Attribute"
         )
     )
@@ -9671,8 +9671,8 @@ class OtaAirLowFareSearchRq:
     :ivar transaction_identifier: A unique identifier to relate all messages within a transaction (e.g. this would be sent in all request and response messages that are part of an on-going transaction).
     :ivar sequence_nmbr: Used to identify the sequence number of the transaction as assigned by the sending system; allows for an application to process messages in a certain order or to request a resynchronization of messages in the event that a system has been off-line and needs to retrieve messages that were missed.
     :ivar transaction_status_code: This indicates where this message falls within a sequence of messages.
-    :ivar alt_lang_id:
     :ivar primary_lang_id: Identifes the primary language preference for the form of travel represented in a collection. The human language is identified by ISO 639 codes.
+    :ivar alt_lang_id:
     :ivar max_responses: A positive integer value that indicates the maximum number of responses desired in the return.
     :ivar direct_flights_only: Request direct flights between given locations. This defaults to false.
     :ivar available_flights_only: Include only flights with available booking codes (when True or when attribute not present).
@@ -9787,17 +9787,17 @@ class OtaAirLowFareSearchRq:
             type="Attribute"
         )
     )
-    alt_lang_id: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="AltLangID",
-            type="Attribute"
-        )
-    )
     primary_lang_id: Optional[str] = field(
         default=None,
         metadata=dict(
             name="PrimaryLangID",
+            type="Attribute"
+        )
+    )
+    alt_lang_id: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="AltLangID",
             type="Attribute"
         )
     )

@@ -2945,19 +2945,19 @@ class typeBaseAirSegment {
     +Carrier : string
     +CabinClass : string
     +FlightNumber : string
-    +ParticipantLevel : string
-    +LinkAvailability : boolean
-    +PolledAvailabilityOption : string
-    +AvailabilityDisplayType : string
-    +ProviderCode : string
-    +SupplierCode : string
-    +FlightTime : integer
-    +TravelTime : integer
-    +Distance : integer
     +Origin : string
     +Destination : string
     +DepartureTime : string
     +ArrivalTime : string
+    +FlightTime : integer
+    +TravelTime : integer
+    +Distance : integer
+    +ProviderCode : string
+    +SupplierCode : string
+    +ParticipantLevel : string
+    +LinkAvailability : boolean
+    +PolledAvailabilityOption : string
+    +AvailabilityDisplayType : string
     +ClassOfService : string
     +ETicketability : typeEticketability
     +Equipment : string

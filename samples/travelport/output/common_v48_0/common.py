@@ -8682,11 +8682,11 @@ class TypeFeeInfo:
     :ivar booking_traveler_ref: Reference to booking traveler
     :ivar passenger_type_code:
     :ivar text: Additional Information returned from Supplier.(ACH  only)
+    :ivar provider_code:
+    :ivar supplier_code:
     :ivar el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
     :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar provider_code:
-    :ivar supplier_code:
     """
     class Meta:
         name = "typeFeeInfo"
@@ -8793,20 +8793,6 @@ class TypeFeeInfo:
             max_length=64.0
         )
     )
-    el_stat: Optional[TypeElementStatus] = field(
-        default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
-    )
     provider_code: Optional[str] = field(
         default=None,
         metadata=dict(
@@ -8823,6 +8809,20 @@ class TypeFeeInfo:
             type="Attribute",
             min_length=1.0,
             max_length=5.0
+        )
+    )
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata=dict(
+            name="ElStat",
+            type="Attribute"
+        )
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="KeyOverride",
+            type="Attribute"
         )
     )
 

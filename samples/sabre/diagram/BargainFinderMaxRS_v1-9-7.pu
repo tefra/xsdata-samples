@@ -680,8 +680,8 @@ class OTA_AirLowFareSearchRS {
     +TransactionIdentifier : string
     +SequenceNmbr : positiveInteger, boolean
     +TransactionStatusCode : TransactionStatusCode
-    +AltLangID : language
     +PrimaryLangID : language
+    +AltLangID : language
     +PricedItinCount : short
     +BrandedOneWayItinCount : short
     +SimpleOneWayItinCount : short

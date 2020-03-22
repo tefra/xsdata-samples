@@ -1704,10 +1704,10 @@ class typeFeeInfo {
     +BookingTravelerRef : string
     +PassengerTypeCode : string
     +Text : string
-    +ElStat : typeElementStatus
-    +KeyOverride : boolean
     +ProviderCode : string
     +SupplierCode : string
+    +ElStat : typeElementStatus
+    +KeyOverride : boolean
 }
 typeFeeInfo +-- TaxInfoRef
 class TaxInfoRef {
