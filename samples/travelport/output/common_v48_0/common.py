@@ -589,7 +589,7 @@ class BookingDates:
 class BookingSource:
     """
     :ivar code: Alternate booking source code or number.
-    :ivar type: Type of booking source sent in the Code attribute. Possible values are &#8220;PseudoCityCode&#8221;,&#8221; ArcNumber&#8221;,&#8221; IataNumber&#8221;, &#8220;CustomerId&#8221; and &#8220;BookingSourceOverrride&#8221;. &#8220;BookingSourceOverrride&#8221; is only applicable in VehicleCreateReservationReq. 1P/1J.
+    :ivar type: Type of booking source sent in the Code attribute. Possible values are “PseudoCityCode”,” ArcNumber”,” IataNumber”, “CustomerId” and “BookingSourceOverrride”. “BookingSourceOverrride” is only applicable in VehicleCreateReservationReq. 1P/1J.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1350,7 +1350,7 @@ class EnettVan:
     """Container for all eNett Van information.
 
     :ivar min_percentage: The minimum percentage that will be applied on the Total price and sent to enett,which will denote the minimum authorized amount approved by eNett.uApi will default this to zero for multi-use Van's.
-    :ivar max_percentage: The maximum percentage that will be applied on the Total price and sent to enett, which will denote the maximum authorized amount as approved by eNett. This value will be ignored and not used for Multi-Use VAN&#8217;s.
+    :ivar max_percentage: The maximum percentage that will be applied on the Total price and sent to enett, which will denote the maximum authorized amount as approved by eNett. This value will be ignored and not used for Multi-Use VAN’s.
     :ivar expiry_days: The number of days from the VAN generation date that the VAN will be active for, after which the VAN cannot be used.
     :ivar multi_use: Acceptable values are true or false. If set to true it will denote that the VAN being requested is multi-use else it will indicate a single -use VAN.A Single use VAN can only be debited once while the multiple use VAN's can be debited multiple times subjected to the maximum value it has been authorized for. The default value will be TRUE to indicate a multi-use VAN is being issued.
     """
@@ -4295,9 +4295,9 @@ class TypePolicy(Enum):
 @dataclass
 class TypePolicyCodesList:
     """
-    :ivar policy_code: A code that indicates why an item was determined to be &#8216;out of policy&#8217;.
-    :ivar min_policy_code: A code that indicates why the minimum fare or rate was determined to be &#8216;out of policy&#8217;.
-    :ivar max_policy_code: A code that indicates why the maximum fare or rate was determined to be &#8216;out of policy&#8217;.
+    :ivar policy_code: A code that indicates why an item was determined to be ‘out of policy’.
+    :ivar min_policy_code: A code that indicates why the minimum fare or rate was determined to be ‘out of policy’.
+    :ivar max_policy_code: A code that indicates why the maximum fare or rate was determined to be ‘out of policy’.
     """
     class Meta:
         name = "typePolicyCodesList"
@@ -10783,7 +10783,7 @@ class TransactionType:
         :ivar one_way_shop: Allows or prohibits one way shopping functionality for the associated provisioning provider configuration
         :ivar flex_explore: Allows or prohibits flex explore functionality for the associated provisioning provider configuration
         :ivar rapid_reprice_enabled: Allows or prohibits rapid reprice functionality for the associated provisioning provider configuration. Providers: 1G/1V
-        :ivar return_upsell_fare: When set to &#8220;true&#8221;, Upsell information will be returned in the shop response.&#160; Provider: 1G, 1V, 1P, 1J, ACH
+        :ivar return_upsell_fare: When set to “true”, Upsell information will be returned in the shop response.  Provider: 1G, 1V, 1P, 1J, ACH
         """
         tier: Optional["TransactionType.Air.Tier"] = field(
             default=None,
@@ -12940,7 +12940,7 @@ class ServiceFeeInfo:
     :ivar service_fee_tax_info:
     :ivar credit_card_auth:
     :ivar payment:
-    :ivar status: Status of the service fee. Possible Values &#8211; Issued, ReadyToIssue, IssueLater.
+    :ivar status: Status of the service fee. Possible Values – Issued, ReadyToIssue, IssueLater.
     :ivar description: The description of the service fee.
     :ivar key:
     :ivar confirmation: The confirmation number of the service fee in the merchant host system.
@@ -13117,7 +13117,7 @@ class Mco(Mcoinformation):
     :ivar provider_code: Contains the Provider Code of the provider that houses this MCO.
     :ivar provider_locator_code: Contains the Provider Locator Code of the Provider Reservation that houses this MCO.
     :ivar pseudo_city_code: The PCC in the host system.
-    :ivar expiry_date: E-Voucher&#8217;s Expiry Date. This expiry date is specific to Rail product
+    :ivar expiry_date: E-Voucher’s Expiry Date. This expiry date is specific to Rail product
     """
     class Meta:
         name = "MCO"

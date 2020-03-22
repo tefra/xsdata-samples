@@ -1814,7 +1814,7 @@ class RoutingLegType:
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=9223372036854775807,
-            pattern=r"[A-Z0-9][A-Z][A-Z0-9]?"
+            pattern=r"\*|[A-Z][A-Z0-9]{1}|[A-Z0-9][A-Z][A-Z0-9]?"
         )
     )
     inbound_carrier: List[str] = field(
@@ -1825,7 +1825,7 @@ class RoutingLegType:
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=9223372036854775807,
-            pattern=r"[A-Z0-9][A-Z][A-Z0-9]?"
+            pattern=r"\*|[A-Z][A-Z0-9]{1}|[A-Z0-9][A-Z][A-Z0-9]?"
         )
     )
     outbound_carrier: List[str] = field(
@@ -1836,7 +1836,7 @@ class RoutingLegType:
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=9223372036854775807,
-            pattern=r"[A-Z0-9][A-Z][A-Z0-9]?"
+            pattern=r"\*|[A-Z][A-Z0-9]{1}|[A-Z0-9][A-Z][A-Z0-9]?"
         )
     )
     connect_point: List[str] = field(
@@ -1847,7 +1847,7 @@ class RoutingLegType:
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=9223372036854775807,
-            pattern=r"[A-Z]{3,5}"
+            pattern=r"\*|\?|\+|\.|[A-Z]{3,5}"
         )
     )
 

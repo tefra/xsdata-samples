@@ -268,7 +268,7 @@ class RailExchangeInfo:
     :ivar approximate_refund_amount:
     :ivar approximate_cancellation_fee:
     :ivar approximate_exchange_amount: The Converted total price in Default Currency for this entity including base price and all taxes.
-    :ivar retain_amount: Amount retained by a rail vendor for future use at the vendor&#8217;s site.
+    :ivar retain_amount: Amount retained by a rail vendor for future use at the vendor’s site.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -588,7 +588,7 @@ class RailSpecificSeatAssignment:
 
     :ivar coach_label: The coach number of the train being requested.
     :ivar place_label: The actual seat number or the close-to seat number based on the Assignment.
-    :ivar assignment: Defines how the PlaceLabel should be applied.  The values are &#147;6.STP&#148; for actual seat or &#147;2.STP&#148; for close-to seat. Default is 2.STP.
+    :ivar assignment: Defines how the PlaceLabel should be applied.  The values are 6.STP for actual seat or 2.STP for close-to seat. Default is 2.STP.
     :ivar rail_segment_ref: The rail segment to which this assignment belongs.
     :ivar booking_traveler_ref: The BookingTraveler for this seat assignment.
     """
@@ -757,11 +757,9 @@ class TypeRailTicketStatus(Enum):
 
 class TypeResponseType(Enum):
     """Indicates the type of information to be returned in
-    RailShopModifyAPIResponse.  Values are &#8220;Schedules&#8221; or
-    &#8220;Availability&#8221; or &#8220;Fares&#8221;.  If not sent,
-    &#8220;Fares&#8221; will be mapped if the request is for a specific rail
-    segments, otherwise &#8220;Availability&#8221; will be mapped. Provider
-    Supported RCH.
+    RailShopModifyAPIResponse.  Values are “Schedules” or “Availability” or
+    “Fares”.  If not sent, “Fares” will be mapped if the request is for a specific
+    rail segments, otherwise “Availability” will be mapped. Provider Supported RCH.
 
     :cvar AVAILABILITY:
     :cvar FARES:
@@ -3048,8 +3046,8 @@ class RailSolutionChangedInfo:
     """If RetainReservation is None, this will contain the new values returned from
     the provider.  If RetainReservation is Price, Schedule, or Both and there is a
     price/schedule change, this will contain the new values that were returned from
-    the provider.  If RetainReservation is Price, Schedule, or Both and there
-    isn&#8217;t a price/schedule change, this element will not be returned.
+    the provider.  If RetainReservation is Price, Schedule, or Both and there isn’t
+    a price/schedule change, this element will not be returned.
 
     :ivar rail_pricing_solution:
     :ivar reason_code:

@@ -1198,7 +1198,7 @@ class ValidatingCarrierInfoType:
             metadata=dict(
                 name="Code",
                 type="Attribute",
-                pattern=r"[A-Za-z]{0}"
+                pattern=r"[A-Z][0-9A-Z]|[0-9A-Z][A-Z][0-9A-Z]?|[A-Za-z]{0}"
             )
         )
 
@@ -5712,7 +5712,7 @@ class PricedItineraryType:
                     name="Code",
                     type="Attribute",
                     required=True,
-                    pattern=r"[A-Za-z]{0}"
+                    pattern=r"[A-Z][0-9A-Z]|[0-9A-Z][A-Z][0-9A-Z]?|[A-Za-z]{0}"
                 )
             )
 
