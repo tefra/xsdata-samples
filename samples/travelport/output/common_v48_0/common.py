@@ -11441,8 +11441,7 @@ class BookingTraveler:
         default=None,
         metadata=dict(
             name="EmergencyInfo",
-            type="Element",
-            required=True
+            type="Element"
         )
     )
     address: List[TypeStructuredAddress] = field(
@@ -11494,8 +11493,7 @@ class BookingTraveler:
         default=None,
         metadata=dict(
             name="TravelInfo",
-            type="Element",
-            required=True
+            type="Element"
         )
     )
     key: Optional[str] = field(

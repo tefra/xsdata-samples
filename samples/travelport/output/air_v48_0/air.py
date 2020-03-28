@@ -7391,8 +7391,7 @@ class AirPricingPayment:
         metadata=dict(
             name="FormOfPaymentRef",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            required=True
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     air_pricing_info_ref: List[AirPricingInfoRef] = field(
