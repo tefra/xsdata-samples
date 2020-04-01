@@ -85,17 +85,17 @@ class FareTokenInfo {
     +HostTokenRef : string
 }
 class AirExchangeBundle {
-    +common:AirExchangeInfo : common:AirExchangeInfo
+    +AirExchangeInfo : common:AirExchangeInfo
     +AirPricingInfoRef : AirPricingInfoRef[]
     +TaxInfo : TaxInfo[]
-    +common:Penalty : common:Penalty[]
+    +Penalty : common:Penalty[]
 }
 class AirExchangeBundleList {
     +AirExchangeBundle : AirExchangeBundle[]
 }
 class AirExchangeBundleTotal {
-    +common:AirExchangeInfo : common:AirExchangeInfo
-    +common:Penalty : common:Penalty[]
+    +AirExchangeInfo : common:AirExchangeInfo
+    +Penalty : common:Penalty[]
 }
 class AirExchangeModifiers {
     +ContractCodes : ContractCodes
@@ -122,9 +122,9 @@ class AirExchangeMultiQuoteOption {
     +AirExchangeBundleList : AirExchangeBundleList[]
 }
 class AirExchangeTicketBundle {
-    +common:TicketNumber : common:TicketNumber
-    +common:FormOfPayment : common:FormOfPayment[]
-    +common:FormOfPaymentRef : common:FormOfPaymentRef
+    +TicketNumber : common:TicketNumber
+    +FormOfPayment : common:FormOfPayment[]
+    +FormOfPaymentRef : common:FormOfPaymentRef
     +WaiverCode : WaiverCode
 }
 class AirFareDiscount {
@@ -134,7 +134,7 @@ class AirFareDiscount {
 }
 class AirFareDisplayModifiers {
     +TripType : typeFareTripType[]
-    +common:CabinClass : common:CabinClass
+    +CabinClass : common:CabinClass
     +PenaltyFareInformation : PenaltyFareInformation
     +FareSearchOption : typeFareSearchOption[]
     +MaxResponses : integer
@@ -170,7 +170,7 @@ class AirFareRulesModifier {
 }
 class AirItinerary {
     +AirSegment : AirSegment[]
-    +common:HostToken : common:HostToken[]
+    +HostToken : common:HostToken[]
     +APISRequirements : APISRequirements[]
 }
 class AirItineraryDetails {
@@ -213,15 +213,15 @@ class AirLegModifiers {
 }
 AirLegModifiers +-- PermittedConnectionPoints
 class PermittedConnectionPoints {
-    +common:ConnectionPoint : common:ConnectionPoint[]
+    +ConnectionPoint : common:ConnectionPoint[]
 }
 AirLegModifiers +-- ProhibitedConnectionPoints
 class ProhibitedConnectionPoints {
-    +common:ConnectionPoint : common:ConnectionPoint[]
+    +ConnectionPoint : common:ConnectionPoint[]
 }
 AirLegModifiers +-- PreferredConnectionPoints
 class PreferredConnectionPoints {
-    +common:ConnectionPoint : common:ConnectionPoint[]
+    +ConnectionPoint : common:ConnectionPoint[]
 }
 AirLegModifiers +-- PermittedBookingCodes
 class PermittedBookingCodes {
@@ -292,7 +292,7 @@ class AirPricingInfo {
     +TaxInfo : TaxInfo[]
     +FareCalc : FareCalc
     +PassengerType : PassengerType[]
-    +common:BookingTravelerRef : common:BookingTravelerRef[]
+    +BookingTravelerRef : common:BookingTravelerRef[]
     +WaiverCode : WaiverCode
     +PaymentRef : PaymentRef[]
     +ChangePenalty : typeFarePenalty[]
@@ -310,7 +310,7 @@ class AirPricingInfo {
     +PolicyCodesList : PolicyCodesList
     +PriceChange : PriceChangeType[]
     +ActionDetails : ActionDetails
-    +common:Commission : common:Commission[]
+    +Commission : common:Commission[]
     +Origin : string
     +Destination : string
     +Key : string
@@ -364,10 +364,10 @@ class AirPricingModifiers {
     +ContractCodes : ContractCodes
     +ExemptTaxes : ExemptTaxes
     +PenaltyFareInformation : PenaltyFareInformation
-    +common:DiscountCard : common:DiscountCard[]
+    +DiscountCard : common:DiscountCard[]
     +PromoCodes : PromoCodes
     +ManualFareAdjustment : ManualFareAdjustment[]
-    +common:PointOfSale : common:PointOfSale
+    +PointOfSale : common:PointOfSale
     +BrandModifiers : BrandModifiers
     +MultiGDSSearchIndicator : MultiGDSSearchIndicator[]
     +PreferredCabins : PreferredCabins[]
@@ -401,7 +401,7 @@ class ProhibitedRuleCategories {
 }
 AirPricingModifiers +-- AccountCodes
 class AccountCodes {
-    +common:AccountCode : common:AccountCode[]
+    +AccountCode : common:AccountCode[]
 }
 AirPricingModifiers +-- ContractCodes
 class ContractCodes {
@@ -412,9 +412,9 @@ class PromoCodes {
     +PromoCode : PromoCode[]
 }
 class AirPricingPayment {
-    +common:Payment : common:Payment[]
-    +common:FormOfPayment : common:FormOfPayment[]
-    +common:FormOfPaymentRef : common:FormOfPaymentRef
+    +Payment : common:Payment[]
+    +FormOfPayment : common:FormOfPayment[]
+    +FormOfPaymentRef : common:FormOfPaymentRef
     +AirPricingInfoRef : AirPricingInfoRef[]
 }
 class AirPricingSolution {
@@ -426,12 +426,12 @@ class AirPricingSolution {
     +FareNote : FareNote[]
     +FareNoteRef : FareNoteRef[]
     +Connection : Connection[]
-    +common:MetaData : common:MetaData[]
+    +MetaData : common:MetaData[]
     +AirPricingResultMessage : common:typeResultMessage[]
     +FeeInfo : FeeInfo[]
     +TaxInfo : TaxInfo[]
     +AirItinerarySolutionRef : AirItinerarySolutionRef[]
-    +common:HostToken : common:HostToken[]
+    +HostToken : common:HostToken[]
     +OptionalServices : OptionalServices
     +AvailableSSR : AvailableSSR
     +PricingDetails : PricingDetails
@@ -462,7 +462,7 @@ class AirPricingTicketingModifiers {
 }
 class AirRefundBundle {
     +AirRefundInfo : AirRefundInfo
-    +common:Name : common:Name[]
+    +Name : common:Name[]
     +TaxInfo : TaxInfo[]
     +WaiverCode : WaiverCode
     +TicketNumber : string
@@ -476,7 +476,7 @@ class RefundType {
 }
 RefundType *- string
 class AirRefundInfo {
-    +common:RefundRemark : common:RefundRemark[]
+    +RefundRemark : common:RefundRemark[]
     +RefundAmount : string
     +RetainAmount : string
     +RefundFee : string
@@ -545,15 +545,15 @@ class AirSearchModifiers {
 }
 AirSearchModifiers +-- DisfavoredProviders
 class DisfavoredProviders {
-    +common:Provider : common:Provider[]
+    +Provider : common:Provider[]
 }
 AirSearchModifiers +-- PreferredProviders
 class PreferredProviders {
-    +common:Provider : common:Provider[]
+    +Provider : common:Provider[]
 }
 AirSearchModifiers +-- DisfavoredCarriers
 class DisfavoredCarriers {
-    +common:Carrier : common:Carrier[]
+    +Carrier : common:Carrier[]
 }
 AirSearchModifiers +-- PreferredAlliances
 class PreferredAlliances {
@@ -642,7 +642,7 @@ class AirSegmentTicketingModifiers {
 class AirSolution {
     +SearchTraveler : SearchTraveler[]
     +AirSegment : AirSegment[]
-    +common:HostToken : common:HostToken[]
+    +HostToken : common:HostToken[]
     +FareBasis : FareBasis[]
 }
 class AirSolutionChangedInfo {
@@ -661,10 +661,10 @@ class AirTicketingModifiers {
     +AirPricingInfoRef : AirPricingInfoRef[]
     +TourCode : TourCode
     +TicketEndorsement : TicketEndorsement[]
-    +common:Commission : common:Commission
-    +common:FormOfPayment : common:FormOfPayment[]
-    +common:CreditCardAuth : common:CreditCardAuth[]
-    +common:Payment : common:Payment[]
+    +Commission : common:Commission
+    +FormOfPayment : common:FormOfPayment[]
+    +CreditCardAuth : common:CreditCardAuth[]
+    +Payment : common:Payment[]
     +PlatingCarrier : string
     +TicketedFareOverride : boolean
     +SuppressTaxAndFee : boolean
@@ -674,7 +674,7 @@ class Alliance {
     +Code : string
 }
 class AlternateLocationDistance {
-    +common:Distance : common:Distance
+    +Distance : common:Distance
     +Key : string
     +SearchLocation : string
     +AlternateLocation : string
@@ -717,7 +717,7 @@ class AuditData {
 }
 class AutoPricingInfo {
     +AirSegmentRef : AirSegmentRef[]
-    +common:BookingTravelerRef : common:BookingTravelerRef[]
+    +BookingTravelerRef : common:BookingTravelerRef[]
     +AirPricingModifiers : AirPricingModifiers
     +AirSegmentPricingModifiers : AirSegmentPricingModifiers[]
     +Key : string
@@ -738,16 +738,16 @@ class AvailabilityErrorInfo {
 }
 AvailabilityErrorInfo *- common:typeErrorInfo
 class AvailableDiscount {
-    +common:LoyaltyProgram : common:LoyaltyProgram[]
+    +LoyaltyProgram : common:LoyaltyProgram[]
     +Amount : string
     +Percent : string
     +Description : string
     +DiscountQualifier : string
 }
 class AvailableSSR {
-    +common:SSR : common:SSR[]
+    +SSR : common:SSR[]
     +SSRRules : common:ServiceRuleType[]
-    +common:IndustryStandardSSR : common:IndustryStandardSSR[]
+    +IndustryStandardSSR : common:IndustryStandardSSR[]
 }
 class BackOfficeHandOff {
     +Type : typeBackOffice
@@ -1038,7 +1038,7 @@ class DestinationPurposeCode {
     +Purpose : typePurposeCode
 }
 class DetailedBillingInformation {
-    +common:FormOfPaymentRef : common:FormOfPaymentRef
+    +FormOfPaymentRef : common:FormOfPaymentRef
     +AirPricingInfoRef : AirPricingInfoRef[]
     +BillingDetailItem : BillingDetailItem[]
 }
@@ -1138,10 +1138,10 @@ class EMDEndorsement {
 }
 class EMDInfo {
     +EMDTravelerInfo : EMDTravelerInfo
-    +common:SupplierLocator : common:SupplierLocator[]
+    +SupplierLocator : common:SupplierLocator[]
     +ElectronicMiscDocument : ElectronicMiscDocument[]
-    +common:Payment : common:Payment
-    +common:FormOfPayment : common:FormOfPayment
+    +Payment : common:Payment
+    +FormOfPayment : common:FormOfPayment
     +EMDPricingInfo : EMDPricingInfo
     +EMDEndorsement : EMDEndorsement[]
     +FareCalc : FareCalc
@@ -1174,7 +1174,7 @@ class EMDSummary {
 class EMDSummaryInfo {
     +EMDSummary : EMDSummary[]
     +EMDTravelerInfo : EMDTravelerInfo
-    +common:Payment : common:Payment
+    +Payment : common:Payment
     +ProviderReservationInfoRef : string
     +Key : string
     +ElStat : common:typeElementStatus
@@ -1195,18 +1195,18 @@ class NameInfo {
 }
 class ETR {
     +AirReservationLocatorCode : AirReservationLocatorCode
-    +common:AgencyInfo : common:AgencyInfo
-    +common:BookingTraveler : common:BookingTraveler
-    +common:FormOfPayment : common:FormOfPayment[]
-    +common:Payment : common:Payment[]
-    +common:CreditCardAuth : common:CreditCardAuth[]
-    +common:SupplierLocator : common:SupplierLocator[]
+    +AgencyInfo : common:AgencyInfo
+    +BookingTraveler : common:BookingTraveler
+    +FormOfPayment : common:FormOfPayment[]
+    +Payment : common:Payment[]
+    +CreditCardAuth : common:CreditCardAuth[]
+    +SupplierLocator : common:SupplierLocator[]
     +FareCalc : FareCalc
     +Ticket : Ticket[]
-    +common:Commission : common:Commission[]
+    +Commission : common:Commission[]
     +AirPricingInfo : AirPricingInfo
     +AuditData : AuditData
-    +common:Restriction : common:Restriction[]
+    +Restriction : common:Restriction[]
     +WaiverCode : WaiverCode
     +BaggageAllowances : BaggageAllowances
     +Key : string
@@ -1269,7 +1269,7 @@ class Enumeration {
 }
 class ExchangeAirSegment {
     +AirSegment : AirSegment
-    +common:CabinClass : common:CabinClass
+    +CabinClass : common:CabinClass
     +FareBasisCode : string
 }
 class ExchangeEligibilityInfo {
@@ -1312,11 +1312,11 @@ class ExpertSolutionList {
 }
 class Facility {
     +Characteristic : Characteristic[]
-    +common:Remark : common:Remark[]
+    +Remark : common:Remark[]
     +PassengerSeatPrice : PassengerSeatPrice[]
     +TaxInfo : TaxInfo[]
     +EMD : EMD
-    +common:ServiceData : common:ServiceData[]
+    +ServiceData : common:ServiceData[]
     +TourCode : TourCode
     +Type : typeFacility
     +SeatCode : string
@@ -1361,7 +1361,7 @@ class FareDisplay {
     +FareMileageInformation : FareMileageInformation
     +AirFareDisplayRuleKey : AirFareDisplayRuleKey
     +BookingCode : BookingCode[]
-    +common:AccountCode : common:AccountCode[]
+    +AccountCode : common:AccountCode[]
     +AddlBookingCodeInformation : AddlBookingCodeInformation
     +FareRuleFailureInfo : FareRuleFailureInfo
     +PriceChange : PriceChangeType[]
@@ -1400,15 +1400,15 @@ class FareGuaranteeInfo {
 class FareInfo {
     +FareTicketDesignator : FareTicketDesignator[]
     +FareSurcharge : FareSurcharge[]
-    +common:AccountCode : common:AccountCode[]
+    +AccountCode : common:AccountCode[]
     +ContractCode : ContractCode[]
-    +common:Endorsement : common:Endorsement[]
+    +Endorsement : common:Endorsement[]
     +BaggageAllowance : BaggageAllowance
     +FareRuleKey : FareRuleKey
     +FareRuleFailureInfo : FareRuleFailureInfo
     +FareRemarkRef : FareRemarkRef[]
     +Brand : Brand
-    +common:Commission : common:Commission
+    +Commission : common:Commission
     +FareAttributes : string
     +ChangePenalty : typeFarePenalty
     +CancelPenalty : typeFarePenalty
@@ -1579,8 +1579,8 @@ class FareRuleLongRef {
     +Key : string
 }
 class FareRuleLookup {
-    +common:AccountCode : common:AccountCode
-    +common:PointOfSale : common:PointOfSale
+    +AccountCode : common:AccountCode
+    +PointOfSale : common:PointOfSale
     +Origin : string
     +Destination : string
     +Carrier : string
@@ -1642,9 +1642,9 @@ class FareType {
     +Code : string
 }
 class FaxDetails {
-    +common:PhoneNumber : common:PhoneNumber
+    +PhoneNumber : common:PhoneNumber
     +TermConditions : TermConditions
-    +common:Remark : common:Remark[]
+    +Remark : common:Remark[]
     +IncludeCoverSheet : boolean
     +To : string
     +From : string
@@ -1825,7 +1825,7 @@ class HostReservation {
     +ETicket : boolean
 }
 class HostTokenList {
-    +common:HostToken : common:HostToken[]
+    +HostToken : common:HostToken[]
 }
 class ImageLocation {
     +value : string
@@ -1844,8 +1844,8 @@ class InvoluntaryChange {
     +TicketEndorsement : TicketEndorsement
 }
 class IssuanceModifiers {
-    +common:FormOfPaymentRef : common:FormOfPaymentRef
-    +common:FormOfPayment : common:FormOfPayment
+    +FormOfPaymentRef : common:FormOfPaymentRef
+    +FormOfPayment : common:FormOfPayment
     +CustomerReceiptInfo : CustomerReceiptInfo
     +EMDEndorsement : EMDEndorsement
     +EMDCommission : EMDCommission
@@ -1942,14 +1942,14 @@ class Meals {
 }
 class MerchandisingAvailabilityDetails {
     +AirItineraryDetails : AirItineraryDetails
-    +common:AccountCode : common:AccountCode
+    +AccountCode : common:AccountCode
 }
 class MerchandisingDetails {
     +AirItineraryDetails : AirItineraryDetails[]
-    +common:AccountCode : common:AccountCode[]
+    +AccountCode : common:AccountCode[]
 }
 class MerchandisingPricingModifiers {
-    +common:AccountCode : common:AccountCode[]
+    +AccountCode : common:AccountCode[]
 }
 class MultiGDSSearchIndicator {
     +Type : string
@@ -2008,9 +2008,9 @@ class Option {
     +TravelTime : duration
 }
 class OptionalService {
-    +common:ServiceData : common:ServiceData[]
-    +common:ServiceInfo : common:ServiceInfo
-    +common:Remark : common:Remark[]
+    +ServiceData : common:ServiceData[]
+    +ServiceInfo : common:ServiceInfo
+    +Remark : common:Remark[]
     +TaxInfo : TaxInfo[]
     +FeeInfo : FeeInfo[]
     +EMD : EMD
@@ -2119,8 +2119,8 @@ class OptionalServicesTotal {
 }
 class OptionalServicesInfo {
     +AirPricingSolution : AirPricingSolution
-    +common:FormOfPayment : common:FormOfPayment[]
-    +common:FormOfPaymentRef : common:FormOfPaymentRef[]
+    +FormOfPayment : common:FormOfPayment[]
+    +FormOfPaymentRef : common:FormOfPaymentRef[]
 }
 class OriginalItineraryDetails {
     +ItineraryType : common:typeItineraryCode
@@ -2135,8 +2135,8 @@ class OverrideCode {
     +value : string
 }
 class PCC {
-    +common:OverridePCC : common:OverridePCC
-    +common:PointOfSale : common:PointOfSale[]
+    +OverridePCC : common:OverridePCC
+    +PointOfSale : common:PointOfSale[]
     +TicketAgency : TicketAgency
 }
 class PassengerDetails {
@@ -2205,10 +2205,10 @@ class PenaltyInformation {
     +ChangeFeeApplicationCode : string
 }
 class PermittedCabins {
-    +common:CabinClass : common:CabinClass[]
+    +CabinClass : common:CabinClass[]
 }
 class PermittedCarriers {
-    +common:Carrier : common:Carrier[]
+    +Carrier : common:Carrier[]
 }
 class PersonName {
     +First : string
@@ -2235,10 +2235,10 @@ class PrePayAccount {
 }
 class PrePayCustomer {
     +PersonName : PersonName
-    +common:Email : common:Email[]
+    +Email : common:Email[]
     +Address : common:typeStructuredAddress[]
     +RelatedTraveler : RelatedTraveler[]
-    +common:LoyaltyCard : common:LoyaltyCard[]
+    +LoyaltyCard : common:LoyaltyCard[]
 }
 class PrePayId {
     +CompanyName : CompanyName
@@ -2264,10 +2264,10 @@ class PreferredBookingCodes {
     +BookingCode : BookingCode[]
 }
 class PreferredCabins {
-    +common:CabinClass : common:CabinClass
+    +CabinClass : common:CabinClass
 }
 class PreferredCarriers {
-    +common:Carrier : common:Carrier[]
+    +Carrier : common:Carrier[]
 }
 class PriceChangeType {
     +value : string
@@ -2305,10 +2305,10 @@ class PrintBlankFormItinerary {
     +IncludeHeader : boolean
 }
 class ProhibitedCabins {
-    +common:CabinClass : common:CabinClass[]
+    +CabinClass : common:CabinClass[]
 }
 class ProhibitedCarriers {
-    +common:Carrier : common:Carrier[]
+    +Carrier : common:Carrier[]
 }
 class PromoCode {
     +Code : string
@@ -2321,15 +2321,15 @@ class RailCoachDetails {
     +RailSeatMapAvailability : boolean
 }
 class RefundFailureInfo {
-    +common:TicketNumber : common:TicketNumber
-    +common:Name : common:Name
+    +TicketNumber : common:TicketNumber
+    +Name : common:Name
     +TCRNumber : string
     +BookingTravelerRef : string[]
     +Code : integer
     +Message : string
 }
 class RelatedTraveler {
-    +common:LoyaltyCard : common:LoyaltyCard[]
+    +LoyaltyCard : common:LoyaltyCard[]
     +PersonName : PersonName
     +CreditsUsed : CreditsUsed
     +StatusCode : string
@@ -2467,7 +2467,7 @@ class SearchAirLeg {
     +AirLegModifiers : AirLegModifiers
 }
 class SearchTraveler {
-    +common:AirSeatAssignment : common:AirSeatAssignment[]
+    +AirSeatAssignment : common:AirSeatAssignment[]
     +Key : string
 }
 SearchTraveler *- common:typePassengerType
@@ -2515,7 +2515,7 @@ class ServiceAssociations {
 }
 ServiceAssociations +-- ApplicableSegment
 class ApplicableSegment {
-    +common:ResponseMessage : common:ResponseMessage
+    +ResponseMessage : common:ResponseMessage
     +OptionalServiceRef : OptionalServiceRef
     +Key : string
 }
@@ -2540,23 +2540,23 @@ class SolutionGroup {
 }
 SolutionGroup +-- PermittedAccountCodes
 class PermittedAccountCodes {
-    +common:AccountCode : common:AccountCode[]
+    +AccountCode : common:AccountCode[]
 }
 SolutionGroup +-- PreferredAccountCodes
 class PreferredAccountCodes {
-    +common:AccountCode : common:AccountCode[]
+    +AccountCode : common:AccountCode[]
 }
 SolutionGroup +-- ProhibitedAccountCodes
 class ProhibitedAccountCodes {
-    +common:AccountCode : common:AccountCode[]
+    +AccountCode : common:AccountCode[]
 }
 SolutionGroup +-- PermittedPointOfSales
 class PermittedPointOfSales {
-    +common:PointOfSale : common:PointOfSale[]
+    +PointOfSale : common:PointOfSale[]
 }
 SolutionGroup +-- ProhibitedPointOfSales
 class ProhibitedPointOfSales {
-    +common:PointOfSale : common:PointOfSale[]
+    +PointOfSale : common:PointOfSale[]
 }
 class SpecificSeatAssignment {
     +BookingTravelerRef : string
@@ -2574,11 +2574,11 @@ class SpecificTimeTable {
 }
 SpecificTimeTable +-- FlightOrigin
 class FlightOrigin {
-    +common:Airport : common:Airport
+    +Airport : common:Airport
 }
 SpecificTimeTable +-- FlightDestination
 class FlightDestination {
-    +common:Airport : common:Airport
+    +Airport : common:Airport
 }
 class SplitTicketingSearch {
     +RoundTrip : integer
@@ -2608,15 +2608,15 @@ class SvcSegment {
     +EMDNumber : string
 }
 class TCR {
-    +common:FormOfPayment : common:FormOfPayment[]
-    +common:Payment : common:Payment[]
-    +common:BookingTraveler : common:BookingTraveler[]
+    +FormOfPayment : common:FormOfPayment[]
+    +Payment : common:Payment[]
+    +BookingTraveler : common:BookingTraveler[]
     +PassengerTicketNumber : PassengerTicketNumber[]
     +AirPricingInfo : AirPricingInfo[]
-    +common:AgencyInfo : common:AgencyInfo
+    +AgencyInfo : common:AgencyInfo
     +AirReservationLocatorCode : AirReservationLocatorCode
-    +common:SupplierLocator : common:SupplierLocator[]
-    +common:RefundRemark : common:RefundRemark[]
+    +SupplierLocator : common:SupplierLocator[]
+    +RefundRemark : common:RefundRemark[]
     +TCRNumber : string
     +Status : typeTCRStatus
     +ModifiedDate : string
@@ -2636,11 +2636,11 @@ class TCR {
     +ForfeitAmount : string
 }
 class TCRExchangeBundle {
-    +common:AirExchangeInfo : common:AirExchangeInfo
+    +AirExchangeInfo : common:AirExchangeInfo
     +AirPricingInfoRef : AirPricingInfoRef[]
     +FeeInfo : FeeInfo[]
     +TaxInfo : TaxInfo[]
-    +common:Penalty : common:Penalty[]
+    +Penalty : common:Penalty[]
     +TCRNumber : string
 }
 class TCRInfo {
@@ -2655,7 +2655,7 @@ class TCRRefundBundle {
     +AirSegment : AirSegment[]
     +FeeInfo : FeeInfo[]
     +TaxInfo : TaxInfo[]
-    +common:HostToken : common:HostToken[]
+    +HostToken : common:HostToken[]
     +TCRNumber : string
     +RefundType : RefundType
     +RefundAccessCode : string
@@ -2708,13 +2708,13 @@ class TicketEndorsement {
 }
 class TicketFailureInfo {
     +AirPricingInfoRef : AirPricingInfoRef[]
-    +common:Name : common:Name
+    +Name : common:Name
     +Code : integer
     +Message : string
     +BookingTravelerRef : string
 }
 class TicketInfo {
-    +common:Name : common:Name
+    +Name : common:Name
     +ConjunctedTicketInfo : ConjunctedTicketInfo[]
     +ExchangedTicketInfo : ExchangedTicketInfo[]
     +Number : string
@@ -2741,7 +2741,7 @@ class TicketingModifiers {
     +AccountingInfo : typeTicketModifierAccountingType
     +BulkTicket : BulkTicket
     +GroupTour : typeBulkTicketModifierType
-    +common:Commission : common:Commission
+    +Commission : common:Commission
     +TourCode : TourCode
     +TicketEndorsement : TicketEndorsement[]
     +ValueModifier : typeTicketModifierValueType
@@ -2749,7 +2749,7 @@ class TicketingModifiers {
     +DocumentOptions : DocumentOptions
     +SegmentSelect : SegmentSelect
     +SegmentModifiers : SegmentModifiers[]
-    +common:SupplierLocator : common:SupplierLocator
+    +SupplierLocator : common:SupplierLocator
     +DestinationPurposeCode : DestinationPurposeCode
     +LanguageOption : LanguageOption[]
     +LandCharges : LandCharges
@@ -2877,7 +2877,7 @@ enum typeATPCOGlobalIndicator {
     ZZ = ZZ
 }
 class typeAirReservationWithFOP {
-    +common:FormOfPayment : common:FormOfPayment[]
+    +FormOfPayment : common:FormOfPayment[]
 }
 typeAirReservationWithFOP *- typeBaseAirReservation
 enum typeAlliance {
@@ -2910,16 +2910,16 @@ enum typeBackOffice {
 }
 class typeBaseAirReservation {
     +OptionalServices : OptionalServices
-    +common:SupplierLocator : common:SupplierLocator[]
-    +common:ThirdPartyInformation : common:ThirdPartyInformation[]
+    +SupplierLocator : common:SupplierLocator[]
+    +ThirdPartyInformation : common:ThirdPartyInformation[]
     +DocumentInfo : DocumentInfo
-    +common:BookingTravelerRef : common:BookingTravelerRef[]
-    +common:ProviderReservationInfoRef : common:ProviderReservationInfoRef[]
+    +BookingTravelerRef : common:BookingTravelerRef[]
+    +ProviderReservationInfoRef : common:ProviderReservationInfoRef[]
     +AirSegment : AirSegment[]
     +SvcSegment : SvcSegment[]
     +AirPricingInfo : AirPricingInfo[]
-    +common:Payment : common:Payment[]
-    +common:CreditCardAuth : common:CreditCardAuth[]
+    +Payment : common:Payment[]
+    +CreditCardAuth : common:CreditCardAuth[]
     +FareNote : FareNote[]
     +FeeInfo : FeeInfo[]
     +TaxInfo : typeTaxInfoWithPaymentRef[]
@@ -2938,7 +2938,7 @@ class typeBaseAirSegment {
     +FlightDetailsRef : FlightDetailsRef[]
     +AlternateLocationDistanceRef : AlternateLocationDistanceRef[]
     +Connection : Connection
-    +common:SellMessage : common:SellMessage[]
+    +SellMessage : common:SellMessage[]
     +RailCoachDetails : RailCoachDetails[]
     +OpenSegment : boolean
     +Group : int
@@ -3381,8 +3381,8 @@ class typeTextElement {
     +LanguageCode : language
 }
 class typeTicketFailureInfo {
-    +common:TicketNumber : common:TicketNumber
-    +common:Name : common:Name
+    +TicketNumber : common:TicketNumber
+    +Name : common:Name
     +TCRNumber : string
     +BookingTravelerRef : string[]
     +Code : integer

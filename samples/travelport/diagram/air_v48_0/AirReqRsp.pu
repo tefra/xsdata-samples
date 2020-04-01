@@ -31,42 +31,42 @@ class AirExchangeQuoteReq {
 }
 AirExchangeQuoteReq *- BaseAirExchangeQuoteReq
 class AirExchangeQuoteRsp {
-    +common:TicketNumber : common:TicketNumber[]
+    +TicketNumber : common:TicketNumber[]
     +AirPricingSolution : AirPricingSolution[]
     +AirExchangeBundleTotal : AirExchangeBundleTotal
     +AirExchangeBundle : AirExchangeBundle[]
-    +common:HostToken : common:HostToken[]
+    +HostToken : common:HostToken[]
     +OptionalServices : OptionalServices
     +FareRule : FareRule[]
 }
 AirExchangeQuoteRsp *- common:BaseRsp
 class AirExchangeReq {
     +AirReservationLocatorCode : AirReservationLocatorCode
-    +common:TicketNumber : common:TicketNumber[]
+    +TicketNumber : common:TicketNumber[]
     +SpecificSeatAssignment : SpecificSeatAssignment[]
     +AirPricingSolution : AirPricingSolution[]
     +AirExchangeModifiers : AirExchangeModifiers
     +AirExchangeBundleTotal : AirExchangeBundleTotal
     +AirExchangeBundle : AirExchangeBundle[]
-    +common:HostToken : common:HostToken[]
+    +HostToken : common:HostToken[]
     +OptionalServices : OptionalServices
-    +common:FormOfPayment : common:FormOfPayment
-    +common:FormOfPaymentRef : common:FormOfPaymentRef
-    +common:SSRInfo : common:SSRInfo[]
-    +common:AddSvc : common:AddSvc
+    +FormOfPayment : common:FormOfPayment
+    +FormOfPaymentRef : common:FormOfPaymentRef
+    +SSRInfo : common:SSRInfo[]
+    +AddSvc : common:AddSvc
     +ReturnReservation : boolean
 }
 AirExchangeReq *- common:BaseReq
 class AirExchangeRsp {
-    +common:TicketNumber : common:TicketNumber[]
-    +common:BookingTraveler : common:BookingTraveler[]
+    +TicketNumber : common:TicketNumber[]
+    +BookingTraveler : common:BookingTraveler[]
     +AirReservation : typeAirReservationWithFOP
     +ExchangeFailureInfo : typeTicketFailureInfo[]
 }
 AirExchangeRsp *- common:BaseRsp
 class AirExchangeTicketingReq {
     +AirReservationLocatorCode : AirReservationLocatorCode
-    +common:TicketNumber : common:TicketNumber
+    +TicketNumber : common:TicketNumber
     +TicketingModifiersRef : typeTicketingModifiersRef[]
     +WaiverCode : WaiverCode
     +DetailedBillingInformation : DetailedBillingInformation[]
@@ -88,11 +88,11 @@ class AirFareDisplayReq {
     +BookingCode : BookingCode[]
     +IncludeAddlBookingCodeInfo : IncludeAddlBookingCodeInfo
     +FareBasis : FareBasis
-    +common:Carrier : common:Carrier[]
-    +common:AccountCode : common:AccountCode[]
+    +Carrier : common:Carrier[]
+    +AccountCode : common:AccountCode[]
     +ContractCode : ContractCode
     +AirFareDisplayModifiers : AirFareDisplayModifiers
-    +common:PointOfSale : common:PointOfSale[]
+    +PointOfSale : common:PointOfSale[]
     +AirFareDisplayRuleKey : AirFareDisplayRuleKey
     +Origin : string
     +Destination : string
@@ -149,7 +149,7 @@ class UnassociatedBookingCodeList {
     +ApplicableSegment : typeApplicableSegment[]
 }
 class AirMerchandisingOfferAvailabilityReq {
-    +common:AgencySellInfo : common:AgencySellInfo
+    +AgencySellInfo : common:AgencySellInfo
     +AirSolution : AirSolution
     +HostReservation : HostReservation[]
     +OfferAvailabilityModifiers : OfferAvailabilityModifiers[]
@@ -158,7 +158,7 @@ class AirMerchandisingOfferAvailabilityReq {
 AirMerchandisingOfferAvailabilityReq *- common:BaseReq
 class AirMerchandisingOfferAvailabilityRsp {
     +AirSolution : AirSolution
-    +common:Remark : common:Remark
+    +Remark : common:Remark
     +OptionalServices : OptionalServices
     +EmbargoList : EmbargoList
 }
@@ -171,7 +171,7 @@ AirPrePayReq *- common:BaseReq
 AirPrePayReq +-- ListSearch
 class ListSearch {
     +PersonNameSearch : PersonNameSearch
-    +common:LoyaltyCard : common:LoyaltyCard[]
+    +LoyaltyCard : common:LoyaltyCard[]
     +StartFromResult : integer
     +MaxResults : integer
 }
@@ -194,10 +194,10 @@ class AirPriceRsp {
 }
 AirPriceRsp *- BaseAirPriceRsp
 class AirRefundQuoteReq {
-    +common:TicketNumber : common:TicketNumber[]
+    +TicketNumber : common:TicketNumber[]
     +TCRNumber : string[]
     +AirRefundModifiers : AirRefundModifiers
-    +common:HostToken : common:HostToken[]
+    +HostToken : common:HostToken[]
     +ProviderReservationInfo : ProviderReservationInfo[]
     +Ignore : boolean
 }
@@ -216,8 +216,8 @@ class AirRefundReq {
     +AirRefundBundle : AirRefundBundle[]
     +TCRRefundBundle : TCRRefundBundle[]
     +AirRefundModifiers : AirRefundModifiers
-    +common:Commission : common:Commission[]
-    +common:FormOfPayment : common:FormOfPayment
+    +Commission : common:Commission[]
+    +FormOfPayment : common:FormOfPayment
 }
 AirRefundReq *- common:BaseReq
 class AirRefundRsp {
@@ -239,7 +239,7 @@ class AirRepriceRsp {
 AirRepriceRsp *- common:BaseRsp
 class AirRetrieveDocumentReq {
     +AirReservationLocatorCode : AirReservationLocatorCode
-    +common:TicketNumber : common:TicketNumber[]
+    +TicketNumber : common:TicketNumber[]
     +TCRNumber : string[]
     +ReturnRestrictions : boolean
     +ReturnPricing : boolean
@@ -251,15 +251,15 @@ class AirRetrieveDocumentReq {
 AirRetrieveDocumentReq *- common:BaseReq
 class AirRetrieveDocumentRsp {
     +ETR : ETR[]
-    +common:MCO : common:MCO[]
+    +MCO : common:MCO[]
     +TCR : TCR[]
     +DocumentFailureInfo : typeFailureInfo[]
-    +common:ServiceFeeInfo : common:ServiceFeeInfo[]
+    +ServiceFeeInfo : common:ServiceFeeInfo[]
     +UniversalRecordLocatorCode : string
 }
 AirRetrieveDocumentRsp *- common:BaseRsp
 class AirSearchReq {
-    +common:PointOfCommencement : common:PointOfCommencement
+    +PointOfCommencement : common:PointOfCommencement
     +SearchAirLeg : SearchAirLeg[]
     +SearchSpecificAirSegment : SearchSpecificAirSegment[]
     +AirSearchModifiers : AirSearchModifiers
@@ -275,12 +275,12 @@ class AirSearchRsp {
     +FareInfoMessage : FareInfoMessage[]
     +AirPricingSolution : AirPricingSolution[]
     +AirPricePointList : AirPricePointList
-    +rail:RailSegmentList : rail:RailSegmentList
-    +rail:RailJourneyList : rail:RailJourneyList
-    +rail:RailFareNoteList : rail:RailFareNoteList
-    +rail:RailFareIDList : rail:RailFareIDList
-    +rail:RailFareList : rail:RailFareList
-    +rail:RailPricingSolution : rail:RailPricingSolution[]
+    +RailSegmentList : rail:RailSegmentList
+    +RailJourneyList : rail:RailJourneyList
+    +RailFareNoteList : rail:RailFareNoteList
+    +RailFareIDList : rail:RailFareIDList
+    +RailFareList : rail:RailFareList
+    +RailPricingSolution : rail:RailPricingSolution[]
 }
 AirSearchRsp *- BaseAvailabilitySearchRsp
 class AirTicketingReq {
@@ -288,7 +288,7 @@ class AirTicketingReq {
     +AirPricingInfoRef : AirPricingInfoRef[]
     +TicketingModifiersRef : typeTicketingModifiersRef[]
     +WaiverCode : WaiverCode
-    +common:Commission : common:Commission[]
+    +Commission : common:Commission[]
     +DetailedBillingInformation : DetailedBillingInformation[]
     +FaxDetailsInformation : FaxDetailsInformation
     +AirTicketingModifiers : AirTicketingModifiers[]
@@ -299,7 +299,7 @@ class AirTicketingReq {
 }
 AirTicketingReq +-- AirPricingInfoRef
 class AirPricingInfoRef {
-    +common:BookingTravelerRef : common:BookingTravelerRef[]
+    +BookingTravelerRef : common:BookingTravelerRef[]
     +Key : string
 }
 class AirTicketingRsp {
@@ -331,8 +331,8 @@ class AirVoidDocumentRsp {
 }
 AirVoidDocumentRsp *- common:BaseRsp
 class AvailabilitySearchReq {
-    +common:SearchPassenger : common:SearchPassenger[]
-    +common:PointOfSale : common:PointOfSale[]
+    +SearchPassenger : common:SearchPassenger[]
+    +PointOfSale : common:PointOfSale[]
     +ReturnBrandIndicator : boolean
     +ChannelId : string
     +NSCC : string
@@ -342,12 +342,12 @@ class AvailabilitySearchRsp {
 }
 AvailabilitySearchRsp *- BaseAvailabilitySearchRsp
 class BaseAirExchangeMultiQuoteReq {
-    +common:TicketNumber : common:TicketNumber[]
+    +TicketNumber : common:TicketNumber[]
     +ProviderReservationInfo : ProviderReservationInfo
     +AirPricingSolution : AirPricingSolution[]
     +RepricingModifiers : RepricingModifiers
     +OriginalItineraryDetails : OriginalItineraryDetails
-    +common:OverridePCC : common:OverridePCC
+    +OverridePCC : common:OverridePCC
 }
 BaseAirExchangeMultiQuoteReq *- common:BaseCoreReq
 BaseAirExchangeMultiQuoteReq +-- ProviderReservationInfo
@@ -356,13 +356,13 @@ class ProviderReservationInfo {
     +ProviderLocatorCode : string
 }
 class BaseAirExchangeQuoteReq {
-    +common:TicketNumber : common:TicketNumber[]
+    +TicketNumber : common:TicketNumber[]
     +ProviderReservationInfo : ProviderReservationInfo
     +AirPricingSolution : AirPricingSolution[]
     +AirExchangeModifiers : AirExchangeModifiers
-    +common:HostToken : common:HostToken[]
+    +HostToken : common:HostToken[]
     +OptionalServices : OptionalServices
-    +common:FormOfPayment : common:FormOfPayment[]
+    +FormOfPayment : common:FormOfPayment[]
     +RepricingModifiers : RepricingModifiers
     +OriginalItineraryDetails : OriginalItineraryDetails
     +PCC : PCC
@@ -377,13 +377,13 @@ class ProviderReservationInfo {
 class BaseAirPriceReq {
     +AirItinerary : AirItinerary
     +AirPricingModifiers : AirPricingModifiers
-    +common:SearchPassenger : common:SearchPassenger[]
+    +SearchPassenger : common:SearchPassenger[]
     +AirPricingCommand : AirPricingCommand[]
     +AirReservationLocatorCode : AirReservationLocatorCode
     +OptionalServices : OptionalServices
-    +common:FormOfPayment : common:FormOfPayment[]
+    +FormOfPayment : common:FormOfPayment[]
     +PCC : PCC
-    +common:SSR : common:SSR[]
+    +SSR : common:SSR[]
     +CheckOBFees : string
     +FareRuleType : typeFareRuleType
     +SupplierCode : string
@@ -420,14 +420,14 @@ class BaseAvailabilitySearchRsp {
 }
 BaseAvailabilitySearchRsp *- common:BaseSearchRsp
 class BaseLowFareSearchReq {
-    +common:SearchPassenger : common:SearchPassenger[]
+    +SearchPassenger : common:SearchPassenger[]
     +AirPricingModifiers : AirPricingModifiers
     +Enumeration : Enumeration
     +AirExchangeModifiers : AirExchangeModifiers
     +FlexExploreModifiers : FlexExploreModifiers
     +PCC : PCC
     +FareRulesFilterCategory : FareRulesFilterCategory
-    +common:FormOfPayment : common:FormOfPayment[]
+    +FormOfPayment : common:FormOfPayment[]
     +EnablePointToPointSearch : boolean
     +EnablePointToPointAlternates : boolean
     +MaxNumberOfExpertSolutions : integer
@@ -448,8 +448,8 @@ class BrandList {
     +Brand : Brand[]
 }
 class EMDIssuanceReq {
-    +common:ProviderReservationDetail : common:ProviderReservationDetail
-    +common:TicketNumber : common:TicketNumber
+    +ProviderReservationDetail : common:ProviderReservationDetail
+    +TicketNumber : common:TicketNumber
     +IssuanceModifiers : IssuanceModifiers
     +SelectionModifiers : SelectionModifiers
     +UniversalRecordLocatorCode : string
@@ -469,11 +469,11 @@ class EMDRetrieveReq {
 EMDRetrieveReq *- common:BaseReq
 EMDRetrieveReq +-- ListRetrieve
 class ListRetrieve {
-    +common:ProviderReservationDetail : common:ProviderReservationDetail
+    +ProviderReservationDetail : common:ProviderReservationDetail
 }
 EMDRetrieveReq +-- DetailRetrieve
 class DetailRetrieve {
-    +common:ProviderReservationDetail : common:ProviderReservationDetail
+    +ProviderReservationDetail : common:ProviderReservationDetail
     +EMDNumber : string
 }
 class EMDRetrieveRsp {
@@ -556,9 +556,9 @@ class SearchSpecificAirSegment {
     +SegmentIndex : int
 }
 class SeatMapReq {
-    +common:AgencySellInfo : common:AgencySellInfo
+    +AgencySellInfo : common:AgencySellInfo
     +AirSegment : AirSegment[]
-    +common:HostToken : common:HostToken[]
+    +HostToken : common:HostToken[]
     +SearchTraveler : SearchTraveler[]
     +HostReservation : HostReservation
     +MerchandisingPricingModifiers : MerchandisingPricingModifiers
@@ -567,14 +567,14 @@ class SeatMapReq {
 }
 SeatMapReq *- common:BaseReq
 class SeatMapRsp {
-    +common:HostToken : common:HostToken[]
-    +common:CabinClass : common:CabinClass
+    +HostToken : common:HostToken[]
+    +CabinClass : common:CabinClass
     +AirSegment : AirSegment[]
     +SearchTraveler : SearchTraveler[]
     +OptionalServices : OptionalServices
-    +common:Remark : common:Remark
+    +Remark : common:Remark
     +Rows : Rows[]
-    +common:PaymentRestriction : common:PaymentRestriction[]
+    +PaymentRestriction : common:PaymentRestriction[]
     +SeatInformation : SeatInformation[]
     +Copyright : string
     +GroupSeatPrice : string

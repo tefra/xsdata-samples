@@ -6,7 +6,7 @@ class Characteristic {
 }
 class Coach {
     +Characteristic : Characteristic
-    +common:Remark : common:Remark[]
+    +Remark : common:Remark[]
     +CoachNumber : string
 }
 class FareValidity {
@@ -78,7 +78,7 @@ class RailFare {
     +RailFareID : RailFareID[]
     +RailFareIDRef : RailFareIDRef[]
     +FareValidity : FareValidity[]
-    +common:HostToken : common:HostToken
+    +HostToken : common:HostToken
     +FulFillmentType : FulFillmentType[]
     +RailFareComponent : RailFareComponent[]
     +Key : string
@@ -113,7 +113,7 @@ class RailFareComponent {
 }
 RailFareComponent +-- Discount
 class Discount {
-    +common:DiscountCard : common:DiscountCard[]
+    +DiscountCard : common:DiscountCard[]
     +Key : string
 }
 class RailFareID {
@@ -163,7 +163,7 @@ class RailJourney {
     +RailSegment : RailSegment[]
     +RailSegmentRef : RailSegmentRef[]
     +JourneyRemark : JourneyRemark[]
-    +common:HostToken : common:HostToken[]
+    +HostToken : common:HostToken[]
     +Key : string
     +Origin : string
     +Destination : string
@@ -210,18 +210,18 @@ class RailLegModifiers {
 }
 RailLegModifiers +-- PermittedConnectionPoints
 class PermittedConnectionPoints {
-    +common:ConnectionPoint : common:ConnectionPoint[]
+    +ConnectionPoint : common:ConnectionPoint[]
 }
 RailLegModifiers +-- ProhibitedConnectionPoints
 class ProhibitedConnectionPoints {
-    +common:ConnectionPoint : common:ConnectionPoint[]
+    +ConnectionPoint : common:ConnectionPoint[]
 }
 class RailPricingInfo {
     +RailFare : RailFare[]
     +RailFareRef : RailFareRef[]
     +RailBookingInfo : RailBookingInfo[]
     +PassengerType : common:typePassengerType[]
-    +common:BookingTravelerRef : common:BookingTravelerRef[]
+    +BookingTravelerRef : common:BookingTravelerRef[]
     +Key : string
     +ExchangeAmount : string
     +ApproximateExchangeAmount : string
@@ -239,7 +239,7 @@ class RailPricingInfo {
     +KeyOverride : boolean
 }
 class RailPricingModifiers {
-    +common:DiscountCard : common:DiscountCard[]
+    +DiscountCard : common:DiscountCard[]
     +ProhibitNonRefundableFares : boolean
     +ProhibitNonExchangeableFares : boolean
     +CurrencyType : string
@@ -275,13 +275,13 @@ class RailRefundInfo {
     +NetAmount : string
 }
 class RailReservation {
-    +common:BookingTravelerRef : common:BookingTravelerRef[]
+    +BookingTravelerRef : common:BookingTravelerRef[]
     +RailJourney : RailJourney[]
     +RailPricingInfo : RailPricingInfo[]
-    +common:Payment : common:Payment[]
+    +Payment : common:Payment[]
     +RailTicketInfo : RailTicketInfo[]
     +RailFareNoteList : RailFareNoteList
-    +common:SupplierLocator : common:SupplierLocator[]
+    +SupplierLocator : common:SupplierLocator[]
     +BookingStatus : string
 }
 RailReservation *- common:BaseReservation
