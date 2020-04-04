@@ -4930,6 +4930,7 @@ class PriceRequestInformationType:
     @dataclass
     class NegotiatedFareCode:
         """
+        :ivar content:
         :ivar supplier: This element indicates the supplier associated with a negotiated fare code.
         :ivar tpa_extensions: This is a place holder for additional elements.
         :ivar code: Any code used to specify an item, for example, type of traveler, service code, room amenity, etc.
@@ -4939,6 +4940,13 @@ class PriceRequestInformationType:
         :ivar secondary_code: An additional attribute to allow flexibility for particular organizations who require an additional code.
         :ivar supplier_code: An additional attribute to allow flexibility for particular organizations who require an additional supplier code.
         """
+        content: Optional[object] = field(
+            default=None,
+            metadata=dict(
+                type="Any",
+                namespace="##any"
+            )
+        )
         supplier: List[CompanyNameType] = field(
             default_factory=list,
             metadata=dict(

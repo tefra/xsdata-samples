@@ -1308,7 +1308,7 @@ ServiceRuleType +-- ApplicationLevel
 class ApplicationLevel {
     +ApplicationLimits : ApplicationLimits
     +ServiceData : ServiceData[]
-    +ApplicableLevels : string
+    +ApplicableLevels : OptionalServiceApplicabilityType[]
     +ProviderDefinedApplicableLevels : string
 }
 ApplicationLevel +-- ApplicationLimits
@@ -1318,7 +1318,7 @@ class ApplicationLimits {
 ServiceRuleType +-- ModifyRules
 class ModifyRules {
     +ModifyRule : ModifyRule[]
-    +SupportedModifications : string
+    +SupportedModifications : ModificationType[]
     +ProviderDefinedModificationType : string
 }
 ModifyRules +-- ModifyRule

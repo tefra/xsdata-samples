@@ -3186,6 +3186,42 @@ class MaxLayoverDurationType:
     )
 
 
+class Meals(Enum):
+    """Available Meal Service.
+
+    :cvar ALCOHOLIC_BEVERAGES_FOR_PURCHASE:
+    :cvar BREAKFAST:
+    :cvar COLD_MEAL:
+    :cvar COMPLIMENTARY_ALCOHOLIC_BEVERAGES:
+    :cvar COMPLIMENTARY_REFRESHMENTS:
+    :cvar CONTINENTAL_BREAKFAST:
+    :cvar DINNER:
+    :cvar FOOD_AND_BEVERAGES_FOR_PURCHASE:
+    :cvar FOOD_FOR_PURCHASE:
+    :cvar HOT_MEAL:
+    :cvar LUNCH:
+    :cvar MEAL:
+    :cvar NO_MEAL_SERVICE:
+    :cvar REFRESHMENTS_FOR_PURCHASE:
+    :cvar SNACK_OR_BRUNCH:
+    """
+    ALCOHOLIC_BEVERAGES_FOR_PURCHASE = "AlcoholicBeveragesForPurchase"
+    BREAKFAST = "Breakfast"
+    COLD_MEAL = "ColdMeal"
+    COMPLIMENTARY_ALCOHOLIC_BEVERAGES = "ComplimentaryAlcoholicBeverages"
+    COMPLIMENTARY_REFRESHMENTS = "ComplimentaryRefreshments"
+    CONTINENTAL_BREAKFAST = "ContinentalBreakfast"
+    DINNER = "Dinner"
+    FOOD_AND_BEVERAGES_FOR_PURCHASE = "FoodAndBeveragesForPurchase"
+    FOOD_FOR_PURCHASE = "FoodForPurchase"
+    HOT_MEAL = "HotMeal"
+    LUNCH = "Lunch"
+    MEAL = "Meal"
+    NO_MEAL_SERVICE = "NoMealService"
+    REFRESHMENTS_FOR_PURCHASE = "RefreshmentsForPurchase"
+    SNACK_OR_BRUNCH = "SnackOrBrunch"
+
+
 @dataclass
 class MultiGdssearchIndicator:
     """Indicates whether public fares and/or private fares should be returned.
@@ -10368,25 +10404,6 @@ class ManualFareAdjustment:
             type="Attribute",
             min_length=1.0,
             max_length=5.0
-        )
-    )
-
-
-@dataclass
-class Meals:
-    """Available Meal Service.
-
-    :ivar value:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    value: Optional[TypeMealService] = field(
-        default=None,
-        metadata=dict(
-            name="value",
-            type="Extension",
-            required=True
         )
     )
 

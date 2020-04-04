@@ -1728,6 +1728,7 @@ class FareAdjustment {
 }
 PriceRequestInformationType +-- NegotiatedFareCode
 class NegotiatedFareCode {
+    +content : anyType
     +Supplier : CompanyNameType[]
     +TPA_Extensions : string
     +Code : string

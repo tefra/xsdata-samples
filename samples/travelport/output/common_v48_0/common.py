@@ -12095,11 +12095,13 @@ class ServiceRuleType:
                 max_occurs=999
             )
         )
-        applicable_levels: Optional[str] = field(
-            default=None,
+        applicable_levels: List[OptionalServiceApplicabilityType] = field(
+            default_factory=list,
             metadata=dict(
                 name="ApplicableLevels",
-                type="Attribute"
+                type="Attribute",
+                min_occurs=0,
+                max_occurs=9223372036854775807
             )
         )
         provider_defined_applicable_levels: Optional[str] = field(
@@ -12143,11 +12145,13 @@ class ServiceRuleType:
                 max_occurs=999
             )
         )
-        supported_modifications: Optional[str] = field(
-            default=None,
+        supported_modifications: List[ModificationType] = field(
+            default_factory=list,
             metadata=dict(
                 name="SupportedModifications",
-                type="Attribute"
+                type="Attribute",
+                min_occurs=0,
+                max_occurs=9223372036854775807
             )
         )
         provider_defined_modification_type: Optional[str] = field(
