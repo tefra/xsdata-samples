@@ -973,7 +973,7 @@ class AirFareRulesReq(BaseReq):
         :ivar category_code: Structured Fare Rules can be requested for "ADV", "MIN", "MAX",  "STP", and "CHG".
         :ivar fare_info_ref: Key reference for multiple fare rule
         """
-        category_code: List[str] = field(
+        category_code: List[object] = field(
             default_factory=list,
             metadata=dict(
                 name="CategoryCode",

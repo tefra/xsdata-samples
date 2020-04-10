@@ -5040,7 +5040,7 @@ class FareMasterPricerTravelBoardSearch:
                             max_occurs=2
                         )
                     )
-                    dummy_net: Optional[str] = field(
+                    dummy_net: Optional[object] = field(
                         default=None,
                         metadata=dict(
                             name="Dummy.NET",
@@ -7030,7 +7030,7 @@ class FareMasterPricerTravelBoardSearch:
                     max_occurs=9
                 )
             )
-            dummy_net: Optional[str] = field(
+            dummy_net: Optional[object] = field(
                 default=None,
                 metadata=dict(
                     name="Dummy.NET",

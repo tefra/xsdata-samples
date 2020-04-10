@@ -120,7 +120,7 @@ class AirFareRulesReq {
 AirFareRulesReq *- common:BaseReq
 AirFareRulesReq +-- FareRulesFilterCategory
 class FareRulesFilterCategory {
-    +CategoryCode : string[]
+    +CategoryCode : anyType[]
     +FareInfoRef : string
 }
 AirFareRulesReq +-- AirReservationSelector

@@ -776,7 +776,7 @@ class MCOText {
 }
 MCOText *- typeFreeFormText
 class MarketingInformation {
-    +Text : string[]
+    +Text : anyType[]
 }
 class MealRequest {
     +Type : string
@@ -788,7 +788,7 @@ class MediaItem {
     +type : string
     +url : anyURI
     +icon : anyURI
-    +sizeCode : typeResponseImageSize
+    +sizeCode : typeImageSize, typeOtherImageSize
 }
 class MetaData {
     +Key : string
@@ -1308,7 +1308,7 @@ ServiceRuleType +-- ApplicationLevel
 class ApplicationLevel {
     +ApplicationLimits : ApplicationLimits
     +ServiceData : ServiceData[]
-    +ApplicableLevels : OptionalServiceApplicabilityType[]
+    +ApplicableLevels : string
     +ProviderDefinedApplicableLevels : string
 }
 ApplicationLevel +-- ApplicationLimits
@@ -1318,7 +1318,7 @@ class ApplicationLimits {
 ServiceRuleType +-- ModifyRules
 class ModifyRules {
     +ModifyRule : ModifyRule[]
-    +SupportedModifications : ModificationType[]
+    +SupportedModifications : string
     +ProviderDefinedModificationType : string
 }
 ModifyRules +-- ModifyRule
@@ -2074,22 +2074,6 @@ enum typeResidency {
     Employee = Employee
     National = National
     Resident = Resident
-}
-enum typeResponseImageSize {
-    T = T
-    I = I
-    S = S
-    M = M
-    L = L
-    E = E
-    G = G
-    F = F
-    B = B
-    J = J
-    O = O
-    H = H
-    C = C
-    X = X
 }
 class typeResultMessage {
     +value : string

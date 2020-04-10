@@ -224,7 +224,7 @@ class AirlineLowestFaresType {
     +Airline : CompanyNameType
     +NoStops : integer
     +LowestFare : CurrencyAmountType
-    +ItineraryCount : string
+    +ItineraryCount : anyType
 }
 class AirportInformationType {
     +TerminalID : string

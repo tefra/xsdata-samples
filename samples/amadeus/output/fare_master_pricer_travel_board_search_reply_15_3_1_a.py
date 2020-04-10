@@ -3046,7 +3046,7 @@ class SpecialRequirementsDataDetailsType:
             max_length=2.0
         )
     )
-    dummy_net: Optional[str] = field(
+    dummy_net: Optional[object] = field(
         default=None,
         metadata=dict(
             name="Dummy.NET",
@@ -3586,7 +3586,7 @@ class DateAndTimeInformationType:
             max_occurs=2
         )
     )
-    dummy_net: Optional[str] = field(
+    dummy_net: Optional[object] = field(
         default=None,
         metadata=dict(
             name="Dummy.NET",
@@ -3617,7 +3617,7 @@ class DateAndTimeInformationType182345S:
             max_occurs=400
         )
     )
-    dummy_net: Optional[str] = field(
+    dummy_net: Optional[object] = field(
         default=None,
         metadata=dict(
             name="Dummy.NET",
@@ -4792,7 +4792,7 @@ class ReferenceInfoType:
             max_occurs=200
         )
     )
-    dummy_net: Optional[str] = field(
+    dummy_net: Optional[object] = field(
         default=None,
         metadata=dict(
             name="Dummy.NET",

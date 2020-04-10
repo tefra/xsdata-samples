@@ -37,10 +37,6 @@ class AirFeeType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     fee_code: Optional[str] = field(
         default=None,
@@ -103,10 +99,6 @@ class AirTaxType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     tax_code: Optional[str] = field(
         default=None,
@@ -591,10 +583,6 @@ class FreeTextType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     language: Optional[str] = field(
         default=None,
@@ -1016,10 +1004,6 @@ class ResponseLocationType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     location_code: Optional[str] = field(
         default=None,
@@ -1059,10 +1043,6 @@ class SurchargesType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     ind: Optional[str] = field(
         default=None,
@@ -1294,7 +1274,7 @@ class AirlineLowestFaresType:
             required=True
         )
     )
-    itinerary_count: Optional[str] = field(
+    itinerary_count: Optional[object] = field(
         default=None,
         metadata=dict(
             name="ItineraryCount",
@@ -3709,8 +3689,6 @@ class PtcfareBreakdownType:
             value: Optional[str] = field(
                 default=None,
                 metadata=dict(
-                    name="value",
-                    type="Extension",
                     min_length=1.0,
                     max_length=16.0
                 )
@@ -3883,10 +3861,6 @@ class PtcfareBreakdownType:
             """
             value: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="value",
-                    type="Extension"
-                )
             )
             name: Optional[str] = field(
                 default=None,

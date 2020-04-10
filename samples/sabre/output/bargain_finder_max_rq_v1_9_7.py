@@ -289,8 +289,6 @@ class CountryNameType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=0.0,
             max_length=64.0
         )
@@ -641,8 +639,6 @@ class EmailType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=1.0,
             max_length=128.0
         )
@@ -1689,10 +1685,6 @@ class RequestLocationType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     location_code: Optional[str] = field(
         default=None,
@@ -1915,8 +1907,6 @@ class StateProvType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=0.0,
             max_length=64.0
         )
@@ -1942,8 +1932,6 @@ class StreetNmbrType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=0.0,
             max_length=64.0
         )
@@ -4943,7 +4931,7 @@ class PriceRequestInformationType:
         content: Optional[object] = field(
             default=None,
             metadata=dict(
-                type="Any",
+                type="Wildcard",
                 namespace="##any"
             )
         )
@@ -5105,8 +5093,6 @@ class TicketDistribPrefType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=0.0,
             max_length=64.0
         )
@@ -8670,10 +8656,6 @@ class TransactionType:
         """
         value: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="value",
-                type="Extension"
-            )
         )
         name: Optional[str] = field(
             default=None,
@@ -8691,10 +8673,6 @@ class TransactionType:
         """
         value: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="value",
-                type="Extension"
-            )
         )
         name: Optional[str] = field(
             default=None,

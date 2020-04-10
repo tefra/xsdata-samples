@@ -67,8 +67,6 @@ class FulFillmentType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=0.0,
             max_length=255.0
         )
@@ -87,10 +85,6 @@ class JourneyRemark:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     category: Optional[str] = field(
         default=None,
@@ -115,10 +109,6 @@ class OperatingCompany:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     code: Optional[str] = field(
         default=None,
@@ -671,8 +661,6 @@ class TicketAdvisory:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=1.0,
             max_length=500.0
         )
@@ -984,10 +972,6 @@ class RailFareId:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     key: Optional[str] = field(
         default=None,
@@ -1036,10 +1020,6 @@ class RailFareNote:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     key: Optional[str] = field(
         default=None,
@@ -1273,10 +1253,6 @@ class RailSegmentInfo:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     category: Optional[str] = field(
         default=None,

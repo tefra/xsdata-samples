@@ -881,7 +881,7 @@ class contextDetails {
 flightDetails +-- technicalStop
 class technicalStop {
     +stopDetails : stopDetails[]
-    +Dummy.NET : string
+    +Dummy.NET : anyType
 }
 technicalStop +-- stopDetails
 class stopDetails {
@@ -1255,7 +1255,7 @@ class unitNumberDetail {
 combinationFareFamilies +-- referenceInfo
 class referenceInfo {
     +referencingDetail : referencingDetail[]
-    +Dummy.NET : string
+    +Dummy.NET : anyType
 }
 referenceInfo +-- referencingDetail
 class referencingDetail {

@@ -179,11 +179,11 @@ class DateAndTimeDetailsType_256192C {
 }
 class DateAndTimeInformationType {
     +stopDetails : DateAndTimeDetailsType[]
-    +Dummy.NET : string
+    +Dummy.NET : anyType
 }
 class DateAndTimeInformationType_182345S {
     +dateAndTimeDetails : DateAndTimeDetailsType_256192C[]
-    +Dummy.NET : string
+    +Dummy.NET : anyType
 }
 class DateTimePeriodDetailsTypeI {
     +qualifier : string
@@ -791,7 +791,7 @@ class ProposedSegmentType {
 }
 class ReferenceInfoType {
     +referencingDetail : ReferencingDetailsType_191583C[]
-    +Dummy.NET : string
+    +Dummy.NET : anyType
 }
 class ReferenceInfoType_133176S {
     +referencingDetail : ReferencingDetailsType[]
@@ -857,7 +857,7 @@ class ServicesReferences {
 }
 class SpecialRequirementsDataDetailsType {
     +seatCharacteristics : string[]
-    +Dummy.NET : string
+    +Dummy.NET : anyType
 }
 class SpecialRequirementsDetailsType {
     +serviceRequirementsInfo : SpecialRequirementsTypeDetailsType

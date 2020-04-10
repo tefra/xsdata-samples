@@ -32,10 +32,6 @@ class CompanyNameType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     company_short_name: Optional[str] = field(
         default=None,
@@ -92,10 +88,6 @@ class EquipmentType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     air_equip_type: Optional[str] = field(
         default=None,

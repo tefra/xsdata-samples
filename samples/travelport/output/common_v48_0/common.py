@@ -1,7 +1,7 @@
 from decimal import Decimal
 from enum import Enum
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 
 
 @dataclass
@@ -946,8 +946,6 @@ class ContinuityCheckOverride:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=1.0,
             white_space="collapse"
         )
@@ -1004,10 +1002,6 @@ class CorporateDiscountId:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     negotiated_rate_code: Optional[bool] = field(
         default=None,
@@ -1163,10 +1157,6 @@ class CustomizedNameData:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     key: Optional[str] = field(
         default=None,
@@ -1451,10 +1441,6 @@ class FormattedTextTextType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     formatted: Optional[bool] = field(
         default=None,
@@ -1499,8 +1485,6 @@ class GuaranteeType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             required=True,
             max_length=250.0
         )
@@ -1599,8 +1583,6 @@ class LocatorCode:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=1.0
         )
     )
@@ -1682,10 +1664,6 @@ class Mcoremark:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     additional_rmk: Optional[bool] = field(
         default=None,
@@ -1705,7 +1683,7 @@ class MarketingInformation:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    text: List[str] = field(
+    text: List[object] = field(
         default_factory=list,
         metadata=dict(
             name="Text",
@@ -1985,8 +1963,6 @@ class NextResultReference:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=1.0,
             white_space="collapse"
         )
@@ -2014,8 +1990,6 @@ class OperatedBy:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=1.0,
             white_space="collapse"
         )
@@ -2054,10 +2028,6 @@ class OtherGuaranteeInfo:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     type: Optional["OtherGuaranteeInfo.Type"] = field(
         default=None,
@@ -2570,8 +2540,6 @@ class PseudoCityCode:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=2.0,
             max_length=10.0
         )
@@ -2648,8 +2616,6 @@ class ReferencePoint:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             required=True,
             max_length=30.0
         )
@@ -2687,10 +2653,6 @@ class Remark:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     key: Optional[str] = field(
         default=None,
@@ -2814,10 +2776,6 @@ class ResponseMessage:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     code: Optional[int] = field(
         default=None,
@@ -3025,10 +2983,6 @@ class SegmentRemark:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     key: Optional[str] = field(
         default=None,
@@ -3053,8 +3007,6 @@ class SellMessage:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             required=True
         )
     )
@@ -3288,8 +3240,6 @@ class SimpleName:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             required=True
         )
     )
@@ -3306,10 +3256,6 @@ class State:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
 
 
@@ -3405,8 +3351,6 @@ class TerminalSessionInfo:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             required=True
         )
     )
@@ -3424,8 +3368,6 @@ class TicketNumber:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             required=True,
             min_length=1.0,
             max_length=13.0
@@ -3911,10 +3853,6 @@ class TypeFreeFormText:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
 
 
@@ -4683,10 +4621,6 @@ class TypeRemark:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
@@ -4799,40 +4733,6 @@ class TypeResidency(Enum):
     RESIDENT = "Resident"
 
 
-class TypeResponseImageSize(Enum):
-    """Allowable images sizes in response.
-
-    :cvar B:
-    :cvar C:
-    :cvar E:
-    :cvar F:
-    :cvar G:
-    :cvar H:
-    :cvar I:
-    :cvar J:
-    :cvar L:
-    :cvar M:
-    :cvar O:
-    :cvar S:
-    :cvar T:
-    :cvar X:
-    """
-    B = "B"
-    C = "C"
-    E = "E"
-    F = "F"
-    G = "G"
-    H = "H"
-    I = "I"
-    J = "J"
-    L = "L"
-    M = "M"
-    O = "O"
-    S = "S"
-    T = "T"
-    X = "X"
-
-
 @dataclass
 class TypeResultMessage:
     """Used to identify the results of a requests.
@@ -4846,10 +4746,6 @@ class TypeResultMessage:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     code: Optional[int] = field(
         default=None,
@@ -6499,10 +6395,6 @@ class HostToken:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     host: Optional[str] = field(
         default=None,
@@ -6727,7 +6619,7 @@ class MediaItem:
             type="Attribute"
         )
     )
-    size_code: Optional[TypeResponseImageSize] = field(
+    size_code: Optional[Union[TypeImageSize, TypeOtherImageSize]] = field(
         default=None,
         metadata=dict(
             name="sizeCode",
@@ -8469,10 +8361,6 @@ class Xmlremark:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     key: Optional[str] = field(
         default=None,
@@ -11926,8 +11814,6 @@ class Group:
         value: Optional[str] = field(
             default=None,
             metadata=dict(
-                name="value",
-                type="Extension",
                 min_length=1.0,
                 white_space="collapse"
             )
@@ -12095,13 +11981,11 @@ class ServiceRuleType:
                 max_occurs=999
             )
         )
-        applicable_levels: List[OptionalServiceApplicabilityType] = field(
-            default_factory=list,
+        applicable_levels: Optional[str] = field(
+            default=None,
             metadata=dict(
                 name="ApplicableLevels",
-                type="Attribute",
-                min_occurs=0,
-                max_occurs=9223372036854775807
+                type="Attribute"
             )
         )
         provider_defined_applicable_levels: Optional[str] = field(
@@ -12145,13 +12029,11 @@ class ServiceRuleType:
                 max_occurs=999
             )
         )
-        supported_modifications: List[ModificationType] = field(
-            default_factory=list,
+        supported_modifications: Optional[str] = field(
+            default=None,
             metadata=dict(
                 name="SupportedModifications",
-                type="Attribute",
-                min_occurs=0,
-                max_occurs=9223372036854775807
+                type="Attribute"
             )
         )
         provider_defined_modification_type: Optional[str] = field(

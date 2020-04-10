@@ -424,8 +424,6 @@ class AddlBookingCodeInformation:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=1.0,
             white_space="collapse"
         )
@@ -504,8 +502,6 @@ class AirFareDisplayRuleKey:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=1.0,
             white_space="collapse"
         )
@@ -607,8 +603,6 @@ class AirReservationLocatorCode:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=5.0,
             max_length=8.0
         )
@@ -878,10 +872,6 @@ class BookingRulesFareReference:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     class_of_service: Optional[str] = field(
         default=None,
@@ -1087,8 +1077,6 @@ class CarrierCode:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             length=2
         )
     )
@@ -1110,10 +1098,6 @@ class CodeshareInfo:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     operating_carrier: Optional[str] = field(
         default=None,
@@ -1394,8 +1378,6 @@ class Emdendorsement:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=1.0,
             max_length=255.0
         )
@@ -1750,8 +1732,6 @@ class FareCalc:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             required=True
         )
     )
@@ -1788,10 +1768,6 @@ class FareInfoMessage:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     key: Optional[str] = field(
         default=None,
@@ -1834,8 +1810,6 @@ class FareMileageInformation:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             required=True
         )
     )
@@ -2081,8 +2055,6 @@ class FareRoutingInformation:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             required=True
         )
     )
@@ -2146,8 +2118,6 @@ class FareRuleKey:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=1.0,
             white_space="collapse"
         )
@@ -2185,10 +2155,6 @@ class FareRuleLong:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     category: Optional[int] = field(
         default=None,
@@ -2381,10 +2347,6 @@ class FeeApplication:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     code: Optional[str] = field(
         default=None,
@@ -2787,10 +2749,6 @@ class ImageLocation:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     type: Optional[str] = field(
         default=None,
@@ -2837,8 +2795,6 @@ class InFlightServices:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             required=True
         )
     )
@@ -3184,42 +3140,6 @@ class MaxLayoverDurationType:
             max_inclusive=9999.0
         )
     )
-
-
-class Meals(Enum):
-    """Available Meal Service.
-
-    :cvar ALCOHOLIC_BEVERAGES_FOR_PURCHASE:
-    :cvar BREAKFAST:
-    :cvar COLD_MEAL:
-    :cvar COMPLIMENTARY_ALCOHOLIC_BEVERAGES:
-    :cvar COMPLIMENTARY_REFRESHMENTS:
-    :cvar CONTINENTAL_BREAKFAST:
-    :cvar DINNER:
-    :cvar FOOD_AND_BEVERAGES_FOR_PURCHASE:
-    :cvar FOOD_FOR_PURCHASE:
-    :cvar HOT_MEAL:
-    :cvar LUNCH:
-    :cvar MEAL:
-    :cvar NO_MEAL_SERVICE:
-    :cvar REFRESHMENTS_FOR_PURCHASE:
-    :cvar SNACK_OR_BRUNCH:
-    """
-    ALCOHOLIC_BEVERAGES_FOR_PURCHASE = "AlcoholicBeveragesForPurchase"
-    BREAKFAST = "Breakfast"
-    COLD_MEAL = "ColdMeal"
-    COMPLIMENTARY_ALCOHOLIC_BEVERAGES = "ComplimentaryAlcoholicBeverages"
-    COMPLIMENTARY_REFRESHMENTS = "ComplimentaryRefreshments"
-    CONTINENTAL_BREAKFAST = "ContinentalBreakfast"
-    DINNER = "Dinner"
-    FOOD_AND_BEVERAGES_FOR_PURCHASE = "FoodAndBeveragesForPurchase"
-    FOOD_FOR_PURCHASE = "FoodForPurchase"
-    HOT_MEAL = "HotMeal"
-    LUNCH = "Lunch"
-    MEAL = "Meal"
-    NO_MEAL_SERVICE = "NoMealService"
-    REFRESHMENTS_FOR_PURCHASE = "RefreshmentsForPurchase"
-    SNACK_OR_BRUNCH = "SnackOrBrunch"
 
 
 @dataclass
@@ -3694,8 +3614,6 @@ class OptionalServiceRef:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             required=True
         )
     )
@@ -3714,8 +3632,6 @@ class OverrideCode:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             length=4
         )
     )
@@ -3753,8 +3669,6 @@ class PassengerReceiptOverride:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             min_length=1.0,
             white_space="collapse"
         )
@@ -3995,10 +3909,6 @@ class PenaltyInformation:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     carrier: Optional[str] = field(
         default=None,
@@ -4188,10 +4098,6 @@ class PriceChangeType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     amount: Optional[str] = field(
         default=None,
@@ -4721,10 +4627,6 @@ class SeatInformation:
         """
         value: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="value",
-                type="Extension"
-            )
         )
         number: Optional[int] = field(
             default=None,
@@ -4748,8 +4650,6 @@ class SegmentIndex:
     value: Optional[int] = field(
         default=None,
         metadata=dict(
-            name="value",
-            type="Extension",
             required=True
         )
     )
@@ -5228,10 +5128,6 @@ class TravelArranger:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     company_short_name: Optional[str] = field(
         default=None,
@@ -5261,10 +5157,6 @@ class Url:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     type: Optional[str] = field(
         default=None,
@@ -5409,10 +5301,6 @@ class VoidFailureInfo:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     ticket_number: Optional[str] = field(
         default=None,
@@ -6469,10 +6357,6 @@ class TypeNativeSearchModifier:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     provider_code: Optional[str] = field(
         default=None,
@@ -6742,10 +6626,6 @@ class TypeTextElement:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     type: Optional[str] = field(
         default=None,
@@ -9546,10 +9426,6 @@ class FareNote:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="value",
-            type="Extension"
-        )
     )
     key: Optional[str] = field(
         default=None,
@@ -10404,6 +10280,23 @@ class ManualFareAdjustment:
             type="Attribute",
             min_length=1.0,
             max_length=5.0
+        )
+    )
+
+
+@dataclass
+class Meals:
+    """Available Meal Service.
+
+    :ivar value:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    value: Optional[TypeMealService] = field(
+        default=None,
+        metadata=dict(
+            required=True
         )
     )
 
