@@ -84,7 +84,7 @@ class AdditionalProductDetailsType:
             max_length=7.0
         )
     )
-    tech_stop_number: Optional[int] = field(
+    tech_stop_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="techStopNumber",
@@ -225,7 +225,7 @@ class BaggageDetailsType:
     :ivar quantity_code: Nature of the free allowance ( Number of pieces or weight)
     :ivar unit_qualifier: Unit qualifier
     """
-    free_allowance: Optional[int] = field(
+    free_allowance: Optional[str] = field(
         default=None,
         metadata=dict(
             name="freeAllowance",
@@ -273,7 +273,7 @@ class BagtagDetailsType:
             max_length=35.0
         )
     )
-    number: Optional[int] = field(
+    number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="number",
@@ -548,7 +548,7 @@ class CategoryDescriptionType:
     :ivar number: Category number from ATPCO naming conventions (C05 for Advance Purchase restrictions, C06 for Minimun stay ...)
     :ivar code: Category Code (ATPCO component code, e.g ADV for Advance purchase, STP for stopover restrictions, ELG for eligibility restrictions...)
     """
-    number: Optional[int] = field(
+    number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="number",
@@ -671,7 +671,7 @@ class CompanyIdentificationTextType:
     :ivar text_ref_number: Company Id Text reference.
     :ivar company_text: Company id free text.
     """
-    text_ref_number: Optional[int] = field(
+    text_ref_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="textRefNumber",
@@ -800,7 +800,7 @@ class CompanyRoleIdentificationType:
             max_length=3.0
         )
     )
-    flight_number: Optional[int] = field(
+    flight_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="flightNumber",
@@ -1448,7 +1448,7 @@ class FareDetailsType193037C:
             pattern=r"[0-9A-Z]{1,3}"
         )
     )
-    rate: Optional[int] = field(
+    rate: Optional[str] = field(
         default=None,
         metadata=dict(
             name="rate",
@@ -1514,7 +1514,7 @@ class FareInformationTypeI:
             max_length=3.0
         )
     )
-    value: Optional[int] = field(
+    value: Optional[str] = field(
         default=None,
         metadata=dict(
             name="value",
@@ -1891,7 +1891,7 @@ class ItemNumberIdentificationType234878C:
     class Meta:
         name = "ItemNumberIdentificationType_234878C"
 
-    number: Optional[int] = field(
+    number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="number",
@@ -1950,7 +1950,7 @@ class ItemReferencesAndVersionsType:
             max_length=6.0
         )
     )
-    ref_number: Optional[int] = field(
+    ref_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="refNumber",
@@ -1981,7 +1981,7 @@ class ItemReferencesAndVersionsType78536S:
             max_length=3.0
         )
     )
-    ref_number: Optional[int] = field(
+    ref_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="refNumber",
@@ -2012,7 +2012,7 @@ class ItemReferencesAndVersionsType78564S:
             max_length=3.0
         )
     )
-    fee_ref_number: Optional[int] = field(
+    fee_ref_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="feeRefNumber",
@@ -2041,7 +2041,7 @@ class ItineraryDetailsType:
             max_length=1.0
         )
     )
-    segment_number: Optional[int] = field(
+    segment_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="segmentNumber",
@@ -2339,7 +2339,7 @@ class OriginAndDestinationRequestType134833S:
     class Meta:
         name = "OriginAndDestinationRequestType_134833S"
 
-    seg_ref: Optional[int] = field(
+    seg_ref: Optional[str] = field(
         default=None,
         metadata=dict(
             name="segRef",
@@ -2360,7 +2360,7 @@ class OriginatorIdentificationDetailsTypeI:
     :ivar confidential_office: Confidential Office Name.
     :ivar other_office: Other Office Name
     """
-    office_name: Optional[int] = field(
+    office_name: Optional[str] = field(
         default=None,
         metadata=dict(
             name="officeName",
@@ -2527,7 +2527,7 @@ class ProductDateTimeType:
             pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
         )
     )
-    date_variation: Optional[int] = field(
+    date_variation: Optional[str] = field(
         default=None,
         metadata=dict(
             name="dateVariation",
@@ -2757,7 +2757,7 @@ class ReferenceType:
             max_length=6.0
         )
     )
-    first_item_identifier: Optional[int] = field(
+    first_item_identifier: Optional[str] = field(
         default=None,
         metadata=dict(
             name="firstItemIdentifier",
@@ -2766,7 +2766,7 @@ class ReferenceType:
             pattern=r"-?[0-9]{1,3}"
         )
     )
-    last_item_identifier: Optional[int] = field(
+    last_item_identifier: Optional[str] = field(
         default=None,
         metadata=dict(
             name="lastItemIdentifier",
@@ -2793,7 +2793,7 @@ class ReferencingDetailsType:
             max_length=3.0
         )
     )
-    ref_number: Optional[int] = field(
+    ref_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="refNumber",
@@ -2825,7 +2825,7 @@ class ReferencingDetailsType191583C:
             max_length=3.0
         )
     )
-    ref_number: Optional[int] = field(
+    ref_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="refNumber",
@@ -2857,7 +2857,7 @@ class ReferencingDetailsType195561C:
             max_length=3.0
         )
     )
-    ref_number: Optional[int] = field(
+    ref_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="refNumber",
@@ -2908,7 +2908,7 @@ class SegmentRepetitionControlDetailsTypeI:
     :ivar quantity: traveller number
     :ivar number_of_units: range of traveller
     """
-    quantity: Optional[int] = field(
+    quantity: Optional[str] = field(
         default=None,
         metadata=dict(
             name="quantity",
@@ -2917,7 +2917,7 @@ class SegmentRepetitionControlDetailsTypeI:
             pattern=r"-?[0-9]{1,15}"
         )
     )
-    number_of_units: Optional[int] = field(
+    number_of_units: Optional[str] = field(
         default=None,
         metadata=dict(
             name="numberOfUnits",
@@ -3088,7 +3088,7 @@ class SpecialRequirementsTypeDetailsType:
             max_length=3.0
         )
     )
-    service_number_of_instances: Optional[int] = field(
+    service_number_of_instances: Optional[str] = field(
         default=None,
         metadata=dict(
             name="serviceNumberOfInstances",
@@ -3312,7 +3312,7 @@ class TravellerDetailsType:
     :ivar ref: Direct reference of passenger assigned by requesting system.
     :ivar infant_indicator: Traveller is an infant
     """
-    ref: Optional[int] = field(
+    ref: Optional[str] = field(
         default=None,
         metadata=dict(
             name="ref",
@@ -3321,7 +3321,7 @@ class TravellerDetailsType:
             pattern=r"-?[0-9]{1,3}"
         )
     )
-    infant_indicator: Optional[int] = field(
+    infant_indicator: Optional[str] = field(
         default=None,
         metadata=dict(
             name="infantIndicator",
@@ -3693,7 +3693,7 @@ class FareFamilyType:
     :ivar carrier: Carrier code
     :ivar services: Reference to the services details
     """
-    ref_number: Optional[int] = field(
+    ref_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="refNumber",
@@ -3713,7 +3713,7 @@ class FareFamilyType:
             max_length=10.0
         )
     )
-    hierarchy: Optional[int] = field(
+    hierarchy: Optional[str] = field(
         default=None,
         metadata=dict(
             name="hierarchy",
@@ -3793,7 +3793,7 @@ class FareInformationType:
             pattern=r"[0-9A-Z]{1,3}"
         )
     )
-    value: Optional[int] = field(
+    value: Optional[str] = field(
         default=None,
         metadata=dict(
             name="value",
@@ -4612,7 +4612,7 @@ class OriginAndDestinationRequestType:
     :ivar seg_ref: Requested segment number
     :ivar location_forcing: Forces arrival or departure, from/to the same airport/city
     """
-    seg_ref: Optional[int] = field(
+    seg_ref: Optional[str] = field(
         default=None,
         metadata=dict(
             name="segRef",

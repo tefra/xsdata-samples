@@ -23,7 +23,7 @@
   "flight_index": [
     {
       "requested_segment_ref": {
-        "seg_ref": 1,
+        "seg_ref": "1",
         "location_forcing": []
       },
       "group_of_flights": [
@@ -51,7 +51,7 @@
                   "time_of_departure": "2135",
                   "date_of_arrival": "280914",
                   "time_of_arrival": "0505",
-                  "date_variation": 2
+                  "date_variation": "2"
                 },
                 "location": [
                   {
@@ -70,7 +70,7 @@
                 "flight_ortrain_number": "15",
                 "product_detail": {
                   "equipment_type": "777",
-                  "tech_stop_number": 1,
+                  "tech_stop_number": "1",
                   "location_id": []
                 },
                 "add_product_detail": {
@@ -126,7 +126,7 @@
                   "time_of_departure": "2125",
                   "date_of_arrival": "280914",
                   "time_of_arrival": "0510",
-                  "date_variation": 2
+                  "date_variation": "2"
                 },
                 "location": [
                   {
@@ -145,7 +145,7 @@
                 "flight_ortrain_number": "2",
                 "product_detail": {
                   "equipment_type": "388",
-                  "tech_stop_number": 1,
+                  "tech_stop_number": "1",
                   "location_id": []
                 },
                 "add_product_detail": {
@@ -181,7 +181,7 @@
     },
     {
       "requested_segment_ref": {
-        "seg_ref": 2,
+        "seg_ref": "2",
         "location_forcing": []
       },
       "group_of_flights": [
@@ -304,7 +304,7 @@
                   "time_of_departure": "1900",
                   "date_of_arrival": "261014",
                   "time_of_arrival": "0020",
-                  "date_variation": 1
+                  "date_variation": "1"
                 },
                 "location": [
                   {
@@ -399,7 +399,7 @@
                   "time_of_departure": "1630",
                   "date_of_arrival": "261014",
                   "time_of_arrival": "0430",
-                  "date_variation": 1
+                  "date_variation": "1"
                 },
                 "location": [
                   {
@@ -418,7 +418,7 @@
                 "flight_ortrain_number": "16",
                 "product_detail": {
                   "equipment_type": "777",
-                  "tech_stop_number": 1,
+                  "tech_stop_number": "1",
                   "location_id": []
                 },
                 "add_product_detail": {
@@ -512,7 +512,7 @@
                   "time_of_departure": "2255",
                   "date_of_arrival": "261014",
                   "time_of_arrival": "0405",
-                  "date_variation": 1
+                  "date_variation": "1"
                 },
                 "location": [
                   {
@@ -570,7 +570,7 @@
                   "time_of_departure": "1900",
                   "date_of_arrival": "261014",
                   "time_of_arrival": "0020",
-                  "date_variation": 1
+                  "date_variation": "1"
                 },
                 "location": [
                   {
@@ -760,7 +760,7 @@
                   "time_of_departure": "1650",
                   "date_of_arrival": "261014",
                   "time_of_arrival": "0545",
-                  "date_variation": 1
+                  "date_variation": "1"
                 },
                 "location": [
                   {
@@ -779,7 +779,7 @@
                 "flight_ortrain_number": "1",
                 "product_detail": {
                   "equipment_type": "388",
-                  "tech_stop_number": 1,
+                  "tech_stop_number": "1",
                   "location_id": []
                 },
                 "add_product_detail": {
@@ -840,7 +840,7 @@
           "referencing_detail": [
             {
               "ref_qualifier": "S",
-              "ref_number": 1
+              "ref_number": "1"
             }
           ]
         }
@@ -860,22 +860,18 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "ADT"
-              ],
+              "ptc": ["ADT"],
               "traveller": [
                 {
-                  "ref": 1
+                  "ref": "1"
                 },
                 {
-                  "ref": 2
+                  "ref": "2"
                 }
               ]
             }
@@ -887,18 +883,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26MAY78",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26MAY78", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -912,9 +904,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YOW",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -939,19 +929,15 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "CH"
-              ],
+              "ptc": ["CH"],
               "traveller": [
                 {
-                  "ref": 3
+                  "ref": "3"
                 }
               ]
             }
@@ -963,18 +949,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26SEP14",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26SEP14", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -988,9 +970,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YOWCH",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -1015,20 +995,16 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "INF"
-              ],
+              "ptc": ["INF"],
               "traveller": [
                 {
-                  "ref": 1,
-                  "infant_indicator": 1
+                  "ref": "1",
+                  "infant_indicator": "1"
                 }
               ]
             }
@@ -1040,18 +1016,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26SEP14",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26SEP14", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -1065,9 +1037,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YOWIN",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -1107,7 +1077,7 @@
           "referencing_detail": [
             {
               "ref_qualifier": "S",
-              "ref_number": 1
+              "ref_number": "1"
             }
           ]
         }
@@ -1129,15 +1099,13 @@
           },
           "pax_reference": [
             {
-              "ptc": [
-                "ADT"
-              ],
+              "ptc": ["ADT"],
               "traveller": [
                 {
-                  "ref": 1
+                  "ref": "1"
                 },
                 {
-                  "ref": 2
+                  "ref": "2"
                 }
               ]
             }
@@ -1160,18 +1128,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "40"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "14AUG14",
-                  "- SEE ADV PURCHASE"
-                ]
+                "description": ["LAST TKT DTE", "14AUG14", "- SEE ADV PURCHASE"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -1185,9 +1149,7 @@
                     "fare_product_detail": {
                       "fare_basis": "QLOUPAU1",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -1204,9 +1166,7 @@
                     "fare_product_detail": {
                       "fare_basis": "QLOUPAU1",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -1233,12 +1193,10 @@
           },
           "pax_reference": [
             {
-              "ptc": [
-                "CH"
-              ],
+              "ptc": ["CH"],
               "traveller": [
                 {
-                  "ref": 3
+                  "ref": "3"
                 }
               ]
             }
@@ -1261,18 +1219,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "40"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "14AUG14",
-                  "- SEE ADV PURCHASE"
-                ]
+                "description": ["LAST TKT DTE", "14AUG14", "- SEE ADV PURCHASE"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -1286,9 +1240,7 @@
                     "fare_product_detail": {
                       "fare_basis": "QLOUPAU1CH",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -1305,9 +1257,7 @@
                     "fare_product_detail": {
                       "fare_basis": "QLOUPAU1CH",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -1334,13 +1284,11 @@
           },
           "pax_reference": [
             {
-              "ptc": [
-                "INF"
-              ],
+              "ptc": ["INF"],
               "traveller": [
                 {
-                  "ref": 1,
-                  "infant_indicator": 1
+                  "ref": "1",
+                  "infant_indicator": "1"
                 }
               ]
             }
@@ -1352,9 +1300,7 @@
                   "text_subject_qualifier": "PEN",
                   "information_type": "70"
                 },
-                "description": [
-                  "TICKETS ARE NON-REFUNDABLE\n                    "
-                ]
+                "description": ["TICKETS ARE NON-REFUNDABLE\n                    "]
               }
             },
             {
@@ -1363,18 +1309,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "40"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "14AUG14",
-                  "- SEE ADV PURCHASE"
-                ]
+                "description": ["LAST TKT DTE", "14AUG14", "- SEE ADV PURCHASE"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -1388,9 +1330,7 @@
                     "fare_product_detail": {
                       "fare_basis": "QLOUPAU1IN",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -1407,9 +1347,7 @@
                     "fare_product_detail": {
                       "fare_basis": "QLOUPAU1IN",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -1449,7 +1387,7 @@
           "referencing_detail": [
             {
               "ref_qualifier": "S",
-              "ref_number": 2
+              "ref_number": "2"
             }
           ]
         }
@@ -1469,22 +1407,18 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "ADT"
-              ],
+              "ptc": ["ADT"],
               "traveller": [
                 {
-                  "ref": 1
+                  "ref": "1"
                 },
                 {
-                  "ref": 2
+                  "ref": "2"
                 }
               ]
             }
@@ -1496,9 +1430,7 @@
                   "text_subject_qualifier": "PEN",
                   "information_type": "73"
                 },
-                "description": [
-                  "PENALTY APPLIES"
-                ]
+                "description": ["PENALTY APPLIES"]
               },
               "monetary_information": {
                 "monetary_detail": [
@@ -1516,11 +1448,7 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "40"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "13SEP14",
-                  "- SEE ADV PURCHASE"
-                ]
+                "description": ["LAST TKT DTE", "13SEP14", "- SEE ADV PURCHASE"]
               }
             },
             {
@@ -1529,16 +1457,14 @@
                   "text_subject_qualifier": "SUR",
                   "information_type": "79"
                 },
-                "description": [
-                  "FARE VALID FOR E TICKET ONLY\n                    "
-                ]
+                "description": ["FARE VALID FOR E TICKET ONLY\n                    "]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -1552,10 +1478,7 @@
                     "fare_product_detail": {
                       "fare_basis": "HLOASQ",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP",
-                        "ET"
-                      ]
+                      "fare_type": ["RP", "ET"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -1572,10 +1495,7 @@
                     "fare_product_detail": {
                       "fare_basis": "HLOASQ",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP",
-                        "ET"
-                      ]
+                      "fare_type": ["RP", "ET"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -1600,19 +1520,15 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "CH"
-              ],
+              "ptc": ["CH"],
               "traveller": [
                 {
-                  "ref": 3
+                  "ref": "3"
                 }
               ]
             }
@@ -1624,9 +1540,7 @@
                   "text_subject_qualifier": "PEN",
                   "information_type": "73"
                 },
-                "description": [
-                  "PENALTY APPLIES"
-                ]
+                "description": ["PENALTY APPLIES"]
               },
               "monetary_information": {
                 "monetary_detail": [
@@ -1644,11 +1558,7 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "40"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "13SEP14",
-                  "- SEE ADV PURCHASE"
-                ]
+                "description": ["LAST TKT DTE", "13SEP14", "- SEE ADV PURCHASE"]
               }
             },
             {
@@ -1657,16 +1567,14 @@
                   "text_subject_qualifier": "SUR",
                   "information_type": "79"
                 },
-                "description": [
-                  "FARE VALID FOR E TICKET ONLY\n                    "
-                ]
+                "description": ["FARE VALID FOR E TICKET ONLY\n                    "]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -1680,10 +1588,7 @@
                     "fare_product_detail": {
                       "fare_basis": "HLOASQCH",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP",
-                        "ET"
-                      ]
+                      "fare_type": ["RP", "ET"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -1700,10 +1605,7 @@
                     "fare_product_detail": {
                       "fare_basis": "HLOASQCH",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP",
-                        "ET"
-                      ]
+                      "fare_type": ["RP", "ET"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -1728,20 +1630,16 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "INF"
-              ],
+              "ptc": ["INF"],
               "traveller": [
                 {
-                  "ref": 1,
-                  "infant_indicator": 1
+                  "ref": "1",
+                  "infant_indicator": "1"
                 }
               ]
             }
@@ -1753,9 +1651,7 @@
                   "text_subject_qualifier": "PEN",
                   "information_type": "73"
                 },
-                "description": [
-                  "PENALTY APPLIES"
-                ]
+                "description": ["PENALTY APPLIES"]
               },
               "monetary_information": {
                 "monetary_detail": [
@@ -1773,11 +1669,7 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "40"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "13SEP14",
-                  "- SEE ADV PURCHASE"
-                ]
+                "description": ["LAST TKT DTE", "13SEP14", "- SEE ADV PURCHASE"]
               }
             },
             {
@@ -1786,16 +1678,14 @@
                   "text_subject_qualifier": "SUR",
                   "information_type": "79"
                 },
-                "description": [
-                  "FARE VALID FOR E TICKET ONLY\n                    "
-                ]
+                "description": ["FARE VALID FOR E TICKET ONLY\n                    "]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -1809,10 +1699,7 @@
                     "fare_product_detail": {
                       "fare_basis": "HLOASQIN",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP",
-                        "ET"
-                      ]
+                      "fare_type": ["RP", "ET"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -1829,10 +1716,7 @@
                     "fare_product_detail": {
                       "fare_basis": "HLOASQIN",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP",
-                        "ET"
-                      ]
+                      "fare_type": ["RP", "ET"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -1871,11 +1755,11 @@
           "referencing_detail": [
             {
               "ref_qualifier": "S",
-              "ref_number": 1
+              "ref_number": "1"
             },
             {
               "ref_qualifier": "S",
-              "ref_number": 3
+              "ref_number": "3"
             }
           ]
         }
@@ -1895,22 +1779,18 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "ADT"
-              ],
+              "ptc": ["ADT"],
               "traveller": [
                 {
-                  "ref": 1
+                  "ref": "1"
                 },
                 {
-                  "ref": 2
+                  "ref": "2"
                 }
               ]
             }
@@ -1922,9 +1802,7 @@
                   "text_subject_qualifier": "PEN",
                   "information_type": "70"
                 },
-                "description": [
-                  "TICKETS ARE NON-REFUNDABLE\n                    "
-                ]
+                "description": ["TICKETS ARE NON-REFUNDABLE\n                    "]
               }
             },
             {
@@ -1933,18 +1811,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "40"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "10AUG14",
-                  "- SEE ADV PURCHASE"
-                ]
+                "description": ["LAST TKT DTE", "10AUG14", "- SEE ADV PURCHASE"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -1958,9 +1832,7 @@
                     "fare_product_detail": {
                       "fare_basis": "SJBBGB",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -1972,7 +1844,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -1986,9 +1858,7 @@
                     "fare_product_detail": {
                       "fare_basis": "SJBBGB",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2013,19 +1883,15 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "CH"
-              ],
+              "ptc": ["CH"],
               "traveller": [
                 {
-                  "ref": 3
+                  "ref": "3"
                 }
               ]
             }
@@ -2037,9 +1903,7 @@
                   "text_subject_qualifier": "PEN",
                   "information_type": "70"
                 },
-                "description": [
-                  "TICKETS ARE NON-REFUNDABLE\n                    "
-                ]
+                "description": ["TICKETS ARE NON-REFUNDABLE\n                    "]
               }
             },
             {
@@ -2048,18 +1912,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "40"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "10AUG14",
-                  "- SEE ADV PURCHASE"
-                ]
+                "description": ["LAST TKT DTE", "10AUG14", "- SEE ADV PURCHASE"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -2073,9 +1933,7 @@
                     "fare_product_detail": {
                       "fare_basis": "SJBBGBCH",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2087,7 +1945,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -2101,9 +1959,7 @@
                     "fare_product_detail": {
                       "fare_basis": "SJBBGBCH",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2128,20 +1984,16 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "INF"
-              ],
+              "ptc": ["INF"],
               "traveller": [
                 {
-                  "ref": 1,
-                  "infant_indicator": 1
+                  "ref": "1",
+                  "infant_indicator": "1"
                 }
               ]
             }
@@ -2153,9 +2005,7 @@
                   "text_subject_qualifier": "PEN",
                   "information_type": "70"
                 },
-                "description": [
-                  "TICKETS ARE NON-REFUNDABLE\n                    "
-                ]
+                "description": ["TICKETS ARE NON-REFUNDABLE\n                    "]
               }
             },
             {
@@ -2164,18 +2014,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "40"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "10AUG14",
-                  "- SEE ADV PURCHASE"
-                ]
+                "description": ["LAST TKT DTE", "10AUG14", "- SEE ADV PURCHASE"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -2189,9 +2035,7 @@
                     "fare_product_detail": {
                       "fare_basis": "SJBBGBIN",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2203,7 +2047,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -2217,9 +2061,7 @@
                     "fare_product_detail": {
                       "fare_basis": "SJBBGBIN",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2258,11 +2100,11 @@
           "referencing_detail": [
             {
               "ref_qualifier": "S",
-              "ref_number": 1
+              "ref_number": "1"
             },
             {
               "ref_qualifier": "S",
-              "ref_number": 4
+              "ref_number": "4"
             }
           ]
         }
@@ -2282,22 +2124,18 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "ADT"
-              ],
+              "ptc": ["ADT"],
               "traveller": [
                 {
-                  "ref": 1
+                  "ref": "1"
                 },
                 {
-                  "ref": 2
+                  "ref": "2"
                 }
               ]
             }
@@ -2309,9 +2147,7 @@
                   "text_subject_qualifier": "PEN",
                   "information_type": "70"
                 },
-                "description": [
-                  "TICKETS ARE NON-REFUNDABLE\n                    "
-                ]
+                "description": ["TICKETS ARE NON-REFUNDABLE\n                    "]
               }
             },
             {
@@ -2320,18 +2156,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "40"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "10AUG14",
-                  "- SEE ADV PURCHASE"
-                ]
+                "description": ["LAST TKT DTE", "10AUG14", "- SEE ADV PURCHASE"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -2345,9 +2177,7 @@
                     "fare_product_detail": {
                       "fare_basis": "SJBBGB",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2359,7 +2189,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -2373,9 +2203,7 @@
                     "fare_product_detail": {
                       "fare_basis": "Y2BA",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -2392,9 +2220,7 @@
                     "fare_product_detail": {
                       "fare_basis": "Y2BA",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2419,19 +2245,15 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "CH"
-              ],
+              "ptc": ["CH"],
               "traveller": [
                 {
-                  "ref": 3
+                  "ref": "3"
                 }
               ]
             }
@@ -2443,9 +2265,7 @@
                   "text_subject_qualifier": "PEN",
                   "information_type": "70"
                 },
-                "description": [
-                  "TICKETS ARE NON-REFUNDABLE\n                    "
-                ]
+                "description": ["TICKETS ARE NON-REFUNDABLE\n                    "]
               }
             },
             {
@@ -2454,18 +2274,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "40"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "10AUG14",
-                  "- SEE ADV PURCHASE"
-                ]
+                "description": ["LAST TKT DTE", "10AUG14", "- SEE ADV PURCHASE"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -2479,9 +2295,7 @@
                     "fare_product_detail": {
                       "fare_basis": "SJBBGBCH",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2493,7 +2307,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -2507,9 +2321,7 @@
                     "fare_product_detail": {
                       "fare_basis": "Y2BACH",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -2526,9 +2338,7 @@
                     "fare_product_detail": {
                       "fare_basis": "Y2BACH",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2553,20 +2363,16 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "INF"
-              ],
+              "ptc": ["INF"],
               "traveller": [
                 {
-                  "ref": 1,
-                  "infant_indicator": 1
+                  "ref": "1",
+                  "infant_indicator": "1"
                 }
               ]
             }
@@ -2578,9 +2384,7 @@
                   "text_subject_qualifier": "PEN",
                   "information_type": "70"
                 },
-                "description": [
-                  "TICKETS ARE NON-REFUNDABLE\n                    "
-                ]
+                "description": ["TICKETS ARE NON-REFUNDABLE\n                    "]
               }
             },
             {
@@ -2589,18 +2393,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "40"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "10AUG14",
-                  "- SEE ADV PURCHASE"
-                ]
+                "description": ["LAST TKT DTE", "10AUG14", "- SEE ADV PURCHASE"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -2614,9 +2414,7 @@
                     "fare_product_detail": {
                       "fare_basis": "SJBBGBIN",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2628,7 +2426,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -2642,9 +2440,7 @@
                     "fare_product_detail": {
                       "fare_basis": "Y2BAIN",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -2661,9 +2457,7 @@
                     "fare_product_detail": {
                       "fare_basis": "Y2BAIN",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2702,11 +2496,11 @@
           "referencing_detail": [
             {
               "ref_qualifier": "S",
-              "ref_number": 1
+              "ref_number": "1"
             },
             {
               "ref_qualifier": "S",
-              "ref_number": 5
+              "ref_number": "5"
             }
           ]
         }
@@ -2729,22 +2523,18 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "ADT"
-              ],
+              "ptc": ["ADT"],
               "traveller": [
                 {
-                  "ref": 1
+                  "ref": "1"
                 },
                 {
-                  "ref": 2
+                  "ref": "2"
                 }
               ]
             }
@@ -2756,18 +2546,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26SEP14",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26SEP14", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -2781,9 +2567,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YRT",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2795,7 +2579,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -2809,9 +2593,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -2828,9 +2610,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2858,19 +2638,15 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "CH"
-              ],
+              "ptc": ["CH"],
               "traveller": [
                 {
-                  "ref": 3
+                  "ref": "3"
                 }
               ]
             }
@@ -2882,18 +2658,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26SEP14",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26SEP14", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -2907,9 +2679,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YRTCH",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2921,7 +2691,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -2935,9 +2705,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -2961,9 +2729,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -2998,20 +2764,16 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "INF"
-              ],
+              "ptc": ["INF"],
               "traveller": [
                 {
-                  "ref": 1,
-                  "infant_indicator": 1
+                  "ref": "1",
+                  "infant_indicator": "1"
                 }
               ]
             }
@@ -3023,18 +2785,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26SEP14",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26SEP14", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -3048,9 +2806,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YRTIN",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -3062,7 +2818,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -3076,9 +2832,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -3102,9 +2856,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -3150,11 +2902,11 @@
           "referencing_detail": [
             {
               "ref_qualifier": "S",
-              "ref_number": 1
+              "ref_number": "1"
             },
             {
               "ref_qualifier": "S",
-              "ref_number": 6
+              "ref_number": "6"
             }
           ]
         }
@@ -3174,22 +2926,18 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "ADT"
-              ],
+              "ptc": ["ADT"],
               "traveller": [
                 {
-                  "ref": 1
+                  "ref": "1"
                 },
                 {
-                  "ref": 2
+                  "ref": "2"
                 }
               ]
             }
@@ -3201,18 +2949,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26SEP14",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26SEP14", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -3226,9 +2970,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YRT",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -3240,7 +2982,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -3254,9 +2996,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -3273,9 +3013,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -3300,19 +3038,15 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "CH"
-              ],
+              "ptc": ["CH"],
               "traveller": [
                 {
-                  "ref": 3
+                  "ref": "3"
                 }
               ]
             }
@@ -3324,18 +3058,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26SEP14",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26SEP14", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -3349,9 +3079,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YRTCH",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -3363,7 +3091,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -3377,9 +3105,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -3403,9 +3129,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -3437,20 +3161,16 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "INF"
-              ],
+              "ptc": ["INF"],
               "traveller": [
                 {
-                  "ref": 1,
-                  "infant_indicator": 1
+                  "ref": "1",
+                  "infant_indicator": "1"
                 }
               ]
             }
@@ -3462,18 +3182,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26SEP14",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26SEP14", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -3487,9 +3203,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YRTIN",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -3501,7 +3215,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -3515,9 +3229,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "N"
@@ -3541,9 +3253,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -3589,11 +3299,11 @@
           "referencing_detail": [
             {
               "ref_qualifier": "S",
-              "ref_number": 1
+              "ref_number": "1"
             },
             {
               "ref_qualifier": "S",
-              "ref_number": 7
+              "ref_number": "7"
             }
           ]
         }
@@ -3613,22 +3323,18 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "ADT"
-              ],
+              "ptc": ["ADT"],
               "traveller": [
                 {
-                  "ref": 1
+                  "ref": "1"
                 },
                 {
-                  "ref": 2
+                  "ref": "2"
                 }
               ]
             }
@@ -3640,18 +3346,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26SEP14",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26SEP14", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -3665,9 +3367,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YRT",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -3679,7 +3379,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -3693,9 +3393,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -3720,19 +3418,15 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "CH"
-              ],
+              "ptc": ["CH"],
               "traveller": [
                 {
-                  "ref": 3
+                  "ref": "3"
                 }
               ]
             }
@@ -3744,18 +3438,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26SEP14",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26SEP14", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -3769,9 +3459,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YRTCH",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -3783,7 +3471,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -3797,9 +3485,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -3831,20 +3517,16 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "INF"
-              ],
+              "ptc": ["INF"],
               "traveller": [
                 {
-                  "ref": 1,
-                  "infant_indicator": 1
+                  "ref": "1",
+                  "infant_indicator": "1"
                 }
               ]
             }
@@ -3856,18 +3538,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26SEP14",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26SEP14", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -3881,9 +3559,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YRTIN",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -3895,7 +3571,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -3909,9 +3585,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YIF",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -3957,11 +3631,11 @@
           "referencing_detail": [
             {
               "ref_qualifier": "S",
-              "ref_number": 2
+              "ref_number": "2"
             },
             {
               "ref_qualifier": "S",
-              "ref_number": 3
+              "ref_number": "3"
             }
           ]
         }
@@ -3981,22 +3655,18 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "ADT"
-              ],
+              "ptc": ["ADT"],
               "traveller": [
                 {
-                  "ref": 1
+                  "ref": "1"
                 },
                 {
-                  "ref": 2
+                  "ref": "2"
                 }
               ]
             }
@@ -4008,18 +3678,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26SEP14",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26SEP14", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -4033,9 +3699,7 @@
                     "fare_product_detail": {
                       "fare_basis": "CIF",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -4047,7 +3711,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -4061,9 +3725,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YRT",
                       "passenger_type": "ADT",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -4088,19 +3750,15 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "CH"
-              ],
+              "ptc": ["CH"],
               "traveller": [
                 {
-                  "ref": 3
+                  "ref": "3"
                 }
               ]
             }
@@ -4112,18 +3770,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26SEP14",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26SEP14", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -4137,9 +3791,7 @@
                     "fare_product_detail": {
                       "fare_basis": "CIF",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -4158,7 +3810,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -4172,9 +3824,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YRTCH",
                       "passenger_type": "CH",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -4199,20 +3849,16 @@
             ],
             "monetary_details": [],
             "pricing_ticketing": {
-              "price_type": [
-                "OBV"
-              ]
+              "price_type": ["OBV"]
             }
           },
           "pax_reference": [
             {
-              "ptc": [
-                "INF"
-              ],
+              "ptc": ["INF"],
               "traveller": [
                 {
-                  "ref": 1,
-                  "infant_indicator": 1
+                  "ref": "1",
+                  "infant_indicator": "1"
                 }
               ]
             }
@@ -4224,18 +3870,14 @@
                   "text_subject_qualifier": "LTD",
                   "information_type": "41"
                 },
-                "description": [
-                  "LAST TKT DTE",
-                  "26SEP14",
-                  "- DATE OF ORIGIN"
-                ]
+                "description": ["LAST TKT DTE", "26SEP14", "- DATE OF ORIGIN"]
               }
             }
           ],
           "fare_details": [
             {
               "segment_ref": {
-                "seg_ref": 1,
+                "seg_ref": "1",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -4249,9 +3891,7 @@
                     "fare_product_detail": {
                       "fare_basis": "CIF",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"
@@ -4270,7 +3910,7 @@
             },
             {
               "segment_ref": {
-                "seg_ref": 2,
+                "seg_ref": "2",
                 "location_forcing": []
               },
               "group_of_fares": [
@@ -4284,9 +3924,7 @@
                     "fare_product_detail": {
                       "fare_basis": "YRTIN",
                       "passenger_type": "IN",
-                      "fare_type": [
-                        "RP"
-                      ]
+                      "fare_type": ["RP"]
                     },
                     "corporate_id": [],
                     "break_point": "Y"

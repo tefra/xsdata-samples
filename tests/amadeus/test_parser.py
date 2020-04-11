@@ -29,7 +29,6 @@ class ParserTests(TestCase):
 
         expected = json_fixture.read_text()
         result = serializer.render(obj)
-        self.assertEqual(expected, result)
-        self.assertEqual(json.loads(expected), json.loads(result))
 
+        self.assertEqual(json.loads(expected), json.loads(result))
         json_fixture.write_text(result)
