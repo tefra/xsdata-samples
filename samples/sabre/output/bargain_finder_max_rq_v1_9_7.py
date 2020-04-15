@@ -14,6 +14,8 @@ from samples.sabre.output.bargain_finder_max_common_types_v1_9_7 import (
     VoluntaryChangesType,
 )
 
+__NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
+
 
 @dataclass
 class AirlineType:

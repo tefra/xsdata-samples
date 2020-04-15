@@ -3,6 +3,8 @@ from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
 
+__NAMESPACE__ = "http://www.travelport.com/schema/common_v48_0"
+
 
 @dataclass
 class Arcpayment:

@@ -144,6 +144,8 @@ from samples.travelport.output.rail_v48_0.rail import (
     RailSegmentList,
 )
 
+__NAMESPACE__ = "http://www.travelport.com/schema/air_v48_0"
+
 
 @dataclass
 class SearchSpecificAirSegment:

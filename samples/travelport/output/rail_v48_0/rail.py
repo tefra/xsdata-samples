@@ -18,6 +18,8 @@ from samples.travelport.output.common_v48_0.common import (
     TypeTimeSpec,
 )
 
+__NAMESPACE__ = "http://www.travelport.com/schema/rail_v48_0"
+
 
 @dataclass
 class FareValidity:

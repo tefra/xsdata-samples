@@ -2,6 +2,8 @@ from decimal import Decimal
 from dataclasses import dataclass, field
 from typing import List, Optional
 
+__NAMESPACE__ = "http://xml.amadeus.com/FMPTBQ_15_3_1A"
+
 
 @dataclass
 class FareMasterPricerTravelBoardSearch:

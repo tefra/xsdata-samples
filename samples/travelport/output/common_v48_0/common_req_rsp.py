@@ -31,6 +31,8 @@ from samples.travelport.output.common_v48_0.common import (
     TypeErrorInfo,
 )
 
+__NAMESPACE__ = "http://www.travelport.com/schema/common_v48_0"
+
 
 class TypeLoggingLevel(Enum):
     """The type of various Logging levels.
