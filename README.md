@@ -1,3 +1,3 @@
-# xsdata-samples
+# xsData samples collection
 
-All samples were generated with the make command `make dataclass` and `make plantuml`
+Examples of how to use the naive XML bindings for python.
