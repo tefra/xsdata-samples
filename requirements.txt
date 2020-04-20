@@ -1,3 +1,5 @@
 tox
+pytest
 pre-commit
-xsdata
+requests
+git+https://github.com/tefra/xsdata@master
