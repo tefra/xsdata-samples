@@ -1,0 +1,1 @@
+from amadeus.models.request.fare_master_pricer_travel_board_search_15_3_1_a import FareMasterPricerTravelBoardSearch

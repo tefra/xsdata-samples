@@ -1,4 +1,4 @@
-exclude: "output/"
+exclude: "models"
 repos:
   - repo: https://github.com/asottile/reorder_python_imports
     rev: v2.1.0
@@ -30,8 +30,3 @@ repos:
     hooks:
       - id: mypy
         additional_dependencies: [tokenize-rt]
-  - repo: https://github.com/prettier/prettier
-    rev: 1.19.1
-    hooks:
-      - id: prettier
-        args: [--prose-wrap=always, --print-width=88]
