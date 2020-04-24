@@ -1,0 +1,26 @@
+language: python
+cache: false
+
+jobs:
+  include:
+    - python: 3.7
+      env: TOXENV=amadeus
+    - python: 3.7
+      env: TOXENV=travelport
+    - python: 3.7
+      env: TOXENV=sabre
+    - python: 3.7
+      env: TOXENV=bnm
+
+before_install:
+  - pip install --upgrade pip
+
+install:
+  - pip install tox
+
+script:
+  - tox
+
+branches:
+  only:
+    - master
