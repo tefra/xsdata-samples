@@ -195,7 +195,6 @@ class ErrorInfo(TypeErrorInfo):
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
 
-
 @dataclass
 class BaseCoreSearchReq(BaseCoreReq):
     """Base Request for Air Search.

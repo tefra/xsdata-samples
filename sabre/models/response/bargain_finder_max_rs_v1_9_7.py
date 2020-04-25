@@ -332,28 +332,24 @@ class CouponOfferType:
     promo_id: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="promo_id",
             type="Attribute"
         )
     )
     corp_id: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="corp_id",
             type="Attribute"
         )
     )
     headline: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="headline",
             type="Attribute"
         )
     )
     discount_pctg: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="discount_pctg",
             type="Attribute"
         )
     )

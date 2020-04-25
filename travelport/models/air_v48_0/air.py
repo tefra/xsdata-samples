@@ -1262,7 +1262,6 @@ class CustomerSearch:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
 
-
 @dataclass
 class Document:
     """APIS Document Details.
@@ -7893,12 +7892,10 @@ class ApplicableSegment(TypeApplicableSegment):
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
 
-
 @dataclass
 class AssociatedRemark(TypeAssociatedRemarkWithSegmentRef):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
-
 
 
 @dataclass
@@ -7907,7 +7904,6 @@ class AsyncProviderSpecificResponse(BaseAsyncProviderSpecificResponse):
     attribute."""
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
-
 
 
 @dataclass
@@ -8866,7 +8862,6 @@ class Dimension(TypeUnitOfMeasure):
     type: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="type",
             type="Attribute"
         )
     )
@@ -9895,7 +9890,6 @@ class FeeInfo(TypeFeeInfo):
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
 
-
 @dataclass
 class GroupedOptionInfo:
     """
@@ -10575,7 +10569,6 @@ class PermittedCarriers:
 class PocketItineraryRemark(TypeAssociatedRemarkWithSegmentRef):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
-
 
 
 @dataclass
@@ -11636,7 +11629,6 @@ class TaxInfo(TypeTaxInfo):
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
 
-
 @dataclass
 class TermConditions:
     """The terms and conditions to be included in Fax details.
@@ -11672,7 +11664,6 @@ class Text(TypeTextElement):
     Consumer','Strapline','Rule'."""
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
-
 
 
 @dataclass
@@ -11741,7 +11732,6 @@ class Title(TypeTextElement):
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
-
 
 
 @dataclass
@@ -14376,7 +14366,6 @@ class EmbargoInfo(BaseBaggageAllowanceInfo):
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
 
-
 @dataclass
 class Enumeration:
     """Provides the capability to group the results into differnt trip type and
@@ -16507,7 +16496,6 @@ class DefaultBrandDetail(TypeDefaultBrandDetail):
     """Applicable air segment."""
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
-
 
 
 @dataclass
@@ -20064,7 +20052,6 @@ class AirSegment(TypeBaseAirSegment):
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
 
-
 @dataclass
 class BaggageAllowances:
     """Details of Baggage allowance.
@@ -23188,7 +23175,6 @@ class AirReservation(TypeBaseAirReservation):
     """The parent container for all booking data."""
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
-
 
 
 @dataclass

@@ -117,7 +117,6 @@ class ApplicationErrorInformationType:
     error: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="error",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
@@ -268,7 +267,6 @@ class BagtagDetailsType:
     identifier: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="identifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -278,7 +276,6 @@ class BagtagDetailsType:
     number: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="number",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,15}"
@@ -295,7 +292,6 @@ class BucketInformationType:
     number: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="number",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -305,7 +301,6 @@ class BucketInformationType:
     name: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="name",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -323,7 +318,6 @@ class CabinInformationType:
     service: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="service",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
@@ -334,7 +328,6 @@ class CabinInformationType:
     cabin: List[str] = field(
         default_factory=list,
         metadata=dict(
-            name="cabin",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
@@ -356,7 +349,6 @@ class CabinProductDetailsType:
     rbd: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="rbd",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
@@ -377,7 +369,6 @@ class CabinProductDetailsType:
     cabin: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="cabin",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -410,7 +401,6 @@ class CabinProductDetailsType195516C:
     rbd: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="rbd",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -430,7 +420,6 @@ class CabinProductDetailsType195516C:
     cabin: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="cabin",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -464,7 +453,6 @@ class CabinProductDetailsType205138C:
     rbd: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="rbd",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
@@ -484,7 +472,6 @@ class CabinProductDetailsType205138C:
     cabin: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="cabin",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -515,7 +502,6 @@ class CabinProductDetailsType229142C:
     rbd: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="rbd",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
@@ -526,7 +512,6 @@ class CabinProductDetailsType229142C:
     cabin: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="cabin",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -553,7 +538,6 @@ class CategoryDescriptionType:
     number: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="number",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
@@ -563,7 +547,6 @@ class CategoryDescriptionType:
     code: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="code",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -581,7 +564,6 @@ class ClassInformationType:
     service: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="service",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
@@ -592,7 +574,6 @@ class ClassInformationType:
     rbd: List[str] = field(
         default_factory=list,
         metadata=dict(
-            name="rbd",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
@@ -725,7 +706,6 @@ class CompanyIdentificationType:
     alliance: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="alliance",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -836,7 +816,6 @@ class CompanyRoleIdentificationType120771C:
     company: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="company",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=2.0,
@@ -865,7 +844,6 @@ class ConversionRateDetailsTypeI:
     currency: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="currency",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -875,7 +853,6 @@ class ConversionRateDetailsTypeI:
     amount: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="amount",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
@@ -909,7 +886,6 @@ class ConversionRateDetailsTypeI179848C:
     currency: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="currency",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
@@ -920,7 +896,6 @@ class ConversionRateDetailsTypeI179848C:
     rate: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="rate",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
@@ -959,7 +934,6 @@ class CriteriaiDetaislType:
     type: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="type",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -969,7 +943,6 @@ class CriteriaiDetaislType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -987,7 +960,6 @@ class DataInformationType:
     indicator: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="indicator",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1018,7 +990,6 @@ class DataTypeInformationType:
     option: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="option",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1049,7 +1020,6 @@ class DateAndTimeDetailsType:
     date: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="date",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])[0-9]{2}"
@@ -1101,7 +1071,6 @@ class DateAndTimeDetailsType256192C:
     qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="qualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1111,7 +1080,6 @@ class DateAndTimeDetailsType256192C:
     date: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="date",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1121,7 +1089,6 @@ class DateAndTimeDetailsType256192C:
     time: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="time",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
@@ -1130,7 +1097,6 @@ class DateAndTimeDetailsType256192C:
     location: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="location",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1149,7 +1115,6 @@ class DateTimePeriodDetailsTypeI:
     qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="qualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
@@ -1160,7 +1125,6 @@ class DateTimePeriodDetailsTypeI:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1202,7 +1166,6 @@ class DiscountPenaltyInformationType:
     amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
-            name="amount",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
@@ -1210,7 +1173,6 @@ class DiscountPenaltyInformationType:
     percentage: Optional[Decimal] = field(
         default=None,
         metadata=dict(
-            name="percentage",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
@@ -1286,7 +1248,6 @@ class FareCalculationCodeDetailsType:
     qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="qualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1296,7 +1257,6 @@ class FareCalculationCodeDetailsType:
     amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
-            name="amount",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
@@ -1324,7 +1284,6 @@ class FareCalculationCodeDetailsType:
     rate: Optional[Decimal] = field(
         default=None,
         metadata=dict(
-            name="rate",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
@@ -1393,7 +1352,6 @@ class FareDetailsTypeI:
     qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="qualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1403,7 +1361,6 @@ class FareDetailsTypeI:
     rate: Optional[Decimal] = field(
         default=None,
         metadata=dict(
-            name="rate",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
@@ -1411,7 +1368,6 @@ class FareDetailsTypeI:
     country: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="country",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1444,7 +1400,6 @@ class FareDetailsType193037C:
     qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="qualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"[0-9A-Z]{1,3}"
@@ -1453,7 +1408,6 @@ class FareDetailsType193037C:
     rate: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="rate",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,8}"
@@ -1462,7 +1416,6 @@ class FareDetailsType193037C:
     country: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="country",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1519,7 +1472,6 @@ class FareInformationTypeI:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,15}"
@@ -1688,7 +1640,6 @@ class FreeTextQualificationType120769C:
     language: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="language",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1708,7 +1659,6 @@ class FrequentTravellerIdentificationType:
     carrier: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="carrier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1718,7 +1668,6 @@ class FrequentTravellerIdentificationType:
     number: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="number",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1759,7 +1708,6 @@ class ItemNumberIdentificationType:
     number: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="number",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1769,7 +1717,6 @@ class ItemNumberIdentificationType:
     type: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="type",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1779,7 +1726,6 @@ class ItemNumberIdentificationType:
     qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="qualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1810,7 +1756,6 @@ class ItemNumberIdentificationType191597C:
     number: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="number",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1844,7 +1789,6 @@ class ItemNumberIdentificationType192331C:
     number: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="number",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1854,7 +1798,6 @@ class ItemNumberIdentificationType192331C:
     type: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="type",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1864,7 +1807,6 @@ class ItemNumberIdentificationType192331C:
     qualifier: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="qualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1896,7 +1838,6 @@ class ItemNumberIdentificationType234878C:
     number: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="number",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,6}"
@@ -1905,7 +1846,6 @@ class ItemNumberIdentificationType234878C:
     type: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="type",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -1926,7 +1866,6 @@ class ItemNumberIdentificationType248537C:
     number: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="number",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -2086,7 +2025,6 @@ class LocationIdentificationDetailsType:
     terminal: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="terminal",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -2104,7 +2042,6 @@ class MiniRulesDetailsType:
     interpretation: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="interpretation",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=0.0,
@@ -2114,7 +2051,6 @@ class MiniRulesDetailsType:
     value: List[str] = field(
         default_factory=list,
         metadata=dict(
-            name="value",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
@@ -2153,7 +2089,6 @@ class MiniRulesType:
     category: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="category",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
@@ -2183,7 +2118,6 @@ class MonetaryInformationDetailsType:
     amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
-            name="amount",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True
@@ -2192,7 +2126,6 @@ class MonetaryInformationDetailsType:
     currency: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="currency",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -2223,7 +2156,6 @@ class MonetaryInformationDetailsTypeI:
     amount: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="amount",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -2233,7 +2165,6 @@ class MonetaryInformationDetailsTypeI:
     currency: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="currency",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -2268,7 +2199,6 @@ class MonetaryInformationDetailsType245528C:
     amount: Optional[Decimal] = field(
         default=None,
         metadata=dict(
-            name="amount",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
@@ -2276,7 +2206,6 @@ class MonetaryInformationDetailsType245528C:
     currency: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="currency",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -2286,7 +2215,6 @@ class MonetaryInformationDetailsType245528C:
     location: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="location",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -2315,7 +2243,6 @@ class OnTimePerformanceType:
     percentage: Optional[Decimal] = field(
         default=None,
         metadata=dict(
-            name="percentage",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
@@ -2323,7 +2250,6 @@ class OnTimePerformanceType:
     accuracy: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="accuracy",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -2552,7 +2478,6 @@ class ProductDetailsType:
     designator: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="designator",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
@@ -2583,7 +2508,6 @@ class ProductDetailsType:
     option: List[str] = field(
         default_factory=list,
         metadata=dict(
-            name="option",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
@@ -2701,7 +2625,6 @@ class ProductTypeDetailsType205137C:
     avl: List[str] = field(
         default_factory=list,
         metadata=dict(
-            name="avl",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
@@ -2721,7 +2644,6 @@ class ProposedSegmentDetailsType:
     ref: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="ref",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -2884,7 +2806,6 @@ class ReferencingDetailsType234704C:
     type: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="type",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -2894,7 +2815,6 @@ class ReferencingDetailsType234704C:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -2913,7 +2833,6 @@ class SegmentRepetitionControlDetailsTypeI:
     quantity: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="quantity",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,15}"
@@ -2940,7 +2859,6 @@ class SelectionDetailsInformationType:
     type: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="type",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
@@ -2970,7 +2888,6 @@ class SequenceInformationTypeU:
     number: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="number",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
@@ -3000,7 +2917,6 @@ class ServicesReferences:
     reference: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="reference",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -3010,7 +2926,6 @@ class ServicesReferences:
     status: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="status",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -3182,7 +3097,6 @@ class StatusDetailsType:
     notification: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="notification",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -3192,7 +3106,6 @@ class StatusDetailsType:
     notification2: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="notification2",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -3202,7 +3115,6 @@ class StatusDetailsType:
     description: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="description",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -3225,7 +3137,6 @@ class StatusDetailsType256255C:
     indicator: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="indicator",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -3235,7 +3146,6 @@ class StatusDetailsType256255C:
     action: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="action",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -3257,7 +3167,6 @@ class TaxDetailsType:
     rate: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="rate",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -3287,7 +3196,6 @@ class TaxDetailsType:
     type: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="type",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -3297,7 +3205,6 @@ class TaxDetailsType:
     indicator: List[str] = field(
         default_factory=list,
         metadata=dict(
-            name="indicator",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
@@ -3317,7 +3224,6 @@ class TravellerDetailsType:
     ref: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="ref",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,3}"
@@ -3718,7 +3624,6 @@ class FareFamilyType:
     hierarchy: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="hierarchy",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,4}"
@@ -3727,7 +3632,6 @@ class FareFamilyType:
     cabin: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="cabin",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -3747,7 +3651,6 @@ class FareFamilyType:
     description: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="description",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -3757,7 +3660,6 @@ class FareFamilyType:
     carrier: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="carrier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=2.0,
@@ -3767,7 +3669,6 @@ class FareFamilyType:
     services: List[ServicesReferences] = field(
         default_factory=list,
         metadata=dict(
-            name="services",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
@@ -3798,7 +3699,6 @@ class FareInformationType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             pattern=r"-?[0-9]{1,15}"
@@ -4163,7 +4063,6 @@ class HeaderInformationTypeI:
     status: List[str] = field(
         default_factory=list,
         metadata=dict(
-            name="status",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
@@ -4252,7 +4151,6 @@ class InteractiveFreeTextType78534S:
     description: List[str] = field(
         default_factory=list,
         metadata=dict(
-            name="description",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
@@ -4284,7 +4182,6 @@ class InteractiveFreeTextType78544S:
     description: List[str] = field(
         default_factory=list,
         metadata=dict(
-            name="description",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
@@ -4316,7 +4213,6 @@ class InteractiveFreeTextType78559S:
     description: List[str] = field(
         default_factory=list,
         metadata=dict(
-            name="description",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
@@ -4470,7 +4366,6 @@ class MiniRulesType78547S:
     category: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="category",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
@@ -4481,7 +4376,6 @@ class MiniRulesType78547S:
     indicator: Optional[MiniRulesIndicatorType] = field(
         default=None,
         metadata=dict(
-            name="indicator",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A"
         )
@@ -5047,7 +4941,6 @@ class StatusType:
     status: List[StatusDetailsType] = field(
         default_factory=list,
         metadata=dict(
-            name="status",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
@@ -5148,7 +5041,6 @@ class TravelProductType:
     location: List[LocationIdentificationDetailsType] = field(
         default_factory=list,
         metadata=dict(
-            name="location",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
@@ -5211,7 +5103,6 @@ class TravellerReferenceInformationType:
     ptc: List[str] = field(
         default_factory=list,
         metadata=dict(
-            name="ptc",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
@@ -5223,7 +5114,6 @@ class TravellerReferenceInformationType:
     traveller: List[TravellerDetailsType] = field(
         default_factory=list,
         metadata=dict(
-            name="traveller",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
@@ -5281,7 +5171,6 @@ class ValueSearchCriteriaType:
     ref: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="ref",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -5291,7 +5180,6 @@ class ValueSearchCriteriaType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="value",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_length=1.0,
@@ -5441,7 +5329,6 @@ class FareMasterPricerTravelBoardSearchReply:
     recommendation: List["FareMasterPricerTravelBoardSearchReply.Recommendation"] = field(
         default_factory=list,
         metadata=dict(
-            name="recommendation",
             type="Element",
             min_occurs=0,
             max_occurs=100000
@@ -5486,7 +5373,6 @@ class FareMasterPricerTravelBoardSearchReply:
     value: List[ValueSearchCriteriaType] = field(
         default_factory=list,
         metadata=dict(
-            name="value",
             type="Element",
             min_occurs=0,
             max_occurs=100009
@@ -5563,7 +5449,6 @@ class FareMasterPricerTravelBoardSearchReply:
             amounts: Optional[MonetaryInformationType] = field(
                 default=None,
                 metadata=dict(
-                    name="amounts",
                     type="Element"
                 )
             )
@@ -5626,7 +5511,6 @@ class FareMasterPricerTravelBoardSearchReply:
             amounts: Optional[MonetaryInformationType] = field(
                 default=None,
                 metadata=dict(
-                    name="amounts",
                     type="Element"
                 )
             )
@@ -5965,7 +5849,6 @@ class FareMasterPricerTravelBoardSearchReply:
             fare: List["FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct.Fare"] = field(
                 default_factory=list,
                 metadata=dict(
-                    name="fare",
                     type="Element",
                     min_occurs=0,
                     max_occurs=7
@@ -6181,7 +6064,6 @@ class FareMasterPricerTravelBoardSearchReply:
         reference: Optional[SequenceDetailsTypeU] = field(
             default=None,
             metadata=dict(
-                name="reference",
                 type="Element",
                 required=True
             )
@@ -6214,7 +6096,6 @@ class FareMasterPricerTravelBoardSearchReply:
             ref: Optional[ReferenceInfoType165972S] = field(
                 default=None,
                 metadata=dict(
-                    name="ref",
                     type="Element",
                     required=True
                 )
@@ -6222,7 +6103,6 @@ class FareMasterPricerTravelBoardSearchReply:
             amount: Optional[MonetaryInformationTypeI] = field(
                 default=None,
                 metadata=dict(
-                    name="amount",
                     type="Element"
                 )
             )
@@ -6240,7 +6120,6 @@ class FareMasterPricerTravelBoardSearchReply:
             ref: Optional[SegmentRepetitionControlTypeI] = field(
                 default=None,
                 metadata=dict(
-                    name="ref",
                     type="Element",
                     required=True
                 )
@@ -6248,7 +6127,6 @@ class FareMasterPricerTravelBoardSearchReply:
             description: Optional[FareInformationTypeI] = field(
                 default=None,
                 metadata=dict(
-                    name="description",
                     type="Element"
                 )
             )
@@ -6262,21 +6140,18 @@ class FareMasterPricerTravelBoardSearchReply:
             amount: Optional[MonetaryInformationTypeI] = field(
                 default=None,
                 metadata=dict(
-                    name="amount",
                     type="Element"
                 )
             )
             fare: Optional[FlightProductInformationType161491S] = field(
                 default=None,
                 metadata=dict(
-                    name="fare",
                     type="Element"
                 )
             )
             attribute: List[AttributeTypeU] = field(
                 default_factory=list,
                 metadata=dict(
-                    name="attribute",
                     type="Element",
                     min_occurs=0,
                     max_occurs=10
@@ -6314,7 +6189,6 @@ class FareMasterPricerTravelBoardSearchReply:
         attributes: Optional[CodedAttributeType] = field(
             default=None,
             metadata=dict(
-                name="attributes",
                 type="Element",
                 required=True
             )
@@ -6640,7 +6514,6 @@ class FareMasterPricerTravelBoardSearchReply:
         mnr: Optional[MiniRulesType] = field(
             default=None,
             metadata=dict(
-                name="mnr",
                 type="Element",
                 required=True
             )

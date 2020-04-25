@@ -3413,7 +3413,6 @@ class AirExchangeQuoteReq(BaseAirExchangeQuoteReq):
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
 
-
 @dataclass
 class AirPriceReq(BaseAirPriceReq):
     """Request to price an itinerary in one to many ways.
@@ -3424,12 +3423,10 @@ class AirPriceReq(BaseAirPriceReq):
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
 
-
 @dataclass
 class AirPriceRsp(BaseAirPriceRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
-
 
 
 @dataclass
@@ -3578,7 +3575,6 @@ class AirUpsellSearchRsp(BaseAirPriceRsp):
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
 
-
 @dataclass
 class AvailabilitySearchReq(AirSearchReq):
     """Availability Search request.
@@ -3643,7 +3639,6 @@ class AvailabilitySearchReq(AirSearchReq):
 class AvailabilitySearchRsp(BaseAvailabilitySearchRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
-
 
 
 @dataclass
@@ -3850,7 +3845,6 @@ class ScheduleSearchReq(AirSearchReq):
     """Schedule Search request."""
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
-
 
 
 @dataclass
