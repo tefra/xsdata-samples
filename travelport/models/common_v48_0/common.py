@@ -974,7 +974,6 @@ class CoordinateLocation:
     latitude: Optional[Decimal] = field(
         default=None,
         metadata=dict(
-            name="latitude",
             type="Attribute",
             required=True
         )
@@ -982,7 +981,6 @@ class CoordinateLocation:
     longitude: Optional[Decimal] = field(
         default=None,
         metadata=dict(
-            name="longitude",
             type="Attribute",
             required=True
         )
@@ -1144,7 +1142,6 @@ class CustomProfileInformation:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
 
-
 @dataclass
 class CustomizedNameData:
     """Customized Name Data is used to print customized name on the different
@@ -1227,7 +1224,8 @@ class Distance:
         default="MI",
         metadata=dict(
             name="Units",
-            type="Attribute"
+            type="Attribute",
+            length=2
         )
     )
     value: Optional[int] = field(
@@ -3538,7 +3536,6 @@ class TypeAgentInfo:
         name = "typeAgentInfo"
 
 
-
 @dataclass
 class TypeBookingTransactionsAllowed:
     """
@@ -4782,7 +4779,6 @@ class TypeSearchTimeSpec:
         name = "typeSearchTimeSpec"
 
 
-
 @dataclass
 class TypeSegmentRef:
     """
@@ -5534,7 +5530,6 @@ class AgencyPayment(TypeAgencyPayment):
     """Container for Agency Payment."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
-
 
 
 @dataclass
@@ -6582,42 +6577,36 @@ class MediaItem:
     caption: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="caption",
             type="Attribute"
         )
     )
     height: Optional[int] = field(
         default=None,
         metadata=dict(
-            name="height",
             type="Attribute"
         )
     )
     width: Optional[int] = field(
         default=None,
         metadata=dict(
-            name="width",
             type="Attribute"
         )
     )
     type: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="type",
             type="Attribute"
         )
     )
     url: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="url",
             type="Attribute"
         )
     )
     icon: Optional[str] = field(
         default=None,
         metadata=dict(
-            name="icon",
             type="Attribute"
         )
     )
@@ -7355,7 +7344,6 @@ class ProviderReservationDetail(TypeProviderReservationDetail):
     request."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
-
 
 
 @dataclass
@@ -8342,7 +8330,6 @@ class VendorLocation(TypeVendorLocation):
     system."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
-
 
 
 @dataclass
@@ -9844,13 +9831,11 @@ class AirSeatAssignment(SeatAssignment):
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
 
-
 @dataclass
 class ConnectionPoint(TypeLocation):
     """A connection point can be eith an IATA airport or cir city code."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
-
 
 
 @dataclass
@@ -10058,12 +10043,10 @@ class Keyword(TypeKeyword):
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
 
-
 @dataclass
 class LocationAddress(TypeStructuredAddress):
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
-
 
 
 @dataclass
