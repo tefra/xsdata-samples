@@ -6,7 +6,7 @@ from xsdata.formats.dataclass.parsers import XmlParser
 from xsdata.formats.dataclass.serializers import DictFactory
 from xsdata.formats.dataclass.serializers import JsonSerializer
 
-from amadeus.models.response import FareMasterPricerTravelBoardSearchReply
+from amadeus.models import FareMasterPricerTravelBoardSearchReply
 
 parser = XmlParser()
 serializer = JsonSerializer(indent=2, dict_factory=DictFactory.FILTER_NONE)

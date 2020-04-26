@@ -2,7 +2,7 @@ from decimal import Decimal
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from sabre.models.request.bargain_finder_max_common_types_v1_9_7 import (
+from sabre.models.bargain_finder_max_common_types_v1_9_7 import (
     AdvResTicketingType,
     AirTripType,
     CompanyNameType,

@@ -5,7 +5,7 @@ from lxml import etree
 from xsdata.formats.dataclass.parsers import JsonParser
 from xsdata.formats.dataclass.serializers import XmlSerializer
 
-from sabre.models.request import OtaAirLowFareSearchRq
+from sabre.models import OtaAirLowFareSearchRq
 
 parser = JsonParser()
 serializer = XmlSerializer(pretty_print=True)

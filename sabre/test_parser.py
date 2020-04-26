@@ -6,7 +6,7 @@ from xsdata.formats.dataclass.parsers import XmlParser
 from xsdata.formats.dataclass.serializers import DictFactory
 from xsdata.formats.dataclass.serializers import JsonSerializer
 
-from sabre.models.response import OtaAirLowFareSearchRs
+from sabre.models import OtaAirLowFareSearchRs
 
 parser = XmlParser()
 serializer = JsonSerializer(indent=2, dict_factory=DictFactory.FILTER_NONE)
