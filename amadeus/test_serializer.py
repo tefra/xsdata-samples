@@ -5,7 +5,7 @@ from lxml import etree
 from xsdata.formats.dataclass.parsers import JsonParser
 from xsdata.formats.dataclass.serializers import XmlSerializer
 
-from amadeus.models.request import FareMasterPricerTravelBoardSearch
+from amadeus.models import FareMasterPricerTravelBoardSearch
 
 parser = JsonParser()
 serializer = XmlSerializer(pretty_print=True)
