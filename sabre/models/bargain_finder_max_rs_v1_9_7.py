@@ -19,12 +19,12 @@ class ActionCodeType(Enum):
     """
     Identifies the action code for a booking - OK, Waitlist etc.
     :cvar OK:
-    :cvar OTHER:
     :cvar WAITLIST:
+    :cvar OTHER:
     """
     OK = "OK"
-    OTHER = "Other"
     WAITLIST = "Waitlist"
+    OTHER = "Other"
 
 
 @dataclass
@@ -629,15 +629,15 @@ class HandlingMarkupSummaryType:
 class MessageClassType(Enum):
     """Definies the available messaage class type.
 
-    :cvar D: Diagnostic
     :cvar E: Error
-    :cvar I: Info
     :cvar W: Warrning
+    :cvar D: Diagnostic
+    :cvar I: Info
     """
-    D = "D"
     E = "E"
-    I = "I"
     W = "W"
+    D = "D"
+    I = "I"
 
 
 @dataclass
@@ -791,15 +791,15 @@ class OcfeeType:
 
 class PollingStatusType(Enum):
     """
+    :cvar RECEIVED:
+    :cvar IN_PROGRESS:
     :cvar COMPLETE:
     :cvar ERROR:
-    :cvar IN_PROGRESS:
-    :cvar RECEIVED:
     """
+    RECEIVED = "received"
+    IN_PROGRESS = "in progress"
     COMPLETE = "complete"
     ERROR = "error"
-    IN_PROGRESS = "in progress"
-    RECEIVED = "received"
 
 
 @dataclass
@@ -1061,11 +1061,11 @@ class SurchargesType:
 class TicketType(Enum):
     """Paper or e-ticket.
 
-    :cvar PAPER:
     :cvar E_TICKET:
+    :cvar PAPER:
     """
-    PAPER = "Paper"
     E_TICKET = "eTicket"
+    PAPER = "Paper"
 
 
 @dataclass
@@ -1103,13 +1103,13 @@ class UnflownPriceType:
 
 class ValidInterlineType(Enum):
     """
+    :cvar YES:
     :cvar NO:
     :cvar UNKNOWN:
-    :cvar YES:
     """
+    YES = "Yes"
     NO = "No"
     UNKNOWN = "Unknown"
-    YES = "Yes"
 
 
 @dataclass
@@ -1730,7 +1730,7 @@ class TicketingInfoRsType:
         )
     )
     valid_interline: ValidInterlineType = field(
-        default="Unknown",
+        default=ValidInterlineType.UNKNOWN,
         metadata=dict(
             name="ValidInterline",
             type="Attribute"
@@ -2833,11 +2833,11 @@ class FareType:
 
             class Type(Enum):
                 """
-                :cvar EXCHANGE:
                 :cvar REFUND:
+                :cvar EXCHANGE:
                 """
-                EXCHANGE = "Exchange"
                 REFUND = "Refund"
+                EXCHANGE = "Exchange"
 
             class Applicability(Enum):
                 """
@@ -5834,8 +5834,8 @@ class OtaAirLowFareSearchRs:
             type="Attribute"
         )
     )
-    target: "OtaAirLowFareSearchRs.Target" = field(
-        default="Production",
+    target: Optional["OtaAirLowFareSearchRs.Target"] = field(
+        default=None,
         metadata=dict(
             name="Target",
             type="Attribute"
@@ -6672,23 +6672,23 @@ class OtaAirLowFareSearchRs:
 
     class Target(Enum):
         """
-        :cvar PRODUCTION:
         :cvar TEST:
+        :cvar PRODUCTION:
         """
-        PRODUCTION = "Production"
         TEST = "Test"
+        PRODUCTION = "Production"
 
     class TransactionStatusCode(Enum):
         """
-        :cvar END: This is the last message within a transaction.
-        :cvar IN_SERIES: This is any message that is not the first or last message within a transaction.
-        :cvar ROLLBACK: This indicates that all messages within the current transaction must be ignored.
         :cvar START: This is the first message within a transaction.
+        :cvar END: This is the last message within a transaction.
+        :cvar ROLLBACK: This indicates that all messages within the current transaction must be ignored.
+        :cvar IN_SERIES: This is any message that is not the first or last message within a transaction.
         """
-        END = "End"
-        IN_SERIES = "InSeries"
-        ROLLBACK = "Rollback"
         START = "Start"
+        END = "End"
+        ROLLBACK = "Rollback"
+        IN_SERIES = "InSeries"
 
 
 @dataclass

@@ -962,7 +962,7 @@ class AirFareRulesReq(BaseReq):
         )
     )
     fare_rule_type: TypeFareRuleType = field(
-        default="long",
+        default=TypeFareRuleType.LONG,
         metadata=dict(
             name="FareRuleType",
             type="Attribute"
@@ -1614,7 +1614,7 @@ class AirRepriceReq:
         )
     )
     fare_rule_type: TypeFareRuleType = field(
-        default="none",
+        default=TypeFareRuleType.NONE_VALUE,
         metadata=dict(
             name="FareRuleType",
             type="Attribute"
@@ -2389,7 +2389,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
         )
     )
     fare_rule_type: TypeFareRuleType = field(
-        default="none",
+        default=TypeFareRuleType.NONE_VALUE,
         metadata=dict(
             name="FareRuleType",
             type="Attribute"
@@ -2534,7 +2534,7 @@ class BaseAirPriceReq(BaseCoreReq):
         )
     )
     fare_rule_type: TypeFareRuleType = field(
-        default="none",
+        default=TypeFareRuleType.NONE_VALUE,
         metadata=dict(
             name="FareRuleType",
             type="Attribute"

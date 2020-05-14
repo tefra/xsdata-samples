@@ -9,17 +9,17 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 class AirTripType(Enum):
     """
     Identifies the trip type - one way, return, circle trip, open jaw.
-    :cvar CIRCLE:
     :cvar ONE_WAY:
+    :cvar RETURN_VALUE:
+    :cvar CIRCLE:
     :cvar OPEN_JAW:
     :cvar OTHER:
-    :cvar RETURN_VALUE:
     """
-    CIRCLE = "Circle"
     ONE_WAY = "OneWay"
+    RETURN_VALUE = "Return"
+    CIRCLE = "Circle"
     OPEN_JAW = "OpenJaw"
     OTHER = "Other"
-    RETURN_VALUE = "Return"
 
 
 @dataclass
@@ -73,11 +73,11 @@ class CompanyNameType:
 
 class DepartureOrArrival(Enum):
     """
-    :cvar ARRIVAL:
     :cvar DEPARTURE:
+    :cvar ARRIVAL:
     """
-    ARRIVAL = "Arrival"
     DEPARTURE = "Departure"
+    ARRIVAL = "Arrival"
 
 
 @dataclass
@@ -112,48 +112,48 @@ class EquipmentType:
 
 class FareDirectionality(Enum):
     """
-    :cvar FROM_VALUE:
     :cvar TO:
+    :cvar FROM_VALUE:
     """
-    FROM_VALUE = "FROM"
     TO = "TO"
+    FROM_VALUE = "FROM"
 
 
 class OutboundOrInbound(Enum):
     """
-    :cvar INBOUND:
     :cvar OUTBOUND:
+    :cvar INBOUND:
     """
-    INBOUND = "Inbound"
     OUTBOUND = "Outbound"
+    INBOUND = "Inbound"
 
 
 class StayUnitType(Enum):
     """Defines the 'Units' that can be applied to Stay restrictions.
 
-    :cvar DAYS:
-    :cvar FRI: Friday
-    :cvar HOURS:
-    :cvar MON: Monday
     :cvar MINUTES:
+    :cvar HOURS:
+    :cvar DAYS:
     :cvar MONTHS:
-    :cvar SAT: Saturday
-    :cvar SUN: Sunday
-    :cvar THU: Thursday
+    :cvar MON: Monday
     :cvar TUES: Tuesday
     :cvar WED: Wednesday
+    :cvar THU: Thursday
+    :cvar FRI: Friday
+    :cvar SAT: Saturday
+    :cvar SUN: Sunday
     """
-    DAYS = "Days"
-    FRI = "FRI"
-    HOURS = "Hours"
-    MON = "MON"
     MINUTES = "Minutes"
+    HOURS = "Hours"
+    DAYS = "Days"
     MONTHS = "Months"
-    SAT = "SAT"
-    SUN = "SUN"
-    THU = "THU"
+    MON = "MON"
     TUES = "TUES"
     WED = "WED"
+    THU = "THU"
+    FRI = "FRI"
+    SAT = "SAT"
+    SUN = "SUN"
 
 
 @dataclass
@@ -641,11 +641,11 @@ class PassengerTypeQuantityType(TravelerCountType):
 
                 class Type(Enum):
                     """
-                    :cvar EXCHANGE:
                     :cvar REFUND:
+                    :cvar EXCHANGE:
                     """
-                    EXCHANGE = "Exchange"
                     REFUND = "Refund"
+                    EXCHANGE = "Exchange"
 
                 class Application(Enum):
                     """

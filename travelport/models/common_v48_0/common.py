@@ -1,7 +1,7 @@
 from decimal import Decimal
 from enum import Enum
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import List, Optional
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v48_0"
 
@@ -616,18 +616,18 @@ class BookingSource:
 
     class Type(Enum):
         """
+        :cvar PSEUDO_CITY_CODE:
         :cvar ARC_NUMBER:
+        :cvar IATA_NUMBER:
+        :cvar CUSTOMER_ID:
         :cvar BOOKING_SOURCE_OVERRIDE: The Booking Source Override is usually used when the car supplier has assigned a number (which can be alpha/numeric)
         								to the agency/e-commerce to use in place of an IATA number. Supported provider(s) : 1P/1J
-        :cvar CUSTOMER_ID:
-        :cvar IATA_NUMBER:
-        :cvar PSEUDO_CITY_CODE:
         """
-        ARC_NUMBER = "ArcNumber"
-        BOOKING_SOURCE_OVERRIDE = "BookingSourceOverride"
-        CUSTOMER_ID = "CustomerId"
-        IATA_NUMBER = "IataNumber"
         PSEUDO_CITY_CODE = "PseudoCityCode"
+        ARC_NUMBER = "ArcNumber"
+        IATA_NUMBER = "IataNumber"
+        CUSTOMER_ID = "CustomerId"
+        BOOKING_SOURCE_OVERRIDE = "BookingSourceOverride"
 
 
 @dataclass
@@ -1220,8 +1220,8 @@ class Distance:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    units: "Distance.Units" = field(
-        default="MI",
+    units: Optional["Distance.Units"] = field(
+        default=None,
         metadata=dict(
             name="Units",
             type="Attribute",
@@ -1247,11 +1247,11 @@ class Distance:
 
     class Units(Enum):
         """
-        :cvar KM:
         :cvar MI:
+        :cvar KM:
         """
-        KM = "KM"
         MI = "MI"
+        KM = "KM"
 
 
 @dataclass
@@ -1466,11 +1466,11 @@ class FormattedTextTextType:
 
     class TextFormat(Enum):
         """
-        :cvar HTML: HTML formatted text.
         :cvar PLAIN_TEXT: Textual data that is in ASCII format.
+        :cvar HTML: HTML formatted text.
         """
-        HTML = "HTML"
         PLAIN_TEXT = "PlainText"
+        HTML = "HTML"
 
 
 @dataclass
@@ -1644,11 +1644,11 @@ class McofeeInfo:
 
     class FeeAppliesToInd(Enum):
         """
-        :cvar PER_MCO:
         :cvar PER_PERSON:
+        :cvar PER_MCO:
         """
-        PER_MCO = "Per-MCO"
         PER_PERSON = "Per-Person"
+        PER_MCO = "Per-MCO"
 
 
 @dataclass
@@ -1822,21 +1822,21 @@ class MiscFormOfPayment:
 class ModificationType(Enum):
     """The modification types supported.
 
-    :cvar ADD_PASSENGER: Add a passenger to the itinerary
     :cvar ADD_SEGMENT: Add a segment to the itinerary
-    :cvar OPTIONS_ONLY: Modification where only options are added / removed from the itinerary
-    :cvar OTHER: Other modification types
-    :cvar REMOVE_PASSENGER: Remove a passenger from the itinerary
     :cvar REMOVE_SEGMENT: Delete a segment from the itinerary
     :cvar REPLACE_SEGMENT: Replace a segment in the itinerary with a new segment
+    :cvar ADD_PASSENGER: Add a passenger to the itinerary
+    :cvar REMOVE_PASSENGER: Remove a passenger from the itinerary
+    :cvar OPTIONS_ONLY: Modification where only options are added / removed from the itinerary
+    :cvar OTHER: Other modification types
     """
-    ADD_PASSENGER = "AddPassenger"
     ADD_SEGMENT = "AddSegment"
-    OPTIONS_ONLY = "OptionsOnly"
-    OTHER = "Other"
-    REMOVE_PASSENGER = "RemovePassenger"
     REMOVE_SEGMENT = "RemoveSegment"
     REPLACE_SEGMENT = "ReplaceSegment"
+    ADD_PASSENGER = "AddPassenger"
+    REMOVE_PASSENGER = "RemovePassenger"
+    OPTIONS_ONLY = "OptionsOnly"
+    OTHER = "Other"
 
 
 @dataclass
@@ -2000,18 +2000,18 @@ class OptionalServiceApplicabilityType(Enum):
     """The different levels at which an optional service may be applied.
 
     :cvar ITINERARY:
-    :cvar OTHER:
     :cvar PASSENGER:
-    :cvar PASSENGER_OD: PassengerOD stands for passenger origin destination.
-    :cvar PASSENGER_SEGMENT:
     :cvar SEGMENT:
+    :cvar PASSENGER_SEGMENT:
+    :cvar PASSENGER_OD: PassengerOD stands for passenger origin destination.
+    :cvar OTHER:
     """
     ITINERARY = "Itinerary"
-    OTHER = "Other"
     PASSENGER = "Passenger"
-    PASSENGER_OD = "PassengerOD"
-    PASSENGER_SEGMENT = "PassengerSegment"
     SEGMENT = "Segment"
+    PASSENGER_SEGMENT = "PassengerSegment"
+    PASSENGER_OD = "PassengerOD"
+    OTHER = "Other"
 
 
 @dataclass
@@ -2040,14 +2040,14 @@ class OtherGuaranteeInfo:
 
     class Type(Enum):
         """
+        :cvar IATA_ARC_NUMBER:
         :cvar AGENCY_ADDRESS:
         :cvar DEPOSIT_TAKEN:
-        :cvar IATA_ARC_NUMBER:
         :cvar OTHERS:
         """
+        IATA_ARC_NUMBER = "IATA/ARC Number"
         AGENCY_ADDRESS = "Agency Address"
         DEPOSIT_TAKEN = "Deposit Taken"
-        IATA_ARC_NUMBER = "IATA/ARC Number"
         OTHERS = "Others"
 
 
@@ -2682,33 +2682,33 @@ class RequiredField:
 
     class Name(Enum):
         """
+        :cvar CARD_TYPE:
+        :cvar NUMBER:
+        :cvar CUSTOMER_REFERENCE:
+        :cvar ISSUE_NUMBER:
+        :cvar START_DATE:
+        :cvar NAME_ON_CARD:
+        :cvar EXPIRATION_DATE:
+        :cvar CVV:
         :cvar ADDRESS_LINE1:
         :cvar ADDRESS_LINE2:
-        :cvar CVV:
-        :cvar CARD_TYPE:
         :cvar CITY:
-        :cvar CUSTOMER_REFERENCE:
-        :cvar EXPIRATION_DATE:
-        :cvar ISSUE_NUMBER:
-        :cvar NAME_ON_CARD:
-        :cvar NUMBER:
-        :cvar POSTAL_CODE:
-        :cvar START_DATE:
         :cvar STATE:
+        :cvar POSTAL_CODE:
         """
+        CARD_TYPE = "CardType"
+        NUMBER = "Number"
+        CUSTOMER_REFERENCE = "CustomerReference"
+        ISSUE_NUMBER = "IssueNumber"
+        START_DATE = "StartDate"
+        NAME_ON_CARD = "NameOnCard"
+        EXPIRATION_DATE = "ExpirationDate"
+        CVV = "CVV"
         ADDRESS_LINE1 = "AddressLine1"
         ADDRESS_LINE2 = "AddressLine2"
-        CVV = "CVV"
-        CARD_TYPE = "CardType"
         CITY = "City"
-        CUSTOMER_REFERENCE = "CustomerReference"
-        EXPIRATION_DATE = "ExpirationDate"
-        ISSUE_NUMBER = "IssueNumber"
-        NAME_ON_CARD = "NameOnCard"
-        NUMBER = "Number"
-        POSTAL_CODE = "PostalCode"
-        START_DATE = "StartDate"
         STATE = "State"
+        POSTAL_CODE = "PostalCode"
 
 
 @dataclass
@@ -2813,13 +2813,13 @@ class ResponseMessage:
 
     class Type(Enum):
         """
+        :cvar WARNING:
         :cvar ERROR:
         :cvar INFO:
-        :cvar WARNING:
         """
+        WARNING = "Warning"
         ERROR = "Error"
         INFO = "Info"
-        WARNING = "Warning"
 
 
 @dataclass
@@ -2907,15 +2907,15 @@ class SearchTicketing:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    ticket_status: "SearchTicketing.TicketStatus" = field(
-        default="Both",
+    ticket_status: Optional["SearchTicketing.TicketStatus"] = field(
+        default=None,
         metadata=dict(
             name="TicketStatus",
             type="Attribute"
         )
     )
-    reservation_status: "SearchTicketing.ReservationStatus" = field(
-        default="Both",
+    reservation_status: Optional["SearchTicketing.ReservationStatus"] = field(
+        default=None,
         metadata=dict(
             name="ReservationStatus",
             type="Attribute"
@@ -2931,23 +2931,23 @@ class SearchTicketing:
 
     class TicketStatus(Enum):
         """
-        :cvar BOTH:
         :cvar TICKETED:
         :cvar UNTICKETED:
+        :cvar BOTH:
         """
-        BOTH = "Both"
         TICKETED = "Ticketed"
         UNTICKETED = "Unticketed"
+        BOTH = "Both"
 
     class ReservationStatus(Enum):
         """
-        :cvar BOTH:
         :cvar ON_HOLD:
         :cvar SET_FOR_TICKETING:
+        :cvar BOTH:
         """
-        BOTH = "Both"
         ON_HOLD = "OnHold"
         SET_FOR_TICKETING = "SetForTicketing"
+        BOTH = "Both"
 
 
 @dataclass
@@ -3428,15 +3428,15 @@ class UrticketStatus(Enum):
     """Information on whether the Universal Record ticket status is Ticketed,
     Unticketed , Partially Ticketed or Not Applicable status.
 
-    :cvar NOT_APPLICABLE:
-    :cvar PARTIALLY_TICKETED:
     :cvar TICKETED:
     :cvar UNTICKETED:
+    :cvar PARTIALLY_TICKETED:
+    :cvar NOT_APPLICABLE:
     """
-    NOT_APPLICABLE = "Not Applicable"
-    PARTIALLY_TICKETED = "Partially Ticketed"
     TICKETED = "Ticketed"
     UNTICKETED = "Unticketed"
+    PARTIALLY_TICKETED = "Partially Ticketed"
+    NOT_APPLICABLE = "Not Applicable"
 
 
 @dataclass
@@ -3461,12 +3461,12 @@ class UnitedNations:
 class TypeAdjustmentTarget(Enum):
     """
     :cvar BASE:
-    :cvar OTHER:
     :cvar TOTAL:
+    :cvar OTHER:
     """
     BASE = "Base"
-    OTHER = "Other"
     TOTAL = "Total"
+    OTHER = "Other"
 
 
 class TypeAdjustmentType(Enum):
@@ -3520,14 +3520,14 @@ class TypeAgencyProfileLevel(Enum):
     """Profile levels in the Agency Hierarchy.
 
     :cvar AGENCY:
-    :cvar AGENT:
     :cvar BRANCH:
     :cvar BRANCH_GROUP:
+    :cvar AGENT:
     """
     AGENCY = "Agency"
-    AGENT = "Agent"
     BRANCH = "Branch"
     BRANCH_GROUP = "BranchGroup"
+    AGENT = "Agent"
 
 
 @dataclass
@@ -3556,33 +3556,33 @@ class TypeBookingTransactionsAllowed:
 class TypeCommissionLevel(Enum):
     """ATA/IATA Standard commission level.
 
+    :cvar RECALLED:
     :cvar FARE:
     :cvar PENALTY:
-    :cvar RECALLED:
     """
+    RECALLED = "Recalled"
     FARE = "Fare"
     PENALTY = "Penalty"
-    RECALLED = "Recalled"
 
 
 class TypeCommissionModifier(Enum):
     """Optional commission modifier.
 
-    :cvar COMMISSION_AMOUNT: Specific commission amount to be applied
-    :cvar FARE_AMOUNT: Commission amount applied to the fare
     :cvar FARE_PERCENT: Commission percentage applied to the fare
+    :cvar FARE_AMOUNT: Commission amount applied to the fare
+    :cvar COMMISSION_AMOUNT: Specific commission amount to be applied
     :cvar LESS_STANDARD_COMMISSION: Indicates commission percentage applied to the fare less the standard commission
     :cvar STANDARD_PLUS_SUPPLEMENTARY_PERCENT: Indicates commission percentage includes standard and supplementary commission
-    :cvar SUPPLEMENTARY_AMOUNT: Supplementary commission amount which is applied to the fare
     :cvar SUPPLEMENTARY_PERCENT: Supplementary commission percent which is applied to the fare
+    :cvar SUPPLEMENTARY_AMOUNT: Supplementary commission amount which is applied to the fare
     """
-    COMMISSION_AMOUNT = "CommissionAmount"
-    FARE_AMOUNT = "FareAmount"
     FARE_PERCENT = "FarePercent"
+    FARE_AMOUNT = "FareAmount"
+    COMMISSION_AMOUNT = "CommissionAmount"
     LESS_STANDARD_COMMISSION = "LessStandardCommission"
     STANDARD_PLUS_SUPPLEMENTARY_PERCENT = "StandardPlusSupplementaryPercent"
-    SUPPLEMENTARY_AMOUNT = "SupplementaryAmount"
     SUPPLEMENTARY_PERCENT = "SupplementaryPercent"
+    SUPPLEMENTARY_AMOUNT = "SupplementaryAmount"
 
 
 class TypeCommissionType(Enum):
@@ -3638,132 +3638,132 @@ class TypeDirection(Enum):
 class TypeDistance(Enum):
     """2 Letter distance unit code.
 
-    :cvar KM:
     :cvar MI:
+    :cvar KM:
     """
-    KM = "KM"
     MI = "MI"
+    KM = "KM"
 
 
 class TypeDoorCount(Enum):
     """
-    :cvar FOUR_TO_FIVE_DOORS:
-    :cvar TWO_TO_FOUR_DOORS:
     :cvar TWO_TO_THREE_DOORS:
+    :cvar TWO_TO_FOUR_DOORS:
+    :cvar FOUR_TO_FIVE_DOORS:
     """
-    FOUR_TO_FIVE_DOORS = "FourToFiveDoors"
-    TWO_TO_FOUR_DOORS = "TwoToFourDoors"
     TWO_TO_THREE_DOORS = "TwoToThreeDoors"
+    TWO_TO_FOUR_DOORS = "TwoToFourDoors"
+    FOUR_TO_FIVE_DOORS = "FourToFiveDoors"
 
 
 class TypeElement(Enum):
     """Defines the list of available data types for modifications.
 
-    :cvar ACCOUNTING_REMARK:
+    :cvar PAYMENT:
+    :cvar CREDIT_CARD_AUTHORIZATION:
+    :cvar DELIVERY_INFO:
+    :cvar FORM_OF_PAYMENT:
     :cvar ACTION_STATUS:
-    :cvar ADDRESS:
-    :cvar AIR_PRICING_INFO:
+    :cvar OSI:
+    :cvar GENERAL_REMARK:
+    :cvar UNASSOCIATED_REMARK:
+    :cvar ACCOUNTING_REMARK:
+    :cvar POST_SCRIPT:
     :cvar AIR_RESERVATION_AIR_SEGMENT_UPDATE:
     :cvar AIR_SEGMENT:
-    :cvar APPLIED_PROFILE:
-    :cvar ASSOCIATED_REMARK:
-    :cvar AUTO_SEAT_ASSIGNMENT:
-    :cvar BOOKING_CONFIRMATION:
-    :cvar BOOKING_TRAVELER:
-    :cvar BRAND:
-    :cvar COLLECTION_ADDRESS:
-    :cvar COMMISSION_REMARK:
-    :cvar CONSOLIDATOR_REMARK:
-    :cvar CORPORATE_DISCOUNT_ID:
-    :cvar CREDIT_CARD_AUTHORIZATION:
-    :cvar CUSTOMER_ID:
-    :cvar CUSTOMIZED_NAME_DATA:
-    :cvar DELIVERY_ADDRESS:
-    :cvar DELIVERY_INFO:
-    :cvar DRIVERS_LICENSE:
-    :cvar EMAIL:
-    :cvar FORM_OF_PAYMENT:
-    :cvar GENERAL_REMARK:
-    :cvar GUARANTEE:
-    :cvar HOTEL_SPECIAL_REQUEST:
-    :cvar INVOICE_REMARK:
-    :cvar LINKED_UNIVERSAL_RECORD:
-    :cvar LOYALTY_CARD:
-    :cvar NAME_REMARK:
-    :cvar OSI:
-    :cvar PASSIVE_SEGMENT:
-    :cvar PAYMENT:
-    :cvar PAYMENT_INFORMATION:
     :cvar PHONE_NUMBER:
-    :cvar POCKET_ITINERARY_REMARK:
-    :cvar POST_SCRIPT:
-    :cvar REVIEW_BOOKING:
+    :cvar EMAIL:
+    :cvar LOYALTY_CARD:
     :cvar SSR:
     :cvar SEAT_ASSIGNMENT:
-    :cvar SERVICE_FEE_INFO:
-    :cvar SPECIAL_EQUIPMENT:
     :cvar SPECIFIC_SEAT_ASSIGNMENT:
-    :cvar THIRD_PARTY_INFORMATION:
-    :cvar TICKETING_MODIFIERS:
-    :cvar TRAVEL_COMPLIANCE:
-    :cvar TRAVEL_PURPOSE:
-    :cvar TRIP_NAME:
-    :cvar UNASSOCIATED_REMARK:
+    :cvar AUTO_SEAT_ASSIGNMENT:
+    :cvar AIR_PRICING_INFO:
     :cvar VEHICLE_SPECIAL_REQUEST:
+    :cvar SPECIAL_EQUIPMENT:
     :cvar XMLREMARK:
+    :cvar ADDRESS:
+    :cvar TICKETING_MODIFIERS:
+    :cvar GUARANTEE:
+    :cvar DELIVERY_ADDRESS:
+    :cvar SERVICE_FEE_INFO:
+    :cvar LINKED_UNIVERSAL_RECORD:
+    :cvar NAME_REMARK:
+    :cvar PASSIVE_SEGMENT:
+    :cvar PAYMENT_INFORMATION:
+    :cvar CUSTOMER_ID:
+    :cvar DRIVERS_LICENSE:
+    :cvar ASSOCIATED_REMARK:
+    :cvar COLLECTION_ADDRESS:
+    :cvar HOTEL_SPECIAL_REQUEST:
+    :cvar CORPORATE_DISCOUNT_ID:
+    :cvar COMMISSION_REMARK:
+    :cvar POCKET_ITINERARY_REMARK:
+    :cvar CUSTOMIZED_NAME_DATA:
+    :cvar INVOICE_REMARK:
+    :cvar THIRD_PARTY_INFORMATION:
+    :cvar TRAVEL_COMPLIANCE:
+    :cvar REVIEW_BOOKING:
+    :cvar CONSOLIDATOR_REMARK:
+    :cvar BOOKING_TRAVELER:
+    :cvar APPLIED_PROFILE:
+    :cvar TRIP_NAME:
+    :cvar TRAVEL_PURPOSE:
+    :cvar BOOKING_CONFIRMATION:
+    :cvar BRAND:
     """
-    ACCOUNTING_REMARK = "AccountingRemark"
+    PAYMENT = "Payment"
+    CREDIT_CARD_AUTHORIZATION = "CreditCardAuthorization"
+    DELIVERY_INFO = "DeliveryInfo"
+    FORM_OF_PAYMENT = "FormOfPayment"
     ACTION_STATUS = "ActionStatus"
-    ADDRESS = "Address"
-    AIR_PRICING_INFO = "AirPricingInfo"
+    OSI = "OSI"
+    GENERAL_REMARK = "GeneralRemark"
+    UNASSOCIATED_REMARK = "UnassociatedRemark"
+    ACCOUNTING_REMARK = "AccountingRemark"
+    POST_SCRIPT = "PostScript"
     AIR_RESERVATION_AIR_SEGMENT_UPDATE = "AirReservationAirSegmentUpdate"
     AIR_SEGMENT = "AirSegment"
-    APPLIED_PROFILE = "AppliedProfile"
-    ASSOCIATED_REMARK = "AssociatedRemark"
-    AUTO_SEAT_ASSIGNMENT = "AutoSeatAssignment"
-    BOOKING_CONFIRMATION = "BookingConfirmation"
-    BOOKING_TRAVELER = "BookingTraveler"
-    BRAND = "Brand"
-    COLLECTION_ADDRESS = "CollectionAddress"
-    COMMISSION_REMARK = "CommissionRemark"
-    CONSOLIDATOR_REMARK = "ConsolidatorRemark"
-    CORPORATE_DISCOUNT_ID = "CorporateDiscountID"
-    CREDIT_CARD_AUTHORIZATION = "CreditCardAuthorization"
-    CUSTOMER_ID = "CustomerID"
-    CUSTOMIZED_NAME_DATA = "CustomizedNameData"
-    DELIVERY_ADDRESS = "DeliveryAddress"
-    DELIVERY_INFO = "DeliveryInfo"
-    DRIVERS_LICENSE = "DriversLicense"
-    EMAIL = "Email"
-    FORM_OF_PAYMENT = "FormOfPayment"
-    GENERAL_REMARK = "GeneralRemark"
-    GUARANTEE = "Guarantee"
-    HOTEL_SPECIAL_REQUEST = "HotelSpecialRequest"
-    INVOICE_REMARK = "InvoiceRemark"
-    LINKED_UNIVERSAL_RECORD = "LinkedUniversalRecord"
-    LOYALTY_CARD = "LoyaltyCard"
-    NAME_REMARK = "NameRemark"
-    OSI = "OSI"
-    PASSIVE_SEGMENT = "PassiveSegment"
-    PAYMENT = "Payment"
-    PAYMENT_INFORMATION = "PaymentInformation"
     PHONE_NUMBER = "PhoneNumber"
-    POCKET_ITINERARY_REMARK = "PocketItineraryRemark"
-    POST_SCRIPT = "PostScript"
-    REVIEW_BOOKING = "ReviewBooking"
+    EMAIL = "Email"
+    LOYALTY_CARD = "LoyaltyCard"
     SSR = "SSR"
     SEAT_ASSIGNMENT = "SeatAssignment"
-    SERVICE_FEE_INFO = "ServiceFeeInfo"
-    SPECIAL_EQUIPMENT = "SpecialEquipment"
     SPECIFIC_SEAT_ASSIGNMENT = "SpecificSeatAssignment"
-    THIRD_PARTY_INFORMATION = "ThirdPartyInformation"
-    TICKETING_MODIFIERS = "TicketingModifiers"
-    TRAVEL_COMPLIANCE = "TravelCompliance"
-    TRAVEL_PURPOSE = "TravelPurpose"
-    TRIP_NAME = "TripName"
-    UNASSOCIATED_REMARK = "UnassociatedRemark"
+    AUTO_SEAT_ASSIGNMENT = "AutoSeatAssignment"
+    AIR_PRICING_INFO = "AirPricingInfo"
     VEHICLE_SPECIAL_REQUEST = "VehicleSpecialRequest"
+    SPECIAL_EQUIPMENT = "SpecialEquipment"
     XMLREMARK = "XMLRemark"
+    ADDRESS = "Address"
+    TICKETING_MODIFIERS = "TicketingModifiers"
+    GUARANTEE = "Guarantee"
+    DELIVERY_ADDRESS = "DeliveryAddress"
+    SERVICE_FEE_INFO = "ServiceFeeInfo"
+    LINKED_UNIVERSAL_RECORD = "LinkedUniversalRecord"
+    NAME_REMARK = "NameRemark"
+    PASSIVE_SEGMENT = "PassiveSegment"
+    PAYMENT_INFORMATION = "PaymentInformation"
+    CUSTOMER_ID = "CustomerID"
+    DRIVERS_LICENSE = "DriversLicense"
+    ASSOCIATED_REMARK = "AssociatedRemark"
+    COLLECTION_ADDRESS = "CollectionAddress"
+    HOTEL_SPECIAL_REQUEST = "HotelSpecialRequest"
+    CORPORATE_DISCOUNT_ID = "CorporateDiscountID"
+    COMMISSION_REMARK = "CommissionRemark"
+    POCKET_ITINERARY_REMARK = "PocketItineraryRemark"
+    CUSTOMIZED_NAME_DATA = "CustomizedNameData"
+    INVOICE_REMARK = "InvoiceRemark"
+    THIRD_PARTY_INFORMATION = "ThirdPartyInformation"
+    TRAVEL_COMPLIANCE = "TravelCompliance"
+    REVIEW_BOOKING = "ReviewBooking"
+    CONSOLIDATOR_REMARK = "ConsolidatorRemark"
+    BOOKING_TRAVELER = "BookingTraveler"
+    APPLIED_PROFILE = "AppliedProfile"
+    TRIP_NAME = "TripName"
+    TRAVEL_PURPOSE = "TravelPurpose"
+    BOOKING_CONFIRMATION = "BookingConfirmation"
+    BRAND = "Brand"
 
 
 class TypeElementStatus(Enum):
@@ -3772,29 +3772,29 @@ class TypeElementStatus(Enum):
     attribute is not retained in response.
 
     :cvar A:
-    :cvar C:
     :cvar M:
+    :cvar C:
     """
     A = "A"
-    C = "C"
     M = "M"
+    C = "C"
 
 
 class TypeEventType(Enum):
     """The various reservation events (book, cancel, void, etc)
 
-    :cvar CANCEL:
     :cvar CREATE:
-    :cvar EXCHANGE:
-    :cvar REFUND:
+    :cvar CANCEL:
     :cvar TICKET:
+    :cvar REFUND:
+    :cvar EXCHANGE:
     :cvar VOID:
     """
-    CANCEL = "Cancel"
     CREATE = "Create"
-    EXCHANGE = "Exchange"
-    REFUND = "Refund"
+    CANCEL = "Cancel"
     TICKET = "Ticket"
+    REFUND = "Refund"
+    EXCHANGE = "Exchange"
     VOID = "Void"
 
 
@@ -3834,11 +3834,11 @@ class TypeFormOfPaymentPnrreference:
 
 class TypeFormOfRefund(Enum):
     """
-    :cvar FORM_OF_PAYMENT:
     :cvar MCO:
+    :cvar FORM_OF_PAYMENT:
     """
-    FORM_OF_PAYMENT = "FormOfPayment"
     MCO = "MCO"
+    FORM_OF_PAYMENT = "FormOfPayment"
 
 
 @dataclass
@@ -3857,23 +3857,23 @@ class TypeFreeFormText:
 
 class TypeFuel(Enum):
     """
-    :cvar DIESEL:
-    :cvar ELECTRIC:
-    :cvar ETHANOL:
-    :cvar HYBRID:
-    :cvar HYDROGEN:
-    :cvar LPGCNG:
-    :cvar MULTI_FUEL:
     :cvar PETROL:
+    :cvar DIESEL:
+    :cvar HYBRID:
+    :cvar ELECTRIC:
+    :cvar LPGCNG:
+    :cvar HYDROGEN:
+    :cvar MULTI_FUEL:
+    :cvar ETHANOL:
     """
-    DIESEL = "Diesel"
-    ELECTRIC = "Electric"
-    ETHANOL = "Ethanol"
-    HYBRID = "Hybrid"
-    HYDROGEN = "Hydrogen"
-    LPGCNG = "LPGCNG"
-    MULTI_FUEL = "MultiFuel"
     PETROL = "Petrol"
+    DIESEL = "Diesel"
+    HYBRID = "Hybrid"
+    ELECTRIC = "Electric"
+    LPGCNG = "LPGCNG"
+    HYDROGEN = "Hydrogen"
+    MULTI_FUEL = "MultiFuel"
+    ETHANOL = "Ethanol"
 
 
 class TypeFulfillmentIdtype(Enum):
@@ -3881,47 +3881,47 @@ class TypeFulfillmentIdtype(Enum):
     collecting the ticket.
 
     :cvar BAHN_CARD:
-    :cvar COLLECTION_REFERENCE:
     :cvar CREDIT_CARD:
     :cvar EURO_CHEQUE_CARD:
+    :cvar COLLECTION_REFERENCE:
     """
     BAHN_CARD = "Bahn Card"
-    COLLECTION_REFERENCE = "Collection Reference"
     CREDIT_CARD = "Credit Card"
     EURO_CHEQUE_CARD = "Euro Cheque Card"
+    COLLECTION_REFERENCE = "Collection Reference"
 
 
 class TypeFulfillmentType(Enum):
     """Defines how the client wishes to receive travel documents, e.g. collect
     ticket at a kiosk, print in agency.
 
-    :cvar CORPORATE_KIOSK:
-    :cvar COURIER:
-    :cvar DIGITAL_PRINTING_OF_TICKET_AT_HOME:
-    :cvar DIRECT_PRINTING_OF_TICKET:
-    :cvar EXPRESS_MAIL:
     :cvar KIOSK:
-    :cvar PRINTING_OF_TICKET_AT_HOME:
-    :cvar RETRIEVE_TICKET_AT_EUROSTAR_IN_LONDON:
-    :cvar STANDARD_MAIL:
-    :cvar TICKET_OFFICE:
-    :cvar TICKETLESS:
-    :cvar TRAIN_STATION_SERVICE_DESK:
     :cvar TRAVEL_AGENCY:
+    :cvar COURIER:
+    :cvar STANDARD_MAIL:
+    :cvar TICKETLESS:
+    :cvar TICKET_OFFICE:
+    :cvar EXPRESS_MAIL:
+    :cvar CORPORATE_KIOSK:
+    :cvar TRAIN_STATION_SERVICE_DESK:
+    :cvar DIRECT_PRINTING_OF_TICKET:
+    :cvar PRINTING_OF_TICKET_AT_HOME:
+    :cvar DIGITAL_PRINTING_OF_TICKET_AT_HOME:
+    :cvar RETRIEVE_TICKET_AT_EUROSTAR_IN_LONDON:
     """
-    CORPORATE_KIOSK = "Corporate Kiosk"
-    COURIER = "Courier"
-    DIGITAL_PRINTING_OF_TICKET_AT_HOME = "Digital Printing of Ticket at Home"
-    DIRECT_PRINTING_OF_TICKET = "Direct Printing of Ticket"
-    EXPRESS_MAIL = "Express Mail"
     KIOSK = "Kiosk"
-    PRINTING_OF_TICKET_AT_HOME = "Printing of Ticket at Home"
-    RETRIEVE_TICKET_AT_EUROSTAR_IN_LONDON = "Retrieve Ticket at Eurostar in London"
-    STANDARD_MAIL = "Standard Mail"
-    TICKET_OFFICE = "Ticket Office"
-    TICKETLESS = "Ticketless"
-    TRAIN_STATION_SERVICE_DESK = "Train Station Service Desk"
     TRAVEL_AGENCY = "Travel Agency"
+    COURIER = "Courier"
+    STANDARD_MAIL = "Standard Mail"
+    TICKETLESS = "Ticketless"
+    TICKET_OFFICE = "Ticket Office"
+    EXPRESS_MAIL = "Express Mail"
+    CORPORATE_KIOSK = "Corporate Kiosk"
+    TRAIN_STATION_SERVICE_DESK = "Train Station Service Desk"
+    DIRECT_PRINTING_OF_TICKET = "Direct Printing of Ticket"
+    PRINTING_OF_TICKET_AT_HOME = "Printing of Ticket at Home"
+    DIGITAL_PRINTING_OF_TICKET_AT_HOME = "Digital Printing of Ticket at Home"
+    RETRIEVE_TICKET_AT_EUROSTAR_IN_LONDON = "Retrieve Ticket at Eurostar in London"
 
 
 @dataclass
@@ -3982,11 +3982,11 @@ class TypeGuaranteeInformation:
 
     class Type(Enum):
         """
-        :cvar DEPOSIT:
         :cvar GUARANTEE:
+        :cvar DEPOSIT:
         """
-        DEPOSIT = "Deposit"
         GUARANTEE = "Guarantee"
+        DEPOSIT = "Deposit"
 
     class AgencyType(Enum):
         """
@@ -4013,56 +4013,56 @@ class TypeImageSize(Enum):
     O - Original
     H - Huge
     C - Colossal
-    :cvar B:
-    :cvar C:
-    :cvar E:
-    :cvar F:
-    :cvar G:
-    :cvar H:
-    :cvar I:
-    :cvar J:
-    :cvar L:
-    :cvar M:
-    :cvar O:
-    :cvar S:
     :cvar T:
+    :cvar I:
+    :cvar S:
+    :cvar M:
+    :cvar L:
+    :cvar E:
+    :cvar G:
+    :cvar F:
+    :cvar B:
+    :cvar J:
+    :cvar O:
+    :cvar H:
+    :cvar C:
     """
-    B = "B"
-    C = "C"
-    E = "E"
-    F = "F"
-    G = "G"
-    H = "H"
-    I = "I"
-    J = "J"
-    L = "L"
-    M = "M"
-    O = "O"
-    S = "S"
     T = "T"
+    I = "I"
+    S = "S"
+    M = "M"
+    L = "L"
+    E = "E"
+    G = "G"
+    F = "F"
+    B = "B"
+    J = "J"
+    O = "O"
+    H = "H"
+    C = "C"
 
 
 class TypeInvoiceRecordCategory(Enum):
     """Invoice record type: Invoice, Void, Refund, Manual.
 
     :cvar INVOICE:
-    :cvar MANUAL:
-    :cvar REFUND:
     :cvar VOID:
+    :cvar REFUND:
+    :cvar MANUAL:
     """
     INVOICE = "Invoice"
-    MANUAL = "Manual"
-    REFUND = "Refund"
     VOID = "Void"
+    REFUND = "Refund"
+    MANUAL = "Manual"
 
 
 class TypeItineraryCode(Enum):
     """
-    :cvar DOMESTIC: Indicates the itinerary is domestic
     :cvar INTERNATIONAL: Indicates the itinerary is International
+    :cvar DOMESTIC: Indicates the itinerary is domestic
     """
-    DOMESTIC = "Domestic"
     INTERNATIONAL = "International"
+    DOMESTIC = "Domestic"
 
 
 class TypeItineraryType(Enum):
@@ -4096,15 +4096,15 @@ class TypeKeyBasedReference:
 class TypeLicenseCode(Enum):
     """The type of license assigned to an agent.
 
-    :cvar ENTERPRISE:
     :cvar STANDARD:
     :cvar STANDARD_PLUS:
+    :cvar ENTERPRISE:
     :cvar TE_ONLY:
     :cvar U_API:
     """
-    ENTERPRISE = "Enterprise"
     STANDARD = "Standard"
     STANDARD_PLUS = "Standard Plus"
+    ENTERPRISE = "Enterprise"
     TE_ONLY = "TE Only"
     U_API = "uAPI"
 
@@ -4122,29 +4122,29 @@ class TypeMcofeeType(Enum):
 class TypeMcostatus(Enum):
     """The available status codes for an MCO.
 
-    :cvar EXPIRED:
     :cvar OPEN:
-    :cvar REFUNDED:
     :cvar USED:
+    :cvar REFUNDED:
     :cvar VOIDED:
+    :cvar EXPIRED:
     """
-    EXPIRED = "Expired"
     OPEN = "Open"
-    REFUNDED = "Refunded"
     USED = "Used"
+    REFUNDED = "Refunded"
     VOIDED = "Voided"
+    EXPIRED = "Expired"
 
 
 class TypeMcotype(Enum):
     """The available types for an MCO.
 
     :cvar AGENCY_SERVICE_FEE:
-    :cvar AIRLINE_SERVICE_FEE:
     :cvar EXCHANGE_RESIDUAL:
+    :cvar AIRLINE_SERVICE_FEE:
     """
     AGENCY_SERVICE_FEE = "AgencyServiceFee"
-    AIRLINE_SERVICE_FEE = "AirlineServiceFee"
     EXCHANGE_RESIDUAL = "ExchangeResidual"
+    AIRLINE_SERVICE_FEE = "AirlineServiceFee"
 
 
 @dataclass
@@ -4217,16 +4217,16 @@ class TypePolicy(Enum):
     """Available product types.
 
     :cvar AIR:
+    :cvar VEHICLE:
     :cvar HOTEL:
     :cvar RAIL:
     :cvar TICKETING:
-    :cvar VEHICLE:
     """
     AIR = "Air"
+    VEHICLE = "Vehicle"
     HOTEL = "Hotel"
     RAIL = "Rail"
     TICKETING = "Ticketing"
-    VEHICLE = "Vehicle"
 
 
 @dataclass
@@ -4295,30 +4295,30 @@ class TypeProduct(Enum):
     """Available product types.
 
     :cvar AIR:
-    :cvar CRUISE:
-    :cvar HOTEL:
-    :cvar OTHER:
-    :cvar RAIL:
     :cvar VEHICLE:
+    :cvar HOTEL:
+    :cvar RAIL:
+    :cvar CRUISE:
+    :cvar OTHER:
     """
     AIR = "Air"
-    CRUISE = "Cruise"
-    HOTEL = "Hotel"
-    OTHER = "Other"
-    RAIL = "Rail"
     VEHICLE = "Vehicle"
+    HOTEL = "Hotel"
+    RAIL = "Rail"
+    CRUISE = "Cruise"
+    OTHER = "Other"
 
 
 class TypeProfileApplicability(Enum):
     """The applicability of the profile or profile template value.
 
     :cvar ALWAYS:
-    :cvar NEVER:
     :cvar OPTIONAL_VALUE:
+    :cvar NEVER:
     """
     ALWAYS = "Always"
-    NEVER = "Never"
     OPTIONAL_VALUE = "Optional"
+    NEVER = "Never"
 
 
 class TypeProfileEntityStatus(Enum):
@@ -4335,89 +4335,89 @@ class TypeProfileEntityStatus(Enum):
 class TypeProfileEntityStatusWithDelete(Enum):
     """Specify whether the change is to update or delete the field.
 
-    :cvar ACTIVE:
     :cvar DELETED:
+    :cvar ACTIVE:
     :cvar INACTIVE:
     """
-    ACTIVE = "Active"
     DELETED = "Deleted"
+    ACTIVE = "Active"
     INACTIVE = "Inactive"
 
 
 class TypeProfileLevel(Enum):
     """The type of the profile or profile template.
 
-    :cvar ACCOUNT:
     :cvar AGENCY:
-    :cvar AGENT:
     :cvar BRANCH:
     :cvar BRANCH_GROUP:
-    :cvar TRAVELER:
+    :cvar AGENT:
+    :cvar ACCOUNT:
     :cvar TRAVELER_GROUP:
+    :cvar TRAVELER:
     """
-    ACCOUNT = "Account"
     AGENCY = "Agency"
-    AGENT = "Agent"
     BRANCH = "Branch"
     BRANCH_GROUP = "BranchGroup"
-    TRAVELER = "Traveler"
+    AGENT = "Agent"
+    ACCOUNT = "Account"
     TRAVELER_GROUP = "TravelerGroup"
+    TRAVELER = "Traveler"
 
 
 class TypeProfileLevelWithCredential(Enum):
     """The "profile level" used for association of workflow etc.
 
     :cvar AGENCY:
-    :cvar AGENT:
     :cvar BRANCH:
+    :cvar AGENT:
     """
     AGENCY = "Agency"
-    AGENT = "Agent"
     BRANCH = "Branch"
+    AGENT = "Agent"
 
 
 class TypeProfileLevelWithSystem(Enum):
     """The "profile level" used for association of workflow etc.
 
-    :cvar ACCOUNT:
+    :cvar SYSTEM:
     :cvar AGENCY:
-    :cvar AGENT:
     :cvar BRANCH:
     :cvar BRANCH_GROUP:
-    :cvar SYSTEM:
-    :cvar TRAVELER:
+    :cvar AGENT:
+    :cvar ACCOUNT:
     :cvar TRAVELER_GROUP:
+    :cvar TRAVELER:
     """
-    ACCOUNT = "Account"
+    SYSTEM = "System"
     AGENCY = "Agency"
-    AGENT = "Agent"
     BRANCH = "Branch"
     BRANCH_GROUP = "BranchGroup"
-    SYSTEM = "System"
-    TRAVELER = "Traveler"
+    AGENT = "Agent"
+    ACCOUNT = "Account"
     TRAVELER_GROUP = "TravelerGroup"
+    TRAVELER = "Traveler"
 
 
 class TypeProfileType(Enum):
     """A type for unique party identifiers of any party role.
 
-    :cvar ACCOUNT:
-    :cvar AGENCY:
     :cvar AGENCY_GROUP:
-    :cvar AGENT:
-    :cvar BRANCH:
+    :cvar AGENCY:
     :cvar BRANCH_GROUP:
-    :cvar TRAVELER:
+    :cvar BRANCH:
+    :cvar AGENT:
+    :cvar ACCOUNT:
     :cvar TRAVELER_GROUP:
+    :cvar TRAVELER:
     """
-    ACCOUNT = "Account"
-    AGENCY = "Agency"
     AGENCY_GROUP = "AgencyGroup"
-    AGENT = "Agent"
-    BRANCH = "Branch"
+    AGENCY = "Agency"
     BRANCH_GROUP = "BranchGroup"
-    TRAVELER = "Traveler"
+    BRANCH = "Branch"
+    AGENT = "Agent"
+    ACCOUNT = "Account"
     TRAVELER_GROUP = "TravelerGroup"
+    TRAVELER = "Traveler"
 
 
 @dataclass
@@ -4464,32 +4464,32 @@ class TypeProviderToken(Enum):
 class TypePurchaseWindow(Enum):
     """The purchase windows available for merchandising service.
 
-    :cvar ANYTIME:
     :cvar BOOKING_ONLY:
-    :cvar CHECK_IN_ONLY:
-    :cvar POST_TICKETING:
     :cvar TICKETING_ONLY:
+    :cvar CHECK_IN_ONLY:
+    :cvar ANYTIME:
+    :cvar POST_TICKETING:
     """
-    ANYTIME = "Anytime"
     BOOKING_ONLY = "BookingOnly"
-    CHECK_IN_ONLY = "CheckInOnly"
-    POST_TICKETING = "PostTicketing"
     TICKETING_ONLY = "TicketingOnly"
+    CHECK_IN_ONLY = "CheckInOnly"
+    ANYTIME = "Anytime"
+    POST_TICKETING = "PostTicketing"
 
 
 class TypeQueueModifyAction(Enum):
     """Queue action: remove, requeue, move, add, unlock.
 
-    :cvar ADD:
-    :cvar MOVE:
     :cvar REMOVE:
     :cvar REQUEUE:
+    :cvar MOVE:
+    :cvar ADD:
     :cvar UNLOCK:
     """
-    ADD = "Add"
-    MOVE = "Move"
     REMOVE = "Remove"
     REQUEUE = "Requeue"
+    MOVE = "Move"
+    ADD = "Add"
     UNLOCK = "Unlock"
 
 
@@ -4498,33 +4498,33 @@ class TypeRateCategory(Enum):
 
     :cvar ASSOCIATION:
     :cvar BUSINESS:
+    :cvar CORPORATE:
+    :cvar GOVERNMENT:
+    :cvar INDUSTRY:
+    :cvar PACKAGE:
+    :cvar INCLUSIVE:
+    :cvar PROMOTIONAL:
+    :cvar CREDENTIAL:
+    :cvar STANDARD:
     :cvar CONSORTIUM:
     :cvar CONVENTION:
-    :cvar CORPORATE:
-    :cvar CREDENTIAL:
-    :cvar GOVERNMENT:
-    :cvar INCLUSIVE:
-    :cvar INDUSTRY:
     :cvar NEGOTIATED:
-    :cvar PACKAGE:
     :cvar PREPAY:
-    :cvar PROMOTIONAL:
-    :cvar STANDARD:
     """
     ASSOCIATION = "Association"
     BUSINESS = "Business"
+    CORPORATE = "Corporate"
+    GOVERNMENT = "Government"
+    INDUSTRY = "Industry"
+    PACKAGE = "Package"
+    INCLUSIVE = "Inclusive"
+    PROMOTIONAL = "Promotional"
+    CREDENTIAL = "Credential"
+    STANDARD = "Standard"
     CONSORTIUM = "Consortium"
     CONVENTION = "Convention"
-    CORPORATE = "Corporate"
-    CREDENTIAL = "Credential"
-    GOVERNMENT = "Government"
-    INCLUSIVE = "Inclusive"
-    INDUSTRY = "Industry"
     NEGOTIATED = "Negotiated"
-    PACKAGE = "Package"
     PREPAY = "Prepay"
-    PROMOTIONAL = "Promotional"
-    STANDARD = "Standard"
 
 
 @dataclass
@@ -4558,37 +4558,37 @@ class TypeRateDescription:
 class TypeRateGuarantee(Enum):
     """The guarantee for this rate.
 
-    :cvar AGENT_ENTERED:
     :cvar RATE_GUARANTEED:
     :cvar RATE_QUOTED:
+    :cvar AGENT_ENTERED:
     """
-    AGENT_ENTERED = "Agent Entered"
     RATE_GUARANTEED = "Rate Guaranteed"
     RATE_QUOTED = "Rate Quoted"
+    AGENT_ENTERED = "Agent Entered"
 
 
 class TypeRateTimePeriod(Enum):
     """The period for the rate code (daily, weekly, etc)
 
-    :cvar BUNDLE:
-    :cvar DAILY:
     :cvar HOURLY:
+    :cvar DAILY:
+    :cvar WEEKLY:
     :cvar MONTHLY:
+    :cvar WEEKEND_DAY:
     :cvar OTHER:
     :cvar PACKAGE:
+    :cvar BUNDLE:
     :cvar TOTAL:
-    :cvar WEEKEND_DAY:
-    :cvar WEEKLY:
     """
-    BUNDLE = "Bundle"
-    DAILY = "Daily"
     HOURLY = "Hourly"
+    DAILY = "Daily"
+    WEEKLY = "Weekly"
     MONTHLY = "Monthly"
+    WEEKEND_DAY = "WeekendDay"
     OTHER = "Other"
     PACKAGE = "Package"
+    BUNDLE = "Bundle"
     TOTAL = "Total"
-    WEEKEND_DAY = "WeekendDay"
-    WEEKLY = "Weekly"
 
 
 class TypeRecordStatus(Enum):
@@ -4596,15 +4596,15 @@ class TypeRecordStatus(Enum):
     Any status.
 
     :cvar ALL:
-    :cvar CANCELED:
-    :cvar CURRENT:
     :cvar PAST:
+    :cvar CURRENT:
+    :cvar CANCELED:
     :cvar UNKNOWN:
     """
     ALL = "All"
-    CANCELED = "Canceled"
-    CURRENT = "Current"
     PAST = "Past"
+    CURRENT = "Current"
+    CANCELED = "Canceled"
     UNKNOWN = "Unknown"
 
 
@@ -4689,19 +4689,19 @@ class TypeRemarkWithTravelerRef:
 
 class TypeReqSeat(Enum):
     """
-    :cvar AISLE:
     :cvar ANY:
+    :cvar AISLE:
     :cvar BULKHEAD:
     :cvar EXIT:
-    :cvar MIDDLE:
     :cvar WINDOW:
+    :cvar MIDDLE:
     """
-    AISLE = "Aisle"
     ANY = "Any"
+    AISLE = "Aisle"
     BULKHEAD = "Bulkhead"
     EXIT = "Exit"
-    MIDDLE = "Middle"
     WINDOW = "Window"
+    MIDDLE = "Middle"
 
 
 class TypeReserveRequirement(Enum):
@@ -4710,13 +4710,13 @@ class TypeReserveRequirement(Enum):
 
     :cvar DEPOSIT:
     :cvar GUARANTEE:
-    :cvar OTHER:
     :cvar PREPAYMENT:
+    :cvar OTHER:
     """
     DEPOSIT = "Deposit"
     GUARANTEE = "Guarantee"
-    OTHER = "Other"
     PREPAYMENT = "Prepayment"
+    OTHER = "Other"
 
 
 class TypeResidency(Enum):
@@ -4730,6 +4730,40 @@ class TypeResidency(Enum):
     EMPLOYEE = "Employee"
     NATIONAL = "National"
     RESIDENT = "Resident"
+
+
+class TypeResponseImageSize(Enum):
+    """Allowable images sizes in response.
+
+    :cvar T:
+    :cvar I:
+    :cvar S:
+    :cvar M:
+    :cvar L:
+    :cvar E:
+    :cvar G:
+    :cvar F:
+    :cvar B:
+    :cvar J:
+    :cvar O:
+    :cvar H:
+    :cvar C:
+    :cvar X:
+    """
+    T = "T"
+    I = "I"
+    S = "S"
+    M = "M"
+    L = "L"
+    E = "E"
+    G = "G"
+    F = "F"
+    B = "B"
+    J = "J"
+    O = "O"
+    H = "H"
+    C = "C"
+    X = "X"
 
 
 @dataclass
@@ -4764,13 +4798,13 @@ class TypeResultMessage:
 
     class Type(Enum):
         """
+        :cvar WARNING:
         :cvar ERROR:
         :cvar INFO:
-        :cvar WARNING:
         """
+        WARNING = "Warning"
         ERROR = "Error"
         INFO = "Info"
-        WARNING = "Warning"
 
 
 @dataclass
@@ -4801,14 +4835,14 @@ class TypeSource(Enum):
     """The source/level at which is item is defined (available through inheritance)
 
     :cvar AGENCY:
-    :cvar AGENT:
-    :cvar BRANCH:
     :cvar BRANCH_GROUP:
+    :cvar BRANCH:
+    :cvar AGENT:
     """
     AGENCY = "Agency"
-    AGENT = "Agent"
-    BRANCH = "Branch"
     BRANCH_GROUP = "BranchGroup"
+    BRANCH = "Branch"
+    AGENT = "Agent"
 
 
 @dataclass
@@ -4834,13 +4868,13 @@ class TypeSpecificTime:
 class TypeStatus(Enum):
     """The status of the service fees.
 
-    :cvar ISSUE_LATER: The service fee can be issued later.
     :cvar ISSUED: The service fee has been issued.
     :cvar READY_TO_ISSUE: The service fee is ready to be issued.
+    :cvar ISSUE_LATER: The service fee can be issued later.
     """
-    ISSUE_LATER = "IssueLater"
     ISSUED = "Issued"
     READY_TO_ISSUE = "ReadyToIssue"
+    ISSUE_LATER = "IssueLater"
 
 
 @dataclass
@@ -4909,23 +4943,23 @@ class TypeTax:
 class TypeTicketStatus(Enum):
     """Status for the ticket (Ticketed, Voided, etc)
 
-    :cvar N: Code="N" Description="Unused"
-    :cvar R: Code="R" Description="Refunded"
-    :cvar S: Code="S" Description="Used"
-    :cvar T: Code="T" Description="Ticketed"
     :cvar U: Code="U" Description="Unticketed"
+    :cvar T: Code="T" Description="Ticketed"
     :cvar V: Code="V" Description="Voided"
+    :cvar R: Code="R" Description="Refunded"
     :cvar X: Code="X" Description="eXchanged"
     :cvar Z: Code="Z" Description="Unknown/Archived/Carrier Modified"
+    :cvar N: Code="N" Description="Unused"
+    :cvar S: Code="S" Description="Used"
     """
-    N = "N"
-    R = "R"
-    S = "S"
-    T = "T"
     U = "U"
+    T = "T"
     V = "V"
+    R = "R"
     X = "X"
     Z = "Z"
+    N = "N"
+    S = "S"
 
 
 @dataclass
@@ -4959,187 +4993,187 @@ class TypeTimeRange:
 class TypeTrinary(Enum):
     """Extension of boolean, that allows for unknown values.
 
-    :cvar FALSE_VALUE:
     :cvar TRUE_VALUE:
+    :cvar FALSE_VALUE:
     :cvar UNKNOWN:
     """
-    FALSE_VALUE = "false"
     TRUE_VALUE = "true"
+    FALSE_VALUE = "false"
     UNKNOWN = "unknown"
 
 
 class TypeVehicleCategory(Enum):
     """The category of vehicle.
 
-    :cvar ALL_TERRAIN:
     :cvar CAR:
-    :cvar COMMERCIAL_VAN_OR_TRUCK:
-    :cvar CONVERTIBLE:
-    :cvar COUPE:
-    :cvar CROSSOVER:
-    :cvar EXTENDED_CAB_PICKUP:
-    :cvar LIMO:
-    :cvar MONOSPACE:
-    :cvar MOTORCYCLE:
-    :cvar MOTORHOME:
-    :cvar PICKUP:
-    :cvar RECREATIONAL:
-    :cvar REGULAR_CAB_PICKUP:
-    :cvar ROADSTER:
-    :cvar SUV:
-    :cvar SPECIAL:
-    :cvar SPECIAL_OFFER:
-    :cvar SPORT:
-    :cvar STATION_WAGON:
-    :cvar TRUCK:
-    :cvar TWO_WHEEL_VEHICLE:
     :cvar VAN:
+    :cvar SUV:
+    :cvar CONVERTIBLE:
+    :cvar TRUCK:
+    :cvar STATION_WAGON:
+    :cvar PICKUP:
+    :cvar ALL_TERRAIN:
+    :cvar RECREATIONAL:
+    :cvar SPORT:
+    :cvar SPECIAL:
+    :cvar EXTENDED_CAB_PICKUP:
+    :cvar REGULAR_CAB_PICKUP:
+    :cvar SPECIAL_OFFER:
+    :cvar COUPE:
+    :cvar MONOSPACE:
+    :cvar ROADSTER:
+    :cvar CROSSOVER:
+    :cvar MOTORCYCLE:
+    :cvar LIMO:
+    :cvar MOTORHOME:
+    :cvar TWO_WHEEL_VEHICLE:
+    :cvar COMMERCIAL_VAN_OR_TRUCK:
     """
-    ALL_TERRAIN = "AllTerrain"
     CAR = "Car"
-    COMMERCIAL_VAN_OR_TRUCK = "CommercialVanOrTruck"
-    CONVERTIBLE = "Convertible"
-    COUPE = "Coupe"
-    CROSSOVER = "Crossover"
-    EXTENDED_CAB_PICKUP = "ExtendedCabPickup"
-    LIMO = "Limo"
-    MONOSPACE = "Monospace"
-    MOTORCYCLE = "Motorcycle"
-    MOTORHOME = "Motorhome"
-    PICKUP = "Pickup"
-    RECREATIONAL = "Recreational"
-    REGULAR_CAB_PICKUP = "RegularCabPickup"
-    ROADSTER = "Roadster"
-    SUV = "SUV"
-    SPECIAL = "Special"
-    SPECIAL_OFFER = "SpecialOffer"
-    SPORT = "Sport"
-    STATION_WAGON = "StationWagon"
-    TRUCK = "Truck"
-    TWO_WHEEL_VEHICLE = "TwoWheelVehicle"
     VAN = "Van"
+    SUV = "SUV"
+    CONVERTIBLE = "Convertible"
+    TRUCK = "Truck"
+    STATION_WAGON = "StationWagon"
+    PICKUP = "Pickup"
+    ALL_TERRAIN = "AllTerrain"
+    RECREATIONAL = "Recreational"
+    SPORT = "Sport"
+    SPECIAL = "Special"
+    EXTENDED_CAB_PICKUP = "ExtendedCabPickup"
+    REGULAR_CAB_PICKUP = "RegularCabPickup"
+    SPECIAL_OFFER = "SpecialOffer"
+    COUPE = "Coupe"
+    MONOSPACE = "Monospace"
+    ROADSTER = "Roadster"
+    CROSSOVER = "Crossover"
+    MOTORCYCLE = "Motorcycle"
+    LIMO = "Limo"
+    MOTORHOME = "Motorhome"
+    TWO_WHEEL_VEHICLE = "TwoWheelVehicle"
+    COMMERCIAL_VAN_OR_TRUCK = "CommercialVanOrTruck"
 
 
 class TypeVehicleClass(Enum):
     """The class of vehicle.
 
-    :cvar CARGO_VAN:
-    :cvar COMPACT:
-    :cvar COMPACT_ELITE:
-    :cvar ECONOMY:
-    :cvar ECONOMY_ELITE:
-    :cvar EXOTIC:
-    :cvar EXOTIC_SUV:
-    :cvar FIFTEEN_PASSENGER_VAN:
-    :cvar FOUR_WHEEL_DRIVE:
-    :cvar FULLSIZE:
-    :cvar FULLSIZE_ELITE:
-    :cvar INTERMEDIATE:
-    :cvar INTERMEDIATE_ELITE:
-    :cvar LARGE_SUV:
-    :cvar LARGE_TRUCK:
-    :cvar LUXURY:
-    :cvar LUXURY_ELITE:
-    :cvar MEDIUM_SUV:
     :cvar MINI:
-    :cvar MINI_ELITE:
-    :cvar MINIVAN:
-    :cvar MOPED:
-    :cvar MOVING_VAN:
-    :cvar OVERSIZE:
-    :cvar PREMIUM:
-    :cvar PREMIUM_ELITE:
-    :cvar REGULAR:
-    :cvar SMALL_OR_MEDIUM_TRUCK:
-    :cvar SMALL_SUV:
-    :cvar SPECIAL:
+    :cvar ECONOMY:
+    :cvar COMPACT:
+    :cvar INTERMEDIATE:
     :cvar STANDARD:
+    :cvar FULLSIZE:
+    :cvar LUXURY:
+    :cvar PREMIUM:
+    :cvar SPECIAL:
+    :cvar MINI_ELITE:
+    :cvar ECONOMY_ELITE:
+    :cvar COMPACT_ELITE:
+    :cvar INTERMEDIATE_ELITE:
     :cvar STANDARD_ELITE:
-    :cvar STRETCH:
+    :cvar FULLSIZE_ELITE:
+    :cvar PREMIUM_ELITE:
+    :cvar LUXURY_ELITE:
+    :cvar OVERSIZE:
     :cvar SUBCOMPACT:
-    :cvar TWELVE_FOOT_TRUCK:
+    :cvar MINIVAN:
     :cvar TWELVE_PASSENGER_VAN:
+    :cvar MOVING_VAN:
+    :cvar FIFTEEN_PASSENGER_VAN:
+    :cvar CARGO_VAN:
+    :cvar TWELVE_FOOT_TRUCK:
     :cvar TWENTY_FOOT_TRUCK:
     :cvar TWENTYFOUR_FOOT_TRUCK:
     :cvar TWENTYSIX_FOOT_TRUCK:
+    :cvar MOPED:
+    :cvar STRETCH:
+    :cvar REGULAR:
     :cvar UNIQUE:
+    :cvar EXOTIC:
+    :cvar SMALL_OR_MEDIUM_TRUCK:
+    :cvar LARGE_TRUCK:
+    :cvar SMALL_SUV:
+    :cvar MEDIUM_SUV:
+    :cvar LARGE_SUV:
+    :cvar EXOTIC_SUV:
+    :cvar FOUR_WHEEL_DRIVE:
     """
-    CARGO_VAN = "CargoVan"
-    COMPACT = "Compact"
-    COMPACT_ELITE = "CompactElite"
-    ECONOMY = "Economy"
-    ECONOMY_ELITE = "EconomyElite"
-    EXOTIC = "Exotic"
-    EXOTIC_SUV = "ExoticSUV"
-    FIFTEEN_PASSENGER_VAN = "FifteenPassengerVan"
-    FOUR_WHEEL_DRIVE = "FourWheelDrive"
-    FULLSIZE = "Fullsize"
-    FULLSIZE_ELITE = "FullsizeElite"
-    INTERMEDIATE = "Intermediate"
-    INTERMEDIATE_ELITE = "IntermediateElite"
-    LARGE_SUV = "LargeSUV"
-    LARGE_TRUCK = "LargeTruck"
-    LUXURY = "Luxury"
-    LUXURY_ELITE = "LuxuryElite"
-    MEDIUM_SUV = "MediumSUV"
     MINI = "Mini"
-    MINI_ELITE = "MiniElite"
-    MINIVAN = "Minivan"
-    MOPED = "Moped"
-    MOVING_VAN = "MovingVan"
-    OVERSIZE = "Oversize"
-    PREMIUM = "Premium"
-    PREMIUM_ELITE = "PremiumElite"
-    REGULAR = "Regular"
-    SMALL_OR_MEDIUM_TRUCK = "SmallOrMediumTruck"
-    SMALL_SUV = "SmallSUV"
-    SPECIAL = "Special"
+    ECONOMY = "Economy"
+    COMPACT = "Compact"
+    INTERMEDIATE = "Intermediate"
     STANDARD = "Standard"
+    FULLSIZE = "Fullsize"
+    LUXURY = "Luxury"
+    PREMIUM = "Premium"
+    SPECIAL = "Special"
+    MINI_ELITE = "MiniElite"
+    ECONOMY_ELITE = "EconomyElite"
+    COMPACT_ELITE = "CompactElite"
+    INTERMEDIATE_ELITE = "IntermediateElite"
     STANDARD_ELITE = "StandardElite"
-    STRETCH = "Stretch"
+    FULLSIZE_ELITE = "FullsizeElite"
+    PREMIUM_ELITE = "PremiumElite"
+    LUXURY_ELITE = "LuxuryElite"
+    OVERSIZE = "Oversize"
     SUBCOMPACT = "Subcompact"
-    TWELVE_FOOT_TRUCK = "TwelveFootTruck"
+    MINIVAN = "Minivan"
     TWELVE_PASSENGER_VAN = "TwelvePassengerVan"
+    MOVING_VAN = "MovingVan"
+    FIFTEEN_PASSENGER_VAN = "FifteenPassengerVan"
+    CARGO_VAN = "CargoVan"
+    TWELVE_FOOT_TRUCK = "TwelveFootTruck"
     TWENTY_FOOT_TRUCK = "TwentyFootTruck"
     TWENTYFOUR_FOOT_TRUCK = "TwentyfourFootTruck"
     TWENTYSIX_FOOT_TRUCK = "TwentysixFootTruck"
+    MOPED = "Moped"
+    STRETCH = "Stretch"
+    REGULAR = "Regular"
     UNIQUE = "Unique"
+    EXOTIC = "Exotic"
+    SMALL_OR_MEDIUM_TRUCK = "SmallOrMediumTruck"
+    LARGE_TRUCK = "LargeTruck"
+    SMALL_SUV = "SmallSUV"
+    MEDIUM_SUV = "MediumSUV"
+    LARGE_SUV = "LargeSUV"
+    EXOTIC_SUV = "ExoticSUV"
+    FOUR_WHEEL_DRIVE = "FourWheelDrive"
 
 
 class TypeVehicleLocation(Enum):
     """The type of location requested, such as resort, city center.
 
-    :cvar AIRPORT:
+    :cvar TERMINAL:
+    :cvar SHUTTLE_ON_AIRPORT:
+    :cvar SHUTTLE_OFF_AIRPORT:
+    :cvar RAILWAY_STATION:
+    :cvar HOTEL:
     :cvar CAR_DEALER:
     :cvar CITY_CENTER_DOWNTOWN:
     :cvar EAST_OF_CITY_CENTER:
-    :cvar HOTEL:
-    :cvar NEAR_RESORT:
+    :cvar SOUTH_OF_CITY_CENTER:
+    :cvar WEST_OF_CITY_CENTER:
     :cvar NORTH_OF_CITY_CENTER:
     :cvar PORT_OR_FERRY:
-    :cvar RAILWAY_STATION:
-    :cvar SHUTTLE_OFF_AIRPORT:
-    :cvar SHUTTLE_ON_AIRPORT:
-    :cvar SOUTH_OF_CITY_CENTER:
-    :cvar TERMINAL:
+    :cvar NEAR_RESORT:
+    :cvar AIRPORT:
     :cvar UNKNOWN:
-    :cvar WEST_OF_CITY_CENTER:
     """
-    AIRPORT = "Airport"
+    TERMINAL = "Terminal"
+    SHUTTLE_ON_AIRPORT = "ShuttleOnAirport"
+    SHUTTLE_OFF_AIRPORT = "ShuttleOffAirport"
+    RAILWAY_STATION = "RailwayStation"
+    HOTEL = "Hotel"
     CAR_DEALER = "CarDealer"
     CITY_CENTER_DOWNTOWN = "CityCenterDowntown"
     EAST_OF_CITY_CENTER = "EastOfCityCenter"
-    HOTEL = "Hotel"
-    NEAR_RESORT = "NearResort"
+    SOUTH_OF_CITY_CENTER = "SouthOfCityCenter"
+    WEST_OF_CITY_CENTER = "WestOfCityCenter"
     NORTH_OF_CITY_CENTER = "NorthOfCityCenter"
     PORT_OR_FERRY = "PortOrFerry"
-    RAILWAY_STATION = "RailwayStation"
-    SHUTTLE_OFF_AIRPORT = "ShuttleOffAirport"
-    SHUTTLE_ON_AIRPORT = "ShuttleOnAirport"
-    SOUTH_OF_CITY_CENTER = "SouthOfCityCenter"
-    TERMINAL = "Terminal"
+    NEAR_RESORT = "NearResort"
+    AIRPORT = "Airport"
     UNKNOWN = "Unknown"
-    WEST_OF_CITY_CENTER = "WestOfCityCenter"
 
 
 class TypeVehicleTransmission(Enum):
@@ -5230,13 +5264,13 @@ class TypeVoucherType(Enum):
     """
     :cvar FULL_CREDIT:
     :cvar GROUP_OR_DAY:
-    :cvar REGULAR_VOUCHER:
     :cvar SPECIFIC_VALUE:
+    :cvar REGULAR_VOUCHER:
     """
     FULL_CREDIT = "FullCredit"
     GROUP_OR_DAY = "GroupOrDay"
-    REGULAR_VOUCHER = "RegularVoucher"
     SPECIFIC_VALUE = "SpecificValue"
+    REGULAR_VOUCHER = "RegularVoucher"
 
 
 @dataclass
@@ -5469,21 +5503,21 @@ class ActionStatus:
 
     class Type(Enum):
         """
+        :cvar TAW:
+        :cvar TTL:
+        :cvar TLCXL:
         :cvar ACTIVE:
         :cvar CXL:
         :cvar TAU: Equivalent to TAX in Worldspan
-        :cvar TAW:
-        :cvar TLCXL:
         :cvar TRH:
-        :cvar TTL:
         """
+        TAW = "TAW"
+        TTL = "TTL"
+        TLCXL = "TLCXL"
         ACTIVE = "ACTIVE"
         CXL = "CXL"
         TAU = "TAU"
-        TAW = "TAW"
-        TLCXL = "TLCXL"
         TRH = "TRH"
-        TTL = "TTL"
 
 
 @dataclass
@@ -6610,7 +6644,7 @@ class MediaItem:
             type="Attribute"
         )
     )
-    size_code: Optional[Union[TypeImageSize, TypeOtherImageSize]] = field(
+    size_code: Optional[TypeResponseImageSize] = field(
         default=None,
         metadata=dict(
             name="sizeCode",
@@ -6941,17 +6975,17 @@ class Payment:
         :cvar AIRLINE_FEE: Payment for all airline based fees (paper ticket fee, SSR, etc.)
         :cvar DELIVERY_FEE: Payment for agency ticket delivery fee
         :cvar ITINERARY: Payment for all passengers
-        :cvar OPTIONAL_SERVICE: Payment for an optional service
         :cvar PASSENGER: Payment for a single passenger. The BookingTravelerRef attribute must be set.
         :cvar SERVICE_FEE: Payment for a service fee other than an MCO
+        :cvar OPTIONAL_SERVICE: Payment for an optional service
         :cvar TICKET_FEE: Deprecated
         """
         AIRLINE_FEE = "AirlineFee"
         DELIVERY_FEE = "DeliveryFee"
         ITINERARY = "Itinerary"
-        OPTIONAL_SERVICE = "OptionalService"
         PASSENGER = "Passenger"
         SERVICE_FEE = "ServiceFee"
+        OPTIONAL_SERVICE = "OptionalService"
         TICKET_FEE = "TicketFee"
 
 
@@ -7086,24 +7120,24 @@ class PhoneNumber:
         """
         :cvar AGENCY:
         :cvar BUSINESS:
-        :cvar EMAIL:
-        :cvar FAX:
-        :cvar HOME:
-        :cvar HOTEL:
         :cvar MOBILE:
-        :cvar NONE_VALUE:
+        :cvar HOME:
+        :cvar FAX:
+        :cvar HOTEL:
         :cvar OTHER:
+        :cvar NONE_VALUE:
+        :cvar EMAIL:
         :cvar RESERVATIONS:
         """
         AGENCY = "Agency"
         BUSINESS = "Business"
-        EMAIL = "Email"
-        FAX = "Fax"
-        HOME = "Home"
-        HOTEL = "Hotel"
         MOBILE = "Mobile"
-        NONE_VALUE = "None"
+        HOME = "Home"
+        FAX = "Fax"
+        HOTEL = "Hotel"
         OTHER = "Other"
+        NONE_VALUE = "None"
+        EMAIL = "Email"
         RESERVATIONS = "Reservations"
 
 

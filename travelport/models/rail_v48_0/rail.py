@@ -687,14 +687,14 @@ class TypeCoachClassType(Enum):
     """Values for accommodation class.
 
     :cvar FIRST_CLASS:
+    :cvar STANDARD_CLASS:
     :cvar FIRST_AND_STANDARD_CLASS:
     :cvar OTHER:
-    :cvar STANDARD_CLASS:
     """
     FIRST_CLASS = "First Class"
+    STANDARD_CLASS = "Standard Class"
     FIRST_AND_STANDARD_CLASS = "First and Standard Class"
     OTHER = "Other"
-    STANDARD_CLASS = "Standard Class"
 
 
 class TypeJourneyDirection(Enum):
@@ -710,39 +710,39 @@ class TypeJourneyDirection(Enum):
 class TypeRailDirection(Enum):
     """The direction of travel.
 
-    :cvar BOTH:
     :cvar INBOUND:
     :cvar OUTBOUND:
+    :cvar BOTH:
     """
-    BOTH = "Both"
     INBOUND = "Inbound"
     OUTBOUND = "Outbound"
+    BOTH = "Both"
 
 
 class TypeRailSegmentInfo(Enum):
     """Extra for ExtraSegmentInfo and Vendor for VendorMessages.
 
     :cvar EXTRA:
-    :cvar SERVICES:
     :cvar VENDOR:
+    :cvar SERVICES:
     """
     EXTRA = "Extra"
-    SERVICES = "Services"
     VENDOR = "Vendor"
+    SERVICES = "Services"
 
 
 class TypeRailTicketStatus(Enum):
     """Status Types for Ticket Info.
 
-    :cvar CAN_BE_PRINTED:
     :cvar NOT_PRINT_READY:
-    :cvar PRINTED:
+    :cvar CAN_BE_PRINTED:
     :cvar QUEUED_SENT_TO_PRINT_MODULE:
+    :cvar PRINTED:
     """
-    CAN_BE_PRINTED = "Can Be Printed"
     NOT_PRINT_READY = "Not Print Ready"
-    PRINTED = "Printed"
+    CAN_BE_PRINTED = "Can Be Printed"
     QUEUED_SENT_TO_PRINT_MODULE = "Queued (sent to print module)"
+    PRINTED = "Printed"
 
 
 class TypeResponseType(Enum):
@@ -752,12 +752,12 @@ class TypeResponseType(Enum):
     rail segments, otherwise “Availability” will be mapped. Provider Supported RCH.
 
     :cvar AVAILABILITY:
-    :cvar FARES:
     :cvar SCHEDULES:
+    :cvar FARES:
     """
     AVAILABILITY = "Availability"
-    FARES = "Fares"
     SCHEDULES = "Schedules"
+    FARES = "Fares"
 
 
 class TypeTransportMode(Enum):
@@ -768,72 +768,72 @@ class TypeTransportMode(Enum):
     :cvar BUS:
     :cvar CABLE_CAR:
     :cvar CAR:
-    :cvar CAR_RUSH_HOUR:
     :cvar CARRIAGE:
     :cvar COURTESY_CAR:
-    :cvar EXPRESS_TRAIN:
     :cvar HELICOPTER:
     :cvar LIMOUSINE:
     :cvar METRO:
     :cvar MONORAIL:
     :cvar MOTORBIKE:
-    :cvar NO_TRANSPORTATION:
-    :cvar OTHER:
     :cvar PACK_ANIMAL:
     :cvar PLANE:
-    :cvar PUBLIC:
     :cvar RENTAL_CAR:
     :cvar RICKSHAW:
-    :cvar SEDAN_CHAIR:
-    :cvar SHARED_TAXI:
-    :cvar SHIP_FERRY:
     :cvar SHUTTLE:
     :cvar SUBWAY:
+    :cvar SEDAN_CHAIR:
     :cvar TAXI:
-    :cvar TAXI_RUSH_HOUR:
     :cvar TRAIN:
-    :cvar TRAM_LIGHT_RAIL:
     :cvar TROLLEY:
     :cvar TUBE:
-    :cvar UNDERGROUND:
     :cvar WALK:
     :cvar WATER_TAXI:
+    :cvar OTHER:
+    :cvar CAR_RUSH_HOUR:
+    :cvar TAXI_RUSH_HOUR:
+    :cvar NO_TRANSPORTATION:
+    :cvar EXPRESS_TRAIN:
+    :cvar PUBLIC:
+    :cvar SHIP_FERRY:
+    :cvar UNDERGROUND:
+    :cvar TRAM_LIGHT_RAIL:
+    :cvar SHARED_TAXI:
     """
     BICYCLE = "Bicycle"
     BOAT = "Boat"
     BUS = "Bus"
     CABLE_CAR = "Cable Car"
     CAR = "Car"
-    CAR_RUSH_HOUR = "Car/Rush hour"
     CARRIAGE = "Carriage"
     COURTESY_CAR = "Courtesy car"
-    EXPRESS_TRAIN = "Express Train"
     HELICOPTER = "Helicopter"
     LIMOUSINE = "Limousine"
     METRO = "Metro"
     MONORAIL = "Monorail"
     MOTORBIKE = "Motorbike"
-    NO_TRANSPORTATION = "No Transportation"
-    OTHER = "Other"
     PACK_ANIMAL = "Pack Animal"
     PLANE = "Plane"
-    PUBLIC = "Public"
     RENTAL_CAR = "Rental Car"
     RICKSHAW = "Rickshaw"
-    SEDAN_CHAIR = "Sedan Chair"
-    SHARED_TAXI = "Shared Taxi"
-    SHIP_FERRY = "Ship/Ferry"
     SHUTTLE = "Shuttle"
     SUBWAY = "Subway"
+    SEDAN_CHAIR = "Sedan Chair"
     TAXI = "Taxi"
-    TAXI_RUSH_HOUR = "Taxi/Rush hour"
     TRAIN = "Train"
-    TRAM_LIGHT_RAIL = "Tram/light rail"
     TROLLEY = "Trolley"
     TUBE = "Tube"
-    UNDERGROUND = "Underground"
     WALK = "Walk"
     WATER_TAXI = "Water Taxi"
+    OTHER = "Other"
+    CAR_RUSH_HOUR = "Car/Rush hour"
+    TAXI_RUSH_HOUR = "Taxi/Rush hour"
+    NO_TRANSPORTATION = "No Transportation"
+    EXPRESS_TRAIN = "Express Train"
+    PUBLIC = "Public"
+    SHIP_FERRY = "Ship/Ferry"
+    UNDERGROUND = "Underground"
+    TRAM_LIGHT_RAIL = "Tram/light rail"
+    SHARED_TAXI = "Shared Taxi"
 
 
 @dataclass
@@ -3052,10 +3052,10 @@ class RailSolutionChangedInfo:
 
     class ReasonCode(Enum):
         """
-        :cvar BOTH:
         :cvar PRICE:
         :cvar SCHEDULE:
+        :cvar BOTH:
         """
-        BOTH = "Both"
         PRICE = "Price"
         SCHEDULE = "Schedule"
+        BOTH = "Both"

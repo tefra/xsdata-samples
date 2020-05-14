@@ -272,6 +272,7 @@ from travelport.models.common_v48_0.common import TypeRemarkWithTravelerRef
 from travelport.models.common_v48_0.common import TypeReqSeat
 from travelport.models.common_v48_0.common import TypeReserveRequirement
 from travelport.models.common_v48_0.common import TypeResidency
+from travelport.models.common_v48_0.common import TypeResponseImageSize
 from travelport.models.common_v48_0.common import TypeResultMessage
 from travelport.models.common_v48_0.common import TypeSearchLocation
 from travelport.models.common_v48_0.common import TypeSearchTimeSpec

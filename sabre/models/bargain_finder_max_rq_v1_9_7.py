@@ -227,31 +227,31 @@ class CabinType(Enum):
     """A cabin is either Premium First (P), First (F), Premium Business (J),
     Business (C), Premium Economy (S) or Economy (Y)
 
-    :cvar BUSINESS:
-    :cvar C:
-    :cvar ECONOMY:
-    :cvar F:
-    :cvar FIRST:
-    :cvar J:
-    :cvar P:
-    :cvar PREMIUM_BUSINESS:
-    :cvar PREMIUM_ECONOMY:
     :cvar PREMIUM_FIRST:
-    :cvar S:
+    :cvar FIRST:
+    :cvar PREMIUM_BUSINESS:
+    :cvar BUSINESS:
+    :cvar PREMIUM_ECONOMY:
+    :cvar ECONOMY:
     :cvar Y:
+    :cvar S:
+    :cvar C:
+    :cvar J:
+    :cvar F:
+    :cvar P:
     """
-    BUSINESS = "Business"
-    C = "C"
-    ECONOMY = "Economy"
-    F = "F"
-    FIRST = "First"
-    J = "J"
-    P = "P"
-    PREMIUM_BUSINESS = "PremiumBusiness"
-    PREMIUM_ECONOMY = "PremiumEconomy"
     PREMIUM_FIRST = "PremiumFirst"
-    S = "S"
+    FIRST = "First"
+    PREMIUM_BUSINESS = "PremiumBusiness"
+    BUSINESS = "Business"
+    PREMIUM_ECONOMY = "PremiumEconomy"
+    ECONOMY = "Economy"
     Y = "Y"
+    S = "S"
+    C = "C"
+    J = "J"
+    F = "F"
+    P = "P"
 
 
 @dataclass
@@ -411,32 +411,32 @@ class CustLoyaltyType:
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
 
-        :cvar INHERIT:
-        :cvar NO:
         :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
         """
-        INHERIT = "Inherit"
-        NO = "No"
         YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
     class ShareMarketInd(Enum):
         """value="Inherit" Permission for sharing data for marketing purposes.
 
-        :cvar INHERIT:
-        :cvar NO:
         :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
         """
-        INHERIT = "Inherit"
-        NO = "No"
         YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
     class SingleVendorInd(Enum):
         """
-        :cvar ALLIANCE:
         :cvar SINGLE_VNDR:
+        :cvar ALLIANCE:
         """
-        ALLIANCE = "Alliance"
         SINGLE_VNDR = "SingleVndr"
+        ALLIANCE = "Alliance"
 
 
 @dataclass
@@ -598,33 +598,33 @@ class DocumentType:
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
 
-        :cvar INHERIT:
-        :cvar NO:
         :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
         """
-        INHERIT = "Inherit"
-        NO = "No"
         YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
     class ShareMarketInd(Enum):
         """value="Inherit" Permission for sharing data for marketing purposes.
 
-        :cvar INHERIT:
-        :cvar NO:
         :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
         """
-        INHERIT = "Inherit"
-        NO = "No"
         YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
     class Gender(Enum):
         """
-        :cvar FEMALE:
         :cvar MALE:
+        :cvar FEMALE:
         :cvar UNKNOWN:
         """
-        FEMALE = "Female"
         MALE = "Male"
+        FEMALE = "Female"
         UNKNOWN = "Unknown"
 
 
@@ -678,24 +678,24 @@ class EmailType:
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
 
-        :cvar INHERIT:
-        :cvar NO:
         :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
         """
-        INHERIT = "Inherit"
-        NO = "No"
         YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
     class ShareMarketInd(Enum):
         """value="Inherit" Permission for sharing data for marketing purposes.
 
-        :cvar INHERIT:
-        :cvar NO:
         :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
         """
-        INHERIT = "Inherit"
-        NO = "No"
         YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
 
 @dataclass
@@ -1026,13 +1026,13 @@ class FlightStopsAsConnectionsType:
 class FlightTypeType(Enum):
     """
     Identifies a particular type of flight - Direct, Stopover etc.
-    :cvar CONNECTION: Flight with plane changes, allowing maximum of 24 hours for each change
-    :cvar DIRECT: Flight without plane change and possible intermediate landing.
     :cvar NONSTOP: Flight without plane change and without intermediate landing.
+    :cvar DIRECT: Flight without plane change and possible intermediate landing.
+    :cvar CONNECTION: Flight with plane changes, allowing maximum of 24 hours for each change
     """
-    CONNECTION = "Connection"
-    DIRECT = "Direct"
     NONSTOP = "Nonstop"
+    DIRECT = "Direct"
+    CONNECTION = "Connection"
 
 
 @dataclass
@@ -1491,24 +1491,24 @@ class PersonNameType:
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
 
-        :cvar INHERIT:
-        :cvar NO:
         :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
         """
-        INHERIT = "Inherit"
-        NO = "No"
         YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
     class ShareMarketInd(Enum):
         """value="Inherit" Permission for sharing data for marketing purposes.
 
-        :cvar INHERIT:
-        :cvar NO:
         :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
         """
-        INHERIT = "Inherit"
-        NO = "No"
         YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
 
 @dataclass
@@ -1668,12 +1668,12 @@ class PreferLevelType(Enum):
     etc.).
 
     :cvar ONLY:
-    :cvar PREFERRED:
     :cvar UNACCEPTABLE:
+    :cvar PREFERRED:
     """
     ONLY = "Only"
-    PREFERRED = "Preferred"
     UNACCEPTABLE = "Unacceptable"
+    PREFERRED = "Preferred"
 
 
 @dataclass
@@ -1718,13 +1718,13 @@ class RequestLocationType:
 class RequestPricingSourceType(Enum):
     """It can be used to indicate whether the fare is public or private.
 
-    :cvar BOTH:
-    :cvar PRIVATE:
     :cvar PUBLISHED:
+    :cvar PRIVATE:
+    :cvar BOTH:
     """
-    BOTH = "Both"
-    PRIVATE = "Private"
     PUBLISHED = "Published"
+    PRIVATE = "Private"
+    BOTH = "Both"
 
 
 @dataclass
@@ -2064,24 +2064,24 @@ class TelephoneType:
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
 
-        :cvar INHERIT:
-        :cvar NO:
         :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
         """
-        INHERIT = "Inherit"
-        NO = "No"
         YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
     class ShareMarketInd(Enum):
         """value="Inherit" Permission for sharing data for marketing purposes.
 
-        :cvar INHERIT:
-        :cvar NO:
         :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
         """
-        INHERIT = "Inherit"
-        NO = "No"
         YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
 
 @dataclass
@@ -2470,11 +2470,11 @@ class ValidatingCarrierPreferLevelType(Enum):
     """Used to specify a preference level for ValidatingCarrier. For adding new
     enums see PreferLevelType.
 
-    :cvar PREFERRED:
     :cvar UNACCEPTABLE:
+    :cvar PREFERRED:
     """
-    PREFERRED = "Preferred"
     UNACCEPTABLE = "Unacceptable"
+    PREFERRED = "Preferred"
 
 
 @dataclass
@@ -2621,24 +2621,24 @@ class AddressType:
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
 
-        :cvar INHERIT:
-        :cvar NO:
         :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
         """
-        INHERIT = "Inherit"
-        NO = "No"
         YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
     class ShareMarketInd(Enum):
         """value="Inherit" Permission for sharing data for marketing purposes.
 
-        :cvar INHERIT:
-        :cvar NO:
         :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
         """
-        INHERIT = "Inherit"
-        NO = "No"
         YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
 
 @dataclass
@@ -2650,14 +2650,14 @@ class AltCitiesCombinationsType:
     :ivar destinations: Which destinations to process in live path (All or Main only)
     """
     origins: AltCitiesCombinationsLocationsType = field(
-        default="Main",
+        default=AltCitiesCombinationsLocationsType.MAIN,
         metadata=dict(
             name="Origins",
             type="Attribute"
         )
     )
     destinations: AltCitiesCombinationsLocationsType = field(
-        default="Main",
+        default=AltCitiesCombinationsLocationsType.MAIN,
         metadata=dict(
             name="Destinations",
             type="Attribute"
@@ -2718,7 +2718,7 @@ class BookingClassPrefType:
         )
     )
     prefer_level: PreferLevelType = field(
-        default="Preferred",
+        default=PreferLevelType.PREFERRED,
         metadata=dict(
             name="PreferLevel",
             type="Attribute"
@@ -2735,7 +2735,7 @@ class CabinPrefType:
     :ivar cabin: Specify cabin type.
     """
     prefer_level: PreferLevelType = field(
-        default="Preferred",
+        default=PreferLevelType.PREFERRED,
         metadata=dict(
             name="PreferLevel",
             type="Attribute"
@@ -2775,7 +2775,7 @@ class CompanyNamePrefType(CompanyNameType):
     :ivar type: Specify what type  of carrier it comes to.
     """
     prefer_level: PreferLevelType = field(
-        default="Preferred",
+        default=PreferLevelType.PREFERRED,
         metadata=dict(
             name="PreferLevel",
             type="Attribute"
@@ -2824,7 +2824,7 @@ class ConnectionType:
             )
         )
         prefer_level: PreferLevelType = field(
-            default="Preferred",
+            default=PreferLevelType.PREFERRED,
             metadata=dict(
                 name="PreferLevel",
                 type="Attribute"
@@ -2847,13 +2847,13 @@ class ConnectionType:
 
         class ConnectionInfo(Enum):
             """
-            :cvar CHANGE: Location is for changing.
-            :cvar STOP: Location is for stopping.
             :cvar VIA: Location without stopping or changing.
+            :cvar STOP: Location is for stopping.
+            :cvar CHANGE: Location is for changing.
             """
-            CHANGE = "Change"
-            STOP = "Stop"
             VIA = "Via"
+            STOP = "Stop"
+            CHANGE = "Change"
 
 
 @dataclass
@@ -3202,7 +3202,7 @@ class DiversityControlType:
                     )
                 )
                 endpoint: DepartureOrArrival = field(
-                    default="Departure",
+                    default=DepartureOrArrival.DEPARTURE,
                     metadata=dict(
                         name="Endpoint",
                         type="Attribute"
@@ -3269,7 +3269,7 @@ class EquipmentTypePref(EquipmentType):
     :ivar wide_body: Specify if equipment should have a wide body or not.
     """
     prefer_level: PreferLevelType = field(
-        default="Preferred",
+        default=PreferLevelType.PREFERRED,
         metadata=dict(
             name="PreferLevel",
             type="Attribute"
@@ -3470,7 +3470,6 @@ class ExchangeOriginDestinationFlightType:
                 metadata=dict(
                     name="Value",
                     type="Attribute",
-                    required=True,
                     pattern=r"(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)%?"
                 )
             )
@@ -3518,7 +3517,7 @@ class FareRestrictPrefType:
     :ivar fare_restriction: Refer to OTA Code List Fare Restriction (FAR).
     """
     prefer_level: PreferLevelType = field(
-        default="Preferred",
+        default=PreferLevelType.PREFERRED,
         metadata=dict(
             name="PreferLevel",
             type="Attribute"
@@ -3879,7 +3878,7 @@ class FlightTypePrefType:
     :ivar max_connections: Indicates that if connection is chosen, then this attribute defines the maximum number of connections preferred.
     """
     prefer_level: PreferLevelType = field(
-        default="Preferred",
+        default=PreferLevelType.PREFERRED,
         metadata=dict(
             name="PreferLevel",
             type="Attribute"
@@ -4686,15 +4685,15 @@ class PriceRequestInformationType:
 
             class Value(Enum):
                 """
-                :cvar LOYALTY: LOYALTY customer type.
-                :cvar PREFELITE: PREFERED_ELITE customer type.
                 :cvar REGULAR: Regular customer type.
                 :cvar TVLYPREF: TVLY_PREFERRED customer type.
+                :cvar PREFELITE: PREFERED_ELITE customer type.
+                :cvar LOYALTY: LOYALTY customer type.
                 """
-                LOYALTY = "LOYALTY"
-                PREFELITE = "PREFELITE"
                 REGULAR = "REGULAR"
                 TVLYPREF = "TVLYPREF"
+                PREFELITE = "PREFELITE"
+                LOYALTY = "LOYALTY"
 
         @dataclass
         class MultipleTravelerGroups:
@@ -4803,13 +4802,13 @@ class PriceRequestInformationType:
 
             class Type(Enum):
                 """
+                :cvar R: Residency.
                 :cvar E: Employment.
                 :cvar N: Nationality.
-                :cvar R: Residency.
                 """
+                R = "R"
                 E = "E"
                 N = "N"
-                R = "R"
 
         @dataclass
         class EticketableOverride:
@@ -5100,7 +5099,7 @@ class TicketDistribPrefType:
         )
     )
     prefer_level: PreferLevelType = field(
-        default="Preferred",
+        default=PreferLevelType.PREFERRED,
         metadata=dict(
             name="PreferLevel",
             type="Attribute"
@@ -7722,36 +7721,36 @@ class AirTravelerType:
 
     class Gender(Enum):
         """
-        :cvar FEMALE:
         :cvar MALE:
+        :cvar FEMALE:
         :cvar UNKNOWN:
         """
-        FEMALE = "Female"
         MALE = "Male"
+        FEMALE = "Female"
         UNKNOWN = "Unknown"
 
     class ShareSynchInd(Enum):
         """value="Inherit" Permission for sharing data for synchronization of
         information held by other travel service providers.
 
-        :cvar INHERIT:
-        :cvar NO:
         :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
         """
-        INHERIT = "Inherit"
-        NO = "No"
         YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
     class ShareMarketInd(Enum):
         """value="Inherit" Permission for sharing data for marketing purposes.
 
-        :cvar INHERIT:
-        :cvar NO:
         :cvar YES:
+        :cvar NO:
+        :cvar INHERIT:
         """
-        INHERIT = "Inherit"
-        NO = "No"
         YES = "Yes"
+        NO = "No"
+        INHERIT = "Inherit"
 
 
 @dataclass
@@ -9697,8 +9696,8 @@ class OtaAirLowFareSearchRq:
             type="Attribute"
         )
     )
-    target: "OtaAirLowFareSearchRq.Target" = field(
-        default="Production",
+    target: Optional["OtaAirLowFareSearchRq.Target"] = field(
+        default=None,
         metadata=dict(
             name="Target",
             type="Attribute"
@@ -10045,13 +10044,13 @@ class OtaAirLowFareSearchRq:
 
             class DisplayPolicy(Enum):
                 """
+                :cvar SOW:
                 :cvar GOW2_RT:
                 :cvar SCHS:
-                :cvar SOW:
                 """
+                SOW = "SOW"
                 GOW2_RT = "GOW2RT"
                 SCHS = "SCHS"
-                SOW = "SOW"
 
         @dataclass
         class Partitions:
@@ -10155,7 +10154,7 @@ class OtaAirLowFareSearchRq:
                         )
                     )
                     prefer_level: PreferLevelType = field(
-                        default="Preferred",
+                        default=PreferLevelType.PREFERRED,
                         metadata=dict(
                             name="PreferLevel",
                             type="Attribute"
@@ -10996,7 +10995,7 @@ class OtaAirLowFareSearchRq:
             :ivar type: Specifies cabin type.
             """
             preference_level: PreferLevelType = field(
-                default="Preferred",
+                default=PreferLevelType.PREFERRED,
                 metadata=dict(
                     name="PreferenceLevel",
                     type="Attribute"
@@ -11026,20 +11025,20 @@ class OtaAirLowFareSearchRq:
 
     class Target(Enum):
         """
-        :cvar PRODUCTION:
         :cvar TEST:
+        :cvar PRODUCTION:
         """
-        PRODUCTION = "Production"
         TEST = "Test"
+        PRODUCTION = "Production"
 
     class TransactionStatusCode(Enum):
         """
-        :cvar END: This is the last message within a transaction.
-        :cvar IN_SERIES: This is any message that is not the first or last message within a transaction.
-        :cvar ROLLBACK: This indicates that all messages within the current transaction must be ignored.
         :cvar START: This is the first message within a transaction.
+        :cvar END: This is the last message within a transaction.
+        :cvar ROLLBACK: This indicates that all messages within the current transaction must be ignored.
+        :cvar IN_SERIES: This is any message that is not the first or last message within a transaction.
         """
-        END = "End"
-        IN_SERIES = "InSeries"
-        ROLLBACK = "Rollback"
         START = "Start"
+        END = "End"
+        ROLLBACK = "Rollback"
+        IN_SERIES = "InSeries"
