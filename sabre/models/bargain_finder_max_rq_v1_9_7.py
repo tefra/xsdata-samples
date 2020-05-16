@@ -1253,6 +1253,15 @@ class NumTripsType:
     )
 
 
+class OtaAirLowFareSearchRqTarget(Enum):
+    """
+    :cvar TEST:
+    :cvar PRODUCTION:
+    """
+    TEST = "Test"
+    PRODUCTION = "Production"
+
+
 @dataclass
 class OptionsPerDatePairType:
     """
@@ -2247,6 +2256,7 @@ class TravelDateTimeType:
                 metadata=dict(
                     name="Date",
                     type="Attribute",
+                    required=True,
                     pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}"
                 )
             )
@@ -2263,6 +2273,7 @@ class TravelDateTimeType:
                 metadata=dict(
                     name="FromDate",
                     type="Attribute",
+                    required=True,
                     pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}"
                 )
             )
@@ -2271,6 +2282,7 @@ class TravelDateTimeType:
                 metadata=dict(
                     name="ToDate",
                     type="Attribute",
+                    required=True,
                     pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}"
                 )
             )
@@ -2320,6 +2332,7 @@ class TravelDateTimeType:
                 metadata=dict(
                     name="Date",
                     type="Attribute",
+                    required=True,
                     pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}"
                 )
             )
@@ -2336,6 +2349,7 @@ class TravelDateTimeType:
                 metadata=dict(
                     name="FromDate",
                     type="Attribute",
+                    required=True,
                     pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}"
                 )
             )
@@ -2344,6 +2358,7 @@ class TravelDateTimeType:
                 metadata=dict(
                     name="ToDate",
                     type="Attribute",
+                    required=True,
                     pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}"
                 )
             )
@@ -3470,6 +3485,7 @@ class ExchangeOriginDestinationFlightType:
                 metadata=dict(
                     name="Value",
                     type="Attribute",
+                    required=True,
                     pattern=r"(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)%?"
                 )
             )
@@ -7387,7 +7403,8 @@ class AirSearchPrefsType:
                 default=None,
                 metadata=dict(
                     name="Value",
-                    type="Attribute"
+                    type="Attribute",
+                    required=True
                 )
             )
 
@@ -7400,7 +7417,8 @@ class AirSearchPrefsType:
                 default=None,
                 metadata=dict(
                     name="Value",
-                    type="Attribute"
+                    type="Attribute",
+                    required=True
                 )
             )
 
@@ -8090,7 +8108,8 @@ class ExchangeTravelPreferencesTpaExtensionsType:
             default=None,
             metadata=dict(
                 name="Value",
-                type="Attribute"
+                type="Attribute",
+                required=True
             )
         )
 
@@ -8103,7 +8122,8 @@ class ExchangeTravelPreferencesTpaExtensionsType:
             default=None,
             metadata=dict(
                 name="Value",
-                type="Attribute"
+                type="Attribute",
+                required=True
             )
         )
 
@@ -9243,7 +9263,8 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
             default=None,
             metadata=dict(
                 name="Value",
-                type="Attribute"
+                type="Attribute",
+                required=True
             )
         )
 
@@ -9256,7 +9277,8 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
             default=None,
             metadata=dict(
                 name="Number",
-                type="Attribute"
+                type="Attribute",
+                required=True
             )
         )
 
@@ -9337,7 +9359,8 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
             default=None,
             metadata=dict(
                 name="Number",
-                type="Attribute"
+                type="Attribute",
+                required=True
             )
         )
 
@@ -9350,7 +9373,8 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
             default=None,
             metadata=dict(
                 name="Number",
-                type="Attribute"
+                type="Attribute",
+                required=True
             )
         )
 
@@ -9696,8 +9720,8 @@ class OtaAirLowFareSearchRq:
             type="Attribute"
         )
     )
-    target: Optional["OtaAirLowFareSearchRq.Target"] = field(
-        default=None,
+    target: OtaAirLowFareSearchRqTarget = field(
+        default=OtaAirLowFareSearchRqTarget.PRODUCTION,
         metadata=dict(
             name="Target",
             type="Attribute"
@@ -10549,7 +10573,8 @@ class OtaAirLowFareSearchRq:
                     default=None,
                     metadata=dict(
                         name="Value",
-                        type="Attribute"
+                        type="Attribute",
+                        required=True
                     )
                 )
 
@@ -10562,7 +10587,8 @@ class OtaAirLowFareSearchRq:
                     default=None,
                     metadata=dict(
                         name="Number",
-                        type="Attribute"
+                        type="Attribute",
+                        required=True
                     )
                 )
 
@@ -10643,7 +10669,8 @@ class OtaAirLowFareSearchRq:
                     default=None,
                     metadata=dict(
                         name="Number",
-                        type="Attribute"
+                        type="Attribute",
+                        required=True
                     )
                 )
 
@@ -10656,7 +10683,8 @@ class OtaAirLowFareSearchRq:
                     default=None,
                     metadata=dict(
                         name="Number",
-                        type="Attribute"
+                        type="Attribute",
+                        required=True
                     )
                 )
 
@@ -11022,14 +11050,6 @@ class OtaAirLowFareSearchRq:
                     length=7
                 )
             )
-
-    class Target(Enum):
-        """
-        :cvar TEST:
-        :cvar PRODUCTION:
-        """
-        TEST = "Test"
-        PRODUCTION = "Production"
 
     class TransactionStatusCode(Enum):
         """

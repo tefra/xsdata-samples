@@ -1209,49 +1209,13 @@ class DiscountCardRef:
     )
 
 
-@dataclass
-class Distance:
-    """Container to encapsulate the a distance value with its unit of measure.
-
-    :ivar units:
-    :ivar value:
-    :ivar direction: Directions: S, N, E, W, SE, NW, ...
+class DistanceUnits(Enum):
     """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    units: Optional["Distance.Units"] = field(
-        default=None,
-        metadata=dict(
-            name="Units",
-            type="Attribute",
-            length=2
-        )
-    )
-    value: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="Value",
-            type="Attribute",
-            required=True
-        )
-    )
-    direction: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Direction",
-            type="Attribute",
-            max_length=2.0
-        )
-    )
-
-    class Units(Enum):
-        """
-        :cvar MI:
-        :cvar KM:
-        """
-        MI = "MI"
-        KM = "KM"
+    :cvar MI:
+    :cvar KM:
+    """
+    MI = "MI"
+    KM = "KM"
 
 
 @dataclass
@@ -2896,58 +2860,26 @@ class RoleInfo:
     )
 
 
-@dataclass
-class SearchTicketing:
-    """Search restriction by Agent.
-
-    :ivar ticket_status: Return only PNRs with ticketed, non-ticketed or both
-    :ivar reservation_status: Used only if "TicketStatus" set to "No" or "Both". Return only PNRs with specific reservation status or both statuses.
-    :ivar ticket_date: Identifies when this reservation was ticketed, or when it should be ticketed by (in the event of a TTL)
+class SearchTicketingReservationStatus(Enum):
     """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
+    :cvar ON_HOLD:
+    :cvar SET_FOR_TICKETING:
+    :cvar BOTH:
+    """
+    ON_HOLD = "OnHold"
+    SET_FOR_TICKETING = "SetForTicketing"
+    BOTH = "Both"
 
-    ticket_status: Optional["SearchTicketing.TicketStatus"] = field(
-        default=None,
-        metadata=dict(
-            name="TicketStatus",
-            type="Attribute"
-        )
-    )
-    reservation_status: Optional["SearchTicketing.ReservationStatus"] = field(
-        default=None,
-        metadata=dict(
-            name="ReservationStatus",
-            type="Attribute"
-        )
-    )
-    ticket_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TicketDate",
-            type="Attribute"
-        )
-    )
 
-    class TicketStatus(Enum):
-        """
-        :cvar TICKETED:
-        :cvar UNTICKETED:
-        :cvar BOTH:
-        """
-        TICKETED = "Ticketed"
-        UNTICKETED = "Unticketed"
-        BOTH = "Both"
-
-    class ReservationStatus(Enum):
-        """
-        :cvar ON_HOLD:
-        :cvar SET_FOR_TICKETING:
-        :cvar BOTH:
-        """
-        ON_HOLD = "OnHold"
-        SET_FOR_TICKETING = "SetForTicketing"
-        BOTH = "Both"
+class SearchTicketingTicketStatus(Enum):
+    """
+    :cvar TICKETED:
+    :cvar UNTICKETED:
+    :cvar BOTH:
+    """
+    TICKETED = "Ticketed"
+    UNTICKETED = "Unticketed"
+    BOTH = "Both"
 
 
 @dataclass
@@ -6156,6 +6088,43 @@ class DiscountCard:
 
 
 @dataclass
+class Distance:
+    """Container to encapsulate the a distance value with its unit of measure.
+
+    :ivar units:
+    :ivar value:
+    :ivar direction: Directions: S, N, E, W, SE, NW, ...
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    units: DistanceUnits = field(
+        default=DistanceUnits.MI,
+        metadata=dict(
+            name="Units",
+            type="Attribute",
+            length=2
+        )
+    )
+    value: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="Value",
+            type="Attribute",
+            required=True
+        )
+    )
+    direction: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Direction",
+            type="Attribute",
+            max_length=2.0
+        )
+    )
+
+
+@dataclass
 class DriversLicense:
     """Details of drivers license.
 
@@ -7791,6 +7760,40 @@ class SearchEvent(TypeTimeRange):
 
 
 @dataclass
+class SearchTicketing:
+    """Search restriction by Agent.
+
+    :ivar ticket_status: Return only PNRs with ticketed, non-ticketed or both
+    :ivar reservation_status: Used only if "TicketStatus" set to "No" or "Both". Return only PNRs with specific reservation status or both statuses.
+    :ivar ticket_date: Identifies when this reservation was ticketed, or when it should be ticketed by (in the event of a TTL)
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    ticket_status: SearchTicketingTicketStatus = field(
+        default=SearchTicketingTicketStatus.BOTH,
+        metadata=dict(
+            name="TicketStatus",
+            type="Attribute"
+        )
+    )
+    reservation_status: SearchTicketingReservationStatus = field(
+        default=SearchTicketingReservationStatus.BOTH,
+        metadata=dict(
+            name="ReservationStatus",
+            type="Attribute"
+        )
+    )
+    ticket_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TicketDate",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class SeatAssignment:
     """
     :ivar key:
@@ -8981,69 +8984,6 @@ class TypeProviderReservationSpecificInfo:
         metadata=dict(
             name="ReservationLevel",
             type="Attribute"
-        )
-    )
-
-
-@dataclass
-class TypeSearchLocation:
-    """
-    :ivar airport:
-    :ivar city:
-    :ivar city_or_airport:
-    :ivar coordinate_location:
-    :ivar rail_location:
-    :ivar distance:
-    """
-    class Meta:
-        name = "typeSearchLocation"
-
-    airport: Optional[Airport] = field(
-        default=None,
-        metadata=dict(
-            name="Airport",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
-    )
-    city: Optional[City] = field(
-        default=None,
-        metadata=dict(
-            name="City",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
-    )
-    city_or_airport: Optional[CityOrAirport] = field(
-        default=None,
-        metadata=dict(
-            name="CityOrAirport",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
-    )
-    coordinate_location: Optional[CoordinateLocation] = field(
-        default=None,
-        metadata=dict(
-            name="CoordinateLocation",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
-    )
-    rail_location: Optional[RailLocation] = field(
-        default=None,
-        metadata=dict(
-            name="RailLocation",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
-    )
-    distance: Optional[Distance] = field(
-        default=None,
-        metadata=dict(
-            name="Distance",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
 
@@ -11057,6 +10997,69 @@ class TypePaymentCard:
             type="Attribute",
             min_length=1.0,
             max_length=16.0
+        )
+    )
+
+
+@dataclass
+class TypeSearchLocation:
+    """
+    :ivar airport:
+    :ivar city:
+    :ivar city_or_airport:
+    :ivar coordinate_location:
+    :ivar rail_location:
+    :ivar distance:
+    """
+    class Meta:
+        name = "typeSearchLocation"
+
+    airport: Optional[Airport] = field(
+        default=None,
+        metadata=dict(
+            name="Airport",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
+        )
+    )
+    city: Optional[City] = field(
+        default=None,
+        metadata=dict(
+            name="City",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
+        )
+    )
+    city_or_airport: Optional[CityOrAirport] = field(
+        default=None,
+        metadata=dict(
+            name="CityOrAirport",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
+        )
+    )
+    coordinate_location: Optional[CoordinateLocation] = field(
+        default=None,
+        metadata=dict(
+            name="CoordinateLocation",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
+        )
+    )
+    rail_location: Optional[RailLocation] = field(
+        default=None,
+        metadata=dict(
+            name="RailLocation",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
+        )
+    )
+    distance: Optional[Distance] = field(
+        default=None,
+        metadata=dict(
+            name="Distance",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
 

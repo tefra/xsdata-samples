@@ -90,7 +90,10 @@ from sabre.models.bargain_finder_max_rq_v1_9_7 import NumTripsType
 from sabre.models.bargain_finder_max_rs_v1_9_7 import ObfeeType
 from sabre.models.bargain_finder_max_rs_v1_9_7 import OcfeeType
 from sabre.models.bargain_finder_max_rq_v1_9_7 import OtaAirLowFareSearchRq
+from sabre.models.bargain_finder_max_rq_v1_9_7 import OtaAirLowFareSearchRqTarget
 from sabre.models.bargain_finder_max_rs_v1_9_7 import OtaAirLowFareSearchRs
+from sabre.models.bargain_finder_max_rs_v1_9_7 import OtaAirLowFareSearchRsTarget
+from sabre.models.bargain_finder_max_common_types_v1_9_7 import OtaPayloadStdAttributesTarget
 from sabre.models.bargain_finder_max_rs_v1_9_7 import OneWayProcessingMessageType
 from sabre.models.bargain_finder_max_rs_v1_9_7 import OperatingAirlineType
 from sabre.models.bargain_finder_max_rq_v1_9_7 import OptionsPerDatePairType

@@ -66,6 +66,7 @@ from travelport.models.common_v48_0.common import DirectPayment
 from travelport.models.common_v48_0.common import DiscountCard
 from travelport.models.common_v48_0.common import DiscountCardRef
 from travelport.models.common_v48_0.common import Distance
+from travelport.models.common_v48_0.common import DistanceUnits
 from travelport.models.common_v48_0.common import DriversLicense
 from travelport.models.common_v48_0.common import DriversLicenseRef
 from travelport.models.common_v48_0.common import Email
@@ -161,6 +162,8 @@ from travelport.models.common_v48_0.common import Ssrinfo
 from travelport.models.common_v48_0.common import SearchEvent
 from travelport.models.common_v48_0.common import SearchPassenger
 from travelport.models.common_v48_0.common import SearchTicketing
+from travelport.models.common_v48_0.common import SearchTicketingReservationStatus
+from travelport.models.common_v48_0.common import SearchTicketingTicketStatus
 from travelport.models.common_v48_0.common import SeatAssignment
 from travelport.models.common_v48_0.common import SeatAttribute
 from travelport.models.common_v48_0.common import SeatAttributes

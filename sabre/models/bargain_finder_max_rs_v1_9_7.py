@@ -789,6 +789,15 @@ class OcfeeType:
     )
 
 
+class OtaAirLowFareSearchRsTarget(Enum):
+    """
+    :cvar TEST:
+    :cvar PRODUCTION:
+    """
+    TEST = "Test"
+    PRODUCTION = "Production"
+
+
 class PollingStatusType(Enum):
     """
     :cvar RECEIVED:
@@ -5834,8 +5843,8 @@ class OtaAirLowFareSearchRs:
             type="Attribute"
         )
     )
-    target: Optional["OtaAirLowFareSearchRs.Target"] = field(
-        default=None,
+    target: OtaAirLowFareSearchRsTarget = field(
+        default=OtaAirLowFareSearchRsTarget.PRODUCTION,
         metadata=dict(
             name="Target",
             type="Attribute"
@@ -6669,14 +6678,6 @@ class OtaAirLowFareSearchRs:
                         required=True
                     )
                 )
-
-    class Target(Enum):
-        """
-        :cvar TEST:
-        :cvar PRODUCTION:
-        """
-        TEST = "Test"
-        PRODUCTION = "Production"
 
     class TransactionStatusCode(Enum):
         """

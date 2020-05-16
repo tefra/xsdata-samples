@@ -344,6 +344,7 @@ from travelport.models.air_v48_0.air import RailCoachDetails
 from travelport.models.air_v48_0.air import RefundFailureInfo
 from travelport.models.air_v48_0.air import RelatedTraveler
 from travelport.models.air_v48_0.air import RepricingModifiers
+from travelport.models.air_v48_0.air import RepricingModifiersFlightType
 from travelport.models.air_v48_0.air import Restriction
 from travelport.models.air_v48_0.air_req_rsp import RetrieveLowFareSearchReq
 from travelport.models.air_v48_0.air_req_rsp import RetrieveLowFareSearchRsp

@@ -4262,6 +4262,19 @@ class RailCoachDetails:
     )
 
 
+class RepricingModifiersFlightType(Enum):
+    """
+    :cvar DIRECT:
+    :cvar NON_STOP:
+    :cvar SINGLE_CONNECTION:
+    :cvar NO_RESTRICTIONS:
+    """
+    DIRECT = "Direct"
+    NON_STOP = "NonStop"
+    SINGLE_CONNECTION = "SingleConnection"
+    NO_RESTRICTIONS = "NoRestrictions"
+
+
 @dataclass
 class Restriction:
     """Fare Reference associated with the BookingRules.
@@ -15629,8 +15642,8 @@ class RepricingModifiers:
             max_inclusive=12.0
         )
     )
-    flight_type: Optional["RepricingModifiers.FlightType"] = field(
-        default=None,
+    flight_type: RepricingModifiersFlightType = field(
+        default=RepricingModifiersFlightType.DIRECT,
         metadata=dict(
             name="FlightType",
             type="Attribute"
@@ -15675,18 +15688,6 @@ class RepricingModifiers:
                 length=2
             )
         )
-
-    class FlightType(Enum):
-        """
-        :cvar DIRECT:
-        :cvar NON_STOP:
-        :cvar SINGLE_CONNECTION:
-        :cvar NO_RESTRICTIONS:
-        """
-        DIRECT = "Direct"
-        NON_STOP = "NonStop"
-        SINGLE_CONNECTION = "SingleConnection"
-        NO_RESTRICTIONS = "NoRestrictions"
 
 
 @dataclass
