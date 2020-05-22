@@ -11,6 +11,10 @@ jobs:
       env: TOXENV=sabre
     - python: 3.7
       env: TOXENV=bnm
+    - python: 3.7
+      env: TOXENV=common-types
+
+
 
 before_install:
   - pip install --upgrade pip

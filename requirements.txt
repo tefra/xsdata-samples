@@ -1,4 +1,5 @@
 tox
+mypy
 pytest
 pre-commit
 requests
