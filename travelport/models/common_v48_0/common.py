@@ -410,27 +410,6 @@ class AirSearchParameters:
 
 
 @dataclass
-class Airport:
-    """Airport identifier.
-
-    :ivar code:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            length=3,
-            white_space="collapse"
-        )
-    )
-
-
-@dataclass
 class Auxdata:
     """
     :ivar entry:
@@ -886,57 +865,6 @@ class Check:
 
 
 @dataclass
-class City:
-    """City identifier.
-
-    :ivar code:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            length=3,
-            white_space="collapse"
-        )
-    )
-
-
-@dataclass
-class CityOrAirport:
-    """This element can be used when it is not known whether the value is an
-    airport or a city code.
-
-    :ivar code: The airport or city IATA code.
-    :ivar prefer_city: Indicates that the search should prefer city results over airport results.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            length=3,
-            white_space="collapse"
-        )
-    )
-    prefer_city: bool = field(
-        default=False,
-        metadata=dict(
-            name="PreferCity",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
 class ContinuityCheckOverride:
     """
     :ivar value:
@@ -957,32 +885,6 @@ class ContinuityCheckOverride:
         metadata=dict(
             name="Key",
             type="Attribute"
-        )
-    )
-
-
-@dataclass
-class CoordinateLocation:
-    """Specific lat/long location, usually associated with a Distance.
-
-    :ivar latitude:
-    :ivar longitude:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    latitude: Optional[Decimal] = field(
-        default=None,
-        metadata=dict(
-            type="Attribute",
-            required=True
-        )
-    )
-    longitude: Optional[Decimal] = field(
-        default=None,
-        metadata=dict(
-            type="Attribute",
-            required=True
         )
     )
 
@@ -2542,29 +2444,6 @@ class QueueSelector:
         metadata=dict(
             name="DateRange",
             type="Attribute"
-        )
-    )
-
-
-@dataclass
-class RailLocation:
-    """RCH specific location code (a.k.a UCodes) which uniquely identifies a train
-    station.
-
-    :ivar code:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            min_length=3.0,
-            max_length=8.0,
-            white_space="collapse"
         )
     )
 
@@ -5499,6 +5378,27 @@ class AgencyPayment(TypeAgencyPayment):
 
 
 @dataclass
+class Airport(Location):
+    """Airport identifier.
+
+    :ivar code:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Code",
+            type="Attribute",
+            required=True,
+            length=3,
+            white_space="collapse"
+        )
+    )
+
+
+@dataclass
 class AppliedProfile:
     """A simple container to specify the profiles that were applied to a
     reservation.
@@ -5700,6 +5600,57 @@ class CardRestriction:
             name="Name",
             type="Attribute",
             required=True
+        )
+    )
+
+
+@dataclass
+class City(Location):
+    """City identifier.
+
+    :ivar code:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Code",
+            type="Attribute",
+            required=True,
+            length=3,
+            white_space="collapse"
+        )
+    )
+
+
+@dataclass
+class CityOrAirport(Location):
+    """This element can be used when it is not known whether the value is an
+    airport or a city code.
+
+    :ivar code: The airport or city IATA code.
+    :ivar prefer_city: Indicates that the search should prefer city results over airport results.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Code",
+            type="Attribute",
+            required=True,
+            length=3,
+            white_space="collapse"
+        )
+    )
+    prefer_city: bool = field(
+        default=False,
+        metadata=dict(
+            name="PreferCity",
+            type="Attribute"
         )
     )
 
@@ -5997,6 +5948,32 @@ class ConsolidatorRemark:
         metadata=dict(
             name="KeyOverride",
             type="Attribute"
+        )
+    )
+
+
+@dataclass
+class CoordinateLocation(Location):
+    """Specific lat/long location, usually associated with a Distance.
+
+    :ivar latitude:
+    :ivar longitude:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    latitude: Optional[Decimal] = field(
+        default=None,
+        metadata=dict(
+            type="Attribute",
+            required=True
+        )
+    )
+    longitude: Optional[Decimal] = field(
+        default=None,
+        metadata=dict(
+            type="Attribute",
+            required=True
         )
     )
 
@@ -7376,6 +7353,29 @@ class QueuePlace:
             type="Element",
             min_occurs=0,
             max_occurs=999
+        )
+    )
+
+
+@dataclass
+class RailLocation(Location):
+    """RCH specific location code (a.k.a UCodes) which uniquely identifies a train
+    station.
+
+    :ivar code:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Code",
+            type="Attribute",
+            required=True,
+            min_length=3.0,
+            max_length=8.0,
+            white_space="collapse"
         )
     )
 
@@ -8822,42 +8822,6 @@ class TypeKeyword:
 
 
 @dataclass
-class TypeLocation:
-    """
-    :ivar airport:
-    :ivar city:
-    :ivar city_or_airport:
-    """
-    class Meta:
-        name = "typeLocation"
-
-    airport: Optional[Airport] = field(
-        default=None,
-        metadata=dict(
-            name="Airport",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
-    )
-    city: Optional[City] = field(
-        default=None,
-        metadata=dict(
-            name="City",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
-    )
-    city_or_airport: Optional[CityOrAirport] = field(
-        default=None,
-        metadata=dict(
-            name="CityOrAirport",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
-    )
-
-
-@dataclass
 class TypeOtakeyword:
     """A complexType for keyword information.
 
@@ -9801,13 +9765,6 @@ class AirExchangeInfo:
 @dataclass
 class AirSeatAssignment(SeatAssignment):
     """Identifies the seat assignment for a passenger."""
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-
-@dataclass
-class ConnectionPoint(TypeLocation):
-    """A connection point can be eith an IATA airport or cir city code."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -10917,6 +10874,42 @@ class TypeFlexibleTimeSpec(TypeTimeSpec):
 
 
 @dataclass
+class TypeLocation:
+    """
+    :ivar airport:
+    :ivar city:
+    :ivar city_or_airport:
+    """
+    class Meta:
+        name = "typeLocation"
+
+    airport: Optional[Airport] = field(
+        default=None,
+        metadata=dict(
+            name="Airport",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
+        )
+    )
+    city: Optional[City] = field(
+        default=None,
+        metadata=dict(
+            name="City",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
+        )
+    )
+    city_or_airport: Optional[CityOrAirport] = field(
+        default=None,
+        metadata=dict(
+            name="CityOrAirport",
+            type="Element",
+            namespace="http://www.travelport.com/schema/common_v48_0"
+        )
+    )
+
+
+@dataclass
 class TypePaymentCard:
     """Container for all credit and debit card information.
 
@@ -11616,6 +11609,13 @@ class BookingTravelerInfo:
             max_length=2.0
         )
     )
+
+
+@dataclass
+class ConnectionPoint(TypeLocation):
+    """A connection point can be eith an IATA airport or cir city code."""
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
 
 
 @dataclass

@@ -18,7 +18,6 @@ from common_types.models.coreschemas.datatypes_base import (
 )
 from common_types.models.coreschemas.voc import (
     CalendarCycleOneLetter,
-    NullFlavor,
     ProbabilityDistributionType,
     SetOperator,
 )
@@ -473,10 +472,8 @@ class RtoMoPq(Qty):
 
 
 @dataclass
-class RtoPqPq:
+class RtoPqPq(Qty):
     """
-    :ivar null_flavor: An exceptional value expressing missing information
-                   and possibly the reason why the information is missing.
     :ivar numerator: The quantity that is being divided in the ratio.  The
                             default is the integer number 1 (one).
     :ivar denominator: The quantity that devides the numerator in the ratio.
@@ -486,13 +483,6 @@ class RtoPqPq:
     class Meta:
         name = "RTO_PQ_PQ"
 
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
-    )
     numerator: Optional[Pq] = field(
         default=None,
         metadata=dict(

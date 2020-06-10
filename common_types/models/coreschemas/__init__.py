@@ -179,6 +179,7 @@ from common_types.models.coreschemas.voc import AudioMediaType
 from common_types.models.coreschemas.voc import AudiologistProviderCodes
 from common_types.models.coreschemas.voc import AuthorizationIssueManagementCode
 from common_types.models.coreschemas.voc import AutomobileInsurancePolicy
+from common_types.models.coreschemas.datatypes_base import Bin
 from common_types.models.coreschemas.datatypes_base import Bl
 from common_types.models.coreschemas.datatypes_base import Bn
 from common_types.models.coreschemas.datatypes import BxitCd
@@ -1283,6 +1284,7 @@ from common_types.models.coreschemas.voc import TranstympanicRoute
 from common_types.models.coreschemas.voc import TribalEntityUs
 from common_types.models.coreschemas.voc import Tsamosan
 from common_types.models.coreschemas.voc import Tsimshianic
+from common_types.models.coreschemas.datatypes_base import Url
 from common_types.models.coreschemas.voc import Urlscheme
 from common_types.models.coreschemas.datatypes import UvpTs
 from common_types.models.coreschemas.voc import UnderwriterParticipationFunction

@@ -2486,189 +2486,6 @@ class RailSegmentList:
 
 
 @dataclass
-class RailExchangeSolution:
-    """Contains the fares and segments for a particular offer.
-
-    :ivar rail_journey:
-    :ivar rail_journey_ref:
-    :ivar rail_pricing_info:
-    :ivar key:
-    :ivar offer_id: OfferID must be included if the RailCreateReq contains a price.  If the RailCreateReq is used for the Direct Book function, the OfferID is not included.
-    :ivar total_price: The total price for this entity including base price and all taxes.
-    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
-    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
-    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
-    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
-    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
-    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
-    :ivar services: The total cost for all optional services.
-    :ivar approximate_taxes: The Converted tax amount in Default Currency.
-    :ivar approximate_fees: The Converted fee amount in Default Currency.
-    :ivar provider_code:
-    :ivar supplier_code:
-    :ivar host_token_ref: HostTokenRef will reference the value in HostTokenList/HostToken @ Key
-    :ivar reference: Offer Reference required for Booking(eg.TL).
-    :ivar rail_exchange_info:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/rail_v48_0"
-
-    rail_journey: List[RailJourney] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailJourney",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    rail_journey_ref: List[RailJourneyRef] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailJourneyRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    rail_pricing_info: List[RailPricingInfo] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailPricingInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
-    )
-    offer_id: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="OfferId",
-            type="Attribute"
-        )
-    )
-    total_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TotalPrice",
-            type="Attribute"
-        )
-    )
-    base_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BasePrice",
-            type="Attribute"
-        )
-    )
-    approximate_total_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApproximateTotalPrice",
-            type="Attribute"
-        )
-    )
-    approximate_base_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApproximateBasePrice",
-            type="Attribute"
-        )
-    )
-    equivalent_base_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="EquivalentBasePrice",
-            type="Attribute"
-        )
-    )
-    taxes: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Taxes",
-            type="Attribute"
-        )
-    )
-    fees: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Fees",
-            type="Attribute"
-        )
-    )
-    services: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Services",
-            type="Attribute"
-        )
-    )
-    approximate_taxes: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApproximateTaxes",
-            type="Attribute"
-        )
-    )
-    approximate_fees: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApproximateFees",
-            type="Attribute"
-        )
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            required=True,
-            min_length=2.0,
-            max_length=5.0
-        )
-    )
-    supplier_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            required=True,
-            min_length=1.0,
-            max_length=5.0
-        )
-    )
-    host_token_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="HostTokenRef",
-            type="Attribute"
-        )
-    )
-    reference: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Reference",
-            type="Attribute"
-        )
-    )
-    rail_exchange_info: Optional[RailExchangeInfo] = field(
-        default=None,
-        metadata=dict(
-            name="RailExchangeInfo",
-            type="Element"
-        )
-    )
-
-
-@dataclass
 class RailJourneyList:
     """List of Rail Journeys.
 
@@ -2684,181 +2501,6 @@ class RailJourneyList:
             type="Element",
             min_occurs=0,
             max_occurs=999
-        )
-    )
-
-
-@dataclass
-class RailPricingSolution:
-    """Contains the fares and segments for a particular offer.
-
-    :ivar rail_journey:
-    :ivar rail_journey_ref:
-    :ivar rail_pricing_info:
-    :ivar key:
-    :ivar offer_id: OfferID must be included if the RailCreateReq contains a price.  If the RailCreateReq is used for the Direct Book function, the OfferID is not included.
-    :ivar total_price: The total price for this entity including base price and all taxes.
-    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
-    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
-    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
-    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
-    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
-    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
-    :ivar services: The total cost for all optional services.
-    :ivar approximate_taxes: The Converted tax amount in Default Currency.
-    :ivar approximate_fees: The Converted fee amount in Default Currency.
-    :ivar provider_code:
-    :ivar supplier_code:
-    :ivar host_token_ref: HostTokenRef will reference the value in HostTokenList/HostToken @ Key
-    :ivar reference: Offer Reference required for Booking(eg.TL).
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/rail_v48_0"
-
-    rail_journey: List[RailJourney] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailJourney",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    rail_journey_ref: List[RailJourneyRef] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailJourneyRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    rail_pricing_info: List[RailPricingInfo] = field(
-        default_factory=list,
-        metadata=dict(
-            name="RailPricingInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
-    )
-    offer_id: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="OfferId",
-            type="Attribute"
-        )
-    )
-    total_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TotalPrice",
-            type="Attribute"
-        )
-    )
-    base_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="BasePrice",
-            type="Attribute"
-        )
-    )
-    approximate_total_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApproximateTotalPrice",
-            type="Attribute"
-        )
-    )
-    approximate_base_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApproximateBasePrice",
-            type="Attribute"
-        )
-    )
-    equivalent_base_price: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="EquivalentBasePrice",
-            type="Attribute"
-        )
-    )
-    taxes: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Taxes",
-            type="Attribute"
-        )
-    )
-    fees: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Fees",
-            type="Attribute"
-        )
-    )
-    services: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Services",
-            type="Attribute"
-        )
-    )
-    approximate_taxes: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApproximateTaxes",
-            type="Attribute"
-        )
-    )
-    approximate_fees: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ApproximateFees",
-            type="Attribute"
-        )
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            required=True,
-            min_length=2.0,
-            max_length=5.0
-        )
-    )
-    supplier_code: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            required=True,
-            min_length=1.0,
-            max_length=5.0
-        )
-    )
-    host_token_ref: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="HostTokenRef",
-            type="Attribute"
-        )
-    )
-    reference: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Reference",
-            type="Attribute"
         )
     )
 
@@ -3017,6 +2659,209 @@ class SearchRailLeg:
             type="Element"
         )
     )
+
+
+@dataclass
+class TypeRailPricingSolution:
+    """Common RailPricingSolution container.
+
+    :ivar rail_journey:
+    :ivar rail_journey_ref:
+    :ivar rail_pricing_info:
+    :ivar key:
+    :ivar offer_id: OfferID must be included if the RailCreateReq contains a price.  If the RailCreateReq is used for the Direct Book function, the OfferID is not included.
+    :ivar total_price: The total price for this entity including base price and all taxes.
+    :ivar base_price: Represents the base price for this entity. This does not include any taxes or surcharges.
+    :ivar approximate_total_price: The Converted total price in Default Currency for this entity including base price and all taxes.
+    :ivar approximate_base_price: The Converted base price in Default Currency for this entity. This does not include any taxes or surcharges.
+    :ivar equivalent_base_price: Represents the base price in the related currency for this entity. This does not include any taxes or surcharges.
+    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated TaxInfo array for a breakdown of the individual taxes.
+    :ivar fees: The aggregated amount of all the fees that are associated with this entity. See the associated FeeInfo array for a breakdown of the individual fees.
+    :ivar services: The total cost for all optional services.
+    :ivar approximate_taxes: The Converted tax amount in Default Currency.
+    :ivar approximate_fees: The Converted fee amount in Default Currency.
+    :ivar provider_code:
+    :ivar supplier_code:
+    :ivar host_token_ref: HostTokenRef will reference the value in HostTokenList/HostToken @ Key
+    :ivar reference: Offer Reference required for Booking(eg.TL).
+    """
+    class Meta:
+        name = "typeRailPricingSolution"
+
+    rail_journey: List[RailJourney] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailJourney",
+            type="Element",
+            namespace="http://www.travelport.com/schema/rail_v48_0",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    rail_journey_ref: List[RailJourneyRef] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailJourneyRef",
+            type="Element",
+            namespace="http://www.travelport.com/schema/rail_v48_0",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    rail_pricing_info: List[RailPricingInfo] = field(
+        default_factory=list,
+        metadata=dict(
+            name="RailPricingInfo",
+            type="Element",
+            namespace="http://www.travelport.com/schema/rail_v48_0",
+            min_occurs=0,
+            max_occurs=999
+        )
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Key",
+            type="Attribute",
+            required=True
+        )
+    )
+    offer_id: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="OfferId",
+            type="Attribute"
+        )
+    )
+    total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TotalPrice",
+            type="Attribute"
+        )
+    )
+    base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="BasePrice",
+            type="Attribute"
+        )
+    )
+    approximate_total_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTotalPrice",
+            type="Attribute"
+        )
+    )
+    approximate_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateBasePrice",
+            type="Attribute"
+        )
+    )
+    equivalent_base_price: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EquivalentBasePrice",
+            type="Attribute"
+        )
+    )
+    taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Taxes",
+            type="Attribute"
+        )
+    )
+    fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Fees",
+            type="Attribute"
+        )
+    )
+    services: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Services",
+            type="Attribute"
+        )
+    )
+    approximate_taxes: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateTaxes",
+            type="Attribute"
+        )
+    )
+    approximate_fees: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ApproximateFees",
+            type="Attribute"
+        )
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="ProviderCode",
+            type="Attribute",
+            required=True,
+            min_length=2.0,
+            max_length=5.0
+        )
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="SupplierCode",
+            type="Attribute",
+            required=True,
+            min_length=1.0,
+            max_length=5.0
+        )
+    )
+    host_token_ref: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="HostTokenRef",
+            type="Attribute"
+        )
+    )
+    reference: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Reference",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
+class RailExchangeSolution(TypeRailPricingSolution):
+    """Contains the fares and segments for a particular offer.
+
+    :ivar rail_exchange_info:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/rail_v48_0"
+
+    rail_exchange_info: Optional[RailExchangeInfo] = field(
+        default=None,
+        metadata=dict(
+            name="RailExchangeInfo",
+            type="Element"
+        )
+    )
+
+
+@dataclass
+class RailPricingSolution(TypeRailPricingSolution):
+    """Contains the fares and segments for a particular offer."""
+    class Meta:
+        namespace = "http://www.travelport.com/schema/rail_v48_0"
 
 
 @dataclass

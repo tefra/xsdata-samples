@@ -41,6 +41,7 @@ from sabre.models.bargain_finder_max_rs_v1_9_7 import CurrencyAmountType
 from sabre.models.bargain_finder_max_rs_v1_9_7 import CurrencyConversionsType
 from sabre.models.bargain_finder_max_rq_v1_9_7 import CustLoyaltyType
 from sabre.models.bargain_finder_max_rq_v1_9_7 import DateRangeType
+from sabre.models.bargain_finder_max_rq_v1_9_7 import DateTimeType
 from sabre.models.bargain_finder_max_rq_v1_9_7 import DepartureDaysType
 from sabre.models.bargain_finder_max_common_types_v1_9_7 import DepartureOrArrival
 from sabre.models.bargain_finder_max_rq_v1_9_7 import DiversityControlType

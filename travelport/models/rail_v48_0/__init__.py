@@ -43,6 +43,7 @@ from travelport.models.rail_v48_0.rail import TicketAdvisory
 from travelport.models.rail_v48_0.rail import TypeCoachClassType
 from travelport.models.rail_v48_0.rail import TypeJourneyDirection
 from travelport.models.rail_v48_0.rail import TypeRailDirection
+from travelport.models.rail_v48_0.rail import TypeRailPricingSolution
 from travelport.models.rail_v48_0.rail import TypeRailSegmentInfo
 from travelport.models.rail_v48_0.rail import TypeRailTicketStatus
 from travelport.models.rail_v48_0.rail import TypeResponseType

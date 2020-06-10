@@ -462,6 +462,70 @@ class DateRangeType:
 
 
 @dataclass
+class DateTimeType:
+    """
+    :ivar time_window_start: Allowed amount of time before specified time.
+    :ivar time_window_end: Allowed amount of time after specified time.
+    :ivar time_tolerance: Maximum time difference between actual and desired time.
+    :ivar date_flexibility: The number of alternate days around the travel date to search.
+    :ivar max_options_per_date: Number of options for requested date.
+    :ivar connection_time_min: Minimal amount of time between flights
+    :ivar connection_time_max: Maximal amount of time between flights
+    """
+    time_window_start: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TimeWindowStart",
+            type="Attribute",
+            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
+        )
+    )
+    time_window_end: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="TimeWindowEnd",
+            type="Attribute",
+            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
+        )
+    )
+    time_tolerance: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="TimeTolerance",
+            type="Attribute"
+        )
+    )
+    date_flexibility: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="DateFlexibility",
+            type="Attribute"
+        )
+    )
+    max_options_per_date: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="MaxOptionsPerDate",
+            type="Attribute"
+        )
+    )
+    connection_time_min: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="ConnectionTimeMin",
+            type="Attribute"
+        )
+    )
+    connection_time_max: Optional[int] = field(
+        default=None,
+        metadata=dict(
+            name="ConnectionTimeMax",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class DepartureDaysType:
     """Specify which days of week  to consider for departure.
 
@@ -1036,80 +1100,6 @@ class FlightTypeType(Enum):
 
 
 @dataclass
-class GlobalDateTimeType:
-    """
-    :ivar time_window_start: Allowed amount of time before specified time.
-    :ivar time_window_end: Allowed amount of time after specified time.
-    :ivar time_tolerance: Maximum time difference between actual and desired time.
-    :ivar date_flexibility: The number of alternate days around the travel date to search.
-    :ivar max_options_per_date: Number of options for requested date.
-    :ivar connection_time_min: Minimal amount of time between flights
-    :ivar connection_time_max: Maximal amount of time between flights
-    :ivar date_time: This date should be of the form YYYY-MM-DDTHH:MM:SS.
-    """
-    time_window_start: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TimeWindowStart",
-            type="Attribute",
-            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
-        )
-    )
-    time_window_end: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TimeWindowEnd",
-            type="Attribute",
-            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
-        )
-    )
-    time_tolerance: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="TimeTolerance",
-            type="Attribute"
-        )
-    )
-    date_flexibility: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="DateFlexibility",
-            type="Attribute"
-        )
-    )
-    max_options_per_date: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="MaxOptionsPerDate",
-            type="Attribute"
-        )
-    )
-    connection_time_min: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="ConnectionTimeMin",
-            type="Attribute"
-        )
-    )
-    connection_time_max: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="ConnectionTimeMax",
-            type="Attribute"
-        )
-    )
-    date_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DateTime",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"
-        )
-    )
-
-
-@dataclass
 class GoverningCarrierOverrideType:
     """
     :ivar airline_code: Airline Carrier Code - override the GOVERNING CARRIER to get the fare filed by that carrier.
@@ -1301,79 +1291,6 @@ class OptionsPerDatePairType:
             name="Max",
             type="Attribute",
             required=True
-        )
-    )
-
-
-@dataclass
-class OverrideDateTimeType:
-    """
-    :ivar time_window_start: Allowed amount of time before specified time.
-    :ivar time_window_end: Allowed amount of time after specified time.
-    :ivar time_tolerance: Maximum time difference between actual and desired time.
-    :ivar date_flexibility: The number of alternate days around the travel date to search.
-    :ivar max_options_per_date: Number of options for requested date.
-    :ivar connection_time_min: Minimal amount of time between flights
-    :ivar connection_time_max: Maximal amount of time between flights
-    :ivar date_time: This date should be of the form YYYY-MM-DDTHH:MM:SS.
-    """
-    time_window_start: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TimeWindowStart",
-            type="Attribute",
-            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
-        )
-    )
-    time_window_end: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="TimeWindowEnd",
-            type="Attribute",
-            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
-        )
-    )
-    time_tolerance: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="TimeTolerance",
-            type="Attribute"
-        )
-    )
-    date_flexibility: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="DateFlexibility",
-            type="Attribute"
-        )
-    )
-    max_options_per_date: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="MaxOptionsPerDate",
-            type="Attribute"
-        )
-    )
-    connection_time_min: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="ConnectionTimeMin",
-            type="Attribute"
-        )
-    )
-    connection_time_max: Optional[int] = field(
-        default=None,
-        metadata=dict(
-            name="ConnectionTimeMax",
-            type="Attribute"
-        )
-    )
-    date_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="DateTime",
-            type="Attribute",
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"
         )
     )
 
@@ -3917,6 +3834,22 @@ class FlightTypePrefType:
 
 
 @dataclass
+class GlobalDateTimeType(DateTimeType):
+    """
+    :ivar date_time: This date should be of the form YYYY-MM-DDTHH:MM:SS.
+    """
+    date_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DateTime",
+            type="Attribute",
+            required=True,
+            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"
+        )
+    )
+
+
+@dataclass
 class InterlineBrandsType:
     """
     :ivar brand: Brand list to be returned
@@ -4104,6 +4037,21 @@ class OriginDestinationFlightType:
         metadata=dict(
             name="Shopped",
             type="Attribute"
+        )
+    )
+
+
+@dataclass
+class OverrideDateTimeType(DateTimeType):
+    """
+    :ivar date_time: This date should be of the form YYYY-MM-DDTHH:MM:SS.
+    """
+    date_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="DateTime",
+            type="Attribute",
+            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"
         )
     )
 
