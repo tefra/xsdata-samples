@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Any,
     Cd,
     Ce,
@@ -14,7 +14,7 @@ from models.coreschemas.datatypes_base import (
     St,
     TsExplicit,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActClassObservation,
     ActClassSupply,
@@ -47,10 +47,10 @@ from models.coreschemas.voc import (
     XRoleClassCredentialedEntity,
     XRoleClassPayeePolicyRelationship,
 )
-from models.multicacheschemas.coct_mt240000_uv01 import (
+from common_types.models.multicacheschemas.coct_mt240000_uv01 import (
     CoctMt240000Uv01ServiceDeliveryLocation,
 )
-from models.multicacheschemas.coct_mt240003_uv02 import (
+from common_types.models.multicacheschemas.coct_mt240003_uv02 import (
     CoctMt240003Uv02ServiceDeliveryLocation,
 )
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from models.multicacheschemas.mcci_mt000200_uv01 import (
+from common_types.models.multicacheschemas.mcci_mt000200_uv01 import (
     McciMt000200Uv01Message,
 )
 

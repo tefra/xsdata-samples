@@ -1,19 +1,19 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     AdExplicit,
     Ce,
     Cs,
     Ii,
     TelExplicit,
 )
-from models.multicacheschemas.coct_mt030203_uv02 import (
+from common_types.models.multicacheschemas.coct_mt030203_uv02 import (
     CoctMt030203Uv02Person,
 )
-from models.multicacheschemas.coct_mt150003_uv03 import (
+from common_types.models.multicacheschemas.coct_mt150003_uv03 import (
     CoctMt150003Uv03Organization,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     NullFlavor,
     RoleClassContact,
 )

@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClassCareProvision,
     ActMood,
     ActRelationshipConditional,
@@ -31,7 +31,7 @@ from models.coreschemas.voc import (
     XActReplaceOrRevise,
     XSuccReplPrev,
 )
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Cd,
     Ce,
     Cs,
@@ -42,28 +42,28 @@ from models.coreschemas.datatypes_base import (
     St,
     TsExplicit,
 )
-from models.multicacheschemas.coct_mt010000_uv01 import (
+from common_types.models.multicacheschemas.coct_mt010000_uv01 import (
     CoctMt010000Uv01Encounter,
 )
-from models.multicacheschemas.coct_mt040200_uv01 import (
+from common_types.models.multicacheschemas.coct_mt040200_uv01 import (
     CoctMt040200Uv01ResponsibleParty,
 )
-from models.multicacheschemas.coct_mt050000_uv01 import (
+from common_types.models.multicacheschemas.coct_mt050000_uv01 import (
     CoctMt050000Uv01Patient,
 )
-from models.multicacheschemas.coct_mt090100_uv01 import (
+from common_types.models.multicacheschemas.coct_mt090100_uv01 import (
     CoctMt090100Uv01AssignedPerson,
 )
-from models.multicacheschemas.coct_mt090400_uv import (
+from common_types.models.multicacheschemas.coct_mt090400_uv import (
     CoctMt090400UvAssignedParty,
 )
-from models.multicacheschemas.coct_mt910000_uv import (
+from common_types.models.multicacheschemas.coct_mt910000_uv import (
     CoctMt910000UvCareGiver,
     CoctMt910000UvEmployee,
     CoctMt910000UvPersonalRelationship,
     CoctMt910000UvStudent,
 )
-from models.multicacheschemas.repc_mt000100_uv01 import (
+from common_types.models.multicacheschemas.repc_mt000100_uv01 import (
     RepcMt000100Uv01Act,
     RepcMt000100Uv01ActReference,
     RepcMt000100Uv01Encounter,
@@ -73,17 +73,17 @@ from models.multicacheschemas.repc_mt000100_uv01 import (
     RepcMt000100Uv01SubstanceAdministration,
     RepcMt000100Uv01Supply,
 )
-from models.multicacheschemas.repc_mt000200_uv import (
+from common_types.models.multicacheschemas.repc_mt000200_uv import (
     RepcMt000200UvCarePlan,
 )
-from models.multicacheschemas.repc_mt000301_uv import (
+from common_types.models.multicacheschemas.repc_mt000301_uv import (
     RepcMt000301UvConditionEvent,
 )
-from models.multicacheschemas.repc_mt000400_uv01 import (
+from common_types.models.multicacheschemas.repc_mt000400_uv01 import (
     RepcMt000400Uv01ActCategory,
     RepcMt000400Uv01ActList,
 )
-from models.multicacheschemas.repc_mt000700_uv01 import (
+from common_types.models.multicacheschemas.repc_mt000700_uv01 import (
     RepcMt000700Uv01MaintainedEntity,
 )
 

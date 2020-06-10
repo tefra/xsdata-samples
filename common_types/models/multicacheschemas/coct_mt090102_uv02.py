@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     AdExplicit,
     Ce,
     Cs,
     EnExplicit,
     Ii,
 )
-from models.multicacheschemas.coct_mt150002_uv01 import (
+from common_types.models.multicacheschemas.coct_mt150002_uv01 import (
     CoctMt150002Uv01Organization,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     EntityClass,
     EntityDeterminer,
     NullFlavor,

@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClassObservation,
     ActMood,
     ContextControl,
     NullFlavor,
     ParticipationType,
 )
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Cd,
     Ce,
     Cs,
     Ii,
     IvlTsExplicit,
 )
-from models.multicacheschemas.coct_mt090001_uv01 import (
+from common_types.models.multicacheschemas.coct_mt090001_uv01 import (
     CoctMt090001Uv01AssignedEntity,
 )
 

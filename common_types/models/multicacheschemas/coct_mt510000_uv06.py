@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     AdExplicit,
     Cd,
     Ce,
@@ -18,7 +18,7 @@ from models.coreschemas.datatypes_base import (
     TelExplicit,
     TsExplicit,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActClassCareProvision,
     ActClassObservation,
@@ -66,35 +66,35 @@ from models.coreschemas.voc import (
     XRoleClassPayeePolicyRelationship,
     XSuccReplPrev,
 )
-from models.multicacheschemas.coct_mt030007_uv import (
+from common_types.models.multicacheschemas.coct_mt030007_uv import (
     CoctMt030007UvNonPersonLivingSubject,
     CoctMt030007UvPerson,
 )
-from models.multicacheschemas.coct_mt050000_uv01 import (
+from common_types.models.multicacheschemas.coct_mt050000_uv01 import (
     CoctMt050000Uv01Patient,
 )
-from models.multicacheschemas.coct_mt060000_uv01 import (
+from common_types.models.multicacheschemas.coct_mt060000_uv01 import (
     CoctMt060000Uv01Transportation,
 )
-from models.multicacheschemas.coct_mt150000_uv02 import (
+from common_types.models.multicacheschemas.coct_mt150000_uv02 import (
     CoctMt150000Uv02Organization,
 )
-from models.multicacheschemas.coct_mt280000_uv04 import (
+from common_types.models.multicacheschemas.coct_mt280000_uv04 import (
     CoctMt280000Uv04CrossReference,
 )
-from models.multicacheschemas.coct_mt290000_uv06 import (
+from common_types.models.multicacheschemas.coct_mt290000_uv06 import (
     CoctMt290000Uv06BillableClinicalService,
 )
-from models.multicacheschemas.coct_mt300000_uv04 import (
+from common_types.models.multicacheschemas.coct_mt300000_uv04 import (
     CoctMt300000Uv04SupplyEvent,
 )
-from models.multicacheschemas.coct_mt310000_uv04 import (
+from common_types.models.multicacheschemas.coct_mt310000_uv04 import (
     CoctMt310000Uv04AccomodationSupplied,
 )
-from models.multicacheschemas.coct_mt490000_uv04 import (
+from common_types.models.multicacheschemas.coct_mt490000_uv04 import (
     CoctMt490000Uv04BillableClinicalProduct,
 )
-from models.multicacheschemas.coct_mt530000_uv import (
+from common_types.models.multicacheschemas.coct_mt530000_uv import (
     CoctMt530000UvAct,
     CoctMt530000UvActReference,
     CoctMt530000UvEncounter,
@@ -104,16 +104,16 @@ from models.multicacheschemas.coct_mt530000_uv import (
     CoctMt530000UvSubstanceAdministration,
     CoctMt530000UvSupply,
 )
-from models.multicacheschemas.coct_mt600000_uv06 import (
+from common_types.models.multicacheschemas.coct_mt600000_uv06 import (
     CoctMt600000Uv06SupplyEvent,
 )
-from models.multicacheschemas.coct_mt740000_uv04 import (
+from common_types.models.multicacheschemas.coct_mt740000_uv04 import (
     CoctMt740000Uv04OralHealthService,
 )
-from models.multicacheschemas.coct_mt810000_uv import (
+from common_types.models.multicacheschemas.coct_mt810000_uv import (
     CoctMt810000UvVerification,
 )
-from models.coreschemas.datatypes import (
+from common_types.models.coreschemas.datatypes import (
     RtoMoPq,
     RtoPqPq,
 )

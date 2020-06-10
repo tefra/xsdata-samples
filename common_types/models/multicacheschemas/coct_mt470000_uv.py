@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActMood,
     NullFlavor,
     ParticipationPhysicalPerformer,
     ParticipationType,
 )
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Cd,
     Ce,
     Cs,
@@ -16,10 +16,10 @@ from models.coreschemas.datatypes_base import (
     IvlTsExplicit,
     TsExplicit,
 )
-from models.multicacheschemas.coct_mt040200_uv01 import (
+from common_types.models.multicacheschemas.coct_mt040200_uv01 import (
     CoctMt040200Uv01ResponsibleParty,
 )
-from models.multicacheschemas.coct_mt090000_uv01 import (
+from common_types.models.multicacheschemas.coct_mt090000_uv01 import (
     CoctMt090000Uv01AssignedEntity,
 )
 

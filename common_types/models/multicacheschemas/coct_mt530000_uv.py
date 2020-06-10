@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     AdExplicit,
     Any,
     Bl,
@@ -23,7 +23,7 @@ from models.coreschemas.datatypes_base import (
     TelExplicit,
     TsExplicit,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActClassContainer,
     ActClassControlAct,
@@ -87,22 +87,22 @@ from models.coreschemas.voc import (
     XRoleClassPayeePolicyRelationship,
     XSuccReplPrev,
 )
-from models.multicacheschemas.coct_mt050000_uv01 import (
+from common_types.models.multicacheschemas.coct_mt050000_uv01 import (
     CoctMt050000Uv01Patient,
 )
-from models.multicacheschemas.coct_mt080000_uv import (
+from common_types.models.multicacheschemas.coct_mt080000_uv import (
     CoctMt080000UvSpecimen,
 )
-from models.multicacheschemas.coct_mt090000_uv01 import (
+from common_types.models.multicacheschemas.coct_mt090000_uv01 import (
     CoctMt090000Uv01AssignedEntity,
 )
-from models.multicacheschemas.coct_mt090102_uv02 import (
+from common_types.models.multicacheschemas.coct_mt090102_uv02 import (
     CoctMt090102Uv02AssignedPerson,
 )
-from models.multicacheschemas.coct_mt230100_uv import (
+from common_types.models.multicacheschemas.coct_mt230100_uv import (
     CoctMt230100UvMedication,
 )
-from models.coreschemas.datatypes import (
+from common_types.models.coreschemas.datatypes import (
     IvlInt,
     IvlPq,
     RtoPqPq,

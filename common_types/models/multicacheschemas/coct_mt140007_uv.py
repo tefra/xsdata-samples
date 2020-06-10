@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Ce,
     Cs,
     Ii,
     Sc,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     EntityClassDevice,
     EntityDeterminer,
     NullFlavor,

@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Ce,
     Cs,
     Ii,
     IvlTsExplicit,
 )
-from models.multicacheschemas.coct_mt030207_uv import (
+from common_types.models.multicacheschemas.coct_mt030207_uv import (
     CoctMt030207UvPerson,
 )
-from models.multicacheschemas.coct_mt140007_uv import (
+from common_types.models.multicacheschemas.coct_mt140007_uv import (
     CoctMt140007UvDevice,
 )
-from models.multicacheschemas.coct_mt150007_uv import (
+from common_types.models.multicacheschemas.coct_mt150007_uv import (
     CoctMt150007UvOrganization,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     NullFlavor,
     RoleClassAgent,
 )

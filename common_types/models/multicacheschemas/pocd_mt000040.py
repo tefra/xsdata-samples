@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     AdExplicit,
     Any,
     Bl,
@@ -25,7 +25,7 @@ from models.coreschemas.datatypes_base import (
     Ts,
     TsExplicit,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActClassClinicalDocument,
     ActClassDocument,
@@ -93,15 +93,15 @@ from models.coreschemas.voc import (
     XSuccReplPrev,
     XServiceEventPerformer,
 )
-from models.coreschemas.datatypes import (
+from common_types.models.coreschemas.datatypes import (
     IvlInt,
     IvlPq,
     RtoPqPq,
 )
-from models.coreschemas.narrative_block import (
+from common_types.models.coreschemas.narrative_block import (
     StrucDocText,
 )
-from models.coreschemas.sdtc import (
+from common_types.models.coreschemas.sdtc import (
     BirthTime,
     DeceasedInd,
     DeceasedTime,

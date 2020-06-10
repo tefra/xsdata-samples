@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActRelationshipReason,
     ContextControl,
     NullFlavor,
@@ -9,7 +9,7 @@ from models.coreschemas.voc import (
     XParticipationAuthorPerformer,
     XParticipationVrfRespSprfWit,
 )
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Ce,
     Cs,
     EdExplicit,
@@ -19,13 +19,13 @@ from models.coreschemas.datatypes_base import (
     IvlTsExplicit,
     Sc,
 )
-from models.multicacheschemas.coct_mt090100_uv01 import (
+from common_types.models.multicacheschemas.coct_mt090100_uv01 import (
     CoctMt090100Uv01AssignedPerson,
 )
-from models.multicacheschemas.coct_mt090300_uv01 import (
+from common_types.models.multicacheschemas.coct_mt090300_uv01 import (
     CoctMt090300Uv01AssignedDevice,
 )
-from models.multicacheschemas.mcai_mt900001_uv01 import (
+from common_types.models.multicacheschemas.mcai_mt900001_uv01 import (
     McaiMt900001Uv01DetectedIssueEvent,
 )
 

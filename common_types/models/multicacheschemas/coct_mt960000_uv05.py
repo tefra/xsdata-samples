@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Any,
     Ce,
     Cs,
@@ -10,7 +10,7 @@ from models.coreschemas.datatypes_base import (
     IvlTsExplicit,
     St,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActClassPosition,
     ActMood,
@@ -20,10 +20,10 @@ from models.coreschemas.voc import (
     ParticipationTargetDevice,
     ParticipationType,
 )
-from models.multicacheschemas.coct_mt090108_uv import (
+from common_types.models.multicacheschemas.coct_mt090108_uv import (
     CoctMt090108UvAssignedPerson,
 )
-from models.multicacheschemas.coct_mt090303_uv01 import (
+from common_types.models.multicacheschemas.coct_mt090303_uv01 import (
     CoctMt090303Uv01AssignedDevice,
 )
 

@@ -2,7 +2,7 @@ from decimal import Decimal
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     AddressPartType,
     CompressionAlgorithm,
     EntityNamePartQualifier,

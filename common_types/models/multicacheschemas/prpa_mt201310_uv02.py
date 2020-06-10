@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     AdExplicit,
     Any,
     Bl,
@@ -20,7 +20,7 @@ from models.coreschemas.datatypes_base import (
     TelExplicit,
     TsExplicit,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClassObservation,
     ActMood,
     EntityClass,
@@ -46,35 +46,35 @@ from models.coreschemas.voc import (
     XRoleClassCredentialedEntity,
     XRoleClassPayeePolicyRelationship,
 )
-from models.multicacheschemas.coct_mt030007_uv import (
+from common_types.models.multicacheschemas.coct_mt030007_uv import (
     CoctMt030007UvNonPersonLivingSubject,
     CoctMt030007UvPerson,
 )
-from models.multicacheschemas.coct_mt030207_uv import (
+from common_types.models.multicacheschemas.coct_mt030207_uv import (
     CoctMt030207UvPerson,
 )
-from models.multicacheschemas.coct_mt150002_uv01 import (
+from common_types.models.multicacheschemas.coct_mt150002_uv01 import (
     CoctMt150002Uv01Organization,
 )
-from models.multicacheschemas.coct_mt150003_uv03 import (
+from common_types.models.multicacheschemas.coct_mt150003_uv03 import (
     CoctMt150003Uv03Organization,
 )
-from models.multicacheschemas.coct_mt150007_uv import (
+from common_types.models.multicacheschemas.coct_mt150007_uv import (
     CoctMt150007UvOrganization,
 )
-from models.multicacheschemas.coct_mt510000_uv06 import (
+from common_types.models.multicacheschemas.coct_mt510000_uv06 import (
     CoctMt510000Uv06CoverageRecord,
 )
-from models.multicacheschemas.coct_mt670000_uv04 import (
+from common_types.models.multicacheschemas.coct_mt670000_uv04 import (
     CoctMt670000Uv04GuarantorRole,
 )
-from models.multicacheschemas.coct_mt710007_uv import (
+from common_types.models.multicacheschemas.coct_mt710007_uv import (
     CoctMt710007UvPlace,
 )
-from models.multicacheschemas.coct_mt820000_uv import (
+from common_types.models.multicacheschemas.coct_mt820000_uv import (
     CoctMt820000UvCareProvision,
 )
-from models.multicacheschemas.coct_mt960000_uv05 import (
+from common_types.models.multicacheschemas.coct_mt960000_uv05 import (
     CoctMt960000Uv05Position,
 )
 

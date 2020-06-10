@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Any,
     Bl,
     Cd,
@@ -16,7 +16,7 @@ from models.coreschemas.datatypes_base import (
     Ts,
     TsExplicit,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActClassCareProvision,
     ActClassObservation,
@@ -66,27 +66,27 @@ from models.coreschemas.voc import (
     XRoleClassPayeePolicyRelationship,
     XSuccReplPrev,
 )
-from models.multicacheschemas.coct_mt050000_uv01 import (
+from common_types.models.multicacheschemas.coct_mt050000_uv01 import (
     CoctMt050000Uv01Patient,
 )
-from models.multicacheschemas.coct_mt090000_uv01 import (
+from common_types.models.multicacheschemas.coct_mt090000_uv01 import (
     CoctMt090000Uv01AssignedEntity,
 )
-from models.multicacheschemas.coct_mt090100_uv01 import (
+from common_types.models.multicacheschemas.coct_mt090100_uv01 import (
     CoctMt090100Uv01AssignedPerson,
 )
-from models.multicacheschemas.coct_mt090400_uv import (
+from common_types.models.multicacheschemas.coct_mt090400_uv import (
     CoctMt090400UvAssignedParty,
 )
-from models.multicacheschemas.coct_mt230100_uv import (
+from common_types.models.multicacheschemas.coct_mt230100_uv import (
     CoctMt230100UvMedication,
 )
-from models.coreschemas.datatypes import (
+from common_types.models.coreschemas.datatypes import (
     IvlInt,
     IvlPq,
     RtoPqPq,
 )
-from models.multicacheschemas.repc_mt000100_uv01 import (
+from common_types.models.multicacheschemas.repc_mt000100_uv01 import (
     RepcMt000100Uv01Act,
     RepcMt000100Uv01ActReference,
     RepcMt000100Uv01Encounter,
@@ -96,7 +96,7 @@ from models.multicacheschemas.repc_mt000100_uv01 import (
     RepcMt000100Uv01SubstanceAdministration,
     RepcMt000100Uv01Supply,
 )
-from models.multicacheschemas.repc_mt000300_uv01 import (
+from common_types.models.multicacheschemas.repc_mt000300_uv01 import (
     RepcMt000300Uv01Concern,
 )
 

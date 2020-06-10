@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     AdExplicit,
     Any,
     Cd,
@@ -18,7 +18,7 @@ from models.coreschemas.datatypes_base import (
     TelExplicit,
     TsExplicit,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActClassCondition,
     ActClassControlAct,
@@ -54,22 +54,22 @@ from models.coreschemas.voc import (
     XActReplaceOrRevise,
     XSuccReplPrev,
 )
-from models.multicacheschemas.coct_mt040200_uv01 import (
+from common_types.models.multicacheschemas.coct_mt040200_uv01 import (
     CoctMt040200Uv01ResponsibleParty,
 )
-from models.multicacheschemas.coct_mt050000_uv01 import (
+from common_types.models.multicacheschemas.coct_mt050000_uv01 import (
     CoctMt050000Uv01Patient,
 )
-from models.multicacheschemas.coct_mt090102_uv02 import (
+from common_types.models.multicacheschemas.coct_mt090102_uv02 import (
     CoctMt090102Uv02AssignedPerson,
 )
-from models.multicacheschemas.coct_mt910000_uv import (
+from common_types.models.multicacheschemas.coct_mt910000_uv import (
     CoctMt910000UvCareGiver,
     CoctMt910000UvEmployee,
     CoctMt910000UvPersonalRelationship,
     CoctMt910000UvStudent,
 )
-from models.multicacheschemas.repc_mt000100_uv01 import (
+from common_types.models.multicacheschemas.repc_mt000100_uv01 import (
     RepcMt000100Uv01Act,
     RepcMt000100Uv01ActReference,
     RepcMt000100Uv01Encounter,
@@ -79,7 +79,7 @@ from models.multicacheschemas.repc_mt000100_uv01 import (
     RepcMt000100Uv01SubstanceAdministration,
     RepcMt000100Uv01Supply,
 )
-from models.multicacheschemas.repc_mt000700_uv01 import (
+from common_types.models.multicacheschemas.repc_mt000700_uv01 import (
     RepcMt000700Uv01MaintainedEntity,
 )
 

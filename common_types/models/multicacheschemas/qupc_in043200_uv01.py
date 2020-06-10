@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActClassControlAct,
     ActMood,
@@ -25,7 +25,7 @@ from models.coreschemas.voc import (
     XActReplaceOrRevise,
     XSuccReplPrev,
 )
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Cd,
     Ce,
     Cs,
@@ -35,14 +35,14 @@ from models.coreschemas.datatypes_base import (
     St,
     TsExplicit,
 )
-from models.multicacheschemas.mcci_mt000300_uv01 import (
+from common_types.models.multicacheschemas.mcci_mt000300_uv01 import (
     McciMt000300Uv01Acknowledgement,
     McciMt000300Uv01AttentionLine,
     McciMt000300Uv01Receiver,
     McciMt000300Uv01RespondTo,
     McciMt000300Uv01Sender,
 )
-from models.multicacheschemas.mfmi_mt700712_uv01 import (
+from common_types.models.multicacheschemas.mfmi_mt700712_uv01 import (
     MfmiMt700712Uv01Author2,
     MfmiMt700712Uv01AuthorOrPerformer,
     MfmiMt700712Uv01Custodian,
@@ -55,10 +55,10 @@ from models.multicacheschemas.mfmi_mt700712_uv01 import (
     MfmiMt700712Uv01Reason,
     MfmiMt700712Uv01ReplacementOf,
 )
-from models.multicacheschemas.qupc_mt040300_uv01 import (
+from common_types.models.multicacheschemas.qupc_mt040300_uv01 import (
     QupcMt040300Uv01ParameterList,
 )
-from models.multicacheschemas.repc_mt004000_uv01 import (
+from common_types.models.multicacheschemas.repc_mt004000_uv01 import (
     RepcMt004000Uv01CareProvisionEvent,
 )
 

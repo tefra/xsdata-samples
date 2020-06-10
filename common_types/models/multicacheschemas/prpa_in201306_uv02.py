@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActClassControlAct,
     ActMood,
@@ -26,7 +26,7 @@ from models.coreschemas.voc import (
     XActReplaceOrRevise,
     XSuccReplPrev,
 )
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Cd,
     Ce,
     Cs,
@@ -36,14 +36,14 @@ from models.coreschemas.datatypes_base import (
     St,
     TsExplicit,
 )
-from models.multicacheschemas.mcci_mt000300_uv01 import (
+from common_types.models.multicacheschemas.mcci_mt000300_uv01 import (
     McciMt000300Uv01Acknowledgement,
     McciMt000300Uv01AttentionLine,
     McciMt000300Uv01Receiver,
     McciMt000300Uv01RespondTo,
     McciMt000300Uv01Sender,
 )
-from models.multicacheschemas.mfmi_mt700711_uv01 import (
+from common_types.models.multicacheschemas.mfmi_mt700711_uv01 import (
     MfmiMt700711Uv01Author2,
     MfmiMt700711Uv01AuthorOrPerformer,
     MfmiMt700711Uv01Custodian,
@@ -56,10 +56,10 @@ from models.multicacheschemas.mfmi_mt700711_uv01 import (
     MfmiMt700711Uv01Reason,
     MfmiMt700711Uv01ReplacementOf,
 )
-from models.multicacheschemas.prpa_mt201306_uv02 import (
+from common_types.models.multicacheschemas.prpa_mt201306_uv02 import (
     PrpaMt201306Uv02QueryByParameter,
 )
-from models.multicacheschemas.prpa_mt201310_uv02 import (
+from common_types.models.multicacheschemas.prpa_mt201310_uv02 import (
     PrpaMt201310Uv02Patient,
 )
 

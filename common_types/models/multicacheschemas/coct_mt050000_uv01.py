@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     AdExplicit,
     Ce,
     Cs,
@@ -9,14 +9,14 @@ from models.coreschemas.datatypes_base import (
     IvlTsExplicit,
     TelExplicit,
 )
-from models.multicacheschemas.coct_mt030000_uv04 import (
+from common_types.models.multicacheschemas.coct_mt030000_uv04 import (
     CoctMt030000Uv04NonPersonLivingSubject,
     CoctMt030000Uv04Person,
 )
-from models.multicacheschemas.coct_mt150000_uv02 import (
+from common_types.models.multicacheschemas.coct_mt150000_uv02 import (
     CoctMt150000Uv02Organization,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     NullFlavor,
     RoleClassMutualRelationship,
     RoleClassOntological,

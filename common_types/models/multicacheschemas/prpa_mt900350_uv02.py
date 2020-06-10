@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActMood,
     NullFlavor,
     ParticipationTargetSubject,
     ParticipationType,
 )
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Cd,
     Cs,
     Ii,
     IntType,
     IvlTsExplicit,
 )
-from models.multicacheschemas.coct_mt050002_uv04 import (
+from common_types.models.multicacheschemas.coct_mt050002_uv04 import (
     CoctMt050002Uv04Patient,
 )
-from models.multicacheschemas.coct_mt090100_uv01 import (
+from common_types.models.multicacheschemas.coct_mt090100_uv01 import (
     CoctMt090100Uv01AssignedPerson,
 )
-from models.multicacheschemas.coct_mt090200_uv01 import (
+from common_types.models.multicacheschemas.coct_mt090200_uv01 import (
     CoctMt090200Uv01AssignedOrganization,
 )
 

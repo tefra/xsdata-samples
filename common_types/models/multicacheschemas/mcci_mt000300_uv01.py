@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Any,
     Ce,
     Cs,
@@ -13,7 +13,7 @@ from models.coreschemas.datatypes_base import (
     St,
     TelExplicit,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     AcknowledgementDetailType,
     CommunicationFunctionType,
     EntityClassDevice,
@@ -25,7 +25,7 @@ from models.coreschemas.voc import (
     RoleClassAgent,
     RoleClassLocatedEntity,
 )
-from models.multicacheschemas.coct_mt040203_uv01 import (
+from common_types.models.multicacheschemas.coct_mt040203_uv01 import (
     CoctMt040203Uv01NotificationParty,
 )
 

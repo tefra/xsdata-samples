@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from models.multicacheschemas.pocd_mt000040 import (
+from common_types.models.multicacheschemas.pocd_mt000040 import (
     PocdMt000040ClinicalDocument,
 )
 

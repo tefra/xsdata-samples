@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActClassObservation,
     ActMood,
@@ -10,7 +10,7 @@ from models.coreschemas.voc import (
     ParticipationPhysicalPerformer,
     ParticipationType,
 )
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Cd,
     Ce,
     Cs,
@@ -18,10 +18,10 @@ from models.coreschemas.datatypes_base import (
     Ii,
     TsExplicit,
 )
-from models.multicacheschemas.coct_mt040008_uv import (
+from common_types.models.multicacheschemas.coct_mt040008_uv import (
     CoctMt040008UvResponsible,
 )
-from models.multicacheschemas.coct_mt090002_uv01 import (
+from common_types.models.multicacheschemas.coct_mt090002_uv01 import (
     CoctMt090002Uv01AssignedEntity,
 )
 

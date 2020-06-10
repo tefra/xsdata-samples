@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Bl,
     Ce,
     Ii,

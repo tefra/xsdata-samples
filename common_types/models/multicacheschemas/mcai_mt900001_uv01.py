@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Any,
     Cd,
     Ce,
@@ -10,7 +10,7 @@ from models.coreschemas.datatypes_base import (
     Ii,
     SxcmTsExplicit,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActClassRoot,
     ActMood,

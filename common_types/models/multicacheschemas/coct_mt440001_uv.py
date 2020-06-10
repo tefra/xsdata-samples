@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActMood,
     NullFlavor,
 )
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     Cd,
     Cs,
     Ii,
     IvlTsExplicit,
     Mo,
 )
-from models.coreschemas.datatypes import (
+from common_types.models.coreschemas.datatypes import (
     RtoMoPq,
     RtoPqPq,
 )

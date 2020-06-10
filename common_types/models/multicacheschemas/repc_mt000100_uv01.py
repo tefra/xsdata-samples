@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from models.coreschemas.datatypes_base import (
+from common_types.models.coreschemas.datatypes_base import (
     AdExplicit,
     Any,
     Bl,
@@ -26,7 +26,7 @@ from models.coreschemas.datatypes_base import (
     Ts,
     TsExplicit,
 )
-from models.coreschemas.voc import (
+from common_types.models.coreschemas.voc import (
     ActClass,
     ActClassContainer,
     ActClassObservation,
@@ -83,36 +83,36 @@ from models.coreschemas.voc import (
     XRoleClassPayeePolicyRelationship,
     XSuccReplPrev,
 )
-from models.multicacheschemas.coct_mt040200_uv01 import (
+from common_types.models.multicacheschemas.coct_mt040200_uv01 import (
     CoctMt040200Uv01ResponsibleParty,
 )
-from models.multicacheschemas.coct_mt050000_uv01 import (
+from common_types.models.multicacheschemas.coct_mt050000_uv01 import (
     CoctMt050000Uv01Patient,
 )
-from models.multicacheschemas.coct_mt080000_uv import (
+from common_types.models.multicacheschemas.coct_mt080000_uv import (
     CoctMt080000UvSpecimen,
 )
-from models.multicacheschemas.coct_mt090000_uv01 import (
+from common_types.models.multicacheschemas.coct_mt090000_uv01 import (
     CoctMt090000Uv01AssignedEntity,
 )
-from models.multicacheschemas.coct_mt220300_uv import (
+from common_types.models.multicacheschemas.coct_mt220300_uv import (
     CoctMt220300UvContent,
 )
-from models.multicacheschemas.coct_mt230100_uv import (
+from common_types.models.multicacheschemas.coct_mt230100_uv import (
     CoctMt230100UvMedication,
 )
-from models.multicacheschemas.coct_mt910000_uv import (
+from common_types.models.multicacheschemas.coct_mt910000_uv import (
     CoctMt910000UvCareGiver,
     CoctMt910000UvEmployee,
     CoctMt910000UvPersonalRelationship,
     CoctMt910000UvStudent,
 )
-from models.coreschemas.datatypes import (
+from common_types.models.coreschemas.datatypes import (
     IvlInt,
     IvlPq,
     RtoPqPq,
 )
-from models.multicacheschemas.repc_mt000700_uv01 import (
+from common_types.models.multicacheschemas.repc_mt000700_uv01 import (
     RepcMt000700Uv01MaintainedEntity,
 )
 
