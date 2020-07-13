@@ -13,7 +13,8 @@ jobs:
       env: TOXENV=bnm
     - python: 3.7
       env: TOXENV=common-types
-
+    - python: 3.7
+      env: TOXENV=reqif
 
 
 before_install:
