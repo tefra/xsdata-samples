@@ -581,11 +581,14 @@ class XhtmlQType:
     class Meta:
         name = "xhtml.q.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -892,11 +895,14 @@ class XhtmlAcronymType:
     class Meta:
         name = "xhtml.acronym.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -1196,11 +1202,14 @@ class XhtmlAbbrType:
     class Meta:
         name = "xhtml.abbr.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -1500,11 +1509,14 @@ class XhtmlCiteType:
     class Meta:
         name = "xhtml.cite.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -1804,11 +1816,14 @@ class XhtmlVarType:
     class Meta:
         name = "xhtml.var.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -2108,11 +2123,14 @@ class XhtmlKbdType:
     class Meta:
         name = "xhtml.kbd.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -2412,11 +2430,14 @@ class XhtmlSampType:
     class Meta:
         name = "xhtml.samp.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -2716,11 +2737,14 @@ class XhtmlCodeType:
     class Meta:
         name = "xhtml.code.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -3020,11 +3044,14 @@ class XhtmlDfnType:
     class Meta:
         name = "xhtml.dfn.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -3324,11 +3351,14 @@ class XhtmlStrongType:
     class Meta:
         name = "xhtml.strong.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -3628,11 +3658,14 @@ class XhtmlCaptionType:
     class Meta:
         name = "xhtml.caption.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -3932,11 +3965,14 @@ class XhtmlDtType:
     class Meta:
         name = "xhtml.dt.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -4236,11 +4272,14 @@ class XhtmlH2Type:
     class Meta:
         name = "xhtml.h2.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -4540,11 +4579,14 @@ class XhtmlH3Type:
     class Meta:
         name = "xhtml.h3.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -4844,11 +4886,14 @@ class XhtmlH4Type:
     class Meta:
         name = "xhtml.h4.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -5148,11 +5193,14 @@ class XhtmlH5Type:
     class Meta:
         name = "xhtml.h5.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -5452,11 +5500,14 @@ class XhtmlH6Type:
     class Meta:
         name = "xhtml.h6.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -5756,11 +5807,14 @@ class XhtmlPType:
     class Meta:
         name = "xhtml.p.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -6055,11 +6109,14 @@ class XhtmlPreType:
     class Meta:
         name = "xhtml.pre.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -6330,11 +6387,14 @@ class XhtmlDdType:
     class Meta:
         name = "xhtml.dd.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     h1: List["XhtmlH1Type"] = field(
@@ -6879,11 +6939,14 @@ class XhtmlTdType:
     class Meta:
         name = "xhtml.td.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     h1: List["XhtmlH1Type"] = field(
@@ -7454,11 +7517,14 @@ class XhtmlThType:
     class Meta:
         name = "xhtml.th.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     h1: List["XhtmlH1Type"] = field(
@@ -8963,11 +9029,14 @@ class XhtmlDivType:
     class Meta:
         name = "xhtml.div.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     h1: List["XhtmlH1Type"] = field(
@@ -9427,11 +9496,14 @@ class XhtmlLiType:
     class Meta:
         name = "xhtml.li.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     h1: List["XhtmlH1Type"] = field(
@@ -9969,11 +10041,14 @@ class XhtmlObjectType:
     class Meta:
         name = "xhtml.object.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     param: List[XhtmlParamType] = field(
@@ -10437,11 +10512,14 @@ class XhtmlAType:
     class Meta:
         name = "xhtml.a.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -10785,11 +10863,14 @@ class XhtmlInlPresType:
     class Meta:
         name = "xhtml.InlPres.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -11089,11 +11170,14 @@ class XhtmlEmType:
     class Meta:
         name = "xhtml.em.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -11393,11 +11477,14 @@ class XhtmlH1Type:
     class Meta:
         name = "xhtml.h1.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -11715,11 +11802,14 @@ class XhtmlEditType:
     class Meta:
         name = "xhtml.edit.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     h1: List[XhtmlH1Type] = field(
@@ -12176,11 +12266,14 @@ class XhtmlSpanType:
     class Meta:
         name = "xhtml.span.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -12480,11 +12573,14 @@ class XhtmlAddressType:
     class Meta:
         name = "xhtml.address.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(
@@ -12784,11 +12880,14 @@ class XhtmlHeadingType:
     class Meta:
         name = "xhtml.heading.type"
 
-    content: Optional[object] = field(
-        default=None,
+    content: List[object] = field(
+        default_factory=list,
         metadata=dict(
             type="Wildcard",
-            namespace="##any"
+            namespace="##any",
+            mixed=True,
+            min_occurs=0,
+            max_occurs=9223372036854775807
         )
     )
     br: List[XhtmlBrType] = field(

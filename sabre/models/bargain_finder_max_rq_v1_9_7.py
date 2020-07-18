@@ -4893,11 +4893,14 @@ class PriceRequestInformationType:
         :ivar secondary_code: An additional attribute to allow flexibility for particular organizations who require an additional code.
         :ivar supplier_code: An additional attribute to allow flexibility for particular organizations who require an additional supplier code.
         """
-        content: Optional[object] = field(
-            default=None,
+        content: List[object] = field(
+            default_factory=list,
             metadata=dict(
                 type="Wildcard",
-                namespace="##any"
+                namespace="##any",
+                mixed=True,
+                min_occurs=0,
+                max_occurs=9223372036854775807
             )
         )
         supplier: List[CompanyNameType] = field(
