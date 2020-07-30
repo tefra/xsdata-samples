@@ -189,7 +189,7 @@ class SearchSpecificAirSegment:
             name="FlightNumber",
             type="Attribute",
             required=True,
-            max_length=5.0
+            max_length=5
         )
     )
     origin: Optional[str] = field(
@@ -264,8 +264,8 @@ class AirExchangeEligibilityReq(BaseReq):
                 name="ProviderCode",
                 type="Attribute",
                 required=True,
-                min_length=2.0,
-                max_length=5.0
+                min_length=2,
+                max_length=5
             )
         )
         provider_locator_code: Optional[str] = field(
@@ -274,7 +274,7 @@ class AirExchangeEligibilityReq(BaseReq):
                 name="ProviderLocatorCode",
                 type="Attribute",
                 required=True,
-                max_length=15.0
+                max_length=15
             )
         )
 
@@ -835,8 +835,8 @@ class AirFareDisplayReq(BaseReq):
             name="ProviderCode",
             type="Attribute",
             required=True,
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     include_mile_route_information: Optional[TypeMileOrRouteBasedFare] = field(
@@ -858,8 +858,8 @@ class AirFareDisplayReq(BaseReq):
         metadata=dict(
             name="ChannelId",
             type="Attribute",
-            min_length=2.0,
-            max_length=4.0
+            min_length=2,
+            max_length=4
         )
     )
     nscc: Optional[str] = field(
@@ -867,8 +867,8 @@ class AirFareDisplayReq(BaseReq):
         metadata=dict(
             name="NSCC",
             type="Attribute",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     return_mm: bool = field(
@@ -1013,8 +1013,8 @@ class AirFareRulesReq(BaseReq):
                 name="AirReservationLocatorCode",
                 type="Attribute",
                 required=True,
-                min_length=5.0,
-                max_length=8.0
+                min_length=5,
+                max_length=8
             )
         )
 
@@ -1281,7 +1281,7 @@ class AirPrePayReq(BaseReq):
                 name="StartFromResult",
                 type="Attribute",
                 required=True,
-                min_inclusive=1.0
+                min_inclusive=1
             )
         )
         max_results: Optional[int] = field(
@@ -1290,8 +1290,8 @@ class AirPrePayReq(BaseReq):
                 name="MaxResults",
                 type="Attribute",
                 required=True,
-                min_inclusive=1.0,
-                max_inclusive=200.0
+                min_inclusive=1,
+                max_inclusive=200
             )
         )
 
@@ -1307,8 +1307,8 @@ class AirPrePayReq(BaseReq):
                 name="Id",
                 type="Attribute",
                 required=True,
-                min_length=1.0,
-                max_length=36.0
+                min_length=1,
+                max_length=36
             )
         )
         type: Optional[str] = field(
@@ -1346,8 +1346,8 @@ class AirPrePayRsp(BaseRsp):
         metadata=dict(
             name="MaxResults",
             type="Attribute",
-            min_inclusive=1.0,
-            max_inclusive=200.0
+            min_inclusive=1,
+            max_inclusive=200
         )
     )
     more_indicator: Optional[bool] = field(
@@ -1445,8 +1445,8 @@ class AirRefundQuoteReq(BaseReq):
                 name="ProviderCode",
                 type="Attribute",
                 required=True,
-                min_length=2.0,
-                max_length=5.0
+                min_length=2,
+                max_length=5
             )
         )
         provider_locator_code: Optional[str] = field(
@@ -1455,7 +1455,7 @@ class AirRefundQuoteReq(BaseReq):
                 name="ProviderLocatorCode",
                 type="Attribute",
                 required=True,
-                max_length=15.0
+                max_length=15
             )
         )
 
@@ -1685,8 +1685,8 @@ class AirRetrieveDocumentReq(BaseReq):
         metadata=dict(
             name="UniversalRecordLocatorCode",
             type="Attribute",
-            min_length=5.0,
-            max_length=8.0
+            min_length=5,
+            max_length=8
         )
     )
     provider_code: Optional[str] = field(
@@ -1694,8 +1694,8 @@ class AirRetrieveDocumentReq(BaseReq):
         metadata=dict(
             name="ProviderCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     provider_locator_code: Optional[str] = field(
@@ -1703,7 +1703,7 @@ class AirRetrieveDocumentReq(BaseReq):
         metadata=dict(
             name="ProviderLocatorCode",
             type="Attribute",
-            max_length=15.0
+            max_length=15
         )
     )
 
@@ -1773,8 +1773,8 @@ class AirRetrieveDocumentRsp(BaseRsp):
         metadata=dict(
             name="UniversalRecordLocatorCode",
             type="Attribute",
-            min_length=5.0,
-            max_length=8.0
+            min_length=5,
+            max_length=8
         )
     )
 
@@ -1926,8 +1926,8 @@ class AirVoidDocumentReq(BaseReq):
         metadata=dict(
             name="ProviderCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     provider_locator_code: Optional[str] = field(
@@ -2052,8 +2052,8 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
                 name="ProviderCode",
                 type="Attribute",
                 required=True,
-                min_length=2.0,
-                max_length=5.0
+                min_length=2,
+                max_length=5
             )
         )
         provider_locator_code: Optional[str] = field(
@@ -2062,7 +2062,7 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
                 name="ProviderLocatorCode",
                 type="Attribute",
                 required=True,
-                max_length=15.0
+                max_length=15
             )
         )
 
@@ -2190,8 +2190,8 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
                 name="ProviderCode",
                 type="Attribute",
                 required=True,
-                min_length=2.0,
-                max_length=5.0
+                min_length=2,
+                max_length=5
             )
         )
         provider_locator_code: Optional[str] = field(
@@ -2200,7 +2200,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
                 name="ProviderLocatorCode",
                 type="Attribute",
                 required=True,
-                max_length=15.0
+                max_length=15
             )
         )
 
@@ -2327,8 +2327,8 @@ class BaseAirPriceReq(BaseCoreReq):
         metadata=dict(
             name="SupplierCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
     ticket_date: Optional[str] = field(
@@ -2357,8 +2357,8 @@ class BaseAirPriceReq(BaseCoreReq):
         metadata=dict(
             name="NSCC",
             type="Attribute",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     split_pricing: bool = field(
@@ -2613,8 +2613,8 @@ class EmdissuanceReq(BaseReq):
             name="UniversalRecordLocatorCode",
             type="Attribute",
             required=True,
-            min_length=5.0,
-            max_length=8.0
+            min_length=5,
+            max_length=8
         )
     )
     show_details: bool = field(
@@ -2927,8 +2927,8 @@ class RetrieveLowFareSearchReq(BaseReq):
             name="ProviderCode",
             type="Attribute",
             required=True,
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
 
@@ -3620,8 +3620,8 @@ class AvailabilitySearchReq(AirSearchReq):
         metadata=dict(
             name="ChannelId",
             type="Attribute",
-            min_length=2.0,
-            max_length=4.0
+            min_length=2,
+            max_length=4
         )
     )
     nscc: Optional[str] = field(
@@ -3629,8 +3629,8 @@ class AvailabilitySearchReq(AirSearchReq):
         metadata=dict(
             name="NSCC",
             type="Attribute",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -3776,8 +3776,8 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
         metadata=dict(
             name="MetaOptionIdentifier",
             type="Attribute",
-            min_length=1.0,
-            max_length=2.0
+            min_length=1,
+            max_length=2
         )
     )
     return_upsell_fare: bool = field(
@@ -3827,8 +3827,8 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
         metadata=dict(
             name="NSCC",
             type="Attribute",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     fare_info_rules: bool = field(
@@ -3926,8 +3926,8 @@ class LowFareSearchReq(BaseLowFareSearchReq):
         metadata=dict(
             name="PolicyReference",
             type="Attribute",
-            min_length=1.0,
-            max_length=20.0
+            min_length=1,
+            max_length=20
         )
     )
 

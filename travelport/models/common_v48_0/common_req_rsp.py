@@ -118,8 +118,8 @@ class BaseCoreReq:
         metadata=dict(
             name="TargetBranch",
             type="Attribute",
-            min_length=1.0,
-            max_length=25.0
+            min_length=1,
+            max_length=25
         )
     )
     override_logging: Optional[TypeLoggingLevel] = field(
@@ -457,7 +457,7 @@ class BaseCreateReservationReq(BaseReq):
         metadata=dict(
             name="RuleName",
             type="Attribute",
-            max_length=10.0
+            max_length=10
         )
     )
     universal_record_locator_code: Optional[str] = field(
@@ -465,8 +465,8 @@ class BaseCreateReservationReq(BaseReq):
         metadata=dict(
             name="UniversalRecordLocatorCode",
             type="Attribute",
-            min_length=5.0,
-            max_length=8.0
+            min_length=5,
+            max_length=8
         )
     )
     provider_locator_code: Optional[str] = field(
@@ -474,8 +474,8 @@ class BaseCreateReservationReq(BaseReq):
         metadata=dict(
             name="ProviderLocatorCode",
             type="Attribute",
-            min_length=5.0,
-            max_length=8.0
+            min_length=5,
+            max_length=8
         )
     )
     provider_code: Optional[str] = field(

@@ -69,8 +69,8 @@ class FulFillmentType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            min_length=0.0,
-            max_length=255.0
+            min_length=0,
+            max_length=255
         )
     )
 
@@ -147,8 +147,8 @@ class RailAutoSeatAssignment:
             name="SeatType",
             type="Attribute",
             required=True,
-            min_length=0.0,
-            max_length=255.0
+            min_length=0,
+            max_length=255
         )
     )
     seat_value: Optional[str] = field(
@@ -157,8 +157,8 @@ class RailAutoSeatAssignment:
             name="SeatValue",
             type="Attribute",
             required=True,
-            min_length=0.0,
-            max_length=255.0
+            min_length=0,
+            max_length=255
         )
     )
     rail_segment_ref: Optional[str] = field(
@@ -192,8 +192,8 @@ class RailAvailInfo:
         metadata=dict(
             name="ClassCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     quantity: Optional[int] = field(
@@ -208,8 +208,8 @@ class RailAvailInfo:
         metadata=dict(
             name="CabinClass",
             type="Attribute",
-            min_length=1.0,
-            max_length=128.0
+            min_length=1,
+            max_length=128
         )
     )
 
@@ -406,8 +406,8 @@ class RailInfo:
         metadata=dict(
             name="RailLocOrigin",
             type="Attribute",
-            min_length=3.0,
-            max_length=8.0,
+            min_length=3,
+            max_length=8,
             white_space="collapse"
         )
     )
@@ -425,8 +425,8 @@ class RailInfo:
         metadata=dict(
             name="RailLocDestination",
             type="Attribute",
-            min_length=3.0,
-            max_length=8.0,
+            min_length=3,
+            max_length=8,
             white_space="collapse"
         )
     )
@@ -451,8 +451,8 @@ class RailInfo:
             name="TrainNumber",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     provider_code: Optional[str] = field(
@@ -461,8 +461,8 @@ class RailInfo:
             name="ProviderCode",
             type="Attribute",
             required=True,
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     supplier_code: Optional[str] = field(
@@ -471,8 +471,8 @@ class RailInfo:
             name="SupplierCode",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
 
@@ -643,8 +643,8 @@ class RailSupplier:
             name="Code",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
 
@@ -663,8 +663,8 @@ class TicketAdvisory:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            min_length=1.0,
-            max_length=500.0
+            min_length=1,
+            max_length=500
         )
     )
     key: Optional[str] = field(
@@ -914,8 +914,8 @@ class RailFareComponent:
         metadata=dict(
             name="PassengerTypeCode",
             type="Attribute",
-            min_length=3.0,
-            max_length=5.0
+            min_length=3,
+            max_length=5
         )
     )
     supplier_passenger_type: Optional[str] = field(
@@ -1199,8 +1199,8 @@ class RailSearchModifiers:
         metadata=dict(
             name="MaxChanges",
             type="Attribute",
-            min_inclusive=0.0,
-            max_inclusive=3.0
+            min_inclusive=0,
+            max_inclusive=3
         )
     )
     direction: Optional[TypeRailDirection] = field(
@@ -1314,8 +1314,8 @@ class RailTicketInfo:
             name="Number",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=19.0
+            min_length=1,
+            max_length=19
         )
     )
     issue_location: Optional[str] = field(
@@ -1323,8 +1323,8 @@ class RailTicketInfo:
         metadata=dict(
             name="IssueLocation",
             type="Attribute",
-            min_length=0.0,
-            max_length=128.0
+            min_length=0,
+            max_length=128
         )
     )
     ticket_status: Optional[str] = field(
@@ -1332,8 +1332,8 @@ class RailTicketInfo:
         metadata=dict(
             name="TicketStatus",
             type="Attribute",
-            min_length=1.0,
-            max_length=255.0
+            min_length=1,
+            max_length=255
         )
     )
     ticket_form_type: Optional[str] = field(
@@ -1341,8 +1341,8 @@ class RailTicketInfo:
         metadata=dict(
             name="TicketFormType",
             type="Attribute",
-            min_length=0.0,
-            max_length=255.0
+            min_length=0,
+            max_length=255
         )
     )
     traffic_type: Optional[str] = field(
@@ -1350,8 +1350,8 @@ class RailTicketInfo:
         metadata=dict(
             name="TrafficType",
             type="Attribute",
-            min_length=1.0,
-            max_length=255.0
+            min_length=1,
+            max_length=255
         )
     )
     issued_date: Optional[str] = field(
@@ -1366,8 +1366,8 @@ class RailTicketInfo:
         metadata=dict(
             name="TicketType",
             type="Attribute",
-            min_length=1.0,
-            max_length=255.0
+            min_length=1,
+            max_length=255
         )
     )
     booking_traveler_ref: Optional[str] = field(
@@ -1535,8 +1535,8 @@ class RailFare:
             name="CabinClass",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=128.0
+            min_length=1,
+            max_length=128
         )
     )
     passenger_type_code: Optional[str] = field(
@@ -1544,8 +1544,8 @@ class RailFare:
         metadata=dict(
             name="PassengerTypeCode",
             type="Attribute",
-            min_length=3.0,
-            max_length=5.0
+            min_length=3,
+            max_length=5
         )
     )
     origin: Optional[str] = field(
@@ -1600,8 +1600,8 @@ class RailFare:
         metadata=dict(
             name="FareReference",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     cross_city_fare: bool = field(
@@ -1644,8 +1644,8 @@ class RailFare:
         metadata=dict(
             name="RailLocOrigin",
             type="Attribute",
-            min_length=3.0,
-            max_length=8.0,
+            min_length=3,
+            max_length=8,
             white_space="collapse"
         )
     )
@@ -1654,8 +1654,8 @@ class RailFare:
         metadata=dict(
             name="RailLocDestination",
             type="Attribute",
-            min_length=3.0,
-            max_length=8.0,
+            min_length=3,
+            max_length=8,
             white_space="collapse"
         )
     )
@@ -1786,8 +1786,8 @@ class RailSegment(Segment):
         metadata=dict(
             name="TrainNumber",
             type="Attribute",
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     origin: Optional[str] = field(
@@ -1842,8 +1842,8 @@ class RailSegment(Segment):
         metadata=dict(
             name="RailLocOrigin",
             type="Attribute",
-            min_length=3.0,
-            max_length=8.0,
+            min_length=3,
+            max_length=8,
             white_space="collapse"
         )
     )
@@ -1852,8 +1852,8 @@ class RailSegment(Segment):
         metadata=dict(
             name="RailLocDestination",
             type="Attribute",
-            min_length=3.0,
-            max_length=8.0,
+            min_length=3,
+            max_length=8,
             white_space="collapse"
         )
     )
@@ -1869,8 +1869,8 @@ class RailSegment(Segment):
         metadata=dict(
             name="TrainTypeCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     transport_mode: Optional[TypeTransportMode] = field(
@@ -1920,8 +1920,8 @@ class RailSegment(Segment):
         metadata=dict(
             name="CabinClass",
             type="Attribute",
-            min_length=1.0,
-            max_length=128.0
+            min_length=1,
+            max_length=128
         )
     )
     class_code: Optional[str] = field(
@@ -1929,8 +1929,8 @@ class RailSegment(Segment):
         metadata=dict(
             name="ClassCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
 
@@ -2097,8 +2097,8 @@ class RailJourney:
         metadata=dict(
             name="RailLocOrigin",
             type="Attribute",
-            min_length=3.0,
-            max_length=8.0,
+            min_length=3,
+            max_length=8,
             white_space="collapse"
         )
     )
@@ -2107,8 +2107,8 @@ class RailJourney:
         metadata=dict(
             name="RailLocDestination",
             type="Attribute",
-            min_length=3.0,
-            max_length=8.0,
+            min_length=3,
+            max_length=8,
             white_space="collapse"
         )
     )
@@ -2117,7 +2117,7 @@ class RailJourney:
         metadata=dict(
             name="RouteDescription",
             type="Attribute",
-            max_length=255.0
+            max_length=255
         )
     )
     journey_direction: Optional[TypeJourneyDirection] = field(
@@ -2209,8 +2209,8 @@ class RailJourney:
         metadata=dict(
             name="ProviderCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     supplier_code: Optional[str] = field(
@@ -2218,8 +2218,8 @@ class RailJourney:
         metadata=dict(
             name="SupplierCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
     status: Optional[str] = field(
@@ -2255,8 +2255,8 @@ class RailJourney:
         metadata=dict(
             name="RouteReference",
             type="Attribute",
-            min_length=0.0,
-            max_length=255.0
+            min_length=0,
+            max_length=255
         )
     )
     el_stat: Optional[TypeElementStatus] = field(
@@ -2809,8 +2809,8 @@ class TypeRailPricingSolution:
             name="ProviderCode",
             type="Attribute",
             required=True,
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     supplier_code: Optional[str] = field(
@@ -2819,8 +2819,8 @@ class TypeRailPricingSolution:
             name="SupplierCode",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
     host_token_ref: Optional[str] = field(

@@ -153,8 +153,8 @@ class BillingInformationType:
         metadata=dict(
             name="AAACity",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     agent_sine_in: Optional[str] = field(
@@ -162,7 +162,7 @@ class BillingInformationType:
         metadata=dict(
             name="AgentSineIn",
             type="Attribute",
-            max_length=3.0
+            max_length=3
         )
     )
     service_name: Optional[str] = field(
@@ -178,8 +178,8 @@ class BillingInformationType:
         metadata=dict(
             name="ActionCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
 
@@ -291,8 +291,8 @@ class CountryNameType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            min_length=0.0,
-            max_length=64.0
+            min_length=0,
+            max_length=64
         )
     )
     code: Optional[str] = field(
@@ -341,8 +341,8 @@ class CustLoyaltyType:
         metadata=dict(
             name="ProgramID",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     membership_id: Optional[str] = field(
@@ -350,8 +350,8 @@ class CustLoyaltyType:
         metadata=dict(
             name="MembershipID",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     travel_sector: Optional[str] = field(
@@ -366,8 +366,8 @@ class CustLoyaltyType:
         metadata=dict(
             name="LoyalLevel",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     single_vendor_ind: Optional["CustLoyaltyType.SingleVendorInd"] = field(
@@ -565,8 +565,8 @@ class DocumentType:
             name="DocHolderName",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     doc_limitations: List[str] = field(
@@ -577,8 +577,8 @@ class DocumentType:
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=9,
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     share_synch_ind: Optional["DocumentType.ShareSynchInd"] = field(
@@ -600,8 +600,8 @@ class DocumentType:
         metadata=dict(
             name="DocIssueAuthority",
             type="Attribute",
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     doc_issue_location: Optional[str] = field(
@@ -609,8 +609,8 @@ class DocumentType:
         metadata=dict(
             name="DocIssueLocation",
             type="Attribute",
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     doc_id: Optional[str] = field(
@@ -618,8 +618,8 @@ class DocumentType:
         metadata=dict(
             name="DocID",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     doc_type: Optional[str] = field(
@@ -705,8 +705,8 @@ class EmailType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            min_length=1.0,
-            max_length=128.0
+            min_length=1,
+            max_length=128
         )
     )
     share_synch_ind: Optional["EmailType.ShareSynchInd"] = field(
@@ -924,8 +924,8 @@ class FareDetailsType:
             name="BasisCode",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=15.0,
+            min_length=1,
+            max_length=15,
             pattern=r"[A-Z0-9]+(/[A-Z0-9]+)?"
         )
     )
@@ -971,7 +971,7 @@ class FareDetailsType:
         metadata=dict(
             name="BrandID",
             type="Attribute",
-            min_length=1.0
+            min_length=1
         )
     )
     program_id: Optional[int] = field(
@@ -1012,8 +1012,8 @@ class FareOptionalDetailsType:
         metadata=dict(
             name="BasisCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=15.0,
+            min_length=1,
+            max_length=15,
             pattern=r"[A-Z0-9]+(/[A-Z0-9]+)?"
         )
     )
@@ -1059,7 +1059,7 @@ class FareOptionalDetailsType:
         metadata=dict(
             name="BrandID",
             type="Attribute",
-            min_length=1.0
+            min_length=1
         )
     )
     program_id: Optional[int] = field(
@@ -1127,8 +1127,8 @@ class IncludeVendorPrefType:
             name="Code",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
 
@@ -1210,7 +1210,7 @@ class NumTripsType:
         metadata=dict(
             name="Number",
             type="Attribute",
-            min_inclusive=1.0
+            min_inclusive=1
         )
     )
     per_date_min: Optional[int] = field(
@@ -1318,8 +1318,8 @@ class PersonNameType:
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=3,
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     given_name: List[str] = field(
@@ -1330,8 +1330,8 @@ class PersonNameType:
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=5,
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     middle_name: List[str] = field(
@@ -1342,8 +1342,8 @@ class PersonNameType:
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=3,
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     surname_prefix: Optional[str] = field(
@@ -1352,8 +1352,8 @@ class PersonNameType:
             name="SurnamePrefix",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     surname: Optional[str] = field(
@@ -1363,8 +1363,8 @@ class PersonNameType:
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
             required=True,
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     name_suffix: List[str] = field(
@@ -1375,8 +1375,8 @@ class PersonNameType:
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=3,
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     name_title: List[str] = field(
@@ -1387,8 +1387,8 @@ class PersonNameType:
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=5,
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     share_synch_ind: Optional["PersonNameType.ShareSynchInd"] = field(
@@ -1528,8 +1528,8 @@ class PointOfSaleOverrideType:
             name="Code",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
 
@@ -1545,8 +1545,8 @@ class PointOfTicketingOverrideType:
             name="Code",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
 
@@ -1564,8 +1564,8 @@ class PositionType:
         metadata=dict(
             name="Latitude",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     longitude: Optional[str] = field(
@@ -1573,8 +1573,8 @@ class PositionType:
         metadata=dict(
             name="Longitude",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     altitude: Optional[str] = field(
@@ -1582,8 +1582,8 @@ class PositionType:
         metadata=dict(
             name="Altitude",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
 
@@ -1635,8 +1635,8 @@ class RequestLocationType:
         metadata=dict(
             name="CodeContext",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
 
@@ -1835,8 +1835,8 @@ class StateProvType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            min_length=0.0,
-            max_length=64.0
+            min_length=0,
+            max_length=64
         )
     )
     state_code: Optional[str] = field(
@@ -1844,8 +1844,8 @@ class StateProvType:
         metadata=dict(
             name="StateCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=8.0
+            min_length=2,
+            max_length=8
         )
     )
 
@@ -1860,8 +1860,8 @@ class StreetNmbrType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            min_length=0.0,
-            max_length=64.0
+            min_length=0,
+            max_length=64
         )
     )
     po_box: Optional[str] = field(
@@ -1869,8 +1869,8 @@ class StreetNmbrType:
         metadata=dict(
             name="PO_Box",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
 
@@ -1957,8 +1957,8 @@ class TelephoneType:
             name="PhoneNumber",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     extension: Optional[str] = field(
@@ -1974,8 +1974,8 @@ class TelephoneType:
         metadata=dict(
             name="PIN",
             type="Attribute",
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     formatted_ind: bool = field(
@@ -2458,8 +2458,8 @@ class AddressType:
             name="BldgRoom",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
-            min_length=0.0,
-            max_length=64.0
+            min_length=0,
+            max_length=64
         )
     )
     address_line: List[str] = field(
@@ -2470,8 +2470,8 @@ class AddressType:
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
             max_occurs=5,
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     city_name: Optional[str] = field(
@@ -2480,8 +2480,8 @@ class AddressType:
             name="CityName",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     postal_code: Optional[str] = field(
@@ -2490,8 +2490,8 @@ class AddressType:
             name="PostalCode",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     county: Optional[str] = field(
@@ -2500,8 +2500,8 @@ class AddressType:
             name="County",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     state_prov: Optional[StateProvType] = field(
@@ -2903,8 +2903,8 @@ class DiversityControlType:
             metadata=dict(
                 name="PriceWeight",
                 type="Attribute",
-                min_inclusive=0.0,
-                max_inclusive=10.0
+                min_inclusive=0,
+                max_inclusive=10
             )
         )
 
@@ -2919,8 +2919,8 @@ class DiversityControlType:
                     name="Weight",
                     type="Attribute",
                     required=True,
-                    min_inclusive=1.0,
-                    max_inclusive=10.0
+                    min_inclusive=1,
+                    max_inclusive=10
                 )
             )
 
@@ -2956,8 +2956,8 @@ class DiversityControlType:
                     name="Weight",
                     type="Attribute",
                     required=True,
-                    min_inclusive=1.0,
-                    max_inclusive=10.0
+                    min_inclusive=1,
+                    max_inclusive=10
                 )
             )
             online_indicator: bool = field(
@@ -3030,8 +3030,8 @@ class DiversityControlType:
                     name="Weight",
                     type="Attribute",
                     required=True,
-                    min_inclusive=1.0,
-                    max_inclusive=10.0
+                    min_inclusive=1,
+                    max_inclusive=10
                 )
             )
 
@@ -3062,8 +3062,8 @@ class DiversityControlType:
                     name="Weight",
                     type="Attribute",
                     required=True,
-                    min_inclusive=1.0,
-                    max_inclusive=10.0
+                    min_inclusive=1,
+                    max_inclusive=10
                 )
             )
             duplicates: int = field(
@@ -3096,8 +3096,8 @@ class DiversityControlType:
                     name="Weight",
                     type="Attribute",
                     required=True,
-                    min_inclusive=1.0,
-                    max_inclusive=10.0
+                    min_inclusive=1,
+                    max_inclusive=10
                 )
             )
 
@@ -3188,8 +3188,8 @@ class DiversityControlType:
                     name="Weight",
                     type="Attribute",
                     required=True,
-                    min_inclusive=1.0,
-                    max_inclusive=10.0
+                    min_inclusive=1,
+                    max_inclusive=10
                 )
             )
 
@@ -3736,8 +3736,8 @@ class FlexibleFaresType:
                     name="Code",
                     type="Attribute",
                     required=True,
-                    min_length=1.0,
-                    max_length=8.0
+                    min_length=1,
+                    max_length=8
                 )
             )
 
@@ -3795,8 +3795,8 @@ class FlexibleFaresType:
                     name="Code",
                     type="Attribute",
                     required=True,
-                    min_length=1.0,
-                    max_length=20.0
+                    min_length=1,
+                    max_length=20
                 )
             )
 
@@ -4460,8 +4460,8 @@ class PriceRequestInformationType:
                         name="Priority",
                         type="Attribute",
                         required=True,
-                        min_inclusive=1.0,
-                        max_inclusive=4.0
+                        min_inclusive=1,
+                        max_inclusive=4
                     )
                 )
 
@@ -4476,8 +4476,8 @@ class PriceRequestInformationType:
                         name="Priority",
                         type="Attribute",
                         required=True,
-                        min_inclusive=1.0,
-                        max_inclusive=4.0
+                        min_inclusive=1,
+                        max_inclusive=4
                     )
                 )
 
@@ -4492,8 +4492,8 @@ class PriceRequestInformationType:
                         name="Priority",
                         type="Attribute",
                         required=True,
-                        min_inclusive=1.0,
-                        max_inclusive=4.0
+                        min_inclusive=1,
+                        max_inclusive=4
                     )
                 )
 
@@ -4508,8 +4508,8 @@ class PriceRequestInformationType:
                         name="Priority",
                         type="Attribute",
                         required=True,
-                        min_inclusive=1.0,
-                        max_inclusive=4.0
+                        min_inclusive=1,
+                        max_inclusive=4
                     )
                 )
 
@@ -4669,8 +4669,8 @@ class PriceRequestInformationType:
                 metadata=dict(
                     name="ItinerariesPerGroup",
                     type="Attribute",
-                    min_inclusive=1.0,
-                    max_inclusive=99.0
+                    min_inclusive=1,
+                    max_inclusive=99
                 )
             )
 
@@ -4732,8 +4732,8 @@ class PriceRequestInformationType:
                     name="StateCode",
                     type="Element",
                     namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_length=2.0,
-                    max_length=8.0
+                    min_length=2,
+                    max_length=8
                 )
             )
             country_code: Optional[str] = field(
@@ -4934,8 +4934,8 @@ class PriceRequestInformationType:
             metadata=dict(
                 name="CodeContext",
                 type="Attribute",
-                min_length=1.0,
-                max_length=32.0
+                min_length=1,
+                max_length=32
             )
         )
         uri: Optional[str] = field(
@@ -4950,8 +4950,8 @@ class PriceRequestInformationType:
             metadata=dict(
                 name="Quantity",
                 type="Attribute",
-                min_inclusive=1.0,
-                max_inclusive=999.0
+                min_inclusive=1,
+                max_inclusive=999
             )
         )
         secondary_code: Optional[str] = field(
@@ -4959,8 +4959,8 @@ class PriceRequestInformationType:
             metadata=dict(
                 name="SecondaryCode",
                 type="Attribute",
-                min_length=1.0,
-                max_length=16.0
+                min_length=1,
+                max_length=16
             )
         )
         supplier_code: Optional[str] = field(
@@ -4968,8 +4968,8 @@ class PriceRequestInformationType:
             metadata=dict(
                 name="SupplierCode",
                 type="Attribute",
-                min_length=1.0,
-                max_length=16.0
+                min_length=1,
+                max_length=16
             )
         )
 
@@ -4984,8 +4984,8 @@ class PriceRequestInformationType:
                 name="Code",
                 type="Attribute",
                 required=True,
-                min_length=1.0,
-                max_length=20.0
+                min_length=1,
+                max_length=20
             )
         )
 
@@ -5061,8 +5061,8 @@ class TicketDistribPrefType:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            min_length=0.0,
-            max_length=64.0
+            min_length=0,
+            max_length=64
         )
     )
     prefer_level: PreferLevelType = field(
@@ -5132,8 +5132,8 @@ class UniqueIdType:
         metadata=dict(
             name="Instance",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     id: Optional[str] = field(
@@ -5142,8 +5142,8 @@ class UniqueIdType:
             name="ID",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     id_context: Optional[str] = field(
@@ -5151,8 +5151,8 @@ class UniqueIdType:
         metadata=dict(
             name="ID_Context",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
 
@@ -5344,7 +5344,7 @@ class AirSearchPrefsType:
             name="OnTimeRate",
             type="Attribute",
             min_inclusive=0.01,
-            max_inclusive=100.0
+            max_inclusive=100.00
         )
     )
     eticket_desired: bool = field(
@@ -5366,8 +5366,8 @@ class AirSearchPrefsType:
         metadata=dict(
             name="MaxStopsQuantity",
             type="Attribute",
-            min_inclusive=0.0,
-            max_inclusive=999.0
+            min_inclusive=0,
+            max_inclusive=999
         )
     )
     use_all_flights: bool = field(
@@ -6181,8 +6181,8 @@ class AirSearchPrefsType:
                 metadata=dict(
                     name="Code",
                     type="Attribute",
-                    min_length=1.0,
-                    max_length=8.0
+                    min_length=1,
+                    max_length=8
                 )
             )
 
@@ -6196,7 +6196,7 @@ class AirSearchPrefsType:
                 metadata=dict(
                     name="Number",
                     type="Attribute",
-                    min_inclusive=1.0
+                    min_inclusive=1
                 )
             )
 
@@ -7062,8 +7062,8 @@ class AirSearchPrefsType:
                 metadata=dict(
                     name="InboundOutboundPairing",
                     type="Attribute",
-                    min_inclusive=1.0,
-                    max_inclusive=1000.0
+                    min_inclusive=1,
+                    max_inclusive=1000
                 )
             )
             additional_non_stops_number: Optional[int] = field(
@@ -7071,7 +7071,7 @@ class AirSearchPrefsType:
                 metadata=dict(
                     name="AdditionalNonStopsNumber",
                     type="Attribute",
-                    min_inclusive=1.0
+                    min_inclusive=1
                 )
             )
             additional_non_stops_percentage: Optional[int] = field(
@@ -7079,8 +7079,8 @@ class AirSearchPrefsType:
                 metadata=dict(
                     name="AdditionalNonStopsPercentage",
                     type="Attribute",
-                    min_inclusive=0.0,
-                    max_inclusive=100.0
+                    min_inclusive=0,
+                    max_inclusive=100
                 )
             )
 
@@ -7096,8 +7096,8 @@ class AirSearchPrefsType:
                         name="PriceWeight",
                         type="Attribute",
                         required=True,
-                        min_inclusive=0.0,
-                        max_inclusive=10.0
+                        min_inclusive=0,
+                        max_inclusive=10
                     )
                 )
                 travel_time_weight: Optional[int] = field(
@@ -7106,8 +7106,8 @@ class AirSearchPrefsType:
                         name="TravelTimeWeight",
                         type="Attribute",
                         required=True,
-                        min_inclusive=0.0,
-                        max_inclusive=10.0
+                        min_inclusive=0,
+                        max_inclusive=10
                     )
                 )
 
@@ -7158,8 +7158,8 @@ class AirSearchPrefsType:
                             name="Percentage",
                             type="Attribute",
                             required=True,
-                            min_inclusive=0.0,
-                            max_inclusive=100.0
+                            min_inclusive=0,
+                            max_inclusive=100
                         )
                     )
 
@@ -7768,8 +7768,8 @@ class ExchangeSourceType:
         metadata=dict(
             name="AgentSine",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     pseudo_city_code: Optional[str] = field(
@@ -7777,8 +7777,8 @@ class ExchangeSourceType:
         metadata=dict(
             name="PseudoCityCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     isocountry: Optional[str] = field(
@@ -7802,8 +7802,8 @@ class ExchangeSourceType:
         metadata=dict(
             name="AgentDutyCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     airline_vendor_id: Optional[str] = field(
@@ -7827,8 +7827,8 @@ class ExchangeSourceType:
         metadata=dict(
             name="FirstDepartPoint",
             type="Attribute",
-            min_length=3.0,
-            max_length=3.0
+            min_length=3,
+            max_length=3
         )
     )
     ersp_user_id: Optional[str] = field(
@@ -7836,8 +7836,8 @@ class ExchangeSourceType:
         metadata=dict(
             name="ERSP_UserID",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     personal_city_code: Optional[str] = field(
@@ -7885,7 +7885,7 @@ class ExchangeSourceType:
         metadata=dict(
             name="AgentDepartmentCode",
             type="Attribute",
-            max_length=6.0
+            max_length=6
         )
     )
     agent_function: Optional[str] = field(
@@ -7893,7 +7893,7 @@ class ExchangeSourceType:
         metadata=dict(
             name="AgentFunction",
             type="Attribute",
-            max_length=3.0
+            max_length=3
         )
     )
     travel_agency_iata: Optional[str] = field(
@@ -7957,8 +7957,8 @@ class ExchangeSourceType:
             name="MainTravelAgencyPCC",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     carrier: Optional[str] = field(
@@ -8221,8 +8221,8 @@ class SourceType:
         metadata=dict(
             name="AgentSine",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     pseudo_city_code: Optional[str] = field(
@@ -8230,8 +8230,8 @@ class SourceType:
         metadata=dict(
             name="PseudoCityCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     isocountry: Optional[str] = field(
@@ -8255,8 +8255,8 @@ class SourceType:
         metadata=dict(
             name="AgentDutyCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     airline_vendor_id: Optional[str] = field(
@@ -8280,8 +8280,8 @@ class SourceType:
         metadata=dict(
             name="FirstDepartPoint",
             type="Attribute",
-            min_length=3.0,
-            max_length=3.0
+            min_length=3,
+            max_length=3
         )
     )
     ersp_user_id: Optional[str] = field(
@@ -8289,8 +8289,8 @@ class SourceType:
         metadata=dict(
             name="ERSP_UserID",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     personal_city_code: Optional[str] = field(
@@ -8338,7 +8338,7 @@ class SourceType:
         metadata=dict(
             name="AgentDepartmentCode",
             type="Attribute",
-            max_length=6.0
+            max_length=6
         )
     )
     agent_function: Optional[str] = field(
@@ -8346,7 +8346,7 @@ class SourceType:
         metadata=dict(
             name="AgentFunction",
             type="Attribute",
-            max_length=3.0
+            max_length=3
         )
     )
     travel_agency_iata: Optional[str] = field(
@@ -8416,8 +8416,8 @@ class SourceType:
         metadata=dict(
             name="MainTravelAgencyPCC",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     home_pcc: Optional[str] = field(
@@ -8425,8 +8425,8 @@ class SourceType:
         metadata=dict(
             name="HomePCC",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
 
@@ -9182,8 +9182,8 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
             metadata=dict(
                 name="PlusMinus",
                 type="Attribute",
-                min_inclusive=0.0,
-                max_inclusive=9.0
+                min_inclusive=0,
+                max_inclusive=9
             )
         )
         plus: Optional[int] = field(
@@ -9191,8 +9191,8 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
             metadata=dict(
                 name="Plus",
                 type="Attribute",
-                min_inclusive=0.0,
-                max_inclusive=9.0
+                min_inclusive=0,
+                max_inclusive=9
             )
         )
         minus: Optional[int] = field(
@@ -9200,8 +9200,8 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
             metadata=dict(
                 name="Minus",
                 type="Attribute",
-                min_inclusive=0.0,
-                max_inclusive=72.0
+                min_inclusive=0,
+                max_inclusive=72
             )
         )
 
@@ -9660,8 +9660,8 @@ class OtaAirLowFareSearchRq:
         metadata=dict(
             name="EchoToken",
             type="Attribute",
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     time_stamp: Optional[str] = field(
@@ -9691,8 +9691,8 @@ class OtaAirLowFareSearchRq:
         metadata=dict(
             name="TransactionIdentifier",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     sequence_nmbr: Optional[Union[int, bool]] = field(
@@ -10084,8 +10084,8 @@ class OtaAirLowFareSearchRq:
                     name="PseudoCityCode",
                     type="Attribute",
                     required=True,
-                    min_length=1.0,
-                    max_length=16.0
+                    min_length=1,
+                    max_length=16
                 )
             )
 
@@ -10124,8 +10124,8 @@ class OtaAirLowFareSearchRq:
                             name="Code",
                             type="Attribute",
                             required=True,
-                            min_length=1.0,
-                            max_length=8.0
+                            min_length=1,
+                            max_length=8
                         )
                     )
                     prefer_level: PreferLevelType = field(
@@ -10492,8 +10492,8 @@ class OtaAirLowFareSearchRq:
                     metadata=dict(
                         name="PlusMinus",
                         type="Attribute",
-                        min_inclusive=0.0,
-                        max_inclusive=9.0
+                        min_inclusive=0,
+                        max_inclusive=9
                     )
                 )
                 plus: Optional[int] = field(
@@ -10501,8 +10501,8 @@ class OtaAirLowFareSearchRq:
                     metadata=dict(
                         name="Plus",
                         type="Attribute",
-                        min_inclusive=0.0,
-                        max_inclusive=9.0
+                        min_inclusive=0,
+                        max_inclusive=9
                     )
                 )
                 minus: Optional[int] = field(
@@ -10510,8 +10510,8 @@ class OtaAirLowFareSearchRq:
                     metadata=dict(
                         name="Minus",
                         type="Attribute",
-                        min_inclusive=0.0,
-                        max_inclusive=72.0
+                        min_inclusive=0,
+                        max_inclusive=72
                     )
                 )
 
@@ -10770,8 +10770,8 @@ class OtaAirLowFareSearchRq:
                     metadata=dict(
                         name="AirportCode",
                         type="Attribute",
-                        min_length=1.0,
-                        max_length=8.0
+                        min_length=1,
+                        max_length=8
                     )
                 )
                 airports_group: Optional[str] = field(
@@ -10818,8 +10818,8 @@ class OtaAirLowFareSearchRq:
                                 name="Code",
                                 type="Attribute",
                                 required=True,
-                                min_length=1.0,
-                                max_length=8.0
+                                min_length=1,
+                                max_length=8
                             )
                         )
 
@@ -10873,8 +10873,8 @@ class OtaAirLowFareSearchRq:
                     metadata=dict(
                         name="AirportCode",
                         type="Attribute",
-                        min_length=1.0,
-                        max_length=8.0
+                        min_length=1,
+                        max_length=8
                     )
                 )
                 airports_group: Optional[str] = field(
@@ -10921,8 +10921,8 @@ class OtaAirLowFareSearchRq:
                                 name="Code",
                                 type="Attribute",
                                 required=True,
-                                min_length=1.0,
-                                max_length=8.0
+                                min_length=1,
+                                max_length=8
                             )
                         )
 
@@ -10962,8 +10962,8 @@ class OtaAirLowFareSearchRq:
                         name="Code",
                         type="Attribute",
                         required=True,
-                        min_length=1.0,
-                        max_length=8.0
+                        min_length=1,
+                        max_length=8
                     )
                 )
 

@@ -20,8 +20,8 @@ class AdditionalFareQualifierDetailsTypeI:
             name="rateClass",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
     ticket_designator: Optional[str] = field(
@@ -30,8 +30,8 @@ class AdditionalFareQualifierDetailsTypeI:
             name="ticketDesignator",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=18.0
+            min_length=1,
+            max_length=18
         )
     )
     pricing_group: Optional[str] = field(
@@ -40,8 +40,8 @@ class AdditionalFareQualifierDetailsTypeI:
             name="pricingGroup",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
     second_rate_class: List[str] = field(
@@ -52,8 +52,8 @@ class AdditionalFareQualifierDetailsTypeI:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=29,
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
 
@@ -72,8 +72,8 @@ class AdditionalProductDetailsType:
             name="equipmentType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     operating_day: Optional[str] = field(
@@ -82,8 +82,8 @@ class AdditionalProductDetailsType:
             name="operatingDay",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=7.0
+            min_length=1,
+            max_length=7
         )
     )
     tech_stop_number: Optional[str] = field(
@@ -103,8 +103,8 @@ class AdditionalProductDetailsType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=3,
-            min_length=3.0,
-            max_length=5.0
+            min_length=3,
+            max_length=5
         )
     )
 
@@ -120,8 +120,8 @@ class ApplicationErrorInformationType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=4.0
+            min_length=1,
+            max_length=4
         )
     )
 
@@ -139,8 +139,8 @@ class AttributeInformationType:
             name="feeParameterType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=3.0,
-            max_length=3.0
+            min_length=3,
+            max_length=3
         )
     )
     fee_parameter_description: Optional[str] = field(
@@ -149,8 +149,8 @@ class AttributeInformationType:
             name="feeParameterDescription",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=15.0
+            min_length=1,
+            max_length=15
         )
     )
 
@@ -169,8 +169,8 @@ class AttributeInformationTypeU:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=25.0
+            min_length=1,
+            max_length=25
         )
     )
     attribute_description: Optional[str] = field(
@@ -179,8 +179,8 @@ class AttributeInformationTypeU:
             name="attributeDescription",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=256.0
+            min_length=1,
+            max_length=256
         )
     )
 
@@ -202,8 +202,8 @@ class AttributeInformationType97181C:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=25.0
+            min_length=1,
+            max_length=25
         )
     )
     attribute_description: Optional[str] = field(
@@ -212,8 +212,8 @@ class AttributeInformationType97181C:
             name="attributeDescription",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=256.0
+            min_length=1,
+            max_length=256
         )
     )
 
@@ -250,8 +250,8 @@ class BaggageDetailsType:
             name="unitQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -269,8 +269,8 @@ class BagtagDetailsType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
     number: Optional[str] = field(
@@ -294,8 +294,8 @@ class BucketInformationType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     name: Optional[str] = field(
@@ -303,8 +303,8 @@ class BucketInformationType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=20.0
+            min_length=1,
+            max_length=20
         )
     )
 
@@ -321,8 +321,8 @@ class CabinInformationType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
     cabin: List[str] = field(
@@ -332,8 +332,8 @@ class CabinInformationType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9,
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
 
@@ -352,8 +352,8 @@ class CabinProductDetailsType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     booking_modifier: Optional[str] = field(
@@ -362,8 +362,8 @@ class CabinProductDetailsType:
             name="bookingModifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=1.0
+            min_length=0,
+            max_length=1
         )
     )
     cabin: Optional[str] = field(
@@ -371,8 +371,8 @@ class CabinProductDetailsType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     avl_status: Optional[str] = field(
@@ -381,8 +381,8 @@ class CabinProductDetailsType:
             name="avlStatus",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=3.0
+            min_length=0,
+            max_length=3
         )
     )
 
@@ -403,8 +403,8 @@ class CabinProductDetailsType195516C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     booking_modifier: Optional[str] = field(
@@ -413,8 +413,8 @@ class CabinProductDetailsType195516C:
             name="bookingModifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=1.0
+            min_length=0,
+            max_length=1
         )
     )
     cabin: Optional[str] = field(
@@ -422,8 +422,8 @@ class CabinProductDetailsType195516C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     avl_status: Optional[str] = field(
@@ -433,8 +433,8 @@ class CabinProductDetailsType195516C:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=0.0,
-            max_length=3.0
+            min_length=0,
+            max_length=3
         )
     )
 
@@ -456,8 +456,8 @@ class CabinProductDetailsType205138C:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     booking_modifier: Optional[str] = field(
@@ -474,8 +474,8 @@ class CabinProductDetailsType205138C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     avl_status: Optional[str] = field(
@@ -505,8 +505,8 @@ class CabinProductDetailsType229142C:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     cabin: Optional[str] = field(
@@ -514,8 +514,8 @@ class CabinProductDetailsType229142C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     avl_status: Optional[str] = field(
@@ -549,8 +549,8 @@ class CategoryDescriptionType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -567,8 +567,8 @@ class ClassInformationType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
     rbd: List[str] = field(
@@ -578,8 +578,8 @@ class ClassInformationType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=26,
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
 
@@ -598,8 +598,8 @@ class CodedAttributeInformationType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
     attribute_description: Optional[str] = field(
@@ -608,8 +608,8 @@ class CodedAttributeInformationType:
             name="attributeDescription",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=50.0
+            min_length=1,
+            max_length=50
         )
     )
 
@@ -631,8 +631,8 @@ class CodedAttributeInformationType270108C:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
     attribute_description: Optional[str] = field(
@@ -641,8 +641,8 @@ class CodedAttributeInformationType270108C:
             name="attributeDescription",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=10.0
+            min_length=1,
+            max_length=10
         )
     )
 
@@ -669,8 +669,8 @@ class CompanyIdentificationTextType:
             name="companyText",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=70.0
+            min_length=0,
+            max_length=70
         )
     )
 
@@ -689,8 +689,8 @@ class CompanyIdentificationType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=2.0,
-            max_length=3.0
+            min_length=2,
+            max_length=3
         )
     )
     operating_carrier: Optional[str] = field(
@@ -699,8 +699,8 @@ class CompanyIdentificationType:
             name="operatingCarrier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=2.0,
-            max_length=3.0
+            min_length=2,
+            max_length=3
         )
     )
     alliance: Optional[str] = field(
@@ -708,8 +708,8 @@ class CompanyIdentificationType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=2.0
+            min_length=1,
+            max_length=2
         )
     )
 
@@ -728,8 +728,8 @@ class CompanyIdentificationTypeI:
             name="marketingCompany",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=2.0,
-            max_length=3.0
+            min_length=2,
+            max_length=3
         )
     )
     operating_company: Optional[str] = field(
@@ -738,8 +738,8 @@ class CompanyIdentificationTypeI:
             name="operatingCompany",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=2.0,
-            max_length=3.0
+            min_length=2,
+            max_length=3
         )
     )
     other_company: Optional[str] = field(
@@ -748,8 +748,8 @@ class CompanyIdentificationTypeI:
             name="otherCompany",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=2.0,
-            max_length=3.0
+            min_length=2,
+            max_length=3
         )
     )
 
@@ -768,8 +768,8 @@ class CompanyRoleIdentificationType:
             name="codeShareType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     airline_designator: Optional[str] = field(
@@ -778,8 +778,8 @@ class CompanyRoleIdentificationType:
             name="airlineDesignator",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=2.0,
-            max_length=3.0
+            min_length=2,
+            max_length=3
         )
     )
     flight_number: Optional[str] = field(
@@ -809,8 +809,8 @@ class CompanyRoleIdentificationType120771C:
             name="transportStageQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     company: Optional[str] = field(
@@ -818,8 +818,8 @@ class CompanyRoleIdentificationType120771C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=2.0,
-            max_length=3.0
+            min_length=2,
+            max_length=3
         )
     )
 
@@ -837,8 +837,8 @@ class ConversionRateDetailsTypeI:
             name="conversionType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     currency: Optional[str] = field(
@@ -846,8 +846,8 @@ class ConversionRateDetailsTypeI:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     amount: Optional[str] = field(
@@ -855,8 +855,8 @@ class ConversionRateDetailsTypeI:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=12.0
+            min_length=0,
+            max_length=12
         )
     )
 
@@ -879,8 +879,8 @@ class ConversionRateDetailsTypeI179848C:
             name="conversionType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     currency: Optional[str] = field(
@@ -889,8 +889,8 @@ class ConversionRateDetailsTypeI179848C:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     rate: Optional[str] = field(
@@ -898,8 +898,8 @@ class ConversionRateDetailsTypeI179848C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=18.0
+            min_length=0,
+            max_length=18
         )
     )
     converted_amount_link: Optional[str] = field(
@@ -908,8 +908,8 @@ class ConversionRateDetailsTypeI179848C:
             name="convertedAmountLink",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=18.0
+            min_length=0,
+            max_length=18
         )
     )
     tax_qualifier: Optional[str] = field(
@@ -918,8 +918,8 @@ class ConversionRateDetailsTypeI179848C:
             name="taxQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=3.0
+            min_length=0,
+            max_length=3
         )
     )
 
@@ -936,8 +936,8 @@ class CriteriaiDetaislType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     value: Optional[str] = field(
@@ -945,8 +945,8 @@ class CriteriaiDetaislType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=18.0
+            min_length=1,
+            max_length=18
         )
     )
 
@@ -962,8 +962,8 @@ class DataInformationType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -983,8 +983,8 @@ class DataTypeInformationType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     option: Optional[str] = field(
@@ -992,8 +992,8 @@ class DataTypeInformationType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -1013,8 +1013,8 @@ class DateAndTimeDetailsType:
             name="dateQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     date: Optional[str] = field(
@@ -1040,8 +1040,8 @@ class DateAndTimeDetailsType:
             name="equipementType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     location_id: Optional[str] = field(
@@ -1050,8 +1050,8 @@ class DateAndTimeDetailsType:
             name="locationId",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=3.0,
-            max_length=5.0
+            min_length=3,
+            max_length=5
         )
     )
 
@@ -1073,8 +1073,8 @@ class DateAndTimeDetailsType256192C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     date: Optional[str] = field(
@@ -1082,8 +1082,8 @@ class DateAndTimeDetailsType256192C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
     time: Optional[str] = field(
@@ -1099,8 +1099,8 @@ class DateAndTimeDetailsType256192C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=25.0
+            min_length=1,
+            max_length=25
         )
     )
 
@@ -1118,8 +1118,8 @@ class DateTimePeriodDetailsTypeI:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     value: Optional[str] = field(
@@ -1127,8 +1127,8 @@ class DateTimePeriodDetailsTypeI:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
 
@@ -1149,8 +1149,8 @@ class DiscountPenaltyInformationType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     rate_category: Optional[str] = field(
@@ -1159,8 +1159,8 @@ class DiscountPenaltyInformationType:
             name="rateCategory",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
     amount: Optional[Decimal] = field(
@@ -1195,8 +1195,8 @@ class DiscountPenaltyMonetaryInformationType:
             name="feeType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     fee_amount_type: Optional[str] = field(
@@ -1205,8 +1205,8 @@ class DiscountPenaltyMonetaryInformationType:
             name="feeAmountType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     fee_amount: Optional[Decimal] = field(
@@ -1223,8 +1223,8 @@ class DiscountPenaltyMonetaryInformationType:
             name="feeCurrency",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -1250,8 +1250,8 @@ class FareCalculationCodeDetailsType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     amount: Optional[Decimal] = field(
@@ -1267,8 +1267,8 @@ class FareCalculationCodeDetailsType:
             name="locationCode",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     other_location_code: Optional[str] = field(
@@ -1277,8 +1277,8 @@ class FareCalculationCodeDetailsType:
             name="otherLocationCode",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     rate: Optional[Decimal] = field(
@@ -1304,8 +1304,8 @@ class FareCategoryCodesTypeI:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=20.0
+            min_length=1,
+            max_length=20
         )
     )
     other_fare_type: List[str] = field(
@@ -1316,8 +1316,8 @@ class FareCategoryCodesTypeI:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=8,
-            min_length=1.0,
-            max_length=20.0
+            min_length=1,
+            max_length=20
         )
     )
 
@@ -1334,8 +1334,8 @@ class FareDetailsType:
             name="passengerTypeQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -1354,8 +1354,8 @@ class FareDetailsTypeI:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     rate: Optional[Decimal] = field(
@@ -1370,8 +1370,8 @@ class FareDetailsTypeI:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     fare_category: Optional[str] = field(
@@ -1380,8 +1380,8 @@ class FareDetailsTypeI:
             name="fareCategory",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -1418,8 +1418,8 @@ class FareDetailsType193037C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     fare_category: Optional[str] = field(
@@ -1446,8 +1446,8 @@ class FareFamilyDetailsType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=10.0
+            min_length=1,
+            max_length=10
         )
     )
 
@@ -1465,8 +1465,8 @@ class FareInformationTypeI:
             name="valueQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     value: Optional[str] = field(
@@ -1490,8 +1490,8 @@ class FareProductDetailsType:
             name="fareBasis",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=18.0
+            min_length=1,
+            max_length=18
         )
     )
 
@@ -1512,8 +1512,8 @@ class FareProductDetailsType248552C:
             name="fareBasis",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=18.0
+            min_length=0,
+            max_length=18
         )
     )
     passenger_type: Optional[str] = field(
@@ -1522,8 +1522,8 @@ class FareProductDetailsType248552C:
             name="passengerType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=6.0
+            min_length=1,
+            max_length=6
         )
     )
     fare_type: List[str] = field(
@@ -1534,8 +1534,8 @@ class FareProductDetailsType248552C:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9,
-            min_length=0.0,
-            max_length=3.0
+            min_length=0,
+            max_length=3
         )
     )
 
@@ -1551,8 +1551,8 @@ class FareTypeGroupingInformationType:
             name="pricingGroup",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
 
@@ -1570,8 +1570,8 @@ class FreeTextQualificationType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     information_type: Optional[str] = field(
@@ -1580,8 +1580,8 @@ class FreeTextQualificationType:
             name="informationType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=4.0
+            min_length=1,
+            max_length=4
         )
     )
 
@@ -1600,8 +1600,8 @@ class FreeTextQualificationTypeI:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -1623,8 +1623,8 @@ class FreeTextQualificationType120769C:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     information_type: Optional[str] = field(
@@ -1633,8 +1633,8 @@ class FreeTextQualificationType120769C:
             name="informationType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=4.0
+            min_length=1,
+            max_length=4
         )
     )
     language: Optional[str] = field(
@@ -1642,8 +1642,8 @@ class FreeTextQualificationType120769C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -1661,8 +1661,8 @@ class FrequentTravellerIdentificationType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
     number: Optional[str] = field(
@@ -1670,8 +1670,8 @@ class FrequentTravellerIdentificationType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=28.0
+            min_length=1,
+            max_length=28
         )
     )
     tier_level: Optional[str] = field(
@@ -1680,8 +1680,8 @@ class FrequentTravellerIdentificationType:
             name="tierLevel",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
     priority_code: Optional[str] = field(
@@ -1690,8 +1690,8 @@ class FrequentTravellerIdentificationType:
             name="priorityCode",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=12.0
+            min_length=1,
+            max_length=12
         )
     )
 
@@ -1710,8 +1710,8 @@ class ItemNumberIdentificationType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=4.0
+            min_length=1,
+            max_length=4
         )
     )
     type: Optional[str] = field(
@@ -1719,8 +1719,8 @@ class ItemNumberIdentificationType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     qualifier: Optional[str] = field(
@@ -1728,8 +1728,8 @@ class ItemNumberIdentificationType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     responsible_agency: Optional[str] = field(
@@ -1738,8 +1738,8 @@ class ItemNumberIdentificationType:
             name="responsibleAgency",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -1758,8 +1758,8 @@ class ItemNumberIdentificationType191597C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=6.0
+            min_length=1,
+            max_length=6
         )
     )
     number_type: Optional[str] = field(
@@ -1768,8 +1768,8 @@ class ItemNumberIdentificationType191597C:
             name="numberType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=3.0
+            min_length=0,
+            max_length=3
         )
     )
 
@@ -1791,8 +1791,8 @@ class ItemNumberIdentificationType192331C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=6.0
+            min_length=1,
+            max_length=6
         )
     )
     type: Optional[str] = field(
@@ -1800,8 +1800,8 @@ class ItemNumberIdentificationType192331C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     qualifier: Optional[str] = field(
@@ -1809,8 +1809,8 @@ class ItemNumberIdentificationType192331C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     responsible_agency: Optional[str] = field(
@@ -1819,8 +1819,8 @@ class ItemNumberIdentificationType192331C:
             name="responsibleAgency",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -1848,8 +1848,8 @@ class ItemNumberIdentificationType234878C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -1868,8 +1868,8 @@ class ItemNumberIdentificationType248537C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
 
@@ -1887,8 +1887,8 @@ class ItemReferencesAndVersionsType:
             name="referenceType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=6.0
+            min_length=1,
+            max_length=6
         )
     )
     ref_number: Optional[str] = field(
@@ -1918,8 +1918,8 @@ class ItemReferencesAndVersionsType78536S:
             name="referenceType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     ref_number: Optional[str] = field(
@@ -1949,8 +1949,8 @@ class ItemReferencesAndVersionsType78564S:
             name="referenceType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     fee_ref_number: Optional[str] = field(
@@ -1978,8 +1978,8 @@ class ItineraryDetailsType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     segment_number: Optional[str] = field(
@@ -2008,8 +2008,8 @@ class LocationIdentificationDetailsType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=3.0,
-            max_length=5.0
+            min_length=3,
+            max_length=5
         )
     )
     airport_city_qualifier: Optional[str] = field(
@@ -2018,8 +2018,8 @@ class LocationIdentificationDetailsType:
             name="airportCityQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     terminal: Optional[str] = field(
@@ -2027,8 +2027,8 @@ class LocationIdentificationDetailsType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
 
@@ -2044,8 +2044,8 @@ class MiniRulesDetailsType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=9.0
+            min_length=0,
+            max_length=9
         )
     )
     value: List[str] = field(
@@ -2055,8 +2055,8 @@ class MiniRulesDetailsType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=10,
-            min_length=0.0,
-            max_length=5.0
+            min_length=0,
+            max_length=5
         )
     )
 
@@ -2074,8 +2074,8 @@ class MiniRulesIndicatorType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=2,
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
 
@@ -2092,8 +2092,8 @@ class MiniRulesType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -2111,8 +2111,8 @@ class MonetaryInformationDetailsType:
             name="amountType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=3.0
+            min_length=0,
+            max_length=3
         )
     )
     amount: Optional[Decimal] = field(
@@ -2128,8 +2128,8 @@ class MonetaryInformationDetailsType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -2149,8 +2149,8 @@ class MonetaryInformationDetailsTypeI:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=6.0
+            min_length=1,
+            max_length=6
         )
     )
     amount: Optional[str] = field(
@@ -2158,8 +2158,8 @@ class MonetaryInformationDetailsTypeI:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
     currency: Optional[str] = field(
@@ -2167,8 +2167,8 @@ class MonetaryInformationDetailsTypeI:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -2192,8 +2192,8 @@ class MonetaryInformationDetailsType245528C:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     amount: Optional[Decimal] = field(
@@ -2208,8 +2208,8 @@ class MonetaryInformationDetailsType245528C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     location: Optional[str] = field(
@@ -2217,8 +2217,8 @@ class MonetaryInformationDetailsType245528C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=25.0
+            min_length=1,
+            max_length=25
         )
     )
 
@@ -2236,8 +2236,8 @@ class OnTimePerformanceType:
             name="dateTimePeriod",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
     percentage: Optional[Decimal] = field(
@@ -2252,8 +2252,8 @@ class OnTimePerformanceType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -2303,8 +2303,8 @@ class OriginatorIdentificationDetailsTypeI:
             name="agentSignin",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=9.0
+            min_length=1,
+            max_length=9
         )
     )
     confidential_office: Optional[str] = field(
@@ -2313,8 +2313,8 @@ class OriginatorIdentificationDetailsTypeI:
             name="confidentialOffice",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=9.0
+            min_length=1,
+            max_length=9
         )
     )
     other_office: Optional[str] = field(
@@ -2323,8 +2323,8 @@ class OriginatorIdentificationDetailsTypeI:
             name="otherOffice",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=9.0
+            min_length=1,
+            max_length=9
         )
     )
 
@@ -2343,8 +2343,8 @@ class PricingTicketingInformationType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=20,
-            min_length=0.0,
-            max_length=3.0
+            min_length=0,
+            max_length=3
         )
     )
 
@@ -2363,8 +2363,8 @@ class PricingTicketingSubsequentType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=10,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -2383,8 +2383,8 @@ class ProcessingInformationType:
             name="actionQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     reference_qualifier: Optional[str] = field(
@@ -2393,8 +2393,8 @@ class ProcessingInformationType:
             name="referenceQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     ref_num: Optional[str] = field(
@@ -2403,8 +2403,8 @@ class ProcessingInformationType:
             name="refNum",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=6.0
+            min_length=1,
+            max_length=6
         )
     )
 
@@ -2481,8 +2481,8 @@ class ProductDetailsType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=17.0
+            min_length=1,
+            max_length=17
         )
     )
     availability_status: Optional[str] = field(
@@ -2491,8 +2491,8 @@ class ProductDetailsType:
             name="availabilityStatus",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     special_service: Optional[str] = field(
@@ -2501,8 +2501,8 @@ class ProductDetailsType:
             name="specialService",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     option: List[str] = field(
@@ -2512,8 +2512,8 @@ class ProductDetailsType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9,
-            min_length=1.0,
-            max_length=7.0
+            min_length=1,
+            max_length=7
         )
     )
 
@@ -2535,8 +2535,8 @@ class ProductFacilitiesType:
             name="lastSeatAvailable",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     level_of_access: Optional[str] = field(
@@ -2545,8 +2545,8 @@ class ProductFacilitiesType:
             name="levelOfAccess",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     electronic_ticketing: Optional[str] = field(
@@ -2555,8 +2555,8 @@ class ProductFacilitiesType:
             name="electronicTicketing",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     operational_suffix: Optional[str] = field(
@@ -2565,8 +2565,8 @@ class ProductFacilitiesType:
             name="operationalSuffix",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     product_detail_qualifier: Optional[str] = field(
@@ -2575,8 +2575,8 @@ class ProductFacilitiesType:
             name="productDetailQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     flight_characteristic: List[str] = field(
@@ -2587,8 +2587,8 @@ class ProductFacilitiesType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -2607,8 +2607,8 @@ class ProductTypeDetailsType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=9,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -2629,8 +2629,8 @@ class ProductTypeDetailsType205137C:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=1,
             max_occurs=9,
-            min_length=1.0,
-            max_length=6.0
+            min_length=1,
+            max_length=6
         )
     )
 
@@ -2646,8 +2646,8 @@ class ProposedSegmentDetailsType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=6.0
+            min_length=1,
+            max_length=6
         )
     )
     unit_qualifier: Optional[str] = field(
@@ -2656,8 +2656,8 @@ class ProposedSegmentDetailsType:
             name="unitQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -2677,8 +2677,8 @@ class ReferenceType:
             name="refOfLeg",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=6.0
+            min_length=1,
+            max_length=6
         )
     )
     first_item_identifier: Optional[str] = field(
@@ -2713,8 +2713,8 @@ class ReferencingDetailsType:
             name="refQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=3.0
+            min_length=0,
+            max_length=3
         )
     )
     ref_number: Optional[str] = field(
@@ -2745,8 +2745,8 @@ class ReferencingDetailsType191583C:
             name="refQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     ref_number: Optional[str] = field(
@@ -2777,8 +2777,8 @@ class ReferencingDetailsType195561C:
             name="refQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     ref_number: Optional[str] = field(
@@ -2808,8 +2808,8 @@ class ReferencingDetailsType234704C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=10.0
+            min_length=1,
+            max_length=10
         )
     )
     value: Optional[str] = field(
@@ -2817,8 +2817,8 @@ class ReferencingDetailsType234704C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=60.0
+            min_length=1,
+            max_length=60
         )
     )
 
@@ -2862,8 +2862,8 @@ class SelectionDetailsInformationType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     option_information: Optional[str] = field(
@@ -2872,8 +2872,8 @@ class SelectionDetailsInformationType:
             name="optionInformation",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -2891,8 +2891,8 @@ class SequenceInformationTypeU:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=10.0
+            min_length=1,
+            max_length=10
         )
     )
     identification_code: Optional[str] = field(
@@ -2901,8 +2901,8 @@ class SequenceInformationTypeU:
             name="identificationCode",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=17.0
+            min_length=1,
+            max_length=17
         )
     )
 
@@ -2919,8 +2919,8 @@ class ServicesReferences:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=4.0
+            min_length=1,
+            max_length=4
         )
     )
     status: Optional[str] = field(
@@ -2928,8 +2928,8 @@ class ServicesReferences:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     from_price: Optional[str] = field(
@@ -2938,8 +2938,8 @@ class ServicesReferences:
             name="fromPrice",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=18.0
+            min_length=1,
+            max_length=18
         )
     )
 
@@ -2959,8 +2959,8 @@ class SpecialRequirementsDataDetailsType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=5,
-            min_length=1.0,
-            max_length=2.0
+            min_length=1,
+            max_length=2
         )
     )
     dummy_net: Optional[object] = field(
@@ -2991,8 +2991,8 @@ class SpecialRequirementsTypeDetailsType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=4.0
+            min_length=1,
+            max_length=4
         )
     )
     service_status: Optional[str] = field(
@@ -3001,8 +3001,8 @@ class SpecialRequirementsTypeDetailsType:
             name="serviceStatus",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     service_number_of_instances: Optional[str] = field(
@@ -3020,8 +3020,8 @@ class SpecialRequirementsTypeDetailsType:
             name="serviceMarketingCarrier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     service_group: Optional[str] = field(
@@ -3030,8 +3030,8 @@ class SpecialRequirementsTypeDetailsType:
             name="serviceGroup",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     service_sub_group: Optional[str] = field(
@@ -3040,8 +3040,8 @@ class SpecialRequirementsTypeDetailsType:
             name="serviceSubGroup",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     service_free_text: List[str] = field(
@@ -3052,8 +3052,8 @@ class SpecialRequirementsTypeDetailsType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=99,
-            min_length=1.0,
-            max_length=70.0
+            min_length=1,
+            max_length=70
         )
     )
 
@@ -3070,8 +3070,8 @@ class SpecificTravellerDetailsType:
             name="referenceNumber",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=10.0
+            min_length=1,
+            max_length=10
         )
     )
 
@@ -3090,8 +3090,8 @@ class StatusDetailsType:
             name="advisoryTypeInfo",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     notification: Optional[str] = field(
@@ -3099,8 +3099,8 @@ class StatusDetailsType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     notification2: Optional[str] = field(
@@ -3108,8 +3108,8 @@ class StatusDetailsType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     description: Optional[str] = field(
@@ -3117,8 +3117,8 @@ class StatusDetailsType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=70.0
+            min_length=1,
+            max_length=70
         )
     )
 
@@ -3139,8 +3139,8 @@ class StatusDetailsType256255C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     action: Optional[str] = field(
@@ -3148,8 +3148,8 @@ class StatusDetailsType256255C:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -3169,8 +3169,8 @@ class TaxDetailsType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=12.0
+            min_length=1,
+            max_length=12
         )
     )
     country_code: Optional[str] = field(
@@ -3179,8 +3179,8 @@ class TaxDetailsType:
             name="countryCode",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     currency_code: Optional[str] = field(
@@ -3189,8 +3189,8 @@ class TaxDetailsType:
             name="currencyCode",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     type: Optional[str] = field(
@@ -3198,8 +3198,8 @@ class TaxDetailsType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     indicator: List[str] = field(
@@ -3209,8 +3209,8 @@ class TaxDetailsType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=98,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -3300,8 +3300,8 @@ class AttributeType:
             name="attributeQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     attribute_details: List[AttributeInformationType97181C] = field(
@@ -3328,8 +3328,8 @@ class AttributeTypeU:
             name="attributeFunction",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     attribute_details: Optional[AttributeInformationTypeU] = field(
@@ -3386,8 +3386,8 @@ class CategDescrType:
             name="processIndicator",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -3548,8 +3548,8 @@ class DiscountAndPenaltyInformationType:
             name="feeIdentification",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     fee_information: Optional[DiscountPenaltyMonetaryInformationType] = field(
@@ -3617,8 +3617,8 @@ class FareFamilyType:
             name="fareFamilyname",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=10.0
+            min_length=1,
+            max_length=10
         )
     )
     hierarchy: Optional[str] = field(
@@ -3634,8 +3634,8 @@ class FareFamilyType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     commercial_family_details: List[FareFamilyDetailsType] = field(
@@ -3653,8 +3653,8 @@ class FareFamilyType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=100.0
+            min_length=1,
+            max_length=100
         )
     )
     carrier: Optional[str] = field(
@@ -3662,8 +3662,8 @@ class FareFamilyType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=2.0,
-            max_length=3.0
+            min_length=2,
+            max_length=3
         )
     )
     services: List[ServicesReferences] = field(
@@ -3718,8 +3718,8 @@ class FareInformationType:
             name="identityNumber",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
     fare_type_grouping: Optional[FareTypeGroupingInformationType] = field(
@@ -3736,8 +3736,8 @@ class FareInformationType:
             name="rateCategory",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
 
@@ -3777,8 +3777,8 @@ class FareQualifierDetailsType:
             name="movementType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     fare_categories: Optional[FareCategoryCodesTypeI] = field(
@@ -3840,8 +3840,8 @@ class FlightCharacteristicsType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=99,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
 
@@ -3968,8 +3968,8 @@ class FlightProductInformationType176659S:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=2,
-            min_length=1.0,
-            max_length=20.0
+            min_length=1,
+            max_length=20
         )
     )
     break_point: Optional[str] = field(
@@ -3978,8 +3978,8 @@ class FlightProductInformationType176659S:
             name="breakPoint",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     context_details: Optional[ProductTypeDetailsType] = field(
@@ -4007,8 +4007,8 @@ class FlightServicesType:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     cabin_info: List[CabinInformationType] = field(
@@ -4067,8 +4067,8 @@ class HeaderInformationTypeI:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=2,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     date_time_period_details: Optional[DateTimePeriodDetailsTypeI] = field(
@@ -4085,8 +4085,8 @@ class HeaderInformationTypeI:
             name="referenceNumber",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
     product_identification: List[str] = field(
@@ -4097,8 +4097,8 @@ class HeaderInformationTypeI:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=2,
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
 
@@ -4124,8 +4124,8 @@ class InteractiveFreeTextType:
             name="freeText",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=50.0
+            min_length=1,
+            max_length=50
         )
     )
 
@@ -4155,8 +4155,8 @@ class InteractiveFreeTextType78534S:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9,
-            min_length=1.0,
-            max_length=70.0
+            min_length=1,
+            max_length=70
         )
     )
 
@@ -4186,8 +4186,8 @@ class InteractiveFreeTextType78544S:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9,
-            min_length=1.0,
-            max_length=70.0
+            min_length=1,
+            max_length=70
         )
     )
 
@@ -4217,8 +4217,8 @@ class InteractiveFreeTextType78559S:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=9,
-            min_length=1.0,
-            max_length=500.0
+            min_length=1,
+            max_length=500
         )
     )
 
@@ -4359,8 +4359,8 @@ class MiniRulesType78547S:
             name="restrictionType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=6.0
+            min_length=0,
+            max_length=6
         )
     )
     category: Optional[str] = field(
@@ -4369,8 +4369,8 @@ class MiniRulesType78547S:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=0.0,
-            max_length=3.0
+            min_length=0,
+            max_length=3
         )
     )
     indicator: Optional[MiniRulesIndicatorType] = field(
@@ -4551,8 +4551,8 @@ class PricingTicketingSubsequentType193023S:
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             required=True,
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     total_fare_amount: Optional[Decimal] = field(
@@ -4615,8 +4615,8 @@ class ProductInformationType:
             name="productDetailsQualifier",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     booking_class_details: List[ProductDetailsType] = field(
@@ -4655,8 +4655,8 @@ class ProposedSegmentType:
             name="flightCharacteristic",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=0.0,
-            max_length=3.0
+            min_length=0,
+            max_length=3
         )
     )
     maj_cabin: Optional[str] = field(
@@ -4665,8 +4665,8 @@ class ProposedSegmentType:
             name="majCabin",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
 
@@ -4983,8 +4983,8 @@ class TaxType:
             name="taxCategory",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=3.0
+            min_length=1,
+            max_length=3
         )
     )
     tax_details: List[TaxDetailsType] = field(
@@ -5061,8 +5061,8 @@ class TravelProductType:
             name="flightOrtrainNumber",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     product_detail: Optional[AdditionalProductDetailsType] = field(
@@ -5107,8 +5107,8 @@ class TravellerReferenceInformationType:
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
             min_occurs=0,
             max_occurs=3,
-            min_length=1.0,
-            max_length=6.0
+            min_length=1,
+            max_length=6
         )
     )
     traveller: List[TravellerDetailsType] = field(
@@ -5144,8 +5144,8 @@ class UserIdentificationType:
             name="officeType",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     office_code: Optional[str] = field(
@@ -5154,8 +5154,8 @@ class UserIdentificationType:
             name="officeCode",
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=30.0
+            min_length=1,
+            max_length=30
         )
     )
 
@@ -5173,8 +5173,8 @@ class ValueSearchCriteriaType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=35.0
+            min_length=1,
+            max_length=35
         )
     )
     value: Optional[str] = field(
@@ -5182,8 +5182,8 @@ class ValueSearchCriteriaType:
         metadata=dict(
             type="Element",
             namespace="http://xml.amadeus.com/FMPTBR_15_3_1A",
-            min_length=1.0,
-            max_length=18.0
+            min_length=1,
+            max_length=18
         )
     )
     criteria_details: List[CriteriaiDetaislType] = field(

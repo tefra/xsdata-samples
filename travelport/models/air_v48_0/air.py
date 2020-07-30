@@ -362,8 +362,8 @@ class ActionDetails:
         metadata=dict(
             name="PseudoCityCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=10.0
+            min_length=2,
+            max_length=10
         )
     )
     agent_sine: Optional[str] = field(
@@ -426,7 +426,7 @@ class AddlBookingCodeInformation:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            min_length=1.0,
+            min_length=1,
             white_space="collapse"
         )
     )
@@ -504,7 +504,7 @@ class AirFareDisplayRuleKey:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            min_length=1.0,
+            min_length=1,
             white_space="collapse"
         )
     )
@@ -513,8 +513,8 @@ class AirFareDisplayRuleKey:
         metadata=dict(
             name="ProviderCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
 
@@ -587,8 +587,8 @@ class AirRefundModifiers:
         metadata=dict(
             name="TicketDesignator",
             type="Attribute",
-            min_length=0.0,
-            max_length=20.0
+            min_length=0,
+            max_length=20
         )
     )
 
@@ -605,8 +605,8 @@ class AirReservationLocatorCode:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            min_length=5.0,
-            max_length=8.0
+            min_length=5,
+            max_length=8
         )
     )
 
@@ -685,8 +685,8 @@ class AirSegmentTicketingModifiers:
             name="BrandTier",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=10.0
+            min_length=1,
+            max_length=10
         )
     )
 
@@ -744,8 +744,8 @@ class BookingCode:
             name="Code",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=2.0
+            min_length=1,
+            max_length=2
         )
     )
 
@@ -880,8 +880,8 @@ class BookingRulesFareReference:
         metadata=dict(
             name="ClassOfService",
             type="Attribute",
-            min_length=1.0,
-            max_length=2.0
+            min_length=1,
+            max_length=2
         )
     )
     ticket_designator_code: Optional[str] = field(
@@ -889,8 +889,8 @@ class BookingRulesFareReference:
         metadata=dict(
             name="TicketDesignatorCode",
             type="Attribute",
-            min_length=0.0,
-            max_length=20.0
+            min_length=0,
+            max_length=20
         )
     )
     account_code: Optional[str] = field(
@@ -912,8 +912,8 @@ class BookingRulesFareReference:
         metadata=dict(
             name="UpgradeClassOfService",
             type="Attribute",
-            min_length=1.0,
-            max_length=2.0
+            min_length=1,
+            max_length=2
         )
     )
 
@@ -963,8 +963,8 @@ class BrandInfo:
             name="BrandID",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=19.0
+            min_length=1,
+            max_length=19
         )
     )
     air_pricing_info_ref: Optional[str] = field(
@@ -1114,7 +1114,7 @@ class CodeshareInfo:
         metadata=dict(
             name="OperatingFlightNumber",
             type="Attribute",
-            max_length=5.0
+            max_length=5
         )
     )
 
@@ -1158,8 +1158,8 @@ class ContractCode:
             name="Code",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     company_name: Optional[str] = field(
@@ -1174,8 +1174,8 @@ class ContractCode:
         metadata=dict(
             name="ProviderCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     supplier_code: Optional[str] = field(
@@ -1183,8 +1183,8 @@ class ContractCode:
         metadata=dict(
             name="SupplierCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
 
@@ -1379,8 +1379,8 @@ class Emdendorsement:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            min_length=1.0,
-            max_length=255.0
+            min_length=1,
+            max_length=255
         )
     )
 
@@ -1410,8 +1410,8 @@ class EmdtravelerInfo:
         metadata=dict(
             name="TravelerType",
             type="Attribute",
-            min_length=3.0,
-            max_length=5.0
+            min_length=3,
+            max_length=5
         )
     )
     age: Optional[int] = field(
@@ -1436,8 +1436,8 @@ class EmdtravelerInfo:
             metadata=dict(
                 name="Prefix",
                 type="Attribute",
-                min_length=1.0,
-                max_length=20.0
+                min_length=1,
+                max_length=20
             )
         )
         first: Optional[str] = field(
@@ -1446,8 +1446,8 @@ class EmdtravelerInfo:
                 name="First",
                 type="Attribute",
                 required=True,
-                min_length=1.0,
-                max_length=256.0
+                min_length=1,
+                max_length=256
             )
         )
         middle: Optional[str] = field(
@@ -1455,8 +1455,8 @@ class EmdtravelerInfo:
             metadata=dict(
                 name="Middle",
                 type="Attribute",
-                min_length=1.0,
-                max_length=256.0
+                min_length=1,
+                max_length=256
             )
         )
         last: Optional[str] = field(
@@ -1465,8 +1465,8 @@ class EmdtravelerInfo:
                 name="Last",
                 type="Attribute",
                 required=True,
-                min_length=1.0,
-                max_length=256.0
+                min_length=1,
+                max_length=256
             )
         )
         suffix: Optional[str] = field(
@@ -1474,8 +1474,8 @@ class EmdtravelerInfo:
             metadata=dict(
                 name="Suffix",
                 type="Attribute",
-                min_length=1.0,
-                max_length=256.0
+                min_length=1,
+                max_length=256
             )
         )
 
@@ -1527,7 +1527,7 @@ class Embargo:
         metadata=dict(
             name="Name",
             type="Attribute",
-            max_length=30.0
+            max_length=30
         )
     )
     text: Optional[str] = field(
@@ -1549,8 +1549,8 @@ class Embargo:
         metadata=dict(
             name="Type",
             type="Attribute",
-            min_length=1.0,
-            max_length=128.0
+            min_length=1,
+            max_length=128
         )
     )
     url: Optional[str] = field(
@@ -1565,7 +1565,7 @@ class Embargo:
         metadata=dict(
             name="ServiceSubCode",
             type="Attribute",
-            max_length=3.0
+            max_length=3
         )
     )
 
@@ -1687,8 +1687,8 @@ class ExemptTaxes:
         metadata=dict(
             name="CompanyName",
             type="Attribute",
-            min_length=1.0,
-            max_length=24.0
+            min_length=1,
+            max_length=24
         )
     )
 
@@ -1861,8 +1861,8 @@ class FarePricing:
         metadata=dict(
             name="PassengerType",
             type="Attribute",
-            min_length=3.0,
-            max_length=5.0
+            min_length=3,
+            max_length=5
         )
     )
     total_fare_amount: Optional[str] = field(
@@ -2076,8 +2076,8 @@ class FareRuleCategory:
             name="Category",
             type="Attribute",
             required=True,
-            min_inclusive=1.0,
-            max_inclusive=50.0
+            min_inclusive=1,
+            max_inclusive=50
         )
     )
 
@@ -2119,7 +2119,7 @@ class FareRuleKey:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            min_length=1.0,
+            min_length=1,
             white_space="collapse"
         )
     )
@@ -2137,8 +2137,8 @@ class FareRuleKey:
             name="ProviderCode",
             type="Attribute",
             required=True,
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
 
@@ -2310,8 +2310,8 @@ class FareTicketDesignator:
         metadata=dict(
             name="Value",
             type="Attribute",
-            min_length=0.0,
-            max_length=20.0
+            min_length=0,
+            max_length=20
         )
     )
 
@@ -2331,8 +2331,8 @@ class FareType:
             name="Code",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
 
@@ -2405,7 +2405,7 @@ class FlexExploreModifiers:
         metadata=dict(
             name="GroupName",
             type="Attribute",
-            max_length=15.0
+            max_length=15
         )
     )
 
@@ -2495,7 +2495,7 @@ class FlightInfoCriteria:
             name="FlightNumber",
             type="Attribute",
             required=True,
-            max_length=5.0
+            max_length=5
         )
     )
     origin: Optional[str] = field(
@@ -2529,8 +2529,8 @@ class FlightInfoCriteria:
         metadata=dict(
             name="ClassOfService",
             type="Attribute",
-            min_length=1.0,
-            max_length=2.0
+            min_length=1,
+            max_length=2
         )
     )
 
@@ -2569,8 +2569,8 @@ class FlightType:
         metadata=dict(
             name="MaxConnections",
             type="Attribute",
-            min_inclusive=-1.0,
-            max_inclusive=3.0
+            min_inclusive=-1,
+            max_inclusive=3
         )
     )
     max_stops: int = field(
@@ -2578,8 +2578,8 @@ class FlightType:
         metadata=dict(
             name="MaxStops",
             type="Attribute",
-            min_inclusive=-1.0,
-            max_inclusive=3.0
+            min_inclusive=-1,
+            max_inclusive=3
         )
     )
     non_stop_directs: Optional[bool] = field(
@@ -2696,8 +2696,8 @@ class HostReservation:
             name="CarrierLocatorCode",
             type="Attribute",
             required=True,
-            min_length=5.0,
-            max_length=8.0
+            min_length=5,
+            max_length=8
         )
     )
     provider_code: Optional[str] = field(
@@ -2706,8 +2706,8 @@ class HostReservation:
             name="ProviderCode",
             type="Attribute",
             required=True,
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     provider_locator_code: Optional[str] = field(
@@ -2716,7 +2716,7 @@ class HostReservation:
             name="ProviderLocatorCode",
             type="Attribute",
             required=True,
-            max_length=15.0
+            max_length=15
         )
     )
     universal_locator_code: Optional[str] = field(
@@ -2724,8 +2724,8 @@ class HostReservation:
         metadata=dict(
             name="UniversalLocatorCode",
             type="Attribute",
-            min_length=5.0,
-            max_length=8.0
+            min_length=5,
+            max_length=8
         )
     )
     eticket: bool = field(
@@ -2897,7 +2897,7 @@ class LegDetail:
         metadata=dict(
             name="FlightNumber",
             type="Attribute",
-            max_length=5.0
+            max_length=5
         )
     )
 
@@ -3119,8 +3119,8 @@ class MaxLayoverDurationType:
         metadata=dict(
             name="Domestic",
             type="Attribute",
-            min_inclusive=0.0,
-            max_inclusive=9999.0
+            min_inclusive=0,
+            max_inclusive=9999
         )
     )
     gateway: Optional[int] = field(
@@ -3128,8 +3128,8 @@ class MaxLayoverDurationType:
         metadata=dict(
             name="Gateway",
             type="Attribute",
-            min_inclusive=0.0,
-            max_inclusive=9999.0
+            min_inclusive=0,
+            max_inclusive=9999
         )
     )
     international: Optional[int] = field(
@@ -3137,8 +3137,8 @@ class MaxLayoverDurationType:
         metadata=dict(
             name="International",
             type="Attribute",
-            min_inclusive=0.0,
-            max_inclusive=9999.0
+            min_inclusive=0,
+            max_inclusive=9999
         )
     )
 
@@ -3169,8 +3169,8 @@ class MultiGdssearchIndicator:
         metadata=dict(
             name="ProviderCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     default_provider: Optional[bool] = field(
@@ -3510,8 +3510,8 @@ class OfferAvailabilityModifiers:
             type="Element",
             min_occurs=0,
             max_occurs=999,
-            min_length=1.0,
-            max_length=128.0
+            min_length=1,
+            max_length=128
         )
     )
     carrier: List[str] = field(
@@ -3554,8 +3554,8 @@ class OptionalServiceModifier:
             name="Type",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=128.0
+            min_length=1,
+            max_length=128
         )
     )
     secondary_type: Optional[str] = field(
@@ -3563,8 +3563,8 @@ class OptionalServiceModifier:
         metadata=dict(
             name="SecondaryType",
             type="Attribute",
-            min_length=1.0,
-            max_length=128.0
+            min_length=1,
+            max_length=128
         )
     )
     supplier_code: Optional[str] = field(
@@ -3573,8 +3573,8 @@ class OptionalServiceModifier:
             name="SupplierCode",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
     service_sub_code: Optional[str] = field(
@@ -3670,7 +3670,7 @@ class PassengerReceiptOverride:
     value: Optional[str] = field(
         default=None,
         metadata=dict(
-            min_length=1.0,
+            min_length=1,
             white_space="collapse"
         )
     )
@@ -3721,8 +3721,8 @@ class PassengerTicketNumber:
         metadata=dict(
             name="TicketNumber",
             type="Attribute",
-            min_length=1.0,
-            max_length=13.0
+            min_length=1,
+            max_length=13
         )
     )
     booking_traveler_ref: Optional[str] = field(
@@ -4020,8 +4020,8 @@ class PersonName:
         metadata=dict(
             name="First",
             type="Attribute",
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     last: Optional[str] = field(
@@ -4030,8 +4030,8 @@ class PersonName:
             name="Last",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     prefix: Optional[str] = field(
@@ -4039,8 +4039,8 @@ class PersonName:
         metadata=dict(
             name="Prefix",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
 
@@ -4060,8 +4060,8 @@ class PersonNameSearch:
             name="Last",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
 
@@ -4081,8 +4081,8 @@ class PolicyCodesList:
             type="Element",
             min_occurs=1,
             max_occurs=10,
-            min_inclusive=1.0,
-            max_inclusive=9999.0
+            min_inclusive=1,
+            max_inclusive=9999
         )
     )
 
@@ -4203,8 +4203,8 @@ class PromoCode:
             name="Code",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     provider_code: Optional[str] = field(
@@ -4213,8 +4213,8 @@ class PromoCode:
             name="ProviderCode",
             type="Attribute",
             required=True,
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     supplier_code: Optional[str] = field(
@@ -4223,8 +4223,8 @@ class PromoCode:
             name="SupplierCode",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
 
@@ -4739,7 +4739,7 @@ class SpecificSeatAssignment:
         metadata=dict(
             name="RailCoachNumber",
             type="Attribute",
-            max_length=4.0
+            max_length=4
         )
     )
 
@@ -4800,7 +4800,7 @@ class SponsoredFltInfo:
             name="FltKey",
             type="Attribute",
             required=True,
-            max_length=5.0
+            max_length=5
         )
     )
 
@@ -4982,7 +4982,7 @@ class TextInfo:
             type="Element",
             min_occurs=0,
             max_occurs=999,
-            max_length=250.0
+            max_length=250
         )
     )
     title: Optional[str] = field(
@@ -5038,8 +5038,8 @@ class TicketDesignator:
             name="Value",
             type="Attribute",
             required=True,
-            min_length=0.0,
-            max_length=20.0
+            min_length=0,
+            max_length=20
         )
     )
 
@@ -5058,8 +5058,8 @@ class TicketEndorsement:
             name="Value",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=256.0
+            min_length=1,
+            max_length=256
         )
     )
 
@@ -5124,7 +5124,7 @@ class TourCode:
             name="Value",
             type="Attribute",
             required=True,
-            max_length=15.0
+            max_length=15
         )
     )
 
@@ -5199,7 +5199,7 @@ class Urlinfo:
             type="Element",
             min_occurs=0,
             max_occurs=999,
-            max_length=250.0
+            max_length=250
         )
     )
     url: List[str] = field(
@@ -5278,8 +5278,8 @@ class VoidDocumentInfo:
         metadata=dict(
             name="DocumentNumber",
             type="Attribute",
-            min_length=1.0,
-            max_length=13.0
+            min_length=1,
+            max_length=13
         )
     )
     document_type: Optional["VoidDocumentInfo.DocumentType"] = field(
@@ -5357,8 +5357,8 @@ class VoidResultInfo:
         metadata=dict(
             name="DocumentNumber",
             type="Attribute",
-            min_length=1.0,
-            max_length=13.0
+            min_length=1,
+            max_length=13
         )
     )
     document_type: Optional["VoidResultInfo.DocumentType"] = field(
@@ -5406,7 +5406,7 @@ class WaiverCode:
         metadata=dict(
             name="TourCode",
             type="Attribute",
-            max_length=15.0
+            max_length=15
         )
     )
     ticket_designator: Optional[str] = field(
@@ -5414,8 +5414,8 @@ class WaiverCode:
         metadata=dict(
             name="TicketDesignator",
             type="Attribute",
-            min_length=0.0,
-            max_length=20.0
+            min_length=0,
+            max_length=20
         )
     )
     endorsement: Optional[str] = field(
@@ -5423,8 +5423,8 @@ class WaiverCode:
         metadata=dict(
             name="Endorsement",
             type="Attribute",
-            min_length=0.0,
-            max_length=100.0
+            min_length=0,
+            max_length=100
         )
     )
 
@@ -5551,7 +5551,7 @@ class TypeAnchorFlightData:
             name="FlightNumber",
             type="Attribute",
             required=True,
-            max_length=5.0
+            max_length=5
         )
     )
     connection_indicator: Optional[bool] = field(
@@ -6378,8 +6378,8 @@ class TypeNativeSearchModifier:
             name="ProviderCode",
             type="Attribute",
             required=True,
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
 
@@ -6398,8 +6398,8 @@ class TypeNonAirReservationRef:
             name="LocatorCode",
             type="Attribute",
             required=True,
-            min_length=5.0,
-            max_length=8.0
+            min_length=5,
+            max_length=8
         )
     )
 
@@ -6962,8 +6962,8 @@ class AirAvailInfo:
         metadata=dict(
             name="ProviderCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     host_token_ref: Optional[str] = field(
@@ -7084,8 +7084,8 @@ class AirExchangeModifiers:
         metadata=dict(
             name="TicketDesignator",
             type="Attribute",
-            min_length=0.0,
-            max_length=20.0
+            min_length=0,
+            max_length=20
         )
     )
     allow_penalty_fares: bool = field(
@@ -7107,8 +7107,8 @@ class AirExchangeModifiers:
         metadata=dict(
             name="UniversalRecordLocatorCode",
             type="Attribute",
-            min_length=5.0,
-            max_length=8.0
+            min_length=5,
+            max_length=8
         )
     )
     provider_locator_code: Optional[str] = field(
@@ -7116,8 +7116,8 @@ class AirExchangeModifiers:
         metadata=dict(
             name="ProviderLocatorCode",
             type="Attribute",
-            min_length=5.0,
-            max_length=8.0
+            min_length=5,
+            max_length=8
         )
     )
     provider_code: Optional[str] = field(
@@ -7510,8 +7510,8 @@ class AirSegmentDetails:
             name="ProviderCode",
             type="Attribute",
             required=True,
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     carrier: Optional[str] = field(
@@ -7572,8 +7572,8 @@ class AirSegmentDetails:
         metadata=dict(
             name="ClassOfService",
             type="Attribute",
-            min_length=1.0,
-            max_length=2.0
+            min_length=1,
+            max_length=2
         )
     )
     cabin_class: Optional[str] = field(
@@ -7597,7 +7597,7 @@ class AirSegmentDetails:
             name="FlightNumber",
             type="Attribute",
             required=True,
-            max_length=5.0
+            max_length=5
         )
     )
 
@@ -7699,8 +7699,8 @@ class AirSegmentPricingModifiers:
         metadata=dict(
             name="BrandTier",
             type="Attribute",
-            min_length=1.0,
-            max_length=10.0
+            min_length=1,
+            max_length=10
         )
     )
 
@@ -8107,8 +8107,8 @@ class BackOfficeHandOff:
         metadata=dict(
             name="PseudoCityCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=10.0
+            min_length=2,
+            max_length=10
         )
     )
 
@@ -8353,8 +8353,8 @@ class Co2Emissions:
         metadata=dict(
             name="Unit",
             type="Attribute",
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     category: Optional[str] = field(
@@ -8362,8 +8362,8 @@ class Co2Emissions:
         metadata=dict(
             name="Category",
             type="Attribute",
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     source: Optional[str] = field(
@@ -8371,8 +8371,8 @@ class Co2Emissions:
         metadata=dict(
             name="Source",
             type="Attribute",
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
 
@@ -8470,8 +8470,8 @@ class Characteristic:
         metadata=dict(
             name="PADISCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=99.0
+            min_length=1,
+            max_length=99
         )
     )
 
@@ -8574,7 +8574,7 @@ class ConjunctedTicketInfo:
         metadata=dict(
             name="IATANumber",
             type="Attribute",
-            max_length=8.0
+            max_length=8
         )
     )
     ticket_issue_date: Optional[str] = field(
@@ -8589,7 +8589,7 @@ class ConjunctedTicketInfo:
         metadata=dict(
             name="TicketingAgentSignOn",
             type="Attribute",
-            max_length=8.0
+            max_length=8
         )
     )
     country_code: Optional[str] = field(
@@ -8703,7 +8703,7 @@ class Coupon:
         metadata=dict(
             name="OperatingFlightNumber",
             type="Attribute",
-            max_length=5.0
+            max_length=5
         )
     )
     marketing_carrier: Optional[str] = field(
@@ -8719,7 +8719,7 @@ class Coupon:
         metadata=dict(
             name="MarketingFlightNumber",
             type="Attribute",
-            max_length=5.0
+            max_length=5
         )
     )
     origin: Optional[str] = field(
@@ -8770,7 +8770,7 @@ class Coupon:
             name="BookingClass",
             type="Attribute",
             required=True,
-            max_length=2.0
+            max_length=2
         )
     )
     fare_basis: Optional[str] = field(
@@ -8801,7 +8801,7 @@ class Coupon:
             name="Status",
             type="Attribute",
             required=True,
-            max_length=1.0
+            max_length=1
         )
     )
     segment_group: Optional[int] = field(
@@ -8907,7 +8907,7 @@ class DocumentOptions:
             type="Element",
             min_occurs=0,
             max_occurs=999,
-            max_length=50.0
+            max_length=50
         )
     )
     suppress_itinerary_remarks: Optional[bool] = field(
@@ -8967,8 +8967,8 @@ class Emd:
         metadata=dict(
             name="FulfillmentType",
             type="Attribute",
-            min_inclusive=1.0,
-            max_inclusive=5.0
+            min_inclusive=1,
+            max_inclusive=5
         )
     )
     fulfillment_type_description: Optional[str] = field(
@@ -9194,8 +9194,8 @@ class Emdcoupon:
         metadata=dict(
             name="RFIDescription",
             type="Attribute",
-            min_length=1.0,
-            max_length=86.0
+            min_length=1,
+            max_length=86
         )
     )
     origin: Optional[str] = field(
@@ -9221,7 +9221,7 @@ class Emdcoupon:
         metadata=dict(
             name="FlightNumber",
             type="Attribute",
-            max_length=5.0
+            max_length=5
         )
     )
     present_to: Optional[str] = field(
@@ -9229,8 +9229,8 @@ class Emdcoupon:
         metadata=dict(
             name="PresentTo",
             type="Attribute",
-            min_length=1.0,
-            max_length=71.0
+            min_length=1,
+            max_length=71
         )
     )
     present_at: Optional[str] = field(
@@ -9238,8 +9238,8 @@ class Emdcoupon:
         metadata=dict(
             name="PresentAt",
             type="Attribute",
-            min_length=1.0,
-            max_length=71.0
+            min_length=1,
+            max_length=71
         )
     )
     non_refundable_ind: Optional[bool] = field(
@@ -9325,8 +9325,8 @@ class ExchangePenaltyInfo:
         metadata=dict(
             name="PTC",
             type="Attribute",
-            min_length=3.0,
-            max_length=5.0
+            min_length=3,
+            max_length=5
         )
     )
     minimum_change_fee: Optional[str] = field(
@@ -9386,7 +9386,7 @@ class FareDetails:
             name="FareBasis",
             type="Attribute",
             required=True,
-            max_length=20.0
+            max_length=20
         )
     )
 
@@ -9741,8 +9741,8 @@ class FareRuleLookup:
             name="ProviderCode",
             type="Attribute",
             required=True,
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     departure_date: Optional[str] = field(
@@ -10163,8 +10163,8 @@ class Leg:
             name="Origin",
             type="Attribute",
             required=True,
-            min_length=3.0,
-            max_length=8.0,
+            min_length=3,
+            max_length=8,
             white_space="collapse"
         )
     )
@@ -10174,8 +10174,8 @@ class Leg:
             name="Destination",
             type="Attribute",
             required=True,
-            min_length=3.0,
-            max_length=8.0,
+            min_length=3,
+            max_length=8,
             white_space="collapse"
         )
     )
@@ -10278,8 +10278,8 @@ class ManualFareAdjustment:
         metadata=dict(
             name="TicketDesignator",
             type="Attribute",
-            min_length=0.0,
-            max_length=20.0
+            min_length=0,
+            max_length=20
         )
     )
     fare_type: Optional[str] = field(
@@ -10287,8 +10287,8 @@ class ManualFareAdjustment:
         metadata=dict(
             name="FareType",
             type="Attribute",
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
 
@@ -10387,8 +10387,8 @@ class OriginalItineraryDetails:
         metadata=dict(
             name="TicketingPCC",
             type="Attribute",
-            min_length=2.0,
-            max_length=10.0
+            min_length=2,
+            max_length=10
         )
     )
     ticketing_iata: Optional[str] = field(
@@ -10396,7 +10396,7 @@ class OriginalItineraryDetails:
         metadata=dict(
             name="TicketingIATA",
             type="Attribute",
-            max_length=8.0
+            max_length=8
         )
     )
     ticketing_country: Optional[str] = field(
@@ -10412,7 +10412,7 @@ class OriginalItineraryDetails:
         metadata=dict(
             name="TourCode",
             type="Attribute",
-            max_length=15.0
+            max_length=15
         )
     )
     ticketing_date: Optional[str] = field(
@@ -10498,8 +10498,8 @@ class PassengerDetails:
             name="Code",
             type="Attribute",
             required=True,
-            min_length=3.0,
-            max_length=5.0
+            min_length=3,
+            max_length=5
         )
     )
     age: Optional[int] = field(
@@ -10608,8 +10608,8 @@ class PrePayId:
             name="Id",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=36.0
+            min_length=1,
+            max_length=36
         )
     )
     type: Optional[str] = field(
@@ -11413,7 +11413,7 @@ class SolutionGroup:
         metadata=dict(
             name="Tag",
             type="Attribute",
-            max_length=20.0
+            max_length=20
         )
     )
     primary: bool = field(
@@ -11554,7 +11554,7 @@ class SpecificTimeTable:
             name="FlightNumber",
             type="Attribute",
             required=True,
-            max_length=5.0
+            max_length=5
         )
     )
 
@@ -12515,8 +12515,8 @@ class AirLegModifiers:
         metadata=dict(
             name="MaxJourneyTime",
             type="Attribute",
-            min_inclusive=0.0,
-            max_inclusive=99.0
+            min_inclusive=0,
+            max_inclusive=99
         )
     )
 
@@ -12932,8 +12932,8 @@ class AirPricingModifiers:
         metadata=dict(
             name="ChannelId",
             type="Attribute",
-            min_length=2.0,
-            max_length=4.0
+            min_length=2,
+            max_length=4
         )
     )
     return_fare_attributes: bool = field(
@@ -13360,8 +13360,8 @@ class AirSearchModifiers:
         metadata=dict(
             name="MaxJourneyTime",
             type="Attribute",
-            min_inclusive=0.0,
-            max_inclusive=99.0
+            min_inclusive=0,
+            max_inclusive=99
         )
     )
     jet_service_only: Optional[bool] = field(
@@ -14641,7 +14641,7 @@ class Facility:
         metadata=dict(
             name="ServiceSubCode",
             type="Attribute",
-            max_length=3.0
+            max_length=3
         )
     )
     ssrcode: Optional[str] = field(
@@ -14649,8 +14649,8 @@ class Facility:
         metadata=dict(
             name="SSRCode",
             type="Attribute",
-            min_length=4.0,
-            max_length=4.0
+            min_length=4,
+            max_length=4
         )
     )
     issuance_reason: Optional[str] = field(
@@ -14658,8 +14658,8 @@ class Facility:
         metadata=dict(
             name="IssuanceReason",
             type="Attribute",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     base_seat_price: Optional[str] = field(
@@ -15161,7 +15161,7 @@ class FlightInfoDetail:
         metadata=dict(
             name="OriginGate",
             type="Attribute",
-            max_length=6.0
+            max_length=6
         )
     )
     destination_terminal: Optional[str] = field(
@@ -15176,7 +15176,7 @@ class FlightInfoDetail:
         metadata=dict(
             name="DestinationGate",
             type="Attribute",
-            max_length=6.0
+            max_length=6
         )
     )
     automated_checkin: bool = field(
@@ -15494,7 +15494,7 @@ class RepricingModifiers:
         metadata=dict(
             name="PrivateFareOptions",
             type="Element",
-            max_length=50.0
+            max_length=50
         )
     )
     fare_type: List[FareType] = field(
@@ -15638,8 +15638,8 @@ class RepricingModifiers:
         metadata=dict(
             name="TimeWindow",
             type="Attribute",
-            min_inclusive=1.0,
-            max_inclusive=12.0
+            min_inclusive=1,
+            max_inclusive=12
         )
     )
     flight_type: RepricingModifiersFlightType = field(
@@ -15970,7 +15970,7 @@ class TicketInfo:
         metadata=dict(
             name="IATANumber",
             type="Attribute",
-            max_length=8.0
+            max_length=8
         )
     )
     ticket_issue_date: Optional[str] = field(
@@ -15985,7 +15985,7 @@ class TicketInfo:
         metadata=dict(
             name="TicketingAgentSignOn",
             type="Attribute",
-            max_length=8.0
+            max_length=8
         )
     )
     country_code: Optional[str] = field(
@@ -16074,8 +16074,8 @@ class TypeDefaultBrandDetail:
         metadata=dict(
             name="BrandID",
             type="Attribute",
-            min_length=1.0,
-            max_length=19.0
+            min_length=1,
+            max_length=19
         )
     )
 
@@ -16204,7 +16204,7 @@ class AirPricingCommand:
         metadata=dict(
             name="CommandKey",
             type="Attribute",
-            max_length=10.0
+            max_length=10
         )
     )
     cabin_class: Optional[str] = field(
@@ -16303,7 +16303,7 @@ class AutoPricingInfo:
         metadata=dict(
             name="PricingType",
             type="Attribute",
-            max_length=25.0
+            max_length=25
         )
     )
     plating_carrier: Optional[str] = field(
@@ -16644,8 +16644,8 @@ class Emdinfo:
             name="ProviderCode",
             type="Attribute",
             required=True,
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     provider_locator_code: Optional[str] = field(
@@ -16654,7 +16654,7 @@ class Emdinfo:
             name="ProviderLocatorCode",
             type="Attribute",
             required=True,
-            max_length=15.0
+            max_length=15
         )
     )
     key: Optional[str] = field(
@@ -17100,7 +17100,7 @@ class FlightInfo:
             name="FlightNumber",
             type="Attribute",
             required=True,
-            max_length=5.0
+            max_length=5
         )
     )
     origin: Optional[str] = field(
@@ -17134,8 +17134,8 @@ class FlightInfo:
         metadata=dict(
             name="ClassOfService",
             type="Attribute",
-            min_length=1.0,
-            max_length=2.0
+            min_length=1,
+            max_length=2
         )
     )
 
@@ -17207,7 +17207,7 @@ class FlightTimeDetail:
         metadata=dict(
             name="FlightNumber",
             type="Attribute",
-            max_length=5.0
+            max_length=5
         )
     )
     origin: Optional[str] = field(
@@ -17341,8 +17341,8 @@ class FlightTimeDetail:
         metadata=dict(
             name="InsideAvailability",
             type="Attribute",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     secure_sell: Optional[str] = field(
@@ -17350,8 +17350,8 @@ class FlightTimeDetail:
         metadata=dict(
             name="SecureSell",
             type="Attribute",
-            min_length=0.0,
-            max_length=2.0
+            min_length=0,
+            max_length=2
         )
     )
     availability_source: Optional[str] = field(
@@ -17359,7 +17359,7 @@ class FlightTimeDetail:
         metadata=dict(
             name="AvailabilitySource",
             type="Attribute",
-            max_length=1.0
+            max_length=1
         )
     )
 
@@ -17720,8 +17720,8 @@ class OptionalService:
         metadata=dict(
             name="ProviderCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     supplier_code: Optional[str] = field(
@@ -17729,8 +17729,8 @@ class OptionalService:
         metadata=dict(
             name="SupplierCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
     optional_services_rule_ref: Optional[str] = field(
@@ -17746,8 +17746,8 @@ class OptionalService:
             name="Type",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=128.0
+            min_length=1,
+            max_length=128
         )
     )
     confirmation: Optional[str] = field(
@@ -17839,7 +17839,7 @@ class OptionalService:
         metadata=dict(
             name="ServiceSubCode",
             type="Attribute",
-            max_length=3.0
+            max_length=3
         )
     )
     ssrcode: Optional[str] = field(
@@ -17847,8 +17847,8 @@ class OptionalService:
         metadata=dict(
             name="SSRCode",
             type="Attribute",
-            min_length=4.0,
-            max_length=4.0
+            min_length=4,
+            max_length=4
         )
     )
     issuance_reason: Optional[str] = field(
@@ -17856,8 +17856,8 @@ class OptionalService:
         metadata=dict(
             name="IssuanceReason",
             type="Attribute",
-            min_length=1.0,
-            max_length=1.0
+            min_length=1,
+            max_length=1
         )
     )
     provider_defined_type: Optional[str] = field(
@@ -17865,8 +17865,8 @@ class OptionalService:
         metadata=dict(
             name="ProviderDefinedType",
             type="Attribute",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     total_price: Optional[str] = field(
@@ -17965,8 +17965,8 @@ class OptionalService:
         metadata=dict(
             name="ApplicableFFLevel",
             type="Attribute",
-            min_inclusive=0.0,
-            max_inclusive=9.0
+            min_inclusive=0,
+            max_inclusive=9
         )
     )
     private: Optional[bool] = field(
@@ -18128,8 +18128,8 @@ class OptionalService:
         metadata=dict(
             name="PseudoCityCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=10.0
+            min_length=2,
+            max_length=10
         )
     )
     tag: Optional[str] = field(
@@ -18137,8 +18137,8 @@ class OptionalService:
         metadata=dict(
             name="Tag",
             type="Attribute",
-            min_length=1.0,
-            max_length=256.0
+            min_length=1,
+            max_length=256
         )
     )
     display_order: Optional[int] = field(
@@ -18146,8 +18146,8 @@ class OptionalService:
         metadata=dict(
             name="DisplayOrder",
             type="Attribute",
-            min_inclusive=0.0,
-            max_inclusive=999.0
+            min_inclusive=0,
+            max_inclusive=999
         )
     )
 
@@ -18382,8 +18382,8 @@ class SegmentModifiers:
         metadata=dict(
             name="TicketDesignator",
             type="Element",
-            min_length=0.0,
-            max_length=20.0
+            min_length=0,
+            max_length=20
         )
     )
 
@@ -18430,8 +18430,8 @@ class BaggageAllowanceInfo(BaseBaggageAllowanceInfo):
         metadata=dict(
             name="TravelerType",
             type="Attribute",
-            min_length=3.0,
-            max_length=5.0
+            min_length=3,
+            max_length=5
         )
     )
     fare_info_ref: Optional[str] = field(
@@ -18610,8 +18610,8 @@ class FareDisplay:
         metadata=dict(
             name="FareTypeCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
     special_fare: Optional[bool] = field(
@@ -18714,8 +18714,8 @@ class FareDisplay:
         metadata=dict(
             name="FareTicketingDesignator",
             type="Attribute",
-            min_length=0.0,
-            max_length=20.0
+            min_length=0,
+            max_length=20
         )
     )
 
@@ -18829,8 +18829,8 @@ class FareRule:
         metadata=dict(
             name="ProviderCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     supplier_code: Optional[str] = field(
@@ -18838,8 +18838,8 @@ class FareRule:
         metadata=dict(
             name="SupplierCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
 
@@ -19132,8 +19132,8 @@ class PrePayProfileInfo:
         metadata=dict(
             name="CreatorID",
             type="Attribute",
-            min_length=1.0,
-            max_length=36.0
+            min_length=1,
+            max_length=36
         )
     )
 
@@ -19432,8 +19432,8 @@ class TicketingModifiers:
         metadata=dict(
             name="Reference",
             type="Attribute",
-            min_length=1.0,
-            max_length=30.0
+            min_length=1,
+            max_length=30
         )
     )
     status: Optional[str] = field(
@@ -19441,7 +19441,7 @@ class TicketingModifiers:
         metadata=dict(
             name="Status",
             type="Attribute",
-            max_length=30.0
+            max_length=30
         )
     )
     free_text: Optional[str] = field(
@@ -19449,7 +19449,7 @@ class TicketingModifiers:
         metadata=dict(
             name="FreeText",
             type="Attribute",
-            max_length=756.0
+            max_length=756
         )
     )
     name_number: Optional[str] = field(
@@ -19748,7 +19748,7 @@ class TypeBaseAirSegment(Segment):
         metadata=dict(
             name="FlightNumber",
             type="Attribute",
-            max_length=5.0
+            max_length=5
         )
     )
     origin: Optional[str] = field(
@@ -19811,8 +19811,8 @@ class TypeBaseAirSegment(Segment):
         metadata=dict(
             name="ProviderCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     supplier_code: Optional[str] = field(
@@ -19820,8 +19820,8 @@ class TypeBaseAirSegment(Segment):
         metadata=dict(
             name="SupplierCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
     participant_level: Optional[str] = field(
@@ -19857,8 +19857,8 @@ class TypeBaseAirSegment(Segment):
         metadata=dict(
             name="ClassOfService",
             type="Attribute",
-            min_length=1.0,
-            max_length=2.0
+            min_length=1,
+            max_length=2
         )
     )
     eticketability: Optional[TypeEticketability] = field(
@@ -19944,7 +19944,7 @@ class TypeBaseAirSegment(Segment):
         metadata=dict(
             name="AvailabilitySource",
             type="Attribute",
-            max_length=1.0
+            max_length=1
         )
     )
     apisrequirements_ref: Optional[str] = field(
@@ -19973,8 +19973,8 @@ class TypeBaseAirSegment(Segment):
         metadata=dict(
             name="NumberInParty",
             type="Attribute",
-            min_inclusive=1.0,
-            max_inclusive=99.0
+            min_inclusive=1,
+            max_inclusive=99
         )
     )
     rail_coach_number: Optional[str] = field(
@@ -19982,7 +19982,7 @@ class TypeBaseAirSegment(Segment):
         metadata=dict(
             name="RailCoachNumber",
             type="Attribute",
-            max_length=4.0
+            max_length=4
         )
     )
     booking_date: Optional[str] = field(
@@ -20208,8 +20208,8 @@ class Brand:
         metadata=dict(
             name="BrandID",
             type="Attribute",
-            min_length=1.0,
-            max_length=19.0
+            min_length=1,
+            max_length=19
         )
     )
     name: Optional[str] = field(
@@ -20231,8 +20231,8 @@ class Brand:
         metadata=dict(
             name="UpSellBrandID",
             type="Attribute",
-            min_length=1.0,
-            max_length=19.0
+            min_length=1,
+            max_length=19
         )
     )
     brand_found: Optional[bool] = field(
@@ -20269,8 +20269,8 @@ class Brand:
         metadata=dict(
             name="BrandTier",
             type="Attribute",
-            min_length=1.0,
-            max_length=10.0
+            min_length=1,
+            max_length=10
         )
     )
     brand_maintained: Optional[str] = field(
@@ -20278,8 +20278,8 @@ class Brand:
         metadata=dict(
             name="BrandMaintained",
             type="Attribute",
-            min_length=1.0,
-            max_length=99.0
+            min_length=1,
+            max_length=99
         )
     )
 
@@ -20397,8 +20397,8 @@ class AirSegmentData:
         metadata=dict(
             name="ClassOfService",
             type="Attribute",
-            min_length=1.0,
-            max_length=2.0
+            min_length=1,
+            max_length=2
         )
     )
 
@@ -20747,8 +20747,8 @@ class FareInfo:
             name="PassengerTypeCode",
             type="Attribute",
             required=True,
-            min_length=3.0,
-            max_length=5.0
+            min_length=3,
+            max_length=5
         )
     )
     origin: Optional[str] = field(
@@ -20819,7 +20819,7 @@ class FareInfo:
         metadata=dict(
             name="TourCode",
             type="Attribute",
-            max_length=15.0
+            max_length=15
         )
     )
     waiver_code: Optional[str] = field(
@@ -20848,8 +20848,8 @@ class FareInfo:
         metadata=dict(
             name="PseudoCityCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=10.0
+            min_length=2,
+            max_length=10
         )
     )
     fare_family: Optional[str] = field(
@@ -20857,8 +20857,8 @@ class FareInfo:
         metadata=dict(
             name="FareFamily",
             type="Attribute",
-            min_length=0.0,
-            max_length=32.0
+            min_length=0,
+            max_length=32
         )
     )
     promotional_fare: Optional[bool] = field(
@@ -20873,7 +20873,7 @@ class FareInfo:
         metadata=dict(
             name="CarCode",
             type="Attribute",
-            max_length=15.0
+            max_length=15
         )
     )
     value_code: Optional[str] = field(
@@ -20881,7 +20881,7 @@ class FareInfo:
         metadata=dict(
             name="ValueCode",
             type="Attribute",
-            max_length=15.0
+            max_length=15
         )
     )
     el_stat: Optional[TypeElementStatus] = field(
@@ -20924,8 +20924,8 @@ class FareInfo:
         metadata=dict(
             name="SupplierCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
     tax_amount: Optional[str] = field(
@@ -21052,8 +21052,8 @@ class TcrrefundBundle:
             name="RefundAccessCode",
             type="Attribute",
             namespace="http://www.travelport.com/schema/air_v48_0",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
 
@@ -21448,7 +21448,7 @@ class AirPricingInfo:
         metadata=dict(
             name="CommandKey",
             type="Attribute",
-            max_length=10.0
+            max_length=10
         )
     )
     total_price: Optional[str] = field(
@@ -21526,8 +21526,8 @@ class AirPricingInfo:
         metadata=dict(
             name="ProviderCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     supplier_code: Optional[str] = field(
@@ -21535,8 +21535,8 @@ class AirPricingInfo:
         metadata=dict(
             name="SupplierCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=5.0
+            min_length=1,
+            max_length=5
         )
     )
     amount_type: Optional[str] = field(
@@ -21544,8 +21544,8 @@ class AirPricingInfo:
         metadata=dict(
             name="AmountType",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     includes_vat: Optional[bool] = field(
@@ -21653,7 +21653,7 @@ class AirPricingInfo:
         metadata=dict(
             name="PricingType",
             type="Attribute",
-            max_length=25.0
+            max_length=25
         )
     )
     true_last_date_to_ticket: Optional[str] = field(
@@ -22535,7 +22535,7 @@ class Etr:
         metadata=dict(
             name="TourCode",
             type="Attribute",
-            max_length=15.0
+            max_length=15
         )
     )
     issued_date: Optional[str] = field(
@@ -22558,8 +22558,8 @@ class Etr:
         metadata=dict(
             name="ProviderCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     provider_locator_code: Optional[str] = field(
@@ -22567,7 +22567,7 @@ class Etr:
         metadata=dict(
             name="ProviderLocatorCode",
             type="Attribute",
-            max_length=15.0
+            max_length=15
         )
     )
     iatanumber: Optional[str] = field(
@@ -22575,7 +22575,7 @@ class Etr:
         metadata=dict(
             name="IATANumber",
             type="Attribute",
-            max_length=8.0
+            max_length=8
         )
     )
     pseudo_city_code: Optional[str] = field(
@@ -22583,8 +22583,8 @@ class Etr:
         metadata=dict(
             name="PseudoCityCode",
             type="Attribute",
-            min_length=2.0,
-            max_length=10.0
+            min_length=2,
+            max_length=10
         )
     )
     country_code: Optional[str] = field(
@@ -22842,8 +22842,8 @@ class Tcr:
             name="ProviderCode",
             type="Attribute",
             required=True,
-            min_length=2.0,
-            max_length=5.0
+            min_length=2,
+            max_length=5
         )
     )
     provider_locator_code: Optional[str] = field(
@@ -22852,7 +22852,7 @@ class Tcr:
             name="ProviderLocatorCode",
             type="Attribute",
             required=True,
-            max_length=15.0
+            max_length=15
         )
     )
     refund_access_code: Optional[str] = field(
@@ -22861,8 +22861,8 @@ class Tcr:
             name="RefundAccessCode",
             type="Attribute",
             namespace="http://www.travelport.com/schema/air_v48_0",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     refund_amount: Optional[str] = field(
@@ -23166,7 +23166,7 @@ class AirPriceResult:
         metadata=dict(
             name="CommandKey",
             type="Attribute",
-            max_length=10.0
+            max_length=10
         )
     )
 

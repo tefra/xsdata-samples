@@ -46,8 +46,8 @@ class AirFeeType:
             name="FeeCode",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     amount: Optional[Decimal] = field(
@@ -108,8 +108,8 @@ class AirTaxType:
             name="TaxCode",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     amount: Optional[Decimal] = field(
@@ -140,8 +140,8 @@ class AirTaxType:
         metadata=dict(
             name="CarrierCode",
             type="Attribute",
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     min_amount: Optional[Decimal] = field(
@@ -544,8 +544,8 @@ class FareMessagesType:
             metadata=dict(
                 name="AirlineCode",
                 type="Attribute",
-                min_length=1.0,
-                max_length=8.0
+                min_length=1,
+                max_length=8
             )
         )
         type: Optional[str] = field(
@@ -731,8 +731,8 @@ class OcfeeType:
             name="OriginAirport",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     destination_airport: Optional[str] = field(
@@ -741,8 +741,8 @@ class OcfeeType:
             name="DestinationAirport",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     carrier: Optional[str] = field(
@@ -751,8 +751,8 @@ class OcfeeType:
             name="Carrier",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     passenger_code: Optional[str] = field(
@@ -1018,8 +1018,8 @@ class ResponseLocationType:
             name="LocationCode",
             type="Attribute",
             required=True,
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     code_context: str = field(
@@ -1027,8 +1027,8 @@ class ResponseLocationType:
         metadata=dict(
             name="CodeContext",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
 
@@ -1152,8 +1152,8 @@ class ValidatingCarrierInfoType:
         metadata=dict(
             name="SettlementMethod",
             type="Attribute",
-            min_length=3.0,
-            max_length=3.0
+            min_length=3,
+            max_length=3
         )
     )
     new_vcx_process: Optional[bool] = field(
@@ -1480,8 +1480,8 @@ class ErrorType(FreeTextType):
         metadata=dict(
             name="Status",
             type="Attribute",
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     tag: Optional[str] = field(
@@ -1496,8 +1496,8 @@ class ErrorType(FreeTextType):
         metadata=dict(
             name="RecordID",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     message_class: Optional[MessageClassType] = field(
@@ -1584,8 +1584,8 @@ class OneWayProcessingMessageType(ProcessingMessageType):
         metadata=dict(
             name="DepartureAirport",
             type="Attribute",
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     arrival_airport: Optional[str] = field(
@@ -1593,8 +1593,8 @@ class OneWayProcessingMessageType(ProcessingMessageType):
         metadata=dict(
             name="ArrivalAirport",
             type="Attribute",
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
 
@@ -1853,8 +1853,8 @@ class WarningType(FreeTextType):
         metadata=dict(
             name="Status",
             type="Attribute",
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     tag: Optional[str] = field(
@@ -1869,8 +1869,8 @@ class WarningType(FreeTextType):
         metadata=dict(
             name="RecordID",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     message_class: Optional[MessageClassType] = field(
@@ -1968,8 +1968,8 @@ class BookFlightSegmentType:
             name="MarriageGrp",
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
-            min_length=1.0,
-            max_length=16.0
+            min_length=1,
+            max_length=16
         )
     )
     stop_airports: Optional["BookFlightSegmentType.StopAirports"] = field(
@@ -2047,8 +2047,8 @@ class BookFlightSegmentType:
         metadata=dict(
             name="InfoSource",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     flight_number: Optional[str] = field(
@@ -2064,8 +2064,8 @@ class BookFlightSegmentType:
         metadata=dict(
             name="TourOperatorFlightID",
             type="Attribute",
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     res_book_desig_code: Optional[str] = field(
@@ -2340,8 +2340,8 @@ class FareInfoType:
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
             required=True,
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     rule_info: Optional[RuleInfoType] = field(
@@ -2826,8 +2826,8 @@ class FareType:
                         name="FareBasisCode",
                         type="Attribute",
                         required=True,
-                        min_length=1.0,
-                        max_length=15.0,
+                        min_length=1,
+                        max_length=15,
                         pattern=r"[A-Z0-9]+(/[A-Z0-9]+)?"
                     )
                 )
@@ -3696,8 +3696,8 @@ class PtcfareBreakdownType:
             value: Optional[str] = field(
                 default=None,
                 metadata=dict(
-                    min_length=1.0,
-                    max_length=16.0
+                    min_length=1,
+                    max_length=16
                 )
             )
             private_fare_type: Optional[str] = field(
@@ -3720,8 +3720,8 @@ class PtcfareBreakdownType:
                 metadata=dict(
                     name="AccountCode",
                     type="Attribute",
-                    min_length=1.0,
-                    max_length=20.0
+                    min_length=1,
+                    max_length=20
                 )
             )
             mileage: Optional[int] = field(
@@ -3921,8 +3921,8 @@ class PtcfareBreakdownType:
                     type="Element",
                     namespace="http://www.opentravel.org/OTA/2003/05",
                     required=True,
-                    min_length=1.0,
-                    max_length=8.0
+                    min_length=1,
+                    max_length=8
                 )
             )
             rule_info: Optional[RuleInfoType] = field(
@@ -4219,7 +4219,7 @@ class AirItineraryPricingInfoType:
         metadata=dict(
             name="PricingSubSource",
             type="Attribute",
-            min_length=1.0,
+            min_length=1,
             pattern=r"[A-Z_]{1,}"
         )
     )
@@ -4411,8 +4411,8 @@ class AirItineraryPricingInfoType:
                     type="Element",
                     namespace="http://www.opentravel.org/OTA/2003/05",
                     required=True,
-                    min_length=1.0,
-                    max_length=8.0
+                    min_length=1,
+                    max_length=8
                 )
             )
             rule_info: Optional[RuleInfoType] = field(
@@ -5316,8 +5316,8 @@ class TicketPricingType:
                     name="Code",
                     type="Attribute",
                     required=True,
-                    min_length=1.0,
-                    max_length=8.0
+                    min_length=1,
+                    max_length=8
                 )
             )
 
@@ -5832,8 +5832,8 @@ class OtaAirLowFareSearchRs:
         metadata=dict(
             name="EchoToken",
             type="Attribute",
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     time_stamp: Optional[str] = field(
@@ -5863,8 +5863,8 @@ class OtaAirLowFareSearchRs:
         metadata=dict(
             name="TransactionIdentifier",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     sequence_nmbr: Optional[Union[int, bool]] = field(

@@ -40,8 +40,8 @@ class CompanyNameType:
         metadata=dict(
             name="CompanyShortName",
             type="Attribute",
-            min_length=1.0,
-            max_length=64.0
+            min_length=1,
+            max_length=64
         )
     )
     travel_sector: Optional[str] = field(
@@ -56,8 +56,8 @@ class CompanyNameType:
         metadata=dict(
             name="Code",
             type="Attribute",
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     code_context: Optional[str] = field(
@@ -65,8 +65,8 @@ class CompanyNameType:
         metadata=dict(
             name="CodeContext",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
 
@@ -97,8 +97,8 @@ class EquipmentType:
             name="AirEquipType",
             type="Attribute",
             required=True,
-            min_length=3.0,
-            max_length=3.0
+            min_length=3,
+            max_length=3
         )
     )
     changeof_gauge: bool = field(
@@ -182,8 +182,8 @@ class TravelerCountType:
         metadata=dict(
             name="Age",
             type="Attribute",
-            min_inclusive=0.0,
-            max_inclusive=999.0
+            min_inclusive=0,
+            max_inclusive=999
         )
     )
     code: Optional[str] = field(
@@ -191,8 +191,8 @@ class TravelerCountType:
         metadata=dict(
             name="Code",
             type="Attribute",
-            min_length=1.0,
-            max_length=8.0
+            min_length=1,
+            max_length=8
         )
     )
     code_context: Optional[str] = field(
@@ -200,8 +200,8 @@ class TravelerCountType:
         metadata=dict(
             name="CodeContext",
             type="Attribute",
-            min_length=1.0,
-            max_length=32.0
+            min_length=1,
+            max_length=32
         )
     )
     uri: Optional[str] = field(
@@ -216,8 +216,8 @@ class TravelerCountType:
         metadata=dict(
             name="Quantity",
             type="Attribute",
-            min_inclusive=1.0,
-            max_inclusive=999.0
+            min_inclusive=1,
+            max_inclusive=999
         )
     )
 
@@ -299,7 +299,7 @@ class VoluntaryChangesType:
                 name="Percent",
                 type="Attribute",
                 min_inclusive=0.01,
-                max_inclusive=100.0
+                max_inclusive=100.00
             )
         )
 
@@ -727,8 +727,8 @@ class StayRestrictionsType:
             metadata=dict(
                 name="MinStay",
                 type="Attribute",
-                min_inclusive=1.0,
-                max_inclusive=99.0
+                min_inclusive=1,
+                max_inclusive=99
             )
         )
         stay_unit: Optional[StayUnitType] = field(
@@ -774,8 +774,8 @@ class StayRestrictionsType:
             metadata=dict(
                 name="MaxStay",
                 type="Attribute",
-                min_inclusive=1.0,
-                max_inclusive=99.0
+                min_inclusive=1,
+                max_inclusive=99
             )
         )
         stay_unit: Optional[StayUnitType] = field(
