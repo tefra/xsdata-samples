@@ -7363,10 +7363,11 @@ class XhtmlTdType:
             type="Attribute"
         )
     )
-    headers: Optional[str] = field(
-        default=None,
+    headers: List[str] = field(
+        default_factory=list,
         metadata=dict(
-            type="Attribute"
+            type="Attribute",
+            tokens=True
         )
     )
     scope: Optional["XhtmlTdType.Scope"] = field(
@@ -7941,10 +7942,11 @@ class XhtmlThType:
             type="Attribute"
         )
     )
-    headers: Optional[str] = field(
-        default=None,
+    headers: List[str] = field(
+        default_factory=list,
         metadata=dict(
-            type="Attribute"
+            type="Attribute",
+            tokens=True
         )
     )
     scope: Optional["XhtmlThType.Scope"] = field(
@@ -10423,8 +10425,7 @@ class XhtmlObjectType:
         default_factory=list,
         metadata=dict(
             type="Attribute",
-            min_occurs=0,
-            max_occurs=9223372036854775807
+            tokens=True
         )
     )
     standby: Optional[str] = field(
@@ -10798,16 +10799,14 @@ class XhtmlAType:
         default_factory=list,
         metadata=dict(
             type="Attribute",
-            min_occurs=0,
-            max_occurs=9223372036854775807
+            tokens=True
         )
     )
     rev: List[str] = field(
         default_factory=list,
         metadata=dict(
             type="Attribute",
-            min_occurs=0,
-            max_occurs=9223372036854775807
+            tokens=True
         )
     )
     accesskey: Optional[str] = field(

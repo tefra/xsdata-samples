@@ -12008,8 +12008,7 @@ class ServiceRuleType:
             metadata=dict(
                 name="ApplicableLevels",
                 type="Attribute",
-                min_occurs=0,
-                max_occurs=9223372036854775807
+                tokens=True
             )
         )
         provider_defined_applicable_levels: Optional[str] = field(
@@ -12058,8 +12057,7 @@ class ServiceRuleType:
             metadata=dict(
                 name="SupportedModifications",
                 type="Attribute",
-                min_occurs=0,
-                max_occurs=9223372036854775807
+                tokens=True
             )
         )
         provider_defined_modification_type: Optional[str] = field(
