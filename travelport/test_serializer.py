@@ -5,7 +5,7 @@ from lxml import etree
 from xsdata.formats.dataclass.parsers import JsonParser
 from xsdata.formats.dataclass.serializers import XmlSerializer
 
-from travelport.models.air_v48_0 import LowFareSearchReq
+from travelport.models import LowFareSearchReq
 
 parser = JsonParser()
 serializer = XmlSerializer(pretty_print=True)

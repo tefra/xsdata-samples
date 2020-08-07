@@ -1,7 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional
-from travelport.models.common_v48_0.common import (
+from travelport.models.travelport_com_schema_common_v48_0 import (
     BaseReservation,
     BookingTravelerRef,
     ConnectionPoint,
