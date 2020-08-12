@@ -8,16 +8,12 @@ from common_types.models.coreschemas.datatypes_base import (
     IvlTsExplicit,
     TelExplicit,
 )
-from common_types.models.multicacheschemas.coct_mt030200_uv import (
-    CoctMt030200UvPerson,
-)
-from common_types.models.multicacheschemas.coct_mt150000_uv02 import (
-    CoctMt150000Uv02Organization,
-)
 from common_types.models.coreschemas.voc import (
     NullFlavor,
     RoleClassAgent,
 )
+from common_types.models.multicacheschemas.coct_mt030200_uv import CoctMt030200UvPerson
+from common_types.models.multicacheschemas.coct_mt150000_uv02 import CoctMt150000Uv02Organization
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

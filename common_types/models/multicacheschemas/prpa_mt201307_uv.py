@@ -6,9 +6,7 @@ from common_types.models.coreschemas.datatypes_base import (
     St,
     TsExplicit,
 )
-from common_types.models.coreschemas.voc import (
-    NullFlavor,
-)
+from common_types.models.coreschemas.voc import NullFlavor
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

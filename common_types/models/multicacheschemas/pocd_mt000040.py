@@ -1,6 +1,11 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+from common_types.models.coreschemas.datatypes import (
+    IvlInt,
+    IvlPq,
+    RtoPqPq,
+)
 from common_types.models.coreschemas.datatypes_base import (
     AdExplicit,
     Any,
@@ -24,6 +29,14 @@ from common_types.models.coreschemas.datatypes_base import (
     TelExplicit,
     Ts,
     TsExplicit,
+)
+from common_types.models.coreschemas.narrative_block import StrucDocText
+from common_types.models.coreschemas.sdtc import (
+    BirthTime,
+    DeceasedInd,
+    DeceasedTime,
+    DischargeDispositionCode,
+    Id,
 )
 from common_types.models.coreschemas.voc import (
     ActClass,
@@ -92,21 +105,6 @@ from common_types.models.coreschemas.voc import (
     XRoleClassPayeePolicyRelationship,
     XSuccReplPrev,
     XServiceEventPerformer,
-)
-from common_types.models.coreschemas.datatypes import (
-    IvlInt,
-    IvlPq,
-    RtoPqPq,
-)
-from common_types.models.coreschemas.narrative_block import (
-    StrucDocText,
-)
-from common_types.models.coreschemas.sdtc import (
-    BirthTime,
-    DeceasedInd,
-    DeceasedTime,
-    DischargeDispositionCode,
-    Id,
 )
 
 __NAMESPACE__ = "urn:hl7-org:v3"

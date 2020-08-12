@@ -7,16 +7,12 @@ from common_types.models.coreschemas.datatypes_base import (
     Ii,
     TelExplicit,
 )
-from common_types.models.multicacheschemas.coct_mt030203_uv02 import (
-    CoctMt030203Uv02Person,
-)
-from common_types.models.multicacheschemas.coct_mt150003_uv03 import (
-    CoctMt150003Uv03Organization,
-)
 from common_types.models.coreschemas.voc import (
     NullFlavor,
     RoleClassContact,
 )
+from common_types.models.multicacheschemas.coct_mt030203_uv02 import CoctMt030203Uv02Person
+from common_types.models.multicacheschemas.coct_mt150003_uv03 import CoctMt150003Uv03Organization
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

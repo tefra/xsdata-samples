@@ -1,7 +1,5 @@
 from dataclasses import dataclass
-from common_types.models.multicacheschemas.pocd_mt000040 import (
-    PocdMt000040ClinicalDocument,
-)
+from common_types.models.multicacheschemas.pocd_mt000040 import PocdMt000040ClinicalDocument
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

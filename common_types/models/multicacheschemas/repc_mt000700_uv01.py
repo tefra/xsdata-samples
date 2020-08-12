@@ -14,9 +14,6 @@ from common_types.models.coreschemas.datatypes_base import (
     Sc,
     TelExplicit,
 )
-from common_types.models.multicacheschemas.coct_mt710000_uv01 import (
-    CoctMt710000Uv01Place,
-)
 from common_types.models.coreschemas.voc import (
     EntityClassDevice,
     EntityClassOrganization,
@@ -37,6 +34,7 @@ from common_types.models.coreschemas.voc import (
     XRoleClassCredentialedEntity,
     XRoleClassPayeePolicyRelationship,
 )
+from common_types.models.multicacheschemas.coct_mt710000_uv01 import CoctMt710000Uv01Place
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

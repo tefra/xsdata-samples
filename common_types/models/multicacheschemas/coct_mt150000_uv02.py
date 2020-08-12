@@ -12,9 +12,6 @@ from common_types.models.coreschemas.datatypes_base import (
     OnExplicit,
     TelExplicit,
 )
-from common_types.models.multicacheschemas.coct_mt070000_uv01 import (
-    CoctMt070000Uv01LocatedEntity,
-)
 from common_types.models.coreschemas.voc import (
     EntityClass,
     EntityClassOrganization,
@@ -23,6 +20,7 @@ from common_types.models.coreschemas.voc import (
     RoleClassContact,
     RoleClassPartitivePartByBot,
 )
+from common_types.models.multicacheschemas.coct_mt070000_uv01 import CoctMt070000Uv01LocatedEntity
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

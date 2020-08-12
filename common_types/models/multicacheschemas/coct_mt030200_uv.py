@@ -15,18 +15,6 @@ from common_types.models.coreschemas.datatypes_base import (
     TelExplicit,
     TsExplicit,
 )
-from common_types.models.multicacheschemas.coct_mt030202_uv01 import (
-    CoctMt030202Uv01Person,
-)
-from common_types.models.multicacheschemas.coct_mt150000_uv02 import (
-    CoctMt150000Uv02Organization,
-)
-from common_types.models.multicacheschemas.coct_mt500000_uv import (
-    CoctMt500000UvCoveredParty,
-)
-from common_types.models.multicacheschemas.coct_mt710000_uv01 import (
-    CoctMt710000Uv01Place,
-)
 from common_types.models.coreschemas.voc import (
     EntityClass,
     EntityClassRoot,
@@ -48,6 +36,10 @@ from common_types.models.coreschemas.voc import (
     XRoleClassCredentialedEntity,
     XRoleClassPayeePolicyRelationship,
 )
+from common_types.models.multicacheschemas.coct_mt030202_uv01 import CoctMt030202Uv01Person
+from common_types.models.multicacheschemas.coct_mt150000_uv02 import CoctMt150000Uv02Organization
+from common_types.models.multicacheschemas.coct_mt500000_uv import CoctMt500000UvCoveredParty
+from common_types.models.multicacheschemas.coct_mt710000_uv01 import CoctMt710000Uv01Place
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

@@ -26,9 +26,7 @@ from common_types.models.coreschemas.voc import (
     RoleClassAgent,
     RoleClassLocatedEntity,
 )
-from common_types.models.multicacheschemas.coct_mt040203_uv01 import (
-    CoctMt040203Uv01NotificationParty,
-)
+from common_types.models.multicacheschemas.coct_mt040203_uv01 import CoctMt040203Uv01NotificationParty
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

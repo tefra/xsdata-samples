@@ -1,6 +1,7 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+from common_types.models.coreschemas.datatypes import RtoPqPq
 from common_types.models.coreschemas.datatypes_base import (
     AdExplicit,
     Ce,
@@ -43,12 +44,7 @@ from common_types.models.coreschemas.voc import (
     XRoleClassCredentialedEntity,
     XRoleClassPayeePolicyRelationship,
 )
-from common_types.models.multicacheschemas.coct_mt240003_uv02 import (
-    CoctMt240003Uv02ServiceDeliveryLocation,
-)
-from common_types.models.coreschemas.datatypes import (
-    RtoPqPq,
-)
+from common_types.models.multicacheschemas.coct_mt240003_uv02 import CoctMt240003Uv02ServiceDeliveryLocation
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

@@ -50,33 +50,15 @@ from common_types.models.multicacheschemas.coct_mt030007_uv import (
     CoctMt030007UvNonPersonLivingSubject,
     CoctMt030007UvPerson,
 )
-from common_types.models.multicacheschemas.coct_mt030207_uv import (
-    CoctMt030207UvPerson,
-)
-from common_types.models.multicacheschemas.coct_mt150002_uv01 import (
-    CoctMt150002Uv01Organization,
-)
-from common_types.models.multicacheschemas.coct_mt150003_uv03 import (
-    CoctMt150003Uv03Organization,
-)
-from common_types.models.multicacheschemas.coct_mt150007_uv import (
-    CoctMt150007UvOrganization,
-)
-from common_types.models.multicacheschemas.coct_mt510000_uv06 import (
-    CoctMt510000Uv06CoverageRecord,
-)
-from common_types.models.multicacheschemas.coct_mt670000_uv04 import (
-    CoctMt670000Uv04GuarantorRole,
-)
-from common_types.models.multicacheschemas.coct_mt710007_uv import (
-    CoctMt710007UvPlace,
-)
-from common_types.models.multicacheschemas.coct_mt820000_uv import (
-    CoctMt820000UvCareProvision,
-)
-from common_types.models.multicacheschemas.coct_mt960000_uv05 import (
-    CoctMt960000Uv05Position,
-)
+from common_types.models.multicacheschemas.coct_mt030207_uv import CoctMt030207UvPerson
+from common_types.models.multicacheschemas.coct_mt150002_uv01 import CoctMt150002Uv01Organization
+from common_types.models.multicacheschemas.coct_mt150003_uv03 import CoctMt150003Uv03Organization
+from common_types.models.multicacheschemas.coct_mt150007_uv import CoctMt150007UvOrganization
+from common_types.models.multicacheschemas.coct_mt510000_uv06 import CoctMt510000Uv06CoverageRecord
+from common_types.models.multicacheschemas.coct_mt670000_uv04 import CoctMt670000Uv04GuarantorRole
+from common_types.models.multicacheschemas.coct_mt710007_uv import CoctMt710007UvPlace
+from common_types.models.multicacheschemas.coct_mt820000_uv import CoctMt820000UvCareProvision
+from common_types.models.multicacheschemas.coct_mt960000_uv05 import CoctMt960000Uv05Position
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

@@ -1,6 +1,13 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+from common_types.models.coreschemas.datatypes_base import (
+    Cs,
+    Ii,
+    IvlTsExplicit,
+    PnExplicit,
+    TsExplicit,
+)
 from common_types.models.coreschemas.voc import (
     ActClass,
     ActClassObservation,
@@ -19,16 +26,7 @@ from common_types.models.coreschemas.voc import (
     XActMoodIntentEvent,
     XRoleClassAccommodationRequestor,
 )
-from common_types.models.multicacheschemas.coct_mt240003_uv02 import (
-    CoctMt240003Uv02ServiceDeliveryLocation,
-)
-from common_types.models.coreschemas.datatypes_base import (
-    Cs,
-    Ii,
-    IvlTsExplicit,
-    PnExplicit,
-    TsExplicit,
-)
+from common_types.models.multicacheschemas.coct_mt240003_uv02 import CoctMt240003Uv02ServiceDeliveryLocation
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

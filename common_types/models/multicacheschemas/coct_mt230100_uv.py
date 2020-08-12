@@ -54,9 +54,7 @@ from common_types.models.coreschemas.voc import (
     XRoleClassCredentialedEntity,
     XRoleClassPayeePolicyRelationship,
 )
-from common_types.models.multicacheschemas.coct_mt440001_uv import (
-    CoctMt440001UvValuedItem,
-)
+from common_types.models.multicacheschemas.coct_mt440001_uv import CoctMt440001UvValuedItem
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

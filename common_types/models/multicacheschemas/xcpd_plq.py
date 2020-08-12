@@ -1,8 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.coreschemas.datatypes_base import (
-    Ii,
-)
+from common_types.models.coreschemas.datatypes_base import Ii
 
 __NAMESPACE__ = "urn:ihe:iti:xcpd:2009"
 

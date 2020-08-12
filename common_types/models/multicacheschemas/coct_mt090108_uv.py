@@ -8,15 +8,13 @@ from common_types.models.coreschemas.datatypes_base import (
     PnExplicit,
     TelExplicit,
 )
-from common_types.models.multicacheschemas.coct_mt150007_uv import (
-    CoctMt150007UvOrganization,
-)
 from common_types.models.coreschemas.voc import (
     EntityClass,
     EntityDeterminer,
     NullFlavor,
     RoleClassAssignedEntity,
 )
+from common_types.models.multicacheschemas.coct_mt150007_uv import CoctMt150007UvOrganization
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

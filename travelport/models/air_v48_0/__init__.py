@@ -1,481 +1,485 @@
-from travelport.models.air_v48_0.air import Advtype
-from travelport.models.air_v48_0.air import Apisrequirements
-from travelport.models.air_v48_0.air import ApisrequirementsList
-from travelport.models.air_v48_0.air import AccountRelatedRules
-from travelport.models.air_v48_0.air import ActionDetails
-from travelport.models.air_v48_0.air import AdditionalInfo
-from travelport.models.air_v48_0.air import AddlBookingCodeInformation
-from travelport.models.air_v48_0.air import Adjustment
-from travelport.models.air_v48_0.air import Affiliations
-from travelport.models.air_v48_0.air import AirAvailInfo
-from travelport.models.air_v48_0.air_req_rsp import AirBaseReq
-from travelport.models.air_v48_0.air import AirExchangeBundle
-from travelport.models.air_v48_0.air import AirExchangeBundleList
-from travelport.models.air_v48_0.air import AirExchangeBundleTotal
-from travelport.models.air_v48_0.air_req_rsp import AirExchangeEligibilityReq
-from travelport.models.air_v48_0.air_req_rsp import AirExchangeEligibilityRsp
-from travelport.models.air_v48_0.air import AirExchangeModifiers
-from travelport.models.air_v48_0.air import AirExchangeMulitQuoteList
-from travelport.models.air_v48_0.air import AirExchangeMultiQuoteOption
-from travelport.models.air_v48_0.air_req_rsp import AirExchangeMultiQuoteReq
-from travelport.models.air_v48_0.air_req_rsp import AirExchangeMultiQuoteRsp
-from travelport.models.air_v48_0.air_req_rsp import AirExchangeQuoteReq
-from travelport.models.air_v48_0.air_req_rsp import AirExchangeQuoteRsp
-from travelport.models.air_v48_0.air_req_rsp import AirExchangeReq
-from travelport.models.air_v48_0.air_req_rsp import AirExchangeRsp
-from travelport.models.air_v48_0.air import AirExchangeTicketBundle
-from travelport.models.air_v48_0.air_req_rsp import AirExchangeTicketingReq
-from travelport.models.air_v48_0.air_req_rsp import AirExchangeTicketingRsp
-from travelport.models.air_v48_0.air import AirFareDiscount
-from travelport.models.air_v48_0.air import AirFareDisplayModifiers
-from travelport.models.air_v48_0.air_req_rsp import AirFareDisplayReq
-from travelport.models.air_v48_0.air_req_rsp import AirFareDisplayRsp
-from travelport.models.air_v48_0.air import AirFareDisplayRuleKey
-from travelport.models.air_v48_0.air import AirFareRuleCategory
-from travelport.models.air_v48_0.air import AirFareRulesModifier
-from travelport.models.air_v48_0.air_req_rsp import AirFareRulesReq
-from travelport.models.air_v48_0.air_req_rsp import AirFareRulesRsp
-from travelport.models.air_v48_0.air import AirItinerary
-from travelport.models.air_v48_0.air import AirItineraryDetails
-from travelport.models.air_v48_0.air import AirItinerarySolution
-from travelport.models.air_v48_0.air import AirItinerarySolutionRef
-from travelport.models.air_v48_0.air import AirLegModifiers
-from travelport.models.air_v48_0.air_req_rsp import AirMerchandisingDetailsReq
-from travelport.models.air_v48_0.air_req_rsp import AirMerchandisingDetailsRsp
-from travelport.models.air_v48_0.air_req_rsp import AirMerchandisingOfferAvailabilityReq
-from travelport.models.air_v48_0.air_req_rsp import AirMerchandisingOfferAvailabilityRsp
-from travelport.models.air_v48_0.air_req_rsp import AirPrePayReq
-from travelport.models.air_v48_0.air_req_rsp import AirPrePayRsp
-from travelport.models.air_v48_0.air import AirPricePoint
-from travelport.models.air_v48_0.air import AirPricePointList
-from travelport.models.air_v48_0.air_req_rsp import AirPriceReq
-from travelport.models.air_v48_0.air import AirPriceResult
-from travelport.models.air_v48_0.air_req_rsp import AirPriceRsp
-from travelport.models.air_v48_0.air import AirPricingAdjustment
-from travelport.models.air_v48_0.air import AirPricingCommand
-from travelport.models.air_v48_0.air import AirPricingInfo
-from travelport.models.air_v48_0.air import AirPricingInfoList
-from travelport.models.air_v48_0.air import AirPricingInfoRef
-from travelport.models.air_v48_0.air import AirPricingModifiers
-from travelport.models.air_v48_0.air import AirPricingPayment
-from travelport.models.air_v48_0.air import AirPricingSolution
-from travelport.models.air_v48_0.air import AirPricingTicketingModifiers
-from travelport.models.air_v48_0.air import AirRefundBundle
-from travelport.models.air_v48_0.air import AirRefundInfo
-from travelport.models.air_v48_0.air import AirRefundModifiers
-from travelport.models.air_v48_0.air_req_rsp import AirRefundQuoteReq
-from travelport.models.air_v48_0.air_req_rsp import AirRefundQuoteRsp
-from travelport.models.air_v48_0.air_req_rsp import AirRefundReq
-from travelport.models.air_v48_0.air_req_rsp import AirRefundRsp
-from travelport.models.air_v48_0.air_req_rsp import AirRepriceReq
-from travelport.models.air_v48_0.air_req_rsp import AirRepriceRsp
-from travelport.models.air_v48_0.air import AirReservation
-from travelport.models.air_v48_0.air import AirReservationLocatorCode
-from travelport.models.air_v48_0.air_req_rsp import AirRetrieveDocumentReq
-from travelport.models.air_v48_0.air_req_rsp import AirRetrieveDocumentRsp
-from travelport.models.air_v48_0.air import AirScheduleChangedInfo
-from travelport.models.air_v48_0.air import AirSearchAsynchModifiers
-from travelport.models.air_v48_0.air import AirSearchModifiers
-from travelport.models.air_v48_0.air_req_rsp import AirSearchReq
-from travelport.models.air_v48_0.air_req_rsp import AirSearchRsp
-from travelport.models.air_v48_0.air import AirSegment
-from travelport.models.air_v48_0.air import AirSegmentData
-from travelport.models.air_v48_0.air import AirSegmentDetails
-from travelport.models.air_v48_0.air import AirSegmentError
-from travelport.models.air_v48_0.air import AirSegmentList
-from travelport.models.air_v48_0.air import AirSegmentPricingModifiers
-from travelport.models.air_v48_0.air import AirSegmentRef
-from travelport.models.air_v48_0.air import AirSegmentSellFailureInfo
-from travelport.models.air_v48_0.air import AirSegmentTicketingModifiers
-from travelport.models.air_v48_0.air import AirSolution
-from travelport.models.air_v48_0.air import AirSolutionChangedInfo
-from travelport.models.air_v48_0.air import AirTicketingModifiers
-from travelport.models.air_v48_0.air_req_rsp import AirTicketingReq
-from travelport.models.air_v48_0.air_req_rsp import AirTicketingRsp
-from travelport.models.air_v48_0.air_req_rsp import AirUpsellSearchReq
-from travelport.models.air_v48_0.air_req_rsp import AirUpsellSearchRsp
-from travelport.models.air_v48_0.air_req_rsp import AirVoidDocumentReq
-from travelport.models.air_v48_0.air_req_rsp import AirVoidDocumentRsp
-from travelport.models.air_v48_0.air import Alliance
-from travelport.models.air_v48_0.air import AlternateLocationDistance
-from travelport.models.air_v48_0.air import AlternateLocationDistanceList
-from travelport.models.air_v48_0.air import AlternateLocationDistanceRef
-from travelport.models.air_v48_0.air import AlternateRoute
-from travelport.models.air_v48_0.air import AlternateRouteList
-from travelport.models.air_v48_0.air import ApplicableSegment
-from travelport.models.air_v48_0.air import AssociatedRemark
-from travelport.models.air_v48_0.air import AsyncProviderSpecificResponse
-from travelport.models.air_v48_0.air import AuditData
-from travelport.models.air_v48_0.air import AutoPricingInfo
-from travelport.models.air_v48_0.air import AutoSeatAssignment
-from travelport.models.air_v48_0.air import AvailabilityErrorInfo
-from travelport.models.air_v48_0.air_req_rsp import AvailabilitySearchReq
-from travelport.models.air_v48_0.air_req_rsp import AvailabilitySearchRsp
-from travelport.models.air_v48_0.air import AvailableDiscount
-from travelport.models.air_v48_0.air import AvailableSsr
-from travelport.models.air_v48_0.air import BackOfficeHandOff
-from travelport.models.air_v48_0.air import BagDetails
-from travelport.models.air_v48_0.air import BaggageAllowance
-from travelport.models.air_v48_0.air import BaggageAllowanceInfo
-from travelport.models.air_v48_0.air import BaggageAllowances
-from travelport.models.air_v48_0.air import BaggageRestriction
-from travelport.models.air_v48_0.air_req_rsp import BaseAirExchangeMultiQuoteReq
-from travelport.models.air_v48_0.air_req_rsp import BaseAirExchangeQuoteReq
-from travelport.models.air_v48_0.air_req_rsp import BaseAirPriceReq
-from travelport.models.air_v48_0.air_req_rsp import BaseAirPriceRsp
-from travelport.models.air_v48_0.air_req_rsp import BaseAirSearchReq
-from travelport.models.air_v48_0.air_req_rsp import BaseAvailabilitySearchRsp
-from travelport.models.air_v48_0.air import BaseBaggageAllowanceInfo
-from travelport.models.air_v48_0.air_req_rsp import BaseLowFareSearchReq
-from travelport.models.air_v48_0.air import BillingDetailItem
-from travelport.models.air_v48_0.air import BookingCode
-from travelport.models.air_v48_0.air import BookingCodeInfo
-from travelport.models.air_v48_0.air import BookingInfo
-from travelport.models.air_v48_0.air import BookingRules
-from travelport.models.air_v48_0.air import BookingRulesFareReference
-from travelport.models.air_v48_0.air import Brand
-from travelport.models.air_v48_0.air import BrandId
-from travelport.models.air_v48_0.air import BrandInfo
-from travelport.models.air_v48_0.air_req_rsp import BrandList
-from travelport.models.air_v48_0.air import BrandModifiers
-from travelport.models.air_v48_0.air import BrandingInfo
-from travelport.models.air_v48_0.air import BundledService
-from travelport.models.air_v48_0.air import BundledServices
-from travelport.models.air_v48_0.air import Chgtype
-from travelport.models.air_v48_0.air import Co2Emission
-from travelport.models.air_v48_0.air import Co2Emissions
-from travelport.models.air_v48_0.air import CarrierCode
-from travelport.models.air_v48_0.air import CarrierList
-from travelport.models.air_v48_0.air import CarryOnAllowanceInfo
-from travelport.models.air_v48_0.air import CategoryDetailsType
-from travelport.models.air_v48_0.air import Characteristic
-from travelport.models.air_v48_0.air import ChargesRules
-from travelport.models.air_v48_0.air import CodeshareInfo
-from travelport.models.air_v48_0.air import CompanyName
-from travelport.models.air_v48_0.air import ConjunctedTicketInfo
-from travelport.models.air_v48_0.air import Connection
-from travelport.models.air_v48_0.air import ContractCode
-from travelport.models.air_v48_0.air import Coupon
-from travelport.models.air_v48_0.air import CreditSummary
-from travelport.models.air_v48_0.air import CustomerReceiptInfo
-from travelport.models.air_v48_0.air import CustomerSearch
-from travelport.models.air_v48_0.air import DefaultBrandDetail
-from travelport.models.air_v48_0.air import DestinationPurposeCode
-from travelport.models.air_v48_0.air import DetailedBillingInformation
-from travelport.models.air_v48_0.air import Dimension
-from travelport.models.air_v48_0.air import Document
-from travelport.models.air_v48_0.air import DocumentInfo
-from travelport.models.air_v48_0.air import DocumentModifiers
-from travelport.models.air_v48_0.air import DocumentOptions
-from travelport.models.air_v48_0.air import DocumentRequired
-from travelport.models.air_v48_0.air import DocumentSelect
-from travelport.models.air_v48_0.air import Emd
-from travelport.models.air_v48_0.air import Emdcommission
-from travelport.models.air_v48_0.air import Emdcoupon
-from travelport.models.air_v48_0.air import Emdendorsement
-from travelport.models.air_v48_0.air import Emdinfo
-from travelport.models.air_v48_0.air_req_rsp import EmdissuanceReq
-from travelport.models.air_v48_0.air_req_rsp import EmdissuanceRsp
-from travelport.models.air_v48_0.air import EmdpricingInfo
-from travelport.models.air_v48_0.air_req_rsp import EmdretrieveReq
-from travelport.models.air_v48_0.air_req_rsp import EmdretrieveRsp
-from travelport.models.air_v48_0.air import Emdsummary
-from travelport.models.air_v48_0.air import EmdsummaryInfo
-from travelport.models.air_v48_0.air import EmdtravelerInfo
-from travelport.models.air_v48_0.air import Etr
-from travelport.models.air_v48_0.air import ElectronicMiscDocument
-from travelport.models.air_v48_0.air import Embargo
-from travelport.models.air_v48_0.air import EmbargoInfo
-from travelport.models.air_v48_0.air import EmbargoList
-from travelport.models.air_v48_0.air import Enumeration
-from travelport.models.air_v48_0.air import ExchangeAirSegment
-from travelport.models.air_v48_0.air import ExchangeEligibilityInfo
-from travelport.models.air_v48_0.air import ExchangePenaltyInfo
-from travelport.models.air_v48_0.air import ExchangedTicketInfo
-from travelport.models.air_v48_0.air import ExcludeTicketing
-from travelport.models.air_v48_0.air import ExemptObfee
-from travelport.models.air_v48_0.air import ExemptTaxes
-from travelport.models.air_v48_0.air import ExpertSolution
-from travelport.models.air_v48_0.air import ExpertSolutionList
-from travelport.models.air_v48_0.air import Facility
-from travelport.models.air_v48_0.air import FareBasis
-from travelport.models.air_v48_0.air import FareCalc
-from travelport.models.air_v48_0.air import FareDetails
-from travelport.models.air_v48_0.air import FareDetailsRef
-from travelport.models.air_v48_0.air import FareDisplay
-from travelport.models.air_v48_0.air import FareDisplayRule
-from travelport.models.air_v48_0.air import FareGuaranteeInfo
-from travelport.models.air_v48_0.air import FareInfo
-from travelport.models.air_v48_0.air import FareInfoList
-from travelport.models.air_v48_0.air import FareInfoMessage
-from travelport.models.air_v48_0.air import FareInfoRef
-from travelport.models.air_v48_0.air import FareMileageInformation
-from travelport.models.air_v48_0.air import FareNote
-from travelport.models.air_v48_0.air import FareNoteList
-from travelport.models.air_v48_0.air import FareNoteRef
-from travelport.models.air_v48_0.air import FarePricing
-from travelport.models.air_v48_0.air import FareRemark
-from travelport.models.air_v48_0.air import FareRemarkList
-from travelport.models.air_v48_0.air import FareRemarkRef
-from travelport.models.air_v48_0.air import FareRestriction
-from travelport.models.air_v48_0.air import FareRestrictionDate
-from travelport.models.air_v48_0.air import FareRestrictionDaysOfWeek
-from travelport.models.air_v48_0.air import FareRestrictionSaleDate
-from travelport.models.air_v48_0.air import FareRestrictionSeasonal
-from travelport.models.air_v48_0.air import FareRoutingInformation
-from travelport.models.air_v48_0.air import FareRule
-from travelport.models.air_v48_0.air import FareRuleCategory
-from travelport.models.air_v48_0.air import FareRuleCategoryTypes
-from travelport.models.air_v48_0.air import FareRuleFailureInfo
-from travelport.models.air_v48_0.air import FareRuleKey
-from travelport.models.air_v48_0.air import FareRuleLong
-from travelport.models.air_v48_0.air import FareRuleLongRef
-from travelport.models.air_v48_0.air import FareRuleLookup
-from travelport.models.air_v48_0.air import FareRuleNameValue
-from travelport.models.air_v48_0.air import FareRuleShort
-from travelport.models.air_v48_0.air import FareRuleShortRef
-from travelport.models.air_v48_0.air import FareRulesFilter
-from travelport.models.air_v48_0.air import FareRulesFilterCategory
-from travelport.models.air_v48_0.air import FareStatus
-from travelport.models.air_v48_0.air import FareStatusFailureInfo
-from travelport.models.air_v48_0.air import FareSurcharge
-from travelport.models.air_v48_0.air import FareTicketDesignator
-from travelport.models.air_v48_0.air import FareType
-from travelport.models.air_v48_0.air import FaxDetails
-from travelport.models.air_v48_0.air import FaxDetailsInformation
-from travelport.models.air_v48_0.air import FeeApplication
-from travelport.models.air_v48_0.air import FeeInfo
-from travelport.models.air_v48_0.air import FlexExploreModifiers
-from travelport.models.air_v48_0.air import FlightDetails
-from travelport.models.air_v48_0.air import FlightDetailsList
-from travelport.models.air_v48_0.air import FlightDetailsRef
-from travelport.models.air_v48_0.air_req_rsp import FlightDetailsReq
-from travelport.models.air_v48_0.air_req_rsp import FlightDetailsRsp
-from travelport.models.air_v48_0.air import FlightInfo
-from travelport.models.air_v48_0.air import FlightInfoCriteria
-from travelport.models.air_v48_0.air import FlightInfoDetail
-from travelport.models.air_v48_0.air_req_rsp import FlightInformationReq
-from travelport.models.air_v48_0.air_req_rsp import FlightInformationRsp
-from travelport.models.air_v48_0.air import FlightOption
-from travelport.models.air_v48_0.air import FlightOptionsList
-from travelport.models.air_v48_0.air import FlightTimeDetail
-from travelport.models.air_v48_0.air import FlightTimeTableCriteria
-from travelport.models.air_v48_0.air_req_rsp import FlightTimeTableReq
-from travelport.models.air_v48_0.air_req_rsp import FlightTimeTableRsp
-from travelport.models.air_v48_0.air import FlightType
-from travelport.models.air_v48_0.air import GeneralTimeTable
-from travelport.models.air_v48_0.air import GroupedOption
-from travelport.models.air_v48_0.air import GroupedOptionInfo
-from travelport.models.air_v48_0.air import HostReservation
-from travelport.models.air_v48_0.air import HostTokenList
-from travelport.models.air_v48_0.air import ImageLocation
-from travelport.models.air_v48_0.air import InFlightServices
-from travelport.models.air_v48_0.air import IncludeAddlBookingCodeInfo
-from travelport.models.air_v48_0.air import InvoluntaryChange
-from travelport.models.air_v48_0.air import IssuanceModifiers
-from travelport.models.air_v48_0.air import Itinerary
-from travelport.models.air_v48_0.air import Journey
-from travelport.models.air_v48_0.air import JourneyData
-from travelport.models.air_v48_0.air import LandCharges
-from travelport.models.air_v48_0.air import LanguageOption
-from travelport.models.air_v48_0.air import Leg
-from travelport.models.air_v48_0.air import LegDetail
-from travelport.models.air_v48_0.air import LegPrice
-from travelport.models.air_v48_0.air import LegRef
-from travelport.models.air_v48_0.air_req_rsp import LowFareSearchAsynchReq
-from travelport.models.air_v48_0.air_req_rsp import LowFareSearchAsynchRsp
-from travelport.models.air_v48_0.air_req_rsp import LowFareSearchReq
-from travelport.models.air_v48_0.air_req_rsp import LowFareSearchRsp
-from travelport.models.air_v48_0.air import LoyaltyCardDetails
-from travelport.models.air_v48_0.air import Maxtype
-from travelport.models.air_v48_0.air import Mintype
-from travelport.models.air_v48_0.air import ManualFareAdjustment
-from travelport.models.air_v48_0.air import MaxLayoverDurationType
-from travelport.models.air_v48_0.air import Meals
-from travelport.models.air_v48_0.air import MerchandisingAvailabilityDetails
-from travelport.models.air_v48_0.air import MerchandisingDetails
-from travelport.models.air_v48_0.air import MerchandisingPricingModifiers
-from travelport.models.air_v48_0.air import MultiGdssearchIndicator
-from travelport.models.air_v48_0.air import Othtype
-from travelport.models.air_v48_0.air import OfferAvailabilityModifiers
-from travelport.models.air_v48_0.air import Option
-from travelport.models.air_v48_0.air import OptionalService
-from travelport.models.air_v48_0.air import OptionalServiceModifier
-from travelport.models.air_v48_0.air import OptionalServiceModifiers
-from travelport.models.air_v48_0.air import OptionalServiceRef
-from travelport.models.air_v48_0.air import OptionalServices
-from travelport.models.air_v48_0.air import OptionalServicesInfo
-from travelport.models.air_v48_0.air import OriginalItineraryDetails
-from travelport.models.air_v48_0.air import OverrideCode
-from travelport.models.air_v48_0.air import Pcc
-from travelport.models.air_v48_0.air import PassengerDetails
-from travelport.models.air_v48_0.air import PassengerDetailsRef
-from travelport.models.air_v48_0.air import PassengerReceiptOverride
-from travelport.models.air_v48_0.air import PassengerSeatPrice
-from travelport.models.air_v48_0.air import PassengerTicketNumber
-from travelport.models.air_v48_0.air import PassengerType
-from travelport.models.air_v48_0.air import PaymentRef
-from travelport.models.air_v48_0.air import PenFeeType
-from travelport.models.air_v48_0.air import Penalty
-from travelport.models.air_v48_0.air import PenaltyFareInformation
-from travelport.models.air_v48_0.air import PenaltyInformation
-from travelport.models.air_v48_0.air import PermittedCabins
-from travelport.models.air_v48_0.air import PermittedCarriers
-from travelport.models.air_v48_0.air import PersonName
-from travelport.models.air_v48_0.air import PersonNameSearch
-from travelport.models.air_v48_0.air import PocketItineraryRemark
-from travelport.models.air_v48_0.air import PolicyCodesList
-from travelport.models.air_v48_0.air import PrePayAccount
-from travelport.models.air_v48_0.air import PrePayCustomer
-from travelport.models.air_v48_0.air import PrePayId
-from travelport.models.air_v48_0.air import PrePayPriceInfo
-from travelport.models.air_v48_0.air import PrePayProfileInfo
-from travelport.models.air_v48_0.air import PreferredBookingCodes
-from travelport.models.air_v48_0.air import PreferredCabins
-from travelport.models.air_v48_0.air import PreferredCarriers
-from travelport.models.air_v48_0.air import PriceChangeType
-from travelport.models.air_v48_0.air import PriceRange
-from travelport.models.air_v48_0.air import PricingDetails
-from travelport.models.air_v48_0.air import PrintBlankFormItinerary
-from travelport.models.air_v48_0.air import ProhibitedCabins
-from travelport.models.air_v48_0.air import ProhibitedCarriers
-from travelport.models.air_v48_0.air import PromoCode
-from travelport.models.air_v48_0.air import RailCoachDetails
-from travelport.models.air_v48_0.air import RefundFailureInfo
-from travelport.models.air_v48_0.air import RelatedTraveler
-from travelport.models.air_v48_0.air import RepricingModifiers
-from travelport.models.air_v48_0.air import RepricingModifiersFlightType
-from travelport.models.air_v48_0.air import Restriction
-from travelport.models.air_v48_0.air_req_rsp import RetrieveLowFareSearchReq
-from travelport.models.air_v48_0.air_req_rsp import RetrieveLowFareSearchRsp
-from travelport.models.air_v48_0.air import Route
-from travelport.models.air_v48_0.air import RouteList
-from travelport.models.air_v48_0.air import RoutingRules
-from travelport.models.air_v48_0.air import Row
-from travelport.models.air_v48_0.air import Rows
-from travelport.models.air_v48_0.air import RuleAdvancedPurchase
-from travelport.models.air_v48_0.air import RuleCharges
-from travelport.models.air_v48_0.air import RuleLengthOfStay
-from travelport.models.air_v48_0.air import Rules
-from travelport.models.air_v48_0.air_req_rsp import ScheduleSearchReq
-from travelport.models.air_v48_0.air_req_rsp import ScheduleSearchRsp
-from travelport.models.air_v48_0.air import SearchAirLeg
-from travelport.models.air_v48_0.air_req_rsp import SearchSpecificAirSegment
-from travelport.models.air_v48_0.air import SearchTraveler
-from travelport.models.air_v48_0.air import SeatInformation
-from travelport.models.air_v48_0.air_req_rsp import SeatMapReq
-from travelport.models.air_v48_0.air_req_rsp import SeatMapRsp
-from travelport.models.air_v48_0.air import SegmentIndex
-from travelport.models.air_v48_0.air import SegmentModifiers
-from travelport.models.air_v48_0.air import SegmentSelect
-from travelport.models.air_v48_0.air import SelectionModifiers
-from travelport.models.air_v48_0.air import ServiceAssociations
-from travelport.models.air_v48_0.air import ServiceGroup
-from travelport.models.air_v48_0.air import ServiceSubGroup
-from travelport.models.air_v48_0.air import SolutionGroup
-from travelport.models.air_v48_0.air import SpecificSeatAssignment
-from travelport.models.air_v48_0.air import SpecificTimeTable
-from travelport.models.air_v48_0.air import SplitTicketingSearch
-from travelport.models.air_v48_0.air import SponsoredFltInfo
-from travelport.models.air_v48_0.air import StructuredFareRulesType
-from travelport.models.air_v48_0.air import SvcSegment
-from travelport.models.air_v48_0.air import Tcr
-from travelport.models.air_v48_0.air import TcrexchangeBundle
-from travelport.models.air_v48_0.air import Tcrinfo
-from travelport.models.air_v48_0.air import TcrrefundBundle
-from travelport.models.air_v48_0.air import Tax
-from travelport.models.air_v48_0.air import TaxInfo
-from travelport.models.air_v48_0.air import TermConditions
-from travelport.models.air_v48_0.air import Text
-from travelport.models.air_v48_0.air import TextInfo
-from travelport.models.air_v48_0.air import Ticket
-from travelport.models.air_v48_0.air import TicketAgency
-from travelport.models.air_v48_0.air import TicketDesignator
-from travelport.models.air_v48_0.air import TicketEndorsement
-from travelport.models.air_v48_0.air import TicketFailureInfo
-from travelport.models.air_v48_0.air import TicketInfo
-from travelport.models.air_v48_0.air import TicketValidity
-from travelport.models.air_v48_0.air import TicketingModifiers
-from travelport.models.air_v48_0.air import TicketingModifiersRef
-from travelport.models.air_v48_0.air import Title
-from travelport.models.air_v48_0.air import TourCode
-from travelport.models.air_v48_0.air import TravelArranger
-from travelport.models.air_v48_0.air import Url
-from travelport.models.air_v48_0.air import Urlinfo
-from travelport.models.air_v48_0.air import UpsellBrand
-from travelport.models.air_v48_0.air import ValueDetails
-from travelport.models.air_v48_0.air import Variance
-from travelport.models.air_v48_0.air import VoidDocumentInfo
-from travelport.models.air_v48_0.air import VoidFailureInfo
-from travelport.models.air_v48_0.air import VoidResultInfo
-from travelport.models.air_v48_0.air import WaiverCode
-from travelport.models.air_v48_0.air import YieldType
-from travelport.models.air_v48_0.air import TypeAtpcoglobalIndicator
-from travelport.models.air_v48_0.air import TypeAirReservationWithFop
-from travelport.models.air_v48_0.air import TypeAlliance
-from travelport.models.air_v48_0.air import TypeAnchorFlightData
-from travelport.models.air_v48_0.air import TypeApplicableSegment
-from travelport.models.air_v48_0.air import TypeAssessIndicator
-from travelport.models.air_v48_0.air import TypeBackOffice
-from travelport.models.air_v48_0.air import TypeBaseAirReservation
-from travelport.models.air_v48_0.air import TypeBaseAirSegment
-from travelport.models.air_v48_0.air import TypeBillingDetailsDataType
-from travelport.models.air_v48_0.air import TypeBillingDetailsName
-from travelport.models.air_v48_0.air import TypeBooking
-from travelport.models.air_v48_0.air import TypeBulkTicketModifierType
-from travelport.models.air_v48_0.air import TypeCarrierCode
-from travelport.models.air_v48_0.air import TypeConnectionIndicator
-from travelport.models.air_v48_0.air import TypeCouponStatus
-from travelport.models.air_v48_0.air import TypeDaysOfOperation
-from travelport.models.air_v48_0.air import TypeDefaultBrandDetail
-from travelport.models.air_v48_0.air import TypeDestinationCode
-from travelport.models.air_v48_0.air import TypeDisplayCategory
-from travelport.models.air_v48_0.air import TypeDiversity
-from travelport.models.air_v48_0.air import TypeEticketability
-from travelport.models.air_v48_0.air import TypeFacility
-from travelport.models.air_v48_0.air import TypeFailureInfo
-from travelport.models.air_v48_0.air import TypeFareBreak
-from travelport.models.air_v48_0.air import TypeFareDirectionality
-from travelport.models.air_v48_0.air import TypeFareDiscount
-from travelport.models.air_v48_0.air import TypeFareGuarantee
-from travelport.models.air_v48_0.air import TypeFarePenalty
-from travelport.models.air_v48_0.air import TypeFareRestrictionType
-from travelport.models.air_v48_0.air import TypeFareRuleCategoryCode
-from travelport.models.air_v48_0.air import TypeFareRuleType
-from travelport.models.air_v48_0.air import TypeFareSearchOption
-from travelport.models.air_v48_0.air import TypeFareStatusCode
-from travelport.models.air_v48_0.air import TypeFareTripType
-from travelport.models.air_v48_0.air import TypeFaresIndicator
-from travelport.models.air_v48_0.air import TypeIgnoreStopOver
-from travelport.models.air_v48_0.air import TypeInventoryRequest
-from travelport.models.air_v48_0.air import TypeItinerary
-from travelport.models.air_v48_0.air import TypeItineraryOption
-from travelport.models.air_v48_0.air import TypeMealService
-from travelport.models.air_v48_0.air import TypeMileOrRouteBasedFare
-from travelport.models.air_v48_0.air import TypeNativeSearchModifier
-from travelport.models.air_v48_0.air import TypeNonAirReservationRef
-from travelport.models.air_v48_0.air import TypePosition
-from travelport.models.air_v48_0.air import TypePricingMethod
-from travelport.models.air_v48_0.air import TypePrivateFare
-from travelport.models.air_v48_0.air import TypePurposeCode
-from travelport.models.air_v48_0.air import TypeReportingType
-from travelport.models.air_v48_0.air import TypeRestrictionLengthOfStay
-from travelport.models.air_v48_0.air import TypeRowLocation
-from travelport.models.air_v48_0.air import TypeSeatAvailability
-from travelport.models.air_v48_0.air import TypeSegmentRef
-from travelport.models.air_v48_0.air import TypeStayUnit
-from travelport.models.air_v48_0.air import TypeTcrstatus
-from travelport.models.air_v48_0.air import TypeTaxInfoWithPaymentRef
-from travelport.models.air_v48_0.air import TypeTextElement
-from travelport.models.air_v48_0.air import TypeTicketFailureInfo
-from travelport.models.air_v48_0.air import TypeTicketModifierAccountingType
-from travelport.models.air_v48_0.air import TypeTicketModifierAmountType
-from travelport.models.air_v48_0.air import TypeTicketModifierPercentType
-from travelport.models.air_v48_0.air import TypeTicketModifierValueType
-from travelport.models.air_v48_0.air import TypeTicketingModifiersRef
-from travelport.models.air_v48_0.air import TypeTripType
-from travelport.models.air_v48_0.air import TypeUnitOfMeasure
-from travelport.models.air_v48_0.air import TypeUnitWeight
-from travelport.models.air_v48_0.air import TypeVarianceIndicator
-from travelport.models.air_v48_0.air import TypeVarianceType
-from travelport.models.air_v48_0.air import TypeWeight
+from travelport.models.air_v48_0.air import (
+    Advtype,
+    Apisrequirements,
+    ApisrequirementsList,
+    AccountRelatedRules,
+    ActionDetails,
+    AdditionalInfo,
+    AddlBookingCodeInformation,
+    Adjustment,
+    Affiliations,
+    AirAvailInfo,
+    AirExchangeBundle,
+    AirExchangeBundleList,
+    AirExchangeBundleTotal,
+    AirExchangeModifiers,
+    AirExchangeMulitQuoteList,
+    AirExchangeMultiQuoteOption,
+    AirExchangeTicketBundle,
+    AirFareDiscount,
+    AirFareDisplayModifiers,
+    AirFareDisplayRuleKey,
+    AirFareRuleCategory,
+    AirFareRulesModifier,
+    AirItinerary,
+    AirItineraryDetails,
+    AirItinerarySolution,
+    AirItinerarySolutionRef,
+    AirLegModifiers,
+    AirPricePoint,
+    AirPricePointList,
+    AirPriceResult,
+    AirPricingAdjustment,
+    AirPricingCommand,
+    AirPricingInfo,
+    AirPricingInfoList,
+    AirPricingInfoRef,
+    AirPricingModifiers,
+    AirPricingPayment,
+    AirPricingSolution,
+    AirPricingTicketingModifiers,
+    AirRefundBundle,
+    AirRefundInfo,
+    AirRefundModifiers,
+    AirReservation,
+    AirReservationLocatorCode,
+    AirScheduleChangedInfo,
+    AirSearchAsynchModifiers,
+    AirSearchModifiers,
+    AirSegment,
+    AirSegmentData,
+    AirSegmentDetails,
+    AirSegmentError,
+    AirSegmentList,
+    AirSegmentPricingModifiers,
+    AirSegmentRef,
+    AirSegmentSellFailureInfo,
+    AirSegmentTicketingModifiers,
+    AirSolution,
+    AirSolutionChangedInfo,
+    AirTicketingModifiers,
+    Alliance,
+    AlternateLocationDistance,
+    AlternateLocationDistanceList,
+    AlternateLocationDistanceRef,
+    AlternateRoute,
+    AlternateRouteList,
+    ApplicableSegment,
+    AssociatedRemark,
+    AsyncProviderSpecificResponse,
+    AuditData,
+    AutoPricingInfo,
+    AutoSeatAssignment,
+    AvailabilityErrorInfo,
+    AvailableDiscount,
+    AvailableSsr,
+    BackOfficeHandOff,
+    BagDetails,
+    BaggageAllowance,
+    BaggageAllowanceInfo,
+    BaggageAllowances,
+    BaggageRestriction,
+    BaseBaggageAllowanceInfo,
+    BillingDetailItem,
+    BookingCode,
+    BookingCodeInfo,
+    BookingInfo,
+    BookingRules,
+    BookingRulesFareReference,
+    Brand,
+    BrandId,
+    BrandInfo,
+    BrandModifiers,
+    BrandingInfo,
+    BundledService,
+    BundledServices,
+    Chgtype,
+    Co2Emission,
+    Co2Emissions,
+    CarrierCode,
+    CarrierList,
+    CarryOnAllowanceInfo,
+    CategoryDetailsType,
+    Characteristic,
+    ChargesRules,
+    CodeshareInfo,
+    CompanyName,
+    ConjunctedTicketInfo,
+    Connection,
+    ContractCode,
+    Coupon,
+    CreditSummary,
+    CustomerReceiptInfo,
+    CustomerSearch,
+    DefaultBrandDetail,
+    DestinationPurposeCode,
+    DetailedBillingInformation,
+    Dimension,
+    Document,
+    DocumentInfo,
+    DocumentModifiers,
+    DocumentOptions,
+    DocumentRequired,
+    DocumentSelect,
+    Emd,
+    Emdcommission,
+    Emdcoupon,
+    Emdendorsement,
+    Emdinfo,
+    EmdpricingInfo,
+    Emdsummary,
+    EmdsummaryInfo,
+    EmdtravelerInfo,
+    Etr,
+    ElectronicMiscDocument,
+    Embargo,
+    EmbargoInfo,
+    EmbargoList,
+    Enumeration,
+    ExchangeAirSegment,
+    ExchangeEligibilityInfo,
+    ExchangePenaltyInfo,
+    ExchangedTicketInfo,
+    ExcludeTicketing,
+    ExemptObfee,
+    ExemptTaxes,
+    ExpertSolution,
+    ExpertSolutionList,
+    Facility,
+    FareBasis,
+    FareCalc,
+    FareDetails,
+    FareDetailsRef,
+    FareDisplay,
+    FareDisplayRule,
+    FareGuaranteeInfo,
+    FareInfo,
+    FareInfoList,
+    FareInfoMessage,
+    FareInfoRef,
+    FareMileageInformation,
+    FareNote,
+    FareNoteList,
+    FareNoteRef,
+    FarePricing,
+    FareRemark,
+    FareRemarkList,
+    FareRemarkRef,
+    FareRestriction,
+    FareRestrictionDate,
+    FareRestrictionDaysOfWeek,
+    FareRestrictionSaleDate,
+    FareRestrictionSeasonal,
+    FareRoutingInformation,
+    FareRule,
+    FareRuleCategory,
+    FareRuleCategoryTypes,
+    FareRuleFailureInfo,
+    FareRuleKey,
+    FareRuleLong,
+    FareRuleLongRef,
+    FareRuleLookup,
+    FareRuleNameValue,
+    FareRuleShort,
+    FareRuleShortRef,
+    FareRulesFilter,
+    FareRulesFilterCategory,
+    FareStatus,
+    FareStatusFailureInfo,
+    FareSurcharge,
+    FareTicketDesignator,
+    FareType,
+    FaxDetails,
+    FaxDetailsInformation,
+    FeeApplication,
+    FeeInfo,
+    FlexExploreModifiers,
+    FlightDetails,
+    FlightDetailsList,
+    FlightDetailsRef,
+    FlightInfo,
+    FlightInfoCriteria,
+    FlightInfoDetail,
+    FlightOption,
+    FlightOptionsList,
+    FlightTimeDetail,
+    FlightTimeTableCriteria,
+    FlightType,
+    GeneralTimeTable,
+    GroupedOption,
+    GroupedOptionInfo,
+    HostReservation,
+    HostTokenList,
+    ImageLocation,
+    InFlightServices,
+    IncludeAddlBookingCodeInfo,
+    InvoluntaryChange,
+    IssuanceModifiers,
+    Itinerary,
+    Journey,
+    JourneyData,
+    LandCharges,
+    LanguageOption,
+    Leg,
+    LegDetail,
+    LegPrice,
+    LegRef,
+    LoyaltyCardDetails,
+    Maxtype,
+    Mintype,
+    ManualFareAdjustment,
+    MaxLayoverDurationType,
+    Meals,
+    MerchandisingAvailabilityDetails,
+    MerchandisingDetails,
+    MerchandisingPricingModifiers,
+    MultiGdssearchIndicator,
+    Othtype,
+    OfferAvailabilityModifiers,
+    Option,
+    OptionalService,
+    OptionalServiceModifier,
+    OptionalServiceModifiers,
+    OptionalServiceRef,
+    OptionalServices,
+    OptionalServicesInfo,
+    OriginalItineraryDetails,
+    OverrideCode,
+    Pcc,
+    PassengerDetails,
+    PassengerDetailsRef,
+    PassengerReceiptOverride,
+    PassengerSeatPrice,
+    PassengerTicketNumber,
+    PassengerType,
+    PaymentRef,
+    PenFeeType,
+    Penalty,
+    PenaltyFareInformation,
+    PenaltyInformation,
+    PermittedCabins,
+    PermittedCarriers,
+    PersonName,
+    PersonNameSearch,
+    PocketItineraryRemark,
+    PolicyCodesList,
+    PrePayAccount,
+    PrePayCustomer,
+    PrePayId,
+    PrePayPriceInfo,
+    PrePayProfileInfo,
+    PreferredBookingCodes,
+    PreferredCabins,
+    PreferredCarriers,
+    PriceChangeType,
+    PriceRange,
+    PricingDetails,
+    PrintBlankFormItinerary,
+    ProhibitedCabins,
+    ProhibitedCarriers,
+    PromoCode,
+    RailCoachDetails,
+    RefundFailureInfo,
+    RelatedTraveler,
+    RepricingModifiers,
+    RepricingModifiersFlightType,
+    Restriction,
+    Route,
+    RouteList,
+    RoutingRules,
+    Row,
+    Rows,
+    RuleAdvancedPurchase,
+    RuleCharges,
+    RuleLengthOfStay,
+    Rules,
+    SearchAirLeg,
+    SearchTraveler,
+    SeatInformation,
+    SegmentIndex,
+    SegmentModifiers,
+    SegmentSelect,
+    SelectionModifiers,
+    ServiceAssociations,
+    ServiceGroup,
+    ServiceSubGroup,
+    SolutionGroup,
+    SpecificSeatAssignment,
+    SpecificTimeTable,
+    SplitTicketingSearch,
+    SponsoredFltInfo,
+    StructuredFareRulesType,
+    SvcSegment,
+    Tcr,
+    TcrexchangeBundle,
+    Tcrinfo,
+    TcrrefundBundle,
+    Tax,
+    TaxInfo,
+    TermConditions,
+    Text,
+    TextInfo,
+    Ticket,
+    TicketAgency,
+    TicketDesignator,
+    TicketEndorsement,
+    TicketFailureInfo,
+    TicketInfo,
+    TicketValidity,
+    TicketingModifiers,
+    TicketingModifiersRef,
+    Title,
+    TourCode,
+    TravelArranger,
+    Url,
+    Urlinfo,
+    UpsellBrand,
+    ValueDetails,
+    Variance,
+    VoidDocumentInfo,
+    VoidFailureInfo,
+    VoidResultInfo,
+    WaiverCode,
+    YieldType,
+    TypeAtpcoglobalIndicator,
+    TypeAirReservationWithFop,
+    TypeAlliance,
+    TypeAnchorFlightData,
+    TypeApplicableSegment,
+    TypeAssessIndicator,
+    TypeBackOffice,
+    TypeBaseAirReservation,
+    TypeBaseAirSegment,
+    TypeBillingDetailsDataType,
+    TypeBillingDetailsName,
+    TypeBooking,
+    TypeBulkTicketModifierType,
+    TypeCarrierCode,
+    TypeConnectionIndicator,
+    TypeCouponStatus,
+    TypeDaysOfOperation,
+    TypeDefaultBrandDetail,
+    TypeDestinationCode,
+    TypeDisplayCategory,
+    TypeDiversity,
+    TypeEticketability,
+    TypeFacility,
+    TypeFailureInfo,
+    TypeFareBreak,
+    TypeFareDirectionality,
+    TypeFareDiscount,
+    TypeFareGuarantee,
+    TypeFarePenalty,
+    TypeFareRestrictionType,
+    TypeFareRuleCategoryCode,
+    TypeFareRuleType,
+    TypeFareSearchOption,
+    TypeFareStatusCode,
+    TypeFareTripType,
+    TypeFaresIndicator,
+    TypeIgnoreStopOver,
+    TypeInventoryRequest,
+    TypeItinerary,
+    TypeItineraryOption,
+    TypeMealService,
+    TypeMileOrRouteBasedFare,
+    TypeNativeSearchModifier,
+    TypeNonAirReservationRef,
+    TypePosition,
+    TypePricingMethod,
+    TypePrivateFare,
+    TypePurposeCode,
+    TypeReportingType,
+    TypeRestrictionLengthOfStay,
+    TypeRowLocation,
+    TypeSeatAvailability,
+    TypeSegmentRef,
+    TypeStayUnit,
+    TypeTcrstatus,
+    TypeTaxInfoWithPaymentRef,
+    TypeTextElement,
+    TypeTicketFailureInfo,
+    TypeTicketModifierAccountingType,
+    TypeTicketModifierAmountType,
+    TypeTicketModifierPercentType,
+    TypeTicketModifierValueType,
+    TypeTicketingModifiersRef,
+    TypeTripType,
+    TypeUnitOfMeasure,
+    TypeUnitWeight,
+    TypeVarianceIndicator,
+    TypeVarianceType,
+    TypeWeight,
+)
+from travelport.models.air_v48_0.air_req_rsp import (
+    AirBaseReq,
+    AirExchangeEligibilityReq,
+    AirExchangeEligibilityRsp,
+    AirExchangeMultiQuoteReq,
+    AirExchangeMultiQuoteRsp,
+    AirExchangeQuoteReq,
+    AirExchangeQuoteRsp,
+    AirExchangeReq,
+    AirExchangeRsp,
+    AirExchangeTicketingReq,
+    AirExchangeTicketingRsp,
+    AirFareDisplayReq,
+    AirFareDisplayRsp,
+    AirFareRulesReq,
+    AirFareRulesRsp,
+    AirMerchandisingDetailsReq,
+    AirMerchandisingDetailsRsp,
+    AirMerchandisingOfferAvailabilityReq,
+    AirMerchandisingOfferAvailabilityRsp,
+    AirPrePayReq,
+    AirPrePayRsp,
+    AirPriceReq,
+    AirPriceRsp,
+    AirRefundQuoteReq,
+    AirRefundQuoteRsp,
+    AirRefundReq,
+    AirRefundRsp,
+    AirRepriceReq,
+    AirRepriceRsp,
+    AirRetrieveDocumentReq,
+    AirRetrieveDocumentRsp,
+    AirSearchReq,
+    AirSearchRsp,
+    AirTicketingReq,
+    AirTicketingRsp,
+    AirUpsellSearchReq,
+    AirUpsellSearchRsp,
+    AirVoidDocumentReq,
+    AirVoidDocumentRsp,
+    AvailabilitySearchReq,
+    AvailabilitySearchRsp,
+    BaseAirExchangeMultiQuoteReq,
+    BaseAirExchangeQuoteReq,
+    BaseAirPriceReq,
+    BaseAirPriceRsp,
+    BaseAirSearchReq,
+    BaseAvailabilitySearchRsp,
+    BaseLowFareSearchReq,
+    BrandList,
+    EmdissuanceReq,
+    EmdissuanceRsp,
+    EmdretrieveReq,
+    EmdretrieveRsp,
+    FlightDetailsReq,
+    FlightDetailsRsp,
+    FlightInformationReq,
+    FlightInformationRsp,
+    FlightTimeTableReq,
+    FlightTimeTableRsp,
+    LowFareSearchAsynchReq,
+    LowFareSearchAsynchRsp,
+    LowFareSearchReq,
+    LowFareSearchRsp,
+    RetrieveLowFareSearchReq,
+    RetrieveLowFareSearchRsp,
+    ScheduleSearchReq,
+    ScheduleSearchRsp,
+    SearchSpecificAirSegment,
+    SeatMapReq,
+    SeatMapRsp,
+)

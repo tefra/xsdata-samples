@@ -20,12 +20,8 @@ from common_types.models.coreschemas.voc import (
     ParticipationTargetDevice,
     ParticipationType,
 )
-from common_types.models.multicacheschemas.coct_mt090108_uv import (
-    CoctMt090108UvAssignedPerson,
-)
-from common_types.models.multicacheschemas.coct_mt090303_uv01 import (
-    CoctMt090303Uv01AssignedDevice,
-)
+from common_types.models.multicacheschemas.coct_mt090108_uv import CoctMt090108UvAssignedPerson
+from common_types.models.multicacheschemas.coct_mt090303_uv01 import CoctMt090303Uv01AssignedDevice
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

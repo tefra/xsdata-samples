@@ -6,19 +6,13 @@ from common_types.models.coreschemas.datatypes_base import (
     Ii,
     IvlTsExplicit,
 )
-from common_types.models.multicacheschemas.coct_mt030207_uv import (
-    CoctMt030207UvPerson,
-)
-from common_types.models.multicacheschemas.coct_mt140007_uv import (
-    CoctMt140007UvDevice,
-)
-from common_types.models.multicacheschemas.coct_mt150007_uv import (
-    CoctMt150007UvOrganization,
-)
 from common_types.models.coreschemas.voc import (
     NullFlavor,
     RoleClassAgent,
 )
+from common_types.models.multicacheschemas.coct_mt030207_uv import CoctMt030207UvPerson
+from common_types.models.multicacheschemas.coct_mt140007_uv import CoctMt140007UvDevice
+from common_types.models.multicacheschemas.coct_mt150007_uv import CoctMt150007UvOrganization
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

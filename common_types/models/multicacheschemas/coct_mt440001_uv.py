@@ -1,9 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.coreschemas.voc import (
-    ActClass,
-    ActMood,
-    NullFlavor,
+from common_types.models.coreschemas.datatypes import (
+    RtoMoPq,
+    RtoPqPq,
 )
 from common_types.models.coreschemas.datatypes_base import (
     Cd,
@@ -12,9 +11,10 @@ from common_types.models.coreschemas.datatypes_base import (
     IvlTsExplicit,
     Mo,
 )
-from common_types.models.coreschemas.datatypes import (
-    RtoMoPq,
-    RtoPqPq,
+from common_types.models.coreschemas.voc import (
+    ActClass,
+    ActMood,
+    NullFlavor,
 )
 
 __NAMESPACE__ = "urn:hl7-org:v3"

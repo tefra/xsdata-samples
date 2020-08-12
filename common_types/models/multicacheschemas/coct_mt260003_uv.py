@@ -1,6 +1,15 @@
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+from common_types.models.coreschemas.datatypes_base import (
+    Ce,
+    Cs,
+    Ii,
+    IvlTsExplicit,
+    PqExplicit,
+    TelExplicit,
+    TsExplicit,
+)
 from common_types.models.coreschemas.voc import (
     ActClass,
     ActClassObservation,
@@ -45,15 +54,6 @@ from common_types.models.coreschemas.voc import (
     XRoleClassCredentialedEntity,
     XRoleClassPayeePolicyRelationship,
     XSuccReplPrev,
-)
-from common_types.models.coreschemas.datatypes_base import (
-    Ce,
-    Cs,
-    Ii,
-    IvlTsExplicit,
-    PqExplicit,
-    TelExplicit,
-    TsExplicit,
 )
 
 __NAMESPACE__ = "urn:hl7-org:v3"

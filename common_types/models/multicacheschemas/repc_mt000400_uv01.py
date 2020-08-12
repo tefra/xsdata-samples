@@ -1,12 +1,5 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.coreschemas.voc import (
-    ActClass,
-    ActMood,
-    ActRelationshipHasComponent,
-    NullFlavor,
-    ParticipationType,
-)
 from common_types.models.coreschemas.datatypes_base import (
     Cd,
     Ce,
@@ -18,12 +11,15 @@ from common_types.models.coreschemas.datatypes_base import (
     St,
     TsExplicit,
 )
-from common_types.models.multicacheschemas.coct_mt040200_uv01 import (
-    CoctMt040200Uv01ResponsibleParty,
+from common_types.models.coreschemas.voc import (
+    ActClass,
+    ActMood,
+    ActRelationshipHasComponent,
+    NullFlavor,
+    ParticipationType,
 )
-from common_types.models.multicacheschemas.coct_mt090100_uv01 import (
-    CoctMt090100Uv01AssignedPerson,
-)
+from common_types.models.multicacheschemas.coct_mt040200_uv01 import CoctMt040200Uv01ResponsibleParty
+from common_types.models.multicacheschemas.coct_mt090100_uv01 import CoctMt090100Uv01AssignedPerson
 from common_types.models.multicacheschemas.repc_mt000100_uv01 import (
     RepcMt000100Uv01Act,
     RepcMt000100Uv01ActReference,

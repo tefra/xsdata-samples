@@ -1,7 +1,5 @@
 from dataclasses import dataclass, field
-from common_types.models.multicacheschemas.mcci_mt000200_uv01 import (
-    McciMt000200Uv01Message,
-)
+from common_types.models.multicacheschemas.mcci_mt000200_uv01 import McciMt000200Uv01Message
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

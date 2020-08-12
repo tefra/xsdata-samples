@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+from common_types.models.coreschemas.datatypes_base import (
+    Cs,
+    Ii,
+)
 from common_types.models.coreschemas.voc import (
     ActClassRoot,
     ActMood,
     NullFlavor,
-)
-from common_types.models.coreschemas.datatypes_base import (
-    Cs,
-    Ii,
 )
 
 __NAMESPACE__ = "urn:hl7-org:v3"

@@ -1,50 +1,52 @@
-from travelport.models.rail_v48_0.rail import Characteristic
-from travelport.models.rail_v48_0.rail import Coach
-from travelport.models.rail_v48_0.rail import FareValidity
-from travelport.models.rail_v48_0.rail import FulFillmentType
-from travelport.models.rail_v48_0.rail import JourneyRemark
-from travelport.models.rail_v48_0.rail import OperatingCompany
-from travelport.models.rail_v48_0.rail import RailAutoSeatAssignment
-from travelport.models.rail_v48_0.rail import RailAvailInfo
-from travelport.models.rail_v48_0.rail import RailBookingInfo
-from travelport.models.rail_v48_0.rail import RailExchangeInfo
-from travelport.models.rail_v48_0.rail import RailExchangeSolution
-from travelport.models.rail_v48_0.rail import RailFare
-from travelport.models.rail_v48_0.rail import RailFareComponent
-from travelport.models.rail_v48_0.rail import RailFareId
-from travelport.models.rail_v48_0.rail import RailFareIdlist
-from travelport.models.rail_v48_0.rail import RailFareIdref
-from travelport.models.rail_v48_0.rail import RailFareList
-from travelport.models.rail_v48_0.rail import RailFareNote
-from travelport.models.rail_v48_0.rail import RailFareNoteList
-from travelport.models.rail_v48_0.rail import RailFareNoteRef
-from travelport.models.rail_v48_0.rail import RailFareRef
-from travelport.models.rail_v48_0.rail import RailInfo
-from travelport.models.rail_v48_0.rail import RailJourney
-from travelport.models.rail_v48_0.rail import RailJourneyList
-from travelport.models.rail_v48_0.rail import RailJourneyRef
-from travelport.models.rail_v48_0.rail import RailLegModifiers
-from travelport.models.rail_v48_0.rail import RailPricingInfo
-from travelport.models.rail_v48_0.rail import RailPricingModifiers
-from travelport.models.rail_v48_0.rail import RailPricingSolution
-from travelport.models.rail_v48_0.rail import RailRefundInfo
-from travelport.models.rail_v48_0.rail import RailReservation
-from travelport.models.rail_v48_0.rail import RailSearchModifiers
-from travelport.models.rail_v48_0.rail import RailSegment
-from travelport.models.rail_v48_0.rail import RailSegmentInfo
-from travelport.models.rail_v48_0.rail import RailSegmentList
-from travelport.models.rail_v48_0.rail import RailSegmentRef
-from travelport.models.rail_v48_0.rail import RailSolutionChangedInfo
-from travelport.models.rail_v48_0.rail import RailSpecificSeatAssignment
-from travelport.models.rail_v48_0.rail import RailSupplier
-from travelport.models.rail_v48_0.rail import RailTicketInfo
-from travelport.models.rail_v48_0.rail import SearchRailLeg
-from travelport.models.rail_v48_0.rail import TicketAdvisory
-from travelport.models.rail_v48_0.rail import TypeCoachClassType
-from travelport.models.rail_v48_0.rail import TypeJourneyDirection
-from travelport.models.rail_v48_0.rail import TypeRailDirection
-from travelport.models.rail_v48_0.rail import TypeRailPricingSolution
-from travelport.models.rail_v48_0.rail import TypeRailSegmentInfo
-from travelport.models.rail_v48_0.rail import TypeRailTicketStatus
-from travelport.models.rail_v48_0.rail import TypeResponseType
-from travelport.models.rail_v48_0.rail import TypeTransportMode
+from travelport.models.rail_v48_0.rail import (
+    Characteristic,
+    Coach,
+    FareValidity,
+    FulFillmentType,
+    JourneyRemark,
+    OperatingCompany,
+    RailAutoSeatAssignment,
+    RailAvailInfo,
+    RailBookingInfo,
+    RailExchangeInfo,
+    RailExchangeSolution,
+    RailFare,
+    RailFareComponent,
+    RailFareId,
+    RailFareIdlist,
+    RailFareIdref,
+    RailFareList,
+    RailFareNote,
+    RailFareNoteList,
+    RailFareNoteRef,
+    RailFareRef,
+    RailInfo,
+    RailJourney,
+    RailJourneyList,
+    RailJourneyRef,
+    RailLegModifiers,
+    RailPricingInfo,
+    RailPricingModifiers,
+    RailPricingSolution,
+    RailRefundInfo,
+    RailReservation,
+    RailSearchModifiers,
+    RailSegment,
+    RailSegmentInfo,
+    RailSegmentList,
+    RailSegmentRef,
+    RailSolutionChangedInfo,
+    RailSpecificSeatAssignment,
+    RailSupplier,
+    RailTicketInfo,
+    SearchRailLeg,
+    TicketAdvisory,
+    TypeCoachClassType,
+    TypeJourneyDirection,
+    TypeRailDirection,
+    TypeRailPricingSolution,
+    TypeRailSegmentInfo,
+    TypeRailTicketStatus,
+    TypeResponseType,
+    TypeTransportMode,
+)

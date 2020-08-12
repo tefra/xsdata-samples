@@ -8,9 +8,6 @@ from common_types.models.coreschemas.datatypes_base import (
     Ii,
     Sc,
 )
-from common_types.models.multicacheschemas.coct_mt150002_uv01 import (
-    CoctMt150002Uv01Organization,
-)
 from common_types.models.coreschemas.voc import (
     EntityClass,
     EntityClassDevice,
@@ -19,6 +16,7 @@ from common_types.models.coreschemas.voc import (
     NullFlavor,
     RoleClassAssignedEntity,
 )
+from common_types.models.multicacheschemas.coct_mt150002_uv01 import CoctMt150002Uv01Organization
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

@@ -44,42 +44,18 @@ from common_types.models.coreschemas.voc import (
     XActReplaceOrRevise,
     XSuccReplPrev,
 )
-from common_types.models.multicacheschemas.coct_mt020000_uv01 import (
-    CoctMt020000Uv01Appointment,
-)
-from common_types.models.multicacheschemas.coct_mt040200_uv01 import (
-    CoctMt040200Uv01ResponsibleParty,
-)
-from common_types.models.multicacheschemas.coct_mt050000_uv01 import (
-    CoctMt050000Uv01Patient,
-)
-from common_types.models.multicacheschemas.coct_mt060000_uv01 import (
-    CoctMt060000Uv01Transportation,
-)
-from common_types.models.multicacheschemas.coct_mt090000_uv01 import (
-    CoctMt090000Uv01AssignedEntity,
-)
-from common_types.models.multicacheschemas.coct_mt090100_uv01 import (
-    CoctMt090100Uv01AssignedPerson,
-)
-from common_types.models.multicacheschemas.coct_mt090200_uv01 import (
-    CoctMt090200Uv01AssignedOrganization,
-)
-from common_types.models.multicacheschemas.coct_mt110000_uv04 import (
-    CoctMt110000Uv04Account,
-)
-from common_types.models.multicacheschemas.coct_mt120104_uv import (
-    CoctMt120104UvObservationDx,
-)
-from common_types.models.multicacheschemas.coct_mt150000_uv02 import (
-    CoctMt150000Uv02Organization,
-)
-from common_types.models.multicacheschemas.coct_mt470000_uv import (
-    CoctMt470000UvConsent,
-)
-from common_types.models.multicacheschemas.coct_mt710000_uv01 import (
-    CoctMt710000Uv01Place,
-)
+from common_types.models.multicacheschemas.coct_mt020000_uv01 import CoctMt020000Uv01Appointment
+from common_types.models.multicacheschemas.coct_mt040200_uv01 import CoctMt040200Uv01ResponsibleParty
+from common_types.models.multicacheschemas.coct_mt050000_uv01 import CoctMt050000Uv01Patient
+from common_types.models.multicacheschemas.coct_mt060000_uv01 import CoctMt060000Uv01Transportation
+from common_types.models.multicacheschemas.coct_mt090000_uv01 import CoctMt090000Uv01AssignedEntity
+from common_types.models.multicacheschemas.coct_mt090100_uv01 import CoctMt090100Uv01AssignedPerson
+from common_types.models.multicacheschemas.coct_mt090200_uv01 import CoctMt090200Uv01AssignedOrganization
+from common_types.models.multicacheschemas.coct_mt110000_uv04 import CoctMt110000Uv04Account
+from common_types.models.multicacheschemas.coct_mt120104_uv import CoctMt120104UvObservationDx
+from common_types.models.multicacheschemas.coct_mt150000_uv02 import CoctMt150000Uv02Organization
+from common_types.models.multicacheschemas.coct_mt470000_uv import CoctMt470000UvConsent
+from common_types.models.multicacheschemas.coct_mt710000_uv01 import CoctMt710000Uv01Place
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

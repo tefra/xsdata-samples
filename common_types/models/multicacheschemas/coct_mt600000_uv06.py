@@ -47,12 +47,8 @@ from common_types.models.coreschemas.voc import (
     XRoleClassCredentialedEntity,
     XRoleClassPayeePolicyRelationship,
 )
-from common_types.models.multicacheschemas.coct_mt240000_uv01 import (
-    CoctMt240000Uv01ServiceDeliveryLocation,
-)
-from common_types.models.multicacheschemas.coct_mt240003_uv02 import (
-    CoctMt240003Uv02ServiceDeliveryLocation,
-)
+from common_types.models.multicacheschemas.coct_mt240000_uv01 import CoctMt240000Uv01ServiceDeliveryLocation
+from common_types.models.multicacheschemas.coct_mt240003_uv02 import CoctMt240003Uv02ServiceDeliveryLocation
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 
