@@ -60,6 +60,7 @@ from travelport.models.travelport_com_schema_air_v48_0 import (
     SeatMapReq,
     SeatMapRsp,
 )
+from travelport.models.travelport_com_schema_common_v48_0 import ErrorInfo
 from travelport.models.travelport_com_soa_common_security_session_context_v1 import SessionContext
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v48_0"
@@ -140,6 +141,7 @@ class AirAvailabilitySearchPortTypeServiceOutput:
     class Body:
         """
         :ivar availability_search_rsp:
+        :ivar fault:
         """
         availability_search_rsp: Optional[AvailabilitySearchRsp] = field(
             default=None,
@@ -149,6 +151,64 @@ class AirAvailabilitySearchPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirAvailabilitySearchPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirAvailabilitySearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -204,6 +264,7 @@ class AirExchangeEligibilityPortTypeServiceOutput:
     class Body:
         """
         :ivar air_exchange_eligibility_rsp:
+        :ivar fault:
         """
         air_exchange_eligibility_rsp: Optional[AirExchangeEligibilityRsp] = field(
             default=None,
@@ -213,6 +274,64 @@ class AirExchangeEligibilityPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirExchangeEligibilityPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirExchangeEligibilityPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -268,6 +387,7 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
     class Body:
         """
         :ivar air_exchange_multi_quote_rsp:
+        :ivar fault:
         """
         air_exchange_multi_quote_rsp: Optional[AirExchangeMultiQuoteRsp] = field(
             default=None,
@@ -277,6 +397,64 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirExchangeMultiQuotePortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirExchangeMultiQuotePortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -332,6 +510,7 @@ class AirExchangeProcessPortTypeServiceOutput:
     class Body:
         """
         :ivar air_exchange_rsp:
+        :ivar fault:
         """
         air_exchange_rsp: Optional[AirExchangeRsp] = field(
             default=None,
@@ -341,6 +520,64 @@ class AirExchangeProcessPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirExchangeProcessPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirExchangeProcessPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -396,6 +633,7 @@ class AirExchangeQuotePortTypeServiceOutput:
     class Body:
         """
         :ivar air_exchange_quote_rsp:
+        :ivar fault:
         """
         air_exchange_quote_rsp: Optional[AirExchangeQuoteRsp] = field(
             default=None,
@@ -405,6 +643,64 @@ class AirExchangeQuotePortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirExchangeQuotePortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirExchangeQuotePortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -482,6 +778,7 @@ class AirExchangeTicketingPortTypeServiceOutput:
     class Body:
         """
         :ivar air_exchange_ticketing_rsp:
+        :ivar fault:
         """
         air_exchange_ticketing_rsp: Optional[AirExchangeTicketingRsp] = field(
             default=None,
@@ -491,6 +788,64 @@ class AirExchangeTicketingPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirExchangeTicketingPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirExchangeTicketingPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -568,6 +923,7 @@ class AirFareDisplayPortTypeServiceOutput:
     class Body:
         """
         :ivar air_fare_display_rsp:
+        :ivar fault:
         """
         air_fare_display_rsp: Optional[AirFareDisplayRsp] = field(
             default=None,
@@ -577,6 +933,64 @@ class AirFareDisplayPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirFareDisplayPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirFareDisplayPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -654,6 +1068,7 @@ class AirFareRulesPortTypeServiceOutput:
     class Body:
         """
         :ivar air_fare_rules_rsp:
+        :ivar fault:
         """
         air_fare_rules_rsp: Optional[AirFareRulesRsp] = field(
             default=None,
@@ -663,6 +1078,64 @@ class AirFareRulesPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirFareRulesPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirFareRulesPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -718,6 +1191,7 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
     class Body:
         """
         :ivar low_fare_search_asynch_rsp:
+        :ivar fault:
         """
         low_fare_search_asynch_rsp: Optional[LowFareSearchAsynchRsp] = field(
             default=None,
@@ -727,6 +1201,64 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirLowFareSearchAsynchPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirLowFareSearchAsynchPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -804,6 +1336,7 @@ class AirLowFareSearchPortTypeServiceOutput:
     class Body:
         """
         :ivar low_fare_search_rsp:
+        :ivar fault:
         """
         low_fare_search_rsp: Optional[LowFareSearchRsp] = field(
             default=None,
@@ -813,6 +1346,64 @@ class AirLowFareSearchPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirLowFareSearchPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirLowFareSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -868,6 +1459,7 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
     class Body:
         """
         :ivar air_merchandising_details_rsp:
+        :ivar fault:
         """
         air_merchandising_details_rsp: Optional[AirMerchandisingDetailsRsp] = field(
             default=None,
@@ -877,6 +1469,64 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirMerchandisingDetailsPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirMerchandisingDetailsPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -932,6 +1582,7 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
     class Body:
         """
         :ivar air_merchandising_offer_availability_rsp:
+        :ivar fault:
         """
         air_merchandising_offer_availability_rsp: Optional[AirMerchandisingOfferAvailabilityRsp] = field(
             default=None,
@@ -941,6 +1592,64 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -996,6 +1705,7 @@ class AirPrePayPortTypeServiceOutput:
     class Body:
         """
         :ivar air_pre_pay_rsp:
+        :ivar fault:
         """
         air_pre_pay_rsp: Optional[AirPrePayRsp] = field(
             default=None,
@@ -1005,6 +1715,64 @@ class AirPrePayPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirPrePayPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirPrePayPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1082,6 +1850,7 @@ class AirPricePortTypeServiceOutput:
     class Body:
         """
         :ivar air_price_rsp:
+        :ivar fault:
         """
         air_price_rsp: Optional[AirPriceRsp] = field(
             default=None,
@@ -1091,6 +1860,64 @@ class AirPricePortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirPricePortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirPricePortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1146,6 +1973,7 @@ class AirRefundQuotePortTypeServiceOutput:
     class Body:
         """
         :ivar air_refund_quote_rsp:
+        :ivar fault:
         """
         air_refund_quote_rsp: Optional[AirRefundQuoteRsp] = field(
             default=None,
@@ -1155,6 +1983,64 @@ class AirRefundQuotePortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirRefundQuotePortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirRefundQuotePortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1210,6 +2096,7 @@ class AirRefundTicketPortTypeServiceOutput:
     class Body:
         """
         :ivar air_refund_rsp:
+        :ivar fault:
         """
         air_refund_rsp: Optional[AirRefundRsp] = field(
             default=None,
@@ -1219,6 +2106,64 @@ class AirRefundTicketPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirRefundTicketPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirRefundTicketPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1274,6 +2219,7 @@ class AirRepriceSearchPortTypeServiceOutput:
     class Body:
         """
         :ivar air_reprice_rsp:
+        :ivar fault:
         """
         air_reprice_rsp: Optional[AirRepriceRsp] = field(
             default=None,
@@ -1283,6 +2229,64 @@ class AirRepriceSearchPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirRepriceSearchPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirRepriceSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1338,6 +2342,7 @@ class AirRetrieveDocumentPortTypeServiceOutput:
     class Body:
         """
         :ivar air_retrieve_document_rsp:
+        :ivar fault:
         """
         air_retrieve_document_rsp: Optional[AirRetrieveDocumentRsp] = field(
             default=None,
@@ -1347,6 +2352,64 @@ class AirRetrieveDocumentPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirRetrieveDocumentPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirRetrieveDocumentPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1402,6 +2465,7 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
     class Body:
         """
         :ivar retrieve_low_fare_search_rsp:
+        :ivar fault:
         """
         retrieve_low_fare_search_rsp: Optional[RetrieveLowFareSearchRsp] = field(
             default=None,
@@ -1411,6 +2475,64 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirRetrieveLowFareSearchPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirRetrieveLowFareSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1466,6 +2588,7 @@ class AirScheduleSearchPortTypeServiceOutput:
     class Body:
         """
         :ivar schedule_search_rsp:
+        :ivar fault:
         """
         schedule_search_rsp: Optional[ScheduleSearchRsp] = field(
             default=None,
@@ -1475,6 +2598,64 @@ class AirScheduleSearchPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirScheduleSearchPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirScheduleSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1530,6 +2711,7 @@ class AirTicketingPortTypeServiceOutput:
     class Body:
         """
         :ivar air_ticketing_rsp:
+        :ivar fault:
         """
         air_ticketing_rsp: Optional[AirTicketingRsp] = field(
             default=None,
@@ -1539,6 +2721,64 @@ class AirTicketingPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirTicketingPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirTicketingPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1594,6 +2834,7 @@ class AirUpsellSearchPortTypeServiceOutput:
     class Body:
         """
         :ivar air_upsell_search_rsp:
+        :ivar fault:
         """
         air_upsell_search_rsp: Optional[AirUpsellSearchRsp] = field(
             default=None,
@@ -1603,6 +2844,64 @@ class AirUpsellSearchPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirUpsellSearchPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirUpsellSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1658,6 +2957,7 @@ class AirVoidDocumentPortTypeServiceOutput:
     class Body:
         """
         :ivar air_void_document_rsp:
+        :ivar fault:
         """
         air_void_document_rsp: Optional[AirVoidDocumentRsp] = field(
             default=None,
@@ -1667,6 +2967,64 @@ class AirVoidDocumentPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["AirVoidDocumentPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["AirVoidDocumentPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1722,6 +3080,7 @@ class EmdissuancePortTypeServiceOutput:
     class Body:
         """
         :ivar emdissuance_rsp:
+        :ivar fault:
         """
         emdissuance_rsp: Optional[EmdissuanceRsp] = field(
             default=None,
@@ -1731,6 +3090,64 @@ class EmdissuancePortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["EmdissuancePortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["EmdissuancePortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1786,6 +3203,7 @@ class EmdretrievePortTypeServiceOutput:
     class Body:
         """
         :ivar emdretrieve_rsp:
+        :ivar fault:
         """
         emdretrieve_rsp: Optional[EmdretrieveRsp] = field(
             default=None,
@@ -1795,6 +3213,64 @@ class EmdretrievePortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["EmdretrievePortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["EmdretrievePortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1850,6 +3326,7 @@ class FlightDetailsPortTypeServiceOutput:
     class Body:
         """
         :ivar flight_details_rsp:
+        :ivar fault:
         """
         flight_details_rsp: Optional[FlightDetailsRsp] = field(
             default=None,
@@ -1859,6 +3336,64 @@ class FlightDetailsPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["FlightDetailsPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["FlightDetailsPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1914,6 +3449,7 @@ class FlightInfoPortTypeServiceOutput:
     class Body:
         """
         :ivar flight_information_rsp:
+        :ivar fault:
         """
         flight_information_rsp: Optional[FlightInformationRsp] = field(
             default=None,
@@ -1923,6 +3459,64 @@ class FlightInfoPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["FlightInfoPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["FlightInfoPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -1978,6 +3572,7 @@ class FlightTimeTablePortTypeServiceOutput:
     class Body:
         """
         :ivar flight_time_table_rsp:
+        :ivar fault:
         """
         flight_time_table_rsp: Optional[FlightTimeTableRsp] = field(
             default=None,
@@ -1987,6 +3582,64 @@ class FlightTimeTablePortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["FlightTimeTablePortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["FlightTimeTablePortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 @dataclass
@@ -2064,6 +3717,7 @@ class SeatMapPortTypeServiceOutput:
     class Body:
         """
         :ivar seat_map_rsp:
+        :ivar fault:
         """
         seat_map_rsp: Optional[SeatMapRsp] = field(
             default=None,
@@ -2073,6 +3727,64 @@ class SeatMapPortTypeServiceOutput:
                 namespace="http://www.travelport.com/schema/air_v48_0"
             )
         )
+        fault: Optional["SeatMapPortTypeServiceOutput.Body.Fault"] = field(
+            default=None,
+            metadata=dict(
+                name="Fault",
+                type="Element"
+            )
+        )
+
+        @dataclass
+        class Fault:
+            """
+            :ivar faultcode:
+            :ivar faultstring:
+            :ivar faultactor:
+            :ivar detail:
+            """
+            faultcode: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultstring: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            faultactor: Optional[str] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+            detail: Optional["SeatMapPortTypeServiceOutput.Body.Fault.Detail"] = field(
+                default=None,
+                metadata=dict(
+                    type="Element",
+                    namespace=""
+                )
+            )
+
+            @dataclass
+            class Detail:
+                """
+                :ivar error_info:
+                """
+                error_info: Optional[ErrorInfo] = field(
+                    default=None,
+                    metadata=dict(
+                        name="ErrorInfo",
+                        type="Element",
+                        namespace="http://www.travelport.com/schema/common_v48_0"
+                    )
+                )
 
 
 class AirAvailabilitySearchPortTypeService:
