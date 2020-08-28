@@ -495,7 +495,7 @@
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Das vorliegende Lastenheft beschreibt die Kundenfunktionsauspr&#228;gung der<xhtml:br xml:space="preserve"/></xhtml:p>
+                <xhtml:p xml:space="preserve">Das vorliegende Lastenheft beschreibt die Kundenfunktionsauspr&#228;gung der<xhtml:br xml:space="preserve"/>Funktion "Testfunktion"</xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -671,7 +671,7 @@
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">ACA:<xhtml:br xml:space="preserve"/></xhtml:p>
+                <xhtml:p xml:space="preserve">ACA:<xhtml:br xml:space="preserve"/>Adaptive Cruise Assist</xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -715,7 +715,7 @@
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">ACC:<xhtml:br xml:space="preserve"/></xhtml:p>
+                <xhtml:p xml:space="preserve">ACC:<xhtml:br xml:space="preserve"/>Adaptive Cruise Control</xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -759,7 +759,7 @@
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">HMI:<xhtml:br xml:space="preserve"/></xhtml:p>
+                <xhtml:p xml:space="preserve">HMI:<xhtml:br xml:space="preserve"/>Human Maschine Interface</xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -847,7 +847,7 @@
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Ego-Fahrzeug:<xhtml:br xml:space="preserve"/></xhtml:p>
+                <xhtml:p xml:space="preserve">Ego-Fahrzeug:<xhtml:br xml:space="preserve"/>Das eigene Fahrzeug auf das sich die Funktionsberschreibung bezieht</xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -891,7 +891,7 @@
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Ego-Fahrstreifen:<xhtml:br xml:space="preserve"/></xhtml:p>
+                <xhtml:p xml:space="preserve">Ego-Fahrstreifen:<xhtml:br xml:space="preserve"/>Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt</xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
