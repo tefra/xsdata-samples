@@ -1,6 +1,7 @@
 tox
 mypy
 pytest
+pytest-benchmark
 pre-commit
 requests
-git+https://github.com/tefra/xsdata@master
+git+https://github.com/tefra/xsdata@sax-parser
