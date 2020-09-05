@@ -1,6 +1,6 @@
+from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
-from dataclasses import dataclass, field
 from typing import List, Optional
 from travelport.models.travelport_com_schema_common_v48_0 import (
     AccountCode,

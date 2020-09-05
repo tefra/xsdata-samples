@@ -1,5 +1,5 @@
-from decimal import Decimal
 from dataclasses import dataclass, field
+from decimal import Decimal
 from typing import List, Optional
 from reqif.models.w3_org_1999_xhtml import (
     XhtmlDivType,

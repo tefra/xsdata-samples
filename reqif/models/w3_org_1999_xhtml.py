@@ -1,5 +1,5 @@
-from enum import Enum
 from dataclasses import dataclass, field
+from enum import Enum
 from typing import List, Optional
 from reqif.models.w3_org_xml_1998_namespace import (
     XhtmlInlPresTypeValue,
