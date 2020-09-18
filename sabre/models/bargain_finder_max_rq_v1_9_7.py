@@ -2092,7 +2092,8 @@ class TravelDateTimeType:
                 type="Element",
                 namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
-                max_occurs=9223372036854775807
+                max_occurs=9223372036854775807,
+                sequential=True
             )
         )
         days_range: List["TravelDateTimeType.DepartureDates.DaysRange"] = field(
@@ -2102,7 +2103,8 @@ class TravelDateTimeType:
                 type="Element",
                 namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
-                max_occurs=9223372036854775807
+                max_occurs=9223372036854775807,
+                sequential=True
             )
         )
         length_of_stay: List["TravelDateTimeType.DepartureDates.LengthOfStay"] = field(
@@ -2225,7 +2227,8 @@ class TravelDateTimeType:
                 type="Element",
                 namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
-                max_occurs=9223372036854775807
+                max_occurs=9223372036854775807,
+                sequential=True
             )
         )
         days_range: List["TravelDateTimeType.ArrivalDates.DaysRange"] = field(
@@ -2235,7 +2238,8 @@ class TravelDateTimeType:
                 type="Element",
                 namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
-                max_occurs=9223372036854775807
+                max_occurs=9223372036854775807,
+                sequential=True
             )
         )
 
@@ -3613,7 +3617,8 @@ class FlexibleFaresType:
                 type="Element",
                 namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
-                max_occurs=9223372036854775807
+                max_occurs=9223372036854775807,
+                sequential=True
             )
         )
         account_code: List["FlexibleFaresType.FareParameters.AccountCode"] = field(
@@ -3623,7 +3628,8 @@ class FlexibleFaresType:
                 type="Element",
                 namespace="http://www.opentravel.org/OTA/2003/05",
                 min_occurs=0,
-                max_occurs=9223372036854775807
+                max_occurs=9223372036854775807,
+                sequential=True
             )
         )
 
@@ -4081,7 +4087,8 @@ class PriceRequestInformationType:
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
-            max_occurs=9223372036854775807
+            max_occurs=9223372036854775807,
+            sequential=True
         )
     )
     account_code: List["PriceRequestInformationType.AccountCode"] = field(
@@ -4091,7 +4098,8 @@ class PriceRequestInformationType:
             type="Element",
             namespace="http://www.opentravel.org/OTA/2003/05",
             min_occurs=0,
-            max_occurs=9223372036854775807
+            max_occurs=9223372036854775807,
+            sequential=True
         )
     )
     tpa_extensions: Optional["PriceRequestInformationType.TpaExtensions"] = field(
@@ -4742,7 +4750,6 @@ class PriceRequestInformationType:
                     name="CountryCode",
                     type="Element",
                     namespace="http://www.opentravel.org/OTA/2003/05",
-                    required=True,
                     pattern=r"[a-zA-Z]{2}"
                 )
             )

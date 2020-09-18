@@ -1020,16 +1020,14 @@ class BrandModifiers:
         default=None,
         metadata=dict(
             name="FareFamilyDisplay",
-            type="Element",
-            required=True
+            type="Element"
         )
     )
     basic_details_only: Optional["BrandModifiers.BasicDetailsOnly"] = field(
         default=None,
         metadata=dict(
             name="BasicDetailsOnly",
-            type="Element",
-            required=True
+            type="Element"
         )
     )
 
@@ -11490,8 +11488,7 @@ class RefundFailureInfo:
         metadata=dict(
             name="TicketNumber",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            required=True
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     name: Optional[Name] = field(
@@ -11499,8 +11496,7 @@ class RefundFailureInfo:
         metadata=dict(
             name="Name",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            required=True
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     tcrnumber: Optional[str] = field(
@@ -12494,8 +12490,7 @@ class TypeTicketFailureInfo:
         metadata=dict(
             name="TicketNumber",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            required=True
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     name: Optional[Name] = field(
@@ -12503,8 +12498,7 @@ class TypeTicketFailureInfo:
         metadata=dict(
             name="Name",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            required=True
+            namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
     tcrnumber: Optional[str] = field(

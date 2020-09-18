@@ -6821,7 +6821,8 @@ class XhtmlDlType:
             type="Element",
             namespace="http://www.w3.org/1999/xhtml",
             min_occurs=0,
-            max_occurs=9223372036854775807
+            max_occurs=9223372036854775807,
+            sequential=True
         )
     )
     dd: List[XhtmlDdType] = field(
@@ -6830,7 +6831,8 @@ class XhtmlDlType:
             type="Element",
             namespace="http://www.w3.org/1999/xhtml",
             min_occurs=0,
-            max_occurs=9223372036854775807
+            max_occurs=9223372036854775807,
+            sequential=True
         )
     )
     space: XhtmlDlTypeValue = field(
@@ -8058,7 +8060,8 @@ class XhtmlTrType:
             type="Element",
             namespace="http://www.w3.org/1999/xhtml",
             min_occurs=0,
-            max_occurs=9223372036854775807
+            max_occurs=9223372036854775807,
+            sequential=True
         )
     )
     td: List[XhtmlTdType] = field(
@@ -8067,7 +8070,8 @@ class XhtmlTrType:
             type="Element",
             namespace="http://www.w3.org/1999/xhtml",
             min_occurs=0,
-            max_occurs=9223372036854775807
+            max_occurs=9223372036854775807,
+            sequential=True
         )
     )
     space: XhtmlTrTypeValue = field(
@@ -8598,7 +8602,7 @@ class XhtmlTableType:
         metadata=dict(
             type="Element",
             namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=1,
+            min_occurs=0,
             max_occurs=9223372036854775807
         )
     )
