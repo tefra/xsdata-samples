@@ -27,6 +27,9 @@ class BindingTests(TestCase):
 
         here.joinpath("sample.output.xml").write_bytes(
             etree.tostring(
-                tree, xml_declaration=True, encoding="ascii", pretty_print=True,
+                tree,
+                xml_declaration=True,
+                encoding="ascii",
+                pretty_print=True,
             )
         )
