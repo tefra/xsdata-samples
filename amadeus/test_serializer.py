@@ -22,7 +22,9 @@ class SerializerTests(TestCase):
         xml_fixture = cwd.joinpath(f"{fixture}.xml")
 
         obj = parser.from_path(json_fixture, FareMasterPricerTravelBoardSearch)
-        xml = serializer.render(obj=obj)
+        xml = serializer.render(
+            obj=obj, ns_map={None: "http://xml.amadeus.com/FMPTBQ_15_3_1A"}
+        )
 
         xml_fixture.write_text(xml)
 

@@ -9,27 +9,24 @@ from xsdata.formats.dataclass.serializers import XmlSerializer
 from reqif.models import ReqIf
 
 parser = XmlParser(context=XmlContext())
-serializer = XmlSerializer(context=parser.context, pretty_print=True)
+serializer = XmlSerializer(context=parser.context, pretty_print=True, encoding="ascii")
 here = Path(__file__).parent.absolute()
 
 
 class BindingTests(TestCase):
     def test_parser_validate_serializer_output(self):
         xml_fixture = here.joinpath("sample.xml")
+        output = here.joinpath("sample.output.xml")
 
         obj = parser.from_path(xml_fixture, ReqIf)
-        tree = serializer.render_tree(obj)
+        ns_map = {
+            None: "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+            "xhtml": "http://www.w3.org/1999/xhtml",
+        }
+        with output.open("w") as f:
+            serializer.write(f, obj, ns_map=ns_map)
 
         schema_doc = etree.parse(here.joinpath("schemas/reqif.xsd").as_uri())
         schema = etree.XMLSchema(schema_doc)
 
-        schema.assertValid(tree)
-
-        here.joinpath("sample.output.xml").write_bytes(
-            etree.tostring(
-                tree,
-                xml_declaration=True,
-                encoding="ascii",
-                pretty_print=True,
-            )
-        )
+        schema.assertValid(etree.parse(str(output)))

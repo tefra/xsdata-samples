@@ -20,7 +20,9 @@ class SerializerTests(TestCase):
         xml_fixture = cwd.joinpath(f"{fixture}.xml")
 
         obj = parser.from_path(json_fixture, OtaAirLowFareSearchRq)
-        xml = serializer.render(obj)
+        xml = serializer.render(
+            obj, ns_map={None: "http://www.opentravel.org/OTA/2003/05"}
+        )
 
         xml_fixture.write_text(xml)
 

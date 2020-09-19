@@ -20,7 +20,13 @@ class SerializerTests(TestCase):
         xml_fixture = cwd.joinpath(f"{fixture}.xml")
 
         obj = parser.from_path(json_fixture, LowFareSearchReq)
-        xml = serializer.render(obj=obj)
+        xml = serializer.render(
+            obj=obj,
+            ns_map={
+                None: "http://www.travelport.com/schema/air_v48_0",
+                "ns1": "http://www.travelport.com/schema/common_v48_0",
+            },
+        )
 
         xml_fixture.write_text(xml)
 
