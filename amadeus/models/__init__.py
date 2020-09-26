@@ -1,11 +1,5 @@
-from amadeus.models.ama_wslink import (
-    ConsumerType,
-    ReceiverType,
-    TransactionFlowLink,
-    TransactionFlowLinkType,
-)
-from amadeus.models.fare_master_pricer_travel_board_search_15_3_1_a import FareMasterPricerTravelBoardSearch
-from amadeus.models.fare_master_pricer_travel_board_search_reply_15_3_1_a import (
+from amadeus.models.master_pricer import FareMasterPricerTravelBoardSearch
+from amadeus.models.master_pricer_reply import (
     ActionDetailsType,
     AdditionalFareQualifierDetailsTypeI,
     AdditionalProductDetailsType,
@@ -41,7 +35,7 @@ from amadeus.models.fare_master_pricer_travel_board_search_reply_15_3_1_a import
     ConversionRateDetailsTypeI179848C,
     ConversionRateTypeI,
     ConversionRateTypeI78562S,
-    CriteriaiDetaislType,
+    CriteriaDetailsType,
     DataInformationType,
     DataTypeInformationType,
     DateAndTimeDetailsType,
@@ -164,4 +158,10 @@ from amadeus.models.fare_master_pricer_travel_board_search_reply_15_3_1_a import
     TravellerReferenceInformationType,
     UserIdentificationType,
     ValueSearchCriteriaType,
+)
+from amadeus.models.ws_link import (
+    ConsumerType,
+    ReceiverType,
+    TransactionFlowLink,
+    TransactionFlowLinkType,
 )

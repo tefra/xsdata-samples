@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Config xmlns="http://pypi.org/project/xsdata" version="20.9">
+  <Output wsdl="true">
+    <Package>travelport.models</Package>
+    <Format>pydata</Format>
+    <Structure>namespaces</Structure>
+  </Output>
+  <Conventions>
+    <ClassName case="pascalCase" safePrefix="type"/>
+    <FieldName case="snakeCase" safePrefix="value"/>
+    <ModuleName case="snakeCase" safePrefix="mod"/>
+    <PackageName case="snakeCase" safePrefix="pkg"/>
+  </Conventions>
+  <Aliases>
+    <ModuleName source="http://www.travelport.com/schema/common_v48_0" target="common"/>
+    <ModuleName source="http://www.travelport.com/schema/rail_v48_0" target="rail"/>
+    <ModuleName source="http://www.travelport.com/schema/air_v48_0" target="air"/>
+    <ModuleName source="http://www.travelport.com/service/air_v48_0" target="services"/>
+    <ModuleName source="http://www.travelport.com/soa/common/security/SessionContext_v1" target="session"/>
+  </Aliases>
+</Config>
