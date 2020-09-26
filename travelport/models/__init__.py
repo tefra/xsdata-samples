@@ -1,4 +1,4 @@
-from travelport.models.travelport_com_schema_air_v48_0 import (
+from travelport.models.air import (
     Advtype,
     Apisrequirements,
     ApisrequirementsList,
@@ -481,7 +481,7 @@ from travelport.models.travelport_com_schema_air_v48_0 import (
     TypeVarianceType,
     TypeWeight,
 )
-from travelport.models.travelport_com_schema_common_v48_0 import (
+from travelport.models.common import (
     Apiprovider,
     Arcpayment,
     AccountCode,
@@ -784,7 +784,7 @@ from travelport.models.travelport_com_schema_common_v48_0 import (
     TypeVoucherInformation,
     TypeVoucherType,
 )
-from travelport.models.travelport_com_schema_rail_v48_0 import (
+from travelport.models.rail import (
     Characteristic as RailCharacteristic,
     Coach,
     FareValidity,
@@ -836,7 +836,7 @@ from travelport.models.travelport_com_schema_rail_v48_0 import (
     TypeResponseType,
     TypeTransportMode,
 )
-from travelport.models.travelport_com_service_air_v48_0 import (
+from travelport.models.services import (
     AirAvailabilitySearchPortTypeService,
     AirAvailabilitySearchPortTypeServiceInput,
     AirAvailabilitySearchPortTypeServiceOutput,
@@ -925,4 +925,4 @@ from travelport.models.travelport_com_service_air_v48_0 import (
     SeatMapPortTypeServiceInput,
     SeatMapPortTypeServiceOutput,
 )
-from travelport.models.travelport_com_soa_common_security_session_context_v1 import SessionContext
+from travelport.models.session import SessionContext

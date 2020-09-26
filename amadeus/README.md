@@ -5,7 +5,7 @@
 - Auto generated models from schema definitions
 - Parsing test for response sample from xml -> python -> json
 - Serialization test for request sample from json -> python -> xml
-
+- Module and class names aliases in configuration file.
 
 ## Run through tox
 
