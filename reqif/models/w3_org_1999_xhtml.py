@@ -53,17 +53,6 @@ from reqif.models.w3_org_xml_1998_namespace import (
 __NAMESPACE__ = "http://www.w3.org/1999/xhtml"
 
 
-class XhtmlParamAttlistValuetype(Enum):
-    """
-    :cvar DATA:
-    :cvar REF:
-    :cvar OBJECT:
-    """
-    DATA = "data"
-    REF = "ref"
-    OBJECT = "object"
-
-
 class XhtmlParamTypeValuetype(Enum):
     """
     :cvar DATA:

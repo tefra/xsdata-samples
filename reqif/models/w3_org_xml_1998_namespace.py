@@ -3,43 +3,7 @@ from enum import Enum
 __NAMESPACE__ = "http://www.w3.org/XML/1998/namespace"
 
 
-class XhtmlCommonAttribValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlCoreAttribValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlInlPresAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlInlPresTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlAAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -57,25 +21,7 @@ class XhtmlATypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlAbbrAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlAbbrTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlAcronymAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -93,25 +39,7 @@ class XhtmlAcronymTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlAddressAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlAddressTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlBlockquoteAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -129,25 +57,7 @@ class XhtmlBlockquoteTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlBrAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlBrTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlCaptionAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -165,25 +75,7 @@ class XhtmlCaptionTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlCiteAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlCiteTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlCodeAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -201,25 +93,7 @@ class XhtmlCodeTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlColAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlColTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlColgroupAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -237,25 +111,7 @@ class XhtmlColgroupTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlDdAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlDdTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlDfnAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -273,25 +129,7 @@ class XhtmlDfnTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlDivAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlDivTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlDlAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -309,25 +147,7 @@ class XhtmlDlTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlDtAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlDtTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlEditAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -345,25 +165,7 @@ class XhtmlEditTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlEmAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlEmTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlH1AttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -381,25 +183,7 @@ class XhtmlH1TypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlH2AttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlH2TypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlH3AttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -417,25 +201,7 @@ class XhtmlH3TypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlH4AttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlH4TypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlH5AttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -453,25 +219,7 @@ class XhtmlH5TypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlH6AttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlH6TypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlHeadingAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -489,25 +237,7 @@ class XhtmlHeadingTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlHrAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlHrTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlKbdAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -525,25 +255,7 @@ class XhtmlKbdTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlLiAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlLiTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlObjectAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -561,25 +273,7 @@ class XhtmlObjectTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlOlAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlOlTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlPAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -597,25 +291,7 @@ class XhtmlPTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlPreAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlPreTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlQAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -633,25 +309,7 @@ class XhtmlQTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlSampAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlSampTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlSpanAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -669,25 +327,7 @@ class XhtmlSpanTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlStrongAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlStrongTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlTableAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -705,25 +345,7 @@ class XhtmlTableTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlTbodyAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlTbodyTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlTdAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -741,25 +363,7 @@ class XhtmlTdTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlTfootAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlTfootTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlThAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -777,25 +381,7 @@ class XhtmlThTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlTheadAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlTheadTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlTrAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:
@@ -813,25 +399,7 @@ class XhtmlTrTypeValue(Enum):
     PRESERVE = "preserve"
 
 
-class XhtmlUlAttlistValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class XhtmlUlTypeValue(Enum):
-    """
-    :cvar DEFAULT:
-    :cvar PRESERVE:
-    """
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
-class XhtmlVarAttlistValue(Enum):
     """
     :cvar DEFAULT:
     :cvar PRESERVE:

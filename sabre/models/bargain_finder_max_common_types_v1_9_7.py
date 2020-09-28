@@ -119,15 +119,6 @@ class FareDirectionality(Enum):
     FROM_VALUE = "FROM"
 
 
-class OtaPayloadStdAttributesTarget(Enum):
-    """
-    :cvar TEST:
-    :cvar PRODUCTION:
-    """
-    TEST = "Test"
-    PRODUCTION = "Production"
-
-
 class OutboundOrInbound(Enum):
     """
     :cvar OUTBOUND:
