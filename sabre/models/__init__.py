@@ -5,7 +5,6 @@ from sabre.models.bargain_finder_max_common_types_v1_9_7 import (
     DepartureOrArrival,
     EquipmentType,
     FareDirectionality,
-    OtaPayloadStdAttributesTarget,
     OutboundOrInbound,
     PassengerTypeQuantityType,
     StayRestrictionsType,
