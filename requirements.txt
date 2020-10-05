@@ -1,4 +1,3 @@
-tox
 mypy
 pytest
 pre-commit

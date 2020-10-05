@@ -2,4 +2,4 @@
 
 Examples of how to use the naive XML bindings for python.
 
-[![Build Status](https://travis-ci.com/tefra/xsdata-samples.svg?branch=master)](https://travis-ci.com/tefra/xsdata-samples)
+![build](https://github.com/tefra/xsdata-samples/workflows/build/badge.svg)
