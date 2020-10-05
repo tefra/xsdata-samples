@@ -1,0 +1,44 @@
+name: build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: "Amadeus", id: "amadeus", xsdata: true, pytest: true }
+          - { name: "Sabre", id: "sabre", xsdata: true, pytest: true }
+          - { name: "Travelport", id: "travelport", xsdata: true, pytest: true }
+          - { name: "Exchange Rates", id: "bnm", pytest: true }
+          - { name: "Common Types", id: "common", xsdata: true, mypy: true }
+          - { name: "Requirements Interchange Format", id: "reqif", mypy: true, pytest: true, xsdata: true }
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Generate Code
+        if: matrix.xsdata
+        run: make build-${{ matrix.id }}
+      - name: Run Tests
+        if: matrix.pytest
+        run: make test-${{ matrix.id }}
+      - name: Run mypy
+        if: matrix.mypy
+        run: make mypy-${{ matrix.id }}

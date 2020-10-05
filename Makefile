@@ -1,0 +1,40 @@
+build-amadeus:
+	rm -rf amadeus/models
+	xsdata amadeus/schemas --config amadeus/.xsdata.xml
+
+test-amadeus:
+	pytest amadeus
+
+build-sabre:
+	rm -rf sabre/models
+	xsdata sabre/schemas --package sabre.models
+
+test-sabre:
+	pytest sabre
+
+build-travelport:
+	rm -rf travelport/models
+	xsdata travelport/schemas/air_v48_0/Air.wsdl --config travelport/.xsdata.xml
+
+test-travelport:
+	pytest travelport
+
+test-bnm:
+	pytest bnm
+
+build-common:
+	rm -rf common_types/models
+	xsdata common_types/Common-Types/src/main/resources/schemas/HL7V3/NE2008/multicacheschemas --config common_types/.xsdata.xml
+
+mypy-common:
+	mypy common_types
+
+build-reqif:
+	rm -rf reqif/models
+	xsdata reqif/schemas/reqif.xsd --package reqif.models --ns-struct
+
+test-reqif:
+	pytest reqif
+
+mypy-reqif:
+	mypy reqif/models
