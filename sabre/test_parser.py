@@ -29,4 +29,4 @@ class ParserTests(TestCase):
         result = serializer.render(obj)
 
         self.assertEqual(json.loads(expected), json.loads(result))
-        json_fixture.write_text(result)
+        json_fixture.write_text(result + "\n")
