@@ -1,3 +1,11 @@
+all: build test mypy
+
+build: build-amadeus build-sabre build-travelport build-common build-reqif
+
+test: test-amadeus test-sabre test-travelport test-bnm test-reqif
+
+mypy: mypy-common mypy-reqif
+
 build-amadeus:
 	rm -rf amadeus/models
 	xsdata amadeus/schemas --config amadeus/.xsdata.xml
