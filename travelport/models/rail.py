@@ -1496,13 +1496,15 @@ class RailFare:
             namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
-    ful_fillment_type: List[FulFillmentType] = field(
+    ful_fillment_type: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="FulFillmentType",
             type="Element",
             min_occurs=0,
-            max_occurs=999
+            max_occurs=999,
+            min_length=0,
+            max_length=255
         )
     )
     rail_fare_component: List[RailFareComponent] = field(
@@ -1772,13 +1774,15 @@ class RailSegment(Segment):
             max_occurs=999
         )
     )
-    ful_fillment_type: List[FulFillmentType] = field(
+    ful_fillment_type: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="FulFillmentType",
             type="Element",
             min_occurs=0,
-            max_occurs=999
+            max_occurs=999,
+            min_length=0,
+            max_length=255
         )
     )
     train_number: Optional[str] = field(
