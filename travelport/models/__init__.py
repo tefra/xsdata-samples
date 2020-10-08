@@ -707,7 +707,6 @@ from travelport.models.common import (
     TypeFlexibleTimeSpec,
     TypeFormOfPaymentPnrreference,
     TypeFormOfRefund,
-    TypeFreeFormText,
     TypeFuel,
     TypeFulfillmentIdtype,
     TypeFulfillmentType,

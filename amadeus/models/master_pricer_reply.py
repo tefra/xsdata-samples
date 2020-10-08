@@ -6167,7 +6167,7 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar global_message_marker: Dummy Segment
         :ivar global_message: Informative free text information
         """
-        global_message_marker: Optional[DummySegmentTypeI] = field(
+        global_message_marker: Optional[str] = field(
             default=None,
             metadata=dict(
                 name="globalMessageMarker",
@@ -6234,7 +6234,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 max_occurs=100000
             )
         )
-        global_message_marker: Optional[DummySegmentTypeI] = field(
+        global_message_marker: Optional[str] = field(
             default=None,
             metadata=dict(
                 name="globalMessageMarker",

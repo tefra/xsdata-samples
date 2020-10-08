@@ -57,14 +57,12 @@ from travelport.models.common import (
     Ssrinfo,
     SearchPassenger,
     Segment,
-    SellMessage,
     ServiceData,
     ServiceFeeInfo,
     ServiceInfo,
     ServiceRuleType,
     SupplierLocator,
     ThirdPartyInformation,
-    TicketNumber,
     TypeAdjustmentTarget,
     TypeAdjustmentType,
     TypeAssociatedRemarkWithSegmentRef,
@@ -1106,6 +1104,35 @@ class CarrierCode:
 
 
 @dataclass
+class CarrierList:
+    """
+    :ivar carrier_code:
+    :ivar include_carrier:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    carrier_code: List[str] = field(
+        default_factory=list,
+        metadata=dict(
+            name="CarrierCode",
+            type="Element",
+            min_occurs=1,
+            max_occurs=6,
+            length=2
+        )
+    )
+    include_carrier: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="IncludeCarrier",
+            type="Attribute",
+            required=True
+        )
+    )
+
+
+@dataclass
 class CodeshareInfo:
     """Describes the codeshare disclosure (simple text string) or the specific
     operating flight information (as attributes).
@@ -1340,6 +1367,54 @@ class DocumentModifiers:
         default=False,
         metadata=dict(
             name="GenerateAccountingInterface",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
+class DocumentOptions:
+    """Allows an agency to set different document options for the itinerary.
+
+    :ivar passenger_receipt_override:
+    :ivar override_option: Allows an agency to override print options for documents during document generation.
+    :ivar suppress_itinerary_remarks: True when itinerary remarks are suppressed.
+    :ivar generate_itin_numbers: True when itinerary numbers are system
+                            generated.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    passenger_receipt_override: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="PassengerReceiptOverride",
+            type="Element",
+            min_length=1,
+            white_space="collapse"
+        )
+    )
+    override_option: List[str] = field(
+        default_factory=list,
+        metadata=dict(
+            name="OverrideOption",
+            type="Element",
+            min_occurs=0,
+            max_occurs=999,
+            max_length=50
+        )
+    )
+    suppress_itinerary_remarks: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="SuppressItineraryRemarks",
+            type="Attribute"
+        )
+    )
+    generate_itin_numbers: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="GenerateItinNumbers",
             type="Attribute"
         )
     )
@@ -7308,13 +7383,15 @@ class AirExchangeTicketBundle:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ticket_number: Optional[TicketNumber] = field(
+    ticket_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="TicketNumber",
             type="Element",
             namespace="http://www.travelport.com/schema/common_v48_0",
-            required=True
+            required=True,
+            min_length=1,
+            max_length=13
         )
     )
     form_of_payment: List[FormOfPayment] = field(
@@ -7710,14 +7787,16 @@ class AirRefundQuoteReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ticket_number: List[TicketNumber] = field(
+    ticket_number: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="TicketNumber",
             type="Element",
             namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
-            max_occurs=999
+            max_occurs=999,
+            min_length=1,
+            max_length=13
         )
     )
     tcrnumber: List[str] = field(
@@ -7809,21 +7888,25 @@ class AirRetrieveDocumentReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
+    air_reservation_locator_code: Optional[str] = field(
         default=None,
         metadata=dict(
             name="AirReservationLocatorCode",
-            type="Element"
+            type="Element",
+            min_length=5,
+            max_length=8
         )
     )
-    ticket_number: List[TicketNumber] = field(
+    ticket_number: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="TicketNumber",
             type="Element",
             namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
-            max_occurs=999
+            max_occurs=999,
+            min_length=1,
+            max_length=13
         )
     )
     tcrnumber: List[str] = field(
@@ -8296,11 +8379,13 @@ class AirVoidDocumentReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
+    air_reservation_locator_code: Optional[str] = field(
         default=None,
         metadata=dict(
             name="AirReservationLocatorCode",
-            type="Element"
+            type="Element",
+            min_length=5,
+            max_length=8
         )
     )
     void_document_info: List[VoidDocumentInfo] = field(
@@ -8877,34 +8962,6 @@ class Co2Emissions:
 
 
 @dataclass
-class CarrierList:
-    """
-    :ivar carrier_code:
-    :ivar include_carrier:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    carrier_code: List[CarrierCode] = field(
-        default_factory=list,
-        metadata=dict(
-            name="CarrierCode",
-            type="Element",
-            min_occurs=1,
-            max_occurs=6
-        )
-    )
-    include_carrier: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="IncludeCarrier",
-            type="Attribute",
-            required=True
-        )
-    )
-
-
-@dataclass
 class CategoryDetailsType:
     """
     :ivar category_details: For each category Details of Structured Fare
@@ -9374,52 +9431,6 @@ class Dimension(TypeUnitOfMeasure):
     type: Optional[str] = field(
         default=None,
         metadata=dict(
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class DocumentOptions:
-    """Allows an agency to set different document options for the itinerary.
-
-    :ivar passenger_receipt_override:
-    :ivar override_option: Allows an agency to override print options for documents during document generation.
-    :ivar suppress_itinerary_remarks: True when itinerary remarks are suppressed.
-    :ivar generate_itin_numbers: True when itinerary numbers are system
-                            generated.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    passenger_receipt_override: Optional[PassengerReceiptOverride] = field(
-        default=None,
-        metadata=dict(
-            name="PassengerReceiptOverride",
-            type="Element"
-        )
-    )
-    override_option: List[str] = field(
-        default_factory=list,
-        metadata=dict(
-            name="OverrideOption",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999,
-            max_length=50
-        )
-    )
-    suppress_itinerary_remarks: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="SuppressItineraryRemarks",
-            type="Attribute"
-        )
-    )
-    generate_itin_numbers: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="GenerateItinNumbers",
             type="Attribute"
         )
     )
@@ -10490,6 +10501,90 @@ class FlightInformationReq(BaseReq):
 
 
 @dataclass
+class GeneralTimeTable:
+    """
+    :ivar days_of_operation:
+    :ivar flight_origin:
+    :ivar flight_destination:
+    :ivar carrier_list:
+    :ivar start_date:
+    :ivar end_date:
+    :ivar start_time: Flight start time of flight time tabel .
+    :ivar end_time: Flight end time of flight time tabel .
+    :ivar include_connection: Include or exclude connecting flights.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    days_of_operation: Optional[TypeDaysOfOperation] = field(
+        default=None,
+        metadata=dict(
+            name="DaysOfOperation",
+            type="Element"
+        )
+    )
+    flight_origin: Optional[TypeLocation] = field(
+        default=None,
+        metadata=dict(
+            name="FlightOrigin",
+            type="Element",
+            required=True
+        )
+    )
+    flight_destination: Optional[TypeLocation] = field(
+        default=None,
+        metadata=dict(
+            name="FlightDestination",
+            type="Element",
+            required=True
+        )
+    )
+    carrier_list: Optional[CarrierList] = field(
+        default=None,
+        metadata=dict(
+            name="CarrierList",
+            type="Element"
+        )
+    )
+    start_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="StartDate",
+            type="Attribute",
+            required=True
+        )
+    )
+    end_date: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EndDate",
+            type="Attribute"
+        )
+    )
+    start_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="StartTime",
+            type="Attribute"
+        )
+    )
+    end_time: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="EndTime",
+            type="Attribute"
+        )
+    )
+    include_connection: Optional[bool] = field(
+        default=None,
+        metadata=dict(
+            name="IncludeConnection",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class GroupedOptionInfo:
     """
     :ivar grouped_option:
@@ -11483,12 +11578,14 @@ class RefundFailureInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ticket_number: Optional[TicketNumber] = field(
+    ticket_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="TicketNumber",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            min_length=1,
+            max_length=13
         )
     )
     name: Optional[Name] = field(
@@ -11893,7 +11990,7 @@ class ServiceAssociations:
                 namespace="http://www.travelport.com/schema/common_v48_0"
             )
         )
-        optional_service_ref: Optional[OptionalServiceRef] = field(
+        optional_service_ref: Optional[str] = field(
             default=None,
             metadata=dict(
                 name="OptionalServiceRef",
@@ -12485,12 +12582,14 @@ class TypeTicketFailureInfo:
     class Meta:
         name = "typeTicketFailureInfo"
 
-    ticket_number: Optional[TicketNumber] = field(
+    ticket_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="TicketNumber",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            min_length=1,
+            max_length=13
         )
     )
     name: Optional[Name] = field(
@@ -15679,7 +15778,7 @@ class FlightInfoDetail:
             type="Element"
         )
     )
-    meals: List[Meals] = field(
+    meals: List[TypeMealService] = field(
         default_factory=list,
         metadata=dict(
             name="Meals",
@@ -15688,7 +15787,7 @@ class FlightInfoDetail:
             max_occurs=999
         )
     )
-    in_flight_services: List[InFlightServices] = field(
+    in_flight_services: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="InFlightServices",
@@ -15802,85 +15901,27 @@ class FlightInfoDetail:
 
 
 @dataclass
-class GeneralTimeTable:
-    """
-    :ivar days_of_operation:
-    :ivar flight_origin:
-    :ivar flight_destination:
-    :ivar carrier_list:
-    :ivar start_date:
-    :ivar end_date:
-    :ivar start_time: Flight start time of flight time tabel .
-    :ivar end_time: Flight end time of flight time tabel .
-    :ivar include_connection: Include or exclude connecting flights.
+class FlightTimeTableCriteria:
+    """Flight Time Table Search Criteria.
+
+    :ivar general_time_table:
+    :ivar specific_time_table:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    days_of_operation: Optional[TypeDaysOfOperation] = field(
+    general_time_table: Optional[GeneralTimeTable] = field(
         default=None,
         metadata=dict(
-            name="DaysOfOperation",
+            name="GeneralTimeTable",
             type="Element"
         )
     )
-    flight_origin: Optional[TypeLocation] = field(
+    specific_time_table: Optional[SpecificTimeTable] = field(
         default=None,
         metadata=dict(
-            name="FlightOrigin",
-            type="Element",
-            required=True
-        )
-    )
-    flight_destination: Optional[TypeLocation] = field(
-        default=None,
-        metadata=dict(
-            name="FlightDestination",
-            type="Element",
-            required=True
-        )
-    )
-    carrier_list: Optional[CarrierList] = field(
-        default=None,
-        metadata=dict(
-            name="CarrierList",
+            name="SpecificTimeTable",
             type="Element"
-        )
-    )
-    start_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="StartDate",
-            type="Attribute",
-            required=True
-        )
-    )
-    end_date: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="EndDate",
-            type="Attribute"
-        )
-    )
-    start_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="StartTime",
-            type="Attribute"
-        )
-    )
-    end_time: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="EndTime",
-            type="Attribute"
-        )
-    )
-    include_connection: Optional[bool] = field(
-        default=None,
-        metadata=dict(
-            name="IncludeConnection",
-            type="Attribute"
         )
     )
 
@@ -15923,11 +15964,13 @@ class IssuanceModifiers:
             type="Element"
         )
     )
-    emdendorsement: Optional[Emdendorsement] = field(
+    emdendorsement: Optional[str] = field(
         default=None,
         metadata=dict(
             name="EMDEndorsement",
-            type="Element"
+            type="Element",
+            min_length=1,
+            max_length=255
         )
     )
     emdcommission: Optional[Emdcommission] = field(
@@ -16774,21 +16817,25 @@ class AirExchangeTicketingReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
+    air_reservation_locator_code: Optional[str] = field(
         default=None,
         metadata=dict(
             name="AirReservationLocatorCode",
             type="Element",
-            required=True
+            required=True,
+            min_length=5,
+            max_length=8
         )
     )
-    ticket_number: Optional[TicketNumber] = field(
+    ticket_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="TicketNumber",
             type="Element",
             namespace="http://www.travelport.com/schema/common_v48_0",
-            required=True
+            required=True,
+            min_length=1,
+            max_length=13
         )
     )
     ticketing_modifiers_ref: List[TypeTicketingModifiersRef] = field(
@@ -17639,16 +17686,18 @@ class Emdinfo:
             type="Element"
         )
     )
-    emdendorsement: List[Emdendorsement] = field(
+    emdendorsement: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="EMDEndorsement",
             type="Element",
             min_occurs=0,
-            max_occurs=999
+            max_occurs=999,
+            min_length=1,
+            max_length=255
         )
     )
-    fare_calc: Optional[FareCalc] = field(
+    fare_calc: Optional[str] = field(
         default=None,
         metadata=dict(
             name="FareCalc",
@@ -17730,12 +17779,14 @@ class EmdissuanceReq(BaseReq):
             required=True
         )
     )
-    ticket_number: Optional[TicketNumber] = field(
+    ticket_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="TicketNumber",
             type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
+            namespace="http://www.travelport.com/schema/common_v48_0",
+            min_length=1,
+            max_length=13
         )
     )
     issuance_modifiers: Optional[IssuanceModifiers] = field(
@@ -17993,7 +18044,7 @@ class FlightDetails:
             type="Element"
         )
     )
-    meals: List[Meals] = field(
+    meals: List[TypeMealService] = field(
         default_factory=list,
         metadata=dict(
             name="Meals",
@@ -18002,7 +18053,7 @@ class FlightDetails:
             max_occurs=999
         )
     )
-    in_flight_services: List[InFlightServices] = field(
+    in_flight_services: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="InFlightServices",
@@ -18463,27 +18514,20 @@ class FlightTimeDetail:
 
 
 @dataclass
-class FlightTimeTableCriteria:
-    """Flight Time Table Search Criteria.
+class FlightTimeTableReq(BaseSearchReq):
+    """Request for Flight Time Table.
 
-    :ivar general_time_table:
-    :ivar specific_time_table:
+    :ivar flight_time_table_criteria: Provider: 1G,1V.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    general_time_table: Optional[GeneralTimeTable] = field(
+    flight_time_table_criteria: Optional[FlightTimeTableCriteria] = field(
         default=None,
         metadata=dict(
-            name="GeneralTimeTable",
-            type="Element"
-        )
-    )
-    specific_time_table: Optional[SpecificTimeTable] = field(
-        default=None,
-        metadata=dict(
-            name="SpecificTimeTable",
-            type="Element"
+            name="FlightTimeTableCriteria",
+            type="Element",
+            required=True
         )
     )
 
@@ -19559,12 +19603,14 @@ class AirTicketingReq(AirBaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
+    air_reservation_locator_code: Optional[str] = field(
         default=None,
         metadata=dict(
             name="AirReservationLocatorCode",
             type="Element",
-            required=True
+            required=True,
+            min_length=5,
+            max_length=8
         )
     )
     air_pricing_info_ref: List["AirTicketingReq.AirPricingInfoRef"] = field(
@@ -19851,14 +19897,14 @@ class FareDisplay:
             max_occurs=99
         )
     )
-    fare_routing_information: Optional[FareRoutingInformation] = field(
+    fare_routing_information: Optional[str] = field(
         default=None,
         metadata=dict(
             name="FareRoutingInformation",
             type="Element"
         )
     )
-    fare_mileage_information: Optional[FareMileageInformation] = field(
+    fare_mileage_information: Optional[str] = field(
         default=None,
         metadata=dict(
             name="FareMileageInformation",
@@ -19891,11 +19937,13 @@ class FareDisplay:
             max_occurs=999
         )
     )
-    addl_booking_code_information: Optional[AddlBookingCodeInformation] = field(
+    addl_booking_code_information: Optional[str] = field(
         default=None,
         metadata=dict(
             name="AddlBookingCodeInformation",
-            type="Element"
+            type="Element",
+            min_length=1,
+            white_space="collapse"
         )
     )
     fare_rule_failure_info: Optional[FareRuleFailureInfo] = field(
@@ -20270,25 +20318,6 @@ class FlightOption:
             required=True,
             length=3,
             white_space="collapse"
-        )
-    )
-
-
-@dataclass
-class FlightTimeTableReq(BaseSearchReq):
-    """Request for Flight Time Table.
-
-    :ivar flight_time_table_criteria: Provider: 1G,1V.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    flight_time_table_criteria: Optional[FlightTimeTableCriteria] = field(
-        default=None,
-        metadata=dict(
-            name="FlightTimeTableCriteria",
-            type="Element",
-            required=True
         )
     )
 
@@ -21105,7 +21134,7 @@ class TypeBaseAirSegment(Segment):
             namespace="http://www.travelport.com/schema/air_v48_0"
         )
     )
-    sell_message: List[SellMessage] = field(
+    sell_message: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="SellMessage",
@@ -23156,7 +23185,7 @@ class AirPricingInfo:
             max_occurs=999
         )
     )
-    fare_calc: Optional[FareCalc] = field(
+    fare_calc: Optional[str] = field(
         default=None,
         metadata=dict(
             name="FareCalc",
@@ -23863,12 +23892,14 @@ class BaseAirPriceReq(BaseCoreReq):
             max_occurs=16
         )
     )
-    air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
+    air_reservation_locator_code: Optional[str] = field(
         default=None,
         metadata=dict(
             name="AirReservationLocatorCode",
             type="Element",
-            namespace="http://www.travelport.com/schema/air_v48_0"
+            namespace="http://www.travelport.com/schema/air_v48_0",
+            min_length=5,
+            max_length=8
         )
     )
     optional_services: Optional[OptionalServices] = field(
@@ -24944,11 +24975,13 @@ class Etr:
         name = "ETR"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
+    air_reservation_locator_code: Optional[str] = field(
         default=None,
         metadata=dict(
             name="AirReservationLocatorCode",
-            type="Element"
+            type="Element",
+            min_length=5,
+            max_length=8
         )
     )
     agency_info: Optional[AgencyInfo] = field(
@@ -25008,7 +25041,7 @@ class Etr:
             max_occurs=999
         )
     )
-    fare_calc: Optional[FareCalc] = field(
+    fare_calc: Optional[str] = field(
         default=None,
         metadata=dict(
             name="FareCalc",
@@ -25363,11 +25396,13 @@ class Tcr:
             namespace="http://www.travelport.com/schema/common_v48_0"
         )
     )
-    air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
+    air_reservation_locator_code: Optional[str] = field(
         default=None,
         metadata=dict(
             name="AirReservationLocatorCode",
-            type="Element"
+            type="Element",
+            min_length=5,
+            max_length=8
         )
     )
     supplier_locator: List[SupplierLocator] = field(
@@ -25795,14 +25830,16 @@ class AirExchangeQuoteRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ticket_number: List[TicketNumber] = field(
+    ticket_number: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="TicketNumber",
             type="Element",
             namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
-            max_occurs=999
+            max_occurs=999,
+            min_length=1,
+            max_length=13
         )
     )
     air_pricing_solution: List[AirPricingSolution] = field(
@@ -25880,22 +25917,26 @@ class AirExchangeReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
+    air_reservation_locator_code: Optional[str] = field(
         default=None,
         metadata=dict(
             name="AirReservationLocatorCode",
             type="Element",
-            required=True
+            required=True,
+            min_length=5,
+            max_length=8
         )
     )
-    ticket_number: List[TicketNumber] = field(
+    ticket_number: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="TicketNumber",
             type="Element",
             namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
-            max_occurs=999
+            max_occurs=999,
+            min_length=1,
+            max_length=13
         )
     )
     specific_seat_assignment: List[SpecificSeatAssignment] = field(
@@ -26120,11 +26161,13 @@ class AirRepriceReq(AirBaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_locator_code: Optional[AirReservationLocatorCode] = field(
+    air_reservation_locator_code: Optional[str] = field(
         default=None,
         metadata=dict(
             name="AirReservationLocatorCode",
-            type="Element"
+            type="Element",
+            min_length=5,
+            max_length=8
         )
     )
     air_pricing_solution: Optional[AirPricingSolution] = field(
@@ -26367,14 +26410,16 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
     :ivar original_itinerary_details:
     :ivar override_pcc:
     """
-    ticket_number: List[TicketNumber] = field(
+    ticket_number: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="TicketNumber",
             type="Element",
             namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
-            max_occurs=999
+            max_occurs=999,
+            min_length=1,
+            max_length=13
         )
     )
     provider_reservation_info: Optional["BaseAirExchangeMultiQuoteReq.ProviderReservationInfo"] = field(
@@ -26462,14 +26507,16 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
     :ivar pcc:
     :ivar fare_rule_type: Provider: ACH.
     """
-    ticket_number: List[TicketNumber] = field(
+    ticket_number: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="TicketNumber",
             type="Element",
             namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
-            max_occurs=999
+            max_occurs=999,
+            min_length=1,
+            max_length=13
         )
     )
     provider_reservation_info: Optional["BaseAirExchangeQuoteReq.ProviderReservationInfo"] = field(
@@ -26721,14 +26768,16 @@ class AirExchangeRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ticket_number: List[TicketNumber] = field(
+    ticket_number: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="TicketNumber",
             type="Element",
             namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
-            max_occurs=999
+            max_occurs=999,
+            min_length=1,
+            max_length=13
         )
     )
     booking_traveler: List[BookingTraveler] = field(

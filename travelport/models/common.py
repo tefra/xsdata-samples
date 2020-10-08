@@ -1541,6 +1541,29 @@ class Mcoremark:
 
 
 @dataclass
+class Mcotext:
+    """
+    All type of free format text messages related to MCO like - Command Text, Agent Entry, MCO Modifiers, Text Message
+    :ivar value:
+    :ivar type: The type of text. Possible values: Command Text, Agent Entry, MCO Modifiers, Text Message
+    """
+    class Meta:
+        name = "MCOText"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    value: Optional[str] = field(
+        default=None,
+    )
+    type: Optional[str] = field(
+        default=None,
+        metadata=dict(
+            name="Type",
+            type="Attribute"
+        )
+    )
+
+
+@dataclass
 class MarketingInformation:
     """Marketing text or Notices for Suppliers.
 
@@ -3652,20 +3675,6 @@ class TypeFormOfRefund(Enum):
     FORM_OF_PAYMENT = "FormOfPayment"
 
 
-@dataclass
-class TypeFreeFormText:
-    """Free form Text.
-
-    :ivar value:
-    """
-    class Meta:
-        name = "typeFreeFormText"
-
-    value: Optional[str] = field(
-        default=None,
-    )
-
-
 class TypeFuel(Enum):
     """
     :cvar PETROL:
@@ -5532,7 +5541,7 @@ class BaseCoreReq:
             max_occurs=999
         )
     )
-    terminal_session_info: Optional[TerminalSessionInfo] = field(
+    terminal_session_info: Optional[str] = field(
         default=None,
         metadata=dict(
             name="TerminalSessionInfo",
@@ -6058,13 +6067,15 @@ class ConsolidatorRemark:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    pseudo_city_code: List[PseudoCityCode] = field(
+    pseudo_city_code: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="PseudoCityCode",
             type="Element",
             min_occurs=1,
-            max_occurs=5
+            max_occurs=5,
+            min_length=2,
+            max_length=10
         )
     )
     key: Optional[str] = field(
@@ -6669,25 +6680,6 @@ class LoyaltyProgram:
         default=None,
         metadata=dict(
             name="Level",
-            type="Attribute"
-        )
-    )
-
-
-@dataclass
-class Mcotext(TypeFreeFormText):
-    """
-    All type of free format text messages related to MCO like - Command Text, Agent Entry, MCO Modifiers, Text Message
-    :ivar type: The type of text. Possible values: Command Text, Agent Entry, MCO Modifiers, Text Message
-    """
-    class Meta:
-        name = "MCOText"
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    type: Optional[str] = field(
-        default=None,
-        metadata=dict(
-            name="Type",
             type="Attribute"
         )
     )
@@ -9072,14 +9064,16 @@ class TypeProviderReservationSpecificInfo:
     class Meta:
         name = "typeProviderReservationSpecificInfo"
 
-    operated_by: List[OperatedBy] = field(
+    operated_by: List[str] = field(
         default_factory=list,
         metadata=dict(
             name="OperatedBy",
             type="Element",
             namespace="http://www.travelport.com/schema/common_v48_0",
             min_occurs=0,
-            max_occurs=999
+            max_occurs=999,
+            min_length=1,
+            white_space="collapse"
         )
     )
     provider_reservation_info_ref: Optional[ProviderReservationInfoRef] = field(
@@ -9156,7 +9150,7 @@ class TypeStructuredAddress:
             max_length=50
         )
     )
-    state: Optional[State] = field(
+    state: Optional[str] = field(
         default=None,
         metadata=dict(
             name="State",
@@ -11944,7 +11938,7 @@ class FileFinishingInfo:
             max_occurs=999
         )
     )
-    custom_profile_information: Optional[CustomProfileInformation] = field(
+    custom_profile_information: Optional[str] = field(
         default=None,
         metadata=dict(
             name="CustomProfileInformation",
@@ -12968,11 +12962,13 @@ class FormOfPayment:
             type="Element"
         )
     )
-    ticket_number: Optional[TicketNumber] = field(
+    ticket_number: Optional[str] = field(
         default=None,
         metadata=dict(
             name="TicketNumber",
-            type="Element"
+            type="Element",
+            min_length=1,
+            max_length=13
         )
     )
     check: Optional[Check] = field(
