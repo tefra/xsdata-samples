@@ -11970,12 +11970,14 @@ class Group:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    name: Optional["Group.Name"] = field(
+    name: Optional[str] = field(
         default=None,
         metadata=dict(
             name="Name",
             type="Element",
-            required=True
+            required=True,
+            min_length=1,
+            white_space="collapse"
         )
     )
     delivery_info: Optional[DeliveryInfo] = field(
@@ -12057,19 +12059,6 @@ class Group:
             type="Attribute"
         )
     )
-
-    @dataclass
-    class Name:
-        """
-        :ivar value:
-        """
-        value: Optional[str] = field(
-            default=None,
-            metadata=dict(
-                min_length=1,
-                white_space="collapse"
-            )
-        )
 
     @dataclass
     class Ssrref:
