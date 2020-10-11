@@ -32,7 +32,7 @@ test-bnm:
 
 build-common:
 	rm -rf common_types/models
-	xsdata common_types/Common-Types/src/main/resources/schemas/HL7V3/NE2008/multicacheschemas --config common_types/.xsdata.xml
+	xsdata common_types/Common-Types/src/main/resources/schemas/nhinc/hl7 --config common_types/.xsdata.xml
 
 mypy-common:
 	mypy common_types
