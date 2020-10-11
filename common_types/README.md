@@ -2,7 +2,7 @@
 
 ## Multi Cache Schemas
 
-- Auto generated models from schema definitions `HL7V3/NE2008/multicacheschemas`
+- Auto generated models from schema definitions `nhinc/hl7`
 - Test with mypy for errors
 
 This suite is an exceptional sample for complex definitions with edge cases.
