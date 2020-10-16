@@ -31,55 +31,50 @@ class PrpaMt900300Uv02CareEventId:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     value: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        }
     )
     semantics_text: Optional[St] = field(
         default=None,
-        metadata=dict(
-            name="semanticsText",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "semanticsText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
 
 
@@ -98,55 +93,50 @@ class PrpaMt900300Uv02EncounterStatus:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     value: List[Cv] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        }
     )
     semantics_text: Optional[St] = field(
         default=None,
-        metadata=dict(
-            name="semanticsText",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "semanticsText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
 
 
@@ -165,54 +155,50 @@ class PrpaMt900300Uv02EncounterTimeframe:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     value: Optional[IvlTsExplicit] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     semantics_text: Optional[St] = field(
         default=None,
-        metadata=dict(
-            name="semanticsText",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "semanticsText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
 
 
@@ -231,55 +217,50 @@ class PrpaMt900300Uv02PatientId:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     value: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        }
     )
     semantics_text: Optional[St] = field(
         default=None,
-        metadata=dict(
-            name="semanticsText",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "semanticsText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
 
 
@@ -298,55 +279,50 @@ class PrpaMt900300Uv02ResponsibleOrganization:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     value: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        }
     )
     semantics_text: Optional[St] = field(
         default=None,
-        metadata=dict(
-            name="semanticsText",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "semanticsText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
 
 
@@ -366,62 +342,58 @@ class PrpaMt900300Uv02SortControl:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sequence_number: Optional[IntType] = field(
         default=None,
-        metadata=dict(
-            name="sequenceNumber",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "sequenceNumber",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     element_name: Optional[Sc] = field(
         default=None,
-        metadata=dict(
-            name="elementName",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "elementName",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     direction_code: Optional[Cs] = field(
         default=None,
-        metadata=dict(
-            name="directionCode",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "directionCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
 
 
@@ -440,54 +412,50 @@ class PrpaMt900300Uv02TypeOfEncounter:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     value: Optional[Cd] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     semantics_text: Optional[St] = field(
         default=None,
-        metadata=dict(
-            name="semanticsText",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "semanticsText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
 
 
@@ -519,168 +487,160 @@ class PrpaMt900300Uv02QueryByParameterPayload:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     query_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="queryId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "queryId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     status_code: Optional[Cs] = field(
         default=None,
-        metadata=dict(
-            name="statusCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "statusCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     modify_code: Optional[Cs] = field(
         default=None,
-        metadata=dict(
-            name="modifyCode",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "modifyCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     response_element_group_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="responseElementGroupId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "responseElementGroupId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     response_modality_code: Optional[Cs] = field(
         default=None,
-        metadata=dict(
-            name="responseModalityCode",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "responseModalityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     response_priority_code: Optional[Cs] = field(
         default=None,
-        metadata=dict(
-            name="responsePriorityCode",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "responsePriorityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     initial_quantity: Optional[IntType] = field(
         default=None,
-        metadata=dict(
-            name="initialQuantity",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "initialQuantity",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     initial_quantity_code: Optional[Ce] = field(
         default=None,
-        metadata=dict(
-            name="initialQuantityCode",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "initialQuantityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     care_event_id: Optional[PrpaMt900300Uv02CareEventId] = field(
         default=None,
-        metadata=dict(
-            name="careEventID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            nillable=True
-        )
+        metadata={
+            "name": "careEventID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     encounter_status: Optional[PrpaMt900300Uv02EncounterStatus] = field(
         default=None,
-        metadata=dict(
-            name="encounterStatus",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            nillable=True
-        )
+        metadata={
+            "name": "encounterStatus",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     encounter_timeframe: Optional[PrpaMt900300Uv02EncounterTimeframe] = field(
         default=None,
-        metadata=dict(
-            name="encounterTimeframe",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            nillable=True
-        )
+        metadata={
+            "name": "encounterTimeframe",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     patient_id: Optional[PrpaMt900300Uv02PatientId] = field(
         default=None,
-        metadata=dict(
-            name="patientId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "patientId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     responsible_organization: Optional[PrpaMt900300Uv02ResponsibleOrganization] = field(
         default=None,
-        metadata=dict(
-            name="responsibleOrganization",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            nillable=True
-        )
+        metadata={
+            "name": "responsibleOrganization",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     sort_control: List[PrpaMt900300Uv02SortControl] = field(
         default_factory=list,
-        metadata=dict(
-            name="sortControl",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            nillable=True
-        )
+        metadata={
+            "name": "sortControl",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     type_of_encounter: Optional[PrpaMt900300Uv02TypeOfEncounter] = field(
         default=None,
-        metadata=dict(
-            name="typeOfEncounter",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            nillable=True
-        )
+        metadata={
+            "name": "typeOfEncounter",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )

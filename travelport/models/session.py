@@ -17,19 +17,18 @@ class SessionContext:
 
     sess_tok: Optional["SessionContext.SessTok"] = field(
         default=None,
-        metadata=dict(
-            name="SessTok",
-            type="Element"
-        )
+        metadata={
+            "name": "SessTok",
+            "type": "Element",
+        }
     )
     sess_prop: List["SessionContext.SessProp"] = field(
         default_factory=list,
-        metadata=dict(
-            name="SessProp",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "SessProp",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
 
     @dataclass
@@ -39,10 +38,10 @@ class SessionContext:
         """
         id: Optional[str] = field(
             default=None,
-            metadata=dict(
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
     @dataclass
@@ -53,15 +52,15 @@ class SessionContext:
         """
         nm: Optional[str] = field(
             default=None,
-            metadata=dict(
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "type": "Attribute",
+                "required": True,
+            }
         )
         val: Optional[str] = field(
             default=None,
-            metadata=dict(
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "type": "Attribute",
+                "required": True,
+            }
         )

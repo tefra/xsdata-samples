@@ -68,57 +68,53 @@ class CoctMt600000Uv06Destination:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     service_delivery_location: Optional[CoctMt240003Uv02ServiceDeliveryLocation] = field(
         default=None,
-        metadata=dict(
-            name="serviceDeliveryLocation",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True,
-            nillable=True
-        )
+        metadata={
+            "name": "serviceDeliveryLocation",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+            "nillable": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     type_code: ParticipationType = field(
         init=False,
         default=ParticipationType.DST,
-        metadata=dict(
-            name="typeCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -141,86 +137,82 @@ class CoctMt600000Uv06Diagnosis:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     code: Optional[Cd] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     text: Optional[St] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
-        metadata=dict(
-            name="effectiveTime",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "effectiveTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     value: Optional[Cd] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     class_code: Optional[ActClassObservation] = field(
         default=None,
-        metadata=dict(
-            name="classCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     mood_code: ActMood = field(
         init=False,
         default=ActMood.EVN,
-        metadata=dict(
-            name="moodCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -239,55 +231,51 @@ class CoctMt600000Uv06Location:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     service_delivery_location: Optional[CoctMt240000Uv01ServiceDeliveryLocation] = field(
         default=None,
-        metadata=dict(
-            name="serviceDeliveryLocation",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "serviceDeliveryLocation",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     type_code: Optional[ParticipationTargetLocation] = field(
         default=None,
-        metadata=dict(
-            name="typeCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -306,57 +294,53 @@ class CoctMt600000Uv06Origin:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     service_delivery_location: Optional[CoctMt240003Uv02ServiceDeliveryLocation] = field(
         default=None,
-        metadata=dict(
-            name="serviceDeliveryLocation",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True,
-            nillable=True
-        )
+        metadata={
+            "name": "serviceDeliveryLocation",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+            "nillable": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     type_code: ParticipationType = field(
         init=False,
         default=ParticipationType.ORG,
-        metadata=dict(
-            name="typeCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -376,63 +360,59 @@ class CoctMt600000Uv06ProviderPerson:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     name: Optional[PnExplicit] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     class_code: EntityClass = field(
         init=False,
         default=EntityClass.PSN,
-        metadata=dict(
-            name="classCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
         default=EntityDeterminer.INSTANCE,
-        metadata=dict(
-            name="determinerCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "determinerCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -452,63 +432,59 @@ class CoctMt600000Uv06SupplyObservationEvent:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     target_site_code: Optional[Cd] = field(
         default=None,
-        metadata=dict(
-            name="targetSiteCode",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "targetSiteCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     class_code: Optional[ActClassObservation] = field(
         default=None,
-        metadata=dict(
-            name="classCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     mood_code: ActMood = field(
         init=False,
         default=ActMood.EVN,
-        metadata=dict(
-            name="moodCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -530,80 +506,76 @@ class CoctMt600000Uv06VisionPrescriptionObservationEvent:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     code: Optional[Cd] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     value: Optional[Any] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     target_site_code: Optional[Cd] = field(
         default=None,
-        metadata=dict(
-            name="targetSiteCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "targetSiteCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     class_code: Optional[ActClassObservation] = field(
         default=None,
-        metadata=dict(
-            name="classCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     mood_code: ActMood = field(
         init=False,
         default=ActMood.EVN,
-        metadata=dict(
-            name="moodCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -623,62 +595,58 @@ class CoctMt600000Uv06VisionProduct:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     name: Optional[EnExplicit] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     class_code: Optional[EntityClassMaterial] = field(
         default=None,
-        metadata=dict(
-            name="classCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     determiner_code: EntityDeterminer = field(
         init=False,
         default=EntityDeterminer.INSTANCE,
-        metadata=dict(
-            name="determinerCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "determinerCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -699,73 +667,68 @@ class CoctMt600000Uv06HealthCareProvider:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        }
     )
     code: Optional[Ce] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     health_care_provider_person: Optional[CoctMt600000Uv06ProviderPerson] = field(
         default=None,
-        metadata=dict(
-            name="healthCareProviderPerson",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            nillable=True
-        )
+        metadata={
+            "name": "healthCareProviderPerson",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt600000Uv06HealthCareProvider.Value", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassMutualRelationship.PROV,
-        metadata=dict(
-            name="classCode",
-            type="Attribute",
-            required=True,
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[^\s]+",
+        }
     )
 
     class Value(Enum):
@@ -791,64 +754,60 @@ class CoctMt600000Uv06PertinentInformation:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sequence_number: Optional[IntType] = field(
         default=None,
-        metadata=dict(
-            name="sequenceNumber",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "sequenceNumber",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     diagnosis: Optional[CoctMt600000Uv06Diagnosis] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True,
-            nillable=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+            "nillable": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt600000Uv06PertinentInformation.Value"]] = field(
         default=None,
-        metadata=dict(
-            name="typeCode",
-            type="Attribute",
-            required=True,
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[^\s]+",
+        }
     )
 
     class Value(Enum):
@@ -905,57 +864,53 @@ class CoctMt600000Uv06PertinentInformation1:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     vision_prescription_observation_event: Optional[CoctMt600000Uv06VisionPrescriptionObservationEvent] = field(
         default=None,
-        metadata=dict(
-            name="visionPrescriptionObservationEvent",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True,
-            nillable=True
-        )
+        metadata={
+            "name": "visionPrescriptionObservationEvent",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+            "nillable": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt600000Uv06PertinentInformation1.Value"]] = field(
         default=None,
-        metadata=dict(
-            name="typeCode",
-            type="Attribute",
-            required=True,
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[^\s]+",
+        }
     )
 
     class Value(Enum):
@@ -1012,57 +967,53 @@ class CoctMt600000Uv06Product2:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     supply_observation_event: Optional[CoctMt600000Uv06SupplyObservationEvent] = field(
         default=None,
-        metadata=dict(
-            name="supplyObservationEvent",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True,
-            nillable=True
-        )
+        metadata={
+            "name": "supplyObservationEvent",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+            "nillable": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     type_code: ParticipationType = field(
         init=False,
         default=ParticipationType.PRD,
-        metadata=dict(
-            name="typeCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1081,57 +1032,53 @@ class CoctMt600000Uv06Author:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     health_care_provider: Optional[CoctMt600000Uv06HealthCareProvider] = field(
         default=None,
-        metadata=dict(
-            name="healthCareProvider",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True,
-            nillable=True
-        )
+        metadata={
+            "name": "healthCareProvider",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+            "nillable": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     type_code: ParticipationType = field(
         init=False,
         default=ParticipationType.AUT,
-        metadata=dict(
-            name="typeCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1152,73 +1099,67 @@ class CoctMt600000Uv06ManufacturedProduct:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     code: Optional[Ce] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     manufactured_vision_product: Optional[CoctMt600000Uv06VisionProduct] = field(
         default=None,
-        metadata=dict(
-            name="manufacturedVisionProduct",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            nillable=True
-        )
+        metadata={
+            "name": "manufacturedVisionProduct",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     product_of: List[CoctMt600000Uv06Product2] = field(
         default_factory=list,
-        metadata=dict(
-            name="productOf",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            nillable=True
-        )
+        metadata={
+            "name": "productOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     class_code: Optional[RoleClassManufacturedProduct] = field(
         default=None,
-        metadata=dict(
-            name="classCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1237,56 +1178,52 @@ class CoctMt600000Uv06Performer:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     health_care_provider: Optional[CoctMt600000Uv06HealthCareProvider] = field(
         default=None,
-        metadata=dict(
-            name="healthCareProvider",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True,
-            nillable=True
-        )
+        metadata={
+            "name": "healthCareProvider",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+            "nillable": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     type_code: Optional[ParticipationPhysicalPerformer] = field(
         default=None,
-        metadata=dict(
-            name="typeCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1308,81 +1245,75 @@ class CoctMt600000Uv06PrescriptionOrder:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     effective_time: Optional[TsExplicit] = field(
         default=None,
-        metadata=dict(
-            name="effectiveTime",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "effectiveTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     author: Optional[CoctMt600000Uv06Author] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            nillable=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     class_code: ActClass = field(
         init=False,
         default=ActClass.SBADM,
-        metadata=dict(
-            name="classCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     mood_code: ActMood = field(
         init=False,
         default=ActMood.RQO,
-        metadata=dict(
-            name="moodCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1401,56 +1332,52 @@ class CoctMt600000Uv06Product:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     manufactured_product: Optional[CoctMt600000Uv06ManufacturedProduct] = field(
         default=None,
-        metadata=dict(
-            name="manufacturedProduct",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "manufacturedProduct",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     type_code: ParticipationType = field(
         init=False,
         default=ParticipationType.PRD,
-        metadata=dict(
-            name="typeCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1469,55 +1396,51 @@ class CoctMt600000Uv06InFulfillmentOf:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     prescription_order: Optional[CoctMt600000Uv06PrescriptionOrder] = field(
         default=None,
-        metadata=dict(
-            name="prescriptionOrder",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "prescriptionOrder",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     type_code: Optional[ActRelationshipFulfills] = field(
         default=None,
-        metadata=dict(
-            name="typeCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1537,64 +1460,60 @@ class CoctMt600000Uv06PrescriptionIntent:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     in_fulfillment_of: Optional[CoctMt600000Uv06InFulfillmentOf] = field(
         default=None,
-        metadata=dict(
-            name="inFulfillmentOf",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "inFulfillmentOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     class_code: ActClass = field(
         init=False,
         default=ActClass.SBADM,
-        metadata=dict(
-            name="classCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     mood_code: Optional[ActMoodIntent] = field(
         default=None,
-        metadata=dict(
-            name="moodCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1613,57 +1532,53 @@ class CoctMt600000Uv06PertinentInformation2:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     prescription_intent: Optional[CoctMt600000Uv06PrescriptionIntent] = field(
         default=None,
-        metadata=dict(
-            name="prescriptionIntent",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True,
-            nillable=True
-        )
+        metadata={
+            "name": "prescriptionIntent",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+            "nillable": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt600000Uv06PertinentInformation2.Value"]] = field(
         default=None,
-        metadata=dict(
-            name="typeCode",
-            type="Attribute",
-            required=True,
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "name": "typeCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[^\s]+",
+        }
     )
 
     class Value(Enum):
@@ -1731,152 +1646,142 @@ class CoctMt600000Uv06SupplyEvent:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     code: Optional[Cd] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
-        metadata=dict(
-            name="effectiveTime",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "effectiveTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     priority_code: List[Ce] = field(
         default_factory=list,
-        metadata=dict(
-            name="priorityCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "priorityCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     product: List[CoctMt600000Uv06Product] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=1,
-            max_occurs=2
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+            "max_occurs": 2,
+        }
     )
     performer: Optional[CoctMt600000Uv06Performer] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            nillable=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     origin: Optional[CoctMt600000Uv06Origin] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            nillable=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     destination: Optional[CoctMt600000Uv06Destination] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            nillable=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     location: Optional[CoctMt600000Uv06Location] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     pertinent_information1: List[CoctMt600000Uv06PertinentInformation1] = field(
         default_factory=list,
-        metadata=dict(
-            name="pertinentInformation1",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            nillable=True
-        )
+        metadata={
+            "name": "pertinentInformation1",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     pertinent_information2: Optional[CoctMt600000Uv06PertinentInformation2] = field(
         default=None,
-        metadata=dict(
-            name="pertinentInformation2",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True,
-            nillable=True
-        )
+        metadata={
+            "name": "pertinentInformation2",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+            "nillable": True,
+        }
     )
     pertinent_information3: List[CoctMt600000Uv06PertinentInformation] = field(
         default_factory=list,
-        metadata=dict(
-            name="pertinentInformation3",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            nillable=True
-        )
+        metadata={
+            "name": "pertinentInformation3",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     class_code: Optional[ActClassSupply] = field(
         default=None,
-        metadata=dict(
-            name="classCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     mood_code: ActMood = field(
         init=False,
         default=ActMood.EVN,
-        metadata=dict(
-            name="moodCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )

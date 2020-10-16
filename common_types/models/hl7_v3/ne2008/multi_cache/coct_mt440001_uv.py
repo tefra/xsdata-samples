@@ -41,103 +41,97 @@ class CoctMt440001UvValuedItem:
 
     realm_code: List[Cs] = field(
         default_factory=list,
-        metadata=dict(
-            name="realmCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "realmCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     type_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="typeId",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "typeId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     template_id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            name="templateId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "templateId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     id: List[Ii] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     code: Optional[Cd] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
-        metadata=dict(
-            name="effectiveTime",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "effectiveTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     unit_quantity: Optional[RtoPqPq] = field(
         default=None,
-        metadata=dict(
-            name="unitQuantity",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "unitQuantity",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     unit_price_amt: Optional[RtoMoPq] = field(
         default=None,
-        metadata=dict(
-            name="unitPriceAmt",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "unitPriceAmt",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     net_amt: Optional[Mo] = field(
         default=None,
-        metadata=dict(
-            name="netAmt",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "netAmt",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     class_code: ActClass = field(
         init=False,
         default=ActClass.INVE,
-        metadata=dict(
-            name="classCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "classCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     mood_code: ActMood = field(
         init=False,
         default=ActMood.DEF_VALUE,
-        metadata=dict(
-            name="moodCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "moodCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )

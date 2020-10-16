@@ -20,10 +20,10 @@ class AttributedQnameType:
     )
     other_attributes: Dict = field(
         default_factory=dict,
-        metadata=dict(
-            type="Attributes",
-            namespace="##other"
-        )
+        metadata={
+            "type": "Attributes",
+            "namespace": "##other",
+        }
     )
 
 
@@ -41,10 +41,10 @@ class AttributedUritype:
     )
     other_attributes: Dict = field(
         default_factory=dict,
-        metadata=dict(
-            type="Attributes",
-            namespace="##other"
-        )
+        metadata={
+            "type": "Attributes",
+            "namespace": "##other",
+        }
     )
 
 
@@ -59,10 +59,10 @@ class AttributedUnsignedLongType:
     )
     other_attributes: Dict = field(
         default_factory=dict,
-        metadata=dict(
-            type="Attributes",
-            namespace="##other"
-        )
+        metadata={
+            "type": "Attributes",
+            "namespace": "##other",
+        }
     )
 
 
@@ -101,19 +101,17 @@ class MetadataType:
     """
     any_element: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+        }
     )
     other_attributes: Dict = field(
         default_factory=dict,
-        metadata=dict(
-            type="Attributes",
-            namespace="##other"
-        )
+        metadata={
+            "type": "Attributes",
+            "namespace": "##other",
+        }
     )
 
 
@@ -125,19 +123,17 @@ class ReferenceParametersType:
     """
     any_element: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+        }
     )
     other_attributes: Dict = field(
         default_factory=dict,
-        metadata=dict(
-            type="Attributes",
-            namespace="##other"
-        )
+        metadata={
+            "type": "Attributes",
+            "namespace": "##other",
+        }
     )
 
 
@@ -199,17 +195,17 @@ class RelatesToType:
     )
     relationship_type: Union[RelationshipType, str] = field(
         default=RelationshipType.HTTP_WWW_W3_ORG_2005_08_ADDRESSING_REPLY,
-        metadata=dict(
-            name="RelationshipType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RelationshipType",
+            "type": "Attribute",
+        }
     )
     other_attributes: Dict = field(
         default_factory=dict,
-        metadata=dict(
-            type="Attributes",
-            namespace="##other"
-        )
+        metadata={
+            "type": "Attributes",
+            "namespace": "##other",
+        }
     )
 
 
@@ -236,44 +232,42 @@ class EndpointReferenceType:
     """
     address: Optional[AttributedUritype] = field(
         default=None,
-        metadata=dict(
-            name="Address",
-            type="Element",
-            namespace="http://www.w3.org/2005/08/addressing",
-            required=True
-        )
+        metadata={
+            "name": "Address",
+            "type": "Element",
+            "namespace": "http://www.w3.org/2005/08/addressing",
+            "required": True,
+        }
     )
     reference_parameters: Optional[ReferenceParameters] = field(
         default=None,
-        metadata=dict(
-            name="ReferenceParameters",
-            type="Element",
-            namespace="http://www.w3.org/2005/08/addressing"
-        )
+        metadata={
+            "name": "ReferenceParameters",
+            "type": "Element",
+            "namespace": "http://www.w3.org/2005/08/addressing",
+        }
     )
     metadata: Optional[Metadata] = field(
         default=None,
-        metadata=dict(
-            name="Metadata",
-            type="Element",
-            namespace="http://www.w3.org/2005/08/addressing"
-        )
+        metadata={
+            "name": "Metadata",
+            "type": "Element",
+            "namespace": "http://www.w3.org/2005/08/addressing",
+        }
     )
     other_element: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##other",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##other",
+        }
     )
     other_attributes: Dict = field(
         default_factory=dict,
-        metadata=dict(
-            type="Attributes",
-            namespace="##other"
-        )
+        metadata={
+            "type": "Attributes",
+            "namespace": "##other",
+        }
     )
 
 
@@ -286,26 +280,26 @@ class ProblemActionType:
     """
     action: Optional[Action] = field(
         default=None,
-        metadata=dict(
-            name="Action",
-            type="Element",
-            namespace="http://www.w3.org/2005/08/addressing"
-        )
+        metadata={
+            "name": "Action",
+            "type": "Element",
+            "namespace": "http://www.w3.org/2005/08/addressing",
+        }
     )
     soap_action: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SoapAction",
-            type="Element",
-            namespace="http://www.w3.org/2005/08/addressing"
-        )
+        metadata={
+            "name": "SoapAction",
+            "type": "Element",
+            "namespace": "http://www.w3.org/2005/08/addressing",
+        }
     )
     other_attributes: Dict = field(
         default_factory=dict,
-        metadata=dict(
-            type="Attributes",
-            namespace="##other"
-        )
+        metadata={
+            "type": "Attributes",
+            "namespace": "##other",
+        }
     )
 
 

@@ -19,20 +19,20 @@ class Arcpayment:
 
     arcidentifier: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ARCIdentifier",
-            type="Attribute",
-            required=True,
-            max_length=128
-        )
+        metadata={
+            "name": "ARCIdentifier",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 128,
+        }
     )
     arcpassword: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ARCPassword",
-            type="Attribute",
-            max_length=128
-        )
+        metadata={
+            "name": "ARCPassword",
+            "type": "Attribute",
+            "max_length": 128,
+        }
     )
 
 
@@ -52,36 +52,36 @@ class AccountCode:
 
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            max_length=36
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "max_length": 36,
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     supplier_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            min_length=1,
-            max_length=5
-        )
+        metadata={
+            "name": "SupplierCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 5,
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+        }
     )
 
 
@@ -105,49 +105,49 @@ class AddSvc:
 
     rfic: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RFIC",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RFIC",
+            "type": "Attribute",
+        }
     )
     rfisc: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RFISC",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RFISC",
+            "type": "Attribute",
+        }
     )
     svc_description: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SvcDescription",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SvcDescription",
+            "type": "Attribute",
+        }
     )
     origin: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Origin",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "Origin",
+            "type": "Attribute",
+            "length": 3,
+            "white_space": "collapse",
+        }
     )
     destination: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Destination",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "Destination",
+            "type": "Attribute",
+            "length": 3,
+            "white_space": "collapse",
+        }
     )
     start_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="StartDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "StartDate",
+            "type": "Attribute",
+        }
     )
 
 
@@ -167,54 +167,54 @@ class AgencySellInfo:
 
     iata_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="IataCode",
-            type="Attribute",
-            max_length=8
-        )
+        metadata={
+            "name": "IataCode",
+            "type": "Attribute",
+            "max_length": 8,
+        }
     )
     country: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Country",
-            type="Attribute",
-            length=2
-        )
+        metadata={
+            "name": "Country",
+            "type": "Attribute",
+            "length": 2,
+        }
     )
     currency_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CurrencyCode",
-            type="Attribute",
-            length=3
-        )
+        metadata={
+            "name": "CurrencyCode",
+            "type": "Attribute",
+            "length": 3,
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     pseudo_city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PseudoCityCode",
-            type="Attribute",
-            min_length=2,
-            max_length=10
-        )
+        metadata={
+            "name": "PseudoCityCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 10,
+        }
     )
     city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CityCode",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "CityCode",
+            "type": "Attribute",
+            "length": 3,
+            "white_space": "collapse",
+        }
     )
 
 
@@ -236,61 +236,61 @@ class AgentAction:
 
     action_type: Optional["AgentAction.ActionType"] = field(
         default=None,
-        metadata=dict(
-            name="ActionType",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "ActionType",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     agent_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "AgentCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     branch_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BranchCode",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=25
-        )
+        metadata={
+            "name": "BranchCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 25,
+        }
     )
     agency_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgencyCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "AgencyCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     agent_sine: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentSine",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AgentSine",
+            "type": "Attribute",
+        }
     )
     event_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EventTime",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "EventTime",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     agent_override: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentOverride",
-            type="Attribute",
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "AgentOverride",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
 
     class ActionType(Enum):
@@ -319,32 +319,32 @@ class AgentIdoverride:
 
     supplier_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            min_length=1,
-            max_length=5
-        )
+        metadata={
+            "name": "SupplierCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 5,
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            required=True,
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     agent_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentID",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "AgentID",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
 
 
@@ -359,11 +359,11 @@ class AgentVoucher:
 
     number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -381,31 +381,31 @@ class AirSearchParameters:
 
     no_advance_purchase: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="NoAdvancePurchase",
-            type="Attribute"
-        )
+        metadata={
+            "name": "NoAdvancePurchase",
+            "type": "Attribute",
+        }
     )
     refundable_fares: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="RefundableFares",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RefundableFares",
+            "type": "Attribute",
+        }
     )
     non_penalty_fares: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="NonPenaltyFares",
-            type="Attribute"
-        )
+        metadata={
+            "name": "NonPenaltyFares",
+            "type": "Attribute",
+        }
     )
     un_restricted_fares: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="UnRestrictedFares",
-            type="Attribute"
-        )
+        metadata={
+            "name": "UnRestrictedFares",
+            "type": "Attribute",
+        }
     )
 
 
@@ -419,12 +419,12 @@ class Auxdata:
 
     entry: List["Auxdata.Entry"] = field(
         default_factory=list,
-        metadata=dict(
-            name="Entry",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
+        metadata={
+            "name": "Entry",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 999,
+        }
     )
 
     @dataclass
@@ -435,19 +435,19 @@ class Auxdata:
         """
         reason: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Reason",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "Reason",
+                "type": "Element",
+                "required": True,
+            }
         )
         description: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Description",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "Description",
+                "type": "Element",
+                "required": True,
+            }
         )
 
 
@@ -464,20 +464,20 @@ class Bsppayment:
 
     bspidentifier: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BSPIdentifier",
-            type="Attribute",
-            required=True,
-            max_length=128
-        )
+        metadata={
+            "name": "BSPIdentifier",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 128,
+        }
     )
     bsppassword: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BSPPassword",
-            type="Attribute",
-            max_length=128
-        )
+        metadata={
+            "name": "BSPPassword",
+            "type": "Attribute",
+            "max_length": 128,
+        }
     )
 
 
@@ -492,21 +492,21 @@ class BaseAsyncProviderSpecificResponse:
     """
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            required=True,
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     more_results: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="MoreResults",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "MoreResults",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -522,19 +522,19 @@ class BillingPointOfSaleInfo:
 
     origin_application: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OriginApplication",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "OriginApplication",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     cidbnumber: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CIDBNumber",
-            type="Attribute",
-            pattern=r"\d{10}"
-        )
+        metadata={
+            "name": "CIDBNumber",
+            "type": "Attribute",
+            "pattern": r"\d{10}",
+        }
     )
 
 
@@ -550,19 +550,19 @@ class BookingDates:
 
     check_in_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CheckInDate",
-            type="Attribute",
-            pattern=r"[^:Z].*"
-        )
+        metadata={
+            "name": "CheckInDate",
+            "type": "Attribute",
+            "pattern": r"[^:Z].*",
+        }
     )
     check_out_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CheckOutDate",
-            type="Attribute",
-            pattern=r"[^:Z].*"
-        )
+        metadata={
+            "name": "CheckOutDate",
+            "type": "Attribute",
+            "pattern": r"[^:Z].*",
+        }
     )
 
 
@@ -577,20 +577,20 @@ class BookingSource:
 
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            min_length=1
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+        }
     )
     type: Optional["BookingSource.Type"] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
     class Type(Enum):
@@ -624,50 +624,50 @@ class BookingTravelerName:
 
     prefix: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Prefix",
-            type="Attribute",
-            min_length=1,
-            max_length=20
-        )
+        metadata={
+            "name": "Prefix",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 20,
+        }
     )
     first: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="First",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=256
-        )
+        metadata={
+            "name": "First",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 256,
+        }
     )
     middle: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Middle",
-            type="Attribute",
-            min_length=1,
-            max_length=256
-        )
+        metadata={
+            "name": "Middle",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 256,
+        }
     )
     last: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Last",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=256
-        )
+        metadata={
+            "name": "Last",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 256,
+        }
     )
     suffix: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Suffix",
-            type="Attribute",
-            min_length=1,
-            max_length=256
-        )
+        metadata={
+            "name": "Suffix",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 256,
+        }
     )
 
 
@@ -683,11 +683,11 @@ class CabinClass:
 
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -702,12 +702,12 @@ class Carrier:
 
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            length=2
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "length": 2,
+        }
     )
 
 
@@ -727,46 +727,46 @@ class Certificate:
 
     number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+        }
     )
     discount_amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DiscountAmount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "DiscountAmount",
+            "type": "Attribute",
+        }
     )
     discount_percentage: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="DiscountPercentage",
-            type="Attribute"
-        )
+        metadata={
+            "name": "DiscountPercentage",
+            "type": "Attribute",
+        }
     )
     not_valid_before: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="NotValidBefore",
-            type="Attribute"
-        )
+        metadata={
+            "name": "NotValidBefore",
+            "type": "Attribute",
+        }
     )
     not_valid_after: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="NotValidAfter",
-            type="Attribute"
-        )
+        metadata={
+            "name": "NotValidAfter",
+            "type": "Attribute",
+        }
     )
 
 
@@ -785,39 +785,39 @@ class Characteristic:
 
     seat_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SeatType",
-            type="Attribute",
-            min_length=0,
-            max_length=255
-        )
+        metadata={
+            "name": "SeatType",
+            "type": "Attribute",
+            "min_length": 0,
+            "max_length": 255,
+        }
     )
     seat_description: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SeatDescription",
-            type="Attribute",
-            min_length=0,
-            max_length=255
-        )
+        metadata={
+            "name": "SeatDescription",
+            "type": "Attribute",
+            "min_length": 0,
+            "max_length": 255,
+        }
     )
     seat_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SeatValue",
-            type="Attribute",
-            min_length=0,
-            max_length=255
-        )
+        metadata={
+            "name": "SeatValue",
+            "type": "Attribute",
+            "min_length": 0,
+            "max_length": 255,
+        }
     )
     seat_value_description: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SeatValueDescription",
-            type="Attribute",
-            min_length=0,
-            max_length=255
-        )
+        metadata={
+            "name": "SeatValueDescription",
+            "type": "Attribute",
+            "min_length": 0,
+            "max_length": 255,
+        }
     )
 
 
@@ -835,32 +835,32 @@ class Check:
 
     micrnumber: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MICRNumber",
-            type="Attribute",
-            max_length=29
-        )
+        metadata={
+            "name": "MICRNumber",
+            "type": "Attribute",
+            "max_length": 29,
+        }
     )
     routing_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RoutingNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RoutingNumber",
+            "type": "Attribute",
+        }
     )
     account_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AccountNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AccountNumber",
+            "type": "Attribute",
+        }
     )
     check_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CheckNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CheckNumber",
+            "type": "Attribute",
+        }
     )
 
 
@@ -875,17 +875,17 @@ class ContinuityCheckOverride:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            min_length=1,
-            white_space="collapse"
-        )
+        metadata={
+            "min_length": 1,
+            "white_space": "collapse",
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
 
 
@@ -907,10 +907,10 @@ class CorporateDiscountId:
     )
     negotiated_rate_code: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="NegotiatedRateCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "NegotiatedRateCode",
+            "type": "Attribute",
+        }
     )
 
 
@@ -925,12 +925,12 @@ class Credentials:
 
     user_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="UserId",
-            type="Attribute",
-            required=True,
-            max_length=36
-        )
+        metadata={
+            "name": "UserId",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 36,
+        }
     )
 
 
@@ -956,84 +956,84 @@ class CreditCardAuth:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     payment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PaymentRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PaymentRef",
+            "type": "Attribute",
+        }
     )
     trans_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TransId",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TransId",
+            "type": "Attribute",
+        }
     )
     number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            min_length=13,
-            max_length=128
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+            "min_length": 13,
+            "max_length": 128,
+        }
     )
     amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     auth_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AuthCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AuthCode",
+            "type": "Attribute",
+        }
     )
     auth_result_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AuthResultCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "AuthResultCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     avsresult_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AVSResultCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AVSResultCode",
+            "type": "Attribute",
+        }
     )
     message: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Message",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Message",
+            "type": "Attribute",
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     form_of_payment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FormOfPaymentRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FormOfPaymentRef",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1061,17 +1061,17 @@ class CustomizedNameData:
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1086,10 +1086,10 @@ class DirectPayment:
 
     text: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Text",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Text",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1103,11 +1103,11 @@ class DiscountCardRef:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1130,11 +1130,11 @@ class DriversLicenseRef:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1153,20 +1153,19 @@ class EmailNotification:
 
     email_ref: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="EmailRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "EmailRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     recipients: Optional["EmailNotification.Recipients"] = field(
         default=None,
-        metadata=dict(
-            name="Recipients",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Recipients",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
     class Recipients(Enum):
@@ -1191,13 +1190,13 @@ class Endorsement:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Value",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=256
-        )
+        metadata={
+            "name": "Value",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 256,
+        }
     )
 
 
@@ -1215,37 +1214,37 @@ class EnettVan:
 
     min_percentage: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="MinPercentage",
-            type="Attribute",
-            min_inclusive=0,
-            max_inclusive=100
-        )
+        metadata={
+            "name": "MinPercentage",
+            "type": "Attribute",
+            "min_inclusive": 0,
+            "max_inclusive": 100,
+        }
     )
     max_percentage: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="MaxPercentage",
-            type="Attribute",
-            min_inclusive=0,
-            max_inclusive=100
-        )
+        metadata={
+            "name": "MaxPercentage",
+            "type": "Attribute",
+            "min_inclusive": 0,
+            "max_inclusive": 100,
+        }
     )
     expiry_days: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ExpiryDays",
-            type="Attribute",
-            min_inclusive="P1D",
-            max_inclusive="P366D"
-        )
+        metadata={
+            "name": "ExpiryDays",
+            "type": "Attribute",
+            "min_inclusive": "P1D",
+            "max_inclusive": "P366D",
+        }
     )
     multi_use: bool = field(
         default=True,
-        metadata=dict(
-            name="MultiUse",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MultiUse",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1261,19 +1260,19 @@ class ExchangedCoupon:
 
     ticket_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TicketNumber",
-            type="Attribute",
-            required=True,
-            length=13
-        )
+        metadata={
+            "name": "TicketNumber",
+            "type": "Attribute",
+            "required": True,
+            "length": 13,
+        }
     )
     coupon_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CouponNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CouponNumber",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1288,11 +1287,11 @@ class FormOfPaymentRef:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1310,24 +1309,24 @@ class FormattedTextTextType:
     )
     formatted: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="Formatted",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Formatted",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Language",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Language",
+            "type": "Attribute",
+        }
     )
     text_format: Optional["FormattedTextTextType.TextFormat"] = field(
         default=None,
-        metadata=dict(
-            name="TextFormat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TextFormat",
+            "type": "Attribute",
+        }
     )
 
     class TextFormat(Enum):
@@ -1350,10 +1349,10 @@ class GuaranteeType:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            required=True,
-            max_length=250
-        )
+        metadata={
+            "required": True,
+            "max_length": 250,
+        }
     )
 
 
@@ -1368,10 +1367,10 @@ class IncludedInBase:
 
     amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1387,10 +1386,10 @@ class IndustryStandardSsr:
 
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1408,27 +1407,27 @@ class KeyMapping:
 
     element_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ElementName",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "ElementName",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     original_key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OriginalKey",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "OriginalKey",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     new_key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="NewKey",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "NewKey",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1448,9 +1447,9 @@ class LocatorCode:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            min_length=1
-        )
+        metadata={
+            "min_length": 1,
+        }
     )
 
 
@@ -1464,11 +1463,11 @@ class LoyaltyCardRef:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1487,25 +1486,25 @@ class McofeeInfo:
 
     amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+        }
     )
     percentage: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Percentage",
-            type="Attribute",
-            pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
-        )
+        metadata={
+            "name": "Percentage",
+            "type": "Attribute",
+            "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
+        }
     )
     fee_applies_to_ind: Optional["McofeeInfo.FeeAppliesToInd"] = field(
         default=None,
-        metadata=dict(
-            name="FeeAppliesToInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FeeAppliesToInd",
+            "type": "Attribute",
+        }
     )
 
     class FeeAppliesToInd(Enum):
@@ -1533,10 +1532,10 @@ class Mcoremark:
     )
     additional_rmk: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="AdditionalRmk",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AdditionalRmk",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1556,10 +1555,10 @@ class Mcotext:
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1574,12 +1573,12 @@ class MarketingInformation:
 
     text: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            name="Text",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
+        metadata={
+            "name": "Text",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 999,
+        }
     )
 
 
@@ -1594,12 +1593,12 @@ class MealRequest:
 
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True,
-            length=4
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+            "length": 4,
+        }
     )
 
 
@@ -1616,23 +1615,23 @@ class MetaData:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=10
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 10,
+        }
     )
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Value",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=50
-        )
+        metadata={
+            "name": "Value",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 50,
+        }
     )
 
 
@@ -1662,49 +1661,49 @@ class MiscFormOfPayment:
 
     credit_card_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CreditCardType",
-            type="Attribute",
-            length=2
-        )
+        metadata={
+            "name": "CreditCardType",
+            "type": "Attribute",
+            "length": 2,
+        }
     )
     credit_card_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CreditCardNumber",
-            type="Attribute",
-            min_length=13,
-            max_length=128
-        )
+        metadata={
+            "name": "CreditCardNumber",
+            "type": "Attribute",
+            "min_length": 13,
+            "max_length": 128,
+        }
     )
     exp_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ExpDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ExpDate",
+            "type": "Attribute",
+        }
     )
     text: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Text",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Text",
+            "type": "Attribute",
+        }
     )
     category: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Category",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Category",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     acceptance_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="AcceptanceOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AcceptanceOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1744,57 +1743,57 @@ class Name:
 
     prefix: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Prefix",
-            type="Attribute",
-            min_length=1,
-            max_length=20
-        )
+        metadata={
+            "name": "Prefix",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 20,
+        }
     )
     first: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="First",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=256
-        )
+        metadata={
+            "name": "First",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 256,
+        }
     )
     middle: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Middle",
-            type="Attribute",
-            min_length=1,
-            max_length=256
-        )
+        metadata={
+            "name": "Middle",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 256,
+        }
     )
     last: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Last",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=256
-        )
+        metadata={
+            "name": "Last",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 256,
+        }
     )
     suffix: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Suffix",
-            type="Attribute",
-            min_length=1,
-            max_length=256
-        )
+        metadata={
+            "name": "Suffix",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 256,
+        }
     )
     traveler_profile_id: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="TravelerProfileId",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TravelerProfileId",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1811,30 +1810,30 @@ class NameOverride:
 
     first: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="First",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=256
-        )
+        metadata={
+            "name": "First",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 256,
+        }
     )
     last: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Last",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=256
-        )
+        metadata={
+            "name": "Last",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 256,
+        }
     )
     age: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Age",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Age",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1851,19 +1850,19 @@ class NextResultReference:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            min_length=1,
-            white_space="collapse"
-        )
+        metadata={
+            "min_length": 1,
+            "white_space": "collapse",
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
 
 
@@ -1878,10 +1877,10 @@ class OperatedBy:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            min_length=1,
-            white_space="collapse"
-        )
+        metadata={
+            "min_length": 1,
+            "white_space": "collapse",
+        }
     )
 
 
@@ -1920,11 +1919,11 @@ class OtherGuaranteeInfo:
     )
     type: Optional["OtherGuaranteeInfo.Type"] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
     class Type(Enum):
@@ -1953,23 +1952,23 @@ class OverridePcc:
 
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            required=True,
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     pseudo_city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PseudoCityCode",
-            type="Attribute",
-            required=True,
-            min_length=2,
-            max_length=10
-        )
+        metadata={
+            "name": "PseudoCityCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 2,
+            "max_length": 10,
+        }
     )
 
 
@@ -1985,11 +1984,11 @@ class OwnershipChange:
 
     owning_pcc: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OwningPCC",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "OwningPCC",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -2012,47 +2011,47 @@ class PaymentAdvice:
 
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True,
-            max_length=3
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 3,
+        }
     )
     document_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DocumentNumber",
-            type="Attribute",
-            required=True,
-            max_length=22
-        )
+        metadata={
+            "name": "DocumentNumber",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 22,
+        }
     )
     issue_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="IssueDate",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "IssueDate",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     issue_city: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="IssueCity",
-            type="Attribute",
-            required=True,
-            length=3,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "IssueCity",
+            "type": "Attribute",
+            "required": True,
+            "length": 3,
+            "white_space": "collapse",
+        }
     )
     original_fop: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OriginalFOP",
-            type="Attribute",
-            max_length=19
-        )
+        metadata={
+            "name": "OriginalFOP",
+            "type": "Attribute",
+            "max_length": 19,
+        }
     )
 
 
@@ -2066,11 +2065,11 @@ class PaymentRef:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -2094,73 +2093,73 @@ class Penalty:
 
     cancel_refund: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="CancelRefund",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CancelRefund",
+            "type": "Attribute",
+        }
     )
     non_refundable: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="NonRefundable",
-            type="Attribute"
-        )
+        metadata={
+            "name": "NonRefundable",
+            "type": "Attribute",
+        }
     )
     non_exchangeable: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="NonExchangeable",
-            type="Attribute"
-        )
+        metadata={
+            "name": "NonExchangeable",
+            "type": "Attribute",
+        }
     )
     cancelation_penalty: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="CancelationPenalty",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CancelationPenalty",
+            "type": "Attribute",
+        }
     )
     reissue_penalty: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="ReissuePenalty",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ReissuePenalty",
+            "type": "Attribute",
+        }
     )
     non_reissue_penalty: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="NonReissuePenalty",
-            type="Attribute"
-        )
+        metadata={
+            "name": "NonReissuePenalty",
+            "type": "Attribute",
+        }
     )
     ticket_refund_penalty: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="TicketRefundPenalty",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TicketRefundPenalty",
+            "type": "Attribute",
+        }
     )
     charge_applicable: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="ChargeApplicable",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ChargeApplicable",
+            "type": "Attribute",
+        }
     )
     charge_portion: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="ChargePortion",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ChargePortion",
+            "type": "Attribute",
+        }
     )
     penalty_amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PenaltyAmount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PenaltyAmount",
+            "type": "Attribute",
+        }
     )
 
 
@@ -2177,27 +2176,27 @@ class PersonalGeography:
 
     country_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CountryCode",
-            type="Element",
-            length=2
-        )
+        metadata={
+            "name": "CountryCode",
+            "type": "Element",
+            "length": 2,
+        }
     )
     state_province_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="StateProvinceCode",
-            type="Element",
-            max_length=6
-        )
+        metadata={
+            "name": "StateProvinceCode",
+            "type": "Element",
+            "max_length": 6,
+        }
     )
     city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CityCode",
-            type="Element",
-            length=3
-        )
+        metadata={
+            "name": "CityCode",
+            "type": "Element",
+            "length": 3,
+        }
     )
 
 
@@ -2214,21 +2213,21 @@ class PointOfCommencement:
 
     city_or_airport_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CityOrAirportCode",
-            type="Attribute",
-            required=True,
-            length=3,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "CityOrAirportCode",
+            "type": "Attribute",
+            "required": True,
+            "length": 3,
+            "white_space": "collapse",
+        }
     )
     time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Time",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Time",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -2249,38 +2248,38 @@ class PointOfSale:
 
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            required=True,
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     pseudo_city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PseudoCityCode",
-            type="Attribute",
-            required=True,
-            min_length=2,
-            max_length=10
-        )
+        metadata={
+            "name": "PseudoCityCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 2,
+            "max_length": 10,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     iata: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="IATA",
-            type="Attribute",
-            max_length=8
-        )
+        metadata={
+            "name": "IATA",
+            "type": "Attribute",
+            "max_length": 8,
+        }
     )
 
 
@@ -2303,78 +2302,78 @@ class PriceMatchError:
 
     error_message: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ErrorMessage",
-            type="Element",
-            required=True
-        )
+        metadata={
+            "name": "ErrorMessage",
+            "type": "Element",
+            "required": True,
+        }
     )
     vendor_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="VendorCode",
-            type="Attribute",
-            min_length=1,
-            max_length=5
-        )
+        metadata={
+            "name": "VendorCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 5,
+        }
     )
     hotel_chain: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="HotelChain",
-            type="Attribute",
-            length=2
-        )
+        metadata={
+            "name": "HotelChain",
+            "type": "Attribute",
+            "length": 2,
+        }
     )
     hotel_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="HotelCode",
-            type="Attribute",
-            max_length=32
-        )
+        metadata={
+            "name": "HotelCode",
+            "type": "Attribute",
+            "max_length": 32,
+        }
     )
     req_base: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            name="ReqBase",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ReqBase",
+            "type": "Attribute",
+        }
     )
     rsp_base: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            name="RspBase",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RspBase",
+            "type": "Attribute",
+        }
     )
     base_diff: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            name="BaseDiff",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BaseDiff",
+            "type": "Attribute",
+        }
     )
     req_total: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            name="ReqTotal",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ReqTotal",
+            "type": "Attribute",
+        }
     )
     rsp_total: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            name="RspTotal",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RspTotal",
+            "type": "Attribute",
+        }
     )
     total_diff: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            name="TotalDiff",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TotalDiff",
+            "type": "Attribute",
+        }
     )
 
 
@@ -2389,13 +2388,13 @@ class Provider:
 
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
 
 
@@ -2410,11 +2409,11 @@ class ProviderReservationInfoRef:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -2428,10 +2427,10 @@ class PseudoCityCode:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            min_length=2,
-            max_length=10
-        )
+        metadata={
+            "min_length": 2,
+            "max_length": 10,
+        }
     )
 
 
@@ -2450,24 +2449,24 @@ class QueueSelector:
 
     queue: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Queue",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Queue",
+            "type": "Attribute",
+        }
     )
     category: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Category",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Category",
+            "type": "Attribute",
+        }
     )
     date_range: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DateRange",
-            type="Attribute"
-        )
+        metadata={
+            "name": "DateRange",
+            "type": "Attribute",
+        }
     )
 
 
@@ -2481,10 +2480,10 @@ class ReferencePoint:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            required=True,
-            max_length=30
-        )
+        metadata={
+            "required": True,
+            "max_length": 30,
+        }
     )
 
 
@@ -2499,11 +2498,11 @@ class RefundRemark:
 
     remark_data: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RemarkData",
-            type="Element",
-            required=True
-        )
+        metadata={
+            "name": "RemarkData",
+            "type": "Element",
+            "required": True,
+        }
     )
 
 
@@ -2522,10 +2521,10 @@ class Remark:
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
 
 
@@ -2539,11 +2538,11 @@ class RequiredField:
 
     name: Optional["RequiredField.Name"] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Name",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
     class Name(Enum):
@@ -2590,24 +2589,24 @@ class Requisition:
 
     number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+        }
     )
     category: Optional["Requisition.Category"] = field(
         default=None,
-        metadata=dict(
-            name="Category",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Category",
+            "type": "Attribute",
+        }
     )
     type: Optional["Requisition.Type"] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+        }
     )
 
     class Category(Enum):
@@ -2645,36 +2644,36 @@ class ResponseMessage:
     )
     code: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     type: Optional["ResponseMessage.Type"] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     supplier_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            min_length=1,
-            max_length=5
-        )
+        metadata={
+            "name": "SupplierCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 5,
+        }
     )
 
     class Type(Enum):
@@ -2700,18 +2699,18 @@ class Restriction:
 
     operation: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Operation",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Operation",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     reason: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Reason",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Reason",
+            "type": "Attribute",
+        }
     )
 
 
@@ -2729,36 +2728,36 @@ class RoleInfo:
 
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Id",
-            type="Attribute",
-            required=True,
-            max_length=19
-        )
+        metadata={
+            "name": "Id",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 19,
+        }
     )
     name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Attribute",
-            required=True,
-            max_length=128
-        )
+        metadata={
+            "name": "Name",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 128,
+        }
     )
     source: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Source",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Source",
+            "type": "Attribute",
+        }
     )
     description: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Description",
-            type="Attribute",
-            max_length=1024
-        )
+        metadata={
+            "name": "Description",
+            "type": "Attribute",
+            "max_length": 1024,
+        }
     )
 
 
@@ -2795,13 +2794,13 @@ class SeatAttribute:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Value",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=2
-        )
+        metadata={
+            "name": "Value",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 2,
+        }
     )
 
 
@@ -2820,11 +2819,11 @@ class SegmentRemark:
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -2840,9 +2839,9 @@ class SellMessage:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            required=True
-        )
+        metadata={
+            "required": True,
+        }
     )
 
 
@@ -2858,19 +2857,19 @@ class ServiceFeeTaxInfo:
 
     category: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Category",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Category",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -2891,42 +2890,40 @@ class ShopInformation:
 
     search_request: List["ShopInformation.SearchRequest"] = field(
         default_factory=list,
-        metadata=dict(
-            name="SearchRequest",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "SearchRequest",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     flights_offered: List["ShopInformation.FlightsOffered"] = field(
         default_factory=list,
-        metadata=dict(
-            name="FlightsOffered",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "FlightsOffered",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     cabin_shopped: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CabinShopped",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CabinShopped",
+            "type": "Attribute",
+        }
     )
     cabin_selected: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CabinSelected",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CabinSelected",
+            "type": "Attribute",
+        }
     )
     lowest_fare_offered: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="LowestFareOffered",
-            type="Attribute"
-        )
+        metadata={
+            "name": "LowestFareOffered",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -2941,37 +2938,37 @@ class ShopInformation:
         """
         origin: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Origin",
-                type="Attribute",
-                length=3,
-                white_space="collapse"
-            )
+            metadata={
+                "name": "Origin",
+                "type": "Attribute",
+                "length": 3,
+                "white_space": "collapse",
+            }
         )
         destination: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Destination",
-                type="Attribute",
-                length=3,
-                white_space="collapse"
-            )
+            metadata={
+                "name": "Destination",
+                "type": "Attribute",
+                "length": 3,
+                "white_space": "collapse",
+            }
         )
         departure_time: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="DepartureTime",
-                type="Attribute"
-            )
+            metadata={
+                "name": "DepartureTime",
+                "type": "Attribute",
+            }
         )
         class_of_service: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="ClassOfService",
-                type="Attribute",
-                min_length=1,
-                max_length=2
-            )
+            metadata={
+                "name": "ClassOfService",
+                "type": "Attribute",
+                "min_length": 1,
+                "max_length": 2,
+            }
         )
 
     @dataclass
@@ -2991,74 +2988,74 @@ class ShopInformation:
         """
         origin: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Origin",
-                type="Attribute",
-                length=3,
-                white_space="collapse"
-            )
+            metadata={
+                "name": "Origin",
+                "type": "Attribute",
+                "length": 3,
+                "white_space": "collapse",
+            }
         )
         destination: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Destination",
-                type="Attribute",
-                length=3,
-                white_space="collapse"
-            )
+            metadata={
+                "name": "Destination",
+                "type": "Attribute",
+                "length": 3,
+                "white_space": "collapse",
+            }
         )
         departure_time: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="DepartureTime",
-                type="Attribute"
-            )
+            metadata={
+                "name": "DepartureTime",
+                "type": "Attribute",
+            }
         )
         travel_order: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="TravelOrder",
-                type="Attribute"
-            )
+            metadata={
+                "name": "TravelOrder",
+                "type": "Attribute",
+            }
         )
         carrier: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Carrier",
-                type="Attribute",
-                length=2
-            )
+            metadata={
+                "name": "Carrier",
+                "type": "Attribute",
+                "length": 2,
+            }
         )
         flight_number: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="FlightNumber",
-                type="Attribute",
-                max_length=5
-            )
+            metadata={
+                "name": "FlightNumber",
+                "type": "Attribute",
+                "max_length": 5,
+            }
         )
         class_of_service: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="ClassOfService",
-                type="Attribute",
-                min_length=1,
-                max_length=2
-            )
+            metadata={
+                "name": "ClassOfService",
+                "type": "Attribute",
+                "min_length": 1,
+                "max_length": 2,
+            }
         )
         stop_over: bool = field(
             default=False,
-            metadata=dict(
-                name="StopOver",
-                type="Attribute"
-            )
+            metadata={
+                "name": "StopOver",
+                "type": "Attribute",
+            }
         )
         connection: bool = field(
             default=False,
-            metadata=dict(
-                name="Connection",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Connection",
+                "type": "Attribute",
+            }
         )
 
 
@@ -3073,9 +3070,9 @@ class SimpleName:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            required=True
-        )
+        metadata={
+            "required": True,
+        }
     )
 
 
@@ -3105,17 +3102,17 @@ class StockControl:
 
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+        }
     )
     number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+        }
     )
 
 
@@ -3134,41 +3131,41 @@ class TaxDetail:
 
     amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     origin_airport: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OriginAirport",
-            type="Attribute",
-            length=3
-        )
+        metadata={
+            "name": "OriginAirport",
+            "type": "Attribute",
+            "length": 3,
+        }
     )
     destination_airport: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DestinationAirport",
-            type="Attribute",
-            length=3
-        )
+        metadata={
+            "name": "DestinationAirport",
+            "type": "Attribute",
+            "length": 3,
+        }
     )
     country_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CountryCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CountryCode",
+            "type": "Attribute",
+        }
     )
     fare_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FareInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FareInfoRef",
+            "type": "Attribute",
+        }
     )
 
 
@@ -3184,9 +3181,9 @@ class TerminalSessionInfo:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            required=True
-        )
+        metadata={
+            "required": True,
+        }
     )
 
 
@@ -3201,11 +3198,11 @@ class TicketNumber:
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            required=True,
-            min_length=1,
-            max_length=13
-        )
+        metadata={
+            "required": True,
+            "min_length": 1,
+            "max_length": 13,
+        }
     )
 
 
@@ -3221,19 +3218,19 @@ class TravelInfo:
 
     trip_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TripName",
-            type="Attribute",
-            max_length=50
-        )
+        metadata={
+            "name": "TripName",
+            "type": "Attribute",
+            "max_length": 50,
+        }
     )
     travel_purpose: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TravelPurpose",
-            type="Attribute",
-            max_length=50
-        )
+        metadata={
+            "name": "TravelPurpose",
+            "type": "Attribute",
+            "max_length": 50,
+        }
     )
 
 
@@ -3248,13 +3245,13 @@ class TravelerType:
 
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            min_length=3,
-            max_length=5
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 3,
+            "max_length": 5,
+        }
     )
 
 
@@ -3284,11 +3281,11 @@ class UnitedNations:
 
     number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -3325,28 +3322,28 @@ class TypeAgencyPayment:
 
     agency_billing_identifier: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgencyBillingIdentifier",
-            type="Attribute",
-            required=True,
-            max_length=128
-        )
+        metadata={
+            "name": "AgencyBillingIdentifier",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 128,
+        }
     )
     agency_billing_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgencyBillingNumber",
-            type="Attribute",
-            max_length=128
-        )
+        metadata={
+            "name": "AgencyBillingNumber",
+            "type": "Attribute",
+            "max_length": 128,
+        }
     )
     agency_billing_password: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgencyBillingPassword",
-            type="Attribute",
-            max_length=128
-        )
+        metadata={
+            "name": "AgencyBillingPassword",
+            "type": "Attribute",
+            "max_length": 128,
+        }
     )
 
 
@@ -3380,10 +3377,10 @@ class TypeBookingTransactionsAllowed:
 
     booking_enabled: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="BookingEnabled",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BookingEnabled",
+            "type": "Attribute",
+        }
     )
 
 
@@ -3443,19 +3440,19 @@ class TypeDateRange:
 
     start_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="StartDate",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "StartDate",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     end_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EndDate",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "EndDate",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -3652,17 +3649,17 @@ class TypeFormOfPaymentPnrreference:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     provider_reservation_level: bool = field(
         default=True,
-        metadata=dict(
-            name="ProviderReservationLevel",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationLevel",
+            "type": "Attribute",
+        }
     )
 
 
@@ -3754,11 +3751,11 @@ class TypeGeneralReference:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -3775,29 +3772,29 @@ class TypeGuaranteeInformation:
 
     type: Optional["TypeGuaranteeInformation.Type"] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     agency_type: Optional["TypeGuaranteeInformation.AgencyType"] = field(
         default=None,
-        metadata=dict(
-            name="AgencyType",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "AgencyType",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     iatanumber: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="IATANumber",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=128
-        )
+        metadata={
+            "name": "IATANumber",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 128,
+        }
     )
 
     class Type(Enum):
@@ -3905,11 +3902,11 @@ class TypeKeyBasedReference:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -3995,13 +3992,13 @@ class TypeNonAirReservationRef:
 
     locator_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="LocatorCode",
-            type="Attribute",
-            required=True,
-            min_length=5,
-            max_length=8
-        )
+        metadata={
+            "name": "LocatorCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 5,
+            "max_length": 8,
+        }
     )
 
 
@@ -4018,28 +4015,27 @@ class TypeOtasubKey:
 
     text: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="Text",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "Text",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     name: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Name",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     description: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Description",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Description",
+            "type": "Attribute",
+        }
     )
 
 
@@ -4079,33 +4075,30 @@ class TypePolicyCodesList:
 
     policy_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="PolicyCode",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=10
-        )
+        metadata={
+            "name": "PolicyCode",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 10,
+        }
     )
     min_policy_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="MinPolicyCode",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=10
-        )
+        metadata={
+            "name": "MinPolicyCode",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 10,
+        }
     )
     max_policy_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="MaxPolicyCode",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=10
-        )
+        metadata={
+            "name": "MaxPolicyCode",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 10,
+        }
     )
 
 
@@ -4272,22 +4265,22 @@ class TypeProviderReservationDetail:
 
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            required=True,
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     provider_locator_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderLocatorCode",
-            type="Attribute",
-            required=True,
-            max_length=15
-        )
+        metadata={
+            "name": "ProviderLocatorCode",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 15,
+        }
     )
 
 
@@ -4376,20 +4369,20 @@ class TypeRateDescription:
 
     text: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="Text",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=1,
-            max_occurs=999
-        )
+        metadata={
+            "name": "Text",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "min_occurs": 1,
+            "max_occurs": 999,
+        }
     )
     name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Name",
+            "type": "Attribute",
+        }
     )
 
 
@@ -4461,19 +4454,19 @@ class TypeRemark:
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
 
 
@@ -4490,38 +4483,37 @@ class TypeRemarkWithTravelerRef:
 
     remark_data: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RemarkData",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            required=True
-        )
+        metadata={
+            "name": "RemarkData",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "required": True,
+        }
     )
     booking_traveler_ref: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
 
 
@@ -4620,18 +4612,18 @@ class TypeResultMessage:
     )
     code: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     type: Optional["TypeResultMessage.Type"] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+        }
     )
 
     class Type(Enum):
@@ -4661,11 +4653,11 @@ class TypeSegmentRef:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -4695,11 +4687,11 @@ class TypeSpecificTime:
 
     time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Time",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Time",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -4728,28 +4720,27 @@ class TypeSubKey:
 
     text: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="Text",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "Text",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Name",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     description: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Description",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Description",
+            "type": "Attribute",
+        }
     )
 
 
@@ -4764,17 +4755,17 @@ class TypeTax:
 
     amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+        }
     )
 
 
@@ -4812,19 +4803,19 @@ class TypeTimeRange:
 
     earliest_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EarliestTime",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "EarliestTime",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     latest_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="LatestTime",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "LatestTime",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -5046,55 +5037,55 @@ class TypeVendorLocation:
 
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            required=True,
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     vendor_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="VendorCode",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=5
-        )
+        metadata={
+            "name": "VendorCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 5,
+        }
     )
     preferred_option: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="PreferredOption",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PreferredOption",
+            "type": "Attribute",
+        }
     )
     vendor_location_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="VendorLocationID",
-            type="Attribute",
-            min_length=1,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "VendorLocationID",
+            "type": "Attribute",
+            "min_length": 1,
+            "white_space": "collapse",
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     more_rates_token: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MoreRatesToken",
-            type="Attribute",
-            min_length=1,
-            max_length=30
-        )
+        metadata={
+            "name": "MoreRatesToken",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 30,
+        }
     )
 
 
@@ -5135,80 +5126,79 @@ class AccountingRemark:
 
     remark_data: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RemarkData",
-            type="Element",
-            required=True
-        )
+        metadata={
+            "name": "RemarkData",
+            "type": "Element",
+            "required": True,
+        }
     )
     booking_traveler_ref: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     category: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Category",
-            type="Attribute",
-            max_length=14
-        )
+        metadata={
+            "name": "Category",
+            "type": "Attribute",
+            "max_length": 14,
+        }
     )
     type_in_gds: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TypeInGds",
-            type="Attribute",
-            max_length=30
-        )
+        metadata={
+            "name": "TypeInGds",
+            "type": "Attribute",
+            "max_length": 30,
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     use_provider_native_mode: bool = field(
         default=False,
-        metadata=dict(
-            name="UseProviderNativeMode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "UseProviderNativeMode",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -5239,104 +5229,104 @@ class ActionStatus:
 
     remark: Optional[Remark] = field(
         default=None,
-        metadata=dict(
-            name="Remark",
-            type="Element"
-        )
+        metadata={
+            "name": "Remark",
+            "type": "Element",
+        }
     )
     type: Optional["ActionStatus.Type"] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     ticket_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TicketDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TicketDate",
+            "type": "Attribute",
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     queue_category: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="QueueCategory",
-            type="Attribute",
-            min_length=1,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "QueueCategory",
+            "type": "Attribute",
+            "min_length": 1,
+            "white_space": "collapse",
+        }
     )
     airport_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AirportCode",
-            type="Attribute",
-            length=3
-        )
+        metadata={
+            "name": "AirportCode",
+            "type": "Attribute",
+            "length": 3,
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     supplier_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            min_length=1,
-            max_length=5
-        )
+        metadata={
+            "name": "SupplierCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 5,
+        }
     )
     pseudo_city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PseudoCityCode",
-            type="Attribute",
-            min_length=2,
-            max_length=10
-        )
+        metadata={
+            "name": "PseudoCityCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 10,
+        }
     )
     account_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AccountCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AccountCode",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
     class Type(Enum):
@@ -5368,12 +5358,12 @@ class AddressRestriction:
 
     required_field: List[RequiredField] = field(
         default_factory=list,
-        metadata=dict(
-            name="RequiredField",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
+        metadata={
+            "name": "RequiredField",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 999,
+        }
     )
 
 
@@ -5388,12 +5378,12 @@ class AgencyInfo:
 
     agent_action: List[AgentAction] = field(
         default_factory=list,
-        metadata=dict(
-            name="AgentAction",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
+        metadata={
+            "name": "AgentAction",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 999,
+        }
     )
 
 
@@ -5415,13 +5405,13 @@ class Airport(Location):
 
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            length=3,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "length": 3,
+            "white_space": "collapse",
+        }
     )
 
 
@@ -5446,66 +5436,66 @@ class AppliedProfile:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     traveler_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TravelerID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TravelerID",
+            "type": "Attribute",
+        }
     )
     traveler_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TravelerName",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TravelerName",
+            "type": "Attribute",
+        }
     )
     account_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AccountID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AccountID",
+            "type": "Attribute",
+        }
     )
     account_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AccountName",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AccountName",
+            "type": "Attribute",
+        }
     )
     immediate_parent_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ImmediateParentID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ImmediateParentID",
+            "type": "Attribute",
+        }
     )
     immediate_parent_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ImmediateParentName",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ImmediateParentName",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -5524,74 +5514,73 @@ class BaseCoreReq:
     """
     billing_point_of_sale_info: Optional[BillingPointOfSaleInfo] = field(
         default=None,
-        metadata=dict(
-            name="BillingPointOfSaleInfo",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            required=True
-        )
+        metadata={
+            "name": "BillingPointOfSaleInfo",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "required": True,
+        }
     )
     agent_idoverride: List[AgentIdoverride] = field(
         default_factory=list,
-        metadata=dict(
-            name="AgentIDOverride",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "AgentIDOverride",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     terminal_session_info: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TerminalSessionInfo",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "TerminalSessionInfo",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     trace_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TraceId",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TraceId",
+            "type": "Attribute",
+        }
     )
     token_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TokenId",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TokenId",
+            "type": "Attribute",
+        }
     )
     authorized_by: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AuthorizedBy",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AuthorizedBy",
+            "type": "Attribute",
+        }
     )
     target_branch: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TargetBranch",
-            type="Attribute",
-            min_length=1,
-            max_length=25
-        )
+        metadata={
+            "name": "TargetBranch",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 25,
+        }
     )
     override_logging: Optional[TypeLoggingLevel] = field(
         default=None,
-        metadata=dict(
-            name="OverrideLogging",
-            type="Attribute"
-        )
+        metadata={
+            "name": "OverrideLogging",
+            "type": "Attribute",
+        }
     )
     language_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="LanguageCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "LanguageCode",
+            "type": "Attribute",
+        }
     )
 
 
@@ -5607,41 +5596,40 @@ class BaseRsp:
     """
     response_message: List[ResponseMessage] = field(
         default_factory=list,
-        metadata=dict(
-            name="ResponseMessage",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "ResponseMessage",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     trace_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TraceId",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TraceId",
+            "type": "Attribute",
+        }
     )
     transaction_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TransactionId",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TransactionId",
+            "type": "Attribute",
+        }
     )
     response_time: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="ResponseTime",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ResponseTime",
+            "type": "Attribute",
+        }
     )
     command_history: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CommandHistory",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CommandHistory",
+            "type": "Attribute",
+        }
     )
 
 
@@ -5657,18 +5645,18 @@ class BookingTravelerInformation:
 
     name: Optional[Name] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Element",
-            required=True
-        )
+        metadata={
+            "name": "Name",
+            "type": "Element",
+            "required": True,
+        }
     )
     booking_traveler_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Attribute",
+        }
     )
 
 
@@ -5687,44 +5675,41 @@ class BookingTravelerRef:
 
     loyalty_card_ref: List[LoyaltyCardRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="LoyaltyCardRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "LoyaltyCardRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     drivers_license_ref: Optional[DriversLicenseRef] = field(
         default=None,
-        metadata=dict(
-            name="DriversLicenseRef",
-            type="Element"
-        )
+        metadata={
+            "name": "DriversLicenseRef",
+            "type": "Element",
+        }
     )
     discount_card_ref: List[DiscountCardRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="DiscountCardRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=9
-        )
+        metadata={
+            "name": "DiscountCardRef",
+            "type": "Element",
+            "max_occurs": 9,
+        }
     )
     payment_ref: List[PaymentRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="PaymentRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=3
-        )
+        metadata={
+            "name": "PaymentRef",
+            "type": "Element",
+            "max_occurs": 3,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
 
 
@@ -5740,30 +5725,30 @@ class CardRestriction:
 
     required_field: List[RequiredField] = field(
         default_factory=list,
-        metadata=dict(
-            name="RequiredField",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
+        metadata={
+            "name": "RequiredField",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 999,
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            min_length=2,
-            max_length=2
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 2,
+            "max_length": 2,
+        }
     )
     name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Name",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -5778,13 +5763,13 @@ class City(Location):
 
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            length=3,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "length": 3,
+            "white_space": "collapse",
+        }
     )
 
 
@@ -5801,20 +5786,20 @@ class CityOrAirport(Location):
 
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            length=3,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "length": 3,
+            "white_space": "collapse",
+        }
     )
     prefer_city: bool = field(
         default=False,
-        metadata=dict(
-            name="PreferCity",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PreferCity",
+            "type": "Attribute",
+        }
     )
 
 
@@ -5837,71 +5822,71 @@ class Commission:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     level: Optional[TypeCommissionLevel] = field(
         default=None,
-        metadata=dict(
-            name="Level",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Level",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     type: Optional[TypeCommissionType] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     modifier: Optional[TypeCommissionModifier] = field(
         default=None,
-        metadata=dict(
-            name="Modifier",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Modifier",
+            "type": "Attribute",
+        }
     )
     amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+        }
     )
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Value",
-            type="Attribute",
-            min_length=0,
-            max_length=15
-        )
+        metadata={
+            "name": "Value",
+            "type": "Attribute",
+            "min_length": 0,
+            "max_length": 15,
+        }
     )
     percentage: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Percentage",
-            type="Attribute",
-            pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
-        )
+        metadata={
+            "name": "Percentage",
+            "type": "Attribute",
+            "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
+        }
     )
     booking_traveler_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Attribute",
+        }
     )
     commission_override: bool = field(
         default=False,
-        metadata=dict(
-            name="CommissionOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CommissionOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -5926,56 +5911,55 @@ class CommissionRemark:
 
     provider_reservation_level: Optional["CommissionRemark.ProviderReservationLevel"] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationLevel",
-            type="Element"
-        )
+        metadata={
+            "name": "ProviderReservationLevel",
+            "type": "Element",
+        }
     )
     passenger_type_level: List["CommissionRemark.PassengerTypeLevel"] = field(
         default_factory=list,
-        metadata=dict(
-            name="PassengerTypeLevel",
-            type="Element",
-            min_occurs=0,
-            max_occurs=4
-        )
+        metadata={
+            "name": "PassengerTypeLevel",
+            "type": "Element",
+            "max_occurs": 4,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -5987,25 +5971,25 @@ class CommissionRemark:
         """
         amount: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Amount",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Amount",
+                "type": "Attribute",
+            }
         )
         percentage: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Percentage",
-                type="Attribute",
-                pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
-            )
+            metadata={
+                "name": "Percentage",
+                "type": "Attribute",
+                "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
+            }
         )
         commission_cap: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="CommissionCap",
-                type="Attribute"
-            )
+            metadata={
+                "name": "CommissionCap",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -6018,35 +6002,35 @@ class CommissionRemark:
         """
         traveler_type: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="TravelerType",
-                type="Attribute",
-                required=True,
-                min_length=3,
-                max_length=5
-            )
+            metadata={
+                "name": "TravelerType",
+                "type": "Attribute",
+                "required": True,
+                "min_length": 3,
+                "max_length": 5,
+            }
         )
         amount: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Amount",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Amount",
+                "type": "Attribute",
+            }
         )
         percentage: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Percentage",
-                type="Attribute",
-                pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
-            )
+            metadata={
+                "name": "Percentage",
+                "type": "Attribute",
+                "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
+            }
         )
         commission_cap: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="CommissionCap",
-                type="Attribute"
-            )
+            metadata={
+                "name": "CommissionCap",
+                "type": "Attribute",
+            }
         )
 
 
@@ -6069,51 +6053,51 @@ class ConsolidatorRemark:
 
     pseudo_city_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="PseudoCityCode",
-            type="Element",
-            min_occurs=1,
-            max_occurs=5,
-            min_length=2,
-            max_length=10
-        )
+        metadata={
+            "name": "PseudoCityCode",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 5,
+            "min_length": 2,
+            "max_length": 10,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -6129,17 +6113,17 @@ class CoordinateLocation(Location):
 
     latitude: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "type": "Attribute",
+            "required": True,
+        }
     )
     longitude: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -6156,10 +6140,10 @@ class CustomerId(TypeRemark):
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
 
 
@@ -6180,52 +6164,52 @@ class DiscountCard:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=8
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 8,
+        }
     )
     description: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Description",
-            type="Attribute",
-            min_length=1,
-            max_length=255
-        )
+        metadata={
+            "name": "Description",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 255,
+        }
     )
     number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            min_length=1,
-            max_length=36
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 36,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -6242,27 +6226,27 @@ class Distance:
 
     units: DistanceUnits = field(
         default=DistanceUnits.MI,
-        metadata=dict(
-            name="Units",
-            type="Attribute",
-            length=2
-        )
+        metadata={
+            "name": "Units",
+            "type": "Attribute",
+            "length": 2,
+        }
     )
     value: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Value",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Value",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     direction: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Direction",
-            type="Attribute",
-            max_length=2
-        )
+        metadata={
+            "name": "Direction",
+            "type": "Attribute",
+            "max_length": 2,
+        }
     )
 
 
@@ -6281,32 +6265,32 @@ class DriversLicense:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     license_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="LicenseNumber",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "LicenseNumber",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -6328,58 +6312,57 @@ class Email:
 
     provider_reservation_info_ref: List[ProviderReservationInfoRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            min_length=1,
-            max_length=128
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 128,
+        }
     )
     comment: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Comment",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "Comment",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     email_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EmailID",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "EmailID",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -6408,110 +6391,109 @@ class GeneralRemark:
 
     remark_data: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RemarkData",
-            type="Element",
-            required=True
-        )
+        metadata={
+            "name": "RemarkData",
+            "type": "Element",
+            "required": True,
+        }
     )
     booking_traveler_ref: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     category: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Category",
-            type="Attribute",
-            max_length=20
-        )
+        metadata={
+            "name": "Category",
+            "type": "Attribute",
+            "max_length": 20,
+        }
     )
     type_in_gds: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TypeInGds",
-            type="Attribute",
-            max_length=30
-        )
+        metadata={
+            "name": "TypeInGds",
+            "type": "Attribute",
+            "max_length": 30,
+        }
     )
     supplier_type: Optional[TypeProduct] = field(
         default=None,
-        metadata=dict(
-            name="SupplierType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SupplierType",
+            "type": "Attribute",
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     supplier_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            min_length=1,
-            max_length=5
-        )
+        metadata={
+            "name": "SupplierCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 5,
+        }
     )
     direction: Optional[TypeDirection] = field(
         default=None,
-        metadata=dict(
-            name="Direction",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Direction",
+            "type": "Attribute",
+        }
     )
     create_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CreateDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CreateDate",
+            "type": "Attribute",
+        }
     )
     use_provider_native_mode: bool = field(
         default=False,
-        metadata=dict(
-            name="UseProviderNativeMode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "UseProviderNativeMode",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -6540,33 +6522,33 @@ class HostToken:
     )
     host: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Host",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "Host",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -6584,34 +6566,34 @@ class LinkedUniversalRecord:
 
     locator_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="LocatorCode",
-            type="Attribute",
-            required=True,
-            min_length=5,
-            max_length=8
-        )
+        metadata={
+            "name": "LocatorCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 5,
+            "max_length": 8,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -6632,56 +6614,56 @@ class LoyaltyProgram:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     supplier_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            required=True,
-            length=2
-        )
+        metadata={
+            "name": "SupplierCode",
+            "type": "Attribute",
+            "required": True,
+            "length": 2,
+        }
     )
     alliance_level: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AllianceLevel",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AllianceLevel",
+            "type": "Attribute",
+        }
     )
     membership_program: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MembershipProgram",
-            type="Attribute",
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "MembershipProgram",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
     level: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Level",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Level",
+            "type": "Attribute",
+        }
     )
 
 
@@ -6702,46 +6684,46 @@ class MediaItem:
 
     caption: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     height: Optional[int] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     width: Optional[int] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     url: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     icon: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     size_code: Optional[TypeResponseImageSize] = field(
         default=None,
-        metadata=dict(
-            name="sizeCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "sizeCode",
+            "type": "Attribute",
+        }
     )
 
 
@@ -6762,48 +6744,47 @@ class NameRemark:
 
     remark_data: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RemarkData",
-            type="Element",
-            required=True
-        )
+        metadata={
+            "name": "RemarkData",
+            "type": "Element",
+            "required": True,
+        }
     )
     provider_reservation_info_ref: List[ProviderReservationInfoRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     category: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Category",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Category",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -6827,66 +6808,66 @@ class Osi:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     carrier: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Carrier",
-            type="Attribute",
-            required=True,
-            length=2
-        )
+        metadata={
+            "name": "Carrier",
+            "type": "Attribute",
+            "required": True,
+            "length": 2,
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            max_length=4
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "max_length": 4,
+        }
     )
     text: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Text",
-            type="Attribute",
-            required=True,
-            max_length=256
-        )
+        metadata={
+            "name": "Text",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 256,
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -6901,33 +6882,33 @@ class OptionalServiceApplicationLimitType:
     """
     applicable_level: Optional[OptionalServiceApplicabilityType] = field(
         default=None,
-        metadata=dict(
-            name="ApplicableLevel",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "ApplicableLevel",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     provider_defined_applicable_levels: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderDefinedApplicableLevels",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderDefinedApplicableLevels",
+            "type": "Attribute",
+        }
     )
     maximum_quantity: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="MaximumQuantity",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "MaximumQuantity",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     minimum_quantity: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="MinimumQuantity",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MinimumQuantity",
+            "type": "Attribute",
+        }
     )
 
 
@@ -6944,26 +6925,26 @@ class PassengerInfo:
 
     name: Optional[Name] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Element"
-        )
+        metadata={
+            "name": "Name",
+            "type": "Element",
+        }
     )
     booking_traveler_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Attribute",
+        }
     )
     passenger_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PassengerType",
-            type="Attribute",
-            min_length=3,
-            max_length=5
-        )
+        metadata={
+            "name": "PassengerType",
+            "type": "Attribute",
+            "min_length": 3,
+            "max_length": 5,
+        }
     )
 
 
@@ -6988,78 +6969,78 @@ class Payment:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     type: Optional["Payment.Type"] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     form_of_payment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FormOfPaymentRef",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "FormOfPaymentRef",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     booking_traveler_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Attribute",
+        }
     )
     amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     amount_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AmountType",
-            type="Attribute",
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "AmountType",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
     approximate_amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ApproximateAmount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ApproximateAmount",
+            "type": "Attribute",
+        }
     )
     status: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Status",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
     class Type(Enum):
@@ -7091,11 +7072,11 @@ class PermittedProviders:
 
     provider: Optional[Provider] = field(
         default=None,
-        metadata=dict(
-            name="Provider",
-            type="Element",
-            required=True
-        )
+        metadata={
+            "name": "Provider",
+            "type": "Element",
+            "required": True,
+        }
     )
 
 
@@ -7122,90 +7103,89 @@ class PhoneNumber:
 
     provider_reservation_info_ref: List[ProviderReservationInfoRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     type: Optional["PhoneNumber.Type"] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+        }
     )
     location: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Location",
-            type="Attribute",
-            max_length=10
-        )
+        metadata={
+            "name": "Location",
+            "type": "Attribute",
+            "max_length": 10,
+        }
     )
     country_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CountryCode",
-            type="Attribute",
-            max_length=5
-        )
+        metadata={
+            "name": "CountryCode",
+            "type": "Attribute",
+            "max_length": 5,
+        }
     )
     area_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AreaCode",
-            type="Attribute",
-            max_length=10
-        )
+        metadata={
+            "name": "AreaCode",
+            "type": "Attribute",
+            "max_length": 10,
+        }
     )
     number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=83
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 83,
+        }
     )
     extension: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Extension",
-            type="Attribute",
-            max_length=10
-        )
+        metadata={
+            "name": "Extension",
+            "type": "Attribute",
+            "max_length": 10,
+        }
     )
     text: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Text",
-            type="Attribute",
-            max_length=1024
-        )
+        metadata={
+            "name": "Text",
+            "type": "Attribute",
+            "max_length": 1024,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
     class Type(Enum):
@@ -7249,39 +7229,39 @@ class PolicyInformation:
 
     reason_code: Optional["PolicyInformation.ReasonCode"] = field(
         default=None,
-        metadata=dict(
-            name="ReasonCode",
-            type="Element"
-        )
+        metadata={
+            "name": "ReasonCode",
+            "type": "Element",
+        }
     )
     type: Optional[TypePolicy] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Name",
+            "type": "Attribute",
+        }
     )
     out_of_policy: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="OutOfPolicy",
-            type="Attribute"
-        )
+        metadata={
+            "name": "OutOfPolicy",
+            "type": "Attribute",
+        }
     )
     segment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SegmentRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SegmentRef",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -7293,24 +7273,24 @@ class PolicyInformation:
         """
         out_of_policy: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="OutOfPolicy",
-                type="Element"
-            )
+            metadata={
+                "name": "OutOfPolicy",
+                "type": "Element",
+            }
         )
         purpose_of_trip: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="PurposeOfTrip",
-                type="Element"
-            )
+            metadata={
+                "name": "PurposeOfTrip",
+                "type": "Element",
+            }
         )
         remark: Optional[Remark] = field(
             default=None,
-            metadata=dict(
-                name="Remark",
-                type="Element"
-            )
+            metadata={
+                "name": "Remark",
+                "type": "Element",
+            }
         )
 
 
@@ -7325,10 +7305,10 @@ class Postscript(TypeRemark):
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
 
 
@@ -7348,39 +7328,39 @@ class ProviderArnksegment:
 
     previous_segment: Optional["ProviderArnksegment.PreviousSegment"] = field(
         default=None,
-        metadata=dict(
-            name="PreviousSegment",
-            type="Element"
-        )
+        metadata={
+            "name": "PreviousSegment",
+            "type": "Element",
+        }
     )
     next_segment: Optional["ProviderArnksegment.NextSegment"] = field(
         default=None,
-        metadata=dict(
-            name="NextSegment",
-            type="Element"
-        )
+        metadata={
+            "name": "NextSegment",
+            "type": "Element",
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     provider_segment_order: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="ProviderSegmentOrder",
-            type="Attribute",
-            max_inclusive=999
-        )
+        metadata={
+            "name": "ProviderSegmentOrder",
+            "type": "Attribute",
+            "max_inclusive": 999,
+        }
     )
 
     @dataclass
@@ -7396,31 +7376,31 @@ class ProviderArnksegment:
         """
         air_segment_ref: Optional[TypeSegmentRef] = field(
             default=None,
-            metadata=dict(
-                name="AirSegmentRef",
-                type="Element"
-            )
+            metadata={
+                "name": "AirSegmentRef",
+                "type": "Element",
+            }
         )
         hotel_reservation_ref: Optional[TypeNonAirReservationRef] = field(
             default=None,
-            metadata=dict(
-                name="HotelReservationRef",
-                type="Element"
-            )
+            metadata={
+                "name": "HotelReservationRef",
+                "type": "Element",
+            }
         )
         vehicle_reservation_ref: Optional[TypeNonAirReservationRef] = field(
             default=None,
-            metadata=dict(
-                name="VehicleReservationRef",
-                type="Element"
-            )
+            metadata={
+                "name": "VehicleReservationRef",
+                "type": "Element",
+            }
         )
         passive_segment_ref: Optional[TypeSegmentRef] = field(
             default=None,
-            metadata=dict(
-                name="PassiveSegmentRef",
-                type="Element"
-            )
+            metadata={
+                "name": "PassiveSegmentRef",
+                "type": "Element",
+            }
         )
 
     @dataclass
@@ -7436,31 +7416,31 @@ class ProviderArnksegment:
         """
         air_segment_ref: Optional[TypeSegmentRef] = field(
             default=None,
-            metadata=dict(
-                name="AirSegmentRef",
-                type="Element"
-            )
+            metadata={
+                "name": "AirSegmentRef",
+                "type": "Element",
+            }
         )
         hotel_reservation_ref: Optional[TypeNonAirReservationRef] = field(
             default=None,
-            metadata=dict(
-                name="HotelReservationRef",
-                type="Element"
-            )
+            metadata={
+                "name": "HotelReservationRef",
+                "type": "Element",
+            }
         )
         vehicle_reservation_ref: Optional[TypeNonAirReservationRef] = field(
             default=None,
-            metadata=dict(
-                name="VehicleReservationRef",
-                type="Element"
-            )
+            metadata={
+                "name": "VehicleReservationRef",
+                "type": "Element",
+            }
         )
         passive_segment_ref: Optional[TypeSegmentRef] = field(
             default=None,
-            metadata=dict(
-                name="PassiveSegmentRef",
-                type="Element"
-            )
+            metadata={
+                "name": "PassiveSegmentRef",
+                "type": "Element",
+            }
         )
 
 
@@ -7485,21 +7465,20 @@ class QueuePlace:
 
     pseudo_city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PseudoCityCode",
-            type="Element",
-            min_length=2,
-            max_length=10
-        )
+        metadata={
+            "name": "PseudoCityCode",
+            "type": "Element",
+            "min_length": 2,
+            "max_length": 10,
+        }
     )
     queue_selector: List[QueueSelector] = field(
         default_factory=list,
-        metadata=dict(
-            name="QueueSelector",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "QueueSelector",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
 
 
@@ -7515,14 +7494,14 @@ class RailLocation(Location):
 
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            min_length=3,
-            max_length=8,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 3,
+            "max_length": 8,
+            "white_space": "collapse",
+        }
     )
 
 
@@ -7545,65 +7524,64 @@ class RailSeatAssignment:
 
     characteristic: List[Characteristic] = field(
         default_factory=list,
-        metadata=dict(
-            name="Characteristic",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "Characteristic",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     status: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute",
-            required=True,
-            length=2,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "Status",
+            "type": "Attribute",
+            "required": True,
+            "length": 2,
+            "white_space": "collapse",
+        }
     )
     seat: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Seat",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Seat",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     rail_segment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RailSegmentRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RailSegmentRef",
+            "type": "Attribute",
+        }
     )
     coach_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CoachNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CoachNumber",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -7619,12 +7597,11 @@ class RequestKeyMappings:
 
     key_mapping: List[KeyMapping] = field(
         default_factory=list,
-        metadata=dict(
-            name="KeyMapping",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "KeyMapping",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
 
 
@@ -7651,83 +7628,83 @@ class ReviewBooking:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     queue: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Queue",
-            type="Attribute",
-            required=True,
-            max_inclusive=99
-        )
+        metadata={
+            "name": "Queue",
+            "type": "Attribute",
+            "required": True,
+            "max_inclusive": 99,
+        }
     )
     queue_category: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="QueueCategory",
-            type="Attribute",
-            max_length=2
-        )
+        metadata={
+            "name": "QueueCategory",
+            "type": "Attribute",
+            "max_length": 2,
+        }
     )
     date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DateTime",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "DateTime",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     pseudo_city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PseudoCityCode",
-            type="Attribute",
-            min_length=2,
-            max_length=10
-        )
+        metadata={
+            "name": "PseudoCityCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 10,
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     remarks: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Remarks",
-            type="Attribute",
-            required=True,
-            max_length=300
-        )
+        metadata={
+            "name": "Remarks",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 300,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -7760,130 +7737,130 @@ class Ssr:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     segment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SegmentRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SegmentRef",
+            "type": "Attribute",
+        }
     )
     passive_segment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PassiveSegmentRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PassiveSegmentRef",
+            "type": "Attribute",
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True,
-            min_length=4,
-            max_length=4
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 4,
+            "max_length": 4,
+        }
     )
     status: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Status",
+            "type": "Attribute",
+        }
     )
     free_text: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FreeText",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FreeText",
+            "type": "Attribute",
+        }
     )
     carrier: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Carrier",
-            type="Attribute",
-            length=2
-        )
+        metadata={
+            "name": "Carrier",
+            "type": "Attribute",
+            "length": 2,
+        }
     )
     carrier_specific_text: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CarrierSpecificText",
-            type="Attribute",
-            min_length=1,
-            max_length=64
-        )
+        metadata={
+            "name": "CarrierSpecificText",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 64,
+        }
     )
     description: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Description",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Description",
+            "type": "Attribute",
+        }
     )
     provider_defined_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderDefinedType",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "ProviderDefinedType",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     ssrrule_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SSRRuleRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SSRRuleRef",
+            "type": "Attribute",
+        }
     )
     url: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="URL",
-            type="Attribute"
-        )
+        metadata={
+            "name": "URL",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
     profile_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProfileID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProfileID",
+            "type": "Attribute",
+        }
     )
     profile_secure_flight_doc_key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProfileSecureFlightDocKey",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProfileSecureFlightDocKey",
+            "type": "Attribute",
+        }
     )
 
 
@@ -7898,10 +7875,10 @@ class SearchEvent(TypeTimeRange):
 
     type: Optional[TypeEventType] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+        }
     )
 
 
@@ -7918,24 +7895,24 @@ class SearchTicketing:
 
     ticket_status: SearchTicketingTicketStatus = field(
         default=SearchTicketingTicketStatus.BOTH,
-        metadata=dict(
-            name="TicketStatus",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TicketStatus",
+            "type": "Attribute",
+        }
     )
     reservation_status: SearchTicketingReservationStatus = field(
         default=SearchTicketingReservationStatus.BOTH,
-        metadata=dict(
-            name="ReservationStatus",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ReservationStatus",
+            "type": "Attribute",
+        }
     )
     ticket_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TicketDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TicketDate",
+            "type": "Attribute",
+        }
     )
 
 
@@ -7955,72 +7932,72 @@ class SeatAssignment:
     """
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     status: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute",
-            required=True,
-            length=2,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "Status",
+            "type": "Attribute",
+            "required": True,
+            "length": 2,
+            "white_space": "collapse",
+        }
     )
     seat: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Seat",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Seat",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     seat_type_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SeatTypeCode",
-            type="Attribute",
-            length=4,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "SeatTypeCode",
+            "type": "Attribute",
+            "length": 4,
+            "white_space": "collapse",
+        }
     )
     segment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SegmentRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SegmentRef",
+            "type": "Attribute",
+        }
     )
     flight_details_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FlightDetailsRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FlightDetailsRef",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
     rail_coach_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RailCoachNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RailCoachNumber",
+            "type": "Attribute",
+        }
     )
 
 
@@ -8035,12 +8012,11 @@ class SeatAttributes:
 
     seat_attribute: List[SeatAttribute] = field(
         default_factory=list,
-        metadata=dict(
-            name="SeatAttribute",
-            type="Element",
-            min_occurs=0,
-            max_occurs=10
-        )
+        metadata={
+            "name": "SeatAttribute",
+            "type": "Element",
+            "max_occurs": 10,
+        }
     )
 
 
@@ -8060,64 +8036,63 @@ class Segment:
     """
     segment_remark: List[SegmentRemark] = field(
         default_factory=list,
-        metadata=dict(
-            name="SegmentRemark",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "SegmentRemark",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     status: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Status",
+            "type": "Attribute",
+        }
     )
     passive: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="Passive",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Passive",
+            "type": "Attribute",
+        }
     )
     travel_order: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="TravelOrder",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TravelOrder",
+            "type": "Attribute",
+        }
     )
     provider_segment_order: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="ProviderSegmentOrder",
-            type="Attribute",
-            max_inclusive=999
-        )
+        metadata={
+            "name": "ProviderSegmentOrder",
+            "type": "Attribute",
+            "max_inclusive": 999,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -8135,32 +8110,32 @@ class SpecialEquipment:
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -8179,43 +8154,42 @@ class SupplierLocator:
 
     segment_ref: List[TypeGeneralReference] = field(
         default_factory=list,
-        metadata=dict(
-            name="SegmentRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "SegmentRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     supplier_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            required=True,
-            length=2
-        )
+        metadata={
+            "name": "SupplierCode",
+            "type": "Attribute",
+            "required": True,
+            "length": 2,
+        }
     )
     supplier_locator_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SupplierLocatorCode",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "SupplierLocatorCode",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     create_date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CreateDateTime",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CreateDateTime",
+            "type": "Attribute",
+        }
     )
 
 
@@ -8239,65 +8213,64 @@ class ThirdPartyInformation:
 
     segment_ref: List[TypeGeneralReference] = field(
         default_factory=list,
-        metadata=dict(
-            name="SegmentRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "SegmentRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     third_party_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ThirdPartyCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ThirdPartyCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     third_party_locator_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ThirdPartyLocatorCode",
-            type="Attribute",
-            max_length=36
-        )
+        metadata={
+            "name": "ThirdPartyLocatorCode",
+            "type": "Attribute",
+            "max_length": 36,
+        }
     )
     third_party_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ThirdPartyName",
-            type="Attribute",
-            max_length=64
-        )
+        metadata={
+            "name": "ThirdPartyName",
+            "type": "Attribute",
+            "max_length": 64,
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -8323,81 +8296,78 @@ class TravelComplianceData:
 
     policy_compliance: List["TravelComplianceData.PolicyCompliance"] = field(
         default_factory=list,
-        metadata=dict(
-            name="PolicyCompliance",
-            type="Element",
-            min_occurs=0,
-            max_occurs=2
-        )
+        metadata={
+            "name": "PolicyCompliance",
+            "type": "Element",
+            "max_occurs": 2,
+        }
     )
     contract_compliance: List["TravelComplianceData.ContractCompliance"] = field(
         default_factory=list,
-        metadata=dict(
-            name="ContractCompliance",
-            type="Element",
-            min_occurs=0,
-            max_occurs=2
-        )
+        metadata={
+            "name": "ContractCompliance",
+            "type": "Element",
+            "max_occurs": 2,
+        }
     )
     preferred_supplier: List["TravelComplianceData.PreferredSupplier"] = field(
         default_factory=list,
-        metadata=dict(
-            name="PreferredSupplier",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "PreferredSupplier",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     air_segment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AirSegmentRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AirSegmentRef",
+            "type": "Attribute",
+        }
     )
     passive_segment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PassiveSegmentRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PassiveSegmentRef",
+            "type": "Attribute",
+        }
     )
     rail_segment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RailSegmentRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RailSegmentRef",
+            "type": "Attribute",
+        }
     )
     reservation_locator_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ReservationLocatorRef",
-            type="Attribute",
-            min_length=5,
-            max_length=8
-        )
+        metadata={
+            "name": "ReservationLocatorRef",
+            "type": "Attribute",
+            "min_length": 5,
+            "max_length": 8,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -8408,20 +8378,20 @@ class TravelComplianceData:
         """
         in_policy: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="InPolicy",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "InPolicy",
+                "type": "Attribute",
+                "required": True,
+            }
         )
         policy_token: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="PolicyToken",
-                type="Attribute",
-                min_length=1,
-                max_length=128
-            )
+            metadata={
+                "name": "PolicyToken",
+                "type": "Attribute",
+                "min_length": 1,
+                "max_length": 128,
+            }
         )
 
     @dataclass
@@ -8432,20 +8402,20 @@ class TravelComplianceData:
         """
         in_contract: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="InContract",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "InContract",
+                "type": "Attribute",
+                "required": True,
+            }
         )
         contract_token: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="ContractToken",
-                type="Attribute",
-                min_length=1,
-                max_length=128
-            )
+            metadata={
+                "name": "ContractToken",
+                "type": "Attribute",
+                "min_length": 1,
+                "max_length": 128,
+            }
         )
 
     @dataclass
@@ -8456,19 +8426,19 @@ class TravelComplianceData:
         """
         preferred: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="Preferred",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Preferred",
+                "type": "Attribute",
+                "required": True,
+            }
         )
         profile_type: Optional[TypeProfileType] = field(
             default=None,
-            metadata=dict(
-                name="ProfileType",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "ProfileType",
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
 
@@ -8486,24 +8456,24 @@ class UnassociatedRemark(TypeRemarkWithTravelerRef):
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -8536,32 +8506,32 @@ class Xmlremark:
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     category: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Category",
-            type="Attribute",
-            max_length=10
-        )
+        metadata={
+            "name": "Category",
+            "type": "Attribute",
+            "max_length": 10,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -8576,19 +8546,19 @@ class TypeAgencyHierarchyReference:
 
     profile_id: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="ProfileID",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "ProfileID",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     profile_type: Optional[TypeAgencyProfileLevel] = field(
         default=None,
-        metadata=dict(
-            name="ProfileType",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "ProfileType",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -8606,24 +8576,24 @@ class TypeAssociatedRemark(TypeRemarkWithTravelerRef):
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -8646,80 +8616,80 @@ class TypeErrorInfo:
 
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            required=True
-        )
+        metadata={
+            "name": "Code",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "required": True,
+        }
     )
     service: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Service",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            required=True
-        )
+        metadata={
+            "name": "Service",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "required": True,
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            required=True
-        )
+        metadata={
+            "name": "Type",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "required": True,
+        }
     )
     description: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Description",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            required=True
-        )
+        metadata={
+            "name": "Description",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "required": True,
+        }
     )
     transaction_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TransactionId",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            required=True
-        )
+        metadata={
+            "name": "TransactionId",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "required": True,
+        }
     )
     trace_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TraceId",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "TraceId",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     command_history: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CommandHistory",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "CommandHistory",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     auxdata: Optional[Auxdata] = field(
         default=None,
-        metadata=dict(
-            name="Auxdata",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "Auxdata",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     stack_trace: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="StackTrace",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "StackTrace",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
 
 
@@ -8753,137 +8723,136 @@ class TypeFeeInfo:
 
     tax_info_ref: List["TypeFeeInfo.TaxInfoRef"] = field(
         default_factory=list,
-        metadata=dict(
-            name="TaxInfoRef",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "TaxInfoRef",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     included_in_base: Optional[IncludedInBase] = field(
         default=None,
-        metadata=dict(
-            name="IncludedInBase",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "IncludedInBase",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     base_amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BaseAmount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BaseAmount",
+            "type": "Attribute",
+        }
     )
     description: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Description",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Description",
+            "type": "Attribute",
+        }
     )
     sub_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SubCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SubCode",
+            "type": "Attribute",
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     fee_token: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FeeToken",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FeeToken",
+            "type": "Attribute",
+        }
     )
     payment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PaymentRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PaymentRef",
+            "type": "Attribute",
+        }
     )
     booking_traveler_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Attribute",
+        }
     )
     passenger_type_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PassengerTypeCode",
-            type="Attribute",
-            min_length=3,
-            max_length=5
-        )
+        metadata={
+            "name": "PassengerTypeCode",
+            "type": "Attribute",
+            "min_length": 3,
+            "max_length": 5,
+        }
     )
     text: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Text",
-            type="Attribute",
-            min_length=1,
-            max_length=64
-        )
+        metadata={
+            "name": "Text",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 64,
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     supplier_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            min_length=1,
-            max_length=5
-        )
+        metadata={
+            "name": "SupplierCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 5,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -8893,11 +8862,11 @@ class TypeFeeInfo:
         """
         key: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Key",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Key",
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
 
@@ -8917,53 +8886,51 @@ class TypeKeyword:
 
     sub_key: List[TypeSubKey] = field(
         default_factory=list,
-        metadata=dict(
-            name="SubKey",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=99
-        )
+        metadata={
+            "name": "SubKey",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 99,
+        }
     )
     text: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="Text",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "Text",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Attribute",
-            required=True,
-            max_length=12
-        )
+        metadata={
+            "name": "Name",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 12,
+        }
     )
     number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+        }
     )
     description: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Description",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Description",
+            "type": "Attribute",
+        }
     )
     language_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="LanguageCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "LanguageCode",
+            "type": "Attribute",
+        }
     )
 
 
@@ -8982,46 +8949,44 @@ class TypeOtakeyword:
 
     sub_key: List[TypeOtasubKey] = field(
         default_factory=list,
-        metadata=dict(
-            name="SubKey",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=99
-        )
+        metadata={
+            "name": "SubKey",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 99,
+        }
     )
     text: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="Text",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "Text",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Attribute",
-            required=True,
-            max_length=6
-        )
+        metadata={
+            "name": "Name",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 6,
+        }
     )
     number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+        }
     )
     description: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Description",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Description",
+            "type": "Attribute",
+        }
     )
 
 
@@ -9037,19 +9002,19 @@ class TypeProfileRef:
 
     profile_entity_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProfileEntityID",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "ProfileEntityID",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     profile_level: Optional[TypeProfileLevel] = field(
         default=None,
-        metadata=dict(
-            name="ProfileLevel",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "ProfileLevel",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -9066,37 +9031,36 @@ class TypeProviderReservationSpecificInfo:
 
     operated_by: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="OperatedBy",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999,
-            min_length=1,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "OperatedBy",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+            "min_length": 1,
+            "white_space": "collapse",
+        }
     )
     provider_reservation_info_ref: Optional[ProviderReservationInfoRef] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     provider_reservation_level: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationLevel",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationLevel",
+            "type": "Attribute",
+        }
     )
     reservation_level: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="ReservationLevel",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ReservationLevel",
+            "type": "Attribute",
+        }
     )
 
 
@@ -9121,92 +9085,90 @@ class TypeStructuredAddress:
 
     address_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AddressName",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            max_length=128
-        )
+        metadata={
+            "name": "AddressName",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_length": 128,
+        }
     )
     street: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="Street",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=5,
-            min_length=1,
-            max_length=255
-        )
+        metadata={
+            "name": "Street",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 5,
+            "min_length": 1,
+            "max_length": 255,
+        }
     )
     city: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="City",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_length=2,
-            max_length=50
-        )
+        metadata={
+            "name": "City",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "min_length": 2,
+            "max_length": 50,
+        }
     )
     state: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="State",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "State",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     postal_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PostalCode",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_length=1,
-            max_length=15
-        )
+        metadata={
+            "name": "PostalCode",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "min_length": 1,
+            "max_length": 15,
+        }
     )
     country: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Country",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            length=2
-        )
+        metadata={
+            "name": "Country",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "length": 2,
+        }
     )
     provider_reservation_info_ref: List[ProviderReservationInfoRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=99
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 99,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -9243,136 +9205,135 @@ class TypeTaxInfo:
 
     tax_detail: List[TaxDetail] = field(
         default_factory=list,
-        metadata=dict(
-            name="TaxDetail",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "TaxDetail",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     included_in_base: Optional[IncludedInBase] = field(
         default=None,
-        metadata=dict(
-            name="IncludedInBase",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "IncludedInBase",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     category: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Category",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Category",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     carrier_defined_category: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CarrierDefinedCategory",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CarrierDefinedCategory",
+            "type": "Attribute",
+        }
     )
     segment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SegmentRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SegmentRef",
+            "type": "Attribute",
+        }
     )
     flight_details_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FlightDetailsRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FlightDetailsRef",
+            "type": "Attribute",
+        }
     )
     coupon_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CouponRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CouponRef",
+            "type": "Attribute",
+        }
     )
     amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     origin_airport: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OriginAirport",
-            type="Attribute",
-            length=3
-        )
+        metadata={
+            "name": "OriginAirport",
+            "type": "Attribute",
+            "length": 3,
+        }
     )
     destination_airport: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DestinationAirport",
-            type="Attribute",
-            length=3
-        )
+        metadata={
+            "name": "DestinationAirport",
+            "type": "Attribute",
+            "length": 3,
+        }
     )
     country_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CountryCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CountryCode",
+            "type": "Attribute",
+        }
     )
     fare_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FareInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FareInfoRef",
+            "type": "Attribute",
+        }
     )
     tax_exempted: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="TaxExempted",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TaxExempted",
+            "type": "Attribute",
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     supplier_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            min_length=1,
-            max_length=5
-        )
+        metadata={
+            "name": "SupplierCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 5,
+        }
     )
     text: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Text",
-            type="Attribute",
-            min_length=1,
-            max_length=128
-        )
+        metadata={
+            "name": "Text",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 128,
+        }
     )
 
 
@@ -9389,26 +9350,26 @@ class TypeTimeSpec:
 
     time_range: Optional[TypeTimeRange] = field(
         default=None,
-        metadata=dict(
-            name="TimeRange",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "TimeRange",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     specific_time: Optional[TypeSpecificTime] = field(
         default=None,
-        metadata=dict(
-            name="SpecificTime",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "SpecificTime",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     preferred_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PreferredTime",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PreferredTime",
+            "type": "Attribute",
+        }
     )
 
 
@@ -9423,17 +9384,17 @@ class TypeTransactionsAllowed(TypeBookingTransactionsAllowed):
 
     shopping_enabled: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="ShoppingEnabled",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShoppingEnabled",
+            "type": "Attribute",
+        }
     )
     pricing_enabled: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="PricingEnabled",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PricingEnabled",
+            "type": "Attribute",
+        }
     )
 
 
@@ -9452,41 +9413,41 @@ class TypeVoucherInformation:
 
     voucher_type: Optional[TypeVoucherType] = field(
         default=None,
-        metadata=dict(
-            name="VoucherType",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "VoucherType",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+        }
     )
     confirmation_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ConfirmationNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ConfirmationNumber",
+            "type": "Attribute",
+        }
     )
     account_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AccountName",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AccountName",
+            "type": "Attribute",
+        }
     )
     number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
 
 
@@ -9503,26 +9464,25 @@ class AccountInformation:
 
     address: Optional[TypeStructuredAddress] = field(
         default=None,
-        metadata=dict(
-            name="Address",
-            type="Element"
-        )
+        metadata={
+            "name": "Address",
+            "type": "Element",
+        }
     )
     phone_number: List[PhoneNumber] = field(
         default_factory=list,
-        metadata=dict(
-            name="PhoneNumber",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "PhoneNumber",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     account_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AccountName",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AccountName",
+            "type": "Attribute",
+        }
     )
 
 
@@ -9539,19 +9499,19 @@ class AgencyContactInfo:
 
     phone_number: List[PhoneNumber] = field(
         default_factory=list,
-        metadata=dict(
-            name="PhoneNumber",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
+        metadata={
+            "name": "PhoneNumber",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 999,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
 
 
@@ -9568,28 +9528,26 @@ class AgencyInformation:
 
     address: Optional[TypeStructuredAddress] = field(
         default=None,
-        metadata=dict(
-            name="Address",
-            type="Element"
-        )
+        metadata={
+            "name": "Address",
+            "type": "Element",
+        }
     )
     email: List[Email] = field(
         default_factory=list,
-        metadata=dict(
-            name="Email",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "Email",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     phone_number: List[PhoneNumber] = field(
         default_factory=list,
-        metadata=dict(
-            name="PhoneNumber",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "PhoneNumber",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
 
 
@@ -9635,226 +9593,221 @@ class AirExchangeInfo:
 
     total_penalty_tax_info: Optional["AirExchangeInfo.TotalPenaltyTaxInfo"] = field(
         default=None,
-        metadata=dict(
-            name="TotalPenaltyTaxInfo",
-            type="Element"
-        )
+        metadata={
+            "name": "TotalPenaltyTaxInfo",
+            "type": "Element",
+        }
     )
     paid_tax: List[TypeTax] = field(
         default_factory=list,
-        metadata=dict(
-            name="PaidTax",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "PaidTax",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     ticket_fee_info: List["AirExchangeInfo.TicketFeeInfo"] = field(
         default_factory=list,
-        metadata=dict(
-            name="TicketFeeInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "TicketFeeInfo",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     reason: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="Reason",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "Reason",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     fee_info: List[TypeFeeInfo] = field(
         default_factory=list,
-        metadata=dict(
-            name="FeeInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "FeeInfo",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     tax_info: List[TypeTaxInfo] = field(
         default_factory=list,
-        metadata=dict(
-            name="TaxInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "TaxInfo",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     exchange_amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ExchangeAmount",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "ExchangeAmount",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     base_fare: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BaseFare",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BaseFare",
+            "type": "Attribute",
+        }
     )
     equivalent_base_fare: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EquivalentBaseFare",
-            type="Attribute"
-        )
+        metadata={
+            "name": "EquivalentBaseFare",
+            "type": "Attribute",
+        }
     )
     taxes: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Taxes",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Taxes",
+            "type": "Attribute",
+        }
     )
     change_fee: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ChangeFee",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ChangeFee",
+            "type": "Attribute",
+        }
     )
     forfeit_amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ForfeitAmount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ForfeitAmount",
+            "type": "Attribute",
+        }
     )
     refundable: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="Refundable",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Refundable",
+            "type": "Attribute",
+        }
     )
     exchangeable: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="Exchangeable",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Exchangeable",
+            "type": "Attribute",
+        }
     )
     first_class_upgrade: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="FirstClassUpgrade",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FirstClassUpgrade",
+            "type": "Attribute",
+        }
     )
     ticket_by_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TicketByDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TicketByDate",
+            "type": "Attribute",
+        }
     )
     pricing_tag: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PricingTag",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PricingTag",
+            "type": "Attribute",
+        }
     )
     equivalent_change_fee: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EquivalentChangeFee",
-            type="Attribute"
-        )
+        metadata={
+            "name": "EquivalentChangeFee",
+            "type": "Attribute",
+        }
     )
     equivalent_exchange_amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EquivalentExchangeAmount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "EquivalentExchangeAmount",
+            "type": "Attribute",
+        }
     )
     add_collection: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AddCollection",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AddCollection",
+            "type": "Attribute",
+        }
     )
     residual_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ResidualValue",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ResidualValue",
+            "type": "Attribute",
+        }
     )
     total_residual_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TotalResidualValue",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TotalResidualValue",
+            "type": "Attribute",
+        }
     )
     original_flight_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OriginalFlightValue",
-            type="Attribute"
-        )
+        metadata={
+            "name": "OriginalFlightValue",
+            "type": "Attribute",
+        }
     )
     flown_segment_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FlownSegmentValue",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FlownSegmentValue",
+            "type": "Attribute",
+        }
     )
     bulk_ticket_advisory: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="BulkTicketAdvisory",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BulkTicketAdvisory",
+            "type": "Attribute",
+        }
     )
     fare_pull: Optional[TypeFarePull] = field(
         default=None,
-        metadata=dict(
-            name="FarePull",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FarePull",
+            "type": "Attribute",
+        }
     )
     passenger_type_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PassengerTypeCode",
-            type="Attribute",
-            min_length=3,
-            max_length=5
-        )
+        metadata={
+            "name": "PassengerTypeCode",
+            "type": "Attribute",
+            "min_length": 3,
+            "max_length": 5,
+        }
     )
     passenger_count: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="PassengerCount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PassengerCount",
+            "type": "Attribute",
+        }
     )
     form_of_refund: Optional[TypeFormOfRefund] = field(
         default=None,
-        metadata=dict(
-            name="FormOfRefund",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FormOfRefund",
+            "type": "Attribute",
+        }
     )
     refund: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Refund",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Refund",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -9865,19 +9818,18 @@ class AirExchangeInfo:
         """
         penalty_tax_info: List[TypeTax] = field(
             default_factory=list,
-            metadata=dict(
-                name="PenaltyTaxInfo",
-                type="Element",
-                min_occurs=0,
-                max_occurs=999
-            )
+            metadata={
+                "name": "PenaltyTaxInfo",
+                "type": "Element",
+                "max_occurs": 999,
+            }
         )
         total_penalty_tax: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="TotalPenaltyTax",
-                type="Attribute"
-            )
+            metadata={
+                "name": "TotalPenaltyTax",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -9889,24 +9841,24 @@ class AirExchangeInfo:
         """
         base: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Base",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Base",
+                "type": "Attribute",
+            }
         )
         tax: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Tax",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Tax",
+                "type": "Attribute",
+            }
         )
         total: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Total",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Total",
+                "type": "Attribute",
+            }
         )
 
 
@@ -9925,13 +9877,12 @@ class BaseCoreSearchReq(BaseCoreReq):
     """
     next_result_reference: List[NextResultReference] = field(
         default_factory=list,
-        metadata=dict(
-            name="NextResultReference",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "NextResultReference",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
 
 
@@ -9943,18 +9894,18 @@ class BaseReq(BaseCoreReq):
     """
     override_pcc: Optional[OverridePcc] = field(
         default=None,
-        metadata=dict(
-            name="OverridePCC",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "OverridePCC",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     retrieve_provider_reservation_details: bool = field(
         default=False,
-        metadata=dict(
-            name="RetrieveProviderReservationDetails",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RetrieveProviderReservationDetails",
+            "type": "Attribute",
+        }
     )
 
 
@@ -9965,13 +9916,12 @@ class BaseSearchRsp(BaseRsp):
     """
     next_result_reference: List[NextResultReference] = field(
         default_factory=list,
-        metadata=dict(
-            name="NextResultReference",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "NextResultReference",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
 
 
@@ -9993,64 +9943,62 @@ class DeliveryInfo:
 
     shipping_address: Optional["DeliveryInfo.ShippingAddress"] = field(
         default=None,
-        metadata=dict(
-            name="ShippingAddress",
-            type="Element"
-        )
+        metadata={
+            "name": "ShippingAddress",
+            "type": "Element",
+        }
     )
     phone_number: Optional[PhoneNumber] = field(
         default=None,
-        metadata=dict(
-            name="PhoneNumber",
-            type="Element"
-        )
+        metadata={
+            "name": "PhoneNumber",
+            "type": "Element",
+        }
     )
     email: Optional[Email] = field(
         default=None,
-        metadata=dict(
-            name="Email",
-            type="Element"
-        )
+        metadata={
+            "name": "Email",
+            "type": "Element",
+        }
     )
     general_remark: List[GeneralRemark] = field(
         default_factory=list,
-        metadata=dict(
-            name="GeneralRemark",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "GeneralRemark",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     provider_reservation_info_ref: List[ProviderReservationInfoRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+        }
     )
     signature_required: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SignatureRequired",
-            type="Attribute",
-            max_length=10
-        )
+        metadata={
+            "name": "SignatureRequired",
+            "type": "Attribute",
+            "max_length": 10,
+        }
     )
     tracking_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TrackingNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TrackingNumber",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -10076,12 +10024,12 @@ class HostTokenList:
 
     host_token: List[HostToken] = field(
         default_factory=list,
-        metadata=dict(
-            name="HostToken",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
+        metadata={
+            "name": "HostToken",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 999,
+        }
     )
 
 
@@ -10100,42 +10048,42 @@ class InvoiceData:
 
     booking_traveler_information: List[BookingTravelerInformation] = field(
         default_factory=list,
-        metadata=dict(
-            name="BookingTravelerInformation",
-            type="Element",
-            min_occurs=1,
-            max_occurs=9
-        )
+        metadata={
+            "name": "BookingTravelerInformation",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 9,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     invoice_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="InvoiceNumber",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "InvoiceNumber",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     issue_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="IssueDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "IssueDate",
+            "type": "Attribute",
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -10152,31 +10100,31 @@ class InvoiceRemark(TypeAssociatedRemark):
 
     air_segment_ref: Optional[TypeSegmentRef] = field(
         default=None,
-        metadata=dict(
-            name="AirSegmentRef",
-            type="Element"
-        )
+        metadata={
+            "name": "AirSegmentRef",
+            "type": "Element",
+        }
     )
     hotel_reservation_ref: Optional[TypeNonAirReservationRef] = field(
         default=None,
-        metadata=dict(
-            name="HotelReservationRef",
-            type="Element"
-        )
+        metadata={
+            "name": "HotelReservationRef",
+            "type": "Element",
+        }
     )
     vehicle_reservation_ref: Optional[TypeNonAirReservationRef] = field(
         default=None,
-        metadata=dict(
-            name="VehicleReservationRef",
-            type="Element"
-        )
+        metadata={
+            "name": "VehicleReservationRef",
+            "type": "Element",
+        }
     )
     passive_segment_ref: Optional[TypeSegmentRef] = field(
         default=None,
-        metadata=dict(
-            name="PassiveSegmentRef",
-            type="Element"
-        )
+        metadata={
+            "name": "PassiveSegmentRef",
+            "type": "Element",
+        }
     )
 
 
@@ -10219,119 +10167,118 @@ class LoyaltyCard:
 
     provider_reservation_specific_info: List[TypeProviderReservationSpecificInfo] = field(
         default_factory=list,
-        metadata=dict(
-            name="ProviderReservationSpecificInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "ProviderReservationSpecificInfo",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     supplier_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            required=True,
-            length=2
-        )
+        metadata={
+            "name": "SupplierCode",
+            "type": "Attribute",
+            "required": True,
+            "length": 2,
+        }
     )
     alliance_level: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AllianceLevel",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AllianceLevel",
+            "type": "Attribute",
+        }
     )
     membership_program: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MembershipProgram",
-            type="Attribute",
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "MembershipProgram",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
     card_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CardNumber",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=36
-        )
+        metadata={
+            "name": "CardNumber",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 36,
+        }
     )
     status: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Status",
+            "type": "Attribute",
+        }
     )
     membership_status: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MembershipStatus",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MembershipStatus",
+            "type": "Attribute",
+        }
     )
     free_text: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FreeText",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FreeText",
+            "type": "Attribute",
+        }
     )
     supplier_type: Optional[TypeProduct] = field(
         default=None,
-        metadata=dict(
-            name="SupplierType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SupplierType",
+            "type": "Attribute",
+        }
     )
     level: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Level",
-            type="Attribute",
-            pattern=r"[a-zA-Z0-9]{1,1}"
-        )
+        metadata={
+            "name": "Level",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z0-9]{1,1}",
+        }
     )
     priority_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PriorityCode",
-            type="Attribute",
-            pattern=r"[a-zA-Z0-9]{1,1}"
-        )
+        metadata={
+            "name": "PriorityCode",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z0-9]{1,1}",
+        }
     )
     vendor_location_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="VendorLocationRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "VendorLocationRef",
+            "type": "Attribute",
+        }
     )
 
 
@@ -10348,34 +10295,33 @@ class Mcoinformation:
 
     passenger_info: List[PassengerInfo] = field(
         default_factory=list,
-        metadata=dict(
-            name="PassengerInfo",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "PassengerInfo",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     mconumber: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MCONumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MCONumber",
+            "type": "Attribute",
+        }
     )
     status: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Status",
+            "type": "Attribute",
+        }
     )
     mcotype: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MCOType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MCOType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -10394,41 +10340,40 @@ class McopriceData:
 
     tax_info: List[TypeTaxInfo] = field(
         default_factory=list,
-        metadata=dict(
-            name="TaxInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "TaxInfo",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     commission: Optional["McopriceData.Commission"] = field(
         default=None,
-        metadata=dict(
-            name="Commission",
-            type="Element"
-        )
+        metadata={
+            "name": "Commission",
+            "type": "Element",
+        }
     )
     mcoamount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MCOAmount",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "MCOAmount",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     mcoequivalent_fare: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MCOEquivalentFare",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MCOEquivalentFare",
+            "type": "Attribute",
+        }
     )
     mcototal_amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MCOTotalAmount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MCOTotalAmount",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -10439,18 +10384,18 @@ class McopriceData:
         """
         amount: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Amount",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Amount",
+                "type": "Attribute",
+            }
         )
         percentage: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Percentage",
-                type="Attribute",
-                pattern=r"([0-9]{1,2}|100)\.[0-9]{1,2}"
-            )
+            metadata={
+                "name": "Percentage",
+                "type": "Attribute",
+                "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
+            }
         )
 
 
@@ -10472,56 +10417,54 @@ class PassiveInfo:
 
     ticket_number: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="TicketNumber",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "TicketNumber",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     confirmation_number: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="ConfirmationNumber",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "ConfirmationNumber",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     commission: Optional[Commission] = field(
         default=None,
-        metadata=dict(
-            name="Commission",
-            type="Element"
-        )
+        metadata={
+            "name": "Commission",
+            "type": "Element",
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+        }
     )
     provider_locator_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderLocatorCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderLocatorCode",
+            "type": "Attribute",
+        }
     )
     supplier_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SupplierCode",
+            "type": "Attribute",
+        }
     )
     supplier_locator_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SupplierLocatorCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SupplierLocatorCode",
+            "type": "Attribute",
+        }
     )
 
 
@@ -10536,20 +10479,20 @@ class PaymentRestriction:
 
     card_restriction: List[CardRestriction] = field(
         default_factory=list,
-        metadata=dict(
-            name="CardRestriction",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
+        metadata={
+            "name": "CardRestriction",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 999,
+        }
     )
     address_restriction: Optional[AddressRestriction] = field(
         default=None,
-        metadata=dict(
-            name="AddressRestriction",
-            type="Element",
-            required=True
-        )
+        metadata={
+            "name": "AddressRestriction",
+            "type": "Element",
+            "required": True,
+        }
     )
 
 
@@ -10565,17 +10508,17 @@ class ReservationName:
 
     booking_traveler_ref: Optional[BookingTravelerRef] = field(
         default=None,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Element"
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Element",
+        }
     )
     name_override: Optional[NameOverride] = field(
         default=None,
-        metadata=dict(
-            name="NameOverride",
-            type="Element"
-        )
+        metadata={
+            "name": "NameOverride",
+            "type": "Element",
+        }
     )
 
 
@@ -10592,20 +10535,19 @@ class Ssrinfo:
 
     ssr: Optional[Ssr] = field(
         default=None,
-        metadata=dict(
-            name="SSR",
-            type="Element",
-            required=True
-        )
+        metadata={
+            "name": "SSR",
+            "type": "Element",
+            "required": True,
+        }
     )
     booking_traveler_ref: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
 
 
@@ -10629,77 +10571,76 @@ class ServiceData:
 
     seat_attributes: Optional[SeatAttributes] = field(
         default=None,
-        metadata=dict(
-            name="SeatAttributes",
-            type="Element"
-        )
+        metadata={
+            "name": "SeatAttributes",
+            "type": "Element",
+        }
     )
     cabin_class: Optional[CabinClass] = field(
         default=None,
-        metadata=dict(
-            name="CabinClass",
-            type="Element"
-        )
+        metadata={
+            "name": "CabinClass",
+            "type": "Element",
+        }
     )
     ssrref: List[TypeKeyBasedReference] = field(
         default_factory=list,
-        metadata=dict(
-            name="SSRRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "SSRRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     data: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Data",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Data",
+            "type": "Attribute",
+        }
     )
     air_segment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AirSegmentRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AirSegmentRef",
+            "type": "Attribute",
+        }
     )
     booking_traveler_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Attribute",
+        }
     )
     stop_over: bool = field(
         default=False,
-        metadata=dict(
-            name="StopOver",
-            type="Attribute"
-        )
+        metadata={
+            "name": "StopOver",
+            "type": "Attribute",
+        }
     )
     traveler_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TravelerType",
-            type="Attribute",
-            min_length=3,
-            max_length=5
-        )
+        metadata={
+            "name": "TravelerType",
+            "type": "Attribute",
+            "min_length": 3,
+            "max_length": 5,
+        }
     )
     emdsummary_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EMDSummaryRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "EMDSummaryRef",
+            "type": "Attribute",
+        }
     )
     emdcoupon_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EMDCouponRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "EMDCouponRef",
+            "type": "Attribute",
+        }
     )
 
 
@@ -10714,21 +10655,20 @@ class ServiceInfo:
 
     description: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="Description",
-            type="Element",
-            min_occurs=1,
-            max_occurs=999
-        )
+        metadata={
+            "name": "Description",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 999,
+        }
     )
     media_item: List[MediaItem] = field(
         default_factory=list,
-        metadata=dict(
-            name="MediaItem",
-            type="Element",
-            min_occurs=0,
-            max_occurs=3
-        )
+        metadata={
+            "name": "MediaItem",
+            "type": "Element",
+            "max_occurs": 3,
+        }
     )
 
 
@@ -10748,45 +10688,45 @@ class TransactionType:
 
     air: Optional["TransactionType.Air"] = field(
         default=None,
-        metadata=dict(
-            name="Air",
-            type="Element"
-        )
+        metadata={
+            "name": "Air",
+            "type": "Element",
+        }
     )
     hotel: Optional[TypeTransactionsAllowed] = field(
         default=None,
-        metadata=dict(
-            name="Hotel",
-            type="Element"
-        )
+        metadata={
+            "name": "Hotel",
+            "type": "Element",
+        }
     )
     rail: Optional[TypeTransactionsAllowed] = field(
         default=None,
-        metadata=dict(
-            name="Rail",
-            type="Element"
-        )
+        metadata={
+            "name": "Rail",
+            "type": "Element",
+        }
     )
     vehicle: Optional[TypeTransactionsAllowed] = field(
         default=None,
-        metadata=dict(
-            name="Vehicle",
-            type="Element"
-        )
+        metadata={
+            "name": "Vehicle",
+            "type": "Element",
+        }
     )
     passive: Optional[TypeBookingTransactionsAllowed] = field(
         default=None,
-        metadata=dict(
-            name="Passive",
-            type="Element"
-        )
+        metadata={
+            "name": "Passive",
+            "type": "Element",
+        }
     )
     background_passive: Optional[TypeBookingTransactionsAllowed] = field(
         default=None,
-        metadata=dict(
-            name="BackgroundPassive",
-            type="Element"
-        )
+        metadata={
+            "name": "BackgroundPassive",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -10804,66 +10744,66 @@ class TransactionType:
         """
         tier: Optional["TransactionType.Air.Tier"] = field(
             default=None,
-            metadata=dict(
-                name="Tier",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Tier",
+                "type": "Attribute",
+            }
         )
         days_enabled: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="DaysEnabled",
-                type="Attribute"
-            )
+            metadata={
+                "name": "DaysEnabled",
+                "type": "Attribute",
+            }
         )
         weekends_enabled: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="WeekendsEnabled",
-                type="Attribute"
-            )
+            metadata={
+                "name": "WeekendsEnabled",
+                "type": "Attribute",
+            }
         )
         airports_enabled: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="AirportsEnabled",
-                type="Attribute"
-            )
+            metadata={
+                "name": "AirportsEnabled",
+                "type": "Attribute",
+            }
         )
         odenabled: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="ODEnabled",
-                type="Attribute"
-            )
+            metadata={
+                "name": "ODEnabled",
+                "type": "Attribute",
+            }
         )
         one_way_shop: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="OneWayShop",
-                type="Attribute"
-            )
+            metadata={
+                "name": "OneWayShop",
+                "type": "Attribute",
+            }
         )
         flex_explore: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="FlexExplore",
-                type="Attribute"
-            )
+            metadata={
+                "name": "FlexExplore",
+                "type": "Attribute",
+            }
         )
         rapid_reprice_enabled: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="RapidRepriceEnabled",
-                type="Attribute"
-            )
+            metadata={
+                "name": "RapidRepriceEnabled",
+                "type": "Attribute",
+            }
         )
         return_upsell_fare: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="ReturnUpsellFare",
-                type="Attribute"
-            )
+            metadata={
+                "name": "ReturnUpsellFare",
+                "type": "Attribute",
+            }
         )
 
         class Tier(Enum):
@@ -10892,35 +10832,35 @@ class TravelSegment(Segment):
 
     origin: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Origin",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "Origin",
+            "type": "Attribute",
+            "length": 3,
+            "white_space": "collapse",
+        }
     )
     destination: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Destination",
-            type="Attribute",
-            length=3,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "Destination",
+            "type": "Attribute",
+            "length": 3,
+            "white_space": "collapse",
+        }
     )
     departure_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DepartureTime",
-            type="Attribute"
-        )
+        metadata={
+            "name": "DepartureTime",
+            "type": "Attribute",
+        }
     )
     arrival_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ArrivalTime",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ArrivalTime",
+            "type": "Attribute",
+        }
     )
 
 
@@ -10938,33 +10878,33 @@ class TravelerInformation:
 
     emergency_contact: Optional["TravelerInformation.EmergencyContact"] = field(
         default=None,
-        metadata=dict(
-            name="EmergencyContact",
-            type="Element"
-        )
+        metadata={
+            "name": "EmergencyContact",
+            "type": "Element",
+        }
     )
     home_airport: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="HomeAirport",
-            type="Attribute",
-            length=3
-        )
+        metadata={
+            "name": "HomeAirport",
+            "type": "Attribute",
+            "length": 3,
+        }
     )
     visa_expiration_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="VisaExpirationDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "VisaExpirationDate",
+            "type": "Attribute",
+        }
     )
     booking_traveler_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
     @dataclass
@@ -10977,24 +10917,24 @@ class TravelerInformation:
         """
         phone_number: Optional[PhoneNumber] = field(
             default=None,
-            metadata=dict(
-                name="PhoneNumber",
-                type="Element"
-            )
+            metadata={
+                "name": "PhoneNumber",
+                "type": "Element",
+            }
         )
         name: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Name",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Name",
+                "type": "Attribute",
+            }
         )
         relationship: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Relationship",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Relationship",
+                "type": "Attribute",
+            }
         )
 
 
@@ -11009,20 +10949,20 @@ class TypeAgencyHierarchyLongReference(TypeAgencyHierarchyReference):
 
     profile_version: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="ProfileVersion",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "ProfileVersion",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     profile_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProfileName",
-            type="Attribute",
-            required=True,
-            max_length=102
-        )
+        metadata={
+            "name": "ProfileName",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 102,
+        }
     )
 
 
@@ -11038,10 +10978,10 @@ class TypeAssociatedRemarkWithSegmentRef(TypeAssociatedRemark):
 
     segment_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SegmentRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SegmentRef",
+            "type": "Attribute",
+        }
     )
 
 
@@ -11057,11 +10997,11 @@ class TypeFlexibleTimeSpec(TypeTimeSpec):
 
     search_extra_days: Optional["TypeFlexibleTimeSpec.SearchExtraDays"] = field(
         default=None,
-        metadata=dict(
-            name="SearchExtraDays",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "SearchExtraDays",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
 
     @dataclass
@@ -11072,17 +11012,17 @@ class TypeFlexibleTimeSpec(TypeTimeSpec):
         """
         days_before: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="DaysBefore",
-                type="Attribute"
-            )
+            metadata={
+                "name": "DaysBefore",
+                "type": "Attribute",
+            }
         )
         days_after: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="DaysAfter",
-                type="Attribute"
-            )
+            metadata={
+                "name": "DaysAfter",
+                "type": "Attribute",
+            }
         )
 
 
@@ -11098,27 +11038,27 @@ class TypeLocation:
 
     airport: Optional[Airport] = field(
         default=None,
-        metadata=dict(
-            name="Airport",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "Airport",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     city: Optional[City] = field(
         default=None,
-        metadata=dict(
-            name="City",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "City",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     city_or_airport: Optional[CityOrAirport] = field(
         default=None,
-        metadata=dict(
-            name="CityOrAirport",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "CityOrAirport",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
 
 
@@ -11141,69 +11081,69 @@ class TypePaymentCard:
 
     phone_number: Optional[PhoneNumber] = field(
         default=None,
-        metadata=dict(
-            name="PhoneNumber",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "PhoneNumber",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     billing_address: Optional[TypeStructuredAddress] = field(
         default=None,
-        metadata=dict(
-            name="BillingAddress",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "BillingAddress",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            min_length=2,
-            max_length=2
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 2,
+        }
     )
     number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            min_length=13,
-            max_length=128
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+            "min_length": 13,
+            "max_length": 128,
+        }
     )
     exp_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ExpDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ExpDate",
+            "type": "Attribute",
+        }
     )
     name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Attribute",
-            max_length=128
-        )
+        metadata={
+            "name": "Name",
+            "type": "Attribute",
+            "max_length": 128,
+        }
     )
     cvv: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CVV",
-            type="Attribute",
-            max_length=4
-        )
+        metadata={
+            "name": "CVV",
+            "type": "Attribute",
+            "max_length": 4,
+        }
     )
     approval_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ApprovalCode",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "ApprovalCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
 
 
@@ -11222,51 +11162,51 @@ class TypeSearchLocation:
 
     airport: Optional[Airport] = field(
         default=None,
-        metadata=dict(
-            name="Airport",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "Airport",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     city: Optional[City] = field(
         default=None,
-        metadata=dict(
-            name="City",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "City",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     city_or_airport: Optional[CityOrAirport] = field(
         default=None,
-        metadata=dict(
-            name="CityOrAirport",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "CityOrAirport",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     coordinate_location: Optional[CoordinateLocation] = field(
         default=None,
-        metadata=dict(
-            name="CoordinateLocation",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "CoordinateLocation",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     rail_location: Optional[RailLocation] = field(
         default=None,
-        metadata=dict(
-            name="RailLocation",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "RailLocation",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     distance: Optional[Distance] = field(
         default=None,
-        metadata=dict(
-            name="Distance",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "Distance",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
 
 
@@ -11285,46 +11225,45 @@ class Apiprovider:
 
     transaction_type: Optional[TransactionType] = field(
         default=None,
-        metadata=dict(
-            name="TransactionType",
-            type="Element"
-        )
+        metadata={
+            "name": "TransactionType",
+            "type": "Element",
+        }
     )
     available_pseudo_city_code: List["Apiprovider.AvailablePseudoCityCode"] = field(
         default_factory=list,
-        metadata=dict(
-            name="AvailablePseudoCityCode",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "AvailablePseudoCityCode",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            required=True,
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     supplier_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SupplierCode",
-            type="Attribute",
-            min_length=1,
-            max_length=5
-        )
+        metadata={
+            "name": "SupplierCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 5,
+        }
     )
     iatacode: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="IATACode",
-            type="Attribute",
-            max_length=8
-        )
+        metadata={
+            "name": "IATACode",
+            "type": "Attribute",
+            "max_length": 8,
+        }
     )
 
     @dataclass
@@ -11334,12 +11273,12 @@ class Apiprovider:
         """
         pseudo_city_code: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="PseudoCityCode",
-                type="Attribute",
-                min_length=2,
-                max_length=10
-            )
+            metadata={
+                "name": "PseudoCityCode",
+                "type": "Attribute",
+                "min_length": 2,
+                "max_length": 10,
+            }
         )
 
 
@@ -11357,74 +11296,71 @@ class BaseReservation:
     """
     accounting_remark: List[AccountingRemark] = field(
         default_factory=list,
-        metadata=dict(
-            name="AccountingRemark",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "AccountingRemark",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     general_remark: List[GeneralRemark] = field(
         default_factory=list,
-        metadata=dict(
-            name="GeneralRemark",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "GeneralRemark",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     restriction: List[Restriction] = field(
         default_factory=list,
-        metadata=dict(
-            name="Restriction",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "Restriction",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     passive_info: Optional[PassiveInfo] = field(
         default=None,
-        metadata=dict(
-            name="PassiveInfo",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "PassiveInfo",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     locator_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="LocatorCode",
-            type="Attribute",
-            required=True,
-            min_length=5,
-            max_length=8
-        )
+        metadata={
+            "name": "LocatorCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 5,
+            "max_length": 8,
+        }
     )
     create_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CreateDate",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "CreateDate",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     modified_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ModifiedDate",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "ModifiedDate",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     customer_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CustomerNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CustomerNumber",
+            "type": "Attribute",
+        }
     )
 
 
@@ -11435,13 +11371,12 @@ class BaseSearchReq(BaseReq):
     """
     next_result_reference: List[NextResultReference] = field(
         default_factory=list,
-        metadata=dict(
-            name="NextResultReference",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "NextResultReference",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
 
 
@@ -11483,226 +11418,212 @@ class BookingTraveler:
 
     booking_traveler_name: Optional[BookingTravelerName] = field(
         default=None,
-        metadata=dict(
-            name="BookingTravelerName",
-            type="Element",
-            required=True
-        )
+        metadata={
+            "name": "BookingTravelerName",
+            "type": "Element",
+            "required": True,
+        }
     )
     delivery_info: List[DeliveryInfo] = field(
         default_factory=list,
-        metadata=dict(
-            name="DeliveryInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "DeliveryInfo",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     phone_number: List[PhoneNumber] = field(
         default_factory=list,
-        metadata=dict(
-            name="PhoneNumber",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "PhoneNumber",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     email: List[Email] = field(
         default_factory=list,
-        metadata=dict(
-            name="Email",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "Email",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     loyalty_card: List[LoyaltyCard] = field(
         default_factory=list,
-        metadata=dict(
-            name="LoyaltyCard",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "LoyaltyCard",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     discount_card: List[DiscountCard] = field(
         default_factory=list,
-        metadata=dict(
-            name="DiscountCard",
-            type="Element",
-            min_occurs=0,
-            max_occurs=9
-        )
+        metadata={
+            "name": "DiscountCard",
+            "type": "Element",
+            "max_occurs": 9,
+        }
     )
     ssr: List[Ssr] = field(
         default_factory=list,
-        metadata=dict(
-            name="SSR",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "SSR",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     name_remark: List[NameRemark] = field(
         default_factory=list,
-        metadata=dict(
-            name="NameRemark",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "NameRemark",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     air_seat_assignment: List[AirSeatAssignment] = field(
         default_factory=list,
-        metadata=dict(
-            name="AirSeatAssignment",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "AirSeatAssignment",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     rail_seat_assignment: List[RailSeatAssignment] = field(
         default_factory=list,
-        metadata=dict(
-            name="RailSeatAssignment",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "RailSeatAssignment",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     emergency_info: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EmergencyInfo",
-            type="Element"
-        )
+        metadata={
+            "name": "EmergencyInfo",
+            "type": "Element",
+        }
     )
     address: List[TypeStructuredAddress] = field(
         default_factory=list,
-        metadata=dict(
-            name="Address",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "Address",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     drivers_license: List[DriversLicense] = field(
         default_factory=list,
-        metadata=dict(
-            name="DriversLicense",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "DriversLicense",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     applied_profile: List[AppliedProfile] = field(
         default_factory=list,
-        metadata=dict(
-            name="AppliedProfile",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "AppliedProfile",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     customized_name_data: List[CustomizedNameData] = field(
         default_factory=list,
-        metadata=dict(
-            name="CustomizedNameData",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "CustomizedNameData",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     travel_compliance_data: List[TravelComplianceData] = field(
         default_factory=list,
-        metadata=dict(
-            name="TravelComplianceData",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "TravelComplianceData",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     travel_info: Optional[TravelInfo] = field(
         default=None,
-        metadata=dict(
-            name="TravelInfo",
-            type="Element"
-        )
+        metadata={
+            "name": "TravelInfo",
+            "type": "Element",
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     traveler_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TravelerType",
-            type="Attribute",
-            min_length=3,
-            max_length=5
-        )
+        metadata={
+            "name": "TravelerType",
+            "type": "Attribute",
+            "min_length": 3,
+            "max_length": 5,
+        }
     )
     age: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Age",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Age",
+            "type": "Attribute",
+        }
     )
     vip: bool = field(
         default=False,
-        metadata=dict(
-            name="VIP",
-            type="Attribute"
-        )
+        metadata={
+            "name": "VIP",
+            "type": "Attribute",
+        }
     )
     dob: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DOB",
-            type="Attribute"
-        )
+        metadata={
+            "name": "DOB",
+            "type": "Attribute",
+        }
     )
     gender: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Gender",
-            type="Attribute",
-            min_length=1,
-            max_length=2
-        )
+        metadata={
+            "name": "Gender",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 2,
+        }
     )
     nationality: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Nationality",
-            type="Attribute",
-            length=2
-        )
+        metadata={
+            "name": "Nationality",
+            "type": "Attribute",
+            "length": 2,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
     name_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="NameNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "NameNumber",
+            "type": "Attribute",
+        }
     )
 
 
@@ -11732,112 +11653,112 @@ class BookingTravelerInfo:
 
     booking_traveler_name: Optional[BookingTravelerName] = field(
         default=None,
-        metadata=dict(
-            name="BookingTravelerName",
-            type="Element"
-        )
+        metadata={
+            "name": "BookingTravelerName",
+            "type": "Element",
+        }
     )
     name_remark: Optional[NameRemark] = field(
         default=None,
-        metadata=dict(
-            name="NameRemark",
-            type="Element"
-        )
+        metadata={
+            "name": "NameRemark",
+            "type": "Element",
+        }
     )
     dob: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DOB",
-            type="Element"
-        )
+        metadata={
+            "name": "DOB",
+            "type": "Element",
+        }
     )
     travel_info: Optional[TravelInfo] = field(
         default=None,
-        metadata=dict(
-            name="TravelInfo",
-            type="Element"
-        )
+        metadata={
+            "name": "TravelInfo",
+            "type": "Element",
+        }
     )
     email: Optional[Email] = field(
         default=None,
-        metadata=dict(
-            name="Email",
-            type="Element"
-        )
+        metadata={
+            "name": "Email",
+            "type": "Element",
+        }
     )
     phone_number: Optional[PhoneNumber] = field(
         default=None,
-        metadata=dict(
-            name="PhoneNumber",
-            type="Element"
-        )
+        metadata={
+            "name": "PhoneNumber",
+            "type": "Element",
+        }
     )
     address: Optional[TypeStructuredAddress] = field(
         default=None,
-        metadata=dict(
-            name="Address",
-            type="Element"
-        )
+        metadata={
+            "name": "Address",
+            "type": "Element",
+        }
     )
     emergency_info: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EmergencyInfo",
-            type="Element"
-        )
+        metadata={
+            "name": "EmergencyInfo",
+            "type": "Element",
+        }
     )
     delivery_info: Optional[DeliveryInfo] = field(
         default=None,
-        metadata=dict(
-            name="DeliveryInfo",
-            type="Element"
-        )
+        metadata={
+            "name": "DeliveryInfo",
+            "type": "Element",
+        }
     )
     age: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Age",
-            type="Element"
-        )
+        metadata={
+            "name": "Age",
+            "type": "Element",
+        }
     )
     customized_name_data: Optional[CustomizedNameData] = field(
         default=None,
-        metadata=dict(
-            name="CustomizedNameData",
-            type="Element"
-        )
+        metadata={
+            "name": "CustomizedNameData",
+            "type": "Element",
+        }
     )
     applied_profile: Optional[AppliedProfile] = field(
         default=None,
-        metadata=dict(
-            name="AppliedProfile",
-            type="Element"
-        )
+        metadata={
+            "name": "AppliedProfile",
+            "type": "Element",
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     traveler_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TravelerType",
-            type="Attribute",
-            min_length=3,
-            max_length=5
-        )
+        metadata={
+            "name": "TravelerType",
+            "type": "Attribute",
+            "min_length": 3,
+            "max_length": 5,
+        }
     )
     gender: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Gender",
-            type="Attribute",
-            min_length=1,
-            max_length=2
-        )
+        metadata={
+            "name": "Gender",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 2,
+        }
     )
 
 
@@ -11861,25 +11782,25 @@ class DebitCard(TypePaymentCard):
 
     issue_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="IssueNumber",
-            type="Attribute",
-            max_length=8
-        )
+        metadata={
+            "name": "IssueNumber",
+            "type": "Attribute",
+            "max_length": 8,
+        }
     )
     profile_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProfileID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProfileID",
+            "type": "Attribute",
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
 
 
@@ -11901,49 +11822,47 @@ class FileFinishingInfo:
 
     shop_information: Optional[ShopInformation] = field(
         default=None,
-        metadata=dict(
-            name="ShopInformation",
-            type="Element"
-        )
+        metadata={
+            "name": "ShopInformation",
+            "type": "Element",
+        }
     )
     policy_information: List[PolicyInformation] = field(
         default_factory=list,
-        metadata=dict(
-            name="PolicyInformation",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "PolicyInformation",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     account_information: Optional[AccountInformation] = field(
         default=None,
-        metadata=dict(
-            name="AccountInformation",
-            type="Element"
-        )
+        metadata={
+            "name": "AccountInformation",
+            "type": "Element",
+        }
     )
     agency_information: Optional[AgencyInformation] = field(
         default=None,
-        metadata=dict(
-            name="AgencyInformation",
-            type="Element"
-        )
+        metadata={
+            "name": "AgencyInformation",
+            "type": "Element",
+        }
     )
     traveler_information: List[TravelerInformation] = field(
         default_factory=list,
-        metadata=dict(
-            name="TravelerInformation",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "TravelerInformation",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     custom_profile_information: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CustomProfileInformation",
-            type="Element"
-        )
+        metadata={
+            "name": "CustomProfileInformation",
+            "type": "Element",
+        }
     )
 
 
@@ -11972,92 +11891,89 @@ class Group:
 
     name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Element",
-            required=True,
-            min_length=1,
-            white_space="collapse"
-        )
+        metadata={
+            "name": "Name",
+            "type": "Element",
+            "required": True,
+            "min_length": 1,
+            "white_space": "collapse",
+        }
     )
     delivery_info: Optional[DeliveryInfo] = field(
         default=None,
-        metadata=dict(
-            name="DeliveryInfo",
-            type="Element"
-        )
+        metadata={
+            "name": "DeliveryInfo",
+            "type": "Element",
+        }
     )
     phone_number: List[PhoneNumber] = field(
         default_factory=list,
-        metadata=dict(
-            name="PhoneNumber",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "PhoneNumber",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     ssrref: List["Group.Ssrref"] = field(
         default_factory=list,
-        metadata=dict(
-            name="SSRRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "SSRRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     address: Optional[TypeStructuredAddress] = field(
         default=None,
-        metadata=dict(
-            name="Address",
-            type="Element"
-        )
+        metadata={
+            "name": "Address",
+            "type": "Element",
+        }
     )
     booking_traveler_ref: List["Group.BookingTravelerRef"] = field(
         default_factory=list,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     traveler_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TravelerType",
-            type="Attribute",
-            min_length=3,
-            max_length=5
-        )
+        metadata={
+            "name": "TravelerType",
+            "type": "Attribute",
+            "min_length": 3,
+            "max_length": 5,
+        }
     )
     group_size: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="GroupSize",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "GroupSize",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -12067,11 +11983,11 @@ class Group:
         """
         key: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Key",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Key",
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
     @dataclass
@@ -12081,11 +11997,11 @@ class Group:
         """
         key: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Key",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Key",
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
 
@@ -12102,53 +12018,52 @@ class ServiceRuleType:
     """
     application_rules: Optional["ServiceRuleType.ApplicationRules"] = field(
         default=None,
-        metadata=dict(
-            name="ApplicationRules",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "ApplicationRules",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     application_level: Optional["ServiceRuleType.ApplicationLevel"] = field(
         default=None,
-        metadata=dict(
-            name="ApplicationLevel",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "ApplicationLevel",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     modify_rules: Optional["ServiceRuleType.ModifyRules"] = field(
         default=None,
-        metadata=dict(
-            name="ModifyRules",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "ModifyRules",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     secondary_type_rules: Optional["ServiceRuleType.SecondaryTypeRules"] = field(
         default=None,
-        metadata=dict(
-            name="SecondaryTypeRules",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "SecondaryTypeRules",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     remarks: List[FormattedTextTextType] = field(
         default_factory=list,
-        metadata=dict(
-            name="Remarks",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=99
-        )
+        metadata={
+            "name": "Remarks",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 99,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
     @dataclass
@@ -12162,38 +12077,38 @@ class ServiceRuleType:
         """
         required_for_all_travelers: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="RequiredForAllTravelers",
-                type="Attribute"
-            )
+            metadata={
+                "name": "RequiredForAllTravelers",
+                "type": "Attribute",
+            }
         )
         required_for_all_segments: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="RequiredForAllSegments",
-                type="Attribute"
-            )
+            metadata={
+                "name": "RequiredForAllSegments",
+                "type": "Attribute",
+            }
         )
         required_for_all_segments_in_od: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="RequiredForAllSegmentsInOD",
-                type="Attribute"
-            )
+            metadata={
+                "name": "RequiredForAllSegmentsInOD",
+                "type": "Attribute",
+            }
         )
         unselected_option_required: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="UnselectedOptionRequired",
-                type="Attribute"
-            )
+            metadata={
+                "name": "UnselectedOptionRequired",
+                "type": "Attribute",
+            }
         )
         secondary_option_code_required: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="SecondaryOptionCodeRequired",
-                type="Attribute"
-            )
+            metadata={
+                "name": "SecondaryOptionCodeRequired",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -12206,36 +12121,35 @@ class ServiceRuleType:
         """
         application_limits: Optional["ServiceRuleType.ApplicationLevel.ApplicationLimits"] = field(
             default=None,
-            metadata=dict(
-                name="ApplicationLimits",
-                type="Element",
-                namespace="http://www.travelport.com/schema/common_v48_0"
-            )
+            metadata={
+                "name": "ApplicationLimits",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/common_v48_0",
+            }
         )
         service_data: List[ServiceData] = field(
             default_factory=list,
-            metadata=dict(
-                name="ServiceData",
-                type="Element",
-                namespace="http://www.travelport.com/schema/common_v48_0",
-                min_occurs=0,
-                max_occurs=999
-            )
+            metadata={
+                "name": "ServiceData",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/common_v48_0",
+                "max_occurs": 999,
+            }
         )
         applicable_levels: List[OptionalServiceApplicabilityType] = field(
             default_factory=list,
-            metadata=dict(
-                name="ApplicableLevels",
-                type="Attribute",
-                tokens=True
-            )
+            metadata={
+                "name": "ApplicableLevels",
+                "type": "Attribute",
+                "tokens": True,
+            }
         )
         provider_defined_applicable_levels: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="ProviderDefinedApplicableLevels",
-                type="Attribute"
-            )
+            metadata={
+                "name": "ProviderDefinedApplicableLevels",
+                "type": "Attribute",
+            }
         )
 
         @dataclass
@@ -12245,13 +12159,13 @@ class ServiceRuleType:
             """
             application_limit: List[OptionalServiceApplicationLimitType] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="ApplicationLimit",
-                    type="Element",
-                    namespace="http://www.travelport.com/schema/common_v48_0",
-                    min_occurs=1,
-                    max_occurs=10
-                )
+                metadata={
+                    "name": "ApplicationLimit",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    "min_occurs": 1,
+                    "max_occurs": 10,
+                }
             )
 
     @dataclass
@@ -12263,28 +12177,28 @@ class ServiceRuleType:
         """
         modify_rule: List["ServiceRuleType.ModifyRules.ModifyRule"] = field(
             default_factory=list,
-            metadata=dict(
-                name="ModifyRule",
-                type="Element",
-                namespace="http://www.travelport.com/schema/common_v48_0",
-                min_occurs=1,
-                max_occurs=999
-            )
+            metadata={
+                "name": "ModifyRule",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/common_v48_0",
+                "min_occurs": 1,
+                "max_occurs": 999,
+            }
         )
         supported_modifications: List[ModificationType] = field(
             default_factory=list,
-            metadata=dict(
-                name="SupportedModifications",
-                type="Attribute",
-                tokens=True
-            )
+            metadata={
+                "name": "SupportedModifications",
+                "type": "Attribute",
+                "tokens": True,
+            }
         )
         provider_defined_modification_type: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="ProviderDefinedModificationType",
-                type="Attribute"
-            )
+            metadata={
+                "name": "ProviderDefinedModificationType",
+                "type": "Attribute",
+            }
         )
 
         @dataclass
@@ -12299,46 +12213,46 @@ class ServiceRuleType:
             """
             modification: Optional[ModificationType] = field(
                 default=None,
-                metadata=dict(
-                    name="Modification",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Modification",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
             automatically_applied_on_add: bool = field(
                 default=False,
-                metadata=dict(
-                    name="AutomaticallyAppliedOnAdd",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "AutomaticallyAppliedOnAdd",
+                    "type": "Attribute",
+                }
             )
             can_delete: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="CanDelete",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "CanDelete",
+                    "type": "Attribute",
+                }
             )
             can_add: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="CanAdd",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "CanAdd",
+                    "type": "Attribute",
+                }
             )
             refundable: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Refundable",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Refundable",
+                    "type": "Attribute",
+                }
             )
             provider_defined_modification_type: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="ProviderDefinedModificationType",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "ProviderDefinedModificationType",
+                    "type": "Attribute",
+                }
             )
 
     @dataclass
@@ -12348,13 +12262,13 @@ class ServiceRuleType:
         """
         secondary_type_rule: List["ServiceRuleType.SecondaryTypeRules.SecondaryTypeRule"] = field(
             default_factory=list,
-            metadata=dict(
-                name="SecondaryTypeRule",
-                type="Element",
-                namespace="http://www.travelport.com/schema/common_v48_0",
-                min_occurs=1,
-                max_occurs=999
-            )
+            metadata={
+                "name": "SecondaryTypeRule",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/common_v48_0",
+                "min_occurs": 1,
+                "max_occurs": 999,
+            }
         )
 
         @dataclass
@@ -12365,21 +12279,20 @@ class ServiceRuleType:
             """
             application_limit: List[OptionalServiceApplicationLimitType] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="ApplicationLimit",
-                    type="Element",
-                    namespace="http://www.travelport.com/schema/common_v48_0",
-                    min_occurs=0,
-                    max_occurs=10
-                )
+                metadata={
+                    "name": "ApplicationLimit",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    "max_occurs": 10,
+                }
             )
             secondary_type: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="SecondaryType",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "SecondaryType",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
 
@@ -12400,61 +12313,61 @@ class TypeCreditCardType(TypePaymentCard):
 
     extended_payment: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ExtendedPayment",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ExtendedPayment",
+            "type": "Attribute",
+        }
     )
     customer_reference: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CustomerReference",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CustomerReference",
+            "type": "Attribute",
+        }
     )
     acceptance_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="AcceptanceOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AcceptanceOverride",
+            "type": "Attribute",
+        }
     )
     third_party_payment: bool = field(
         default=False,
-        metadata=dict(
-            name="ThirdPartyPayment",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ThirdPartyPayment",
+            "type": "Attribute",
+        }
     )
     bank_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BankName",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BankName",
+            "type": "Attribute",
+        }
     )
     bank_country_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BankCountryCode",
-            type="Attribute",
-            length=2
-        )
+        metadata={
+            "name": "BankCountryCode",
+            "type": "Attribute",
+            "length": 2,
+        }
     )
     bank_state_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BankStateCode",
-            type="Attribute",
-            max_length=6
-        )
+        metadata={
+            "name": "BankStateCode",
+            "type": "Attribute",
+            "max_length": 6,
+        }
     )
     enett: bool = field(
         default=False,
-        metadata=dict(
-            name="Enett",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Enett",
+            "type": "Attribute",
+        }
     )
 
 
@@ -12480,100 +12393,98 @@ class TypePassengerType:
 
     name: Optional[Name] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "Name",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     loyalty_card: List[LoyaltyCard] = field(
         default_factory=list,
-        metadata=dict(
-            name="LoyaltyCard",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "LoyaltyCard",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     discount_card: List[DiscountCard] = field(
         default_factory=list,
-        metadata=dict(
-            name="DiscountCard",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=9
-        )
+        metadata={
+            "name": "DiscountCard",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 9,
+        }
     )
     personal_geography: Optional[PersonalGeography] = field(
         default=None,
-        metadata=dict(
-            name="PersonalGeography",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "PersonalGeography",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            min_length=3,
-            max_length=5
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 3,
+            "max_length": 5,
+        }
     )
     age: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Age",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Age",
+            "type": "Attribute",
+        }
     )
     dob: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DOB",
-            type="Attribute"
-        )
+        metadata={
+            "name": "DOB",
+            "type": "Attribute",
+        }
     )
     gender: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Gender",
-            type="Attribute",
-            min_length=1,
-            max_length=2
-        )
+        metadata={
+            "name": "Gender",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 2,
+        }
     )
     price_ptconly: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="PricePTCOnly",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PricePTCOnly",
+            "type": "Attribute",
+        }
     )
     booking_traveler_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Attribute",
+        }
     )
     accompanied_passenger: bool = field(
         default=False,
-        metadata=dict(
-            name="AccompaniedPassenger",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AccompaniedPassenger",
+            "type": "Attribute",
+        }
     )
     residency_type: Optional[TypeResidency] = field(
         default=None,
-        metadata=dict(
-            name="ResidencyType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ResidencyType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -12608,220 +12519,211 @@ class BaseCreateReservationReq(BaseReq):
     """
     linked_universal_record: List[LinkedUniversalRecord] = field(
         default_factory=list,
-        metadata=dict(
-            name="LinkedUniversalRecord",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "LinkedUniversalRecord",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     booking_traveler: List[BookingTraveler] = field(
         default_factory=list,
-        metadata=dict(
-            name="BookingTraveler",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "BookingTraveler",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     osi: List[Osi] = field(
         default_factory=list,
-        metadata=dict(
-            name="OSI",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "OSI",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     accounting_remark: List[AccountingRemark] = field(
         default_factory=list,
-        metadata=dict(
-            name="AccountingRemark",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "AccountingRemark",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     general_remark: List[GeneralRemark] = field(
         default_factory=list,
-        metadata=dict(
-            name="GeneralRemark",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "GeneralRemark",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     xmlremark: List[Xmlremark] = field(
         default_factory=list,
-        metadata=dict(
-            name="XMLRemark",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "XMLRemark",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     unassociated_remark: List[UnassociatedRemark] = field(
         default_factory=list,
-        metadata=dict(
-            name="UnassociatedRemark",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "UnassociatedRemark",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     postscript: Optional[Postscript] = field(
         default=None,
-        metadata=dict(
-            name="Postscript",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "Postscript",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     passive_info: Optional[PassiveInfo] = field(
         default=None,
-        metadata=dict(
-            name="PassiveInfo",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "PassiveInfo",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     continuity_check_override: Optional[ContinuityCheckOverride] = field(
         default=None,
-        metadata=dict(
-            name="ContinuityCheckOverride",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "ContinuityCheckOverride",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     agency_contact_info: Optional[AgencyContactInfo] = field(
         default=None,
-        metadata=dict(
-            name="AgencyContactInfo",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "AgencyContactInfo",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     customer_id: Optional[CustomerId] = field(
         default=None,
-        metadata=dict(
-            name="CustomerID",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "CustomerID",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     file_finishing_info: Optional[FileFinishingInfo] = field(
         default=None,
-        metadata=dict(
-            name="FileFinishingInfo",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "FileFinishingInfo",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     commission_remark: Optional[CommissionRemark] = field(
         default=None,
-        metadata=dict(
-            name="CommissionRemark",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "CommissionRemark",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     consolidator_remark: Optional[ConsolidatorRemark] = field(
         default=None,
-        metadata=dict(
-            name="ConsolidatorRemark",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "ConsolidatorRemark",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     invoice_remark: List[InvoiceRemark] = field(
         default_factory=list,
-        metadata=dict(
-            name="InvoiceRemark",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "InvoiceRemark",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     ssr: List[Ssr] = field(
         default_factory=list,
-        metadata=dict(
-            name="SSR",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "SSR",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
     email_notification: Optional[EmailNotification] = field(
         default=None,
-        metadata=dict(
-            name="EmailNotification",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "EmailNotification",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     queue_place: Optional[QueuePlace] = field(
         default=None,
-        metadata=dict(
-            name="QueuePlace",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0"
-        )
+        metadata={
+            "name": "QueuePlace",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+        }
     )
     rule_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RuleName",
-            type="Attribute",
-            max_length=10
-        )
+        metadata={
+            "name": "RuleName",
+            "type": "Attribute",
+            "max_length": 10,
+        }
     )
     universal_record_locator_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="UniversalRecordLocatorCode",
-            type="Attribute",
-            min_length=5,
-            max_length=8
-        )
+        metadata={
+            "name": "UniversalRecordLocatorCode",
+            "type": "Attribute",
+            "min_length": 5,
+            "max_length": 8,
+        }
     )
     provider_locator_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderLocatorCode",
-            type="Attribute",
-            min_length=5,
-            max_length=8
-        )
+        metadata={
+            "name": "ProviderLocatorCode",
+            "type": "Attribute",
+            "min_length": 5,
+            "max_length": 8,
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+        }
     )
     customer_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CustomerNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CustomerNumber",
+            "type": "Attribute",
+        }
     )
     version: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Version",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Version",
+            "type": "Attribute",
+        }
     )
 
 
@@ -12837,17 +12739,17 @@ class CreditCard(TypeCreditCardType):
 
     profile_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProfileID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProfileID",
+            "type": "Attribute",
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
 
 
@@ -12862,10 +12764,10 @@ class SearchPassenger(TypePassengerType):
 
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
 
 
@@ -12925,236 +12827,234 @@ class FormOfPayment:
 
     credit_card: Optional[CreditCard] = field(
         default=None,
-        metadata=dict(
-            name="CreditCard",
-            type="Element"
-        )
+        metadata={
+            "name": "CreditCard",
+            "type": "Element",
+        }
     )
     debit_card: Optional[DebitCard] = field(
         default=None,
-        metadata=dict(
-            name="DebitCard",
-            type="Element"
-        )
+        metadata={
+            "name": "DebitCard",
+            "type": "Element",
+        }
     )
     enett_van: Optional[EnettVan] = field(
         default=None,
-        metadata=dict(
-            name="EnettVan",
-            type="Element"
-        )
+        metadata={
+            "name": "EnettVan",
+            "type": "Element",
+        }
     )
     certificate: Optional[Certificate] = field(
         default=None,
-        metadata=dict(
-            name="Certificate",
-            type="Element"
-        )
+        metadata={
+            "name": "Certificate",
+            "type": "Element",
+        }
     )
     ticket_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TicketNumber",
-            type="Element",
-            min_length=1,
-            max_length=13
-        )
+        metadata={
+            "name": "TicketNumber",
+            "type": "Element",
+            "min_length": 1,
+            "max_length": 13,
+        }
     )
     check: Optional[Check] = field(
         default=None,
-        metadata=dict(
-            name="Check",
-            type="Element"
-        )
+        metadata={
+            "name": "Check",
+            "type": "Element",
+        }
     )
     requisition: Optional[Requisition] = field(
         default=None,
-        metadata=dict(
-            name="Requisition",
-            type="Element"
-        )
+        metadata={
+            "name": "Requisition",
+            "type": "Element",
+        }
     )
     misc_form_of_payment: Optional[MiscFormOfPayment] = field(
         default=None,
-        metadata=dict(
-            name="MiscFormOfPayment",
-            type="Element"
-        )
+        metadata={
+            "name": "MiscFormOfPayment",
+            "type": "Element",
+        }
     )
     agency_payment: Optional[AgencyPayment] = field(
         default=None,
-        metadata=dict(
-            name="AgencyPayment",
-            type="Element"
-        )
+        metadata={
+            "name": "AgencyPayment",
+            "type": "Element",
+        }
     )
     united_nations: Optional[UnitedNations] = field(
         default=None,
-        metadata=dict(
-            name="UnitedNations",
-            type="Element"
-        )
+        metadata={
+            "name": "UnitedNations",
+            "type": "Element",
+        }
     )
     direct_payment: Optional[DirectPayment] = field(
         default=None,
-        metadata=dict(
-            name="DirectPayment",
-            type="Element"
-        )
+        metadata={
+            "name": "DirectPayment",
+            "type": "Element",
+        }
     )
     agent_voucher: Optional[AgentVoucher] = field(
         default=None,
-        metadata=dict(
-            name="AgentVoucher",
-            type="Element"
-        )
+        metadata={
+            "name": "AgentVoucher",
+            "type": "Element",
+        }
     )
     payment_advice: Optional[PaymentAdvice] = field(
         default=None,
-        metadata=dict(
-            name="PaymentAdvice",
-            type="Element"
-        )
+        metadata={
+            "name": "PaymentAdvice",
+            "type": "Element",
+        }
     )
     provider_reservation_info_ref: List[TypeFormOfPaymentPnrreference] = field(
         default_factory=list,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     segment_ref: List[TypeGeneralReference] = field(
         default_factory=list,
-        metadata=dict(
-            name="SegmentRef",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "SegmentRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     bsppayment: Optional[Bsppayment] = field(
         default=None,
-        metadata=dict(
-            name="BSPPayment",
-            type="Element"
-        )
+        metadata={
+            "name": "BSPPayment",
+            "type": "Element",
+        }
     )
     arcpayment: Optional[Arcpayment] = field(
         default=None,
-        metadata=dict(
-            name="ARCPayment",
-            type="Element"
-        )
+        metadata={
+            "name": "ARCPayment",
+            "type": "Element",
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True,
-            max_length=25
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+            "max_length": 25,
+        }
     )
     fulfillment_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FulfillmentType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FulfillmentType",
+            "type": "Attribute",
+        }
     )
     fulfillment_location: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FulfillmentLocation",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FulfillmentLocation",
+            "type": "Attribute",
+        }
     )
     fulfillment_idtype: Optional[TypeFulfillmentIdtype] = field(
         default=None,
-        metadata=dict(
-            name="FulfillmentIDType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FulfillmentIDType",
+            "type": "Attribute",
+        }
     )
     fulfillment_idnumber: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FulfillmentIDNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FulfillmentIDNumber",
+            "type": "Attribute",
+        }
     )
     is_agent_type: bool = field(
         default=False,
-        metadata=dict(
-            name="IsAgentType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "IsAgentType",
+            "type": "Attribute",
+        }
     )
     agent_text: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentText",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AgentText",
+            "type": "Attribute",
+        }
     )
     reuse_fop: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ReuseFOP",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ReuseFOP",
+            "type": "Attribute",
+        }
     )
     external_reference: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ExternalReference",
-            type="Attribute",
-            max_length=32
-        )
+        metadata={
+            "name": "ExternalReference",
+            "type": "Attribute",
+            "max_length": 32,
+        }
     )
     reusable: bool = field(
         default=False,
-        metadata=dict(
-            name="Reusable",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Reusable",
+            "type": "Attribute",
+        }
     )
     profile_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProfileID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProfileID",
+            "type": "Attribute",
+        }
     )
     profile_key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProfileKey",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProfileKey",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -13178,68 +13078,68 @@ class Guarantee:
 
     credit_card: Optional[CreditCard] = field(
         default=None,
-        metadata=dict(
-            name="CreditCard",
-            type="Element"
-        )
+        metadata={
+            "name": "CreditCard",
+            "type": "Element",
+        }
     )
     other_guarantee_info: Optional[OtherGuaranteeInfo] = field(
         default=None,
-        metadata=dict(
-            name="OtherGuaranteeInfo",
-            type="Element"
-        )
+        metadata={
+            "name": "OtherGuaranteeInfo",
+            "type": "Element",
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     reuse_fop: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ReuseFOP",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ReuseFOP",
+            "type": "Attribute",
+        }
     )
     external_reference: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ExternalReference",
-            type="Attribute",
-            max_length=32
-        )
+        metadata={
+            "name": "ExternalReference",
+            "type": "Attribute",
+            "max_length": 32,
+        }
     )
     reusable: bool = field(
         default=False,
-        metadata=dict(
-            name="Reusable",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Reusable",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
 
 
@@ -13251,13 +13151,12 @@ class BaseCreateWithFormOfPaymentReq(BaseCreateReservationReq):
     """
     form_of_payment: List[FormOfPayment] = field(
         default_factory=list,
-        metadata=dict(
-            name="FormOfPayment",
-            type="Element",
-            namespace="http://www.travelport.com/schema/common_v48_0",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "FormOfPayment",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
     )
 
 
@@ -13278,51 +13177,50 @@ class McoexchangeInfo:
 
     form_of_payment: Optional[FormOfPayment] = field(
         default=None,
-        metadata=dict(
-            name="FormOfPayment",
-            type="Element"
-        )
+        metadata={
+            "name": "FormOfPayment",
+            "type": "Element",
+        }
     )
     exchanged_coupon: List[ExchangedCoupon] = field(
         default_factory=list,
-        metadata=dict(
-            name="ExchangedCoupon",
-            type="Element",
-            min_occurs=0,
-            max_occurs=4
-        )
+        metadata={
+            "name": "ExchangedCoupon",
+            "type": "Element",
+            "max_occurs": 4,
+        }
     )
     original_ticket_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OriginalTicketNumber",
-            type="Attribute",
-            length=13
-        )
+        metadata={
+            "name": "OriginalTicketNumber",
+            "type": "Attribute",
+            "length": 13,
+        }
     )
     original_city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OriginalCityCode",
-            type="Attribute",
-            length=3
-        )
+        metadata={
+            "name": "OriginalCityCode",
+            "type": "Attribute",
+            "length": 3,
+        }
     )
     original_ticket_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OriginalTicketDate",
-            type="Attribute",
-            pattern=r"[^:Z].*"
-        )
+        metadata={
+            "name": "OriginalTicketDate",
+            "type": "Attribute",
+            "pattern": r"[^:Z].*",
+        }
     )
     iatacode: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="IATACode",
-            type="Attribute",
-            max_length=8
-        )
+        metadata={
+            "name": "IATACode",
+            "type": "Attribute",
+            "max_length": 8,
+        }
     )
 
 
@@ -13356,131 +13254,130 @@ class ServiceFeeInfo:
 
     form_of_payment: Optional[FormOfPayment] = field(
         default=None,
-        metadata=dict(
-            name="FormOfPayment",
-            type="Element"
-        )
+        metadata={
+            "name": "FormOfPayment",
+            "type": "Element",
+        }
     )
     service_fee_tax_info: List[ServiceFeeTaxInfo] = field(
         default_factory=list,
-        metadata=dict(
-            name="ServiceFeeTaxInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "ServiceFeeTaxInfo",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     credit_card_auth: Optional[CreditCardAuth] = field(
         default=None,
-        metadata=dict(
-            name="CreditCardAuth",
-            type="Element"
-        )
+        metadata={
+            "name": "CreditCardAuth",
+            "type": "Element",
+        }
     )
     payment: Optional[Payment] = field(
         default=None,
-        metadata=dict(
-            name="Payment",
-            type="Element"
-        )
+        metadata={
+            "name": "Payment",
+            "type": "Element",
+        }
     )
     status: Optional[TypeStatus] = field(
         default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Status",
+            "type": "Attribute",
+        }
     )
     description: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Description",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Description",
+            "type": "Attribute",
+        }
     )
     key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Key",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
     )
     confirmation: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Confirmation",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Confirmation",
+            "type": "Attribute",
+        }
     )
     ticket_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TicketNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TicketNumber",
+            "type": "Attribute",
+        }
     )
     booking_traveler_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BookingTravelerRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Attribute",
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     passive_provider_reservation_info_ref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PassiveProviderReservationInfoRef",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PassiveProviderReservationInfoRef",
+            "type": "Attribute",
+        }
     )
     total_amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TotalAmount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TotalAmount",
+            "type": "Attribute",
+        }
     )
     base_amount: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BaseAmount",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BaseAmount",
+            "type": "Attribute",
+        }
     )
     taxes: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Taxes",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Taxes",
+            "type": "Attribute",
+        }
     )
     el_stat: Optional[TypeElementStatus] = field(
         default=None,
-        metadata=dict(
-            name="ElStat",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
     )
     key_override: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="KeyOverride",
-            type="Attribute"
-        )
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
     )
     booking_traveler_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BookingTravelerName",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BookingTravelerName",
+            "type": "Attribute",
+        }
     )
 
 
@@ -13520,170 +13417,166 @@ class Mco(Mcoinformation):
 
     form_of_payment: List[FormOfPayment] = field(
         default_factory=list,
-        metadata=dict(
-            name="FormOfPayment",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "FormOfPayment",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     endorsement: Optional[Endorsement] = field(
         default=None,
-        metadata=dict(
-            name="Endorsement",
-            type="Element"
-        )
+        metadata={
+            "name": "Endorsement",
+            "type": "Element",
+        }
     )
     mcoexchange_info: Optional[McoexchangeInfo] = field(
         default=None,
-        metadata=dict(
-            name="MCOExchangeInfo",
-            type="Element"
-        )
+        metadata={
+            "name": "MCOExchangeInfo",
+            "type": "Element",
+        }
     )
     mcofee_info: Optional[McofeeInfo] = field(
         default=None,
-        metadata=dict(
-            name="MCOFeeInfo",
-            type="Element"
-        )
+        metadata={
+            "name": "MCOFeeInfo",
+            "type": "Element",
+        }
     )
     mcoremark: List[Mcoremark] = field(
         default_factory=list,
-        metadata=dict(
-            name="MCORemark",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "MCORemark",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     mcoprice_data: Optional[McopriceData] = field(
         default=None,
-        metadata=dict(
-            name="MCOPriceData",
-            type="Element"
-        )
+        metadata={
+            "name": "MCOPriceData",
+            "type": "Element",
+        }
     )
     stock_control: List[StockControl] = field(
         default_factory=list,
-        metadata=dict(
-            name="StockControl",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "StockControl",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     mcotext: List[Mcotext] = field(
         default_factory=list,
-        metadata=dict(
-            name="MCOText",
-            type="Element",
-            min_occurs=0,
-            max_occurs=999
-        )
+        metadata={
+            "name": "MCOText",
+            "type": "Element",
+            "max_occurs": 999,
+        }
     )
     ticket_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TicketType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TicketType",
+            "type": "Attribute",
+        }
     )
     ticket_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TicketNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TicketNumber",
+            "type": "Attribute",
+        }
     )
     mcoissued: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="MCOIssued",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "MCOIssued",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     mcoissue_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MCOIssueDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MCOIssueDate",
+            "type": "Attribute",
+        }
     )
     mcodoc_num: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MCODocNum",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MCODocNum",
+            "type": "Attribute",
+        }
     )
     issue_reason_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="IssueReasonCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "IssueReasonCode",
+            "type": "Attribute",
+        }
     )
     plating_carrier: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PlatingCarrier",
-            type="Attribute",
-            length=2
-        )
+        metadata={
+            "name": "PlatingCarrier",
+            "type": "Attribute",
+            "length": 2,
+        }
     )
     tour_operator: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TourOperator",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TourOperator",
+            "type": "Attribute",
+        }
     )
     location: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Location",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Location",
+            "type": "Attribute",
+        }
     )
     tour_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TourCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TourCode",
+            "type": "Attribute",
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderCode",
-            type="Attribute",
-            min_length=2,
-            max_length=5
-        )
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
     )
     provider_locator_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProviderLocatorCode",
-            type="Attribute",
-            max_length=15
-        )
+        metadata={
+            "name": "ProviderLocatorCode",
+            "type": "Attribute",
+            "max_length": 15,
+        }
     )
     pseudo_city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PseudoCityCode",
-            type="Attribute",
-            min_length=2,
-            max_length=10
-        )
+        metadata={
+            "name": "PseudoCityCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 10,
+        }
     )
     expiry_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ExpiryDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ExpiryDate",
+            "type": "Attribute",
+        }
     )

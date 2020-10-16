@@ -25,38 +25,38 @@ class CareRecordQupcIn043100Uv01RequestType:
 
     local_device_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="localDeviceId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "localDeviceId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     sender_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="senderOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "senderOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     receiver_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="receiverOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "receiverOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     query: Optional[QupcIn043100Uv01McciMt000100Uv01Message] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -70,12 +70,12 @@ class CareRecordQupcIn043200Uv01ResponseType:
 
     care_record: Optional[QupcIn043200Uv01MfmiMt700712Uv01Subject1] = field(
         default=None,
-        metadata=dict(
-            name="careRecord",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "careRecord",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -92,38 +92,38 @@ class FindEncountersPrpaIn900300Uv02RequestType:
 
     local_device_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="localDeviceId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "localDeviceId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     sender_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="senderOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "senderOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     receiver_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="receiverOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "receiverOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     query: Optional[PrpaIn900300Uv02McciMt000100Uv01Message] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -137,12 +137,10 @@ class FindEncountersPrpaMt900350Uv02ResponseType:
 
     event: List[PrpaMt900350Uv02EncounterEvent] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -159,38 +157,38 @@ class FindPatientsPrpaIn201305Uv02RequestType:
 
     local_device_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="localDeviceId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "localDeviceId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     sender_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="senderOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "senderOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     receiver_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="receiverOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "receiverOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     query: Optional[PrpaIn201305Uv02McciMt000100Uv01Message] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -204,12 +202,10 @@ class FindPatientsPrpaMt201310Uv02ResponseType:
 
     subject: List[PrpaMt201310Uv02Patient] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -226,38 +222,38 @@ class PatientDemographicsPrpaIn201307Uv02RequestType:
 
     local_device_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="localDeviceId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "localDeviceId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     sender_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="senderOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "senderOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     receiver_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="receiverOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "receiverOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     query: Optional[PrpaIn201307Uv02McciMt000100Uv01Message] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -271,11 +267,11 @@ class PatientDemographicsPrpaMt201303Uv02ResponseType:
 
     subject: Optional[PrpaMt201303Uv02Patient] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 

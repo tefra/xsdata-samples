@@ -17,21 +17,21 @@ class CommunityPrpaIn201306Uv02ResponseType:
 
     prpa_in201306_uv02: Optional[PrpaIn201306Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201306UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201306UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_community: Optional[NhinTargetCommunityType] = field(
         default=None,
-        metadata=dict(
-            name="nhinTargetCommunity",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "nhinTargetCommunity",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -45,13 +45,12 @@ class RespondingGatewayPrpaIn201306Uv02ResponseType:
 
     community_response: List[CommunityPrpaIn201306Uv02ResponseType] = field(
         default_factory=list,
-        metadata=dict(
-            name="communityResponse",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "communityResponse",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        }
     )
 
 

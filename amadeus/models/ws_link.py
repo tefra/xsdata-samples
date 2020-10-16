@@ -12,13 +12,13 @@ class ConsumerType:
     """
     unique_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="UniqueID",
-            type="Element",
-            namespace="http://wsdl.amadeus.com/2010/06/ws/Link_v1",
-            required=True,
-            max_length=64
-        )
+        metadata={
+            "name": "UniqueID",
+            "type": "Element",
+            "namespace": "http://wsdl.amadeus.com/2010/06/ws/Link_v1",
+            "required": True,
+            "max_length": 64,
+        }
     )
 
 
@@ -30,13 +30,13 @@ class ReceiverType:
     """
     server_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ServerID",
-            type="Element",
-            namespace="http://wsdl.amadeus.com/2010/06/ws/Link_v1",
-            required=True,
-            max_length=64
-        )
+        metadata={
+            "name": "ServerID",
+            "type": "Element",
+            "namespace": "http://wsdl.amadeus.com/2010/06/ws/Link_v1",
+            "required": True,
+            "max_length": 64,
+        }
     )
 
 
@@ -49,19 +49,19 @@ class TransactionFlowLinkType:
     """
     consumer: Optional[ConsumerType] = field(
         default=None,
-        metadata=dict(
-            name="Consumer",
-            type="Element",
-            namespace="http://wsdl.amadeus.com/2010/06/ws/Link_v1"
-        )
+        metadata={
+            "name": "Consumer",
+            "type": "Element",
+            "namespace": "http://wsdl.amadeus.com/2010/06/ws/Link_v1",
+        }
     )
     receiver: Optional[ReceiverType] = field(
         default=None,
-        metadata=dict(
-            name="Receiver",
-            type="Element",
-            namespace="http://wsdl.amadeus.com/2010/06/ws/Link_v1"
-        )
+        metadata={
+            "name": "Receiver",
+            "type": "Element",
+            "namespace": "http://wsdl.amadeus.com/2010/06/ws/Link_v1",
+        }
     )
 
 

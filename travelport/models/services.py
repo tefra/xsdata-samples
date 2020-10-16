@@ -78,17 +78,17 @@ class AirAvailabilitySearchPortTypeServiceInput:
 
     header: Optional["AirAvailabilitySearchPortTypeServiceInput.Header"] = field(
         default=None,
-        metadata=dict(
-            name="Header",
-            type="Element"
-        )
+        metadata={
+            "name": "Header",
+            "type": "Element",
+        }
     )
     body: Optional["AirAvailabilitySearchPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -98,11 +98,11 @@ class AirAvailabilitySearchPortTypeServiceInput:
         """
         session_context: Optional[SessionContext] = field(
             default=None,
-            metadata=dict(
-                name="SessionContext",
-                type="Element",
-                namespace="http://www.travelport.com/soa/common/security/SessionContext_v1"
-            )
+            metadata={
+                "name": "SessionContext",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
+            }
         )
 
     @dataclass
@@ -112,11 +112,11 @@ class AirAvailabilitySearchPortTypeServiceInput:
         """
         availability_search_req: Optional[AvailabilitySearchReq] = field(
             default=None,
-            metadata=dict(
-                name="AvailabilitySearchReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AvailabilitySearchReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -131,10 +131,10 @@ class AirAvailabilitySearchPortTypeServiceOutput:
 
     body: Optional["AirAvailabilitySearchPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -145,18 +145,18 @@ class AirAvailabilitySearchPortTypeServiceOutput:
         """
         availability_search_rsp: Optional[AvailabilitySearchRsp] = field(
             default=None,
-            metadata=dict(
-                name="AvailabilitySearchRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AvailabilitySearchRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirAvailabilitySearchPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -169,31 +169,31 @@ class AirAvailabilitySearchPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirAvailabilitySearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -203,11 +203,11 @@ class AirAvailabilitySearchPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -222,10 +222,10 @@ class AirExchangeEligibilityPortTypeServiceInput:
 
     body: Optional["AirExchangeEligibilityPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -235,11 +235,11 @@ class AirExchangeEligibilityPortTypeServiceInput:
         """
         air_exchange_eligibility_req: Optional[AirExchangeEligibilityReq] = field(
             default=None,
-            metadata=dict(
-                name="AirExchangeEligibilityReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirExchangeEligibilityReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -254,10 +254,10 @@ class AirExchangeEligibilityPortTypeServiceOutput:
 
     body: Optional["AirExchangeEligibilityPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -268,18 +268,18 @@ class AirExchangeEligibilityPortTypeServiceOutput:
         """
         air_exchange_eligibility_rsp: Optional[AirExchangeEligibilityRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirExchangeEligibilityRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirExchangeEligibilityRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirExchangeEligibilityPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -292,31 +292,31 @@ class AirExchangeEligibilityPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirExchangeEligibilityPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -326,11 +326,11 @@ class AirExchangeEligibilityPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -345,10 +345,10 @@ class AirExchangeMultiQuotePortTypeServiceInput:
 
     body: Optional["AirExchangeMultiQuotePortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -358,11 +358,11 @@ class AirExchangeMultiQuotePortTypeServiceInput:
         """
         air_exchange_multi_quote_req: Optional[AirExchangeMultiQuoteReq] = field(
             default=None,
-            metadata=dict(
-                name="AirExchangeMultiQuoteReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirExchangeMultiQuoteReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -377,10 +377,10 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
 
     body: Optional["AirExchangeMultiQuotePortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -391,18 +391,18 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
         """
         air_exchange_multi_quote_rsp: Optional[AirExchangeMultiQuoteRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirExchangeMultiQuoteRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirExchangeMultiQuoteRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirExchangeMultiQuotePortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -415,31 +415,31 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirExchangeMultiQuotePortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -449,11 +449,11 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -468,10 +468,10 @@ class AirExchangeProcessPortTypeServiceInput:
 
     body: Optional["AirExchangeProcessPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -481,11 +481,11 @@ class AirExchangeProcessPortTypeServiceInput:
         """
         air_exchange_req: Optional[AirExchangeReq] = field(
             default=None,
-            metadata=dict(
-                name="AirExchangeReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirExchangeReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -500,10 +500,10 @@ class AirExchangeProcessPortTypeServiceOutput:
 
     body: Optional["AirExchangeProcessPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -514,18 +514,18 @@ class AirExchangeProcessPortTypeServiceOutput:
         """
         air_exchange_rsp: Optional[AirExchangeRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirExchangeRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirExchangeRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirExchangeProcessPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -538,31 +538,31 @@ class AirExchangeProcessPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirExchangeProcessPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -572,11 +572,11 @@ class AirExchangeProcessPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -591,10 +591,10 @@ class AirExchangeQuotePortTypeServiceInput:
 
     body: Optional["AirExchangeQuotePortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -604,11 +604,11 @@ class AirExchangeQuotePortTypeServiceInput:
         """
         air_exchange_quote_req: Optional[AirExchangeQuoteReq] = field(
             default=None,
-            metadata=dict(
-                name="AirExchangeQuoteReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirExchangeQuoteReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -623,10 +623,10 @@ class AirExchangeQuotePortTypeServiceOutput:
 
     body: Optional["AirExchangeQuotePortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -637,18 +637,18 @@ class AirExchangeQuotePortTypeServiceOutput:
         """
         air_exchange_quote_rsp: Optional[AirExchangeQuoteRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirExchangeQuoteRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirExchangeQuoteRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirExchangeQuotePortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -661,31 +661,31 @@ class AirExchangeQuotePortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirExchangeQuotePortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -695,11 +695,11 @@ class AirExchangeQuotePortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -715,17 +715,17 @@ class AirExchangeTicketingPortTypeServiceInput:
 
     header: Optional["AirExchangeTicketingPortTypeServiceInput.Header"] = field(
         default=None,
-        metadata=dict(
-            name="Header",
-            type="Element"
-        )
+        metadata={
+            "name": "Header",
+            "type": "Element",
+        }
     )
     body: Optional["AirExchangeTicketingPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -735,11 +735,11 @@ class AirExchangeTicketingPortTypeServiceInput:
         """
         session_context: Optional[SessionContext] = field(
             default=None,
-            metadata=dict(
-                name="SessionContext",
-                type="Element",
-                namespace="http://www.travelport.com/soa/common/security/SessionContext_v1"
-            )
+            metadata={
+                "name": "SessionContext",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
+            }
         )
 
     @dataclass
@@ -749,11 +749,11 @@ class AirExchangeTicketingPortTypeServiceInput:
         """
         air_exchange_ticketing_req: Optional[AirExchangeTicketingReq] = field(
             default=None,
-            metadata=dict(
-                name="AirExchangeTicketingReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirExchangeTicketingReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -768,10 +768,10 @@ class AirExchangeTicketingPortTypeServiceOutput:
 
     body: Optional["AirExchangeTicketingPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -782,18 +782,18 @@ class AirExchangeTicketingPortTypeServiceOutput:
         """
         air_exchange_ticketing_rsp: Optional[AirExchangeTicketingRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirExchangeTicketingRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirExchangeTicketingRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirExchangeTicketingPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -806,31 +806,31 @@ class AirExchangeTicketingPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirExchangeTicketingPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -840,11 +840,11 @@ class AirExchangeTicketingPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -860,17 +860,17 @@ class AirFareDisplayPortTypeServiceInput:
 
     header: Optional["AirFareDisplayPortTypeServiceInput.Header"] = field(
         default=None,
-        metadata=dict(
-            name="Header",
-            type="Element"
-        )
+        metadata={
+            "name": "Header",
+            "type": "Element",
+        }
     )
     body: Optional["AirFareDisplayPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -880,11 +880,11 @@ class AirFareDisplayPortTypeServiceInput:
         """
         session_context: Optional[SessionContext] = field(
             default=None,
-            metadata=dict(
-                name="SessionContext",
-                type="Element",
-                namespace="http://www.travelport.com/soa/common/security/SessionContext_v1"
-            )
+            metadata={
+                "name": "SessionContext",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
+            }
         )
 
     @dataclass
@@ -894,11 +894,11 @@ class AirFareDisplayPortTypeServiceInput:
         """
         air_fare_display_req: Optional[AirFareDisplayReq] = field(
             default=None,
-            metadata=dict(
-                name="AirFareDisplayReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirFareDisplayReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -913,10 +913,10 @@ class AirFareDisplayPortTypeServiceOutput:
 
     body: Optional["AirFareDisplayPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -927,18 +927,18 @@ class AirFareDisplayPortTypeServiceOutput:
         """
         air_fare_display_rsp: Optional[AirFareDisplayRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirFareDisplayRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirFareDisplayRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirFareDisplayPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -951,31 +951,31 @@ class AirFareDisplayPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirFareDisplayPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -985,11 +985,11 @@ class AirFareDisplayPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -1005,17 +1005,17 @@ class AirFareRulesPortTypeServiceInput:
 
     header: Optional["AirFareRulesPortTypeServiceInput.Header"] = field(
         default=None,
-        metadata=dict(
-            name="Header",
-            type="Element"
-        )
+        metadata={
+            "name": "Header",
+            "type": "Element",
+        }
     )
     body: Optional["AirFareRulesPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1025,11 +1025,11 @@ class AirFareRulesPortTypeServiceInput:
         """
         session_context: Optional[SessionContext] = field(
             default=None,
-            metadata=dict(
-                name="SessionContext",
-                type="Element",
-                namespace="http://www.travelport.com/soa/common/security/SessionContext_v1"
-            )
+            metadata={
+                "name": "SessionContext",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
+            }
         )
 
     @dataclass
@@ -1039,11 +1039,11 @@ class AirFareRulesPortTypeServiceInput:
         """
         air_fare_rules_req: Optional[AirFareRulesReq] = field(
             default=None,
-            metadata=dict(
-                name="AirFareRulesReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirFareRulesReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -1058,10 +1058,10 @@ class AirFareRulesPortTypeServiceOutput:
 
     body: Optional["AirFareRulesPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1072,18 +1072,18 @@ class AirFareRulesPortTypeServiceOutput:
         """
         air_fare_rules_rsp: Optional[AirFareRulesRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirFareRulesRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirFareRulesRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirFareRulesPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -1096,31 +1096,31 @@ class AirFareRulesPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirFareRulesPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -1130,11 +1130,11 @@ class AirFareRulesPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -1149,10 +1149,10 @@ class AirLowFareSearchAsynchPortTypeServiceInput:
 
     body: Optional["AirLowFareSearchAsynchPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1162,11 +1162,11 @@ class AirLowFareSearchAsynchPortTypeServiceInput:
         """
         low_fare_search_asynch_req: Optional[LowFareSearchAsynchReq] = field(
             default=None,
-            metadata=dict(
-                name="LowFareSearchAsynchReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "LowFareSearchAsynchReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -1181,10 +1181,10 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
 
     body: Optional["AirLowFareSearchAsynchPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1195,18 +1195,18 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
         """
         low_fare_search_asynch_rsp: Optional[LowFareSearchAsynchRsp] = field(
             default=None,
-            metadata=dict(
-                name="LowFareSearchAsynchRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "LowFareSearchAsynchRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirLowFareSearchAsynchPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -1219,31 +1219,31 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirLowFareSearchAsynchPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -1253,11 +1253,11 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -1273,17 +1273,17 @@ class AirLowFareSearchPortTypeServiceInput:
 
     header: Optional["AirLowFareSearchPortTypeServiceInput.Header"] = field(
         default=None,
-        metadata=dict(
-            name="Header",
-            type="Element"
-        )
+        metadata={
+            "name": "Header",
+            "type": "Element",
+        }
     )
     body: Optional["AirLowFareSearchPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1293,11 +1293,11 @@ class AirLowFareSearchPortTypeServiceInput:
         """
         session_context: Optional[SessionContext] = field(
             default=None,
-            metadata=dict(
-                name="SessionContext",
-                type="Element",
-                namespace="http://www.travelport.com/soa/common/security/SessionContext_v1"
-            )
+            metadata={
+                "name": "SessionContext",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
+            }
         )
 
     @dataclass
@@ -1307,11 +1307,11 @@ class AirLowFareSearchPortTypeServiceInput:
         """
         low_fare_search_req: Optional[LowFareSearchReq] = field(
             default=None,
-            metadata=dict(
-                name="LowFareSearchReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "LowFareSearchReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -1326,10 +1326,10 @@ class AirLowFareSearchPortTypeServiceOutput:
 
     body: Optional["AirLowFareSearchPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1340,18 +1340,18 @@ class AirLowFareSearchPortTypeServiceOutput:
         """
         low_fare_search_rsp: Optional[LowFareSearchRsp] = field(
             default=None,
-            metadata=dict(
-                name="LowFareSearchRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "LowFareSearchRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirLowFareSearchPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -1364,31 +1364,31 @@ class AirLowFareSearchPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirLowFareSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -1398,11 +1398,11 @@ class AirLowFareSearchPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -1417,10 +1417,10 @@ class AirMerchandisingDetailsPortTypeServiceInput:
 
     body: Optional["AirMerchandisingDetailsPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1430,11 +1430,11 @@ class AirMerchandisingDetailsPortTypeServiceInput:
         """
         air_merchandising_details_req: Optional[AirMerchandisingDetailsReq] = field(
             default=None,
-            metadata=dict(
-                name="AirMerchandisingDetailsReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirMerchandisingDetailsReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -1449,10 +1449,10 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
 
     body: Optional["AirMerchandisingDetailsPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1463,18 +1463,18 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
         """
         air_merchandising_details_rsp: Optional[AirMerchandisingDetailsRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirMerchandisingDetailsRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirMerchandisingDetailsRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirMerchandisingDetailsPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -1487,31 +1487,31 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirMerchandisingDetailsPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -1521,11 +1521,11 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -1540,10 +1540,10 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceInput:
 
     body: Optional["AirMerchandisingOfferAvailabilityPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1553,11 +1553,11 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceInput:
         """
         air_merchandising_offer_availability_req: Optional[AirMerchandisingOfferAvailabilityReq] = field(
             default=None,
-            metadata=dict(
-                name="AirMerchandisingOfferAvailabilityReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirMerchandisingOfferAvailabilityReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -1572,10 +1572,10 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
 
     body: Optional["AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1586,18 +1586,18 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
         """
         air_merchandising_offer_availability_rsp: Optional[AirMerchandisingOfferAvailabilityRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirMerchandisingOfferAvailabilityRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirMerchandisingOfferAvailabilityRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -1610,31 +1610,31 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -1644,11 +1644,11 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -1663,10 +1663,10 @@ class AirPrePayPortTypeServiceInput:
 
     body: Optional["AirPrePayPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1676,11 +1676,11 @@ class AirPrePayPortTypeServiceInput:
         """
         air_pre_pay_req: Optional[AirPrePayReq] = field(
             default=None,
-            metadata=dict(
-                name="AirPrePayReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirPrePayReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -1695,10 +1695,10 @@ class AirPrePayPortTypeServiceOutput:
 
     body: Optional["AirPrePayPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1709,18 +1709,18 @@ class AirPrePayPortTypeServiceOutput:
         """
         air_pre_pay_rsp: Optional[AirPrePayRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirPrePayRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirPrePayRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirPrePayPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -1733,31 +1733,31 @@ class AirPrePayPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirPrePayPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -1767,11 +1767,11 @@ class AirPrePayPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -1787,17 +1787,17 @@ class AirPricePortTypeServiceInput:
 
     header: Optional["AirPricePortTypeServiceInput.Header"] = field(
         default=None,
-        metadata=dict(
-            name="Header",
-            type="Element"
-        )
+        metadata={
+            "name": "Header",
+            "type": "Element",
+        }
     )
     body: Optional["AirPricePortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1807,11 +1807,11 @@ class AirPricePortTypeServiceInput:
         """
         session_context: Optional[SessionContext] = field(
             default=None,
-            metadata=dict(
-                name="SessionContext",
-                type="Element",
-                namespace="http://www.travelport.com/soa/common/security/SessionContext_v1"
-            )
+            metadata={
+                "name": "SessionContext",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
+            }
         )
 
     @dataclass
@@ -1821,11 +1821,11 @@ class AirPricePortTypeServiceInput:
         """
         air_price_req: Optional[AirPriceReq] = field(
             default=None,
-            metadata=dict(
-                name="AirPriceReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirPriceReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -1840,10 +1840,10 @@ class AirPricePortTypeServiceOutput:
 
     body: Optional["AirPricePortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1854,18 +1854,18 @@ class AirPricePortTypeServiceOutput:
         """
         air_price_rsp: Optional[AirPriceRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirPriceRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirPriceRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirPricePortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -1878,31 +1878,31 @@ class AirPricePortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirPricePortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -1912,11 +1912,11 @@ class AirPricePortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -1931,10 +1931,10 @@ class AirRefundQuotePortTypeServiceInput:
 
     body: Optional["AirRefundQuotePortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1944,11 +1944,11 @@ class AirRefundQuotePortTypeServiceInput:
         """
         air_refund_quote_req: Optional[AirRefundQuoteReq] = field(
             default=None,
-            metadata=dict(
-                name="AirRefundQuoteReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirRefundQuoteReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -1963,10 +1963,10 @@ class AirRefundQuotePortTypeServiceOutput:
 
     body: Optional["AirRefundQuotePortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -1977,18 +1977,18 @@ class AirRefundQuotePortTypeServiceOutput:
         """
         air_refund_quote_rsp: Optional[AirRefundQuoteRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirRefundQuoteRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirRefundQuoteRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirRefundQuotePortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -2001,31 +2001,31 @@ class AirRefundQuotePortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirRefundQuotePortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -2035,11 +2035,11 @@ class AirRefundQuotePortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -2054,10 +2054,10 @@ class AirRefundTicketPortTypeServiceInput:
 
     body: Optional["AirRefundTicketPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2067,11 +2067,11 @@ class AirRefundTicketPortTypeServiceInput:
         """
         air_refund_req: Optional[AirRefundReq] = field(
             default=None,
-            metadata=dict(
-                name="AirRefundReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirRefundReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -2086,10 +2086,10 @@ class AirRefundTicketPortTypeServiceOutput:
 
     body: Optional["AirRefundTicketPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2100,18 +2100,18 @@ class AirRefundTicketPortTypeServiceOutput:
         """
         air_refund_rsp: Optional[AirRefundRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirRefundRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirRefundRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirRefundTicketPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -2124,31 +2124,31 @@ class AirRefundTicketPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirRefundTicketPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -2158,11 +2158,11 @@ class AirRefundTicketPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -2177,10 +2177,10 @@ class AirRepriceSearchPortTypeServiceInput:
 
     body: Optional["AirRepriceSearchPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2190,11 +2190,11 @@ class AirRepriceSearchPortTypeServiceInput:
         """
         air_reprice_req: Optional[AirRepriceReq] = field(
             default=None,
-            metadata=dict(
-                name="AirRepriceReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirRepriceReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -2209,10 +2209,10 @@ class AirRepriceSearchPortTypeServiceOutput:
 
     body: Optional["AirRepriceSearchPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2223,18 +2223,18 @@ class AirRepriceSearchPortTypeServiceOutput:
         """
         air_reprice_rsp: Optional[AirRepriceRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirRepriceRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirRepriceRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirRepriceSearchPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -2247,31 +2247,31 @@ class AirRepriceSearchPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirRepriceSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -2281,11 +2281,11 @@ class AirRepriceSearchPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -2300,10 +2300,10 @@ class AirRetrieveDocumentPortTypeServiceInput:
 
     body: Optional["AirRetrieveDocumentPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2313,11 +2313,11 @@ class AirRetrieveDocumentPortTypeServiceInput:
         """
         air_retrieve_document_req: Optional[AirRetrieveDocumentReq] = field(
             default=None,
-            metadata=dict(
-                name="AirRetrieveDocumentReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirRetrieveDocumentReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -2332,10 +2332,10 @@ class AirRetrieveDocumentPortTypeServiceOutput:
 
     body: Optional["AirRetrieveDocumentPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2346,18 +2346,18 @@ class AirRetrieveDocumentPortTypeServiceOutput:
         """
         air_retrieve_document_rsp: Optional[AirRetrieveDocumentRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirRetrieveDocumentRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirRetrieveDocumentRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirRetrieveDocumentPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -2370,31 +2370,31 @@ class AirRetrieveDocumentPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirRetrieveDocumentPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -2404,11 +2404,11 @@ class AirRetrieveDocumentPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -2423,10 +2423,10 @@ class AirRetrieveLowFareSearchPortTypeServiceInput:
 
     body: Optional["AirRetrieveLowFareSearchPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2436,11 +2436,11 @@ class AirRetrieveLowFareSearchPortTypeServiceInput:
         """
         retrieve_low_fare_search_req: Optional[RetrieveLowFareSearchReq] = field(
             default=None,
-            metadata=dict(
-                name="RetrieveLowFareSearchReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "RetrieveLowFareSearchReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -2455,10 +2455,10 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
 
     body: Optional["AirRetrieveLowFareSearchPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2469,18 +2469,18 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
         """
         retrieve_low_fare_search_rsp: Optional[RetrieveLowFareSearchRsp] = field(
             default=None,
-            metadata=dict(
-                name="RetrieveLowFareSearchRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "RetrieveLowFareSearchRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirRetrieveLowFareSearchPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -2493,31 +2493,31 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirRetrieveLowFareSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -2527,11 +2527,11 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -2546,10 +2546,10 @@ class AirScheduleSearchPortTypeServiceInput:
 
     body: Optional["AirScheduleSearchPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2559,11 +2559,11 @@ class AirScheduleSearchPortTypeServiceInput:
         """
         schedule_search_req: Optional[ScheduleSearchReq] = field(
             default=None,
-            metadata=dict(
-                name="ScheduleSearchReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "ScheduleSearchReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -2578,10 +2578,10 @@ class AirScheduleSearchPortTypeServiceOutput:
 
     body: Optional["AirScheduleSearchPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2592,18 +2592,18 @@ class AirScheduleSearchPortTypeServiceOutput:
         """
         schedule_search_rsp: Optional[ScheduleSearchRsp] = field(
             default=None,
-            metadata=dict(
-                name="ScheduleSearchRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "ScheduleSearchRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirScheduleSearchPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -2616,31 +2616,31 @@ class AirScheduleSearchPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirScheduleSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -2650,11 +2650,11 @@ class AirScheduleSearchPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -2669,10 +2669,10 @@ class AirTicketingPortTypeServiceInput:
 
     body: Optional["AirTicketingPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2682,11 +2682,11 @@ class AirTicketingPortTypeServiceInput:
         """
         air_ticketing_req: Optional[AirTicketingReq] = field(
             default=None,
-            metadata=dict(
-                name="AirTicketingReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirTicketingReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -2701,10 +2701,10 @@ class AirTicketingPortTypeServiceOutput:
 
     body: Optional["AirTicketingPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2715,18 +2715,18 @@ class AirTicketingPortTypeServiceOutput:
         """
         air_ticketing_rsp: Optional[AirTicketingRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirTicketingRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirTicketingRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirTicketingPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -2739,31 +2739,31 @@ class AirTicketingPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirTicketingPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -2773,11 +2773,11 @@ class AirTicketingPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -2792,10 +2792,10 @@ class AirUpsellSearchPortTypeServiceInput:
 
     body: Optional["AirUpsellSearchPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2805,11 +2805,11 @@ class AirUpsellSearchPortTypeServiceInput:
         """
         air_upsell_search_req: Optional[AirUpsellSearchReq] = field(
             default=None,
-            metadata=dict(
-                name="AirUpsellSearchReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirUpsellSearchReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -2824,10 +2824,10 @@ class AirUpsellSearchPortTypeServiceOutput:
 
     body: Optional["AirUpsellSearchPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2838,18 +2838,18 @@ class AirUpsellSearchPortTypeServiceOutput:
         """
         air_upsell_search_rsp: Optional[AirUpsellSearchRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirUpsellSearchRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirUpsellSearchRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirUpsellSearchPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -2862,31 +2862,31 @@ class AirUpsellSearchPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirUpsellSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -2896,11 +2896,11 @@ class AirUpsellSearchPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -2915,10 +2915,10 @@ class AirVoidDocumentPortTypeServiceInput:
 
     body: Optional["AirVoidDocumentPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2928,11 +2928,11 @@ class AirVoidDocumentPortTypeServiceInput:
         """
         air_void_document_req: Optional[AirVoidDocumentReq] = field(
             default=None,
-            metadata=dict(
-                name="AirVoidDocumentReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirVoidDocumentReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -2947,10 +2947,10 @@ class AirVoidDocumentPortTypeServiceOutput:
 
     body: Optional["AirVoidDocumentPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -2961,18 +2961,18 @@ class AirVoidDocumentPortTypeServiceOutput:
         """
         air_void_document_rsp: Optional[AirVoidDocumentRsp] = field(
             default=None,
-            metadata=dict(
-                name="AirVoidDocumentRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "AirVoidDocumentRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["AirVoidDocumentPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -2985,31 +2985,31 @@ class AirVoidDocumentPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["AirVoidDocumentPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -3019,11 +3019,11 @@ class AirVoidDocumentPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -3038,10 +3038,10 @@ class EmdissuancePortTypeServiceInput:
 
     body: Optional["EmdissuancePortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -3051,11 +3051,11 @@ class EmdissuancePortTypeServiceInput:
         """
         emdissuance_req: Optional[EmdissuanceReq] = field(
             default=None,
-            metadata=dict(
-                name="EMDIssuanceReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "EMDIssuanceReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -3070,10 +3070,10 @@ class EmdissuancePortTypeServiceOutput:
 
     body: Optional["EmdissuancePortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -3084,18 +3084,18 @@ class EmdissuancePortTypeServiceOutput:
         """
         emdissuance_rsp: Optional[EmdissuanceRsp] = field(
             default=None,
-            metadata=dict(
-                name="EMDIssuanceRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "EMDIssuanceRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["EmdissuancePortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -3108,31 +3108,31 @@ class EmdissuancePortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["EmdissuancePortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -3142,11 +3142,11 @@ class EmdissuancePortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -3161,10 +3161,10 @@ class EmdretrievePortTypeServiceInput:
 
     body: Optional["EmdretrievePortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -3174,11 +3174,11 @@ class EmdretrievePortTypeServiceInput:
         """
         emdretrieve_req: Optional[EmdretrieveReq] = field(
             default=None,
-            metadata=dict(
-                name="EMDRetrieveReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "EMDRetrieveReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -3193,10 +3193,10 @@ class EmdretrievePortTypeServiceOutput:
 
     body: Optional["EmdretrievePortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -3207,18 +3207,18 @@ class EmdretrievePortTypeServiceOutput:
         """
         emdretrieve_rsp: Optional[EmdretrieveRsp] = field(
             default=None,
-            metadata=dict(
-                name="EMDRetrieveRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "EMDRetrieveRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["EmdretrievePortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -3231,31 +3231,31 @@ class EmdretrievePortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["EmdretrievePortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -3265,11 +3265,11 @@ class EmdretrievePortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -3284,10 +3284,10 @@ class FlightDetailsPortTypeServiceInput:
 
     body: Optional["FlightDetailsPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -3297,11 +3297,11 @@ class FlightDetailsPortTypeServiceInput:
         """
         flight_details_req: Optional[FlightDetailsReq] = field(
             default=None,
-            metadata=dict(
-                name="FlightDetailsReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "FlightDetailsReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -3316,10 +3316,10 @@ class FlightDetailsPortTypeServiceOutput:
 
     body: Optional["FlightDetailsPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -3330,18 +3330,18 @@ class FlightDetailsPortTypeServiceOutput:
         """
         flight_details_rsp: Optional[FlightDetailsRsp] = field(
             default=None,
-            metadata=dict(
-                name="FlightDetailsRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "FlightDetailsRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["FlightDetailsPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -3354,31 +3354,31 @@ class FlightDetailsPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["FlightDetailsPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -3388,11 +3388,11 @@ class FlightDetailsPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -3407,10 +3407,10 @@ class FlightInfoPortTypeServiceInput:
 
     body: Optional["FlightInfoPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -3420,11 +3420,11 @@ class FlightInfoPortTypeServiceInput:
         """
         flight_information_req: Optional[FlightInformationReq] = field(
             default=None,
-            metadata=dict(
-                name="FlightInformationReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "FlightInformationReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -3439,10 +3439,10 @@ class FlightInfoPortTypeServiceOutput:
 
     body: Optional["FlightInfoPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -3453,18 +3453,18 @@ class FlightInfoPortTypeServiceOutput:
         """
         flight_information_rsp: Optional[FlightInformationRsp] = field(
             default=None,
-            metadata=dict(
-                name="FlightInformationRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "FlightInformationRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["FlightInfoPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -3477,31 +3477,31 @@ class FlightInfoPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["FlightInfoPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -3511,11 +3511,11 @@ class FlightInfoPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -3530,10 +3530,10 @@ class FlightTimeTablePortTypeServiceInput:
 
     body: Optional["FlightTimeTablePortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -3543,11 +3543,11 @@ class FlightTimeTablePortTypeServiceInput:
         """
         flight_time_table_req: Optional[FlightTimeTableReq] = field(
             default=None,
-            metadata=dict(
-                name="FlightTimeTableReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "FlightTimeTableReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -3562,10 +3562,10 @@ class FlightTimeTablePortTypeServiceOutput:
 
     body: Optional["FlightTimeTablePortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -3576,18 +3576,18 @@ class FlightTimeTablePortTypeServiceOutput:
         """
         flight_time_table_rsp: Optional[FlightTimeTableRsp] = field(
             default=None,
-            metadata=dict(
-                name="FlightTimeTableRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "FlightTimeTableRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["FlightTimeTablePortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -3600,31 +3600,31 @@ class FlightTimeTablePortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["FlightTimeTablePortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -3634,11 +3634,11 @@ class FlightTimeTablePortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 
@@ -3654,17 +3654,17 @@ class SeatMapPortTypeServiceInput:
 
     header: Optional["SeatMapPortTypeServiceInput.Header"] = field(
         default=None,
-        metadata=dict(
-            name="Header",
-            type="Element"
-        )
+        metadata={
+            "name": "Header",
+            "type": "Element",
+        }
     )
     body: Optional["SeatMapPortTypeServiceInput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -3674,11 +3674,11 @@ class SeatMapPortTypeServiceInput:
         """
         session_context: Optional[SessionContext] = field(
             default=None,
-            metadata=dict(
-                name="SessionContext",
-                type="Element",
-                namespace="http://www.travelport.com/soa/common/security/SessionContext_v1"
-            )
+            metadata={
+                "name": "SessionContext",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
+            }
         )
 
     @dataclass
@@ -3688,11 +3688,11 @@ class SeatMapPortTypeServiceInput:
         """
         seat_map_req: Optional[SeatMapReq] = field(
             default=None,
-            metadata=dict(
-                name="SeatMapReq",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "SeatMapReq",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
 
 
@@ -3707,10 +3707,10 @@ class SeatMapPortTypeServiceOutput:
 
     body: Optional["SeatMapPortTypeServiceOutput.Body"] = field(
         default=None,
-        metadata=dict(
-            name="Body",
-            type="Element"
-        )
+        metadata={
+            "name": "Body",
+            "type": "Element",
+        }
     )
 
     @dataclass
@@ -3721,18 +3721,18 @@ class SeatMapPortTypeServiceOutput:
         """
         seat_map_rsp: Optional[SeatMapRsp] = field(
             default=None,
-            metadata=dict(
-                name="SeatMapRsp",
-                type="Element",
-                namespace="http://www.travelport.com/schema/air_v48_0"
-            )
+            metadata={
+                "name": "SeatMapRsp",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v48_0",
+            }
         )
         fault: Optional["SeatMapPortTypeServiceOutput.Body.Fault"] = field(
             default=None,
-            metadata=dict(
-                name="Fault",
-                type="Element"
-            )
+            metadata={
+                "name": "Fault",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -3745,31 +3745,31 @@ class SeatMapPortTypeServiceOutput:
             """
             faultcode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultstring: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             faultactor: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
             detail: Optional["SeatMapPortTypeServiceOutput.Body.Fault.Detail"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    namespace=""
-                )
+                metadata={
+                    "type": "Element",
+                    "namespace": "",
+                }
             )
 
             @dataclass
@@ -3779,11 +3779,11 @@ class SeatMapPortTypeServiceOutput:
                 """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
-                    metadata=dict(
-                        name="ErrorInfo",
-                        type="Element",
-                        namespace="http://www.travelport.com/schema/common_v48_0"
-                    )
+                    metadata={
+                        "name": "ErrorInfo",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v48_0",
+                    }
                 )
 
 

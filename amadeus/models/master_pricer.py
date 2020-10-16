@@ -34,158 +34,146 @@ class FareMasterPricerTravelBoardSearch:
 
     number_of_unit: Optional["FareMasterPricerTravelBoardSearch.NumberOfUnit"] = field(
         default=None,
-        metadata=dict(
-            name="numberOfUnit",
-            type="Element"
-        )
+        metadata={
+            "name": "numberOfUnit",
+            "type": "Element",
+        }
     )
     global_options: Optional["FareMasterPricerTravelBoardSearch.GlobalOptions"] = field(
         default=None,
-        metadata=dict(
-            name="globalOptions",
-            type="Element"
-        )
+        metadata={
+            "name": "globalOptions",
+            "type": "Element",
+        }
     )
     pax_reference: List["FareMasterPricerTravelBoardSearch.PaxReference"] = field(
         default_factory=list,
-        metadata=dict(
-            name="paxReference",
-            type="Element",
-            min_occurs=0,
-            max_occurs=6
-        )
+        metadata={
+            "name": "paxReference",
+            "type": "Element",
+            "max_occurs": 6,
+        }
     )
     customer_ref: Optional["FareMasterPricerTravelBoardSearch.CustomerRef"] = field(
         default=None,
-        metadata=dict(
-            name="customerRef",
-            type="Element"
-        )
+        metadata={
+            "name": "customerRef",
+            "type": "Element",
+        }
     )
     form_of_payment_by_passenger: List["FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger"] = field(
         default_factory=list,
-        metadata=dict(
-            name="formOfPaymentByPassenger",
-            type="Element",
-            min_occurs=0,
-            max_occurs=60
-        )
+        metadata={
+            "name": "formOfPaymentByPassenger",
+            "type": "Element",
+            "max_occurs": 60,
+        }
     )
     solution_family: List["FareMasterPricerTravelBoardSearch.SolutionFamily"] = field(
         default_factory=list,
-        metadata=dict(
-            name="solutionFamily",
-            type="Element",
-            min_occurs=0,
-            max_occurs=20
-        )
+        metadata={
+            "name": "solutionFamily",
+            "type": "Element",
+            "max_occurs": 20,
+        }
     )
     passenger_info_grp: List["FareMasterPricerTravelBoardSearch.PassengerInfoGrp"] = field(
         default_factory=list,
-        metadata=dict(
-            name="passengerInfoGrp",
-            type="Element",
-            min_occurs=0,
-            max_occurs=9
-        )
+        metadata={
+            "name": "passengerInfoGrp",
+            "type": "Element",
+            "max_occurs": 9,
+        }
     )
     fare_families: List["FareMasterPricerTravelBoardSearch.FareFamilies"] = field(
         default_factory=list,
-        metadata=dict(
-            name="fareFamilies",
-            type="Element",
-            min_occurs=0,
-            max_occurs=20
-        )
+        metadata={
+            "name": "fareFamilies",
+            "type": "Element",
+            "max_occurs": 20,
+        }
     )
     fare_options: Optional["FareMasterPricerTravelBoardSearch.FareOptions"] = field(
         default=None,
-        metadata=dict(
-            name="fareOptions",
-            type="Element"
-        )
+        metadata={
+            "name": "fareOptions",
+            "type": "Element",
+        }
     )
     price_to_beat: Optional["FareMasterPricerTravelBoardSearch.PriceToBeat"] = field(
         default=None,
-        metadata=dict(
-            name="priceToBeat",
-            type="Element"
-        )
+        metadata={
+            "name": "priceToBeat",
+            "type": "Element",
+        }
     )
     tax_info: List["FareMasterPricerTravelBoardSearch.TaxInfo"] = field(
         default_factory=list,
-        metadata=dict(
-            name="taxInfo",
-            type="Element",
-            min_occurs=0,
-            max_occurs=9
-        )
+        metadata={
+            "name": "taxInfo",
+            "type": "Element",
+            "max_occurs": 9,
+        }
     )
     travel_flight_info: Optional["FareMasterPricerTravelBoardSearch.TravelFlightInfo"] = field(
         default=None,
-        metadata=dict(
-            name="travelFlightInfo",
-            type="Element"
-        )
+        metadata={
+            "name": "travelFlightInfo",
+            "type": "Element",
+        }
     )
     value_search: List["FareMasterPricerTravelBoardSearch.ValueSearch"] = field(
         default_factory=list,
-        metadata=dict(
-            name="valueSearch",
-            type="Element",
-            min_occurs=0,
-            max_occurs=99
-        )
+        metadata={
+            "name": "valueSearch",
+            "type": "Element",
+            "max_occurs": 99,
+        }
     )
     buckets: List["FareMasterPricerTravelBoardSearch.Buckets"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            min_occurs=0,
-            max_occurs=10
-        )
+        metadata={
+            "type": "Element",
+            "max_occurs": 10,
+        }
     )
     itinerary: List["FareMasterPricerTravelBoardSearch.Itinerary"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            min_occurs=0,
-            max_occurs=18
-        )
+        metadata={
+            "type": "Element",
+            "max_occurs": 18,
+        }
     )
     ticket_change_info: Optional["FareMasterPricerTravelBoardSearch.TicketChangeInfo"] = field(
         default=None,
-        metadata=dict(
-            name="ticketChangeInfo",
-            type="Element"
-        )
+        metadata={
+            "name": "ticketChangeInfo",
+            "type": "Element",
+        }
     )
     combination_fare_families: List["FareMasterPricerTravelBoardSearch.CombinationFareFamilies"] = field(
         default_factory=list,
-        metadata=dict(
-            name="combinationFareFamilies",
-            type="Element",
-            min_occurs=0,
-            max_occurs=2000
-        )
+        metadata={
+            "name": "combinationFareFamilies",
+            "type": "Element",
+            "max_occurs": 2000,
+        }
     )
     fee_option: List["FareMasterPricerTravelBoardSearch.FeeOption"] = field(
         default_factory=list,
-        metadata=dict(
-            name="feeOption",
-            type="Element",
-            min_occurs=0,
-            max_occurs=9
-        )
+        metadata={
+            "name": "feeOption",
+            "type": "Element",
+            "max_occurs": 9,
+        }
     )
     office_id_details: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails"] = field(
         default_factory=list,
-        metadata=dict(
-            name="officeIdDetails",
-            type="Element",
-            min_occurs=0,
-            max_occurs=20
-        )
+        metadata={
+            "name": "officeIdDetails",
+            "type": "Element",
+            "max_occurs": 20,
+        }
     )
 
     @dataclass
@@ -195,12 +183,12 @@ class FareMasterPricerTravelBoardSearch:
         """
         unit_number_detail: List["FareMasterPricerTravelBoardSearch.NumberOfUnit.UnitNumberDetail"] = field(
             default_factory=list,
-            metadata=dict(
-                name="unitNumberDetail",
-                type="Element",
-                min_occurs=1,
-                max_occurs=20
-            )
+            metadata={
+                "name": "unitNumberDetail",
+                "type": "Element",
+                "min_occurs": 1,
+                "max_occurs": 20,
+            }
         )
 
         @dataclass
@@ -211,21 +199,21 @@ class FareMasterPricerTravelBoardSearch:
             """
             number_of_units: Optional[Decimal] = field(
                 default=None,
-                metadata=dict(
-                    name="numberOfUnits",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "numberOfUnits",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             type_of_unit: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="typeOfUnit",
-                    type="Element",
-                    required=True,
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "name": "typeOfUnit",
+                    "type": "Element",
+                    "required": True,
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
 
     @dataclass
@@ -235,12 +223,12 @@ class FareMasterPricerTravelBoardSearch:
         """
         selection_details: List["FareMasterPricerTravelBoardSearch.GlobalOptions.SelectionDetails"] = field(
             default_factory=list,
-            metadata=dict(
-                name="selectionDetails",
-                type="Element",
-                min_occurs=1,
-                max_occurs=10
-            )
+            metadata={
+                "name": "selectionDetails",
+                "type": "Element",
+                "min_occurs": 1,
+                "max_occurs": 10,
+            }
         )
 
         @dataclass
@@ -251,21 +239,21 @@ class FareMasterPricerTravelBoardSearch:
             """
             option: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    required=True,
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "required": True,
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             option_information: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="optionInformation",
-                    type="Element",
-                    min_length=1,
-                    max_length=35
-                )
+                metadata={
+                    "name": "optionInformation",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 35,
+                }
             )
 
     @dataclass
@@ -276,21 +264,20 @@ class FareMasterPricerTravelBoardSearch:
         """
         ptc: List[str] = field(
             default_factory=list,
-            metadata=dict(
-                type="Element",
-                min_occurs=0,
-                max_occurs=3,
-                min_length=1,
-                max_length=6
-            )
+            metadata={
+                "type": "Element",
+                "max_occurs": 3,
+                "min_length": 1,
+                "max_length": 6,
+            }
         )
         traveller: List["FareMasterPricerTravelBoardSearch.PaxReference.Traveller"] = field(
             default_factory=list,
-            metadata=dict(
-                type="Element",
-                min_occurs=1,
-                max_occurs=9
-            )
+            metadata={
+                "type": "Element",
+                "min_occurs": 1,
+                "max_occurs": 9,
+            }
         )
 
         @dataclass
@@ -301,19 +288,19 @@ class FareMasterPricerTravelBoardSearch:
             """
             ref: Optional[Decimal] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "type": "Element",
+                    "required": True,
+                }
             )
             infant_indicator: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="infantIndicator",
-                    type="Element",
-                    min_length=1,
-                    max_length=1
-                )
+                metadata={
+                    "name": "infantIndicator",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 1,
+                }
             )
 
     @dataclass
@@ -323,12 +310,12 @@ class FareMasterPricerTravelBoardSearch:
         """
         customer_references: List["FareMasterPricerTravelBoardSearch.CustomerRef.CustomerReferences"] = field(
             default_factory=list,
-            metadata=dict(
-                name="customerReferences",
-                type="Element",
-                min_occurs=1,
-                max_occurs=20
-            )
+            metadata={
+                "name": "customerReferences",
+                "type": "Element",
+                "min_occurs": 1,
+                "max_occurs": 20,
+            }
         )
 
         @dataclass
@@ -341,40 +328,40 @@ class FareMasterPricerTravelBoardSearch:
             """
             reference_qualifier: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="referenceQualifier",
-                    type="Element",
-                    required=True,
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "name": "referenceQualifier",
+                    "type": "Element",
+                    "required": True,
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             reference_number: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="referenceNumber",
-                    type="Element",
-                    min_length=1,
-                    max_length=35
-                )
+                metadata={
+                    "name": "referenceNumber",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 35,
+                }
             )
             reference_party_name: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="referencePartyName",
-                    type="Element",
-                    min_length=1,
-                    max_length=35
-                )
+                metadata={
+                    "name": "referencePartyName",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 35,
+                }
             )
             traveller_reference_nbr: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="travellerReferenceNbr",
-                    type="Element",
-                    min_length=1,
-                    max_length=10
-                )
+                metadata={
+                    "name": "travellerReferenceNbr",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 10,
+                }
             )
 
     @dataclass
@@ -385,18 +372,18 @@ class FareMasterPricerTravelBoardSearch:
         """
         form_of_payment_details: Optional["FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails"] = field(
             default=None,
-            metadata=dict(
-                name="formOfPaymentDetails",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "formOfPaymentDetails",
+                "type": "Element",
+                "required": True,
+            }
         )
         passenger_fee_reference: Optional["FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.PassengerFeeReference"] = field(
             default=None,
-            metadata=dict(
-                name="passengerFeeReference",
-                type="Element"
-            )
+            metadata={
+                "name": "passengerFeeReference",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -406,12 +393,11 @@ class FareMasterPricerTravelBoardSearch:
             """
             form_of_payment_details: List["FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails.FormOfPaymentDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="formOfPaymentDetails",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9
-                )
+                metadata={
+                    "name": "formOfPaymentDetails",
+                    "type": "Element",
+                    "max_occurs": 9,
+                }
             )
 
             @dataclass
@@ -423,28 +409,28 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 type: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 charged_amount: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="chargedAmount",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "chargedAmount",
+                        "type": "Element",
+                    }
                 )
                 credit_card_number: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="creditCardNumber",
-                        type="Element",
-                        min_length=1,
-                        max_length=20
-                    )
+                    metadata={
+                        "name": "creditCardNumber",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 20,
+                    }
                 )
 
         @dataclass
@@ -456,26 +442,26 @@ class FareMasterPricerTravelBoardSearch:
             """
             passenger_fee_ref_type: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="passengerFeeRefType",
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "name": "passengerFeeRefType",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             passenger_fee_ref_number: Optional[Decimal] = field(
                 default=None,
-                metadata=dict(
-                    name="passengerFeeRefNumber",
-                    type="Element"
-                )
+                metadata={
+                    "name": "passengerFeeRefNumber",
+                    "type": "Element",
+                }
             )
             other_characteristics: Optional["FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.PassengerFeeReference.OtherCharacteristics"] = field(
                 default=None,
-                metadata=dict(
-                    name="otherCharacteristics",
-                    type="Element"
-                )
+                metadata={
+                    "name": "otherCharacteristics",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -485,12 +471,12 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 passenger_fee_ref_qualif: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="passengerFeeRefQualif",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "passengerFeeRefQualif",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
     @dataclass
@@ -505,50 +491,50 @@ class FareMasterPricerTravelBoardSearch:
         """
         value_qualifier: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="valueQualifier",
-                type="Element",
-                min_length=1,
-                max_length=3
-            )
+            metadata={
+                "name": "valueQualifier",
+                "type": "Element",
+                "min_length": 1,
+                "max_length": 3,
+            }
         )
         value: Optional[Decimal] = field(
             default=None,
-            metadata=dict(
-                type="Element"
-            )
+            metadata={
+                "type": "Element",
+            }
         )
         fare_details: Optional["FareMasterPricerTravelBoardSearch.SolutionFamily.FareDetails"] = field(
             default=None,
-            metadata=dict(
-                name="fareDetails",
-                type="Element"
-            )
+            metadata={
+                "name": "fareDetails",
+                "type": "Element",
+            }
         )
         identity_number: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="identityNumber",
-                type="Element",
-                min_length=1,
-                max_length=35
-            )
+            metadata={
+                "name": "identityNumber",
+                "type": "Element",
+                "min_length": 1,
+                "max_length": 35,
+            }
         )
         fare_type_grouping: Optional["FareMasterPricerTravelBoardSearch.SolutionFamily.FareTypeGrouping"] = field(
             default=None,
-            metadata=dict(
-                name="fareTypeGrouping",
-                type="Element"
-            )
+            metadata={
+                "name": "fareTypeGrouping",
+                "type": "Element",
+            }
         )
         rate_category: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="rateCategory",
-                type="Element",
-                min_length=1,
-                max_length=35
-            )
+            metadata={
+                "name": "rateCategory",
+                "type": "Element",
+                "min_length": 1,
+                "max_length": 35,
+            }
         )
 
         @dataclass
@@ -561,34 +547,34 @@ class FareMasterPricerTravelBoardSearch:
             """
             qualifier: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             rate: Optional[Decimal] = field(
                 default=None,
-                metadata=dict(
-                    type="Element"
-                )
+                metadata={
+                    "type": "Element",
+                }
             )
             country: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             fare_category: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="fareCategory",
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "name": "fareCategory",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
 
         @dataclass
@@ -598,12 +584,12 @@ class FareMasterPricerTravelBoardSearch:
             """
             pricing_group: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="pricingGroup",
-                    type="Element",
-                    min_length=1,
-                    max_length=35
-                )
+                metadata={
+                    "name": "pricingGroup",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 35,
+                }
             )
 
     @dataclass
@@ -614,20 +600,19 @@ class FareMasterPricerTravelBoardSearch:
         """
         passenger_reference: Optional["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PassengerReference"] = field(
             default=None,
-            metadata=dict(
-                name="passengerReference",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "passengerReference",
+                "type": "Element",
+                "required": True,
+            }
         )
         psg_details_info: List["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo"] = field(
             default_factory=list,
-            metadata=dict(
-                name="psgDetailsInfo",
-                type="Element",
-                min_occurs=0,
-                max_occurs=2
-            )
+            metadata={
+                "name": "psgDetailsInfo",
+                "type": "Element",
+                "max_occurs": 2,
+            }
         )
 
         @dataclass
@@ -637,12 +622,11 @@ class FareMasterPricerTravelBoardSearch:
             """
             segment_control_details: List["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PassengerReference.SegmentControlDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="segmentControlDetails",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9
-                )
+                metadata={
+                    "name": "segmentControlDetails",
+                    "type": "Element",
+                    "max_occurs": 9,
+                }
             )
 
             @dataclass
@@ -652,9 +636,9 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 quantity: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element"
-                    )
+                    metadata={
+                        "type": "Element",
+                    }
                 )
 
         @dataclass
@@ -665,18 +649,18 @@ class FareMasterPricerTravelBoardSearch:
             """
             discount_ptc: Optional["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.DiscountPtc"] = field(
                 default=None,
-                metadata=dict(
-                    name="discountPtc",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "discountPtc",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             flequent_flyer_details: Optional["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.FlequentFlyerDetails"] = field(
                 default=None,
-                metadata=dict(
-                    name="flequentFlyerDetails",
-                    type="Element"
-                )
+                metadata={
+                    "name": "flequentFlyerDetails",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -687,18 +671,18 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 value_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="valueQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "valueQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 value: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element"
-                    )
+                    metadata={
+                        "type": "Element",
+                    }
                 )
 
             @dataclass
@@ -708,12 +692,12 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 frequent_traveller_details: List["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.FlequentFlyerDetails.FrequentTravellerDetails"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="frequentTravellerDetails",
-                        type="Element",
-                        min_occurs=1,
-                        max_occurs=99
-                    )
+                    metadata={
+                        "name": "frequentTravellerDetails",
+                        "type": "Element",
+                        "min_occurs": 1,
+                        "max_occurs": 99,
+                    }
                 )
 
                 @dataclass
@@ -732,87 +716,87 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     carrier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=35
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 35,
+                        }
                     )
                     number: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=28
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 28,
+                        }
                     )
                     customer_reference: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="customerReference",
-                            type="Element",
-                            min_length=1,
-                            max_length=10
-                        )
+                        metadata={
+                            "name": "customerReference",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 10,
+                        }
                     )
                     status: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     tier_level: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="tierLevel",
-                            type="Element",
-                            min_length=1,
-                            max_length=35
-                        )
+                        metadata={
+                            "name": "tierLevel",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 35,
+                        }
                     )
                     priority_code: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="priorityCode",
-                            type="Element",
-                            min_length=1,
-                            max_length=12
-                        )
+                        metadata={
+                            "name": "priorityCode",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 12,
+                        }
                     )
                     tier_description: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="tierDescription",
-                            type="Element",
-                            min_length=1,
-                            max_length=35
-                        )
+                        metadata={
+                            "name": "tierDescription",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 35,
+                        }
                     )
                     company_code: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="companyCode",
-                            type="Element",
-                            min_length=1,
-                            max_length=35
-                        )
+                        metadata={
+                            "name": "companyCode",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 35,
+                        }
                     )
                     customer_value: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            name="customerValue",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "customerValue",
+                            "type": "Element",
+                        }
                     )
                     type: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
 
     @dataclass
@@ -825,36 +809,34 @@ class FareMasterPricerTravelBoardSearch:
         """
         family_information: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyInformation"] = field(
             default=None,
-            metadata=dict(
-                name="familyInformation",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "familyInformation",
+                "type": "Element",
+                "required": True,
+            }
         )
         family_criteria: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria"] = field(
             default=None,
-            metadata=dict(
-                name="familyCriteria",
-                type="Element"
-            )
+            metadata={
+                "name": "familyCriteria",
+                "type": "Element",
+            }
         )
         fare_family_segment: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment"] = field(
             default_factory=list,
-            metadata=dict(
-                name="fareFamilySegment",
-                type="Element",
-                min_occurs=0,
-                max_occurs=6
-            )
+            metadata={
+                "name": "fareFamilySegment",
+                "type": "Element",
+                "max_occurs": 6,
+            }
         )
         other_possible_criteria: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria"] = field(
             default_factory=list,
-            metadata=dict(
-                name="otherPossibleCriteria",
-                type="Element",
-                min_occurs=0,
-                max_occurs=20
-            )
+            metadata={
+                "name": "otherPossibleCriteria",
+                "type": "Element",
+                "max_occurs": 20,
+            }
         )
 
         @dataclass
@@ -867,34 +849,33 @@ class FareMasterPricerTravelBoardSearch:
             """
             ref_number: Optional[Decimal] = field(
                 default=None,
-                metadata=dict(
-                    name="refNumber",
-                    type="Element"
-                )
+                metadata={
+                    "name": "refNumber",
+                    "type": "Element",
+                }
             )
             fare_familyname: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="fareFamilyname",
-                    type="Element",
-                    min_length=1,
-                    max_length=10
-                )
+                metadata={
+                    "name": "fareFamilyname",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 10,
+                }
             )
             hierarchy: Optional[Decimal] = field(
                 default=None,
-                metadata=dict(
-                    type="Element"
-                )
+                metadata={
+                    "type": "Element",
+                }
             )
             commercial_family_details: List["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyInformation.CommercialFamilyDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="commercialFamilyDetails",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "commercialFamilyDetails",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
 
             @dataclass
@@ -904,13 +885,13 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 commercial_family: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="commercialFamily",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=10
-                    )
+                    metadata={
+                        "name": "commercialFamily",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 10,
+                    }
                 )
 
         @dataclass
@@ -928,85 +909,78 @@ class FareMasterPricerTravelBoardSearch:
             """
             carrier_id: List[str] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="carrierId",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20,
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "name": "carrierId",
+                    "type": "Element",
+                    "max_occurs": 20,
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             rdb: List[str] = field(
                 default_factory=list,
-                metadata=dict(
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20,
-                    min_length=1,
-                    max_length=2
-                )
+                metadata={
+                    "type": "Element",
+                    "max_occurs": 20,
+                    "min_length": 1,
+                    "max_length": 2,
+                }
             )
             fare_family_info: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.FareFamilyInfo"] = field(
                 default=None,
-                metadata=dict(
-                    name="fareFamilyInfo",
-                    type="Element"
-                )
+                metadata={
+                    "name": "fareFamilyInfo",
+                    "type": "Element",
+                }
             )
             fare_product_detail: List["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.FareProductDetail"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="fareProductDetail",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "fareProductDetail",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
             corporate_info: List["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.CorporateInfo"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="corporateInfo",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "corporateInfo",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
             cabin_product: List["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.CabinProduct"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="cabinProduct",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=6
-                )
+                metadata={
+                    "name": "cabinProduct",
+                    "type": "Element",
+                    "max_occurs": 6,
+                }
             )
             cabin_processing_identifier: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="cabinProcessingIdentifier",
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "name": "cabinProcessingIdentifier",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             date_time_details: List["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.DateTimeDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="dateTimeDetails",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "dateTimeDetails",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
             other_criteria: List["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.OtherCriteria"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="otherCriteria",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "otherCriteria",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
 
             @dataclass
@@ -1016,14 +990,14 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 fare_family_qual: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="fareFamilyQual",
-                        type="Element",
-                        min_occurs=1,
-                        max_occurs=9,
-                        min_length=0,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "fareFamilyQual",
+                        "type": "Element",
+                        "min_occurs": 1,
+                        "max_occurs": 9,
+                        "min_length": 0,
+                        "max_length": 3,
+                    }
                 )
 
             @dataclass
@@ -1034,23 +1008,22 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 fare_basis: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="fareBasis",
-                        type="Element",
-                        min_length=0,
-                        max_length=18
-                    )
+                    metadata={
+                        "name": "fareBasis",
+                        "type": "Element",
+                        "min_length": 0,
+                        "max_length": 18,
+                    }
                 )
                 fare_type: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="fareType",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=3,
-                        min_length=0,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "fareType",
+                        "type": "Element",
+                        "max_occurs": 3,
+                        "min_length": 0,
+                        "max_length": 3,
+                    }
                 )
 
             @dataclass
@@ -1061,21 +1034,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 corporate_number_identifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="corporateNumberIdentifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=12
-                    )
+                    metadata={
+                        "name": "corporateNumberIdentifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 12,
+                    }
                 )
                 corporate_name: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="corporateName",
-                        type="Element",
-                        min_length=1,
-                        max_length=20
-                    )
+                    metadata={
+                        "name": "corporateName",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 20,
+                    }
                 )
 
             @dataclass
@@ -1085,13 +1058,13 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 cabin_designator: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="cabinDesignator",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "cabinDesignator",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
 
             @dataclass
@@ -1102,19 +1075,19 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 date: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        required=True,
-                        min_length=6,
-                        max_length=6
-                    )
+                    metadata={
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 6,
+                        "max_length": 6,
+                    }
                 )
                 other_date: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="otherDate",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "otherDate",
+                        "type": "Element",
+                    }
                 )
 
             @dataclass
@@ -1125,22 +1098,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 name: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=5
-                    )
+                    metadata={
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 5,
+                    }
                 )
                 value: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=10,
-                        min_length=1,
-                        max_length=20
-                    )
+                    metadata={
+                        "type": "Element",
+                        "max_occurs": 10,
+                        "min_length": 1,
+                        "max_length": 20,
+                    }
                 )
 
         @dataclass
@@ -1151,18 +1123,18 @@ class FareMasterPricerTravelBoardSearch:
             """
             reference_info: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.ReferenceInfo"] = field(
                 default=None,
-                metadata=dict(
-                    name="referenceInfo",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "referenceInfo",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             family_criteria: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria"] = field(
                 default=None,
-                metadata=dict(
-                    name="familyCriteria",
-                    type="Element"
-                )
+                metadata={
+                    "name": "familyCriteria",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -1172,12 +1144,11 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 referencing_detail: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.ReferenceInfo.ReferencingDetail"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="referencingDetail",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=9
-                    )
+                    metadata={
+                        "name": "referencingDetail",
+                        "type": "Element",
+                        "max_occurs": 9,
+                    }
                 )
 
                 @dataclass
@@ -1188,20 +1159,20 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     ref_qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="refQualifier",
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "refQualifier",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     ref_number: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            name="refNumber",
-                            type="Element",
-                            required=True
-                        )
+                        metadata={
+                            "name": "refNumber",
+                            "type": "Element",
+                            "required": True,
+                        }
                     )
 
             @dataclass
@@ -1219,85 +1190,78 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 carrier_id: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="carrierId",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20,
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "carrierId",
+                        "type": "Element",
+                        "max_occurs": 20,
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 rdb: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20,
-                        min_length=1,
-                        max_length=2
-                    )
+                    metadata={
+                        "type": "Element",
+                        "max_occurs": 20,
+                        "min_length": 1,
+                        "max_length": 2,
+                    }
                 )
                 fare_family_info: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.FareFamilyInfo"] = field(
                     default=None,
-                    metadata=dict(
-                        name="fareFamilyInfo",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "fareFamilyInfo",
+                        "type": "Element",
+                    }
                 )
                 fare_product_detail: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.FareProductDetail"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="fareProductDetail",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20
-                    )
+                    metadata={
+                        "name": "fareProductDetail",
+                        "type": "Element",
+                        "max_occurs": 20,
+                    }
                 )
                 corporate_info: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.CorporateInfo"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="corporateInfo",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20
-                    )
+                    metadata={
+                        "name": "corporateInfo",
+                        "type": "Element",
+                        "max_occurs": 20,
+                    }
                 )
                 cabin_product: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.CabinProduct"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="cabinProduct",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=6
-                    )
+                    metadata={
+                        "name": "cabinProduct",
+                        "type": "Element",
+                        "max_occurs": 6,
+                    }
                 )
                 cabin_processing_identifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="cabinProcessingIdentifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "cabinProcessingIdentifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 date_time_details: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.DateTimeDetails"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="dateTimeDetails",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20
-                    )
+                    metadata={
+                        "name": "dateTimeDetails",
+                        "type": "Element",
+                        "max_occurs": 20,
+                    }
                 )
                 other_criteria: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.OtherCriteria"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="otherCriteria",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20
-                    )
+                    metadata={
+                        "name": "otherCriteria",
+                        "type": "Element",
+                        "max_occurs": 20,
+                    }
                 )
 
                 @dataclass
@@ -1307,14 +1271,14 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     fare_family_qual: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="fareFamilyQual",
-                            type="Element",
-                            min_occurs=1,
-                            max_occurs=9,
-                            min_length=0,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "fareFamilyQual",
+                            "type": "Element",
+                            "min_occurs": 1,
+                            "max_occurs": 9,
+                            "min_length": 0,
+                            "max_length": 3,
+                        }
                     )
 
                 @dataclass
@@ -1325,23 +1289,22 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     fare_basis: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="fareBasis",
-                            type="Element",
-                            min_length=0,
-                            max_length=18
-                        )
+                        metadata={
+                            "name": "fareBasis",
+                            "type": "Element",
+                            "min_length": 0,
+                            "max_length": 18,
+                        }
                     )
                     fare_type: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="fareType",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=3,
-                            min_length=0,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "fareType",
+                            "type": "Element",
+                            "max_occurs": 3,
+                            "min_length": 0,
+                            "max_length": 3,
+                        }
                     )
 
                 @dataclass
@@ -1352,21 +1315,21 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     corporate_number_identifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="corporateNumberIdentifier",
-                            type="Element",
-                            min_length=1,
-                            max_length=12
-                        )
+                        metadata={
+                            "name": "corporateNumberIdentifier",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 12,
+                        }
                     )
                     corporate_name: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="corporateName",
-                            type="Element",
-                            min_length=1,
-                            max_length=20
-                        )
+                        metadata={
+                            "name": "corporateName",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 20,
+                        }
                     )
 
                 @dataclass
@@ -1376,13 +1339,13 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     cabin_designator: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="cabinDesignator",
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "cabinDesignator",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
 
                 @dataclass
@@ -1393,19 +1356,19 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     date: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            required=True,
-                            min_length=6,
-                            max_length=6
-                        )
+                        metadata={
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 6,
+                            "max_length": 6,
+                        }
                     )
                     other_date: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            name="otherDate",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "otherDate",
+                            "type": "Element",
+                        }
                     )
 
                 @dataclass
@@ -1416,22 +1379,21 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     name: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=5
-                        )
+                        metadata={
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 5,
+                        }
                     )
                     value: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=10,
-                            min_length=1,
-                            max_length=20
-                        )
+                        metadata={
+                            "type": "Element",
+                            "max_occurs": 10,
+                            "min_length": 1,
+                            "max_length": 20,
+                        }
                     )
 
         @dataclass
@@ -1443,27 +1405,26 @@ class FareMasterPricerTravelBoardSearch:
             """
             logical_link: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink"] = field(
                 default=None,
-                metadata=dict(
-                    name="logicalLink",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "logicalLink",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             family_criteria: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria"] = field(
                 default=None,
-                metadata=dict(
-                    name="familyCriteria",
-                    type="Element"
-                )
+                metadata={
+                    "name": "familyCriteria",
+                    "type": "Element",
+                }
             )
             fare_family_segment: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="fareFamilySegment",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=6
-                )
+                metadata={
+                    "name": "fareFamilySegment",
+                    "type": "Element",
+                    "max_occurs": 6,
+                }
             )
 
             @dataclass
@@ -1473,11 +1434,11 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 boolean_expression: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink.BooleanExpression"] = field(
                     default=None,
-                    metadata=dict(
-                        name="booleanExpression",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "booleanExpression",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
 
                 @dataclass
@@ -1487,12 +1448,12 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     code_operator: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="codeOperator",
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "codeOperator",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
 
             @dataclass
@@ -1510,85 +1471,78 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 carrier_id: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="carrierId",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20,
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "carrierId",
+                        "type": "Element",
+                        "max_occurs": 20,
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 rdb: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20,
-                        min_length=1,
-                        max_length=2
-                    )
+                    metadata={
+                        "type": "Element",
+                        "max_occurs": 20,
+                        "min_length": 1,
+                        "max_length": 2,
+                    }
                 )
                 fare_family_info: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.FareFamilyInfo"] = field(
                     default=None,
-                    metadata=dict(
-                        name="fareFamilyInfo",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "fareFamilyInfo",
+                        "type": "Element",
+                    }
                 )
                 fare_product_detail: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.FareProductDetail"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="fareProductDetail",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20
-                    )
+                    metadata={
+                        "name": "fareProductDetail",
+                        "type": "Element",
+                        "max_occurs": 20,
+                    }
                 )
                 corporate_info: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.CorporateInfo"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="corporateInfo",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20
-                    )
+                    metadata={
+                        "name": "corporateInfo",
+                        "type": "Element",
+                        "max_occurs": 20,
+                    }
                 )
                 cabin_product: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.CabinProduct"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="cabinProduct",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=6
-                    )
+                    metadata={
+                        "name": "cabinProduct",
+                        "type": "Element",
+                        "max_occurs": 6,
+                    }
                 )
                 cabin_processing_identifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="cabinProcessingIdentifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "cabinProcessingIdentifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 date_time_details: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.DateTimeDetails"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="dateTimeDetails",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20
-                    )
+                    metadata={
+                        "name": "dateTimeDetails",
+                        "type": "Element",
+                        "max_occurs": 20,
+                    }
                 )
                 other_criteria: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.OtherCriteria"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="otherCriteria",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20
-                    )
+                    metadata={
+                        "name": "otherCriteria",
+                        "type": "Element",
+                        "max_occurs": 20,
+                    }
                 )
 
                 @dataclass
@@ -1598,14 +1552,14 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     fare_family_qual: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="fareFamilyQual",
-                            type="Element",
-                            min_occurs=1,
-                            max_occurs=9,
-                            min_length=0,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "fareFamilyQual",
+                            "type": "Element",
+                            "min_occurs": 1,
+                            "max_occurs": 9,
+                            "min_length": 0,
+                            "max_length": 3,
+                        }
                     )
 
                 @dataclass
@@ -1616,23 +1570,22 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     fare_basis: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="fareBasis",
-                            type="Element",
-                            min_length=0,
-                            max_length=18
-                        )
+                        metadata={
+                            "name": "fareBasis",
+                            "type": "Element",
+                            "min_length": 0,
+                            "max_length": 18,
+                        }
                     )
                     fare_type: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="fareType",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=3,
-                            min_length=0,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "fareType",
+                            "type": "Element",
+                            "max_occurs": 3,
+                            "min_length": 0,
+                            "max_length": 3,
+                        }
                     )
 
                 @dataclass
@@ -1643,21 +1596,21 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     corporate_number_identifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="corporateNumberIdentifier",
-                            type="Element",
-                            min_length=1,
-                            max_length=12
-                        )
+                        metadata={
+                            "name": "corporateNumberIdentifier",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 12,
+                        }
                     )
                     corporate_name: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="corporateName",
-                            type="Element",
-                            min_length=1,
-                            max_length=20
-                        )
+                        metadata={
+                            "name": "corporateName",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 20,
+                        }
                     )
 
                 @dataclass
@@ -1667,13 +1620,13 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     cabin_designator: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="cabinDesignator",
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "cabinDesignator",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
 
                 @dataclass
@@ -1684,19 +1637,19 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     date: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            required=True,
-                            min_length=6,
-                            max_length=6
-                        )
+                        metadata={
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 6,
+                            "max_length": 6,
+                        }
                     )
                     other_date: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            name="otherDate",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "otherDate",
+                            "type": "Element",
+                        }
                     )
 
                 @dataclass
@@ -1707,22 +1660,21 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     name: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=5
-                        )
+                        metadata={
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 5,
+                        }
                     )
                     value: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=10,
-                            min_length=1,
-                            max_length=20
-                        )
+                        metadata={
+                            "type": "Element",
+                            "max_occurs": 10,
+                            "min_length": 1,
+                            "max_length": 20,
+                        }
                     )
 
             @dataclass
@@ -1733,18 +1685,18 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 reference_info: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.ReferenceInfo"] = field(
                     default=None,
-                    metadata=dict(
-                        name="referenceInfo",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "referenceInfo",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 family_criteria: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria"] = field(
                     default=None,
-                    metadata=dict(
-                        name="familyCriteria",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "familyCriteria",
+                        "type": "Element",
+                    }
                 )
 
                 @dataclass
@@ -1754,12 +1706,11 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     referencing_detail: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.ReferenceInfo.ReferencingDetail"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="referencingDetail",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=9
-                        )
+                        metadata={
+                            "name": "referencingDetail",
+                            "type": "Element",
+                            "max_occurs": 9,
+                        }
                     )
 
                     @dataclass
@@ -1770,20 +1721,20 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         ref_qualifier: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="refQualifier",
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "refQualifier",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         ref_number: Optional[Decimal] = field(
                             default=None,
-                            metadata=dict(
-                                name="refNumber",
-                                type="Element",
-                                required=True
-                            )
+                            metadata={
+                                "name": "refNumber",
+                                "type": "Element",
+                                "required": True,
+                            }
                         )
 
                 @dataclass
@@ -1801,85 +1752,78 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     carrier_id: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="carrierId",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=20,
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "carrierId",
+                            "type": "Element",
+                            "max_occurs": 20,
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     rdb: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=20,
-                            min_length=1,
-                            max_length=2
-                        )
+                        metadata={
+                            "type": "Element",
+                            "max_occurs": 20,
+                            "min_length": 1,
+                            "max_length": 2,
+                        }
                     )
                     fare_family_info: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.FareFamilyInfo"] = field(
                         default=None,
-                        metadata=dict(
-                            name="fareFamilyInfo",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "fareFamilyInfo",
+                            "type": "Element",
+                        }
                     )
                     fare_product_detail: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.FareProductDetail"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="fareProductDetail",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=20
-                        )
+                        metadata={
+                            "name": "fareProductDetail",
+                            "type": "Element",
+                            "max_occurs": 20,
+                        }
                     )
                     corporate_info: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.CorporateInfo"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="corporateInfo",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=20
-                        )
+                        metadata={
+                            "name": "corporateInfo",
+                            "type": "Element",
+                            "max_occurs": 20,
+                        }
                     )
                     cabin_product: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.CabinProduct"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="cabinProduct",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=6
-                        )
+                        metadata={
+                            "name": "cabinProduct",
+                            "type": "Element",
+                            "max_occurs": 6,
+                        }
                     )
                     cabin_processing_identifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="cabinProcessingIdentifier",
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "cabinProcessingIdentifier",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     date_time_details: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.DateTimeDetails"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="dateTimeDetails",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=20
-                        )
+                        metadata={
+                            "name": "dateTimeDetails",
+                            "type": "Element",
+                            "max_occurs": 20,
+                        }
                     )
                     other_criteria: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.OtherCriteria"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="otherCriteria",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=20
-                        )
+                        metadata={
+                            "name": "otherCriteria",
+                            "type": "Element",
+                            "max_occurs": 20,
+                        }
                     )
 
                     @dataclass
@@ -1889,14 +1833,14 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         fare_family_qual: List[str] = field(
                             default_factory=list,
-                            metadata=dict(
-                                name="fareFamilyQual",
-                                type="Element",
-                                min_occurs=1,
-                                max_occurs=9,
-                                min_length=0,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "fareFamilyQual",
+                                "type": "Element",
+                                "min_occurs": 1,
+                                "max_occurs": 9,
+                                "min_length": 0,
+                                "max_length": 3,
+                            }
                         )
 
                     @dataclass
@@ -1907,23 +1851,22 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         fare_basis: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="fareBasis",
-                                type="Element",
-                                min_length=0,
-                                max_length=18
-                            )
+                            metadata={
+                                "name": "fareBasis",
+                                "type": "Element",
+                                "min_length": 0,
+                                "max_length": 18,
+                            }
                         )
                         fare_type: List[str] = field(
                             default_factory=list,
-                            metadata=dict(
-                                name="fareType",
-                                type="Element",
-                                min_occurs=0,
-                                max_occurs=3,
-                                min_length=0,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "fareType",
+                                "type": "Element",
+                                "max_occurs": 3,
+                                "min_length": 0,
+                                "max_length": 3,
+                            }
                         )
 
                     @dataclass
@@ -1934,21 +1877,21 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         corporate_number_identifier: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="corporateNumberIdentifier",
-                                type="Element",
-                                min_length=1,
-                                max_length=12
-                            )
+                            metadata={
+                                "name": "corporateNumberIdentifier",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 12,
+                            }
                         )
                         corporate_name: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="corporateName",
-                                type="Element",
-                                min_length=1,
-                                max_length=20
-                            )
+                            metadata={
+                                "name": "corporateName",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 20,
+                            }
                         )
 
                     @dataclass
@@ -1958,13 +1901,13 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         cabin_designator: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="cabinDesignator",
-                                type="Element",
-                                required=True,
-                                min_length=1,
-                                max_length=1
-                            )
+                            metadata={
+                                "name": "cabinDesignator",
+                                "type": "Element",
+                                "required": True,
+                                "min_length": 1,
+                                "max_length": 1,
+                            }
                         )
 
                     @dataclass
@@ -1975,19 +1918,19 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         date: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                required=True,
-                                min_length=6,
-                                max_length=6
-                            )
+                            metadata={
+                                "type": "Element",
+                                "required": True,
+                                "min_length": 6,
+                                "max_length": 6,
+                            }
                         )
                         other_date: Optional[Decimal] = field(
                             default=None,
-                            metadata=dict(
-                                name="otherDate",
-                                type="Element"
-                            )
+                            metadata={
+                                "name": "otherDate",
+                                "type": "Element",
+                            }
                         )
 
                     @dataclass
@@ -1998,22 +1941,21 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         name: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                required=True,
-                                min_length=1,
-                                max_length=5
-                            )
+                            metadata={
+                                "type": "Element",
+                                "required": True,
+                                "min_length": 1,
+                                "max_length": 5,
+                            }
                         )
                         value: List[str] = field(
                             default_factory=list,
-                            metadata=dict(
-                                type="Element",
-                                min_occurs=0,
-                                max_occurs=10,
-                                min_length=1,
-                                max_length=20
-                            )
+                            metadata={
+                                "type": "Element",
+                                "max_occurs": 10,
+                                "min_length": 1,
+                                "max_length": 20,
+                            }
                         )
 
     @dataclass
@@ -2030,59 +1972,59 @@ class FareMasterPricerTravelBoardSearch:
         """
         pricing_tick_info: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo"] = field(
             default=None,
-            metadata=dict(
-                name="pricingTickInfo",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "pricingTickInfo",
+                "type": "Element",
+                "required": True,
+            }
         )
         corporate: Optional["FareMasterPricerTravelBoardSearch.FareOptions.Corporate"] = field(
             default=None,
-            metadata=dict(
-                type="Element"
-            )
+            metadata={
+                "type": "Element",
+            }
         )
         ticketing_price_scheme: Optional["FareMasterPricerTravelBoardSearch.FareOptions.TicketingPriceScheme"] = field(
             default=None,
-            metadata=dict(
-                name="ticketingPriceScheme",
-                type="Element"
-            )
+            metadata={
+                "name": "ticketingPriceScheme",
+                "type": "Element",
+            }
         )
         fee_id_description: Optional["FareMasterPricerTravelBoardSearch.FareOptions.FeeIdDescription"] = field(
             default=None,
-            metadata=dict(
-                name="feeIdDescription",
-                type="Element"
-            )
+            metadata={
+                "name": "feeIdDescription",
+                "type": "Element",
+            }
         )
         conversion_rate: Optional["FareMasterPricerTravelBoardSearch.FareOptions.ConversionRate"] = field(
             default=None,
-            metadata=dict(
-                name="conversionRate",
-                type="Element"
-            )
+            metadata={
+                "name": "conversionRate",
+                "type": "Element",
+            }
         )
         form_of_payment: Optional["FareMasterPricerTravelBoardSearch.FareOptions.FormOfPayment"] = field(
             default=None,
-            metadata=dict(
-                name="formOfPayment",
-                type="Element"
-            )
+            metadata={
+                "name": "formOfPayment",
+                "type": "Element",
+            }
         )
         frequent_traveller_info: Optional["FareMasterPricerTravelBoardSearch.FareOptions.FrequentTravellerInfo"] = field(
             default=None,
-            metadata=dict(
-                name="frequentTravellerInfo",
-                type="Element"
-            )
+            metadata={
+                "name": "frequentTravellerInfo",
+                "type": "Element",
+            }
         )
         monetary_cabin_info: Optional["FareMasterPricerTravelBoardSearch.FareOptions.MonetaryCabinInfo"] = field(
             default=None,
-            metadata=dict(
-                name="monetaryCabinInfo",
-                type="Element"
-            )
+            metadata={
+                "name": "monetaryCabinInfo",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -2098,52 +2040,52 @@ class FareMasterPricerTravelBoardSearch:
             """
             pricing_ticketing: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.PricingTicketing"] = field(
                 default=None,
-                metadata=dict(
-                    name="pricingTicketing",
-                    type="Element"
-                )
+                metadata={
+                    "name": "pricingTicketing",
+                    "type": "Element",
+                }
             )
             ticketing_date: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.TicketingDate"] = field(
                 default=None,
-                metadata=dict(
-                    name="ticketingDate",
-                    type="Element"
-                )
+                metadata={
+                    "name": "ticketingDate",
+                    "type": "Element",
+                }
             )
             company_id: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.CompanyId"] = field(
                 default=None,
-                metadata=dict(
-                    name="companyId",
-                    type="Element"
-                )
+                metadata={
+                    "name": "companyId",
+                    "type": "Element",
+                }
             )
             selling_point: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.SellingPoint"] = field(
                 default=None,
-                metadata=dict(
-                    name="sellingPoint",
-                    type="Element"
-                )
+                metadata={
+                    "name": "sellingPoint",
+                    "type": "Element",
+                }
             )
             ticketing_point: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.TicketingPoint"] = field(
                 default=None,
-                metadata=dict(
-                    name="ticketingPoint",
-                    type="Element"
-                )
+                metadata={
+                    "name": "ticketingPoint",
+                    "type": "Element",
+                }
             )
             journey_origin_point: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.JourneyOriginPoint"] = field(
                 default=None,
-                metadata=dict(
-                    name="journeyOriginPoint",
-                    type="Element"
-                )
+                metadata={
+                    "name": "journeyOriginPoint",
+                    "type": "Element",
+                }
             )
             corporate_id: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.CorporateId"] = field(
                 default=None,
-                metadata=dict(
-                    name="corporateId",
-                    type="Element"
-                )
+                metadata={
+                    "name": "corporateId",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -2153,14 +2095,14 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 price_type: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="priceType",
-                        type="Element",
-                        min_occurs=1,
-                        max_occurs=50,
-                        min_length=0,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "priceType",
+                        "type": "Element",
+                        "min_occurs": 1,
+                        "max_occurs": 50,
+                        "min_length": 0,
+                        "max_length": 3,
+                    }
                 )
 
             @dataclass
@@ -2171,21 +2113,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 date: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        required=True,
-                        min_length=6,
-                        max_length=6
-                    )
+                    metadata={
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 6,
+                        "max_length": 6,
+                    }
                 )
                 rtc_date: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="rtcDate",
-                        type="Element",
-                        min_length=6,
-                        max_length=6
-                    )
+                    metadata={
+                        "name": "rtcDate",
+                        "type": "Element",
+                        "min_length": 6,
+                        "max_length": 6,
+                    }
                 )
 
             @dataclass
@@ -2200,21 +2142,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        required=True,
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 country: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
             @dataclass
@@ -2225,21 +2167,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        required=True,
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 country: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
             @dataclass
@@ -2250,21 +2192,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        required=True,
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 country: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
             @dataclass
@@ -2276,30 +2218,30 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 arc_number: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="arcNumber",
-                        type="Element",
-                        min_length=1,
-                        max_length=12
-                    )
+                    metadata={
+                        "name": "arcNumber",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 12,
+                    }
                 )
                 ersp_number: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="erspNumber",
-                        type="Element",
-                        min_length=1,
-                        max_length=12
-                    )
+                    metadata={
+                        "name": "erspNumber",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 12,
+                    }
                 )
                 iata_number: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="iataNumber",
-                        type="Element",
-                        min_length=1,
-                        max_length=12
-                    )
+                    metadata={
+                        "name": "iataNumber",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 12,
+                    }
                 )
 
         @dataclass
@@ -2309,12 +2251,11 @@ class FareMasterPricerTravelBoardSearch:
             """
             corporate_id: List["FareMasterPricerTravelBoardSearch.FareOptions.Corporate.CorporateId"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="corporateId",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "corporateId",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
 
             @dataclass
@@ -2325,23 +2266,23 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 corporate_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="corporateQualifier",
-                        type="Element",
-                        required=True,
-                        min_length=0,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "corporateQualifier",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 0,
+                        "max_length": 3,
+                    }
                 )
                 identity: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        type="Element",
-                        min_occurs=1,
-                        max_occurs=9,
-                        min_length=1,
-                        max_length=20
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_occurs": 1,
+                        "max_occurs": 9,
+                        "min_length": 1,
+                        "max_length": 20,
+                    }
                 )
 
         @dataclass
@@ -2354,37 +2295,37 @@ class FareMasterPricerTravelBoardSearch:
             """
             reference_number: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="referenceNumber",
-                    type="Element",
-                    required=True,
-                    min_length=1,
-                    max_length=35
-                )
+                metadata={
+                    "name": "referenceNumber",
+                    "type": "Element",
+                    "required": True,
+                    "min_length": 1,
+                    "max_length": 35,
+                }
             )
             name: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=35
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 35,
+                }
             )
             status: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             description: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=250
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 250,
+                }
             )
 
         @dataclass
@@ -2394,12 +2335,11 @@ class FareMasterPricerTravelBoardSearch:
             """
             fee_id: List["FareMasterPricerTravelBoardSearch.FareOptions.FeeIdDescription.FeeId"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="feeId",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "feeId",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
 
             @dataclass
@@ -2410,23 +2350,23 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 fee_type: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="feeType",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "feeType",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 5,
+                    }
                 )
                 fee_id_number: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="feeIdNumber",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=50
-                    )
+                    metadata={
+                        "name": "feeIdNumber",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 50,
+                    }
                 )
 
         @dataclass
@@ -2436,12 +2376,12 @@ class FareMasterPricerTravelBoardSearch:
             """
             conversion_rate_detail: List["FareMasterPricerTravelBoardSearch.FareOptions.ConversionRate.ConversionRateDetail"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="conversionRateDetail",
-                    type="Element",
-                    min_occurs=1,
-                    max_occurs=2
-                )
+                metadata={
+                    "name": "conversionRateDetail",
+                    "type": "Element",
+                    "min_occurs": 1,
+                    "max_occurs": 2,
+                }
             )
 
             @dataclass
@@ -2452,21 +2392,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 conversion_type: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="conversionType",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "conversionType",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 currency: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
         @dataclass
@@ -2476,12 +2416,11 @@ class FareMasterPricerTravelBoardSearch:
             """
             form_of_payment_details: List["FareMasterPricerTravelBoardSearch.FareOptions.FormOfPayment.FormOfPaymentDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="formOfPaymentDetails",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9
-                )
+                metadata={
+                    "name": "formOfPaymentDetails",
+                    "type": "Element",
+                    "max_occurs": 9,
+                }
             )
 
             @dataclass
@@ -2493,28 +2432,28 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 type: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 charged_amount: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="chargedAmount",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "chargedAmount",
+                        "type": "Element",
+                    }
                 )
                 credit_card_number: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="creditCardNumber",
-                        type="Element",
-                        min_length=1,
-                        max_length=20
-                    )
+                    metadata={
+                        "name": "creditCardNumber",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 20,
+                    }
                 )
 
         @dataclass
@@ -2524,12 +2463,12 @@ class FareMasterPricerTravelBoardSearch:
             """
             frequent_traveller_details: List["FareMasterPricerTravelBoardSearch.FareOptions.FrequentTravellerInfo.FrequentTravellerDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="frequentTravellerDetails",
-                    type="Element",
-                    min_occurs=1,
-                    max_occurs=99
-                )
+                metadata={
+                    "name": "frequentTravellerDetails",
+                    "type": "Element",
+                    "min_occurs": 1,
+                    "max_occurs": 99,
+                }
             )
 
             @dataclass
@@ -2545,64 +2484,64 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 carrier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 number: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=25
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 25,
+                    }
                 )
                 customer_reference: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="customerReference",
-                        type="Element",
-                        min_length=1,
-                        max_length=10
-                    )
+                    metadata={
+                        "name": "customerReference",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 10,
+                    }
                 )
                 tier_level: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="tierLevel",
-                        type="Element",
-                        min_length=1,
-                        max_length=35
-                    )
+                    metadata={
+                        "name": "tierLevel",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 35,
+                    }
                 )
                 priority_code: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="priorityCode",
-                        type="Element",
-                        min_length=1,
-                        max_length=12
-                    )
+                    metadata={
+                        "name": "priorityCode",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 12,
+                    }
                 )
                 tier_description: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="tierDescription",
-                        type="Element",
-                        min_length=1,
-                        max_length=35
-                    )
+                    metadata={
+                        "name": "tierDescription",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 35,
+                    }
                 )
                 type: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
         @dataclass
@@ -2612,12 +2551,11 @@ class FareMasterPricerTravelBoardSearch:
             """
             money_and_cabin_info: List["FareMasterPricerTravelBoardSearch.FareOptions.MonetaryCabinInfo.MoneyAndCabinInfo"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="moneyAndCabinInfo",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=99
-                )
+                metadata={
+                    "name": "moneyAndCabinInfo",
+                    "type": "Element",
+                    "max_occurs": 99,
+                }
             )
 
             @dataclass
@@ -2631,47 +2569,46 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 amount_type: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="amountType",
-                        type="Element",
-                        min_length=0,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "amountType",
+                        "type": "Element",
+                        "min_length": 0,
+                        "max_length": 3,
+                    }
                 )
                 amount: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 currency: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 cabin_class_designator: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="cabinClassDesignator",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=9,
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "cabinClassDesignator",
+                        "type": "Element",
+                        "max_occurs": 9,
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
 
     @dataclass
@@ -2682,20 +2619,19 @@ class FareMasterPricerTravelBoardSearch:
         """
         money_info: Optional["FareMasterPricerTravelBoardSearch.PriceToBeat.MoneyInfo"] = field(
             default=None,
-            metadata=dict(
-                name="moneyInfo",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "moneyInfo",
+                "type": "Element",
+                "required": True,
+            }
         )
         additional_money_info: List["FareMasterPricerTravelBoardSearch.PriceToBeat.AdditionalMoneyInfo"] = field(
             default_factory=list,
-            metadata=dict(
-                name="additionalMoneyInfo",
-                type="Element",
-                min_occurs=0,
-                max_occurs=19
-            )
+            metadata={
+                "name": "additionalMoneyInfo",
+                "type": "Element",
+                "max_occurs": 19,
+            }
         )
 
         @dataclass
@@ -2707,26 +2643,26 @@ class FareMasterPricerTravelBoardSearch:
             """
             qualifier: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             amount: Optional[Decimal] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "type": "Element",
+                    "required": True,
+                }
             )
             currency: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
 
         @dataclass
@@ -2739,35 +2675,35 @@ class FareMasterPricerTravelBoardSearch:
             """
             qualifier: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             amount: Optional[Decimal] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "type": "Element",
+                    "required": True,
+                }
             )
             currency: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             location_id: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="locationId",
-                    type="Element",
-                    min_length=3,
-                    max_length=3
-                )
+                metadata={
+                    "name": "locationId",
+                    "type": "Element",
+                    "min_length": 3,
+                    "max_length": 3,
+                }
             )
 
     @dataclass
@@ -2778,21 +2714,20 @@ class FareMasterPricerTravelBoardSearch:
         """
         withhold_tax_surcharge: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="withholdTaxSurcharge",
-                type="Element",
-                min_length=1,
-                max_length=3
-            )
+            metadata={
+                "name": "withholdTaxSurcharge",
+                "type": "Element",
+                "min_length": 1,
+                "max_length": 3,
+            }
         )
         tax_detail: List["FareMasterPricerTravelBoardSearch.TaxInfo.TaxDetail"] = field(
             default_factory=list,
-            metadata=dict(
-                name="taxDetail",
-                type="Element",
-                min_occurs=0,
-                max_occurs=99
-            )
+            metadata={
+                "name": "taxDetail",
+                "type": "Element",
+                "max_occurs": 99,
+            }
         )
 
         @dataclass
@@ -2806,44 +2741,44 @@ class FareMasterPricerTravelBoardSearch:
             """
             rate: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=18
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 18,
+                }
             )
             country: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             currency: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             type: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             amount_qualifier: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="amountQualifier",
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "name": "amountQualifier",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
 
     @dataclass
@@ -2858,53 +2793,49 @@ class FareMasterPricerTravelBoardSearch:
         """
         cabin_id: Optional["FareMasterPricerTravelBoardSearch.TravelFlightInfo.CabinId"] = field(
             default=None,
-            metadata=dict(
-                name="cabinId",
-                type="Element"
-            )
+            metadata={
+                "name": "cabinId",
+                "type": "Element",
+            }
         )
         company_identity: List["FareMasterPricerTravelBoardSearch.TravelFlightInfo.CompanyIdentity"] = field(
             default_factory=list,
-            metadata=dict(
-                name="companyIdentity",
-                type="Element",
-                min_occurs=0,
-                max_occurs=20
-            )
+            metadata={
+                "name": "companyIdentity",
+                "type": "Element",
+                "max_occurs": 20,
+            }
         )
         flight_detail: Optional["FareMasterPricerTravelBoardSearch.TravelFlightInfo.FlightDetail"] = field(
             default=None,
-            metadata=dict(
-                name="flightDetail",
-                type="Element"
-            )
+            metadata={
+                "name": "flightDetail",
+                "type": "Element",
+            }
         )
         inclusion_detail: List["FareMasterPricerTravelBoardSearch.TravelFlightInfo.InclusionDetail"] = field(
             default_factory=list,
-            metadata=dict(
-                name="inclusionDetail",
-                type="Element",
-                min_occurs=0,
-                max_occurs=20
-            )
+            metadata={
+                "name": "inclusionDetail",
+                "type": "Element",
+                "max_occurs": 20,
+            }
         )
         exclusion_detail: List["FareMasterPricerTravelBoardSearch.TravelFlightInfo.ExclusionDetail"] = field(
             default_factory=list,
-            metadata=dict(
-                name="exclusionDetail",
-                type="Element",
-                min_occurs=0,
-                max_occurs=20
-            )
+            metadata={
+                "name": "exclusionDetail",
+                "type": "Element",
+                "max_occurs": 20,
+            }
         )
         unit_number_detail: List["FareMasterPricerTravelBoardSearch.TravelFlightInfo.UnitNumberDetail"] = field(
             default_factory=list,
-            metadata=dict(
-                name="unitNumberDetail",
-                type="Element",
-                min_occurs=0,
-                max_occurs=20
-            )
+            metadata={
+                "name": "unitNumberDetail",
+                "type": "Element",
+                "max_occurs": 20,
+            }
         )
 
         @dataclass
@@ -2915,22 +2846,21 @@ class FareMasterPricerTravelBoardSearch:
             """
             cabin_qualifier: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="cabinQualifier",
-                    type="Element",
-                    min_length=1,
-                    max_length=2
-                )
+                metadata={
+                    "name": "cabinQualifier",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 2,
+                }
             )
             cabin: List[str] = field(
                 default_factory=list,
-                metadata=dict(
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=5,
-                    min_length=0,
-                    max_length=1
-                )
+                metadata={
+                    "type": "Element",
+                    "max_occurs": 5,
+                    "min_length": 0,
+                    "max_length": 1,
+                }
             )
 
         @dataclass
@@ -2941,24 +2871,24 @@ class FareMasterPricerTravelBoardSearch:
             """
             carrier_qualifier: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="carrierQualifier",
-                    type="Element",
-                    required=True,
-                    min_length=0,
-                    max_length=1
-                )
+                metadata={
+                    "name": "carrierQualifier",
+                    "type": "Element",
+                    "required": True,
+                    "min_length": 0,
+                    "max_length": 1,
+                }
             )
             carrier_id: List[str] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="carrierId",
-                    type="Element",
-                    min_occurs=1,
-                    max_occurs=999,
-                    min_length=2,
-                    max_length=3
-                )
+                metadata={
+                    "name": "carrierId",
+                    "type": "Element",
+                    "min_occurs": 1,
+                    "max_occurs": 999,
+                    "min_length": 2,
+                    "max_length": 3,
+                }
             )
 
         @dataclass
@@ -2968,14 +2898,13 @@ class FareMasterPricerTravelBoardSearch:
             """
             flight_type: List[str] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="flightType",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9,
-                    min_length=1,
-                    max_length=2
-                )
+                metadata={
+                    "name": "flightType",
+                    "type": "Element",
+                    "max_occurs": 9,
+                    "min_length": 1,
+                    "max_length": 2,
+                }
             )
 
         @dataclass
@@ -2987,32 +2916,32 @@ class FareMasterPricerTravelBoardSearch:
             """
             inclusion_identifier: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="inclusionIdentifier",
-                    type="Element",
-                    required=True,
-                    min_length=0,
-                    max_length=1
-                )
+                metadata={
+                    "name": "inclusionIdentifier",
+                    "type": "Element",
+                    "required": True,
+                    "min_length": 0,
+                    "max_length": 1,
+                }
             )
             location_id: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="locationId",
-                    type="Element",
-                    required=True,
-                    min_length=3,
-                    max_length=5
-                )
+                metadata={
+                    "name": "locationId",
+                    "type": "Element",
+                    "required": True,
+                    "min_length": 3,
+                    "max_length": 5,
+                }
             )
             airport_city_qualifier: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="airportCityQualifier",
-                    type="Element",
-                    min_length=1,
-                    max_length=1
-                )
+                metadata={
+                    "name": "airportCityQualifier",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 1,
+                }
             )
 
         @dataclass
@@ -3024,32 +2953,32 @@ class FareMasterPricerTravelBoardSearch:
             """
             exclusion_identifier: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="exclusionIdentifier",
-                    type="Element",
-                    required=True,
-                    min_length=0,
-                    max_length=1
-                )
+                metadata={
+                    "name": "exclusionIdentifier",
+                    "type": "Element",
+                    "required": True,
+                    "min_length": 0,
+                    "max_length": 1,
+                }
             )
             location_id: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="locationId",
-                    type="Element",
-                    required=True,
-                    min_length=3,
-                    max_length=5
-                )
+                metadata={
+                    "name": "locationId",
+                    "type": "Element",
+                    "required": True,
+                    "min_length": 3,
+                    "max_length": 5,
+                }
             )
             airport_city_qualifier: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="airportCityQualifier",
-                    type="Element",
-                    min_length=1,
-                    max_length=1
-                )
+                metadata={
+                    "name": "airportCityQualifier",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 1,
+                }
             )
 
         @dataclass
@@ -3060,21 +2989,21 @@ class FareMasterPricerTravelBoardSearch:
             """
             number_of_units: Optional[Decimal] = field(
                 default=None,
-                metadata=dict(
-                    name="numberOfUnits",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "numberOfUnits",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             type_of_unit: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="typeOfUnit",
-                    type="Element",
-                    required=True,
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "name": "typeOfUnit",
+                    "type": "Element",
+                    "required": True,
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
 
     @dataclass
@@ -3087,38 +3016,37 @@ class FareMasterPricerTravelBoardSearch:
         """
         criteria_name: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="criteriaName",
-                type="Element",
-                min_length=1,
-                max_length=50
-            )
+            metadata={
+                "name": "criteriaName",
+                "type": "Element",
+                "min_length": 1,
+                "max_length": 50,
+            }
         )
         criteria_code: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="criteriaCode",
-                type="Element",
-                min_length=1,
-                max_length=3
-            )
+            metadata={
+                "name": "criteriaCode",
+                "type": "Element",
+                "min_length": 1,
+                "max_length": 3,
+            }
         )
         value: Optional[str] = field(
             default=None,
-            metadata=dict(
-                type="Element",
-                min_length=1,
-                max_length=18
-            )
+            metadata={
+                "type": "Element",
+                "min_length": 1,
+                "max_length": 18,
+            }
         )
         criteria_details: List["FareMasterPricerTravelBoardSearch.ValueSearch.CriteriaDetails"] = field(
             default_factory=list,
-            metadata=dict(
-                name="criteriaDetails",
-                type="Element",
-                min_occurs=0,
-                max_occurs=10
-            )
+            metadata={
+                "name": "criteriaDetails",
+                "type": "Element",
+                "max_occurs": 10,
+            }
         )
 
         @dataclass
@@ -3130,29 +3058,28 @@ class FareMasterPricerTravelBoardSearch:
             """
             type: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             value: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=18
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 18,
+                }
             )
             attribute: List[str] = field(
                 default_factory=list,
-                metadata=dict(
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=99,
-                    min_length=1,
-                    max_length=9
-                )
+                metadata={
+                    "type": "Element",
+                    "max_occurs": 99,
+                    "min_length": 1,
+                    "max_length": 9,
+                }
             )
 
     @dataclass
@@ -3163,20 +3090,19 @@ class FareMasterPricerTravelBoardSearch:
         """
         bucket_info: Optional["FareMasterPricerTravelBoardSearch.Buckets.BucketInfo"] = field(
             default=None,
-            metadata=dict(
-                name="bucketInfo",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "bucketInfo",
+                "type": "Element",
+                "required": True,
+            }
         )
         bucket_details: List["FareMasterPricerTravelBoardSearch.Buckets.BucketDetails"] = field(
             default_factory=list,
-            metadata=dict(
-                name="bucketDetails",
-                type="Element",
-                min_occurs=0,
-                max_occurs=15
-            )
+            metadata={
+                "name": "bucketDetails",
+                "type": "Element",
+                "max_occurs": 15,
+            }
         )
 
         @dataclass
@@ -3193,63 +3119,63 @@ class FareMasterPricerTravelBoardSearch:
             """
             number: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             name: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=20
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 20,
+                }
             )
             completion: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             mode: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             value_ref: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="valueRef",
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "name": "valueRef",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             weight: Optional[Decimal] = field(
                 default=None,
-                metadata=dict(
-                    type="Element"
-                )
+                metadata={
+                    "type": "Element",
+                }
             )
             count: Optional[Decimal] = field(
                 default=None,
-                metadata=dict(
-                    type="Element"
-                )
+                metadata={
+                    "type": "Element",
+                }
             )
             attribute_count: Optional[Decimal] = field(
                 default=None,
-                metadata=dict(
-                    name="attributeCount",
-                    type="Element"
-                )
+                metadata={
+                    "name": "attributeCount",
+                    "type": "Element",
+                }
             )
 
         @dataclass
@@ -3261,27 +3187,26 @@ class FareMasterPricerTravelBoardSearch:
             """
             code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             type: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             attribute: List["FareMasterPricerTravelBoardSearch.Buckets.BucketDetails.Attribute"] = field(
                 default_factory=list,
-                metadata=dict(
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=10
-                )
+                metadata={
+                    "type": "Element",
+                    "max_occurs": 10,
+                }
             )
 
             @dataclass
@@ -3292,22 +3217,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 requested_sgt: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="requestedSgt",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "requestedSgt",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 value: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=50,
-                        min_length=1,
-                        max_length=20
-                    )
+                    metadata={
+                        "type": "Element",
+                        "max_occurs": 50,
+                        "min_length": 1,
+                        "max_length": 20,
+                    }
                 )
 
     @dataclass
@@ -3327,86 +3251,83 @@ class FareMasterPricerTravelBoardSearch:
         """
         requested_segment_ref: Optional["FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentRef"] = field(
             default=None,
-            metadata=dict(
-                name="requestedSegmentRef",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "requestedSegmentRef",
+                "type": "Element",
+                "required": True,
+            }
         )
         departure_localization: Optional["FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization"] = field(
             default=None,
-            metadata=dict(
-                name="departureLocalization",
-                type="Element"
-            )
+            metadata={
+                "name": "departureLocalization",
+                "type": "Element",
+            }
         )
         arrival_localization: Optional["FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization"] = field(
             default=None,
-            metadata=dict(
-                name="arrivalLocalization",
-                type="Element"
-            )
+            metadata={
+                "name": "arrivalLocalization",
+                "type": "Element",
+            }
         )
         time_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails"] = field(
             default=None,
-            metadata=dict(
-                name="timeDetails",
-                type="Element"
-            )
+            metadata={
+                "name": "timeDetails",
+                "type": "Element",
+            }
         )
         flight_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo"] = field(
             default=None,
-            metadata=dict(
-                name="flightInfo",
-                type="Element"
-            )
+            metadata={
+                "name": "flightInfo",
+                "type": "Element",
+            }
         )
         family_information: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FamilyInformation"] = field(
             default=None,
-            metadata=dict(
-                name="familyInformation",
-                type="Element"
-            )
+            metadata={
+                "name": "familyInformation",
+                "type": "Element",
+            }
         )
         value_search: List["FareMasterPricerTravelBoardSearch.Itinerary.ValueSearch"] = field(
             default_factory=list,
-            metadata=dict(
-                name="valueSearch",
-                type="Element",
-                min_occurs=0,
-                max_occurs=99
-            )
+            metadata={
+                "name": "valueSearch",
+                "type": "Element",
+                "max_occurs": 99,
+            }
         )
         group_of_flights: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights"] = field(
             default_factory=list,
-            metadata=dict(
-                name="groupOfFlights",
-                type="Element",
-                min_occurs=0,
-                max_occurs=6
-            )
+            metadata={
+                "name": "groupOfFlights",
+                "type": "Element",
+                "max_occurs": 6,
+            }
         )
         flight_info_pnr: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr"] = field(
             default_factory=list,
-            metadata=dict(
-                name="flightInfoPNR",
-                type="Element",
-                min_occurs=0,
-                max_occurs=4
-            )
+            metadata={
+                "name": "flightInfoPNR",
+                "type": "Element",
+                "max_occurs": 4,
+            }
         )
         requested_segment_action: Optional["FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentAction"] = field(
             default=None,
-            metadata=dict(
-                name="requestedSegmentAction",
-                type="Element"
-            )
+            metadata={
+                "name": "requestedSegmentAction",
+                "type": "Element",
+            }
         )
         attributes: Optional["FareMasterPricerTravelBoardSearch.Itinerary.Attributes"] = field(
             default=None,
-            metadata=dict(
-                type="Element"
-            )
+            metadata={
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -3417,20 +3338,19 @@ class FareMasterPricerTravelBoardSearch:
             """
             seg_ref: Optional[Decimal] = field(
                 default=None,
-                metadata=dict(
-                    name="segRef",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "segRef",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             location_forcing: List["FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentRef.LocationForcing"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="locationForcing",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=2
-                )
+                metadata={
+                    "name": "locationForcing",
+                    "type": "Element",
+                    "max_occurs": 2,
+                }
             )
 
             @dataclass
@@ -3441,21 +3361,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 airport_city_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="airportCityQualifier",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "airportCityQualifier",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
                 segment_number: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="segmentNumber",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "segmentNumber",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
 
         @dataclass
@@ -3468,35 +3388,33 @@ class FareMasterPricerTravelBoardSearch:
             """
             departure_point: Optional["FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.DeparturePoint"] = field(
                 default=None,
-                metadata=dict(
-                    name="departurePoint",
-                    type="Element"
-                )
+                metadata={
+                    "name": "departurePoint",
+                    "type": "Element",
+                }
             )
             dep_multi_city: List["FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.DepMultiCity"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="depMultiCity",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "depMultiCity",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
             first_pnr_segment_ref: Optional["FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.FirstPnrSegmentRef"] = field(
                 default=None,
-                metadata=dict(
-                    name="firstPnrSegmentRef",
-                    type="Element"
-                )
+                metadata={
+                    "name": "firstPnrSegmentRef",
+                    "type": "Element",
+                }
             )
             attribute_details: List["FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.AttributeDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="attributeDetails",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "attributeDetails",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
 
             @dataclass
@@ -3511,52 +3429,52 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 distance: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element"
-                    )
+                    metadata={
+                        "type": "Element",
+                    }
                 )
                 distance_unit: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="distanceUnit",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "distanceUnit",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 airport_city_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="airportCityQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "airportCityQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
                 latitude: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=6,
-                        max_length=6
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 6,
+                        "max_length": 6,
+                    }
                 )
                 longitude: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=6,
-                        max_length=6
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 6,
+                        "max_length": 6,
+                    }
                 )
 
             @dataclass
@@ -3567,22 +3485,22 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        required=True,
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 airport_city_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="airportCityQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "airportCityQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
 
             @dataclass
@@ -3593,19 +3511,19 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 pnr_segment_tattoo: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="pnrSegmentTattoo",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "pnrSegmentTattoo",
+                        "type": "Element",
+                    }
                 )
                 pnr_segment_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="pnrSegmentQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "pnrSegmentQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
 
             @dataclass
@@ -3616,21 +3534,20 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 type: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=5
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 5,
+                    }
                 )
                 value: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=10,
-                        min_length=1,
-                        max_length=20
-                    )
+                    metadata={
+                        "type": "Element",
+                        "max_occurs": 10,
+                        "min_length": 1,
+                        "max_length": 20,
+                    }
                 )
 
         @dataclass
@@ -3642,28 +3559,26 @@ class FareMasterPricerTravelBoardSearch:
             """
             arrival_point_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization.ArrivalPointDetails"] = field(
                 default=None,
-                metadata=dict(
-                    name="arrivalPointDetails",
-                    type="Element"
-                )
+                metadata={
+                    "name": "arrivalPointDetails",
+                    "type": "Element",
+                }
             )
             arrival_multi_city: List["FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization.ArrivalMultiCity"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="arrivalMultiCity",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "arrivalMultiCity",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
             attribute_details: List["FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization.AttributeDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="attributeDetails",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "attributeDetails",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
 
             @dataclass
@@ -3678,52 +3593,52 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 distance: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element"
-                    )
+                    metadata={
+                        "type": "Element",
+                    }
                 )
                 distance_unit: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="distanceUnit",
-                        type="Element",
-                        min_length=0,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "distanceUnit",
+                        "type": "Element",
+                        "min_length": 0,
+                        "max_length": 3,
+                    }
                 )
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 airport_city_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="airportCityQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "airportCityQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
                 latitude: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=6,
-                        max_length=6
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 6,
+                        "max_length": 6,
+                    }
                 )
                 longitude: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=6,
-                        max_length=6
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 6,
+                        "max_length": 6,
+                    }
                 )
 
             @dataclass
@@ -3734,22 +3649,22 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        required=True,
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 airport_city_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="airportCityQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "airportCityQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
 
             @dataclass
@@ -3760,21 +3675,20 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 type: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=5
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 5,
+                    }
                 )
                 value: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=10,
-                        min_length=1,
-                        max_length=20
-                    )
+                    metadata={
+                        "type": "Element",
+                        "max_occurs": 10,
+                        "min_length": 1,
+                        "max_length": 20,
+                    }
                 )
 
         @dataclass
@@ -3786,25 +3700,25 @@ class FareMasterPricerTravelBoardSearch:
             """
             first_date_time_detail: Optional["FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.FirstDateTimeDetail"] = field(
                 default=None,
-                metadata=dict(
-                    name="firstDateTimeDetail",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "firstDateTimeDetail",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             range_of_date: Optional["FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.RangeOfDate"] = field(
                 default=None,
-                metadata=dict(
-                    name="rangeOfDate",
-                    type="Element"
-                )
+                metadata={
+                    "name": "rangeOfDate",
+                    "type": "Element",
+                }
             )
             trip_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.TripDetails"] = field(
                 default=None,
-                metadata=dict(
-                    name="tripDetails",
-                    type="Element"
-                )
+                metadata={
+                    "name": "tripDetails",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -3817,37 +3731,37 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 time_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="timeQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "timeQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 date: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=6,
-                        max_length=6
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 6,
+                        "max_length": 6,
+                    }
                 )
                 time: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=4,
-                        max_length=4
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 4,
+                        "max_length": 4,
+                    }
                 )
                 time_window: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="timeWindow",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "timeWindow",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
             @dataclass
@@ -3859,28 +3773,28 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 range_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="rangeQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "rangeQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 day_interval: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="dayInterval",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "dayInterval",
+                        "type": "Element",
+                    }
                 )
                 time_atdestination: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="timeAtdestination",
-                        type="Element",
-                        min_length=4,
-                        max_length=4
-                    )
+                    metadata={
+                        "name": "timeAtdestination",
+                        "type": "Element",
+                        "min_length": 4,
+                        "max_length": 4,
+                    }
                 )
 
             @dataclass
@@ -3892,26 +3806,26 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 flexibility_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="flexibilityQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "flexibilityQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 trip_interval: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="tripInterval",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "tripInterval",
+                        "type": "Element",
+                    }
                 )
                 trip_duration: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="tripDuration",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "tripDuration",
+                        "type": "Element",
+                    }
                 )
 
         @dataclass
@@ -3926,53 +3840,49 @@ class FareMasterPricerTravelBoardSearch:
             """
             cabin_id: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.CabinId"] = field(
                 default=None,
-                metadata=dict(
-                    name="cabinId",
-                    type="Element"
-                )
+                metadata={
+                    "name": "cabinId",
+                    "type": "Element",
+                }
             )
             company_identity: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.CompanyIdentity"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="companyIdentity",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "companyIdentity",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
             flight_detail: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.FlightDetail"] = field(
                 default=None,
-                metadata=dict(
-                    name="flightDetail",
-                    type="Element"
-                )
+                metadata={
+                    "name": "flightDetail",
+                    "type": "Element",
+                }
             )
             inclusion_detail: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.InclusionDetail"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="inclusionDetail",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "inclusionDetail",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
             exclusion_detail: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.ExclusionDetail"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="exclusionDetail",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "exclusionDetail",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
             unit_number_detail: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.UnitNumberDetail"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="unitNumberDetail",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "unitNumberDetail",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
 
             @dataclass
@@ -3983,22 +3893,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 cabin_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="cabinQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=2
-                    )
+                    metadata={
+                        "name": "cabinQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 2,
+                    }
                 )
                 cabin: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=5,
-                        min_length=0,
-                        max_length=1
-                    )
+                    metadata={
+                        "type": "Element",
+                        "max_occurs": 5,
+                        "min_length": 0,
+                        "max_length": 1,
+                    }
                 )
 
             @dataclass
@@ -4009,24 +3918,24 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 carrier_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="carrierQualifier",
-                        type="Element",
-                        required=True,
-                        min_length=0,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "carrierQualifier",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 0,
+                        "max_length": 1,
+                    }
                 )
                 carrier_id: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="carrierId",
-                        type="Element",
-                        min_occurs=1,
-                        max_occurs=99,
-                        min_length=2,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "carrierId",
+                        "type": "Element",
+                        "min_occurs": 1,
+                        "max_occurs": 99,
+                        "min_length": 2,
+                        "max_length": 3,
+                    }
                 )
 
             @dataclass
@@ -4036,14 +3945,13 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 flight_type: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="flightType",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=9,
-                        min_length=1,
-                        max_length=2
-                    )
+                    metadata={
+                        "name": "flightType",
+                        "type": "Element",
+                        "max_occurs": 9,
+                        "min_length": 1,
+                        "max_length": 2,
+                    }
                 )
 
             @dataclass
@@ -4055,32 +3963,32 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 inclusion_identifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="inclusionIdentifier",
-                        type="Element",
-                        required=True,
-                        min_length=0,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "inclusionIdentifier",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 0,
+                        "max_length": 1,
+                    }
                 )
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        required=True,
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 airport_city_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="airportCityQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "airportCityQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
 
             @dataclass
@@ -4092,32 +4000,32 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 exclusion_identifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="exclusionIdentifier",
-                        type="Element",
-                        required=True,
-                        min_length=0,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "exclusionIdentifier",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 0,
+                        "max_length": 1,
+                    }
                 )
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        required=True,
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 airport_city_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="airportCityQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "airportCityQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
 
             @dataclass
@@ -4128,21 +4036,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 number_of_units: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="numberOfUnits",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "numberOfUnits",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 type_of_unit: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="typeOfUnit",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "typeOfUnit",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
         @dataclass
@@ -4152,12 +4060,11 @@ class FareMasterPricerTravelBoardSearch:
             """
             commercial_family_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FamilyInformation.CommercialFamilyDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="commercialFamilyDetails",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "commercialFamilyDetails",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
 
             @dataclass
@@ -4167,13 +4074,13 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 commercial_family: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="commercialFamily",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=10
-                    )
+                    metadata={
+                        "name": "commercialFamily",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 10,
+                    }
                 )
 
         @dataclass
@@ -4186,38 +4093,37 @@ class FareMasterPricerTravelBoardSearch:
             """
             criteria_name: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="criteriaName",
-                    type="Element",
-                    min_length=1,
-                    max_length=50
-                )
+                metadata={
+                    "name": "criteriaName",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 50,
+                }
             )
             criteria_code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="criteriaCode",
-                    type="Element",
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "name": "criteriaCode",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             value: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    type="Element",
-                    min_length=1,
-                    max_length=18
-                )
+                metadata={
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 18,
+                }
             )
             criteria_details: List["FareMasterPricerTravelBoardSearch.Itinerary.ValueSearch.CriteriaDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="criteriaDetails",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=10
-                )
+                metadata={
+                    "name": "criteriaDetails",
+                    "type": "Element",
+                    "max_occurs": 10,
+                }
             )
 
             @dataclass
@@ -4229,29 +4135,28 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 type: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 value: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=18
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 18,
+                    }
                 )
                 attribute: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=99,
-                        min_length=1,
-                        max_length=9
-                    )
+                    metadata={
+                        "type": "Element",
+                        "max_occurs": 99,
+                        "min_length": 1,
+                        "max_length": 9,
+                    }
                 )
 
         @dataclass
@@ -4263,27 +4168,27 @@ class FareMasterPricerTravelBoardSearch:
             """
             prop_flight_gr_detail: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PropFlightGrDetail"] = field(
                 default=None,
-                metadata=dict(
-                    name="propFlightGrDetail",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "propFlightGrDetail",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             price_to_beat: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat"] = field(
                 default=None,
-                metadata=dict(
-                    name="priceToBeat",
-                    type="Element"
-                )
+                metadata={
+                    "name": "priceToBeat",
+                    "type": "Element",
+                }
             )
             flight_details: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="flightDetails",
-                    type="Element",
-                    min_occurs=1,
-                    max_occurs=4
-                )
+                metadata={
+                    "name": "flightDetails",
+                    "type": "Element",
+                    "min_occurs": 1,
+                    "max_occurs": 4,
+                }
             )
 
             @dataclass
@@ -4295,30 +4200,30 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 flight_proposal: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PropFlightGrDetail.FlightProposal"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="flightProposal",
-                        type="Element",
-                        min_occurs=1,
-                        max_occurs=9
-                    )
+                    metadata={
+                        "name": "flightProposal",
+                        "type": "Element",
+                        "min_occurs": 1,
+                        "max_occurs": 9,
+                    }
                 )
                 flight_characteristic: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="flightCharacteristic",
-                        type="Element",
-                        min_length=0,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "flightCharacteristic",
+                        "type": "Element",
+                        "min_length": 0,
+                        "max_length": 3,
+                    }
                 )
                 maj_cabin: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="majCabin",
-                        type="Element",
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "majCabin",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
 
                 @dataclass
@@ -4329,20 +4234,20 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     ref: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=6
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 6,
+                        }
                     )
                     unit_qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="unitQualifier",
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "unitQualifier",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
 
             @dataclass
@@ -4353,20 +4258,19 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 money_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat.MoneyInfo"] = field(
                     default=None,
-                    metadata=dict(
-                        name="moneyInfo",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "moneyInfo",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 additional_money_info: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat.AdditionalMoneyInfo"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="additionalMoneyInfo",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=19
-                    )
+                    metadata={
+                        "name": "additionalMoneyInfo",
+                        "type": "Element",
+                        "max_occurs": 19,
+                    }
                 )
 
                 @dataclass
@@ -4378,26 +4282,26 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     amount: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            required=True
-                        )
+                        metadata={
+                            "type": "Element",
+                            "required": True,
+                        }
                     )
                     currency: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
 
                 @dataclass
@@ -4410,35 +4314,35 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     amount: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            required=True
-                        )
+                        metadata={
+                            "type": "Element",
+                            "required": True,
+                        }
                     )
                     currency: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     location_id: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="locationId",
-                            type="Element",
-                            min_length=3,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "locationId",
+                            "type": "Element",
+                            "min_length": 3,
+                            "max_length": 3,
+                        }
                     )
 
             @dataclass
@@ -4455,66 +4359,63 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 flight_information: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation"] = field(
                     default=None,
-                    metadata=dict(
-                        name="flightInformation",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "flightInformation",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 avl_info: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AvlInfo"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="avlInfo",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=6
-                    )
+                    metadata={
+                        "name": "avlInfo",
+                        "type": "Element",
+                        "max_occurs": 6,
+                    }
                 )
                 technical_stop: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TechnicalStop"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="technicalStop",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=5
-                    )
+                    metadata={
+                        "name": "technicalStop",
+                        "type": "Element",
+                        "max_occurs": 5,
+                    }
                 )
                 commercial_agreement: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.CommercialAgreement"] = field(
                     default=None,
-                    metadata=dict(
-                        name="commercialAgreement",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "commercialAgreement",
+                        "type": "Element",
+                    }
                 )
                 add_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AddInfo"] = field(
                     default=None,
-                    metadata=dict(
-                        name="addInfo",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "addInfo",
+                        "type": "Element",
+                    }
                 )
                 terminal_equipment_details: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="terminalEquipmentDetails",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=2
-                    )
+                    metadata={
+                        "name": "terminalEquipmentDetails",
+                        "type": "Element",
+                        "max_occurs": 2,
+                    }
                 )
                 reservation_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo"] = field(
                     default=None,
-                    metadata=dict(
-                        name="reservationInfo",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "reservationInfo",
+                        "type": "Element",
+                    }
                 )
                 price_to_beat: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat"] = field(
                     default=None,
-                    metadata=dict(
-                        name="priceToBeat",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "priceToBeat",
+                        "type": "Element",
+                    }
                 )
 
                 @dataclass
@@ -4530,58 +4431,57 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     product_date_time: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.ProductDateTime"] = field(
                         default=None,
-                        metadata=dict(
-                            name="productDateTime",
-                            type="Element",
-                            required=True
-                        )
+                        metadata={
+                            "name": "productDateTime",
+                            "type": "Element",
+                            "required": True,
+                        }
                     )
                     location: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.Location"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            type="Element",
-                            min_occurs=1,
-                            max_occurs=2
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_occurs": 1,
+                            "max_occurs": 2,
+                        }
                     )
                     company_id: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.CompanyId"] = field(
                         default=None,
-                        metadata=dict(
-                            name="companyId",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "companyId",
+                            "type": "Element",
+                        }
                     )
                     flight_ortrain_number: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="flightOrtrainNumber",
-                            type="Element",
-                            min_length=1,
-                            max_length=8
-                        )
+                        metadata={
+                            "name": "flightOrtrainNumber",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 8,
+                        }
                     )
                     product_detail: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.ProductDetail"] = field(
                         default=None,
-                        metadata=dict(
-                            name="productDetail",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "productDetail",
+                            "type": "Element",
+                        }
                     )
                     add_product_detail: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.AddProductDetail"] = field(
                         default=None,
-                        metadata=dict(
-                            name="addProductDetail",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "addProductDetail",
+                            "type": "Element",
+                        }
                     )
                     attribute_details: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.AttributeDetails"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="attributeDetails",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=20
-                        )
+                        metadata={
+                            "name": "attributeDetails",
+                            "type": "Element",
+                            "max_occurs": 20,
+                        }
                     )
 
                     @dataclass
@@ -4595,49 +4495,49 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         date_of_departure: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="dateOfDeparture",
-                                type="Element",
-                                required=True,
-                                min_length=6,
-                                max_length=6
-                            )
+                            metadata={
+                                "name": "dateOfDeparture",
+                                "type": "Element",
+                                "required": True,
+                                "min_length": 6,
+                                "max_length": 6,
+                            }
                         )
                         time_of_departure: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="timeOfDeparture",
-                                type="Element",
-                                min_length=4,
-                                max_length=4
-                            )
+                            metadata={
+                                "name": "timeOfDeparture",
+                                "type": "Element",
+                                "min_length": 4,
+                                "max_length": 4,
+                            }
                         )
                         date_of_arrival: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="dateOfArrival",
-                                type="Element",
-                                min_length=6,
-                                max_length=6
-                            )
+                            metadata={
+                                "name": "dateOfArrival",
+                                "type": "Element",
+                                "min_length": 6,
+                                "max_length": 6,
+                            }
                         )
                         time_of_arrival: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="timeOfArrival",
-                                type="Element",
-                                min_length=4,
-                                max_length=4
-                            )
+                            metadata={
+                                "name": "timeOfArrival",
+                                "type": "Element",
+                                "min_length": 4,
+                                "max_length": 4,
+                            }
                         )
                         date_variation: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="dateVariation",
-                                type="Element",
-                                min_length=1,
-                                max_length=1
-                            )
+                            metadata={
+                                "name": "dateVariation",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 1,
+                            }
                         )
 
                     @dataclass
@@ -4649,30 +4549,30 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         location_id: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="locationId",
-                                type="Element",
-                                required=True,
-                                min_length=3,
-                                max_length=5
-                            )
+                            metadata={
+                                "name": "locationId",
+                                "type": "Element",
+                                "required": True,
+                                "min_length": 3,
+                                "max_length": 5,
+                            }
                         )
                         airport_city_qualifier: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="airportCityQualifier",
-                                type="Element",
-                                min_length=1,
-                                max_length=1
-                            )
+                            metadata={
+                                "name": "airportCityQualifier",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 1,
+                            }
                         )
                         terminal: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=5
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 5,
+                            }
                         )
 
                     @dataclass
@@ -4683,22 +4583,22 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         marketing_carrier: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="marketingCarrier",
-                                type="Element",
-                                required=True,
-                                min_length=2,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "marketingCarrier",
+                                "type": "Element",
+                                "required": True,
+                                "min_length": 2,
+                                "max_length": 3,
+                            }
                         )
                         operating_carrier: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="operatingCarrier",
-                                type="Element",
-                                min_length=2,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "operatingCarrier",
+                                "type": "Element",
+                                "min_length": 2,
+                                "max_length": 3,
+                            }
                         )
 
                     @dataclass
@@ -4711,39 +4611,38 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         equipment_type: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="equipmentType",
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "equipmentType",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         operating_day: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="operatingDay",
-                                type="Element",
-                                min_length=1,
-                                max_length=7
-                            )
+                            metadata={
+                                "name": "operatingDay",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 7,
+                            }
                         )
                         tech_stop_number: Optional[Decimal] = field(
                             default=None,
-                            metadata=dict(
-                                name="techStopNumber",
-                                type="Element"
-                            )
+                            metadata={
+                                "name": "techStopNumber",
+                                "type": "Element",
+                            }
                         )
                         location_id: List[str] = field(
                             default_factory=list,
-                            metadata=dict(
-                                name="locationId",
-                                type="Element",
-                                min_occurs=0,
-                                max_occurs=3,
-                                min_length=3,
-                                max_length=5
-                            )
+                            metadata={
+                                "name": "locationId",
+                                "type": "Element",
+                                "max_occurs": 3,
+                                "min_length": 3,
+                                "max_length": 5,
+                            }
                         )
 
                     @dataclass
@@ -4758,59 +4657,58 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         last_seat_available: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="lastSeatAvailable",
-                                type="Element",
-                                min_length=1,
-                                max_length=1
-                            )
+                            metadata={
+                                "name": "lastSeatAvailable",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 1,
+                            }
                         )
                         level_of_access: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="levelOfAccess",
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "levelOfAccess",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         electronic_ticketing: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="electronicTicketing",
-                                type="Element",
-                                min_length=1,
-                                max_length=1
-                            )
+                            metadata={
+                                "name": "electronicTicketing",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 1,
+                            }
                         )
                         operational_suffix: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="operationalSuffix",
-                                type="Element",
-                                min_length=1,
-                                max_length=1
-                            )
+                            metadata={
+                                "name": "operationalSuffix",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 1,
+                            }
                         )
                         product_detail_qualifier: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="productDetailQualifier",
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "productDetailQualifier",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         flight_characteristic: List[str] = field(
                             default_factory=list,
-                            metadata=dict(
-                                name="flightCharacteristic",
-                                type="Element",
-                                min_occurs=0,
-                                max_occurs=9,
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "flightCharacteristic",
+                                "type": "Element",
+                                "max_occurs": 9,
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
 
                     @dataclass
@@ -4821,22 +4719,22 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         attribute_type: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="attributeType",
-                                type="Element",
-                                required=True,
-                                min_length=1,
-                                max_length=5
-                            )
+                            metadata={
+                                "name": "attributeType",
+                                "type": "Element",
+                                "required": True,
+                                "min_length": 1,
+                                "max_length": 5,
+                            }
                         )
                         attribute_description: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="attributeDescription",
-                                type="Element",
-                                min_length=1,
-                                max_length=10
-                            )
+                            metadata={
+                                "name": "attributeDescription",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 10,
+                            }
                         )
 
                 @dataclass
@@ -4847,19 +4745,18 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     cabin_product: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AvlInfo.CabinProduct"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="cabinProduct",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=26
-                        )
+                        metadata={
+                            "name": "cabinProduct",
+                            "type": "Element",
+                            "max_occurs": 26,
+                        }
                     )
                     context_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AvlInfo.ContextDetails"] = field(
                         default=None,
-                        metadata=dict(
-                            name="contextDetails",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "contextDetails",
+                            "type": "Element",
+                        }
                     )
 
                     @dataclass
@@ -4872,38 +4769,38 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         rbd: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                required=True,
-                                min_length=1,
-                                max_length=1
-                            )
+                            metadata={
+                                "type": "Element",
+                                "required": True,
+                                "min_length": 1,
+                                "max_length": 1,
+                            }
                         )
                         booking_modifier: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="bookingModifier",
-                                type="Element",
-                                min_length=1,
-                                max_length=1
-                            )
+                            metadata={
+                                "name": "bookingModifier",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 1,
+                            }
                         )
                         cabin: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=1
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 1,
+                            }
                         )
                         avl_status: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="avlStatus",
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "avlStatus",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
 
                     @dataclass
@@ -4913,13 +4810,13 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         avl: List[str] = field(
                             default_factory=list,
-                            metadata=dict(
-                                type="Element",
-                                min_occurs=1,
-                                max_occurs=9,
-                                min_length=1,
-                                max_length=6
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_occurs": 1,
+                                "max_occurs": 9,
+                                "min_length": 1,
+                                "max_length": 6,
+                            }
                         )
 
                 @dataclass
@@ -4930,19 +4827,19 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     stop_details: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TechnicalStop.StopDetails"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="stopDetails",
-                            type="Element",
-                            min_occurs=1,
-                            max_occurs=2
-                        )
+                        metadata={
+                            "name": "stopDetails",
+                            "type": "Element",
+                            "min_occurs": 1,
+                            "max_occurs": 2,
+                        }
                     )
                     dummy_net: Optional[object] = field(
                         default=None,
-                        metadata=dict(
-                            name="Dummy.NET",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "Dummy.NET",
+                            "type": "Element",
+                        }
                     )
 
                     @dataclass
@@ -4956,47 +4853,47 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         date_qualifier: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="dateQualifier",
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "dateQualifier",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         date: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=6,
-                                max_length=6
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 6,
+                                "max_length": 6,
+                            }
                         )
                         first_time: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="firstTime",
-                                type="Element",
-                                min_length=4,
-                                max_length=4
-                            )
+                            metadata={
+                                "name": "firstTime",
+                                "type": "Element",
+                                "min_length": 4,
+                                "max_length": 4,
+                            }
                         )
                         equipement_type: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="equipementType",
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "equipementType",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         location_id: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="locationId",
-                                type="Element",
-                                min_length=3,
-                                max_length=5
-                            )
+                            metadata={
+                                "name": "locationId",
+                                "type": "Element",
+                                "min_length": 3,
+                                "max_length": 5,
+                            }
                         )
 
                 @dataclass
@@ -5007,19 +4904,18 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     codeshare_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.CommercialAgreement.CodeshareDetails"] = field(
                         default=None,
-                        metadata=dict(
-                            name="codeshareDetails",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "codeshareDetails",
+                            "type": "Element",
+                        }
                     )
                     other_codeshare_details: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.CommercialAgreement.OtherCodeshareDetails"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="otherCodeshareDetails",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=9
-                        )
+                        metadata={
+                            "name": "otherCodeshareDetails",
+                            "type": "Element",
+                            "max_occurs": 9,
+                        }
                     )
 
                     @dataclass
@@ -5031,28 +4927,28 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         code_share_type: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="codeShareType",
-                                type="Element",
-                                min_length=1,
-                                max_length=1
-                            )
+                            metadata={
+                                "name": "codeShareType",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 1,
+                            }
                         )
                         airline_designator: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="airlineDesignator",
-                                type="Element",
-                                min_length=2,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "airlineDesignator",
+                                "type": "Element",
+                                "min_length": 2,
+                                "max_length": 3,
+                            }
                         )
                         flight_number: Optional[Decimal] = field(
                             default=None,
-                            metadata=dict(
-                                name="flightNumber",
-                                type="Element"
-                            )
+                            metadata={
+                                "name": "flightNumber",
+                                "type": "Element",
+                            }
                         )
 
                     @dataclass
@@ -5064,28 +4960,28 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         code_share_type: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="codeShareType",
-                                type="Element",
-                                min_length=1,
-                                max_length=1
-                            )
+                            metadata={
+                                "name": "codeShareType",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 1,
+                            }
                         )
                         airline_designator: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="airlineDesignator",
-                                type="Element",
-                                min_length=2,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "airlineDesignator",
+                                "type": "Element",
+                                "min_length": 2,
+                                "max_length": 3,
+                            }
                         )
                         flight_number: Optional[Decimal] = field(
                             default=None,
-                            metadata=dict(
-                                name="flightNumber",
-                                type="Element"
-                            )
+                            metadata={
+                                "name": "flightNumber",
+                                "type": "Element",
+                            }
                         )
 
                 @dataclass
@@ -5098,40 +4994,38 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     status: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=2,
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "max_occurs": 2,
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     date_time_period_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AddInfo.DateTimePeriodDetails"] = field(
                         default=None,
-                        metadata=dict(
-                            name="dateTimePeriodDetails",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "dateTimePeriodDetails",
+                            "type": "Element",
+                        }
                     )
                     reference_number: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="referenceNumber",
-                            type="Element",
-                            min_length=1,
-                            max_length=35
-                        )
+                        metadata={
+                            "name": "referenceNumber",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 35,
+                        }
                     )
                     product_identification: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="productIdentification",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=2,
-                            min_length=1,
-                            max_length=35
-                        )
+                        metadata={
+                            "name": "productIdentification",
+                            "type": "Element",
+                            "max_occurs": 2,
+                            "min_length": 1,
+                            "max_length": 35,
+                        }
                     )
 
                     @dataclass
@@ -5142,20 +5036,20 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         qualifier: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                required=True,
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "type": "Element",
+                                "required": True,
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         value: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=35
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 35,
+                            }
                         )
 
                 @dataclass
@@ -5168,31 +5062,31 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     leg_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.LegDetails"] = field(
                         default=None,
-                        metadata=dict(
-                            name="legDetails",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "legDetails",
+                            "type": "Element",
+                        }
                     )
                     departure_station_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.DepartureStationInfo"] = field(
                         default=None,
-                        metadata=dict(
-                            name="departureStationInfo",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "departureStationInfo",
+                            "type": "Element",
+                        }
                     )
                     arrival_station_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.ArrivalStationInfo"] = field(
                         default=None,
-                        metadata=dict(
-                            name="arrivalStationInfo",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "arrivalStationInfo",
+                            "type": "Element",
+                        }
                     )
                     mileage_time_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.MileageTimeDetails"] = field(
                         default=None,
-                        metadata=dict(
-                            name="mileageTimeDetails",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "mileageTimeDetails",
+                            "type": "Element",
+                        }
                     )
 
                     @dataclass
@@ -5204,26 +5098,26 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         equipment: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         duration: Optional[Decimal] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element"
-                            )
+                            metadata={
+                                "type": "Element",
+                            }
                         )
                         complexing_flight_indicator: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="complexingFlightIndicator",
-                                type="Element",
-                                min_length=1,
-                                max_length=1
-                            )
+                            metadata={
+                                "name": "complexingFlightIndicator",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 1,
+                            }
                         )
 
                     @dataclass
@@ -5233,11 +5127,11 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         terminal: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
 
                     @dataclass
@@ -5247,11 +5141,11 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         terminal: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
 
                     @dataclass
@@ -5261,10 +5155,10 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         elapsed_ground_time: Optional[Decimal] = field(
                             default=None,
-                            metadata=dict(
-                                name="elapsedGroundTime",
-                                type="Element"
-                            )
+                            metadata={
+                                "name": "elapsedGroundTime",
+                                "type": "Element",
+                            }
                         )
 
                 @dataclass
@@ -5281,65 +5175,65 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     booking: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
                     identifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
                     status: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     item_number: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            name="itemNumber",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "itemNumber",
+                            "type": "Element",
+                        }
                     )
                     date_time_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo.DateTimeDetails"] = field(
                         default=None,
-                        metadata=dict(
-                            name="dateTimeDetails",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "dateTimeDetails",
+                            "type": "Element",
+                        }
                     )
                     designator: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
                     movement_type: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="movementType",
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "movementType",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     product_type_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo.ProductTypeDetails"] = field(
                         default=None,
-                        metadata=dict(
-                            name="productTypeDetails",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "productTypeDetails",
+                            "type": "Element",
+                        }
                     )
 
                     @dataclass
@@ -5350,20 +5244,20 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         date: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                required=True,
-                                min_length=6,
-                                max_length=6
-                            )
+                            metadata={
+                                "type": "Element",
+                                "required": True,
+                                "min_length": 6,
+                                "max_length": 6,
+                            }
                         )
                         time: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=4,
-                                max_length=4
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 4,
+                                "max_length": 4,
+                            }
                         )
 
                     @dataclass
@@ -5374,21 +5268,21 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         sequence_number: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="sequenceNumber",
-                                type="Element",
-                                min_length=1,
-                                max_length=6
-                            )
+                            metadata={
+                                "name": "sequenceNumber",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 6,
+                            }
                         )
                         availability_context: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="availabilityContext",
-                                type="Element",
-                                min_length=1,
-                                max_length=6
-                            )
+                            metadata={
+                                "name": "availabilityContext",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 6,
+                            }
                         )
 
                 @dataclass
@@ -5399,20 +5293,19 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     money_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat.MoneyInfo"] = field(
                         default=None,
-                        metadata=dict(
-                            name="moneyInfo",
-                            type="Element",
-                            required=True
-                        )
+                        metadata={
+                            "name": "moneyInfo",
+                            "type": "Element",
+                            "required": True,
+                        }
                     )
                     additional_money_info: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat.AdditionalMoneyInfo"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="additionalMoneyInfo",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=19
-                        )
+                        metadata={
+                            "name": "additionalMoneyInfo",
+                            "type": "Element",
+                            "max_occurs": 19,
+                        }
                     )
 
                     @dataclass
@@ -5424,26 +5317,26 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         qualifier: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         amount: Optional[Decimal] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                required=True
-                            )
+                            metadata={
+                                "type": "Element",
+                                "required": True,
+                            }
                         )
                         currency: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
 
                     @dataclass
@@ -5456,35 +5349,35 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         qualifier: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         amount: Optional[Decimal] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                required=True
-                            )
+                            metadata={
+                                "type": "Element",
+                                "required": True,
+                            }
                         )
                         currency: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         location_id: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="locationId",
-                                type="Element",
-                                min_length=3,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "locationId",
+                                "type": "Element",
+                                "min_length": 3,
+                                "max_length": 3,
+                            }
                         )
 
         @dataclass
@@ -5502,70 +5395,68 @@ class FareMasterPricerTravelBoardSearch:
             """
             travel_response_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails"] = field(
                 default=None,
-                metadata=dict(
-                    name="travelResponseDetails",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "travelResponseDetails",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             time_table_date: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate"] = field(
                 default=None,
-                metadata=dict(
-                    name="timeTableDate",
-                    type="Element"
-                )
+                metadata={
+                    "name": "timeTableDate",
+                    "type": "Element",
+                }
             )
             terminal_equipment_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="terminalEquipmentDetails",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=2
-                )
+                metadata={
+                    "name": "terminalEquipmentDetails",
+                    "type": "Element",
+                    "max_occurs": 2,
+                }
             )
             codeshare_data: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData"] = field(
                 default=None,
-                metadata=dict(
-                    name="codeshareData",
-                    type="Element"
-                )
+                metadata={
+                    "name": "codeshareData",
+                    "type": "Element",
+                }
             )
             disclosure: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.Disclosure"] = field(
                 default=None,
-                metadata=dict(
-                    type="Element"
-                )
+                metadata={
+                    "type": "Element",
+                }
             )
             stop_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.StopDetails"] = field(
                 default=None,
-                metadata=dict(
-                    name="stopDetails",
-                    type="Element"
-                )
+                metadata={
+                    "name": "stopDetails",
+                    "type": "Element",
+                }
             )
             traffic_restriction_data: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TrafficRestrictionData"] = field(
                 default=None,
-                metadata=dict(
-                    name="trafficRestrictionData",
-                    type="Element"
-                )
+                metadata={
+                    "name": "trafficRestrictionData",
+                    "type": "Element",
+                }
             )
             reservation_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo"] = field(
                 default=None,
-                metadata=dict(
-                    name="reservationInfo",
-                    type="Element"
-                )
+                metadata={
+                    "name": "reservationInfo",
+                    "type": "Element",
+                }
             )
             incidental_stop_info: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="incidentalStopInfo",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=8
-                )
+                metadata={
+                    "name": "incidentalStopInfo",
+                    "type": "Element",
+                    "max_occurs": 8,
+                }
             )
 
             @dataclass
@@ -5580,48 +5471,48 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 flight_date: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightDate"] = field(
                     default=None,
-                    metadata=dict(
-                        name="flightDate",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "flightDate",
+                        "type": "Element",
+                    }
                 )
                 board_point_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.BoardPointDetails"] = field(
                     default=None,
-                    metadata=dict(
-                        name="boardPointDetails",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "boardPointDetails",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 offpoint_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.OffpointDetails"] = field(
                     default=None,
-                    metadata=dict(
-                        name="offpointDetails",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "offpointDetails",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 company_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.CompanyDetails"] = field(
                     default=None,
-                    metadata=dict(
-                        name="companyDetails",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "companyDetails",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 flight_identification: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightIdentification"] = field(
                     default=None,
-                    metadata=dict(
-                        name="flightIdentification",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "flightIdentification",
+                        "type": "Element",
+                    }
                 )
                 flight_type_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightTypeDetails"] = field(
                     default=None,
-                    metadata=dict(
-                        name="flightTypeDetails",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "flightTypeDetails",
+                        "type": "Element",
+                    }
                 )
 
                 @dataclass
@@ -5635,48 +5526,48 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     departure_date: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="departureDate",
-                            type="Element",
-                            min_length=8,
-                            max_length=8
-                        )
+                        metadata={
+                            "name": "departureDate",
+                            "type": "Element",
+                            "min_length": 8,
+                            "max_length": 8,
+                        }
                     )
                     departure_time: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="departureTime",
-                            type="Element",
-                            min_length=4,
-                            max_length=4
-                        )
+                        metadata={
+                            "name": "departureTime",
+                            "type": "Element",
+                            "min_length": 4,
+                            "max_length": 4,
+                        }
                     )
                     arrival_date: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="arrivalDate",
-                            type="Element",
-                            min_length=8,
-                            max_length=8
-                        )
+                        metadata={
+                            "name": "arrivalDate",
+                            "type": "Element",
+                            "min_length": 8,
+                            "max_length": 8,
+                        }
                     )
                     arrival_time: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="arrivalTime",
-                            type="Element",
-                            min_length=4,
-                            max_length=4
-                        )
+                        metadata={
+                            "name": "arrivalTime",
+                            "type": "Element",
+                            "min_length": 4,
+                            "max_length": 4,
+                        }
                     )
                     date_variation: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="dateVariation",
-                            type="Element",
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "dateVariation",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
 
                 @dataclass
@@ -5686,13 +5577,13 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     true_location_id: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="trueLocationId",
-                            type="Element",
-                            required=True,
-                            min_length=3,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "trueLocationId",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 3,
+                            "max_length": 3,
+                        }
                     )
 
                 @dataclass
@@ -5702,13 +5593,13 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     true_location_id: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="trueLocationId",
-                            type="Element",
-                            required=True,
-                            min_length=3,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "trueLocationId",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 3,
+                            "max_length": 3,
+                        }
                     )
 
                 @dataclass
@@ -5718,13 +5609,13 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     marketing_company: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="marketingCompany",
-                            type="Element",
-                            required=True,
-                            min_length=2,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "marketingCompany",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 2,
+                            "max_length": 3,
+                        }
                     )
 
                 @dataclass
@@ -5735,20 +5626,20 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     flight_number: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            name="flightNumber",
-                            type="Element",
-                            required=True
-                        )
+                        metadata={
+                            "name": "flightNumber",
+                            "type": "Element",
+                            "required": True,
+                        }
                     )
                     operational_suffix: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="operationalSuffix",
-                            type="Element",
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "operationalSuffix",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
 
                 @dataclass
@@ -5758,14 +5649,14 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     flight_indicator: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="flightIndicator",
-                            type="Element",
-                            min_occurs=1,
-                            max_occurs=5,
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "flightIndicator",
+                            "type": "Element",
+                            "min_occurs": 1,
+                            "max_occurs": 5,
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
 
             @dataclass
@@ -5777,23 +5668,23 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 begin_date_time: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.BeginDateTime"] = field(
                     default=None,
-                    metadata=dict(
-                        name="beginDateTime",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "beginDateTime",
+                        "type": "Element",
+                    }
                 )
                 end_date_time: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.EndDateTime"] = field(
                     default=None,
-                    metadata=dict(
-                        name="endDateTime",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "endDateTime",
+                        "type": "Element",
+                    }
                 )
                 frequency: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.Frequency"] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element"
-                    )
+                    metadata={
+                        "type": "Element",
+                    }
                 )
 
                 @dataclass
@@ -5805,23 +5696,23 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     year: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=4,
-                            max_length=4
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 4,
+                            "max_length": 4,
+                        }
                     )
                     month: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element"
-                        )
+                        metadata={
+                            "type": "Element",
+                        }
                     )
                     day: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element"
-                        )
+                        metadata={
+                            "type": "Element",
+                        }
                     )
 
                 @dataclass
@@ -5833,23 +5724,23 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     year: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=4,
-                            max_length=4
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 4,
+                            "max_length": 4,
+                        }
                     )
                     month: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element"
-                        )
+                        metadata={
+                            "type": "Element",
+                        }
                     )
                     day: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element"
-                        )
+                        metadata={
+                            "type": "Element",
+                        }
                     )
 
                 @dataclass
@@ -5860,22 +5751,21 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     value: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=7,
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "type": "Element",
+                            "max_occurs": 7,
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
 
             @dataclass
@@ -5888,31 +5778,31 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 leg_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.LegDetails"] = field(
                     default=None,
-                    metadata=dict(
-                        name="legDetails",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "legDetails",
+                        "type": "Element",
+                    }
                 )
                 departure_station_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.DepartureStationInfo"] = field(
                     default=None,
-                    metadata=dict(
-                        name="departureStationInfo",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "departureStationInfo",
+                        "type": "Element",
+                    }
                 )
                 arrival_station_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.ArrivalStationInfo"] = field(
                     default=None,
-                    metadata=dict(
-                        name="arrivalStationInfo",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "arrivalStationInfo",
+                        "type": "Element",
+                    }
                 )
                 mileage_time_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.MileageTimeDetails"] = field(
                     default=None,
-                    metadata=dict(
-                        name="mileageTimeDetails",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "mileageTimeDetails",
+                        "type": "Element",
+                    }
                 )
 
                 @dataclass
@@ -5924,26 +5814,26 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     equipment: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     duration: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element"
-                        )
+                        metadata={
+                            "type": "Element",
+                        }
                     )
                     complexing_flight_indicator: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="complexingFlightIndicator",
-                            type="Element",
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "complexingFlightIndicator",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
 
                 @dataclass
@@ -5953,11 +5843,11 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     terminal: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
 
                 @dataclass
@@ -5967,11 +5857,11 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     terminal: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
 
                 @dataclass
@@ -5981,10 +5871,10 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     elapsed_ground_time: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            name="elapsedGroundTime",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "elapsedGroundTime",
+                            "type": "Element",
+                        }
                     )
 
             @dataclass
@@ -5995,20 +5885,19 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 codeshare_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData.CodeshareDetails"] = field(
                     default=None,
-                    metadata=dict(
-                        name="codeshareDetails",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "codeshareDetails",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 other_codeshare_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData.OtherCodeshareDetails"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="otherCodeshareDetails",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=8
-                    )
+                    metadata={
+                        "name": "otherCodeshareDetails",
+                        "type": "Element",
+                        "max_occurs": 8,
+                    }
                 )
 
                 @dataclass
@@ -6021,38 +5910,38 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     transport_stage_qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="transportStageQualifier",
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "transportStageQualifier",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
                     airline_designator: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="airlineDesignator",
-                            type="Element",
-                            min_length=2,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "airlineDesignator",
+                            "type": "Element",
+                            "min_length": 2,
+                            "max_length": 3,
+                        }
                     )
                     flight_number: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            name="flightNumber",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "flightNumber",
+                            "type": "Element",
+                        }
                     )
                     operational_suffix: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="operationalSuffix",
-                            type="Element",
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "operationalSuffix",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
 
                 @dataclass
@@ -6065,38 +5954,38 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     transport_stage_qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="transportStageQualifier",
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "transportStageQualifier",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
                     airline_designator: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="airlineDesignator",
-                            type="Element",
-                            min_length=2,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "airlineDesignator",
+                            "type": "Element",
+                            "min_length": 2,
+                            "max_length": 3,
+                        }
                     )
                     flight_number: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            name="flightNumber",
-                            type="Element"
-                        )
+                        metadata={
+                            "name": "flightNumber",
+                            "type": "Element",
+                        }
                     )
                     operational_suffix: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="operationalSuffix",
-                            type="Element",
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "operationalSuffix",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
 
             @dataclass
@@ -6107,21 +5996,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 free_text_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.Disclosure.FreeTextDetails"] = field(
                     default=None,
-                    metadata=dict(
-                        name="freeTextDetails",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "freeTextDetails",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 free_text: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="freeText",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=70
-                    )
+                    metadata={
+                        "name": "freeText",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 70,
+                    }
                 )
 
                 @dataclass
@@ -6134,40 +6023,40 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     text_subject_qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="textSubjectQualifier",
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "textSubjectQualifier",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     information_type: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="informationType",
-                            type="Element",
-                            min_length=1,
-                            max_length=4
-                        )
+                        metadata={
+                            "name": "informationType",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 4,
+                        }
                     )
                     source: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     encoding: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
 
             @dataclass
@@ -6177,12 +6066,11 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 routing_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.StopDetails.RoutingDetails"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="routingDetails",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=9
-                    )
+                    metadata={
+                        "name": "routingDetails",
+                        "type": "Element",
+                        "max_occurs": 9,
+                    }
                 )
 
                 @dataclass
@@ -6192,11 +6080,11 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     station: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=3,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 3,
+                            "max_length": 3,
+                        }
                     )
 
             @dataclass
@@ -6206,12 +6094,11 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 traffic_restriction_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TrafficRestrictionData.TrafficRestrictionDetails"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="trafficRestrictionDetails",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=5
-                    )
+                    metadata={
+                        "name": "trafficRestrictionDetails",
+                        "type": "Element",
+                        "max_occurs": 5,
+                    }
                 )
 
                 @dataclass
@@ -6221,11 +6108,11 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     code: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
 
             @dataclass
@@ -6242,65 +6129,65 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 booking: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
                 identifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
                 status: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 item_number: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="itemNumber",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "itemNumber",
+                        "type": "Element",
+                    }
                 )
                 date_time_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo.DateTimeDetails"] = field(
                     default=None,
-                    metadata=dict(
-                        name="dateTimeDetails",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "dateTimeDetails",
+                        "type": "Element",
+                    }
                 )
                 designator: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
                 movement_type: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="movementType",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "movementType",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 product_type_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo.ProductTypeDetails"] = field(
                     default=None,
-                    metadata=dict(
-                        name="productTypeDetails",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "productTypeDetails",
+                        "type": "Element",
+                    }
                 )
 
                 @dataclass
@@ -6311,20 +6198,20 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     date: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            required=True,
-                            min_length=6,
-                            max_length=6
-                        )
+                        metadata={
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 6,
+                            "max_length": 6,
+                        }
                     )
                     time: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=4,
-                            max_length=4
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 4,
+                            "max_length": 4,
+                        }
                     )
 
                 @dataclass
@@ -6335,21 +6222,21 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     sequence_number: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="sequenceNumber",
-                            type="Element",
-                            min_length=1,
-                            max_length=6
-                        )
+                        metadata={
+                            "name": "sequenceNumber",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 6,
+                        }
                     )
                     availability_context: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="availabilityContext",
-                            type="Element",
-                            min_length=1,
-                            max_length=6
-                        )
+                        metadata={
+                            "name": "availabilityContext",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 6,
+                        }
                     )
 
             @dataclass
@@ -6359,11 +6246,11 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 date_time_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo.DateTimeInfo"] = field(
                     default=None,
-                    metadata=dict(
-                        name="dateTimeInfo",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "dateTimeInfo",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
 
                 @dataclass
@@ -6373,12 +6260,11 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     date_time_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo.DateTimeInfo.DateTimeDetails"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="dateTimeDetails",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=2
-                        )
+                        metadata={
+                            "name": "dateTimeDetails",
+                            "type": "Element",
+                            "max_occurs": 2,
+                        }
                     )
 
                     @dataclass
@@ -6393,51 +6279,51 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         qualifier: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         date: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=6,
-                                max_length=6
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 6,
+                                "max_length": 6,
+                            }
                         )
                         time: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=4,
-                                max_length=4
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 4,
+                                "max_length": 4,
+                            }
                         )
                         qualifier2: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         reserved1: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         reserved2: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=3,
-                                max_length=5
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 3,
+                                "max_length": 5,
+                            }
                         )
 
         @dataclass
@@ -6448,20 +6334,20 @@ class FareMasterPricerTravelBoardSearch:
             """
             action_request_code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="actionRequestCode",
-                    type="Element",
-                    required=True,
-                    min_length=1,
-                    max_length=3
-                )
+                metadata={
+                    "name": "actionRequestCode",
+                    "type": "Element",
+                    "required": True,
+                    "min_length": 1,
+                    "max_length": 3,
+                }
             )
             product_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentAction.ProductDetails"] = field(
                 default=None,
-                metadata=dict(
-                    name="productDetails",
-                    type="Element"
-                )
+                metadata={
+                    "name": "productDetails",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -6474,41 +6360,40 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 flight_number: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="flightNumber",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "flightNumber",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 5,
+                    }
                 )
                 booking_class: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="bookingClass",
-                        type="Element",
-                        min_length=1,
-                        max_length=2
-                    )
+                    metadata={
+                        "name": "bookingClass",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 2,
+                    }
                 )
                 operational_suffix: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="operationalSuffix",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "operationalSuffix",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 modifier: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=3,
-                        min_length=1,
-                        max_length=7
-                    )
+                    metadata={
+                        "type": "Element",
+                        "max_occurs": 3,
+                        "min_length": 1,
+                        "max_length": 7,
+                    }
                 )
 
         @dataclass
@@ -6518,12 +6403,12 @@ class FareMasterPricerTravelBoardSearch:
             """
             attribute_details: List["FareMasterPricerTravelBoardSearch.Itinerary.Attributes.AttributeDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="attributeDetails",
-                    type="Element",
-                    min_occurs=1,
-                    max_occurs=9
-                )
+                metadata={
+                    "name": "attributeDetails",
+                    "type": "Element",
+                    "min_occurs": 1,
+                    "max_occurs": 9,
+                }
             )
 
             @dataclass
@@ -6534,22 +6419,22 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 attribute_type: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="attributeType",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "attributeType",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 5,
+                    }
                 )
                 attribute_description: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="attributeDescription",
-                        type="Element",
-                        min_length=1,
-                        max_length=50
-                    )
+                    metadata={
+                        "name": "attributeDescription",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 50,
+                    }
                 )
 
     @dataclass
@@ -6560,20 +6445,19 @@ class FareMasterPricerTravelBoardSearch:
         """
         ticket_number_details: Optional["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketNumberDetails"] = field(
             default=None,
-            metadata=dict(
-                name="ticketNumberDetails",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "ticketNumberDetails",
+                "type": "Element",
+                "required": True,
+            }
         )
         ticket_requested_segments: List["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments"] = field(
             default_factory=list,
-            metadata=dict(
-                name="ticketRequestedSegments",
-                type="Element",
-                min_occurs=0,
-                max_occurs=6
-            )
+            metadata={
+                "name": "ticketRequestedSegments",
+                "type": "Element",
+                "max_occurs": 6,
+            }
         )
 
         @dataclass
@@ -6583,12 +6467,12 @@ class FareMasterPricerTravelBoardSearch:
             """
             document_details: List["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketNumberDetails.DocumentDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="documentDetails",
-                    type="Element",
-                    min_occurs=1,
-                    max_occurs=99
-                )
+                metadata={
+                    "name": "documentDetails",
+                    "type": "Element",
+                    "min_occurs": 1,
+                    "max_occurs": 99,
+                }
             )
 
             @dataclass
@@ -6598,11 +6482,11 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 number: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=35
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 35,
+                    }
                 )
 
         @dataclass
@@ -6613,18 +6497,18 @@ class FareMasterPricerTravelBoardSearch:
             """
             action_identification: Optional["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ActionIdentification"] = field(
                 default=None,
-                metadata=dict(
-                    name="actionIdentification",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "actionIdentification",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             connect_point_details: Optional["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ConnectPointDetails"] = field(
                 default=None,
-                metadata=dict(
-                    name="connectPointDetails",
-                    type="Element"
-                )
+                metadata={
+                    "name": "connectPointDetails",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -6635,20 +6519,20 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 action_request_code: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="actionRequestCode",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "actionRequestCode",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 product_details: Optional["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ActionIdentification.ProductDetails"] = field(
                     default=None,
-                    metadata=dict(
-                        name="productDetails",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "productDetails",
+                        "type": "Element",
+                    }
                 )
 
                 @dataclass
@@ -6661,41 +6545,40 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     flight_number: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="flightNumber",
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=5
-                        )
+                        metadata={
+                            "name": "flightNumber",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 5,
+                        }
                     )
                     booking_class: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="bookingClass",
-                            type="Element",
-                            min_length=1,
-                            max_length=2
-                        )
+                        metadata={
+                            "name": "bookingClass",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 2,
+                        }
                     )
                     operational_suffix: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="operationalSuffix",
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "operationalSuffix",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     modifier: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=3,
-                            min_length=1,
-                            max_length=7
-                        )
+                        metadata={
+                            "type": "Element",
+                            "max_occurs": 3,
+                            "min_length": 1,
+                            "max_length": 7,
+                        }
                     )
 
             @dataclass
@@ -6705,12 +6588,12 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 connection_details: List["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ConnectPointDetails.ConnectionDetails"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="connectionDetails",
-                        type="Element",
-                        min_occurs=1,
-                        max_occurs=17
-                    )
+                    metadata={
+                        "name": "connectionDetails",
+                        "type": "Element",
+                        "min_occurs": 1,
+                        "max_occurs": 17,
+                    }
                 )
 
                 @dataclass
@@ -6720,12 +6603,12 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     location: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
 
     @dataclass
@@ -6737,27 +6620,26 @@ class FareMasterPricerTravelBoardSearch:
         """
         item_ffcnumber: Optional["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber"] = field(
             default=None,
-            metadata=dict(
-                name="itemFFCNumber",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "itemFFCNumber",
+                "type": "Element",
+                "required": True,
+            }
         )
         nb_of_units: Optional["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.NbOfUnits"] = field(
             default=None,
-            metadata=dict(
-                name="nbOfUnits",
-                type="Element"
-            )
+            metadata={
+                "name": "nbOfUnits",
+                "type": "Element",
+            }
         )
         reference_info: List["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ReferenceInfo"] = field(
             default_factory=list,
-            metadata=dict(
-                name="referenceInfo",
-                type="Element",
-                min_occurs=0,
-                max_occurs=6
-            )
+            metadata={
+                "name": "referenceInfo",
+                "type": "Element",
+                "max_occurs": 6,
+            }
         )
 
         @dataclass
@@ -6767,11 +6649,11 @@ class FareMasterPricerTravelBoardSearch:
             """
             item_number_id: Optional["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber.ItemNumberId"] = field(
                 default=None,
-                metadata=dict(
-                    name="itemNumberId",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "itemNumberId",
+                    "type": "Element",
+                    "required": True,
+                }
             )
 
             @dataclass
@@ -6784,36 +6666,36 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 number: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=4
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 4,
+                    }
                 )
                 type: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 responsible_agency: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="responsibleAgency",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "responsibleAgency",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
         @dataclass
@@ -6823,12 +6705,12 @@ class FareMasterPricerTravelBoardSearch:
             """
             unit_number_detail: List["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.NbOfUnits.UnitNumberDetail"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="unitNumberDetail",
-                    type="Element",
-                    min_occurs=1,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "unitNumberDetail",
+                    "type": "Element",
+                    "min_occurs": 1,
+                    "max_occurs": 20,
+                }
             )
 
             @dataclass
@@ -6839,20 +6721,20 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 number_of_units: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="numberOfUnits",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "numberOfUnits",
+                        "type": "Element",
+                    }
                 )
                 type_of_unit: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="typeOfUnit",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "typeOfUnit",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
         @dataclass
@@ -6863,19 +6745,18 @@ class FareMasterPricerTravelBoardSearch:
             """
             referencing_detail: List["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ReferenceInfo.ReferencingDetail"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="referencingDetail",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9
-                )
+                metadata={
+                    "name": "referencingDetail",
+                    "type": "Element",
+                    "max_occurs": 9,
+                }
             )
             dummy_net: Optional[object] = field(
                 default=None,
-                metadata=dict(
-                    name="Dummy.NET",
-                    type="Element"
-                )
+                metadata={
+                    "name": "Dummy.NET",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -6886,20 +6767,20 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 ref_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="refQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "refQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 ref_number: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="refNumber",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "refNumber",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
 
     @dataclass
@@ -6911,27 +6792,26 @@ class FareMasterPricerTravelBoardSearch:
         """
         fee_type_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo"] = field(
             default=None,
-            metadata=dict(
-                name="feeTypeInfo",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "feeTypeInfo",
+                "type": "Element",
+                "required": True,
+            }
         )
         rate_tax: Optional["FareMasterPricerTravelBoardSearch.FeeOption.RateTax"] = field(
             default=None,
-            metadata=dict(
-                name="rateTax",
-                type="Element"
-            )
+            metadata={
+                "name": "rateTax",
+                "type": "Element",
+            }
         )
         fee_details: List["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails"] = field(
             default_factory=list,
-            metadata=dict(
-                name="feeDetails",
-                type="Element",
-                min_occurs=0,
-                max_occurs=99
-            )
+            metadata={
+                "name": "feeDetails",
+                "type": "Element",
+                "max_occurs": 99,
+            }
         )
 
         @dataclass
@@ -6942,20 +6822,19 @@ class FareMasterPricerTravelBoardSearch:
             """
             carrier_fee_details: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo.CarrierFeeDetails"] = field(
                 default=None,
-                metadata=dict(
-                    name="carrierFeeDetails",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "carrierFeeDetails",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             other_selection_details: List["FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo.OtherSelectionDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="otherSelectionDetails",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=98
-                )
+                metadata={
+                    "name": "otherSelectionDetails",
+                    "type": "Element",
+                    "max_occurs": 98,
+                }
             )
 
             @dataclass
@@ -6966,21 +6845,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 type: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 option_information: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="optionInformation",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "optionInformation",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
             @dataclass
@@ -6991,21 +6870,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 option: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 option_information: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="optionInformation",
-                        type="Element",
-                        min_length=1,
-                        max_length=35
-                    )
+                    metadata={
+                        "name": "optionInformation",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 35,
+                    }
                 )
 
         @dataclass
@@ -7015,12 +6894,12 @@ class FareMasterPricerTravelBoardSearch:
             """
             monetary_details: List["FareMasterPricerTravelBoardSearch.FeeOption.RateTax.MonetaryDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="monetaryDetails",
-                    type="Element",
-                    min_occurs=1,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "monetaryDetails",
+                    "type": "Element",
+                    "min_occurs": 1,
+                    "max_occurs": 20,
+                }
             )
 
             @dataclass
@@ -7032,29 +6911,29 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 type_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="typeQualifier",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "typeQualifier",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 amount: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=12
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 12,
+                    }
                 )
                 currency: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
         @dataclass
@@ -7066,25 +6945,25 @@ class FareMasterPricerTravelBoardSearch:
             """
             fee_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo"] = field(
                 default=None,
-                metadata=dict(
-                    name="feeInfo",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "feeInfo",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             associated_amounts: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.AssociatedAmounts"] = field(
                 default=None,
-                metadata=dict(
-                    name="associatedAmounts",
-                    type="Element"
-                )
+                metadata={
+                    "name": "associatedAmounts",
+                    "type": "Element",
+                }
             )
             fee_description_grp: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp"] = field(
                 default=None,
-                metadata=dict(
-                    name="feeDescriptionGrp",
-                    type="Element"
-                )
+                metadata={
+                    "name": "feeDescriptionGrp",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -7095,20 +6974,19 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 data_type_information: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo.DataTypeInformation"] = field(
                     default=None,
-                    metadata=dict(
-                        name="dataTypeInformation",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "dataTypeInformation",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 data_information: List["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo.DataInformation"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="dataInformation",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=99
-                    )
+                    metadata={
+                        "name": "dataInformation",
+                        "type": "Element",
+                        "max_occurs": 99,
+                    }
                 )
 
                 @dataclass
@@ -7119,21 +6997,21 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     sub_type: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="subType",
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "subType",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     option: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
 
                 @dataclass
@@ -7143,11 +7021,11 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     indicator: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
 
             @dataclass
@@ -7157,12 +7035,12 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 monetary_details: List["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.AssociatedAmounts.MonetaryDetails"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="monetaryDetails",
-                        type="Element",
-                        min_occurs=1,
-                        max_occurs=20
-                    )
+                    metadata={
+                        "name": "monetaryDetails",
+                        "type": "Element",
+                        "min_occurs": 1,
+                        "max_occurs": 20,
+                    }
                 )
 
                 @dataclass
@@ -7175,37 +7053,37 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     type_qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="typeQualifier",
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "typeQualifier",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     amount: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=12
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 12,
+                        }
                     )
                     currency: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     location: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
 
             @dataclass
@@ -7217,25 +7095,25 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 item_number_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo"] = field(
                     default=None,
-                    metadata=dict(
-                        name="itemNumberInfo",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "itemNumberInfo",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 service_attributes_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceAttributesInfo"] = field(
                     default=None,
-                    metadata=dict(
-                        name="serviceAttributesInfo",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "serviceAttributesInfo",
+                        "type": "Element",
+                    }
                 )
                 service_description_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo"] = field(
                     default=None,
-                    metadata=dict(
-                        name="serviceDescriptionInfo",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "serviceDescriptionInfo",
+                        "type": "Element",
+                    }
                 )
 
                 @dataclass
@@ -7245,11 +7123,11 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     item_number_details: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo.ItemNumberDetails"] = field(
                         default=None,
-                        metadata=dict(
-                            name="itemNumberDetails",
-                            type="Element",
-                            required=True
-                        )
+                        metadata={
+                            "name": "itemNumberDetails",
+                            "type": "Element",
+                            "required": True,
+                        }
                     )
 
                     @dataclass
@@ -7262,36 +7140,36 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         number: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=4
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 4,
+                            }
                         )
                         type: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         qualifier: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         responsible_agency: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="responsibleAgency",
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "responsibleAgency",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
 
                 @dataclass
@@ -7302,21 +7180,21 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     attribute_qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="attributeQualifier",
-                            type="Element",
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "attributeQualifier",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )
                     attribute_details: List["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceAttributesInfo.AttributeDetails"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="attributeDetails",
-                            type="Element",
-                            min_occurs=1,
-                            max_occurs=99
-                        )
+                        metadata={
+                            "name": "attributeDetails",
+                            "type": "Element",
+                            "min_occurs": 1,
+                            "max_occurs": 99,
+                        }
                     )
 
                     @dataclass
@@ -7327,22 +7205,22 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         attribute_type: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="attributeType",
-                                type="Element",
-                                required=True,
-                                min_length=1,
-                                max_length=25
-                            )
+                            metadata={
+                                "name": "attributeType",
+                                "type": "Element",
+                                "required": True,
+                                "min_length": 1,
+                                "max_length": 25,
+                            }
                         )
                         attribute_description: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="attributeDescription",
-                                type="Element",
-                                min_length=1,
-                                max_length=256
-                            )
+                            metadata={
+                                "name": "attributeDescription",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 256,
+                            }
                         )
 
                 @dataclass
@@ -7353,20 +7231,19 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     service_requirements_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo.ServiceRequirementsInfo"] = field(
                         default=None,
-                        metadata=dict(
-                            name="serviceRequirementsInfo",
-                            type="Element",
-                            required=True
-                        )
+                        metadata={
+                            "name": "serviceRequirementsInfo",
+                            "type": "Element",
+                            "required": True,
+                        }
                     )
                     seat_details: List["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo.SeatDetails"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="seatDetails",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=999
-                        )
+                        metadata={
+                            "name": "seatDetails",
+                            "type": "Element",
+                            "max_occurs": 999,
+                        }
                     )
 
                     @dataclass
@@ -7382,67 +7259,66 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         service_classification: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="serviceClassification",
-                                type="Element",
-                                required=True,
-                                min_length=1,
-                                max_length=4
-                            )
+                            metadata={
+                                "name": "serviceClassification",
+                                "type": "Element",
+                                "required": True,
+                                "min_length": 1,
+                                "max_length": 4,
+                            }
                         )
                         service_status: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="serviceStatus",
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "serviceStatus",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         service_number_of_instances: Optional[Decimal] = field(
                             default=None,
-                            metadata=dict(
-                                name="serviceNumberOfInstances",
-                                type="Element"
-                            )
+                            metadata={
+                                "name": "serviceNumberOfInstances",
+                                "type": "Element",
+                            }
                         )
                         service_marketing_carrier: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="serviceMarketingCarrier",
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "serviceMarketingCarrier",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         service_group: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="serviceGroup",
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "serviceGroup",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         service_sub_group: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="serviceSubGroup",
-                                type="Element",
-                                min_length=1,
-                                max_length=3
-                            )
+                            metadata={
+                                "name": "serviceSubGroup",
+                                "type": "Element",
+                                "min_length": 1,
+                                "max_length": 3,
+                            }
                         )
                         service_free_text: List[str] = field(
                             default_factory=list,
-                            metadata=dict(
-                                name="serviceFreeText",
-                                type="Element",
-                                min_occurs=0,
-                                max_occurs=99,
-                                min_length=1,
-                                max_length=70
-                            )
+                            metadata={
+                                "name": "serviceFreeText",
+                                "type": "Element",
+                                "max_occurs": 99,
+                                "min_length": 1,
+                                "max_length": 70,
+                            }
                         )
 
                     @dataclass
@@ -7452,14 +7328,13 @@ class FareMasterPricerTravelBoardSearch:
                         """
                         seat_characteristics: List[str] = field(
                             default_factory=list,
-                            metadata=dict(
-                                name="seatCharacteristics",
-                                type="Element",
-                                min_occurs=0,
-                                max_occurs=5,
-                                min_length=1,
-                                max_length=2
-                            )
+                            metadata={
+                                "name": "seatCharacteristics",
+                                "type": "Element",
+                                "max_occurs": 5,
+                                "min_length": 1,
+                                "max_length": 2,
+                            }
                         )
 
     @dataclass
@@ -7475,55 +7350,54 @@ class FareMasterPricerTravelBoardSearch:
         """
         office_id_information: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.OfficeIdInformation"] = field(
             default=None,
-            metadata=dict(
-                name="officeIdInformation",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "officeIdInformation",
+                "type": "Element",
+                "required": True,
+            }
         )
         nb_of_units: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.NbOfUnits"] = field(
             default=None,
-            metadata=dict(
-                name="nbOfUnits",
-                type="Element"
-            )
+            metadata={
+                "name": "nbOfUnits",
+                "type": "Element",
+            }
         )
         uid_option: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.UidOption"] = field(
             default=None,
-            metadata=dict(
-                name="uidOption",
-                type="Element"
-            )
+            metadata={
+                "name": "uidOption",
+                "type": "Element",
+            }
         )
         pricing_tick_info: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo"] = field(
             default=None,
-            metadata=dict(
-                name="pricingTickInfo",
-                type="Element"
-            )
+            metadata={
+                "name": "pricingTickInfo",
+                "type": "Element",
+            }
         )
         corporate_fare_info: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.CorporateFareInfo"] = field(
             default=None,
-            metadata=dict(
-                name="corporateFareInfo",
-                type="Element"
-            )
+            metadata={
+                "name": "corporateFareInfo",
+                "type": "Element",
+            }
         )
         travel_flight_info: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo"] = field(
             default=None,
-            metadata=dict(
-                name="travelFlightInfo",
-                type="Element"
-            )
+            metadata={
+                "name": "travelFlightInfo",
+                "type": "Element",
+            }
         )
         airline_distribution_details: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails"] = field(
             default_factory=list,
-            metadata=dict(
-                name="airlineDistributionDetails",
-                type="Element",
-                min_occurs=0,
-                max_occurs=6
-            )
+            metadata={
+                "name": "airlineDistributionDetails",
+                "type": "Element",
+                "max_occurs": 6,
+            }
         )
 
         @dataclass
@@ -7535,28 +7409,28 @@ class FareMasterPricerTravelBoardSearch:
             """
             office_identification: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.OfficeIdInformation.OfficeIdentification"] = field(
                 default=None,
-                metadata=dict(
-                    name="officeIdentification",
-                    type="Element"
-                )
+                metadata={
+                    "name": "officeIdentification",
+                    "type": "Element",
+                }
             )
             office_type: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="officeType",
-                    type="Element",
-                    min_length=1,
-                    max_length=1
-                )
+                metadata={
+                    "name": "officeType",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 1,
+                }
             )
             office_code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="officeCode",
-                    type="Element",
-                    min_length=1,
-                    max_length=30
-                )
+                metadata={
+                    "name": "officeCode",
+                    "type": "Element",
+                    "min_length": 1,
+                    "max_length": 30,
+                }
             )
 
             @dataclass
@@ -7569,37 +7443,37 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 office_name: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="officeName",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "officeName",
+                        "type": "Element",
+                    }
                 )
                 agent_signin: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="agentSignin",
-                        type="Element",
-                        min_length=1,
-                        max_length=9
-                    )
+                    metadata={
+                        "name": "agentSignin",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 9,
+                    }
                 )
                 confidential_office: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="confidentialOffice",
-                        type="Element",
-                        min_length=1,
-                        max_length=9
-                    )
+                    metadata={
+                        "name": "confidentialOffice",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 9,
+                    }
                 )
                 other_office: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="otherOffice",
-                        type="Element",
-                        min_length=1,
-                        max_length=9
-                    )
+                    metadata={
+                        "name": "otherOffice",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 9,
+                    }
                 )
 
         @dataclass
@@ -7609,12 +7483,12 @@ class FareMasterPricerTravelBoardSearch:
             """
             unit_number_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.NbOfUnits.UnitNumberDetail"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="unitNumberDetail",
-                    type="Element",
-                    min_occurs=1,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "unitNumberDetail",
+                    "type": "Element",
+                    "min_occurs": 1,
+                    "max_occurs": 20,
+                }
             )
 
             @dataclass
@@ -7625,20 +7499,20 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 number_of_units: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="numberOfUnits",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "numberOfUnits",
+                        "type": "Element",
+                    }
                 )
                 type_of_unit: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="typeOfUnit",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "typeOfUnit",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
         @dataclass
@@ -7648,12 +7522,12 @@ class FareMasterPricerTravelBoardSearch:
             """
             attribute_details: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.UidOption.AttributeDetails"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="attributeDetails",
-                    type="Element",
-                    min_occurs=1,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "attributeDetails",
+                    "type": "Element",
+                    "min_occurs": 1,
+                    "max_occurs": 20,
+                }
             )
 
             @dataclass
@@ -7664,22 +7538,22 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 attribute_type: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="attributeType",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "attributeType",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 5,
+                    }
                 )
                 attribute_description: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="attributeDescription",
-                        type="Element",
-                        min_length=1,
-                        max_length=20
-                    )
+                    metadata={
+                        "name": "attributeDescription",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 20,
+                    }
                 )
 
         @dataclass
@@ -7695,52 +7569,52 @@ class FareMasterPricerTravelBoardSearch:
             """
             pricing_ticketing: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.PricingTicketing"] = field(
                 default=None,
-                metadata=dict(
-                    name="pricingTicketing",
-                    type="Element"
-                )
+                metadata={
+                    "name": "pricingTicketing",
+                    "type": "Element",
+                }
             )
             ticketing_date: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.TicketingDate"] = field(
                 default=None,
-                metadata=dict(
-                    name="ticketingDate",
-                    type="Element"
-                )
+                metadata={
+                    "name": "ticketingDate",
+                    "type": "Element",
+                }
             )
             company_id: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.CompanyId"] = field(
                 default=None,
-                metadata=dict(
-                    name="companyId",
-                    type="Element"
-                )
+                metadata={
+                    "name": "companyId",
+                    "type": "Element",
+                }
             )
             selling_point: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.SellingPoint"] = field(
                 default=None,
-                metadata=dict(
-                    name="sellingPoint",
-                    type="Element"
-                )
+                metadata={
+                    "name": "sellingPoint",
+                    "type": "Element",
+                }
             )
             ticketing_point: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.TicketingPoint"] = field(
                 default=None,
-                metadata=dict(
-                    name="ticketingPoint",
-                    type="Element"
-                )
+                metadata={
+                    "name": "ticketingPoint",
+                    "type": "Element",
+                }
             )
             journey_origin_point: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.JourneyOriginPoint"] = field(
                 default=None,
-                metadata=dict(
-                    name="journeyOriginPoint",
-                    type="Element"
-                )
+                metadata={
+                    "name": "journeyOriginPoint",
+                    "type": "Element",
+                }
             )
             corporate_id: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.CorporateId"] = field(
                 default=None,
-                metadata=dict(
-                    name="corporateId",
-                    type="Element"
-                )
+                metadata={
+                    "name": "corporateId",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -7750,14 +7624,14 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 price_type: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="priceType",
-                        type="Element",
-                        min_occurs=1,
-                        max_occurs=50,
-                        min_length=0,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "priceType",
+                        "type": "Element",
+                        "min_occurs": 1,
+                        "max_occurs": 50,
+                        "min_length": 0,
+                        "max_length": 3,
+                    }
                 )
 
             @dataclass
@@ -7768,21 +7642,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 date: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        required=True,
-                        min_length=6,
-                        max_length=6
-                    )
+                    metadata={
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 6,
+                        "max_length": 6,
+                    }
                 )
                 rtc_date: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="rtcDate",
-                        type="Element",
-                        min_length=6,
-                        max_length=6
-                    )
+                    metadata={
+                        "name": "rtcDate",
+                        "type": "Element",
+                        "min_length": 6,
+                        "max_length": 6,
+                    }
                 )
 
             @dataclass
@@ -7797,21 +7671,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        required=True,
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 country: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
             @dataclass
@@ -7822,21 +7696,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        required=True,
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 country: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
             @dataclass
@@ -7847,21 +7721,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        required=True,
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 country: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
             @dataclass
@@ -7873,30 +7747,30 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 arc_number: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="arcNumber",
-                        type="Element",
-                        min_length=1,
-                        max_length=12
-                    )
+                    metadata={
+                        "name": "arcNumber",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 12,
+                    }
                 )
                 ersp_number: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="erspNumber",
-                        type="Element",
-                        min_length=1,
-                        max_length=12
-                    )
+                    metadata={
+                        "name": "erspNumber",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 12,
+                    }
                 )
                 iata_number: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="iataNumber",
-                        type="Element",
-                        min_length=1,
-                        max_length=12
-                    )
+                    metadata={
+                        "name": "iataNumber",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 12,
+                    }
                 )
 
         @dataclass
@@ -7906,10 +7780,10 @@ class FareMasterPricerTravelBoardSearch:
             """
             corporate_fare_identifiers: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.CorporateFareInfo.CorporateFareIdentifiers"] = field(
                 default=None,
-                metadata=dict(
-                    name="corporateFareIdentifiers",
-                    type="Element"
-                )
+                metadata={
+                    "name": "corporateFareIdentifiers",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -7920,23 +7794,22 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 fare_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="fareQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "fareQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
                 identify_number: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="identifyNumber",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20,
-                        min_length=1,
-                        max_length=35
-                    )
+                    metadata={
+                        "name": "identifyNumber",
+                        "type": "Element",
+                        "max_occurs": 20,
+                        "min_length": 1,
+                        "max_length": 35,
+                    }
                 )
 
         @dataclass
@@ -7951,53 +7824,49 @@ class FareMasterPricerTravelBoardSearch:
             """
             cabin_id: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.CabinId"] = field(
                 default=None,
-                metadata=dict(
-                    name="cabinId",
-                    type="Element"
-                )
+                metadata={
+                    "name": "cabinId",
+                    "type": "Element",
+                }
             )
             company_identity: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.CompanyIdentity"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="companyIdentity",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "companyIdentity",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
             flight_detail: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.FlightDetail"] = field(
                 default=None,
-                metadata=dict(
-                    name="flightDetail",
-                    type="Element"
-                )
+                metadata={
+                    "name": "flightDetail",
+                    "type": "Element",
+                }
             )
             inclusion_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.InclusionDetail"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="inclusionDetail",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=20
-                )
+                metadata={
+                    "name": "inclusionDetail",
+                    "type": "Element",
+                    "max_occurs": 20,
+                }
             )
             exclusion_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.ExclusionDetail"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="exclusionDetail",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=2
-                )
+                metadata={
+                    "name": "exclusionDetail",
+                    "type": "Element",
+                    "max_occurs": 2,
+                }
             )
             unit_number_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.UnitNumberDetail"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="unitNumberDetail",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9
-                )
+                metadata={
+                    "name": "unitNumberDetail",
+                    "type": "Element",
+                    "max_occurs": 9,
+                }
             )
 
             @dataclass
@@ -8008,22 +7877,22 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 cabin_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="cabinQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=2
-                    )
+                    metadata={
+                        "name": "cabinQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 2,
+                    }
                 )
                 cabin: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        type="Element",
-                        min_occurs=1,
-                        max_occurs=3,
-                        min_length=0,
-                        max_length=1
-                    )
+                    metadata={
+                        "type": "Element",
+                        "min_occurs": 1,
+                        "max_occurs": 3,
+                        "min_length": 0,
+                        "max_length": 1,
+                    }
                 )
 
             @dataclass
@@ -8034,24 +7903,24 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 carrier_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="carrierQualifier",
-                        type="Element",
-                        required=True,
-                        min_length=0,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "carrierQualifier",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 0,
+                        "max_length": 1,
+                    }
                 )
                 carrier_id: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="carrierId",
-                        type="Element",
-                        min_occurs=1,
-                        max_occurs=99,
-                        min_length=2,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "carrierId",
+                        "type": "Element",
+                        "min_occurs": 1,
+                        "max_occurs": 99,
+                        "min_length": 2,
+                        "max_length": 3,
+                    }
                 )
 
             @dataclass
@@ -8061,14 +7930,13 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 flight_type: List[str] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="flightType",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=9,
-                        min_length=1,
-                        max_length=2
-                    )
+                    metadata={
+                        "name": "flightType",
+                        "type": "Element",
+                        "max_occurs": 9,
+                        "min_length": 1,
+                        "max_length": 2,
+                    }
                 )
 
             @dataclass
@@ -8080,32 +7948,32 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 inclusion_identifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="inclusionIdentifier",
-                        type="Element",
-                        required=True,
-                        min_length=0,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "inclusionIdentifier",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 0,
+                        "max_length": 1,
+                    }
                 )
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        required=True,
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 airport_city_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="airportCityQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "airportCityQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
 
             @dataclass
@@ -8117,32 +7985,32 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 exclusion_identifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="exclusionIdentifier",
-                        type="Element",
-                        required=True,
-                        min_length=0,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "exclusionIdentifier",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 0,
+                        "max_length": 1,
+                    }
                 )
                 location_id: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="locationId",
-                        type="Element",
-                        required=True,
-                        min_length=3,
-                        max_length=5
-                    )
+                    metadata={
+                        "name": "locationId",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 3,
+                        "max_length": 5,
+                    }
                 )
                 airport_city_qualifier: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="airportCityQualifier",
-                        type="Element",
-                        min_length=1,
-                        max_length=1
-                    )
+                    metadata={
+                        "name": "airportCityQualifier",
+                        "type": "Element",
+                        "min_length": 1,
+                        "max_length": 1,
+                    }
                 )
 
             @dataclass
@@ -8153,21 +8021,21 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 number_of_units: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="numberOfUnits",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "numberOfUnits",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 type_of_unit: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="typeOfUnit",
-                        type="Element",
-                        required=True,
-                        min_length=1,
-                        max_length=3
-                    )
+                    metadata={
+                        "name": "typeOfUnit",
+                        "type": "Element",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 3,
+                    }
                 )
 
         @dataclass
@@ -8178,18 +8046,18 @@ class FareMasterPricerTravelBoardSearch:
             """
             requested_segment_ref: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.RequestedSegmentRef"] = field(
                 default=None,
-                metadata=dict(
-                    name="requestedSegmentRef",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "requestedSegmentRef",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             flight_info: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo"] = field(
                 default=None,
-                metadata=dict(
-                    name="flightInfo",
-                    type="Element"
-                )
+                metadata={
+                    "name": "flightInfo",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -8200,20 +8068,19 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 seg_ref: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="segRef",
-                        type="Element",
-                        required=True
-                    )
+                    metadata={
+                        "name": "segRef",
+                        "type": "Element",
+                        "required": True,
+                    }
                 )
                 location_forcing: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.RequestedSegmentRef.LocationForcing"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="locationForcing",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=2
-                    )
+                    metadata={
+                        "name": "locationForcing",
+                        "type": "Element",
+                        "max_occurs": 2,
+                    }
                 )
 
                 @dataclass
@@ -8224,21 +8091,21 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     airport_city_qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="airportCityQualifier",
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "airportCityQualifier",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
                     segment_number: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            name="segmentNumber",
-                            type="Element",
-                            required=True
-                        )
+                        metadata={
+                            "name": "segmentNumber",
+                            "type": "Element",
+                            "required": True,
+                        }
                     )
 
             @dataclass
@@ -8253,53 +8120,49 @@ class FareMasterPricerTravelBoardSearch:
                 """
                 cabin_id: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.CabinId"] = field(
                     default=None,
-                    metadata=dict(
-                        name="cabinId",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "cabinId",
+                        "type": "Element",
+                    }
                 )
                 company_identity: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.CompanyIdentity"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="companyIdentity",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20
-                    )
+                    metadata={
+                        "name": "companyIdentity",
+                        "type": "Element",
+                        "max_occurs": 20,
+                    }
                 )
                 flight_detail: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.FlightDetail"] = field(
                     default=None,
-                    metadata=dict(
-                        name="flightDetail",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "flightDetail",
+                        "type": "Element",
+                    }
                 )
                 inclusion_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.InclusionDetail"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="inclusionDetail",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=20
-                    )
+                    metadata={
+                        "name": "inclusionDetail",
+                        "type": "Element",
+                        "max_occurs": 20,
+                    }
                 )
                 exclusion_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.ExclusionDetail"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="exclusionDetail",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=2
-                    )
+                    metadata={
+                        "name": "exclusionDetail",
+                        "type": "Element",
+                        "max_occurs": 2,
+                    }
                 )
                 unit_number_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.UnitNumberDetail"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="unitNumberDetail",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=9
-                    )
+                    metadata={
+                        "name": "unitNumberDetail",
+                        "type": "Element",
+                        "max_occurs": 9,
+                    }
                 )
 
                 @dataclass
@@ -8310,22 +8173,22 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     cabin_qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="cabinQualifier",
-                            type="Element",
-                            min_length=1,
-                            max_length=2
-                        )
+                        metadata={
+                            "name": "cabinQualifier",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 2,
+                        }
                     )
                     cabin: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            type="Element",
-                            min_occurs=1,
-                            max_occurs=3,
-                            min_length=0,
-                            max_length=1
-                        )
+                        metadata={
+                            "type": "Element",
+                            "min_occurs": 1,
+                            "max_occurs": 3,
+                            "min_length": 0,
+                            "max_length": 1,
+                        }
                     )
 
                 @dataclass
@@ -8336,24 +8199,24 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     carrier_qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="carrierQualifier",
-                            type="Element",
-                            required=True,
-                            min_length=0,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "carrierQualifier",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 0,
+                            "max_length": 1,
+                        }
                     )
                     carrier_id: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="carrierId",
-                            type="Element",
-                            min_occurs=1,
-                            max_occurs=99,
-                            min_length=2,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "carrierId",
+                            "type": "Element",
+                            "min_occurs": 1,
+                            "max_occurs": 99,
+                            "min_length": 2,
+                            "max_length": 3,
+                        }
                     )
 
                 @dataclass
@@ -8363,14 +8226,13 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     flight_type: List[str] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="flightType",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=9,
-                            min_length=1,
-                            max_length=2
-                        )
+                        metadata={
+                            "name": "flightType",
+                            "type": "Element",
+                            "max_occurs": 9,
+                            "min_length": 1,
+                            "max_length": 2,
+                        }
                     )
 
                 @dataclass
@@ -8382,32 +8244,32 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     inclusion_identifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="inclusionIdentifier",
-                            type="Element",
-                            required=True,
-                            min_length=0,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "inclusionIdentifier",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 0,
+                            "max_length": 1,
+                        }
                     )
                     location_id: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="locationId",
-                            type="Element",
-                            required=True,
-                            min_length=3,
-                            max_length=5
-                        )
+                        metadata={
+                            "name": "locationId",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 3,
+                            "max_length": 5,
+                        }
                     )
                     airport_city_qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="airportCityQualifier",
-                            type="Element",
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "airportCityQualifier",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
 
                 @dataclass
@@ -8419,32 +8281,32 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     exclusion_identifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="exclusionIdentifier",
-                            type="Element",
-                            required=True,
-                            min_length=0,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "exclusionIdentifier",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 0,
+                            "max_length": 1,
+                        }
                     )
                     location_id: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="locationId",
-                            type="Element",
-                            required=True,
-                            min_length=3,
-                            max_length=5
-                        )
+                        metadata={
+                            "name": "locationId",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 3,
+                            "max_length": 5,
+                        }
                     )
                     airport_city_qualifier: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="airportCityQualifier",
-                            type="Element",
-                            min_length=1,
-                            max_length=1
-                        )
+                        metadata={
+                            "name": "airportCityQualifier",
+                            "type": "Element",
+                            "min_length": 1,
+                            "max_length": 1,
+                        }
                     )
 
                 @dataclass
@@ -8455,19 +8317,19 @@ class FareMasterPricerTravelBoardSearch:
                     """
                     number_of_units: Optional[Decimal] = field(
                         default=None,
-                        metadata=dict(
-                            name="numberOfUnits",
-                            type="Element",
-                            required=True
-                        )
+                        metadata={
+                            "name": "numberOfUnits",
+                            "type": "Element",
+                            "required": True,
+                        }
                     )
                     type_of_unit: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="typeOfUnit",
-                            type="Element",
-                            required=True,
-                            min_length=1,
-                            max_length=3
-                        )
+                        metadata={
+                            "name": "typeOfUnit",
+                            "type": "Element",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 3,
+                        }
                     )

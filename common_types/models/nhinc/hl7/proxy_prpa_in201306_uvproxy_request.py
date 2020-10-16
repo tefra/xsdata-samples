@@ -21,29 +21,29 @@ class ProxyPrpaIn201306UvproxyRequestType:
 
     prpa_in201306_uv02: Optional[PrpaIn201306Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201306UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201306UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     assertion: Optional[AssertionType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_system: Optional[NhinTargetSystemType] = field(
         default=None,
-        metadata=dict(
-            name="nhinTargetSystem",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "nhinTargetSystem",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -58,21 +58,21 @@ class ProxyPrpaIn201306UvproxySecuredRequestType:
 
     prpa_in201306_uv02: Optional[PrpaIn201306Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201306UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201306UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_system: Optional[NhinTargetSystemType] = field(
         default=None,
-        metadata=dict(
-            name="nhinTargetSystem",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "nhinTargetSystem",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 

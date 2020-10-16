@@ -25,21 +25,21 @@ class AirlineType:
     """
     operating: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Operating",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9A-Z]{2,3}"
-        )
+        metadata={
+            "name": "Operating",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[0-9A-Z]{2,3}",
+        }
     )
     marketing: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Marketing",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9A-Z]{2,3}"
-        )
+        metadata={
+            "name": "Marketing",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[0-9A-Z]{2,3}",
+        }
     )
 
 
@@ -50,12 +50,12 @@ class AllianceType:
     """
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            length=2
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "length": 2,
+        }
     )
 
 
@@ -76,11 +76,11 @@ class ApplyResidentDiscountType:
     """
     ind: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="Ind",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Ind",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -92,17 +92,17 @@ class AwardShoppingType:
     """
     enable: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="Enable",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Enable",
+            "type": "Attribute",
+        }
     )
     use_ras: bool = field(
         default=False,
-        metadata=dict(
-            name="UseRAS",
-            type="Attribute"
-        )
+        metadata={
+            "name": "UseRAS",
+            "type": "Attribute",
+        }
     )
 
 
@@ -120,67 +120,67 @@ class BillingInformationType:
     """
     user_station: int = field(
         default=0,
-        metadata=dict(
-            name="UserStation",
-            type="Attribute"
-        )
+        metadata={
+            "name": "UserStation",
+            "type": "Attribute",
+        }
     )
     user_branch: int = field(
         default=0,
-        metadata=dict(
-            name="UserBranch",
-            type="Attribute"
-        )
+        metadata={
+            "name": "UserBranch",
+            "type": "Attribute",
+        }
     )
     partition_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PartitionID",
-            type="Attribute",
-            pattern=r"[0-9A-Z]{2,4}"
-        )
+        metadata={
+            "name": "PartitionID",
+            "type": "Attribute",
+            "pattern": r"[0-9A-Z]{2,4}",
+        }
     )
     user_set_address: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="UserSetAddress",
-            type="Attribute",
-            pattern=r"[0-9A-F]{6}"
-        )
+        metadata={
+            "name": "UserSetAddress",
+            "type": "Attribute",
+            "pattern": r"[0-9A-F]{6}",
+        }
     )
     aaacity: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AAACity",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "AAACity",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     agent_sine_in: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentSineIn",
-            type="Attribute",
-            max_length=3
-        )
+        metadata={
+            "name": "AgentSineIn",
+            "type": "Attribute",
+            "max_length": 3,
+        }
     )
     service_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ServiceName",
-            type="Attribute",
-            pattern=r"[0-9a-zA-Z,]{1,8}"
-        )
+        metadata={
+            "name": "ServiceName",
+            "type": "Attribute",
+            "pattern": r"[0-9a-zA-Z,]{1,8}",
+        }
     )
     action_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ActionCode",
-            type="Attribute",
-            min_length=1,
-            max_length=5
-        )
+        metadata={
+            "name": "ActionCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 5,
+        }
     )
 
 
@@ -194,17 +194,17 @@ class BookingChannelType:
     """
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+        }
     )
     primary: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="Primary",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Primary",
+            "type": "Attribute",
+        }
     )
 
 
@@ -215,11 +215,11 @@ class BrandType:
     """
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -261,12 +261,12 @@ class CachePartitionType:
     """
     name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Name",
-            type="Attribute",
-            required=True,
-            pattern=r"[A-Z0-9_]{1,}"
-        )
+        metadata={
+            "name": "Name",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[A-Z0-9_]{1,}",
+        }
     )
 
 
@@ -290,18 +290,18 @@ class CountryNameType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            min_length=0,
-            max_length=64
-        )
+        metadata={
+            "min_length": 0,
+            "max_length": 64,
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{2}"
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z]{2}",
+        }
     )
 
 
@@ -324,87 +324,87 @@ class CustLoyaltyType:
     """
     share_synch_ind: Optional["CustLoyaltyType.ShareSynchInd"] = field(
         default=None,
-        metadata=dict(
-            name="ShareSynchInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShareSynchInd",
+            "type": "Attribute",
+        }
     )
     share_market_ind: Optional["CustLoyaltyType.ShareMarketInd"] = field(
         default=None,
-        metadata=dict(
-            name="ShareMarketInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShareMarketInd",
+            "type": "Attribute",
+        }
     )
     program_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ProgramID",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "ProgramID",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     membership_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MembershipID",
-            type="Attribute",
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "MembershipID",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
     travel_sector: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TravelSector",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TravelSector",
+            "type": "Attribute",
+        }
     )
     loyal_level: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="LoyalLevel",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "LoyalLevel",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     single_vendor_ind: Optional["CustLoyaltyType.SingleVendorInd"] = field(
         default=None,
-        metadata=dict(
-            name="SingleVendorInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SingleVendorInd",
+            "type": "Attribute",
+        }
     )
     signup_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SignupDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SignupDate",
+            "type": "Attribute",
+        }
     )
     effective_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EffectiveDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "EffectiveDate",
+            "type": "Attribute",
+        }
     )
     expire_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ExpireDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ExpireDate",
+            "type": "Attribute",
+        }
     )
     rph: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RPH",
-            type="Attribute",
-            pattern=r"[0-9]{1,8}"
-        )
+        metadata={
+            "name": "RPH",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,8}",
+        }
     )
 
     class ShareSynchInd(Enum):
@@ -447,17 +447,17 @@ class DateRangeType:
     """
     outbound_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OutboundDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "OutboundDate",
+            "type": "Attribute",
+        }
     )
     date_range: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="DateRange",
-            type="Attribute"
-        )
+        metadata={
+            "name": "DateRange",
+            "type": "Attribute",
+        }
     )
 
 
@@ -474,54 +474,54 @@ class DateTimeType:
     """
     time_window_start: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TimeWindowStart",
-            type="Attribute",
-            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
-        )
+        metadata={
+            "name": "TimeWindowStart",
+            "type": "Attribute",
+            "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
+        }
     )
     time_window_end: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TimeWindowEnd",
-            type="Attribute",
-            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
-        )
+        metadata={
+            "name": "TimeWindowEnd",
+            "type": "Attribute",
+            "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
+        }
     )
     time_tolerance: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="TimeTolerance",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TimeTolerance",
+            "type": "Attribute",
+        }
     )
     date_flexibility: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="DateFlexibility",
-            type="Attribute"
-        )
+        metadata={
+            "name": "DateFlexibility",
+            "type": "Attribute",
+        }
     )
     max_options_per_date: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="MaxOptionsPerDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MaxOptionsPerDate",
+            "type": "Attribute",
+        }
     )
     connection_time_min: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="ConnectionTimeMin",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ConnectionTimeMin",
+            "type": "Attribute",
+        }
     )
     connection_time_max: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="ConnectionTimeMax",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ConnectionTimeMax",
+            "type": "Attribute",
+        }
     )
 
 
@@ -533,12 +533,12 @@ class DepartureDaysType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Value",
-            type="Attribute",
-            required=True,
-            length=7
-        )
+        metadata={
+            "name": "Value",
+            "type": "Attribute",
+            "required": True,
+            "length": 7,
+        }
     )
 
 
@@ -561,101 +561,100 @@ class DocumentType:
     """
     doc_holder_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DocHolderName",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_length=1,
-            max_length=64
-        )
+        metadata={
+            "name": "DocHolderName",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_length": 1,
+            "max_length": 64,
+        }
     )
     doc_limitations: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="DocLimitations",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9,
-            min_length=1,
-            max_length=64
-        )
+        metadata={
+            "name": "DocLimitations",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 9,
+            "min_length": 1,
+            "max_length": 64,
+        }
     )
     share_synch_ind: Optional["DocumentType.ShareSynchInd"] = field(
         default=None,
-        metadata=dict(
-            name="ShareSynchInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShareSynchInd",
+            "type": "Attribute",
+        }
     )
     share_market_ind: Optional["DocumentType.ShareMarketInd"] = field(
         default=None,
-        metadata=dict(
-            name="ShareMarketInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShareMarketInd",
+            "type": "Attribute",
+        }
     )
     doc_issue_authority: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DocIssueAuthority",
-            type="Attribute",
-            min_length=1,
-            max_length=64
-        )
+        metadata={
+            "name": "DocIssueAuthority",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 64,
+        }
     )
     doc_issue_location: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DocIssueLocation",
-            type="Attribute",
-            min_length=1,
-            max_length=64
-        )
+        metadata={
+            "name": "DocIssueLocation",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 64,
+        }
     )
     doc_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DocID",
-            type="Attribute",
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "DocID",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
     doc_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DocType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "DocType",
+            "type": "Attribute",
+        }
     )
     gender: Optional["DocumentType.Gender"] = field(
         default=None,
-        metadata=dict(
-            name="Gender",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Gender",
+            "type": "Attribute",
+        }
     )
     birth_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BirthDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BirthDate",
+            "type": "Attribute",
+        }
     )
     effective_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EffectiveDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "EffectiveDate",
+            "type": "Attribute",
+        }
     )
     expire_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ExpireDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ExpireDate",
+            "type": "Attribute",
+        }
     )
 
     class ShareSynchInd(Enum):
@@ -704,38 +703,38 @@ class EmailType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            min_length=1,
-            max_length=128
-        )
+        metadata={
+            "min_length": 1,
+            "max_length": 128,
+        }
     )
     share_synch_ind: Optional["EmailType.ShareSynchInd"] = field(
         default=None,
-        metadata=dict(
-            name="ShareSynchInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShareSynchInd",
+            "type": "Attribute",
+        }
     )
     share_market_ind: Optional["EmailType.ShareMarketInd"] = field(
         default=None,
-        metadata=dict(
-            name="ShareMarketInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShareMarketInd",
+            "type": "Attribute",
+        }
     )
     default_ind: bool = field(
         default=False,
-        metadata=dict(
-            name="DefaultInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "DefaultInd",
+            "type": "Attribute",
+        }
     )
     email_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EmailType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "EmailType",
+            "type": "Attribute",
+        }
     )
 
     class ShareSynchInd(Enum):
@@ -774,53 +773,53 @@ class ExchangeFareType:
     """
     base_fare_amount: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            name="BaseFareAmount",
-            type="Attribute",
-            required=True,
-            fraction_digits=3
-        )
+        metadata={
+            "name": "BaseFareAmount",
+            "type": "Attribute",
+            "required": True,
+            "fraction_digits": 3,
+        }
     )
     non_refundable_amount: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            name="NonRefundableAmount",
-            type="Attribute",
-            fraction_digits=3
-        )
+        metadata={
+            "name": "NonRefundableAmount",
+            "type": "Attribute",
+            "fraction_digits": 3,
+        }
     )
     base_fare_currency: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BaseFareCurrency",
-            type="Attribute",
-            required=True,
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "BaseFareCurrency",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     fare_calc_currency: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FareCalcCurrency",
-            type="Attribute",
-            required=True,
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "FareCalcCurrency",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     validating_carrier: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ValidatingCarrier",
-            type="Attribute",
-            pattern=r"[0-9A-Z]{2,3}"
-        )
+        metadata={
+            "name": "ValidatingCarrier",
+            "type": "Attribute",
+            "pattern": r"[0-9A-Z]{2,3}",
+        }
     )
     roe: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            name="ROE",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ROE",
+            "type": "Attribute",
+        }
     )
 
 
@@ -837,45 +836,45 @@ class ExchangeSettingsType:
     """
     reprice_current_itin: bool = field(
         default=True,
-        metadata=dict(
-            name="RepriceCurrentItin",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RepriceCurrentItin",
+            "type": "Attribute",
+        }
     )
     attach_exchange_info: bool = field(
         default=False,
-        metadata=dict(
-            name="AttachExchangeInfo",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AttachExchangeInfo",
+            "type": "Attribute",
+        }
     )
     reissue_exchange: Optional["ExchangeSettingsType.ReissueExchange"] = field(
         default=None,
-        metadata=dict(
-            name="ReissueExchange",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ReissueExchange",
+            "type": "Attribute",
+        }
     )
     branded_results: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="BrandedResults",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BrandedResults",
+            "type": "Attribute",
+        }
     )
     miptimeout_threshold: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="MIPTimeoutThreshold",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MIPTimeoutThreshold",
+            "type": "Attribute",
+        }
     )
     request_type: Optional["ExchangeSettingsType.RequestType"] = field(
         default=None,
-        metadata=dict(
-            name="RequestType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RequestType",
+            "type": "Attribute",
+        }
     )
 
     class ReissueExchange(Enum):
@@ -912,74 +911,74 @@ class FareDetailsType:
     """
     component_no: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="ComponentNo",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "ComponentNo",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     basis_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BasisCode",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=15,
-            pattern=r"[A-Z0-9]+(/[A-Z0-9]+)?"
-        )
+        metadata={
+            "name": "BasisCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 15,
+            "pattern": r"[A-Z0-9]+(/[A-Z0-9]+)?",
+        }
     )
     amount: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            fraction_digits=3
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+            "fraction_digits": 3,
+        }
     )
     vendor: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Vendor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Vendor",
+            "type": "Attribute",
+        }
     )
     source_vendor: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SourceVendor",
-            type="Attribute",
-            pattern=r"[0-9A-Z]{2,3}"
-        )
+        metadata={
+            "name": "SourceVendor",
+            "type": "Attribute",
+            "pattern": r"[0-9A-Z]{2,3}",
+        }
     )
     tariff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Tariff",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Tariff",
+            "type": "Attribute",
+        }
     )
     rule_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RuleNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RuleNumber",
+            "type": "Attribute",
+        }
     )
     brand_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BrandID",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "BrandID",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     program_id: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="ProgramID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProgramID",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1002,72 +1001,72 @@ class FareOptionalDetailsType:
     """
     component_no: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="ComponentNo",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ComponentNo",
+            "type": "Attribute",
+        }
     )
     basis_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BasisCode",
-            type="Attribute",
-            min_length=1,
-            max_length=15,
-            pattern=r"[A-Z0-9]+(/[A-Z0-9]+)?"
-        )
+        metadata={
+            "name": "BasisCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 15,
+            "pattern": r"[A-Z0-9]+(/[A-Z0-9]+)?",
+        }
     )
     amount: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            fraction_digits=3
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+            "fraction_digits": 3,
+        }
     )
     vendor: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Vendor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Vendor",
+            "type": "Attribute",
+        }
     )
     source_vendor: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SourceVendor",
-            type="Attribute",
-            pattern=r"[0-9A-Z]{2,3}"
-        )
+        metadata={
+            "name": "SourceVendor",
+            "type": "Attribute",
+            "pattern": r"[0-9A-Z]{2,3}",
+        }
     )
     tariff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Tariff",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Tariff",
+            "type": "Attribute",
+        }
     )
     rule_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RuleNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "RuleNumber",
+            "type": "Attribute",
+        }
     )
     brand_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BrandID",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "BrandID",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     program_id: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="ProgramID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProgramID",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1079,11 +1078,11 @@ class FlightStopsAsConnectionsType:
     """
     ind: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="Ind",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Ind",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1106,12 +1105,12 @@ class GoverningCarrierOverrideType:
     """
     airline_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AirlineCode",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9A-Z]{2,3}"
-        )
+        metadata={
+            "name": "AirlineCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[0-9A-Z]{2,3}",
+        }
     )
 
 
@@ -1123,13 +1122,13 @@ class IncludeVendorPrefType:
     """
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=8
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 8,
+        }
     )
 
 
@@ -1140,11 +1139,11 @@ class JumpCabinLogicType:
     """
     disabled: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="Disabled",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Disabled",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1155,11 +1154,11 @@ class KeepSameCabinType:
     """
     enabled: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="Enabled",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Enabled",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1172,26 +1171,26 @@ class MileageDisplayType:
     """
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     city: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="City",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "City",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     surcharge: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Surcharge",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Surcharge",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1207,39 +1206,39 @@ class NumTripsType:
     """
     number: int = field(
         default=9,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            min_inclusive=1
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+            "min_inclusive": 1,
+        }
     )
     per_date_min: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="PerDateMin",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PerDateMin",
+            "type": "Attribute",
+        }
     )
     per_date_max: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="PerDateMax",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PerDateMax",
+            "type": "Attribute",
+        }
     )
     per_market: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="PerMarket",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PerMarket",
+            "type": "Attribute",
+        }
     )
     per_month: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="PerMonth",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PerMonth",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1262,36 +1261,36 @@ class OptionsPerDatePairType:
     """
     departure: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Departure",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}"
-        )
+        metadata={
+            "name": "Departure",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
+        }
     )
     return_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Return",
-            type="Attribute",
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}"
-        )
+        metadata={
+            "name": "Return",
+            "type": "Attribute",
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
+        }
     )
     min: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Min",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Min",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     max: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Max",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Max",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -1312,105 +1311,100 @@ class PersonNameType:
     """
     name_prefix: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="NamePrefix",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=3,
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "NamePrefix",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 3,
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     given_name: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="GivenName",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=5,
-            min_length=1,
-            max_length=64
-        )
+        metadata={
+            "name": "GivenName",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 5,
+            "min_length": 1,
+            "max_length": 64,
+        }
     )
     middle_name: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="MiddleName",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=3,
-            min_length=1,
-            max_length=64
-        )
+        metadata={
+            "name": "MiddleName",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 3,
+            "min_length": 1,
+            "max_length": 64,
+        }
     )
     surname_prefix: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SurnamePrefix",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "SurnamePrefix",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     surname: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Surname",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True,
-            min_length=1,
-            max_length=64
-        )
+        metadata={
+            "name": "Surname",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+            "min_length": 1,
+            "max_length": 64,
+        }
     )
     name_suffix: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="NameSuffix",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=3,
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "NameSuffix",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 3,
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     name_title: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="NameTitle",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=5,
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "NameTitle",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 5,
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     share_synch_ind: Optional["PersonNameType.ShareSynchInd"] = field(
         default=None,
-        metadata=dict(
-            name="ShareSynchInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShareSynchInd",
+            "type": "Attribute",
+        }
     )
     share_market_ind: Optional["PersonNameType.ShareMarketInd"] = field(
         default=None,
-        metadata=dict(
-            name="ShareMarketInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShareMarketInd",
+            "type": "Attribute",
+        }
     )
     name_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="NameType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "NameType",
+            "type": "Attribute",
+        }
     )
 
     class ShareSynchInd(Enum):
@@ -1451,69 +1445,69 @@ class PlusUpType:
     """
     amount: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            required=True,
-            fraction_digits=3
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+            "required": True,
+            "fraction_digits": 3,
+        }
     )
     origin_city: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OriginCity",
-            type="Attribute",
-            required=True,
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "OriginCity",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     destination_city: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DestinationCity",
-            type="Attribute",
-            required=True,
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "DestinationCity",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     fare_origin_city: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FareOriginCity",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "FareOriginCity",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     fare_destination_city: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FareDestinationCity",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "FareDestinationCity",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     via_city: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ViaCity",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "ViaCity",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     message: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Message",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Message",
+            "type": "Attribute",
+        }
     )
     country_of_payment: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CountryOfPayment",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{2}"
-        )
+        metadata={
+            "name": "CountryOfPayment",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z]{2}",
+        }
     )
 
 
@@ -1524,13 +1518,13 @@ class PointOfSaleOverrideType:
     """
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=8
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 8,
+        }
     )
 
 
@@ -1541,13 +1535,13 @@ class PointOfTicketingOverrideType:
     """
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=8
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 8,
+        }
     )
 
 
@@ -1561,30 +1555,30 @@ class PositionType:
     """
     latitude: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Latitude",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "Latitude",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     longitude: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Longitude",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "Longitude",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     altitude: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Altitude",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "Altitude",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
 
 
@@ -1616,28 +1610,28 @@ class RequestLocationType:
     )
     location_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="LocationCode",
-            type="Attribute",
-            pattern=r"[A-Z]{1,8}"
-        )
+        metadata={
+            "name": "LocationCode",
+            "type": "Attribute",
+            "pattern": r"[A-Z]{1,8}",
+        }
     )
     airports_group: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AirportsGroup",
-            type="Attribute",
-            pattern=r"[A-Za-z0-9]{1,40}"
-        )
+        metadata={
+            "name": "AirportsGroup",
+            "type": "Attribute",
+            "pattern": r"[A-Za-z0-9]{1,40}",
+        }
     )
     code_context: str = field(
         default="IATA",
-        metadata=dict(
-            name="CodeContext",
-            type="Attribute",
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "CodeContext",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
 
 
@@ -1661,19 +1655,19 @@ class ReservationType:
     """
     status: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Status",
-            type="Attribute",
-            pattern=r"[A-Z]{1,2}"
-        )
+        metadata={
+            "name": "Status",
+            "type": "Attribute",
+            "pattern": r"[A-Z]{1,2}",
+        }
     )
     real_status: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RealStatus",
-            type="Attribute",
-            pattern=r"[A-Z]{1,2}"
-        )
+        metadata={
+            "name": "RealStatus",
+            "type": "Attribute",
+            "pattern": r"[A-Z]{1,2}",
+        }
     )
 
 
@@ -1685,20 +1679,20 @@ class RetailerRulesType:
     """
     retailer_rule: List["RetailerRulesType.RetailerRule"] = field(
         default_factory=list,
-        metadata=dict(
-            name="RetailerRule",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=1,
-            max_occurs=4
-        )
+        metadata={
+            "name": "RetailerRule",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_occurs": 1,
+            "max_occurs": 4,
+        }
     )
     force: bool = field(
         default=False,
-        metadata=dict(
-            name="Force",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Force",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -1708,12 +1702,12 @@ class RetailerRulesType:
         """
         code: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Code",
-                type="Attribute",
-                required=True,
-                pattern=r"[0-9a-zA-Z]{2,20}"
-            )
+            metadata={
+                "name": "Code",
+                "type": "Attribute",
+                "required": True,
+                "pattern": r"[0-9a-zA-Z]{2,20}",
+            }
         )
 
 
@@ -1728,47 +1722,39 @@ class RoutingLegType:
     """
     inbound_outbound_carrier: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="InboundOutboundCarrier",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            pattern=r"\*|[A-Z][A-Z0-9]{1}|[A-Z0-9][A-Z][A-Z0-9]?"
-        )
+        metadata={
+            "name": "InboundOutboundCarrier",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "pattern": r"\*|[A-Z][A-Z0-9]{1}|[A-Z0-9][A-Z][A-Z0-9]?",
+        }
     )
     inbound_carrier: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="InboundCarrier",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            pattern=r"\*|[A-Z][A-Z0-9]{1}|[A-Z0-9][A-Z][A-Z0-9]?"
-        )
+        metadata={
+            "name": "InboundCarrier",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "pattern": r"\*|[A-Z][A-Z0-9]{1}|[A-Z0-9][A-Z][A-Z0-9]?",
+        }
     )
     outbound_carrier: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="OutboundCarrier",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            pattern=r"\*|[A-Z][A-Z0-9]{1}|[A-Z0-9][A-Z][A-Z0-9]?"
-        )
+        metadata={
+            "name": "OutboundCarrier",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "pattern": r"\*|[A-Z][A-Z0-9]{1}|[A-Z0-9][A-Z][A-Z0-9]?",
+        }
     )
     connect_point: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="ConnectPoint",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            pattern=r"\*|\?|\+|\.|[A-Z]{3,5}"
-        )
+        metadata={
+            "name": "ConnectPoint",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "pattern": r"\*|\?|\+|\.|[A-Z]{3,5}",
+        }
     )
 
 
@@ -1780,18 +1766,18 @@ class SeatStatusSimType:
     """
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     command: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Command",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Command",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1804,24 +1790,24 @@ class SideTripType:
     """
     number: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+        }
     )
     start: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="Start",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Start",
+            "type": "Attribute",
+        }
     )
     end: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="End",
-            type="Attribute"
-        )
+        metadata={
+            "name": "End",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1834,19 +1820,19 @@ class StateProvType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            min_length=0,
-            max_length=64
-        )
+        metadata={
+            "min_length": 0,
+            "max_length": 64,
+        }
     )
     state_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="StateCode",
-            type="Attribute",
-            min_length=2,
-            max_length=8
-        )
+        metadata={
+            "name": "StateCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 8,
+        }
     )
 
 
@@ -1859,19 +1845,19 @@ class StreetNmbrType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            min_length=0,
-            max_length=64
-        )
+        metadata={
+            "min_length": 0,
+            "max_length": 64,
+        }
     )
     po_box: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PO_Box",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "PO_Box",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
 
 
@@ -1883,12 +1869,12 @@ class TaxCodeType:
     """
     tax_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TaxCode",
-            type="Attribute",
-            required=True,
-            pattern=r"[A-Z0-9]{2}[A-Z0-9]{0,1}"
-        )
+        metadata={
+            "name": "TaxCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[A-Z0-9]{2}[A-Z0-9]{0,1}",
+        }
     )
 
 
@@ -1909,81 +1895,81 @@ class TelephoneType:
     """
     share_synch_ind: Optional["TelephoneType.ShareSynchInd"] = field(
         default=None,
-        metadata=dict(
-            name="ShareSynchInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShareSynchInd",
+            "type": "Attribute",
+        }
     )
     share_market_ind: Optional["TelephoneType.ShareMarketInd"] = field(
         default=None,
-        metadata=dict(
-            name="ShareMarketInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShareMarketInd",
+            "type": "Attribute",
+        }
     )
     phone_location_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PhoneLocationType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PhoneLocationType",
+            "type": "Attribute",
+        }
     )
     phone_tech_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PhoneTechType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PhoneTechType",
+            "type": "Attribute",
+        }
     )
     country_access_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CountryAccessCode",
-            type="Attribute",
-            pattern=r"[0-9]{1,3}"
-        )
+        metadata={
+            "name": "CountryAccessCode",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,3}",
+        }
     )
     area_city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AreaCityCode",
-            type="Attribute",
-            pattern=r"[0-9]{1,8}"
-        )
+        metadata={
+            "name": "AreaCityCode",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,8}",
+        }
     )
     phone_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PhoneNumber",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "PhoneNumber",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
     extension: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Extension",
-            type="Attribute",
-            pattern=r"[0-9]{1,5}"
-        )
+        metadata={
+            "name": "Extension",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,5}",
+        }
     )
     pin: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PIN",
-            type="Attribute",
-            min_length=1,
-            max_length=8
-        )
+        metadata={
+            "name": "PIN",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 8,
+        }
     )
     formatted_ind: bool = field(
         default=False,
-        metadata=dict(
-            name="FormattedInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FormattedInd",
+            "type": "Attribute",
+        }
     )
 
     class ShareSynchInd(Enum):
@@ -2024,55 +2010,55 @@ class TravelDateTimeType:
     """
     departure_date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DepartureDateTime",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"
-        )
+        metadata={
+            "name": "DepartureDateTime",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}",
+        }
     )
     arrival_date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ArrivalDateTime",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"
-        )
+        metadata={
+            "name": "ArrivalDateTime",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}",
+        }
     )
     departure_dates: Optional["TravelDateTimeType.DepartureDates"] = field(
         default=None,
-        metadata=dict(
-            name="DepartureDates",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "DepartureDates",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     arrival_dates: Optional["TravelDateTimeType.ArrivalDates"] = field(
         default=None,
-        metadata=dict(
-            name="ArrivalDates",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "ArrivalDates",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     departure_window: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DepartureWindow",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            pattern=r"([0-2][0-9][0-5][0-9]){2}"
-        )
+        metadata={
+            "name": "DepartureWindow",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "pattern": r"([0-2][0-9][0-5][0-9]){2}",
+        }
     )
     arrival_window: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ArrivalWindow",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            pattern=r"([0-2][0-9][0-5][0-9]){2}"
-        )
+        metadata={
+            "name": "ArrivalWindow",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "pattern": r"([0-2][0-9][0-5][0-9]){2}",
+        }
     )
 
     @dataclass
@@ -2087,45 +2073,37 @@ class TravelDateTimeType:
         """
         day: List["TravelDateTimeType.DepartureDates.Day"] = field(
             default_factory=list,
-            metadata=dict(
-                name="Day",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807,
-                sequential=True
-            )
+            metadata={
+                "name": "Day",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "sequential": True,
+            }
         )
         days_range: List["TravelDateTimeType.DepartureDates.DaysRange"] = field(
             default_factory=list,
-            metadata=dict(
-                name="DaysRange",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807,
-                sequential=True
-            )
+            metadata={
+                "name": "DaysRange",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "sequential": True,
+            }
         )
         length_of_stay: List["TravelDateTimeType.DepartureDates.LengthOfStay"] = field(
             default_factory=list,
-            metadata=dict(
-                name="LengthOfStay",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "LengthOfStay",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         length_of_stay_range: List["TravelDateTimeType.DepartureDates.LengthOfStayRange"] = field(
             default_factory=list,
-            metadata=dict(
-                name="LengthOfStayRange",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "LengthOfStayRange",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
 
         @dataclass
@@ -2135,11 +2113,11 @@ class TravelDateTimeType:
             """
             days: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Days",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Days",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -2150,19 +2128,19 @@ class TravelDateTimeType:
             """
             min_days: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="MinDays",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "MinDays",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
             max_days: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="MaxDays",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "MaxDays",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -2172,12 +2150,12 @@ class TravelDateTimeType:
             """
             date: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Date",
-                    type="Attribute",
-                    required=True,
-                    pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}"
-                )
+                metadata={
+                    "name": "Date",
+                    "type": "Attribute",
+                    "required": True,
+                    "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
+                }
             )
 
         @dataclass
@@ -2189,29 +2167,29 @@ class TravelDateTimeType:
             """
             from_date: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="FromDate",
-                    type="Attribute",
-                    required=True,
-                    pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}"
-                )
+                metadata={
+                    "name": "FromDate",
+                    "type": "Attribute",
+                    "required": True,
+                    "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
+                }
             )
             to_date: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="ToDate",
-                    type="Attribute",
-                    required=True,
-                    pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}"
-                )
+                metadata={
+                    "name": "ToDate",
+                    "type": "Attribute",
+                    "required": True,
+                    "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
+                }
             )
             week_days: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="WeekDays",
-                    type="Attribute",
-                    pattern=r"[S_][M_][T_][W_][T_][F_][S_]"
-                )
+                metadata={
+                    "name": "WeekDays",
+                    "type": "Attribute",
+                    "pattern": r"[S_][M_][T_][W_][T_][F_][S_]",
+                }
             )
 
     @dataclass
@@ -2222,25 +2200,21 @@ class TravelDateTimeType:
         """
         day: List["TravelDateTimeType.ArrivalDates.Day"] = field(
             default_factory=list,
-            metadata=dict(
-                name="Day",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807,
-                sequential=True
-            )
+            metadata={
+                "name": "Day",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "sequential": True,
+            }
         )
         days_range: List["TravelDateTimeType.ArrivalDates.DaysRange"] = field(
             default_factory=list,
-            metadata=dict(
-                name="DaysRange",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807,
-                sequential=True
-            )
+            metadata={
+                "name": "DaysRange",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "sequential": True,
+            }
         )
 
         @dataclass
@@ -2250,12 +2224,12 @@ class TravelDateTimeType:
             """
             date: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Date",
-                    type="Attribute",
-                    required=True,
-                    pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}"
-                )
+                metadata={
+                    "name": "Date",
+                    "type": "Attribute",
+                    "required": True,
+                    "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
+                }
             )
 
         @dataclass
@@ -2267,29 +2241,29 @@ class TravelDateTimeType:
             """
             from_date: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="FromDate",
-                    type="Attribute",
-                    required=True,
-                    pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}"
-                )
+                metadata={
+                    "name": "FromDate",
+                    "type": "Attribute",
+                    "required": True,
+                    "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
+                }
             )
             to_date: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="ToDate",
-                    type="Attribute",
-                    required=True,
-                    pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}"
-                )
+                metadata={
+                    "name": "ToDate",
+                    "type": "Attribute",
+                    "required": True,
+                    "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
+                }
             )
             week_days: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="WeekDays",
-                    type="Attribute",
-                    pattern=r"[S_][M_][T_][W_][T_][F_][S_]"
-                )
+                metadata={
+                    "name": "WeekDays",
+                    "type": "Attribute",
+                    "pattern": r"[S_][M_][T_][W_][T_][F_][S_]",
+                }
             )
 
 
@@ -2303,13 +2277,11 @@ class TravelerInfoSummaryTpaExtensionsType:
 
     traveler_rating: List["TravelerInfoSummaryTpaExtensionsType.TravelerRating"] = field(
         default_factory=list,
-        metadata=dict(
-            name="TravelerRating",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "TravelerRating",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
 
     @dataclass
@@ -2320,23 +2292,19 @@ class TravelerInfoSummaryTpaExtensionsType:
         """
         score: List["TravelerInfoSummaryTpaExtensionsType.TravelerRating.Score"] = field(
             default_factory=list,
-            metadata=dict(
-                name="Score",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "Score",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         frequent_flyer: List["TravelerInfoSummaryTpaExtensionsType.TravelerRating.FrequentFlyer"] = field(
             default_factory=list,
-            metadata=dict(
-                name="FrequentFlyer",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "FrequentFlyer",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
 
         @dataclass
@@ -2347,19 +2315,19 @@ class TravelerInfoSummaryTpaExtensionsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
             carrier: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Carrier",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Carrier",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -2370,19 +2338,19 @@ class TravelerInfoSummaryTpaExtensionsType:
             """
             tier: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Tier",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Tier",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
             carrier: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Carrier",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Carrier",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
 
@@ -2394,11 +2362,11 @@ class TravelerRefNumberType:
     """
     rph: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="RPH",
-            type="Attribute",
-            pattern=r"[0-9]{1,8}"
-        )
+        metadata={
+            "name": "RPH",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,8}",
+        }
     )
 
 
@@ -2424,11 +2392,11 @@ class XofaresType:
 
     value: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="Value",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Value",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -2450,107 +2418,106 @@ class AddressType:
     """
     street_nmbr: Optional[StreetNmbrType] = field(
         default=None,
-        metadata=dict(
-            name="StreetNmbr",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "StreetNmbr",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     bldg_room: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BldgRoom",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_length=0,
-            max_length=64
-        )
+        metadata={
+            "name": "BldgRoom",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_length": 0,
+            "max_length": 64,
+        }
     )
     address_line: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="AddressLine",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=5,
-            min_length=1,
-            max_length=64
-        )
+        metadata={
+            "name": "AddressLine",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 5,
+            "min_length": 1,
+            "max_length": 64,
+        }
     )
     city_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CityName",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_length=1,
-            max_length=64
-        )
+        metadata={
+            "name": "CityName",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_length": 1,
+            "max_length": 64,
+        }
     )
     postal_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PostalCode",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "PostalCode",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     county: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="County",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "County",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
     state_prov: Optional[StateProvType] = field(
         default=None,
-        metadata=dict(
-            name="StateProv",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "StateProv",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     country_name: Optional[CountryNameType] = field(
         default=None,
-        metadata=dict(
-            name="CountryName",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "CountryName",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     formatted_ind: bool = field(
         default=False,
-        metadata=dict(
-            name="FormattedInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FormattedInd",
+            "type": "Attribute",
+        }
     )
     share_synch_ind: Optional["AddressType.ShareSynchInd"] = field(
         default=None,
-        metadata=dict(
-            name="ShareSynchInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShareSynchInd",
+            "type": "Attribute",
+        }
     )
     share_market_ind: Optional["AddressType.ShareMarketInd"] = field(
         default=None,
-        metadata=dict(
-            name="ShareMarketInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShareMarketInd",
+            "type": "Attribute",
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+        }
     )
 
     class ShareSynchInd(Enum):
@@ -2587,17 +2554,17 @@ class AltCitiesCombinationsType:
     """
     origins: AltCitiesCombinationsLocationsType = field(
         default=AltCitiesCombinationsLocationsType.MAIN,
-        metadata=dict(
-            name="Origins",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Origins",
+            "type": "Attribute",
+        }
     )
     destinations: AltCitiesCombinationsLocationsType = field(
         default=AltCitiesCombinationsLocationsType.MAIN,
-        metadata=dict(
-            name="Destinations",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Destinations",
+            "type": "Attribute",
+        }
     )
 
 
@@ -2610,29 +2577,29 @@ class ArunkType:
     """
     origin_location: Optional[RequestLocationType] = field(
         default=None,
-        metadata=dict(
-            name="OriginLocation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "OriginLocation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     destination_location: Optional[RequestLocationType] = field(
         default=None,
-        metadata=dict(
-            name="DestinationLocation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "DestinationLocation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     side_trip: Optional[SideTripType] = field(
         default=None,
-        metadata=dict(
-            name="SideTrip",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "SideTrip",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
 
 
@@ -2646,19 +2613,19 @@ class BookingClassPrefType:
     """
     res_book_desig_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ResBookDesigCode",
-            type="Attribute",
-            required=True,
-            pattern=r"[A-Z]{1,2}"
-        )
+        metadata={
+            "name": "ResBookDesigCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[A-Z]{1,2}",
+        }
     )
     prefer_level: PreferLevelType = field(
         default=PreferLevelType.PREFERRED,
-        metadata=dict(
-            name="PreferLevel",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PreferLevel",
+            "type": "Attribute",
+        }
     )
 
 
@@ -2672,17 +2639,17 @@ class CabinPrefType:
     """
     prefer_level: PreferLevelType = field(
         default=PreferLevelType.PREFERRED,
-        metadata=dict(
-            name="PreferLevel",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PreferLevel",
+            "type": "Attribute",
+        }
     )
     cabin: Optional[CabinType] = field(
         default=None,
-        metadata=dict(
-            name="Cabin",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Cabin",
+            "type": "Attribute",
+        }
     )
 
 
@@ -2693,13 +2660,12 @@ class CachePartitionGroupType:
     """
     partition: List[CachePartitionType] = field(
         default_factory=list,
-        metadata=dict(
-            name="Partition",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=2,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "Partition",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_occurs": 2,
+        }
     )
 
 
@@ -2712,17 +2678,17 @@ class CompanyNamePrefType(CompanyNameType):
     """
     prefer_level: PreferLevelType = field(
         default=PreferLevelType.PREFERRED,
-        metadata=dict(
-            name="PreferLevel",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PreferLevel",
+            "type": "Attribute",
+        }
     )
     type: Optional[CarrierType] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+        }
     )
 
 
@@ -2735,13 +2701,13 @@ class ConnectionType:
     """
     connection_location: List["ConnectionType.ConnectionLocation"] = field(
         default_factory=list,
-        metadata=dict(
-            name="ConnectionLocation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=1,
-            max_occurs=9
-        )
+        metadata={
+            "name": "ConnectionLocation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_occurs": 1,
+            "max_occurs": 9,
+        }
     )
 
     @dataclass
@@ -2754,31 +2720,31 @@ class ConnectionType:
         """
         inclusive: bool = field(
             default=True,
-            metadata=dict(
-                name="Inclusive",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Inclusive",
+                "type": "Attribute",
+            }
         )
         prefer_level: PreferLevelType = field(
             default=PreferLevelType.PREFERRED,
-            metadata=dict(
-                name="PreferLevel",
-                type="Attribute"
-            )
+            metadata={
+                "name": "PreferLevel",
+                "type": "Attribute",
+            }
         )
         min_change_time: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="MinChangeTime",
-                type="Attribute"
-            )
+            metadata={
+                "name": "MinChangeTime",
+                "type": "Attribute",
+            }
         )
         connection_info: Optional["ConnectionType.ConnectionLocation.ConnectionInfo"] = field(
             default=None,
-            metadata=dict(
-                name="ConnectionInfo",
-                type="Attribute"
-            )
+            metadata={
+                "name": "ConnectionInfo",
+                "type": "Attribute",
+            }
         )
 
         class ConnectionInfo(Enum):
@@ -2803,21 +2769,21 @@ class DiversityControlType:
     """
     low_fare_bucket: Optional["DiversityControlType.LowFareBucket"] = field(
         default=None,
-        metadata=dict(
-            name="LowFareBucket",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "LowFareBucket",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     dimensions: Optional["DiversityControlType.Dimensions"] = field(
         default=None,
-        metadata=dict(
-            name="Dimensions",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "Dimensions",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
 
     @dataclass
@@ -2828,19 +2794,19 @@ class DiversityControlType:
         """
         options: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Options",
-                type="Attribute",
-                pattern=r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%"
-            )
+            metadata={
+                "name": "Options",
+                "type": "Attribute",
+                "pattern": r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%",
+            }
         )
         fare_cut_off: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="FareCutOff",
-                type="Attribute",
-                pattern=r"(0|100|[1-9][0-9]?)%"
-            )
+            metadata={
+                "name": "FareCutOff",
+                "type": "Attribute",
+                "pattern": r"(0|100|[1-9][0-9]?)%",
+            }
         )
 
     @dataclass
@@ -2856,60 +2822,60 @@ class DiversityControlType:
         """
         travel_time: Optional["DiversityControlType.Dimensions.TravelTime"] = field(
             default=None,
-            metadata=dict(
-                name="TravelTime",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "TravelTime",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         carrier: Optional["DiversityControlType.Dimensions.Carrier"] = field(
             default=None,
-            metadata=dict(
-                name="Carrier",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "Carrier",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         operating_duplicate: Optional["DiversityControlType.Dimensions.OperatingDuplicate"] = field(
             default=None,
-            metadata=dict(
-                name="OperatingDuplicate",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "OperatingDuplicate",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         inbound_outbound_pairing: Optional["DiversityControlType.Dimensions.InboundOutboundPairing"] = field(
             default=None,
-            metadata=dict(
-                name="InboundOutboundPairing",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "InboundOutboundPairing",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         time_of_day: Optional["DiversityControlType.Dimensions.TimeOfDay"] = field(
             default=None,
-            metadata=dict(
-                name="TimeOfDay",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "TimeOfDay",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         stops_number: Optional["DiversityControlType.Dimensions.StopsNumber"] = field(
             default=None,
-            metadata=dict(
-                name="StopsNumber",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "StopsNumber",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         price_weight: int = field(
             default=10,
-            metadata=dict(
-                name="PriceWeight",
-                type="Attribute",
-                min_inclusive=0,
-                max_inclusive=10
-            )
+            metadata={
+                "name": "PriceWeight",
+                "type": "Attribute",
+                "min_inclusive": 0,
+                "max_inclusive": 10,
+            }
         )
 
         @dataclass
@@ -2919,13 +2885,13 @@ class DiversityControlType:
             """
             weight: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Weight",
-                    type="Attribute",
-                    required=True,
-                    min_inclusive=1,
-                    max_inclusive=10
-                )
+                metadata={
+                    "name": "Weight",
+                    "type": "Attribute",
+                    "required": True,
+                    "min_inclusive": 1,
+                    "max_inclusive": 10,
+                }
             )
 
         @dataclass
@@ -2938,38 +2904,36 @@ class DiversityControlType:
             """
             default: Optional["DiversityControlType.Dimensions.Carrier.Default"] = field(
                 default=None,
-                metadata=dict(
-                    name="Default",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05"
-                )
+                metadata={
+                    "name": "Default",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             override: List["DiversityControlType.Dimensions.Carrier.Override"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="Override",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "Override",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             weight: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Weight",
-                    type="Attribute",
-                    required=True,
-                    min_inclusive=1,
-                    max_inclusive=10
-                )
+                metadata={
+                    "name": "Weight",
+                    "type": "Attribute",
+                    "required": True,
+                    "min_inclusive": 1,
+                    "max_inclusive": 10,
+                }
             )
             online_indicator: bool = field(
                 default=False,
-                metadata=dict(
-                    name="OnlineIndicator",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "OnlineIndicator",
+                    "type": "Attribute",
+                }
             )
 
             @dataclass
@@ -2979,12 +2943,12 @@ class DiversityControlType:
                 """
                 options: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="Options",
-                        type="Attribute",
-                        required=True,
-                        pattern=r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%"
-                    )
+                    metadata={
+                        "name": "Options",
+                        "type": "Attribute",
+                        "required": True,
+                        "pattern": r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%",
+                    }
                 )
 
             @dataclass
@@ -2995,21 +2959,21 @@ class DiversityControlType:
                 """
                 code: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="Code",
-                        type="Attribute",
-                        required=True,
-                        pattern=r"[0-9A-Z]{2,3}"
-                    )
+                    metadata={
+                        "name": "Code",
+                        "type": "Attribute",
+                        "required": True,
+                        "pattern": r"[0-9A-Z]{2,3}",
+                    }
                 )
                 options: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="Options",
-                        type="Attribute",
-                        required=True,
-                        pattern=r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%"
-                    )
+                    metadata={
+                        "name": "Options",
+                        "type": "Attribute",
+                        "required": True,
+                        "pattern": r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%",
+                    }
                 )
 
         @dataclass
@@ -3020,23 +2984,21 @@ class DiversityControlType:
             """
             preferred_carrier: List["DiversityControlType.Dimensions.OperatingDuplicate.PreferredCarrier"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="PreferredCarrier",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "PreferredCarrier",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             weight: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Weight",
-                    type="Attribute",
-                    required=True,
-                    min_inclusive=1,
-                    max_inclusive=10
-                )
+                metadata={
+                    "name": "Weight",
+                    "type": "Attribute",
+                    "required": True,
+                    "min_inclusive": 1,
+                    "max_inclusive": 10,
+                }
             )
 
             @dataclass
@@ -3046,12 +3008,12 @@ class DiversityControlType:
                 """
                 code: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="Code",
-                        type="Attribute",
-                        required=True,
-                        pattern=r"[0-9A-Z]{2,3}"
-                    )
+                    metadata={
+                        "name": "Code",
+                        "type": "Attribute",
+                        "required": True,
+                        "pattern": r"[0-9A-Z]{2,3}",
+                    }
                 )
 
         @dataclass
@@ -3062,20 +3024,20 @@ class DiversityControlType:
             """
             weight: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Weight",
-                    type="Attribute",
-                    required=True,
-                    min_inclusive=1,
-                    max_inclusive=10
-                )
+                metadata={
+                    "name": "Weight",
+                    "type": "Attribute",
+                    "required": True,
+                    "min_inclusive": 1,
+                    "max_inclusive": 10,
+                }
             )
             duplicates: int = field(
                 default=1,
-                metadata=dict(
-                    name="Duplicates",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Duplicates",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -3086,23 +3048,21 @@ class DiversityControlType:
             """
             distribution: List["DiversityControlType.Dimensions.TimeOfDay.Distribution"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="Distribution",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "Distribution",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             weight: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Weight",
-                    type="Attribute",
-                    required=True,
-                    min_inclusive=1,
-                    max_inclusive=10
-                )
+                metadata={
+                    "name": "Weight",
+                    "type": "Attribute",
+                    "required": True,
+                    "min_inclusive": 1,
+                    "max_inclusive": 10,
+                }
             )
 
             @dataclass
@@ -3115,34 +3075,33 @@ class DiversityControlType:
                 """
                 range: List["DiversityControlType.Dimensions.TimeOfDay.Distribution.Range"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="Range",
-                        type="Element",
-                        namespace="http://www.opentravel.org/OTA/2003/05",
-                        min_occurs=0,
-                        max_occurs=4
-                    )
+                    metadata={
+                        "name": "Range",
+                        "type": "Element",
+                        "namespace": "http://www.opentravel.org/OTA/2003/05",
+                        "max_occurs": 4,
+                    }
                 )
                 direction: Optional[OutboundOrInbound] = field(
                     default=None,
-                    metadata=dict(
-                        name="Direction",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Direction",
+                        "type": "Attribute",
+                    }
                 )
                 leg: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Leg",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Leg",
+                        "type": "Attribute",
+                    }
                 )
                 endpoint: DepartureOrArrival = field(
                     default=DepartureOrArrival.DEPARTURE,
-                    metadata=dict(
-                        name="Endpoint",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Endpoint",
+                        "type": "Attribute",
+                    }
                 )
 
                 @dataclass
@@ -3156,29 +3115,29 @@ class DiversityControlType:
                     """
                     begin: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="Begin",
-                            type="Attribute",
-                            required=True,
-                            pattern=r"([0-1]?[0-9]|2[0-3]):[0-5][0-9]"
-                        )
+                        metadata={
+                            "name": "Begin",
+                            "type": "Attribute",
+                            "required": True,
+                            "pattern": r"([0-1]?[0-9]|2[0-3]):[0-5][0-9]",
+                        }
                     )
                     end: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="End",
-                            type="Attribute",
-                            required=True,
-                            pattern=r"([0-1]?[0-9]|2[0-3]):[0-5][0-9]"
-                        )
+                        metadata={
+                            "name": "End",
+                            "type": "Attribute",
+                            "required": True,
+                            "pattern": r"([0-1]?[0-9]|2[0-3]):[0-5][0-9]",
+                        }
                     )
                     options: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="Options",
-                            type="Attribute",
-                            pattern=r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%"
-                        )
+                        metadata={
+                            "name": "Options",
+                            "type": "Attribute",
+                            "pattern": r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%",
+                        }
                     )
 
         @dataclass
@@ -3188,13 +3147,13 @@ class DiversityControlType:
             """
             weight: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Weight",
-                    type="Attribute",
-                    required=True,
-                    min_inclusive=1,
-                    max_inclusive=10
-                )
+                metadata={
+                    "name": "Weight",
+                    "type": "Attribute",
+                    "required": True,
+                    "min_inclusive": 1,
+                    "max_inclusive": 10,
+                }
             )
 
 
@@ -3206,17 +3165,17 @@ class EquipmentTypePref(EquipmentType):
     """
     prefer_level: PreferLevelType = field(
         default=PreferLevelType.PREFERRED,
-        metadata=dict(
-            name="PreferLevel",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PreferLevel",
+            "type": "Attribute",
+        }
     )
     wide_body: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="WideBody",
-            type="Attribute"
-        )
+        metadata={
+            "name": "WideBody",
+            "type": "Attribute",
+        }
     )
 
 
@@ -3242,142 +3201,138 @@ class ExchangeOriginDestinationFlightType:
     """
     origin_location: Optional[RequestLocationType] = field(
         default=None,
-        metadata=dict(
-            name="OriginLocation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "OriginLocation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     destination_location: Optional[RequestLocationType] = field(
         default=None,
-        metadata=dict(
-            name="DestinationLocation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "DestinationLocation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     airline: Optional[AirlineType] = field(
         default=None,
-        metadata=dict(
-            name="Airline",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "Airline",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     side_trip: Optional[SideTripType] = field(
         default=None,
-        metadata=dict(
-            name="SideTrip",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "SideTrip",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     reservation: Optional[ReservationType] = field(
         default=None,
-        metadata=dict(
-            name="Reservation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "Reservation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     mileage_display: List[MileageDisplayType] = field(
         default_factory=list,
-        metadata=dict(
-            name="MileageDisplay",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "MileageDisplay",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     booking_date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BookingDateTime",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
-        )
+        metadata={
+            "name": "BookingDateTime",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
+        }
     )
     fare: Optional["ExchangeOriginDestinationFlightType.Fare"] = field(
         default=None,
-        metadata=dict(
-            name="Fare",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "Fare",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     plus_up: List[PlusUpType] = field(
         default_factory=list,
-        metadata=dict(
-            name="PlusUp",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "PlusUp",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     number: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     departure_date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DepartureDateTime",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
-        )
+        metadata={
+            "name": "DepartureDateTime",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
+        }
     )
     arrival_date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ArrivalDateTime",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
-        )
+        metadata={
+            "name": "ArrivalDateTime",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
+        }
     )
     marriage_status: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MarriageStatus",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MarriageStatus",
+            "type": "Attribute",
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True,
-            pattern=r"[AKO]"
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[AKO]",
+        }
     )
     flown: bool = field(
         default=False,
-        metadata=dict(
-            name="Flown",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Flown",
+            "type": "Attribute",
+        }
     )
     class_of_service: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ClassOfService",
-            type="Attribute",
-            required=True,
-            pattern=r"[A-Z]{1,2}"
-        )
+        metadata={
+            "name": "ClassOfService",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[A-Z]{1,2}",
+        }
     )
 
     @dataclass
@@ -3387,11 +3342,11 @@ class ExchangeOriginDestinationFlightType:
         """
         adjustment: Optional["ExchangeOriginDestinationFlightType.Fare.Adjustment"] = field(
             default=None,
-            metadata=dict(
-                name="Adjustment",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "Adjustment",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
 
         @dataclass
@@ -3403,27 +3358,27 @@ class ExchangeOriginDestinationFlightType:
             """
             value: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True,
-                    pattern=r"(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)%?"
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                    "pattern": r"(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)%?",
+                }
             )
             currency: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Currency",
-                    type="Attribute",
-                    pattern=r"[a-zA-Z]{3}"
-                )
+                metadata={
+                    "name": "Currency",
+                    "type": "Attribute",
+                    "pattern": r"[a-zA-Z]{3}",
+                }
             )
             group: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Group",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Group",
+                    "type": "Attribute",
+                }
             )
 
 
@@ -3437,11 +3392,11 @@ class ExchangeTpaExtensionsType:
 
     award_shopping: Optional[AwardShoppingType] = field(
         default=None,
-        metadata=dict(
-            name="AwardShopping",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "AwardShopping",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
 
 
@@ -3455,17 +3410,17 @@ class FareRestrictPrefType:
     """
     prefer_level: PreferLevelType = field(
         default=PreferLevelType.PREFERRED,
-        metadata=dict(
-            name="PreferLevel",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PreferLevel",
+            "type": "Attribute",
+        }
     )
     fare_restriction: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FareRestriction",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FareRestriction",
+            "type": "Attribute",
+        }
     )
 
 
@@ -3476,13 +3431,13 @@ class FlexibleFaresType:
     """
     fare_parameters: List["FlexibleFaresType.FareParameters"] = field(
         default_factory=list,
-        metadata=dict(
-            name="FareParameters",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=1,
-            max_occurs=10
-        )
+        metadata={
+            "name": "FareParameters",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_occurs": 1,
+            "max_occurs": 10,
+        }
     )
 
     @dataclass
@@ -3506,131 +3461,126 @@ class FlexibleFaresType:
         """
         exclude_restricted: Optional["FlexibleFaresType.FareParameters.ExcludeRestricted"] = field(
             default=None,
-            metadata=dict(
-                name="ExcludeRestricted",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "ExcludeRestricted",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         res_ticketing: Optional["FlexibleFaresType.FareParameters.ResTicketing"] = field(
             default=None,
-            metadata=dict(
-                name="ResTicketing",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "ResTicketing",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         min_max_stay: Optional["FlexibleFaresType.FareParameters.MinMaxStay"] = field(
             default=None,
-            metadata=dict(
-                name="MinMaxStay",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "MinMaxStay",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         refund_penalty: Optional["FlexibleFaresType.FareParameters.RefundPenalty"] = field(
             default=None,
-            metadata=dict(
-                name="RefundPenalty",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "RefundPenalty",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         public_fare: Optional["FlexibleFaresType.FareParameters.PublicFare"] = field(
             default=None,
-            metadata=dict(
-                name="PublicFare",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "PublicFare",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         private_fare: Optional["FlexibleFaresType.FareParameters.PrivateFare"] = field(
             default=None,
-            metadata=dict(
-                name="PrivateFare",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "PrivateFare",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         cabin: Optional["FlexibleFaresType.FareParameters.Cabin"] = field(
             default=None,
-            metadata=dict(
-                name="Cabin",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "Cabin",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         passenger_type: Optional["FlexibleFaresType.FareParameters.PassengerType"] = field(
             default=None,
-            metadata=dict(
-                name="PassengerType",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "PassengerType",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         negotiated_fares_only: Optional["FlexibleFaresType.FareParameters.NegotiatedFaresOnly"] = field(
             default=None,
-            metadata=dict(
-                name="NegotiatedFaresOnly",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "NegotiatedFaresOnly",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         xofares: Optional["FlexibleFaresType.FareParameters.Xofares"] = field(
             default=None,
-            metadata=dict(
-                name="XOFares",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "XOFares",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         passenger_type_quantity: List[PassengerTypeQuantityType] = field(
             default_factory=list,
-            metadata=dict(
-                name="PassengerTypeQuantity",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=4
-            )
+            metadata={
+                "name": "PassengerTypeQuantity",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "max_occurs": 4,
+            }
         )
         jump_cabin_logic: Optional[JumpCabinLogicType] = field(
             default=None,
-            metadata=dict(
-                name="JumpCabinLogic",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "JumpCabinLogic",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         keep_same_cabin: Optional[KeepSameCabinType] = field(
             default=None,
-            metadata=dict(
-                name="KeepSameCabin",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "KeepSameCabin",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         corporate_id: List["FlexibleFaresType.FareParameters.CorporateId"] = field(
             default_factory=list,
-            metadata=dict(
-                name="CorporateID",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807,
-                sequential=True
-            )
+            metadata={
+                "name": "CorporateID",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "sequential": True,
+            }
         )
         account_code: List["FlexibleFaresType.FareParameters.AccountCode"] = field(
             default_factory=list,
-            metadata=dict(
-                name="AccountCode",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807,
-                sequential=True
-            )
+            metadata={
+                "name": "AccountCode",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "sequential": True,
+            }
         )
 
         @dataclass
@@ -3640,11 +3590,11 @@ class FlexibleFaresType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -3654,11 +3604,11 @@ class FlexibleFaresType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -3668,11 +3618,11 @@ class FlexibleFaresType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -3682,11 +3632,11 @@ class FlexibleFaresType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -3696,11 +3646,11 @@ class FlexibleFaresType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -3710,11 +3660,11 @@ class FlexibleFaresType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -3724,11 +3674,11 @@ class FlexibleFaresType:
             """
             type: Optional[CabinType] = field(
                 default=None,
-                metadata=dict(
-                    name="Type",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Type",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -3738,13 +3688,13 @@ class FlexibleFaresType:
             """
             code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Code",
-                    type="Attribute",
-                    required=True,
-                    min_length=1,
-                    max_length=8
-                )
+                metadata={
+                    "name": "Code",
+                    "type": "Attribute",
+                    "required": True,
+                    "min_length": 1,
+                    "max_length": 8,
+                }
             )
 
         @dataclass
@@ -3754,11 +3704,11 @@ class FlexibleFaresType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -3768,11 +3718,11 @@ class FlexibleFaresType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -3782,12 +3732,12 @@ class FlexibleFaresType:
             """
             code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Code",
-                    type="Attribute",
-                    required=True,
-                    pattern=r"[A-Za-z]{3}[0-9]{2}"
-                )
+                metadata={
+                    "name": "Code",
+                    "type": "Attribute",
+                    "required": True,
+                    "pattern": r"[A-Za-z]{3}[0-9]{2}",
+                }
             )
 
         @dataclass
@@ -3797,13 +3747,13 @@ class FlexibleFaresType:
             """
             code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Code",
-                    type="Attribute",
-                    required=True,
-                    min_length=1,
-                    max_length=20
-                )
+                metadata={
+                    "name": "Code",
+                    "type": "Attribute",
+                    "required": True,
+                    "min_length": 1,
+                    "max_length": 20,
+                }
             )
 
 
@@ -3818,24 +3768,24 @@ class FlightTypePrefType:
     """
     prefer_level: PreferLevelType = field(
         default=PreferLevelType.PREFERRED,
-        metadata=dict(
-            name="PreferLevel",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PreferLevel",
+            "type": "Attribute",
+        }
     )
     flight_type: Optional[FlightTypeType] = field(
         default=None,
-        metadata=dict(
-            name="FlightType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FlightType",
+            "type": "Attribute",
+        }
     )
     max_connections: Optional[Union[int, bool]] = field(
         default=None,
-        metadata=dict(
-            name="MaxConnections",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MaxConnections",
+            "type": "Attribute",
+        }
     )
 
 
@@ -3846,12 +3796,12 @@ class GlobalDateTimeType(DateTimeType):
     """
     date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DateTime",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"
-        )
+        metadata={
+            "name": "DateTime",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}",
+        }
     )
 
 
@@ -3863,20 +3813,18 @@ class InterlineBrandsType:
     """
     brand: List[BrandType] = field(
         default_factory=list,
-        metadata=dict(
-            name="Brand",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "Brand",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     change_brand_for_soldout: bool = field(
         default=False,
-        metadata=dict(
-            name="ChangeBrandForSoldout",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ChangeBrandForSoldout",
+            "type": "Attribute",
+        }
     )
 
 
@@ -3903,147 +3851,143 @@ class OriginDestinationFlightType:
     """
     origin_location: Optional[RequestLocationType] = field(
         default=None,
-        metadata=dict(
-            name="OriginLocation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "OriginLocation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     destination_location: Optional[RequestLocationType] = field(
         default=None,
-        metadata=dict(
-            name="DestinationLocation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "DestinationLocation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     airline: Optional[AirlineType] = field(
         default=None,
-        metadata=dict(
-            name="Airline",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "Airline",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     side_trip: Optional[SideTripType] = field(
         default=None,
-        metadata=dict(
-            name="SideTrip",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "SideTrip",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     reservation: Optional[ReservationType] = field(
         default=None,
-        metadata=dict(
-            name="Reservation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "Reservation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     mileage_display: List[MileageDisplayType] = field(
         default_factory=list,
-        metadata=dict(
-            name="MileageDisplay",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "MileageDisplay",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     booking_date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BookingDateTime",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
-        )
+        metadata={
+            "name": "BookingDateTime",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
+        }
     )
     fare: Optional[FareOptionalDetailsType] = field(
         default=None,
-        metadata=dict(
-            name="Fare",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "Fare",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     plus_up: List[PlusUpType] = field(
         default_factory=list,
-        metadata=dict(
-            name="PlusUp",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "PlusUp",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     number: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Number",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     departure_date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DepartureDateTime",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
-        )
+        metadata={
+            "name": "DepartureDateTime",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
+        }
     )
     arrival_date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ArrivalDateTime",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?"
-        )
+        metadata={
+            "name": "ArrivalDateTime",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
+        }
     )
     marriage_status: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MarriageStatus",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MarriageStatus",
+            "type": "Attribute",
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True,
-            pattern=r"[AKO]"
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[AKO]",
+        }
     )
     flown: bool = field(
         default=False,
-        metadata=dict(
-            name="Flown",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Flown",
+            "type": "Attribute",
+        }
     )
     class_of_service: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ClassOfService",
-            type="Attribute",
-            pattern=r"[A-Z]{1,2}"
-        )
+        metadata={
+            "name": "ClassOfService",
+            "type": "Attribute",
+            "pattern": r"[A-Z]{1,2}",
+        }
     )
     shopped: bool = field(
         default=False,
-        metadata=dict(
-            name="Shopped",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Shopped",
+            "type": "Attribute",
+        }
     )
 
 
@@ -4054,11 +3998,11 @@ class OverrideDateTimeType(DateTimeType):
     """
     date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DateTime",
-            type="Attribute",
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"
-        )
+        metadata={
+            "name": "DateTime",
+            "type": "Attribute",
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}",
+        }
     )
 
 
@@ -4082,97 +4026,93 @@ class PriceRequestInformationType:
     """
     negotiated_fare_code: List["PriceRequestInformationType.NegotiatedFareCode"] = field(
         default_factory=list,
-        metadata=dict(
-            name="NegotiatedFareCode",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "NegotiatedFareCode",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "sequential": True,
+        }
     )
     account_code: List["PriceRequestInformationType.AccountCode"] = field(
         default_factory=list,
-        metadata=dict(
-            name="AccountCode",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "AccountCode",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "sequential": True,
+        }
     )
     tpa_extensions: Optional["PriceRequestInformationType.TpaExtensions"] = field(
         default=None,
-        metadata=dict(
-            name="TPA_Extensions",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "TPA_Extensions",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     fare_qualifier: Optional[Union[str, bool]] = field(
         default=None,
-        metadata=dict(
-            name="FareQualifier",
-            type="Attribute"
-        )
+        metadata={
+            "name": "FareQualifier",
+            "type": "Attribute",
+        }
     )
     negotiated_fares_only: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="NegotiatedFaresOnly",
-            type="Attribute"
-        )
+        metadata={
+            "name": "NegotiatedFaresOnly",
+            "type": "Attribute",
+        }
     )
     currency_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CurrencyCode",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "CurrencyCode",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     pricing_source: Optional[RequestPricingSourceType] = field(
         default=None,
-        metadata=dict(
-            name="PricingSource",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PricingSource",
+            "type": "Attribute",
+        }
     )
     reprice: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="Reprice",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Reprice",
+            "type": "Attribute",
+        }
     )
     process_thru_fares_only: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="ProcessThruFaresOnly",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ProcessThruFaresOnly",
+            "type": "Attribute",
+        }
     )
     purchase_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PurchaseDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PurchaseDate",
+            "type": "Attribute",
+        }
     )
     purchase_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PurchaseTime",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PurchaseTime",
+            "type": "Attribute",
+        }
     )
     net_fares_used: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="NetFaresUsed",
-            type="Attribute"
-        )
+        metadata={
+            "name": "NetFaresUsed",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -4201,163 +4141,163 @@ class PriceRequestInformationType:
         """
         public_fare: Optional["PriceRequestInformationType.TpaExtensions.PublicFare"] = field(
             default=None,
-            metadata=dict(
-                name="PublicFare",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "PublicFare",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         private_fare: Optional["PriceRequestInformationType.TpaExtensions.PrivateFare"] = field(
             default=None,
-            metadata=dict(
-                name="PrivateFare",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "PrivateFare",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         iatafare: Optional["PriceRequestInformationType.TpaExtensions.Iatafare"] = field(
             default=None,
-            metadata=dict(
-                name="IATAFare",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "IATAFare",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         web_fare: Optional["PriceRequestInformationType.TpaExtensions.WebFare"] = field(
             default=None,
-            metadata=dict(
-                name="WebFare",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "WebFare",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         priority: Optional["PriceRequestInformationType.TpaExtensions.Priority"] = field(
             default=None,
-            metadata=dict(
-                name="Priority",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "Priority",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         indicators: Optional["PriceRequestInformationType.TpaExtensions.Indicators"] = field(
             default=None,
-            metadata=dict(
-                name="Indicators",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "Indicators",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         promo_id: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="PromoID",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "PromoID",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         customer_type: Optional["PriceRequestInformationType.TpaExtensions.CustomerType"] = field(
             default=None,
-            metadata=dict(
-                name="CustomerType",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "CustomerType",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         multiple_traveler_groups: Optional["PriceRequestInformationType.TpaExtensions.MultipleTravelerGroups"] = field(
             default=None,
-            metadata=dict(
-                name="MultipleTravelerGroups",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "MultipleTravelerGroups",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         branded_fare_indicators: Optional["PriceRequestInformationType.TpaExtensions.BrandedFareIndicators"] = field(
             default=None,
-            metadata=dict(
-                name="BrandedFareIndicators",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "BrandedFareIndicators",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         passenger_status: Optional["PriceRequestInformationType.TpaExtensions.PassengerStatus"] = field(
             default=None,
-            metadata=dict(
-                name="PassengerStatus",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "PassengerStatus",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         point_of_sale_override: Optional[PointOfSaleOverrideType] = field(
             default=None,
-            metadata=dict(
-                name="PointOfSaleOverride",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "PointOfSaleOverride",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         point_of_ticketing_override: Optional[PointOfTicketingOverrideType] = field(
             default=None,
-            metadata=dict(
-                name="PointOfTicketingOverride",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "PointOfTicketingOverride",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         apply_resident_discount: Optional[ApplyResidentDiscountType] = field(
             default=None,
-            metadata=dict(
-                name="ApplyResidentDiscount",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "ApplyResidentDiscount",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         eticketable_override: Optional["PriceRequestInformationType.TpaExtensions.EticketableOverride"] = field(
             default=None,
-            metadata=dict(
-                name="ETicketableOverride",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "ETicketableOverride",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         currency: Optional["PriceRequestInformationType.TpaExtensions.Currency"] = field(
             default=None,
-            metadata=dict(
-                name="Currency",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "Currency",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         use_reduced_constructions: Optional["PriceRequestInformationType.TpaExtensions.UseReducedConstructions"] = field(
             default=None,
-            metadata=dict(
-                name="UseReducedConstructions",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "UseReducedConstructions",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         obfees: Optional["PriceRequestInformationType.TpaExtensions.Obfees"] = field(
             default=None,
-            metadata=dict(
-                name="OBFees",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "OBFees",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         fare_breaks_at_legs: Optional["PriceRequestInformationType.TpaExtensions.FareBreaksAtLegs"] = field(
             default=None,
-            metadata=dict(
-                name="FareBreaksAtLegs",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "FareBreaksAtLegs",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         fare_adjustment: Optional["PriceRequestInformationType.TpaExtensions.FareAdjustment"] = field(
             default=None,
-            metadata=dict(
-                name="FareAdjustment",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "FareAdjustment",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
 
         @dataclass
@@ -4367,10 +4307,10 @@ class PriceRequestInformationType:
             """
             ind: bool = field(
                 default=False,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -4380,10 +4320,10 @@ class PriceRequestInformationType:
             """
             ind: bool = field(
                 default=False,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -4393,10 +4333,10 @@ class PriceRequestInformationType:
             """
             ind: bool = field(
                 default=False,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -4406,10 +4346,10 @@ class PriceRequestInformationType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -4422,39 +4362,39 @@ class PriceRequestInformationType:
             """
             price: Optional["PriceRequestInformationType.TpaExtensions.Priority.Price"] = field(
                 default=None,
-                metadata=dict(
-                    name="Price",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    required=True
-                )
+                metadata={
+                    "name": "Price",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "required": True,
+                }
             )
             direct_flights: Optional["PriceRequestInformationType.TpaExtensions.Priority.DirectFlights"] = field(
                 default=None,
-                metadata=dict(
-                    name="DirectFlights",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    required=True
-                )
+                metadata={
+                    "name": "DirectFlights",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "required": True,
+                }
             )
             time: Optional["PriceRequestInformationType.TpaExtensions.Priority.Time"] = field(
                 default=None,
-                metadata=dict(
-                    name="Time",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    required=True
-                )
+                metadata={
+                    "name": "Time",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "required": True,
+                }
             )
             vendor: Optional["PriceRequestInformationType.TpaExtensions.Priority.Vendor"] = field(
                 default=None,
-                metadata=dict(
-                    name="Vendor",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    required=True
-                )
+                metadata={
+                    "name": "Vendor",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "required": True,
+                }
             )
 
             @dataclass
@@ -4464,13 +4404,13 @@ class PriceRequestInformationType:
                 """
                 priority: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Priority",
-                        type="Attribute",
-                        required=True,
-                        min_inclusive=1,
-                        max_inclusive=4
-                    )
+                    metadata={
+                        "name": "Priority",
+                        "type": "Attribute",
+                        "required": True,
+                        "min_inclusive": 1,
+                        "max_inclusive": 4,
+                    }
                 )
 
             @dataclass
@@ -4480,13 +4420,13 @@ class PriceRequestInformationType:
                 """
                 priority: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Priority",
-                        type="Attribute",
-                        required=True,
-                        min_inclusive=1,
-                        max_inclusive=4
-                    )
+                    metadata={
+                        "name": "Priority",
+                        "type": "Attribute",
+                        "required": True,
+                        "min_inclusive": 1,
+                        "max_inclusive": 4,
+                    }
                 )
 
             @dataclass
@@ -4496,13 +4436,13 @@ class PriceRequestInformationType:
                 """
                 priority: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Priority",
-                        type="Attribute",
-                        required=True,
-                        min_inclusive=1,
-                        max_inclusive=4
-                    )
+                    metadata={
+                        "name": "Priority",
+                        "type": "Attribute",
+                        "required": True,
+                        "min_inclusive": 1,
+                        "max_inclusive": 4,
+                    }
                 )
 
             @dataclass
@@ -4512,13 +4452,13 @@ class PriceRequestInformationType:
                 """
                 priority: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Priority",
-                        type="Attribute",
-                        required=True,
-                        min_inclusive=1,
-                        max_inclusive=4
-                    )
+                    metadata={
+                        "name": "Priority",
+                        "type": "Attribute",
+                        "required": True,
+                        "min_inclusive": 1,
+                        "max_inclusive": 4,
+                    }
                 )
 
         @dataclass
@@ -4532,43 +4472,43 @@ class PriceRequestInformationType:
             """
             retain_fare: Optional["PriceRequestInformationType.TpaExtensions.Indicators.RetainFare"] = field(
                 default=None,
-                metadata=dict(
-                    name="RetainFare",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05"
-                )
+                metadata={
+                    "name": "RetainFare",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             min_max_stay: Optional["PriceRequestInformationType.TpaExtensions.Indicators.MinMaxStay"] = field(
                 default=None,
-                metadata=dict(
-                    name="MinMaxStay",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05"
-                )
+                metadata={
+                    "name": "MinMaxStay",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             refund_penalty: Optional["PriceRequestInformationType.TpaExtensions.Indicators.RefundPenalty"] = field(
                 default=None,
-                metadata=dict(
-                    name="RefundPenalty",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05"
-                )
+                metadata={
+                    "name": "RefundPenalty",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             res_ticketing: Optional["PriceRequestInformationType.TpaExtensions.Indicators.ResTicketing"] = field(
                 default=None,
-                metadata=dict(
-                    name="ResTicketing",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05"
-                )
+                metadata={
+                    "name": "ResTicketing",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             travel_policy: Optional["PriceRequestInformationType.TpaExtensions.Indicators.TravelPolicy"] = field(
                 default=None,
-                metadata=dict(
-                    name="TravelPolicy",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05"
-                )
+                metadata={
+                    "name": "TravelPolicy",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
 
             @dataclass
@@ -4578,11 +4518,11 @@ class PriceRequestInformationType:
                 """
                 ind: Optional[bool] = field(
                     default=None,
-                    metadata=dict(
-                        name="Ind",
-                        type="Attribute",
-                        required=True
-                    )
+                    metadata={
+                        "name": "Ind",
+                        "type": "Attribute",
+                        "required": True,
+                    }
                 )
 
             @dataclass
@@ -4592,11 +4532,11 @@ class PriceRequestInformationType:
                 """
                 ind: Optional[bool] = field(
                     default=None,
-                    metadata=dict(
-                        name="Ind",
-                        type="Attribute",
-                        required=True
-                    )
+                    metadata={
+                        "name": "Ind",
+                        "type": "Attribute",
+                        "required": True,
+                    }
                 )
 
             @dataclass
@@ -4606,11 +4546,11 @@ class PriceRequestInformationType:
                 """
                 ind: Optional[bool] = field(
                     default=None,
-                    metadata=dict(
-                        name="Ind",
-                        type="Attribute",
-                        required=True
-                    )
+                    metadata={
+                        "name": "Ind",
+                        "type": "Attribute",
+                        "required": True,
+                    }
                 )
 
             @dataclass
@@ -4620,11 +4560,11 @@ class PriceRequestInformationType:
                 """
                 ind: Optional[bool] = field(
                     default=None,
-                    metadata=dict(
-                        name="Ind",
-                        type="Attribute",
-                        required=True
-                    )
+                    metadata={
+                        "name": "Ind",
+                        "type": "Attribute",
+                        "required": True,
+                    }
                 )
 
             @dataclass
@@ -4634,11 +4574,11 @@ class PriceRequestInformationType:
                 """
                 ind: Optional[bool] = field(
                     default=None,
-                    metadata=dict(
-                        name="Ind",
-                        type="Attribute",
-                        required=True
-                    )
+                    metadata={
+                        "name": "Ind",
+                        "type": "Attribute",
+                        "required": True,
+                    }
                 )
 
         @dataclass
@@ -4648,11 +4588,11 @@ class PriceRequestInformationType:
             """
             value: Optional["PriceRequestInformationType.TpaExtensions.CustomerType.Value"] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
             class Value(Enum):
@@ -4674,12 +4614,12 @@ class PriceRequestInformationType:
             """
             itineraries_per_group: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="ItinerariesPerGroup",
-                    type="Attribute",
-                    min_inclusive=1,
-                    max_inclusive=99
-                )
+                metadata={
+                    "name": "ItinerariesPerGroup",
+                    "type": "Attribute",
+                    "min_inclusive": 1,
+                    "max_inclusive": 99,
+                }
             )
 
         @dataclass
@@ -4691,25 +4631,25 @@ class PriceRequestInformationType:
             """
             return_cheapest_unbranded_fare: Optional["PriceRequestInformationType.TpaExtensions.BrandedFareIndicators.ReturnCheapestUnbrandedFare"] = field(
                 default=None,
-                metadata=dict(
-                    name="ReturnCheapestUnbrandedFare",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05"
-                )
+                metadata={
+                    "name": "ReturnCheapestUnbrandedFare",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             single_branded_fare: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="SingleBrandedFare",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "SingleBrandedFare",
+                    "type": "Attribute",
+                }
             )
             multiple_branded_fares: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="MultipleBrandedFares",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "MultipleBrandedFares",
+                    "type": "Attribute",
+                }
             )
 
             @dataclass
@@ -4719,11 +4659,11 @@ class PriceRequestInformationType:
                 """
                 ind: Optional[bool] = field(
                     default=None,
-                    metadata=dict(
-                        name="Ind",
-                        type="Attribute",
-                        required=True
-                    )
+                    metadata={
+                        "name": "Ind",
+                        "type": "Attribute",
+                        "required": True,
+                    }
                 )
 
         @dataclass
@@ -4736,39 +4676,39 @@ class PriceRequestInformationType:
             """
             state_code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="StateCode",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_length=2,
-                    max_length=8
-                )
+                metadata={
+                    "name": "StateCode",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "min_length": 2,
+                    "max_length": 8,
+                }
             )
             country_code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="CountryCode",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    pattern=r"[a-zA-Z]{2}"
-                )
+                metadata={
+                    "name": "CountryCode",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "pattern": r"[a-zA-Z]{2}",
+                }
             )
             city_code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="CityCode",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    pattern=r"[a-zA-Z]{3}"
-                )
+                metadata={
+                    "name": "CityCode",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "pattern": r"[a-zA-Z]{3}",
+                }
             )
             type: Optional["PriceRequestInformationType.TpaExtensions.PassengerStatus.Type"] = field(
                 default=None,
-                metadata=dict(
-                    name="Type",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Type",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
             class Type(Enum):
@@ -4788,10 +4728,10 @@ class PriceRequestInformationType:
             """
             value: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -4802,18 +4742,18 @@ class PriceRequestInformationType:
             """
             dual: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Dual",
-                    type="Attribute",
-                    pattern=r"[a-zA-Z]{3}"
-                )
+                metadata={
+                    "name": "Dual",
+                    "type": "Attribute",
+                    "pattern": r"[a-zA-Z]{3}",
+                }
             )
             moverride: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="MOverride",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "MOverride",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -4823,10 +4763,10 @@ class PriceRequestInformationType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -4837,17 +4777,17 @@ class PriceRequestInformationType:
             """
             rtype: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="RType",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "RType",
+                    "type": "Attribute",
+                }
             )
             ttype: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="TType",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "TType",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -4857,10 +4797,10 @@ class PriceRequestInformationType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -4871,20 +4811,20 @@ class PriceRequestInformationType:
             """
             value: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True,
-                    pattern=r"(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)%?"
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                    "pattern": r"(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)%?",
+                }
             )
             currency: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Currency",
-                    type="Attribute",
-                    pattern=r"[a-zA-Z]{3}"
-                )
+                metadata={
+                    "name": "Currency",
+                    "type": "Attribute",
+                    "pattern": r"[a-zA-Z]{3}",
+                }
             )
 
     @dataclass
@@ -4902,82 +4842,78 @@ class PriceRequestInformationType:
         """
         content: List[object] = field(
             default_factory=list,
-            metadata=dict(
-                type="Wildcard",
-                namespace="##any",
-                mixed=True,
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "type": "Wildcard",
+                "namespace": "##any",
+                "mixed": True,
+            }
         )
         supplier: List[CompanyNameType] = field(
             default_factory=list,
-            metadata=dict(
-                name="Supplier",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "Supplier",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         tpa_extensions: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="TPA_Extensions",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "TPA_Extensions",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         code: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Code",
-                type="Attribute",
-                pattern=r"[A-Za-z]{3}[0-9]{2}"
-            )
+            metadata={
+                "name": "Code",
+                "type": "Attribute",
+                "pattern": r"[A-Za-z]{3}[0-9]{2}",
+            }
         )
         code_context: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="CodeContext",
-                type="Attribute",
-                min_length=1,
-                max_length=32
-            )
+            metadata={
+                "name": "CodeContext",
+                "type": "Attribute",
+                "min_length": 1,
+                "max_length": 32,
+            }
         )
         uri: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="URI",
-                type="Attribute"
-            )
+            metadata={
+                "name": "URI",
+                "type": "Attribute",
+            }
         )
         quantity: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="Quantity",
-                type="Attribute",
-                min_inclusive=1,
-                max_inclusive=999
-            )
+            metadata={
+                "name": "Quantity",
+                "type": "Attribute",
+                "min_inclusive": 1,
+                "max_inclusive": 999,
+            }
         )
         secondary_code: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="SecondaryCode",
-                type="Attribute",
-                min_length=1,
-                max_length=16
-            )
+            metadata={
+                "name": "SecondaryCode",
+                "type": "Attribute",
+                "min_length": 1,
+                "max_length": 16,
+            }
         )
         supplier_code: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="SupplierCode",
-                type="Attribute",
-                min_length=1,
-                max_length=16
-            )
+            metadata={
+                "name": "SupplierCode",
+                "type": "Attribute",
+                "min_length": 1,
+                "max_length": 16,
+            }
         )
 
     @dataclass
@@ -4987,13 +4923,13 @@ class PriceRequestInformationType:
         """
         code: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Code",
-                type="Attribute",
-                required=True,
-                min_length=1,
-                max_length=20
-            )
+            metadata={
+                "name": "Code",
+                "type": "Attribute",
+                "required": True,
+                "min_length": 1,
+                "max_length": 20,
+            }
         )
 
 
@@ -5006,20 +4942,19 @@ class RoutingDefinitionType:
     """
     routing_leg: List[RoutingLegType] = field(
         default_factory=list,
-        metadata=dict(
-            name="RoutingLeg",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "RoutingLeg",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_occurs": 1,
+        }
     )
     add_wildcards: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="AddWildcards",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AddWildcards",
+            "type": "Attribute",
+        }
     )
 
 
@@ -5032,11 +4967,11 @@ class SourceBookingChannelType(BookingChannelType):
     """
     company_name: Optional[CompanyNameType] = field(
         default=None,
-        metadata=dict(
-            name="CompanyName",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "CompanyName",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
 
 
@@ -5048,11 +4983,11 @@ class TaxCodeAmountType(TaxCodeType):
     """
     amount: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            name="Amount",
-            type="Attribute",
-            fraction_digits=3
-        )
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+            "fraction_digits": 3,
+        }
     )
 
 
@@ -5067,31 +5002,31 @@ class TicketDistribPrefType:
     """
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            min_length=0,
-            max_length=64
-        )
+        metadata={
+            "min_length": 0,
+            "max_length": 64,
+        }
     )
     prefer_level: PreferLevelType = field(
         default=PreferLevelType.PREFERRED,
-        metadata=dict(
-            name="PreferLevel",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PreferLevel",
+            "type": "Attribute",
+        }
     )
     distrib_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DistribType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "DistribType",
+            "type": "Attribute",
+        }
     )
     ticket_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TicketTime",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TicketTime",
+            "type": "Attribute",
+        }
     )
 
 
@@ -5113,54 +5048,54 @@ class UniqueIdType:
 
     company_name: Optional[CompanyNameType] = field(
         default=None,
-        metadata=dict(
-            name="CompanyName",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "CompanyName",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     url: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="URL",
-            type="Attribute"
-        )
+        metadata={
+            "name": "URL",
+            "type": "Attribute",
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Type",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     instance: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Instance",
-            type="Attribute",
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "Instance",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
     id_context: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID_Context",
-            type="Attribute",
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "ID_Context",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
 
 
@@ -5172,21 +5107,19 @@ class ValidatingCarrierType:
     """
     preference: List["ValidatingCarrierType.Preference"] = field(
         default_factory=list,
-        metadata=dict(
-            name="Preference",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "Preference",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            pattern=r"[0-9A-Z]{2,3}"
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "pattern": r"[0-9A-Z]{2,3}",
+        }
     )
 
     @dataclass
@@ -5197,20 +5130,20 @@ class ValidatingCarrierType:
         """
         code: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Code",
-                type="Attribute",
-                required=True,
-                pattern=r"[0-9A-Z]{2,3}"
-            )
+            metadata={
+                "name": "Code",
+                "type": "Attribute",
+                "required": True,
+                "pattern": r"[0-9A-Z]{2,3}",
+            }
         )
         level: Optional[ValidatingCarrierPreferLevelType] = field(
             default=None,
-            metadata=dict(
-                name="Level",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Level",
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
 
@@ -5240,163 +5173,155 @@ class AirSearchPrefsType:
     """
     vendor_pref: List[CompanyNamePrefType] = field(
         default_factory=list,
-        metadata=dict(
-            name="VendorPref",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "VendorPref",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     flight_type_pref: Optional[FlightTypePrefType] = field(
         default=None,
-        metadata=dict(
-            name="FlightTypePref",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "FlightTypePref",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     fare_restrict_pref: List["AirSearchPrefsType.FareRestrictPref"] = field(
         default_factory=list,
-        metadata=dict(
-            name="FareRestrictPref",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=4
-        )
+        metadata={
+            "name": "FareRestrictPref",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 4,
+        }
     )
     equip_pref: List[EquipmentTypePref] = field(
         default_factory=list,
-        metadata=dict(
-            name="EquipPref",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9
-        )
+        metadata={
+            "name": "EquipPref",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 9,
+        }
     )
     cabin_pref: List[CabinPrefType] = field(
         default_factory=list,
-        metadata=dict(
-            name="CabinPref",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=3
-        )
+        metadata={
+            "name": "CabinPref",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 3,
+        }
     )
     ticket_distrib_pref: List[TicketDistribPrefType] = field(
         default_factory=list,
-        metadata=dict(
-            name="TicketDistribPref",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=3
-        )
+        metadata={
+            "name": "TicketDistribPref",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 3,
+        }
     )
     tpa_extensions: Optional["AirSearchPrefsType.TpaExtensions"] = field(
         default=None,
-        metadata=dict(
-            name="TPA_Extensions",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "TPA_Extensions",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     ancillary_fees: Optional["AirSearchPrefsType.AncillaryFees"] = field(
         default=None,
-        metadata=dict(
-            name="AncillaryFees",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "AncillaryFees",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     frequent_flyer: List["AirSearchPrefsType.FrequentFlyer"] = field(
         default_factory=list,
-        metadata=dict(
-            name="FrequentFlyer",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "FrequentFlyer",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     spanish_family_discount: Optional["AirSearchPrefsType.SpanishFamilyDiscount"] = field(
         default=None,
-        metadata=dict(
-            name="SpanishFamilyDiscount",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "SpanishFamilyDiscount",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     interline_brands: Optional[InterlineBrandsType] = field(
         default=None,
-        metadata=dict(
-            name="InterlineBrands",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "InterlineBrands",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     smoking_allowed: bool = field(
         default=False,
-        metadata=dict(
-            name="SmokingAllowed",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SmokingAllowed",
+            "type": "Attribute",
+        }
     )
     on_time_rate: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            name="OnTimeRate",
-            type="Attribute",
-            min_inclusive=0.01,
-            max_inclusive=100.00
-        )
+        metadata={
+            "name": "OnTimeRate",
+            "type": "Attribute",
+            "min_inclusive": 0.01,
+            "max_inclusive": 100.00,
+        }
     )
     eticket_desired: bool = field(
         default=False,
-        metadata=dict(
-            name="ETicketDesired",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ETicketDesired",
+            "type": "Attribute",
+        }
     )
     valid_interline_ticket: bool = field(
         default=False,
-        metadata=dict(
-            name="ValidInterlineTicket",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ValidInterlineTicket",
+            "type": "Attribute",
+        }
     )
     max_stops_quantity: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="MaxStopsQuantity",
-            type="Attribute",
-            min_inclusive=0,
-            max_inclusive=999
-        )
+        metadata={
+            "name": "MaxStopsQuantity",
+            "type": "Attribute",
+            "min_inclusive": 0,
+            "max_inclusive": 999,
+        }
     )
     use_all_flights: bool = field(
         default=False,
-        metadata=dict(
-            name="UseAllFlights",
-            type="Attribute"
-        )
+        metadata={
+            "name": "UseAllFlights",
+            "type": "Attribute",
+        }
     )
     all_flights_data: bool = field(
         default=False,
-        metadata=dict(
-            name="AllFlightsData",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AllFlightsData",
+            "type": "Attribute",
+        }
     )
     hybrid: bool = field(
         default=True,
-        metadata=dict(
-            name="Hybrid",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Hybrid",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -5408,27 +5333,27 @@ class AirSearchPrefsType:
         """
         adv_res_ticketing: Optional[AdvResTicketingType] = field(
             default=None,
-            metadata=dict(
-                name="AdvResTicketing",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "AdvResTicketing",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         stay_restrictions: Optional[StayRestrictionsType] = field(
             default=None,
-            metadata=dict(
-                name="StayRestrictions",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "StayRestrictions",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         voluntary_changes: Optional[VoluntaryChangesType] = field(
             default=None,
-            metadata=dict(
-                name="VoluntaryChanges",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "VoluntaryChanges",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
 
     @dataclass
@@ -5518,664 +5443,654 @@ class AirSearchPrefsType:
         """
         departure_window: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="DepartureWindow",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                pattern=r"([0-2][0-9][0-5][0-9]){2}"
-            )
+            metadata={
+                "name": "DepartureWindow",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "pattern": r"([0-2][0-9][0-5][0-9]){2}",
+            }
         )
         arrival_window: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="ArrivalWindow",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                pattern=r"([0-2][0-9][0-5][0-9]){2}"
-            )
+            metadata={
+                "name": "ArrivalWindow",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "pattern": r"([0-2][0-9][0-5][0-9]){2}",
+            }
         )
         exclude_vendor_pref: List["AirSearchPrefsType.TpaExtensions.ExcludeVendorPref"] = field(
             default_factory=list,
-            metadata=dict(
-                name="ExcludeVendorPref",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "ExcludeVendorPref",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         include_alliance_pref: List[AllianceType] = field(
             default_factory=list,
-            metadata=dict(
-                name="IncludeAlliancePref",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "IncludeAlliancePref",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         exclude_alliance_pref: List[AllianceType] = field(
             default_factory=list,
-            metadata=dict(
-                name="ExcludeAlliancePref",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "ExcludeAlliancePref",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         num_trips: Optional[NumTripsType] = field(
             default=None,
-            metadata=dict(
-                name="NumTrips",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "NumTrips",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         alt_cities_combinations: Optional[AltCitiesCombinationsType] = field(
             default=None,
-            metadata=dict(
-                name="AltCitiesCombinations",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "AltCitiesCombinations",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         num_trips_with_routing: Optional["AirSearchPrefsType.TpaExtensions.NumTripsWithRouting"] = field(
             default=None,
-            metadata=dict(
-                name="NumTripsWithRouting",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "NumTripsWithRouting",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         online_indicator: Optional["AirSearchPrefsType.TpaExtensions.OnlineIndicator"] = field(
             default=None,
-            metadata=dict(
-                name="OnlineIndicator",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "OnlineIndicator",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         interline_indicator: Optional["AirSearchPrefsType.TpaExtensions.InterlineIndicator"] = field(
             default=None,
-            metadata=dict(
-                name="InterlineIndicator",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "InterlineIndicator",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         trip_type: Optional["AirSearchPrefsType.TpaExtensions.TripType"] = field(
             default=None,
-            metadata=dict(
-                name="TripType",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "TripType",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         max_price: Optional["AirSearchPrefsType.TpaExtensions.MaxPrice"] = field(
             default=None,
-            metadata=dict(
-                name="MaxPrice",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "MaxPrice",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         content_type: Optional["AirSearchPrefsType.TpaExtensions.ContentType"] = field(
             default=None,
-            metadata=dict(
-                name="ContentType",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "ContentType",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         domestic_layover_time: Optional["AirSearchPrefsType.TpaExtensions.DomesticLayoverTime"] = field(
             default=None,
-            metadata=dict(
-                name="DomesticLayoverTime",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "DomesticLayoverTime",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         long_connect_time: Optional["AirSearchPrefsType.TpaExtensions.LongConnectTime"] = field(
             default=None,
-            metadata=dict(
-                name="LongConnectTime",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "LongConnectTime",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         long_connect_points: Optional["AirSearchPrefsType.TpaExtensions.LongConnectPoints"] = field(
             default=None,
-            metadata=dict(
-                name="LongConnectPoints",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "LongConnectPoints",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         air_service_only: Optional["AirSearchPrefsType.TpaExtensions.AirServiceOnly"] = field(
             default=None,
-            metadata=dict(
-                name="AirServiceOnly",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "AirServiceOnly",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         jet_service_only: Optional["AirSearchPrefsType.TpaExtensions.JetServiceOnly"] = field(
             default=None,
-            metadata=dict(
-                name="JetServiceOnly",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "JetServiceOnly",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         same_connection_airport_only: Optional["AirSearchPrefsType.TpaExtensions.SameConnectionAirportOnly"] = field(
             default=None,
-            metadata=dict(
-                name="SameConnectionAirportOnly",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "SameConnectionAirportOnly",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         same_origin_airport_only: Optional["AirSearchPrefsType.TpaExtensions.SameOriginAirportOnly"] = field(
             default=None,
-            metadata=dict(
-                name="SameOriginAirportOnly",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "SameOriginAirportOnly",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         same_turnaround_airport_only: Optional["AirSearchPrefsType.TpaExtensions.SameTurnaroundAirportOnly"] = field(
             default=None,
-            metadata=dict(
-                name="SameTurnaroundAirportOnly",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "SameTurnaroundAirportOnly",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         aircraft_type_penalty: Optional["AirSearchPrefsType.TpaExtensions.AircraftTypePenalty"] = field(
             default=None,
-            metadata=dict(
-                name="AircraftTypePenalty",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "AircraftTypePenalty",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         alternate_airport_penalty: Optional["AirSearchPrefsType.TpaExtensions.AlternateAirportPenalty"] = field(
             default=None,
-            metadata=dict(
-                name="AlternateAirportPenalty",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "AlternateAirportPenalty",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         fare_amount_threshold: Optional["AirSearchPrefsType.TpaExtensions.FareAmountThreshold"] = field(
             default=None,
-            metadata=dict(
-                name="FareAmountThreshold",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "FareAmountThreshold",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         num_of_low_fare_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfLowFareSol"] = field(
             default=None,
-            metadata=dict(
-                name="numOfLowFareSol",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "numOfLowFareSol",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         num_of_must_price_onl_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPriceOnlSol"] = field(
             default=None,
-            metadata=dict(
-                name="numOfMustPriceOnlSol",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "numOfMustPriceOnlSol",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         num_of_must_price_inrl_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPriceInrlSol"] = field(
             default=None,
-            metadata=dict(
-                name="numOfMustPriceInrlSol",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "numOfMustPriceInrlSol",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         num_of_must_price_nstp_onl_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstpOnlSol"] = field(
             default=None,
-            metadata=dict(
-                name="numOfMustPriceNStpOnlSol",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "numOfMustPriceNStpOnlSol",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         num_of_must_price_nstp_inrl_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstpInrlSol"] = field(
             default=None,
-            metadata=dict(
-                name="numOfMustPriceNStpInrlSol",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "numOfMustPriceNStpInrlSol",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         num_of_must_price_sstop_onl_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPriceSstopOnlSol"] = field(
             default=None,
-            metadata=dict(
-                name="numOfMustPriceSStopOnlSol",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "numOfMustPriceSStopOnlSol",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         stp_penalty_in_usd: Optional["AirSearchPrefsType.TpaExtensions.StpPenaltyInUsd"] = field(
             default=None,
-            metadata=dict(
-                name="stpPenaltyInUSD",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "stpPenaltyInUSD",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         dur_penalty_in_usd: Optional["AirSearchPrefsType.TpaExtensions.DurPenaltyInUsd"] = field(
             default=None,
-            metadata=dict(
-                name="durPenaltyInUSD",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "durPenaltyInUSD",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         dep_penalty_in_usd: Optional["AirSearchPrefsType.TpaExtensions.DepPenaltyInUsd"] = field(
             default=None,
-            metadata=dict(
-                name="depPenaltyInUSD",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "depPenaltyInUSD",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         max_allowed_must_price_overage_per_crr: Optional["AirSearchPrefsType.TpaExtensions.MaxAllowedMustPriceOveragePerCrr"] = field(
             default=None,
-            metadata=dict(
-                name="maxAllowedMustPriceOveragePerCrr",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "maxAllowedMustPriceOveragePerCrr",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         flt_opt_must_price_reuse_limit: Optional["AirSearchPrefsType.TpaExtensions.FltOptMustPriceReuseLimit"] = field(
             default=None,
-            metadata=dict(
-                name="fltOptMustPriceReuseLimit",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "fltOptMustPriceReuseLimit",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         upper_bound_must_price_factor_for_not_non_stp: Optional["AirSearchPrefsType.TpaExtensions.UpperBoundMustPriceFactorForNotNonStp"] = field(
             default=None,
-            metadata=dict(
-                name="upperBoundMustPriceFactorForNotNonStp",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "upperBoundMustPriceFactorForNotNonStp",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         upper_bound_lfsfactor: Optional["AirSearchPrefsType.TpaExtensions.UpperBoundLfsfactor"] = field(
             default=None,
-            metadata=dict(
-                name="upperBoundLFSFactor",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "upperBoundLFSFactor",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         num_of_must_price_nstp1_stp_onl_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstp1StpOnlSol"] = field(
             default=None,
-            metadata=dict(
-                name="numOfMustPriceNStp1StpOnlSol",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "numOfMustPriceNStp1StpOnlSol",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         num_of_must_price_nstp1_stp_inrl_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstp1StpInrlSol"] = field(
             default=None,
-            metadata=dict(
-                name="numOfMustPriceNStp1StpInrlSol",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "numOfMustPriceNStp1StpInrlSol",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         upper_bound_must_price_factor_for_non_stp: Optional["AirSearchPrefsType.TpaExtensions.UpperBoundMustPriceFactorForNonStp"] = field(
             default=None,
-            metadata=dict(
-                name="upperBoundMustPriceFactorForNonStp",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "upperBoundMustPriceFactorForNonStp",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         max_allowed_lfsoverage_per_crr_percent: Optional["AirSearchPrefsType.TpaExtensions.MaxAllowedLfsoveragePerCrrPercent"] = field(
             default=None,
-            metadata=dict(
-                name="maxAllowedLFSOveragePerCrrPercent",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "maxAllowedLFSOveragePerCrrPercent",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         target_min_num_of_lfsonl_sol_per_crr: Optional["AirSearchPrefsType.TpaExtensions.TargetMinNumOfLfsonlSolPerCrr"] = field(
             default=None,
-            metadata=dict(
-                name="targetMinNumOfLFSOnlSolPerCrr",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "targetMinNumOfLFSOnlSolPerCrr",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         target_min_num_of_lfstot_onl_sol_percent: Optional["AirSearchPrefsType.TpaExtensions.TargetMinNumOfLfstotOnlSolPercent"] = field(
             default=None,
-            metadata=dict(
-                name="targetMinNumOfLFSTotOnlSolPercent",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "targetMinNumOfLFSTotOnlSolPercent",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         flt_opt_lfsreuse_limit_for_non_avs: Optional["AirSearchPrefsType.TpaExtensions.FltOptLfsreuseLimitForNonAvs"] = field(
             default=None,
-            metadata=dict(
-                name="fltOptLFSReuseLimitForNonAVS",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "fltOptLFSReuseLimitForNonAVS",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         flt_opt_lfsreuse_limit_for_avs: Optional["AirSearchPrefsType.TpaExtensions.FltOptLfsreuseLimitForAvs"] = field(
             default=None,
-            metadata=dict(
-                name="fltOptLFSReuseLimitForAVS",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "fltOptLFSReuseLimitForAVS",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         avs_penalty_crrs: Optional["AirSearchPrefsType.TpaExtensions.AvsPenaltyCrrs"] = field(
             default=None,
-            metadata=dict(
-                name="avsPenaltyCrrs",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "avsPenaltyCrrs",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         max_num_of_non_stp_onl_sol: Optional["AirSearchPrefsType.TpaExtensions.MaxNumOfNonStpOnlSol"] = field(
             default=None,
-            metadata=dict(
-                name="maxNumOfNonStpOnlSol",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "maxNumOfNonStpOnlSol",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         max_num_of_non_stp_inrl_sol: Optional["AirSearchPrefsType.TpaExtensions.MaxNumOfNonStpInrlSol"] = field(
             default=None,
-            metadata=dict(
-                name="maxNumOfNonStpInrlSol",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "maxNumOfNonStpInrlSol",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         max_num_of_single_stp_onl_sol: Optional["AirSearchPrefsType.TpaExtensions.MaxNumOfSingleStpOnlSol"] = field(
             default=None,
-            metadata=dict(
-                name="maxNumOfSingleStpOnlSol",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "maxNumOfSingleStpOnlSol",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         max_num_of2_plus_stp_sol: Optional["AirSearchPrefsType.TpaExtensions.MaxNumOf2PlusStpSol"] = field(
             default=None,
-            metadata=dict(
-                name="maxNumOf2PlusStpSol",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "maxNumOf2PlusStpSol",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         min_allowed_overage_per_crr_percent: Optional["AirSearchPrefsType.TpaExtensions.MinAllowedOveragePerCrrPercent"] = field(
             default=None,
-            metadata=dict(
-                name="minAllowedOveragePerCrrPercent",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "minAllowedOveragePerCrrPercent",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         min_allowed_overage_per_crr: Optional["AirSearchPrefsType.TpaExtensions.MinAllowedOveragePerCrr"] = field(
             default=None,
-            metadata=dict(
-                name="minAllowedOveragePerCrr",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "minAllowedOveragePerCrr",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         max_rel_fare_lvl_ofx_for_non_stp: Optional["AirSearchPrefsType.TpaExtensions.MaxRelFareLvlOfxForNonStp"] = field(
             default=None,
-            metadata=dict(
-                name="maxRelFareLvlOfxForNonStp",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "maxRelFareLvlOfxForNonStp",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         max_rel_fare_lvl_ofx_for_cnx: Optional["AirSearchPrefsType.TpaExtensions.MaxRelFareLvlOfxForCnx"] = field(
             default=None,
-            metadata=dict(
-                name="maxRelFareLvlOfxForCnx",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "maxRelFareLvlOfxForCnx",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         num_of_must_price2_plus_stp_sol: Optional["AirSearchPrefsType.TpaExtensions.NumOfMustPrice2PlusStpSol"] = field(
             default=None,
-            metadata=dict(
-                name="numOfMustPrice2PlusStpSol",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "numOfMustPrice2PlusStpSol",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         itinerary_number_threshold: Optional["AirSearchPrefsType.TpaExtensions.ItineraryNumberThreshold"] = field(
             default=None,
-            metadata=dict(
-                name="ItineraryNumberThreshold",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "ItineraryNumberThreshold",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         xofares: Optional[XofaresType] = field(
             default=None,
-            metadata=dict(
-                name="XOFares",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "XOFares",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         exempt_all_taxes: Optional["AirSearchPrefsType.TpaExtensions.ExemptAllTaxes"] = field(
             default=None,
-            metadata=dict(
-                name="ExemptAllTaxes",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "ExemptAllTaxes",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         exempt_all_taxes_and_fees: Optional["AirSearchPrefsType.TpaExtensions.ExemptAllTaxesAndFees"] = field(
             default=None,
-            metadata=dict(
-                name="ExemptAllTaxesAndFees",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "ExemptAllTaxesAndFees",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         taxes: Optional["AirSearchPrefsType.TpaExtensions.Taxes"] = field(
             default=None,
-            metadata=dict(
-                name="Taxes",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "Taxes",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         exempt_tax: List[TaxCodeType] = field(
             default_factory=list,
-            metadata=dict(
-                name="ExemptTax",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "ExemptTax",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         flight_stops_as_connections: Optional[FlightStopsAsConnectionsType] = field(
             default=None,
-            metadata=dict(
-                name="FlightStopsAsConnections",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "FlightStopsAsConnections",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         ticketing_sum_of_locals: Optional["AirSearchPrefsType.TpaExtensions.TicketingSumOfLocals"] = field(
             default=None,
-            metadata=dict(
-                name="TicketingSumOfLocals",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "TicketingSumOfLocals",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         multi_airport_codes: Optional["AirSearchPrefsType.TpaExtensions.MultiAirportCodes"] = field(
             default=None,
-            metadata=dict(
-                name="MultiAirportCodes",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "MultiAirportCodes",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         jump_cabin_logic: Optional[JumpCabinLogicType] = field(
             default=None,
-            metadata=dict(
-                name="JumpCabinLogic",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "JumpCabinLogic",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         keep_same_cabin: Optional[KeepSameCabinType] = field(
             default=None,
-            metadata=dict(
-                name="KeepSameCabin",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "KeepSameCabin",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         governing_carrier_override: Optional[GoverningCarrierOverrideType] = field(
             default=None,
-            metadata=dict(
-                name="GoverningCarrierOverride",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "GoverningCarrierOverride",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         exclude_call_direct_carriers: Optional["AirSearchPrefsType.TpaExtensions.ExcludeCallDirectCarriers"] = field(
             default=None,
-            metadata=dict(
-                name="ExcludeCallDirectCarriers",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "ExcludeCallDirectCarriers",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         validating_carrier: Optional[ValidatingCarrierType] = field(
             default=None,
-            metadata=dict(
-                name="ValidatingCarrier",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "ValidatingCarrier",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         validating_carrier_check: Optional["AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck"] = field(
             default=None,
-            metadata=dict(
-                name="ValidatingCarrierCheck",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "ValidatingCarrierCheck",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         settlement_method: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="SettlementMethod",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                pattern=r"[a-zA-Z0-9]{3}"
-            )
+            metadata={
+                "name": "SettlementMethod",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "pattern": r"[a-zA-Z0-9]{3}",
+            }
         )
         flight_repeat_limit: Optional["AirSearchPrefsType.TpaExtensions.FlightRepeatLimit"] = field(
             default=None,
-            metadata=dict(
-                name="FlightRepeatLimit",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "FlightRepeatLimit",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         flexible_fares: Optional[FlexibleFaresType] = field(
             default=None,
-            metadata=dict(
-                name="FlexibleFares",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "FlexibleFares",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         diversity_parameters: Optional["AirSearchPrefsType.TpaExtensions.DiversityParameters"] = field(
             default=None,
-            metadata=dict(
-                name="DiversityParameters",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "DiversityParameters",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         additional_fare_limit: Optional["AirSearchPrefsType.TpaExtensions.AdditionalFareLimit"] = field(
             default=None,
-            metadata=dict(
-                name="AdditionalFareLimit",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "AdditionalFareLimit",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         fare_focus_rules: Optional["AirSearchPrefsType.TpaExtensions.FareFocusRules"] = field(
             default=None,
-            metadata=dict(
-                name="FareFocusRules",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "FareFocusRules",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         selling_levels: Optional["AirSearchPrefsType.TpaExtensions.SellingLevels"] = field(
             default=None,
-            metadata=dict(
-                name="SellingLevels",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "SellingLevels",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         budget: Optional["AirSearchPrefsType.TpaExtensions.Budget"] = field(
             default=None,
-            metadata=dict(
-                name="Budget",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "Budget",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         options_per_date_pair_list: Optional["AirSearchPrefsType.TpaExtensions.OptionsPerDatePairList"] = field(
             default=None,
-            metadata=dict(
-                name="OptionsPerDatePairList",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "OptionsPerDatePairList",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         country_pref: List["AirSearchPrefsType.TpaExtensions.CountryPref"] = field(
             default_factory=list,
-            metadata=dict(
-                name="CountryPref",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "CountryPref",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         retailer_rules: Optional[RetailerRulesType] = field(
             default=None,
-            metadata=dict(
-                name="RetailerRules",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "RetailerRules",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
 
         @dataclass
@@ -6185,12 +6100,12 @@ class AirSearchPrefsType:
             """
             code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Code",
-                    type="Attribute",
-                    min_length=1,
-                    max_length=8
-                )
+                metadata={
+                    "name": "Code",
+                    "type": "Attribute",
+                    "min_length": 1,
+                    "max_length": 8,
+                }
             )
 
         @dataclass
@@ -6200,11 +6115,11 @@ class AirSearchPrefsType:
             """
             number: int = field(
                 default=5,
-                metadata=dict(
-                    name="Number",
-                    type="Attribute",
-                    min_inclusive=1
-                )
+                metadata={
+                    "name": "Number",
+                    "type": "Attribute",
+                    "min_inclusive": 1,
+                }
             )
 
         @dataclass
@@ -6214,10 +6129,10 @@ class AirSearchPrefsType:
             """
             value: Optional[AirTripType] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -6227,11 +6142,11 @@ class AirSearchPrefsType:
             """
             value: Optional[Decimal] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    fraction_digits=3
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "fraction_digits": 3,
+                }
             )
 
         @dataclass
@@ -6241,10 +6156,10 @@ class AirSearchPrefsType:
             """
             type: Optional["AirSearchPrefsType.TpaExtensions.ContentType.Type"] = field(
                 default=None,
-                metadata=dict(
-                    name="Type",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Type",
+                    "type": "Attribute",
+                }
             )
 
             class Type(Enum):
@@ -6262,11 +6177,11 @@ class AirSearchPrefsType:
             """
             hours: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Hours",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Hours",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6278,24 +6193,24 @@ class AirSearchPrefsType:
             """
             min: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Min",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Min",
+                    "type": "Attribute",
+                }
             )
             max: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Max",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Max",
+                    "type": "Attribute",
+                }
             )
             enable: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Enable",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Enable",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -6306,17 +6221,17 @@ class AirSearchPrefsType:
             """
             min: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Min",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Min",
+                    "type": "Attribute",
+                }
             )
             max: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Max",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Max",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -6326,11 +6241,11 @@ class AirSearchPrefsType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6340,11 +6255,11 @@ class AirSearchPrefsType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6354,11 +6269,11 @@ class AirSearchPrefsType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6368,11 +6283,11 @@ class AirSearchPrefsType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6382,11 +6297,11 @@ class AirSearchPrefsType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6396,11 +6311,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6410,11 +6325,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6424,11 +6339,11 @@ class AirSearchPrefsType:
             """
             value: Optional[float] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6438,11 +6353,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6452,11 +6367,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6466,11 +6381,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6480,11 +6395,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6494,11 +6409,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6508,11 +6423,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6522,11 +6437,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6536,11 +6451,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6550,11 +6465,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6564,11 +6479,11 @@ class AirSearchPrefsType:
             """
             value: Optional[float] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6578,11 +6493,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6592,11 +6507,11 @@ class AirSearchPrefsType:
             """
             value: Optional[float] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6606,11 +6521,11 @@ class AirSearchPrefsType:
             """
             value: Optional[float] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6620,11 +6535,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6634,11 +6549,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6648,11 +6563,11 @@ class AirSearchPrefsType:
             """
             value: Optional[float] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6662,11 +6577,11 @@ class AirSearchPrefsType:
             """
             value: Optional[float] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6676,11 +6591,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6690,11 +6605,11 @@ class AirSearchPrefsType:
             """
             value: Optional[float] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6704,11 +6619,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6718,11 +6633,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6732,11 +6647,11 @@ class AirSearchPrefsType:
             """
             value: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6746,11 +6661,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6760,11 +6675,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6774,11 +6689,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6788,11 +6703,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6802,11 +6717,11 @@ class AirSearchPrefsType:
             """
             value: Optional[float] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6816,11 +6731,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6830,11 +6745,11 @@ class AirSearchPrefsType:
             """
             value: Optional[float] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6844,11 +6759,11 @@ class AirSearchPrefsType:
             """
             value: Optional[float] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6858,11 +6773,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6872,11 +6787,11 @@ class AirSearchPrefsType:
             """
             value: Optional[float] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -6886,10 +6801,10 @@ class AirSearchPrefsType:
             """
             enable: bool = field(
                 default=False,
-                metadata=dict(
-                    name="Enable",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Enable",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -6899,10 +6814,10 @@ class AirSearchPrefsType:
             """
             enable_open_jaw: bool = field(
                 default=False,
-                metadata=dict(
-                    name="EnableOpenJaw",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "EnableOpenJaw",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -6912,10 +6827,10 @@ class AirSearchPrefsType:
             """
             enabled: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Enabled",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Enabled",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -6928,41 +6843,37 @@ class AirSearchPrefsType:
             """
             settlement_validation: Optional["AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.SettlementValidation"] = field(
                 default=None,
-                metadata=dict(
-                    name="SettlementValidation",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    required=True
-                )
+                metadata={
+                    "name": "SettlementValidation",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "required": True,
+                }
             )
             ietvalidation: Optional["AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Ietvalidation"] = field(
                 default=None,
-                metadata=dict(
-                    name="IETValidation",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    required=True
-                )
+                metadata={
+                    "name": "IETValidation",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "required": True,
+                }
             )
             carrier: List["AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Carrier"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="Carrier",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "Carrier",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             country: List["AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Country"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="Country",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "Country",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
 
             @dataclass
@@ -6973,11 +6884,11 @@ class AirSearchPrefsType:
                 """
                 ind: Optional[bool] = field(
                     default=None,
-                    metadata=dict(
-                        name="Ind",
-                        type="Attribute",
-                        required=True
-                    )
+                    metadata={
+                        "name": "Ind",
+                        "type": "Attribute",
+                        "required": True,
+                    }
                 )
 
             @dataclass
@@ -6988,11 +6899,11 @@ class AirSearchPrefsType:
                 """
                 ind: Optional[bool] = field(
                     default=None,
-                    metadata=dict(
-                        name="Ind",
-                        type="Attribute",
-                        required=True
-                    )
+                    metadata={
+                        "name": "Ind",
+                        "type": "Attribute",
+                        "required": True,
+                    }
                 )
 
             @dataclass
@@ -7002,12 +6913,12 @@ class AirSearchPrefsType:
                 """
                 code: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="Code",
-                        type="Attribute",
-                        required=True,
-                        pattern=r"[0-9A-Z]{2,3}"
-                    )
+                    metadata={
+                        "name": "Code",
+                        "type": "Attribute",
+                        "required": True,
+                        "pattern": r"[0-9A-Z]{2,3}",
+                    }
                 )
 
             @dataclass
@@ -7017,12 +6928,12 @@ class AirSearchPrefsType:
                 """
                 code: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="Code",
-                        type="Attribute",
-                        required=True,
-                        pattern=r"[a-zA-Z]{2}"
-                    )
+                    metadata={
+                        "name": "Code",
+                        "type": "Attribute",
+                        "required": True,
+                        "pattern": r"[a-zA-Z]{2}",
+                    }
                 )
 
         @dataclass
@@ -7032,11 +6943,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -7050,45 +6961,45 @@ class AirSearchPrefsType:
             """
             weightings: Optional["AirSearchPrefsType.TpaExtensions.DiversityParameters.Weightings"] = field(
                 default=None,
-                metadata=dict(
-                    name="Weightings",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05"
-                )
+                metadata={
+                    "name": "Weightings",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             time_of_day_distribution: Optional["AirSearchPrefsType.TpaExtensions.DiversityParameters.TimeOfDayDistribution"] = field(
                 default=None,
-                metadata=dict(
-                    name="TimeOfDayDistribution",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05"
-                )
+                metadata={
+                    "name": "TimeOfDayDistribution",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             inbound_outbound_pairing: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="InboundOutboundPairing",
-                    type="Attribute",
-                    min_inclusive=1,
-                    max_inclusive=1000
-                )
+                metadata={
+                    "name": "InboundOutboundPairing",
+                    "type": "Attribute",
+                    "min_inclusive": 1,
+                    "max_inclusive": 1000,
+                }
             )
             additional_non_stops_number: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="AdditionalNonStopsNumber",
-                    type="Attribute",
-                    min_inclusive=1
-                )
+                metadata={
+                    "name": "AdditionalNonStopsNumber",
+                    "type": "Attribute",
+                    "min_inclusive": 1,
+                }
             )
             additional_non_stops_percentage: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="AdditionalNonStopsPercentage",
-                    type="Attribute",
-                    min_inclusive=0,
-                    max_inclusive=100
-                )
+                metadata={
+                    "name": "AdditionalNonStopsPercentage",
+                    "type": "Attribute",
+                    "min_inclusive": 0,
+                    "max_inclusive": 100,
+                }
             )
 
             @dataclass
@@ -7099,23 +7010,23 @@ class AirSearchPrefsType:
                 """
                 price_weight: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="PriceWeight",
-                        type="Attribute",
-                        required=True,
-                        min_inclusive=0,
-                        max_inclusive=10
-                    )
+                    metadata={
+                        "name": "PriceWeight",
+                        "type": "Attribute",
+                        "required": True,
+                        "min_inclusive": 0,
+                        "max_inclusive": 10,
+                    }
                 )
                 travel_time_weight: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="TravelTimeWeight",
-                        type="Attribute",
-                        required=True,
-                        min_inclusive=0,
-                        max_inclusive=10
-                    )
+                    metadata={
+                        "name": "TravelTimeWeight",
+                        "type": "Attribute",
+                        "required": True,
+                        "min_inclusive": 0,
+                        "max_inclusive": 10,
+                    }
                 )
 
             @dataclass
@@ -7125,13 +7036,13 @@ class AirSearchPrefsType:
                 """
                 time_of_day_range: List["AirSearchPrefsType.TpaExtensions.DiversityParameters.TimeOfDayDistribution.TimeOfDayRange"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="TimeOfDayRange",
-                        type="Element",
-                        namespace="http://www.opentravel.org/OTA/2003/05",
-                        min_occurs=2,
-                        max_occurs=4
-                    )
+                    metadata={
+                        "name": "TimeOfDayRange",
+                        "type": "Element",
+                        "namespace": "http://www.opentravel.org/OTA/2003/05",
+                        "min_occurs": 2,
+                        "max_occurs": 4,
+                    }
                 )
 
                 @dataclass
@@ -7143,31 +7054,31 @@ class AirSearchPrefsType:
                     """
                     begin: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="Begin",
-                            type="Attribute",
-                            required=True,
-                            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
-                        )
+                        metadata={
+                            "name": "Begin",
+                            "type": "Attribute",
+                            "required": True,
+                            "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
+                        }
                     )
                     end: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="End",
-                            type="Attribute",
-                            required=True,
-                            pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
-                        )
+                        metadata={
+                            "name": "End",
+                            "type": "Attribute",
+                            "required": True,
+                            "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
+                        }
                     )
                     percentage: Optional[int] = field(
                         default=None,
-                        metadata=dict(
-                            name="Percentage",
-                            type="Attribute",
-                            required=True,
-                            min_inclusive=0,
-                            max_inclusive=100
-                        )
+                        metadata={
+                            "name": "Percentage",
+                            "type": "Attribute",
+                            "required": True,
+                            "min_inclusive": 0,
+                            "max_inclusive": 100,
+                        }
                     )
 
         @dataclass
@@ -7177,11 +7088,11 @@ class AirSearchPrefsType:
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -7191,10 +7102,10 @@ class AirSearchPrefsType:
             """
             exclude: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Exclude",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Exclude",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -7205,19 +7116,19 @@ class AirSearchPrefsType:
             """
             selling_level_rules: Optional["AirSearchPrefsType.TpaExtensions.SellingLevels.SellingLevelRules"] = field(
                 default=None,
-                metadata=dict(
-                    name="SellingLevelRules",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05"
-                )
+                metadata={
+                    "name": "SellingLevelRules",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             show_fare_amounts: Optional["AirSearchPrefsType.TpaExtensions.SellingLevels.ShowFareAmounts"] = field(
                 default=None,
-                metadata=dict(
-                    name="ShowFareAmounts",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05"
-                )
+                metadata={
+                    "name": "ShowFareAmounts",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
 
             @dataclass
@@ -7227,11 +7138,11 @@ class AirSearchPrefsType:
                 """
                 ignore: Optional[bool] = field(
                     default=None,
-                    metadata=dict(
-                        name="Ignore",
-                        type="Attribute",
-                        required=True
-                    )
+                    metadata={
+                        "name": "Ignore",
+                        "type": "Attribute",
+                        "required": True,
+                    }
                 )
 
             @dataclass
@@ -7242,17 +7153,17 @@ class AirSearchPrefsType:
                 """
                 original: Optional[bool] = field(
                     default=None,
-                    metadata=dict(
-                        name="Original",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Original",
+                        "type": "Attribute",
+                    }
                 )
                 adjusted: Optional[bool] = field(
                     default=None,
-                    metadata=dict(
-                        name="Adjusted",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Adjusted",
+                        "type": "Attribute",
+                    }
                 )
 
         @dataclass
@@ -7264,25 +7175,25 @@ class AirSearchPrefsType:
             """
             minimum_price: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="MinimumPrice",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "MinimumPrice",
+                    "type": "Attribute",
+                }
             )
             maximum_price: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="MaximumPrice",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "MaximumPrice",
+                    "type": "Attribute",
+                }
             )
             relative_price_threshold: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="RelativePriceThreshold",
-                    type="Attribute",
-                    pattern=r"0|-?[1-9][0-9]*%?"
-                )
+                metadata={
+                    "name": "RelativePriceThreshold",
+                    "type": "Attribute",
+                    "pattern": r"0|-?[1-9][0-9]*%?",
+                }
             )
 
         @dataclass
@@ -7292,13 +7203,12 @@ class AirSearchPrefsType:
             """
             options_per_date_pair: List[OptionsPerDatePairType] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="OptionsPerDatePair",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_occurs=1,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "OptionsPerDatePair",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "min_occurs": 1,
+                }
             )
 
         @dataclass
@@ -7309,21 +7219,21 @@ class AirSearchPrefsType:
             """
             code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Code",
-                    type="Attribute",
-                    required=True,
-                    pattern=r"[a-zA-Z]{2}"
-                )
+                metadata={
+                    "name": "Code",
+                    "type": "Attribute",
+                    "required": True,
+                    "pattern": r"[a-zA-Z]{2}",
+                }
             )
             prefer_level: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="PreferLevel",
-                    type="Attribute",
-                    required=True,
-                    pattern=r"Unacceptable"
-                )
+                metadata={
+                    "name": "PreferLevel",
+                    "type": "Attribute",
+                    "required": True,
+                    "pattern": r"Unacceptable",
+                }
             )
 
         @dataclass
@@ -7333,10 +7243,10 @@ class AirSearchPrefsType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -7346,10 +7256,10 @@ class AirSearchPrefsType:
             """
             ind: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Ind",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Ind",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -7359,11 +7269,11 @@ class AirSearchPrefsType:
             """
             value: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -7373,11 +7283,11 @@ class AirSearchPrefsType:
             """
             value: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -7387,13 +7297,11 @@ class AirSearchPrefsType:
             """
             tax: List[TaxCodeAmountType] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="Tax",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "Tax",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
 
     @dataclass
@@ -7405,28 +7313,26 @@ class AirSearchPrefsType:
         """
         ancillary_fee_group: List["AirSearchPrefsType.AncillaryFees.AncillaryFeeGroup"] = field(
             default_factory=list,
-            metadata=dict(
-                name="AncillaryFeeGroup",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "AncillaryFeeGroup",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         enable: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="Enable",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Enable",
+                "type": "Attribute",
+                "required": True,
+            }
         )
         summary: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="Summary",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Summary",
+                "type": "Attribute",
+            }
         )
 
         @dataclass
@@ -7437,18 +7343,18 @@ class AirSearchPrefsType:
             """
             code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Code",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Code",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
             count: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Count",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Count",
+                    "type": "Attribute",
+                }
             )
 
     @dataclass
@@ -7459,18 +7365,18 @@ class AirSearchPrefsType:
         """
         status: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="Status",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Status",
+                "type": "Attribute",
+                "required": True,
+            }
         )
         airline_code: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="AirlineCode",
-                type="Attribute"
-            )
+            metadata={
+                "name": "AirlineCode",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -7480,11 +7386,11 @@ class AirSearchPrefsType:
         """
         level: Optional["AirSearchPrefsType.SpanishFamilyDiscount.Level"] = field(
             default=None,
-            metadata=dict(
-                name="Level",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Level",
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
         class Level(Enum):
@@ -7520,147 +7426,142 @@ class AirTravelerType:
     """
     profile_ref: Optional["AirTravelerType.ProfileRef"] = field(
         default=None,
-        metadata=dict(
-            name="ProfileRef",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "ProfileRef",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     person_name: Optional[PersonNameType] = field(
         default=None,
-        metadata=dict(
-            name="PersonName",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "PersonName",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     telephone: List[TelephoneType] = field(
         default_factory=list,
-        metadata=dict(
-            name="Telephone",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=5
-        )
+        metadata={
+            "name": "Telephone",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 5,
+        }
     )
     email: List[EmailType] = field(
         default_factory=list,
-        metadata=dict(
-            name="Email",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=3
-        )
+        metadata={
+            "name": "Email",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 3,
+        }
     )
     address: List[AddressType] = field(
         default_factory=list,
-        metadata=dict(
-            name="Address",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=5
-        )
+        metadata={
+            "name": "Address",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 5,
+        }
     )
     cust_loyalty: List[CustLoyaltyType] = field(
         default_factory=list,
-        metadata=dict(
-            name="CustLoyalty",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=5
-        )
+        metadata={
+            "name": "CustLoyalty",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 5,
+        }
     )
     document: List[DocumentType] = field(
         default_factory=list,
-        metadata=dict(
-            name="Document",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=10
-        )
+        metadata={
+            "name": "Document",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 10,
+        }
     )
     passenger_type_quantity: Optional[PassengerTypeQuantityType] = field(
         default=None,
-        metadata=dict(
-            name="PassengerTypeQuantity",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "PassengerTypeQuantity",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     traveler_ref_number: Optional[TravelerRefNumberType] = field(
         default=None,
-        metadata=dict(
-            name="TravelerRefNumber",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "TravelerRefNumber",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     flight_segment_rphs: Optional["AirTravelerType.FlightSegmentRphs"] = field(
         default=None,
-        metadata=dict(
-            name="FlightSegmentRPHs",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "FlightSegmentRPHs",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     gender: Optional["AirTravelerType.Gender"] = field(
         default=None,
-        metadata=dict(
-            name="Gender",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Gender",
+            "type": "Attribute",
+        }
     )
     share_synch_ind: Optional["AirTravelerType.ShareSynchInd"] = field(
         default=None,
-        metadata=dict(
-            name="ShareSynchInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShareSynchInd",
+            "type": "Attribute",
+        }
     )
     share_market_ind: Optional["AirTravelerType.ShareMarketInd"] = field(
         default=None,
-        metadata=dict(
-            name="ShareMarketInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShareMarketInd",
+            "type": "Attribute",
+        }
     )
     birth_date: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BirthDate",
-            type="Attribute"
-        )
+        metadata={
+            "name": "BirthDate",
+            "type": "Attribute",
+        }
     )
     currency_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CurrencyCode",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "CurrencyCode",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     passenger_type_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PassengerTypeCode",
-            type="Attribute",
-            required=True,
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "PassengerTypeCode",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     accompanied_by_infant: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="AccompaniedByInfant",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AccompaniedByInfant",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -7670,12 +7571,12 @@ class AirTravelerType:
         """
         unique_id: Optional[UniqueIdType] = field(
             default=None,
-            metadata=dict(
-                name="UniqueID",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                required=True
-            )
+            metadata={
+                "name": "UniqueID",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "required": True,
+            }
         )
 
     @dataclass
@@ -7685,14 +7586,14 @@ class AirTravelerType:
         """
         flight_segment_rph: List[str] = field(
             default_factory=list,
-            metadata=dict(
-                name="FlightSegmentRPH",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=1,
-                max_occurs=99,
-                pattern=r"[0-9]{1,8}"
-            )
+            metadata={
+                "name": "FlightSegmentRPH",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "min_occurs": 1,
+                "max_occurs": 99,
+                "pattern": r"[0-9]{1,8}",
+            }
         )
 
     class Gender(Enum):
@@ -7764,240 +7665,240 @@ class ExchangeSourceType:
     """
     booking_channel: Optional[SourceBookingChannelType] = field(
         default=None,
-        metadata=dict(
-            name="BookingChannel",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "BookingChannel",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     agent_sine: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentSine",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "AgentSine",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     pseudo_city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PseudoCityCode",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "PseudoCityCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     isocountry: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ISOCountry",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{2}"
-        )
+        metadata={
+            "name": "ISOCountry",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z]{2}",
+        }
     )
     isocurrency: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ISOCurrency",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "ISOCurrency",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     agent_duty_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentDutyCode",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "AgentDutyCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     airline_vendor_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AirlineVendorID",
-            type="Attribute",
-            pattern=r"[A-Z0-9]{2,3}"
-        )
+        metadata={
+            "name": "AirlineVendorID",
+            "type": "Attribute",
+            "pattern": r"[A-Z0-9]{2,3}",
+        }
     )
     airport_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AirportCode",
-            type="Attribute",
-            pattern=r"[A-Z0-9]{3,5}"
-        )
+        metadata={
+            "name": "AirportCode",
+            "type": "Attribute",
+            "pattern": r"[A-Z0-9]{3,5}",
+        }
     )
     first_depart_point: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FirstDepartPoint",
-            type="Attribute",
-            min_length=3,
-            max_length=3
-        )
+        metadata={
+            "name": "FirstDepartPoint",
+            "type": "Attribute",
+            "min_length": 3,
+            "max_length": 3,
+        }
     )
     ersp_user_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ERSP_UserID",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "ERSP_UserID",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     personal_city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PersonalCityCode",
-            type="Attribute",
-            pattern=r"[0-9A-Z]{3,4}"
-        )
+        metadata={
+            "name": "PersonalCityCode",
+            "type": "Attribute",
+            "pattern": r"[0-9A-Z]{3,4}",
+        }
     )
     accounting_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AccountingCode",
-            type="Attribute",
-            pattern=r"[0-9a-zA-Z]{2,3}"
-        )
+        metadata={
+            "name": "AccountingCode",
+            "type": "Attribute",
+            "pattern": r"[0-9a-zA-Z]{2,3}",
+        }
     )
     office_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OfficeCode",
-            type="Attribute",
-            pattern=r"[0-9]{7}"
-        )
+        metadata={
+            "name": "OfficeCode",
+            "type": "Attribute",
+            "pattern": r"[0-9]{7}",
+        }
     )
     default_ticketing_carrier: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DefaultTicketingCarrier",
-            type="Attribute",
-            pattern=r"[A-Z0-9]{2}[A-Z]?"
-        )
+        metadata={
+            "name": "DefaultTicketingCarrier",
+            "type": "Attribute",
+            "pattern": r"[A-Z0-9]{2}[A-Z]?",
+        }
     )
     airline_channel_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AirlineChannelCode",
-            type="Attribute",
-            pattern=r"[A-Z]{3}"
-        )
+        metadata={
+            "name": "AirlineChannelCode",
+            "type": "Attribute",
+            "pattern": r"[A-Z]{3}",
+        }
     )
     agent_department_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentDepartmentCode",
-            type="Attribute",
-            max_length=6
-        )
+        metadata={
+            "name": "AgentDepartmentCode",
+            "type": "Attribute",
+            "max_length": 6,
+        }
     )
     agent_function: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentFunction",
-            type="Attribute",
-            max_length=3
-        )
+        metadata={
+            "name": "AgentFunction",
+            "type": "Attribute",
+            "max_length": 3,
+        }
     )
     travel_agency_iata: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TravelAgencyIATA",
-            type="Attribute",
-            pattern=r"[0-9]{1,14}"
-        )
+        metadata={
+            "name": "TravelAgencyIATA",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,14}",
+        }
     )
     home_agency_iata: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="HomeAgencyIATA",
-            type="Attribute",
-            pattern=r"[0-9]{1,14}"
-        )
+        metadata={
+            "name": "HomeAgencyIATA",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,14}",
+        }
     )
     agent_iata: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentIATA",
-            type="Attribute",
-            pattern=r"[0-9]{1,14}"
-        )
+        metadata={
+            "name": "AgentIATA",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,14}",
+        }
     )
     vendor_crscode: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="VendorCRSCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "VendorCRSCode",
+            "type": "Attribute",
+        }
     )
     agent_duty: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentDuty",
-            type="Attribute",
-            length=1
-        )
+        metadata={
+            "name": "AgentDuty",
+            "type": "Attribute",
+            "length": 1,
+        }
     )
     abacus_user: bool = field(
         default=False,
-        metadata=dict(
-            name="AbacusUser",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AbacusUser",
+            "type": "Attribute",
+        }
     )
     agent_city: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentCity",
-            type="Attribute",
-            required=True,
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "AgentCity",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     main_travel_agency_pcc: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MainTravelAgencyPCC",
-            type="Attribute",
-            required=True,
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "MainTravelAgencyPCC",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     carrier: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Carrier",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9A-Z]{2,3}"
-        )
+        metadata={
+            "name": "Carrier",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[0-9A-Z]{2,3}",
+        }
     )
     host_carrier: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="HostCarrier",
-            type="Attribute",
-            pattern=r"[0-9A-Z]{2,3}"
-        )
+        metadata={
+            "name": "HostCarrier",
+            "type": "Attribute",
+            "pattern": r"[0-9A-Z]{2,3}",
+        }
     )
     eticket_capable: bool = field(
         default=False,
-        metadata=dict(
-            name="ETicketCapable",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ETicketCapable",
+            "type": "Attribute",
+        }
     )
     co_host_id: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="CoHostID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "CoHostID",
+            "type": "Attribute",
+        }
     )
 
 
@@ -8015,46 +7916,44 @@ class ExchangeTravelPreferencesTpaExtensionsType:
 
     exempt_all_taxes: Optional["ExchangeTravelPreferencesTpaExtensionsType.ExemptAllTaxes"] = field(
         default=None,
-        metadata=dict(
-            name="ExemptAllTaxes",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "ExemptAllTaxes",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     exempt_all_taxes_and_fees: Optional["ExchangeTravelPreferencesTpaExtensionsType.ExemptAllTaxesAndFees"] = field(
         default=None,
-        metadata=dict(
-            name="ExemptAllTaxesAndFees",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "ExemptAllTaxesAndFees",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     taxes: Optional["ExchangeTravelPreferencesTpaExtensionsType.Taxes"] = field(
         default=None,
-        metadata=dict(
-            name="Taxes",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "Taxes",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     exempt_tax: List[TaxCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            name="ExemptTax",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "ExemptTax",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     settlement_method: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="SettlementMethod",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            pattern=r"[a-zA-Z0-9]{3}"
-        )
+        metadata={
+            "name": "SettlementMethod",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "pattern": r"[a-zA-Z0-9]{3}",
+        }
     )
 
     @dataclass
@@ -8064,11 +7963,11 @@ class ExchangeTravelPreferencesTpaExtensionsType:
         """
         value: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="Value",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Value",
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
     @dataclass
@@ -8078,11 +7977,11 @@ class ExchangeTravelPreferencesTpaExtensionsType:
         """
         value: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="Value",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Value",
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
     @dataclass
@@ -8092,13 +7991,11 @@ class ExchangeTravelPreferencesTpaExtensionsType:
         """
         tax: List[TaxCodeAmountType] = field(
             default_factory=list,
-            metadata=dict(
-                name="Tax",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "Tax",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
 
 
@@ -8113,29 +8010,29 @@ class OriginDestinationInformationType(TravelDateTimeType):
     """
     origin_location: Optional["OriginDestinationInformationType.OriginLocation"] = field(
         default=None,
-        metadata=dict(
-            name="OriginLocation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "OriginLocation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     destination_location: Optional["OriginDestinationInformationType.DestinationLocation"] = field(
         default=None,
-        metadata=dict(
-            name="DestinationLocation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "DestinationLocation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     connection_locations: Optional[ConnectionType] = field(
         default=None,
-        metadata=dict(
-            name="ConnectionLocations",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "ConnectionLocations",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
 
     @dataclass
@@ -8145,10 +8042,10 @@ class OriginDestinationInformationType(TravelDateTimeType):
         """
         all_airports: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="AllAirports",
-                type="Attribute"
-            )
+            metadata={
+                "name": "AllAirports",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -8158,10 +8055,10 @@ class OriginDestinationInformationType(TravelDateTimeType):
         """
         all_airports: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="AllAirports",
-                type="Attribute"
-            )
+            metadata={
+                "name": "AllAirports",
+                "type": "Attribute",
+            }
         )
 
 
@@ -8200,241 +8097,241 @@ class SourceType:
     """
     requestor_id: Optional[UniqueIdType] = field(
         default=None,
-        metadata=dict(
-            name="RequestorID",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "RequestorID",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     position: Optional[PositionType] = field(
         default=None,
-        metadata=dict(
-            name="Position",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "Position",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     booking_channel: Optional[SourceBookingChannelType] = field(
         default=None,
-        metadata=dict(
-            name="BookingChannel",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "BookingChannel",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     agent_sine: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentSine",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "AgentSine",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     pseudo_city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PseudoCityCode",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "PseudoCityCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     isocountry: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ISOCountry",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{2}"
-        )
+        metadata={
+            "name": "ISOCountry",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z]{2}",
+        }
     )
     isocurrency: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ISOCurrency",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "ISOCurrency",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     agent_duty_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentDutyCode",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "AgentDutyCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     airline_vendor_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AirlineVendorID",
-            type="Attribute",
-            pattern=r"[A-Z0-9]{2,3}"
-        )
+        metadata={
+            "name": "AirlineVendorID",
+            "type": "Attribute",
+            "pattern": r"[A-Z0-9]{2,3}",
+        }
     )
     airport_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AirportCode",
-            type="Attribute",
-            pattern=r"[A-Z0-9]{3,5}"
-        )
+        metadata={
+            "name": "AirportCode",
+            "type": "Attribute",
+            "pattern": r"[A-Z0-9]{3,5}",
+        }
     )
     first_depart_point: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="FirstDepartPoint",
-            type="Attribute",
-            min_length=3,
-            max_length=3
-        )
+        metadata={
+            "name": "FirstDepartPoint",
+            "type": "Attribute",
+            "min_length": 3,
+            "max_length": 3,
+        }
     )
     ersp_user_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ERSP_UserID",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "ERSP_UserID",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     personal_city_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PersonalCityCode",
-            type="Attribute",
-            pattern=r"[0-9A-Z]{3,4}"
-        )
+        metadata={
+            "name": "PersonalCityCode",
+            "type": "Attribute",
+            "pattern": r"[0-9A-Z]{3,4}",
+        }
     )
     accounting_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AccountingCode",
-            type="Attribute",
-            pattern=r"[0-9a-zA-Z]{2,3}"
-        )
+        metadata={
+            "name": "AccountingCode",
+            "type": "Attribute",
+            "pattern": r"[0-9a-zA-Z]{2,3}",
+        }
     )
     office_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OfficeCode",
-            type="Attribute",
-            pattern=r"[0-9]{7}"
-        )
+        metadata={
+            "name": "OfficeCode",
+            "type": "Attribute",
+            "pattern": r"[0-9]{7}",
+        }
     )
     default_ticketing_carrier: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DefaultTicketingCarrier",
-            type="Attribute",
-            pattern=r"[A-Z0-9]{2}[A-Z]?"
-        )
+        metadata={
+            "name": "DefaultTicketingCarrier",
+            "type": "Attribute",
+            "pattern": r"[A-Z0-9]{2}[A-Z]?",
+        }
     )
     airline_channel_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AirlineChannelCode",
-            type="Attribute",
-            pattern=r"[A-Z]{3}"
-        )
+        metadata={
+            "name": "AirlineChannelCode",
+            "type": "Attribute",
+            "pattern": r"[A-Z]{3}",
+        }
     )
     agent_department_code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentDepartmentCode",
-            type="Attribute",
-            max_length=6
-        )
+        metadata={
+            "name": "AgentDepartmentCode",
+            "type": "Attribute",
+            "max_length": 6,
+        }
     )
     agent_function: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentFunction",
-            type="Attribute",
-            max_length=3
-        )
+        metadata={
+            "name": "AgentFunction",
+            "type": "Attribute",
+            "max_length": 3,
+        }
     )
     travel_agency_iata: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TravelAgencyIATA",
-            type="Attribute",
-            pattern=r"[0-9]{1,14}"
-        )
+        metadata={
+            "name": "TravelAgencyIATA",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,14}",
+        }
     )
     home_agency_iata: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="HomeAgencyIATA",
-            type="Attribute",
-            pattern=r"[0-9]{1,14}"
-        )
+        metadata={
+            "name": "HomeAgencyIATA",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,14}",
+        }
     )
     agent_iata: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentIATA",
-            type="Attribute",
-            pattern=r"[0-9]{1,14}"
-        )
+        metadata={
+            "name": "AgentIATA",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,14}",
+        }
     )
     vendor_crscode: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="VendorCRSCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "VendorCRSCode",
+            "type": "Attribute",
+        }
     )
     agent_duty: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentDuty",
-            type="Attribute",
-            length=1
-        )
+        metadata={
+            "name": "AgentDuty",
+            "type": "Attribute",
+            "length": 1,
+        }
     )
     abacus_user: bool = field(
         default=False,
-        metadata=dict(
-            name="AbacusUser",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AbacusUser",
+            "type": "Attribute",
+        }
     )
     agent_city: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AgentCity",
-            type="Attribute",
-            pattern=r"[a-zA-Z]{3}"
-        )
+        metadata={
+            "name": "AgentCity",
+            "type": "Attribute",
+            "pattern": r"[a-zA-Z]{3}",
+        }
     )
     carrier: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Carrier",
-            type="Attribute",
-            pattern=r"[0-9A-Z]{2,3}"
-        )
+        metadata={
+            "name": "Carrier",
+            "type": "Attribute",
+            "pattern": r"[0-9A-Z]{2,3}",
+        }
     )
     main_travel_agency_pcc: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="MainTravelAgencyPCC",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "MainTravelAgencyPCC",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
     home_pcc: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="HomePCC",
-            type="Attribute",
-            min_length=1,
-            max_length=16
-        )
+        metadata={
+            "name": "HomePCC",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
     )
 
 
@@ -8466,165 +8363,165 @@ class TransactionType:
     """
     request_type: Optional["TransactionType.RequestType"] = field(
         default=None,
-        metadata=dict(
-            name="RequestType",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "RequestType",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     service_tag: Optional["TransactionType.ServiceTag"] = field(
         default=None,
-        metadata=dict(
-            name="ServiceTag",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "ServiceTag",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     purchase_type: Optional["TransactionType.PurchaseType"] = field(
         default=None,
-        metadata=dict(
-            name="PurchaseType",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "PurchaseType",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     sabre_ath: Optional["TransactionType.SabreAth"] = field(
         default=None,
-        metadata=dict(
-            name="SabreAth",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "SabreAth",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     tran_id: Optional["TransactionType.TranId"] = field(
         default=None,
-        metadata=dict(
-            name="TranID",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "TranID",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     client_session_id: Optional["TransactionType.ClientSessionId"] = field(
         default=None,
-        metadata=dict(
-            name="ClientSessionID",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "ClientSessionID",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     branch: Optional["TransactionType.Branch"] = field(
         default=None,
-        metadata=dict(
-            name="Branch",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "Branch",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     compress_response: Optional["TransactionType.CompressResponse"] = field(
         default=None,
-        metadata=dict(
-            name="CompressResponse",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "CompressResponse",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     fare_overrides: Optional["TransactionType.FareOverrides"] = field(
         default=None,
-        metadata=dict(
-            name="FareOverrides",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "FareOverrides",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     diagnostics: Optional["TransactionType.Diagnostics"] = field(
         default=None,
-        metadata=dict(
-            name="Diagnostics",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "Diagnostics",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     subagent_data: Optional["TransactionType.SubagentData"] = field(
         default=None,
-        metadata=dict(
-            name="SubagentData",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "SubagentData",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     response_sorting: Optional["TransactionType.ResponseSorting"] = field(
         default=None,
-        metadata=dict(
-            name="ResponseSorting",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "ResponseSorting",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     seat_status_sim: Optional[SeatStatusSimType] = field(
         default=None,
-        metadata=dict(
-            name="SeatStatusSim",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "SeatStatusSim",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     available_level: Optional["TransactionType.AvailableLevel"] = field(
         default=None,
-        metadata=dict(
-            name="AvailableLevel",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "AvailableLevel",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     atsetest: Optional["TransactionType.Atsetest"] = field(
         default=None,
-        metadata=dict(
-            name="ATSETest",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "ATSETest",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     debug: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="Debug",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Debug",
+            "type": "Attribute",
+        }
     )
     debug_key: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="DebugKey",
-            type="Attribute"
-        )
+        metadata={
+            "name": "DebugKey",
+            "type": "Attribute",
+        }
     )
     config_set: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ConfigSet",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ConfigSet",
+            "type": "Attribute",
+        }
     )
     disable_cache: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="DisableCache",
-            type="Attribute"
-        )
+        metadata={
+            "name": "DisableCache",
+            "type": "Attribute",
+        }
     )
     chunk_number: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ChunkNumber",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ChunkNumber",
+            "type": "Attribute",
+        }
     )
     show_itin_source: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="ShowItinSource",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ShowItinSource",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -8638,10 +8535,10 @@ class TransactionType:
         )
         name: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Name",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Name",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -8655,10 +8552,10 @@ class TransactionType:
         )
         name: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Name",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Name",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -8668,10 +8565,10 @@ class TransactionType:
         """
         name: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Name",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Name",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -8683,24 +8580,24 @@ class TransactionType:
         """
         value: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Value",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Value",
+                "type": "Attribute",
+            }
         )
         binary_sec_token: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="BinarySecToken",
-                type="Attribute"
-            )
+            metadata={
+                "name": "BinarySecToken",
+                "type": "Attribute",
+            }
         )
         conversation_id: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="ConversationID",
-                type="Attribute"
-            )
+            metadata={
+                "name": "ConversationID",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -8710,10 +8607,10 @@ class TransactionType:
         """
         value: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Value",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Value",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -8723,10 +8620,10 @@ class TransactionType:
         """
         value: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Value",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Value",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -8736,10 +8633,10 @@ class TransactionType:
         """
         name: str = field(
             default="Main",
-            metadata=dict(
-                name="Name",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Name",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -8749,10 +8646,10 @@ class TransactionType:
         """
         value: bool = field(
             default=False,
-            metadata=dict(
-                name="Value",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Value",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -8762,13 +8659,13 @@ class TransactionType:
         """
         fare_override: List["TransactionType.FareOverrides.FareOverride"] = field(
             default_factory=list,
-            metadata=dict(
-                name="FareOverride",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=1,
-                max_occurs=4
-            )
+            metadata={
+                "name": "FareOverride",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "min_occurs": 1,
+                "max_occurs": 4,
+            }
         )
 
         @dataclass
@@ -8783,50 +8680,48 @@ class TransactionType:
             """
             vendor_pref: List[CompanyNamePrefType] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="VendorPref",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "VendorPref",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             tpa_extensions: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="TPA_Extensions",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05"
-                )
+                metadata={
+                    "name": "TPA_Extensions",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             fare_type: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="FareType",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "FareType",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
             pseudo_city_code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="PseudoCityCode",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "PseudoCityCode",
+                    "type": "Attribute",
+                }
             )
             corporate_id: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="CorporateID",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "CorporateID",
+                    "type": "Attribute",
+                }
             )
             callable: str = field(
                 default="true",
-                metadata=dict(
-                    name="Callable",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Callable",
+                    "type": "Attribute",
+                }
             )
 
     @dataclass
@@ -8836,13 +8731,12 @@ class TransactionType:
         """
         diagnostic: List["TransactionType.Diagnostics.Diagnostic"] = field(
             default_factory=list,
-            metadata=dict(
-                name="Diagnostic",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05",
-                min_occurs=1,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "Diagnostic",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "min_occurs": 1,
+            }
         )
 
         @dataclass
@@ -8855,37 +8749,35 @@ class TransactionType:
             """
             diagnostic_argument: List["TransactionType.Diagnostics.Diagnostic.DiagnosticArgument"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="DiagnosticArgument",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "DiagnosticArgument",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             tpa_extensions: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="TPA_Extensions",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05"
-                )
+                metadata={
+                    "name": "TPA_Extensions",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                }
             )
             target: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Target",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Target",
+                    "type": "Attribute",
+                }
             )
             code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Code",
-                    type="Attribute",
-                    required=True,
-                    pattern=r"[A-Za-z0-9_]+(/[A-Za-z0-9_]+)*"
-                )
+                metadata={
+                    "name": "Code",
+                    "type": "Attribute",
+                    "required": True,
+                    "pattern": r"[A-Za-z0-9_]+(/[A-Za-z0-9_]+)*",
+                }
             )
 
             @dataclass
@@ -8896,18 +8788,18 @@ class TransactionType:
                 """
                 name: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="Name",
-                        type="Attribute",
-                        required=True
-                    )
+                    metadata={
+                        "name": "Name",
+                        "type": "Attribute",
+                        "required": True,
+                    }
                 )
                 value: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="Value",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Value",
+                        "type": "Attribute",
+                    }
                 )
 
     @dataclass
@@ -8917,10 +8809,10 @@ class TransactionType:
         """
         code: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Code",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Code",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -8930,10 +8822,10 @@ class TransactionType:
         """
         enable_chronological_sorting: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="EnableChronologicalSorting",
-                type="Attribute"
-            )
+            metadata={
+                "name": "EnableChronologicalSorting",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -8943,11 +8835,11 @@ class TransactionType:
         """
         value: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Value",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Value",
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
     @dataclass
@@ -8957,10 +8849,10 @@ class TransactionType:
         """
         feature: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="Feature",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Feature",
+                "type": "Attribute",
+            }
         )
 
 
@@ -8972,18 +8864,18 @@ class ExchangeAirSearchPrefsType:
     """
     tpa_extensions: Optional[ExchangeTravelPreferencesTpaExtensionsType] = field(
         default=None,
-        metadata=dict(
-            name="TPA_Extensions",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "TPA_Extensions",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     valid_interline_ticket: bool = field(
         default=False,
-        metadata=dict(
-            name="ValidInterlineTicket",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ValidInterlineTicket",
+            "type": "Attribute",
+        }
     )
 
 
@@ -9006,115 +8898,109 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
     """
     flight: List[ExchangeOriginDestinationFlightType] = field(
         default_factory=list,
-        metadata=dict(
-            name="Flight",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "Flight",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_occurs": 1,
+        }
     )
     date_flexibility: List["ExchangeOriginDestinationInformationType.DateFlexibility"] = field(
         default_factory=list,
-        metadata=dict(
-            name="DateFlexibility",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=2
-        )
+        metadata={
+            "name": "DateFlexibility",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 2,
+        }
     )
     sister_destination_location: List[RequestLocationType] = field(
         default_factory=list,
-        metadata=dict(
-            name="SisterDestinationLocation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "SisterDestinationLocation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     sister_destination_mileage: Optional["ExchangeOriginDestinationInformationType.SisterDestinationMileage"] = field(
         default=None,
-        metadata=dict(
-            name="SisterDestinationMileage",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "SisterDestinationMileage",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     sister_origin_location: List[RequestLocationType] = field(
         default_factory=list,
-        metadata=dict(
-            name="SisterOriginLocation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "SisterOriginLocation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     sister_origin_mileage: Optional["ExchangeOriginDestinationInformationType.SisterOriginMileage"] = field(
         default=None,
-        metadata=dict(
-            name="SisterOriginMileage",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "SisterOriginMileage",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     segment_type: Optional["ExchangeOriginDestinationInformationType.SegmentType"] = field(
         default=None,
-        metadata=dict(
-            name="SegmentType",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "SegmentType",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     alternate_time: Optional["ExchangeOriginDestinationInformationType.AlternateTime"] = field(
         default=None,
-        metadata=dict(
-            name="AlternateTime",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "AlternateTime",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     max_one_way_options: Optional["ExchangeOriginDestinationInformationType.MaxOneWayOptions"] = field(
         default=None,
-        metadata=dict(
-            name="MaxOneWayOptions",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "MaxOneWayOptions",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     num_one_way_options: Optional["ExchangeOriginDestinationInformationType.NumOneWayOptions"] = field(
         default=None,
-        metadata=dict(
-            name="NumOneWayOptions",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "NumOneWayOptions",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     cabin_pref: Optional[CabinPrefType] = field(
         default=None,
-        metadata=dict(
-            name="CabinPref",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "CabinPref",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     connection_time: Optional["ExchangeOriginDestinationInformationType.ConnectionTime"] = field(
         default=None,
-        metadata=dict(
-            name="ConnectionTime",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "ConnectionTime",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     total_travel_time: Optional["ExchangeOriginDestinationInformationType.TotalTravelTime"] = field(
         default=None,
-        metadata=dict(
-            name="TotalTravelTime",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "TotalTravelTime",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
 
     @dataclass
@@ -9127,31 +9013,31 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
         """
         nbr_of_days: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="NbrOfDays",
-                type="Attribute"
-            )
+            metadata={
+                "name": "NbrOfDays",
+                "type": "Attribute",
+            }
         )
         plus: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="Plus",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Plus",
+                "type": "Attribute",
+            }
         )
         minus: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="Minus",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Minus",
+                "type": "Attribute",
+            }
         )
         validate: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="Validate",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Validate",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -9161,10 +9047,10 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
         """
         code: Optional["ExchangeOriginDestinationInformationType.SegmentType.Code"] = field(
             default=None,
-            metadata=dict(
-                name="Code",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Code",
+                "type": "Attribute",
+            }
         )
 
         class Code(Enum):
@@ -9186,30 +9072,30 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
         """
         plus_minus: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="PlusMinus",
-                type="Attribute",
-                min_inclusive=0,
-                max_inclusive=9
-            )
+            metadata={
+                "name": "PlusMinus",
+                "type": "Attribute",
+                "min_inclusive": 0,
+                "max_inclusive": 9,
+            }
         )
         plus: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="Plus",
-                type="Attribute",
-                min_inclusive=0,
-                max_inclusive=9
-            )
+            metadata={
+                "name": "Plus",
+                "type": "Attribute",
+                "min_inclusive": 0,
+                "max_inclusive": 9,
+            }
         )
         minus: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="Minus",
-                type="Attribute",
-                min_inclusive=0,
-                max_inclusive=72
-            )
+            metadata={
+                "name": "Minus",
+                "type": "Attribute",
+                "min_inclusive": 0,
+                "max_inclusive": 72,
+            }
         )
 
     @dataclass
@@ -9219,11 +9105,11 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
         """
         value: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="Value",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Value",
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
     @dataclass
@@ -9233,11 +9119,11 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
         """
         number: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="Number",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Number",
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
     @dataclass
@@ -9251,40 +9137,40 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
         """
         min: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="Min",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Min",
+                "type": "Attribute",
+            }
         )
         max: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="Max",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Max",
+                "type": "Attribute",
+            }
         )
         excluded_connection_begin: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="ExcludedConnectionBegin",
-                type="Attribute",
-                pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
-            )
+            metadata={
+                "name": "ExcludedConnectionBegin",
+                "type": "Attribute",
+                "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
+            }
         )
         excluded_connection_end: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="ExcludedConnectionEnd",
-                type="Attribute",
-                pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
-            )
+            metadata={
+                "name": "ExcludedConnectionEnd",
+                "type": "Attribute",
+                "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
+            }
         )
         enable_excluded_connection: Optional[bool] = field(
             default=None,
-            metadata=dict(
-                name="EnableExcludedConnection",
-                type="Attribute"
-            )
+            metadata={
+                "name": "EnableExcludedConnection",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -9295,17 +9181,17 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
         """
         min: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="Min",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Min",
+                "type": "Attribute",
+            }
         )
         max: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="Max",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Max",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -9315,11 +9201,11 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
         """
         number: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="Number",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Number",
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
     @dataclass
@@ -9329,11 +9215,11 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
         """
         number: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="Number",
-                type="Attribute",
-                required=True
-            )
+            metadata={
+                "name": "Number",
+                "type": "Attribute",
+                "required": True,
+            }
         )
 
 
@@ -9347,12 +9233,12 @@ class ExchangePostype:
 
     source: Optional[ExchangeSourceType] = field(
         default=None,
-        metadata=dict(
-            name="Source",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "Source",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
 
 
@@ -9368,13 +9254,13 @@ class PosType:
 
     source: List[SourceType] = field(
         default_factory=list,
-        metadata=dict(
-            name="Source",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=1,
-            max_occurs=5
-        )
+        metadata={
+            "name": "Source",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_occurs": 1,
+            "max_occurs": 5,
+        }
     )
 
 
@@ -9387,21 +9273,21 @@ class TravelerInformationType:
     """
     passenger_type_quantity: List[PassengerTypeQuantityType] = field(
         default_factory=list,
-        metadata=dict(
-            name="PassengerTypeQuantity",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=1,
-            max_occurs=9
-        )
+        metadata={
+            "name": "PassengerTypeQuantity",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_occurs": 1,
+            "max_occurs": 9,
+        }
     )
     air_traveler: Optional[AirTravelerType] = field(
         default=None,
-        metadata=dict(
-            name="AirTraveler",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "AirTraveler",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
 
 
@@ -9417,46 +9303,44 @@ class TravelerInfoSummaryType:
     """
     seats_requested: List[int] = field(
         default_factory=list,
-        metadata=dict(
-            name="SeatsRequested",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=4
-        )
+        metadata={
+            "name": "SeatsRequested",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 4,
+        }
     )
     air_traveler_avail: List[TravelerInformationType] = field(
         default_factory=list,
-        metadata=dict(
-            name="AirTravelerAvail",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=4
-        )
+        metadata={
+            "name": "AirTravelerAvail",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 4,
+        }
     )
     price_request_information: Optional[PriceRequestInformationType] = field(
         default=None,
-        metadata=dict(
-            name="PriceRequestInformation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "PriceRequestInformation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     tpa_extensions: Optional[TravelerInfoSummaryTpaExtensionsType] = field(
         default=None,
-        metadata=dict(
-            name="TPA_Extensions",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "TPA_Extensions",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     specific_ptc_indicator: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="SpecificPTC_Indicator",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SpecificPTC_Indicator",
+            "type": "Attribute",
+        }
     )
 
 
@@ -9478,108 +9362,104 @@ class ExchangeType:
     """
     fare: Optional[ExchangeFareType] = field(
         default=None,
-        metadata=dict(
-            name="Fare",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "Fare",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     pos: Optional[ExchangePostype] = field(
         default=None,
-        metadata=dict(
-            name="POS",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "POS",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     origin_destination_information: List[ExchangeOriginDestinationInformationType] = field(
         default_factory=list,
-        metadata=dict(
-            name="OriginDestinationInformation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775808,
-            sequential=True
-        )
+        metadata={
+            "name": "OriginDestinationInformation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "sequential": True,
+        }
     )
     arunk: List[ArunkType] = field(
         default_factory=list,
-        metadata=dict(
-            name="Arunk",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "Arunk",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "sequential": True,
+        }
     )
     travel_preferences: Optional[ExchangeAirSearchPrefsType] = field(
         default=None,
-        metadata=dict(
-            name="TravelPreferences",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "TravelPreferences",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     traveler_info_summary: Optional[TravelerInfoSummaryType] = field(
         default=None,
-        metadata=dict(
-            name="TravelerInfoSummary",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05",
-            required=True
-        )
+        metadata={
+            "name": "TravelerInfoSummary",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
     )
     tpa_extensions: Optional[ExchangeTpaExtensionsType] = field(
         default=None,
-        metadata=dict(
-            name="TPA_Extensions",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "TPA_Extensions",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     original_tkt_issue_date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="OriginalTktIssueDateTime",
-            type="Attribute",
-            required=True,
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?"
-        )
+        metadata={
+            "name": "OriginalTktIssueDateTime",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?",
+        }
     )
     exchanged_tkt_issue_date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ExchangedTktIssueDateTime",
-            type="Attribute",
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?"
-        )
+        metadata={
+            "name": "ExchangedTktIssueDateTime",
+            "type": "Attribute",
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?",
+        }
     )
     previous_exchange_date_time: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PreviousExchangeDateTime",
-            type="Attribute",
-            pattern=r"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?"
-        )
+        metadata={
+            "name": "PreviousExchangeDateTime",
+            "type": "Attribute",
+            "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?",
+        }
     )
     number_of_tax_boxes: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="NumberOfTaxBoxes",
-            type="Attribute"
-        )
+        metadata={
+            "name": "NumberOfTaxBoxes",
+            "type": "Attribute",
+        }
     )
     bypass_advance_purchase_option: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="BypassAdvancePurchaseOption",
-            type="Attribute",
-            length=1
-        )
+        metadata={
+            "name": "BypassAdvancePurchaseOption",
+            "type": "Attribute",
+            "length": 1,
+        }
     )
 
 
@@ -9616,168 +9496,165 @@ class OtaAirLowFareSearchRq:
 
     pos: Optional[PosType] = field(
         default=None,
-        metadata=dict(
-            name="POS",
-            type="Element",
-            required=True
-        )
+        metadata={
+            "name": "POS",
+            "type": "Element",
+            "required": True,
+        }
     )
     origin_destination_information: List["OtaAirLowFareSearchRq.OriginDestinationInformation"] = field(
         default_factory=list,
-        metadata=dict(
-            name="OriginDestinationInformation",
-            type="Element",
-            min_occurs=0,
-            max_occurs=10
-        )
+        metadata={
+            "name": "OriginDestinationInformation",
+            "type": "Element",
+            "max_occurs": 10,
+        }
     )
     leg: List["OtaAirLowFareSearchRq.Leg"] = field(
         default_factory=list,
-        metadata=dict(
-            name="Leg",
-            type="Element",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "Leg",
+            "type": "Element",
+        }
     )
     travel_preferences: Optional[AirSearchPrefsType] = field(
         default=None,
-        metadata=dict(
-            name="TravelPreferences",
-            type="Element"
-        )
+        metadata={
+            "name": "TravelPreferences",
+            "type": "Element",
+        }
     )
     traveler_info_summary: Optional[TravelerInfoSummaryType] = field(
         default=None,
-        metadata=dict(
-            name="TravelerInfoSummary",
-            type="Element",
-            required=True
-        )
+        metadata={
+            "name": "TravelerInfoSummary",
+            "type": "Element",
+            "required": True,
+        }
     )
     tpa_extensions: Optional["OtaAirLowFareSearchRq.TpaExtensions"] = field(
         default=None,
-        metadata=dict(
-            name="TPA_Extensions",
-            type="Element"
-        )
+        metadata={
+            "name": "TPA_Extensions",
+            "type": "Element",
+        }
     )
     echo_token: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="EchoToken",
-            type="Attribute",
-            min_length=1,
-            max_length=64
-        )
+        metadata={
+            "name": "EchoToken",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 64,
+        }
     )
     time_stamp: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TimeStamp",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TimeStamp",
+            "type": "Attribute",
+        }
     )
     target: OtaAirLowFareSearchRqTarget = field(
         default=OtaAirLowFareSearchRqTarget.PRODUCTION,
-        metadata=dict(
-            name="Target",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Target",
+            "type": "Attribute",
+        }
     )
     version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Version",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "Version",
+            "type": "Attribute",
+            "required": True,
+        }
     )
     transaction_identifier: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TransactionIdentifier",
-            type="Attribute",
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "TransactionIdentifier",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
     sequence_nmbr: Optional[Union[int, bool]] = field(
         default=None,
-        metadata=dict(
-            name="SequenceNmbr",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SequenceNmbr",
+            "type": "Attribute",
+        }
     )
     transaction_status_code: Optional["OtaAirLowFareSearchRq.TransactionStatusCode"] = field(
         default=None,
-        metadata=dict(
-            name="TransactionStatusCode",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TransactionStatusCode",
+            "type": "Attribute",
+        }
     )
     primary_lang_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="PrimaryLangID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "PrimaryLangID",
+            "type": "Attribute",
+        }
     )
     alt_lang_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AltLangID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AltLangID",
+            "type": "Attribute",
+        }
     )
     max_responses: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="MaxResponses",
-            type="Attribute"
-        )
+        metadata={
+            "name": "MaxResponses",
+            "type": "Attribute",
+        }
     )
     direct_flights_only: bool = field(
         default=False,
-        metadata=dict(
-            name="DirectFlightsOnly",
-            type="Attribute"
-        )
+        metadata={
+            "name": "DirectFlightsOnly",
+            "type": "Attribute",
+        }
     )
     available_flights_only: bool = field(
         default=True,
-        metadata=dict(
-            name="AvailableFlightsOnly",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AvailableFlightsOnly",
+            "type": "Attribute",
+        }
     )
     response_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ResponseType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ResponseType",
+            "type": "Attribute",
+        }
     )
     response_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ResponseVersion",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ResponseVersion",
+            "type": "Attribute",
+        }
     )
     separate_messages: bool = field(
         default=False,
-        metadata=dict(
-            name="SeparateMessages",
-            type="Attribute"
-        )
+        metadata={
+            "name": "SeparateMessages",
+            "type": "Attribute",
+        }
     )
     truncate_messages: bool = field(
         default=True,
-        metadata=dict(
-            name="TruncateMessages",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TruncateMessages",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -9802,121 +9679,115 @@ class OtaAirLowFareSearchRq:
         """
         intelli_sell_transaction: Optional[TransactionType] = field(
             default=None,
-            metadata=dict(
-                name="IntelliSellTransaction",
-                type="Element"
-            )
+            metadata={
+                "name": "IntelliSellTransaction",
+                "type": "Element",
+            }
         )
         diversity_control: Optional[DiversityControlType] = field(
             default=None,
-            metadata=dict(
-                name="DiversityControl",
-                type="Element"
-            )
+            metadata={
+                "name": "DiversityControl",
+                "type": "Element",
+            }
         )
         messaging_details: Optional["OtaAirLowFareSearchRq.TpaExtensions.MessagingDetails"] = field(
             default=None,
-            metadata=dict(
-                name="MessagingDetails",
-                type="Element"
-            )
+            metadata={
+                "name": "MessagingDetails",
+                "type": "Element",
+            }
         )
         alternate_airport_cities: List["OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportCities"] = field(
             default_factory=list,
-            metadata=dict(
-                name="AlternateAirportCities",
-                type="Element",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "AlternateAirportCities",
+                "type": "Element",
+            }
         )
         alternate_airport_mileage: Optional["OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportMileage"] = field(
             default=None,
-            metadata=dict(
-                name="AlternateAirportMileage",
-                type="Element"
-            )
+            metadata={
+                "name": "AlternateAirportMileage",
+                "type": "Element",
+            }
         )
         award_shopping: Optional[AwardShoppingType] = field(
             default=None,
-            metadata=dict(
-                name="AwardShopping",
-                type="Element"
-            )
+            metadata={
+                "name": "AwardShopping",
+                "type": "Element",
+            }
         )
         billing: Optional[BillingInformationType] = field(
             default=None,
-            metadata=dict(
-                name="Billing",
-                type="Element"
-            )
+            metadata={
+                "name": "Billing",
+                "type": "Element",
+            }
         )
         exchange_settings: Optional[ExchangeSettingsType] = field(
             default=None,
-            metadata=dict(
-                name="ExchangeSettings",
-                type="Element"
-            )
+            metadata={
+                "name": "ExchangeSettings",
+                "type": "Element",
+            }
         )
         exchange: List[ExchangeType] = field(
             default_factory=list,
-            metadata=dict(
-                name="Exchange",
-                type="Element",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "Exchange",
+                "type": "Element",
+            }
         )
         split_taxes: Optional["OtaAirLowFareSearchRq.TpaExtensions.SplitTaxes"] = field(
             default=None,
-            metadata=dict(
-                name="SplitTaxes",
-                type="Element"
-            )
+            metadata={
+                "name": "SplitTaxes",
+                "type": "Element",
+            }
         )
         alternate_dates_processing: Optional["OtaAirLowFareSearchRq.TpaExtensions.AlternateDatesProcessing"] = field(
             default=None,
-            metadata=dict(
-                name="AlternateDatesProcessing",
-                type="Element"
-            )
+            metadata={
+                "name": "AlternateDatesProcessing",
+                "type": "Element",
+            }
         )
         itinerary_cache: Optional["OtaAirLowFareSearchRq.TpaExtensions.ItineraryCache"] = field(
             default=None,
-            metadata=dict(
-                name="ItineraryCache",
-                type="Element"
-            )
+            metadata={
+                "name": "ItineraryCache",
+                "type": "Element",
+            }
         )
         multi_ticket: Optional["OtaAirLowFareSearchRq.TpaExtensions.MultiTicket"] = field(
             default=None,
-            metadata=dict(
-                name="MultiTicket",
-                type="Element"
-            )
+            metadata={
+                "name": "MultiTicket",
+                "type": "Element",
+            }
         )
         partitions: Optional["OtaAirLowFareSearchRq.TpaExtensions.Partitions"] = field(
             default=None,
-            metadata=dict(
-                name="Partitions",
-                type="Element"
-            )
+            metadata={
+                "name": "Partitions",
+                "type": "Element",
+            }
         )
         reservation_data: Optional["OtaAirLowFareSearchRq.TpaExtensions.ReservationData"] = field(
             default=None,
-            metadata=dict(
-                name="ReservationData",
-                type="Element"
-            )
+            metadata={
+                "name": "ReservationData",
+                "type": "Element",
+            }
         )
         alternate_pcc: List["OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc"] = field(
             default_factory=list,
-            metadata=dict(
-                name="AlternatePCC",
-                type="Element",
-                min_occurs=0,
-                max_occurs=9223372036854775807
-            )
+            metadata={
+                "name": "AlternatePCC",
+                "type": "Element",
+            }
         )
 
         @dataclass
@@ -9926,10 +9797,10 @@ class OtaAirLowFareSearchRq:
             """
             mdrsubset: Optional["OtaAirLowFareSearchRq.TpaExtensions.MessagingDetails.Mdrsubset"] = field(
                 default=None,
-                metadata=dict(
-                    name="MDRSubset",
-                    type="Element"
-                )
+                metadata={
+                    "name": "MDRSubset",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -9939,10 +9810,10 @@ class OtaAirLowFareSearchRq:
                 """
                 code: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="Code",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Code",
+                        "type": "Attribute",
+                    }
                 )
 
         @dataclass
@@ -9953,17 +9824,17 @@ class OtaAirLowFareSearchRq:
             """
             by_leg: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="ByLeg",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "ByLeg",
+                    "type": "Attribute",
+                }
             )
             by_fare_component: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="ByFareComponent",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "ByFareComponent",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -9974,17 +9845,17 @@ class OtaAirLowFareSearchRq:
             """
             calendar_mode: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="CalendarMode",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "CalendarMode",
+                    "type": "Attribute",
+                }
             )
             num_options_per_alternate_date: int = field(
                 default=9,
-                metadata=dict(
-                    name="NumOptionsPerAlternateDate",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "NumOptionsPerAlternateDate",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -9995,17 +9866,17 @@ class OtaAirLowFareSearchRq:
             """
             public_time_to_live: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="PublicTimeToLive",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "PublicTimeToLive",
+                    "type": "Attribute",
+                }
             )
             remove_previous_on_update: Optional[bool] = field(
                 default=None,
-                metadata=dict(
-                    name="RemovePreviousOnUpdate",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "RemovePreviousOnUpdate",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -10018,10 +9889,10 @@ class OtaAirLowFareSearchRq:
             """
             display_policy: Optional["OtaAirLowFareSearchRq.TpaExtensions.MultiTicket.DisplayPolicy"] = field(
                 default=None,
-                metadata=dict(
-                    name="DisplayPolicy",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "DisplayPolicy",
+                    "type": "Attribute",
+                }
             )
 
             class DisplayPolicy(Enum):
@@ -10042,21 +9913,17 @@ class OtaAirLowFareSearchRq:
             """
             partition: List[CachePartitionType] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="Partition",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "Partition",
+                    "type": "Element",
+                }
             )
             group: List[CachePartitionGroupType] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="Group",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "Group",
+                    "type": "Element",
+                }
             )
 
         @dataclass
@@ -10066,10 +9933,10 @@ class OtaAirLowFareSearchRq:
             """
             dknumber: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="DKNumber",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "DKNumber",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -10080,20 +9947,20 @@ class OtaAirLowFareSearchRq:
             """
             travel_preferences: Optional["OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences"] = field(
                 default=None,
-                metadata=dict(
-                    name="TravelPreferences",
-                    type="Element"
-                )
+                metadata={
+                    "name": "TravelPreferences",
+                    "type": "Element",
+                }
             )
             pseudo_city_code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="PseudoCityCode",
-                    type="Attribute",
-                    required=True,
-                    min_length=1,
-                    max_length=16
-                )
+                metadata={
+                    "name": "PseudoCityCode",
+                    "type": "Attribute",
+                    "required": True,
+                    "min_length": 1,
+                    "max_length": 16,
+                }
             )
 
             @dataclass
@@ -10104,19 +9971,17 @@ class OtaAirLowFareSearchRq:
                 """
                 vendor_pref: List["OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences.VendorPref"] = field(
                     default_factory=list,
-                    metadata=dict(
-                        name="VendorPref",
-                        type="Element",
-                        min_occurs=0,
-                        max_occurs=9223372036854775807
-                    )
+                    metadata={
+                        "name": "VendorPref",
+                        "type": "Element",
+                    }
                 )
                 tpa_extensions: Optional["OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences.TpaExtensions"] = field(
                     default=None,
-                    metadata=dict(
-                        name="TPA_Extensions",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "TPA_Extensions",
+                        "type": "Element",
+                    }
                 )
 
                 @dataclass
@@ -10127,20 +9992,20 @@ class OtaAirLowFareSearchRq:
                     """
                     code: Optional[str] = field(
                         default=None,
-                        metadata=dict(
-                            name="Code",
-                            type="Attribute",
-                            required=True,
-                            min_length=1,
-                            max_length=8
-                        )
+                        metadata={
+                            "name": "Code",
+                            "type": "Attribute",
+                            "required": True,
+                            "min_length": 1,
+                            "max_length": 8,
+                        }
                     )
                     prefer_level: PreferLevelType = field(
                         default=PreferLevelType.PREFERRED,
-                        metadata=dict(
-                            name="PreferLevel",
-                            type="Attribute"
-                        )
+                        metadata={
+                            "name": "PreferLevel",
+                            "type": "Attribute",
+                        }
                     )
 
                 @dataclass
@@ -10151,21 +10016,17 @@ class OtaAirLowFareSearchRq:
                     """
                     include_alliance_pref: List[AllianceType] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="IncludeAlliancePref",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=9223372036854775807
-                        )
+                        metadata={
+                            "name": "IncludeAlliancePref",
+                            "type": "Element",
+                        }
                     )
                     exclude_alliance_pref: List[AllianceType] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="ExcludeAlliancePref",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=9223372036854775807
-                        )
+                        metadata={
+                            "name": "ExcludeAlliancePref",
+                            "type": "Element",
+                        }
                     )
 
         @dataclass
@@ -10176,20 +10037,20 @@ class OtaAirLowFareSearchRq:
             """
             specified_location: Optional["OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportCities.SpecifiedLocation"] = field(
                 default=None,
-                metadata=dict(
-                    name="SpecifiedLocation",
-                    type="Element",
-                    required=True
-                )
+                metadata={
+                    "name": "SpecifiedLocation",
+                    "type": "Element",
+                    "required": True,
+                }
             )
             alternate_location: List["OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportCities.AlternateLocation"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="AlternateLocation",
-                    type="Element",
-                    min_occurs=1,
-                    max_occurs=5
-                )
+                metadata={
+                    "name": "AlternateLocation",
+                    "type": "Element",
+                    "min_occurs": 1,
+                    "max_occurs": 5,
+                }
             )
 
             @dataclass
@@ -10199,11 +10060,11 @@ class OtaAirLowFareSearchRq:
                 """
                 location_code: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="LocationCode",
-                        type="Attribute",
-                        pattern=r"[A-Z]*"
-                    )
+                    metadata={
+                        "name": "LocationCode",
+                        "type": "Attribute",
+                        "pattern": r"[A-Z]*",
+                    }
                 )
 
             @dataclass
@@ -10213,11 +10074,11 @@ class OtaAirLowFareSearchRq:
                 """
                 location_code: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="LocationCode",
-                        type="Attribute",
-                        pattern=r"[A-Z]*"
-                    )
+                    metadata={
+                        "name": "LocationCode",
+                        "type": "Attribute",
+                        "pattern": r"[A-Z]*",
+                    }
                 )
 
         @dataclass
@@ -10227,11 +10088,11 @@ class OtaAirLowFareSearchRq:
             """
             number: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Number",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Number",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
     @dataclass
@@ -10244,32 +10105,32 @@ class OtaAirLowFareSearchRq:
         """
         tpa_extensions: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions"] = field(
             default=None,
-            metadata=dict(
-                name="TPA_Extensions",
-                type="Element"
-            )
+            metadata={
+                "name": "TPA_Extensions",
+                "type": "Element",
+            }
         )
         rph: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="RPH",
-                type="Attribute",
-                pattern=r"[0-9]{1,8}"
-            )
+            metadata={
+                "name": "RPH",
+                "type": "Attribute",
+                "pattern": r"[0-9]{1,8}",
+            }
         )
         fixed: bool = field(
             default=False,
-            metadata=dict(
-                name="Fixed",
-                type="Attribute"
-            )
+            metadata={
+                "name": "Fixed",
+                "type": "Attribute",
+            }
         )
         full_diversity: bool = field(
             default=False,
-            metadata=dict(
-                name="FullDiversity",
-                type="Attribute"
-            )
+            metadata={
+                "name": "FullDiversity",
+                "type": "Attribute",
+            }
         )
 
         @dataclass
@@ -10295,136 +10156,123 @@ class OtaAirLowFareSearchRq:
             """
             flight: List[OriginDestinationFlightType] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="Flight",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "Flight",
+                    "type": "Element",
+                }
             )
             routing: List[RoutingDefinitionType] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="Routing",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "Routing",
+                    "type": "Element",
+                }
             )
             date_flexibility: List["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.DateFlexibility"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="DateFlexibility",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=2
-                )
+                metadata={
+                    "name": "DateFlexibility",
+                    "type": "Element",
+                    "max_occurs": 2,
+                }
             )
             sister_destination_location: List[RequestLocationType] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="SisterDestinationLocation",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "SisterDestinationLocation",
+                    "type": "Element",
+                }
             )
             sister_destination_mileage: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SisterDestinationMileage"] = field(
                 default=None,
-                metadata=dict(
-                    name="SisterDestinationMileage",
-                    type="Element"
-                )
+                metadata={
+                    "name": "SisterDestinationMileage",
+                    "type": "Element",
+                }
             )
             sister_origin_location: List[RequestLocationType] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="SisterOriginLocation",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "SisterOriginLocation",
+                    "type": "Element",
+                }
             )
             sister_origin_mileage: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SisterOriginMileage"] = field(
                 default=None,
-                metadata=dict(
-                    name="SisterOriginMileage",
-                    type="Element"
-                )
+                metadata={
+                    "name": "SisterOriginMileage",
+                    "type": "Element",
+                }
             )
             segment_type: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SegmentType"] = field(
                 default=None,
-                metadata=dict(
-                    name="SegmentType",
-                    type="Element"
-                )
+                metadata={
+                    "name": "SegmentType",
+                    "type": "Element",
+                }
             )
             alternate_time: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.AlternateTime"] = field(
                 default=None,
-                metadata=dict(
-                    name="AlternateTime",
-                    type="Element"
-                )
+                metadata={
+                    "name": "AlternateTime",
+                    "type": "Element",
+                }
             )
             max_one_way_options: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.MaxOneWayOptions"] = field(
                 default=None,
-                metadata=dict(
-                    name="MaxOneWayOptions",
-                    type="Element"
-                )
+                metadata={
+                    "name": "MaxOneWayOptions",
+                    "type": "Element",
+                }
             )
             num_one_way_options: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.NumOneWayOptions"] = field(
                 default=None,
-                metadata=dict(
-                    name="NumOneWayOptions",
-                    type="Element"
-                )
+                metadata={
+                    "name": "NumOneWayOptions",
+                    "type": "Element",
+                }
             )
             cabin_pref: Optional[CabinPrefType] = field(
                 default=None,
-                metadata=dict(
-                    name="CabinPref",
-                    type="Element"
-                )
+                metadata={
+                    "name": "CabinPref",
+                    "type": "Element",
+                }
             )
             connection_time: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.ConnectionTime"] = field(
                 default=None,
-                metadata=dict(
-                    name="ConnectionTime",
-                    type="Element"
-                )
+                metadata={
+                    "name": "ConnectionTime",
+                    "type": "Element",
+                }
             )
             total_travel_time: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.TotalTravelTime"] = field(
                 default=None,
-                metadata=dict(
-                    name="TotalTravelTime",
-                    type="Element"
-                )
+                metadata={
+                    "name": "TotalTravelTime",
+                    "type": "Element",
+                }
             )
             include_vendor_pref: List[IncludeVendorPrefType] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="IncludeVendorPref",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "IncludeVendorPref",
+                    "type": "Element",
+                }
             )
             include_alliance_pref: List[AllianceType] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="IncludeAlliancePref",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "IncludeAlliancePref",
+                    "type": "Element",
+                }
             )
             departure_days: Optional[DepartureDaysType] = field(
                 default=None,
-                metadata=dict(
-                    name="DepartureDays",
-                    type="Element"
-                )
+                metadata={
+                    "name": "DepartureDays",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -10437,31 +10285,31 @@ class OtaAirLowFareSearchRq:
                 """
                 nbr_of_days: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="NbrOfDays",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "NbrOfDays",
+                        "type": "Attribute",
+                    }
                 )
                 plus: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Plus",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Plus",
+                        "type": "Attribute",
+                    }
                 )
                 minus: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Minus",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Minus",
+                        "type": "Attribute",
+                    }
                 )
                 validate: Optional[bool] = field(
                     default=None,
-                    metadata=dict(
-                        name="Validate",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Validate",
+                        "type": "Attribute",
+                    }
                 )
 
             @dataclass
@@ -10471,10 +10319,10 @@ class OtaAirLowFareSearchRq:
                 """
                 code: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SegmentType.Code"] = field(
                     default=None,
-                    metadata=dict(
-                        name="Code",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Code",
+                        "type": "Attribute",
+                    }
                 )
 
                 class Code(Enum):
@@ -10496,30 +10344,30 @@ class OtaAirLowFareSearchRq:
                 """
                 plus_minus: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="PlusMinus",
-                        type="Attribute",
-                        min_inclusive=0,
-                        max_inclusive=9
-                    )
+                    metadata={
+                        "name": "PlusMinus",
+                        "type": "Attribute",
+                        "min_inclusive": 0,
+                        "max_inclusive": 9,
+                    }
                 )
                 plus: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Plus",
-                        type="Attribute",
-                        min_inclusive=0,
-                        max_inclusive=9
-                    )
+                    metadata={
+                        "name": "Plus",
+                        "type": "Attribute",
+                        "min_inclusive": 0,
+                        "max_inclusive": 9,
+                    }
                 )
                 minus: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Minus",
-                        type="Attribute",
-                        min_inclusive=0,
-                        max_inclusive=72
-                    )
+                    metadata={
+                        "name": "Minus",
+                        "type": "Attribute",
+                        "min_inclusive": 0,
+                        "max_inclusive": 72,
+                    }
                 )
 
             @dataclass
@@ -10529,11 +10377,11 @@ class OtaAirLowFareSearchRq:
                 """
                 value: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Value",
-                        type="Attribute",
-                        required=True
-                    )
+                    metadata={
+                        "name": "Value",
+                        "type": "Attribute",
+                        "required": True,
+                    }
                 )
 
             @dataclass
@@ -10543,11 +10391,11 @@ class OtaAirLowFareSearchRq:
                 """
                 number: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Number",
-                        type="Attribute",
-                        required=True
-                    )
+                    metadata={
+                        "name": "Number",
+                        "type": "Attribute",
+                        "required": True,
+                    }
                 )
 
             @dataclass
@@ -10561,40 +10409,40 @@ class OtaAirLowFareSearchRq:
                 """
                 min: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Min",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Min",
+                        "type": "Attribute",
+                    }
                 )
                 max: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Max",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Max",
+                        "type": "Attribute",
+                    }
                 )
                 excluded_connection_begin: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="ExcludedConnectionBegin",
-                        type="Attribute",
-                        pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
-                    )
+                    metadata={
+                        "name": "ExcludedConnectionBegin",
+                        "type": "Attribute",
+                        "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
+                    }
                 )
                 excluded_connection_end: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="ExcludedConnectionEnd",
-                        type="Attribute",
-                        pattern=r"([0-1][0-9]|2[0-3])[0-5][0-9]"
-                    )
+                    metadata={
+                        "name": "ExcludedConnectionEnd",
+                        "type": "Attribute",
+                        "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
+                    }
                 )
                 enable_excluded_connection: Optional[bool] = field(
                     default=None,
-                    metadata=dict(
-                        name="EnableExcludedConnection",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "EnableExcludedConnection",
+                        "type": "Attribute",
+                    }
                 )
 
             @dataclass
@@ -10605,17 +10453,17 @@ class OtaAirLowFareSearchRq:
                 """
                 min: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Min",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Min",
+                        "type": "Attribute",
+                    }
                 )
                 max: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Max",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Max",
+                        "type": "Attribute",
+                    }
                 )
 
             @dataclass
@@ -10625,11 +10473,11 @@ class OtaAirLowFareSearchRq:
                 """
                 number: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Number",
-                        type="Attribute",
-                        required=True
-                    )
+                    metadata={
+                        "name": "Number",
+                        "type": "Attribute",
+                        "required": True,
+                    }
                 )
 
             @dataclass
@@ -10639,11 +10487,11 @@ class OtaAirLowFareSearchRq:
                 """
                 number: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="Number",
-                        type="Attribute",
-                        required=True
-                    )
+                    metadata={
+                        "name": "Number",
+                        "type": "Attribute",
+                        "required": True,
+                    }
                 )
 
     @dataclass
@@ -10661,70 +10509,70 @@ class OtaAirLowFareSearchRq:
         """
         departure_date_time: Optional["OtaAirLowFareSearchRq.Leg.DepartureDateTime"] = field(
             default=None,
-            metadata=dict(
-                name="DepartureDateTime",
-                type="Element"
-            )
+            metadata={
+                "name": "DepartureDateTime",
+                "type": "Element",
+            }
         )
         arrival_date_time: Optional[GlobalDateTimeType] = field(
             default=None,
-            metadata=dict(
-                name="ArrivalDateTime",
-                type="Element"
-            )
+            metadata={
+                "name": "ArrivalDateTime",
+                "type": "Element",
+            }
         )
         origins: Optional["OtaAirLowFareSearchRq.Leg.Origins"] = field(
             default=None,
-            metadata=dict(
-                name="Origins",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "Origins",
+                "type": "Element",
+                "required": True,
+            }
         )
         destinations: Optional["OtaAirLowFareSearchRq.Leg.Destinations"] = field(
             default=None,
-            metadata=dict(
-                name="Destinations",
-                type="Element",
-                required=True
-            )
+            metadata={
+                "name": "Destinations",
+                "type": "Element",
+                "required": True,
+            }
         )
         connection_locations: Optional[ConnectionType] = field(
             default=None,
-            metadata=dict(
-                name="ConnectionLocations",
-                type="Element"
-            )
+            metadata={
+                "name": "ConnectionLocations",
+                "type": "Element",
+            }
         )
         carriers: Optional["OtaAirLowFareSearchRq.Leg.Carriers"] = field(
             default=None,
-            metadata=dict(
-                name="Carriers",
-                type="Element"
-            )
+            metadata={
+                "name": "Carriers",
+                "type": "Element",
+            }
         )
         cabin: Optional["OtaAirLowFareSearchRq.Leg.Cabin"] = field(
             default=None,
-            metadata=dict(
-                name="Cabin",
-                type="Element"
-            )
+            metadata={
+                "name": "Cabin",
+                "type": "Element",
+            }
         )
         rph: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="RPH",
-                type="Attribute",
-                required=True,
-                pattern=r"[0-9]{1,8}"
-            )
+            metadata={
+                "name": "RPH",
+                "type": "Attribute",
+                "required": True,
+                "pattern": r"[0-9]{1,8}",
+            }
         )
         max_options: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="MaxOptions",
-                type="Attribute"
-            )
+            metadata={
+                "name": "MaxOptions",
+                "type": "Attribute",
+            }
         )
 
         @dataclass
@@ -10734,12 +10582,11 @@ class OtaAirLowFareSearchRq:
             """
             origin: List["OtaAirLowFareSearchRq.Leg.Origins.Origin"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="Origin",
-                    type="Element",
-                    min_occurs=1,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "Origin",
+                    "type": "Element",
+                    "min_occurs": 1,
+                }
             )
 
             @dataclass
@@ -10753,40 +10600,40 @@ class OtaAirLowFareSearchRq:
                 """
                 connection_locations: Optional[ConnectionType] = field(
                     default=None,
-                    metadata=dict(
-                        name="ConnectionLocations",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "ConnectionLocations",
+                        "type": "Element",
+                    }
                 )
                 carriers: Optional["OtaAirLowFareSearchRq.Leg.Origins.Origin.Carriers"] = field(
                     default=None,
-                    metadata=dict(
-                        name="Carriers",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "Carriers",
+                        "type": "Element",
+                    }
                 )
                 departure_date_time_override: Optional[OverrideDateTimeType] = field(
                     default=None,
-                    metadata=dict(
-                        name="DepartureDateTimeOverride",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "DepartureDateTimeOverride",
+                        "type": "Element",
+                    }
                 )
                 airport_code: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="AirportCode",
-                        type="Attribute",
-                        min_length=1,
-                        max_length=8
-                    )
+                    metadata={
+                        "name": "AirportCode",
+                        "type": "Attribute",
+                        "min_length": 1,
+                        "max_length": 8,
+                    }
                 )
                 airports_group: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="AirportsGroup",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "AirportsGroup",
+                        "type": "Attribute",
+                    }
                 )
 
                 @dataclass
@@ -10797,21 +10644,17 @@ class OtaAirLowFareSearchRq:
                     """
                     include_vendor_pref: List[IncludeVendorPrefType] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="IncludeVendorPref",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=9223372036854775807
-                        )
+                        metadata={
+                            "name": "IncludeVendorPref",
+                            "type": "Element",
+                        }
                     )
                     exclude_vendor_pref: List["OtaAirLowFareSearchRq.Leg.Origins.Origin.Carriers.ExcludeVendorPref"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="ExcludeVendorPref",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=9223372036854775807
-                        )
+                        metadata={
+                            "name": "ExcludeVendorPref",
+                            "type": "Element",
+                        }
                     )
 
                     @dataclass
@@ -10821,13 +10664,13 @@ class OtaAirLowFareSearchRq:
                         """
                         code: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="Code",
-                                type="Attribute",
-                                required=True,
-                                min_length=1,
-                                max_length=8
-                            )
+                            metadata={
+                                "name": "Code",
+                                "type": "Attribute",
+                                "required": True,
+                                "min_length": 1,
+                                "max_length": 8,
+                            }
                         )
 
         @dataclass
@@ -10837,12 +10680,11 @@ class OtaAirLowFareSearchRq:
             """
             destination: List["OtaAirLowFareSearchRq.Leg.Destinations.Destination"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="Destination",
-                    type="Element",
-                    min_occurs=1,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "Destination",
+                    "type": "Element",
+                    "min_occurs": 1,
+                }
             )
 
             @dataclass
@@ -10856,40 +10698,40 @@ class OtaAirLowFareSearchRq:
                 """
                 connection_locations: Optional[ConnectionType] = field(
                     default=None,
-                    metadata=dict(
-                        name="ConnectionLocations",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "ConnectionLocations",
+                        "type": "Element",
+                    }
                 )
                 carriers: Optional["OtaAirLowFareSearchRq.Leg.Destinations.Destination.Carriers"] = field(
                     default=None,
-                    metadata=dict(
-                        name="Carriers",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "Carriers",
+                        "type": "Element",
+                    }
                 )
                 arrival_date_time_override: Optional[OverrideDateTimeType] = field(
                     default=None,
-                    metadata=dict(
-                        name="ArrivalDateTimeOverride",
-                        type="Element"
-                    )
+                    metadata={
+                        "name": "ArrivalDateTimeOverride",
+                        "type": "Element",
+                    }
                 )
                 airport_code: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="AirportCode",
-                        type="Attribute",
-                        min_length=1,
-                        max_length=8
-                    )
+                    metadata={
+                        "name": "AirportCode",
+                        "type": "Attribute",
+                        "min_length": 1,
+                        "max_length": 8,
+                    }
                 )
                 airports_group: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="AirportsGroup",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "AirportsGroup",
+                        "type": "Attribute",
+                    }
                 )
 
                 @dataclass
@@ -10900,21 +10742,17 @@ class OtaAirLowFareSearchRq:
                     """
                     include_vendor_pref: List[IncludeVendorPrefType] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="IncludeVendorPref",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=9223372036854775807
-                        )
+                        metadata={
+                            "name": "IncludeVendorPref",
+                            "type": "Element",
+                        }
                     )
                     exclude_vendor_pref: List["OtaAirLowFareSearchRq.Leg.Destinations.Destination.Carriers.ExcludeVendorPref"] = field(
                         default_factory=list,
-                        metadata=dict(
-                            name="ExcludeVendorPref",
-                            type="Element",
-                            min_occurs=0,
-                            max_occurs=9223372036854775807
-                        )
+                        metadata={
+                            "name": "ExcludeVendorPref",
+                            "type": "Element",
+                        }
                     )
 
                     @dataclass
@@ -10924,13 +10762,13 @@ class OtaAirLowFareSearchRq:
                         """
                         code: Optional[str] = field(
                             default=None,
-                            metadata=dict(
-                                name="Code",
-                                type="Attribute",
-                                required=True,
-                                min_length=1,
-                                max_length=8
-                            )
+                            metadata={
+                                "name": "Code",
+                                "type": "Attribute",
+                                "required": True,
+                                "min_length": 1,
+                                "max_length": 8,
+                            }
                         )
 
         @dataclass
@@ -10941,21 +10779,17 @@ class OtaAirLowFareSearchRq:
             """
             include_vendor_pref: List[IncludeVendorPrefType] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="IncludeVendorPref",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "IncludeVendorPref",
+                    "type": "Element",
+                }
             )
             exclude_vendor_pref: List["OtaAirLowFareSearchRq.Leg.Carriers.ExcludeVendorPref"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="ExcludeVendorPref",
-                    type="Element",
-                    min_occurs=0,
-                    max_occurs=9223372036854775807
-                )
+                metadata={
+                    "name": "ExcludeVendorPref",
+                    "type": "Element",
+                }
             )
 
             @dataclass
@@ -10965,13 +10799,13 @@ class OtaAirLowFareSearchRq:
                 """
                 code: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="Code",
-                        type="Attribute",
-                        required=True,
-                        min_length=1,
-                        max_length=8
-                    )
+                    metadata={
+                        "name": "Code",
+                        "type": "Attribute",
+                        "required": True,
+                        "min_length": 1,
+                        "max_length": 8,
+                    }
                 )
 
         @dataclass
@@ -10982,17 +10816,17 @@ class OtaAirLowFareSearchRq:
             """
             preference_level: PreferLevelType = field(
                 default=PreferLevelType.PREFERRED,
-                metadata=dict(
-                    name="PreferenceLevel",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "PreferenceLevel",
+                    "type": "Attribute",
+                }
             )
             type: Optional[CabinType] = field(
                 default=None,
-                metadata=dict(
-                    name="Type",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Type",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -11002,11 +10836,11 @@ class OtaAirLowFareSearchRq:
             """
             week_days: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="WeekDays",
-                    type="Attribute",
-                    length=7
-                )
+                metadata={
+                    "name": "WeekDays",
+                    "type": "Attribute",
+                    "length": 7,
+                }
             )
 
     class TransactionStatusCode(Enum):

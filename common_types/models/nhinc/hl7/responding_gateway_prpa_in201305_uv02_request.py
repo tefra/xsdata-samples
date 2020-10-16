@@ -21,28 +21,28 @@ class RespondingGatewayPrpaIn201305Uv02RequestType:
 
     prpa_in201305_uv02: Optional[PrpaIn201305Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201305UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201305UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     assertion: Optional[AssertionType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
-        metadata=dict(
-            name="NhinTargetCommunities",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "NhinTargetCommunities",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -57,20 +57,20 @@ class RespondingGatewayPrpaIn201305Uv02SecuredRequestType:
 
     prpa_in201305_uv02: Optional[PrpaIn201305Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201305UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201305UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
-        metadata=dict(
-            name="NhinTargetCommunities",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "NhinTargetCommunities",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
