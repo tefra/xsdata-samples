@@ -78,29 +78,29 @@ class XhtmlBrType:
     space: XhtmlBrTypeValue = field(
         init=False,
         default=XhtmlBrTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -126,81 +126,81 @@ class XhtmlColType:
     space: XhtmlColTypeValue = field(
         init=False,
         default=XhtmlColTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     span: int = field(
         default=1,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     width: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d*\*"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d*\*",
+        }
     )
     align: Optional["XhtmlColType.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            length=1
-        )
+        metadata={
+            "type": "Attribute",
+            "length": 1,
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d+[%]|\d*\.\d+[%]"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
     )
     valign: Optional["XhtmlColType.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Align(Enum):
@@ -246,42 +246,42 @@ class XhtmlHrType:
     space: XhtmlHrTypeValue = field(
         init=False,
         default=XhtmlHrTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -301,52 +301,51 @@ class XhtmlOlType:
 
     li: List["XhtmlLiType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "min_occurs": 1,
+        }
     )
     space: XhtmlOlTypeValue = field(
         init=False,
         default=XhtmlOlTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -364,34 +363,34 @@ class XhtmlParamType:
 
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "type": "Attribute",
+            "required": True,
+        }
     )
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     valuetype: XhtmlParamTypeValuetype = field(
         default=XhtmlParamTypeValuetype.DATA,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -417,91 +416,89 @@ class XhtmlColgroupType:
 
     col: List[XhtmlColType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlColgroupTypeValue = field(
         init=False,
         default=XhtmlColgroupTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     span: int = field(
         default=1,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     width: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d*\*"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d*\*",
+        }
     )
     align: Optional["XhtmlColgroupType.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            length=1
-        )
+        metadata={
+            "type": "Attribute",
+            "length": 1,
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d+[%]|\d*\.\d+[%]"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
     )
     valign: Optional["XhtmlColgroupType.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Align(Enum):
@@ -572,277 +569,227 @@ class XhtmlQType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List["XhtmlStrongType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List["XhtmlDfnType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List["XhtmlCodeType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List["XhtmlSampType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List["XhtmlKbdType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List["XhtmlVarType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List["XhtmlCiteType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List["XhtmlAbbrType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List["XhtmlAcronymType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List["XhtmlQType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlQTypeValue = field(
         init=False,
         default=XhtmlQTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     cite_attribute: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="cite",
-            type="Attribute"
-        )
+        metadata={
+            "name": "cite",
+            "type": "Attribute",
+        }
     )
 
 
@@ -886,270 +833,220 @@ class XhtmlAcronymType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List["XhtmlStrongType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List["XhtmlDfnType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List["XhtmlCodeType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List["XhtmlSampType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List["XhtmlKbdType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List["XhtmlVarType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List["XhtmlCiteType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List["XhtmlAbbrType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List["XhtmlAcronymType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlAcronymTypeValue = field(
         init=False,
         default=XhtmlAcronymTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -1193,270 +1090,220 @@ class XhtmlAbbrType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List["XhtmlStrongType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List["XhtmlDfnType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List["XhtmlCodeType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List["XhtmlSampType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List["XhtmlKbdType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List["XhtmlVarType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List["XhtmlCiteType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List["XhtmlAbbrType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlAbbrTypeValue = field(
         init=False,
         default=XhtmlAbbrTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -1500,270 +1347,220 @@ class XhtmlCiteType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List["XhtmlStrongType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List["XhtmlDfnType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List["XhtmlCodeType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List["XhtmlSampType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List["XhtmlKbdType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List["XhtmlVarType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List["XhtmlCiteType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlCiteTypeValue = field(
         init=False,
         default=XhtmlCiteTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -1807,270 +1604,220 @@ class XhtmlVarType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List["XhtmlStrongType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List["XhtmlDfnType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List["XhtmlCodeType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List["XhtmlSampType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List["XhtmlKbdType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List["XhtmlVarType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlVarTypeValue = field(
         init=False,
         default=XhtmlVarTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -2114,270 +1861,220 @@ class XhtmlKbdType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List["XhtmlStrongType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List["XhtmlDfnType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List["XhtmlCodeType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List["XhtmlSampType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List["XhtmlKbdType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlKbdTypeValue = field(
         init=False,
         default=XhtmlKbdTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -2421,270 +2118,220 @@ class XhtmlSampType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List["XhtmlStrongType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List["XhtmlDfnType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List["XhtmlCodeType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List["XhtmlSampType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlSampTypeValue = field(
         init=False,
         default=XhtmlSampTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -2728,270 +2375,220 @@ class XhtmlCodeType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List["XhtmlStrongType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List["XhtmlDfnType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List["XhtmlCodeType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlCodeTypeValue = field(
         init=False,
         default=XhtmlCodeTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -3035,270 +2632,220 @@ class XhtmlDfnType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List["XhtmlStrongType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List["XhtmlDfnType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlDfnTypeValue = field(
         init=False,
         default=XhtmlDfnTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -3342,270 +2889,220 @@ class XhtmlStrongType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List["XhtmlStrongType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlStrongTypeValue = field(
         init=False,
         default=XhtmlStrongTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -3649,270 +3146,220 @@ class XhtmlCaptionType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlCaptionTypeValue = field(
         init=False,
         default=XhtmlCaptionTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -3956,270 +3403,220 @@ class XhtmlDtType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlDtTypeValue = field(
         init=False,
         default=XhtmlDtTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -4263,270 +3660,220 @@ class XhtmlH2Type:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlH2TypeValue = field(
         init=False,
         default=XhtmlH2TypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -4570,270 +3917,220 @@ class XhtmlH3Type:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlH3TypeValue = field(
         init=False,
         default=XhtmlH3TypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -4877,270 +4174,220 @@ class XhtmlH4Type:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlH4TypeValue = field(
         init=False,
         default=XhtmlH4TypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -5184,270 +4431,220 @@ class XhtmlH5Type:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlH5TypeValue = field(
         init=False,
         default=XhtmlH5TypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -5491,270 +4688,220 @@ class XhtmlH6Type:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlH6TypeValue = field(
         init=False,
         default=XhtmlH6TypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -5798,270 +4945,220 @@ class XhtmlPType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlPTypeValue = field(
         init=False,
         default=XhtmlPTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -6100,225 +5197,185 @@ class XhtmlPreType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlPreTypeValue = field(
         init=False,
         default=XhtmlPreTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -6378,414 +5435,332 @@ class XhtmlDdType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     h1: List["XhtmlH1Type"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h2: List[XhtmlH2Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h3: List[XhtmlH3Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h4: List[XhtmlH4Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h5: List[XhtmlH5Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h6: List[XhtmlH6Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ul: List["XhtmlUlType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ol: List[XhtmlOlType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dl: List["XhtmlDlType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     p: List[XhtmlPType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     div: List["XhtmlDivType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     pre: List[XhtmlPreType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     blockquote: List["XhtmlBlockquoteType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     address: List["XhtmlAddressType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     hr: List[XhtmlHrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     table: List["XhtmlTableType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlDdTypeValue = field(
         init=False,
         default=XhtmlDdTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -6806,63 +5781,59 @@ class XhtmlDlType:
 
     dt: List[XhtmlDtType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
+        }
     )
     dd: List[XhtmlDdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
+        }
     )
     space: XhtmlDlTypeValue = field(
         init=False,
         default=XhtmlDlTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -6932,478 +5903,396 @@ class XhtmlTdType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     h1: List["XhtmlH1Type"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h2: List[XhtmlH2Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h3: List[XhtmlH3Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h4: List[XhtmlH4Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h5: List[XhtmlH5Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h6: List[XhtmlH6Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ul: List["XhtmlUlType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ol: List[XhtmlOlType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dl: List[XhtmlDlType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     p: List[XhtmlPType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     div: List["XhtmlDivType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     pre: List[XhtmlPreType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     blockquote: List["XhtmlBlockquoteType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     address: List["XhtmlAddressType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     hr: List[XhtmlHrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     table: List["XhtmlTableType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlTdTypeValue = field(
         init=False,
         default=XhtmlTdTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     abbr_attribute: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="abbr",
-            type="Attribute"
-        )
+        metadata={
+            "name": "abbr",
+            "type": "Attribute",
+        }
     )
     axis: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     headers: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     scope: Optional["XhtmlTdType.Scope"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     rowspan: int = field(
         default=1,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     colspan: int = field(
         default=1,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     align: Optional["XhtmlTdType.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            length=1
-        )
+        metadata={
+            "type": "Attribute",
+            "length": 1,
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d+[%]|\d*\.\d+[%]"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
     )
     valign: Optional["XhtmlTdType.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Scope(Enum):
@@ -7511,478 +6400,396 @@ class XhtmlThType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     h1: List["XhtmlH1Type"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h2: List[XhtmlH2Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h3: List[XhtmlH3Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h4: List[XhtmlH4Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h5: List[XhtmlH5Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h6: List[XhtmlH6Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ul: List["XhtmlUlType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ol: List[XhtmlOlType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dl: List[XhtmlDlType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     p: List[XhtmlPType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     div: List["XhtmlDivType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     pre: List[XhtmlPreType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     blockquote: List["XhtmlBlockquoteType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     address: List["XhtmlAddressType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     hr: List[XhtmlHrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     table: List["XhtmlTableType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlThTypeValue = field(
         init=False,
         default=XhtmlThTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     abbr_attribute: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="abbr",
-            type="Attribute"
-        )
+        metadata={
+            "name": "abbr",
+            "type": "Attribute",
+        }
     )
     axis: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     headers: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     scope: Optional["XhtmlThType.Scope"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     rowspan: int = field(
         default=1,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     colspan: int = field(
         default=1,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     align: Optional["XhtmlThType.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            length=1
-        )
+        metadata={
+            "type": "Attribute",
+            "length": 1,
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d+[%]|\d*\.\d+[%]"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
     )
     valign: Optional["XhtmlThType.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Scope(Enum):
@@ -8045,89 +6852,85 @@ class XhtmlTrType:
 
     th: List[XhtmlThType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
+        }
     )
     td: List[XhtmlTdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
+        }
     )
     space: XhtmlTrTypeValue = field(
         init=False,
         default=XhtmlTrTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     align: Optional["XhtmlTrType.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            length=1
-        )
+        metadata={
+            "type": "Attribute",
+            "length": 1,
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d+[%]|\d*\.\d+[%]"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
     )
     valign: Optional["XhtmlTrType.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Align(Enum):
@@ -8177,78 +6980,77 @@ class XhtmlTbodyType:
 
     tr: List[XhtmlTrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "min_occurs": 1,
+        }
     )
     space: XhtmlTbodyTypeValue = field(
         init=False,
         default=XhtmlTbodyTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     align: Optional["XhtmlTbodyType.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            length=1
-        )
+        metadata={
+            "type": "Attribute",
+            "length": 1,
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d+[%]|\d*\.\d+[%]"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
     )
     valign: Optional["XhtmlTbodyType.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Align(Enum):
@@ -8298,78 +7100,77 @@ class XhtmlTfootType:
 
     tr: List[XhtmlTrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "min_occurs": 1,
+        }
     )
     space: XhtmlTfootTypeValue = field(
         init=False,
         default=XhtmlTfootTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     align: Optional["XhtmlTfootType.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            length=1
-        )
+        metadata={
+            "type": "Attribute",
+            "length": 1,
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d+[%]|\d*\.\d+[%]"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
     )
     valign: Optional["XhtmlTfootType.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Align(Enum):
@@ -8419,78 +7220,77 @@ class XhtmlTheadType:
 
     tr: List[XhtmlTrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "min_occurs": 1,
+        }
     )
     space: XhtmlTheadTypeValue = field(
         init=False,
         default=XhtmlTheadTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     align: Optional["XhtmlTheadType.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            length=1
-        )
+        metadata={
+            "type": "Attribute",
+            "length": 1,
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d+[%]|\d*\.\d+[%]"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
     )
     valign: Optional["XhtmlTheadType.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Align(Enum):
@@ -8549,145 +7349,137 @@ class XhtmlTableType:
 
     caption: Optional[XhtmlCaptionType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     col: List[XhtmlColType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     colgroup: List[XhtmlColgroupType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     thead: Optional[XhtmlTheadType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tfoot: Optional[XhtmlTfootType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tbody: List[XhtmlTbodyType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tr: List[XhtmlTrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlTableTypeValue = field(
         init=False,
         default=XhtmlTableTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     summary: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     width: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d+[%]|\d*\.\d+[%]"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
     )
     border: Optional[int] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     frame: Optional["XhtmlTableType.Frame"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     rules: Optional["XhtmlTableType.Rules"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     cellspacing: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d+[%]|\d*\.\d+[%]"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
     )
     cellpadding: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d+[%]|\d*\.\d+[%]"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
     )
 
     class Frame(Enum):
@@ -8761,212 +7553,176 @@ class XhtmlBlockquoteType:
 
     h1: List["XhtmlH1Type"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h2: List[XhtmlH2Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h3: List[XhtmlH3Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h4: List[XhtmlH4Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h5: List[XhtmlH5Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h6: List[XhtmlH6Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ul: List["XhtmlUlType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ol: List[XhtmlOlType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dl: List[XhtmlDlType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     p: List[XhtmlPType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     div: List["XhtmlDivType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     pre: List[XhtmlPreType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     blockquote: List["XhtmlBlockquoteType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     address: List["XhtmlAddressType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     hr: List[XhtmlHrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     table: List[XhtmlTableType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlBlockquoteTypeValue = field(
         init=False,
         default=XhtmlBlockquoteTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     cite: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -9026,414 +7782,332 @@ class XhtmlDivType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     h1: List["XhtmlH1Type"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h2: List[XhtmlH2Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h3: List[XhtmlH3Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h4: List[XhtmlH4Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h5: List[XhtmlH5Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h6: List[XhtmlH6Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ul: List["XhtmlUlType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ol: List[XhtmlOlType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dl: List[XhtmlDlType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     p: List[XhtmlPType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     div: List["XhtmlDivType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     pre: List[XhtmlPreType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     blockquote: List[XhtmlBlockquoteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     address: List["XhtmlAddressType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     hr: List[XhtmlHrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     table: List[XhtmlTableType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlDivTypeValue = field(
         init=False,
         default=XhtmlDivTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -9493,414 +8167,332 @@ class XhtmlLiType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     h1: List["XhtmlH1Type"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h2: List[XhtmlH2Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h3: List[XhtmlH3Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h4: List[XhtmlH4Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h5: List[XhtmlH5Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h6: List[XhtmlH6Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ul: List["XhtmlUlType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ol: List[XhtmlOlType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dl: List[XhtmlDlType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     p: List[XhtmlPType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     div: List[XhtmlDivType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     pre: List[XhtmlPreType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     blockquote: List[XhtmlBlockquoteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     address: List["XhtmlAddressType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     hr: List[XhtmlHrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     table: List[XhtmlTableType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List["XhtmlAType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List["XhtmlObjectType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlLiTypeValue = field(
         init=False,
         default=XhtmlLiTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -9920,52 +8512,51 @@ class XhtmlUlType:
 
     li: List[XhtmlLiType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "min_occurs": 1,
+        }
     )
     space: XhtmlUlTypeValue = field(
         init=False,
         default=XhtmlUlTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -10038,420 +8629,416 @@ class XhtmlObjectType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     param: List[XhtmlParamType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h1: Optional["XhtmlH1Type"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h2: Optional[XhtmlH2Type] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h3: Optional[XhtmlH3Type] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h4: Optional[XhtmlH4Type] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h5: Optional[XhtmlH5Type] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h6: Optional[XhtmlH6Type] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ul: Optional[XhtmlUlType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ol: Optional[XhtmlOlType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dl: Optional[XhtmlDlType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     p: Optional[XhtmlPType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     div: Optional[XhtmlDivType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     pre: Optional[XhtmlPreType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     blockquote: Optional[XhtmlBlockquoteType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     address: Optional["XhtmlAddressType"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     hr: Optional[XhtmlHrType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "required": True,
+        }
     )
     table: Optional[XhtmlTableType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     br: Optional[XhtmlBrType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: Optional["XhtmlSpanType"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: Optional["XhtmlEmType"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: Optional[XhtmlStrongType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: Optional[XhtmlDfnType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: Optional[XhtmlCodeType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: Optional[XhtmlSampType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: Optional[XhtmlKbdType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: Optional[XhtmlVarType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: Optional[XhtmlCiteType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: Optional[XhtmlAbbrType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: Optional[XhtmlAcronymType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: Optional[XhtmlQType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: Optional["XhtmlInlPresType"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: Optional["XhtmlInlPresType"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: Optional["XhtmlInlPresType"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: Optional["XhtmlInlPresType"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: Optional["XhtmlInlPresType"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: Optional["XhtmlInlPresType"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: Optional["XhtmlInlPresType"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: Optional["XhtmlAType"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "required": True,
+        }
     )
     object: Optional["XhtmlObjectType"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: Optional["XhtmlEditType"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: Optional["XhtmlEditType"] = field(
         default=None,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml"
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlObjectTypeValue = field(
         init=False,
         default=XhtmlObjectTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     declare: Optional["XhtmlObjectType.Declare"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     classid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     codebase: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     data: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     codetype: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     archive: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     standby: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     height: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d+[%]|\d*\.\d+[%]"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
     )
     width: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"\d+[%]|\d*\.\d+[%]"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
     )
     name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     tabindex: Optional[int] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Declare(Enum):
@@ -10508,312 +9095,264 @@ class XhtmlAType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List[XhtmlObjectType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlATypeValue = field(
         init=False,
         default=XhtmlATypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     href: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     charset: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     hreflang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     rel: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     rev: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     accesskey: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            length=1
-        )
+        metadata={
+            "type": "Attribute",
+            "length": 1,
+        }
     )
     tabindex: Optional[int] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -10857,270 +9396,220 @@ class XhtmlInlPresType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List["XhtmlInlPresType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List[XhtmlAType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List[XhtmlObjectType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlInlPresTypeValue = field(
         init=False,
         default=XhtmlInlPresTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -11164,270 +9653,220 @@ class XhtmlEmType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List["XhtmlEmType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List[XhtmlAType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List[XhtmlObjectType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlEmTypeValue = field(
         init=False,
         default=XhtmlEmTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -11471,270 +9910,220 @@ class XhtmlH1Type:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List[XhtmlEmType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List[XhtmlAType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List[XhtmlObjectType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlH1TypeValue = field(
         init=False,
         default=XhtmlH1TypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -11796,427 +10185,345 @@ class XhtmlEditType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     h1: List[XhtmlH1Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h2: List[XhtmlH2Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h3: List[XhtmlH3Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h4: List[XhtmlH4Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h5: List[XhtmlH5Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     h6: List[XhtmlH6Type] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ul: List[XhtmlUlType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ol: List[XhtmlOlType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dl: List[XhtmlDlType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     p: List[XhtmlPType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     div: List[XhtmlDivType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     pre: List[XhtmlPreType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     blockquote: List[XhtmlBlockquoteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     address: List["XhtmlAddressType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     hr: List[XhtmlHrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     table: List[XhtmlTableType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List[XhtmlEmType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List[XhtmlAType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List[XhtmlObjectType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List["XhtmlEditType"] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlEditTypeValue = field(
         init=False,
         default=XhtmlEditTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     cite_attribute: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="cite",
-            type="Attribute"
-        )
+        metadata={
+            "name": "cite",
+            "type": "Attribute",
+        }
     )
     datetime: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -12260,270 +10567,220 @@ class XhtmlSpanType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List["XhtmlSpanType"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List[XhtmlEmType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List[XhtmlAType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List[XhtmlObjectType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List[XhtmlEditType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List[XhtmlEditType] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlSpanTypeValue = field(
         init=False,
         default=XhtmlSpanTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -12567,270 +10824,220 @@ class XhtmlAddressType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List[XhtmlSpanType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List[XhtmlEmType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List[XhtmlAType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List[XhtmlObjectType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List[XhtmlEditType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List[XhtmlEditType] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlAddressTypeValue = field(
         init=False,
         default=XhtmlAddressTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -12874,268 +11081,218 @@ class XhtmlHeadingType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     br: List[XhtmlBrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     span: List[XhtmlSpanType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     em: List[XhtmlEmType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     strong: List[XhtmlStrongType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     dfn: List[XhtmlDfnType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     code: List[XhtmlCodeType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     samp: List[XhtmlSampType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     kbd: List[XhtmlKbdType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     var: List[XhtmlVarType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     cite: List[XhtmlCiteType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     abbr: List[XhtmlAbbrType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     acronym: List[XhtmlAcronymType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     q: List[XhtmlQType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     tt: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     i: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     b: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     big: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     small: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sub: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     sup: List[XhtmlInlPresType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     a: List[XhtmlAType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     object: List[XhtmlObjectType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     ins: List[XhtmlEditType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     del_value: List[XhtmlEditType] = field(
         default_factory=list,
-        metadata=dict(
-            name="del",
-            type="Element",
-            namespace="http://www.w3.org/1999/xhtml",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "del",
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
     )
     space: XhtmlHeadingTypeValue = field(
         init=False,
         default=XhtmlHeadingTypeValue.PRESERVE,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     class_value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="class",
-            type="Attribute"
-        )
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     lang: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            namespace="http://www.w3.org/XML/1998/namespace"
-        )
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
     )
     style: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )

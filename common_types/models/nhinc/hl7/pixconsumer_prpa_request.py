@@ -22,28 +22,28 @@ class PixconsumerPrpaIn201301UvrequestType:
 
     prpa_in201301_uv02: Optional[PrpaIn201301Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201301UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201301UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     assertion: Optional[AssertionType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
-        metadata=dict(
-            name="NhinTargetCommunities",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "NhinTargetCommunities",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -58,20 +58,20 @@ class PixconsumerPrpaIn201301UvsecuredRequestType:
 
     prpa_in201301_uv02: Optional[PrpaIn201301Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201301UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201301UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
-        metadata=dict(
-            name="NhinTargetCommunities",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "NhinTargetCommunities",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -87,28 +87,28 @@ class PixconsumerPrpaIn201302UvrequestType:
 
     prpa_in201302_uv02: Optional[PrpaIn201302Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201302UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201302UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     assertion: Optional[AssertionType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
-        metadata=dict(
-            name="NhinTargetCommunities",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "NhinTargetCommunities",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -123,20 +123,20 @@ class PixconsumerPrpaIn201302UvsecuredRequestType:
 
     prpa_in201302_uv02: Optional[PrpaIn201302Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201302UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201302UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
-        metadata=dict(
-            name="NhinTargetCommunities",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "NhinTargetCommunities",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 

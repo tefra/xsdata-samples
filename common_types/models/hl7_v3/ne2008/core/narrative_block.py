@@ -29,60 +29,60 @@ class StrucDocCol:
 
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     span: str = field(
         default="1",
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     width: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     align: Optional["StrucDocCol.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     valign: Optional["StrucDocCol.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Align(Enum):
@@ -125,32 +125,32 @@ class StrucDocFootnoteRef:
 
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     idref: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="IDREF",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "IDREF",
+            "type": "Attribute",
+            "required": True,
+        }
     )
 
 
@@ -173,13 +173,11 @@ class StrucDocSub:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
 
 
@@ -193,13 +191,11 @@ class StrucDocSup:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
 
 
@@ -221,81 +217,69 @@ class StrucDocCaption:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     link_html: List["StrucDocLinkHtml"] = field(
         default_factory=list,
-        metadata=dict(
-            name="linkHtml",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "linkHtml",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sub: List[StrucDocSub] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sup: List[StrucDocSup] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote: List["StrucDocFootnote"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote_ref: List[StrucDocFootnoteRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="footnoteRef",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "footnoteRef",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -318,69 +302,67 @@ class StrucDocColgroup:
 
     col: List[StrucDocCol] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     span: str = field(
         default="1",
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     width: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     align: Optional["StrucDocColgroup.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     valign: Optional["StrucDocColgroup.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Align(Enum):
@@ -427,70 +409,60 @@ class StrucDocTitleFootnote:
 
     content_any: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     content: List["StrucDocTitleContent"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sub: List[StrucDocSub] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sup: List[StrucDocSup] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     br: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -508,40 +480,40 @@ class StrucDocRenderMultiMedia:
 
     caption: Optional[StrucDocCaption] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     referenced_object: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="referencedObject",
-            type="Attribute",
-            required=True,
-            tokens=True
-        )
+        metadata={
+            "name": "referencedObject",
+            "type": "Attribute",
+            "required": True,
+            "tokens": True,
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -564,89 +536,75 @@ class StrucDocTitleContent:
 
     content_any: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     content: List["StrucDocTitleContent"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sub: List[StrucDocSub] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sup: List[StrucDocSup] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     br: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote: List[StrucDocTitleFootnote] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote_ref: List[StrucDocFootnoteRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="footnoteRef",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "footnoteRef",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -672,124 +630,106 @@ class StrucDocParagraph:
 
     content_any: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     caption: Optional[StrucDocCaption] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     content: List["StrucDocContent"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     link_html: List["StrucDocLinkHtml"] = field(
         default_factory=list,
-        metadata=dict(
-            name="linkHtml",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "linkHtml",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     sub: List[StrucDocSub] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     sup: List[StrucDocSup] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     br: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     footnote: List["StrucDocFootnote"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     footnote_ref: List[StrucDocFootnoteRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="footnoteRef",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "footnoteRef",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     render_multi_media: List[StrucDocRenderMultiMedia] = field(
         default_factory=list,
-        metadata=dict(
-            name="renderMultiMedia",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "renderMultiMedia",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -824,170 +764,152 @@ class StrucDocTh:
 
     content_any: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     content: List["StrucDocContent"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     link_html: List["StrucDocLinkHtml"] = field(
         default_factory=list,
-        metadata=dict(
-            name="linkHtml",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "linkHtml",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sub: List[StrucDocSub] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sup: List[StrucDocSup] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     br: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote: List["StrucDocFootnote"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote_ref: List[StrucDocFootnoteRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="footnoteRef",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "footnoteRef",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     render_multi_media: List[StrucDocRenderMultiMedia] = field(
         default_factory=list,
-        metadata=dict(
-            name="renderMultiMedia",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "renderMultiMedia",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     abbr: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     axis: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     headers: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     scope: Optional["StrucDocTh.Scope"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     rowspan: str = field(
         default="1",
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     colspan: str = field(
         default="1",
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     align: Optional["StrucDocTh.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     valign: Optional["StrucDocTh.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Scope(Enum):
@@ -1049,97 +971,83 @@ class StrucDocTitle:
 
     content_any: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     content: List[StrucDocTitleContent] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sub: List[StrucDocSub] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sup: List[StrucDocSup] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     br: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote: List[StrucDocTitleFootnote] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote_ref: List[StrucDocFootnoteRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="footnoteRef",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "footnoteRef",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     media_type: str = field(
         init=False,
         default="text/x-hl7-title+xml",
-        metadata=dict(
-            name="mediaType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "mediaType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1176,189 +1084,167 @@ class StrucDocTd:
 
     content_any: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     content: List["StrucDocContent"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     link_html: List["StrucDocLinkHtml"] = field(
         default_factory=list,
-        metadata=dict(
-            name="linkHtml",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "linkHtml",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sub: List[StrucDocSub] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sup: List[StrucDocSup] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     br: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote: List["StrucDocFootnote"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote_ref: List[StrucDocFootnoteRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="footnoteRef",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "footnoteRef",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     render_multi_media: List[StrucDocRenderMultiMedia] = field(
         default_factory=list,
-        metadata=dict(
-            name="renderMultiMedia",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "renderMultiMedia",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     paragraph: List[StrucDocParagraph] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     list_value: List["StrucDocList"] = field(
         default_factory=list,
-        metadata=dict(
-            name="list",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "list",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     abbr: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     axis: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     headers: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     scope: Optional["StrucDocTd.Scope"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     rowspan: str = field(
         default="1",
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     colspan: str = field(
         default="1",
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     align: Optional["StrucDocTd.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     valign: Optional["StrucDocTd.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Scope(Enum):
@@ -1418,66 +1304,62 @@ class StrucDocTr:
 
     th: List[StrucDocTh] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     td: List[StrucDocTd] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     align: Optional["StrucDocTr.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     valign: Optional["StrucDocTr.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Align(Enum):
@@ -1524,57 +1406,56 @@ class StrucDocTbody:
 
     tr: List[StrucDocTr] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     align: Optional["StrucDocTbody.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     valign: Optional["StrucDocTbody.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Align(Enum):
@@ -1621,57 +1502,56 @@ class StrucDocTfoot:
 
     tr: List[StrucDocTr] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     align: Optional["StrucDocTfoot.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     valign: Optional["StrucDocTfoot.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Align(Enum):
@@ -1718,57 +1598,56 @@ class StrucDocThead:
 
     tr: List[StrucDocTr] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     align: Optional["StrucDocThead.Align"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     char: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     charoff: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     valign: Optional["StrucDocThead.Valign"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Align(Enum):
@@ -1823,114 +1702,109 @@ class StrucDocTable:
 
     caption: Optional[StrucDocCaption] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     col: List[StrucDocCol] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     colgroup: List[StrucDocColgroup] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     thead: Optional[StrucDocThead] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     tfoot: Optional[StrucDocTfoot] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     tbody: List[StrucDocTbody] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     summary: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     width: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     border: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     frame: Optional["StrucDocTable.Frame"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     rules: Optional["StrucDocTable.Rules"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     cellspacing: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     cellpadding: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Frame(Enum):
@@ -1995,155 +1869,131 @@ class StrucDocItem:
 
     content_any: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     caption: Optional[StrucDocCaption] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     content: List["StrucDocContent"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     link_html: List["StrucDocLinkHtml"] = field(
         default_factory=list,
-        metadata=dict(
-            name="linkHtml",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "linkHtml",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     sub: List[StrucDocSub] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     sup: List[StrucDocSup] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     br: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     footnote: List["StrucDocFootnote"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     footnote_ref: List[StrucDocFootnoteRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="footnoteRef",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "footnoteRef",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     render_multi_media: List[StrucDocRenderMultiMedia] = field(
         default_factory=list,
-        metadata=dict(
-            name="renderMultiMedia",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "renderMultiMedia",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     paragraph: List[StrucDocParagraph] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     list_value: List["StrucDocList"] = field(
         default_factory=list,
-        metadata=dict(
-            name="list",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "list",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     table: List[StrucDocTable] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -2162,47 +2012,46 @@ class StrucDocList:
 
     caption: Optional[StrucDocCaption] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     item: List[StrucDocItem] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=1,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 1,
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     list_type: StrucDocListListType = field(
         default=StrucDocListListType.UNORDERED,
-        metadata=dict(
-            name="listType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "listType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -2228,118 +2077,98 @@ class StrucDocFootnote:
 
     content_any: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     content: List["StrucDocContent"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     link_html: List["StrucDocLinkHtml"] = field(
         default_factory=list,
-        metadata=dict(
-            name="linkHtml",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "linkHtml",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sub: List[StrucDocSub] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sup: List[StrucDocSup] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     br: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     render_multi_media: List[StrucDocRenderMultiMedia] = field(
         default_factory=list,
-        metadata=dict(
-            name="renderMultiMedia",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "renderMultiMedia",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     paragraph: List[StrucDocParagraph] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     list_value: List[StrucDocList] = field(
         default_factory=list,
-        metadata=dict(
-            name="list",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "list",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     table: List[StrucDocTable] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -2363,83 +2192,77 @@ class StrucDocLinkHtml:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     footnote: List[StrucDocFootnote] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote_ref: List[StrucDocFootnoteRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="footnoteRef",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "footnoteRef",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     href: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     rel: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     rev: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     title: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -2465,115 +2288,97 @@ class StrucDocContent:
 
     content_any: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     content: List["StrucDocContent"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     link_html: List[StrucDocLinkHtml] = field(
         default_factory=list,
-        metadata=dict(
-            name="linkHtml",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "linkHtml",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sub: List[StrucDocSub] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sup: List[StrucDocSup] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     br: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote: List[StrucDocFootnote] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote_ref: List[StrucDocFootnoteRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="footnoteRef",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "footnoteRef",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     render_multi_media: List[StrucDocRenderMultiMedia] = field(
         default_factory=list,
-        metadata=dict(
-            name="renderMultiMedia",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "renderMultiMedia",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     revised: Optional["StrucDocContent.Revised"] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
     class Revised(Enum):
@@ -2610,143 +2415,119 @@ class StrucDocText:
 
     content_any: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     content: List[StrucDocContent] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     link_html: List[StrucDocLinkHtml] = field(
         default_factory=list,
-        metadata=dict(
-            name="linkHtml",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "linkHtml",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sub: List[StrucDocSub] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     sup: List[StrucDocSup] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     br: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote: List[StrucDocFootnote] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     footnote_ref: List[StrucDocFootnoteRef] = field(
         default_factory=list,
-        metadata=dict(
-            name="footnoteRef",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "footnoteRef",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     render_multi_media: List[StrucDocRenderMultiMedia] = field(
         default_factory=list,
-        metadata=dict(
-            name="renderMultiMedia",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "renderMultiMedia",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     paragraph: List[StrucDocParagraph] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     list_value: List[StrucDocList] = field(
         default_factory=list,
-        metadata=dict(
-            name="list",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "list",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     table: List[StrucDocTable] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="ID",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     style_code: List[str] = field(
         default_factory=list,
-        metadata=dict(
-            name="styleCode",
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     media_type: str = field(
         init=False,
         default="text/x-hl7-text+xml",
-        metadata=dict(
-            name="mediaType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "mediaType",
+            "type": "Attribute",
+        }
     )

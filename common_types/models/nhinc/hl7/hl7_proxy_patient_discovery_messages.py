@@ -24,29 +24,29 @@ class PixconsumerPrpaIn201301UvproxyRequestType:
 
     prpa_in201301_uv02: Optional[PrpaIn201301Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201301UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201301UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     assertion: Optional[AssertionType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_system: Optional[NhinTargetSystemType] = field(
         default=None,
-        metadata=dict(
-            name="nhinTargetSystem",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "nhinTargetSystem",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -61,21 +61,21 @@ class PixconsumerPrpaIn201301UvproxySecuredRequestType:
 
     prpa_in201301_uv02: Optional[PrpaIn201301Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201301UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201301UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_system: Optional[NhinTargetSystemType] = field(
         default=None,
-        metadata=dict(
-            name="nhinTargetSystem",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "nhinTargetSystem",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -91,29 +91,29 @@ class PixconsumerPrpaIn201302UvproxyRequestType:
 
     prpa_in201302_uv02: Optional[PrpaIn201302Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201302UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201302UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     assertion: Optional[AssertionType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_system: Optional[NhinTargetSystemType] = field(
         default=None,
-        metadata=dict(
-            name="nhinTargetSystem",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "nhinTargetSystem",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -128,21 +128,21 @@ class PixconsumerPrpaIn201302UvproxySecuredRequestType:
 
     prpa_in201302_uv02: Optional[PrpaIn201302Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201302UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201302UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_system: Optional[NhinTargetSystemType] = field(
         default=None,
-        metadata=dict(
-            name="nhinTargetSystem",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "nhinTargetSystem",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -158,29 +158,29 @@ class PixconsumerPrpaIn201304UvproxyRequestType:
 
     prpa_in201304_uv02: Optional[PrpaIn201304Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201304UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201304UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     assertion: Optional[AssertionType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_system: Optional[NhinTargetSystemType] = field(
         default=None,
-        metadata=dict(
-            name="nhinTargetSystem",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "nhinTargetSystem",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -195,21 +195,21 @@ class PixconsumerPrpaIn201304UvproxySecuredRequestType:
 
     prpa_in201304_uv02: Optional[PrpaIn201304Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201304UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201304UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_system: Optional[NhinTargetSystemType] = field(
         default=None,
-        metadata=dict(
-            name="nhinTargetSystem",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "nhinTargetSystem",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -225,29 +225,29 @@ class PixconsumerPrpaIn201309UvproxyRequestType:
 
     prpa_in201309_uv02: Optional[PrpaIn201309Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201309UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201309UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     assertion: Optional[AssertionType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_system: Optional[NhinTargetSystemType] = field(
         default=None,
-        metadata=dict(
-            name="nhinTargetSystem",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "nhinTargetSystem",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -262,21 +262,21 @@ class PixconsumerPrpaIn201309UvproxySecuredRequestType:
 
     prpa_in201309_uv02: Optional[PrpaIn201309Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201309UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201309UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_system: Optional[NhinTargetSystemType] = field(
         default=None,
-        metadata=dict(
-            name="nhinTargetSystem",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "nhinTargetSystem",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 

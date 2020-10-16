@@ -16,9 +16,9 @@ class McciIn000002Uv01(McciMt000200Uv01Message):
     itsversion: str = field(
         init=False,
         default="XML_1.0",
-        metadata=dict(
-            name="ITSVersion",
-            type="Attribute",
-            required=True
-        )
+        metadata={
+            "name": "ITSVersion",
+            "type": "Attribute",
+            "required": True,
+        }
     )

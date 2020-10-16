@@ -37,37 +37,37 @@ class CompanyNameType:
     )
     company_short_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CompanyShortName",
-            type="Attribute",
-            min_length=1,
-            max_length=64
-        )
+        metadata={
+            "name": "CompanyShortName",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 64,
+        }
     )
     travel_sector: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="TravelSector",
-            type="Attribute"
-        )
+        metadata={
+            "name": "TravelSector",
+            "type": "Attribute",
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            min_length=1,
-            max_length=8
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 8,
+        }
     )
     code_context: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CodeContext",
-            type="Attribute",
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "CodeContext",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
 
 
@@ -93,20 +93,20 @@ class EquipmentType:
     )
     air_equip_type: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="AirEquipType",
-            type="Attribute",
-            required=True,
-            min_length=3,
-            max_length=3
-        )
+        metadata={
+            "name": "AirEquipType",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 3,
+            "max_length": 3,
+        }
     )
     changeof_gauge: bool = field(
         default=False,
-        metadata=dict(
-            name="ChangeofGauge",
-            type="Attribute"
-        )
+        metadata={
+            "name": "ChangeofGauge",
+            "type": "Attribute",
+        }
     )
 
 
@@ -170,46 +170,46 @@ class TravelerCountType:
     """
     age: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Age",
-            type="Attribute",
-            min_inclusive=0,
-            max_inclusive=999
-        )
+        metadata={
+            "name": "Age",
+            "type": "Attribute",
+            "min_inclusive": 0,
+            "max_inclusive": 999,
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="Code",
-            type="Attribute",
-            min_length=1,
-            max_length=8
-        )
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 8,
+        }
     )
     code_context: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="CodeContext",
-            type="Attribute",
-            min_length=1,
-            max_length=32
-        )
+        metadata={
+            "name": "CodeContext",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
     )
     uri: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="URI",
-            type="Attribute"
-        )
+        metadata={
+            "name": "URI",
+            "type": "Attribute",
+        }
     )
     quantity: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Quantity",
-            type="Attribute",
-            min_inclusive=1,
-            max_inclusive=999
-        )
+        metadata={
+            "name": "Quantity",
+            "type": "Attribute",
+            "min_inclusive": 1,
+            "max_inclusive": 999,
+        }
     )
 
 
@@ -223,18 +223,18 @@ class VoluntaryChangesType:
     """
     penalty: Optional["VoluntaryChangesType.Penalty"] = field(
         default=None,
-        metadata=dict(
-            name="Penalty",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "Penalty",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     vol_change_ind: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="VolChangeInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "VolChangeInd",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -249,49 +249,49 @@ class VoluntaryChangesType:
         """
         penalty_type: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="PenaltyType",
-                type="Attribute"
-            )
+            metadata={
+                "name": "PenaltyType",
+                "type": "Attribute",
+            }
         )
         departure_status: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="DepartureStatus",
-                type="Attribute"
-            )
+            metadata={
+                "name": "DepartureStatus",
+                "type": "Attribute",
+            }
         )
         amount: Optional[Decimal] = field(
             default=None,
-            metadata=dict(
-                name="Amount",
-                type="Attribute",
-                fraction_digits=3
-            )
+            metadata={
+                "name": "Amount",
+                "type": "Attribute",
+                "fraction_digits": 3,
+            }
         )
         currency_code: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="CurrencyCode",
-                type="Attribute",
-                pattern=r"[a-zA-Z]{3}"
-            )
+            metadata={
+                "name": "CurrencyCode",
+                "type": "Attribute",
+                "pattern": r"[a-zA-Z]{3}",
+            }
         )
         decimal_places: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="DecimalPlaces",
-                type="Attribute"
-            )
+            metadata={
+                "name": "DecimalPlaces",
+                "type": "Attribute",
+            }
         )
         percent: Optional[Decimal] = field(
             default=None,
-            metadata=dict(
-                name="Percent",
-                type="Attribute",
-                min_inclusive=0.01,
-                max_inclusive=100.00
-            )
+            metadata={
+                "name": "Percent",
+                "type": "Attribute",
+                "min_inclusive": 0.01,
+                "max_inclusive": 100.00,
+            }
         )
 
 
@@ -307,33 +307,33 @@ class AdvResTicketingType:
     """
     adv_reservation: Optional["AdvResTicketingType.AdvReservation"] = field(
         default=None,
-        metadata=dict(
-            name="AdvReservation",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "AdvReservation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     adv_ticketing: Optional["AdvResTicketingType.AdvTicketing"] = field(
         default=None,
-        metadata=dict(
-            name="AdvTicketing",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "AdvTicketing",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     adv_res_ind: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="AdvResInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AdvResInd",
+            "type": "Attribute",
+        }
     )
     adv_ticketing_ind: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="AdvTicketingInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "AdvTicketingInd",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -345,25 +345,25 @@ class AdvResTicketingType:
         """
         latest_time_of_day: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="LatestTimeOfDay",
-                type="Attribute"
-            )
+            metadata={
+                "name": "LatestTimeOfDay",
+                "type": "Attribute",
+            }
         )
         latest_period: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="LatestPeriod",
-                type="Attribute",
-                pattern=r"[0-9]{1,3}"
-            )
+            metadata={
+                "name": "LatestPeriod",
+                "type": "Attribute",
+                "pattern": r"[0-9]{1,3}",
+            }
         )
         latest_unit: Optional[StayUnitType] = field(
             default=None,
-            metadata=dict(
-                name="LatestUnit",
-                type="Attribute"
-            )
+            metadata={
+                "name": "LatestUnit",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -378,47 +378,47 @@ class AdvResTicketingType:
         """
         from_res_time_of_day: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="FromResTimeOfDay",
-                type="Attribute"
-            )
+            metadata={
+                "name": "FromResTimeOfDay",
+                "type": "Attribute",
+            }
         )
         from_res_period: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="FromResPeriod",
-                type="Attribute",
-                pattern=r"[0-9]{1,3}"
-            )
+            metadata={
+                "name": "FromResPeriod",
+                "type": "Attribute",
+                "pattern": r"[0-9]{1,3}",
+            }
         )
         from_res_unit: Optional[StayUnitType] = field(
             default=None,
-            metadata=dict(
-                name="FromResUnit",
-                type="Attribute"
-            )
+            metadata={
+                "name": "FromResUnit",
+                "type": "Attribute",
+            }
         )
         from_depart_time_of_day: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="FromDepartTimeOfDay",
-                type="Attribute"
-            )
+            metadata={
+                "name": "FromDepartTimeOfDay",
+                "type": "Attribute",
+            }
         )
         from_depart_period: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="FromDepartPeriod",
-                type="Attribute",
-                pattern=r"[0-9]{1,3}"
-            )
+            metadata={
+                "name": "FromDepartPeriod",
+                "type": "Attribute",
+                "pattern": r"[0-9]{1,3}",
+            }
         )
         from_depart_unit: Optional[StayUnitType] = field(
             default=None,
-            metadata=dict(
-                name="FromDepartUnit",
-                type="Attribute"
-            )
+            metadata={
+                "name": "FromDepartUnit",
+                "type": "Attribute",
+            }
         )
 
 
@@ -432,25 +432,25 @@ class PassengerTypeQuantityType(TravelerCountType):
     """
     tpa_extensions: Optional["PassengerTypeQuantityType.TpaExtensions"] = field(
         default=None,
-        metadata=dict(
-            name="TPA_Extensions",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "TPA_Extensions",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     changeable: bool = field(
         default=True,
-        metadata=dict(
-            name="Changeable",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Changeable",
+            "type": "Attribute",
+        }
     )
     index: Optional[int] = field(
         default=None,
-        metadata=dict(
-            name="Index",
-            type="Attribute"
-        )
+        metadata={
+            "name": "Index",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -464,43 +464,43 @@ class PassengerTypeQuantityType(TravelerCountType):
         """
         birth_date: Optional["PassengerTypeQuantityType.TpaExtensions.BirthDate"] = field(
             default=None,
-            metadata=dict(
-                name="BirthDate",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "BirthDate",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         age: Optional["PassengerTypeQuantityType.TpaExtensions.Age"] = field(
             default=None,
-            metadata=dict(
-                name="Age",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "Age",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         state: Optional["PassengerTypeQuantityType.TpaExtensions.State"] = field(
             default=None,
-            metadata=dict(
-                name="State",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "State",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         total_number: Optional["PassengerTypeQuantityType.TpaExtensions.TotalNumber"] = field(
             default=None,
-            metadata=dict(
-                name="TotalNumber",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "TotalNumber",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
         voluntary_changes: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges"] = field(
             default=None,
-            metadata=dict(
-                name="VoluntaryChanges",
-                type="Element",
-                namespace="http://www.opentravel.org/OTA/2003/05"
-            )
+            metadata={
+                "name": "VoluntaryChanges",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+            }
         )
 
         @dataclass
@@ -510,10 +510,10 @@ class PassengerTypeQuantityType(TravelerCountType):
             """
             date: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Date",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Date",
+                    "type": "Attribute",
+                }
             )
 
         @dataclass
@@ -523,11 +523,11 @@ class PassengerTypeQuantityType(TravelerCountType):
             """
             years: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Years",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Years",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -537,11 +537,11 @@ class PassengerTypeQuantityType(TravelerCountType):
             """
             code: Optional[str] = field(
                 default=None,
-                metadata=dict(
-                    name="Code",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Code",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -551,11 +551,11 @@ class PassengerTypeQuantityType(TravelerCountType):
             """
             value: Optional[int] = field(
                 default=None,
-                metadata=dict(
-                    name="Value",
-                    type="Attribute",
-                    required=True
-                )
+                metadata={
+                    "name": "Value",
+                    "type": "Attribute",
+                    "required": True,
+                }
             )
 
         @dataclass
@@ -568,20 +568,19 @@ class PassengerTypeQuantityType(TravelerCountType):
             """
             penalty: List["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty"] = field(
                 default_factory=list,
-                metadata=dict(
-                    name="Penalty",
-                    type="Element",
-                    namespace="http://www.opentravel.org/OTA/2003/05",
-                    min_occurs=0,
-                    max_occurs=2
-                )
+                metadata={
+                    "name": "Penalty",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "max_occurs": 2,
+                }
             )
             match: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Match"] = field(
                 default=None,
-                metadata=dict(
-                    name="Match",
-                    type="Attribute"
-                )
+                metadata={
+                    "name": "Match",
+                    "type": "Attribute",
+                }
             )
 
             @dataclass
@@ -596,47 +595,47 @@ class PassengerTypeQuantityType(TravelerCountType):
                 """
                 type: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty.Type"] = field(
                     default=None,
-                    metadata=dict(
-                        name="Type",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Type",
+                        "type": "Attribute",
+                    }
                 )
                 exclude: Optional[bool] = field(
                     default=None,
-                    metadata=dict(
-                        name="Exclude",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Exclude",
+                        "type": "Attribute",
+                    }
                 )
                 application: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty.Application"] = field(
                     default=None,
-                    metadata=dict(
-                        name="Application",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "Application",
+                        "type": "Attribute",
+                    }
                 )
                 amount: Optional[Decimal] = field(
                     default=None,
-                    metadata=dict(
-                        name="Amount",
-                        type="Attribute",
-                        fraction_digits=3
-                    )
+                    metadata={
+                        "name": "Amount",
+                        "type": "Attribute",
+                        "fraction_digits": 3,
+                    }
                 )
                 currency_code: Optional[str] = field(
                     default=None,
-                    metadata=dict(
-                        name="CurrencyCode",
-                        type="Attribute",
-                        pattern=r"[a-zA-Z]{3}"
-                    )
+                    metadata={
+                        "name": "CurrencyCode",
+                        "type": "Attribute",
+                        "pattern": r"[a-zA-Z]{3}",
+                    }
                 )
                 decimal_places: Optional[int] = field(
                     default=None,
-                    metadata=dict(
-                        name="DecimalPlaces",
-                        type="Attribute"
-                    )
+                    metadata={
+                        "name": "DecimalPlaces",
+                        "type": "Attribute",
+                    }
                 )
 
                 class Type(Enum):
@@ -676,26 +675,26 @@ class StayRestrictionsType:
     """
     minimum_stay: Optional["StayRestrictionsType.MinimumStay"] = field(
         default=None,
-        metadata=dict(
-            name="MinimumStay",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "MinimumStay",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     maximum_stay: Optional["StayRestrictionsType.MaximumStay"] = field(
         default=None,
-        metadata=dict(
-            name="MaximumStay",
-            type="Element",
-            namespace="http://www.opentravel.org/OTA/2003/05"
-        )
+        metadata={
+            "name": "MaximumStay",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
     )
     stay_restrictions_ind: Optional[bool] = field(
         default=None,
-        metadata=dict(
-            name="StayRestrictionsInd",
-            type="Attribute"
-        )
+        metadata={
+            "name": "StayRestrictionsInd",
+            "type": "Attribute",
+        }
     )
 
     @dataclass
@@ -708,33 +707,33 @@ class StayRestrictionsType:
         """
         return_time_of_day: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="ReturnTimeOfDay",
-                type="Attribute"
-            )
+            metadata={
+                "name": "ReturnTimeOfDay",
+                "type": "Attribute",
+            }
         )
         min_stay: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="MinStay",
-                type="Attribute",
-                min_inclusive=1,
-                max_inclusive=99
-            )
+            metadata={
+                "name": "MinStay",
+                "type": "Attribute",
+                "min_inclusive": 1,
+                "max_inclusive": 99,
+            }
         )
         stay_unit: Optional[StayUnitType] = field(
             default=None,
-            metadata=dict(
-                name="StayUnit",
-                type="Attribute"
-            )
+            metadata={
+                "name": "StayUnit",
+                "type": "Attribute",
+            }
         )
         min_stay_date: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="MinStayDate",
-                type="Attribute"
-            )
+            metadata={
+                "name": "MinStayDate",
+                "type": "Attribute",
+            }
         )
 
     @dataclass
@@ -748,40 +747,40 @@ class StayRestrictionsType:
         """
         return_type: Optional["StayRestrictionsType.MaximumStay.ReturnType"] = field(
             default=None,
-            metadata=dict(
-                name="ReturnType",
-                type="Attribute"
-            )
+            metadata={
+                "name": "ReturnType",
+                "type": "Attribute",
+            }
         )
         return_time_of_day: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="ReturnTimeOfDay",
-                type="Attribute"
-            )
+            metadata={
+                "name": "ReturnTimeOfDay",
+                "type": "Attribute",
+            }
         )
         max_stay: Optional[int] = field(
             default=None,
-            metadata=dict(
-                name="MaxStay",
-                type="Attribute",
-                min_inclusive=1,
-                max_inclusive=99
-            )
+            metadata={
+                "name": "MaxStay",
+                "type": "Attribute",
+                "min_inclusive": 1,
+                "max_inclusive": 99,
+            }
         )
         stay_unit: Optional[StayUnitType] = field(
             default=None,
-            metadata=dict(
-                name="StayUnit",
-                type="Attribute"
-            )
+            metadata={
+                "name": "StayUnit",
+                "type": "Attribute",
+            }
         )
         max_stay_date: Optional[str] = field(
             default=None,
-            metadata=dict(
-                name="MaxStayDate",
-                type="Attribute"
-            )
+            metadata={
+                "name": "MaxStayDate",
+                "type": "Attribute",
+            }
         )
 
         class ReturnType(Enum):

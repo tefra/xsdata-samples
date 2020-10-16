@@ -48,20 +48,18 @@ class AdxpExplicit:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: Optional[AddressPartType] = field(
         default=None,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -80,10 +78,10 @@ class Any:
 
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
 
 
@@ -108,27 +106,25 @@ class EnxpExplicit:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: Optional[EntityNamePartType] = field(
         default=None,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
     qualifier: List[EntityNamePartQualifier] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -147,24 +143,24 @@ class IvxbTsExplicit:
 
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?",
+        }
     )
     inclusive: str = field(
         default="true",
-        metadata=dict(
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
 
@@ -185,23 +181,23 @@ class SxcmTsExplicit:
 
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?",
+        }
     )
     operator: SetOperator = field(
         default=SetOperator.I,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -219,17 +215,17 @@ class TsExplicit:
 
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?",
+        }
     )
 
 
@@ -244,21 +240,19 @@ class AdxpAdditionalLocator:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.ADL,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -273,21 +267,19 @@ class AdxpBuildingNumberSuffix:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.BNS,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -302,21 +294,19 @@ class AdxpCareOf:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CAR,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -331,21 +321,19 @@ class AdxpCensusTract:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CEN,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -360,21 +348,19 @@ class AdxpCity:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CTY,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -389,21 +375,19 @@ class AdxpCountry:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CNT,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -418,21 +402,19 @@ class AdxpCounty:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CPA,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -447,21 +429,19 @@ class AdxpDelimiter:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DEL_VALUE,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -476,21 +456,19 @@ class AdxpDeliveryAddressLine:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DAL,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -505,21 +483,19 @@ class AdxpDeliveryInstallationArea:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DINSTA,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -534,21 +510,19 @@ class AdxpDeliveryInstallationQualifier:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DINSTQ,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -563,21 +537,19 @@ class AdxpDeliveryInstallationType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DINST,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -592,21 +564,19 @@ class AdxpDeliveryMode:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DMOD,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -621,21 +591,19 @@ class AdxpDeliveryModeIdentifier:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DMODID,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -650,21 +618,19 @@ class AdxpDirection:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DIR,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -679,21 +645,19 @@ class AdxpHouseNumber:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.BNR,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -708,21 +672,19 @@ class AdxpHouseNumberNumeric:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.BNN,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -737,21 +699,19 @@ class AdxpPostBox:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.POB,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -766,21 +726,19 @@ class AdxpPostalCode:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.ZIP,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -795,21 +753,19 @@ class AdxpPrecinct:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.PRE,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -824,21 +780,19 @@ class AdxpState:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STA,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -853,21 +807,19 @@ class AdxpStreetAddressLine:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.SAL,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -882,21 +834,19 @@ class AdxpStreetName:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STR_VALUE,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -911,21 +861,19 @@ class AdxpStreetNameBase:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STB,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -940,21 +888,19 @@ class AdxpStreetNameType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STTYP,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -969,21 +915,19 @@ class AdxpUnitId:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.UNID,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -998,21 +942,19 @@ class AdxpUnitType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.UNIT,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1027,21 +969,19 @@ class AdxpExplicitAdditionalLocator:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.ADL,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1056,21 +996,19 @@ class AdxpExplicitBuildingNumberSuffix:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.BNS,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1085,21 +1023,19 @@ class AdxpExplicitCareOf:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CAR,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1114,21 +1050,19 @@ class AdxpExplicitCensusTract:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CEN,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1143,21 +1077,19 @@ class AdxpExplicitCity:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CTY,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1172,21 +1104,19 @@ class AdxpExplicitCountry:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CNT,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1201,21 +1131,19 @@ class AdxpExplicitCounty:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CPA,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1230,21 +1158,19 @@ class AdxpExplicitDelimiter:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DEL_VALUE,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1259,21 +1185,19 @@ class AdxpExplicitDeliveryAddressLine:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DAL,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1288,21 +1212,19 @@ class AdxpExplicitDeliveryInstallationArea:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DINSTA,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1317,21 +1239,19 @@ class AdxpExplicitDeliveryInstallationQualifier:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DINSTQ,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1346,21 +1266,19 @@ class AdxpExplicitDeliveryInstallationType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DINST,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1375,21 +1293,19 @@ class AdxpExplicitDeliveryMode:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DMOD,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1404,21 +1320,19 @@ class AdxpExplicitDeliveryModeIdentifier:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DMODID,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1433,21 +1347,19 @@ class AdxpExplicitDirection:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DIR,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1462,21 +1374,19 @@ class AdxpExplicitHouseNumber:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.BNR,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1491,21 +1401,19 @@ class AdxpExplicitHouseNumberNumeric:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.BNN,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1520,21 +1428,19 @@ class AdxpExplicitPostBox:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.POB,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1549,21 +1455,19 @@ class AdxpExplicitPostalCode:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.ZIP,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1578,21 +1482,19 @@ class AdxpExplicitPrecinct:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.PRE,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1607,21 +1509,19 @@ class AdxpExplicitState:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STA,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1636,21 +1536,19 @@ class AdxpExplicitStreetAddressLine:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.SAL,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1665,21 +1563,19 @@ class AdxpExplicitStreetName:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STR_VALUE,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1694,21 +1590,19 @@ class AdxpExplicitStreetNameBase:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STB,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1723,21 +1617,19 @@ class AdxpExplicitStreetNameType1:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STTYP,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1752,21 +1644,19 @@ class AdxpExplicitUnitId:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.UNID,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1781,21 +1671,19 @@ class AdxpExplicitUnitType:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.UNIT,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -1815,28 +1703,26 @@ class EnDelimiter:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.DEL_VALUE,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
     qualifier: List[EntityNamePartQualifier] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -1856,28 +1742,26 @@ class EnFamily:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.FAM,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
     qualifier: List[EntityNamePartQualifier] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -1897,28 +1781,26 @@ class EnGiven:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.GIV,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
     qualifier: List[EntityNamePartQualifier] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -1938,28 +1820,26 @@ class EnPrefix:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.PFX,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
     qualifier: List[EntityNamePartQualifier] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -1979,28 +1859,26 @@ class EnSuffix:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.SFX,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
     qualifier: List[EntityNamePartQualifier] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -2016,28 +1894,26 @@ class EnExplicitDelimiter:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.DEL_VALUE,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
     qualifier: List[EntityNamePartQualifier] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -2053,28 +1929,26 @@ class EnExplicitFamily:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.FAM,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
     qualifier: List[EntityNamePartQualifier] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -2090,28 +1964,26 @@ class EnExplicitGiven:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.GIV,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
     qualifier: List[EntityNamePartQualifier] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -2127,28 +1999,26 @@ class EnExplicitPrefix:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.PFX,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
     qualifier: List[EntityNamePartQualifier] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -2164,28 +2034,26 @@ class EnExplicitSuffix:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.SFX,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
     qualifier: List[EntityNamePartQualifier] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -2243,335 +2111,277 @@ class AdExplicit:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     delimiter: List[AdxpExplicitDelimiter] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     country: List[AdxpExplicitCountry] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     state: List[AdxpExplicitState] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     county: List[AdxpExplicitCounty] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     city: List[AdxpExplicitCity] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     postal_code: List[AdxpExplicitPostalCode] = field(
         default_factory=list,
-        metadata=dict(
-            name="postalCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "postalCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     street_address_line: List[AdxpExplicitStreetAddressLine] = field(
         default_factory=list,
-        metadata=dict(
-            name="streetAddressLine",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "streetAddressLine",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     house_number: List[AdxpExplicitHouseNumber] = field(
         default_factory=list,
-        metadata=dict(
-            name="houseNumber",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "houseNumber",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     house_number_numeric: List[AdxpExplicitHouseNumberNumeric] = field(
         default_factory=list,
-        metadata=dict(
-            name="houseNumberNumeric",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "houseNumberNumeric",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     direction: List[AdxpExplicitDirection] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     street_name: List[AdxpExplicitStreetName] = field(
         default_factory=list,
-        metadata=dict(
-            name="streetName",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "streetName",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     street_name_base: List[AdxpExplicitStreetNameBase] = field(
         default_factory=list,
-        metadata=dict(
-            name="streetNameBase",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "streetNameBase",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     street_name_type: List[AdxpExplicitStreetNameType1] = field(
         default_factory=list,
-        metadata=dict(
-            name="streetNameType",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "streetNameType",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     additional_locator: List[AdxpExplicitAdditionalLocator] = field(
         default_factory=list,
-        metadata=dict(
-            name="additionalLocator",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "additionalLocator",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     unit_id: List[AdxpExplicitUnitId] = field(
         default_factory=list,
-        metadata=dict(
-            name="unitID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "unitID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     unit_type: List[AdxpExplicitUnitType] = field(
         default_factory=list,
-        metadata=dict(
-            name="unitType",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "unitType",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     care_of: List[AdxpExplicitCareOf] = field(
         default_factory=list,
-        metadata=dict(
-            name="careOf",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "careOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     census_tract: List[AdxpExplicitCensusTract] = field(
         default_factory=list,
-        metadata=dict(
-            name="censusTract",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "censusTract",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     delivery_address_line: List[AdxpExplicitDeliveryAddressLine] = field(
         default_factory=list,
-        metadata=dict(
-            name="deliveryAddressLine",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "deliveryAddressLine",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     delivery_installation_type: List[AdxpExplicitDeliveryInstallationType] = field(
         default_factory=list,
-        metadata=dict(
-            name="deliveryInstallationType",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "deliveryInstallationType",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     delivery_installation_area: List[AdxpExplicitDeliveryInstallationArea] = field(
         default_factory=list,
-        metadata=dict(
-            name="deliveryInstallationArea",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "deliveryInstallationArea",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     delivery_installation_qualifier: List[AdxpExplicitDeliveryInstallationQualifier] = field(
         default_factory=list,
-        metadata=dict(
-            name="deliveryInstallationQualifier",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "deliveryInstallationQualifier",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     delivery_mode: List[AdxpExplicitDeliveryMode] = field(
         default_factory=list,
-        metadata=dict(
-            name="deliveryMode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "deliveryMode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     delivery_mode_identifier: List[AdxpExplicitDeliveryModeIdentifier] = field(
         default_factory=list,
-        metadata=dict(
-            name="deliveryModeIdentifier",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "deliveryModeIdentifier",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     building_number_suffix: List[AdxpExplicitBuildingNumberSuffix] = field(
         default_factory=list,
-        metadata=dict(
-            name="buildingNumberSuffix",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "buildingNumberSuffix",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     post_box: List[AdxpExplicitPostBox] = field(
         default_factory=list,
-        metadata=dict(
-            name="postBox",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "postBox",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     precinct: List[AdxpExplicitPrecinct] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     useable_period: List[SxcmTsExplicit] = field(
         default_factory=list,
-        metadata=dict(
-            name="useablePeriod",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "useablePeriod",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     use: List[PostalAddressUse] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     is_not_ordered: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="isNotOrdered",
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "name": "isNotOrdered",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
 
@@ -2599,19 +2409,17 @@ class Bin(Any):
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     representation: BinaryDataEncoding = field(
         default=BinaryDataEncoding.TXT,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -2627,10 +2435,10 @@ class Bl(Any):
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
 
@@ -2668,24 +2476,24 @@ class Cr(Any):
 
     name: Optional["Cv"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     value: Optional["Cd"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     inverted: str = field(
         default="false",
-        metadata=dict(
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
 
@@ -2717,32 +2525,32 @@ class Ii(Any):
 
     root: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     extension: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     assigning_authority_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="assigningAuthorityName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "assigningAuthorityName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     displayable: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
 
@@ -2785,33 +2593,31 @@ class TelExplicit:
 
     useable_period: List[SxcmTsExplicit] = field(
         default_factory=list,
-        metadata=dict(
-            name="useablePeriod",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "useablePeriod",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     use: List[TelecommunicationAddressUse] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -2833,9 +2639,9 @@ class Url(Any):
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -2851,10 +2657,10 @@ class Bn(AnynonNull):
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
 
@@ -2873,9 +2679,9 @@ class IntType(Qty):
 
     value: Optional[int] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -2897,16 +2703,16 @@ class Mo(Qty):
 
     value: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     currency: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
 
 
@@ -2928,9 +2734,9 @@ class Real(Qty):
 
     value: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -2948,19 +2754,19 @@ class RtoQtyQty(Qty):
 
     numerator: Optional[Qty] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     denominator: Optional[Qty] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -2976,10 +2782,10 @@ class Ts(Qty):
 
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?",
+        }
     )
 
 
@@ -3018,68 +2824,66 @@ class ThumbnailExplicit:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     reference: Optional[TelExplicit] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     representation: BinaryDataEncoding = field(
         default=BinaryDataEncoding.TXT,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     media_type: str = field(
         default="text/plain",
-        metadata=dict(
-            name="mediaType",
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "name": "mediaType",
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     compression: Optional[CompressionAlgorithm] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     integrity_check: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="integrityCheck",
-            type="Attribute"
-        )
+        metadata={
+            "name": "integrityCheck",
+            "type": "Attribute",
+        }
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
         default=IntegrityCheckAlgorithm.SHA_1,
-        metadata=dict(
-            name="integrityCheckAlgorithm",
-            type="Attribute"
-        )
+        metadata={
+            "name": "integrityCheckAlgorithm",
+            "type": "Attribute",
+        }
     )
 
 
@@ -3123,75 +2927,73 @@ class EdExplicit:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     reference: Optional[TelExplicit] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     thumbnail: Optional[ThumbnailExplicit] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     representation: BinaryDataEncoding = field(
         default=BinaryDataEncoding.TXT,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     media_type: str = field(
         default="text/plain",
-        metadata=dict(
-            name="mediaType",
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "name": "mediaType",
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     compression: Optional[CompressionAlgorithm] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     integrity_check: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="integrityCheck",
-            type="Attribute"
-        )
+        metadata={
+            "name": "integrityCheck",
+            "type": "Attribute",
+        }
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
         default=IntegrityCheckAlgorithm.SHA_1,
-        metadata=dict(
-            name="integrityCheckAlgorithm",
-            type="Attribute"
-        )
+        metadata={
+            "name": "integrityCheckAlgorithm",
+            "type": "Attribute",
+        }
     )
 
 
@@ -3207,10 +3009,10 @@ class IvxbTs(Ts):
 
     inclusive: str = field(
         default="true",
-        metadata=dict(
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
 
@@ -3275,114 +3077,112 @@ class ScExplicit:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     reference: Optional[TelExplicit] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     thumbnail: Optional[ThumbnailExplicit] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     representation: BinaryDataEncoding = field(
         default=BinaryDataEncoding.TXT,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     media_type: str = field(
         default="text/plain",
-        metadata=dict(
-            name="mediaType",
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "name": "mediaType",
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     compression: Optional[CompressionAlgorithm] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     integrity_check: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="integrityCheck",
-            type="Attribute"
-        )
+        metadata={
+            "name": "integrityCheck",
+            "type": "Attribute",
+        }
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
         default=IntegrityCheckAlgorithm.SHA_1,
-        metadata=dict(
-            name="integrityCheckAlgorithm",
-            type="Attribute"
-        )
+        metadata={
+            "name": "integrityCheckAlgorithm",
+            "type": "Attribute",
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     code_system: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystem",
-            type="Attribute",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "codeSystem",
+            "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     code_system_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     code_system_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemVersion",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemVersion",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     display_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="displayName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "displayName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
 
 
@@ -3421,68 +3221,66 @@ class StExplicit:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     reference: Optional[TelExplicit] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     thumbnail: Optional[ThumbnailExplicit] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     representation: BinaryDataEncoding = field(
         default=BinaryDataEncoding.TXT,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     media_type: str = field(
         default="text/plain",
-        metadata=dict(
-            name="mediaType",
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "name": "mediaType",
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     compression: Optional[CompressionAlgorithm] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     integrity_check: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="integrityCheck",
-            type="Attribute"
-        )
+        metadata={
+            "name": "integrityCheck",
+            "type": "Attribute",
+        }
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
         default=IntegrityCheckAlgorithm.SHA_1,
-        metadata=dict(
-            name="integrityCheckAlgorithm",
-            type="Attribute"
-        )
+        metadata={
+            "name": "integrityCheckAlgorithm",
+            "type": "Attribute",
+        }
     )
 
 
@@ -3500,9 +3298,9 @@ class SxcmTs(Ts):
 
     operator: SetOperator = field(
         default=SetOperator.I,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -3558,328 +3356,270 @@ class Ad(Any):
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     delimiter: List[AdxpDelimiter] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     country: List[AdxpCountry] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     state: List[AdxpState] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     county: List[AdxpCounty] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     city: List[AdxpCity] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     postal_code: List[AdxpPostalCode] = field(
         default_factory=list,
-        metadata=dict(
-            name="postalCode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "postalCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     street_address_line: List[AdxpStreetAddressLine] = field(
         default_factory=list,
-        metadata=dict(
-            name="streetAddressLine",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "streetAddressLine",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     house_number: List[AdxpHouseNumber] = field(
         default_factory=list,
-        metadata=dict(
-            name="houseNumber",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "houseNumber",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     house_number_numeric: List[AdxpHouseNumberNumeric] = field(
         default_factory=list,
-        metadata=dict(
-            name="houseNumberNumeric",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "houseNumberNumeric",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     direction: List[AdxpDirection] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     street_name: List[AdxpStreetName] = field(
         default_factory=list,
-        metadata=dict(
-            name="streetName",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "streetName",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     street_name_base: List[AdxpStreetNameBase] = field(
         default_factory=list,
-        metadata=dict(
-            name="streetNameBase",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "streetNameBase",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     street_name_type: List[AdxpStreetNameType] = field(
         default_factory=list,
-        metadata=dict(
-            name="streetNameType",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "streetNameType",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     additional_locator: List[AdxpAdditionalLocator] = field(
         default_factory=list,
-        metadata=dict(
-            name="additionalLocator",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "additionalLocator",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     unit_id: List[AdxpUnitId] = field(
         default_factory=list,
-        metadata=dict(
-            name="unitID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "unitID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     unit_type: List[AdxpUnitType] = field(
         default_factory=list,
-        metadata=dict(
-            name="unitType",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "unitType",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     care_of: List[AdxpCareOf] = field(
         default_factory=list,
-        metadata=dict(
-            name="careOf",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "careOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     census_tract: List[AdxpCensusTract] = field(
         default_factory=list,
-        metadata=dict(
-            name="censusTract",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "censusTract",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     delivery_address_line: List[AdxpDeliveryAddressLine] = field(
         default_factory=list,
-        metadata=dict(
-            name="deliveryAddressLine",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "deliveryAddressLine",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     delivery_installation_type: List[AdxpDeliveryInstallationType] = field(
         default_factory=list,
-        metadata=dict(
-            name="deliveryInstallationType",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "deliveryInstallationType",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     delivery_installation_area: List[AdxpDeliveryInstallationArea] = field(
         default_factory=list,
-        metadata=dict(
-            name="deliveryInstallationArea",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "deliveryInstallationArea",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     delivery_installation_qualifier: List[AdxpDeliveryInstallationQualifier] = field(
         default_factory=list,
-        metadata=dict(
-            name="deliveryInstallationQualifier",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "deliveryInstallationQualifier",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     delivery_mode: List[AdxpDeliveryMode] = field(
         default_factory=list,
-        metadata=dict(
-            name="deliveryMode",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "deliveryMode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     delivery_mode_identifier: List[AdxpDeliveryModeIdentifier] = field(
         default_factory=list,
-        metadata=dict(
-            name="deliveryModeIdentifier",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "deliveryModeIdentifier",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     building_number_suffix: List[AdxpBuildingNumberSuffix] = field(
         default_factory=list,
-        metadata=dict(
-            name="buildingNumberSuffix",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "buildingNumberSuffix",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     post_box: List[AdxpPostBox] = field(
         default_factory=list,
-        metadata=dict(
-            name="postBox",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "name": "postBox",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     precinct: List[AdxpPrecinct] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     useable_period: List[SxcmTs] = field(
         default_factory=list,
-        metadata=dict(
-            name="useablePeriod",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "useablePeriod",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     use: List[PostalAddressUse] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
     is_not_ordered: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="isNotOrdered",
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "name": "isNotOrdered",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
 
@@ -3908,63 +3648,63 @@ class PqrExplicit:
 
     original_text: Optional[EdExplicit] = field(
         default=None,
-        metadata=dict(
-            name="originalText",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "originalText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     code_system: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystem",
-            type="Attribute",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "codeSystem",
+            "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     code_system_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     code_system_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemVersion",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemVersion",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     display_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="displayName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "displayName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     value: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -3991,20 +3731,18 @@ class Tel(Url):
 
     useable_period: List[SxcmTs] = field(
         default_factory=list,
-        metadata=dict(
-            name="useablePeriod",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "name": "useablePeriod",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     use: List[TelecommunicationAddressUse] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -4028,32 +3766,30 @@ class PqExplicit:
 
     translation: List[PqrExplicit] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     value: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     unit: str = field(
         default="1",
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
 
 
@@ -4089,62 +3825,60 @@ class Thumbnail:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     reference: Optional[Tel] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     thumbnail: Optional["Thumbnail"] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     media_type: str = field(
         default="text/plain",
-        metadata=dict(
-            name="mediaType",
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "name": "mediaType",
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     compression: Optional[CompressionAlgorithm] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     integrity_check: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="integrityCheck",
-            type="Attribute"
-        )
+        metadata={
+            "name": "integrityCheck",
+            "type": "Attribute",
+        }
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
         default=IntegrityCheckAlgorithm.SHA_1,
-        metadata=dict(
-            name="integrityCheckAlgorithm",
-            type="Attribute"
-        )
+        metadata={
+            "name": "integrityCheckAlgorithm",
+            "type": "Attribute",
+        }
     )
 
 
@@ -4184,62 +3918,60 @@ class Ed(Bin):
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     reference: Optional[Tel] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     thumbnail: Optional[Thumbnail] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     media_type: str = field(
         default="text/plain",
-        metadata=dict(
-            name="mediaType",
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "name": "mediaType",
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     compression: Optional[CompressionAlgorithm] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     integrity_check: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="integrityCheck",
-            type="Attribute"
-        )
+        metadata={
+            "name": "integrityCheck",
+            "type": "Attribute",
+        }
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
         default=IntegrityCheckAlgorithm.SHA_1,
-        metadata=dict(
-            name="integrityCheckAlgorithm",
-            type="Attribute"
-        )
+        metadata={
+            "name": "integrityCheckAlgorithm",
+            "type": "Attribute",
+        }
     )
 
 
@@ -4272,57 +4004,55 @@ class IvlTsExplicit:
 
     low: Optional[IvxbTsExplicit] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     width: List[PqExplicit] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     high: List[IvxbTsExplicit] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     center: Optional[TsExplicit] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     value: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?",
+        }
     )
     operator: SetOperator = field(
         default=SetOperator.I,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -4359,86 +4089,82 @@ class Cd(Any):
 
     original_text: Optional[Ed] = field(
         default=None,
-        metadata=dict(
-            name="originalText",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "originalText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     qualifier: List[Cr] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     translation: List["Cd"] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     code_system: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystem",
-            type="Attribute",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "codeSystem",
+            "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     code_system_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     code_system_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemVersion",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemVersion",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     display_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="displayName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "displayName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     value_set: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="valueSet",
-            type="Attribute",
-            namespace="urn:hl7-org:sdtc",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "valueSet",
+            "type": "Attribute",
+            "namespace": "urn:hl7-org:sdtc",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     value_set_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="valueSetVersion",
-            type="Attribute",
-            namespace="urn:hl7-org:sdtc",
-            min_length=1
-        )
+        metadata={
+            "name": "valueSetVersion",
+            "type": "Attribute",
+            "namespace": "urn:hl7-org:sdtc",
+            "min_length": 1,
+        }
     )
 
 
@@ -4471,85 +4197,73 @@ class EnExplicit:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     delimiter: List[EnExplicitDelimiter] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     family: List[EnExplicitFamily] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     given: List[EnExplicitGiven] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     prefix: List[EnExplicitPrefix] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     suffix: List[EnExplicitSuffix] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     valid_time: Optional[IvlTsExplicit] = field(
         default=None,
-        metadata=dict(
-            name="validTime",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "validTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     use: List[EntityNameUse] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -4580,65 +4294,57 @@ class OnExplicit:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     delimiter: List[EnExplicitDelimiter] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     prefix: List[EnExplicitPrefix] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     suffix: List[EnExplicitSuffix] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     valid_time: Optional[IvlTsExplicit] = field(
         default=None,
-        metadata=dict(
-            name="validTime",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "validTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     use: List[EntityNameUse] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -4671,85 +4377,73 @@ class PnExplicit:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     delimiter: List[EnExplicitDelimiter] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     family: List[EnExplicitFamily] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     given: List[EnExplicitGiven] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     prefix: List[EnExplicitPrefix] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     suffix: List[EnExplicitSuffix] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     valid_time: Optional[IvlTsExplicit] = field(
         default=None,
-        metadata=dict(
-            name="validTime",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "validTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
-        metadata=dict(
-            name="nullFlavor",
-            type="Attribute"
-        )
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
     )
     use: List[EntityNameUse] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -4782,70 +4476,68 @@ class St:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     reference: Optional[Tel] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     thumbnail: Optional[Ed] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     representation: BinaryDataEncoding = field(
         init=False,
         default=BinaryDataEncoding.TXT,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     media_type: str = field(
         init=False,
         default="text/plain",
-        metadata=dict(
-            name="mediaType",
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "name": "mediaType",
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     compression: Optional[CompressionAlgorithm] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     integrity_check: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="integrityCheck",
-            type="Attribute"
-        )
+        metadata={
+            "name": "integrityCheck",
+            "type": "Attribute",
+        }
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
         default=IntegrityCheckAlgorithm.SHA_1,
-        metadata=dict(
-            name="integrityCheckAlgorithm",
-            type="Attribute"
-        )
+        metadata={
+            "name": "integrityCheckAlgorithm",
+            "type": "Attribute",
+        }
     )
     language: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
 
 
@@ -4869,20 +4561,18 @@ class Adxp(St):
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: Optional[AddressPartType] = field(
         default=None,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -4919,86 +4609,82 @@ class CdExplicit(Any):
 
     original_text: Optional[EdExplicit] = field(
         default=None,
-        metadata=dict(
-            name="originalText",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "originalText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     qualifier: List[Cr] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     translation: List[Cd] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     code_system: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystem",
-            type="Attribute",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "codeSystem",
+            "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     code_system_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     code_system_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemVersion",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemVersion",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     display_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="displayName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "displayName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     value_set: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="valueSet",
-            type="Attribute",
-            namespace="urn:hl7-org:sdtc",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "valueSet",
+            "type": "Attribute",
+            "namespace": "urn:hl7-org:sdtc",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     value_set_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="valueSetVersion",
-            type="Attribute",
-            namespace="urn:hl7-org:sdtc",
-            min_length=1
-        )
+        metadata={
+            "name": "valueSetVersion",
+            "type": "Attribute",
+            "namespace": "urn:hl7-org:sdtc",
+            "min_length": 1,
+        }
     )
 
 
@@ -5029,84 +4715,82 @@ class Ce:
 
     original_text: Optional[Ed] = field(
         default=None,
-        metadata=dict(
-            name="originalText",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "originalText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     qualifier: Optional[Cr] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     translation: List[Cd] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     code_system: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystem",
-            type="Attribute",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "codeSystem",
+            "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     code_system_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     code_system_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemVersion",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemVersion",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     display_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="displayName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "displayName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     value_set: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="valueSet",
-            type="Attribute",
-            namespace="urn:hl7-org:sdtc",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "valueSet",
+            "type": "Attribute",
+            "namespace": "urn:hl7-org:sdtc",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     value_set_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="valueSetVersion",
-            type="Attribute",
-            namespace="urn:hl7-org:sdtc",
-            min_length=1
-        )
+        metadata={
+            "name": "valueSetVersion",
+            "type": "Attribute",
+            "namespace": "urn:hl7-org:sdtc",
+            "min_length": 1,
+        }
     )
 
 
@@ -5137,84 +4821,82 @@ class CeExplicit:
 
     original_text: Optional[EdExplicit] = field(
         default=None,
-        metadata=dict(
-            name="originalText",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "originalText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     qualifier: Optional[Cr] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     translation: List[Cd] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     code_system: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystem",
-            type="Attribute",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "codeSystem",
+            "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     code_system_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     code_system_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemVersion",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemVersion",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     display_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="displayName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "displayName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     value_set: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="valueSet",
-            type="Attribute",
-            namespace="urn:hl7-org:sdtc",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "valueSet",
+            "type": "Attribute",
+            "namespace": "urn:hl7-org:sdtc",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     value_set_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="valueSetVersion",
-            type="Attribute",
-            namespace="urn:hl7-org:sdtc",
-            min_length=1
-        )
+        metadata={
+            "name": "valueSetVersion",
+            "type": "Attribute",
+            "namespace": "urn:hl7-org:sdtc",
+            "min_length": 1,
+        }
     )
 
 
@@ -5243,82 +4925,82 @@ class Cs:
 
     original_text: Optional[Ed] = field(
         default=None,
-        metadata=dict(
-            name="originalText",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "originalText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     qualifier: Optional[Cr] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     translation: Optional[Cd] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     code_system: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystem",
-            type="Attribute",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "codeSystem",
+            "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     code_system_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     code_system_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemVersion",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemVersion",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     display_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="displayName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "displayName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     value_set: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="valueSet",
-            type="Attribute",
-            namespace="urn:hl7-org:sdtc",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "valueSet",
+            "type": "Attribute",
+            "namespace": "urn:hl7-org:sdtc",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     value_set_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="valueSetVersion",
-            type="Attribute",
-            namespace="urn:hl7-org:sdtc",
-            min_length=1
-        )
+        metadata={
+            "name": "valueSetVersion",
+            "type": "Attribute",
+            "namespace": "urn:hl7-org:sdtc",
+            "min_length": 1,
+        }
     )
 
 
@@ -5347,82 +5029,82 @@ class Cv:
 
     original_text: Optional[Ed] = field(
         default=None,
-        metadata=dict(
-            name="originalText",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "originalText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     qualifier: Optional[Cr] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     translation: Optional[Cd] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     code_system: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystem",
-            type="Attribute",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "codeSystem",
+            "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     code_system_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     code_system_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemVersion",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemVersion",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     display_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="displayName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "displayName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     value_set: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="valueSet",
-            type="Attribute",
-            namespace="urn:hl7-org:sdtc",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "valueSet",
+            "type": "Attribute",
+            "namespace": "urn:hl7-org:sdtc",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     value_set_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="valueSetVersion",
-            type="Attribute",
-            namespace="urn:hl7-org:sdtc",
-            min_length=1
-        )
+        metadata={
+            "name": "valueSetVersion",
+            "type": "Attribute",
+            "namespace": "urn:hl7-org:sdtc",
+            "min_length": 1,
+        }
     )
 
 
@@ -5450,85 +5132,83 @@ class EivlEvent:
 
     original_text: Optional[Ed] = field(
         default=None,
-        metadata=dict(
-            name="originalText",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "originalText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     qualifier: Optional[Cr] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     translation: List[Cd] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     code: Optional[TimingEvent] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     code_system: str = field(
         init=False,
         default="2.16.840.1.113883.5.139",
-        metadata=dict(
-            name="codeSystem",
-            type="Attribute",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "codeSystem",
+            "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     code_system_name: str = field(
         init=False,
         default="TimingEvent",
-        metadata=dict(
-            name="codeSystemName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     code_system_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemVersion",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemVersion",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     display_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="displayName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "displayName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     value_set: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="valueSet",
-            type="Attribute",
-            namespace="urn:hl7-org:sdtc",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "valueSet",
+            "type": "Attribute",
+            "namespace": "urn:hl7-org:sdtc",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     value_set_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="valueSetVersion",
-            type="Attribute",
-            namespace="urn:hl7-org:sdtc",
-            min_length=1
-        )
+        metadata={
+            "name": "valueSetVersion",
+            "type": "Attribute",
+            "namespace": "urn:hl7-org:sdtc",
+            "min_length": 1,
+        }
     )
 
 
@@ -5553,27 +5233,25 @@ class Enxp(St):
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     part_type: Optional[EntityNamePartType] = field(
         default=None,
-        metadata=dict(
-            name="partType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
     )
     qualifier: List[EntityNamePartQualifier] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -5598,52 +5276,50 @@ class Sc(St):
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     code: Optional[str] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     code_system: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystem",
-            type="Attribute",
-            pattern=r"[0-2](\.(0|[1-9][0-9]*))*"
-        )
+        metadata={
+            "name": "codeSystem",
+            "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
     )
     code_system_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     code_system_version: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="codeSystemVersion",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "codeSystemVersion",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
     display_name: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="displayName",
-            type="Attribute",
-            min_length=1
-        )
+        metadata={
+            "name": "displayName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
     )
 
 
@@ -5672,9 +5348,9 @@ class Pqr(Cv):
 
     value: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -5696,25 +5372,23 @@ class Pq(Qty):
 
     translation: List[Pqr] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     value: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     unit: str = field(
         default="1",
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
 
 
@@ -5739,37 +5413,35 @@ class IvlTs(SxcmTs):
 
     low: Optional[IvxbTs] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     width: List[Pq] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     high: List[IvxbTs] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     center: Optional[Ts] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -5803,78 +5475,66 @@ class En(Any):
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     delimiter: List[EnDelimiter] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     family: List[EnFamily] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     given: List[EnGiven] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     prefix: List[EnPrefix] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     suffix: List[EnSuffix] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     valid_time: Optional[IvlTs] = field(
         default=None,
-        metadata=dict(
-            name="validTime",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "validTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     use: List[EntityNameUse] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -5903,78 +5563,66 @@ class On:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     delimiter: List[EnDelimiter] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     family: List[EnFamily] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     given: List[EnGiven] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     prefix: List[EnPrefix] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     suffix: List[EnSuffix] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     valid_time: Optional[IvlTs] = field(
         default=None,
-        metadata=dict(
-            name="validTime",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "validTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     use: List[EntityNameUse] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -6004,78 +5652,66 @@ class Tn:
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )
     delimiter: List[EnDelimiter] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     family: List[EnFamily] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     given: List[EnGiven] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     prefix: List[EnPrefix] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     suffix: List[EnSuffix] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=9223372036854775807,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
     )
     valid_time: Optional[IvlTs] = field(
         default=None,
-        metadata=dict(
-            name="validTime",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "validTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     use: List[EntityNameUse] = field(
         default_factory=list,
-        metadata=dict(
-            type="Attribute",
-            tokens=True
-        )
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
     )
 
 
@@ -6092,11 +5728,9 @@ class Pn(En):
 
     content: List[object] = field(
         default_factory=list,
-        metadata=dict(
-            type="Wildcard",
-            namespace="##any",
-            mixed=True,
-            min_occurs=0,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
     )

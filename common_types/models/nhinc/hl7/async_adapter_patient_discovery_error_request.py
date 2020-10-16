@@ -21,47 +21,47 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
     """
     prpa_in201305_uv02: Optional[PrpaIn201305Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201305UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201305UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     prpa_in201306_uv02: Optional[PrpaIn201306Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201306UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201306UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     assertion: Optional[AssertionType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
-        metadata=dict(
-            name="NhinTargetCommunities",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "NhinTargetCommunities",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     error_msg: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="errorMsg",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "errorMsg",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -75,39 +75,39 @@ class AsyncAdapterPatientDiscoveryErrorSecuredRequestType:
     """
     prpa_in201305_uv02: Optional[PrpaIn201305Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201305UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201305UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     prpa_in201306_uv02: Optional[PrpaIn201306Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201306UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201306UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
-        metadata=dict(
-            name="NhinTargetCommunities",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "NhinTargetCommunities",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     error_msg: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="errorMsg",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "errorMsg",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 

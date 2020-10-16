@@ -35,9 +35,9 @@ class BxitCd(Cd):
 
     qty: int = field(
         default=1,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -69,31 +69,31 @@ class GlistPq(Any):
 
     head: Optional[Pq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     increment: Optional[Pq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     period: Optional[int] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     denominator: Optional[int] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -125,31 +125,31 @@ class GlistTs(Any):
 
     head: Optional[Ts] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     increment: Optional[Pq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     period: Optional[int] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
     denominator: Optional[int] = field(
         default=None,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -166,11 +166,11 @@ class HxitCe(Ce):
 
     valid_time: Optional[IvlTs] = field(
         default=None,
-        metadata=dict(
-            name="validTime",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "validTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -187,11 +187,11 @@ class HxitPq(Pq):
 
     valid_time: Optional[IvlTs] = field(
         default=None,
-        metadata=dict(
-            name="validTime",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "validTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -207,10 +207,10 @@ class IvxbInt(IntType):
 
     inclusive: str = field(
         default="true",
-        metadata=dict(
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
 
@@ -226,10 +226,10 @@ class IvxbMo(Mo):
 
     inclusive: str = field(
         default="true",
-        metadata=dict(
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
 
@@ -245,10 +245,10 @@ class IvxbPq(Pq):
 
     inclusive: str = field(
         default="true",
-        metadata=dict(
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
 
@@ -264,10 +264,10 @@ class IvxbReal(Real):
 
     inclusive: str = field(
         default="true",
-        metadata=dict(
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
 
@@ -302,32 +302,32 @@ class PivlTs(SxcmTs):
 
     phase: Optional[IvlTs] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     period: Optional[Pq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     alignment: Optional[Union[CalendarCycleOneLetter, str, "PivlTs.Value"]] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     institution_specified: str = field(
         default="false",
-        metadata=dict(
-            name="institutionSpecified",
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "name": "institutionSpecified",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
     class Value(Enum):
@@ -388,18 +388,18 @@ class PpdPq(Pq):
 
     standard_deviation: Optional[Pq] = field(
         default=None,
-        metadata=dict(
-            name="standardDeviation",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "standardDeviation",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     distribution_type: Optional[ProbabilityDistributionType] = field(
         default=None,
-        metadata=dict(
-            name="distributionType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "distributionType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -426,18 +426,18 @@ class PpdTs(Ts):
 
     standard_deviation: Optional[Pq] = field(
         default=None,
-        metadata=dict(
-            name="standardDeviation",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "standardDeviation",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     distribution_type: Optional[ProbabilityDistributionType] = field(
         default=None,
-        metadata=dict(
-            name="distributionType",
-            type="Attribute"
-        )
+        metadata={
+            "name": "distributionType",
+            "type": "Attribute",
+        }
     )
 
 
@@ -455,19 +455,19 @@ class RtoMoPq(Qty):
 
     numerator: Optional[Mo] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     denominator: Optional[Pq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -485,19 +485,19 @@ class RtoPqPq(Qty):
 
     numerator: Optional[Pq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     denominator: Optional[Pq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -517,28 +517,28 @@ class SlistPq(Any):
 
     origin: Optional[Pq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     scale: Optional[Pq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     digits: List[int] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True,
-            tokens=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+            "tokens": True,
+        }
     )
 
 
@@ -558,28 +558,28 @@ class SlistTs(Any):
 
     origin: Optional[Ts] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     scale: Optional[Pq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     digits: List[int] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True,
-            tokens=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+            "tokens": True,
+        }
     )
 
 
@@ -597,9 +597,9 @@ class SxcmCd(Cd):
 
     operator: SetOperator = field(
         default=SetOperator.I,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -617,9 +617,9 @@ class SxcmInt(IntType):
 
     operator: SetOperator = field(
         default=SetOperator.I,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -637,9 +637,9 @@ class SxcmMo(Mo):
 
     operator: SetOperator = field(
         default=SetOperator.I,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -657,9 +657,9 @@ class SxcmPq(Pq):
 
     operator: SetOperator = field(
         default=SetOperator.I,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -677,9 +677,9 @@ class SxcmReal(Real):
 
     operator: SetOperator = field(
         default=SetOperator.I,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -693,12 +693,11 @@ class SxprTs(SxcmTs):
 
     comp: List[SxcmTs] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=2,
-            max_occurs=9223372036854775807
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "min_occurs": 2,
+        }
     )
 
 
@@ -713,11 +712,11 @@ class UvpTs(Ts):
 
     probability: Optional[Decimal] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            min_inclusive=0.0,
-            max_inclusive=1.0
-        )
+        metadata={
+            "type": "Attribute",
+            "min_inclusive": 0.0,
+            "max_inclusive": 1.0,
+        }
     )
 
 
@@ -742,37 +741,35 @@ class IvlInt(SxcmInt):
 
     low: Optional[IvxbInt] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     width: List[IntType] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     high: List[IvxbInt] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     center: Optional[IntType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -797,37 +794,35 @@ class IvlMo(SxcmMo):
 
     low: Optional[IvxbMo] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     width: List[Mo] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     high: List[IvxbMo] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     center: Optional[Mo] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -852,37 +847,35 @@ class IvlPq(SxcmPq):
 
     low: Optional[IvxbPq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     width: List[Pq] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     high: List[IvxbPq] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     center: Optional[Pq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -907,37 +900,35 @@ class IvlReal(SxcmReal):
 
     low: Optional[IvxbReal] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     width: List[Real] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     high: List[IvxbReal] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     center: Optional[Real] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -953,10 +944,10 @@ class IvxbPpdPq(PpdPq):
 
     inclusive: str = field(
         default="true",
-        metadata=dict(
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
 
@@ -972,10 +963,10 @@ class IvxbPpdTs(PpdTs):
 
     inclusive: str = field(
         default="true",
-        metadata=dict(
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
 
@@ -993,9 +984,9 @@ class SxcmPpdPq(PpdPq):
 
     operator: SetOperator = field(
         default=SetOperator.I,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -1013,9 +1004,9 @@ class SxcmPpdTs(PpdTs):
 
     operator: SetOperator = field(
         default=SetOperator.I,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -1029,9 +1020,9 @@ class BxitIvlPq(IvlPq):
 
     qty: int = field(
         default=1,
-        metadata=dict(
-            type="Attribute"
-        )
+        metadata={
+            "type": "Attribute",
+        }
     )
 
 
@@ -1060,17 +1051,17 @@ class EivlTs(SxcmTs):
 
     event: Optional[EivlEvent] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     offset: Optional[IvlPq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -1095,37 +1086,35 @@ class IvlPpdPq(SxcmPpdPq):
 
     low: Optional[IvxbPpdPq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     width: List[PpdPq] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     high: List[IvxbPpdPq] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     center: Optional[PpdPq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -1150,37 +1139,35 @@ class IvlPpdTs(SxcmPpdTs):
 
     low: Optional[IvxbPpdTs] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     width: List[PpdPq] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     high: List[IvxbPpdTs] = field(
         default_factory=list,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            min_occurs=0,
-            max_occurs=3,
-            sequential=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
     )
     center: Optional[PpdTs] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -1209,17 +1196,17 @@ class EivlPpdTs(SxcmPpdTs):
 
     event: Optional[EivlEvent] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     offset: Optional[IvlPpdPq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -1254,32 +1241,32 @@ class PivlPpdTs(SxcmPpdTs):
 
     phase: Optional[IvlPpdTs] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     period: Optional[PpdPq] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     alignment: Optional[Union[CalendarCycleOneLetter, str, "PivlPpdTs.Value"]] = field(
         default=None,
-        metadata=dict(
-            type="Attribute",
-            pattern=r"[^\s]+"
-        )
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
     )
     institution_specified: str = field(
         default="false",
-        metadata=dict(
-            name="institutionSpecified",
-            type="Attribute",
-            pattern=r"true|false"
-        )
+        metadata={
+            "name": "institutionSpecified",
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
     )
 
     class Value(Enum):

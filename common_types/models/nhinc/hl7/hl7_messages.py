@@ -24,21 +24,21 @@ class CreateFault201310RequestType:
     """
     sender_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="senderOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "senderOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     receiver_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="receiverOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "receiverOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -54,55 +54,55 @@ class Create201302RequestType:
     """
     prpa201310_patient: Optional[PrpaMt201310Uv02Patient] = field(
         default=None,
-        metadata=dict(
-            name="PRPA201310Patient",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "PRPA201310Patient",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     prpa201301_patient: Optional[PrpaMt201301Uv02Patient] = field(
         default=None,
-        metadata=dict(
-            name="PRPA201301Patient",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "PRPA201301Patient",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
     remote_patient_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="remotePatientId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "remotePatientId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     remote_device_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="remoteDeviceId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "remoteDeviceId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     sender_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="senderOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "senderOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     receiver_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="receiverOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "receiverOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -116,39 +116,39 @@ class Create201305RequestType:
     """
     prpa201301_patient: Optional[PrpaMt201301Uv02Patient] = field(
         default=None,
-        metadata=dict(
-            name="PRPA201301Patient",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA201301Patient",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     local_device_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="localDeviceId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "localDeviceId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     sender_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="senderOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "senderOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     receiver_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="receiverOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "receiverOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -164,57 +164,57 @@ class Create201310RequestType:
     """
     pseudo_patient_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="pseudoPatientId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "pseudoPatientId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     pseudo_assigning_authority_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="pseudoAssigningAuthorityId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "pseudoAssigningAuthorityId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     local_device_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="localDeviceId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "localDeviceId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     sender_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="senderOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "senderOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     receiver_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="receiverOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "receiverOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     prpa201307_query_by_parameter: Optional[PrpaMt201307Uv02QueryByParameter] = field(
         default=None,
-        metadata=dict(
-            name="PRPA201307QueryByParameter",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA201307QueryByParameter",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -229,48 +229,48 @@ class CreateAckMsgRequestType:
     """
     local_device_id: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="localDeviceId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "localDeviceId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     orig_msg_id: Optional[Ii] = field(
         default=None,
-        metadata=dict(
-            name="origMsgId",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "origMsgId",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     msg_text: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="msgText",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "msgText",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     sender_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="senderOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "senderOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     receiver_oid: Optional[str] = field(
         default=None,
-        metadata=dict(
-            name="receiverOID",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "receiverOID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -291,20 +291,20 @@ class PixconsumerMcciIn000002Uv01RequestType:
 
     mcci_in000002_uv01: Optional[McciIn000002Uv01] = field(
         default=None,
-        metadata=dict(
-            name="MCCI_IN000002UV01",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "MCCI_IN000002UV01",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     assertion: Optional[AssertionType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -320,28 +320,28 @@ class PixconsumerPrpaIn201304UvrequestType:
 
     prpa_in201304_uv02: Optional[PrpaIn201304Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201304UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201304UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     assertion: Optional[AssertionType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
-        metadata=dict(
-            name="NhinTargetCommunities",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "NhinTargetCommunities",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -356,20 +356,20 @@ class PixconsumerPrpaIn201304UvsecuredRequestType:
 
     prpa_in201304_uv02: Optional[PrpaIn201304Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201304UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201304UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
-        metadata=dict(
-            name="NhinTargetCommunities",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "NhinTargetCommunities",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -385,28 +385,28 @@ class PixconsumerPrpaIn201309UvrequestType:
 
     prpa_in201309_uv02: Optional[PrpaIn201309Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201309UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201309UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     assertion: Optional[AssertionType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
-        metadata=dict(
-            name="NhinTargetCommunities",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "NhinTargetCommunities",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -420,12 +420,12 @@ class PixconsumerPrpaIn201309UvresponseType:
 
     prpa_in201310_uv02: Optional[PrpaIn201310Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201310UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201310UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -440,20 +440,20 @@ class PixconsumerPrpaIn201309UvsecuredRequestType:
 
     prpa_in201309_uv02: Optional[PrpaIn201309Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201309UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201309UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
-        metadata=dict(
-            name="NhinTargetCommunities",
-            type="Element",
-            namespace="urn:hl7-org:v3"
-        )
+        metadata={
+            "name": "NhinTargetCommunities",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
     )
 
 
@@ -468,20 +468,20 @@ class PixconsumerPrpaIn201310UvrequestType:
 
     prpa_in201310_uv02: Optional[PrpaIn201310Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201310UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201310UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
     assertion: Optional[AssertionType] = field(
         default=None,
-        metadata=dict(
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
@@ -495,12 +495,12 @@ class PixconsumerPrpaIn201310UvsecuredRequestType:
 
     prpa_in201310_uv02: Optional[PrpaIn201310Uv02] = field(
         default=None,
-        metadata=dict(
-            name="PRPA_IN201310UV02",
-            type="Element",
-            namespace="urn:hl7-org:v3",
-            required=True
-        )
+        metadata={
+            "name": "PRPA_IN201310UV02",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        }
     )
 
 
