@@ -8640,289 +8640,328 @@ class XhtmlObjectType:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    h1: Optional["XhtmlH1Type"] = field(
-        default=None,
+    h1: List["XhtmlH1Type"] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    h2: Optional[XhtmlH2Type] = field(
-        default=None,
+    h2: List[XhtmlH2Type] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    h3: Optional[XhtmlH3Type] = field(
-        default=None,
+    h3: List[XhtmlH3Type] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    h4: Optional[XhtmlH4Type] = field(
-        default=None,
+    h4: List[XhtmlH4Type] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    h5: Optional[XhtmlH5Type] = field(
-        default=None,
+    h5: List[XhtmlH5Type] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    h6: Optional[XhtmlH6Type] = field(
-        default=None,
+    h6: List[XhtmlH6Type] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    ul: Optional[XhtmlUlType] = field(
-        default=None,
+    ul: List[XhtmlUlType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    ol: Optional[XhtmlOlType] = field(
-        default=None,
+    ol: List[XhtmlOlType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    dl: Optional[XhtmlDlType] = field(
-        default=None,
+    dl: List[XhtmlDlType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    p: Optional[XhtmlPType] = field(
-        default=None,
+    p: List[XhtmlPType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    div: Optional[XhtmlDivType] = field(
-        default=None,
+    div: List[XhtmlDivType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    pre: Optional[XhtmlPreType] = field(
-        default=None,
+    pre: List[XhtmlPreType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    blockquote: Optional[XhtmlBlockquoteType] = field(
-        default=None,
+    blockquote: List[XhtmlBlockquoteType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    address: Optional["XhtmlAddressType"] = field(
-        default=None,
+    address: List["XhtmlAddressType"] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    hr: Optional[XhtmlHrType] = field(
-        default=None,
+    hr: List[XhtmlHrType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
-            "required": True,
+            "sequential": True,
         }
     )
-    table: Optional[XhtmlTableType] = field(
-        default=None,
+    table: List[XhtmlTableType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    br: Optional[XhtmlBrType] = field(
-        default=None,
+    br: List[XhtmlBrType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    span: Optional["XhtmlSpanType"] = field(
-        default=None,
+    span: List["XhtmlSpanType"] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    em: Optional["XhtmlEmType"] = field(
-        default=None,
+    em: List["XhtmlEmType"] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    strong: Optional[XhtmlStrongType] = field(
-        default=None,
+    strong: List[XhtmlStrongType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    dfn: Optional[XhtmlDfnType] = field(
-        default=None,
+    dfn: List[XhtmlDfnType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    code: Optional[XhtmlCodeType] = field(
-        default=None,
+    code: List[XhtmlCodeType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    samp: Optional[XhtmlSampType] = field(
-        default=None,
+    samp: List[XhtmlSampType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    kbd: Optional[XhtmlKbdType] = field(
-        default=None,
+    kbd: List[XhtmlKbdType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    var: Optional[XhtmlVarType] = field(
-        default=None,
+    var: List[XhtmlVarType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    cite: Optional[XhtmlCiteType] = field(
-        default=None,
+    cite: List[XhtmlCiteType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    abbr: Optional[XhtmlAbbrType] = field(
-        default=None,
+    abbr: List[XhtmlAbbrType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    acronym: Optional[XhtmlAcronymType] = field(
-        default=None,
+    acronym: List[XhtmlAcronymType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    q: Optional[XhtmlQType] = field(
-        default=None,
+    q: List[XhtmlQType] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    tt: Optional["XhtmlInlPresType"] = field(
-        default=None,
+    tt: List["XhtmlInlPresType"] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    i: Optional["XhtmlInlPresType"] = field(
-        default=None,
+    i: List["XhtmlInlPresType"] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    b: Optional["XhtmlInlPresType"] = field(
-        default=None,
+    b: List["XhtmlInlPresType"] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    big: Optional["XhtmlInlPresType"] = field(
-        default=None,
+    big: List["XhtmlInlPresType"] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    small: Optional["XhtmlInlPresType"] = field(
-        default=None,
+    small: List["XhtmlInlPresType"] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    sub: Optional["XhtmlInlPresType"] = field(
-        default=None,
+    sub: List["XhtmlInlPresType"] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    sup: Optional["XhtmlInlPresType"] = field(
-        default=None,
+    sup: List["XhtmlInlPresType"] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    a: Optional["XhtmlAType"] = field(
-        default=None,
+    a: List["XhtmlAType"] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
-            "required": True,
+            "sequential": True,
         }
     )
-    object: Optional["XhtmlObjectType"] = field(
-        default=None,
+    object: List["XhtmlObjectType"] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    ins: Optional["XhtmlEditType"] = field(
-        default=None,
+    ins: List["XhtmlEditType"] = field(
+        default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
-    del_value: Optional["XhtmlEditType"] = field(
-        default=None,
+    del_value: List["XhtmlEditType"] = field(
+        default_factory=list,
         metadata={
             "name": "del",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
+            "sequential": True,
         }
     )
     space: XhtmlObjectTypeValue = field(
