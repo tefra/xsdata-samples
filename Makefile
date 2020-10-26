@@ -27,6 +27,9 @@ build-travelport:
 test-travelport:
 	pytest travelport
 
+mypy-travelport:
+	mypy travelport/models
+
 test-bnm:
 	pytest bnm
 
