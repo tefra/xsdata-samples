@@ -1,0 +1,6870 @@
+{
+ "the_header": {
+  "req_if_header": {
+   "comment": null,
+   "creation_time": "2020-07-07T15:13:23.601197",
+   "repository_id": null,
+   "req_if_tool_id": "TReqz",
+   "req_if_version": "1.0",
+   "source_tool_id": "Jira",
+   "title": "KuFu_Testfunktion",
+   "identifier": "_9e243b7d-3fbd-4994-96ed-544d1597ac00"
+  }
+ },
+ "core_content": {
+  "req_if_content": {
+   "datatypes": {
+    "datatype_definition_boolean": [],
+    "datatype_definition_date": [],
+    "datatype_definition_enumeration": [
+     {
+      "alternative_id": null,
+      "specified_values": {
+       "enum_value": [
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 0,
+           "other_content": "-1"
+          }
+         },
+         "desc": null,
+         "identifier": "_98c84b85-0043-4911-a0a3-42a48ec8a4fd",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "Peter_Test"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 0,
+           "other_content": "-1"
+          }
+         },
+         "desc": null,
+         "identifier": "_342c6db4-78ad-4525-96bc-15b07ae0a36b",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "Max_Mustermann"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 0,
+           "other_content": "-1"
+          }
+         },
+         "desc": null,
+         "identifier": "_caef9d66-4967-4067-9749-fcd67f22faf2",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "User_1"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 0,
+           "other_content": "-1"
+          }
+         },
+         "desc": null,
+         "identifier": "_df43a5b5-04c9-4807-b5a1-dbb63a4788b7",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "User_2"
+        }
+       ]
+      },
+      "desc": null,
+      "identifier": "_0a3b23c3-ceff-46b0-9904-27e69a60d534",
+      "last_change": "2020-06-18T11:21:02+02:00",
+      "long_name": "t_Reviewer_Testing"
+     },
+     {
+      "alternative_id": null,
+      "specified_values": {
+       "enum_value": [
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 10,
+           "other_content": "4"
+          }
+         },
+         "desc": null,
+         "identifier": "_9a287866-708f-4a8c-abab-259680b9cd61",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "im_Review"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 20,
+           "other_content": "12"
+          }
+         },
+         "desc": null,
+         "identifier": "_7fe843e7-a5db-4299-91fc-9c7d068402fc",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "zu_Kl\u00e4ren"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 30,
+           "other_content": "8"
+          }
+         },
+         "desc": null,
+         "identifier": "_f9437ec4-b92e-4d3b-ae1b-4de4f10de27e",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "testbar"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 40,
+           "other_content": "6"
+          }
+         },
+         "desc": null,
+         "identifier": "_1f754c62-71e9-473c-9b94-d11abaec0c79",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "nicht_testbar"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 0,
+           "other_content": "-1"
+          }
+         },
+         "desc": null,
+         "identifier": "_37429d02-48c0-4f3a-bb66-2fc0d99e9851",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "n/a"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 99,
+           "other_content": "-1"
+          }
+         },
+         "desc": null,
+         "identifier": "_c2266813-bdad-42c7-8b60-04e9ee1c0f63",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "TBD"
+        }
+       ]
+      },
+      "desc": null,
+      "identifier": "_7937b70c-f4c9-4944-8df0-36660f1d15a9",
+      "last_change": "2020-06-18T11:21:02+02:00",
+      "long_name": "t_Status Testing"
+     },
+     {
+      "alternative_id": null,
+      "specified_values": {
+       "enum_value": [
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 10,
+           "other_content": "4"
+          }
+         },
+         "desc": null,
+         "identifier": "_fcf54bdf-c824-4584-9cb2-e52f45cf5886",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "Fahrzeug"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 20,
+           "other_content": "10"
+          }
+         },
+         "desc": null,
+         "identifier": "_ff2c7b41-c679-42e3-aa45-aa42534b5c5c",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "HIL"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 0,
+           "other_content": "6"
+          }
+         },
+         "desc": null,
+         "identifier": "_69d5e5f2-6f34-436f-9aae-e22d438a5e42",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "TBD"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 99,
+           "other_content": "11"
+          }
+         },
+         "desc": null,
+         "identifier": "_42f7f695-7b34-466f-889e-cdaf7834ca17",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "n/a"
+        }
+       ]
+      },
+      "desc": null,
+      "identifier": "_db82652b-8684-40d3-b4a0-f2cb3419691b",
+      "last_change": "2020-06-18T11:21:02+02:00",
+      "long_name": "t_Testort"
+     },
+     {
+      "alternative_id": null,
+      "specified_values": {
+       "enum_value": [
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 1,
+           "other_content": "-1"
+          }
+         },
+         "desc": null,
+         "identifier": "_e0e37fdc-ba4a-432a-b7d9-e1ef7aead8a4",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "TBD"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 10,
+           "other_content": "-1"
+          }
+         },
+         "desc": null,
+         "identifier": "_e15d0ce4-8136-473f-9aa5-7b397713d06a",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "Funktionale Anforderung"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 20,
+           "other_content": "-1"
+          }
+         },
+         "desc": null,
+         "identifier": "_89342424-e9dd-411e-a853-163813bed665",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "Nicht-funktionale Anforderung"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 30,
+           "other_content": "-1"
+          }
+         },
+         "desc": null,
+         "identifier": "_db3e20f4-4644-4cf6-8f54-f37c60d9065d",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "Information"
+        },
+        {
+         "alternative_id": null,
+         "properties": {
+          "embedded_value": {
+           "key": 40,
+           "other_content": "-1"
+          }
+         },
+         "desc": null,
+         "identifier": "_5183bdc7-cc53-4a23-a485-48f5ae866533",
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "\u00dcberschrift"
+        }
+       ]
+      },
+      "desc": null,
+      "identifier": "_e5629e97-8e39-4045-bc53-3a7745557619",
+      "last_change": "2020-06-18T11:21:02+02:00",
+      "long_name": "AnfTyp"
+     }
+    ],
+    "datatype_definition_integer": [],
+    "datatype_definition_real": [],
+    "datatype_definition_string": [
+     {
+      "alternative_id": null,
+      "desc": null,
+      "identifier": "_3d82caa2-9d92-4c70-a50d-1ab9b085fde7",
+      "last_change": "2020-06-18T11:21:02+02:00",
+      "long_name": "String",
+      "max_length": 1024
+     }
+    ],
+    "datatype_definition_xhtml": [
+     {
+      "alternative_id": null,
+      "desc": null,
+      "identifier": "_46bd8741-717f-46f7-a414-1b5c41f9f56e",
+      "last_change": "2020-06-18T11:21:02+02:00",
+      "long_name": "Text"
+     }
+    ]
+   },
+   "spec_types": {
+    "relation_group_type": [],
+    "spec_object_type": [
+     {
+      "alternative_id": null,
+      "spec_attributes": {
+       "attribute_definition_boolean": [],
+       "attribute_definition_date": [],
+       "attribute_definition_enumeration": [
+        {
+         "default_value": {
+          "attribute_value_enumeration": {
+           "definition": {
+            "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+           },
+           "values": {
+            "enum_value_ref": [
+             "_c2266813-bdad-42c7-8b60-04e9ee1c0f63"
+            ]
+           }
+          }
+         },
+         "alternative_id": null,
+         "type": {
+          "datatype_definition_enumeration_ref": "_7937b70c-f4c9-4944-8df0-36660f1d15a9"
+         },
+         "desc": null,
+         "identifier": "_91d05124-3a58-4c28-84bd-ea29744ff69c",
+         "is_editable": false,
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "Status_Testing",
+         "multi_valued": false
+        },
+        {
+         "default_value": {
+          "attribute_value_enumeration": {
+           "definition": {
+            "attribute_definition_enumeration_ref": "_02dcd7b1-a607-40f8-bfb6-5f4435dd696d"
+           },
+           "values": {
+            "enum_value_ref": [
+             "_69d5e5f2-6f34-436f-9aae-e22d438a5e42"
+            ]
+           }
+          }
+         },
+         "alternative_id": null,
+         "type": {
+          "datatype_definition_enumeration_ref": "_db82652b-8684-40d3-b4a0-f2cb3419691b"
+         },
+         "desc": null,
+         "identifier": "_02dcd7b1-a607-40f8-bfb6-5f4435dd696d",
+         "is_editable": false,
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "Testort",
+         "multi_valued": true
+        },
+        {
+         "default_value": {
+          "attribute_value_enumeration": {
+           "definition": {
+            "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+           },
+           "values": {
+            "enum_value_ref": [
+             "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+            ]
+           }
+          }
+         },
+         "alternative_id": null,
+         "type": {
+          "datatype_definition_enumeration_ref": "_e5629e97-8e39-4045-bc53-3a7745557619"
+         },
+         "desc": null,
+         "identifier": "_7a29d21c-052c-4599-8381-3c743c1b6504",
+         "is_editable": false,
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "Typ",
+         "multi_valued": false
+        }
+       ],
+       "attribute_definition_integer": [],
+       "attribute_definition_real": [],
+       "attribute_definition_string": [
+        {
+         "alternative_id": null,
+         "default_value": null,
+         "type": {
+          "datatype_definition_string_ref": "_3d82caa2-9d92-4c70-a50d-1ab9b085fde7"
+         },
+         "desc": null,
+         "identifier": "_f0b16293-8a23-4f58-a325-91cfcce5aa15",
+         "is_editable": false,
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "Object Identifier"
+        }
+       ],
+       "attribute_definition_xhtml": [
+        {
+         "alternative_id": null,
+         "default_value": null,
+         "type": {
+          "datatype_definition_xhtml_ref": "_46bd8741-717f-46f7-a414-1b5c41f9f56e"
+         },
+         "desc": null,
+         "identifier": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21",
+         "is_editable": false,
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "ReqIF.ChapterName"
+        },
+        {
+         "alternative_id": null,
+         "default_value": null,
+         "type": {
+          "datatype_definition_xhtml_ref": "_46bd8741-717f-46f7-a414-1b5c41f9f56e"
+         },
+         "desc": null,
+         "identifier": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9",
+         "is_editable": false,
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "ReqIF.Text"
+        },
+        {
+         "alternative_id": null,
+         "default_value": null,
+         "type": {
+          "datatype_definition_xhtml_ref": "_46bd8741-717f-46f7-a414-1b5c41f9f56e"
+         },
+         "desc": null,
+         "identifier": "_2ba9b86e-336e-4449-82ab-b91cfe54d6d5",
+         "is_editable": false,
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "Kommentar_Testing"
+        }
+       ]
+      },
+      "desc": null,
+      "identifier": "_8a253863-8e29-4cb7-9f06-4666c698f8b2",
+      "last_change": "2020-06-18T11:21:01+02:00",
+      "long_name": "KuFu_Testfunktion_OBJECT-TYPE"
+     }
+    ],
+    "spec_relation_type": [],
+    "specification_type": [
+     {
+      "alternative_id": null,
+      "spec_attributes": {
+       "attribute_definition_boolean": [],
+       "attribute_definition_date": [],
+       "attribute_definition_enumeration": [
+        {
+         "default_value": {
+          "attribute_value_enumeration": null
+         },
+         "alternative_id": null,
+         "type": {
+          "datatype_definition_enumeration_ref": "_0a3b23c3-ceff-46b0-9904-27e69a60d534"
+         },
+         "desc": null,
+         "identifier": "_747d7404-99f5-4cde-a4e4-e50d80d3cbf8",
+         "is_editable": true,
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "Reviewer_Testing",
+         "multi_valued": false
+        },
+        {
+         "default_value": {
+          "attribute_value_enumeration": {
+           "definition": {
+            "attribute_definition_enumeration_ref": "_a00bdc41-b33c-4b1e-9862-099a9969a433"
+           },
+           "values": {
+            "enum_value_ref": [
+             "_c2266813-bdad-42c7-8b60-04e9ee1c0f63"
+            ]
+           }
+          }
+         },
+         "alternative_id": null,
+         "type": {
+          "datatype_definition_enumeration_ref": "_7937b70c-f4c9-4944-8df0-36660f1d15a9"
+         },
+         "desc": null,
+         "identifier": "_a00bdc41-b33c-4b1e-9862-099a9969a433",
+         "is_editable": true,
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "Status_Testing",
+         "multi_valued": false
+        },
+        {
+         "default_value": {
+          "attribute_value_enumeration": {
+           "definition": {
+            "attribute_definition_enumeration_ref": "_c16d7f65-a6c3-4449-a335-6941c6f5a7a7"
+           },
+           "values": {
+            "enum_value_ref": [
+             "_69d5e5f2-6f34-436f-9aae-e22d438a5e42"
+            ]
+           }
+          }
+         },
+         "alternative_id": null,
+         "type": {
+          "datatype_definition_enumeration_ref": "_db82652b-8684-40d3-b4a0-f2cb3419691b"
+         },
+         "desc": null,
+         "identifier": "_c16d7f65-a6c3-4449-a335-6941c6f5a7a7",
+         "is_editable": true,
+         "last_change": "2020-06-18T11:21:02+02:00",
+         "long_name": "Testort",
+         "multi_valued": true
+        }
+       ],
+       "attribute_definition_integer": [],
+       "attribute_definition_real": [],
+       "attribute_definition_string": [],
+       "attribute_definition_xhtml": []
+      },
+      "desc": null,
+      "identifier": "_1e784a62-6117-4b98-b5c5-844d8b5ccedc",
+      "last_change": "2020-06-18T11:21:01+02:00",
+      "long_name": "KuFu_Testfunktion_DOCTYPE_GROUP-TYPE"
+     }
+    ]
+   },
+   "spec_objects": {
+    "spec_object": [
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_1"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}b",
+             "value": {
+              "content": [
+               "Titel",
+               " : Test Titel  "
+              ],
+              "br": [],
+              "span": [],
+              "em": [],
+              "strong": [],
+              "dfn": [],
+              "code": [],
+              "samp": [],
+              "kbd": [],
+              "var": [],
+              "cite": [],
+              "abbr": [],
+              "acronym": [],
+              "q": [],
+              "tt": [],
+              "i": [],
+              "b": [],
+              "big": [],
+              "small": [],
+              "sub": [],
+              "sup": [],
+              "a": [],
+              "object": [],
+              "ins": [],
+              "del_value": [],
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null,
+              "lang": null,
+              "style": null
+             }
+            },
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}br",
+             "value": {
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null
+             }
+            },
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}b",
+             "value": {
+              "content": [
+               "Bearbeiter",
+               " : Test Bearbeiter  "
+              ],
+              "br": [],
+              "span": [],
+              "em": [],
+              "strong": [],
+              "dfn": [],
+              "code": [],
+              "samp": [],
+              "kbd": [],
+              "var": [],
+              "cite": [],
+              "abbr": [],
+              "acronym": [],
+              "q": [],
+              "tt": [],
+              "i": [],
+              "b": [],
+              "big": [],
+              "small": [],
+              "sub": [],
+              "sup": [],
+              "a": [],
+              "object": [],
+              "ins": [],
+              "del_value": [],
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null,
+              "lang": null,
+              "style": null
+             }
+            },
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}br",
+             "value": {
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null
+             }
+            },
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}b",
+             "value": {
+              "content": [
+               "Abt./OE",
+               " : Test Abteilung  "
+              ],
+              "br": [],
+              "span": [],
+              "em": [],
+              "strong": [],
+              "dfn": [],
+              "code": [],
+              "samp": [],
+              "kbd": [],
+              "var": [],
+              "cite": [],
+              "abbr": [],
+              "acronym": [],
+              "q": [],
+              "tt": [],
+              "i": [],
+              "b": [],
+              "big": [],
+              "small": [],
+              "sub": [],
+              "sup": [],
+              "a": [],
+              "object": [],
+              "ins": [],
+              "del_value": [],
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null,
+              "lang": null,
+              "style": null
+             }
+            },
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}br",
+             "value": {
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null
+             }
+            },
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}b",
+             "value": {
+              "content": [
+               "Telefon",
+               " : Test Telefon  "
+              ],
+              "br": [],
+              "span": [],
+              "em": [],
+              "strong": [],
+              "dfn": [],
+              "code": [],
+              "samp": [],
+              "kbd": [],
+              "var": [],
+              "cite": [],
+              "abbr": [],
+              "acronym": [],
+              "q": [],
+              "tt": [],
+              "i": [],
+              "b": [],
+              "big": [],
+              "small": [],
+              "sub": [],
+              "sup": [],
+              "a": [],
+              "object": [],
+              "ins": [],
+              "del_value": [],
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null,
+              "lang": null,
+              "style": null
+             }
+            },
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}br",
+             "value": {
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null
+             }
+            },
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}b",
+             "value": {
+              "content": [
+               "E-Mail:",
+               "  some.body@example.com  "
+              ],
+              "br": [],
+              "span": [],
+              "em": [],
+              "strong": [],
+              "dfn": [],
+              "code": [],
+              "samp": [],
+              "kbd": [],
+              "var": [],
+              "cite": [],
+              "abbr": [],
+              "acronym": [],
+              "q": [],
+              "tt": [],
+              "i": [],
+              "b": [],
+              "big": [],
+              "small": [],
+              "sub": [],
+              "sup": [],
+              "a": [],
+              "object": [],
+              "ins": [],
+              "del_value": [],
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null,
+              "lang": null,
+              "style": null
+             }
+            },
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}br",
+             "value": {
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null
+             }
+            },
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}b",
+             "value": {
+              "content": [
+               "Erstausgabe:",
+               "  09.03.2020  "
+              ],
+              "br": [],
+              "span": [],
+              "em": [],
+              "strong": [],
+              "dfn": [],
+              "code": [],
+              "samp": [],
+              "kbd": [],
+              "var": [],
+              "cite": [],
+              "abbr": [],
+              "acronym": [],
+              "q": [],
+              "tt": [],
+              "i": [],
+              "b": [],
+              "big": [],
+              "small": [],
+              "sub": [],
+              "sup": [],
+              "a": [],
+              "object": [],
+              "ins": [],
+              "del_value": [],
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null,
+              "lang": null,
+              "style": null
+             }
+            },
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}br",
+             "value": {
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null
+             }
+            },
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}b",
+             "value": {
+              "content": [
+               "Datum \u00c4nderungsstand",
+               " : 09.03.2020  "
+              ],
+              "br": [],
+              "span": [],
+              "em": [],
+              "strong": [],
+              "dfn": [],
+              "code": [],
+              "samp": [],
+              "kbd": [],
+              "var": [],
+              "cite": [],
+              "abbr": [],
+              "acronym": [],
+              "q": [],
+              "tt": [],
+              "i": [],
+              "b": [],
+              "big": [],
+              "small": [],
+              "sub": [],
+              "sup": [],
+              "a": [],
+              "object": [],
+              "ins": [],
+              "del_value": [],
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null,
+              "lang": null,
+              "style": null
+             }
+            },
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}br",
+             "value": {
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null
+             }
+            },
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}b",
+             "value": {
+              "content": [
+               "\u00c4nderungsstand",
+               " : V1.0  "
+              ],
+              "br": [],
+              "span": [],
+              "em": [],
+              "strong": [],
+              "dfn": [],
+              "code": [],
+              "samp": [],
+              "kbd": [],
+              "var": [],
+              "cite": [],
+              "abbr": [],
+              "acronym": [],
+              "q": [],
+              "tt": [],
+              "i": [],
+              "b": [],
+              "big": [],
+              "small": [],
+              "sub": [],
+              "sup": [],
+              "a": [],
+              "object": [],
+              "ins": [],
+              "del_value": [],
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null,
+              "lang": null,
+              "style": null
+             }
+            }
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_e2d6c16e-f1d3-46cf-8e28-61b5fb533f14",
+      "last_change": "2020-07-07T15:13:24.921169",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_5183bdc7-cc53-4a23-a485-48f5ae866533"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_2"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "Einleitung  "
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_82f7941c-35fb-474d-b440-cd4bb3a5cb07",
+      "last_change": "2020-07-07T15:13:24.930863",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_5183bdc7-cc53-4a23-a485-48f5ae866533"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_3"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "\u00c4nderungsverfolgung  "
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_50139ee3-d7e1-4263-b6f8-197094383048",
+      "last_change": "2020-07-07T15:13:24.930863",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_14"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}span",
+             "value": {
+              "content": [
+               {
+                "qname": "{http://www.w3.org/1999/xhtml}object",
+                "value": {
+                 "content": [],
+                 "param": [],
+                 "h1": [],
+                 "h2": [],
+                 "h3": [],
+                 "h4": [],
+                 "h5": [],
+                 "h6": [],
+                 "ul": [],
+                 "ol": [],
+                 "dl": [],
+                 "p": [],
+                 "div": [],
+                 "pre": [],
+                 "blockquote": [],
+                 "address": [],
+                 "hr": [],
+                 "table": [],
+                 "br": [],
+                 "span": [],
+                 "em": [],
+                 "strong": [],
+                 "dfn": [],
+                 "code": [],
+                 "samp": [],
+                 "kbd": [],
+                 "var": [],
+                 "cite": [],
+                 "abbr": [],
+                 "acronym": [],
+                 "q": [],
+                 "tt": [],
+                 "i": [],
+                 "b": [],
+                 "big": [],
+                 "small": [],
+                 "sub": [],
+                 "sup": [],
+                 "a": [],
+                 "object": [],
+                 "ins": [],
+                 "del_value": [],
+                 "space": "preserve",
+                 "id": null,
+                 "class_value": null,
+                 "title": null,
+                 "lang": null,
+                 "style": null,
+                 "declare": null,
+                 "classid": null,
+                 "codebase": null,
+                 "data": "KuFu_Testfunktion_00270cf8/21744/_3f36bf4d-5428-4134-9059-02e7c8a3af26_1.png",
+                 "type": "image/png",
+                 "codetype": null,
+                 "archive": [],
+                 "standby": null,
+                 "height": null,
+                 "width": null,
+                 "name": null,
+                 "tabindex": null
+                }
+               }
+              ],
+              "br": [],
+              "span": [],
+              "em": [],
+              "strong": [],
+              "dfn": [],
+              "code": [],
+              "samp": [],
+              "kbd": [],
+              "var": [],
+              "cite": [],
+              "abbr": [],
+              "acronym": [],
+              "q": [],
+              "tt": [],
+              "i": [],
+              "b": [],
+              "big": [],
+              "small": [],
+              "sub": [],
+              "sup": [],
+              "a": [],
+              "object": [],
+              "ins": [],
+              "del_value": [],
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null,
+              "lang": null,
+              "style": ""
+             }
+            }
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_bf3077ec-1755-4001-ba06-6b136d478355",
+      "last_change": "2020-07-07T15:13:24.930863",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_5183bdc7-cc53-4a23-a485-48f5ae866533"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_4"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "Dokumentenzweck  "
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_9e51998a-9b74-40d7-b703-244100f0adde",
+      "last_change": "2020-07-07T15:13:24.930863",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_15"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Das vorliegende Lastenheft beschreibt die Kundenfunktionsauspr\u00e4gung der",
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}br",
+             "value": {
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null
+             }
+            },
+            {
+             "qname": null,
+             "text": "\nFunktion \"Testfunktion\"  ",
+             "tail": null,
+             "ns_map": {},
+             "children": [],
+             "attributes": {}
+            }
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_a49cb529-786e-4af9-b55c-07d6e9b4f9ab",
+      "last_change": "2020-07-07T15:13:24.941303",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_5183bdc7-cc53-4a23-a485-48f5ae866533"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_5"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "Geltungsbereich  "
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_515e27c8-b859-4914-827d-7df0c11bc499",
+      "last_change": "2020-07-07T15:13:24.945999",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_16"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Lorem ipsum  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_9d91426d-3e2f-4d63-9114-f8d947f23beb",
+      "last_change": "2020-07-07T15:13:24.945999",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_5183bdc7-cc53-4a23-a485-48f5ae866533"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_6"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "Abk\u00fcrzungen  "
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_f6093ebf-ef0d-48dc-9f1a-a162d4314f80",
+      "last_change": "2020-07-07T15:13:24.945999",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_17"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "ACA:  ",
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}br",
+             "value": {
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null
+             }
+            },
+            {
+             "qname": null,
+             "text": "\nAdaptive Cruise Assist  ",
+             "tail": null,
+             "ns_map": {},
+             "children": [],
+             "attributes": {}
+            }
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_7f8c63fb-5d9f-4dea-8c83-e75fee2f89c7",
+      "last_change": "2020-07-07T15:13:24.951041",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_18"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "ACC:  ",
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}br",
+             "value": {
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null
+             }
+            },
+            {
+             "qname": null,
+             "text": "\nAdaptive Cruise Control  ",
+             "tail": null,
+             "ns_map": {},
+             "children": [],
+             "attributes": {}
+            }
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_ccb938a6-a67d-4a26-bbcc-5be6c320d218",
+      "last_change": "2020-07-07T15:13:24.951041",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_19"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "HMI:  ",
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}br",
+             "value": {
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null
+             }
+            },
+            {
+             "qname": null,
+             "text": "\nHuman Maschine Interface  ",
+             "tail": null,
+             "ns_map": {},
+             "children": [],
+             "attributes": {}
+            }
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_62886a45-3b25-4502-9a84-81cb636b75c8",
+      "last_change": "2020-07-07T15:13:24.951041",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_5183bdc7-cc53-4a23-a485-48f5ae866533"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_7"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "Definitionen  "
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_a28b6e46-ad92-4f09-abac-f091acd8e10f",
+      "last_change": "2020-07-07T15:13:24.951041",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_20"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Ego-Fahrzeug:  ",
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}br",
+             "value": {
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null
+             }
+            },
+            {
+             "qname": null,
+             "text": "\nDas eigene Fahrzeug auf das sich die Funktionsberschreibung bezieht  ",
+             "tail": null,
+             "ns_map": {},
+             "children": [],
+             "attributes": {}
+            }
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_47051ba0-c21f-4218-b933-d1dd23787ce7",
+      "last_change": "2020-07-07T15:13:24.960890",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_21"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Ego-Fahrstreifen:  ",
+            {
+             "qname": "{http://www.w3.org/1999/xhtml}br",
+             "value": {
+              "space": "preserve",
+              "id": null,
+              "class_value": null,
+              "title": null
+             }
+            },
+            {
+             "qname": null,
+             "text": "\nFahrstreifen auf dem sich das Ego-Fahrzeug bewegt  ",
+             "tail": null,
+             "ns_map": {},
+             "children": [],
+             "attributes": {}
+            }
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_680028f8-0938-483c-ad3e-840c23fe8f99",
+      "last_change": "2020-07-07T15:13:24.960890",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_5183bdc7-cc53-4a23-a485-48f5ae866533"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_8"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "Normen und Vorschriften  "
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_db40b8e7-3783-457e-b07b-96ee213efa5c",
+      "last_change": "2020-07-07T15:13:24.960890",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_22"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "ISO26262: Road Vehicles \u2013 Functional Safety  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_05e79ee1-23ec-44a6-afc6-3493027e2337",
+      "last_change": "2020-07-07T15:13:24.960890",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_5183bdc7-cc53-4a23-a485-48f5ae866533"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_9"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "Fahrzeugfunktion Testfunktion  "
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_241dbe84-34c8-48e9-a60a-11a2ad04520d",
+      "last_change": "2020-07-07T15:13:24.960890",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_5183bdc7-cc53-4a23-a485-48f5ae866533"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_10"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "Funktionsbeschreibung  "
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_20b0c130-bb71-4ba1-a333-7c57baa2d324",
+      "last_change": "2020-07-07T15:13:24.960890",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_23"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Infomration 1  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_48c9c0e5-f623-49ac-87de-a743f7d403ba",
+      "last_change": "2020-07-07T15:13:24.960890",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_f9437ec4-b92e-4d3b-ae1b-4de4f10de27e"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_e15d0ce4-8136-473f-9aa5-7b397713d06a"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_24"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "Test Kommentar 30.06.2020 von Simon\n"
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_2ba9b86e-336e-4449-82ab-b91cfe54d6d5"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Anforderung 1  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_9f4a5535-bc91-4efb-b302-c83d700c6fe6",
+      "last_change": "2020-07-07T15:13:24.970923",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_1f754c62-71e9-473c-9b94-d11abaec0c79"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_e15d0ce4-8136-473f-9aa5-7b397713d06a"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_25"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "No Findings"
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_2ba9b86e-336e-4449-82ab-b91cfe54d6d5"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Anforderung 2  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_d5d5f8fb-8046-4ab0-a99f-569175b6ae92",
+      "last_change": "2020-07-07T15:13:24.970923",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_1f754c62-71e9-473c-9b94-d11abaec0c79"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_e15d0ce4-8136-473f-9aa5-7b397713d06a"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_26"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "Logischer Widerspruch"
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_2ba9b86e-336e-4449-82ab-b91cfe54d6d5"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Anforderung 3  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_4c488594-3726-4e4a-98a3-fef186876f30",
+      "last_change": "2020-07-07T15:13:24.970923",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_27"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Information 2  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_85a1ce54-8795-451c-bddb-7748be63e025",
+      "last_change": "2020-07-07T15:13:24.970923",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_e15d0ce4-8136-473f-9aa5-7b397713d06a"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_28"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Anforderung 4  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_24a014d7-9f79-4a24-b7ee-348f6d2352cc",
+      "last_change": "2020-07-07T15:13:24.970923",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_f9437ec4-b92e-4d3b-ae1b-4de4f10de27e"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_e15d0ce4-8136-473f-9aa5-7b397713d06a"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_29"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "fehlende Werte xy"
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_2ba9b86e-336e-4449-82ab-b91cfe54d6d5"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Anforderung 5  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_e7e1f47f-f938-45dc-820d-cfaf4a292f9b",
+      "last_change": "2020-07-07T15:13:24.970923",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_f9437ec4-b92e-4d3b-ae1b-4de4f10de27e"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_e15d0ce4-8136-473f-9aa5-7b397713d06a"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_30"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Anforderung 6  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_6bd1c880-a619-4996-b835-af72a9a1f3b7",
+      "last_change": "2020-07-07T15:13:24.970923",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_5183bdc7-cc53-4a23-a485-48f5ae866533"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_11"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "HMI-Konzept  "
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_b4bdc373-dd3b-42d1-ab2a-b672505e573e",
+      "last_change": "2020-07-07T15:13:24.970923",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_31"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Information 3  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_f54c3390-d0f5-4821-9f48-5b560de9f05b",
+      "last_change": "2020-07-07T15:13:24.981229",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_32"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Information 4  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_e6770b8d-d6ce-4398-8fb2-49fced2f9caf",
+      "last_change": "2020-07-07T15:13:24.981229",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_1f754c62-71e9-473c-9b94-d11abaec0c79"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_e15d0ce4-8136-473f-9aa5-7b397713d06a"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_33"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Anforderung 7  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_5337254e-b5bd-4de3-86bf-54048314739b",
+      "last_change": "2020-07-07T15:13:24.981229",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_f9437ec4-b92e-4d3b-ae1b-4de4f10de27e"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_e15d0ce4-8136-473f-9aa5-7b397713d06a"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_34"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Anforderung 8  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_a665ae6e-12f9-4977-9f97-959df584bdce",
+      "last_change": "2020-07-07T15:13:24.981229",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_e15d0ce4-8136-473f-9aa5-7b397713d06a"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_35"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Anforderung 9  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_b6e753c5-6882-49f7-babc-db09e3e4bce0",
+      "last_change": "2020-07-07T15:13:24.981229",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_5183bdc7-cc53-4a23-a485-48f5ae866533"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_12"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": null,
+          "div": {
+           "content": [
+            "Funktionale Sicherheit  "
+           ],
+           "h1": [],
+           "h2": [],
+           "h3": [],
+           "h4": [],
+           "h5": [],
+           "h6": [],
+           "ul": [],
+           "ol": [],
+           "dl": [],
+           "p": [],
+           "div": [],
+           "pre": [],
+           "blockquote": [],
+           "address": [],
+           "hr": [],
+           "table": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          }
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_7021bc0c-cfd2-41f9-8758-d9c06b8a983d",
+      "last_change": "2020-07-07T15:13:24.981229",
+      "long_name": null
+     },
+     {
+      "alternative_id": null,
+      "values": {
+       "attribute_value_boolean": [],
+       "attribute_value_date": [],
+       "attribute_value_enumeration": [
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_91d05124-3a58-4c28-84bd-ea29744ff69c"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_37429d02-48c0-4f3a-bb66-2fc0d99e9851"
+          ]
+         }
+        },
+        {
+         "definition": {
+          "attribute_definition_enumeration_ref": "_7a29d21c-052c-4599-8381-3c743c1b6504"
+         },
+         "values": {
+          "enum_value_ref": [
+           "_db3e20f4-4644-4cf6-8f54-f37c60d9065d"
+          ]
+         }
+        }
+       ],
+       "attribute_value_integer": [],
+       "attribute_value_real": [],
+       "attribute_value_string": [
+        {
+         "definition": {
+          "attribute_definition_string_ref": "_f0b16293-8a23-4f58-a325-91cfcce5aa15"
+         },
+         "the_value": "Test_13"
+        }
+       ],
+       "attribute_value_xhtml": [
+        {
+         "the_value": {
+          "p": {
+           "content": [],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
+         },
+         "is_simplified": null
+        },
+        {
+         "the_value": {
+          "p": {
+           "content": [
+            "Die FuSi - rlevanten Anforderungen ist im Modul \"XYZ\" definiert  "
+           ],
+           "br": [],
+           "span": [],
+           "em": [],
+           "strong": [],
+           "dfn": [],
+           "code": [],
+           "samp": [],
+           "kbd": [],
+           "var": [],
+           "cite": [],
+           "abbr": [],
+           "acronym": [],
+           "q": [],
+           "tt": [],
+           "i": [],
+           "b": [],
+           "big": [],
+           "small": [],
+           "sub": [],
+           "sup": [],
+           "a": [],
+           "object": [],
+           "ins": [],
+           "del_value": [],
+           "space": "preserve",
+           "id": null,
+           "class_value": null,
+           "title": null,
+           "lang": null,
+           "style": null
+          },
+          "div": null
+         },
+         "the_original_value": null,
+         "definition": {
+          "attribute_definition_xhtml_ref": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
+         },
+         "is_simplified": null
+        }
+       ]
+      },
+      "type": {
+       "spec_object_type_ref": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
+      },
+      "desc": null,
+      "identifier": "_2b78c61f-92f4-4c2a-9265-ca11a208a369",
+      "last_change": "2020-07-07T15:13:24.981229",
+      "long_name": null
+     }
+    ]
+   },
+   "spec_relations": null,
+   "specifications": {
+    "specification": [
+     {
+      "alternative_id": null,
+      "values": null,
+      "children": {
+       "spec_hierarchy": [
+        {
+         "alternative_id": null,
+         "children": null,
+         "editable_atts": null,
+         "object": {
+          "spec_object_ref": "_e2d6c16e-f1d3-46cf-8e28-61b5fb533f14"
+         },
+         "desc": null,
+         "identifier": "_3416a75-4ce-910-507-acd8e2f2aef",
+         "is_editable": true,
+         "is_table_internal": false,
+         "last_change": "2020-07-07T15:13:24.921169",
+         "long_name": null
+        },
+        {
+         "alternative_id": null,
+         "children": {
+          "spec_hierarchy": [
+           {
+            "alternative_id": null,
+            "children": {
+             "spec_hierarchy": [
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_bf3077ec-1755-4001-ba06-6b136d478355"
+               },
+               "desc": null,
+               "identifier": "_67c6a1e-ce5-d3d-fa7-8ab6d9af3fd",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.930863",
+               "long_name": null
+              }
+             ]
+            },
+            "editable_atts": null,
+            "object": {
+             "spec_object_ref": "_50139ee3-d7e1-4263-b6f8-197094383048"
+            },
+            "desc": null,
+            "identifier": "_6c8349c-726-ae6-e3b-396831a8398",
+            "is_editable": true,
+            "is_table_internal": false,
+            "last_change": "2020-07-07T15:13:24.930863",
+            "long_name": null
+           },
+           {
+            "alternative_id": null,
+            "children": {
+             "spec_hierarchy": [
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_a49cb529-786e-4af9-b55c-07d6e9b4f9ab"
+               },
+               "desc": null,
+               "identifier": "_2838023-778-fae-dc2-2708f721b78",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.941303",
+               "long_name": null
+              }
+             ]
+            },
+            "editable_atts": null,
+            "object": {
+             "spec_object_ref": "_9e51998a-9b74-40d7-b703-244100f0adde"
+            },
+            "desc": null,
+            "identifier": "_f457c54-a9d-d88-18e-ee47145a72c",
+            "is_editable": true,
+            "is_table_internal": false,
+            "last_change": "2020-07-07T15:13:24.930863",
+            "long_name": null
+           },
+           {
+            "alternative_id": null,
+            "children": {
+             "spec_hierarchy": [
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_9d91426d-3e2f-4d63-9114-f8d947f23beb"
+               },
+               "desc": null,
+               "identifier": "_b53b3a3-6ab-0ce-268-29151c9bde1",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.945999",
+               "long_name": null
+              }
+             ]
+            },
+            "editable_atts": null,
+            "object": {
+             "spec_object_ref": "_515e27c8-b859-4914-827d-7df0c11bc499"
+            },
+            "desc": null,
+            "identifier": "_d82c8d1-19a-817-d66-453cfb2e55f",
+            "is_editable": true,
+            "is_table_internal": false,
+            "last_change": "2020-07-07T15:13:24.945999",
+            "long_name": null
+           },
+           {
+            "alternative_id": null,
+            "children": {
+             "spec_hierarchy": [
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_7f8c63fb-5d9f-4dea-8c83-e75fee2f89c7"
+               },
+               "desc": null,
+               "identifier": "_093f65e-80a-95f-076-1c5722a46aa",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.951041",
+               "long_name": null
+              },
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_ccb938a6-a67d-4a26-bbcc-5be6c320d218"
+               },
+               "desc": null,
+               "identifier": "_7f39f83-7fb-b19-8ef-c628eba0259",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.951041",
+               "long_name": null
+              },
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_62886a45-3b25-4502-9a84-81cb636b75c8"
+               },
+               "desc": null,
+               "identifier": "_03afdbd-6e7-29b-25f-597834fa83a",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.951041",
+               "long_name": null
+              }
+             ]
+            },
+            "editable_atts": null,
+            "object": {
+             "spec_object_ref": "_f6093ebf-ef0d-48dc-9f1a-a162d4314f80"
+            },
+            "desc": null,
+            "identifier": "_72b32a1-754-a1c-9b3-95e0cb6cde7",
+            "is_editable": true,
+            "is_table_internal": false,
+            "last_change": "2020-07-07T15:13:24.945999",
+            "long_name": null
+           },
+           {
+            "alternative_id": null,
+            "children": {
+             "spec_hierarchy": [
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_47051ba0-c21f-4218-b933-d1dd23787ce7"
+               },
+               "desc": null,
+               "identifier": "_735b90b-568-25e-6c3-678819b6e05",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.960890",
+               "long_name": null
+              },
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_680028f8-0938-483c-ad3e-840c23fe8f99"
+               },
+               "desc": null,
+               "identifier": "_14bfa6b-148-5e4-bba-28a21ed3804",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.960890",
+               "long_name": null
+              }
+             ]
+            },
+            "editable_atts": null,
+            "object": {
+             "spec_object_ref": "_a28b6e46-ad92-4f09-abac-f091acd8e10f"
+            },
+            "desc": null,
+            "identifier": "_fc490ca-5c0-b12-9bb-3554a4fdf6f",
+            "is_editable": true,
+            "is_table_internal": false,
+            "last_change": "2020-07-07T15:13:24.951041",
+            "long_name": null
+           },
+           {
+            "alternative_id": null,
+            "children": {
+             "spec_hierarchy": [
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_05e79ee1-23ec-44a6-afc6-3493027e2337"
+               },
+               "desc": null,
+               "identifier": "_d2ddea1-f00-65c-862-e36bd4e3c7c",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.960890",
+               "long_name": null
+              }
+             ]
+            },
+            "editable_atts": null,
+            "object": {
+             "spec_object_ref": "_db40b8e7-3783-457e-b07b-96ee213efa5c"
+            },
+            "desc": null,
+            "identifier": "_e2c420d-28d-bf8-e0f-2ec19b37151",
+            "is_editable": true,
+            "is_table_internal": false,
+            "last_change": "2020-07-07T15:13:24.960890",
+            "long_name": null
+           }
+          ]
+         },
+         "editable_atts": null,
+         "object": {
+          "spec_object_ref": "_82f7941c-35fb-474d-b440-cd4bb3a5cb07"
+         },
+         "desc": null,
+         "identifier": "_17e6216-fc8-86d-a4d-bc0e1742c08",
+         "is_editable": true,
+         "is_table_internal": false,
+         "last_change": "2020-07-07T15:13:24.930863",
+         "long_name": null
+        },
+        {
+         "alternative_id": null,
+         "children": {
+          "spec_hierarchy": [
+           {
+            "alternative_id": null,
+            "children": {
+             "spec_hierarchy": [
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_48c9c0e5-f623-49ac-87de-a743f7d403ba"
+               },
+               "desc": null,
+               "identifier": "_d1fe173-08e-593-7ad-34b1d77e88d",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.960890",
+               "long_name": null
+              },
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_9f4a5535-bc91-4efb-b302-c83d700c6fe6"
+               },
+               "desc": null,
+               "identifier": "_43ec517-68b-edd-015-3edc9a11367",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.970923",
+               "long_name": null
+              },
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_d5d5f8fb-8046-4ab0-a99f-569175b6ae92"
+               },
+               "desc": null,
+               "identifier": "_fe9fc28-c3f-0af-42b-d3bead98a92",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.970923",
+               "long_name": null
+              },
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_4c488594-3726-4e4a-98a3-fef186876f30"
+               },
+               "desc": null,
+               "identifier": "_3ef8154-6f7-509-fe9-7004015c619",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.970923",
+               "long_name": null
+              },
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_85a1ce54-8795-451c-bddb-7748be63e025"
+               },
+               "desc": null,
+               "identifier": "_c7e1249-fc0-eb9-ed9-8c236bd1996",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.970923",
+               "long_name": null
+              },
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_24a014d7-9f79-4a24-b7ee-348f6d2352cc"
+               },
+               "desc": null,
+               "identifier": "_7647966-734-c29-486-3252e490f73",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.970923",
+               "long_name": null
+              },
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_e7e1f47f-f938-45dc-820d-cfaf4a292f9b"
+               },
+               "desc": null,
+               "identifier": "_54229ab-cfa-649-700-b83dd475529",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.970923",
+               "long_name": null
+              },
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_6bd1c880-a619-4996-b835-af72a9a1f3b7"
+               },
+               "desc": null,
+               "identifier": "_98dce83-a57-039-e16-467c9dae521",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.970923",
+               "long_name": null
+              }
+             ]
+            },
+            "editable_atts": null,
+            "object": {
+             "spec_object_ref": "_20b0c130-bb71-4ba1-a333-7c57baa2d324"
+            },
+            "desc": null,
+            "identifier": "_28dd2c7-55c-926-562-0b2ff0100bd",
+            "is_editable": true,
+            "is_table_internal": false,
+            "last_change": "2020-07-07T15:13:24.960890",
+            "long_name": null
+           },
+           {
+            "alternative_id": null,
+            "children": {
+             "spec_hierarchy": [
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_f54c3390-d0f5-4821-9f48-5b560de9f05b"
+               },
+               "desc": null,
+               "identifier": "_e2ef524-bf3-9fe-11d-a8e90fefdc9",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.981229",
+               "long_name": null
+              },
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_e6770b8d-d6ce-4398-8fb2-49fced2f9caf"
+               },
+               "desc": null,
+               "identifier": "_ac627ab-ccb-b62-c96-702f07f6425",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.981229",
+               "long_name": null
+              },
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_5337254e-b5bd-4de3-86bf-54048314739b"
+               },
+               "desc": null,
+               "identifier": "_38b3eff-baf-662-478-c76a704e9b5",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.981229",
+               "long_name": null
+              },
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_a665ae6e-12f9-4977-9f97-959df584bdce"
+               },
+               "desc": null,
+               "identifier": "_6974ce5-c66-610-44d-b9fed0ff954",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.981229",
+               "long_name": null
+              },
+              {
+               "alternative_id": null,
+               "children": null,
+               "editable_atts": null,
+               "object": {
+                "spec_object_ref": "_b6e753c5-6882-49f7-babc-db09e3e4bce0"
+               },
+               "desc": null,
+               "identifier": "_65b9eea-e1c-6bb-f0c-2a47751a186",
+               "is_editable": true,
+               "is_table_internal": false,
+               "last_change": "2020-07-07T15:13:24.981229",
+               "long_name": null
+              }
+             ]
+            },
+            "editable_atts": null,
+            "object": {
+             "spec_object_ref": "_b4bdc373-dd3b-42d1-ab2a-b672505e573e"
+            },
+            "desc": null,
+            "identifier": "_812b4ba-87f-ee0-c9d-3bbf5bbe87f",
+            "is_editable": true,
+            "is_table_internal": false,
+            "last_change": "2020-07-07T15:13:24.970923",
+            "long_name": null
+           }
+          ]
+         },
+         "editable_atts": null,
+         "object": {
+          "spec_object_ref": "_241dbe84-34c8-48e9-a60a-11a2ad04520d"
+         },
+         "desc": null,
+         "identifier": "_d09bf41-44a-365-46c-077ebb5e35c",
+         "is_editable": true,
+         "is_table_internal": false,
+         "last_change": "2020-07-07T15:13:24.960890",
+         "long_name": null
+        },
+        {
+         "alternative_id": null,
+         "children": {
+          "spec_hierarchy": [
+           {
+            "alternative_id": null,
+            "children": null,
+            "editable_atts": null,
+            "object": {
+             "spec_object_ref": "_2b78c61f-92f4-4c2a-9265-ca11a208a369"
+            },
+            "desc": null,
+            "identifier": "_2723d09-b63-85e-d7c-60cc007e8b9",
+            "is_editable": true,
+            "is_table_internal": false,
+            "last_change": "2020-07-07T15:13:24.981229",
+            "long_name": null
+           }
+          ]
+         },
+         "editable_atts": null,
+         "object": {
+          "spec_object_ref": "_7021bc0c-cfd2-41f9-8758-d9c06b8a983d"
+         },
+         "desc": null,
+         "identifier": "_a97da62-b09-b75-294-ffdc3e46390",
+         "is_editable": true,
+         "is_table_internal": false,
+         "last_change": "2020-07-07T15:13:24.981229",
+         "long_name": null
+        }
+       ]
+      },
+      "type": {
+       "specification_type_ref": "_1e784a62-6117-4b98-b5c5-844d8b5ccedc"
+      },
+      "desc": null,
+      "identifier": "_72296576-2d6f-498e-a267-5ccf60cb7ba4",
+      "last_change": "2020-06-18T11:21:01+02:00",
+      "long_name": "KuFu_Testfunktion"
+     }
+    ]
+   },
+   "spec_relation_groups": null
+  }
+ },
+ "tool_extensions": null,
+ "lang": null
+}
