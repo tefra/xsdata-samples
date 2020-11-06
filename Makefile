@@ -1,10 +1,10 @@
 all: build test mypy
 
-build: build-amadeus build-sabre build-travelport build-common build-reqif
+build: build-amadeus build-sabre build-travelport build-common build-reqif build-npo
 
-test: test-amadeus test-sabre test-travelport test-bnm test-reqif
+test: test-amadeus test-sabre test-travelport test-bnm test-reqif test-npo
 
-mypy: mypy-common mypy-reqif
+mypy: mypy-common mypy-reqif mypy-npo
 
 build-amadeus:
 	rm -rf amadeus/models
@@ -49,3 +49,13 @@ test-reqif:
 
 mypy-reqif:
 	mypy reqif/models
+
+build-npo:
+	rm -rf npo/models
+	xsdata npo/schemas/rs.poms.omroep.nl/v1/schema/urn:vpro:api:2013 --package npo.models
+
+test-npo:
+	pytest npo/models
+
+mypy-npo:
+	mypy npm/models

@@ -8,9 +8,9 @@
 
 The given definitions have a good balance between reusability and readability.
 
-
-## Run through tox
+## Makefile commands
 
 ```console
-$ tox -e sabre
+$ make build-sabre
+$ make test-sabre
 ```

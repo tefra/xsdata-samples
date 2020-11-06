@@ -1858,14 +1858,7 @@
               "title": null
              }
             },
-            {
-             "qname": null,
-             "text": "\nFunktion \"Testfunktion\"  ",
-             "tail": null,
-             "ns_map": {},
-             "children": [],
-             "attributes": {}
-            }
+            "\nFunktion \"Testfunktion\"  "
            ],
            "br": [],
            "span": [],
@@ -2451,14 +2444,7 @@
               "title": null
              }
             },
-            {
-             "qname": null,
-             "text": "\nAdaptive Cruise Assist  ",
-             "tail": null,
-             "ns_map": {},
-             "children": [],
-             "attributes": {}
-            }
+            "\nAdaptive Cruise Assist  "
            ],
            "br": [],
            "span": [],
@@ -2604,14 +2590,7 @@
               "title": null
              }
             },
-            {
-             "qname": null,
-             "text": "\nAdaptive Cruise Control  ",
-             "tail": null,
-             "ns_map": {},
-             "children": [],
-             "attributes": {}
-            }
+            "\nAdaptive Cruise Control  "
            ],
            "br": [],
            "span": [],
@@ -2757,14 +2736,7 @@
               "title": null
              }
             },
-            {
-             "qname": null,
-             "text": "\nHuman Maschine Interface  ",
-             "tail": null,
-             "ns_map": {},
-             "children": [],
-             "attributes": {}
-            }
+            "\nHuman Maschine Interface  "
            ],
            "br": [],
            "span": [],
@@ -3062,14 +3034,7 @@
               "title": null
              }
             },
-            {
-             "qname": null,
-             "text": "\nDas eigene Fahrzeug auf das sich die Funktionsberschreibung bezieht  ",
-             "tail": null,
-             "ns_map": {},
-             "children": [],
-             "attributes": {}
-            }
+            "\nDas eigene Fahrzeug auf das sich die Funktionsberschreibung bezieht  "
            ],
            "br": [],
            "span": [],
@@ -3215,14 +3180,7 @@
               "title": null
              }
             },
-            {
-             "qname": null,
-             "text": "\nFahrstreifen auf dem sich das Ego-Fahrzeug bewegt  ",
-             "tail": null,
-             "ns_map": {},
-             "children": [],
-             "attributes": {}
-            }
+            "\nFahrstreifen auf dem sich das Ego-Fahrzeug bewegt  "
            ],
            "br": [],
            "span": [],

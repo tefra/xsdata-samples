@@ -14,8 +14,10 @@ classes by target namespace.
 
 Test with pypy against output validate serializer output.
 
-## Run through tox
+## Makefile commands
 
 ```console
-$ tox -e reqif
+$ make build-reqif
+$ make test-reqif
+$ make mypy-reqif
 ```

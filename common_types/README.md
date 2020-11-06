@@ -7,8 +7,9 @@
 
 This suite is an exceptional sample for complex definitions with edge cases.
 
-## Run through tox
+## Makefile commands
 
 ```console
-$ tox -e common-types
+$ make build-common
+$ make mypy-common
 ```
