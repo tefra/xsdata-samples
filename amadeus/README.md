@@ -7,8 +7,9 @@
 - Serialization test for request sample from json -> python -> xml
 - Module and class names aliases in configuration file.
 
-## Run through tox
+## Makefile commands
 
 ```console
-$ tox -e amadeus
+$ make build-amadeus
+$ make test-amadeus
 ```
