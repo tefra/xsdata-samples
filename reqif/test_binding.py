@@ -4,12 +4,14 @@ from unittest import TestCase
 from lxml import etree
 from xsdata.formats.dataclass.context import XmlContext
 from xsdata.formats.dataclass.parsers import XmlParser
+from xsdata.formats.dataclass.serializers import JsonSerializer
 from xsdata.formats.dataclass.serializers import XmlSerializer
 
 from reqif.models import ReqIf
 
 parser = XmlParser(context=XmlContext())
 serializer = XmlSerializer(context=parser.context, pretty_print=True, encoding="ascii")
+jsonSerializer = JsonSerializer(indent=True)
 here = Path(__file__).parent.absolute()
 
 
@@ -28,5 +30,6 @@ class BindingTests(TestCase):
 
         schema_doc = etree.parse(here.joinpath("schemas/reqif.xsd").as_uri())
         schema = etree.XMLSchema(schema_doc)
+        output.with_suffix(".json").write_text(jsonSerializer.render(obj))
 
         schema.assertValid(etree.parse(str(output)))
