@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+  attributeFormDefault="unqualified"
+  elementFormDefault="qualified"
+  targetNamespace="urn:vpro:shared:2009" xmlns="urn:vpro:shared:2009" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element type="imageType" name="image"/>
+
+  <xs:attributeGroup name="publishableAttributesGroup">
+    <xs:attribute name="urn" type="xs:anyURI"/>
+    <xs:attribute name="publishStart" type="xs:dateTime"/>
+    <xs:attribute name="publishStop" type="xs:dateTime"/>
+    <xs:attribute name="publishDate" type="xs:dateTime"/>
+    <xs:attribute name="creationDate" type="xs:dateTime"/>
+    <xs:attribute name="lastModified" type="xs:dateTime"/>
+    <xs:attribute name="workflow" type="workflowEnumType"/>
+  </xs:attributeGroup>
+
+
+  <xs:complexType name="publishableObjectType" abstract="true">
+    <xs:attributeGroup ref="publishableAttributesGroup"/>
+  </xs:complexType>
+
+  <xs:simpleType name="workflowEnumType">
+    <xs:annotation>
+      <xs:documentation>
+        These are the possible values of several 'workflow' fields. These serve administrative purposes only. In the Frontent API you should
+        only encounter 'PUBLISHED'.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FOR PUBLICATION"/>
+      <xs:enumeration value="FOR REPUBLICATION"/>
+      <xs:enumeration value="PUBLISHED"/>
+      <xs:enumeration value="PARENT REVOKED"/>
+      <xs:enumeration value="REVOKED"/>
+      <xs:enumeration value="FOR DELETION"/>
+      <xs:enumeration value="DELETED"/>
+      <xs:enumeration value="MERGED"/>
+      <xs:enumeration value="IGNORE">
+        <xs:annotation>
+          <xs:documentation>
+            This means that the object is ignored for workflow changes. This is mainly usefull during testing.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="imageType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="title"/>
+      <xs:element type="xs:string" name="description" minOccurs="0"/>
+      <xs:element type="xs:anyURI" name="imageUri" minOccurs="0"/>
+      <xs:element name="offset" type="xs:duration" form="qualified" minOccurs="0"/>
+      <xs:element type="xs:positiveInteger" name="height" minOccurs="0"/>
+      <xs:element type="xs:positiveInteger" name="width" minOccurs="0"/>
+      <xs:element type="xs:string" name="credits" minOccurs="0"/>
+      <xs:element name="source" type="xs:string"  minOccurs="0"/>
+      <xs:element name="sourceName" type="xs:string"  minOccurs="0"/>
+      <xs:element name="license" type="licenseEnum"  minOccurs="0"/>
+      <xs:element type="xs:string" name="date" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="imageTypeEnum" name="type"/>
+    <xs:attribute type="ownerTypeEnum" name="owner" use="required"/>
+    <xs:attribute type="xs:boolean" name="highlighted" default="false" />
+    <xs:attributeGroup ref="publishableAttributesGroup"/>
+  </xs:complexType>
+
+  <xs:simpleType name="imageTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PICTURE"/>
+      <xs:enumeration value="PORTRAIT"/>
+      <xs:enumeration value="STILL"/>
+      <xs:enumeration value="LOGO"/>
+      <xs:enumeration value="ICON"/>
+      <xs:enumeration value="PROMO_LANDSCAPE"/>
+      <xs:enumeration value="PROMO_PORTRAIT"/>
+      <xs:enumeration value="BACKGROUND"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ownerTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BROADCASTER"/>
+      <xs:enumeration value="NEBO"/>
+      <xs:enumeration value="NPO"/>
+      <xs:enumeration value="MIS"/>
+      <xs:enumeration value="CERES"/>
+      <xs:enumeration value="PLUTO"/>
+      <xs:enumeration value="PROJECTM"/>
+      <xs:enumeration value="WHATS_ON"/>
+      <xs:enumeration value="IMMIX"/>
+      <xs:enumeration value="AUTHORITY"/>
+      <xs:enumeration value="RADIOBOX"/>
+      <xs:enumeration value="BEELDENGELUID"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="subtitlesTypeEnum">
+    <xs:annotation>
+      <xsd:documentation>
+        The type of a subtitles object. TODO these descriptions are provisional?
+      </xsd:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CAPTION">
+        <xs:annotation>
+          <xs:documentation>The subtitles represent a textual version of what is spoken or wat is happening. They are expected to be in the same language as the video itself. Teletekst 888 subtitles are captions.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TRANSLATION">
+        <xs:annotation>
+          <xs:documentation>The subtitles represent a translation. They are expected to be in a different language than the main language that can be heard</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TRANSCRIPT">
+         <xs:annotation>
+           <xs:documentation>The subtitles represent a precise or automatic version of what is being said. </xs:documentation>
+         </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="subtitlesWorkflowEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="IGNORE"/>
+      <xs:enumeration value="REVOKED"/>
+      <xs:enumeration value="FOR_DELETION"/>
+      <xs:enumeration value="DELETED"/>
+      <xs:enumeration value="FOR_PUBLICATION"/>
+      <xs:enumeration value="FOR_REPUBLICATION"/>
+      <xs:enumeration value="PUBLISHED"/>
+      <xs:enumeration value="PUBLISH_ERROR"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="licenseEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="COPYRIGHTED"/>
+      <xs:enumeration value="PUBLIC_DOMAIN"/>
+      <xs:enumeration value="CC_BY"/>
+      <xs:enumeration value="CC_BY_1_0"/>
+      <xs:enumeration value="CC_BY_2_0"/>
+      <xs:enumeration value="CC_BY_3_0"/>
+      <xs:enumeration value="CC_BY_4_0"/>
+      <xs:enumeration value="CC_BY_SA"/>
+      <xs:enumeration value="CC_BY_SA_1_0"/>
+      <xs:enumeration value="CC_BY_SA_2_0"/>
+      <xs:enumeration value="CC_BY_SA_3_0"/>
+      <xs:enumeration value="CC_BY_SA_4_0"/>
+      <xs:enumeration value="CC_BY_ND"/>
+      <xs:enumeration value="CC_BY_ND_1_0"/>
+      <xs:enumeration value="CC_BY_ND_2_0"/>
+      <xs:enumeration value="CC_BY_ND_3_0"/>
+      <xs:enumeration value="CC_BY_ND_4_0"/>
+      <xs:enumeration value="CC_BY_NC"/>
+      <xs:enumeration value="CC_BY_NC_1_0"/>
+      <xs:enumeration value="CC_BY_NC_2_0"/>
+      <xs:enumeration value="CC_BY_NC_3_0"/>
+      <xs:enumeration value="CC_BY_NC_4_0"/>
+      <xs:enumeration value="CC_BY_NC_SA"/>
+      <xs:enumeration value="CC_BY_NC_SA_1_0"/>
+      <xs:enumeration value="CC_BY_NC_SA_2_0"/>
+      <xs:enumeration value="CC_BY_NC_SA_3_0"/>
+      <xs:enumeration value="CC_BY_NC_SA_4_0"/>
+      <xs:enumeration value="CC_BY_NC_ND"/>
+      <xs:enumeration value="CC_BY_NC_ND_1_0"/>
+      <xs:enumeration value="CC_BY_NC_ND_2_0"/>
+      <xs:enumeration value="CC_BY_NC_ND_3_0"/>
+      <xs:enumeration value="CC_BY_NC_ND_4_0"/>
+      <xs:enumeration value="USA_GOV"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

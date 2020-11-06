@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" version="1.0" targetNamespace="urn:vpro:pages:2013" xmlns:shared="urn:vpro:shared:2009" xmlns:pages="urn:vpro:pages:2013" xmlns:tns="urn:vpro:pages:2013" xmlns:media="urn:vpro:media:2009" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="urn:vpro:media:2009" schemaLocation="../../../poms.omroep.nl/schema/vproMedia.xsd"/>
+
+  <xs:import namespace="urn:vpro:shared:2009" schemaLocation="../../../poms.omroep.nl/schema/vproShared.xsd"/>
+
+  <xs:element name="genre" type="tns:genreType"/>
+
+  <xs:element name="page" type="tns:pageType"/>
+
+  <xs:complexType name="pageType">
+    <xs:sequence>
+      <xs:element name="crid" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="alternativeUrl" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="broadcaster" type="media:broadcasterType" maxOccurs="unbounded"/>
+      <xs:element name="portal" type="tns:portalType" minOccurs="0"/>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="subTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="keyword" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="tns:genre" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="summary" type="xs:string" minOccurs="0"/>
+      <xs:element name="paragraphs" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="paragraph" type="tns:paragraphType" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="tag" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="referral" type="tns:referralType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="link" type="tns:linkType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="embed" type="tns:embedType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="statRef" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="images" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="image" type="tns:imageType" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="relation" type="tns:relationType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="url" type="xs:string" use="required"/>
+    <xs:attribute name="type" type="tns:pageTypeEnum" use="required"/>
+    <xs:attribute name="creationDate" type="xs:dateTime"/>
+    <xs:attribute name="lastModified" type="xs:dateTime"/>
+    <xs:attribute name="lastPublished" type="xs:dateTime"/>
+    <xs:attribute name="publishStart" type="xs:dateTime"/>
+    <xs:attribute name="publishStop" type="xs:dateTime"/>
+    <xs:attribute name="refCount" type="xs:int"/>
+    <xs:attribute name="sortDate" type="xs:dateTime"/>
+    <xs:attribute name="workflow" type="tns:pageWorkflow"/>
+  </xs:complexType>
+
+  <xs:complexType name="portalType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="section" type="tns:sectionType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+    <xs:attribute name="url" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="sectionType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="path" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="genreType">
+    <xs:sequence>
+      <xs:element name="term" type="tns:pageTermType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="displayName" type="xs:string"/>
+    <xs:attribute name="id" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:simpleType name="pageTermType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:complexType name="paragraphType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string" minOccurs="0"/>
+      <xs:element name="body" type="xs:string" minOccurs="0"/>
+      <xs:element name="image" type="tns:imageType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="imageType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="credits" type="xs:string" minOccurs="0"/>
+      <xs:element name="source" type="xs:string" minOccurs="0"/>
+      <xs:element name="sourceName" type="xs:string" minOccurs="0"/>
+      <xs:element name="license" type="shared:licenseEnum" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="shared:imageTypeEnum"/>
+    <xs:attribute name="url" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="referralType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="referrer" type="xs:string"/>
+        <xs:attribute name="type" type="tns:linkTypeEnum"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="linkType">
+    <xs:sequence>
+      <xs:element name="text" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="pageRef" type="xs:string"/>
+    <xs:attribute name="type" type="tns:linkTypeEnum"/>
+  </xs:complexType>
+
+  <xs:complexType name="embedType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:choice minOccurs="0">
+        <xs:element ref="media:group"/>
+        <xs:element ref="media:program"/>
+        <xs:element ref="media:segment"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="relationType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="uriRef" type="xs:string"/>
+        <xs:attribute name="broadcaster" type="xs:string" use="required"/>
+        <xs:attribute name="type" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="linkTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TOP_STORY"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="pageTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ARTICLE"/>
+      <xs:enumeration value="SPECIAL"/>
+      <xs:enumeration value="HOME"/>
+      <xs:enumeration value="OVERVIEW"/>
+      <xs:enumeration value="PRODUCT"/>
+      <xs:enumeration value="PLAYER"/>
+      <xs:enumeration value="AUDIO"/>
+      <xs:enumeration value="VIDEO"/>
+      <xs:enumeration value="MIXED"/>
+      <xs:enumeration value="PLAYLIST"/>
+      <xs:enumeration value="MOVIE"/>
+      <xs:enumeration value="SERIES"/>
+      <xs:enumeration value="PERSON"/>
+      <xs:enumeration value="SEARCH"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="pageWorkflow">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PUBLISHED"/>
+      <xs:enumeration value="DELETED"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

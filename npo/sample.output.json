@@ -1,0 +1,92 @@
+{
+ "items": {
+  "item": [
+   {
+    "result": {
+     "crid": [
+      "crid://vpro/media/vprobroadcast/WO_VPRO_2297327"
+     ],
+     "alternative_url": [],
+     "broadcaster": [
+      {
+       "value": null,
+       "id": "VPRO"
+      }
+     ],
+     "portal": {
+      "name": "www.vprobroadcast.com",
+      "section": null,
+      "id": "VPROBROADCAST",
+      "url": "https://www.vprobroadcast.com"
+     },
+     "title": "Antibiotics",
+     "sub_title": null,
+     "keyword": [],
+     "genre": [],
+     "summary": null,
+     "paragraphs": null,
+     "tag": [],
+     "referral": [],
+     "link": [],
+     "embed": [],
+     "stat_ref": [],
+     "images": {
+      "image": [
+       {
+        "title": "Antibiotica",
+        "description": "Labyrint",
+        "credits": null,
+        "source": null,
+        "source_name": null,
+        "license": null,
+        "type": "PICTURE",
+        "url": "https://images.poms.omroep.nl/image/s360/665086.jpg"
+       }
+      ]
+     },
+     "relation": [],
+     "url": "https://www.vprobroadcast.com/play~WO_VPRO_2297327~antibiotics~.html",
+     "type": "VIDEO",
+     "creation_date": "2019-11-22T14:15:09.443+01:00",
+     "last_modified": "2019-11-22T14:15:09.443+01:00",
+     "last_published": "2019-11-22T14:15:24.341+01:00",
+     "publish_start": "2015-10-16T14:23:14.729+02:00",
+     "publish_stop": null,
+     "ref_count": 0,
+     "sort_date": "2015-10-16T14:23:14.729+02:00",
+     "workflow": null
+    },
+    "highlight": [],
+    "score": 0.3099519
+   }
+  ]
+ },
+ "total": 432,
+ "total_qualifier": "EQUAL_TO",
+ "offset": 0,
+ "max": 0,
+ "facets": {
+  "sort_dates": [],
+  "types": [],
+  "broadcasters": [],
+  "tags": [],
+  "keywords": [],
+  "genres": [],
+  "portals": [],
+  "sections": [],
+  "relations": []
+ },
+ "selected_facets": {
+  "sort_dates": [],
+  "types": [],
+  "broadcasters": [],
+  "tags": [],
+  "keywords": [],
+  "genres": [],
+  "portals": [],
+  "sections": [],
+  "relations": []
+ },
+ "media_facets": null,
+ "media_selected_facets": null
+}

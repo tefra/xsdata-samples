@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:vpro:api:2013" xmlns:shared="urn:vpro:shared:2009" xmlns:pages="urn:vpro:pages:2013" xmlns:tns="urn:vpro:api:2013" xmlns:api="urn:vpro:api:2013" xmlns:media="urn:vpro:media:2009" attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0" targetNamespace="urn:vpro:api:2013">
+
+  <xs:import namespace="urn:vpro:media:2009" schemaLocation="../../../poms.omroep.nl/schema/vproMedia.xsd"/>
+
+  <xs:import namespace="urn:vpro:shared:2009" schemaLocation="../../../poms.omroep.nl/schema/vproShared.xsd"/>
+
+  <xs:import namespace="urn:vpro:pages:2013" schemaLocation="pages_2013.xsd"/>
+
+  <xs:element name="mediaForm" type="mediaFormType"/>
+
+  <xs:element name="mediaSearchResult" type="mediaSearchResultType"/>
+
+  <xs:element name="pageSearchResult" type="pageSearchResultType"/>
+
+  <xs:element name="pagesForm" type="pagesFormType"/>
+
+  <xs:element name="redirectEntry" type="redirectEntry"/>
+
+  <xs:element name="redirects" type="redirectList"/>
+
+  <xs:element name="scheduleForm" type="scheduleFormType"/>
+
+  <xs:element name="scheduleItem" type="scheduleEventApiType"/>
+
+  <xs:element name="subtitlesForm" type="subtitlesFormType"/>
+
+  <xs:element name="suggestion" type="suggestionType"/>
+
+  <xs:complexType name="pagesFormType">
+    <xs:sequence>
+      <xs:element name="searches" type="pagesSearchType" minOccurs="0"/>
+      <xs:element name="sortFields" type="pageSortListType" minOccurs="0"/>
+      <xs:element name="facets" type="pagesFacetsType" minOccurs="0"/>
+      <xs:element ref="mediaForm" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="highlight" type="xs:boolean"/>
+  </xs:complexType>
+
+  <xs:complexType name="pagesSearchType">
+    <xs:sequence>
+      <xs:element name="text" type="simpleMatcherType" minOccurs="0"/>
+      <xs:element name="broadcasters" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="types" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="portals" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="sections" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="genres" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="tags" type="extendedTextMatcherListType" minOccurs="0"/>
+      <xs:element name="keywords" type="extendedTextMatcherListType" minOccurs="0"/>
+      <xs:element name="sortDates" type="dateRangeMatcherListType" minOccurs="0"/>
+      <xs:element name="lastModifiedDates" type="dateRangeMatcherListType" minOccurs="0"/>
+      <xs:element name="creationDates" type="dateRangeMatcherListType" minOccurs="0"/>
+      <xs:element name="publishDates" type="dateRangeMatcherListType" minOccurs="0"/>
+      <xs:element name="relations" type="pageRelationSearchListType" minOccurs="0"/>
+      <xs:element name="links" type="pageAssociationSearchListType" minOccurs="0"/>
+      <xs:element name="referrals" type="pageAssociationSearchListType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="match" type="match"/>
+  </xs:complexType>
+
+  <xs:complexType name="simpleMatcherType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="fuzziness" type="xs:string"/>
+        <xs:attribute name="matchType" type="simpleMatchType"/>
+        <xs:attribute name="match" type="match"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="textMatcherListType">
+    <xs:complexContent>
+      <xs:extension base="matcherList">
+        <xs:sequence>
+          <xs:element name="matcher" type="textMatcherType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="matcherList" abstract="true">
+    <xs:sequence/>
+    <xs:attribute name="match" type="match"/>
+  </xs:complexType>
+
+  <xs:complexType name="textMatcherType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="matchType" type="standardMatchType"/>
+        <xs:attribute name="match" type="match"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="extendedTextMatcherListType">
+    <xs:complexContent>
+      <xs:extension base="matcherList">
+        <xs:sequence>
+          <xs:element name="matcher" type="extendedMatcherType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="extendedMatcherType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="fuzziness" type="xs:string"/>
+        <xs:attribute name="matchType" type="standardMatchType"/>
+        <xs:attribute name="caseSensitive" type="xs:boolean"/>
+        <xs:attribute name="match" type="match"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="dateRangeMatcherListType">
+    <xs:complexContent>
+      <xs:extension base="matcherList">
+        <xs:sequence>
+          <xs:element name="matcher" type="dateRangeMatcherType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="dateRangeMatcherType">
+    <xs:complexContent>
+      <xs:extension base="rangeMatcherType">
+        <xs:sequence>
+          <xs:element name="begin" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="end" type="xs:dateTime" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="rangeMatcherType" abstract="true">
+    <xs:sequence/>
+    <xs:attribute name="inclusiveEnd" type="xs:boolean"/>
+    <xs:attribute name="match" type="match"/>
+  </xs:complexType>
+
+  <xs:complexType name="pageRelationSearchListType">
+    <xs:sequence>
+      <xs:element name="relationSearch" type="pageRelationSearchType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pageRelationSearchType">
+    <xs:sequence>
+      <xs:element name="types" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="broadcasters" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="values" type="extendedTextMatcherListType" minOccurs="0"/>
+      <xs:element name="uriRefs" type="textMatcherListType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="match" type="match"/>
+  </xs:complexType>
+
+  <xs:complexType name="mediaSearchType"><xs:annotation><xs:documentation>Limits the search result to media with certain properties</xs:documentation></xs:annotation>
+    <xs:sequence>
+      <xs:element name="text" type="simpleMatcherType" minOccurs="0"/>
+      <xs:element name="mediaIds" type="textMatcherListType" minOccurs="0"><xs:annotation><xs:documentation>The MID must match one of the mediaIds</xs:documentation></xs:annotation></xs:element>
+      <xs:element name="types" type="textMatcherListType" minOccurs="0"><xs:annotation><xs:documentation>The media type must match one of these.</xs:documentation></xs:annotation></xs:element>
+      <xs:element name="avTypes" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="sortDates" type="dateRangeMatcherListType" minOccurs="0"/>
+      <xs:element name="publishDates" type="dateRangeMatcherListType" minOccurs="0"/>
+      <xs:element name="creationDates" type="dateRangeMatcherListType" minOccurs="0"/>
+      <xs:element name="lastModifiedDates" type="dateRangeMatcherListType" minOccurs="0"/>
+      <xs:element name="broadcasters" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="locations" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="tags" type="extendedTextMatcherListType" minOccurs="0"/>
+      <xs:element name="genres" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="durations" type="durationRangeMatcherListType" minOccurs="0"/>
+      <xs:element name="descendantOf" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="episodeOf" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="memberOf" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="relations" type="mediaRelationSearchListType" minOccurs="0"/>
+      <xs:element name="scheduleEvents" type="scheduleEventSearchType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="ageRatings" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="contentRatings" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="titles" type="titleSearchType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="geoLocations" type="geoLocationSearchType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="match" type="match"/>
+  </xs:complexType>
+
+  <xs:complexType name="durationRangeMatcherListType">
+    <xs:complexContent>
+      <xs:extension base="matcherList">
+        <xs:sequence>
+          <xs:element name="matcher" type="durationRangeMatcherType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="durationRangeMatcherType">
+    <xs:complexContent>
+      <xs:extension base="rangeMatcherType">
+        <xs:sequence>
+          <xs:element name="begin" type="xs:duration" minOccurs="0"/>
+          <xs:element name="end" type="xs:duration" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="mediaRelationSearchListType">
+    <xs:sequence>
+      <xs:element name="relationSearch" type="mediaRelationSearchType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="mediaRelationSearchType">
+    <xs:sequence>
+      <xs:element name="types" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="broadcasters" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="values" type="extendedTextMatcherListType" minOccurs="0"/>
+      <xs:element name="uriRefs" type="textMatcherListType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="match" type="match"/>
+  </xs:complexType>
+
+  <xs:complexType name="memberRefSearchType">
+    <xs:sequence>
+      <xs:element name="mediaIds" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="types" type="textMatcherListType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="match" type="match"/>
+  </xs:complexType>
+
+  <xs:complexType name="associationSearchType">
+    <xs:sequence>
+      <xs:element name="urls" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="types" type="textMatcherListType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="match" type="match"/>
+  </xs:complexType>
+
+  <xs:complexType name="scheduleEventSearchType">
+    <xs:complexContent>
+      <xs:extension base="rangeMatcherType">
+        <xs:sequence>
+          <xs:element name="begin" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="end" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="channel" type="media:channelEnum" minOccurs="0"/>
+          <xs:element name="net" type="xs:string" minOccurs="0"/>
+          <xs:element name="rerun" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="titleSearchType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="owner" type="shared:ownerTypeEnum"/>
+        <xs:attribute name="type" type="media:textualTypeEnum"/>
+        <xs:attribute name="matchType" type="standardMatchType"/>
+        <xs:attribute name="match" type="match"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="geoLocationSearchType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="owner" type="shared:ownerTypeEnum"/>
+        <xs:attribute name="role" type="media:geoRoleType"/>
+        <xs:attribute name="gtaaUri" type="xs:string"/>
+        <xs:attribute name="match" type="match"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="pageAssociationSearchListType">
+    <xs:sequence>
+      <xs:element name="search" type="associationSearchType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pageSortListType">
+    <xs:sequence>
+      <xs:element name="sort" type="pageSortType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pageSortType">
+    <xs:simpleContent>
+      <xs:extension base="pageSortTypeEnum">
+        <xs:attribute name="order" type="orderTypeEnum"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="pagesFacetsType">
+    <xs:sequence>
+      <xs:element name="sortDates" type="dateRangeFacetsType" minOccurs="0"/>
+      <xs:element name="broadcasters" type="pageFacetType" minOccurs="0"/>
+      <xs:element name="types" type="pageFacetType" minOccurs="0"/>
+      <xs:element name="tags" type="extendedPageFacetType" minOccurs="0"/>
+      <xs:element name="keywords" type="extendedPageFacetType" minOccurs="0"/>
+      <xs:element name="genres" type="pageSearchableTermFacetType" minOccurs="0"/>
+      <xs:element name="portals" type="pageFacetType" minOccurs="0"/>
+      <xs:element name="sections" type="pageFacetType" minOccurs="0"/>
+      <xs:element name="relations" type="pageRelationFacetListType" minOccurs="0"/>
+      <xs:element name="filter" type="pagesSearchType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="dateRangeFacetsType">
+    <xs:complexContent>
+      <xs:extension base="abstractFacetType">
+        <xs:sequence>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="interval" type="dateRangeIntervalType"/>
+            <xs:element name="preset" type="dateRangePresetTypeEnum"/>
+            <xs:element name="range" type="dateRangeFacetItemType"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="abstractFacetType" abstract="true">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:simpleType name="dateRangeIntervalType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:complexType name="dateRangeFacetItemType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="begin" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="end" type="xs:dateTime" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="mediaFacetType">
+    <xs:complexContent>
+      <xs:extension base="textFacetType">
+        <xs:sequence>
+          <xs:element name="filter" type="mediaSearchType" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="textFacetType">
+    <xs:complexContent>
+      <xs:extension base="abstractFacetType">
+        <xs:sequence>
+          <xs:element name="threshold" type="xs:int" minOccurs="0"/>
+          <xs:element name="max" type="xs:int" minOccurs="0"/>
+          <xs:element name="include" type="xs:string" minOccurs="0"/>
+          <xs:element name="script" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="sort" type="facetOrderTypeEnum"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="pageFacetType">
+    <xs:complexContent>
+      <xs:extension base="textFacetType">
+        <xs:sequence>
+          <xs:element name="filter" type="pagesSearchType" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="extendedPageFacetType">
+    <xs:complexContent>
+      <xs:extension base="textFacetType">
+        <xs:sequence>
+          <xs:element name="filter" type="pagesSearchType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="caseSensitive" type="xs:boolean"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="pageSearchableTermFacetType">
+    <xs:complexContent>
+      <xs:extension base="pageFacetType">
+        <xs:sequence>
+          <xs:element name="subSearch" type="termSearchType" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="termSearchType">
+    <xs:sequence>
+      <xs:element name="ids" type="textMatcherListType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="match" type="match"/>
+  </xs:complexType>
+
+  <xs:complexType name="pageRelationFacetListType">
+    <xs:complexContent>
+      <xs:extension base="abstractFacetType">
+        <xs:sequence>
+          <xs:element name="filter" type="pagesSearchType" minOccurs="0"/>
+          <xs:element name="subSearch" type="pageRelationSearchType" minOccurs="0"/>
+          <xs:element name="facet" type="pageRelationFacetType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="pageRelationFacetType">
+    <xs:complexContent>
+      <xs:extension base="extendedPageFacetType">
+        <xs:sequence>
+          <xs:element name="subSearch" type="pageRelationSearchType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="mediaFormType">
+    <xs:sequence>
+      <xs:element name="searches" type="mediaSearchType" minOccurs="0"/>
+      <xs:element name="sortFields" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="sort" type="mediaSortType"/>
+              <xs:element name="titleSort" type="titleSortOrderType"/>
+            </xs:choice>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="facets" type="mediaFacetsType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="highlight" type="xs:boolean"/>
+  </xs:complexType>
+
+  <xs:complexType name="mediaSortType">
+    <xs:simpleContent>
+      <xs:extension base="mediaSortTypeEnum">
+        <xs:attribute name="order" type="orderTypeEnum"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="titleSortOrderType">
+    <xs:simpleContent>
+      <xs:extension base="mediaSortType">
+        <xs:attribute name="type" type="media:textualTypeEnum"/>
+        <xs:attribute name="owner" type="shared:ownerTypeEnum"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="mediaFacetsType">
+    <xs:sequence>
+      <xs:element name="titles" type="mediaTitleFacetListType" minOccurs="0"/>
+      <xs:element name="types" type="mediaFacetType" minOccurs="0"/>
+      <xs:element name="avTypes" type="mediaFacetType" minOccurs="0"/>
+      <xs:element name="sortDates" type="dateRangeFacetsType" minOccurs="0"/>
+      <xs:element name="broadcasters" type="mediaFacetType" minOccurs="0"/>
+      <xs:element name="genres" type="mediaSearchableTermFacetType" minOccurs="0"/>
+      <xs:element name="tags" type="extendedMediaFacetType" minOccurs="0"/>
+      <xs:element name="durations" type="durationRangeFacetsType" minOccurs="0"/>
+      <xs:element name="descendantOf" type="memberRefFacetType" minOccurs="0"/>
+      <xs:element name="episodeOf" type="memberRefFacetType" minOccurs="0"/>
+      <xs:element name="memberOf" type="memberRefFacetType" minOccurs="0"/>
+      <xs:element name="relations" type="mediaRelationFacetListType" minOccurs="0"/>
+      <xs:element name="ageRatings" type="mediaFacetType" minOccurs="0"/>
+      <xs:element name="contentRatings" type="mediaFacetType" minOccurs="0"/>
+      <xs:element name="geoLocations" type="mediaSearchableTermFacetType" minOccurs="0"/>
+      <xs:element name="filter" type="mediaSearchType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="mediaTitleFacetListType">
+    <xs:complexContent>
+      <xs:extension base="mediaFacetType">
+        <xs:sequence>
+          <xs:element name="subSearch" type="titleSearchType" minOccurs="0"/>
+          <xs:element name="title" type="mediaTitleFacetType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="mediaTitleFacetType">
+    <xs:complexContent>
+      <xs:extension base="textFacetType">
+        <xs:sequence>
+          <xs:element name="subSearch" type="titleSearchType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="mediaSearchableTermFacetType">
+    <xs:complexContent>
+      <xs:extension base="mediaFacetType">
+        <xs:sequence>
+          <xs:element name="subSearch" type="termSearchType" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="extendedMediaFacetType">
+    <xs:complexContent>
+      <xs:extension base="textFacetType">
+        <xs:sequence>
+          <xs:element name="filter" type="mediaSearchType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="caseSensitive" type="xs:boolean"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="durationRangeFacetsType">
+    <xs:complexContent>
+      <xs:extension base="abstractFacetType">
+        <xs:sequence>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="interval" type="durationRangeIntervalType"/>
+            <xs:element name="range" type="durationRangeFacetItemType"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="durationRangeIntervalType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:complexType name="durationRangeFacetItemType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="begin" type="xs:duration" minOccurs="0"/>
+      <xs:element name="end" type="xs:duration" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="memberRefFacetType">
+    <xs:complexContent>
+      <xs:extension base="mediaFacetType">
+        <xs:sequence>
+          <xs:element name="subSearch" type="memberRefSearchType" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="mediaRelationFacetListType">
+    <xs:complexContent>
+      <xs:extension base="abstractFacetType">
+        <xs:sequence>
+          <xs:element name="filter" type="mediaSearchType" minOccurs="0"/>
+          <xs:element name="subSearch" type="mediaRelationSearchType" minOccurs="0"/>
+          <xs:element name="facet" type="mediaRelationFacetType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="mediaRelationFacetType">
+    <xs:complexContent>
+      <xs:extension base="extendedMediaFacetType">
+        <xs:sequence>
+          <xs:element name="subSearch" type="mediaRelationSearchType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="scheduleFormType">
+    <xs:sequence>
+      <xs:element name="searches" type="mediaSearchType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="highlight" type="xs:boolean"/>
+  </xs:complexType>
+
+  <xs:complexType name="subtitlesFormType">
+    <xs:sequence>
+      <xs:element name="searches" type="subtitlesSearchType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subtitlesSearchType">
+    <xs:sequence>
+      <xs:element name="text" type="simpleMatcherType" minOccurs="0"/>
+      <xs:element name="mids" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="types" type="textMatcherListType" minOccurs="0"/>
+      <xs:element name="languages" type="textMatcherListType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="match" type="match"/>
+  </xs:complexType>
+
+  <xs:complexType name="redirectList">
+    <xs:sequence>
+      <xs:element name="entry" type="redirectEntry" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="lastUpdate" type="xs:dateTime"/>
+  </xs:complexType>
+
+  <xs:complexType name="redirectEntry">
+    <xs:sequence/>
+    <xs:attribute name="from" type="xs:string"/>
+    <xs:attribute name="to" type="xs:string"/>
+    <xs:attribute name="ultimate" type="xs:string"/>
+    <xs:attribute name="circular" type="xs:boolean"/>
+  </xs:complexType>
+
+  <xs:complexType name="mediaSearchResults">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="pageSearchResults">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="mediaSearchResultType">
+    <xs:complexContent>
+      <xs:extension base="genericMediaSearchResultType">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="genericMediaSearchResultType">
+    <xs:complexContent>
+      <xs:extension base="searchResultType">
+        <xs:sequence>
+          <xs:element name="facets" type="mediaFacetsResultType" minOccurs="0"/>
+          <xs:element name="selectedFacets" type="mediaFacetsResultType" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="searchResultType">
+    <xs:complexContent>
+      <xs:extension base="resultType">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="resultType">
+    <xs:sequence>
+      <xs:element name="items" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="item" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="total" type="xs:long"/>
+    <xs:attribute name="totalQualifier" type="totalQualifier"/>
+    <xs:attribute name="offset" type="xs:long"/>
+    <xs:attribute name="max" type="xs:int"/>
+  </xs:complexType>
+
+  <xs:complexType name="mediaFacetsResultType">
+    <xs:sequence>
+      <xs:element name="titles" type="termFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="types" type="termFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="avTypes" type="termFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="sortDates" type="dateFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="broadcasters" type="termFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="genres" type="mediaGenreFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="geoLocations" type="mediaGeoLocationFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="tags" type="termFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="durations" type="durationFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="descendantOf" type="memberRefFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="episodeOf" type="memberRefFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="memberOf" type="memberRefFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="relations" type="namedTermFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="ageRatings" type="termFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="contentRatings" type="termFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="termFacetResultItemType">
+    <xs:complexContent>
+      <xs:extension base="facetResultItem">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="value" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="facetResultItem" abstract="true">
+    <xs:sequence>
+      <xs:element name="count" type="xs:long"/>
+      <xs:element name="selected" type="xs:boolean" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="dateFacetResultItemType">
+    <xs:complexContent>
+      <xs:extension base="rangeFacetResultItem">
+        <xs:sequence>
+          <xs:element name="begin" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="end" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="rangeFacetResultItem" abstract="true">
+    <xs:complexContent>
+      <xs:extension base="facetResultItem">
+        <xs:sequence/>
+        <xs:attribute name="value" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="mediaGenreFacetResultItemType">
+    <xs:complexContent>
+      <xs:extension base="termFacetResultItemType">
+        <xs:sequence>
+          <xs:element name="term" type="media:termType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="mediaGeoLocationFacetResultItemType">
+    <xs:complexContent>
+      <xs:extension base="termFacetResultItemType">
+        <xs:sequence>
+          <xs:element name="term" type="media:termType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="durationFacetResultItemType">
+    <xs:complexContent>
+      <xs:extension base="rangeFacetResultItem">
+        <xs:sequence>
+          <xs:element name="begin" type="xs:duration" minOccurs="0"/>
+          <xs:element name="end" type="xs:duration" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="memberRefFacetResultItemType">
+    <xs:complexContent>
+      <xs:extension base="termFacetResultItemType">
+        <xs:sequence>
+          <xs:element name="type" type="media:mediaTypeEnum" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="namedTermFacetResultItemType">
+    <xs:sequence>
+      <xs:element name="facet" type="termFacetResultItemType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="scheduleEventApiType">
+    <xs:complexContent>
+      <xs:extension base="media:scheduleEventType">
+        <xs:sequence>
+          <xs:choice minOccurs="0">
+            <xs:element ref="media:program"/>
+            <xs:element ref="media:group"/>
+            <xs:element ref="media:segment"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="suggestionType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:complexType name="searchResultItem">
+    <xs:sequence>
+      <xs:element name="result" type="xs:anyType" minOccurs="0"/>
+      <xs:element name="highlight" type="hightlightType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="score" type="xs:float"/>
+  </xs:complexType>
+
+  <xs:complexType name="hightlightType">
+    <xs:sequence>
+      <xs:element name="body" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="term" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="pageSearchResultType">
+    <xs:complexContent>
+      <xs:extension base="searchResultType">
+        <xs:sequence>
+          <xs:element name="facets" type="pageFacetsResultType" minOccurs="0"/>
+          <xs:element name="selectedFacets" type="pageFacetsResultType" minOccurs="0"/>
+          <xs:element name="mediaFacets" type="mediaFacetsResultType" minOccurs="0"/>
+          <xs:element name="mediaSelectedFacets" type="mediaFacetsResultType" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="pageFacetsResultType">
+    <xs:sequence>
+      <xs:element name="sortDates" type="dateFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="types" type="termFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="broadcasters" type="termFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="tags" type="termFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="keywords" type="termFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="genres" type="pageGenreFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="portals" type="termFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="sections" type="termFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="relations" type="namedTermFacetResultItemType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pageGenreFacetResultItemType">
+    <xs:complexContent>
+      <xs:extension base="termFacetResultItemType">
+        <xs:sequence>
+          <xs:element name="term" type="pages:pageTermType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="simpleMatchType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TEXT"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="match">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MUST"/>
+      <xs:enumeration value="SHOULD"/>
+      <xs:enumeration value="NOT"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="standardMatchType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TEXT"/>
+      <xs:enumeration value="REGEX"/>
+      <xs:enumeration value="WILDCARD"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="orderTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ASC"/>
+      <xs:enumeration value="DESC"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="pageSortTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="sortDate"/>
+      <xs:enumeration value="lastModified"/>
+      <xs:enumeration value="lastPublished"/>
+      <xs:enumeration value="creationDate"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="dateRangePresetTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BEFORE_LAST_YEAR"/>
+      <xs:enumeration value="LAST_YEAR"/>
+      <xs:enumeration value="LAST_MONTH"/>
+      <xs:enumeration value="LAST_WEEK"/>
+      <xs:enumeration value="YESTERDAY"/>
+      <xs:enumeration value="TODAY"/>
+      <xs:enumeration value="THIS_WEEK"/>
+      <xs:enumeration value="TOMORROW"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="facetOrderTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VALUE_ASC"/>
+      <xs:enumeration value="VALUE_DESC"/>
+      <xs:enumeration value="COUNT_ASC"/>
+      <xs:enumeration value="COUNT_DESC"/>
+      <xs:enumeration value="TERM"/>
+      <xs:enumeration value="REVERSE_TERM"/>
+      <xs:enumeration value="COUNT"/>
+      <xs:enumeration value="REVERSE_COUNT"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="mediaSortTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="title"/>
+      <xs:enumeration value="sortDate"/>
+      <xs:enumeration value="publishDate"/>
+      <xs:enumeration value="episode"/>
+      <xs:enumeration value="episodeAdded"/>
+      <xs:enumeration value="memberAdded"/>
+      <xs:enumeration value="member"/>
+      <xs:enumeration value="creationDate"/>
+      <xs:enumeration value="lastModified"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="totalQualifier">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EQUAL_TO"/>
+      <xs:enumeration value="APPROXIMATE"/>
+      <xs:enumeration value="GREATER_THAN_OR_EQUAL_TO"/>
+      <xs:enumeration value="MISSING"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

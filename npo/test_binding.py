@@ -7,29 +7,32 @@ from xsdata.formats.dataclass.parsers import XmlParser
 from xsdata.formats.dataclass.serializers import JsonSerializer
 from xsdata.formats.dataclass.serializers import XmlSerializer
 
-from reqif.models import ReqIf
+from npo.models import PageSearchResult
 
 parser = XmlParser(context=XmlContext())
-serializer = XmlSerializer(context=parser.context, pretty_print=True, encoding="ascii")
+serializer = XmlSerializer(context=parser.context, pretty_print=True)
 jsonSerializer = JsonSerializer(indent=True)
 here = Path(__file__).parent.absolute()
+schema_path = here.joinpath("schemas/rs.poms.omroep.nl/v1/schema/urn:vpro:api:2013")
 
 
 class BindingTests(TestCase):
-    def test_parser_validate_serializer_output(self):
+    def test_binding(self):
         xml_fixture = here.joinpath("sample.xml")
         output = here.joinpath("sample.output.xml")
-
-        obj = parser.from_path(xml_fixture, ReqIf)
         ns_map = {
-            None: "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "xhtml": "http://www.w3.org/1999/xhtml",
+            "api": "urn:vpro:api:2013",
+            "pages": "urn:vpro:pages:2013",
         }
+
+        obj = parser.from_path(xml_fixture, PageSearchResult)
         with output.open("w") as f:
             serializer.write(f, obj, ns_map=ns_map)
 
-        schema_doc = etree.parse(here.joinpath("schemas/reqif.xsd").as_uri())
+        schema_doc = etree.parse(schema_path.as_uri())
         schema = etree.XMLSchema(schema_doc)
         output.with_suffix(".json").write_text(jsonSerializer.render(obj) + "\n")
 
         schema.assertValid(etree.parse(str(output)))
+
+        self.assertEqual(obj.items.item[0].result.title, "Antibiotics")
