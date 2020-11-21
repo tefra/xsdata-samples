@@ -4,11 +4,13 @@ from unittest import TestCase
 from lxml import etree
 from xsdata.formats.dataclass.parsers import JsonParser
 from xsdata.formats.dataclass.serializers import XmlSerializer
+from xsdata.formats.dataclass.serializers.config import SerializerConfig
 
 from travelport.models import LowFareSearchReq
 
 parser = JsonParser()
-serializer = XmlSerializer(pretty_print=True)
+config = SerializerConfig(pretty_print=True)
+serializer = XmlSerializer(context=parser.context, config=config)
 cwd = Path(__file__).parent.absolute()
 xsd_location = str(cwd.joinpath("schemas/air_v48_0/AirReqRsp.xsd"))
 

@@ -4,11 +4,13 @@ from unittest import TestCase
 from lxml import etree
 from xsdata.formats.dataclass.parsers import JsonParser
 from xsdata.formats.dataclass.serializers import XmlSerializer
+from xsdata.formats.dataclass.serializers.config import SerializerConfig
 
 from amadeus.models import FareMasterPricerTravelBoardSearch
 
+config = SerializerConfig(pretty_print=True)
+serializer = XmlSerializer(config=config)
 parser = JsonParser()
-serializer = XmlSerializer(pretty_print=True)
 cwd = Path(__file__).parent.absolute()
 xsd_location = str(
     cwd.joinpath("schemas/Fare_MasterPricerTravelBoardSearch_15_3_1A.xsd")

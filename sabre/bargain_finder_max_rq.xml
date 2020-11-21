@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <OTA_AirLowFareSearchRQ xmlns="http://www.opentravel.org/OTA/2003/05" Target="Production" Version="1.9.7" DirectFlightsOnly="false" AvailableFlightsOnly="true" SeparateMessages="false" TruncateMessages="true">
   <POS>
     <Source PseudoCityCode="C9QH" AbacusUser="false">

@@ -1,18 +1,18 @@
 import sys
 from pathlib import Path
 
-from xsdata.formats.dataclass.context import XmlContext
 from xsdata.formats.dataclass.parsers import XmlParser
 from xsdata.formats.dataclass.serializers import XmlSerializer
+from xsdata.formats.dataclass.serializers.config import SerializerConfig
 
 from reqif.models import ReqIf
 
 here = Path(__file__).parent
 
 xml_fixture = here.joinpath("sample.xml")
-context = XmlContext()
-parser = XmlParser(context=context)
-serializer = XmlSerializer(context=context, pretty_print=True, encoding="ascii")
+parser = XmlParser()
+config = SerializerConfig(pretty_print=True, encoding="ascii")
+serializer = XmlSerializer(context=parser.context, config=config)
 
 obj = parser.from_path(xml_fixture, ReqIf)
 ns_map = {

@@ -6,11 +6,13 @@ from xsdata.formats.dataclass.context import XmlContext
 from xsdata.formats.dataclass.parsers import XmlParser
 from xsdata.formats.dataclass.serializers import JsonSerializer
 from xsdata.formats.dataclass.serializers import XmlSerializer
+from xsdata.formats.dataclass.serializers.config import SerializerConfig
 
 from reqif.models import ReqIf
 
 parser = XmlParser(context=XmlContext())
-serializer = XmlSerializer(context=parser.context, pretty_print=True, encoding="ascii")
+config = SerializerConfig(pretty_print=True, encoding="ascii")
+serializer = XmlSerializer(context=parser.context, config=config)
 jsonSerializer = JsonSerializer(indent=True)
 here = Path(__file__).parent.absolute()
 
