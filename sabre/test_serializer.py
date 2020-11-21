@@ -4,11 +4,13 @@ from unittest import TestCase
 from lxml import etree
 from xsdata.formats.dataclass.parsers import JsonParser
 from xsdata.formats.dataclass.serializers import XmlSerializer
+from xsdata.formats.dataclass.serializers.config import SerializerConfig
 
 from sabre.models import OtaAirLowFareSearchRq
 
 parser = JsonParser()
-serializer = XmlSerializer(pretty_print=True)
+config = SerializerConfig(pretty_print=True)
+serializer = XmlSerializer(config=config)
 cwd = Path(__file__).parent.absolute()
 xsd_location = str(cwd.joinpath("schemas/BargainFinderMaxRQ_v1-9-7.xsd"))
 

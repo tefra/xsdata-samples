@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LowFareSearchReq xmlns="http://www.travelport.com/schema/air_v48_0" xmlns:ns1="http://www.travelport.com/schema/common_v48_0" TraceId="c0716df8-12f5-11ea-9d04-000c293dfa64" TargetBranch="P107695" EnablePointToPointSearch="false" EnablePointToPointAlternates="false" MaxNumberOfExpertSolutions="0" SolutionResult="false" PreferCompleteItinerary="true" ReturnUpsellFare="false" IncludeFareInfoMessages="false" ReturnBrandedFares="true" MultiGDSSearch="false" ReturnMM="false" CheckOBFees="All" FareInfoRules="false">
   <ns1:BillingPointOfSaleInfo OriginApplication="UAPI"/>
   <SearchAirLeg>
