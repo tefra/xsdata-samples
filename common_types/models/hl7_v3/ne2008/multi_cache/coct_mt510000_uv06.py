@@ -100,25 +100,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 class CoctMt510000Uv06Coverage2Value(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -139,25 +120,6 @@ class CoctMt510000Uv06Coverage2Value(Enum):
 
 
 class CoctMt510000Uv06Limitation2Value(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -178,25 +140,6 @@ class CoctMt510000Uv06Limitation2Value(Enum):
 
 
 class CoctMt510000Uv06Limitation3Value(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -217,25 +160,6 @@ class CoctMt510000Uv06Limitation3Value(Enum):
 
 
 class CoctMt510000Uv06LimitationValue(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -256,25 +180,6 @@ class CoctMt510000Uv06LimitationValue(Enum):
 
 
 class CoctMt510000Uv06Reference2Value(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -295,25 +200,6 @@ class CoctMt510000Uv06Reference2Value(Enum):
 
 
 class CoctMt510000Uv06ReferenceValue(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -335,19 +221,6 @@ class CoctMt510000Uv06ReferenceValue(Enum):
 
 @dataclass
 class CoctMt510000Uv06CoverageChargePolicy:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar reason_code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.CoverageChargePolicy"
 
@@ -442,17 +315,6 @@ class CoctMt510000Uv06CoverageChargePolicy:
 
 @dataclass
 class CoctMt510000Uv06CoverageDefinition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar title:
-    :ivar text:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.CoverageDefinition"
 
@@ -530,18 +392,6 @@ class CoctMt510000Uv06CoverageDefinition:
 
 @dataclass
 class CoctMt510000Uv06CoverageLimitObservation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar value:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.CoverageLimitObservation"
 
@@ -626,19 +476,6 @@ class CoctMt510000Uv06CoverageLimitObservation:
 
 @dataclass
 class CoctMt510000Uv06CoveragePolicy:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar reason_code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.CoveragePolicy"
 
@@ -733,14 +570,6 @@ class CoctMt510000Uv06CoveragePolicy:
 
 @dataclass
 class CoctMt510000Uv06DirectAuthorityOver:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar underwriter:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.DirectAuthorityOver"
 
@@ -797,14 +626,6 @@ class CoctMt510000Uv06DirectAuthorityOver:
 
 @dataclass
 class CoctMt510000Uv06DirectAuthorityOver4:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar payor:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.DirectAuthorityOver4"
 
@@ -861,18 +682,6 @@ class CoctMt510000Uv06DirectAuthorityOver4:
 
 @dataclass
 class CoctMt510000Uv06EligibilityStatusObservation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar value:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.EligibilityStatusObservation"
 
@@ -957,17 +766,6 @@ class CoctMt510000Uv06EligibilityStatusObservation:
 
 @dataclass
 class CoctMt510000Uv06Organization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar telecom:
-    :ivar addr:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Organization"
 
@@ -1045,18 +843,6 @@ class CoctMt510000Uv06Organization:
 
 @dataclass
 class CoctMt510000Uv06Person:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar telecom:
-    :ivar birth_time:
-    :ivar addr:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Person"
 
@@ -1143,18 +929,6 @@ class CoctMt510000Uv06Person:
 
 @dataclass
 class CoctMt510000Uv06PolicyOrProgramFinancialLimit:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar net_amt:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.PolicyOrProgramFinancialLimit"
 
@@ -1241,21 +1015,6 @@ class CoctMt510000Uv06PolicyOrProgramFinancialLimit:
 
 @dataclass
 class CoctMt510000Uv06Precondition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar observation:
-    :ivar substance_administration:
-    :ivar supply:
-    :ivar procedure:
-    :ivar encounter:
-    :ivar act:
-    :ivar organizer:
-    :ivar act_reference:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Precondition"
 
@@ -1368,25 +1127,6 @@ class CoctMt510000Uv06Precondition:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -1408,17 +1148,6 @@ class CoctMt510000Uv06Precondition:
 
 @dataclass
 class CoctMt510000Uv06PreviousPolicyOrProgram:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.PreviousPolicyOrProgram"
 
@@ -1499,15 +1228,6 @@ class CoctMt510000Uv06PreviousPolicyOrProgram:
 
 @dataclass
 class CoctMt510000Uv06ServiceDefinition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.ServiceDefinition"
 
@@ -1570,14 +1290,6 @@ class CoctMt510000Uv06ServiceDefinition:
 
 @dataclass
 class CoctMt510000Uv06Subject3:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar verification:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Subject3"
 
@@ -1633,20 +1345,6 @@ class CoctMt510000Uv06Subject3:
 
 @dataclass
 class CoctMt510000Uv06Beneficiary:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar member_organization1:
-    :ivar member_person:
-    :ivar member_non_person_living_subject:
-    :ivar group_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Beneficiary"
 
@@ -1751,38 +1449,11 @@ class CoctMt510000Uv06Beneficiary:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt510000Uv06Definition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar billable_clinical_service1:
-    :ivar billable_clinical_product1:
-    :ivar supply_event1:
-    :ivar accomodation_supplied1:
-    :ivar supply_event2:
-    :ivar oral_health_service1:
-    :ivar cross_reference1:
-    :ivar observation:
-    :ivar substance_administration:
-    :ivar supply:
-    :ivar procedure:
-    :ivar encounter:
-    :ivar act:
-    :ivar organizer:
-    :ivar act_reference:
-    :ivar transportation:
-    :ivar service_definition:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Definition"
 
@@ -1975,25 +1646,6 @@ class CoctMt510000Uv06Definition:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -2015,14 +1667,6 @@ class CoctMt510000Uv06Definition:
 
 @dataclass
 class CoctMt510000Uv06Definition3:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar coverage_definition:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Definition3"
 
@@ -2079,25 +1723,6 @@ class CoctMt510000Uv06Definition3:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -2119,14 +1744,6 @@ class CoctMt510000Uv06Definition3:
 
 @dataclass
 class CoctMt510000Uv06Limitation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar coverage_limit_observation:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Limitation"
 
@@ -2185,14 +1802,6 @@ class CoctMt510000Uv06Limitation:
 
 @dataclass
 class CoctMt510000Uv06Limitation3:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar policy_or_program_financial_limit:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Limitation3"
 
@@ -2251,22 +1860,6 @@ class CoctMt510000Uv06Limitation3:
 
 @dataclass
 class CoctMt510000Uv06Payor:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar addr:
-    :ivar telecom:
-    :ivar effective_time:
-    :ivar invoice_payor_organization:
-    :ivar underwriting_organization:
-    :ivar direct_authority_over:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Payor"
 
@@ -2383,25 +1976,11 @@ class CoctMt510000Uv06Payor:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt510000Uv06PersonalRelationship:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar relationship_holder:
-    :ivar personal_relationship_with:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.PersonalRelationship"
 
@@ -2480,27 +2059,11 @@ class CoctMt510000Uv06PersonalRelationship:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt510000Uv06PolicyHolder:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar addr:
-    :ivar telecom:
-    :ivar policy_holder_person:
-    :ivar policy_holder_organization:
-    :ivar underwriting_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.PolicyHolder"
 
@@ -2595,22 +2158,11 @@ class CoctMt510000Uv06PolicyHolder:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt510000Uv06Reference:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar coverage_policy:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Reference"
 
@@ -2669,14 +2221,6 @@ class CoctMt510000Uv06Reference:
 
 @dataclass
 class CoctMt510000Uv06Reference2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar coverage_charge_policy:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Reference2"
 
@@ -2735,14 +2279,6 @@ class CoctMt510000Uv06Reference2:
 
 @dataclass
 class CoctMt510000Uv06ReplacementOf:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar previous_policy_or_program:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.ReplacementOf"
 
@@ -2799,25 +2335,6 @@ class CoctMt510000Uv06ReplacementOf:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -2839,20 +2356,6 @@ class CoctMt510000Uv06ReplacementOf:
 
 @dataclass
 class CoctMt510000Uv06ResponsibleParty:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar agent_person:
-    :ivar represented_person:
-    :ivar represented_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.ResponsibleParty"
 
@@ -2954,14 +2457,6 @@ class CoctMt510000Uv06ResponsibleParty:
 
 @dataclass
 class CoctMt510000Uv06Subject:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar eligibility_status_observation:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Subject"
 
@@ -3018,16 +2513,6 @@ class CoctMt510000Uv06Subject:
 
 @dataclass
 class CoctMt510000Uv06Beneficiary2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar patient:
-    :ivar beneficiary:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Beneficiary2"
 
@@ -3099,22 +2584,6 @@ class CoctMt510000Uv06Beneficiary2:
 
 @dataclass
 class CoctMt510000Uv06CoverageCharge:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar unit_quantity:
-    :ivar unit_price_amt:
-    :ivar net_amt:
-    :ivar factor_number:
-    :ivar reference:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.CoverageCharge"
 
@@ -3232,14 +2701,6 @@ class CoctMt510000Uv06CoverageCharge:
 
 @dataclass
 class CoctMt510000Uv06DirectAuthorityOver2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar payor:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.DirectAuthorityOver2"
 
@@ -3296,22 +2757,6 @@ class CoctMt510000Uv06DirectAuthorityOver2:
 
 @dataclass
 class CoctMt510000Uv06FinancialParticipationCharge:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar unit_quantity:
-    :ivar unit_price_amt:
-    :ivar net_amt:
-    :ivar factor_number:
-    :ivar reference:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.FinancialParticipationCharge"
 
@@ -3429,14 +2874,6 @@ class CoctMt510000Uv06FinancialParticipationCharge:
 
 @dataclass
 class CoctMt510000Uv06Holder:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar policy_holder:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Holder"
 
@@ -3494,14 +2931,6 @@ class CoctMt510000Uv06Holder:
 
 @dataclass
 class CoctMt510000Uv06IndirectAuthorithyOver:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar responsible_party:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.IndirectAuthorithyOver"
 
@@ -3559,14 +2988,6 @@ class CoctMt510000Uv06IndirectAuthorithyOver:
 
 @dataclass
 class CoctMt510000Uv06IndirectAuthorithyOver2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar policy_holder:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.IndirectAuthorithyOver2"
 
@@ -3624,16 +3045,6 @@ class CoctMt510000Uv06IndirectAuthorithyOver2:
 
 @dataclass
 class CoctMt510000Uv06Part:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar priority_number:
-    :ivar effective_time:
-    :ivar personal_relationship:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Part"
 
@@ -3707,15 +3118,6 @@ class CoctMt510000Uv06Part:
 
 @dataclass
 class CoctMt510000Uv06PrimaryPerformer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar function_code:
-    :ivar payor:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.PrimaryPerformer"
 
@@ -3780,27 +3182,6 @@ class CoctMt510000Uv06PrimaryPerformer:
 
 @dataclass
 class CoctMt510000Uv06CoveredParty:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar effective_time:
-    :ivar covered_organization1:
-    :ivar covered_person:
-    :ivar covered_non_person_living_subject:
-    :ivar underwriting_organization:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar part:
-    :ivar indirect_authority1:
-    :ivar indirect_authority2:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.CoveredParty"
 
@@ -3964,15 +3345,6 @@ class CoctMt510000Uv06CoveredParty:
 
 @dataclass
 class CoctMt510000Uv06Limitation2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar coverage_charge:
-    :ivar financial_participation_charge:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Limitation2"
 
@@ -4039,23 +3411,6 @@ class CoctMt510000Uv06Limitation2:
 
 @dataclass
 class CoctMt510000Uv06Underwriter:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar addr:
-    :ivar telecom:
-    :ivar effective_time:
-    :ivar underwriting_organization:
-    :ivar scoper_organization:
-    :ivar direct_authority_over1:
-    :ivar direct_authority_over2:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Underwriter"
 
@@ -4181,23 +3536,11 @@ class CoctMt510000Uv06Underwriter:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt510000Uv06Author2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar function_code:
-    :ivar underwriter:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Author2"
 
@@ -4262,24 +3605,6 @@ class CoctMt510000Uv06Author2:
 
 @dataclass
 class CoctMt510000Uv06Benefit:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar confidentiality_code:
-    :ivar reason_code:
-    :ivar definition:
-    :ivar precondition:
-    :ivar reference:
-    :ivar limitation:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Benefit"
 
@@ -4412,15 +3737,6 @@ class CoctMt510000Uv06Benefit:
 
 @dataclass
 class CoctMt510000Uv06CoveredParty2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar covered_party:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT510000UV06.CoveredParty2"
 
@@ -4484,14 +3800,6 @@ class CoctMt510000Uv06CoveredParty2:
 
 @dataclass
 class CoctMt510000Uv06DirectAuthorityOver3:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar underwriter:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.DirectAuthorityOver3"
 
@@ -4548,15 +3856,6 @@ class CoctMt510000Uv06DirectAuthorityOver3:
 
 @dataclass
 class CoctMt510000Uv06Coverage2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar benefit:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Coverage2"
 
@@ -4622,22 +3921,6 @@ class CoctMt510000Uv06Coverage2:
 
 @dataclass
 class CoctMt510000Uv06Sponsor:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar addr:
-    :ivar telecom:
-    :ivar effective_time:
-    :ivar sponsor_organization:
-    :ivar underwriting_organization:
-    :ivar direct_authority_over:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Sponsor"
 
@@ -4754,23 +4037,11 @@ class CoctMt510000Uv06Sponsor:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt510000Uv06ResponsibleParty2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar function_code:
-    :ivar sponsor:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.ResponsibleParty2"
 
@@ -4835,29 +4106,6 @@ class CoctMt510000Uv06ResponsibleParty2:
 
 @dataclass
 class CoctMt510000Uv06PolicyOrProgram:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar confidentiality_code:
-    :ivar covered_party:
-    :ivar holder:
-    :ivar responsible_party:
-    :ivar primary_performer:
-    :ivar author:
-    :ivar definition:
-    :ivar replacement_of:
-    :ivar limitation1:
-    :ivar limitation2:
-    :ivar coverage_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.PolicyOrProgram"
 
@@ -5039,15 +4287,6 @@ class CoctMt510000Uv06PolicyOrProgram:
 
 @dataclass
 class CoctMt510000Uv06Component:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar priority_number:
-    :ivar policy_or_program:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.Component"
 
@@ -5112,20 +4351,6 @@ class CoctMt510000Uv06Component:
 
 @dataclass
 class CoctMt510000Uv06CoverageRecord:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar confidentiality_code:
-    :ivar beneficiary:
-    :ivar component:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT510000UV06.CoverageRecord"
 

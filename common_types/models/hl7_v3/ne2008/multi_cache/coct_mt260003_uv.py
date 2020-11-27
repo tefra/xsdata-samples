@@ -60,25 +60,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 class CoctMt260003UvSubject2Value(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -99,25 +80,6 @@ class CoctMt260003UvSubject2Value(Enum):
 
 
 class CoctMt260003UvSubjectValue(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -139,14 +101,6 @@ class CoctMt260003UvSubjectValue(Enum):
 
 @dataclass
 class CoctMt260003UvAssignedEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.AssignedEntity"
 
@@ -201,15 +155,6 @@ class CoctMt260003UvAssignedEntity:
 
 @dataclass
 class CoctMt260003UvDetectedMedicationIssueDefinition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar effective_time:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.DetectedMedicationIssueDefinition"
 
@@ -275,15 +220,6 @@ class CoctMt260003UvDetectedMedicationIssueDefinition:
 
 @dataclass
 class CoctMt260003UvManufacturedMaterialKind:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.ManufacturedMaterialKind"
 
@@ -345,14 +281,6 @@ class CoctMt260003UvManufacturedMaterialKind:
 
 @dataclass
 class CoctMt260003UvPharmacy:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar telecom:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.Pharmacy"
 
@@ -407,24 +335,11 @@ class CoctMt260003UvPharmacy:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt260003UvSeverityObservation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar value:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.SeverityObservation"
 
@@ -496,14 +411,6 @@ class CoctMt260003UvSeverityObservation:
 
 @dataclass
 class CoctMt260003UvAuthor:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.Author"
 
@@ -561,14 +468,6 @@ class CoctMt260003UvAuthor:
 
 @dataclass
 class CoctMt260003UvDefinition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar detected_medication_issue_definition:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.Definition"
 
@@ -623,25 +522,6 @@ class CoctMt260003UvDefinition:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -663,14 +543,6 @@ class CoctMt260003UvDefinition:
 
 @dataclass
 class CoctMt260003UvLocation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar pharmacy:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.Location"
 
@@ -726,14 +598,6 @@ class CoctMt260003UvLocation:
 
 @dataclass
 class CoctMt260003UvManufacturedProduct:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar manufactured_material_kind:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.ManufacturedProduct"
 
@@ -789,14 +653,6 @@ class CoctMt260003UvManufacturedProduct:
 
 @dataclass
 class CoctMt260003UvSubject:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar severity_observation:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.Subject"
 
@@ -855,14 +711,6 @@ class CoctMt260003UvSubject:
 
 @dataclass
 class CoctMt260003UvConsumable:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar manufactured_product:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.Consumable"
 
@@ -919,16 +767,6 @@ class CoctMt260003UvConsumable:
 
 @dataclass
 class CoctMt260003UvManagement:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar author:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.Management"
 
@@ -1000,18 +838,6 @@ class CoctMt260003UvManagement:
 
 @dataclass
 class CoctMt260003UvOtherSupply:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar effective_time:
-    :ivar quantity:
-    :ivar expected_use_time:
-    :ivar location:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.OtherSupply"
 
@@ -1098,14 +924,6 @@ class CoctMt260003UvOtherSupply:
 
 @dataclass
 class CoctMt260003UvMitigates:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar management:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.Mitigates"
 
@@ -1161,15 +979,6 @@ class CoctMt260003UvMitigates:
 
 @dataclass
 class CoctMt260003UvOtherMedication:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar consumable:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.OtherMedication"
 
@@ -1234,15 +1043,6 @@ class CoctMt260003UvOtherMedication:
 
 @dataclass
 class CoctMt260003UvSubject2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar other_medication:
-    :ivar other_supply:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.Subject2"
 
@@ -1309,20 +1109,6 @@ class CoctMt260003UvSubject2:
 
 @dataclass
 class CoctMt260003UvDetectedMedicationIssue:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar value:
-    :ivar definition:
-    :ivar subject:
-    :ivar mitigated_by:
-    :ivar subject_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT260003UV.DetectedMedicationIssue"
 

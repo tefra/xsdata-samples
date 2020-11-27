@@ -71,25 +71,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 class CoctMt300000Uv04SubjectValue(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -111,14 +92,6 @@ class CoctMt300000Uv04SubjectValue(Enum):
 
 @dataclass
 class CoctMt300000Uv04Destination:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar service_delivery_location:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.Destination"
 
@@ -176,14 +149,6 @@ class CoctMt300000Uv04Destination:
 
 @dataclass
 class CoctMt300000Uv04HealthCareProvider:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.HealthCareProvider"
 
@@ -237,22 +202,11 @@ class CoctMt300000Uv04HealthCareProvider:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt300000Uv04Location:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar service_delivery_location:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.Location"
 
@@ -308,16 +262,6 @@ class CoctMt300000Uv04Location:
 
 @dataclass
 class CoctMt300000Uv04ManufacturedMaterialKind:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar form_code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.ManufacturedMaterialKind"
 
@@ -387,14 +331,6 @@ class CoctMt300000Uv04ManufacturedMaterialKind:
 
 @dataclass
 class CoctMt300000Uv04Origin:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar service_delivery_location:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.Origin"
 
@@ -452,16 +388,6 @@ class CoctMt300000Uv04Origin:
 
 @dataclass
 class CoctMt300000Uv04PrescriberPerson:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar telecom:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.PrescriberPerson"
 
@@ -533,14 +459,6 @@ class CoctMt300000Uv04PrescriberPerson:
 
 @dataclass
 class CoctMt300000Uv04Subject:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar detected_medication_issue:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.Subject"
 
@@ -599,14 +517,6 @@ class CoctMt300000Uv04Subject:
 
 @dataclass
 class CoctMt300000Uv04SubstitutionRole:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.SubstitutionRole"
 
@@ -659,24 +569,11 @@ class CoctMt300000Uv04SubstitutionRole:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt300000Uv04SupplyOrder:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar effective_time:
-    :ivar repeat_number:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.SupplyOrder"
 
@@ -748,15 +645,6 @@ class CoctMt300000Uv04SupplyOrder:
 
 @dataclass
 class CoctMt300000Uv04ManufacturedProduct:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar quantity:
-    :ivar manufactured_material_kind:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.ManufacturedProduct"
 
@@ -820,14 +708,6 @@ class CoctMt300000Uv04ManufacturedProduct:
 
 @dataclass
 class CoctMt300000Uv04Performer1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar health_care_provider:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.Performer1"
 
@@ -884,14 +764,6 @@ class CoctMt300000Uv04Performer1:
 
 @dataclass
 class CoctMt300000Uv04Performer2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar substitution_role:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.Performer2"
 
@@ -948,15 +820,6 @@ class CoctMt300000Uv04Performer2:
 
 @dataclass
 class CoctMt300000Uv04PrescriberRole:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar playing_prescriber_person:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.PrescriberRole"
 
@@ -1019,22 +882,11 @@ class CoctMt300000Uv04PrescriberRole:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt300000Uv04Reason:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar supply_order:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.Reason"
 
@@ -1091,14 +943,6 @@ class CoctMt300000Uv04Reason:
 
 @dataclass
 class CoctMt300000Uv04Author:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar prescriber_role:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.Author"
 
@@ -1156,14 +1000,6 @@ class CoctMt300000Uv04Author:
 
 @dataclass
 class CoctMt300000Uv04Product:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar manufactured_product:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.Product"
 
@@ -1221,17 +1057,6 @@ class CoctMt300000Uv04Product:
 
 @dataclass
 class CoctMt300000Uv04Substitution:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar reason_code:
-    :ivar performer:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.Substitution"
 
@@ -1312,14 +1137,6 @@ class CoctMt300000Uv04Substitution:
 
 @dataclass
 class CoctMt300000Uv04PertinentInformation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar substitution:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.PertinentInformation"
 
@@ -1374,25 +1191,6 @@ class CoctMt300000Uv04PertinentInformation:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -1414,14 +1212,6 @@ class CoctMt300000Uv04PertinentInformation:
 
 @dataclass
 class CoctMt300000Uv04PertinentInformation2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar substitution:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.PertinentInformation2"
 
@@ -1476,25 +1266,6 @@ class CoctMt300000Uv04PertinentInformation2:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -1516,17 +1287,6 @@ class CoctMt300000Uv04PertinentInformation2:
 
 @dataclass
 class CoctMt300000Uv04SubstanceAdministrationOrder:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar author:
-    :ivar reason:
-    :ivar pertinent_information:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.SubstanceAdministrationOrder"
 
@@ -1609,14 +1369,6 @@ class CoctMt300000Uv04SubstanceAdministrationOrder:
 
 @dataclass
 class CoctMt300000Uv04InFulfillmentOf:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar substance_administration_order:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.InFulfillmentOf"
 
@@ -1673,20 +1425,6 @@ class CoctMt300000Uv04InFulfillmentOf:
 
 @dataclass
 class CoctMt300000Uv04SubstanceAdministrationIntent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar effective_time:
-    :ivar priority_code:
-    :ivar in_fulfillment_of:
-    :ivar pertinent_information:
-    :ivar subject_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.SubstanceAdministrationIntent"
 
@@ -1793,14 +1531,6 @@ class CoctMt300000Uv04SubstanceAdministrationIntent:
 
 @dataclass
 class CoctMt300000Uv04Reason2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar substance_administration_intent:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.Reason2"
 
@@ -1857,25 +1587,6 @@ class CoctMt300000Uv04Reason2:
 
 @dataclass
 class CoctMt300000Uv04SupplyEvent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar quantity:
-    :ivar expected_use_time:
-    :ivar product:
-    :ivar performer:
-    :ivar origin:
-    :ivar destination:
-    :ivar location:
-    :ivar reason_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT300000UV04.SupplyEvent"
 

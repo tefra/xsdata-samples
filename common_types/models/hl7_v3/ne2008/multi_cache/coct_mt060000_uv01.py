@@ -34,16 +34,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt060000Uv01Entity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT060000UV01.Entity"
 
@@ -113,15 +103,6 @@ class CoctMt060000Uv01Entity:
 
 @dataclass
 class CoctMt060000Uv01Escort:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT060000UV01.Escort"
 
@@ -186,14 +167,6 @@ class CoctMt060000Uv01Escort:
 
 @dataclass
 class CoctMt060000Uv01Location:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar located_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT060000UV01.Location"
 
@@ -250,15 +223,6 @@ class CoctMt060000Uv01Location:
 
 @dataclass
 class CoctMt060000Uv01Performer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT060000UV01.Performer"
 
@@ -322,14 +286,6 @@ class CoctMt060000Uv01Performer:
 
 @dataclass
 class CoctMt060000Uv01RoleTransport:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar playing_entity:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT060000UV01.RoleTransport"
 
@@ -384,22 +340,11 @@ class CoctMt060000Uv01RoleTransport:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt060000Uv01Subject:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar role_transport:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT060000UV01.Subject"
 
@@ -456,25 +401,6 @@ class CoctMt060000Uv01Subject:
 
 @dataclass
 class CoctMt060000Uv01Transportation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar subject:
-    :ivar performer:
-    :ivar escort:
-    :ivar location:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT060000UV01.Transportation"
 

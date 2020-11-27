@@ -36,27 +36,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class PrpaIn201305Uv02QuqiMt021001Uv01ControlActProcess:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar effective_time:
-    :ivar priority_code:
-    :ivar reason_code:
-    :ivar language_code:
-    :ivar overseer:
-    :ivar author_or_performer:
-    :ivar data_enterer:
-    :ivar information_recipient:
-    :ivar reason_of:
-    :ivar query_by_parameter:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "PRPA_IN201305UV02.QUQI_MT021001UV01.ControlActProcess"
 
@@ -217,28 +196,6 @@ class PrpaIn201305Uv02QuqiMt021001Uv01ControlActProcess:
 
 @dataclass
 class PrpaIn201305Uv02McciMt000100Uv01Message:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar creation_time:
-    :ivar security_text:
-    :ivar version_code:
-    :ivar interaction_id:
-    :ivar profile_id:
-    :ivar processing_code:
-    :ivar processing_mode_code:
-    :ivar accept_ack_code:
-    :ivar sequence_number:
-    :ivar attachment_text:
-    :ivar receiver:
-    :ivar respond_to:
-    :ivar sender:
-    :ivar attention_line:
-    :ivar control_act_process:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_IN201305UV02.MCCI_MT000100UV01.Message"
 
@@ -413,9 +370,6 @@ class PrpaIn201305Uv02McciMt000100Uv01Message:
 
 @dataclass
 class PrpaIn201305Uv02(PrpaIn201305Uv02McciMt000100Uv01Message):
-    """
-    :ivar itsversion:
-    """
     class Meta:
         name = "PRPA_IN201305UV02"
         namespace = "urn:hl7-org:v3"

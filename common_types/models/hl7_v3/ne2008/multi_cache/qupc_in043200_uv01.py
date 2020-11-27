@@ -62,25 +62,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 class QupcIn043200Uv01MfmiMt700712Uv01Subject1Value(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -101,25 +82,6 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1Value(Enum):
 
 
 class QupcIn043200Uv01MfmiMt700712Uv01Subject5Value(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -141,15 +103,6 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject5Value(Enum):
 
 @dataclass
 class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar care_provision_event:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "QUPC_IN043200UV01.MFMI_MT700712UV01.Subject5"
 
@@ -216,23 +169,6 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
 
 @dataclass
 class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar author:
-    :ivar custodian:
-    :ivar in_fulfillment_of:
-    :ivar definition:
-    :ivar replacement_of:
-    :ivar subject2:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "QUPC_IN043200UV01.MFMI_MT700712UV01.RegistrationEvent"
 
@@ -364,15 +300,6 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
 
 @dataclass
 class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar registration_event:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "QUPC_IN043200UV01.MFMI_MT700712UV01.Subject1"
 
@@ -439,29 +366,6 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
 
 @dataclass
 class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar effective_time:
-    :ivar priority_code:
-    :ivar reason_code:
-    :ivar language_code:
-    :ivar overseer:
-    :ivar author_or_performer:
-    :ivar data_enterer:
-    :ivar information_recipient:
-    :ivar subject:
-    :ivar reason_of:
-    :ivar query_ack:
-    :ivar parameter_list:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "QUPC_IN043200UV01.MFMI_MT700712UV01.ControlActProcess"
 
@@ -639,28 +543,6 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
 
 @dataclass
 class QupcIn043200Uv01McciMt000300Uv01Message:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar creation_time:
-    :ivar security_text:
-    :ivar version_code:
-    :ivar interaction_id:
-    :ivar profile_id:
-    :ivar processing_code:
-    :ivar processing_mode_code:
-    :ivar accept_ack_code:
-    :ivar attachment_text:
-    :ivar receiver:
-    :ivar respond_to:
-    :ivar sender:
-    :ivar attention_line:
-    :ivar acknowledgement:
-    :ivar control_act_process:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "QUPC_IN043200UV01.MCCI_MT000300UV01.Message"
 
@@ -835,9 +717,6 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
 
 @dataclass
 class QupcIn043200Uv01(QupcIn043200Uv01McciMt000300Uv01Message):
-    """
-    :ivar itsversion:
-    """
     class Meta:
         name = "QUPC_IN043200UV01"
         namespace = "urn:hl7-org:v3"

@@ -68,10 +68,6 @@ __NAMESPACE__ = "http://www.travelport.com/service/air_v48_0"
 
 @dataclass
 class AirAvailabilitySearchPortTypeServiceInput:
-    """
-    :ivar header:
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -93,9 +89,6 @@ class AirAvailabilitySearchPortTypeServiceInput:
 
     @dataclass
     class Header:
-        """
-        :ivar session_context:
-        """
         session_context: Optional[SessionContext] = field(
             default=None,
             metadata={
@@ -107,9 +100,6 @@ class AirAvailabilitySearchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar availability_search_req:
-        """
         availability_search_req: Optional[AvailabilitySearchReq] = field(
             default=None,
             metadata={
@@ -122,9 +112,6 @@ class AirAvailabilitySearchPortTypeServiceInput:
 
 @dataclass
 class AirAvailabilitySearchPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -139,10 +126,6 @@ class AirAvailabilitySearchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar availability_search_rsp:
-        :ivar fault:
-        """
         availability_search_rsp: Optional[AvailabilitySearchRsp] = field(
             default=None,
             metadata={
@@ -161,12 +144,6 @@ class AirAvailabilitySearchPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -198,9 +175,6 @@ class AirAvailabilitySearchPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -213,9 +187,6 @@ class AirAvailabilitySearchPortTypeServiceOutput:
 
 @dataclass
 class AirExchangeEligibilityPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -230,9 +201,6 @@ class AirExchangeEligibilityPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_exchange_eligibility_req:
-        """
         air_exchange_eligibility_req: Optional[AirExchangeEligibilityReq] = field(
             default=None,
             metadata={
@@ -245,9 +213,6 @@ class AirExchangeEligibilityPortTypeServiceInput:
 
 @dataclass
 class AirExchangeEligibilityPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -262,10 +227,6 @@ class AirExchangeEligibilityPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_exchange_eligibility_rsp:
-        :ivar fault:
-        """
         air_exchange_eligibility_rsp: Optional[AirExchangeEligibilityRsp] = field(
             default=None,
             metadata={
@@ -284,12 +245,6 @@ class AirExchangeEligibilityPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -321,9 +276,6 @@ class AirExchangeEligibilityPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -336,9 +288,6 @@ class AirExchangeEligibilityPortTypeServiceOutput:
 
 @dataclass
 class AirExchangeMultiQuotePortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -353,9 +302,6 @@ class AirExchangeMultiQuotePortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_exchange_multi_quote_req:
-        """
         air_exchange_multi_quote_req: Optional[AirExchangeMultiQuoteReq] = field(
             default=None,
             metadata={
@@ -368,9 +314,6 @@ class AirExchangeMultiQuotePortTypeServiceInput:
 
 @dataclass
 class AirExchangeMultiQuotePortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -385,10 +328,6 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_exchange_multi_quote_rsp:
-        :ivar fault:
-        """
         air_exchange_multi_quote_rsp: Optional[AirExchangeMultiQuoteRsp] = field(
             default=None,
             metadata={
@@ -407,12 +346,6 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -444,9 +377,6 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -459,9 +389,6 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
 
 @dataclass
 class AirExchangeProcessPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -476,9 +403,6 @@ class AirExchangeProcessPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_exchange_req:
-        """
         air_exchange_req: Optional[AirExchangeReq] = field(
             default=None,
             metadata={
@@ -491,9 +415,6 @@ class AirExchangeProcessPortTypeServiceInput:
 
 @dataclass
 class AirExchangeProcessPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -508,10 +429,6 @@ class AirExchangeProcessPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_exchange_rsp:
-        :ivar fault:
-        """
         air_exchange_rsp: Optional[AirExchangeRsp] = field(
             default=None,
             metadata={
@@ -530,12 +447,6 @@ class AirExchangeProcessPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -567,9 +478,6 @@ class AirExchangeProcessPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -582,9 +490,6 @@ class AirExchangeProcessPortTypeServiceOutput:
 
 @dataclass
 class AirExchangeQuotePortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -599,9 +504,6 @@ class AirExchangeQuotePortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_exchange_quote_req:
-        """
         air_exchange_quote_req: Optional[AirExchangeQuoteReq] = field(
             default=None,
             metadata={
@@ -614,9 +516,6 @@ class AirExchangeQuotePortTypeServiceInput:
 
 @dataclass
 class AirExchangeQuotePortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -631,10 +530,6 @@ class AirExchangeQuotePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_exchange_quote_rsp:
-        :ivar fault:
-        """
         air_exchange_quote_rsp: Optional[AirExchangeQuoteRsp] = field(
             default=None,
             metadata={
@@ -653,12 +548,6 @@ class AirExchangeQuotePortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -690,9 +579,6 @@ class AirExchangeQuotePortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -705,10 +591,6 @@ class AirExchangeQuotePortTypeServiceOutput:
 
 @dataclass
 class AirExchangeTicketingPortTypeServiceInput:
-    """
-    :ivar header:
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -730,9 +612,6 @@ class AirExchangeTicketingPortTypeServiceInput:
 
     @dataclass
     class Header:
-        """
-        :ivar session_context:
-        """
         session_context: Optional[SessionContext] = field(
             default=None,
             metadata={
@@ -744,9 +623,6 @@ class AirExchangeTicketingPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_exchange_ticketing_req:
-        """
         air_exchange_ticketing_req: Optional[AirExchangeTicketingReq] = field(
             default=None,
             metadata={
@@ -759,9 +635,6 @@ class AirExchangeTicketingPortTypeServiceInput:
 
 @dataclass
 class AirExchangeTicketingPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -776,10 +649,6 @@ class AirExchangeTicketingPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_exchange_ticketing_rsp:
-        :ivar fault:
-        """
         air_exchange_ticketing_rsp: Optional[AirExchangeTicketingRsp] = field(
             default=None,
             metadata={
@@ -798,12 +667,6 @@ class AirExchangeTicketingPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -835,9 +698,6 @@ class AirExchangeTicketingPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -850,10 +710,6 @@ class AirExchangeTicketingPortTypeServiceOutput:
 
 @dataclass
 class AirFareDisplayPortTypeServiceInput:
-    """
-    :ivar header:
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -875,9 +731,6 @@ class AirFareDisplayPortTypeServiceInput:
 
     @dataclass
     class Header:
-        """
-        :ivar session_context:
-        """
         session_context: Optional[SessionContext] = field(
             default=None,
             metadata={
@@ -889,9 +742,6 @@ class AirFareDisplayPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_fare_display_req:
-        """
         air_fare_display_req: Optional[AirFareDisplayReq] = field(
             default=None,
             metadata={
@@ -904,9 +754,6 @@ class AirFareDisplayPortTypeServiceInput:
 
 @dataclass
 class AirFareDisplayPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -921,10 +768,6 @@ class AirFareDisplayPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_fare_display_rsp:
-        :ivar fault:
-        """
         air_fare_display_rsp: Optional[AirFareDisplayRsp] = field(
             default=None,
             metadata={
@@ -943,12 +786,6 @@ class AirFareDisplayPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -980,9 +817,6 @@ class AirFareDisplayPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -995,10 +829,6 @@ class AirFareDisplayPortTypeServiceOutput:
 
 @dataclass
 class AirFareRulesPortTypeServiceInput:
-    """
-    :ivar header:
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1020,9 +850,6 @@ class AirFareRulesPortTypeServiceInput:
 
     @dataclass
     class Header:
-        """
-        :ivar session_context:
-        """
         session_context: Optional[SessionContext] = field(
             default=None,
             metadata={
@@ -1034,9 +861,6 @@ class AirFareRulesPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_fare_rules_req:
-        """
         air_fare_rules_req: Optional[AirFareRulesReq] = field(
             default=None,
             metadata={
@@ -1049,9 +873,6 @@ class AirFareRulesPortTypeServiceInput:
 
 @dataclass
 class AirFareRulesPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1066,10 +887,6 @@ class AirFareRulesPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_fare_rules_rsp:
-        :ivar fault:
-        """
         air_fare_rules_rsp: Optional[AirFareRulesRsp] = field(
             default=None,
             metadata={
@@ -1088,12 +905,6 @@ class AirFareRulesPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -1125,9 +936,6 @@ class AirFareRulesPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -1140,9 +948,6 @@ class AirFareRulesPortTypeServiceOutput:
 
 @dataclass
 class AirLowFareSearchAsynchPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1157,9 +962,6 @@ class AirLowFareSearchAsynchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar low_fare_search_asynch_req:
-        """
         low_fare_search_asynch_req: Optional[LowFareSearchAsynchReq] = field(
             default=None,
             metadata={
@@ -1172,9 +974,6 @@ class AirLowFareSearchAsynchPortTypeServiceInput:
 
 @dataclass
 class AirLowFareSearchAsynchPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1189,10 +988,6 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar low_fare_search_asynch_rsp:
-        :ivar fault:
-        """
         low_fare_search_asynch_rsp: Optional[LowFareSearchAsynchRsp] = field(
             default=None,
             metadata={
@@ -1211,12 +1006,6 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -1248,9 +1037,6 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -1263,10 +1049,6 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
 
 @dataclass
 class AirLowFareSearchPortTypeServiceInput:
-    """
-    :ivar header:
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1288,9 +1070,6 @@ class AirLowFareSearchPortTypeServiceInput:
 
     @dataclass
     class Header:
-        """
-        :ivar session_context:
-        """
         session_context: Optional[SessionContext] = field(
             default=None,
             metadata={
@@ -1302,9 +1081,6 @@ class AirLowFareSearchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar low_fare_search_req:
-        """
         low_fare_search_req: Optional[LowFareSearchReq] = field(
             default=None,
             metadata={
@@ -1317,9 +1093,6 @@ class AirLowFareSearchPortTypeServiceInput:
 
 @dataclass
 class AirLowFareSearchPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1334,10 +1107,6 @@ class AirLowFareSearchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar low_fare_search_rsp:
-        :ivar fault:
-        """
         low_fare_search_rsp: Optional[LowFareSearchRsp] = field(
             default=None,
             metadata={
@@ -1356,12 +1125,6 @@ class AirLowFareSearchPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -1393,9 +1156,6 @@ class AirLowFareSearchPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -1408,9 +1168,6 @@ class AirLowFareSearchPortTypeServiceOutput:
 
 @dataclass
 class AirMerchandisingDetailsPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1425,9 +1182,6 @@ class AirMerchandisingDetailsPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_merchandising_details_req:
-        """
         air_merchandising_details_req: Optional[AirMerchandisingDetailsReq] = field(
             default=None,
             metadata={
@@ -1440,9 +1194,6 @@ class AirMerchandisingDetailsPortTypeServiceInput:
 
 @dataclass
 class AirMerchandisingDetailsPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1457,10 +1208,6 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_merchandising_details_rsp:
-        :ivar fault:
-        """
         air_merchandising_details_rsp: Optional[AirMerchandisingDetailsRsp] = field(
             default=None,
             metadata={
@@ -1479,12 +1226,6 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -1516,9 +1257,6 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -1531,9 +1269,6 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
 
 @dataclass
 class AirMerchandisingOfferAvailabilityPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1548,9 +1283,6 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_merchandising_offer_availability_req:
-        """
         air_merchandising_offer_availability_req: Optional[AirMerchandisingOfferAvailabilityReq] = field(
             default=None,
             metadata={
@@ -1563,9 +1295,6 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceInput:
 
 @dataclass
 class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1580,10 +1309,6 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_merchandising_offer_availability_rsp:
-        :ivar fault:
-        """
         air_merchandising_offer_availability_rsp: Optional[AirMerchandisingOfferAvailabilityRsp] = field(
             default=None,
             metadata={
@@ -1602,12 +1327,6 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -1639,9 +1358,6 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -1654,9 +1370,6 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
 
 @dataclass
 class AirPrePayPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1671,9 +1384,6 @@ class AirPrePayPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_pre_pay_req:
-        """
         air_pre_pay_req: Optional[AirPrePayReq] = field(
             default=None,
             metadata={
@@ -1686,9 +1396,6 @@ class AirPrePayPortTypeServiceInput:
 
 @dataclass
 class AirPrePayPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1703,10 +1410,6 @@ class AirPrePayPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_pre_pay_rsp:
-        :ivar fault:
-        """
         air_pre_pay_rsp: Optional[AirPrePayRsp] = field(
             default=None,
             metadata={
@@ -1725,12 +1428,6 @@ class AirPrePayPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -1762,9 +1459,6 @@ class AirPrePayPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -1777,10 +1471,6 @@ class AirPrePayPortTypeServiceOutput:
 
 @dataclass
 class AirPricePortTypeServiceInput:
-    """
-    :ivar header:
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1802,9 +1492,6 @@ class AirPricePortTypeServiceInput:
 
     @dataclass
     class Header:
-        """
-        :ivar session_context:
-        """
         session_context: Optional[SessionContext] = field(
             default=None,
             metadata={
@@ -1816,9 +1503,6 @@ class AirPricePortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_price_req:
-        """
         air_price_req: Optional[AirPriceReq] = field(
             default=None,
             metadata={
@@ -1831,9 +1515,6 @@ class AirPricePortTypeServiceInput:
 
 @dataclass
 class AirPricePortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1848,10 +1529,6 @@ class AirPricePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_price_rsp:
-        :ivar fault:
-        """
         air_price_rsp: Optional[AirPriceRsp] = field(
             default=None,
             metadata={
@@ -1870,12 +1547,6 @@ class AirPricePortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -1907,9 +1578,6 @@ class AirPricePortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -1922,9 +1590,6 @@ class AirPricePortTypeServiceOutput:
 
 @dataclass
 class AirRefundQuotePortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1939,9 +1604,6 @@ class AirRefundQuotePortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_refund_quote_req:
-        """
         air_refund_quote_req: Optional[AirRefundQuoteReq] = field(
             default=None,
             metadata={
@@ -1954,9 +1616,6 @@ class AirRefundQuotePortTypeServiceInput:
 
 @dataclass
 class AirRefundQuotePortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -1971,10 +1630,6 @@ class AirRefundQuotePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_refund_quote_rsp:
-        :ivar fault:
-        """
         air_refund_quote_rsp: Optional[AirRefundQuoteRsp] = field(
             default=None,
             metadata={
@@ -1993,12 +1648,6 @@ class AirRefundQuotePortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2030,9 +1679,6 @@ class AirRefundQuotePortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -2045,9 +1691,6 @@ class AirRefundQuotePortTypeServiceOutput:
 
 @dataclass
 class AirRefundTicketPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2062,9 +1705,6 @@ class AirRefundTicketPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_refund_req:
-        """
         air_refund_req: Optional[AirRefundReq] = field(
             default=None,
             metadata={
@@ -2077,9 +1717,6 @@ class AirRefundTicketPortTypeServiceInput:
 
 @dataclass
 class AirRefundTicketPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2094,10 +1731,6 @@ class AirRefundTicketPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_refund_rsp:
-        :ivar fault:
-        """
         air_refund_rsp: Optional[AirRefundRsp] = field(
             default=None,
             metadata={
@@ -2116,12 +1749,6 @@ class AirRefundTicketPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2153,9 +1780,6 @@ class AirRefundTicketPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -2168,9 +1792,6 @@ class AirRefundTicketPortTypeServiceOutput:
 
 @dataclass
 class AirRepriceSearchPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2185,9 +1806,6 @@ class AirRepriceSearchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_reprice_req:
-        """
         air_reprice_req: Optional[AirRepriceReq] = field(
             default=None,
             metadata={
@@ -2200,9 +1818,6 @@ class AirRepriceSearchPortTypeServiceInput:
 
 @dataclass
 class AirRepriceSearchPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2217,10 +1832,6 @@ class AirRepriceSearchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_reprice_rsp:
-        :ivar fault:
-        """
         air_reprice_rsp: Optional[AirRepriceRsp] = field(
             default=None,
             metadata={
@@ -2239,12 +1850,6 @@ class AirRepriceSearchPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2276,9 +1881,6 @@ class AirRepriceSearchPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -2291,9 +1893,6 @@ class AirRepriceSearchPortTypeServiceOutput:
 
 @dataclass
 class AirRetrieveDocumentPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2308,9 +1907,6 @@ class AirRetrieveDocumentPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_retrieve_document_req:
-        """
         air_retrieve_document_req: Optional[AirRetrieveDocumentReq] = field(
             default=None,
             metadata={
@@ -2323,9 +1919,6 @@ class AirRetrieveDocumentPortTypeServiceInput:
 
 @dataclass
 class AirRetrieveDocumentPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2340,10 +1933,6 @@ class AirRetrieveDocumentPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_retrieve_document_rsp:
-        :ivar fault:
-        """
         air_retrieve_document_rsp: Optional[AirRetrieveDocumentRsp] = field(
             default=None,
             metadata={
@@ -2362,12 +1951,6 @@ class AirRetrieveDocumentPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2399,9 +1982,6 @@ class AirRetrieveDocumentPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -2414,9 +1994,6 @@ class AirRetrieveDocumentPortTypeServiceOutput:
 
 @dataclass
 class AirRetrieveLowFareSearchPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2431,9 +2008,6 @@ class AirRetrieveLowFareSearchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar retrieve_low_fare_search_req:
-        """
         retrieve_low_fare_search_req: Optional[RetrieveLowFareSearchReq] = field(
             default=None,
             metadata={
@@ -2446,9 +2020,6 @@ class AirRetrieveLowFareSearchPortTypeServiceInput:
 
 @dataclass
 class AirRetrieveLowFareSearchPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2463,10 +2034,6 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar retrieve_low_fare_search_rsp:
-        :ivar fault:
-        """
         retrieve_low_fare_search_rsp: Optional[RetrieveLowFareSearchRsp] = field(
             default=None,
             metadata={
@@ -2485,12 +2052,6 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2522,9 +2083,6 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -2537,9 +2095,6 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
 
 @dataclass
 class AirScheduleSearchPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2554,9 +2109,6 @@ class AirScheduleSearchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar schedule_search_req:
-        """
         schedule_search_req: Optional[ScheduleSearchReq] = field(
             default=None,
             metadata={
@@ -2569,9 +2121,6 @@ class AirScheduleSearchPortTypeServiceInput:
 
 @dataclass
 class AirScheduleSearchPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2586,10 +2135,6 @@ class AirScheduleSearchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar schedule_search_rsp:
-        :ivar fault:
-        """
         schedule_search_rsp: Optional[ScheduleSearchRsp] = field(
             default=None,
             metadata={
@@ -2608,12 +2153,6 @@ class AirScheduleSearchPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2645,9 +2184,6 @@ class AirScheduleSearchPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -2660,9 +2196,6 @@ class AirScheduleSearchPortTypeServiceOutput:
 
 @dataclass
 class AirTicketingPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2677,9 +2210,6 @@ class AirTicketingPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_ticketing_req:
-        """
         air_ticketing_req: Optional[AirTicketingReq] = field(
             default=None,
             metadata={
@@ -2692,9 +2222,6 @@ class AirTicketingPortTypeServiceInput:
 
 @dataclass
 class AirTicketingPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2709,10 +2236,6 @@ class AirTicketingPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_ticketing_rsp:
-        :ivar fault:
-        """
         air_ticketing_rsp: Optional[AirTicketingRsp] = field(
             default=None,
             metadata={
@@ -2731,12 +2254,6 @@ class AirTicketingPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2768,9 +2285,6 @@ class AirTicketingPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -2783,9 +2297,6 @@ class AirTicketingPortTypeServiceOutput:
 
 @dataclass
 class AirUpsellSearchPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2800,9 +2311,6 @@ class AirUpsellSearchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_upsell_search_req:
-        """
         air_upsell_search_req: Optional[AirUpsellSearchReq] = field(
             default=None,
             metadata={
@@ -2815,9 +2323,6 @@ class AirUpsellSearchPortTypeServiceInput:
 
 @dataclass
 class AirUpsellSearchPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2832,10 +2337,6 @@ class AirUpsellSearchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_upsell_search_rsp:
-        :ivar fault:
-        """
         air_upsell_search_rsp: Optional[AirUpsellSearchRsp] = field(
             default=None,
             metadata={
@@ -2854,12 +2355,6 @@ class AirUpsellSearchPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2891,9 +2386,6 @@ class AirUpsellSearchPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -2906,9 +2398,6 @@ class AirUpsellSearchPortTypeServiceOutput:
 
 @dataclass
 class AirVoidDocumentPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2923,9 +2412,6 @@ class AirVoidDocumentPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_void_document_req:
-        """
         air_void_document_req: Optional[AirVoidDocumentReq] = field(
             default=None,
             metadata={
@@ -2938,9 +2424,6 @@ class AirVoidDocumentPortTypeServiceInput:
 
 @dataclass
 class AirVoidDocumentPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -2955,10 +2438,6 @@ class AirVoidDocumentPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar air_void_document_rsp:
-        :ivar fault:
-        """
         air_void_document_rsp: Optional[AirVoidDocumentRsp] = field(
             default=None,
             metadata={
@@ -2977,12 +2456,6 @@ class AirVoidDocumentPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -3014,9 +2487,6 @@ class AirVoidDocumentPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -3029,9 +2499,6 @@ class AirVoidDocumentPortTypeServiceOutput:
 
 @dataclass
 class EmdissuancePortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -3046,9 +2513,6 @@ class EmdissuancePortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar emdissuance_req:
-        """
         emdissuance_req: Optional[EmdissuanceReq] = field(
             default=None,
             metadata={
@@ -3061,9 +2525,6 @@ class EmdissuancePortTypeServiceInput:
 
 @dataclass
 class EmdissuancePortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -3078,10 +2539,6 @@ class EmdissuancePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar emdissuance_rsp:
-        :ivar fault:
-        """
         emdissuance_rsp: Optional[EmdissuanceRsp] = field(
             default=None,
             metadata={
@@ -3100,12 +2557,6 @@ class EmdissuancePortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -3137,9 +2588,6 @@ class EmdissuancePortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -3152,9 +2600,6 @@ class EmdissuancePortTypeServiceOutput:
 
 @dataclass
 class EmdretrievePortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -3169,9 +2614,6 @@ class EmdretrievePortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar emdretrieve_req:
-        """
         emdretrieve_req: Optional[EmdretrieveReq] = field(
             default=None,
             metadata={
@@ -3184,9 +2626,6 @@ class EmdretrievePortTypeServiceInput:
 
 @dataclass
 class EmdretrievePortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -3201,10 +2640,6 @@ class EmdretrievePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar emdretrieve_rsp:
-        :ivar fault:
-        """
         emdretrieve_rsp: Optional[EmdretrieveRsp] = field(
             default=None,
             metadata={
@@ -3223,12 +2658,6 @@ class EmdretrievePortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -3260,9 +2689,6 @@ class EmdretrievePortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -3275,9 +2701,6 @@ class EmdretrievePortTypeServiceOutput:
 
 @dataclass
 class FlightDetailsPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -3292,9 +2715,6 @@ class FlightDetailsPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar flight_details_req:
-        """
         flight_details_req: Optional[FlightDetailsReq] = field(
             default=None,
             metadata={
@@ -3307,9 +2727,6 @@ class FlightDetailsPortTypeServiceInput:
 
 @dataclass
 class FlightDetailsPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -3324,10 +2741,6 @@ class FlightDetailsPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar flight_details_rsp:
-        :ivar fault:
-        """
         flight_details_rsp: Optional[FlightDetailsRsp] = field(
             default=None,
             metadata={
@@ -3346,12 +2759,6 @@ class FlightDetailsPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -3383,9 +2790,6 @@ class FlightDetailsPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -3398,9 +2802,6 @@ class FlightDetailsPortTypeServiceOutput:
 
 @dataclass
 class FlightInfoPortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -3415,9 +2816,6 @@ class FlightInfoPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar flight_information_req:
-        """
         flight_information_req: Optional[FlightInformationReq] = field(
             default=None,
             metadata={
@@ -3430,9 +2828,6 @@ class FlightInfoPortTypeServiceInput:
 
 @dataclass
 class FlightInfoPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -3447,10 +2842,6 @@ class FlightInfoPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar flight_information_rsp:
-        :ivar fault:
-        """
         flight_information_rsp: Optional[FlightInformationRsp] = field(
             default=None,
             metadata={
@@ -3469,12 +2860,6 @@ class FlightInfoPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -3506,9 +2891,6 @@ class FlightInfoPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -3521,9 +2903,6 @@ class FlightInfoPortTypeServiceOutput:
 
 @dataclass
 class FlightTimeTablePortTypeServiceInput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -3538,9 +2917,6 @@ class FlightTimeTablePortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar flight_time_table_req:
-        """
         flight_time_table_req: Optional[FlightTimeTableReq] = field(
             default=None,
             metadata={
@@ -3553,9 +2929,6 @@ class FlightTimeTablePortTypeServiceInput:
 
 @dataclass
 class FlightTimeTablePortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -3570,10 +2943,6 @@ class FlightTimeTablePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar flight_time_table_rsp:
-        :ivar fault:
-        """
         flight_time_table_rsp: Optional[FlightTimeTableRsp] = field(
             default=None,
             metadata={
@@ -3592,12 +2961,6 @@ class FlightTimeTablePortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -3629,9 +2992,6 @@ class FlightTimeTablePortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={
@@ -3644,10 +3004,6 @@ class FlightTimeTablePortTypeServiceOutput:
 
 @dataclass
 class SeatMapPortTypeServiceInput:
-    """
-    :ivar header:
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -3669,9 +3025,6 @@ class SeatMapPortTypeServiceInput:
 
     @dataclass
     class Header:
-        """
-        :ivar session_context:
-        """
         session_context: Optional[SessionContext] = field(
             default=None,
             metadata={
@@ -3683,9 +3036,6 @@ class SeatMapPortTypeServiceInput:
 
     @dataclass
     class Body:
-        """
-        :ivar seat_map_req:
-        """
         seat_map_req: Optional[SeatMapReq] = field(
             default=None,
             metadata={
@@ -3698,9 +3048,6 @@ class SeatMapPortTypeServiceInput:
 
 @dataclass
 class SeatMapPortTypeServiceOutput:
-    """
-    :ivar body:
-    """
     class Meta:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
@@ -3715,10 +3062,6 @@ class SeatMapPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        """
-        :ivar seat_map_rsp:
-        :ivar fault:
-        """
         seat_map_rsp: Optional[SeatMapRsp] = field(
             default=None,
             metadata={
@@ -3737,12 +3080,6 @@ class SeatMapPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            """
-            :ivar faultcode:
-            :ivar faultstring:
-            :ivar faultactor:
-            :ivar detail:
-            """
             faultcode: Optional[str] = field(
                 default=None,
                 metadata={
@@ -3774,9 +3111,6 @@ class SeatMapPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                """
-                :ivar error_info:
-                """
                 error_info: Optional[ErrorInfo] = field(
                     default=None,
                     metadata={

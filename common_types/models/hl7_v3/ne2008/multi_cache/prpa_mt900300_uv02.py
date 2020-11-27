@@ -18,14 +18,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class PrpaMt900300Uv02CareEventId:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT900300UV02.CareEventID"
 
@@ -80,14 +72,6 @@ class PrpaMt900300Uv02CareEventId:
 
 @dataclass
 class PrpaMt900300Uv02EncounterStatus:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT900300UV02.EncounterStatus"
 
@@ -142,14 +126,6 @@ class PrpaMt900300Uv02EncounterStatus:
 
 @dataclass
 class PrpaMt900300Uv02EncounterTimeframe:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT900300UV02.EncounterTimeframe"
 
@@ -204,14 +180,6 @@ class PrpaMt900300Uv02EncounterTimeframe:
 
 @dataclass
 class PrpaMt900300Uv02PatientId:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT900300UV02.PatientId"
 
@@ -266,14 +234,6 @@ class PrpaMt900300Uv02PatientId:
 
 @dataclass
 class PrpaMt900300Uv02ResponsibleOrganization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT900300UV02.ResponsibleOrganization"
 
@@ -328,15 +288,6 @@ class PrpaMt900300Uv02ResponsibleOrganization:
 
 @dataclass
 class PrpaMt900300Uv02SortControl:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar element_name:
-    :ivar direction_code:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT900300UV02.SortControl"
 
@@ -399,14 +350,6 @@ class PrpaMt900300Uv02SortControl:
 
 @dataclass
 class PrpaMt900300Uv02TypeOfEncounter:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT900300UV02.TypeOfEncounter"
 
@@ -461,27 +404,6 @@ class PrpaMt900300Uv02TypeOfEncounter:
 
 @dataclass
 class PrpaMt900300Uv02QueryByParameterPayload:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar query_id:
-    :ivar status_code:
-    :ivar modify_code:
-    :ivar response_element_group_id:
-    :ivar response_modality_code:
-    :ivar response_priority_code:
-    :ivar initial_quantity:
-    :ivar initial_quantity_code:
-    :ivar care_event_id:
-    :ivar encounter_status:
-    :ivar encounter_timeframe:
-    :ivar patient_id:
-    :ivar responsible_organization:
-    :ivar sort_control:
-    :ivar type_of_encounter:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT900300UV02.QueryByParameterPayload"
 

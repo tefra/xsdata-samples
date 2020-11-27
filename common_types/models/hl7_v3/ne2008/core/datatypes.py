@@ -282,6 +282,7 @@ class PivlTs(SxcmTs):
                 provide that extra validation, thus applications must be
                 aware that instance (fragments) that pass validation with
                 this might might still not be legal.
+
     :ivar phase: A prototype of the repeating interval specifying the
                             duration of each occurrence and anchors the periodic
                             interval sequence at a certain point in time.
@@ -331,23 +332,6 @@ class PivlTs(SxcmTs):
     )
 
     class Value(Enum):
-        """
-        :cvar CD:
-        :cvar DM:
-        :cvar DW:
-        :cvar DY:
-        :cvar CH:
-        :cvar HD:
-        :cvar CN:
-        :cvar NH:
-        :cvar CM:
-        :cvar MY:
-        :cvar CS:
-        :cvar SN:
-        :cvar CW:
-        :cvar WY:
-        :cvar CY:
-        """
         CD = "CD"
         DM = "DM"
         DW = "DW"
@@ -685,9 +669,6 @@ class SxcmReal(Real):
 
 @dataclass
 class SxprTs(SxcmTs):
-    """
-    :ivar comp:
-    """
     class Meta:
         name = "SXPR_TS"
 
@@ -1037,6 +1018,7 @@ class EivlTs(SxcmTs):
                 provide that extra validation, thus applications must be
                 aware that instance (fragments) that pass validation with
                 this might might still not be legal.
+
     :ivar event: A code for a common (periodical) activity of daily
                             living based on which the event related periodic
                             interval is specified.
@@ -1182,6 +1164,7 @@ class EivlPpdTs(SxcmPpdTs):
                 provide that extra validation, thus applications must be
                 aware that instance (fragments) that pass validation with
                 this might might still not be legal.
+
     :ivar event: A code for a common (periodical) activity of daily
                             living based on which the event related periodic
                             interval is specified.
@@ -1221,6 +1204,7 @@ class PivlPpdTs(SxcmPpdTs):
                 provide that extra validation, thus applications must be
                 aware that instance (fragments) that pass validation with
                 this might might still not be legal.
+
     :ivar phase: A prototype of the repeating interval specifying the
                             duration of each occurrence and anchors the periodic
                             interval sequence at a certain point in time.
@@ -1270,23 +1254,6 @@ class PivlPpdTs(SxcmPpdTs):
     )
 
     class Value(Enum):
-        """
-        :cvar CD:
-        :cvar DM:
-        :cvar DW:
-        :cvar DY:
-        :cvar CH:
-        :cvar HD:
-        :cvar CN:
-        :cvar NH:
-        :cvar CM:
-        :cvar MY:
-        :cvar CS:
-        :cvar SN:
-        :cvar CW:
-        :cvar WY:
-        :cvar CY:
-        """
         CD = "CD"
         DM = "DM"
         DW = "DW"

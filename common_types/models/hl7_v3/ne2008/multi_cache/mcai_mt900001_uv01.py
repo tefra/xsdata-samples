@@ -46,16 +46,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class McaiMt900001Uv01DetectedIssueManagement:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar text:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "MCAI_MT900001UV01.DetectedIssueManagement"
 
@@ -124,14 +114,6 @@ class McaiMt900001Uv01DetectedIssueManagement:
 
 @dataclass
 class McaiMt900001Uv01Role:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "MCAI_MT900001UV01.Role"
 
@@ -184,23 +166,11 @@ class McaiMt900001Uv01Role:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class McaiMt900001Uv01SourceOf:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar detected_issue_management:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "MCAI_MT900001UV01.SourceOf"
 
@@ -265,14 +235,6 @@ class McaiMt900001Uv01SourceOf:
 
 @dataclass
 class McaiMt900001Uv01Subject:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar role:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "MCAI_MT900001UV01.Subject"
 
@@ -328,17 +290,6 @@ class McaiMt900001Uv01Subject:
 
 @dataclass
 class McaiMt900001Uv01ActOrderRequired:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar subject:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "MCAI_MT900001UV01.ActOrderRequired"
 
@@ -417,16 +368,6 @@ class McaiMt900001Uv01ActOrderRequired:
 
 @dataclass
 class McaiMt900001Uv01Requires:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar act_order_required:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_conduction_ind:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "MCAI_MT900001UV01.Requires"
 
@@ -499,25 +440,6 @@ class McaiMt900001Uv01Requires:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -539,20 +461,6 @@ class McaiMt900001Uv01Requires:
 
 @dataclass
 class McaiMt900001Uv01DetectedIssueEvent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar value:
-    :ivar mitigated_by:
-    :ivar trigger_for:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "MCAI_MT900001UV01.DetectedIssueEvent"
 

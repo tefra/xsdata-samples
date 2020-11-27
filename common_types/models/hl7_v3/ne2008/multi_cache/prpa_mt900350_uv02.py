@@ -23,15 +23,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class PrpaMt900350Uv02Admitter:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "PRPA_MT900350UV02.Admitter"
 
@@ -97,17 +88,6 @@ class PrpaMt900350Uv02Admitter:
 
 @dataclass
 class PrpaMt900350Uv02Attender:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar time:
-    :ivar status_code:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "PRPA_MT900350UV02.Attender"
 
@@ -189,16 +169,6 @@ class PrpaMt900350Uv02Attender:
 
 @dataclass
 class PrpaMt900350Uv02ResponsibleParty:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar status_code:
-    :ivar assigned_organization:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "PRPA_MT900350UV02.ResponsibleParty"
 
@@ -272,14 +242,6 @@ class PrpaMt900350Uv02ResponsibleParty:
 
 @dataclass
 class PrpaMt900350Uv02Subject:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar patient:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "PRPA_MT900350UV02.Subject"
 
@@ -334,22 +296,6 @@ class PrpaMt900350Uv02Subject:
 
 @dataclass
 class PrpaMt900350Uv02EncounterEvent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar subject:
-    :ivar responsible_party:
-    :ivar admitter:
-    :ivar attender:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "PRPA_MT900350UV02.EncounterEvent"
 

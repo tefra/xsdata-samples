@@ -11,11 +11,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class RespondingGatewayPrpaIn201305Uv02RequestType:
-    """
-    :ivar prpa_in201305_uv02:
-    :ivar assertion:
-    :ivar nhin_target_communities:
-    """
     class Meta:
         name = "RespondingGateway_PRPA_IN201305UV02RequestType"
 
@@ -48,10 +43,6 @@ class RespondingGatewayPrpaIn201305Uv02RequestType:
 
 @dataclass
 class RespondingGatewayPrpaIn201305Uv02SecuredRequestType:
-    """
-    :ivar prpa_in201305_uv02:
-    :ivar nhin_target_communities:
-    """
     class Meta:
         name = "RespondingGateway_PRPA_IN201305UV02SecuredRequestType"
 

@@ -33,15 +33,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt310000Uv04AcommodationRequestor:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT310000UV04.AcommodationRequestor"
 
@@ -106,14 +97,6 @@ class CoctMt310000Uv04AcommodationRequestor:
 
 @dataclass
 class CoctMt310000Uv04Location:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar service_delivery_location:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT310000UV04.Location"
 
@@ -169,15 +152,6 @@ class CoctMt310000Uv04Location:
 
 @dataclass
 class CoctMt310000Uv04MedicalService:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT310000UV04.MedicalService"
 
@@ -241,15 +215,6 @@ class CoctMt310000Uv04MedicalService:
 
 @dataclass
 class CoctMt310000Uv04MinimumAvailableAccommodation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT310000UV04.MinimumAvailableAccommodation"
 
@@ -313,15 +278,6 @@ class CoctMt310000Uv04MinimumAvailableAccommodation:
 
 @dataclass
 class CoctMt310000Uv04AccommodationRequestorRole:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar accommodation_requestor:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT310000UV04.AccommodationRequestorRole"
 
@@ -384,14 +340,6 @@ class CoctMt310000Uv04AccommodationRequestorRole:
 
 @dataclass
 class CoctMt310000Uv04PertinentInformation1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar minimum_available_accommodation:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT310000UV04.PertinentInformation1"
 
@@ -447,25 +395,6 @@ class CoctMt310000Uv04PertinentInformation1:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -487,14 +416,6 @@ class CoctMt310000Uv04PertinentInformation1:
 
 @dataclass
 class CoctMt310000Uv04PertinentInformation3:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar medical_service:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT310000UV04.PertinentInformation3"
 
@@ -549,25 +470,6 @@ class CoctMt310000Uv04PertinentInformation3:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -589,14 +491,6 @@ class CoctMt310000Uv04PertinentInformation3:
 
 @dataclass
 class CoctMt310000Uv04Author:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar accommodation_requestor_role:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT310000UV04.Author"
 
@@ -653,17 +547,6 @@ class CoctMt310000Uv04Author:
 
 @dataclass
 class CoctMt310000Uv04Encounter:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar effective_time:
-    :ivar pertinent_information:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT310000UV04.Encounter"
 
@@ -745,17 +628,6 @@ class CoctMt310000Uv04Encounter:
 
 @dataclass
 class CoctMt310000Uv04AccommodationRequested:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar author:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT310000UV04.AccommodationRequested"
 
@@ -835,14 +707,6 @@ class CoctMt310000Uv04AccommodationRequested:
 
 @dataclass
 class CoctMt310000Uv04PertinentInformation2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar encounter:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT310000UV04.PertinentInformation2"
 
@@ -896,25 +760,6 @@ class CoctMt310000Uv04PertinentInformation2:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -936,14 +781,6 @@ class CoctMt310000Uv04PertinentInformation2:
 
 @dataclass
 class CoctMt310000Uv04InFulfillmentOf:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar accommodation_requested:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT310000UV04.InFulfillmentOf"
 
@@ -999,21 +836,6 @@ class CoctMt310000Uv04InFulfillmentOf:
 
 @dataclass
 class CoctMt310000Uv04AccomodationSupplied:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar reason_code:
-    :ivar location:
-    :ivar in_fulfillment_of:
-    :ivar pertinent_information1:
-    :ivar pertinent_information2:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT310000UV04.AccomodationSupplied"
 

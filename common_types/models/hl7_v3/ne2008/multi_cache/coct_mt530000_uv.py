@@ -102,25 +102,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 class CoctMt530000UvReferenceRangeValue(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -141,25 +122,6 @@ class CoctMt530000UvReferenceRangeValue(Enum):
 
 
 class CoctMt530000UvSubject1Value(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -181,16 +143,6 @@ class CoctMt530000UvSubject1Value(Enum):
 
 @dataclass
 class CoctMt530000UvActDefinition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar text:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.ActDefinition"
 
@@ -261,15 +213,6 @@ class CoctMt530000UvActDefinition:
 
 @dataclass
 class CoctMt530000UvActReference:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.ActReference"
 
@@ -332,19 +275,6 @@ class CoctMt530000UvActReference:
 
 @dataclass
 class CoctMt530000UvDataEnterer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar mode_code:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.DataEnterer"
 
@@ -440,17 +370,6 @@ class CoctMt530000UvDataEnterer:
 
 @dataclass
 class CoctMt530000UvLabeledDrug:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar name:
-    :ivar expiration_time:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.LabeledDrug"
 
@@ -527,18 +446,6 @@ class CoctMt530000UvLabeledDrug:
 
 @dataclass
 class CoctMt530000UvMaterial:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar name:
-    :ivar lot_number_text:
-    :ivar expiration_time:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Material"
 
@@ -623,16 +530,6 @@ class CoctMt530000UvMaterial:
 
 @dataclass
 class CoctMt530000UvMaterialKind2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar desc:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.MaterialKind2"
 
@@ -701,18 +598,6 @@ class CoctMt530000UvMaterialKind2:
 
 @dataclass
 class CoctMt530000UvOrganization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar telecom:
-    :ivar addr:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Organization"
 
@@ -796,16 +681,6 @@ class CoctMt530000UvOrganization:
 
 @dataclass
 class CoctMt530000UvPlace:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar addr:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Place"
 
@@ -875,18 +750,6 @@ class CoctMt530000UvPlace:
 
 @dataclass
 class CoctMt530000UvPrecondition2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar conjunction_code:
-    :ivar seperatable_ind:
-    :ivar criterion:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.Precondition2"
 
@@ -973,25 +836,6 @@ class CoctMt530000UvPrecondition2:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -1013,16 +857,6 @@ class CoctMt530000UvPrecondition2:
 
 @dataclass
 class CoctMt530000UvProduct2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar specimen:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Product2"
 
@@ -1094,15 +928,6 @@ class CoctMt530000UvProduct2:
 
 @dataclass
 class CoctMt530000UvRecordTarget:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar patient:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.RecordTarget"
 
@@ -1166,14 +991,6 @@ class CoctMt530000UvRecordTarget:
 
 @dataclass
 class CoctMt530000UvResponsibleParty1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.ResponsibleParty1"
 
@@ -1231,15 +1048,6 @@ class CoctMt530000UvResponsibleParty1:
 
 @dataclass
 class CoctMt530000UvResponsibleParty2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.ResponsibleParty2"
 
@@ -1304,20 +1112,6 @@ class CoctMt530000UvResponsibleParty2:
 
 @dataclass
 class CoctMt530000UvVerifier:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar time:
-    :ivar mode_code:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Verifier"
 
@@ -1420,14 +1214,6 @@ class CoctMt530000UvVerifier:
 
 @dataclass
 class CoctMt530000UvBirthplace:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar birthplace:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Birthplace"
 
@@ -1483,28 +1269,11 @@ class CoctMt530000UvBirthplace:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt530000UvCriterion:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar text:
-    :ivar value:
-    :ivar interpretation_code:
-    :ivar precondition:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.Criterion"
 
@@ -1607,16 +1376,6 @@ class CoctMt530000UvCriterion:
 
 @dataclass
 class CoctMt530000UvDefinition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar act_definition:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.Definition"
 
@@ -1688,25 +1447,6 @@ class CoctMt530000UvDefinition:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -1728,17 +1468,6 @@ class CoctMt530000UvDefinition:
 
 @dataclass
 class CoctMt530000UvHealthCareFacility:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar location:
-    :ivar service_provider_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.HealthCareFacility"
 
@@ -1816,17 +1545,6 @@ class CoctMt530000UvHealthCareFacility:
 
 @dataclass
 class CoctMt530000UvManufacturedProduct:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar manufactured_labeled_drug:
-    :ivar manufactured_material:
-    :ivar manufacturer_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.ManufacturedProduct"
 
@@ -1907,14 +1625,6 @@ class CoctMt530000UvManufacturedProduct:
 
 @dataclass
 class CoctMt530000UvMaterialPart:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar part_material_kind:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.MaterialPart"
 
@@ -1970,16 +1680,6 @@ class CoctMt530000UvMaterialPart:
 
 @dataclass
 class CoctMt530000UvRole:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar scoping_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Role"
 
@@ -2049,30 +1749,11 @@ class CoctMt530000UvRole:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt530000UvSourceOf1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar pause_quantity:
-    :ivar conjunction_code:
-    :ivar seperatable_ind:
-    :ivar act_reference:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar inversion_ind:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.SourceOf1"
 
@@ -2191,25 +1872,6 @@ class CoctMt530000UvSourceOf1:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -2231,24 +1893,6 @@ class CoctMt530000UvSourceOf1:
 
 @dataclass
 class CoctMt530000UvAnimal:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar quantity:
-    :ivar name:
-    :ivar desc:
-    :ivar administrative_gender_code:
-    :ivar birth_time:
-    :ivar strain_text:
-    :ivar gender_status_code:
-    :ivar as_role:
-    :ivar birthplace:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Animal"
 
@@ -2383,18 +2027,6 @@ class CoctMt530000UvAnimal:
 
 @dataclass
 class CoctMt530000UvConditions:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar conjunction_code:
-    :ivar seperatable_ind:
-    :ivar criterion:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.Conditions"
 
@@ -2481,15 +2113,6 @@ class CoctMt530000UvConditions:
 
 @dataclass
 class CoctMt530000UvDevice:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar manufactured_product:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Device"
 
@@ -2553,23 +2176,6 @@ class CoctMt530000UvDevice:
 
 @dataclass
 class CoctMt530000UvEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar quantity:
-    :ivar name:
-    :ivar desc:
-    :ivar status_code:
-    :ivar risk_code:
-    :ivar handling_code:
-    :ivar as_role:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Entity"
 
@@ -2693,15 +2299,6 @@ class CoctMt530000UvEntity:
 
 @dataclass
 class CoctMt530000UvLocation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar health_care_facility:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Location"
 
@@ -2765,17 +2362,6 @@ class CoctMt530000UvLocation:
 
 @dataclass
 class CoctMt530000UvMaterialKind:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar desc:
-    :ivar material_part:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.MaterialKind"
 
@@ -2853,26 +2439,6 @@ class CoctMt530000UvMaterialKind:
 
 @dataclass
 class CoctMt530000UvPerson:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar telecom:
-    :ivar administrative_gender_code:
-    :ivar birth_time:
-    :ivar multiple_birth_ind:
-    :ivar multiple_birth_order_number:
-    :ivar marital_status_code:
-    :ivar religious_affiliation_code:
-    :ivar race_code:
-    :ivar ethnic_group_code:
-    :ivar as_role:
-    :ivar birthplace:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Person"
 
@@ -3024,18 +2590,6 @@ class CoctMt530000UvPerson:
 
 @dataclass
 class CoctMt530000UvPrecondition1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar conjunction_code:
-    :ivar seperatable_ind:
-    :ivar criterion:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.Precondition1"
 
@@ -3122,25 +2676,6 @@ class CoctMt530000UvPrecondition1:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -3162,15 +2697,6 @@ class CoctMt530000UvPrecondition1:
 
 @dataclass
 class CoctMt530000UvProduct1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar manufactured_product:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Product1"
 
@@ -3234,14 +2760,6 @@ class CoctMt530000UvProduct1:
 
 @dataclass
 class CoctMt530000UvAdministerableMaterial:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar administerable_material_kind:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.AdministerableMaterial"
 
@@ -3297,27 +2815,11 @@ class CoctMt530000UvAdministerableMaterial:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt530000UvObservationRange:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar text:
-    :ivar value:
-    :ivar interpretation_code:
-    :ivar precondition:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.ObservationRange"
 
@@ -3413,23 +2915,6 @@ class CoctMt530000UvObservationRange:
 
 @dataclass
 class CoctMt530000UvRelatedEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar related_person:
-    :ivar related_animal:
-    :ivar related_entity:
-    :ivar scoping_person:
-    :ivar scoping_animal:
-    :ivar scoping_entity:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.RelatedEntity"
 
@@ -3558,22 +3043,6 @@ class CoctMt530000UvRelatedEntity:
 
 @dataclass
 class CoctMt530000UvAuthor:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar time:
-    :ivar mode_code:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar related_entity:
-    :ivar patient:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Author"
 
@@ -3693,16 +3162,6 @@ class CoctMt530000UvAuthor:
 
 @dataclass
 class CoctMt530000UvConsumable:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar administerable_material:
-    :ivar medication:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Consumable"
 
@@ -3774,20 +3233,6 @@ class CoctMt530000UvConsumable:
 
 @dataclass
 class CoctMt530000UvInformant:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar function_code:
-    :ivar time:
-    :ivar mode_code:
-    :ivar related_entity:
-    :ivar patient:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Informant"
 
@@ -3891,20 +3336,6 @@ class CoctMt530000UvInformant:
 
 @dataclass
 class CoctMt530000UvPerformer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar function_code:
-    :ivar time:
-    :ivar mode_code:
-    :ivar related_entity:
-    :ivar patient:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Performer"
 
@@ -4007,17 +3438,6 @@ class CoctMt530000UvPerformer:
 
 @dataclass
 class CoctMt530000UvReferenceRange:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar seperatable_ind:
-    :ivar observation_range:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.ReferenceRange"
 
@@ -4099,19 +3519,6 @@ class CoctMt530000UvReferenceRange:
 
 @dataclass
 class CoctMt530000UvSubject2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar awareness_code:
-    :ivar patient:
-    :ivar related_entity:
-    :ivar specimen:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Subject2"
 
@@ -4206,21 +3613,6 @@ class CoctMt530000UvSubject2:
 
 @dataclass
 class CoctMt530000UvControlActEvent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar reason_code:
-    :ivar responsible_party:
-    :ivar author:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.ControlActEvent"
 
@@ -4333,16 +3725,6 @@ class CoctMt530000UvControlActEvent:
 
 @dataclass
 class CoctMt530000UvSubject1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar control_act_event:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.Subject1"
 
@@ -4415,43 +3797,6 @@ class CoctMt530000UvSubject1:
 
 @dataclass
 class CoctMt530000UvEncounter:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar admission_referral_source_code:
-    :ivar length_of_stay_quantity:
-    :ivar discharge_disposition_code:
-    :ivar pre_admit_test_ind:
-    :ivar special_courtesies_code:
-    :ivar special_arrangement_code:
-    :ivar subject:
-    :ivar record_target:
-    :ivar responsible_party:
-    :ivar performer:
-    :ivar author:
-    :ivar data_enterer:
-    :ivar informant:
-    :ivar verifier:
-    :ivar location:
-    :ivar definition:
-    :ivar conditions:
-    :ivar source_of1:
-    :ivar source_of2:
-    :ivar subject_of:
-    :ivar target_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Encounter"
 
@@ -4743,46 +4088,6 @@ class CoctMt530000UvEncounter:
 
 @dataclass
 class CoctMt530000UvProcedure:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar interruptible_ind:
-    :ivar uncertainty_code:
-    :ivar language_code:
-    :ivar method_code:
-    :ivar approach_site_code:
-    :ivar target_site_code:
-    :ivar subject:
-    :ivar device:
-    :ivar product:
-    :ivar record_target:
-    :ivar responsible_party:
-    :ivar performer:
-    :ivar author:
-    :ivar data_enterer:
-    :ivar informant:
-    :ivar verifier:
-    :ivar location:
-    :ivar definition:
-    :ivar conditions:
-    :ivar source_of1:
-    :ivar source_of2:
-    :ivar subject_of:
-    :ivar target_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.Procedure"
 
@@ -5097,48 +4402,6 @@ class CoctMt530000UvProcedure:
 
 @dataclass
 class CoctMt530000UvSubstanceAdministration:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar repeat_number:
-    :ivar language_code:
-    :ivar route_code:
-    :ivar approach_site_code:
-    :ivar dose_quantity:
-    :ivar rate_quantity:
-    :ivar dose_check_quantity:
-    :ivar max_dose_quantity:
-    :ivar administration_unit_code:
-    :ivar subject:
-    :ivar consumable:
-    :ivar record_target:
-    :ivar responsible_party:
-    :ivar performer:
-    :ivar author:
-    :ivar data_enterer:
-    :ivar informant:
-    :ivar verifier:
-    :ivar location:
-    :ivar definition:
-    :ivar conditions:
-    :ivar source_of1:
-    :ivar source_of2:
-    :ivar subject_of:
-    :ivar target_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.SubstanceAdministration"
 
@@ -5470,43 +4733,6 @@ class CoctMt530000UvSubstanceAdministration:
 
 @dataclass
 class CoctMt530000UvSupply:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar repeat_number:
-    :ivar independent_ind:
-    :ivar language_code:
-    :ivar quantity:
-    :ivar expected_use_time:
-    :ivar subject:
-    :ivar product:
-    :ivar record_target:
-    :ivar responsible_party:
-    :ivar performer:
-    :ivar author:
-    :ivar data_enterer:
-    :ivar informant:
-    :ivar verifier:
-    :ivar location:
-    :ivar definition:
-    :ivar conditions:
-    :ivar source_of1:
-    :ivar source_of2:
-    :ivar subject_of:
-    :ivar target_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Supply"
 
@@ -5796,25 +5022,6 @@ class CoctMt530000UvSupply:
 
 @dataclass
 class CoctMt530000UvComponent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar seperatable_ind:
-    :ivar observation:
-    :ivar substance_administration:
-    :ivar supply:
-    :ivar procedure:
-    :ivar encounter:
-    :ivar act:
-    :ivar organizer:
-    :ivar act_reference:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.Component"
 
@@ -5958,38 +5165,6 @@ class CoctMt530000UvComponent:
 
 @dataclass
 class CoctMt530000UvOrganizer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar subject:
-    :ivar record_target:
-    :ivar responsible_party:
-    :ivar performer:
-    :ivar author:
-    :ivar data_enterer:
-    :ivar informant:
-    :ivar verifier:
-    :ivar location:
-    :ivar definition:
-    :ivar conditions:
-    :ivar component:
-    :ivar source_of1:
-    :ivar source_of2:
-    :ivar subject_of:
-    :ivar target_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT530000UV.Organizer"
 
@@ -6241,27 +5416,6 @@ class CoctMt530000UvOrganizer:
 
 @dataclass
 class CoctMt530000UvSourceOf2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar pause_quantity:
-    :ivar conjunction_code:
-    :ivar seperatable_ind:
-    :ivar observation:
-    :ivar substance_administration:
-    :ivar supply:
-    :ivar procedure:
-    :ivar encounter:
-    :ivar act:
-    :ivar organizer:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.SourceOf2"
 
@@ -6419,25 +5573,6 @@ class CoctMt530000UvSourceOf2:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -6459,47 +5594,6 @@ class CoctMt530000UvSourceOf2:
 
 @dataclass
 class CoctMt530000UvObservation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar derivation_expr:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar repeat_number:
-    :ivar uncertainty_code:
-    :ivar language_code:
-    :ivar value:
-    :ivar interpretation_code:
-    :ivar method_code:
-    :ivar target_site_code:
-    :ivar subject:
-    :ivar record_target:
-    :ivar responsible_party:
-    :ivar performer:
-    :ivar author:
-    :ivar data_enterer:
-    :ivar informant:
-    :ivar verifier:
-    :ivar location:
-    :ivar definition:
-    :ivar conditions:
-    :ivar reference_range:
-    :ivar source_of1:
-    :ivar source_of2:
-    :ivar subject_of:
-    :ivar target_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.Observation"
 
@@ -6823,27 +5917,6 @@ class CoctMt530000UvObservation:
 
 @dataclass
 class CoctMt530000UvSourceOf3:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar pause_quantity:
-    :ivar conjunction_code:
-    :ivar seperatable_ind:
-    :ivar observation:
-    :ivar substance_administration:
-    :ivar supply:
-    :ivar procedure:
-    :ivar encounter:
-    :ivar act:
-    :ivar organizer:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.SourceOf3"
 
@@ -7001,25 +6074,6 @@ class CoctMt530000UvSourceOf3:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -7041,40 +6095,6 @@ class CoctMt530000UvSourceOf3:
 
 @dataclass
 class CoctMt530000UvAct:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar uncertainty_code:
-    :ivar language_code:
-    :ivar subject:
-    :ivar record_target:
-    :ivar responsible_party:
-    :ivar performer:
-    :ivar author:
-    :ivar data_enterer:
-    :ivar informant:
-    :ivar verifier:
-    :ivar location:
-    :ivar definition:
-    :ivar conditions:
-    :ivar source_of1:
-    :ivar source_of2:
-    :ivar subject_of:
-    :ivar target_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT530000UV.Act"
 

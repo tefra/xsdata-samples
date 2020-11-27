@@ -18,10 +18,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CreateFault201310RequestType:
-    """
-    :ivar sender_oid:
-    :ivar receiver_oid:
-    """
     sender_oid: Optional[str] = field(
         default=None,
         metadata={
@@ -44,14 +40,6 @@ class CreateFault201310RequestType:
 
 @dataclass
 class Create201302RequestType:
-    """
-    :ivar prpa201310_patient:
-    :ivar prpa201301_patient:
-    :ivar remote_patient_id:
-    :ivar remote_device_id:
-    :ivar sender_oid:
-    :ivar receiver_oid:
-    """
     prpa201310_patient: Optional[PrpaMt201310Uv02Patient] = field(
         default=None,
         metadata={
@@ -108,12 +96,6 @@ class Create201302RequestType:
 
 @dataclass
 class Create201305RequestType:
-    """
-    :ivar prpa201301_patient:
-    :ivar local_device_id:
-    :ivar sender_oid:
-    :ivar receiver_oid:
-    """
     prpa201301_patient: Optional[PrpaMt201301Uv02Patient] = field(
         default=None,
         metadata={
@@ -154,14 +136,6 @@ class Create201305RequestType:
 
 @dataclass
 class Create201310RequestType:
-    """
-    :ivar pseudo_patient_id:
-    :ivar pseudo_assigning_authority_id:
-    :ivar local_device_id:
-    :ivar sender_oid:
-    :ivar receiver_oid:
-    :ivar prpa201307_query_by_parameter:
-    """
     pseudo_patient_id: Optional[str] = field(
         default=None,
         metadata={
@@ -220,13 +194,6 @@ class Create201310RequestType:
 
 @dataclass
 class CreateAckMsgRequestType:
-    """
-    :ivar local_device_id:
-    :ivar orig_msg_id:
-    :ivar msg_text:
-    :ivar sender_oid:
-    :ivar receiver_oid:
-    """
     local_device_id: Optional[str] = field(
         default=None,
         metadata={
@@ -282,10 +249,6 @@ class CreateFault201310Request(CreateFault201310RequestType):
 
 @dataclass
 class PixconsumerMcciIn000002Uv01RequestType:
-    """
-    :ivar mcci_in000002_uv01:
-    :ivar assertion:
-    """
     class Meta:
         name = "PIXConsumer_MCCI_IN000002UV01RequestType"
 
@@ -310,11 +273,6 @@ class PixconsumerMcciIn000002Uv01RequestType:
 
 @dataclass
 class PixconsumerPrpaIn201304UvrequestType:
-    """
-    :ivar prpa_in201304_uv02:
-    :ivar assertion:
-    :ivar nhin_target_communities:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201304UVRequestType"
 
@@ -347,10 +305,6 @@ class PixconsumerPrpaIn201304UvrequestType:
 
 @dataclass
 class PixconsumerPrpaIn201304UvsecuredRequestType:
-    """
-    :ivar prpa_in201304_uv02:
-    :ivar nhin_target_communities:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201304UVSecuredRequestType"
 
@@ -375,11 +329,6 @@ class PixconsumerPrpaIn201304UvsecuredRequestType:
 
 @dataclass
 class PixconsumerPrpaIn201309UvrequestType:
-    """
-    :ivar prpa_in201309_uv02:
-    :ivar assertion:
-    :ivar nhin_target_communities:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201309UVRequestType"
 
@@ -412,9 +361,6 @@ class PixconsumerPrpaIn201309UvrequestType:
 
 @dataclass
 class PixconsumerPrpaIn201309UvresponseType:
-    """
-    :ivar prpa_in201310_uv02:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201309UVResponseType"
 
@@ -431,10 +377,6 @@ class PixconsumerPrpaIn201309UvresponseType:
 
 @dataclass
 class PixconsumerPrpaIn201309UvsecuredRequestType:
-    """
-    :ivar prpa_in201309_uv02:
-    :ivar nhin_target_communities:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201309UVSecuredRequestType"
 
@@ -459,10 +401,6 @@ class PixconsumerPrpaIn201309UvsecuredRequestType:
 
 @dataclass
 class PixconsumerPrpaIn201310UvrequestType:
-    """
-    :ivar prpa_in201310_uv02:
-    :ivar assertion:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201310UVRequestType"
 
@@ -487,9 +425,6 @@ class PixconsumerPrpaIn201310UvrequestType:
 
 @dataclass
 class PixconsumerPrpaIn201310UvsecuredRequestType:
-    """
-    :ivar prpa_in201310_uv02:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201310UVSecuredRequestType"
 

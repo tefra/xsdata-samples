@@ -46,14 +46,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt030200UvBirthPlace:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar birthplace:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT030200UV.BirthPlace"
 
@@ -109,24 +101,11 @@ class CoctMt030200UvBirthPlace:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt030200UvCitizen:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar effective_time:
-    :ivar political_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT030200UV.Citizen"
 
@@ -198,29 +177,11 @@ class CoctMt030200UvCitizen:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt030200UvContactParty:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar contact_person:
-    :ivar contact_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT030200UV.ContactParty"
 
@@ -330,23 +291,6 @@ class CoctMt030200UvContactParty:
 
 @dataclass
 class CoctMt030200UvEmployment:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar job_code:
-    :ivar job_title_name:
-    :ivar job_class_code:
-    :ivar employer_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT030200UV.Employment"
 
@@ -471,20 +415,6 @@ class CoctMt030200UvEmployment:
 
 @dataclass
 class CoctMt030200UvEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar quantity:
-    :ivar name:
-    :ivar desc:
-    :ivar status_code:
-    :ivar existence_time:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT030200UV.Entity"
 
@@ -584,20 +514,6 @@ class CoctMt030200UvEntity:
 
 @dataclass
 class CoctMt030200UvGuarantor:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar guarantor_person:
-    :ivar guarantor_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT030200UV.Guarantor"
 
@@ -699,29 +615,11 @@ class CoctMt030200UvGuarantor:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt030200UvGuardian:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar certificate_text:
-    :ivar guardian_person:
-    :ivar guardian_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT030200UV.Guardian"
 
@@ -831,24 +729,11 @@ class CoctMt030200UvGuardian:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt030200UvLanguageCommunication:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar language_code:
-    :ivar mode_code:
-    :ivar proficiency_level_code:
-    :ivar preference_ind:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "COCT_MT030200UV.LanguageCommunication"
 
@@ -920,15 +805,6 @@ class CoctMt030200UvLanguageCommunication:
 
 @dataclass
 class CoctMt030200UvOtherIds:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar scoping_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT030200UV.OtherIDs"
 
@@ -991,27 +867,11 @@ class CoctMt030200UvOtherIds:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt030200UvStudent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar school_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT030200UV.Student"
 
@@ -1104,26 +964,11 @@ class CoctMt030200UvStudent:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt030200UvMember:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar group_entity:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT030200UV.Member"
 
@@ -1210,51 +1055,11 @@ class CoctMt030200UvMember:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt030200UvPerson:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar desc:
-    :ivar status_code:
-    :ivar administrative_gender_code:
-    :ivar birth_time:
-    :ivar deceased_ind:
-    :ivar deceased_time:
-    :ivar multiple_birth_ind:
-    :ivar multiple_birth_order_number:
-    :ivar organ_donor_ind:
-    :ivar marital_status_code:
-    :ivar education_level_code:
-    :ivar disability_code:
-    :ivar living_arrangement_code:
-    :ivar religious_affiliation_code:
-    :ivar race_code:
-    :ivar ethnic_group_code:
-    :ivar as_employment:
-    :ivar as_citizen:
-    :ivar as_student:
-    :ivar as_member:
-    :ivar as_other_ids:
-    :ivar as_covered_party:
-    :ivar contact_party:
-    :ivar guardian:
-    :ivar guarantor:
-    :ivar birth_place:
-    :ivar language_communication:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT030200UV.Person"
 

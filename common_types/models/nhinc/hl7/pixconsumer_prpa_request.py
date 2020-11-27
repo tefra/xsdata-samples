@@ -12,11 +12,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class PixconsumerPrpaIn201301UvrequestType:
-    """
-    :ivar prpa_in201301_uv02:
-    :ivar assertion:
-    :ivar nhin_target_communities:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201301UVRequestType"
 
@@ -49,10 +44,6 @@ class PixconsumerPrpaIn201301UvrequestType:
 
 @dataclass
 class PixconsumerPrpaIn201301UvsecuredRequestType:
-    """
-    :ivar prpa_in201301_uv02:
-    :ivar nhin_target_communities:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201301UVSecuredRequestType"
 
@@ -77,11 +68,6 @@ class PixconsumerPrpaIn201301UvsecuredRequestType:
 
 @dataclass
 class PixconsumerPrpaIn201302UvrequestType:
-    """
-    :ivar prpa_in201302_uv02:
-    :ivar assertion:
-    :ivar nhin_target_communities:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201302UVRequestType"
 
@@ -114,10 +100,6 @@ class PixconsumerPrpaIn201302UvrequestType:
 
 @dataclass
 class PixconsumerPrpaIn201302UvsecuredRequestType:
-    """
-    :ivar prpa_in201302_uv02:
-    :ivar nhin_target_communities:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201302UVSecuredRequestType"
 

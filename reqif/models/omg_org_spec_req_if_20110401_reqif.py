@@ -11,9 +11,6 @@ __NAMESPACE__ = "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd"
 
 @dataclass
 class AlternativeId:
-    """
-    :ivar identifier:
-    """
     class Meta:
         name = "ALTERNATIVE-ID"
 
@@ -29,10 +26,6 @@ class AlternativeId:
 
 @dataclass
 class AttributeValueBoolean:
-    """
-    :ivar definition:
-    :ivar the_value:
-    """
     class Meta:
         name = "ATTRIBUTE-VALUE-BOOLEAN"
 
@@ -56,9 +49,6 @@ class AttributeValueBoolean:
 
     @dataclass
     class Definition:
-        """
-        :ivar attribute_definition_boolean_ref:
-        """
         attribute_definition_boolean_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -71,10 +61,6 @@ class AttributeValueBoolean:
 
 @dataclass
 class AttributeValueDate:
-    """
-    :ivar definition:
-    :ivar the_value:
-    """
     class Meta:
         name = "ATTRIBUTE-VALUE-DATE"
 
@@ -98,9 +84,6 @@ class AttributeValueDate:
 
     @dataclass
     class Definition:
-        """
-        :ivar attribute_definition_date_ref:
-        """
         attribute_definition_date_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -113,10 +96,6 @@ class AttributeValueDate:
 
 @dataclass
 class AttributeValueEnumeration:
-    """
-    :ivar definition:
-    :ivar values:
-    """
     class Meta:
         name = "ATTRIBUTE-VALUE-ENUMERATION"
 
@@ -140,9 +119,6 @@ class AttributeValueEnumeration:
 
     @dataclass
     class Definition:
-        """
-        :ivar attribute_definition_enumeration_ref:
-        """
         attribute_definition_enumeration_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -154,9 +130,6 @@ class AttributeValueEnumeration:
 
     @dataclass
     class Values:
-        """
-        :ivar enum_value_ref:
-        """
         enum_value_ref: List[str] = field(
             default_factory=list,
             metadata={
@@ -169,10 +142,6 @@ class AttributeValueEnumeration:
 
 @dataclass
 class AttributeValueInteger:
-    """
-    :ivar definition:
-    :ivar the_value:
-    """
     class Meta:
         name = "ATTRIBUTE-VALUE-INTEGER"
 
@@ -196,9 +165,6 @@ class AttributeValueInteger:
 
     @dataclass
     class Definition:
-        """
-        :ivar attribute_definition_integer_ref:
-        """
         attribute_definition_integer_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -211,10 +177,6 @@ class AttributeValueInteger:
 
 @dataclass
 class AttributeValueReal:
-    """
-    :ivar definition:
-    :ivar the_value:
-    """
     class Meta:
         name = "ATTRIBUTE-VALUE-REAL"
 
@@ -238,9 +200,6 @@ class AttributeValueReal:
 
     @dataclass
     class Definition:
-        """
-        :ivar attribute_definition_real_ref:
-        """
         attribute_definition_real_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -253,10 +212,6 @@ class AttributeValueReal:
 
 @dataclass
 class AttributeValueString:
-    """
-    :ivar definition:
-    :ivar the_value:
-    """
     class Meta:
         name = "ATTRIBUTE-VALUE-STRING"
 
@@ -280,9 +235,6 @@ class AttributeValueString:
 
     @dataclass
     class Definition:
-        """
-        :ivar attribute_definition_string_ref:
-        """
         attribute_definition_string_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -295,10 +247,6 @@ class AttributeValueString:
 
 @dataclass
 class EmbeddedValue:
-    """
-    :ivar key:
-    :ivar other_content:
-    """
     class Meta:
         name = "EMBEDDED-VALUE"
 
@@ -322,16 +270,6 @@ class EmbeddedValue:
 
 @dataclass
 class ReqIfHeader:
-    """
-    :ivar comment:
-    :ivar creation_time:
-    :ivar repository_id:
-    :ivar req_if_tool_id:
-    :ivar req_if_version:
-    :ivar source_tool_id:
-    :ivar title:
-    :ivar identifier:
-    """
     class Meta:
         name = "REQ-IF-HEADER"
 
@@ -409,9 +347,6 @@ class ReqIfHeader:
 
 @dataclass
 class ReqIfToolExtension:
-    """
-    :ivar other_element:
-    """
     class Meta:
         name = "REQ-IF-TOOL-EXTENSION"
 
@@ -426,16 +361,6 @@ class ReqIfToolExtension:
 
 @dataclass
 class AttributeDefinitionBoolean:
-    """
-    :ivar alternative_id:
-    :ivar default_value:
-    :ivar type:
-    :ivar desc:
-    :ivar identifier:
-    :ivar is_editable:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "ATTRIBUTE-DEFINITION-BOOLEAN"
 
@@ -504,9 +429,6 @@ class AttributeDefinitionBoolean:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -518,9 +440,6 @@ class AttributeDefinitionBoolean:
 
     @dataclass
     class DefaultValue:
-        """
-        :ivar attribute_value_boolean:
-        """
         attribute_value_boolean: Optional[AttributeValueBoolean] = field(
             default=None,
             metadata={
@@ -532,9 +451,6 @@ class AttributeDefinitionBoolean:
 
     @dataclass
     class Type:
-        """
-        :ivar datatype_definition_boolean_ref:
-        """
         datatype_definition_boolean_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -547,16 +463,6 @@ class AttributeDefinitionBoolean:
 
 @dataclass
 class AttributeDefinitionDate:
-    """
-    :ivar alternative_id:
-    :ivar default_value:
-    :ivar type:
-    :ivar desc:
-    :ivar identifier:
-    :ivar is_editable:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "ATTRIBUTE-DEFINITION-DATE"
 
@@ -625,9 +531,6 @@ class AttributeDefinitionDate:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -639,9 +542,6 @@ class AttributeDefinitionDate:
 
     @dataclass
     class DefaultValue:
-        """
-        :ivar attribute_value_date:
-        """
         attribute_value_date: Optional[AttributeValueDate] = field(
             default=None,
             metadata={
@@ -653,9 +553,6 @@ class AttributeDefinitionDate:
 
     @dataclass
     class Type:
-        """
-        :ivar datatype_definition_date_ref:
-        """
         datatype_definition_date_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -668,17 +565,6 @@ class AttributeDefinitionDate:
 
 @dataclass
 class AttributeDefinitionEnumeration:
-    """
-    :ivar default_value:
-    :ivar alternative_id:
-    :ivar type:
-    :ivar desc:
-    :ivar identifier:
-    :ivar is_editable:
-    :ivar last_change:
-    :ivar long_name:
-    :ivar multi_valued:
-    """
     class Meta:
         name = "ATTRIBUTE-DEFINITION-ENUMERATION"
 
@@ -755,9 +641,6 @@ class AttributeDefinitionEnumeration:
 
     @dataclass
     class DefaultValue:
-        """
-        :ivar attribute_value_enumeration:
-        """
         attribute_value_enumeration: Optional[AttributeValueEnumeration] = field(
             default=None,
             metadata={
@@ -769,9 +652,6 @@ class AttributeDefinitionEnumeration:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -783,9 +663,6 @@ class AttributeDefinitionEnumeration:
 
     @dataclass
     class Type:
-        """
-        :ivar datatype_definition_enumeration_ref:
-        """
         datatype_definition_enumeration_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -798,16 +675,6 @@ class AttributeDefinitionEnumeration:
 
 @dataclass
 class AttributeDefinitionInteger:
-    """
-    :ivar alternative_id:
-    :ivar default_value:
-    :ivar type:
-    :ivar desc:
-    :ivar identifier:
-    :ivar is_editable:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "ATTRIBUTE-DEFINITION-INTEGER"
 
@@ -876,9 +743,6 @@ class AttributeDefinitionInteger:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -890,9 +754,6 @@ class AttributeDefinitionInteger:
 
     @dataclass
     class DefaultValue:
-        """
-        :ivar attribute_value_integer:
-        """
         attribute_value_integer: Optional[AttributeValueInteger] = field(
             default=None,
             metadata={
@@ -904,9 +765,6 @@ class AttributeDefinitionInteger:
 
     @dataclass
     class Type:
-        """
-        :ivar datatype_definition_integer_ref:
-        """
         datatype_definition_integer_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -919,16 +777,6 @@ class AttributeDefinitionInteger:
 
 @dataclass
 class AttributeDefinitionReal:
-    """
-    :ivar alternative_id:
-    :ivar default_value:
-    :ivar type:
-    :ivar desc:
-    :ivar identifier:
-    :ivar is_editable:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "ATTRIBUTE-DEFINITION-REAL"
 
@@ -997,9 +845,6 @@ class AttributeDefinitionReal:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -1011,9 +856,6 @@ class AttributeDefinitionReal:
 
     @dataclass
     class DefaultValue:
-        """
-        :ivar attribute_value_real:
-        """
         attribute_value_real: Optional[AttributeValueReal] = field(
             default=None,
             metadata={
@@ -1025,9 +867,6 @@ class AttributeDefinitionReal:
 
     @dataclass
     class Type:
-        """
-        :ivar datatype_definition_real_ref:
-        """
         datatype_definition_real_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -1040,16 +879,6 @@ class AttributeDefinitionReal:
 
 @dataclass
 class AttributeDefinitionString:
-    """
-    :ivar alternative_id:
-    :ivar default_value:
-    :ivar type:
-    :ivar desc:
-    :ivar identifier:
-    :ivar is_editable:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "ATTRIBUTE-DEFINITION-STRING"
 
@@ -1118,9 +947,6 @@ class AttributeDefinitionString:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -1132,9 +958,6 @@ class AttributeDefinitionString:
 
     @dataclass
     class DefaultValue:
-        """
-        :ivar attribute_value_string:
-        """
         attribute_value_string: Optional[AttributeValueString] = field(
             default=None,
             metadata={
@@ -1146,9 +969,6 @@ class AttributeDefinitionString:
 
     @dataclass
     class Type:
-        """
-        :ivar datatype_definition_string_ref:
-        """
         datatype_definition_string_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -1161,13 +981,6 @@ class AttributeDefinitionString:
 
 @dataclass
 class DatatypeDefinitionBoolean:
-    """
-    :ivar alternative_id:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "DATATYPE-DEFINITION-BOOLEAN"
 
@@ -1212,9 +1025,6 @@ class DatatypeDefinitionBoolean:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -1227,13 +1037,6 @@ class DatatypeDefinitionBoolean:
 
 @dataclass
 class DatatypeDefinitionDate:
-    """
-    :ivar alternative_id:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "DATATYPE-DEFINITION-DATE"
 
@@ -1278,9 +1081,6 @@ class DatatypeDefinitionDate:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -1293,15 +1093,6 @@ class DatatypeDefinitionDate:
 
 @dataclass
 class DatatypeDefinitionInteger:
-    """
-    :ivar alternative_id:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    :ivar max:
-    :ivar min:
-    """
     class Meta:
         name = "DATATYPE-DEFINITION-INTEGER"
 
@@ -1362,9 +1153,6 @@ class DatatypeDefinitionInteger:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -1377,16 +1165,6 @@ class DatatypeDefinitionInteger:
 
 @dataclass
 class DatatypeDefinitionReal:
-    """
-    :ivar alternative_id:
-    :ivar accuracy:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    :ivar max:
-    :ivar min:
-    """
     class Meta:
         name = "DATATYPE-DEFINITION-REAL"
 
@@ -1455,9 +1233,6 @@ class DatatypeDefinitionReal:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -1470,14 +1245,6 @@ class DatatypeDefinitionReal:
 
 @dataclass
 class DatatypeDefinitionString:
-    """
-    :ivar alternative_id:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    :ivar max_length:
-    """
     class Meta:
         name = "DATATYPE-DEFINITION-STRING"
 
@@ -1530,9 +1297,6 @@ class DatatypeDefinitionString:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -1545,13 +1309,6 @@ class DatatypeDefinitionString:
 
 @dataclass
 class DatatypeDefinitionXhtml:
-    """
-    :ivar alternative_id:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "DATATYPE-DEFINITION-XHTML"
 
@@ -1596,9 +1353,6 @@ class DatatypeDefinitionXhtml:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -1611,14 +1365,6 @@ class DatatypeDefinitionXhtml:
 
 @dataclass
 class EnumValue:
-    """
-    :ivar alternative_id:
-    :ivar properties:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "ENUM-VALUE"
 
@@ -1672,9 +1418,6 @@ class EnumValue:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -1686,9 +1429,6 @@ class EnumValue:
 
     @dataclass
     class Properties:
-        """
-        :ivar embedded_value:
-        """
         embedded_value: Optional[EmbeddedValue] = field(
             default=None,
             metadata={
@@ -1701,17 +1441,6 @@ class EnumValue:
 
 @dataclass
 class RelationGroup:
-    """
-    :ivar alternative_id:
-    :ivar source_specification:
-    :ivar spec_relations:
-    :ivar target_specification:
-    :ivar type:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "RELATION-GROUP"
 
@@ -1791,9 +1520,6 @@ class RelationGroup:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -1805,9 +1531,6 @@ class RelationGroup:
 
     @dataclass
     class SourceSpecification:
-        """
-        :ivar specification_ref:
-        """
         specification_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -1819,9 +1542,6 @@ class RelationGroup:
 
     @dataclass
     class SpecRelations:
-        """
-        :ivar spec_relation_ref:
-        """
         spec_relation_ref: List[str] = field(
             default_factory=list,
             metadata={
@@ -1833,9 +1553,6 @@ class RelationGroup:
 
     @dataclass
     class TargetSpecification:
-        """
-        :ivar specification_ref:
-        """
         specification_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -1847,9 +1564,6 @@ class RelationGroup:
 
     @dataclass
     class Type:
-        """
-        :ivar relation_group_type_ref:
-        """
         relation_group_type_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -1862,18 +1576,6 @@ class RelationGroup:
 
 @dataclass
 class SpecHierarchy:
-    """
-    :ivar alternative_id:
-    :ivar children:
-    :ivar editable_atts:
-    :ivar object:
-    :ivar desc:
-    :ivar identifier:
-    :ivar is_editable:
-    :ivar is_table_internal:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "SPEC-HIERARCHY"
 
@@ -1957,9 +1659,6 @@ class SpecHierarchy:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -1971,9 +1670,6 @@ class SpecHierarchy:
 
     @dataclass
     class Children:
-        """
-        :ivar spec_hierarchy:
-        """
         spec_hierarchy: List["SpecHierarchy"] = field(
             default_factory=list,
             metadata={
@@ -1985,15 +1681,6 @@ class SpecHierarchy:
 
     @dataclass
     class EditableAtts:
-        """
-        :ivar attribute_definition_boolean_ref:
-        :ivar attribute_definition_date_ref:
-        :ivar attribute_definition_enumeration_ref:
-        :ivar attribute_definition_integer_ref:
-        :ivar attribute_definition_real_ref:
-        :ivar attribute_definition_string_ref:
-        :ivar attribute_definition_xhtml_ref:
-        """
         attribute_definition_boolean_ref: List[str] = field(
             default_factory=list,
             metadata={
@@ -2053,9 +1740,6 @@ class SpecHierarchy:
 
     @dataclass
     class Object:
-        """
-        :ivar spec_object_ref:
-        """
         spec_object_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2068,10 +1752,6 @@ class SpecHierarchy:
 
 @dataclass
 class XhtmlContent:
-    """
-    :ivar p:
-    :ivar div:
-    """
     class Meta:
         name = "XHTML-CONTENT"
 
@@ -2093,12 +1773,6 @@ class XhtmlContent:
 
 @dataclass
 class AttributeValueXhtml:
-    """
-    :ivar the_value:
-    :ivar the_original_value:
-    :ivar definition:
-    :ivar is_simplified:
-    """
     class Meta:
         name = "ATTRIBUTE-VALUE-XHTML"
 
@@ -2138,9 +1812,6 @@ class AttributeValueXhtml:
 
     @dataclass
     class Definition:
-        """
-        :ivar attribute_definition_xhtml_ref:
-        """
         attribute_definition_xhtml_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2153,14 +1824,6 @@ class AttributeValueXhtml:
 
 @dataclass
 class DatatypeDefinitionEnumeration:
-    """
-    :ivar alternative_id:
-    :ivar specified_values:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "DATATYPE-DEFINITION-ENUMERATION"
 
@@ -2213,9 +1876,6 @@ class DatatypeDefinitionEnumeration:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -2227,9 +1887,6 @@ class DatatypeDefinitionEnumeration:
 
     @dataclass
     class SpecifiedValues:
-        """
-        :ivar enum_value:
-        """
         enum_value: List[EnumValue] = field(
             default_factory=list,
             metadata={
@@ -2242,16 +1899,6 @@ class DatatypeDefinitionEnumeration:
 
 @dataclass
 class AttributeDefinitionXhtml:
-    """
-    :ivar alternative_id:
-    :ivar default_value:
-    :ivar type:
-    :ivar desc:
-    :ivar identifier:
-    :ivar is_editable:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "ATTRIBUTE-DEFINITION-XHTML"
 
@@ -2320,9 +1967,6 @@ class AttributeDefinitionXhtml:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -2334,9 +1978,6 @@ class AttributeDefinitionXhtml:
 
     @dataclass
     class DefaultValue:
-        """
-        :ivar attribute_value_xhtml:
-        """
         attribute_value_xhtml: Optional[AttributeValueXhtml] = field(
             default=None,
             metadata={
@@ -2348,9 +1989,6 @@ class AttributeDefinitionXhtml:
 
     @dataclass
     class Type:
-        """
-        :ivar datatype_definition_xhtml_ref:
-        """
         datatype_definition_xhtml_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2363,15 +2001,6 @@ class AttributeDefinitionXhtml:
 
 @dataclass
 class SpecObject:
-    """
-    :ivar alternative_id:
-    :ivar values:
-    :ivar type:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "SPEC-OBJECT"
 
@@ -2433,9 +2062,6 @@ class SpecObject:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -2447,15 +2073,6 @@ class SpecObject:
 
     @dataclass
     class Values:
-        """
-        :ivar attribute_value_boolean:
-        :ivar attribute_value_date:
-        :ivar attribute_value_enumeration:
-        :ivar attribute_value_integer:
-        :ivar attribute_value_real:
-        :ivar attribute_value_string:
-        :ivar attribute_value_xhtml:
-        """
         attribute_value_boolean: List[AttributeValueBoolean] = field(
             default_factory=list,
             metadata={
@@ -2515,9 +2132,6 @@ class SpecObject:
 
     @dataclass
     class Type:
-        """
-        :ivar spec_object_type_ref:
-        """
         spec_object_type_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2530,17 +2144,6 @@ class SpecObject:
 
 @dataclass
 class SpecRelation:
-    """
-    :ivar alternative_id:
-    :ivar values:
-    :ivar source:
-    :ivar target:
-    :ivar type:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "SPEC-RELATION"
 
@@ -2620,9 +2223,6 @@ class SpecRelation:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -2634,15 +2234,6 @@ class SpecRelation:
 
     @dataclass
     class Values:
-        """
-        :ivar attribute_value_boolean:
-        :ivar attribute_value_date:
-        :ivar attribute_value_enumeration:
-        :ivar attribute_value_integer:
-        :ivar attribute_value_real:
-        :ivar attribute_value_string:
-        :ivar attribute_value_xhtml:
-        """
         attribute_value_boolean: List[AttributeValueBoolean] = field(
             default_factory=list,
             metadata={
@@ -2702,9 +2293,6 @@ class SpecRelation:
 
     @dataclass
     class Source:
-        """
-        :ivar spec_object_ref:
-        """
         spec_object_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2716,9 +2304,6 @@ class SpecRelation:
 
     @dataclass
     class Target:
-        """
-        :ivar spec_object_ref:
-        """
         spec_object_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2730,9 +2315,6 @@ class SpecRelation:
 
     @dataclass
     class Type:
-        """
-        :ivar spec_relation_type_ref:
-        """
         spec_relation_type_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2745,16 +2327,6 @@ class SpecRelation:
 
 @dataclass
 class Specification:
-    """
-    :ivar alternative_id:
-    :ivar values:
-    :ivar children:
-    :ivar type:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "SPECIFICATION"
 
@@ -2824,9 +2396,6 @@ class Specification:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -2838,15 +2407,6 @@ class Specification:
 
     @dataclass
     class Values:
-        """
-        :ivar attribute_value_boolean:
-        :ivar attribute_value_date:
-        :ivar attribute_value_enumeration:
-        :ivar attribute_value_integer:
-        :ivar attribute_value_real:
-        :ivar attribute_value_string:
-        :ivar attribute_value_xhtml:
-        """
         attribute_value_boolean: List[AttributeValueBoolean] = field(
             default_factory=list,
             metadata={
@@ -2906,9 +2466,6 @@ class Specification:
 
     @dataclass
     class Children:
-        """
-        :ivar spec_hierarchy:
-        """
         spec_hierarchy: List[SpecHierarchy] = field(
             default_factory=list,
             metadata={
@@ -2920,9 +2477,6 @@ class Specification:
 
     @dataclass
     class Type:
-        """
-        :ivar specification_type_ref:
-        """
         specification_type_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2935,14 +2489,6 @@ class Specification:
 
 @dataclass
 class RelationGroupType:
-    """
-    :ivar alternative_id:
-    :ivar spec_attributes:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "RELATION-GROUP-TYPE"
 
@@ -2995,9 +2541,6 @@ class RelationGroupType:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -3009,15 +2552,6 @@ class RelationGroupType:
 
     @dataclass
     class SpecAttributes:
-        """
-        :ivar attribute_definition_boolean:
-        :ivar attribute_definition_date:
-        :ivar attribute_definition_enumeration:
-        :ivar attribute_definition_integer:
-        :ivar attribute_definition_real:
-        :ivar attribute_definition_string:
-        :ivar attribute_definition_xhtml:
-        """
         attribute_definition_boolean: List[AttributeDefinitionBoolean] = field(
             default_factory=list,
             metadata={
@@ -3078,14 +2612,6 @@ class RelationGroupType:
 
 @dataclass
 class SpecObjectType:
-    """
-    :ivar alternative_id:
-    :ivar spec_attributes:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "SPEC-OBJECT-TYPE"
 
@@ -3138,9 +2664,6 @@ class SpecObjectType:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -3152,15 +2675,6 @@ class SpecObjectType:
 
     @dataclass
     class SpecAttributes:
-        """
-        :ivar attribute_definition_boolean:
-        :ivar attribute_definition_date:
-        :ivar attribute_definition_enumeration:
-        :ivar attribute_definition_integer:
-        :ivar attribute_definition_real:
-        :ivar attribute_definition_string:
-        :ivar attribute_definition_xhtml:
-        """
         attribute_definition_boolean: List[AttributeDefinitionBoolean] = field(
             default_factory=list,
             metadata={
@@ -3221,14 +2735,6 @@ class SpecObjectType:
 
 @dataclass
 class SpecRelationType:
-    """
-    :ivar alternative_id:
-    :ivar spec_attributes:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "SPEC-RELATION-TYPE"
 
@@ -3281,9 +2787,6 @@ class SpecRelationType:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -3295,15 +2798,6 @@ class SpecRelationType:
 
     @dataclass
     class SpecAttributes:
-        """
-        :ivar attribute_definition_boolean:
-        :ivar attribute_definition_date:
-        :ivar attribute_definition_enumeration:
-        :ivar attribute_definition_integer:
-        :ivar attribute_definition_real:
-        :ivar attribute_definition_string:
-        :ivar attribute_definition_xhtml:
-        """
         attribute_definition_boolean: List[AttributeDefinitionBoolean] = field(
             default_factory=list,
             metadata={
@@ -3364,14 +2858,6 @@ class SpecRelationType:
 
 @dataclass
 class SpecificationType:
-    """
-    :ivar alternative_id:
-    :ivar spec_attributes:
-    :ivar desc:
-    :ivar identifier:
-    :ivar last_change:
-    :ivar long_name:
-    """
     class Meta:
         name = "SPECIFICATION-TYPE"
 
@@ -3424,9 +2910,6 @@ class SpecificationType:
 
     @dataclass
     class AlternativeId:
-        """
-        :ivar alternative_id:
-        """
         alternative_id: Optional[AlternativeId] = field(
             default=None,
             metadata={
@@ -3438,15 +2921,6 @@ class SpecificationType:
 
     @dataclass
     class SpecAttributes:
-        """
-        :ivar attribute_definition_boolean:
-        :ivar attribute_definition_date:
-        :ivar attribute_definition_enumeration:
-        :ivar attribute_definition_integer:
-        :ivar attribute_definition_real:
-        :ivar attribute_definition_string:
-        :ivar attribute_definition_xhtml:
-        """
         attribute_definition_boolean: List[AttributeDefinitionBoolean] = field(
             default_factory=list,
             metadata={
@@ -3507,14 +2981,6 @@ class SpecificationType:
 
 @dataclass
 class ReqIfContent:
-    """
-    :ivar datatypes:
-    :ivar spec_types:
-    :ivar spec_objects:
-    :ivar spec_relations:
-    :ivar specifications:
-    :ivar spec_relation_groups:
-    """
     class Meta:
         name = "REQ-IF-CONTENT"
 
@@ -3569,15 +3035,6 @@ class ReqIfContent:
 
     @dataclass
     class Datatypes:
-        """
-        :ivar datatype_definition_boolean:
-        :ivar datatype_definition_date:
-        :ivar datatype_definition_enumeration:
-        :ivar datatype_definition_integer:
-        :ivar datatype_definition_real:
-        :ivar datatype_definition_string:
-        :ivar datatype_definition_xhtml:
-        """
         datatype_definition_boolean: List[DatatypeDefinitionBoolean] = field(
             default_factory=list,
             metadata={
@@ -3637,12 +3094,6 @@ class ReqIfContent:
 
     @dataclass
     class SpecTypes:
-        """
-        :ivar relation_group_type:
-        :ivar spec_object_type:
-        :ivar spec_relation_type:
-        :ivar specification_type:
-        """
         relation_group_type: List[RelationGroupType] = field(
             default_factory=list,
             metadata={
@@ -3678,9 +3129,6 @@ class ReqIfContent:
 
     @dataclass
     class SpecObjects:
-        """
-        :ivar spec_object:
-        """
         spec_object: List[SpecObject] = field(
             default_factory=list,
             metadata={
@@ -3692,9 +3140,6 @@ class ReqIfContent:
 
     @dataclass
     class SpecRelations:
-        """
-        :ivar spec_relation:
-        """
         spec_relation: List[SpecRelation] = field(
             default_factory=list,
             metadata={
@@ -3706,9 +3151,6 @@ class ReqIfContent:
 
     @dataclass
     class Specifications:
-        """
-        :ivar specification:
-        """
         specification: List[Specification] = field(
             default_factory=list,
             metadata={
@@ -3720,9 +3162,6 @@ class ReqIfContent:
 
     @dataclass
     class SpecRelationGroups:
-        """
-        :ivar relation_group:
-        """
         relation_group: List[RelationGroup] = field(
             default_factory=list,
             metadata={
@@ -3735,12 +3174,6 @@ class ReqIfContent:
 
 @dataclass
 class ReqIf:
-    """
-    :ivar the_header:
-    :ivar core_content:
-    :ivar tool_extensions:
-    :ivar lang:
-    """
     class Meta:
         name = "REQ-IF"
         namespace = "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd"
@@ -3779,9 +3212,6 @@ class ReqIf:
 
     @dataclass
     class TheHeader:
-        """
-        :ivar req_if_header:
-        """
         req_if_header: Optional[ReqIfHeader] = field(
             default=None,
             metadata={
@@ -3792,9 +3222,6 @@ class ReqIf:
 
     @dataclass
     class CoreContent:
-        """
-        :ivar req_if_content:
-        """
         req_if_content: Optional[ReqIfContent] = field(
             default=None,
             metadata={
@@ -3805,9 +3232,6 @@ class ReqIf:
 
     @dataclass
     class ToolExtensions:
-        """
-        :ivar req_if_tool_extension:
-        """
         req_if_tool_extension: List[ReqIfToolExtension] = field(
             default_factory=list,
             metadata={

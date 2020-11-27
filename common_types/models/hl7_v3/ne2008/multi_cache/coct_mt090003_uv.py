@@ -25,17 +25,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt090003UvDevice:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar manufacturer_model_name:
-    :ivar software_name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT090003UV.Device"
 
@@ -112,17 +101,6 @@ class CoctMt090003UvDevice:
 
 @dataclass
 class CoctMt090003UvNonPersonLivingSubject:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT090003UV.NonPersonLivingSubject"
 
@@ -197,15 +175,6 @@ class CoctMt090003UvNonPersonLivingSubject:
 
 @dataclass
 class CoctMt090003UvOrganization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT090003UV.Organization"
 
@@ -267,15 +236,6 @@ class CoctMt090003UvOrganization:
 
 @dataclass
 class CoctMt090003UvPerson:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT090003UV.Person"
 
@@ -338,22 +298,6 @@ class CoctMt090003UvPerson:
 
 @dataclass
 class CoctMt090003UvAssignedEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar assigned_organization:
-    :ivar assigned_person:
-    :ivar assigned_device:
-    :ivar assigned_non_person_living_subject:
-    :ivar represented_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT090003UV.AssignedEntity"
 

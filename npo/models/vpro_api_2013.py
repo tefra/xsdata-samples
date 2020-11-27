@@ -24,11 +24,6 @@ class AbstractFacetType:
 
 @dataclass
 class DateRangeFacetItemType:
-    """
-    :ivar name:
-    :ivar begin:
-    :ivar end:
-    """
     class Meta:
         name = "dateRangeFacetItemType"
 
@@ -56,16 +51,6 @@ class DateRangeFacetItemType:
 
 
 class DateRangePresetTypeEnum(Enum):
-    """
-    :cvar BEFORE_LAST_YEAR:
-    :cvar LAST_YEAR:
-    :cvar LAST_MONTH:
-    :cvar LAST_WEEK:
-    :cvar YESTERDAY:
-    :cvar TODAY:
-    :cvar THIS_WEEK:
-    :cvar TOMORROW:
-    """
     BEFORE_LAST_YEAR = "BEFORE_LAST_YEAR"
     LAST_YEAR = "LAST_YEAR"
     LAST_MONTH = "LAST_MONTH"
@@ -78,11 +63,6 @@ class DateRangePresetTypeEnum(Enum):
 
 @dataclass
 class DurationRangeFacetItemType:
-    """
-    :ivar name:
-    :ivar begin:
-    :ivar end:
-    """
     class Meta:
         name = "durationRangeFacetItemType"
 
@@ -110,16 +90,6 @@ class DurationRangeFacetItemType:
 
 
 class FacetOrderTypeEnum(Enum):
-    """
-    :cvar VALUE_ASC:
-    :cvar VALUE_DESC:
-    :cvar COUNT_ASC:
-    :cvar COUNT_DESC:
-    :cvar TERM:
-    :cvar REVERSE_TERM:
-    :cvar COUNT:
-    :cvar REVERSE_COUNT:
-    """
     VALUE_ASC = "VALUE_ASC"
     VALUE_DESC = "VALUE_DESC"
     COUNT_ASC = "COUNT_ASC"
@@ -132,10 +102,6 @@ class FacetOrderTypeEnum(Enum):
 
 @dataclass
 class FacetResultItem:
-    """
-    :ivar count:
-    :ivar selected:
-    """
     class Meta:
         name = "facetResultItem"
 
@@ -158,10 +124,6 @@ class FacetResultItem:
 
 @dataclass
 class HightlightType:
-    """
-    :ivar body:
-    :ivar term:
-    """
     class Meta:
         name = "hightlightType"
 
@@ -182,11 +144,6 @@ class HightlightType:
 
 
 class Match(Enum):
-    """
-    :cvar MUST:
-    :cvar SHOULD:
-    :cvar NOT_VALUE:
-    """
     MUST = "MUST"
     SHOULD = "SHOULD"
     NOT_VALUE = "NOT"
@@ -199,17 +156,6 @@ class MediaSearchResults:
 
 
 class MediaSortTypeEnum(Enum):
-    """
-    :cvar TITLE:
-    :cvar SORT_DATE:
-    :cvar PUBLISH_DATE:
-    :cvar EPISODE:
-    :cvar EPISODE_ADDED:
-    :cvar MEMBER_ADDED:
-    :cvar MEMBER:
-    :cvar CREATION_DATE:
-    :cvar LAST_MODIFIED:
-    """
     TITLE = "title"
     SORT_DATE = "sortDate"
     PUBLISH_DATE = "publishDate"
@@ -222,10 +168,6 @@ class MediaSortTypeEnum(Enum):
 
 
 class OrderTypeEnum(Enum):
-    """
-    :cvar ASC:
-    :cvar DESC:
-    """
     ASC = "ASC"
     DESC = "DESC"
 
@@ -237,12 +179,6 @@ class PageSearchResults:
 
 
 class PageSortTypeEnum(Enum):
-    """
-    :cvar SORT_DATE:
-    :cvar LAST_MODIFIED:
-    :cvar LAST_PUBLISHED:
-    :cvar CREATION_DATE:
-    """
     SORT_DATE = "sortDate"
     LAST_MODIFIED = "lastModified"
     LAST_PUBLISHED = "lastPublished"
@@ -251,12 +187,6 @@ class PageSortTypeEnum(Enum):
 
 @dataclass
 class RedirectEntry:
-    """
-    :ivar from_value:
-    :ivar to:
-    :ivar ultimate:
-    :ivar circular:
-    """
     class Meta:
         name = "redirectEntry"
         namespace = "urn:vpro:api:2013"
@@ -293,18 +223,10 @@ class RedirectEntry:
 
 
 class SimpleMatchType(Enum):
-    """
-    :cvar TEXT:
-    """
     TEXT = "TEXT"
 
 
 class StandardMatchType(Enum):
-    """
-    :cvar TEXT:
-    :cvar REGEX:
-    :cvar WILDCARD:
-    """
     TEXT = "TEXT"
     REGEX = "REGEX"
     WILDCARD = "WILDCARD"
@@ -312,9 +234,6 @@ class StandardMatchType(Enum):
 
 @dataclass
 class Suggestion:
-    """
-    :ivar value:
-    """
     class Meta:
         name = "suggestion"
         namespace = "urn:vpro:api:2013"
@@ -328,12 +247,6 @@ class Suggestion:
 
 
 class TotalQualifier(Enum):
-    """
-    :cvar EQUAL_TO:
-    :cvar APPROXIMATE:
-    :cvar GREATER_THAN_OR_EQUAL_TO:
-    :cvar MISSING:
-    """
     EQUAL_TO = "EQUAL_TO"
     APPROXIMATE = "APPROXIMATE"
     GREATER_THAN_OR_EQUAL_TO = "GREATER_THAN_OR_EQUAL_TO"
@@ -342,11 +255,6 @@ class TotalQualifier(Enum):
 
 @dataclass
 class DateRangeFacetsType(AbstractFacetType):
-    """
-    :ivar interval:
-    :ivar preset:
-    :ivar range:
-    """
     class Meta:
         name = "dateRangeFacetsType"
 
@@ -378,10 +286,6 @@ class DateRangeFacetsType(AbstractFacetType):
 
 @dataclass
 class DurationRangeFacetsType(AbstractFacetType):
-    """
-    :ivar interval:
-    :ivar range:
-    """
     class Meta:
         name = "durationRangeFacetsType"
 
@@ -405,13 +309,6 @@ class DurationRangeFacetsType(AbstractFacetType):
 
 @dataclass
 class ExtendedMatcherType:
-    """
-    :ivar value:
-    :ivar fuzziness:
-    :ivar match_type:
-    :ivar case_sensitive:
-    :ivar match:
-    """
     class Meta:
         name = "extendedMatcherType"
 
@@ -448,13 +345,6 @@ class ExtendedMatcherType:
 
 @dataclass
 class GeoLocationSearchType:
-    """
-    :ivar value:
-    :ivar owner:
-    :ivar role:
-    :ivar gtaa_uri:
-    :ivar match:
-    """
     class Meta:
         name = "geoLocationSearchType"
 
@@ -490,9 +380,6 @@ class GeoLocationSearchType:
 
 @dataclass
 class MatcherList:
-    """
-    :ivar match:
-    """
     class Meta:
         name = "matcherList"
 
@@ -506,10 +393,6 @@ class MatcherList:
 
 @dataclass
 class MediaSortType:
-    """
-    :ivar value:
-    :ivar order:
-    """
     class Meta:
         name = "mediaSortType"
 
@@ -526,10 +409,6 @@ class MediaSortType:
 
 @dataclass
 class PageSortType:
-    """
-    :ivar value:
-    :ivar order:
-    """
     class Meta:
         name = "pageSortType"
 
@@ -546,9 +425,6 @@ class PageSortType:
 
 @dataclass
 class RangeFacetResultItem(FacetResultItem):
-    """
-    :ivar value:
-    """
     class Meta:
         name = "rangeFacetResultItem"
 
@@ -562,10 +438,6 @@ class RangeFacetResultItem(FacetResultItem):
 
 @dataclass
 class RangeMatcherType:
-    """
-    :ivar inclusive_end:
-    :ivar match:
-    """
     class Meta:
         name = "rangeMatcherType"
 
@@ -586,10 +458,6 @@ class RangeMatcherType:
 
 @dataclass
 class RedirectList:
-    """
-    :ivar entry:
-    :ivar last_update:
-    """
     class Meta:
         name = "redirectList"
 
@@ -611,13 +479,6 @@ class RedirectList:
 
 @dataclass
 class ResultType:
-    """
-    :ivar items:
-    :ivar total:
-    :ivar total_qualifier:
-    :ivar offset:
-    :ivar max:
-    """
     class Meta:
         name = "resultType"
 
@@ -656,9 +517,6 @@ class ResultType:
 
     @dataclass
     class Items:
-        """
-        :ivar item:
-        """
         item: List[object] = field(
             default_factory=list,
             metadata={
@@ -670,11 +528,6 @@ class ResultType:
 
 @dataclass
 class ScheduleEventApiType(ScheduleEventType):
-    """
-    :ivar program:
-    :ivar group:
-    :ivar segment:
-    """
     class Meta:
         name = "scheduleEventApiType"
 
@@ -703,11 +556,6 @@ class ScheduleEventApiType(ScheduleEventType):
 
 @dataclass
 class SearchResultItem:
-    """
-    :ivar result:
-    :ivar highlight:
-    :ivar score:
-    """
     class Meta:
         name = "searchResultItem"
 
@@ -735,12 +583,6 @@ class SearchResultItem:
 
 @dataclass
 class SimpleMatcherType:
-    """
-    :ivar value:
-    :ivar fuzziness:
-    :ivar match_type:
-    :ivar match:
-    """
     class Meta:
         name = "simpleMatcherType"
 
@@ -770,10 +612,6 @@ class SimpleMatcherType:
 
 @dataclass
 class TermFacetResultItemType(FacetResultItem):
-    """
-    :ivar id:
-    :ivar value:
-    """
     class Meta:
         name = "termFacetResultItemType"
 
@@ -795,13 +633,6 @@ class TermFacetResultItemType(FacetResultItem):
 
 @dataclass
 class TextFacetType(AbstractFacetType):
-    """
-    :ivar threshold:
-    :ivar max:
-    :ivar include:
-    :ivar script:
-    :ivar sort:
-    """
     class Meta:
         name = "textFacetType"
 
@@ -843,11 +674,6 @@ class TextFacetType(AbstractFacetType):
 
 @dataclass
 class TextMatcherType:
-    """
-    :ivar value:
-    :ivar match_type:
-    :ivar match:
-    """
     class Meta:
         name = "textMatcherType"
 
@@ -871,13 +697,6 @@ class TextMatcherType:
 
 @dataclass
 class TitleSearchType:
-    """
-    :ivar value:
-    :ivar owner:
-    :ivar type:
-    :ivar match_type:
-    :ivar match:
-    """
     class Meta:
         name = "titleSearchType"
 
@@ -913,11 +732,6 @@ class TitleSearchType:
 
 @dataclass
 class DateFacetResultItemType(RangeFacetResultItem):
-    """
-    :ivar begin:
-    :ivar end:
-    :ivar name:
-    """
     class Meta:
         name = "dateFacetResultItemType"
 
@@ -946,10 +760,6 @@ class DateFacetResultItemType(RangeFacetResultItem):
 
 @dataclass
 class DateRangeMatcherType(RangeMatcherType):
-    """
-    :ivar begin:
-    :ivar end:
-    """
     class Meta:
         name = "dateRangeMatcherType"
 
@@ -971,10 +781,6 @@ class DateRangeMatcherType(RangeMatcherType):
 
 @dataclass
 class DurationFacetResultItemType(RangeFacetResultItem):
-    """
-    :ivar begin:
-    :ivar end:
-    """
     class Meta:
         name = "durationFacetResultItemType"
 
@@ -996,10 +802,6 @@ class DurationFacetResultItemType(RangeFacetResultItem):
 
 @dataclass
 class DurationRangeMatcherType(RangeMatcherType):
-    """
-    :ivar begin:
-    :ivar end:
-    """
     class Meta:
         name = "durationRangeMatcherType"
 
@@ -1021,9 +823,6 @@ class DurationRangeMatcherType(RangeMatcherType):
 
 @dataclass
 class ExtendedTextMatcherListType(MatcherList):
-    """
-    :ivar matcher:
-    """
     class Meta:
         name = "extendedTextMatcherListType"
 
@@ -1038,9 +837,6 @@ class ExtendedTextMatcherListType(MatcherList):
 
 @dataclass
 class MediaGenreFacetResultItemType(TermFacetResultItemType):
-    """
-    :ivar term:
-    """
     class Meta:
         name = "mediaGenreFacetResultItemType"
 
@@ -1055,9 +851,6 @@ class MediaGenreFacetResultItemType(TermFacetResultItemType):
 
 @dataclass
 class MediaGeoLocationFacetResultItemType(TermFacetResultItemType):
-    """
-    :ivar term:
-    """
     class Meta:
         name = "mediaGeoLocationFacetResultItemType"
 
@@ -1072,10 +865,6 @@ class MediaGeoLocationFacetResultItemType(TermFacetResultItemType):
 
 @dataclass
 class MediaTitleFacetType(TextFacetType):
-    """
-    :ivar sub_search:
-    :ivar name:
-    """
     class Meta:
         name = "mediaTitleFacetType"
 
@@ -1097,9 +886,6 @@ class MediaTitleFacetType(TextFacetType):
 
 @dataclass
 class MemberRefFacetResultItemType(TermFacetResultItemType):
-    """
-    :ivar type:
-    """
     class Meta:
         name = "memberRefFacetResultItemType"
 
@@ -1114,10 +900,6 @@ class MemberRefFacetResultItemType(TermFacetResultItemType):
 
 @dataclass
 class NamedTermFacetResultItemType:
-    """
-    :ivar facet:
-    :ivar name:
-    """
     class Meta:
         name = "namedTermFacetResultItemType"
 
@@ -1138,9 +920,6 @@ class NamedTermFacetResultItemType:
 
 @dataclass
 class PageGenreFacetResultItemType(TermFacetResultItemType):
-    """
-    :ivar term:
-    """
     class Meta:
         name = "pageGenreFacetResultItemType"
 
@@ -1155,9 +934,6 @@ class PageGenreFacetResultItemType(TermFacetResultItemType):
 
 @dataclass
 class PageSortListType:
-    """
-    :ivar sort:
-    """
     class Meta:
         name = "pageSortListType"
 
@@ -1180,13 +956,6 @@ class Redirects(RedirectList):
 
 @dataclass
 class ScheduleEventSearchType(RangeMatcherType):
-    """
-    :ivar begin:
-    :ivar end:
-    :ivar channel:
-    :ivar net:
-    :ivar rerun:
-    """
     class Meta:
         name = "scheduleEventSearchType"
 
@@ -1242,9 +1011,6 @@ class SearchResultType(ResultType):
 
 @dataclass
 class TextMatcherListType(MatcherList):
-    """
-    :ivar matcher:
-    """
     class Meta:
         name = "textMatcherListType"
 
@@ -1259,10 +1025,6 @@ class TextMatcherListType(MatcherList):
 
 @dataclass
 class TitleSortOrderType(MediaSortType):
-    """
-    :ivar type:
-    :ivar owner:
-    """
     class Meta:
         name = "titleSortOrderType"
 
@@ -1282,11 +1044,6 @@ class TitleSortOrderType(MediaSortType):
 
 @dataclass
 class AssociationSearchType:
-    """
-    :ivar urls:
-    :ivar types:
-    :ivar match:
-    """
     class Meta:
         name = "associationSearchType"
 
@@ -1314,9 +1071,6 @@ class AssociationSearchType:
 
 @dataclass
 class DateRangeMatcherListType(MatcherList):
-    """
-    :ivar matcher:
-    """
     class Meta:
         name = "dateRangeMatcherListType"
 
@@ -1331,9 +1085,6 @@ class DateRangeMatcherListType(MatcherList):
 
 @dataclass
 class DurationRangeMatcherListType(MatcherList):
-    """
-    :ivar matcher:
-    """
     class Meta:
         name = "durationRangeMatcherListType"
 
@@ -1348,23 +1099,6 @@ class DurationRangeMatcherListType(MatcherList):
 
 @dataclass
 class MediaFacetsResultType:
-    """
-    :ivar titles:
-    :ivar types:
-    :ivar av_types:
-    :ivar sort_dates:
-    :ivar broadcasters:
-    :ivar genres:
-    :ivar geo_locations:
-    :ivar tags:
-    :ivar durations:
-    :ivar descendant_of:
-    :ivar episode_of:
-    :ivar member_of:
-    :ivar relations:
-    :ivar age_ratings:
-    :ivar content_ratings:
-    """
     class Meta:
         name = "mediaFacetsResultType"
 
@@ -1500,13 +1234,6 @@ class MediaFacetsResultType:
 
 @dataclass
 class MediaRelationSearchType:
-    """
-    :ivar types:
-    :ivar broadcasters:
-    :ivar values:
-    :ivar uri_refs:
-    :ivar match:
-    """
     class Meta:
         name = "mediaRelationSearchType"
 
@@ -1549,11 +1276,6 @@ class MediaRelationSearchType:
 
 @dataclass
 class MemberRefSearchType:
-    """
-    :ivar media_ids:
-    :ivar types:
-    :ivar match:
-    """
     class Meta:
         name = "memberRefSearchType"
 
@@ -1582,17 +1304,6 @@ class MemberRefSearchType:
 
 @dataclass
 class PageFacetsResultType:
-    """
-    :ivar sort_dates:
-    :ivar types:
-    :ivar broadcasters:
-    :ivar tags:
-    :ivar keywords:
-    :ivar genres:
-    :ivar portals:
-    :ivar sections:
-    :ivar relations:
-    """
     class Meta:
         name = "pageFacetsResultType"
 
@@ -1673,13 +1384,6 @@ class PageFacetsResultType:
 
 @dataclass
 class PageRelationSearchType:
-    """
-    :ivar types:
-    :ivar broadcasters:
-    :ivar values:
-    :ivar uri_refs:
-    :ivar match:
-    """
     class Meta:
         name = "pageRelationSearchType"
 
@@ -1722,13 +1426,6 @@ class PageRelationSearchType:
 
 @dataclass
 class SubtitlesSearchType:
-    """
-    :ivar text:
-    :ivar mids:
-    :ivar types:
-    :ivar languages:
-    :ivar match:
-    """
     class Meta:
         name = "subtitlesSearchType"
 
@@ -1770,10 +1467,6 @@ class SubtitlesSearchType:
 
 @dataclass
 class TermSearchType:
-    """
-    :ivar ids:
-    :ivar match:
-    """
     class Meta:
         name = "termSearchType"
 
@@ -1794,10 +1487,6 @@ class TermSearchType:
 
 @dataclass
 class GenericMediaSearchResultType(SearchResultType):
-    """
-    :ivar facets:
-    :ivar selected_facets:
-    """
     class Meta:
         name = "genericMediaSearchResultType"
 
@@ -1820,9 +1509,6 @@ class GenericMediaSearchResultType(SearchResultType):
 
 @dataclass
 class MediaRelationSearchListType:
-    """
-    :ivar relation_search:
-    """
     class Meta:
         name = "mediaRelationSearchListType"
 
@@ -1838,9 +1524,6 @@ class MediaRelationSearchListType:
 
 @dataclass
 class PageAssociationSearchListType:
-    """
-    :ivar search:
-    """
     class Meta:
         name = "pageAssociationSearchListType"
 
@@ -1855,9 +1538,6 @@ class PageAssociationSearchListType:
 
 @dataclass
 class PageRelationSearchListType:
-    """
-    :ivar relation_search:
-    """
     class Meta:
         name = "pageRelationSearchListType"
 
@@ -1873,12 +1553,6 @@ class PageRelationSearchListType:
 
 @dataclass
 class PageSearchResultType(SearchResultType):
-    """
-    :ivar facets:
-    :ivar selected_facets:
-    :ivar media_facets:
-    :ivar media_selected_facets:
-    """
     class Meta:
         name = "pageSearchResultType"
 
@@ -1917,9 +1591,6 @@ class PageSearchResultType(SearchResultType):
 
 @dataclass
 class SubtitlesFormType:
-    """
-    :ivar searches:
-    """
     class Meta:
         name = "subtitlesFormType"
 
@@ -2156,24 +1827,6 @@ class PageSearchResult(PageSearchResultType):
 
 @dataclass
 class PagesSearchType:
-    """
-    :ivar text:
-    :ivar broadcasters:
-    :ivar types:
-    :ivar portals:
-    :ivar sections:
-    :ivar genres:
-    :ivar tags:
-    :ivar keywords:
-    :ivar sort_dates:
-    :ivar last_modified_dates:
-    :ivar creation_dates:
-    :ivar publish_dates:
-    :ivar relations:
-    :ivar links:
-    :ivar referrals:
-    :ivar match:
-    """
     class Meta:
         name = "pagesSearchType"
 
@@ -2303,10 +1956,6 @@ class SubtitlesForm(SubtitlesFormType):
 
 @dataclass
 class ExtendedMediaFacetType(TextFacetType):
-    """
-    :ivar filter:
-    :ivar case_sensitive:
-    """
     class Meta:
         name = "extendedMediaFacetType"
 
@@ -2328,10 +1977,6 @@ class ExtendedMediaFacetType(TextFacetType):
 
 @dataclass
 class ExtendedPageFacetType(TextFacetType):
-    """
-    :ivar filter:
-    :ivar case_sensitive:
-    """
     class Meta:
         name = "extendedPageFacetType"
 
@@ -2353,9 +1998,6 @@ class ExtendedPageFacetType(TextFacetType):
 
 @dataclass
 class MediaFacetType(TextFacetType):
-    """
-    :ivar filter:
-    """
     class Meta:
         name = "mediaFacetType"
 
@@ -2377,9 +2019,6 @@ class MediaSearchResult(MediaSearchResultType):
 
 @dataclass
 class PageFacetType(TextFacetType):
-    """
-    :ivar filter:
-    """
     class Meta:
         name = "pageFacetType"
 
@@ -2394,10 +2033,6 @@ class PageFacetType(TextFacetType):
 
 @dataclass
 class ScheduleFormType:
-    """
-    :ivar searches:
-    :ivar highlight:
-    """
     class Meta:
         name = "scheduleFormType"
 
@@ -2418,10 +2053,6 @@ class ScheduleFormType:
 
 @dataclass
 class MediaRelationFacetType(ExtendedMediaFacetType):
-    """
-    :ivar sub_search:
-    :ivar name:
-    """
     class Meta:
         name = "mediaRelationFacetType"
 
@@ -2443,9 +2074,6 @@ class MediaRelationFacetType(ExtendedMediaFacetType):
 
 @dataclass
 class MediaSearchableTermFacetType(MediaFacetType):
-    """
-    :ivar sub_search:
-    """
     class Meta:
         name = "mediaSearchableTermFacetType"
 
@@ -2461,10 +2089,6 @@ class MediaSearchableTermFacetType(MediaFacetType):
 
 @dataclass
 class MediaTitleFacetListType(MediaFacetType):
-    """
-    :ivar sub_search:
-    :ivar title:
-    """
     class Meta:
         name = "mediaTitleFacetListType"
 
@@ -2487,9 +2111,6 @@ class MediaTitleFacetListType(MediaFacetType):
 
 @dataclass
 class MemberRefFacetType(MediaFacetType):
-    """
-    :ivar sub_search:
-    """
     class Meta:
         name = "memberRefFacetType"
 
@@ -2505,10 +2126,6 @@ class MemberRefFacetType(MediaFacetType):
 
 @dataclass
 class PageRelationFacetType(ExtendedPageFacetType):
-    """
-    :ivar sub_search:
-    :ivar name:
-    """
     class Meta:
         name = "pageRelationFacetType"
 
@@ -2530,9 +2147,6 @@ class PageRelationFacetType(ExtendedPageFacetType):
 
 @dataclass
 class PageSearchableTermFacetType(PageFacetType):
-    """
-    :ivar sub_search:
-    """
     class Meta:
         name = "pageSearchableTermFacetType"
 
@@ -2555,11 +2169,6 @@ class ScheduleForm(ScheduleFormType):
 
 @dataclass
 class MediaRelationFacetListType(AbstractFacetType):
-    """
-    :ivar filter:
-    :ivar sub_search:
-    :ivar facet:
-    """
     class Meta:
         name = "mediaRelationFacetListType"
 
@@ -2589,11 +2198,6 @@ class MediaRelationFacetListType(AbstractFacetType):
 
 @dataclass
 class PageRelationFacetListType(AbstractFacetType):
-    """
-    :ivar filter:
-    :ivar sub_search:
-    :ivar facet:
-    """
     class Meta:
         name = "pageRelationFacetListType"
 
@@ -2623,24 +2227,6 @@ class PageRelationFacetListType(AbstractFacetType):
 
 @dataclass
 class MediaFacetsType:
-    """
-    :ivar titles:
-    :ivar types:
-    :ivar av_types:
-    :ivar sort_dates:
-    :ivar broadcasters:
-    :ivar genres:
-    :ivar tags:
-    :ivar durations:
-    :ivar descendant_of:
-    :ivar episode_of:
-    :ivar member_of:
-    :ivar relations:
-    :ivar age_ratings:
-    :ivar content_ratings:
-    :ivar geo_locations:
-    :ivar filter:
-    """
     class Meta:
         name = "mediaFacetsType"
 
@@ -2768,18 +2354,6 @@ class MediaFacetsType:
 
 @dataclass
 class PagesFacetsType:
-    """
-    :ivar sort_dates:
-    :ivar broadcasters:
-    :ivar types:
-    :ivar tags:
-    :ivar keywords:
-    :ivar genres:
-    :ivar portals:
-    :ivar sections:
-    :ivar relations:
-    :ivar filter:
-    """
     class Meta:
         name = "pagesFacetsType"
 
@@ -2858,12 +2432,6 @@ class PagesFacetsType:
 
 @dataclass
 class MediaFormType:
-    """
-    :ivar searches:
-    :ivar sort_fields:
-    :ivar facets:
-    :ivar highlight:
-    """
     class Meta:
         name = "mediaFormType"
 
@@ -2898,10 +2466,6 @@ class MediaFormType:
 
     @dataclass
     class SortFields:
-        """
-        :ivar sort:
-        :ivar title_sort:
-        """
         sort: List[MediaSortType] = field(
             default_factory=list,
             metadata={
@@ -2930,13 +2494,6 @@ class MediaForm(MediaFormType):
 
 @dataclass
 class PagesFormType:
-    """
-    :ivar searches:
-    :ivar sort_fields:
-    :ivar facets:
-    :ivar media_form:
-    :ivar highlight:
-    """
     class Meta:
         name = "pagesFormType"
 

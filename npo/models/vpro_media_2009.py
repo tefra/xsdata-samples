@@ -32,21 +32,12 @@ class AgeRatingType(Enum):
 
 
 class AspectRatioEnum(Enum):
-    """
-    :cvar VALUE_4_3:
-    :cvar VALUE_16_9:
-    """
     VALUE_4_3 = "4:3"
     VALUE_16_9 = "16:9"
 
 
 @dataclass
 class AudioAttributesType:
-    """
-    :ivar number_of_channels:
-    :ivar audio_coding:
-    :ivar language:
-    """
     class Meta:
         name = "audioAttributesType"
 
@@ -76,25 +67,6 @@ class AudioAttributesType:
 
 
 class AvFileFormatEnum(Enum):
-    """
-    :cvar MP3:
-    :cvar RA:
-    :cvar RM:
-    :cvar MP4:
-    :cvar WVC1:
-    :cvar WM:
-    :cvar RAM:
-    :cvar WMP:
-    :cvar HTML:
-    :cvar M4_A:
-    :cvar M4_V:
-    :cvar DGPP:
-    :cvar FLV:
-    :cvar HASP:
-    :cvar MPEG2:
-    :cvar H264:
-    :cvar UNKNOWN:
-    """
     MP3 = "MP3"
     RA = "RA"
     RM = "RM"
@@ -115,11 +87,6 @@ class AvFileFormatEnum(Enum):
 
 
 class AvTypeEnum(Enum):
-    """
-    :cvar AUDIO:
-    :cvar VIDEO:
-    :cvar MIXED:
-    """
     AUDIO = "AUDIO"
     VIDEO = "VIDEO"
     MIXED = "MIXED"
@@ -127,10 +94,6 @@ class AvTypeEnum(Enum):
 
 @dataclass
 class AvailableSubtitleType:
-    """
-    :ivar language:
-    :ivar type:
-    """
     class Meta:
         name = "availableSubtitleType"
 
@@ -748,12 +711,6 @@ class ChannelEnum(Enum):
 
 
 class ColorType(Enum):
-    """
-    :cvar COLOR:
-    :cvar BLACK_AND_WHITE:
-    :cvar BLACK_AND_WHITE_AND_COLOR:
-    :cvar COLORIZED:
-    """
     COLOR = "COLOR"
     BLACK_AND_WHITE = "BLACK AND WHITE"
     BLACK_AND_WHITE_AND_COLOR = "BLACK AND WHITE AND COLOR"
@@ -779,10 +736,6 @@ class ContentRatingType(Enum):
 
 @dataclass
 class CountryType:
-    """
-    :ivar value:
-    :ivar code:
-    """
     class Meta:
         name = "countryType"
 
@@ -799,20 +752,12 @@ class CountryType:
 
 
 class Encryption(Enum):
-    """
-    :cvar NONE_VALUE:
-    :cvar DRM:
-    """
     NONE_VALUE = "NONE"
     DRM = "DRM"
 
 
 @dataclass
 class GenreType:
-    """
-    :ivar term:
-    :ivar id:
-    """
     class Meta:
         name = "genreType"
 
@@ -851,12 +796,6 @@ class GeoRestrictionEnum(Enum):
 
 
 class GeoRoleType(Enum):
-    """
-    :cvar RECORDED_IN:
-    :cvar SUBJECT:
-    :cvar PRODUCED_IN:
-    :cvar UNDEFINED:
-    """
     RECORDED_IN = "RECORDED_IN"
     SUBJECT = "SUBJECT"
     PRODUCED_IN = "PRODUCED_IN"
@@ -864,16 +803,6 @@ class GeoRoleType(Enum):
 
 
 class GroupTypeEnum(Enum):
-    """
-    :cvar STRAND:
-    :cvar ALBUM:
-    :cvar PLAYLIST:
-    :cvar ARCHIVE:
-    :cvar COLLECTION:
-    :cvar SEASON:
-    :cvar SERIES:
-    :cvar UMBRELLA:
-    """
     STRAND = "STRAND"
     ALBUM = "ALBUM"
     PLAYLIST = "PLAYLIST"
@@ -885,15 +814,6 @@ class GroupTypeEnum(Enum):
 
 
 class GtaaStatusType(Enum):
-    """
-    :cvar CANDIDATE:
-    :cvar APPROVED:
-    :cvar REDIRECTED:
-    :cvar NOT_COMPLIANT:
-    :cvar REJECTED:
-    :cvar OBSOLETE:
-    :cvar DELETED:
-    """
     CANDIDATE = "candidate"
     APPROVED = "approved"
     REDIRECTED = "redirected"
@@ -904,16 +824,6 @@ class GtaaStatusType(Enum):
 
 
 class IntentionEnum(Enum):
-    """
-    :cvar INFORM:
-    :cvar INFORM_NEWS_AND_FACTS:
-    :cvar INFORM_INDEPTH:
-    :cvar INFORM_GENERAL:
-    :cvar ENTERTAINMENT:
-    :cvar ENTERTAINMENT_LEASURE:
-    :cvar ENTERTAINMENT_INFORMATIVE:
-    :cvar ACTIVATING:
-    """
     INFORM = "INFORM"
     INFORM_NEWS_AND_FACTS = "INFORM_NEWS_AND_FACTS"
     INFORM_INDEPTH = "INFORM_INDEPTH"
@@ -926,10 +836,6 @@ class IntentionEnum(Enum):
 
 @dataclass
 class LanguageType:
-    """
-    :ivar value:
-    :ivar code:
-    """
     class Meta:
         name = "languageType"
 
@@ -946,16 +852,6 @@ class LanguageType:
 
 
 class License(Enum):
-    """
-    :cvar COPYRIGHTED:
-    :cvar PUBLIC_DOMAIN:
-    :cvar CC_BY:
-    :cvar CC_BY_SA:
-    :cvar CC_BY_ND:
-    :cvar CC_BY_NC:
-    :cvar CC_BY_NC_SA:
-    :cvar CC_BY_NC_ND:
-    """
     COPYRIGHTED = "COPYRIGHTED"
     PUBLIC_DOMAIN = "PUBLIC_DOMAIN"
     CC_BY = "CC_BY"
@@ -967,11 +863,6 @@ class License(Enum):
 
 
 class LocationTypeEnum(Enum):
-    """
-    :cvar INTERNAL:
-    :cvar EXTERNAL:
-    :cvar UNKNOWN:
-    """
     INTERNAL = "INTERNAL"
     EXTERNAL = "EXTERNAL"
     UNKNOWN = "UNKNOWN"
@@ -1028,10 +919,6 @@ class MediaTypeEnum(Enum):
 
 @dataclass
 class OrganizationType:
-    """
-    :ivar value:
-    :ivar id:
-    """
     class Meta:
         name = "organizationType"
 
@@ -1048,12 +935,6 @@ class OrganizationType:
 
 
 class PlatformTypeEnum(Enum):
-    """
-    :cvar INTERNETVOD:
-    :cvar TVVOD:
-    :cvar PLUSVOD:
-    :cvar NPOPLUSVOD:
-    """
     INTERNETVOD = "INTERNETVOD"
     TVVOD = "TVVOD"
     PLUSVOD = "PLUSVOD"
@@ -1062,12 +943,6 @@ class PlatformTypeEnum(Enum):
 
 @dataclass
 class PortalRestrictionType:
-    """
-    :ivar value:
-    :ivar portal_id:
-    :ivar start:
-    :ivar stop:
-    """
     class Meta:
         name = "portalRestrictionType"
 
@@ -1109,17 +984,6 @@ class PredictionStateEnum(Enum):
 
 
 class ProgramTypeEnum(Enum):
-    """
-    :cvar BROADCAST:
-    :cvar MOVIE:
-    :cvar TRAILER:
-    :cvar CLIP:
-    :cvar STRAND:
-    :cvar TRACK:
-    :cvar VISUALRADIO:
-    :cvar PROMO:
-    :cvar RECORDING:
-    """
     BROADCAST = "BROADCAST"
     MOVIE = "MOVIE"
     TRAILER = "TRAILER"
@@ -1133,13 +997,6 @@ class ProgramTypeEnum(Enum):
 
 @dataclass
 class RelationType:
-    """
-    :ivar value:
-    :ivar type:
-    :ivar broadcaster:
-    :ivar uri_ref:
-    :ivar urn:
-    """
     class Meta:
         name = "relationType"
 
@@ -1178,10 +1035,6 @@ class RelationType:
 
 @dataclass
 class RepeatType:
-    """
-    :ivar value:
-    :ivar is_rerun:
-    """
     class Meta:
         name = "repeatType"
 
@@ -1240,27 +1093,15 @@ class RoleType(Enum):
 
 
 class ScheduleEventTypeEnum(Enum):
-    """
-    :cvar STRAND:
-    """
     STRAND = "STRAND"
 
 
 class SegmentTypeEnum(Enum):
-    """
-    :cvar SEGMENT:
-    :cvar VISUALRADIOSEGMENT:
-    """
     SEGMENT = "SEGMENT"
     VISUALRADIOSEGMENT = "VISUALRADIOSEGMENT"
 
 
 class StreamingStatusValue(Enum):
-    """
-    :cvar OFFLINE:
-    :cvar ONLINE:
-    :cvar UNSET:
-    """
     OFFLINE = "OFFLINE"
     ONLINE = "ONLINE"
     UNSET = "UNSET"
@@ -1268,10 +1109,6 @@ class StreamingStatusValue(Enum):
 
 @dataclass
 class TagType:
-    """
-    :ivar value:
-    :ivar lang:
-    """
     class Meta:
         name = "tagType"
 
@@ -1288,15 +1125,6 @@ class TagType:
 
 
 class TargetGroupEnum(Enum):
-    """
-    :cvar KIDS_6:
-    :cvar KIDS_12:
-    :cvar YOUNG_ADULTS:
-    :cvar ADULTS:
-    :cvar ADULTS_WITH_KIDS_6:
-    :cvar ADULTS_WITH_KIDS_12:
-    :cvar EVERYONE:
-    """
     KIDS_6 = "KIDS_6"
     KIDS_12 = "KIDS_12"
     YOUNG_ADULTS = "YOUNG_ADULTS"
@@ -1307,17 +1135,6 @@ class TargetGroupEnum(Enum):
 
 
 class TextualTypeEnum(Enum):
-    """
-    :cvar MAIN:
-    :cvar SHORT:
-    :cvar SUB:
-    :cvar KICKER:
-    :cvar ORIGINAL:
-    :cvar EPISODE:
-    :cvar WORK:
-    :cvar LEXICO:
-    :cvar ABBREVIATION:
-    """
     MAIN = "MAIN"
     SHORT = "SHORT"
     SUB = "SUB"
@@ -1331,10 +1148,6 @@ class TextualTypeEnum(Enum):
 
 @dataclass
 class TwitterType:
-    """
-    :ivar value:
-    :ivar type:
-    """
     class Meta:
         name = "twitterType"
 
@@ -1349,23 +1162,11 @@ class TwitterType:
     )
 
     class Type(Enum):
-        """
-        :cvar ACCOUNT:
-        :cvar HASHTAG:
-        """
         ACCOUNT = "ACCOUNT"
         HASHTAG = "HASHTAG"
 
 
 class WorkflowTypeEnum(Enum):
-    """
-    :cvar PUBLISHED:
-    :cvar REVOKED:
-    :cvar FOR_REPUBLICATION:
-    :cvar FOR_PUBLICATION:
-    :cvar DELETED:
-    :cvar PARENT_REVOKED:
-    """
     PUBLISHED = "PUBLISHED"
     REVOKED = "REVOKED"
     FOR_REPUBLICATION = "FOR REPUBLICATION"
@@ -1382,11 +1183,6 @@ class BroadcasterType(OrganizationType):
 
 @dataclass
 class DescendantRefType:
-    """
-    :ivar mid_ref:
-    :ivar urn_ref:
-    :ivar type:
-    """
     class Meta:
         name = "descendantRefType"
 
@@ -1418,11 +1214,6 @@ class DescendantRefType:
 
 @dataclass
 class DescriptionType:
-    """
-    :ivar value:
-    :ivar type:
-    :ivar owner:
-    """
     class Meta:
         name = "descriptionType"
 
@@ -1446,13 +1237,6 @@ class DescriptionType:
 
 @dataclass
 class GeoLocationType:
-    """
-    :ivar name:
-    :ivar scope_note:
-    :ivar role:
-    :ivar gtaa_uri:
-    :ivar gtaa_status:
-    """
     class Meta:
         name = "geoLocationType"
 
@@ -1497,13 +1281,6 @@ class GeoLocationType:
 
 @dataclass
 class GeoRestrictionType:
-    """
-    :ivar value:
-    :ivar region_id:
-    :ivar start:
-    :ivar stop:
-    :ivar platform:
-    """
     class Meta:
         name = "geoRestrictionType"
 
@@ -1539,9 +1316,6 @@ class GeoRestrictionType:
 
 @dataclass
 class ImagesType:
-    """
-    :ivar image:
-    """
     class Meta:
         name = "imagesType"
 
@@ -1556,10 +1330,6 @@ class ImagesType:
 
 @dataclass
 class IntentionType:
-    """
-    :ivar intention:
-    :ivar owner:
-    """
     class Meta:
         name = "intentionType"
 
@@ -1580,13 +1350,6 @@ class IntentionType:
 
 @dataclass
 class NameType:
-    """
-    :ivar name:
-    :ivar scope_note:
-    :ivar role:
-    :ivar gtaa_uri:
-    :ivar gtaa_status:
-    """
     class Meta:
         name = "nameType"
 
@@ -1630,13 +1393,6 @@ class NameType:
 
 @dataclass
 class PersonType:
-    """
-    :ivar given_name:
-    :ivar family_name:
-    :ivar role:
-    :ivar gtaa_uri:
-    :ivar gtaa_status:
-    """
     class Meta:
         name = "personType"
 
@@ -1683,9 +1439,6 @@ class PersonType:
 
 @dataclass
 class PortalsType:
-    """
-    :ivar portal:
-    """
     class Meta:
         name = "portalsType"
 
@@ -1700,12 +1453,6 @@ class PortalsType:
 
 @dataclass
 class PredictionType:
-    """
-    :ivar value:
-    :ivar state:
-    :ivar publish_start:
-    :ivar publish_stop:
-    """
     class Meta:
         name = "predictionType"
 
@@ -1736,15 +1483,6 @@ class PredictionType:
 
 @dataclass
 class RecursiveMemberRef:
-    """
-    :ivar member_of:
-    :ivar episode_of:
-    :ivar segment_of:
-    :ivar mid_ref:
-    :ivar type:
-    :ivar index:
-    :ivar highlighted:
-    """
     class Meta:
         name = "recursiveMemberRef"
 
@@ -1801,11 +1539,6 @@ class RecursiveMemberRef:
 
 @dataclass
 class ScheduleEventDescription:
-    """
-    :ivar value:
-    :ivar owner:
-    :ivar type:
-    """
     class Meta:
         name = "scheduleEventDescription"
 
@@ -1830,11 +1563,6 @@ class ScheduleEventDescription:
 
 @dataclass
 class ScheduleEventTitle:
-    """
-    :ivar value:
-    :ivar owner:
-    :ivar type:
-    """
     class Meta:
         name = "scheduleEventTitle"
 
@@ -1859,10 +1587,6 @@ class ScheduleEventTitle:
 
 @dataclass
 class StreamingStatus:
-    """
-    :ivar with_drm:
-    :ivar without_drm:
-    """
     class Meta:
         name = "streamingStatus"
         namespace = "urn:vpro:media:2009"
@@ -1887,10 +1611,6 @@ class StreamingStatus:
 
 @dataclass
 class TargetGroupsType:
-    """
-    :ivar target_group:
-    :ivar owner:
-    """
     class Meta:
         name = "targetGroupsType"
 
@@ -1912,11 +1632,6 @@ class TargetGroupsType:
 
 @dataclass
 class TitleType:
-    """
-    :ivar value:
-    :ivar type:
-    :ivar owner:
-    """
     class Meta:
         name = "titleType"
 
@@ -1940,12 +1655,6 @@ class TitleType:
 
 @dataclass
 class TopicType:
-    """
-    :ivar name:
-    :ivar scope_note:
-    :ivar gtaa_uri:
-    :ivar gtaa_status:
-    """
     class Meta:
         name = "topicType"
 
@@ -2039,13 +1748,6 @@ class VideoAttributesType:
 
 @dataclass
 class AvAttributesType:
-    """
-    :ivar bitrate:
-    :ivar byte_size:
-    :ivar av_file_format:
-    :ivar video_attributes:
-    :ivar audio_attributes:
-    """
     class Meta:
         name = "avAttributesType"
 
@@ -2092,10 +1794,6 @@ class AvAttributesType:
 
 @dataclass
 class CreditsType:
-    """
-    :ivar person:
-    :ivar name:
-    """
     class Meta:
         name = "creditsType"
 
@@ -2119,10 +1817,6 @@ class CreditsType:
 
 @dataclass
 class GeoLocationsType:
-    """
-    :ivar geo_location:
-    :ivar owner:
-    """
     class Meta:
         name = "geoLocationsType"
 
@@ -2237,10 +1931,6 @@ class MemberRefType:
 
 @dataclass
 class TopicsType:
-    """
-    :ivar topic:
-    :ivar owner:
-    """
     class Meta:
         name = "topicsType"
 
@@ -2261,23 +1951,6 @@ class TopicsType:
 
 @dataclass
 class LocationType:
-    """
-    :ivar program_url:
-    :ivar av_attributes:
-    :ivar subtitles:
-    :ivar offset:
-    :ivar duration:
-    :ivar type:
-    :ivar platform:
-    :ivar owner:
-    :ivar urn:
-    :ivar publish_start:
-    :ivar publish_stop:
-    :ivar publish_date:
-    :ivar creation_date:
-    :ivar last_modified:
-    :ivar workflow:
-    """
     class Meta:
         name = "locationType"
 
@@ -2389,29 +2062,6 @@ class LocationType:
 
 @dataclass
 class ScheduleEventType:
-    """
-    :ivar title:
-    :ivar description:
-    :ivar repeat:
-    :ivar member_of:
-    :ivar av_attributes:
-    :ivar text_subtitles:
-    :ivar text_page:
-    :ivar guide_day:
-    :ivar start:
-    :ivar offset:
-    :ivar duration:
-    :ivar po_prog_id:
-    :ivar primary_lifestyle:
-    :ivar secondary_lifestyle:
-    :ivar imi:
-    :ivar channel:
-    :ivar net:
-    :ivar guide_day_attribute:
-    :ivar mid_ref:
-    :ivar urn_ref:
-    :ivar type:
-    """
     class Meta:
         name = "scheduleEventType"
 
@@ -2578,10 +2228,6 @@ class ScheduleEventType:
 
 @dataclass
 class LocationTableType:
-    """
-    :ivar location:
-    :ivar schedule_event:
-    """
     class Meta:
         name = "locationTableType"
 
@@ -2604,9 +2250,6 @@ class LocationTableType:
 
 @dataclass
 class LocationsType:
-    """
-    :ivar location:
-    """
     class Meta:
         name = "locationsType"
 
@@ -2621,9 +2264,6 @@ class LocationsType:
 
 @dataclass
 class ScheduleEventsType:
-    """
-    :ivar schedule_event:
-    """
     class Meta:
         name = "scheduleEventsType"
 
@@ -2639,16 +2279,6 @@ class ScheduleEventsType:
 
 @dataclass
 class ScheduleType:
-    """
-    :ivar schedule_event:
-    :ivar channel:
-    :ivar net:
-    :ivar date:
-    :ivar release_version:
-    :ivar start:
-    :ivar stop:
-    :ivar reruns:
-    """
     class Meta:
         name = "scheduleType"
 
@@ -3146,12 +2776,6 @@ class Schedule(ScheduleType):
 
 @dataclass
 class GroupType(BaseMediaType):
-    """
-    :ivar po_series_id:
-    :ivar is_ordered:
-    :ivar type:
-    :ivar default_element:
-    """
     class Meta:
         name = "groupType"
 
@@ -3189,13 +2813,6 @@ class GroupType(BaseMediaType):
 
 @dataclass
 class SegmentType(BaseMediaType):
-    """
-    :ivar segment_of:
-    :ivar start:
-    :ivar mid_ref:
-    :ivar urn_ref:
-    :ivar type:
-    """
     class Meta:
         name = "segmentType"
 
@@ -3267,9 +2884,6 @@ class Segment(SegmentType):
 
 @dataclass
 class SegmentsType:
-    """
-    :ivar segment:
-    """
     class Meta:
         name = "segmentsType"
 
@@ -3284,9 +2898,6 @@ class SegmentsType:
 
 @dataclass
 class GroupTableType:
-    """
-    :ivar group:
-    """
     class Meta:
         name = "groupTableType"
 
@@ -3357,9 +2968,6 @@ class Program(ProgramType):
 
 @dataclass
 class ProgramTableType:
-    """
-    :ivar program:
-    """
     class Meta:
         name = "programTableType"
 

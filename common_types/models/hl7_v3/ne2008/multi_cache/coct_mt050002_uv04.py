@@ -35,18 +35,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt050002Uv04NonPersonLivingSubject:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar administrative_gender_code:
-    :ivar birth_time:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT050002UV04.NonPersonLivingSubject"
 
@@ -132,18 +120,6 @@ class CoctMt050002Uv04NonPersonLivingSubject:
 
 @dataclass
 class CoctMt050002Uv04Person:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar administrative_gender_code:
-    :ivar birth_time:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT050002UV04.Person"
 
@@ -230,18 +206,6 @@ class CoctMt050002Uv04Person:
 
 @dataclass
 class CoctMt050002Uv04Patient:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar addr:
-    :ivar patient_person:
-    :ivar patient_non_person_living_subject:
-    :ivar provider_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT050002UV04.Patient"
 
@@ -330,7 +294,4 @@ class CoctMt050002Uv04Patient:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"

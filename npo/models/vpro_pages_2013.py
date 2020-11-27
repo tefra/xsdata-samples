@@ -17,11 +17,6 @@ __NAMESPACE__ = "urn:vpro:pages:2013"
 
 @dataclass
 class GenreType:
-    """
-    :ivar term:
-    :ivar display_name:
-    :ivar id:
-    """
     class Meta:
         name = "genreType"
 
@@ -48,29 +43,10 @@ class GenreType:
 
 
 class LinkTypeEnum(Enum):
-    """
-    :cvar TOP_STORY:
-    """
     TOP_STORY = "TOP_STORY"
 
 
 class PageTypeEnum(Enum):
-    """
-    :cvar ARTICLE:
-    :cvar SPECIAL:
-    :cvar HOME:
-    :cvar OVERVIEW:
-    :cvar PRODUCT:
-    :cvar PLAYER:
-    :cvar AUDIO:
-    :cvar VIDEO:
-    :cvar MIXED:
-    :cvar PLAYLIST:
-    :cvar MOVIE:
-    :cvar SERIES:
-    :cvar PERSON:
-    :cvar SEARCH:
-    """
     ARTICLE = "ARTICLE"
     SPECIAL = "SPECIAL"
     HOME = "HOME"
@@ -88,22 +64,12 @@ class PageTypeEnum(Enum):
 
 
 class PageWorkflow(Enum):
-    """
-    :cvar PUBLISHED:
-    :cvar DELETED:
-    """
     PUBLISHED = "PUBLISHED"
     DELETED = "DELETED"
 
 
 @dataclass
 class RelationType:
-    """
-    :ivar value:
-    :ivar uri_ref:
-    :ivar broadcaster:
-    :ivar type:
-    """
     class Meta:
         name = "relationType"
 
@@ -135,10 +101,6 @@ class RelationType:
 
 @dataclass
 class SectionType:
-    """
-    :ivar value:
-    :ivar path:
-    """
     class Meta:
         name = "sectionType"
 
@@ -155,13 +117,6 @@ class SectionType:
 
 @dataclass
 class EmbedType:
-    """
-    :ivar title:
-    :ivar description:
-    :ivar group:
-    :ivar program:
-    :ivar segment:
-    """
     class Meta:
         name = "embedType"
 
@@ -211,16 +166,6 @@ class Genre(GenreType):
 
 @dataclass
 class ImageType:
-    """
-    :ivar title:
-    :ivar description:
-    :ivar credits:
-    :ivar source:
-    :ivar source_name:
-    :ivar license:
-    :ivar type:
-    :ivar url:
-    """
     class Meta:
         name = "imageType"
 
@@ -283,11 +228,6 @@ class ImageType:
 
 @dataclass
 class LinkType:
-    """
-    :ivar text:
-    :ivar page_ref:
-    :ivar type:
-    """
     class Meta:
         name = "linkType"
 
@@ -315,12 +255,6 @@ class LinkType:
 
 @dataclass
 class PortalType:
-    """
-    :ivar name:
-    :ivar section:
-    :ivar id:
-    :ivar url:
-    """
     class Meta:
         name = "portalType"
 
@@ -357,11 +291,6 @@ class PortalType:
 
 @dataclass
 class ReferralType:
-    """
-    :ivar value:
-    :ivar referrer:
-    :ivar type:
-    """
     class Meta:
         name = "referralType"
 
@@ -384,11 +313,6 @@ class ReferralType:
 
 @dataclass
 class ParagraphType:
-    """
-    :ivar title:
-    :ivar body:
-    :ivar image:
-    """
     class Meta:
         name = "paragraphType"
 
@@ -417,35 +341,6 @@ class ParagraphType:
 
 @dataclass
 class PageType:
-    """
-    :ivar crid:
-    :ivar alternative_url:
-    :ivar broadcaster:
-    :ivar portal:
-    :ivar title:
-    :ivar sub_title:
-    :ivar keyword:
-    :ivar genre:
-    :ivar summary:
-    :ivar paragraphs:
-    :ivar tag:
-    :ivar referral:
-    :ivar link:
-    :ivar embed:
-    :ivar stat_ref:
-    :ivar images:
-    :ivar relation:
-    :ivar url:
-    :ivar type:
-    :ivar creation_date:
-    :ivar last_modified:
-    :ivar last_published:
-    :ivar publish_start:
-    :ivar publish_stop:
-    :ivar ref_count:
-    :ivar sort_date:
-    :ivar workflow:
-    """
     class Meta:
         name = "pageType"
 
@@ -645,9 +540,6 @@ class PageType:
 
     @dataclass
     class Paragraphs:
-        """
-        :ivar paragraph:
-        """
         paragraph: List[ParagraphType] = field(
             default_factory=list,
             metadata={
@@ -658,9 +550,6 @@ class PageType:
 
     @dataclass
     class Images:
-        """
-        :ivar image:
-        """
         image: List[ImageType] = field(
             default_factory=list,
             metadata={

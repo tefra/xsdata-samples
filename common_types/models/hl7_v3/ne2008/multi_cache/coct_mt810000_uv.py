@@ -26,14 +26,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt810000UvPerformer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar responsible:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT810000UV.Performer"
 
@@ -89,16 +81,6 @@ class CoctMt810000UvPerformer:
 
 @dataclass
 class CoctMt810000UvPrimaryPerformer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT810000UV.PrimaryPerformer"
 
@@ -172,15 +154,6 @@ class CoctMt810000UvPrimaryPerformer:
 
 @dataclass
 class CoctMt810000UvVerificationRequest:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT810000UV.VerificationRequest"
 
@@ -244,14 +217,6 @@ class CoctMt810000UvVerificationRequest:
 
 @dataclass
 class CoctMt810000UvInFulfillmentOf:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar verification_request:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT810000UV.InFulfillmentOf"
 
@@ -308,15 +273,6 @@ class CoctMt810000UvInFulfillmentOf:
 
 @dataclass
 class CoctMt810000UvInformationProvision:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar performer:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT810000UV.InformationProvision"
 
@@ -382,14 +338,6 @@ class CoctMt810000UvInformationProvision:
 
 @dataclass
 class CoctMt810000UvSupport:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar information_provision:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT810000UV.Support"
 
@@ -446,24 +394,6 @@ class CoctMt810000UvSupport:
 
 @dataclass
 class CoctMt810000UvVerification:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar reason_code:
-    :ivar value:
-    :ivar method_code:
-    :ivar primary_performer:
-    :ivar in_fulfillment_of:
-    :ivar support:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT810000UV.Verification"
 

@@ -36,20 +36,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class RepcMt000400Uv01Author5:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar time:
-    :ivar mode_code:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "REPC_MT000400UV01.Author5"
 
@@ -157,24 +143,6 @@ class RepcMt000400Uv01Author5:
 
 @dataclass
 class RepcMt000400Uv01Component4:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar act_reference1:
-    :ivar act:
-    :ivar encounter:
-    :ivar observation:
-    :ivar organizer:
-    :ivar procedure:
-    :ivar substance_administration:
-    :ivar supply:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000400UV01.Component4"
 
@@ -311,15 +279,6 @@ class RepcMt000400Uv01Component4:
 
 @dataclass
 class RepcMt000400Uv01Custodian:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar responsible_party:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "REPC_MT000400UV01.Custodian"
 
@@ -384,17 +343,6 @@ class RepcMt000400Uv01Custodian:
 
 @dataclass
 class RepcMt000400Uv01ActCategory:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar author:
-    :ivar component:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "REPC_MT000400UV01.ActCategory"
 
@@ -475,19 +423,6 @@ class RepcMt000400Uv01ActCategory:
 
 @dataclass
 class RepcMt000400Uv01ActList:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar author:
-    :ivar custodian:
-    :ivar component:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "REPC_MT000400UV01.ActList"
 

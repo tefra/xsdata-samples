@@ -20,10 +20,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 class BinaryDataEncoding(Enum):
-    """
-    :cvar B64:
-    :cvar TXT:
-    """
     B64 = "B64"
     TXT = "TXT"
 
@@ -231,10 +227,6 @@ class TsExplicit:
 
 @dataclass
 class AdxpAdditionalLocator:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.additionalLocator"
 
@@ -258,10 +250,6 @@ class AdxpAdditionalLocator:
 
 @dataclass
 class AdxpBuildingNumberSuffix:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.buildingNumberSuffix"
 
@@ -285,10 +273,6 @@ class AdxpBuildingNumberSuffix:
 
 @dataclass
 class AdxpCareOf:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.careOf"
 
@@ -312,10 +296,6 @@ class AdxpCareOf:
 
 @dataclass
 class AdxpCensusTract:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.censusTract"
 
@@ -339,10 +319,6 @@ class AdxpCensusTract:
 
 @dataclass
 class AdxpCity:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.city"
 
@@ -366,10 +342,6 @@ class AdxpCity:
 
 @dataclass
 class AdxpCountry:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.country"
 
@@ -393,10 +365,6 @@ class AdxpCountry:
 
 @dataclass
 class AdxpCounty:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.county"
 
@@ -420,10 +388,6 @@ class AdxpCounty:
 
 @dataclass
 class AdxpDelimiter:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.delimiter"
 
@@ -447,10 +411,6 @@ class AdxpDelimiter:
 
 @dataclass
 class AdxpDeliveryAddressLine:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.deliveryAddressLine"
 
@@ -474,10 +434,6 @@ class AdxpDeliveryAddressLine:
 
 @dataclass
 class AdxpDeliveryInstallationArea:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.deliveryInstallationArea"
 
@@ -501,10 +457,6 @@ class AdxpDeliveryInstallationArea:
 
 @dataclass
 class AdxpDeliveryInstallationQualifier:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.deliveryInstallationQualifier"
 
@@ -528,10 +480,6 @@ class AdxpDeliveryInstallationQualifier:
 
 @dataclass
 class AdxpDeliveryInstallationType:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.deliveryInstallationType"
 
@@ -555,10 +503,6 @@ class AdxpDeliveryInstallationType:
 
 @dataclass
 class AdxpDeliveryMode:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.deliveryMode"
 
@@ -582,10 +526,6 @@ class AdxpDeliveryMode:
 
 @dataclass
 class AdxpDeliveryModeIdentifier:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.deliveryModeIdentifier"
 
@@ -609,10 +549,6 @@ class AdxpDeliveryModeIdentifier:
 
 @dataclass
 class AdxpDirection:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.direction"
 
@@ -636,10 +572,6 @@ class AdxpDirection:
 
 @dataclass
 class AdxpHouseNumber:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.houseNumber"
 
@@ -663,10 +595,6 @@ class AdxpHouseNumber:
 
 @dataclass
 class AdxpHouseNumberNumeric:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.houseNumberNumeric"
 
@@ -690,10 +618,6 @@ class AdxpHouseNumberNumeric:
 
 @dataclass
 class AdxpPostBox:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.postBox"
 
@@ -717,10 +641,6 @@ class AdxpPostBox:
 
 @dataclass
 class AdxpPostalCode:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.postalCode"
 
@@ -744,10 +664,6 @@ class AdxpPostalCode:
 
 @dataclass
 class AdxpPrecinct:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.precinct"
 
@@ -771,10 +687,6 @@ class AdxpPrecinct:
 
 @dataclass
 class AdxpState:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.state"
 
@@ -798,10 +710,6 @@ class AdxpState:
 
 @dataclass
 class AdxpStreetAddressLine:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.streetAddressLine"
 
@@ -825,10 +733,6 @@ class AdxpStreetAddressLine:
 
 @dataclass
 class AdxpStreetName:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.streetName"
 
@@ -852,10 +756,6 @@ class AdxpStreetName:
 
 @dataclass
 class AdxpStreetNameBase:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.streetNameBase"
 
@@ -879,10 +779,6 @@ class AdxpStreetNameBase:
 
 @dataclass
 class AdxpStreetNameType:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.streetNameType"
 
@@ -906,10 +802,6 @@ class AdxpStreetNameType:
 
 @dataclass
 class AdxpUnitId:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.unitID"
 
@@ -933,10 +825,6 @@ class AdxpUnitId:
 
 @dataclass
 class AdxpUnitType:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp.unitType"
 
@@ -960,10 +848,6 @@ class AdxpUnitType:
 
 @dataclass
 class AdxpExplicitAdditionalLocator:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.additionalLocator"
 
@@ -987,10 +871,6 @@ class AdxpExplicitAdditionalLocator:
 
 @dataclass
 class AdxpExplicitBuildingNumberSuffix:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.buildingNumberSuffix"
 
@@ -1014,10 +894,6 @@ class AdxpExplicitBuildingNumberSuffix:
 
 @dataclass
 class AdxpExplicitCareOf:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.careOf"
 
@@ -1041,10 +917,6 @@ class AdxpExplicitCareOf:
 
 @dataclass
 class AdxpExplicitCensusTract:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.censusTract"
 
@@ -1068,10 +940,6 @@ class AdxpExplicitCensusTract:
 
 @dataclass
 class AdxpExplicitCity:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.city"
 
@@ -1095,10 +963,6 @@ class AdxpExplicitCity:
 
 @dataclass
 class AdxpExplicitCountry:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.country"
 
@@ -1122,10 +986,6 @@ class AdxpExplicitCountry:
 
 @dataclass
 class AdxpExplicitCounty:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.county"
 
@@ -1149,10 +1009,6 @@ class AdxpExplicitCounty:
 
 @dataclass
 class AdxpExplicitDelimiter:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.delimiter"
 
@@ -1176,10 +1032,6 @@ class AdxpExplicitDelimiter:
 
 @dataclass
 class AdxpExplicitDeliveryAddressLine:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.deliveryAddressLine"
 
@@ -1203,10 +1055,6 @@ class AdxpExplicitDeliveryAddressLine:
 
 @dataclass
 class AdxpExplicitDeliveryInstallationArea:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.deliveryInstallationArea"
 
@@ -1230,10 +1078,6 @@ class AdxpExplicitDeliveryInstallationArea:
 
 @dataclass
 class AdxpExplicitDeliveryInstallationQualifier:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.deliveryInstallationQualifier"
 
@@ -1257,10 +1101,6 @@ class AdxpExplicitDeliveryInstallationQualifier:
 
 @dataclass
 class AdxpExplicitDeliveryInstallationType:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.deliveryInstallationType"
 
@@ -1284,10 +1124,6 @@ class AdxpExplicitDeliveryInstallationType:
 
 @dataclass
 class AdxpExplicitDeliveryMode:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.deliveryMode"
 
@@ -1311,10 +1147,6 @@ class AdxpExplicitDeliveryMode:
 
 @dataclass
 class AdxpExplicitDeliveryModeIdentifier:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.deliveryModeIdentifier"
 
@@ -1338,10 +1170,6 @@ class AdxpExplicitDeliveryModeIdentifier:
 
 @dataclass
 class AdxpExplicitDirection:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.direction"
 
@@ -1365,10 +1193,6 @@ class AdxpExplicitDirection:
 
 @dataclass
 class AdxpExplicitHouseNumber:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.houseNumber"
 
@@ -1392,10 +1216,6 @@ class AdxpExplicitHouseNumber:
 
 @dataclass
 class AdxpExplicitHouseNumberNumeric:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.houseNumberNumeric"
 
@@ -1419,10 +1239,6 @@ class AdxpExplicitHouseNumberNumeric:
 
 @dataclass
 class AdxpExplicitPostBox:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.postBox"
 
@@ -1446,10 +1262,6 @@ class AdxpExplicitPostBox:
 
 @dataclass
 class AdxpExplicitPostalCode:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.postalCode"
 
@@ -1473,10 +1285,6 @@ class AdxpExplicitPostalCode:
 
 @dataclass
 class AdxpExplicitPrecinct:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.precinct"
 
@@ -1500,10 +1308,6 @@ class AdxpExplicitPrecinct:
 
 @dataclass
 class AdxpExplicitState:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.state"
 
@@ -1527,10 +1331,6 @@ class AdxpExplicitState:
 
 @dataclass
 class AdxpExplicitStreetAddressLine:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.streetAddressLine"
 
@@ -1554,10 +1354,6 @@ class AdxpExplicitStreetAddressLine:
 
 @dataclass
 class AdxpExplicitStreetName:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.streetName"
 
@@ -1581,10 +1377,6 @@ class AdxpExplicitStreetName:
 
 @dataclass
 class AdxpExplicitStreetNameBase:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.streetNameBase"
 
@@ -1608,10 +1400,6 @@ class AdxpExplicitStreetNameBase:
 
 @dataclass
 class AdxpExplicitStreetNameType1:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.streetNameType1"
 
@@ -1635,10 +1423,6 @@ class AdxpExplicitStreetNameType1:
 
 @dataclass
 class AdxpExplicitUnitId:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.unitID"
 
@@ -1662,10 +1446,6 @@ class AdxpExplicitUnitId:
 
 @dataclass
 class AdxpExplicitUnitType:
-    """
-    :ivar content:
-    :ivar part_type:
-    """
     class Meta:
         name = "adxp_explicit.unitType"
 
@@ -1884,11 +1664,6 @@ class EnSuffix:
 
 @dataclass
 class EnExplicitDelimiter:
-    """
-    :ivar content:
-    :ivar part_type:
-    :ivar qualifier:
-    """
     class Meta:
         name = "en_explicit.delimiter"
 
@@ -1919,11 +1694,6 @@ class EnExplicitDelimiter:
 
 @dataclass
 class EnExplicitFamily:
-    """
-    :ivar content:
-    :ivar part_type:
-    :ivar qualifier:
-    """
     class Meta:
         name = "en_explicit.family"
 
@@ -1954,11 +1724,6 @@ class EnExplicitFamily:
 
 @dataclass
 class EnExplicitGiven:
-    """
-    :ivar content:
-    :ivar part_type:
-    :ivar qualifier:
-    """
     class Meta:
         name = "en_explicit.given"
 
@@ -1989,11 +1754,6 @@ class EnExplicitGiven:
 
 @dataclass
 class EnExplicitPrefix:
-    """
-    :ivar content:
-    :ivar part_type:
-    :ivar qualifier:
-    """
     class Meta:
         name = "en_explicit.prefix"
 
@@ -2024,11 +1784,6 @@ class EnExplicitPrefix:
 
 @dataclass
 class EnExplicitSuffix:
-    """
-    :ivar content:
-    :ivar part_type:
-    :ivar qualifier:
-    """
     class Meta:
         name = "en_explicit.suffix"
 
@@ -2425,10 +2180,10 @@ class Bin(Any):
 
 @dataclass
 class Bl(Any):
-    """The Boolean type stands for the values of two-valued logic. A Boolean value
-    can be either true or false, or, as any other value may be NULL.
+    """The Boolean type stands for the values of two-valued logic.
 
-    :ivar value:
+    A Boolean value can be either true or false, or, as any other value may
+    be NULL.
     """
     class Meta:
         name = "BL"
@@ -2626,13 +2381,11 @@ class Url(Any):
     """A telecommunications address  specified according to Internet standard RFC
     1738.
 
-                [http://www.ietf.org/rfc/rfc1738.txt]. The
-                URL specifies the protocol and the contact point defined
-                by that protocol for the resource.  Notable uses of the
-                telecommunication address data type are for telephone and
-                telefax numbers, e-mail addresses, Hypertext references,
-                FTP references, etc.
-    :ivar value:
+    [http://www.ietf.org/rfc/rfc1738.txt]. The URL specifies the protocol
+    and the contact point defined by that protocol for the resource.
+    Notable uses of the telecommunication address data type are for
+    telephone and telefax numbers, e-mail addresses, Hypertext references,
+    FTP references, etc.
     """
     class Meta:
         name = "URL"
@@ -2647,10 +2400,9 @@ class Url(Any):
 
 @dataclass
 class Bn(AnynonNull):
-    """The BooleanNonNull type is used where a Boolean cannot have a null value. A
-    Boolean value can be either true or false.
+    """The BooleanNonNull type is used where a Boolean cannot have a null value.
 
-    :ivar value:
+    A Boolean value can be either true or false.
     """
     class Meta:
         name = "BN"
@@ -2667,12 +2419,12 @@ class Bn(AnynonNull):
 @dataclass
 class IntType(Qty):
     """Integer numbers (-1,0,1,2, 100, 3398129, etc.) are precise numbers that are
-    results of counting and enumerating. Integer numbers are discrete, the set of
-    integers is infinite but countable.  No arbitrary limit is imposed on the range
-    of integer numbers. Two NULL flavors are defined for the positive and negative
-    infinity.
+    results of counting and enumerating.
 
-    :ivar value:
+    Integer numbers are discrete, the set of integers is infinite but
+    countable.  No arbitrary limit is imposed on the range of integer
+    numbers. Two NULL flavors are defined for the positive and negative
+    infinity.
     """
     class Meta:
         name = "INT"
@@ -2718,16 +2470,16 @@ class Mo(Qty):
 
 @dataclass
 class Real(Qty):
-    """Fractional numbers. Typically used whenever quantities are measured,
-    estimated, or computed from other real numbers.  The typical representation is
-    decimal, where the number of significant decimal digits is known as the
-    precision. Real numbers are needed beyond integers whenever quantities of the
-    real world are measured, estimated, or computed from other real numbers. The
-    term "Real number" in this specification is used to mean that fractional values
-    are covered without necessarily implying the full set of the mathematical real
-    numbers.
+    """Fractional numbers.
 
-    :ivar value:
+    Typically used whenever quantities are measured, estimated, or computed
+    from other real numbers.  The typical representation is decimal, where
+    the number of significant decimal digits is known as the precision. Real
+    numbers are needed beyond integers whenever quantities of the real world
+    are measured, estimated, or computed from other real numbers. The term
+    "Real number" in this specification is used to mean that fractional
+    values are covered without necessarily implying the full set of the
+    mathematical real numbers.
     """
     class Meta:
         name = "REAL"
@@ -2772,10 +2524,9 @@ class RtoQtyQty(Qty):
 
 @dataclass
 class Ts(Qty):
-    """A quantity specifying a point on the axis of natural time. A point in time
-    is most often represented as a calendar expression.
+    """A quantity specifying a point on the axis of natural time.
 
-    :ivar value:
+    A point in time is most often represented as a calendar expression.
     """
     class Meta:
         name = "TS"
@@ -5717,11 +5468,11 @@ class Tn:
 
 @dataclass
 class Pn(En):
-    """A name for a person. A sequence of name parts, such as given name or family
-    name, prefix, suffix, etc. PN differs from EN because the qualifier type cannot
-    include LS (Legal Status).
+    """A name for a person.
 
-    :ivar content:
+    A sequence of name parts, such as given name or family name, prefix,
+    suffix, etc. PN differs from EN because the qualifier type cannot
+    include LS (Legal Status).
     """
     class Meta:
         name = "PN"

@@ -1,9 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Config xmlns="http://pypi.org/project/xsdata" version="20.9">
+<Config xmlns="http://pypi.org/project/xsdata" version="20.12">
   <Output wsdl="true">
     <Package>travelport.models</Package>
     <Format>pydata</Format>
     <Structure>namespaces</Structure>
+    <DocstringStyle>NumPy</DocstringStyle>
   </Output>
   <Conventions>
     <ClassName case="pascalCase" safePrefix="type"/>

@@ -61,16 +61,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt230100UvAgency:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Agency"
 
@@ -141,17 +131,6 @@ class CoctMt230100UvAgency:
 
 @dataclass
 class CoctMt230100UvCharacteristic:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar text:
-    :ivar value:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Characteristic"
 
@@ -229,16 +208,6 @@ class CoctMt230100UvCharacteristic:
 
 @dataclass
 class CoctMt230100UvCountry:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Country"
 
@@ -309,18 +278,6 @@ class CoctMt230100UvCountry:
 
 @dataclass
 class CoctMt230100UvMedicineClass:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar name:
-    :ivar desc:
-    :ivar form_code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.MedicineClass"
 
@@ -405,17 +362,6 @@ class CoctMt230100UvMedicineClass:
 
 @dataclass
 class CoctMt230100UvObservationGoal:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar text:
-    :ivar value:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.ObservationGoal"
 
@@ -492,16 +438,6 @@ class CoctMt230100UvObservationGoal:
 
 @dataclass
 class CoctMt230100UvPolicy:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar text:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Policy"
 
@@ -571,15 +507,6 @@ class CoctMt230100UvPolicy:
 
 @dataclass
 class CoctMt230100UvRelatedManufacturer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar represented_manufacturer:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.RelatedManufacturer"
 
@@ -642,15 +569,6 @@ class CoctMt230100UvRelatedManufacturer:
 
 @dataclass
 class CoctMt230100UvSubContent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar quantity:
-    :ivar contained_packaged_medicine:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.SubContent"
 
@@ -713,24 +631,11 @@ class CoctMt230100UvSubContent:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt230100UvSubIngredient:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar quantity:
-    :ivar ingredient:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT230100UV.SubIngredient"
 
@@ -800,14 +705,6 @@ class CoctMt230100UvSubIngredient:
 
 @dataclass
 class CoctMt230100UvSubject7:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar valued_item:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Subject7"
 
@@ -864,15 +761,6 @@ class CoctMt230100UvSubject7:
 
 @dataclass
 class CoctMt230100UvSuperContent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar quantity:
-    :ivar container_packaged_medicine:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.SuperContent"
 
@@ -935,27 +823,11 @@ class CoctMt230100UvSuperContent:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt230100UvManufacturer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar telecom:
-    :ivar addr:
-    :ivar as_related_manufacturer:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Manufacturer"
 
@@ -1048,15 +920,6 @@ class CoctMt230100UvManufacturer:
 
 @dataclass
 class CoctMt230100UvSpecializedKind:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar generalized_medicine_class:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.SpecializedKind"
 
@@ -1119,14 +982,6 @@ class CoctMt230100UvSpecializedKind:
 
 @dataclass
 class CoctMt230100UvSubject14:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar policy:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Subject14"
 
@@ -1182,14 +1037,6 @@ class CoctMt230100UvSubject14:
 
 @dataclass
 class CoctMt230100UvSubject15:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar policy:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Subject15"
 
@@ -1245,14 +1092,6 @@ class CoctMt230100UvSubject15:
 
 @dataclass
 class CoctMt230100UvSubject2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar policy:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Subject2"
 
@@ -1308,14 +1147,6 @@ class CoctMt230100UvSubject2:
 
 @dataclass
 class CoctMt230100UvSubject22:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar characteristic:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Subject22"
 
@@ -1371,14 +1202,6 @@ class CoctMt230100UvSubject22:
 
 @dataclass
 class CoctMt230100UvSubject25:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar characteristic:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Subject25"
 
@@ -1434,14 +1257,6 @@ class CoctMt230100UvSubject25:
 
 @dataclass
 class CoctMt230100UvSubject3:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar observation_goal:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Subject3"
 
@@ -1498,14 +1313,6 @@ class CoctMt230100UvSubject3:
 
 @dataclass
 class CoctMt230100UvSubject4:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar characteristic:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Subject4"
 
@@ -1561,15 +1368,6 @@ class CoctMt230100UvSubject4:
 
 @dataclass
 class CoctMt230100UvTerritorialAuthority:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar territory:
-    :ivar governing_country:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.TerritorialAuthority"
 
@@ -1633,23 +1431,11 @@ class CoctMt230100UvTerritorialAuthority:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt230100UvAuthor:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar territorial_authority:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Author"
 
@@ -1713,14 +1499,6 @@ class CoctMt230100UvAuthor:
 
 @dataclass
 class CoctMt230100UvDistributedProduct:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar distributing_manufacturer:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.DistributedProduct"
 
@@ -1776,14 +1554,6 @@ class CoctMt230100UvDistributedProduct:
 
 @dataclass
 class CoctMt230100UvMedicineManufacturer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar manufacturer:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.MedicineManufacturer"
 
@@ -1839,16 +1609,6 @@ class CoctMt230100UvMedicineManufacturer:
 
 @dataclass
 class CoctMt230100UvPart:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar quantity:
-    :ivar part_medicine:
-    :ivar subject_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Part"
 
@@ -1920,14 +1680,6 @@ class CoctMt230100UvPart:
 
 @dataclass
 class CoctMt230100UvRole:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar playing_manufacturer:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Role"
 
@@ -1982,22 +1734,11 @@ class CoctMt230100UvRole:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt230100UvSubstanceManufacturer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar manufacturer:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.SubstanceManufacturer"
 
@@ -2053,14 +1794,6 @@ class CoctMt230100UvSubstanceManufacturer:
 
 @dataclass
 class CoctMt230100UvHolder:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar role:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Holder"
 
@@ -2117,20 +1850,6 @@ class CoctMt230100UvHolder:
 
 @dataclass
 class CoctMt230100UvSubstance:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar name:
-    :ivar desc:
-    :ivar lot_number_text:
-    :ivar as_substance_manufacturer:
-    :ivar sub_ingredient:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Substance"
 
@@ -2232,19 +1951,6 @@ class CoctMt230100UvSubstance:
 
 @dataclass
 class CoctMt230100UvApproval:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar holder:
-    :ivar author:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Approval"
 
@@ -2339,16 +2045,6 @@ class CoctMt230100UvApproval:
 
 @dataclass
 class CoctMt230100UvIngredient:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar quantity:
-    :ivar ingredient:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT230100UV.Ingredient"
 
@@ -2418,14 +2114,6 @@ class CoctMt230100UvIngredient:
 
 @dataclass
 class CoctMt230100UvSubject1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar approval:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Subject1"
 
@@ -2481,14 +2169,6 @@ class CoctMt230100UvSubject1:
 
 @dataclass
 class CoctMt230100UvSubject11:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar approval:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Subject11"
 
@@ -2544,14 +2224,6 @@ class CoctMt230100UvSubject11:
 
 @dataclass
 class CoctMt230100UvSubject16:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar approval:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Subject16"
 
@@ -2607,17 +2279,6 @@ class CoctMt230100UvSubject16:
 
 @dataclass
 class CoctMt230100UvManufacturedProduct:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar manufacturer:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar subject_of3:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.ManufacturedProduct"
 
@@ -2699,24 +2360,6 @@ class CoctMt230100UvManufacturedProduct:
 
 @dataclass
 class CoctMt230100UvPackagedMedicine:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar form_code:
-    :ivar lot_number_text:
-    :ivar capacity_quantity:
-    :ivar cap_type_code:
-    :ivar as_manufactured_product:
-    :ivar as_super_content:
-    :ivar sub_content:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.PackagedMedicine"
 
@@ -2851,17 +2494,6 @@ class CoctMt230100UvPackagedMedicine:
 
 @dataclass
 class CoctMt230100UvContent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar quantity:
-    :ivar container_packaged_medicine:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Content"
 
@@ -2942,38 +2574,11 @@ class CoctMt230100UvContent:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt230100UvMedicine:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar desc:
-    :ivar risk_code:
-    :ivar handling_code:
-    :ivar form_code:
-    :ivar lot_number_text:
-    :ivar expiration_time:
-    :ivar stability_time:
-    :ivar as_distributed_product:
-    :ivar as_medicine_manufacturer:
-    :ivar as_content:
-    :ivar as_specialized_kind:
-    :ivar part:
-    :ivar ingredient:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Medicine"
 
@@ -3156,19 +2761,6 @@ class CoctMt230100UvMedicine:
 
 @dataclass
 class CoctMt230100UvMedication:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar administerable_medicine:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar subject_of3:
-    :ivar subject_of4:
-    :ivar subject_of5:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT230100UV.Medication"
 
@@ -3269,7 +2861,4 @@ class CoctMt230100UvMedication:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"

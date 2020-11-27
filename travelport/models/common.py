@@ -10,8 +10,10 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v48_0"
 class Arcpayment:
     """ARC form of payment.ACH Only.
 
-    :ivar arcidentifier: Value of the ARC Direct Bill id
-    :ivar arcpassword: Value of the ARC Direct Bill id password
+    Parameters
+    ----------
+    arcidentifier: Value of the ARC Direct Bill id
+    arcpassword: Value of the ARC Direct Bill id password
     """
     class Meta:
         name = "ARCPayment"
@@ -42,10 +44,12 @@ class AccountCode:
     not specified, it will be considered a default AccounCode to be sent to all the
     Providers or Suppliers.
 
-    :ivar code:
-    :ivar provider_code:
-    :ivar supplier_code:
-    :ivar type: An identifier to categorize this account code. For example, FlightPass for AC Flight Pass or RFB for AC corporate Rewards for Business.
+    Parameters
+    ----------
+    code:
+    provider_code:
+    supplier_code:
+    type: An identifier to categorize this account code. For example, FlightPass for AC Flight Pass or RFB for AC corporate Rewards for Business.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -89,14 +93,17 @@ class AccountCode:
 class AddSvc:
     """
     1P - Add SVC segments to collect additional fee
-    :ivar rfic: 1P - Reason for issuance
-    :ivar rfisc: 1P - Resaon for issuance sub-code
-    :ivar svc_description: 1P - SVC fee description
-    :ivar origin: Origin location - Airport code. If this value not
+
+    Parameters
+    ----------
+    rfic: 1P - Reason for issuance
+    rfisc: 1P - Resaon for issuance sub-code
+    svc_description: 1P - SVC fee description
+    origin: Origin location - Airport code. If this value not
     					provided, the last air segment arrival location is taken as
     					default. 1P only.
-    :ivar destination: Destination location - Airport code.
-    :ivar start_date: The start date of the SVC segment. If the value
+    destination: Destination location - Airport code.
+    start_date: The start date of the SVC segment. If the value
     					not specified, the default value is set as the date next to the
     					last airsegment arrival date. 1P only
     """
@@ -155,12 +162,14 @@ class AddSvc:
 class AgencySellInfo:
     """Information about the agency selling the reservation.
 
-    :ivar iata_code: The IATA code that pertains to this Agency and Branch.
-    :ivar country: The country code of the requesting agency.
-    :ivar currency_code: The currency code in which the reservation will be ticketed.
-    :ivar provider_code: The IATA assigned airline/GDS code.
-    :ivar pseudo_city_code: The PCC in the host system.
-    :ivar city_code: IATA code of "home" city or airport.
+    Parameters
+    ----------
+    iata_code: The IATA code that pertains to this Agency and Branch.
+    country: The country code of the requesting agency.
+    currency_code: The currency code in which the reservation will be ticketed.
+    provider_code: The IATA assigned airline/GDS code.
+    pseudo_city_code: The PCC in the host system.
+    city_code: IATA code of "home" city or airport.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -223,13 +232,15 @@ class AgentAction:
     """Depending on context, this will represent information about which agent
     perform different actions.
 
-    :ivar action_type: The type of action the agent performed.
-    :ivar agent_code: The AgenctCode who performed the action.
-    :ivar branch_code: The BranchCode of the branch (working branch, branchcode used for the request. If nothing specified, branchcode for the agent) who performed the action.
-    :ivar agency_code: The AgencyCode of the agent who performed the action.
-    :ivar agent_sine: The sign in user name of the agent logged into the terminal. PROVIDER SUPPORTED: ACH
-    :ivar event_time: Date and time at which this event took place.
-    :ivar agent_override: AgentSine value that was used during PNR creation or End Transact.
+    Parameters
+    ----------
+    action_type: The type of action the agent performed.
+    agent_code: The AgenctCode who performed the action.
+    branch_code: The BranchCode of the branch (working branch, branchcode used for the request. If nothing specified, branchcode for the agent) who performed the action.
+    agency_code: The AgencyCode of the agent who performed the action.
+    agent_sine: The sign in user name of the agent logged into the terminal. PROVIDER SUPPORTED: ACH
+    event_time: Date and time at which this event took place.
+    agent_override: AgentSine value that was used during PNR creation or End Transact.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -294,11 +305,6 @@ class AgentAction:
     )
 
     class ActionType(Enum):
-        """
-        :cvar CREATED:
-        :cvar MODIFIED:
-        :cvar TICKETED:
-        """
         CREATED = "Created"
         MODIFIED = "Modified"
         TICKETED = "Ticketed"
@@ -309,9 +315,11 @@ class AgentIdoverride:
     """Vendor specific agent identifier overrides to be used to access vendor
     systems.
 
-    :ivar supplier_code: Supplier code to determine which vendor this AgentId belongs to.
-    :ivar provider_code: Provider code to route the AgentId to proper provider.
-    :ivar agent_id: The Agent ID for the applicable supplier/vendor
+    Parameters
+    ----------
+    supplier_code: Supplier code to determine which vendor this AgentId belongs to.
+    provider_code: Provider code to route the AgentId to proper provider.
+    agent_id: The Agent ID for the applicable supplier/vendor
     """
     class Meta:
         name = "AgentIDOverride"
@@ -350,10 +358,7 @@ class AgentIdoverride:
 
 @dataclass
 class AgentVoucher:
-    """Agent Voucher Form of Payments.
-
-    :ivar number:
-    """
+    """Agent Voucher Form of Payments."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -369,13 +374,7 @@ class AgentVoucher:
 
 @dataclass
 class AirSearchParameters:
-    """Search Parameters.
-
-    :ivar no_advance_purchase:
-    :ivar refundable_fares:
-    :ivar non_penalty_fares:
-    :ivar un_restricted_fares:
-    """
+    """Search Parameters."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -411,9 +410,6 @@ class AirSearchParameters:
 
 @dataclass
 class Auxdata:
-    """
-    :ivar entry:
-    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -429,10 +425,6 @@ class Auxdata:
 
     @dataclass
     class Entry:
-        """
-        :ivar reason:
-        :ivar description:
-        """
         reason: Optional[str] = field(
             default=None,
             metadata={
@@ -455,8 +447,10 @@ class Auxdata:
 class Bsppayment:
     """BSP form of payment.ACH Only.
 
-    :ivar bspidentifier: Value of the BSP Direct Bill id
-    :ivar bsppassword: Value of the BSP Direct Bill id password
+    Parameters
+    ----------
+    bspidentifier: Value of the BSP Direct Bill id
+    bsppassword: Value of the BSP Direct Bill id password
     """
     class Meta:
         name = "BSPPayment"
@@ -486,8 +480,10 @@ class BaseAsyncProviderSpecificResponse:
     """Identifies pending responses from a specific provider using MoreResults
     attribute.
 
-    :ivar provider_code: Provider code of a specific host
-    :ivar more_results: Identifies whether more results are available for
+    Parameters
+    ----------
+    provider_code: Provider code of a specific host
+    more_results: Identifies whether more results are available for
                       specific host or not.
     """
     provider_code: Optional[str] = field(
@@ -514,8 +510,10 @@ class BaseAsyncProviderSpecificResponse:
 class BillingPointOfSaleInfo:
     """Point of Sale information for Billing.
 
-    :ivar origin_application: Name of the Point of Sale application which initiated the Request.This information will be provided as part of the provisioning of the user.
-    :ivar cidbnumber: A 10 Digit customer number generated by CIDB system.
+    Parameters
+    ----------
+    origin_application: Name of the Point of Sale application which initiated the Request.This information will be provided as part of the provisioning of the user.
+    cidbnumber: A 10 Digit customer number generated by CIDB system.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -540,11 +538,7 @@ class BillingPointOfSaleInfo:
 
 @dataclass
 class BookingDates:
-    """Check in and Check out Date information.
-
-    :ivar check_in_date:
-    :ivar check_out_date:
-    """
+    """Check in and Check out Date information."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -569,8 +563,10 @@ class BookingDates:
 @dataclass
 class BookingSource:
     """
-    :ivar code: Alternate booking source code or number.
-    :ivar type: Type of booking source sent in the Code attribute. Possible values are “PseudoCityCode”,” ArcNumber”,” IataNumber”, “CustomerId” and “BookingSourceOverrride”. “BookingSourceOverrride” is only applicable in VehicleCreateReservationReq. 1P/1J.
+    Parameters
+    ----------
+    code: Alternate booking source code or number.
+    type: Type of booking source sent in the Code attribute. Possible values are “PseudoCityCode”,” ArcNumber”,” IataNumber”, “CustomerId” and “BookingSourceOverrride”. “BookingSourceOverrride” is only applicable in VehicleCreateReservationReq. 1P/1J.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -595,11 +591,13 @@ class BookingSource:
 
     class Type(Enum):
         """
-        :cvar PSEUDO_CITY_CODE:
-        :cvar ARC_NUMBER:
-        :cvar IATA_NUMBER:
-        :cvar CUSTOMER_ID:
-        :cvar BOOKING_SOURCE_OVERRIDE: The Booking Source Override is usually used when the car supplier has assigned a number (which can be alpha/numeric)
+        Properties
+        ----------
+        PSEUDO_CITY_CODE:
+        ARC_NUMBER:
+        IATA_NUMBER:
+        CUSTOMER_ID:
+        BOOKING_SOURCE_OVERRIDE: The Booking Source Override is usually used when the car supplier has assigned a number (which can be alpha/numeric)
         								to the agency/e-commerce to use in place of an IATA number. Supported provider(s) : 1P/1J
         """
         PSEUDO_CITY_CODE = "PseudoCityCode"
@@ -613,11 +611,13 @@ class BookingSource:
 class BookingTravelerName:
     """Complete name fields.
 
-    :ivar prefix: Name prefix.
-    :ivar first: First Name.
-    :ivar middle: Midle name.
-    :ivar last: Last Name.
-    :ivar suffix: Name suffix.
+    Parameters
+    ----------
+    prefix: Name prefix.
+    first: First Name.
+    middle: Midle name.
+    last: Last Name.
+    suffix: Name suffix.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -674,10 +674,7 @@ class BookingTravelerName:
 @dataclass
 class CabinClass:
     """Requests cabin class (First, Business and Economy, etc.) as supported by the
-    provider or supplier.
-
-    :ivar type:
-    """
+    provider or supplier."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -693,10 +690,7 @@ class CabinClass:
 
 @dataclass
 class Carrier:
-    """Carrier identifier.
-
-    :ivar code:
-    """
+    """Carrier identifier."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -715,12 +709,14 @@ class Carrier:
 class Certificate:
     """Certificate Form of Payment.
 
-    :ivar number: The Certificate number
-    :ivar amount: The monetary value of the certificate.
-    :ivar discount_amount: The monetary discount amount of this certificate.
-    :ivar discount_percentage: The percentage discount value of this certificate.
-    :ivar not_valid_before: The date that this certificate becomes valid.
-    :ivar not_valid_after: The date that this certificate expires.
+    Parameters
+    ----------
+    number: The Certificate number
+    amount: The monetary value of the certificate.
+    discount_amount: The monetary discount amount of this certificate.
+    discount_percentage: The percentage discount value of this certificate.
+    not_valid_before: The date that this certificate becomes valid.
+    not_valid_after: The date that this certificate expires.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -775,10 +771,12 @@ class Characteristic:
     """Identifies the characteristics of the seat with seat type, value and
     description.
 
-    :ivar seat_type: Indicates codeset of values such as Seat Type like Place,Position, Smoking Choice, Place Arrangement, Place Direction, Compartment.
-    :ivar seat_description: Description of the seat type.
-    :ivar seat_value: Indicates the value specific to the selected type.
-    :ivar seat_value_description: Description of the seat value.
+    Parameters
+    ----------
+    seat_type: Indicates codeset of values such as Seat Type like Place,Position, Smoking Choice, Place Arrangement, Place Direction, Compartment.
+    seat_description: Description of the seat type.
+    seat_value: Indicates the value specific to the selected type.
+    seat_value_description: Description of the seat value.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -825,10 +823,12 @@ class Characteristic:
 class Check:
     """Check Form of Payment.
 
-    :ivar micrnumber: Magnetic Ink Character Reader Number of check.
-    :ivar routing_number: The bank routing number of the check.
-    :ivar account_number: The account number of the check
-    :ivar check_number: The sequential check number of the check.
+    Parameters
+    ----------
+    micrnumber: Magnetic Ink Character Reader Number of check.
+    routing_number: The bank routing number of the check.
+    account_number: The account number of the check
+    check_number: The sequential check number of the check.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -867,8 +867,10 @@ class Check:
 @dataclass
 class ContinuityCheckOverride:
     """
-    :ivar value:
-    :ivar key: Will use key to map continuity remark to a particular segment
+    Parameters
+    ----------
+    value:
+    key: Will use key to map continuity remark to a particular segment
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -893,8 +895,10 @@ class ContinuityCheckOverride:
 class CorporateDiscountId:
     """These are zero or more negotiated rate codes.
 
-    :ivar value:
-    :ivar negotiated_rate_code: When set to true,
+    Parameters
+    ----------
+    value:
+    negotiated_rate_code: When set to true,
                                 the data in the CorporateDiscountID is a negotiated rate code.
                                 Otherwise, this data is a Corporate Discount ID rate.
     """
@@ -918,7 +922,9 @@ class CorporateDiscountId:
 class Credentials:
     """Container to send login id and password on each request.
 
-    :ivar user_id: The UserID associated with the entity using this request withing this BranchCode.
+    Parameters
+    ----------
+    user_id: The UserID associated with the entity using this request withing this BranchCode.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -939,17 +945,19 @@ class CreditCardAuth:
     """The result of a Credit Auth Request. Will contain all the authorization info
     and result codes.
 
-    :ivar key:
-    :ivar payment_ref:
-    :ivar trans_id: The transaction id from the credit processing system
-    :ivar number:
-    :ivar amount: The amount that was authorized.
-    :ivar auth_code: The authorization code to confirm card acceptance
-    :ivar auth_result_code: The result code of the authorization command.
-    :ivar avsresult_code: The address verification result code (if AVS was requested)
-    :ivar message: The message explains the result of the authorization command.
-    :ivar provider_reservation_info_ref:
-    :ivar form_of_payment_ref:
+    Parameters
+    ----------
+    key:
+    payment_ref:
+    trans_id: The transaction id from the credit processing system
+    number:
+    amount: The amount that was authorized.
+    auth_code: The authorization code to confirm card acceptance
+    auth_result_code: The result code of the authorization command.
+    avsresult_code: The address verification result code (if AVS was requested)
+    message: The message explains the result of the authorization command.
+    provider_reservation_info_ref:
+    form_of_payment_ref:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1047,12 +1055,7 @@ class CustomProfileInformation:
 @dataclass
 class CustomizedNameData:
     """Customized Name Data is used to print customized name on the different
-    documents.
-
-    :ivar value:
-    :ivar key:
-    :ivar provider_reservation_info_ref:
-    """
+    documents."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1077,10 +1080,7 @@ class CustomizedNameData:
 
 @dataclass
 class DirectPayment:
-    """Direct Payment Form of Payments.
-
-    :ivar text:
-    """
+    """Direct Payment Form of Payments."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1095,9 +1095,6 @@ class DirectPayment:
 
 @dataclass
 class DiscountCardRef:
-    """
-    :ivar key:
-    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1112,19 +1109,12 @@ class DiscountCardRef:
 
 
 class DistanceUnits(Enum):
-    """
-    :cvar MI:
-    :cvar KM:
-    """
     MI = "MI"
     KM = "KM"
 
 
 @dataclass
 class DriversLicenseRef:
-    """
-    :ivar key:
-    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1142,8 +1132,11 @@ class DriversLicenseRef:
 class EmailNotification:
     """
     Send Email Notification to the emails specified in Booking Traveler. Supported Provider : 1G/1V
-    :ivar email_ref: Reference to Booking Traveler Email.
-    :ivar recipients: Indicates the recipients of the mail addresses for which the user requires the system to send the itinerary.List of Possible Values:
+
+    Parameters
+    ----------
+    email_ref: Reference to Booking Traveler Email.
+    recipients: Indicates the recipients of the mail addresses for which the user requires the system to send the itinerary.List of Possible Values:
     						All = Send Email to All addresses
     						Default = Send Email to Primary Booking Traveler
     						Specific = Send Email to specific address Referred in EmailRef.
@@ -1169,11 +1162,6 @@ class EmailNotification:
     )
 
     class Recipients(Enum):
-        """
-        :cvar ALL:
-        :cvar DEFAULT:
-        :cvar SPECIFIC:
-        """
         ALL = "All"
         DEFAULT = "Default"
         SPECIFIC = "Specific"
@@ -1181,10 +1169,7 @@ class EmailNotification:
 
 @dataclass
 class Endorsement:
-    """Restrictions or instructions about the fare or ticket.
-
-    :ivar value:
-    """
+    """Restrictions or instructions about the fare or ticket."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1204,10 +1189,12 @@ class Endorsement:
 class EnettVan:
     """Container for all eNett Van information.
 
-    :ivar min_percentage: The minimum percentage that will be applied on the Total price and sent to enett,which will denote the minimum authorized amount approved by eNett.uApi will default this to zero for multi-use Van's.
-    :ivar max_percentage: The maximum percentage that will be applied on the Total price and sent to enett, which will denote the maximum authorized amount as approved by eNett. This value will be ignored and not used for Multi-Use VAN’s.
-    :ivar expiry_days: The number of days from the VAN generation date that the VAN will be active for, after which the VAN cannot be used.
-    :ivar multi_use: Acceptable values are true or false. If set to true it will denote that the VAN being requested is multi-use else it will indicate a single -use VAN.A Single use VAN can only be debited once while the multiple use VAN's can be debited multiple times subjected to the maximum value it has been authorized for. The default value will be TRUE to indicate a multi-use VAN is being issued.
+    Parameters
+    ----------
+    min_percentage: The minimum percentage that will be applied on the Total price and sent to enett,which will denote the minimum authorized amount approved by eNett.uApi will default this to zero for multi-use Van's.
+    max_percentage: The maximum percentage that will be applied on the Total price and sent to enett, which will denote the maximum authorized amount as approved by eNett. This value will be ignored and not used for Multi-Use VAN’s.
+    expiry_days: The number of days from the VAN generation date that the VAN will be active for, after which the VAN cannot be used.
+    multi_use: Acceptable values are true or false. If set to true it will denote that the VAN being requested is multi-use else it will indicate a single -use VAN.A Single use VAN can only be debited once while the multiple use VAN's can be debited multiple times subjected to the maximum value it has been authorized for. The default value will be TRUE to indicate a multi-use VAN is being issued.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1252,8 +1239,10 @@ class EnettVan:
 class ExchangedCoupon:
     """The coupon numbers that were used in the exchange process to create the MCO.
 
-    :ivar ticket_number: The ticket number for which the exchange coupons are present.
-    :ivar coupon_number: Coupon numbers that were exchanged specific to this ticket
+    Parameters
+    ----------
+    ticket_number: The ticket number for which the exchange coupons are present.
+    coupon_number: Coupon numbers that were exchanged specific to this ticket
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1278,10 +1267,7 @@ class ExchangedCoupon:
 
 @dataclass
 class FormOfPaymentRef:
-    """A reference to a Form of Payment in the existing UR.
-
-    :ivar key:
-    """
+    """A reference to a Form of Payment in the existing UR."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1299,10 +1285,12 @@ class FormOfPaymentRef:
 class FormattedTextTextType:
     """Provides text and indicates whether it is formatted or not.
 
-    :ivar value:
-    :ivar formatted: Textual information, which may be formatted as a line of information, or unformatted, as a paragraph of text.
-    :ivar language: Language identification.
-    :ivar text_format: Indicates the format of text used in the description e.g. unformatted  or html.
+    Parameters
+    ----------
+    value:
+    formatted: Textual information, which may be formatted as a line of information, or unformatted, as a paragraph of text.
+    language: Language identification.
+    text_format: Indicates the format of text used in the description e.g. unformatted  or html.
     """
     value: Optional[str] = field(
         default=None,
@@ -1331,8 +1319,10 @@ class FormattedTextTextType:
 
     class TextFormat(Enum):
         """
-        :cvar PLAIN_TEXT: Textual data that is in ASCII format.
-        :cvar HTML: HTML formatted text.
+        Properties
+        ----------
+        PLAIN_TEXT: Textual data that is in ASCII format.
+        HTML: HTML formatted text.
         """
         PLAIN_TEXT = "PlainText"
         HTML = "HTML"
@@ -1340,10 +1330,7 @@ class FormattedTextTextType:
 
 @dataclass
 class GuaranteeType:
-    """A type of guarantee i.e.
-
-    :ivar value:
-    """
+    """A type of guarantee i.e."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1360,7 +1347,9 @@ class GuaranteeType:
 class IncludedInBase:
     """Shows the taxes and fees included in the base fare. (ACH only)
 
-    :ivar amount: this attribute shows the amount included in the base fare for the specific fee or tax
+    Parameters
+    ----------
+    amount: this attribute shows the amount included in the base fare for the specific fee or tax
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1378,7 +1367,9 @@ class IncludedInBase:
 class IndustryStandardSsr:
     """Indicates Carrier Supports this industry standard.
 
-    :ivar code: This code indicates which Standard of SSR's they support. Sucha as the 'AIRIMP' standard identified by 'IATA.org'
+    Parameters
+    ----------
+    code: This code indicates which Standard of SSR's they support. Sucha as the 'AIRIMP' standard identified by 'IATA.org'
     """
     class Meta:
         name = "IndustryStandardSSR"
@@ -1398,9 +1389,11 @@ class KeyMapping:
     """Element for which mapping key sent in the request is different from the
     mapping key comes in the response.
 
-    :ivar element_name: Name of the element.
-    :ivar original_key: The mapping key which is sent in the request.
-    :ivar new_key: The mapping key that comes in the response.
+    Parameters
+    ----------
+    element_name: Name of the element.
+    original_key: The mapping key which is sent in the request.
+    new_key: The mapping key that comes in the response.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1438,10 +1431,7 @@ class Location:
 
 @dataclass
 class LocatorCode:
-    """A locator code that identifies a PNR or searches for one.
-
-    :ivar value:
-    """
+    """A locator code that identifies a PNR or searches for one."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1455,9 +1445,6 @@ class LocatorCode:
 
 @dataclass
 class LoyaltyCardRef:
-    """
-    :ivar key:
-    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1476,9 +1463,11 @@ class McofeeInfo:
     """Information related to the PTA/TOD (Prepaid Ticket Advice / Ticket on
     Departure) related to the MCO.
 
-    :ivar amount: The monetary amount.
-    :ivar percentage: The percentage.
-    :ivar fee_applies_to_ind: Indicates if PTA/TOD fee is for the entire MCO or is per person.
+    Parameters
+    ----------
+    amount: The monetary amount.
+    percentage: The percentage.
+    fee_applies_to_ind: Indicates if PTA/TOD fee is for the entire MCO or is per person.
     """
     class Meta:
         name = "MCOFeeInfo"
@@ -1508,10 +1497,6 @@ class McofeeInfo:
     )
 
     class FeeAppliesToInd(Enum):
-        """
-        :cvar PER_PERSON:
-        :cvar PER_MCO:
-        """
         PER_PERSON = "Per-Person"
         PER_MCO = "Per-MCO"
 
@@ -1520,8 +1505,10 @@ class McofeeInfo:
 class Mcoremark:
     """Information related to fare construction, free form text etc. of the MCO.
 
-    :ivar value:
-    :ivar additional_rmk: Indicates if the remark is additional remark or not.
+    Parameters
+    ----------
+    value:
+    additional_rmk: Indicates if the remark is additional remark or not.
     """
     class Meta:
         name = "MCORemark"
@@ -1543,8 +1530,11 @@ class Mcoremark:
 class Mcotext:
     """
     All type of free format text messages related to MCO like - Command Text, Agent Entry, MCO Modifiers, Text Message
-    :ivar value:
-    :ivar type: The type of text. Possible values: Command Text, Agent Entry, MCO Modifiers, Text Message
+
+    Parameters
+    ----------
+    value:
+    type: The type of text. Possible values: Command Text, Agent Entry, MCO Modifiers, Text Message
     """
     class Meta:
         name = "MCOText"
@@ -1564,10 +1554,7 @@ class Mcotext:
 
 @dataclass
 class MarketingInformation:
-    """Marketing text or Notices for Suppliers.
-
-    :ivar text:
-    """
+    """Marketing text or Notices for Suppliers."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1584,10 +1571,7 @@ class MarketingInformation:
 
 @dataclass
 class MealRequest:
-    """Special meal requests like Vegetarian.
-
-    :ivar type:
-    """
+    """Special meal requests like Vegetarian."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1604,11 +1588,9 @@ class MealRequest:
 
 @dataclass
 class MetaData:
-    """Extra data to elaborate the parent element. This data is primarily
-    informative and is not persisted.
+    """Extra data to elaborate the parent element.
 
-    :ivar key:
-    :ivar value:
+    This data is primarily informative and is not persisted.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1639,11 +1621,13 @@ class MetaData:
 class MiscFormOfPayment:
     """Miscellaneous Form of Payments.
 
-    :ivar credit_card_type: The 2 letter credit/ debit card type or code which may not have been issued using the standard bank card types  - i.e. an airline issued card
-    :ivar credit_card_number:
-    :ivar exp_date: The Expiration date of this card in YYYY-MM format.
-    :ivar text: Any free form text which may be associated with the Miscellaneous Form of Payment. This text may be provider or GDS specific
-    :ivar category: Indicates what Category the Miscellaneous Form Of Payment is being used for payment - The category may vary by GDS.
+    Parameters
+    ----------
+    credit_card_type: The 2 letter credit/ debit card type or code which may not have been issued using the standard bank card types  - i.e. an airline issued card
+    credit_card_number:
+    exp_date: The Expiration date of this card in YYYY-MM format.
+    text: Any free form text which may be associated with the Miscellaneous Form of Payment. This text may be provider or GDS specific
+    category: Indicates what Category the Miscellaneous Form Of Payment is being used for payment - The category may vary by GDS.
     Allowable values are
                             "Text"
                             "Credit"
@@ -1654,7 +1638,7 @@ class MiscFormOfPayment:
                             "MultipleReceivables"
                             "Exchange"
                             "Cash"
-    :ivar acceptance_override: Override airline restriction on the credit card.
+    acceptance_override: Override airline restriction on the credit card.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1710,13 +1694,15 @@ class MiscFormOfPayment:
 class ModificationType(Enum):
     """The modification types supported.
 
-    :cvar ADD_SEGMENT: Add a segment to the itinerary
-    :cvar REMOVE_SEGMENT: Delete a segment from the itinerary
-    :cvar REPLACE_SEGMENT: Replace a segment in the itinerary with a new segment
-    :cvar ADD_PASSENGER: Add a passenger to the itinerary
-    :cvar REMOVE_PASSENGER: Remove a passenger from the itinerary
-    :cvar OPTIONS_ONLY: Modification where only options are added / removed from the itinerary
-    :cvar OTHER: Other modification types
+    Properties
+    ----------
+    ADD_SEGMENT: Add a segment to the itinerary
+    REMOVE_SEGMENT: Delete a segment from the itinerary
+    REPLACE_SEGMENT: Replace a segment in the itinerary with a new segment
+    ADD_PASSENGER: Add a passenger to the itinerary
+    REMOVE_PASSENGER: Remove a passenger from the itinerary
+    OPTIONS_ONLY: Modification where only options are added / removed from the itinerary
+    OTHER: Other modification types
     """
     ADD_SEGMENT = "AddSegment"
     REMOVE_SEGMENT = "RemoveSegment"
@@ -1731,12 +1717,14 @@ class ModificationType(Enum):
 class Name:
     """Complete name fields.
 
-    :ivar prefix: Name prefix. Size can be up to 20 characters
-    :ivar first: First Name. Size can be up to 256 characters
-    :ivar middle: Midle name. Size can be up to 256 characters
-    :ivar last: Last Name. Size can be up to 256 characters
-    :ivar suffix: Name suffix. Size can be up to 256 characters
-    :ivar traveler_profile_id: Traveler Applied Profile ID.
+    Parameters
+    ----------
+    prefix: Name prefix. Size can be up to 20 characters
+    first: First Name. Size can be up to 256 characters
+    middle: Midle name. Size can be up to 256 characters
+    last: Last Name. Size can be up to 256 characters
+    suffix: Name suffix. Size can be up to 256 characters
+    traveler_profile_id: Traveler Applied Profile ID.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1801,9 +1789,11 @@ class Name:
 class NameOverride:
     """To be used if the name is different from booking travelers in the PNR.
 
-    :ivar first: First Name.
-    :ivar last: Last Name.
-    :ivar age: Age.
+    Parameters
+    ----------
+    first: First Name.
+    last: Last Name.
+    age: Age.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1842,8 +1832,10 @@ class NextResultReference:
     """Container to return/send additional retrieve/request additional search
     results.
 
-    :ivar value:
-    :ivar provider_code: The code of the Provider (e.g 1G,1S)
+    Parameters
+    ----------
+    value:
+    provider_code: The code of the Provider (e.g 1G,1S)
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1868,10 +1860,7 @@ class NextResultReference:
 
 @dataclass
 class OperatedBy:
-    """This is the carrier code to support Cross Accrual.
-
-    :ivar value:
-    """
+    """This is the carrier code to support Cross Accrual."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1887,12 +1876,14 @@ class OperatedBy:
 class OptionalServiceApplicabilityType(Enum):
     """The different levels at which an optional service may be applied.
 
-    :cvar ITINERARY:
-    :cvar PASSENGER:
-    :cvar SEGMENT:
-    :cvar PASSENGER_SEGMENT:
-    :cvar PASSENGER_OD: PassengerOD stands for passenger origin destination.
-    :cvar OTHER:
+    Properties
+    ----------
+    ITINERARY:
+    PASSENGER:
+    SEGMENT:
+    PASSENGER_SEGMENT:
+    PASSENGER_OD: PassengerOD stands for passenger origin destination.
+    OTHER:
     """
     ITINERARY = "Itinerary"
     PASSENGER = "Passenger"
@@ -1905,8 +1896,10 @@ class OptionalServiceApplicabilityType(Enum):
 @dataclass
 class OtherGuaranteeInfo:
     """
-    :ivar value:
-    :ivar type: 1) IATA/ARC Number
+    Parameters
+    ----------
+    value:
+    type: 1) IATA/ARC Number
     							2) Agency Address
     							2) Deposit Taken
     							3) Others
@@ -1927,12 +1920,6 @@ class OtherGuaranteeInfo:
     )
 
     class Type(Enum):
-        """
-        :cvar IATA_ARC_NUMBER:
-        :cvar AGENCY_ADDRESS:
-        :cvar DEPOSIT_TAKEN:
-        :cvar OTHERS:
-        """
         IATA_ARC_NUMBER = "IATA/ARC Number"
         AGENCY_ADDRESS = "Agency Address"
         DEPOSIT_TAKEN = "Deposit Taken"
@@ -1943,8 +1930,10 @@ class OtherGuaranteeInfo:
 class OverridePcc:
     """Used to emulate to another PCC or SID.  Providers: 1G, 1V, 1P, 1J.
 
-    :ivar provider_code: The code of the provider (e.g. 1G, 1S)
-    :ivar pseudo_city_code: The PCC in the host system.
+    Parameters
+    ----------
+    provider_code: The code of the provider (e.g. 1G, 1S)
+    pseudo_city_code: The PCC in the host system.
     """
     class Meta:
         name = "OverridePCC"
@@ -1977,7 +1966,9 @@ class OwnershipChange:
     """Element to change the ownership of the PNR in the UR. PROVIDER SUPPORTED:
     Worldspan and JAL.
 
-    :ivar owning_pcc: New owning PCC of the PNR.
+    Parameters
+    ----------
+    owning_pcc: New owning PCC of the PNR.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1996,15 +1987,17 @@ class OwnershipChange:
 class PaymentAdvice:
     """Contains other form of payment for Cruise Reservations.
 
-    :ivar type: Other Payment Yype. Possible Values: AGC - Agency
+    Parameters
+    ----------
+    type: Other Payment Yype. Possible Values: AGC - Agency
                                                     Check, AGG - Agency Guarantee, AWC - Award Check, CSH - Cash
                                                     Equivalent, DBC - Denied Boarding Compensation, MCO -
                                                     Miscellaneous Charge Order, TOO - Tour Order, TOV - Tour Voucher
-    :ivar document_number: Payment Document Number Examples: 1234567890,
+    document_number: Payment Document Number Examples: 1234567890,
                                                     R7777
-    :ivar issue_date: Document Issuance date
-    :ivar issue_city: City code of document issuance
-    :ivar original_fop: Original form of payment Examples: CHECK 3500
+    issue_date: Document Issuance date
+    issue_city: City code of document issuance
+    original_fop: Original form of payment Examples: CHECK 3500
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2057,9 +2050,6 @@ class PaymentAdvice:
 
 @dataclass
 class PaymentRef:
-    """
-    :ivar key:
-    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -2075,19 +2065,7 @@ class PaymentRef:
 
 @dataclass
 class Penalty:
-    """Exchange penalty information.
-
-    :ivar cancel_refund:
-    :ivar non_refundable:
-    :ivar non_exchangeable:
-    :ivar cancelation_penalty:
-    :ivar reissue_penalty:
-    :ivar non_reissue_penalty:
-    :ivar ticket_refund_penalty:
-    :ivar charge_applicable:
-    :ivar charge_portion:
-    :ivar penalty_amount:
-    """
+    """Exchange penalty information."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -2167,9 +2145,11 @@ class Penalty:
 class PersonalGeography:
     """Personal geography details of the associated passenger.
 
-    :ivar country_code: Passenger country code.
-    :ivar state_province_code: Passenger state/province code.
-    :ivar city_code: Passenger city code.
+    Parameters
+    ----------
+    country_code: Passenger country code.
+    state_province_code: Passenger state/province code.
+    city_code: Passenger city code.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2205,8 +2185,10 @@ class PointOfCommencement:
     """Point of Commencement is optional. CityOrAirportCode and date portion of the
     Time attribute is mandatory.
 
-    :ivar city_or_airport_code: Three digit Airport or City code that would be the Point of Commencement location for the trips/legs mentioned.
-    :ivar time: Specify a date or date and time
+    Parameters
+    ----------
+    city_or_airport_code: Three digit Airport or City code that would be the Point of Commencement location for the trips/legs mentioned.
+    time: Specify a date or date and time
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2238,10 +2220,12 @@ class PointOfSale:
     level.  For fare redistribution at the stored fare level see
     AirPricingSolution/AirPricingInfo/AirPricingModifiers/PointOfSale.
 
-    :ivar provider_code: The provider in which the PCC is defined.
-    :ivar pseudo_city_code: The PCC in the host system.
-    :ivar key:
-    :ivar iata: Used for rapid reprice. This field is the IATA associated to this Point of Sale PCC. Providers: 1G/1V
+    Parameters
+    ----------
+    provider_code: The provider in which the PCC is defined.
+    pseudo_city_code: The PCC in the host system.
+    key:
+    iata: Used for rapid reprice. This field is the IATA associated to this Point of Sale PCC. Providers: 1G/1V
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2286,16 +2270,18 @@ class PointOfSale:
 @dataclass
 class PriceMatchError:
     """
-    :ivar error_message:
-    :ivar vendor_code: The code of the vendor (e.g.  HZ, etc.)
-    :ivar hotel_chain: 2 Letter Hotel Chain Code
-    :ivar hotel_code: Unique hotel identifier for the channel.
-    :ivar req_base: BaseRate in the request.
-    :ivar rsp_base: BaseRate retruned from the supplier.
-    :ivar base_diff: BaseRate Difference.
-    :ivar req_total: Estimated Total Amount in the request.
-    :ivar rsp_total: Estimated Total Amount returned from the supplier.
-    :ivar total_diff: Estimated Total Amount difference.
+    Parameters
+    ----------
+    error_message:
+    vendor_code: The code of the vendor (e.g.  HZ, etc.)
+    hotel_chain: 2 Letter Hotel Chain Code
+    hotel_code: Unique hotel identifier for the channel.
+    req_base: BaseRate in the request.
+    rsp_base: BaseRate retruned from the supplier.
+    base_diff: BaseRate Difference.
+    req_total: Estimated Total Amount in the request.
+    rsp_total: Estimated Total Amount returned from the supplier.
+    total_diff: Estimated Total Amount difference.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2379,10 +2365,7 @@ class PriceMatchError:
 
 @dataclass
 class Provider:
-    """Provider identifier.
-
-    :ivar code:
-    """
+    """Provider identifier."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -2400,10 +2383,7 @@ class Provider:
 
 @dataclass
 class ProviderReservationInfoRef:
-    """Container for Provider reservation reference key.
-
-    :ivar key:
-    """
+    """Container for Provider reservation reference key."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -2419,9 +2399,6 @@ class ProviderReservationInfoRef:
 
 @dataclass
 class PseudoCityCode:
-    """
-    :ivar value:
-    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -2438,11 +2415,13 @@ class PseudoCityCode:
 class QueueSelector:
     """Identifies the Queue with Queue Number , Category and Date Range.
 
-    :ivar queue: Queue Number . Possible values are 01, AA , A1 etc.
-    :ivar category: Queue Category Number. 2 Character Alpha or Numeric Number.
+    Parameters
+    ----------
+    queue: Queue Number . Possible values are 01, AA , A1 etc.
+    category: Queue Category Number. 2 Character Alpha or Numeric Number.
     Either Alpha or Numeric Number is allowed.
     If using for Sabre is mandatory and is Prefatory Instruction Code value of 0-999.
-    :ivar date_range: Date range number where the PNR should be queued. Possible values are 1,2,1-4 etc.
+    date_range: Date range number where the PNR should be queued. Possible values are 1,2,1-4 etc.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2472,9 +2451,6 @@ class QueueSelector:
 
 @dataclass
 class ReferencePoint:
-    """
-    :ivar value:
-    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -2491,7 +2467,9 @@ class ReferencePoint:
 class RefundRemark:
     """A textual remark displayed in Refund Quote and Refund response.
 
-    :ivar remark_data: Actual remark data.
+    Parameters
+    ----------
+    remark_data: Actual remark data.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2508,10 +2486,9 @@ class RefundRemark:
 
 @dataclass
 class Remark:
-    """A textual remark container to hold any printable text. (max 512 chars)
+    """A textual remark container to hold any printable text.
 
-    :ivar value:
-    :ivar key:
+    (max 512 chars)
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2531,7 +2508,9 @@ class Remark:
 @dataclass
 class RequiredField:
     """
-    :ivar name: The name of the required field
+    Parameters
+    ----------
+    name: The name of the required field
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2546,21 +2525,6 @@ class RequiredField:
     )
 
     class Name(Enum):
-        """
-        :cvar CARD_TYPE:
-        :cvar NUMBER:
-        :cvar CUSTOMER_REFERENCE:
-        :cvar ISSUE_NUMBER:
-        :cvar START_DATE:
-        :cvar NAME_ON_CARD:
-        :cvar EXPIRATION_DATE:
-        :cvar CVV:
-        :cvar ADDRESS_LINE1:
-        :cvar ADDRESS_LINE2:
-        :cvar CITY:
-        :cvar STATE:
-        :cvar POSTAL_CODE:
-        """
         CARD_TYPE = "CardType"
         NUMBER = "Number"
         CUSTOMER_REFERENCE = "CustomerReference"
@@ -2580,9 +2544,11 @@ class RequiredField:
 class Requisition:
     """Requisition Form of Payment.
 
-    :ivar number: Requisition number used for accounting
-    :ivar category: Classification Category for the requisition payment
-    :ivar type: Type can be Cash or Credit for category as Government
+    Parameters
+    ----------
+    number: Requisition number used for accounting
+    category: Classification Category for the requisition payment
+    type: Type can be Cash or Credit for category as Government
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2610,18 +2576,10 @@ class Requisition:
     )
 
     class Category(Enum):
-        """
-        :cvar GOVERNMENT:
-        :cvar OTHER:
-        """
         GOVERNMENT = "Government"
         OTHER = "Other"
 
     class Type(Enum):
-        """
-        :cvar CASH:
-        :cvar CREDIT:
-        """
         CASH = "Cash"
         CREDIT = "Credit"
 
@@ -2630,11 +2588,13 @@ class Requisition:
 class ResponseMessage:
     """A simple textual fare note. Used within several other objects.
 
-    :ivar value:
-    :ivar code:
-    :ivar type: Indicates the type of message (Warning, Error, Info)
-    :ivar provider_code:
-    :ivar supplier_code:
+    Parameters
+    ----------
+    value:
+    code:
+    type: Indicates the type of message (Warning, Error, Info)
+    provider_code:
+    supplier_code:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2677,11 +2637,6 @@ class ResponseMessage:
     )
 
     class Type(Enum):
-        """
-        :cvar WARNING:
-        :cvar ERROR:
-        :cvar INFO:
-        """
         WARNING = "Warning"
         ERROR = "Error"
         INFO = "Info"
@@ -2691,8 +2646,10 @@ class ResponseMessage:
 class Restriction:
     """Which activities are supported for a particular element.
 
-    :ivar operation: The operation that is restricted
-    :ivar reason: The reason it is restricted
+    Parameters
+    ----------
+    operation: The operation that is restricted
+    reason: The reason it is restricted
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2718,10 +2675,12 @@ class Restriction:
 class RoleInfo:
     """Container to specify the role of the agent.
 
-    :ivar id: Unique identifier of the role.
-    :ivar name: Agent's role name
-    :ivar source: Role inheritance level. Needed in the response, not in the request
-    :ivar description: Description of role
+    Parameters
+    ----------
+    id: Unique identifier of the role.
+    name: Agent's role name
+    source: Role inheritance level. Needed in the response, not in the request
+    description: Description of role
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2762,22 +2721,12 @@ class RoleInfo:
 
 
 class SearchTicketingReservationStatus(Enum):
-    """
-    :cvar ON_HOLD:
-    :cvar SET_FOR_TICKETING:
-    :cvar BOTH:
-    """
     ON_HOLD = "OnHold"
     SET_FOR_TICKETING = "SetForTicketing"
     BOTH = "Both"
 
 
 class SearchTicketingTicketStatus(Enum):
-    """
-    :cvar TICKETED:
-    :cvar UNTICKETED:
-    :cvar BOTH:
-    """
     TICKETED = "Ticketed"
     UNTICKETED = "Unticketed"
     BOTH = "Both"
@@ -2785,10 +2734,7 @@ class SearchTicketingTicketStatus(Enum):
 
 @dataclass
 class SeatAttribute:
-    """Identifies the seat attribute of the service.
-
-    :ivar value:
-    """
+    """Identifies the seat attribute of the service."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -2806,10 +2752,9 @@ class SeatAttribute:
 
 @dataclass
 class SegmentRemark:
-    """A textual remark container to hold any printable text. (max 512 chars)
+    """A textual remark container to hold any printable text.
 
-    :ivar value:
-    :ivar key:
+    (max 512 chars)
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2829,10 +2774,10 @@ class SegmentRemark:
 
 @dataclass
 class SellMessage:
-    """Sell Message from Vendor. This is applicable in response messages only, any
-    input in request message will be ignored.
+    """Sell Message from Vendor.
 
-    :ivar value:
+    This is applicable in response messages only, any input in request
+    message will be ignored.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2849,8 +2794,10 @@ class SellMessage:
 class ServiceFeeTaxInfo:
     """The taxes associated to a particular Service Fee.
 
-    :ivar category: The tax category represents a valid IATA tax code.
-    :ivar amount:
+    Parameters
+    ----------
+    category: The tax category represents a valid IATA tax code.
+    amount:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2877,13 +2824,15 @@ class ServiceFeeTaxInfo:
 class ShopInformation:
     """Shopping Information required for File Finishing.
 
-    :ivar search_request: Search parameters that were used in LFS
+    Parameters
+    ----------
+    search_request: Search parameters that were used in LFS
                                                             request
-    :ivar flights_offered: Flights with lowest logical airfare
+    flights_offered: Flights with lowest logical airfare
                                                             returned as response to LFS request
-    :ivar cabin_shopped:
-    :ivar cabin_selected:
-    :ivar lowest_fare_offered:
+    cabin_shopped:
+    cabin_selected:
+    lowest_fare_offered:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2929,12 +2878,14 @@ class ShopInformation:
     @dataclass
     class SearchRequest:
         """
-        :ivar origin:
-        :ivar destination:
-        :ivar departure_time: Date and Time at which this entity
+        Parameters
+        ----------
+        origin:
+        destination:
+        departure_time: Date and Time at which this entity
         									departs. This does not include Time Zone information since it
         									can be derived from origin location
-        :ivar class_of_service:
+        class_of_service:
         """
         origin: Optional[str] = field(
             default=None,
@@ -2974,17 +2925,19 @@ class ShopInformation:
     @dataclass
     class FlightsOffered:
         """
-        :ivar origin:
-        :ivar destination:
-        :ivar departure_time: Date and Time at which this entity
+        Parameters
+        ----------
+        origin:
+        destination:
+        departure_time: Date and Time at which this entity
         									departs. This does not include Time Zone information since it
         									can be derived from origin location
-        :ivar travel_order:
-        :ivar carrier:
-        :ivar flight_number:
-        :ivar class_of_service:
-        :ivar stop_over:
-        :ivar connection:
+        travel_order:
+        carrier:
+        flight_number:
+        class_of_service:
+        stop_over:
+        connection:
         """
         origin: Optional[str] = field(
             default=None,
@@ -3061,10 +3014,7 @@ class ShopInformation:
 
 @dataclass
 class SimpleName:
-    """Free text name.
-
-    :ivar value:
-    """
+    """Free text name."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -3078,10 +3028,7 @@ class SimpleName:
 
 @dataclass
 class State:
-    """Container to house the state code for an address.
-
-    :ivar value:
-    """
+    """Container to house the state code for an address."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -3094,8 +3041,10 @@ class State:
 class StockControl:
     """The Stock Control Numbers related details of the MCO.
 
-    :ivar type: Stock control type valid options include: Pending, Failed, Plain Paper, Blank, Suppressed.
-    :ivar number: Stock control number.
+    Parameters
+    ----------
+    type: Stock control type valid options include: Pending, Failed, Plain Paper, Blank, Suppressed.
+    number: Stock control number.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -3118,14 +3067,7 @@ class StockControl:
 
 @dataclass
 class TaxDetail:
-    """The tax idetail nformation for a fare quote tax.
-
-    :ivar amount:
-    :ivar origin_airport:
-    :ivar destination_airport:
-    :ivar country_code:
-    :ivar fare_info_ref:
-    """
+    """The tax idetail nformation for a fare quote tax."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -3171,10 +3113,10 @@ class TaxDetail:
 
 @dataclass
 class TerminalSessionInfo:
-    """Travelport use only. This element contains CDATA information representing
-    existing GDS session data or ACH credentials information of the terminal user.
+    """Travelport use only.
 
-    :ivar value:
+    This element contains CDATA information representing existing GDS
+    session data or ACH credentials information of the terminal user
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -3189,10 +3131,7 @@ class TerminalSessionInfo:
 
 @dataclass
 class TicketNumber:
-    """The identifying number for the actual ticket.
-
-    :ivar value:
-    """
+    """The identifying number for the actual ticket."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -3210,8 +3149,10 @@ class TicketNumber:
 class TravelInfo:
     """Traveler information details like Travel Purpose and Trip Name.
 
-    :ivar trip_name: Trip Name
-    :ivar travel_purpose: Purpose of the trip
+    Parameters
+    ----------
+    trip_name: Trip Name
+    travel_purpose: Purpose of the trip
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -3236,10 +3177,7 @@ class TravelInfo:
 
 @dataclass
 class TravelerType:
-    """The 3-char IATA traveler type code.
-
-    :ivar code:
-    """
+    """The 3-char IATA traveler type code."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -3257,13 +3195,7 @@ class TravelerType:
 
 class UrticketStatus(Enum):
     """Information on whether the Universal Record ticket status is Ticketed,
-    Unticketed , Partially Ticketed or Not Applicable status.
-
-    :cvar TICKETED:
-    :cvar UNTICKETED:
-    :cvar PARTIALLY_TICKETED:
-    :cvar NOT_APPLICABLE:
-    """
+    Unticketed , Partially Ticketed or Not Applicable status."""
     TICKETED = "Ticketed"
     UNTICKETED = "Unticketed"
     PARTIALLY_TICKETED = "Partially Ticketed"
@@ -3272,10 +3204,7 @@ class UrticketStatus(Enum):
 
 @dataclass
 class UnitedNations:
-    """United Nations Form of Payments.
-
-    :ivar number:
-    """
+    """United Nations Form of Payments."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -3290,21 +3219,12 @@ class UnitedNations:
 
 
 class TypeAdjustmentTarget(Enum):
-    """
-    :cvar BASE:
-    :cvar TOTAL:
-    :cvar OTHER:
-    """
     BASE = "Base"
     TOTAL = "Total"
     OTHER = "Other"
 
 
 class TypeAdjustmentType(Enum):
-    """
-    :cvar AMOUNT:
-    :cvar PERCENTAGE:
-    """
     AMOUNT = "Amount"
     PERCENTAGE = "Percentage"
 
@@ -3313,9 +3233,11 @@ class TypeAdjustmentType(Enum):
 class TypeAgencyPayment:
     """Type for Agency Payment.
 
-    :ivar agency_billing_identifier: Value of the billing id
-    :ivar agency_billing_number: Value of billing number
-    :ivar agency_billing_password: Value of billing password
+    Parameters
+    ----------
+    agency_billing_identifier: Value of the billing id
+    agency_billing_number: Value of billing number
+    agency_billing_password: Value of billing password
     """
     class Meta:
         name = "typeAgencyPayment"
@@ -3348,13 +3270,7 @@ class TypeAgencyPayment:
 
 
 class TypeAgencyProfileLevel(Enum):
-    """Profile levels in the Agency Hierarchy.
-
-    :cvar AGENCY:
-    :cvar BRANCH:
-    :cvar BRANCH_GROUP:
-    :cvar AGENT:
-    """
+    """Profile levels in the Agency Hierarchy."""
     AGENCY = "Agency"
     BRANCH = "Branch"
     BRANCH_GROUP = "BranchGroup"
@@ -3370,7 +3286,9 @@ class TypeAgentInfo:
 @dataclass
 class TypeBookingTransactionsAllowed:
     """
-    :ivar booking_enabled: Allow or prohibit booking transaction for the given product type on this Provider/Supplier. Inheritable.
+    Parameters
+    ----------
+    booking_enabled: Allow or prohibit booking transaction for the given product type on this Provider/Supplier. Inheritable.
     """
     class Meta:
         name = "typeBookingTransactionsAllowed"
@@ -3385,12 +3303,7 @@ class TypeBookingTransactionsAllowed:
 
 
 class TypeCommissionLevel(Enum):
-    """ATA/IATA Standard commission level.
-
-    :cvar RECALLED:
-    :cvar FARE:
-    :cvar PENALTY:
-    """
+    """ATA/IATA Standard commission level."""
     RECALLED = "Recalled"
     FARE = "Fare"
     PENALTY = "Penalty"
@@ -3399,13 +3312,15 @@ class TypeCommissionLevel(Enum):
 class TypeCommissionModifier(Enum):
     """Optional commission modifier.
 
-    :cvar FARE_PERCENT: Commission percentage applied to the fare
-    :cvar FARE_AMOUNT: Commission amount applied to the fare
-    :cvar COMMISSION_AMOUNT: Specific commission amount to be applied
-    :cvar LESS_STANDARD_COMMISSION: Indicates commission percentage applied to the fare less the standard commission
-    :cvar STANDARD_PLUS_SUPPLEMENTARY_PERCENT: Indicates commission percentage includes standard and supplementary commission
-    :cvar SUPPLEMENTARY_PERCENT: Supplementary commission percent which is applied to the fare
-    :cvar SUPPLEMENTARY_AMOUNT: Supplementary commission amount which is applied to the fare
+    Properties
+    ----------
+    FARE_PERCENT: Commission percentage applied to the fare
+    FARE_AMOUNT: Commission amount applied to the fare
+    COMMISSION_AMOUNT: Specific commission amount to be applied
+    LESS_STANDARD_COMMISSION: Indicates commission percentage applied to the fare less the standard commission
+    STANDARD_PLUS_SUPPLEMENTARY_PERCENT: Indicates commission percentage includes standard and supplementary commission
+    SUPPLEMENTARY_PERCENT: Supplementary commission percent which is applied to the fare
+    SUPPLEMENTARY_AMOUNT: Supplementary commission amount which is applied to the fare
     """
     FARE_PERCENT = "FarePercent"
     FARE_AMOUNT = "FareAmount"
@@ -3417,12 +3332,7 @@ class TypeCommissionModifier(Enum):
 
 
 class TypeCommissionType(Enum):
-    """Types of possible commission.
-
-    :cvar FLAT:
-    :cvar PERCENT_BASE:
-    :cvar PERCENT_TOTAL:
-    """
+    """Types of possible commission."""
     FLAT = "Flat"
     PERCENT_BASE = "PercentBase"
     PERCENT_TOTAL = "PercentTotal"
@@ -3430,11 +3340,7 @@ class TypeCommissionType(Enum):
 
 @dataclass
 class TypeDateRange:
-    """Specify a range of dates.
-
-    :ivar start_date:
-    :ivar end_date:
-    """
+    """Specify a range of dates."""
     class Meta:
         name = "typeDateRange"
 
@@ -3457,92 +3363,25 @@ class TypeDateRange:
 
 
 class TypeDirection(Enum):
-    """Defines the Direction for Incoming or Outgoing.
-
-    :cvar INCOMING:
-    :cvar OUTGOING:
-    """
+    """Defines the Direction for Incoming or Outgoing."""
     INCOMING = "Incoming"
     OUTGOING = "Outgoing"
 
 
 class TypeDistance(Enum):
-    """2 Letter distance unit code.
-
-    :cvar MI:
-    :cvar KM:
-    """
+    """2 Letter distance unit code."""
     MI = "MI"
     KM = "KM"
 
 
 class TypeDoorCount(Enum):
-    """
-    :cvar TWO_TO_THREE_DOORS:
-    :cvar TWO_TO_FOUR_DOORS:
-    :cvar FOUR_TO_FIVE_DOORS:
-    """
     TWO_TO_THREE_DOORS = "TwoToThreeDoors"
     TWO_TO_FOUR_DOORS = "TwoToFourDoors"
     FOUR_TO_FIVE_DOORS = "FourToFiveDoors"
 
 
 class TypeElement(Enum):
-    """Defines the list of available data types for modifications.
-
-    :cvar PAYMENT:
-    :cvar CREDIT_CARD_AUTHORIZATION:
-    :cvar DELIVERY_INFO:
-    :cvar FORM_OF_PAYMENT:
-    :cvar ACTION_STATUS:
-    :cvar OSI:
-    :cvar GENERAL_REMARK:
-    :cvar UNASSOCIATED_REMARK:
-    :cvar ACCOUNTING_REMARK:
-    :cvar POST_SCRIPT:
-    :cvar AIR_RESERVATION_AIR_SEGMENT_UPDATE:
-    :cvar AIR_SEGMENT:
-    :cvar PHONE_NUMBER:
-    :cvar EMAIL:
-    :cvar LOYALTY_CARD:
-    :cvar SSR:
-    :cvar SEAT_ASSIGNMENT:
-    :cvar SPECIFIC_SEAT_ASSIGNMENT:
-    :cvar AUTO_SEAT_ASSIGNMENT:
-    :cvar AIR_PRICING_INFO:
-    :cvar VEHICLE_SPECIAL_REQUEST:
-    :cvar SPECIAL_EQUIPMENT:
-    :cvar XMLREMARK:
-    :cvar ADDRESS:
-    :cvar TICKETING_MODIFIERS:
-    :cvar GUARANTEE:
-    :cvar DELIVERY_ADDRESS:
-    :cvar SERVICE_FEE_INFO:
-    :cvar LINKED_UNIVERSAL_RECORD:
-    :cvar NAME_REMARK:
-    :cvar PASSIVE_SEGMENT:
-    :cvar PAYMENT_INFORMATION:
-    :cvar CUSTOMER_ID:
-    :cvar DRIVERS_LICENSE:
-    :cvar ASSOCIATED_REMARK:
-    :cvar COLLECTION_ADDRESS:
-    :cvar HOTEL_SPECIAL_REQUEST:
-    :cvar CORPORATE_DISCOUNT_ID:
-    :cvar COMMISSION_REMARK:
-    :cvar POCKET_ITINERARY_REMARK:
-    :cvar CUSTOMIZED_NAME_DATA:
-    :cvar INVOICE_REMARK:
-    :cvar THIRD_PARTY_INFORMATION:
-    :cvar TRAVEL_COMPLIANCE:
-    :cvar REVIEW_BOOKING:
-    :cvar CONSOLIDATOR_REMARK:
-    :cvar BOOKING_TRAVELER:
-    :cvar APPLIED_PROFILE:
-    :cvar TRIP_NAME:
-    :cvar TRAVEL_PURPOSE:
-    :cvar BOOKING_CONFIRMATION:
-    :cvar BRAND:
-    """
+    """Defines the list of available data types for modifications."""
     PAYMENT = "Payment"
     CREDIT_CARD_AUTHORIZATION = "CreditCardAuthorization"
     DELIVERY_INFO = "DeliveryInfo"
@@ -3598,13 +3437,11 @@ class TypeElement(Enum):
 
 
 class TypeElementStatus(Enum):
-    """Values to specify the state of the element. "A" refers to "Add" , "M" refers
-    to "Modified" and "C" refers to error conditions when value provided in "Key"
-    attribute is not retained in response.
+    """Values to specify the state of the element.
 
-    :cvar A:
-    :cvar M:
-    :cvar C:
+    "A" refers to "Add" , "M" refers to "Modified" and "C" refers to error
+    conditions when value provided in "Key" attribute is not retained in
+    response
     """
     A = "A"
     M = "M"
@@ -3612,15 +3449,7 @@ class TypeElementStatus(Enum):
 
 
 class TypeEventType(Enum):
-    """The various reservation events (book, cancel, void, etc)
-
-    :cvar CREATE:
-    :cvar CANCEL:
-    :cvar TICKET:
-    :cvar REFUND:
-    :cvar EXCHANGE:
-    :cvar VOID:
-    """
+    """The various reservation events (book, cancel, void, etc)"""
     CREATE = "Create"
     CANCEL = "Cancel"
     TICKET = "Ticket"
@@ -3630,10 +3459,6 @@ class TypeEventType(Enum):
 
 
 class TypeFarePull(Enum):
-    """
-    :cvar REVERSE_OF_ORIGIN_DESTINATION:
-    :cvar SAME_AS_ORIGIN_DESTINATION:
-    """
     REVERSE_OF_ORIGIN_DESTINATION = "ReverseOfOriginDestination"
     SAME_AS_ORIGIN_DESTINATION = "SameAsOriginDestination"
 
@@ -3641,8 +3466,10 @@ class TypeFarePull(Enum):
 @dataclass
 class TypeFormOfPaymentPnrreference:
     """
-    :ivar key: Unique ID to identify a ProviderReservationInfo
-    :ivar provider_reservation_level: It means that the form of payment is applied at ProviderReservation level.
+    Parameters
+    ----------
+    key: Unique ID to identify a ProviderReservationInfo
+    provider_reservation_level: It means that the form of payment is applied at ProviderReservation level.
     """
     class Meta:
         name = "typeFormOfPaymentPNRReference"
@@ -3664,25 +3491,11 @@ class TypeFormOfPaymentPnrreference:
 
 
 class TypeFormOfRefund(Enum):
-    """
-    :cvar MCO:
-    :cvar FORM_OF_PAYMENT:
-    """
     MCO = "MCO"
     FORM_OF_PAYMENT = "FormOfPayment"
 
 
 class TypeFuel(Enum):
-    """
-    :cvar PETROL:
-    :cvar DIESEL:
-    :cvar HYBRID:
-    :cvar ELECTRIC:
-    :cvar LPGCNG:
-    :cvar HYDROGEN:
-    :cvar MULTI_FUEL:
-    :cvar ETHANOL:
-    """
     PETROL = "Petrol"
     DIESEL = "Diesel"
     HYBRID = "Hybrid"
@@ -3695,13 +3508,7 @@ class TypeFuel(Enum):
 
 class TypeFulfillmentIdtype(Enum):
     """IdentificationType to define how the customer will identify himself when
-    collecting the ticket.
-
-    :cvar BAHN_CARD:
-    :cvar CREDIT_CARD:
-    :cvar EURO_CHEQUE_CARD:
-    :cvar COLLECTION_REFERENCE:
-    """
+    collecting the ticket."""
     BAHN_CARD = "Bahn Card"
     CREDIT_CARD = "Credit Card"
     EURO_CHEQUE_CARD = "Euro Cheque Card"
@@ -3710,22 +3517,7 @@ class TypeFulfillmentIdtype(Enum):
 
 class TypeFulfillmentType(Enum):
     """Defines how the client wishes to receive travel documents, e.g. collect
-    ticket at a kiosk, print in agency.
-
-    :cvar KIOSK:
-    :cvar TRAVEL_AGENCY:
-    :cvar COURIER:
-    :cvar STANDARD_MAIL:
-    :cvar TICKETLESS:
-    :cvar TICKET_OFFICE:
-    :cvar EXPRESS_MAIL:
-    :cvar CORPORATE_KIOSK:
-    :cvar TRAIN_STATION_SERVICE_DESK:
-    :cvar DIRECT_PRINTING_OF_TICKET:
-    :cvar PRINTING_OF_TICKET_AT_HOME:
-    :cvar DIGITAL_PRINTING_OF_TICKET_AT_HOME:
-    :cvar RETRIEVE_TICKET_AT_EUROSTAR_IN_LONDON:
-    """
+    ticket at a kiosk, print in agency."""
     KIOSK = "Kiosk"
     TRAVEL_AGENCY = "Travel Agency"
     COURIER = "Courier"
@@ -3743,9 +3535,6 @@ class TypeFulfillmentType(Enum):
 
 @dataclass
 class TypeGeneralReference:
-    """
-    :ivar key:
-    """
     class Meta:
         name = "typeGeneralReference"
 
@@ -3763,9 +3552,11 @@ class TypeGeneralReference:
 class TypeGuaranteeInformation:
     """Information pertaining to the payment of type Guarantee.
 
-    :ivar type: Guarantee only or Deposit
-    :ivar agency_type: Guarantee to Agency IATA or Guarantee to Another Agency IATA
-    :ivar iatanumber: Payment IATA number. (ie. IATA of Agency or Other Agency)
+    Parameters
+    ----------
+    type: Guarantee only or Deposit
+    agency_type: Guarantee to Agency IATA or Guarantee to Another Agency IATA
+    iatanumber: Payment IATA number. (ie. IATA of Agency or Other Agency)
     """
     class Meta:
         name = "typeGuaranteeInformation"
@@ -3798,18 +3589,10 @@ class TypeGuaranteeInformation:
     )
 
     class Type(Enum):
-        """
-        :cvar GUARANTEE:
-        :cvar DEPOSIT:
-        """
         GUARANTEE = "Guarantee"
         DEPOSIT = "Deposit"
 
     class AgencyType(Enum):
-        """
-        :cvar AGENCY_IATA:
-        :cvar OTHER_AGENCY_IATA:
-        """
         AGENCY_IATA = "AgencyIATA"
         OTHER_AGENCY_IATA = "OtherAgencyIATA"
 
@@ -3830,19 +3613,6 @@ class TypeImageSize(Enum):
     O - Original
     H - Huge
     C - Colossal
-    :cvar T:
-    :cvar I:
-    :cvar S:
-    :cvar M:
-    :cvar L:
-    :cvar E:
-    :cvar G:
-    :cvar F:
-    :cvar B:
-    :cvar J:
-    :cvar O:
-    :cvar H:
-    :cvar C:
     """
     T = "T"
     I = "I"
@@ -3860,13 +3630,7 @@ class TypeImageSize(Enum):
 
 
 class TypeInvoiceRecordCategory(Enum):
-    """Invoice record type: Invoice, Void, Refund, Manual.
-
-    :cvar INVOICE:
-    :cvar VOID:
-    :cvar REFUND:
-    :cvar MANUAL:
-    """
+    """Invoice record type: Invoice, Void, Refund, Manual."""
     INVOICE = "Invoice"
     VOID = "Void"
     REFUND = "Refund"
@@ -3875,8 +3639,10 @@ class TypeInvoiceRecordCategory(Enum):
 
 class TypeItineraryCode(Enum):
     """
-    :cvar INTERNATIONAL: Indicates the itinerary is International
-    :cvar DOMESTIC: Indicates the itinerary is domestic
+    Properties
+    ----------
+    INTERNATIONAL: Indicates the itinerary is International
+    DOMESTIC: Indicates the itinerary is domestic
     """
     INTERNATIONAL = "International"
     DOMESTIC = "Domestic"
@@ -3884,8 +3650,10 @@ class TypeItineraryCode(Enum):
 
 class TypeItineraryType(Enum):
     """
-    :cvar NEW: Indicates the itinerary is New
-    :cvar ORIGINAL: Indicates the itinerary is Original
+    Properties
+    ----------
+    NEW: Indicates the itinerary is New
+    ORIGINAL: Indicates the itinerary is Original
     """
     NEW = "New"
     ORIGINAL = "Original"
@@ -3893,10 +3661,7 @@ class TypeItineraryType(Enum):
 
 @dataclass
 class TypeKeyBasedReference:
-    """Generic type to be used for Key based reference.
-
-    :ivar key:
-    """
+    """Generic type to be used for Key based reference."""
     class Meta:
         name = "typeKeyBasedReference"
 
@@ -3911,14 +3676,7 @@ class TypeKeyBasedReference:
 
 
 class TypeLicenseCode(Enum):
-    """The type of license assigned to an agent.
-
-    :cvar STANDARD:
-    :cvar STANDARD_PLUS:
-    :cvar ENTERPRISE:
-    :cvar TE_ONLY:
-    :cvar U_API:
-    """
+    """The type of license assigned to an agent."""
     STANDARD = "Standard"
     STANDARD_PLUS = "Standard Plus"
     ENTERPRISE = "Enterprise"
@@ -3927,15 +3685,7 @@ class TypeLicenseCode(Enum):
 
 
 class TypeLoggingLevel(Enum):
-    """The type of various Logging levels.
-
-    :cvar TRACE:
-    :cvar DEBUG:
-    :cvar INFO:
-    :cvar WARN:
-    :cvar ERROR:
-    :cvar FATAL:
-    """
+    """The type of various Logging levels."""
     TRACE = "TRACE"
     DEBUG = "DEBUG"
     INFO = "INFO"
@@ -3945,24 +3695,13 @@ class TypeLoggingLevel(Enum):
 
 
 class TypeMcofeeType(Enum):
-    """The available Airline service fee types for an MCO.
-
-    :cvar CURRENTLY:
-    :cvar UNDEFINED:
-    """
+    """The available Airline service fee types for an MCO."""
     CURRENTLY = "CURRENTLY"
     UNDEFINED = "UNDEFINED"
 
 
 class TypeMcostatus(Enum):
-    """The available status codes for an MCO.
-
-    :cvar OPEN:
-    :cvar USED:
-    :cvar REFUNDED:
-    :cvar VOIDED:
-    :cvar EXPIRED:
-    """
+    """The available status codes for an MCO."""
     OPEN = "Open"
     USED = "Used"
     REFUNDED = "Refunded"
@@ -3971,12 +3710,7 @@ class TypeMcostatus(Enum):
 
 
 class TypeMcotype(Enum):
-    """The available types for an MCO.
-
-    :cvar AGENCY_SERVICE_FEE:
-    :cvar EXCHANGE_RESIDUAL:
-    :cvar AIRLINE_SERVICE_FEE:
-    """
+    """The available types for an MCO."""
     AGENCY_SERVICE_FEE = "AgencyServiceFee"
     EXCHANGE_RESIDUAL = "ExchangeResidual"
     AIRLINE_SERVICE_FEE = "AirlineServiceFee"
@@ -3984,9 +3718,6 @@ class TypeMcotype(Enum):
 
 @dataclass
 class TypeNonAirReservationRef:
-    """
-    :ivar locator_code:
-    """
     class Meta:
         name = "typeNonAirReservationRef"
 
@@ -4006,9 +3737,11 @@ class TypeNonAirReservationRef:
 class TypeOtasubKey:
     """The attributes and elements in a SubKey.
 
-    :ivar text: Information for a sub key.
-    :ivar name: A subkey to identify the special equipment codes. Applicable when Policy/@Name is EQUIP. Uses OTA CODE "EQP". 1P/1J.
-    :ivar description: A brief description of a subkey.
+    Parameters
+    ----------
+    text: Information for a sub key.
+    name: A subkey to identify the special equipment codes. Applicable when Policy/@Name is EQUIP. Uses OTA CODE "EQP". 1P/1J.
+    description: A brief description of a subkey.
     """
     class Meta:
         name = "typeOTASubKey"
@@ -4040,22 +3773,12 @@ class TypeOtasubKey:
 
 
 class TypeOtherImageSize(Enum):
-    """Other unknown image sizes.
-
-    :cvar X:
-    """
+    """Other unknown image sizes."""
     X = "X"
 
 
 class TypePolicy(Enum):
-    """Available product types.
-
-    :cvar AIR:
-    :cvar VEHICLE:
-    :cvar HOTEL:
-    :cvar RAIL:
-    :cvar TICKETING:
-    """
+    """Available product types."""
     AIR = "Air"
     VEHICLE = "Vehicle"
     HOTEL = "Hotel"
@@ -4066,9 +3789,11 @@ class TypePolicy(Enum):
 @dataclass
 class TypePolicyCodesList:
     """
-    :ivar policy_code: A code that indicates why an item was determined to be ‘out of policy’.
-    :ivar min_policy_code: A code that indicates why the minimum fare or rate was determined to be ‘out of policy’.
-    :ivar max_policy_code: A code that indicates why the maximum fare or rate was determined to be ‘out of policy’.
+    Parameters
+    ----------
+    policy_code: A code that indicates why an item was determined to be ‘out of policy’.
+    min_policy_code: A code that indicates why the minimum fare or rate was determined to be ‘out of policy’.
+    max_policy_code: A code that indicates why the maximum fare or rate was determined to be ‘out of policy’.
     """
     class Meta:
         name = "typePolicyCodesList"
@@ -4103,35 +3828,18 @@ class TypePolicyCodesList:
 
 
 class TypePriceClassOfService(Enum):
-    """
-    :cvar CLASS_BOOKED:
-    :cvar LOWEST_CLASS:
-    """
     CLASS_BOOKED = "ClassBooked"
     LOWEST_CLASS = "LowestClass"
 
 
 class TypePricingType(Enum):
-    """
-    :cvar CLASS_BOOKED:
-    :cvar LOWEST_CLASS:
-    :cvar LOWEST_QUOTE:
-    """
     CLASS_BOOKED = "ClassBooked"
     LOWEST_CLASS = "LowestClass"
     LOWEST_QUOTE = "LowestQuote"
 
 
 class TypeProduct(Enum):
-    """Available product types.
-
-    :cvar AIR:
-    :cvar VEHICLE:
-    :cvar HOTEL:
-    :cvar RAIL:
-    :cvar CRUISE:
-    :cvar OTHER:
-    """
+    """Available product types."""
     AIR = "Air"
     VEHICLE = "Vehicle"
     HOTEL = "Hotel"
@@ -4141,51 +3849,31 @@ class TypeProduct(Enum):
 
 
 class TypeProfileApplicability(Enum):
-    """The applicability of the profile or profile template value.
-
-    :cvar ALWAYS:
-    :cvar OPTIONAL_VALUE:
-    :cvar NEVER:
-    """
+    """The applicability of the profile or profile template value."""
     ALWAYS = "Always"
     OPTIONAL_VALUE = "Optional"
     NEVER = "Never"
 
 
 class TypeProfileEntityStatus(Enum):
-    """Status of the given profile/entity. Any profile with a status other than
-    Active cannot perform most transactions.
+    """Status of the given profile/entity.
 
-    :cvar ACTIVE:
-    :cvar INACTIVE:
+    Any profile with a status other than Active cannot perform most
+    transactions.
     """
     ACTIVE = "Active"
     INACTIVE = "Inactive"
 
 
 class TypeProfileEntityStatusWithDelete(Enum):
-    """Specify whether the change is to update or delete the field.
-
-    :cvar DELETED:
-    :cvar ACTIVE:
-    :cvar INACTIVE:
-    """
+    """Specify whether the change is to update or delete the field."""
     DELETED = "Deleted"
     ACTIVE = "Active"
     INACTIVE = "Inactive"
 
 
 class TypeProfileLevel(Enum):
-    """The type of the profile or profile template.
-
-    :cvar AGENCY:
-    :cvar BRANCH:
-    :cvar BRANCH_GROUP:
-    :cvar AGENT:
-    :cvar ACCOUNT:
-    :cvar TRAVELER_GROUP:
-    :cvar TRAVELER:
-    """
+    """The type of the profile or profile template."""
     AGENCY = "Agency"
     BRANCH = "Branch"
     BRANCH_GROUP = "BranchGroup"
@@ -4196,29 +3884,14 @@ class TypeProfileLevel(Enum):
 
 
 class TypeProfileLevelWithCredential(Enum):
-    """The "profile level" used for association of workflow etc.
-
-    :cvar AGENCY:
-    :cvar BRANCH:
-    :cvar AGENT:
-    """
+    """The "profile level" used for association of workflow etc."""
     AGENCY = "Agency"
     BRANCH = "Branch"
     AGENT = "Agent"
 
 
 class TypeProfileLevelWithSystem(Enum):
-    """The "profile level" used for association of workflow etc.
-
-    :cvar SYSTEM:
-    :cvar AGENCY:
-    :cvar BRANCH:
-    :cvar BRANCH_GROUP:
-    :cvar AGENT:
-    :cvar ACCOUNT:
-    :cvar TRAVELER_GROUP:
-    :cvar TRAVELER:
-    """
+    """The "profile level" used for association of workflow etc."""
     SYSTEM = "System"
     AGENCY = "Agency"
     BRANCH = "Branch"
@@ -4230,17 +3903,7 @@ class TypeProfileLevelWithSystem(Enum):
 
 
 class TypeProfileType(Enum):
-    """A type for unique party identifiers of any party role.
-
-    :cvar AGENCY_GROUP:
-    :cvar AGENCY:
-    :cvar BRANCH_GROUP:
-    :cvar BRANCH:
-    :cvar AGENT:
-    :cvar ACCOUNT:
-    :cvar TRAVELER_GROUP:
-    :cvar TRAVELER:
-    """
+    """A type for unique party identifiers of any party role."""
     AGENCY_GROUP = "AgencyGroup"
     AGENCY = "Agency"
     BRANCH_GROUP = "BranchGroup"
@@ -4254,11 +3917,9 @@ class TypeProfileType(Enum):
 @dataclass
 class TypeProviderReservationDetail:
     """Details of a provider reservation locator consisting of provider locator
-    code and provider code. To be used as a request element type while accessing a
-    specific PNR.
+    code and provider code.
 
-    :ivar provider_code:
-    :ivar provider_locator_code:
+    To be used as a request element type while accessing a specific PNR
     """
     class Meta:
         name = "typeProviderReservationDetail"
@@ -4285,22 +3946,12 @@ class TypeProviderReservationDetail:
 
 
 class TypeProviderToken(Enum):
-    """List of known hosts with terminal access.
-
-    :cvar SABRE:
-    """
+    """List of known hosts with terminal access."""
     SABRE = "Sabre"
 
 
 class TypePurchaseWindow(Enum):
-    """The purchase windows available for merchandising service.
-
-    :cvar BOOKING_ONLY:
-    :cvar TICKETING_ONLY:
-    :cvar CHECK_IN_ONLY:
-    :cvar ANYTIME:
-    :cvar POST_TICKETING:
-    """
+    """The purchase windows available for merchandising service."""
     BOOKING_ONLY = "BookingOnly"
     TICKETING_ONLY = "TicketingOnly"
     CHECK_IN_ONLY = "CheckInOnly"
@@ -4309,14 +3960,7 @@ class TypePurchaseWindow(Enum):
 
 
 class TypeQueueModifyAction(Enum):
-    """Queue action: remove, requeue, move, add, unlock.
-
-    :cvar REMOVE:
-    :cvar REQUEUE:
-    :cvar MOVE:
-    :cvar ADD:
-    :cvar UNLOCK:
-    """
+    """Queue action: remove, requeue, move, add, unlock."""
     REMOVE = "Remove"
     REQUEUE = "Requeue"
     MOVE = "Move"
@@ -4325,23 +3969,7 @@ class TypeQueueModifyAction(Enum):
 
 
 class TypeRateCategory(Enum):
-    """The category of the rate (Best, etc)
-
-    :cvar ASSOCIATION:
-    :cvar BUSINESS:
-    :cvar CORPORATE:
-    :cvar GOVERNMENT:
-    :cvar INDUSTRY:
-    :cvar PACKAGE:
-    :cvar INCLUSIVE:
-    :cvar PROMOTIONAL:
-    :cvar CREDENTIAL:
-    :cvar STANDARD:
-    :cvar CONSORTIUM:
-    :cvar CONVENTION:
-    :cvar NEGOTIATED:
-    :cvar PREPAY:
-    """
+    """The category of the rate (Best, etc)"""
     ASSOCIATION = "Association"
     BUSINESS = "Business"
     CORPORATE = "Corporate"
@@ -4361,8 +3989,10 @@ class TypeRateCategory(Enum):
 @dataclass
 class TypeRateDescription:
     """
-    :ivar text:
-    :ivar name: Optional context name of the text block being returned i.e. Room details
+    Parameters
+    ----------
+    text:
+    name: Optional context name of the text block being returned i.e. Room details
     """
     class Meta:
         name = "typeRateDescription"
@@ -4387,30 +4017,14 @@ class TypeRateDescription:
 
 
 class TypeRateGuarantee(Enum):
-    """The guarantee for this rate.
-
-    :cvar RATE_GUARANTEED:
-    :cvar RATE_QUOTED:
-    :cvar AGENT_ENTERED:
-    """
+    """The guarantee for this rate."""
     RATE_GUARANTEED = "Rate Guaranteed"
     RATE_QUOTED = "Rate Quoted"
     AGENT_ENTERED = "Agent Entered"
 
 
 class TypeRateTimePeriod(Enum):
-    """The period for the rate code (daily, weekly, etc)
-
-    :cvar HOURLY:
-    :cvar DAILY:
-    :cvar WEEKLY:
-    :cvar MONTHLY:
-    :cvar WEEKEND_DAY:
-    :cvar OTHER:
-    :cvar PACKAGE:
-    :cvar BUNDLE:
-    :cvar TOTAL:
-    """
+    """The period for the rate code (daily, weekly, etc)"""
     HOURLY = "Hourly"
     DAILY = "Daily"
     WEEKLY = "Weekly"
@@ -4424,14 +4038,7 @@ class TypeRateTimePeriod(Enum):
 
 class TypeRecordStatus(Enum):
     """Information on whether the Universal Record is Current, Past , Cancelled or
-    Any status.
-
-    :cvar ALL:
-    :cvar PAST:
-    :cvar CURRENT:
-    :cvar CANCELED:
-    :cvar UNKNOWN:
-    """
+    Any status."""
     ALL = "All"
     PAST = "Past"
     CURRENT = "Current"
@@ -4442,9 +4049,11 @@ class TypeRecordStatus(Enum):
 @dataclass
 class TypeRemark:
     """
-    :ivar value:
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar provider_code: Contains the Provider Code of the provider for which this element is used
+    Parameters
+    ----------
+    value:
+    provider_reservation_info_ref: Provider reservation reference key.
+    provider_code: Contains the Provider Code of the provider for which this element is used
     """
     class Meta:
         name = "typeRemark"
@@ -4473,10 +4082,12 @@ class TypeRemark:
 @dataclass
 class TypeRemarkWithTravelerRef:
     """
-    :ivar remark_data: Actual remarks data.
-    :ivar booking_traveler_ref: Reference to Booking Traveler.
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar provider_code: Contains the Provider Code of the provider for which this element is used
+    Parameters
+    ----------
+    remark_data: Actual remarks data.
+    booking_traveler_ref: Reference to Booking Traveler.
+    provider_reservation_info_ref: Provider reservation reference key.
+    provider_code: Contains the Provider Code of the provider for which this element is used
     """
     class Meta:
         name = "typeRemarkWithTravelerRef"
@@ -4518,14 +4129,6 @@ class TypeRemarkWithTravelerRef:
 
 
 class TypeReqSeat(Enum):
-    """
-    :cvar ANY:
-    :cvar AISLE:
-    :cvar BULKHEAD:
-    :cvar EXIT:
-    :cvar WINDOW:
-    :cvar MIDDLE:
-    """
     ANY = "Any"
     AISLE = "Aisle"
     BULKHEAD = "Bulkhead"
@@ -4536,13 +4139,7 @@ class TypeReqSeat(Enum):
 
 class TypeReserveRequirement(Enum):
     """Type of payment required to reserve travel i.e. Hotel Reservation
-    requirement.
-
-    :cvar DEPOSIT:
-    :cvar GUARANTEE:
-    :cvar PREPAYMENT:
-    :cvar OTHER:
-    """
+    requirement."""
     DEPOSIT = "Deposit"
     GUARANTEE = "Guarantee"
     PREPAYMENT = "Prepayment"
@@ -4551,35 +4148,14 @@ class TypeReserveRequirement(Enum):
 
 class TypeResidency(Enum):
     """The passenger residency type.Residence Type can be Employee, National or
-    Resident.
-
-    :cvar EMPLOYEE:
-    :cvar NATIONAL:
-    :cvar RESIDENT:
-    """
+    Resident."""
     EMPLOYEE = "Employee"
     NATIONAL = "National"
     RESIDENT = "Resident"
 
 
 class TypeResponseImageSize(Enum):
-    """Allowable images sizes in response.
-
-    :cvar T:
-    :cvar I:
-    :cvar S:
-    :cvar M:
-    :cvar L:
-    :cvar E:
-    :cvar G:
-    :cvar F:
-    :cvar B:
-    :cvar J:
-    :cvar O:
-    :cvar H:
-    :cvar C:
-    :cvar X:
-    """
+    """Allowable images sizes in response."""
     T = "T"
     I = "I"
     S = "S"
@@ -4600,9 +4176,11 @@ class TypeResponseImageSize(Enum):
 class TypeResultMessage:
     """Used to identify the results of a requests.
 
-    :ivar value:
-    :ivar code:
-    :ivar type: Indicates the type of message (Warning, Error, Info)
+    Parameters
+    ----------
+    value:
+    code:
+    type: Indicates the type of message (Warning, Error, Info)
     """
     class Meta:
         name = "typeResultMessage"
@@ -4627,11 +4205,6 @@ class TypeResultMessage:
     )
 
     class Type(Enum):
-        """
-        :cvar WARNING:
-        :cvar ERROR:
-        :cvar INFO:
-        """
         WARNING = "Warning"
         ERROR = "Error"
         INFO = "Info"
@@ -4645,9 +4218,6 @@ class TypeSearchTimeSpec:
 
 @dataclass
 class TypeSegmentRef:
-    """
-    :ivar key:
-    """
     class Meta:
         name = "typeSegmentRef"
 
@@ -4662,13 +4232,8 @@ class TypeSegmentRef:
 
 
 class TypeSource(Enum):
-    """The source/level at which is item is defined (available through inheritance)
-
-    :cvar AGENCY:
-    :cvar BRANCH_GROUP:
-    :cvar BRANCH:
-    :cvar AGENT:
-    """
+    """The source/level at which is item is defined (available through
+    inheritance)"""
     AGENCY = "Agency"
     BRANCH_GROUP = "BranchGroup"
     BRANCH = "Branch"
@@ -4677,10 +4242,10 @@ class TypeSource(Enum):
 
 @dataclass
 class TypeSpecificTime:
-    """Specify exact times. System will automatically convert to a range according
-    to agency configuration.
+    """Specify exact times.
 
-    :ivar time:
+    System will automatically convert to a range according to agency
+    configuration.
     """
     class Meta:
         name = "typeSpecificTime"
@@ -4698,9 +4263,11 @@ class TypeSpecificTime:
 class TypeStatus(Enum):
     """The status of the service fees.
 
-    :cvar ISSUED: The service fee has been issued.
-    :cvar READY_TO_ISSUE: The service fee is ready to be issued.
-    :cvar ISSUE_LATER: The service fee can be issued later.
+    Properties
+    ----------
+    ISSUED: The service fee has been issued.
+    READY_TO_ISSUE: The service fee is ready to be issued.
+    ISSUE_LATER: The service fee can be issued later.
     """
     ISSUED = "Issued"
     READY_TO_ISSUE = "ReadyToIssue"
@@ -4711,9 +4278,11 @@ class TypeStatus(Enum):
 class TypeSubKey:
     """The attributes and elements in a SubKey.
 
-    :ivar text: Information for a sub key.
-    :ivar name: A subkey to identify the specific information within this keyword
-    :ivar description: A brief description of a subkey.
+    Parameters
+    ----------
+    text: Information for a sub key.
+    name: A subkey to identify the specific information within this keyword
+    description: A brief description of a subkey.
     """
     class Meta:
         name = "typeSubKey"
@@ -4746,10 +4315,6 @@ class TypeSubKey:
 
 @dataclass
 class TypeTax:
-    """
-    :ivar amount:
-    :ivar code:
-    """
     class Meta:
         name = "typeTax"
 
@@ -4772,14 +4337,16 @@ class TypeTax:
 class TypeTicketStatus(Enum):
     """Status for the ticket (Ticketed, Voided, etc)
 
-    :cvar U: Code="U" Description="Unticketed"
-    :cvar T: Code="T" Description="Ticketed"
-    :cvar V: Code="V" Description="Voided"
-    :cvar R: Code="R" Description="Refunded"
-    :cvar X: Code="X" Description="eXchanged"
-    :cvar Z: Code="Z" Description="Unknown/Archived/Carrier Modified"
-    :cvar N: Code="N" Description="Unused"
-    :cvar S: Code="S" Description="Used"
+    Properties
+    ----------
+    U: Code="U" Description="Unticketed"
+    T: Code="T" Description="Ticketed"
+    V: Code="V" Description="Voided"
+    R: Code="R" Description="Refunded"
+    X: Code="X" Description="eXchanged"
+    Z: Code="Z" Description="Unknown/Archived/Carrier Modified"
+    N: Code="N" Description="Unused"
+    S: Code="S" Description="Used"
     """
     U = "U"
     T = "T"
@@ -4793,11 +4360,7 @@ class TypeTicketStatus(Enum):
 
 @dataclass
 class TypeTimeRange:
-    """Specify a range of times.
-
-    :ivar earliest_time:
-    :ivar latest_time:
-    """
+    """Specify a range of times."""
     class Meta:
         name = "typeTimeRange"
 
@@ -4820,44 +4383,14 @@ class TypeTimeRange:
 
 
 class TypeTrinary(Enum):
-    """Extension of boolean, that allows for unknown values.
-
-    :cvar TRUE_VALUE:
-    :cvar FALSE_VALUE:
-    :cvar UNKNOWN:
-    """
+    """Extension of boolean, that allows for unknown values."""
     TRUE_VALUE = "true"
     FALSE_VALUE = "false"
     UNKNOWN = "unknown"
 
 
 class TypeVehicleCategory(Enum):
-    """The category of vehicle.
-
-    :cvar CAR:
-    :cvar VAN:
-    :cvar SUV:
-    :cvar CONVERTIBLE:
-    :cvar TRUCK:
-    :cvar STATION_WAGON:
-    :cvar PICKUP:
-    :cvar ALL_TERRAIN:
-    :cvar RECREATIONAL:
-    :cvar SPORT:
-    :cvar SPECIAL:
-    :cvar EXTENDED_CAB_PICKUP:
-    :cvar REGULAR_CAB_PICKUP:
-    :cvar SPECIAL_OFFER:
-    :cvar COUPE:
-    :cvar MONOSPACE:
-    :cvar ROADSTER:
-    :cvar CROSSOVER:
-    :cvar MOTORCYCLE:
-    :cvar LIMO:
-    :cvar MOTORHOME:
-    :cvar TWO_WHEEL_VEHICLE:
-    :cvar COMMERCIAL_VAN_OR_TRUCK:
-    """
+    """The category of vehicle."""
     CAR = "Car"
     VAN = "Van"
     SUV = "SUV"
@@ -4884,49 +4417,7 @@ class TypeVehicleCategory(Enum):
 
 
 class TypeVehicleClass(Enum):
-    """The class of vehicle.
-
-    :cvar MINI:
-    :cvar ECONOMY:
-    :cvar COMPACT:
-    :cvar INTERMEDIATE:
-    :cvar STANDARD:
-    :cvar FULLSIZE:
-    :cvar LUXURY:
-    :cvar PREMIUM:
-    :cvar SPECIAL:
-    :cvar MINI_ELITE:
-    :cvar ECONOMY_ELITE:
-    :cvar COMPACT_ELITE:
-    :cvar INTERMEDIATE_ELITE:
-    :cvar STANDARD_ELITE:
-    :cvar FULLSIZE_ELITE:
-    :cvar PREMIUM_ELITE:
-    :cvar LUXURY_ELITE:
-    :cvar OVERSIZE:
-    :cvar SUBCOMPACT:
-    :cvar MINIVAN:
-    :cvar TWELVE_PASSENGER_VAN:
-    :cvar MOVING_VAN:
-    :cvar FIFTEEN_PASSENGER_VAN:
-    :cvar CARGO_VAN:
-    :cvar TWELVE_FOOT_TRUCK:
-    :cvar TWENTY_FOOT_TRUCK:
-    :cvar TWENTYFOUR_FOOT_TRUCK:
-    :cvar TWENTYSIX_FOOT_TRUCK:
-    :cvar MOPED:
-    :cvar STRETCH:
-    :cvar REGULAR:
-    :cvar UNIQUE:
-    :cvar EXOTIC:
-    :cvar SMALL_OR_MEDIUM_TRUCK:
-    :cvar LARGE_TRUCK:
-    :cvar SMALL_SUV:
-    :cvar MEDIUM_SUV:
-    :cvar LARGE_SUV:
-    :cvar EXOTIC_SUV:
-    :cvar FOUR_WHEEL_DRIVE:
-    """
+    """The class of vehicle."""
     MINI = "Mini"
     ECONOMY = "Economy"
     COMPACT = "Compact"
@@ -4970,24 +4461,7 @@ class TypeVehicleClass(Enum):
 
 
 class TypeVehicleLocation(Enum):
-    """The type of location requested, such as resort, city center.
-
-    :cvar TERMINAL:
-    :cvar SHUTTLE_ON_AIRPORT:
-    :cvar SHUTTLE_OFF_AIRPORT:
-    :cvar RAILWAY_STATION:
-    :cvar HOTEL:
-    :cvar CAR_DEALER:
-    :cvar CITY_CENTER_DOWNTOWN:
-    :cvar EAST_OF_CITY_CENTER:
-    :cvar SOUTH_OF_CITY_CENTER:
-    :cvar WEST_OF_CITY_CENTER:
-    :cvar NORTH_OF_CITY_CENTER:
-    :cvar PORT_OR_FERRY:
-    :cvar NEAR_RESORT:
-    :cvar AIRPORT:
-    :cvar UNKNOWN:
-    """
+    """The type of location requested, such as resort, city center."""
     TERMINAL = "Terminal"
     SHUTTLE_ON_AIRPORT = "ShuttleOnAirport"
     SHUTTLE_OFF_AIRPORT = "ShuttleOffAirport"
@@ -5006,14 +4480,6 @@ class TypeVehicleLocation(Enum):
 
 
 class TypeVehicleTransmission(Enum):
-    """
-    :cvar AUTOMATIC:
-    :cvar AUTOMATIC4_WD:
-    :cvar AUTOMATIC_AWD:
-    :cvar MANUAL:
-    :cvar MANUAL4_WD:
-    :cvar MANUAL_AWD:
-    """
     AUTOMATIC = "Automatic"
     AUTOMATIC4_WD = "Automatic4WD"
     AUTOMATIC_AWD = "AutomaticAWD"
@@ -5025,12 +4491,14 @@ class TypeVehicleTransmission(Enum):
 @dataclass
 class TypeVendorLocation:
     """
-    :ivar provider_code: The code of the provider (e.g. 1G, 1S)
-    :ivar vendor_code: The code of the vendor (e.g.  HZ, etc.)
-    :ivar preferred_option: Preferred Option marker for Location.
-    :ivar vendor_location_id: Location identifier
-    :ivar key: Key which maps vendor location with vehicles
-    :ivar more_rates_token: Enter the Token when provided by hotel property, more rates exist. HADS/HSS  support only.
+    Parameters
+    ----------
+    provider_code: The code of the provider (e.g. 1G, 1S)
+    vendor_code: The code of the vendor (e.g.  HZ, etc.)
+    preferred_option: Preferred Option marker for Location.
+    vendor_location_id: Location identifier
+    key: Key which maps vendor location with vehicles
+    more_rates_token: Enter the Token when provided by hotel property, more rates exist. HADS/HSS  support only.
     """
     class Meta:
         name = "typeVendorLocation"
@@ -5090,12 +4558,6 @@ class TypeVendorLocation:
 
 
 class TypeVoucherType(Enum):
-    """
-    :cvar FULL_CREDIT:
-    :cvar GROUP_OR_DAY:
-    :cvar SPECIFIC_VALUE:
-    :cvar REGULAR_VOUCHER:
-    """
     FULL_CREDIT = "FullCredit"
     GROUP_OR_DAY = "GroupOrDay"
     SPECIFIC_VALUE = "SpecificValue"
@@ -5106,20 +4568,22 @@ class TypeVoucherType(Enum):
 class AccountingRemark:
     """An accounting remark container to hold any printable text.
 
-    :ivar remark_data: Actual remarks data.
-    :ivar booking_traveler_ref: Reference to Booking Traveler.
-    :ivar key:
-    :ivar category: A category to group and organize the various
+    Parameters
+    ----------
+    remark_data: Actual remarks data.
+    booking_traveler_ref: Reference to Booking Traveler.
+    key:
+    category: A category to group and organize the various
                         remarks. This is not required, but it is recommended.
-    :ivar type_in_gds:
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar provider_code: Contains the Provider Code of the provider
+    type_in_gds:
+    provider_reservation_info_ref: Provider reservation reference key.
+    provider_code: Contains the Provider Code of the provider
                         for which this accounting remark is used
-    :ivar use_provider_native_mode: Will be true when terminal process required,
+    use_provider_native_mode: Will be true when terminal process required,
                         else false
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5207,22 +4671,24 @@ class ActionStatus:
     """Status of the action that will happen or has happened to the air
     reservation. One Action status for each provider reservation.
 
-    :ivar remark:
-    :ivar type: Identifies the type of action (if any) to take on this air reservation. Only TTL, TAU, TAX and TAW can be set by the user.
-    :ivar ticket_date: Identifies when the action type will happen, or
+    Parameters
+    ----------
+    remark:
+    type: Identifies the type of action (if any) to take on this air reservation. Only TTL, TAU, TAX and TAW can be set by the user.
+    ticket_date: Identifies when the action type will happen, or
                             has happened according to the type.
-    :ivar key: Identifies when the action type will happen, or
+    key: Identifies when the action type will happen, or
                             has happened according to the type.
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar queue_category: Add Category placement to ticketing queue (required in 1P - default is 00)
-    :ivar airport_code: Used with Time Limit to specify the airport location where the ticket is to be issued.
-    :ivar provider_code:
-    :ivar supplier_code:
-    :ivar pseudo_city_code: The Branch PCC in the host system where PNR can be queued for ticketing. When used with TAU it will auto queue to Q10. When used with TAW agent performs manual move to Q.
-    :ivar account_code: Used with TAW. Used to specify a corporate or in house account code to the PNR as part of ticketing arrangement field.
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    provider_reservation_info_ref: Provider reservation reference key.
+    queue_category: Add Category placement to ticketing queue (required in 1P - default is 00)
+    airport_code: Used with Time Limit to specify the airport location where the ticket is to be issued.
+    provider_code:
+    supplier_code:
+    pseudo_city_code: The Branch PCC in the host system where PNR can be queued for ticketing. When used with TAU it will auto queue to Q10. When used with TAW agent performs manual move to Q.
+    account_code: Used with TAW. Used to specify a corporate or in house account code to the PNR as part of ticketing arrangement field.
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5331,13 +4797,15 @@ class ActionStatus:
 
     class Type(Enum):
         """
-        :cvar TAW:
-        :cvar TTL:
-        :cvar TLCXL:
-        :cvar ACTIVE:
-        :cvar CXL:
-        :cvar TAU: Equivalent to TAX in Worldspan
-        :cvar TRH:
+        Properties
+        ----------
+        TAW:
+        TTL:
+        TLCXL:
+        ACTIVE:
+        CXL:
+        TAU: Equivalent to TAX in Worldspan
+        TRH:
         """
         TAW = "TAW"
         TTL = "TTL"
@@ -5350,9 +4818,6 @@ class ActionStatus:
 
 @dataclass
 class AddressRestriction:
-    """
-    :ivar required_field:
-    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -5369,10 +4834,7 @@ class AddressRestriction:
 
 @dataclass
 class AgencyInfo:
-    """Tracks the various agent/agency information.
-
-    :ivar agent_action:
-    """
+    """Tracks the various agent/agency information."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -5396,10 +4858,7 @@ class AgencyPayment(TypeAgencyPayment):
 
 @dataclass
 class Airport(Location):
-    """Airport identifier.
-
-    :ivar code:
-    """
+    """Airport identifier."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -5420,16 +4879,18 @@ class AppliedProfile:
     """A simple container to specify the profiles that were applied to a
     reservation.
 
-    :ivar key: Key for update/delete of the element
-    :ivar traveler_id: The ID of the TravelerProfile that was applied
-    :ivar traveler_name: The name from the TravelerProfile that was applied
-    :ivar account_id: The ID of the AccountProfile that was applied
-    :ivar account_name: The name from the AccountProfile that was applied
-    :ivar immediate_parent_id: The ID of the immediate parent that was applied
-    :ivar immediate_parent_name: The name of the immediate parent that was applied
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    key: Key for update/delete of the element
+    traveler_id: The ID of the TravelerProfile that was applied
+    traveler_name: The name from the TravelerProfile that was applied
+    account_id: The ID of the AccountProfile that was applied
+    account_name: The name from the AccountProfile that was applied
+    immediate_parent_id: The ID of the immediate parent that was applied
+    immediate_parent_name: The name of the immediate parent that was applied
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5502,15 +4963,17 @@ class AppliedProfile:
 @dataclass
 class BaseCoreReq:
     """
-    :ivar billing_point_of_sale_info:
-    :ivar agent_idoverride:
-    :ivar terminal_session_info:
-    :ivar trace_id: Unique identifier for this atomic transaction traced by the user. Use is optional.
-    :ivar token_id: Authentication Token ID used when running in statefull operation. Obtained from the LoginRsp. Use is optional.
-    :ivar authorized_by: Used in showing who authorized the request. Use is optional.
-    :ivar target_branch: Used for Emulation - If authorised will execute the request as if the agent's parent branch is the TargetBranch specified.
-    :ivar override_logging: Use to override the default logging level
-    :ivar language_code: ISO 639 two-character language codes are used to retrieve specific information in the requested language. For Rich Content and Branding, language codes ZH-HANT (Chinese Traditional), ZH-HANS (Chinese Simplified), FR-CA (French Canadian) and PT-BR (Portuguese Brazil) can also be used. For RCH, language codes ENGB, ENUS, DEDE, DECH can also be used. Only certain services support this attribute. Providers: ACH, RCH, 1G, 1V, 1P, 1J.
+    Parameters
+    ----------
+    billing_point_of_sale_info:
+    agent_idoverride:
+    terminal_session_info:
+    trace_id: Unique identifier for this atomic transaction traced by the user. Use is optional.
+    token_id: Authentication Token ID used when running in statefull operation. Obtained from the LoginRsp. Use is optional.
+    authorized_by: Used in showing who authorized the request. Use is optional.
+    target_branch: Used for Emulation - If authorised will execute the request as if the agent's parent branch is the TargetBranch specified.
+    override_logging: Use to override the default logging level
+    language_code: ISO 639 two-character language codes are used to retrieve specific information in the requested language. For Rich Content and Branding, language codes ZH-HANT (Chinese Traditional), ZH-HANS (Chinese Simplified), FR-CA (French Canadian) and PT-BR (Portuguese Brazil) can also be used. For RCH, language codes ENGB, ENUS, DEDE, DECH can also be used. Only certain services support this attribute. Providers: ACH, RCH, 1G, 1V, 1P, 1J.
     """
     billing_point_of_sale_info: Optional[BillingPointOfSaleInfo] = field(
         default=None,
@@ -5588,11 +5051,13 @@ class BaseCoreReq:
 class BaseRsp:
     """The base type for all responses.
 
-    :ivar response_message:
-    :ivar trace_id: Unique identifier for this atomic transaction traced by the user. Use is optional.
-    :ivar transaction_id: System generated unique identifier for this atomic transaction.
-    :ivar response_time: The time (in ms) the system spent processing this request, not including transmission times.
-    :ivar command_history: HTTP link to download command history and debugging information of the request that generated this response. Must be enabled on the system.
+    Parameters
+    ----------
+    response_message:
+    trace_id: Unique identifier for this atomic transaction traced by the user. Use is optional.
+    transaction_id: System generated unique identifier for this atomic transaction.
+    response_time: The time (in ms) the system spent processing this request, not including transmission times.
+    command_history: HTTP link to download command history and debugging information of the request that generated this response. Must be enabled on the system.
     """
     response_message: List[ResponseMessage] = field(
         default_factory=list,
@@ -5637,8 +5102,10 @@ class BaseRsp:
 class BookingTravelerInformation:
     """Booking Traveler information tied to invoice.
 
-    :ivar name:
-    :ivar booking_traveler_ref: A reference to a passenger related to a ticket.
+    Parameters
+    ----------
+    name:
+    booking_traveler_ref: A reference to a passenger related to a ticket.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5662,14 +5129,7 @@ class BookingTravelerInformation:
 
 @dataclass
 class BookingTravelerRef:
-    """Reference Element for Booking Traveler and Loyalty cards.
-
-    :ivar loyalty_card_ref:
-    :ivar drivers_license_ref:
-    :ivar discount_card_ref:
-    :ivar payment_ref:
-    :ivar key:
-    """
+    """Reference Element for Booking Traveler and Loyalty cards."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -5716,9 +5176,11 @@ class BookingTravelerRef:
 @dataclass
 class CardRestriction:
     """
-    :ivar required_field:
-    :ivar code: 2 letter Credit/Debit Card merchant type
-    :ivar name: Card merchant description
+    Parameters
+    ----------
+    required_field:
+    code: 2 letter Credit/Debit Card merchant type
+    name: Card merchant description
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5754,10 +5216,7 @@ class CardRestriction:
 
 @dataclass
 class City(Location):
-    """City identifier.
-
-    :ivar code:
-    """
+    """City identifier."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -5778,8 +5237,10 @@ class CityOrAirport(Location):
     """This element can be used when it is not known whether the value is an
     airport or a city code.
 
-    :ivar code: The airport or city IATA code.
-    :ivar prefer_city: Indicates that the search should prefer city results over airport results.
+    Parameters
+    ----------
+    code: The airport or city IATA code.
+    prefer_city: Indicates that the search should prefer city results over airport results.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5807,15 +5268,17 @@ class CityOrAirport(Location):
 class Commission:
     """Identifies the agency commission.
 
-    :ivar key:
-    :ivar level: The commission percentage level.
-    :ivar type: The commission type.
-    :ivar modifier: Optional commission modifier.
-    :ivar amount: The monetary amount of the commission.
-    :ivar value: Contains alphanumeric or alpha characters intended as 1G Value Code as applicable by BSP of client.
-    :ivar percentage: The percent of the commission.
-    :ivar booking_traveler_ref: A reference to a passenger.
-    :ivar commission_override: This is enabled to override CAT-35 commission error during air ticketing. PROVIDER SUPPORTED:Worldspan and JAL
+    Parameters
+    ----------
+    key:
+    level: The commission percentage level.
+    type: The commission type.
+    modifier: Optional commission modifier.
+    amount: The monetary amount of the commission.
+    value: Contains alphanumeric or alpha characters intended as 1G Value Code as applicable by BSP of client.
+    percentage: The percent of the commission.
+    booking_traveler_ref: A reference to a passenger.
+    commission_override: This is enabled to override CAT-35 commission error during air ticketing. PROVIDER SUPPORTED:Worldspan and JAL
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5894,17 +5357,19 @@ class Commission:
 class CommissionRemark:
     """Identifies the agency commision remarks. Specifically used for Worldspan.
 
-    :ivar provider_reservation_level: Specify commission which is applicable to
+    Parameters
+    ----------
+    provider_reservation_level: Specify commission which is applicable to
                                                             PNR level.
-    :ivar passenger_type_level: Specify commission which is applicable to
+    passenger_type_level: Specify commission which is applicable to
                                                             per PTC level.
-    :ivar key: Key to be used for internal processing.
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar provider_code: Contains the Provider Code of the provider
+    key: Key to be used for internal processing.
+    provider_reservation_info_ref: Provider reservation reference key.
+    provider_code: Contains the Provider Code of the provider
                                                     for which this accounting remark is used
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5965,9 +5430,11 @@ class CommissionRemark:
     @dataclass
     class ProviderReservationLevel:
         """
-        :ivar amount: The monetary amount of the commission.
-        :ivar percentage: The percent of the commission.
-        :ivar commission_cap: Commission cap for the Airline.
+        Parameters
+        ----------
+        amount: The monetary amount of the commission.
+        percentage: The percent of the commission.
+        commission_cap: Commission cap for the Airline.
         """
         amount: Optional[str] = field(
             default=None,
@@ -5995,10 +5462,12 @@ class CommissionRemark:
     @dataclass
     class PassengerTypeLevel:
         """
-        :ivar traveler_type:
-        :ivar amount: The monetary amount of the commission.
-        :ivar percentage: The percent of the commission.
-        :ivar commission_cap: Commission cap for the Airline.
+        Parameters
+        ----------
+        traveler_type:
+        amount: The monetary amount of the commission.
+        percentage: The percent of the commission.
+        commission_cap: Commission cap for the Airline.
         """
         traveler_type: Optional[str] = field(
             default=None,
@@ -6040,13 +5509,15 @@ class ConsolidatorRemark:
     information created by retail agent to  allow a consolidator or other Axess
     users to service their PNR. PROVIDER SUPPORTED: Worldspan and JAL.
 
-    :ivar pseudo_city_code:
-    :ivar key: Key to be used for internal processing.
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar provider_code: Contains the Provider Code of the provider for which this element is used
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    pseudo_city_code:
+    key: Key to be used for internal processing.
+    provider_reservation_info_ref: Provider reservation reference key.
+    provider_code: Contains the Provider Code of the provider for which this element is used
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6103,11 +5574,7 @@ class ConsolidatorRemark:
 
 @dataclass
 class CoordinateLocation(Location):
-    """Specific lat/long location, usually associated with a Distance.
-
-    :ivar latitude:
-    :ivar longitude:
-    """
+    """Specific lat/long location, usually associated with a Distance."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -6129,10 +5596,10 @@ class CoordinateLocation(Location):
 
 @dataclass
 class CustomerId(TypeRemark):
-    """A provider reservation field used to store customer information. It may be
-    used to identify reservations which will/will not be available for access.
+    """A provider reservation field used to store customer information.
 
-    :ivar key:
+    It may be used to identify reservations which will/will not be available
+    for access.
     """
     class Meta:
         name = "CustomerID"
@@ -6151,13 +5618,15 @@ class CustomerId(TypeRemark):
 class DiscountCard:
     """Rail Discount Card Information.
 
-    :ivar key:
-    :ivar code:
-    :ivar description:
-    :ivar number:
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    key:
+    code:
+    description:
+    number:
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6217,9 +5686,11 @@ class DiscountCard:
 class Distance:
     """Container to encapsulate the a distance value with its unit of measure.
 
-    :ivar units:
-    :ivar value:
-    :ivar direction: Directions: S, N, E, W, SE, NW, ...
+    Parameters
+    ----------
+    units:
+    value:
+    direction: Directions: S, N, E, W, SE, NW, ...
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6254,11 +5725,13 @@ class Distance:
 class DriversLicense:
     """Details of drivers license.
 
-    :ivar key:
-    :ivar license_number: The driving license number of the booking traveler.
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    key:
+    license_number: The driving license number of the booking traveler.
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6298,14 +5771,16 @@ class DriversLicense:
 class Email:
     """Container for an email address with a type specifier (max 128 chars)
 
-    :ivar provider_reservation_info_ref: Tagging provider reservation info with Email.
-    :ivar key:
-    :ivar type:
-    :ivar comment:
-    :ivar email_id:
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    provider_reservation_info_ref: Tagging provider reservation info with Email.
+    key:
+    type:
+    comment:
+    email_id:
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6370,21 +5845,23 @@ class Email:
 class GeneralRemark:
     """A textual remark container to hold any printable text. (max 512 chars)
 
-    :ivar remark_data: Actual remarks data.
-    :ivar booking_traveler_ref: Reference to Booking Traveler.
-    :ivar key:
-    :ivar category: A category to group and organize the various remarks. This is not required, but it is recommended.
-    :ivar type_in_gds:
-    :ivar supplier_type: The type of product this reservation is relative to
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar provider_code:
-    :ivar supplier_code:
-    :ivar direction: Direction Incoming or Outgoing of the GeneralRemark.
-    :ivar create_date: The date and time that this GeneralRemark was created.
-    :ivar use_provider_native_mode: Will be true when terminal process required, else false
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    remark_data: Actual remarks data.
+    booking_traveler_ref: Reference to Booking Traveler.
+    key:
+    category: A category to group and organize the various remarks. This is not required, but it is recommended.
+    type_in_gds:
+    supplier_type: The type of product this reservation is relative to
+    provider_reservation_info_ref: Provider reservation reference key.
+    provider_code:
+    supplier_code:
+    direction: Direction Incoming or Outgoing of the GeneralRemark.
+    create_date: The date and time that this GeneralRemark was created.
+    use_provider_native_mode: Will be true when terminal process required, else false
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6507,12 +5984,14 @@ class HostToken:
     know how to route the command(s). You can have multiple active sessions between
     one or more hosts.
 
-    :ivar value:
-    :ivar host: The host associated with this token
-    :ivar key: Unique identifier for this token - use this key when a single HostToken is shared by multiple elements.
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    value:
+    host: The host associated with this token
+    key: Unique identifier for this token - use this key when a single HostToken is shared by multiple elements.
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6555,11 +6034,13 @@ class HostToken:
 @dataclass
 class LinkedUniversalRecord:
     """
-    :ivar locator_code: A Universal Record that need to be linked to the current Universal Record.
-    :ivar key:
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    locator_code: A Universal Record that need to be linked to the current Universal Record.
+    key:
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6600,14 +6081,16 @@ class LinkedUniversalRecord:
 @dataclass
 class LoyaltyProgram:
     """
-    :ivar key:
-    :ivar supplier_code: The code used to identify the Loyalty supplier, e.g. AA, ZE, MC
-    :ivar alliance_level:
-    :ivar membership_program: Loyalty Program membership Id of the traveler specific to Amtrak(2V) Guest Rewards
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    key:
+    supplier_code: The code used to identify the Loyalty supplier, e.g. AA, ZE, MC
+    alliance_level:
+    membership_program: Loyalty Program membership Id of the traveler specific to Amtrak(2V) Guest Rewards
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar level:
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    level:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6669,16 +6152,7 @@ class LoyaltyProgram:
 
 @dataclass
 class MediaItem:
-    """Photos and other media urls for the property referenced above.
-
-    :ivar caption:
-    :ivar height:
-    :ivar width:
-    :ivar type:
-    :ivar url:
-    :ivar icon:
-    :ivar size_code:
-    """
+    """Photos and other media urls for the property referenced above."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -6731,13 +6205,15 @@ class MediaItem:
 class NameRemark:
     """Text that support Name Remarks.
 
-    :ivar remark_data: Actual remarks data.
-    :ivar provider_reservation_info_ref: Tagging provider reservation info with NameRemark.
-    :ivar key:
-    :ivar category: A category to group and organize the various remarks. This is not required, but it is recommended.
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    remark_data: Actual remarks data.
+    provider_reservation_info_ref: Tagging provider reservation info with NameRemark.
+    key:
+    category: A category to group and organize the various remarks. This is not required, but it is recommended.
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6792,15 +6268,17 @@ class NameRemark:
 class Osi:
     """Other Service information sent to the carriers during air bookings.
 
-    :ivar key:
-    :ivar carrier:
-    :ivar code:
-    :ivar text:
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar provider_code: Contains the Provider Code of the provider for which this OSI is used
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    key:
+    carrier:
+    code:
+    text:
+    provider_reservation_info_ref: Provider reservation reference key.
+    provider_code: Contains the Provider Code of the provider for which this OSI is used
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         name = "OSI"
@@ -6875,10 +6353,12 @@ class Osi:
 class OptionalServiceApplicationLimitType:
     """The optional service application limit.
 
-    :ivar applicable_level: Indicates the applicable level for the option
-    :ivar provider_defined_applicable_levels: Indicates the actual provider defined ApplicableLevels which is mapped to Other
-    :ivar maximum_quantity: The maximum quantity allowed for the type
-    :ivar minimum_quantity: Indicates the minimum number of the option that can be selected.
+    Parameters
+    ----------
+    applicable_level: Indicates the applicable level for the option
+    provider_defined_applicable_levels: Indicates the actual provider defined ApplicableLevels which is mapped to Other
+    maximum_quantity: The maximum quantity allowed for the type
+    minimum_quantity: Indicates the minimum number of the option that can be selected.
     """
     applicable_level: Optional[OptionalServiceApplicabilityType] = field(
         default=None,
@@ -6916,9 +6396,11 @@ class OptionalServiceApplicationLimitType:
 class PassengerInfo:
     """Booking Traveler information tied to invoice.
 
-    :ivar name:
-    :ivar booking_traveler_ref: A reference to a passenger related to a ticket.
-    :ivar passenger_type: Passenger Type Code.
+    Parameters
+    ----------
+    name:
+    booking_traveler_ref: A reference to a passenger related to a ticket.
+    passenger_type: Passenger Type Code.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6952,17 +6434,20 @@ class PassengerInfo:
 class Payment:
     """
     Payment information - must be used in conjunction with credit card info
-    :ivar key:
-    :ivar type: Identifies the type of payment. This can be for an itinerary, a traveler, or a service fee for example.
-    :ivar form_of_payment_ref: The credit card that is will be used to make this payment.
-    :ivar booking_traveler_ref: If the type represents a per traveler payment, then this will reference the traveler this payment refers to.
-    :ivar amount:
-    :ivar amount_type: This field displays type of payment amount when it is non-monetary. Presently available/supported value is "Flight Pass Credits".
-    :ivar approximate_amount: It stores the converted payment amount in agency's default currency
-    :ivar status: Status to indicate the business association of the payment element.
-    :ivar el_stat: This attribute is used to show the action results of an element.
+
+    Parameters
+    ----------
+    key:
+    type: Identifies the type of payment. This can be for an itinerary, a traveler, or a service fee for example.
+    form_of_payment_ref: The credit card that is will be used to make this payment.
+    booking_traveler_ref: If the type represents a per traveler payment, then this will reference the traveler this payment refers to.
+    amount:
+    amount_type: This field displays type of payment amount when it is non-monetary. Presently available/supported value is "Flight Pass Credits".
+    approximate_amount: It stores the converted payment amount in agency's default currency
+    status: Status to indicate the business association of the payment element.
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7045,13 +6530,15 @@ class Payment:
 
     class Type(Enum):
         """
-        :cvar AIRLINE_FEE: Payment for all airline based fees (paper ticket fee, SSR, etc.)
-        :cvar DELIVERY_FEE: Payment for agency ticket delivery fee
-        :cvar ITINERARY: Payment for all passengers
-        :cvar PASSENGER: Payment for a single passenger. The BookingTravelerRef attribute must be set.
-        :cvar SERVICE_FEE: Payment for a service fee other than an MCO
-        :cvar OPTIONAL_SERVICE: Payment for an optional service
-        :cvar TICKET_FEE: Deprecated
+        Properties
+        ----------
+        AIRLINE_FEE: Payment for all airline based fees (paper ticket fee, SSR, etc.)
+        DELIVERY_FEE: Payment for agency ticket delivery fee
+        ITINERARY: Payment for all passengers
+        PASSENGER: Payment for a single passenger. The BookingTravelerRef attribute must be set.
+        SERVICE_FEE: Payment for a service fee other than an MCO
+        OPTIONAL_SERVICE: Payment for an optional service
+        TICKET_FEE: Deprecated
         """
         AIRLINE_FEE = "AirlineFee"
         DELIVERY_FEE = "DeliveryFee"
@@ -7064,9 +6551,6 @@ class Payment:
 
 @dataclass
 class PermittedProviders:
-    """
-    :ivar provider:
-    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -7085,18 +6569,20 @@ class PhoneNumber:
     """Consists of type (office, home, fax), location (city code), the country
     code, the number, and an extension.
 
-    :ivar provider_reservation_info_ref:
-    :ivar key:
-    :ivar type:
-    :ivar location: IATA code for airport or city
-    :ivar country_code: Hosts/providers will expect this to be international dialing digits
-    :ivar area_code:
-    :ivar number: The local phone number
-    :ivar extension:
-    :ivar text:
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    provider_reservation_info_ref:
+    key:
+    type:
+    location: IATA code for airport or city
+    country_code: Hosts/providers will expect this to be international dialing digits
+    area_code:
+    number: The local phone number
+    extension:
+    text:
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7189,18 +6675,6 @@ class PhoneNumber:
     )
 
     class Type(Enum):
-        """
-        :cvar AGENCY:
-        :cvar BUSINESS:
-        :cvar MOBILE:
-        :cvar HOME:
-        :cvar FAX:
-        :cvar HOTEL:
-        :cvar OTHER:
-        :cvar NONE_VALUE:
-        :cvar EMAIL:
-        :cvar RESERVATIONS:
-        """
         AGENCY = "Agency"
         BUSINESS = "Business"
         MOBILE = "Mobile"
@@ -7217,12 +6691,14 @@ class PhoneNumber:
 class PolicyInformation:
     """Policy Information required for File Finishing.
 
-    :ivar reason_code: Reason Code
-    :ivar type: Policy Type - Air, Hotel, Car, Rail,
+    Parameters
+    ----------
+    reason_code: Reason Code
+    type: Policy Type - Air, Hotel, Car, Rail,
                                                     Ticketing
-    :ivar name: Policy Name
-    :ivar out_of_policy: In Policy / Out of Policy Indicator
-    :ivar segment_ref:
+    name: Policy Name
+    out_of_policy: In Policy / Out of Policy Indicator
+    segment_ref:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7267,9 +6743,11 @@ class PolicyInformation:
     @dataclass
     class ReasonCode:
         """
-        :ivar out_of_policy: Reason Code - Out of Policy
-        :ivar purpose_of_trip: Reason Code -Purpose of Trip
-        :ivar remark:
+        Parameters
+        ----------
+        out_of_policy: Reason Code - Out of Policy
+        purpose_of_trip: Reason Code -Purpose of Trip
+        remark:
         """
         out_of_policy: Optional[str] = field(
             default=None,
@@ -7296,10 +6774,7 @@ class PolicyInformation:
 
 @dataclass
 class Postscript(TypeRemark):
-    """Postscript Notes.
-
-    :ivar key:
-    """
+    """Postscript Notes."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -7316,11 +6791,13 @@ class Postscript(TypeRemark):
 class ProviderArnksegment:
     """Represents host ARNK segments.
 
-    :ivar previous_segment:
-    :ivar next_segment:
-    :ivar key:
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar provider_segment_order: To identify the appropriate travel sequence for Air/Car/Hotel/Rail segments/reservations in the provider reservation.
+    Parameters
+    ----------
+    previous_segment:
+    next_segment:
+    key:
+    provider_reservation_info_ref: Provider reservation reference key.
+    provider_segment_order: To identify the appropriate travel sequence for Air/Car/Hotel/Rail segments/reservations in the provider reservation.
     """
     class Meta:
         name = "ProviderARNKSegment"
@@ -7366,12 +6843,14 @@ class ProviderArnksegment:
     @dataclass
     class PreviousSegment:
         """
-        :ivar air_segment_ref: Reference to AirSegment from an Air
+        Parameters
+        ----------
+        air_segment_ref: Reference to AirSegment from an Air
         										Reservation.
-        :ivar hotel_reservation_ref: Specify the locator code of Hotel reservation.
-        :ivar vehicle_reservation_ref: Specify the locator code of Vehicle
+        hotel_reservation_ref: Specify the locator code of Hotel reservation.
+        vehicle_reservation_ref: Specify the locator code of Vehicle
         										reservation.
-        :ivar passive_segment_ref: Reference to PassiveSegment from a Passive
+        passive_segment_ref: Reference to PassiveSegment from a Passive
         										Reservation.
         """
         air_segment_ref: Optional[TypeSegmentRef] = field(
@@ -7406,12 +6885,14 @@ class ProviderArnksegment:
     @dataclass
     class NextSegment:
         """
-        :ivar air_segment_ref: Reference to AirSegment from an Air
+        Parameters
+        ----------
+        air_segment_ref: Reference to AirSegment from an Air
         										Reservation.
-        :ivar hotel_reservation_ref: Specify the locator code of Hotel reservation.
-        :ivar vehicle_reservation_ref: Specify the locator code of Vehicle
+        hotel_reservation_ref: Specify the locator code of Hotel reservation.
+        vehicle_reservation_ref: Specify the locator code of Vehicle
         										reservation.
-        :ivar passive_segment_ref: Reference to PassiveSegment from a Passive
+        passive_segment_ref: Reference to PassiveSegment from a Passive
         										Reservation.
         """
         air_segment_ref: Optional[TypeSegmentRef] = field(
@@ -7457,8 +6938,10 @@ class QueuePlace:
     """Allow queue placement of a PNR at the time of booking to be used for
     Providers 1G,1V,1P and 1J.
 
-    :ivar pseudo_city_code: Pseudo City Code
-    :ivar queue_selector: Identifies the Queue Information to be selected for placing the UR
+    Parameters
+    ----------
+    pseudo_city_code: Pseudo City Code
+    queue_selector: Identifies the Queue Information to be selected for placing the UR
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7485,10 +6968,7 @@ class QueuePlace:
 @dataclass
 class RailLocation(Location):
     """RCH specific location code (a.k.a UCodes) which uniquely identifies a train
-    station.
-
-    :ivar code:
-    """
+    station."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -7509,15 +6989,17 @@ class RailLocation(Location):
 class RailSeatAssignment:
     """Identifies the seat assignment for a passenger on RailSegment.
 
-    :ivar characteristic:
-    :ivar key:
-    :ivar status:
-    :ivar seat:
-    :ivar rail_segment_ref:
-    :ivar coach_number:
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    characteristic:
+    key:
+    status:
+    seat:
+    rail_segment_ref:
+    coach_number:
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7588,10 +7070,7 @@ class RailSeatAssignment:
 @dataclass
 class RequestKeyMappings:
     """All the elements for which mapping key sent in the request is different from
-    the mapping key comes in the response.
-
-    :ivar key_mapping:
-    """
+    the mapping key comes in the response."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -7611,17 +7090,19 @@ class ReviewBooking:
     Reservation along with the date time and Queue details. On the date time
     defined in reminders, the message along with the PNR goes to the desired Queue.
 
-    :ivar key: Returned in response. Use it for update of saved review booking.
-    :ivar queue: Queue number, Must be numeric and less than 100.
-    :ivar queue_category: Queue Category, 2 Character Alpha or Numeric.
-    :ivar date_time: Date and Time to place message on designated Queue, Should be prior to the last segment date in the PNR.
-    :ivar pseudo_city_code: Input PCC optional value for placing the PNR into Queue. If not passed, will add as default PNR's Pseudo.
-    :ivar provider_code: The code of the Provider (e.g 1G,1V).
-    :ivar provider_reservation_info_ref: Provider Reservation reference. Returned in the response. Use it for update of saved Review Booking.
-    :ivar remarks: Remark or reminder message. It can be truncated depending on the provider.
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    key: Returned in response. Use it for update of saved review booking.
+    queue: Queue number, Must be numeric and less than 100.
+    queue_category: Queue Category, 2 Character Alpha or Numeric.
+    date_time: Date and Time to place message on designated Queue, Should be prior to the last segment date in the PNR.
+    pseudo_city_code: Input PCC optional value for placing the PNR into Queue. If not passed, will add as default PNR's Pseudo.
+    provider_code: The code of the Provider (e.g 1G,1V).
+    provider_reservation_info_ref: Provider Reservation reference. Returned in the response. Use it for update of saved Review Booking.
+    remarks: Remark or reminder message. It can be truncated depending on the provider.
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7712,24 +7193,26 @@ class ReviewBooking:
 class Ssr:
     """Special serivces like wheel chair, or pet carrier.
 
-    :ivar key:
-    :ivar segment_ref: Reference to the air segment. May be required for some Types.
-    :ivar passive_segment_ref: Reference to the passive segment.
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
-    :ivar type: Programmatic SSRs use codes recognized by the provider/supplier (example, VGML=vegetarian meal code). Manual SSRs do not have an associated programmatic code.
-    :ivar status:
-    :ivar free_text: Certain SSR types will require a free text message. For example MAAS (Meet and assist).
-    :ivar carrier:
-    :ivar carrier_specific_text: Carrier specific information which are not captured in the FreeText field(not present in IATA's standard SSR DOCO format). An example is VISA Expiration Date.
-    :ivar description:
-    :ivar provider_defined_type: Original Type as sent by the provider
-    :ivar ssrrule_ref: UniqueID to associate a rule to the SSR
-    :ivar url:
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    key:
+    segment_ref: Reference to the air segment. May be required for some Types.
+    passive_segment_ref: Reference to the passive segment.
+    provider_reservation_info_ref: Provider reservation reference key.
+    type: Programmatic SSRs use codes recognized by the provider/supplier (example, VGML=vegetarian meal code). Manual SSRs do not have an associated programmatic code.
+    status:
+    free_text: Certain SSR types will require a free text message. For example MAAS (Meet and assist).
+    carrier:
+    carrier_specific_text: Carrier specific information which are not captured in the FreeText field(not present in IATA's standard SSR DOCO format). An example is VISA Expiration Date.
+    description:
+    provider_defined_type: Original Type as sent by the provider
+    ssrrule_ref: UniqueID to associate a rule to the SSR
+    url:
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar profile_id: Key assigned for Secure Flight Document value from the specified profile
-    :ivar profile_secure_flight_doc_key: Unique ID of Booking Traveler's Profile that contains the Secure flight Detail
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    profile_id: Key assigned for Secure Flight Document value from the specified profile
+    profile_secure_flight_doc_key: Unique ID of Booking Traveler's Profile that contains the Secure flight Detail
     """
     class Meta:
         name = "SSR"
@@ -7866,10 +7349,7 @@ class Ssr:
 
 @dataclass
 class SearchEvent(TypeTimeRange):
-    """Search for various reservation events.
-
-    :ivar type:
-    """
+    """Search for various reservation events."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -7886,9 +7366,11 @@ class SearchEvent(TypeTimeRange):
 class SearchTicketing:
     """Search restriction by Agent.
 
-    :ivar ticket_status: Return only PNRs with ticketed, non-ticketed or both
-    :ivar reservation_status: Used only if "TicketStatus" set to "No" or "Both". Return only PNRs with specific reservation status or both statuses.
-    :ivar ticket_date: Identifies when this reservation was ticketed, or when it should be ticketed by (in the event of a TTL)
+    Parameters
+    ----------
+    ticket_status: Return only PNRs with ticketed, non-ticketed or both
+    reservation_status: Used only if "TicketStatus" set to "No" or "Both". Return only PNRs with specific reservation status or both statuses.
+    ticket_date: Identifies when this reservation was ticketed, or when it should be ticketed by (in the event of a TTL)
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7919,16 +7401,18 @@ class SearchTicketing:
 @dataclass
 class SeatAssignment:
     """
-    :ivar key:
-    :ivar status:
-    :ivar seat:
-    :ivar seat_type_code: The 4 letter SSR code like SMSW,NSSW,SMST etc.
-    :ivar segment_ref:
-    :ivar flight_details_ref:
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    key:
+    status:
+    seat:
+    seat_type_code: The 4 letter SSR code like SMSW,NSSW,SMST etc.
+    segment_ref:
+    flight_details_ref:
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar rail_coach_number: Coach number for which rail seatmap/coachmap is returned.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    rail_coach_number: Coach number for which rail seatmap/coachmap is returned.
     """
     key: Optional[str] = field(
         default=None,
@@ -8003,10 +7487,7 @@ class SeatAssignment:
 
 @dataclass
 class SeatAttributes:
-    """Identifies the seat attribute of the service.
-
-    :ivar seat_attribute:
-    """
+    """Identifies the seat attribute of the service."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -8024,15 +7505,17 @@ class SeatAttributes:
 class Segment:
     """The base segment type.
 
-    :ivar segment_remark:
-    :ivar key:
-    :ivar status: Status of this segment.
-    :ivar passive:
-    :ivar travel_order: To identify the appropriate travel sequence for Air/Car/Hotel segments/reservations based on travel dates. This ordering is applicable across the UR not provider or traveler specific
-    :ivar provider_segment_order: To identify the appropriate travel sequence for Air/Car/Hotel/Rail segments/reservations in the provider reservation.
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    segment_remark:
+    key:
+    status: Status of this segment.
+    passive:
+    travel_order: To identify the appropriate travel sequence for Air/Car/Hotel segments/reservations based on travel dates. This ordering is applicable across the UR not provider or traveler specific
+    provider_segment_order: To identify the appropriate travel sequence for Air/Car/Hotel/Rail segments/reservations in the provider reservation.
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     segment_remark: List[SegmentRemark] = field(
         default_factory=list,
@@ -8099,11 +7582,13 @@ class Segment:
 @dataclass
 class SpecialEquipment:
     """
-    :ivar key:
-    :ivar type: Special equipment associated with a specific vehicle
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    key:
+    type: Special equipment associated with a specific vehicle
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -8143,11 +7628,13 @@ class SpecialEquipment:
 class SupplierLocator:
     """Locator code on the host carrier system.
 
-    :ivar segment_ref: Air/Passive Segment Reference
-    :ivar supplier_code: Carrier Code
-    :ivar supplier_locator_code: Carrier reservation locator code
-    :ivar provider_reservation_info_ref: Provider Reservation  reference
-    :ivar create_date_time: The Date and Time which the reservation is received from the Vendor as a SupplierLocator creation Date.
+    Parameters
+    ----------
+    segment_ref: Air/Passive Segment Reference
+    supplier_code: Carrier Code
+    supplier_locator_code: Carrier reservation locator code
+    provider_reservation_info_ref: Provider Reservation  reference
+    create_date_time: The Date and Time which the reservation is received from the Vendor as a SupplierLocator creation Date.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -8198,15 +7685,17 @@ class ThirdPartyInformation:
     """Third party supplier locator information. Specifically applicable for SDK
     booking.
 
-    :ivar segment_ref: Air/Passive Segment Reference
-    :ivar third_party_code: Third party supplier code.
-    :ivar third_party_locator_code: Confirmation number for third party supplier.
-    :ivar third_party_name: Third party supplier name.
-    :ivar provider_reservation_info_ref: Provider Reservation  reference
-    :ivar key: Unique identifier of the third party supplier. Key can be used to modify or delete saved third party information.
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    segment_ref: Air/Passive Segment Reference
+    third_party_code: Third party supplier code.
+    third_party_locator_code: Confirmation number for third party supplier.
+    third_party_name: Third party supplier name.
+    provider_reservation_info_ref: Provider Reservation  reference
+    key: Unique identifier of the third party supplier. Key can be used to modify or delete saved third party information.
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -8279,17 +7768,19 @@ class TravelComplianceData:
     """Travel Compliance and Preferred Supplier information of the traveler
     specific to a segment.
 
-    :ivar policy_compliance:
-    :ivar contract_compliance:
-    :ivar preferred_supplier:
-    :ivar key: System generated key, returned back in the response. This can be used to modify or delete a saved TravelComplianceData.
-    :ivar air_segment_ref: Refers to Air Segment. Applicable only for Air. Ignored for others.
-    :ivar passive_segment_ref: Refers to Passive Segment. Applicable only for Passive. Ignored for others.
-    :ivar rail_segment_ref: Refers to Rail Segment. Applicable only for Rail. Ignored for others.
-    :ivar reservation_locator_ref: This is returned in the response. Any input will be ignored for this attribute. This represents the association of Travel Compliance Data with the uAPI reservation locator code, mainly relevant to Hotel and Vehicle.
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    policy_compliance:
+    contract_compliance:
+    preferred_supplier:
+    key: System generated key, returned back in the response. This can be used to modify or delete a saved TravelComplianceData.
+    air_segment_ref: Refers to Air Segment. Applicable only for Air. Ignored for others.
+    passive_segment_ref: Refers to Passive Segment. Applicable only for Passive. Ignored for others.
+    rail_segment_ref: Refers to Rail Segment. Applicable only for Rail. Ignored for others.
+    reservation_locator_ref: This is returned in the response. Any input will be ignored for this attribute. This represents the association of Travel Compliance Data with the uAPI reservation locator code, mainly relevant to Hotel and Vehicle.
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -8373,8 +7864,10 @@ class TravelComplianceData:
     @dataclass
     class PolicyCompliance:
         """
-        :ivar in_policy: Policy Compliance Indicator. For In-Policy set to 'true', For Out-Of-Policy set to 'false''.
-        :ivar policy_token: Optional text message to set the rule or token for which it's In Policy or Out Of Policy.
+        Parameters
+        ----------
+        in_policy: Policy Compliance Indicator. For In-Policy set to 'true', For Out-Of-Policy set to 'false''.
+        policy_token: Optional text message to set the rule or token for which it's In Policy or Out Of Policy.
         """
         in_policy: Optional[bool] = field(
             default=None,
@@ -8397,8 +7890,10 @@ class TravelComplianceData:
     @dataclass
     class ContractCompliance:
         """
-        :ivar in_contract: Contract Compliance Indicator. For In-Contract set to 'true', For Out-Of-Contract set to 'false'.
-        :ivar contract_token: Optional text message to set the rule or token for which it's In Contract or Out Of Contract.
+        Parameters
+        ----------
+        in_contract: Contract Compliance Indicator. For In-Contract set to 'true', For Out-Of-Contract set to 'false'.
+        contract_token: Optional text message to set the rule or token for which it's In Contract or Out Of Contract.
         """
         in_contract: Optional[bool] = field(
             default=None,
@@ -8421,8 +7916,10 @@ class TravelComplianceData:
     @dataclass
     class PreferredSupplier:
         """
-        :ivar preferred: Preferred Supplier - 'true', 'false'.
-        :ivar profile_type: Indicate profile type. e.g. if Agency Preferred then pass Agency, if Traveler Preferred then pass Traveler.
+        Parameters
+        ----------
+        preferred: Preferred Supplier - 'true', 'false'.
+        profile_type: Indicate profile type. e.g. if Agency Preferred then pass Agency, if Traveler Preferred then pass Traveler.
         """
         preferred: Optional[bool] = field(
             default=None,
@@ -8446,10 +7943,12 @@ class TravelComplianceData:
 class UnassociatedRemark(TypeRemarkWithTravelerRef):
     """A textual remark container to hold non-associated itinerary remarks.
 
-    :ivar key:
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    key:
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -8490,12 +7989,14 @@ class Xmlremark:
     """A remark container to hold an XML document. (max 1024 chars) This will be
     encoded with xml encoding.
 
-    :ivar value:
-    :ivar key:
-    :ivar category: A category to group and organize the various remarks. This is not required, but it is recommended.
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    value:
+    key:
+    category: A category to group and organize the various remarks. This is not required, but it is recommended.
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         name = "XMLRemark"
@@ -8537,10 +8038,6 @@ class Xmlremark:
 
 @dataclass
 class TypeAgencyHierarchyReference:
-    """
-    :ivar profile_id:
-    :ivar profile_type:
-    """
     class Meta:
         name = "typeAgencyHierarchyReference"
 
@@ -8566,10 +8063,12 @@ class TypeAgencyHierarchyReference:
 class TypeAssociatedRemark(TypeRemarkWithTravelerRef):
     """A textual remark container to hold Associated itinerary remarks.
 
-    :ivar key:
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    key:
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         name = "typeAssociatedRemark"
@@ -8599,18 +8098,7 @@ class TypeAssociatedRemark(TypeRemarkWithTravelerRef):
 
 @dataclass
 class TypeErrorInfo:
-    """Container for error data when there is an application error.
-
-    :ivar code:
-    :ivar service:
-    :ivar type:
-    :ivar description:
-    :ivar transaction_id:
-    :ivar trace_id:
-    :ivar command_history:
-    :ivar auxdata:
-    :ivar stack_trace:
-    """
+    """Container for error data when there is an application error."""
     class Meta:
         name = "typeErrorInfo"
 
@@ -8698,25 +8186,27 @@ class TypeFeeInfo:
     """A generic type of fee for those charges which are incurred by the passenger,
     but not necessarily shown on tickets.
 
-    :ivar tax_info_ref: This reference elements will associate relevant taxes to this fee
-    :ivar included_in_base:
-    :ivar base_amount:
-    :ivar description:
-    :ivar sub_code:
-    :ivar key:
-    :ivar amount:
-    :ivar code:
-    :ivar fee_token:
-    :ivar payment_ref: The reference to the one of the air
+    Parameters
+    ----------
+    tax_info_ref: This reference elements will associate relevant taxes to this fee
+    included_in_base:
+    base_amount:
+    description:
+    sub_code:
+    key:
+    amount:
+    code:
+    fee_token:
+    payment_ref: The reference to the one of the air
                       reservation payments if fee included in charge
-    :ivar booking_traveler_ref: Reference to booking traveler
-    :ivar passenger_type_code:
-    :ivar text: Additional Information returned from Supplier.(ACH  only)
-    :ivar provider_code:
-    :ivar supplier_code:
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    booking_traveler_ref: Reference to booking traveler
+    passenger_type_code:
+    text: Additional Information returned from Supplier.(ACH  only)
+    provider_code:
+    supplier_code:
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         name = "typeFeeInfo"
@@ -8857,9 +8347,6 @@ class TypeFeeInfo:
 
     @dataclass
     class TaxInfoRef:
-        """
-        :ivar key:
-        """
         key: Optional[str] = field(
             default=None,
             metadata={
@@ -8874,12 +8361,14 @@ class TypeFeeInfo:
 class TypeKeyword:
     """A complexType for keyword information.
 
-    :ivar sub_key: A further breakdown of a keyword.
-    :ivar text: Information for a keyword.
-    :ivar name: The keyword name.
-    :ivar number: The number for this keyword.
-    :ivar description: A brief description of the keyword
-    :ivar language_code: ISO 639 two-character language codes are used to retrieve specific information in the requested language. For Rich Content and Branding, language codes ZH-HANT (Chinese Traditional), ZH-HANS (Chinese Simplified), FR-CA (French Canadian) and PT-BR (Portuguese Brazil) can also be used. For RCH, language codes ENGB, ENUS, DEDE, DECH can also be used. Only certain services support this attribute. Providers: ACH, RCH, 1G, 1V, 1P, 1J.
+    Parameters
+    ----------
+    sub_key: A further breakdown of a keyword.
+    text: Information for a keyword.
+    name: The keyword name.
+    number: The number for this keyword.
+    description: A brief description of the keyword
+    language_code: ISO 639 two-character language codes are used to retrieve specific information in the requested language. For Rich Content and Branding, language codes ZH-HANT (Chinese Traditional), ZH-HANS (Chinese Simplified), FR-CA (French Canadian) and PT-BR (Portuguese Brazil) can also be used. For RCH, language codes ENGB, ENUS, DEDE, DECH can also be used. Only certain services support this attribute. Providers: ACH, RCH, 1G, 1V, 1P, 1J.
     """
     class Meta:
         name = "typeKeyword"
@@ -8938,11 +8427,13 @@ class TypeKeyword:
 class TypeOtakeyword:
     """A complexType for keyword information.
 
-    :ivar sub_key: A further breakdown of a keyword.
-    :ivar text: Information for a keyword.
-    :ivar name: The keyword name.
-    :ivar number: The number for this keyword.
-    :ivar description: A brief description of the keyword
+    Parameters
+    ----------
+    sub_key: A further breakdown of a keyword.
+    text: Information for a keyword.
+    name: The keyword name.
+    number: The number for this keyword.
+    description: A brief description of the keyword
     """
     class Meta:
         name = "typeOTAKeyword"
@@ -8992,11 +8483,7 @@ class TypeOtakeyword:
 
 @dataclass
 class TypeProfileRef:
-    """ProfileEntityID and ProfileLevel together identity a profile entity.
-
-    :ivar profile_entity_id:
-    :ivar profile_level:
-    """
+    """ProfileEntityID and ProfileLevel together identity a profile entity."""
     class Meta:
         name = "typeProfileRef"
 
@@ -9021,10 +8508,12 @@ class TypeProfileRef:
 @dataclass
 class TypeProviderReservationSpecificInfo:
     """
-    :ivar operated_by: Cross accrual carrier info
-    :ivar provider_reservation_info_ref: Tagging provider reservation info with LoyaltyCard.
-    :ivar provider_reservation_level: If true means Loyalty card is applied at ProviderReservation level.
-    :ivar reservation_level: If true means Loyalty card is applied at Universal Record Reservation level e.g. Hotel Reservation, Vehicle Reservation etc.
+    Parameters
+    ----------
+    operated_by: Cross accrual carrier info
+    provider_reservation_info_ref: Tagging provider reservation info with LoyaltyCard.
+    provider_reservation_level: If true means Loyalty card is applied at ProviderReservation level.
+    reservation_level: If true means Loyalty card is applied at Universal Record Reservation level e.g. Hotel Reservation, Vehicle Reservation etc.
     """
     class Meta:
         name = "typeProviderReservationSpecificInfo"
@@ -9068,17 +8557,19 @@ class TypeProviderReservationSpecificInfo:
 class TypeStructuredAddress:
     """A fully structured address.
 
-    :ivar address_name:
-    :ivar street: The Address street and number, e.g. 105 Main St.
-    :ivar city: The city name for the requested address, e.g. Atlanta.
-    :ivar state: The State or Province of address requested, e.g. CA, Ontario.
-    :ivar postal_code: The 5-15 alphanumeric postal Code for the requested address, e.g. 90210.
-    :ivar country: The Full country name or two letter ISO country code e.g. US, France. A two letter country code is required for a Postal Code Searches.
-    :ivar provider_reservation_info_ref: Tagging provider reservation info with Address.
-    :ivar key: Key for update/delete of the element
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    address_name:
+    street: The Address street and number, e.g. 105 Main St.
+    city: The city name for the requested address, e.g. Atlanta.
+    state: The State or Province of address requested, e.g. CA, Ontario.
+    postal_code: The 5-15 alphanumeric postal Code for the requested address, e.g. 90210.
+    country: The Full country name or two letter ISO country code e.g. US, France. A two letter country code is required for a Postal Code Searches.
+    provider_reservation_info_ref: Tagging provider reservation info with Address.
+    key: Key for update/delete of the element
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         name = "typeStructuredAddress"
@@ -9175,30 +8666,32 @@ class TypeStructuredAddress:
 @dataclass
 class TypeTaxInfo:
     """
-    :ivar tax_detail:
-    :ivar included_in_base:
-    :ivar key: The tax key represents a valid key of tax
-    :ivar category: The tax category represents a valid IATA tax
+    Parameters
+    ----------
+    tax_detail:
+    included_in_base:
+    key: The tax key represents a valid key of tax
+    category: The tax category represents a valid IATA tax
                      code.
-    :ivar carrier_defined_category: Optional category, where a carrier has
+    carrier_defined_category: Optional category, where a carrier has
                        used a non-standard IATA tax category. The tax category will be
                        set to "DU"
-    :ivar segment_ref: The segment to which that tax is relative (if
+    segment_ref: The segment to which that tax is relative (if
                        applicable)
-    :ivar flight_details_ref: The flight details that this tax is relative
+    flight_details_ref: The flight details that this tax is relative
                      to (if applicable)
-    :ivar coupon_ref: The coupon to which that tax is relative (if
+    coupon_ref: The coupon to which that tax is relative (if
                      applicable)
-    :ivar amount:
-    :ivar origin_airport:
-    :ivar destination_airport:
-    :ivar country_code:
-    :ivar fare_info_ref:
-    :ivar tax_exempted: This indicates whether the tax specified by
+    amount:
+    origin_airport:
+    destination_airport:
+    country_code:
+    fare_info_ref:
+    tax_exempted: This indicates whether the tax specified by
                      tax category is exempted.
-    :ivar provider_code: Code of the provider returning this TaxInfo.
-    :ivar supplier_code: Code of the supplier returning this TaxInfo.
-    :ivar text: Additional Information returned from Supplier.(ACH  only)
+    provider_code: Code of the provider returning this TaxInfo.
+    supplier_code: Code of the supplier returning this TaxInfo.
+    text: Additional Information returned from Supplier.(ACH  only)
     """
     class Meta:
         name = "typeTaxInfo"
@@ -9341,9 +8834,11 @@ class TypeTaxInfo:
 class TypeTimeSpec:
     """Specifies times as either specific times, or a time range.
 
-    :ivar time_range:
-    :ivar specific_time:
-    :ivar preferred_time: Specifies a time that would be preferred within the time range specified.
+    Parameters
+    ----------
+    time_range:
+    specific_time:
+    preferred_time: Specifies a time that would be preferred within the time range specified.
     """
     class Meta:
         name = "typeTimeSpec"
@@ -9376,8 +8871,10 @@ class TypeTimeSpec:
 @dataclass
 class TypeTransactionsAllowed(TypeBookingTransactionsAllowed):
     """
-    :ivar shopping_enabled: Allow or prohibit shopping transaction for the given product type on this Provider/Supplier. Inheritable.
-    :ivar pricing_enabled: Allow or prohibit pricing transaction for the given product type on this Provider/Supplier. Inheritable.
+    Parameters
+    ----------
+    shopping_enabled: Allow or prohibit shopping transaction for the given product type on this Provider/Supplier. Inheritable.
+    pricing_enabled: Allow or prohibit pricing transaction for the given product type on this Provider/Supplier. Inheritable.
     """
     class Meta:
         name = "typeTransactionsAllowed"
@@ -9402,11 +8899,13 @@ class TypeTransactionsAllowed(TypeBookingTransactionsAllowed):
 class TypeVoucherInformation:
     """Information pertaining to the payment of a Vehicle Rental.
 
-    :ivar voucher_type: Specifies if the Voucher is for Full Credit or a Group/Day or a Monetary Amount or RegularVoucher.
-    :ivar amount: Amount associated with the Voucher.
-    :ivar confirmation_number: Confirmation from the vendor for the voucher
-    :ivar account_name: Associated account name for the voucher
-    :ivar number: To advise car associates of the voucher number and store in the car segment. It is required when VoucherType selected as   "RegularVoucher" for 1P, 1J only.
+    Parameters
+    ----------
+    voucher_type: Specifies if the Voucher is for Full Credit or a Group/Day or a Monetary Amount or RegularVoucher.
+    amount: Amount associated with the Voucher.
+    confirmation_number: Confirmation from the vendor for the voucher
+    account_name: Associated account name for the voucher
+    number: To advise car associates of the voucher number and store in the car segment. It is required when VoucherType selected as   "RegularVoucher" for 1P, 1J only.
     """
     class Meta:
         name = "typeVoucherInformation"
@@ -9453,12 +8952,7 @@ class TypeVoucherInformation:
 
 @dataclass
 class AccountInformation:
-    """Account Information required for File Finishing.
-
-    :ivar address:
-    :ivar phone_number:
-    :ivar account_name:
-    """
+    """Account Information required for File Finishing."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -9488,11 +8982,9 @@ class AccountInformation:
 
 @dataclass
 class AgencyContactInfo:
-    """Generic agency contact information container. It must contain  at least one
-    phone number to be used by an agency.
+    """Generic agency contact information container.
 
-    :ivar phone_number:
-    :ivar key:
+    It must contain  at least one phone number to be used by an agency
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -9517,12 +9009,7 @@ class AgencyContactInfo:
 
 @dataclass
 class AgencyInformation:
-    """Agency Information required for File Finishing.
-
-    :ivar address:
-    :ivar email:
-    :ivar phone_number:
-    """
+    """Agency Information required for File Finishing."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -9555,38 +9042,40 @@ class AgencyInformation:
 class AirExchangeInfo:
     """Provides results of a exchange quote.
 
-    :ivar total_penalty_tax_info:
-    :ivar paid_tax:
-    :ivar ticket_fee_info: Used for rapid reprice. Providers: 1G/1V/1P/1S/1A
-    :ivar reason: Used for rapid reprice. The reason code or text is returned if the
+    Parameters
+    ----------
+    total_penalty_tax_info:
+    paid_tax:
+    ticket_fee_info: Used for rapid reprice. Providers: 1G/1V/1P/1S/1A
+    reason: Used for rapid reprice. The reason code or text is returned if the
                                                     PricingTag is not equal to A, and explains why A was not returned.
                                                     Providers: 1G/1V/1P/1S/1A
-    :ivar fee_info:
-    :ivar tax_info: Itinerary level taxes
-    :ivar exchange_amount:
-    :ivar base_fare:
-    :ivar equivalent_base_fare:
-    :ivar taxes:
-    :ivar change_fee:
-    :ivar forfeit_amount:
-    :ivar refundable:
-    :ivar exchangeable:
-    :ivar first_class_upgrade:
-    :ivar ticket_by_date:
-    :ivar pricing_tag:
-    :ivar equivalent_change_fee:
-    :ivar equivalent_exchange_amount:
-    :ivar add_collection:
-    :ivar residual_value:
-    :ivar total_residual_value:
-    :ivar original_flight_value:
-    :ivar flown_segment_value:
-    :ivar bulk_ticket_advisory:
-    :ivar fare_pull:
-    :ivar passenger_type_code:
-    :ivar passenger_count:
-    :ivar form_of_refund: How the refund will be issued. Values will be MCO or FormOfPayment
-    :ivar refund: Total refund amount.
+    fee_info:
+    tax_info: Itinerary level taxes
+    exchange_amount:
+    base_fare:
+    equivalent_base_fare:
+    taxes:
+    change_fee:
+    forfeit_amount:
+    refundable:
+    exchangeable:
+    first_class_upgrade:
+    ticket_by_date:
+    pricing_tag:
+    equivalent_change_fee:
+    equivalent_exchange_amount:
+    add_collection:
+    residual_value:
+    total_residual_value:
+    original_flight_value:
+    flown_segment_value:
+    bulk_ticket_advisory:
+    fare_pull:
+    passenger_type_code:
+    passenger_count:
+    form_of_refund: How the refund will be issued. Values will be MCO or FormOfPayment
+    refund: Total refund amount.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -9812,10 +9301,6 @@ class AirExchangeInfo:
 
     @dataclass
     class TotalPenaltyTaxInfo:
-        """
-        :ivar penalty_tax_info:
-        :ivar total_penalty_tax:
-        """
         penalty_tax_info: List[TypeTax] = field(
             default_factory=list,
             metadata={
@@ -9834,11 +9319,6 @@ class AirExchangeInfo:
 
     @dataclass
     class TicketFeeInfo:
-        """
-        :ivar base:
-        :ivar tax:
-        :ivar total:
-        """
         base: Optional[str] = field(
             default=None,
             metadata={
@@ -9871,10 +9351,7 @@ class AirSeatAssignment(SeatAssignment):
 
 @dataclass
 class BaseCoreSearchReq(BaseCoreReq):
-    """Base Request for Air Search.
-
-    :ivar next_result_reference:
-    """
+    """Base Request for Air Search."""
     next_result_reference: List[NextResultReference] = field(
         default_factory=list,
         metadata={
@@ -9888,10 +9365,6 @@ class BaseCoreSearchReq(BaseCoreReq):
 
 @dataclass
 class BaseReq(BaseCoreReq):
-    """
-    :ivar override_pcc:
-    :ivar retrieve_provider_reservation_details:
-    """
     override_pcc: Optional[OverridePcc] = field(
         default=None,
         metadata={
@@ -9911,9 +9384,6 @@ class BaseReq(BaseCoreReq):
 
 @dataclass
 class BaseSearchRsp(BaseRsp):
-    """
-    :ivar next_result_reference:
-    """
     next_result_reference: List[NextResultReference] = field(
         default_factory=list,
         metadata={
@@ -9929,14 +9399,16 @@ class BaseSearchRsp(BaseRsp):
 class DeliveryInfo:
     """Container to encapsulate all delivery related information.
 
-    :ivar shipping_address:
-    :ivar phone_number:
-    :ivar email:
-    :ivar general_remark:
-    :ivar provider_reservation_info_ref: Tagging provider reservation info with Delivery Info.
-    :ivar type: An arbitrary identifier to categorize this delivery info
-    :ivar signature_required: Indicates whether a signature shoud be required in order to make the delivery.
-    :ivar tracking_number: The tracking number of the shipping company making the delivery.
+    Parameters
+    ----------
+    shipping_address:
+    phone_number:
+    email:
+    general_remark:
+    provider_reservation_info_ref: Tagging provider reservation info with Delivery Info.
+    type: An arbitrary identifier to categorize this delivery info
+    signature_required: Indicates whether a signature shoud be required in order to make the delivery.
+    tracking_number: The tracking number of the shipping company making the delivery.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -10015,10 +9487,7 @@ class ErrorInfo(TypeErrorInfo):
 
 @dataclass
 class HostTokenList:
-    """The shared object list of Host Tokens.
-
-    :ivar host_token:
-    """
+    """The shared object list of Host Tokens."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -10037,11 +9506,13 @@ class HostTokenList:
 class InvoiceData:
     """List of invoices only for 1G/1V.
 
-    :ivar booking_traveler_information:
-    :ivar key:
-    :ivar invoice_number: Invoice number
-    :ivar issue_date: Invoice issue date
-    :ivar provider_reservation_info_ref: Provider reservation reference key.
+    Parameters
+    ----------
+    booking_traveler_information:
+    key:
+    invoice_number: Invoice number
+    issue_date: Invoice issue date
+    provider_reservation_info_ref: Provider reservation reference key.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -10090,10 +9561,12 @@ class InvoiceData:
 @dataclass
 class InvoiceRemark(TypeAssociatedRemark):
     """
-    :ivar air_segment_ref: Reference to AirSegment from an Air Reservation.
-    :ivar hotel_reservation_ref: Specify the locator code of Hotel reservation.
-    :ivar vehicle_reservation_ref: Specify the locator code of Vehicle reservation.
-    :ivar passive_segment_ref: Reference to PassiveSegment from a Passive Reservation.
+    Parameters
+    ----------
+    air_segment_ref: Reference to AirSegment from an Air Reservation.
+    hotel_reservation_ref: Specify the locator code of Hotel reservation.
+    vehicle_reservation_ref: Specify the locator code of Vehicle reservation.
+    passive_segment_ref: Reference to PassiveSegment from a Passive Reservation.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -10145,22 +9618,24 @@ class LocationAddress(TypeStructuredAddress):
 class LoyaltyCard:
     """Provider loyalty card information.
 
-    :ivar provider_reservation_specific_info:
-    :ivar key:
-    :ivar supplier_code: The code used to identify the Loyalty supplier, e.g. AA, ZE, MC
-    :ivar alliance_level:
-    :ivar membership_program: Loyalty Program membership Id of the traveler specific to Amtrak(2V) Guest Rewards
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    provider_reservation_specific_info:
+    key:
+    supplier_code: The code used to identify the Loyalty supplier, e.g. AA, ZE, MC
+    alliance_level:
+    membership_program: Loyalty Program membership Id of the traveler specific to Amtrak(2V) Guest Rewards
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar card_number:
-    :ivar status:
-    :ivar membership_status:
-    :ivar free_text:
-    :ivar supplier_type:
-    :ivar level:
-    :ivar priority_code:
-    :ivar vendor_location_ref:
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    card_number:
+    status:
+    membership_status:
+    free_text:
+    supplier_type:
+    level:
+    priority_code:
+    vendor_location_ref:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -10285,10 +9760,12 @@ class LoyaltyCard:
 @dataclass
 class Mcoinformation:
     """
-    :ivar passenger_info:
-    :ivar mconumber: The unique MCO number
-    :ivar status: Current status of the MCO
-    :ivar mcotype: The Type of MCO. Once of Agency Fee, Airline Service Fee, or Residual value from an Exchange.
+    Parameters
+    ----------
+    passenger_info:
+    mconumber: The unique MCO number
+    status: Current status of the MCO
+    mcotype: The Type of MCO. Once of Agency Fee, Airline Service Fee, or Residual value from an Exchange.
     """
     class Meta:
         name = "MCOInformation"
@@ -10328,11 +9805,13 @@ class Mcoinformation:
 @dataclass
 class McopriceData:
     """
-    :ivar tax_info:
-    :ivar commission:
-    :ivar mcoamount: The total value of the MCO including any processing fees.
-    :ivar mcoequivalent_fare: Exchange value of the currency actually collected.
-    :ivar mcototal_amount: The Total amount for the MCO.
+    Parameters
+    ----------
+    tax_info:
+    commission:
+    mcoamount: The total value of the MCO including any processing fees.
+    mcoequivalent_fare: Exchange value of the currency actually collected.
+    mcototal_amount: The Total amount for the MCO.
     """
     class Meta:
         name = "MCOPriceData"
@@ -10379,8 +9858,10 @@ class McopriceData:
     @dataclass
     class Commission:
         """
-        :ivar amount: The monetary amount.
-        :ivar percentage: The percentage.
+        Parameters
+        ----------
+        amount: The monetary amount.
+        percentage: The percentage.
         """
         amount: Optional[str] = field(
             default=None,
@@ -10402,16 +9883,7 @@ class McopriceData:
 @dataclass
 class PassiveInfo:
     """Used by CreateReservationReq for passing in elements normally found post-
-    booking.
-
-    :ivar ticket_number:
-    :ivar confirmation_number:
-    :ivar commission:
-    :ivar provider_code:
-    :ivar provider_locator_code:
-    :ivar supplier_code:
-    :ivar supplier_locator_code:
-    """
+    booking."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -10470,10 +9942,6 @@ class PassiveInfo:
 
 @dataclass
 class PaymentRestriction:
-    """
-    :ivar card_restriction:
-    :ivar address_restriction:
-    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -10500,8 +9968,10 @@ class PaymentRestriction:
 class ReservationName:
     """Container to represent reservation name as appears in GDS booking.
 
-    :ivar booking_traveler_ref:
-    :ivar name_override: To be used if the reservation name is other than booking travelers in the PNR
+    Parameters
+    ----------
+    booking_traveler_ref:
+    name_override: To be used if the reservation name is other than booking travelers in the PNR
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -10526,8 +9996,10 @@ class ReservationName:
 class Ssrinfo:
     """Bundle SSR with BookingTraveler reference in order to add SSR post booking.
 
-    :ivar ssr:
-    :ivar booking_traveler_ref: Reference to Booking Traveler.
+    Parameters
+    ----------
+    ssr:
+    booking_traveler_ref: Reference to Booking Traveler.
     """
     class Meta:
         name = "SSRInfo"
@@ -10554,17 +10026,19 @@ class Ssrinfo:
 @dataclass
 class ServiceData:
     """
-    :ivar seat_attributes:
-    :ivar cabin_class:
-    :ivar ssrref: References to the related SSRs. At present, only reference to ASVC SSR is supported. Supported providers are 1G/1V/1P/1J
-    :ivar data: Data that specifies the details of the merchandising offering (e.g. seat number for seat service)
-    :ivar air_segment_ref: Reference to a segment if the merchandising offering only pertains to that segment. If no segment reference is present this means this offering is for the whole itinerary.
-    :ivar booking_traveler_ref: Reference to a passenger if the merchandising offering only pertains to that passenger. If no passenger reference is present this means this offering is for all passengers.
-    :ivar stop_over: Indicates that there is a significant
+    Parameters
+    ----------
+    seat_attributes:
+    cabin_class:
+    ssrref: References to the related SSRs. At present, only reference to ASVC SSR is supported. Supported providers are 1G/1V/1P/1J
+    data: Data that specifies the details of the merchandising offering (e.g. seat number for seat service)
+    air_segment_ref: Reference to a segment if the merchandising offering only pertains to that segment. If no segment reference is present this means this offering is for the whole itinerary.
+    booking_traveler_ref: Reference to a passenger if the merchandising offering only pertains to that passenger. If no passenger reference is present this means this offering is for all passengers.
+    stop_over: Indicates that there is a significant
                             delay between flights (usually 12 hours or more)
-    :ivar traveler_type: Passenger Type Code.
-    :ivar emdsummary_ref: Reference to the corresponding EMD issued. Supported providers are 1G/1V/1P/1J
-    :ivar emdcoupon_ref: Reference to the corresponding EMD coupon issued. Supported providers are 1G/1V/1P/1J
+    traveler_type: Passenger Type Code.
+    emdsummary_ref: Reference to the corresponding EMD issued. Supported providers are 1G/1V/1P/1J
+    emdcoupon_ref: Reference to the corresponding EMD coupon issued. Supported providers are 1G/1V/1P/1J
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -10647,8 +10121,10 @@ class ServiceData:
 @dataclass
 class ServiceInfo:
     """
-    :ivar description: Description of the Service.  Usually used in tandem with  one or more media items.
-    :ivar media_item:
+    Parameters
+    ----------
+    description: Description of the Service.  Usually used in tandem with  one or more media items.
+    media_item:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -10676,12 +10152,14 @@ class ServiceInfo:
 class TransactionType:
     """Configuration for products by type. Inheritable.
 
-    :ivar air:
-    :ivar hotel:
-    :ivar rail:
-    :ivar vehicle:
-    :ivar passive: For true passive segments such as ground, cruise etc
-    :ivar background_passive: For behind the scenes or background passives Only
+    Parameters
+    ----------
+    air:
+    hotel:
+    rail:
+    vehicle:
+    passive: For true passive segments such as ground, cruise etc
+    background_passive: For behind the scenes or background passives Only
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -10732,15 +10210,17 @@ class TransactionType:
     @dataclass
     class Air(TypeTransactionsAllowed):
         """
-        :ivar tier: Indicate the Tier Level
-        :ivar days_enabled: Allow or prohibit Flexible Days (within a date range) shopping option
-        :ivar weekends_enabled: Allow or prohibit Flexible Weekends shopping option
-        :ivar airports_enabled: Allow or prohibit Flexible Airport (choice of Origin and Destination airports) shopping option
-        :ivar odenabled: Allow or prohibit Flexible Origin and Destination (choice of airports within a radius) shopping option
-        :ivar one_way_shop: Allows or prohibits one way shopping functionality for the associated provisioning provider configuration
-        :ivar flex_explore: Allows or prohibits flex explore functionality for the associated provisioning provider configuration
-        :ivar rapid_reprice_enabled: Allows or prohibits rapid reprice functionality for the associated provisioning provider configuration. Providers: 1G/1V
-        :ivar return_upsell_fare: When set to “true”, Upsell information will be returned in the shop response.  Provider: 1G, 1V, 1P, 1J, ACH
+        Parameters
+        ----------
+        tier: Indicate the Tier Level
+        days_enabled: Allow or prohibit Flexible Days (within a date range) shopping option
+        weekends_enabled: Allow or prohibit Flexible Weekends shopping option
+        airports_enabled: Allow or prohibit Flexible Airport (choice of Origin and Destination airports) shopping option
+        odenabled: Allow or prohibit Flexible Origin and Destination (choice of airports within a radius) shopping option
+        one_way_shop: Allows or prohibits one way shopping functionality for the associated provisioning provider configuration
+        flex_explore: Allows or prohibits flex explore functionality for the associated provisioning provider configuration
+        rapid_reprice_enabled: Allows or prohibits rapid reprice functionality for the associated provisioning provider configuration. Providers: 1G/1V
+        return_upsell_fare: When set to “true”, Upsell information will be returned in the shop response.  Provider: 1G, 1V, 1P, 1J, ACH
         """
         tier: Optional["TransactionType.Air.Tier"] = field(
             default=None,
@@ -10807,11 +10287,6 @@ class TransactionType:
         )
 
         class Tier(Enum):
-            """
-            :cvar VALUE_1:
-            :cvar VALUE_2:
-            :cvar VALUE_3:
-            """
             VALUE_1 = 1
             VALUE_2 = 2
             VALUE_3 = 3
@@ -10822,10 +10297,12 @@ class TravelSegment(Segment):
     """Generic segment used to provide travel information that was not processed by
     the system.
 
-    :ivar origin: The IATA location code for this origination of this entity.
-    :ivar destination: The IATA location code for this destination of this entity.
-    :ivar departure_time: The date and time at which this entity departs. This does not include time zone information since it can be derived from the origin location.
-    :ivar arrival_time: The date and time at which this entity arrives at the destination. This does not include time zone information since it can be derived from the origin location.
+    Parameters
+    ----------
+    origin: The IATA location code for this origination of this entity.
+    destination: The IATA location code for this destination of this entity.
+    departure_time: The date and time at which this entity departs. This does not include time zone information since it can be derived from the origin location.
+    arrival_time: The date and time at which this entity arrives at the destination. This does not include time zone information since it can be derived from the origin location.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -10868,10 +10345,12 @@ class TravelSegment(Segment):
 class TravelerInformation:
     """Traveler Information required for File Finishing.
 
-    :ivar emergency_contact:
-    :ivar home_airport:
-    :ivar visa_expiration_date:
-    :ivar booking_traveler_ref: A reference to a passenger.
+    Parameters
+    ----------
+    emergency_contact:
+    home_airport:
+    visa_expiration_date:
+    booking_traveler_ref: A reference to a passenger.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -10910,9 +10389,11 @@ class TravelerInformation:
     @dataclass
     class EmergencyContact:
         """
-        :ivar phone_number:
-        :ivar name: Name of Emergency Contact Person
-        :ivar relationship: Relationship between Traveler and
+        Parameters
+        ----------
+        phone_number:
+        name: Name of Emergency Contact Person
+        relationship: Relationship between Traveler and
         									Emergency Contact Person
         """
         phone_number: Optional[PhoneNumber] = field(
@@ -10941,8 +10422,10 @@ class TravelerInformation:
 @dataclass
 class TypeAgencyHierarchyLongReference(TypeAgencyHierarchyReference):
     """
-    :ivar profile_version:
-    :ivar profile_name: Initially: Agent: Last, First, Branch: BranchCode, Agency: Name. After new profile  implementation: Agent: UserName, others levels: Name.
+    Parameters
+    ----------
+    profile_version:
+    profile_name: Initially: Agent: Last, First, Branch: BranchCode, Agency: Name. After new profile  implementation: Agent: UserName, others levels: Name.
     """
     class Meta:
         name = "typeAgencyHierarchyLongReference"
@@ -10971,7 +10454,9 @@ class TypeAssociatedRemarkWithSegmentRef(TypeAssociatedRemark):
     """A textual remark container to hold Associated itinerary remarks with segment
     association.
 
-    :ivar segment_ref: Reference to an Air/Passive Segment
+    Parameters
+    ----------
+    segment_ref: Reference to an Air/Passive Segment
     """
     class Meta:
         name = "typeAssociatedRemarkWithSegmentRef"
@@ -10990,7 +10475,9 @@ class TypeFlexibleTimeSpec(TypeTimeSpec):
     """A type which can be used for flexible date/time specification -extends the
     generic type typeTimeSpec to provide extra options for search.
 
-    :ivar search_extra_days: Options to search for extra days on top of the specified date
+    Parameters
+    ----------
+    search_extra_days: Options to search for extra days on top of the specified date
     """
     class Meta:
         name = "typeFlexibleTimeSpec"
@@ -11007,8 +10494,10 @@ class TypeFlexibleTimeSpec(TypeTimeSpec):
     @dataclass
     class SearchExtraDays:
         """
-        :ivar days_before: Number of days to search before the specified date
-        :ivar days_after: Number of days to search after the specified date
+        Parameters
+        ----------
+        days_before: Number of days to search before the specified date
+        days_after: Number of days to search after the specified date
         """
         days_before: Optional[int] = field(
             default=None,
@@ -11028,11 +10517,6 @@ class TypeFlexibleTimeSpec(TypeTimeSpec):
 
 @dataclass
 class TypeLocation:
-    """
-    :ivar airport:
-    :ivar city:
-    :ivar city_or_airport:
-    """
     class Meta:
         name = "typeLocation"
 
@@ -11066,15 +10550,17 @@ class TypeLocation:
 class TypePaymentCard:
     """Container for all credit and debit card information.
 
-    :ivar phone_number:
-    :ivar billing_address: The address to where the billing statements
+    Parameters
+    ----------
+    phone_number:
+    billing_address: The address to where the billing statements
                             for this card are sent. Used for address verification purposes.
-    :ivar type: The 2 letter credit/ debit card type.
-    :ivar number:
-    :ivar exp_date: The Expiration date of this card in YYYY-MM format.
-    :ivar name: The name as it appears on the card.
-    :ivar cvv: Card Verification Code
-    :ivar approval_code: This code is required for an authorization process from the Credit Card company directly,required for some of the CCH carriers.This attribute is also used for EMD retrieve and issuance transactions.
+    type: The 2 letter credit/ debit card type.
+    number:
+    exp_date: The Expiration date of this card in YYYY-MM format.
+    name: The name as it appears on the card.
+    cvv: Card Verification Code
+    approval_code: This code is required for an authorization process from the Credit Card company directly,required for some of the CCH carriers.This attribute is also used for EMD retrieve and issuance transactions.
     """
     class Meta:
         name = "typePaymentCard"
@@ -11149,14 +10635,6 @@ class TypePaymentCard:
 
 @dataclass
 class TypeSearchLocation:
-    """
-    :ivar airport:
-    :ivar city:
-    :ivar city_or_airport:
-    :ivar coordinate_location:
-    :ivar rail_location:
-    :ivar distance:
-    """
     class Meta:
         name = "typeSearchLocation"
 
@@ -11213,11 +10691,13 @@ class TypeSearchLocation:
 @dataclass
 class Apiprovider:
     """
-    :ivar transaction_type:
-    :ivar available_pseudo_city_code:
-    :ivar provider_code: The Provider Code of the host
-    :ivar supplier_code: The Supplier Code of the host
-    :ivar iatacode: Agency IATA or ARC code, used as an ID with airlines.
+    Parameters
+    ----------
+    transaction_type:
+    available_pseudo_city_code:
+    provider_code: The Provider Code of the host
+    supplier_code: The Supplier Code of the host
+    iatacode: Agency IATA or ARC code, used as an ID with airlines.
     """
     class Meta:
         name = "APIProvider"
@@ -11269,7 +10749,9 @@ class Apiprovider:
     @dataclass
     class AvailablePseudoCityCode:
         """
-        :ivar pseudo_city_code: The PseudoCityCode used to connect to the host.
+        Parameters
+        ----------
+        pseudo_city_code: The PseudoCityCode used to connect to the host.
         """
         pseudo_city_code: Optional[str] = field(
             default=None,
@@ -11285,14 +10767,16 @@ class Apiprovider:
 @dataclass
 class BaseReservation:
     """
-    :ivar accounting_remark:
-    :ivar general_remark:
-    :ivar restriction:
-    :ivar passive_info:
-    :ivar locator_code: The unique identifier for this reservation. If this is this View Only UR LocatorCode is '999999'.
-    :ivar create_date: The date and time that this reservation was created.
-    :ivar modified_date: The date and time that this reservation was last modified for any reason.
-    :ivar customer_number:
+    Parameters
+    ----------
+    accounting_remark:
+    general_remark:
+    restriction:
+    passive_info:
+    locator_code: The unique identifier for this reservation. If this is this View Only UR LocatorCode is '999999'.
+    create_date: The date and time that this reservation was created.
+    modified_date: The date and time that this reservation was last modified for any reason.
+    customer_number:
     """
     accounting_remark: List[AccountingRemark] = field(
         default_factory=list,
@@ -11366,9 +10850,6 @@ class BaseReservation:
 
 @dataclass
 class BaseSearchReq(BaseReq):
-    """
-    :ivar next_result_reference:
-    """
     next_result_reference: List[NextResultReference] = field(
         default_factory=list,
         metadata={
@@ -11384,34 +10865,36 @@ class BaseSearchReq(BaseReq):
 class BookingTraveler:
     """A traveler and all their accompanying data.
 
-    :ivar booking_traveler_name:
-    :ivar delivery_info:
-    :ivar phone_number:
-    :ivar email:
-    :ivar loyalty_card:
-    :ivar discount_card:
-    :ivar ssr:
-    :ivar name_remark:
-    :ivar air_seat_assignment:
-    :ivar rail_seat_assignment:
-    :ivar emergency_info:
-    :ivar address:
-    :ivar drivers_license:
-    :ivar applied_profile:
-    :ivar customized_name_data:
-    :ivar travel_compliance_data: Travel Compliance and Preferred Supplier information of the booking traveler specific to a segment. Not applicable to Saved Trip.
-    :ivar travel_info:
-    :ivar key:
-    :ivar traveler_type: Defines the type of traveler used for booking which could be a non-defining type (Companion, Web-fare, etc), or a standard type (Adult, Child, etc).
-    :ivar age: BookingTraveler age
-    :ivar vip: When set to True indicates that the Booking Traveler is a VIP based on agency/customer criteria
-    :ivar dob: Traveler Date of Birth
-    :ivar gender: The BookingTraveler gender type
-    :ivar nationality: Specify ISO country code for nationality of the Booking Traveler
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    booking_traveler_name:
+    delivery_info:
+    phone_number:
+    email:
+    loyalty_card:
+    discount_card:
+    ssr:
+    name_remark:
+    air_seat_assignment:
+    rail_seat_assignment:
+    emergency_info:
+    address:
+    drivers_license:
+    applied_profile:
+    customized_name_data:
+    travel_compliance_data: Travel Compliance and Preferred Supplier information of the booking traveler specific to a segment. Not applicable to Saved Trip.
+    travel_info:
+    key:
+    traveler_type: Defines the type of traveler used for booking which could be a non-defining type (Companion, Web-fare, etc), or a standard type (Adult, Child, etc).
+    age: BookingTraveler age
+    vip: When set to True indicates that the Booking Traveler is a VIP based on agency/customer criteria
+    dob: Traveler Date of Birth
+    gender: The BookingTraveler gender type
+    nationality: Specify ISO country code for nationality of the Booking Traveler
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar name_number: Host Name Number
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    name_number: Host Name Number
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -11632,21 +11115,23 @@ class BookingTravelerInfo:
     """Container that will allow modifying Universal record data that is not
     product specific.
 
-    :ivar booking_traveler_name:
-    :ivar name_remark:
-    :ivar dob: Traveler Date of Birth
-    :ivar travel_info:
-    :ivar email:
-    :ivar phone_number:
-    :ivar address:
-    :ivar emergency_info:
-    :ivar delivery_info:
-    :ivar age:
-    :ivar customized_name_data:
-    :ivar applied_profile:
-    :ivar key:
-    :ivar traveler_type:
-    :ivar gender:
+    Parameters
+    ----------
+    booking_traveler_name:
+    name_remark:
+    dob: Traveler Date of Birth
+    travel_info:
+    email:
+    phone_number:
+    address:
+    emergency_info:
+    delivery_info:
+    age:
+    customized_name_data:
+    applied_profile:
+    key:
+    traveler_type:
+    gender:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -11773,9 +11258,11 @@ class ConnectionPoint(TypeLocation):
 class DebitCard(TypePaymentCard):
     """Container for all debit card information.
 
-    :ivar issue_number: Verification number for Debit Cards
-    :ivar profile_id: The unique ID of the profile that contains the payment details to use.
-    :ivar key: The Key assigned to the payment details value from the specified profile.
+    Parameters
+    ----------
+    issue_number: Verification number for Debit Cards
+    profile_id: The unique ID of the profile that contains the payment details to use.
+    key: The Key assigned to the payment details value from the specified profile.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -11809,13 +11296,15 @@ class FileFinishingInfo:
     """Misc Data required for File Finishing. This data is transient and not saved
     in database.
 
-    :ivar shop_information:
-    :ivar policy_information: Policy Information required for File
+    Parameters
+    ----------
+    shop_information:
+    policy_information: Policy Information required for File
                                                             Finishing. Would repeat per Policy Type
-    :ivar account_information:
-    :ivar agency_information:
-    :ivar traveler_information:
-    :ivar custom_profile_information:
+    account_information:
+    agency_information:
+    traveler_information:
+    custom_profile_information:
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -11871,20 +11360,22 @@ class Group:
     """Represents a traveler group for Group booking and all their accompanying
     data. SUPPORTED PROVIDER: Worldspan and JAL.
 
-    :ivar name: Name of the group in group booking.
-    :ivar delivery_info:
-    :ivar phone_number:
-    :ivar ssrref: Reference Element for SSR.
-    :ivar address:
-    :ivar booking_traveler_ref: Reference Element for Booking Traveler.
-    :ivar key:
-    :ivar traveler_type: Defines the type of traveler used for booking
+    Parameters
+    ----------
+    name: Name of the group in group booking.
+    delivery_info:
+    phone_number:
+    ssrref: Reference Element for SSR.
+    address:
+    booking_traveler_ref: Reference Element for Booking Traveler.
+    key:
+    traveler_type: Defines the type of traveler used for booking
                         which could be a non-defining type (Companion, Web-fare, etc), or a
                         standard type (Adult, Child, etc).
-    :ivar group_size: Represents size of the group
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    group_size: Represents size of the group
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -11978,9 +11469,6 @@ class Group:
 
     @dataclass
     class Ssrref:
-        """
-        :ivar key:
-        """
         key: Optional[str] = field(
             default=None,
             metadata={
@@ -11992,9 +11480,6 @@ class Group:
 
     @dataclass
     class BookingTravelerRef:
-        """
-        :ivar key:
-        """
         key: Optional[str] = field(
             default=None,
             metadata={
@@ -12009,12 +11494,14 @@ class Group:
 class ServiceRuleType:
     """Contains the rules for applying service rules.
 
-    :ivar application_rules: The rules to apply the rule to the itinerary
-    :ivar application_level: Lists the levels where the option is applied in the itinerary. Some options are applied for the entire itinerary, some for entire segments, etc.
-    :ivar modify_rules: Groups the modification rules for the Option
-    :ivar secondary_type_rules: Lists the supported Secondary Codes for the optional / additional service.
-    :ivar remarks: Adds text remarks / rules for the optional / additional service
-    :ivar key: Unique ID to identify an optional service rule
+    Parameters
+    ----------
+    application_rules: The rules to apply the rule to the itinerary
+    application_level: Lists the levels where the option is applied in the itinerary. Some options are applied for the entire itinerary, some for entire segments, etc.
+    modify_rules: Groups the modification rules for the Option
+    secondary_type_rules: Lists the supported Secondary Codes for the optional / additional service.
+    remarks: Adds text remarks / rules for the optional / additional service
+    key: Unique ID to identify an optional service rule
     """
     application_rules: Optional["ServiceRuleType.ApplicationRules"] = field(
         default=None,
@@ -12069,11 +11556,13 @@ class ServiceRuleType:
     @dataclass
     class ApplicationRules:
         """
-        :ivar required_for_all_travelers: Indicates if the option needs to be applied to all travelers in the itinerary if selected
-        :ivar required_for_all_segments: Indicates if the option needs to be applied to all segments in the itinerary if selected
-        :ivar required_for_all_segments_in_od: Indicates if the option needs to be applied to all segments in a origin / destination (connection flights) if selected for one segment in the OD
-        :ivar unselected_option_required: If an UnselectedOption is present in the option, then the Unselected option  needs to be selected even if the option is not selected when this flag is set to true
-        :ivar secondary_option_code_required: If set to true, the secondary option code is required for this option
+        Parameters
+        ----------
+        required_for_all_travelers: Indicates if the option needs to be applied to all travelers in the itinerary if selected
+        required_for_all_segments: Indicates if the option needs to be applied to all segments in the itinerary if selected
+        required_for_all_segments_in_od: Indicates if the option needs to be applied to all segments in a origin / destination (connection flights) if selected for one segment in the OD
+        unselected_option_required: If an UnselectedOption is present in the option, then the Unselected option  needs to be selected even if the option is not selected when this flag is set to true
+        secondary_option_code_required: If set to true, the secondary option code is required for this option
         """
         required_for_all_travelers: Optional[bool] = field(
             default=None,
@@ -12114,10 +11603,12 @@ class ServiceRuleType:
     @dataclass
     class ApplicationLevel:
         """
-        :ivar application_limits: Adds the limits on the number of options that can be selected for a particular type
-        :ivar service_data:
-        :ivar applicable_levels: Indicates the level in the itinerary when the option is applied.
-        :ivar provider_defined_applicable_levels: Indicates the actual provider defined ApplicableLevels which is mapped to Other
+        Parameters
+        ----------
+        application_limits: Adds the limits on the number of options that can be selected for a particular type
+        service_data:
+        applicable_levels: Indicates the level in the itinerary when the option is applied.
+        provider_defined_applicable_levels: Indicates the actual provider defined ApplicableLevels which is mapped to Other
         """
         application_limits: Optional["ServiceRuleType.ApplicationLevel.ApplicationLimits"] = field(
             default=None,
@@ -12155,7 +11646,9 @@ class ServiceRuleType:
         @dataclass
         class ApplicationLimits:
             """
-            :ivar application_limit: The application limits for a particular level
+            Parameters
+            ----------
+            application_limit: The application limits for a particular level
             """
             application_limit: List[OptionalServiceApplicationLimitType] = field(
                 default_factory=list,
@@ -12171,9 +11664,11 @@ class ServiceRuleType:
     @dataclass
     class ModifyRules:
         """
-        :ivar modify_rule: Indicates modification rules for the particular modification type.
-        :ivar supported_modifications: Lists the supported modifications for the itinerary.
-        :ivar provider_defined_modification_type: Indicates the actual provider defined modification type which is mapped to Other
+        Parameters
+        ----------
+        modify_rule: Indicates modification rules for the particular modification type.
+        supported_modifications: Lists the supported modifications for the itinerary.
+        provider_defined_modification_type: Indicates the actual provider defined modification type which is mapped to Other
         """
         modify_rule: List["ServiceRuleType.ModifyRules.ModifyRule"] = field(
             default_factory=list,
@@ -12204,12 +11699,14 @@ class ServiceRuleType:
         @dataclass
         class ModifyRule:
             """
-            :ivar modification: The modificaiton for which this rule group applies.
-            :ivar automatically_applied_on_add: Indicates if the option will be automatically added to new segments / passengers in the itinerary.
-            :ivar can_delete: Indicates if the option can be deleted from the itinerary without segment or passenger modifications
-            :ivar can_add: Indicates if the option can be added to the itinerary without segment or passenger modification
-            :ivar refundable: Indicates if the price of the option is refundable.
-            :ivar provider_defined_modification_type: Indicates the actual provider defined modification type which is mapped to Other
+            Parameters
+            ----------
+            modification: The modificaiton for which this rule group applies.
+            automatically_applied_on_add: Indicates if the option will be automatically added to new segments / passengers in the itinerary.
+            can_delete: Indicates if the option can be deleted from the itinerary without segment or passenger modifications
+            can_add: Indicates if the option can be added to the itinerary without segment or passenger modification
+            refundable: Indicates if the price of the option is refundable.
+            provider_defined_modification_type: Indicates the actual provider defined modification type which is mapped to Other
             """
             modification: Optional[ModificationType] = field(
                 default=None,
@@ -12258,7 +11755,9 @@ class ServiceRuleType:
     @dataclass
     class SecondaryTypeRules:
         """
-        :ivar secondary_type_rule: Lists a single secondary code for the optional / additional service.
+        Parameters
+        ----------
+        secondary_type_rule: Lists a single secondary code for the optional / additional service.
         """
         secondary_type_rule: List["ServiceRuleType.SecondaryTypeRules.SecondaryTypeRule"] = field(
             default_factory=list,
@@ -12274,8 +11773,10 @@ class ServiceRuleType:
         @dataclass
         class SecondaryTypeRule:
             """
-            :ivar application_limit:
-            :ivar secondary_type: The unique type to associate a secondary type in an optional service
+            Parameters
+            ----------
+            application_limit:
+            secondary_type: The unique type to associate a secondary type in an optional service
             """
             application_limit: List[OptionalServiceApplicationLimitType] = field(
                 default_factory=list,
@@ -12299,14 +11800,16 @@ class ServiceRuleType:
 @dataclass
 class TypeCreditCardType(TypePaymentCard):
     """
-    :ivar extended_payment: Used for American Express cards.
-    :ivar customer_reference: Agencies use this to pass the traveler information to the credit card company.
-    :ivar acceptance_override: Override airline restriction on the credit card.
-    :ivar third_party_payment: If true, this indicates that the credit card holder is not one of the passengers.
-    :ivar bank_name: Issuing bank name for this credit card
-    :ivar bank_country_code: ISO Country code associated with the issuing bank
-    :ivar bank_state_code: State code associated with the issuing bank.
-    :ivar enett: Acceptable values are true or false. If set to true it will denote that the credit card used has been issued through Enett. For all other credit card payments this value will be set to false.
+    Parameters
+    ----------
+    extended_payment: Used for American Express cards.
+    customer_reference: Agencies use this to pass the traveler information to the credit card company.
+    acceptance_override: Override airline restriction on the credit card.
+    third_party_payment: If true, this indicates that the credit card holder is not one of the passengers.
+    bank_name: Issuing bank name for this credit card
+    bank_country_code: ISO Country code associated with the issuing bank
+    bank_state_code: State code associated with the issuing bank.
+    enett: Acceptable values are true or false. If set to true it will denote that the credit card used has been issued through Enett. For all other credit card payments this value will be set to false.
     """
     class Meta:
         name = "typeCreditCardType"
@@ -12375,18 +11878,20 @@ class TypeCreditCardType(TypePaymentCard):
 class TypePassengerType:
     """Passenger type code with optional age information.
 
-    :ivar name: Optional passenger Name with associated LoyaltyCard may provide benefit when pricing itineraries using Low Cost Carriers. In general, most carriers do not consider passenger LoyalyCard information when initially pricing itineraries.
-    :ivar loyalty_card:
-    :ivar discount_card:
-    :ivar personal_geography: Passenger personal geography detail to be sent to Host for accessing location specific fares
-    :ivar code: The 3-char IATA passenger type code
-    :ivar age:
-    :ivar dob: Passenger Date of Birth
-    :ivar gender: The passenger gender type
-    :ivar price_ptconly:
-    :ivar booking_traveler_ref: This value should be set for Multiple Passengers in the request.
-    :ivar accompanied_passenger: Container to identify accompanied passenger. Set true means this passenger is accompanied
-    :ivar residency_type: The passenger residence type.
+    Parameters
+    ----------
+    name: Optional passenger Name with associated LoyaltyCard may provide benefit when pricing itineraries using Low Cost Carriers. In general, most carriers do not consider passenger LoyalyCard information when initially pricing itineraries.
+    loyalty_card:
+    discount_card:
+    personal_geography: Passenger personal geography detail to be sent to Host for accessing location specific fares
+    code: The 3-char IATA passenger type code
+    age:
+    dob: Passenger Date of Birth
+    gender: The passenger gender type
+    price_ptconly:
+    booking_traveler_ref: This value should be set for Multiple Passengers in the request.
+    accompanied_passenger: Container to identify accompanied passenger. Set true means this passenger is accompanied
+    residency_type: The passenger residence type.
     """
     class Meta:
         name = "typePassengerType"
@@ -12491,31 +11996,33 @@ class TypePassengerType:
 @dataclass
 class BaseCreateReservationReq(BaseReq):
     """
-    :ivar linked_universal_record:
-    :ivar booking_traveler:
-    :ivar osi:
-    :ivar accounting_remark:
-    :ivar general_remark:
-    :ivar xmlremark:
-    :ivar unassociated_remark:
-    :ivar postscript:
-    :ivar passive_info:
-    :ivar continuity_check_override: This element will be used if user wants to override segment continuity check.
-    :ivar agency_contact_info:
-    :ivar customer_id:
-    :ivar file_finishing_info:
-    :ivar commission_remark:
-    :ivar consolidator_remark:
-    :ivar invoice_remark:
-    :ivar ssr: SSR element outside Booking Traveler without any Segment Ref or Booking Traveler Ref.
-    :ivar email_notification:
-    :ivar queue_place: Allow queue placement of a PNR at the time of booking in AirCreateReservationReq,HotelCreateReservationReq,PassiveCreateReservationReq and VehicleCreateReservationReq for providers 1G,1V,1P and 1J.
-    :ivar rule_name: This attribute is meant to attach a mandatory custom check rule name to a PNR. A non-mandatory custom check rule too can be attached to a PNR.
-    :ivar universal_record_locator_code: Which UniversalRecord should this new reservation be applied to.  If blank, then a new one is created.
-    :ivar provider_locator_code: Which Provider reservation does this reservation get added to.
-    :ivar provider_code: To be used with ProviderLocatorCode, which host the reservation being added to belongs to.
-    :ivar customer_number: Optional client centric customer identifier
-    :ivar version:
+    Parameters
+    ----------
+    linked_universal_record:
+    booking_traveler:
+    osi:
+    accounting_remark:
+    general_remark:
+    xmlremark:
+    unassociated_remark:
+    postscript:
+    passive_info:
+    continuity_check_override: This element will be used if user wants to override segment continuity check.
+    agency_contact_info:
+    customer_id:
+    file_finishing_info:
+    commission_remark:
+    consolidator_remark:
+    invoice_remark:
+    ssr: SSR element outside Booking Traveler without any Segment Ref or Booking Traveler Ref.
+    email_notification:
+    queue_place: Allow queue placement of a PNR at the time of booking in AirCreateReservationReq,HotelCreateReservationReq,PassiveCreateReservationReq and VehicleCreateReservationReq for providers 1G,1V,1P and 1J.
+    rule_name: This attribute is meant to attach a mandatory custom check rule name to a PNR. A non-mandatory custom check rule too can be attached to a PNR.
+    universal_record_locator_code: Which UniversalRecord should this new reservation be applied to.  If blank, then a new one is created.
+    provider_locator_code: Which Provider reservation does this reservation get added to.
+    provider_code: To be used with ProviderLocatorCode, which host the reservation being added to belongs to.
+    customer_number: Optional client centric customer identifier
+    version:
     """
     linked_universal_record: List[LinkedUniversalRecord] = field(
         default_factory=list,
@@ -12731,8 +12238,10 @@ class BaseCreateReservationReq(BaseReq):
 class CreditCard(TypeCreditCardType):
     """Container for all credit card information.
 
-    :ivar profile_id: The unique ID of the profile that contains the payment details to use.
-    :ivar key: The Key assigned to the payment details value from the specified profile.
+    Parameters
+    ----------
+    profile_id: The unique ID of the profile that contains the payment details to use.
+    key: The Key assigned to the payment details value from the specified profile.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -12755,10 +12264,7 @@ class CreditCard(TypeCreditCardType):
 
 @dataclass
 class SearchPassenger(TypePassengerType):
-    """Passenger type with code and optional age information.
-
-    :ivar key:
-    """
+    """Passenger type with code and optional age information."""
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -12775,26 +12281,28 @@ class SearchPassenger(TypePassengerType):
 class FormOfPayment:
     """A Form of Payment used to purchase all or part of a booking.
 
-    :ivar credit_card:
-    :ivar debit_card:
-    :ivar enett_van:
-    :ivar certificate:
-    :ivar ticket_number:
-    :ivar check:
-    :ivar requisition:
-    :ivar misc_form_of_payment:
-    :ivar agency_payment:
-    :ivar united_nations:
-    :ivar direct_payment:
-    :ivar agent_voucher:
-    :ivar payment_advice:
-    :ivar provider_reservation_info_ref:
-    :ivar segment_ref:
-    :ivar bsppayment:
-    :ivar arcpayment:
-    :ivar key:
-    :ivar type:
-    :ivar fulfillment_type: Defines how the client wishes to receive travel documents. Type does not define where or how payment is made. The supported values are  "Ticket on Departure",
+    Parameters
+    ----------
+    credit_card:
+    debit_card:
+    enett_van:
+    certificate:
+    ticket_number:
+    check:
+    requisition:
+    misc_form_of_payment:
+    agency_payment:
+    united_nations:
+    direct_payment:
+    agent_voucher:
+    payment_advice:
+    provider_reservation_info_ref:
+    segment_ref:
+    bsppayment:
+    arcpayment:
+    key:
+    type:
+    fulfillment_type: Defines how the client wishes to receive travel documents. Type does not define where or how payment is made. The supported values are  "Ticket on Departure",
                                                             "Travel Agency",
                                                             "Courier",
                                                             "Standard Mail",
@@ -12808,19 +12316,19 @@ class FormOfPayment:
                                                             "Digital Printing of Ticket at Home",
                                                             "Retrieve Ticket at Eurostar in London"
     Collect booking ticket at a Kiosk, print in agency.
-    :ivar fulfillment_location: Information about the location of the printer.
-    :ivar fulfillment_idtype: Identification type, e.g. credit card, to define how the customer will identify himself when collecting the ticket
-    :ivar fulfillment_idnumber: Identification number, e.g. card number, to define how the customer will identify himself when collecting the ticket
-    :ivar is_agent_type: If this is true then FormOfPayment mention in Type is anAgent type FormOfPayment.
-    :ivar agent_text: This is only relevent when IsAgentType is specified as true. Otherwise this will be ignored.
-    :ivar reuse_fop: Key of the FOP Key to be reused as this Form of Payment.Only Credit and Debit Card will be supported for FOP Reuse.
-    :ivar external_reference:
-    :ivar reusable: Indicates whether the form of payment can be reused or not. Currently applicable for Credit and Debit form of payment
-    :ivar profile_id: The unique ID of the profile that contains the payment details to use.
-    :ivar profile_key: The Key assigned to the payment details value from the specified profile.
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    fulfillment_location: Information about the location of the printer.
+    fulfillment_idtype: Identification type, e.g. credit card, to define how the customer will identify himself when collecting the ticket
+    fulfillment_idnumber: Identification number, e.g. card number, to define how the customer will identify himself when collecting the ticket
+    is_agent_type: If this is true then FormOfPayment mention in Type is anAgent type FormOfPayment.
+    agent_text: This is only relevent when IsAgentType is specified as true. Otherwise this will be ignored.
+    reuse_fop: Key of the FOP Key to be reused as this Form of Payment.Only Credit and Debit Card will be supported for FOP Reuse.
+    external_reference:
+    reusable: Indicates whether the form of payment can be reused or not. Currently applicable for Credit and Debit form of payment
+    profile_id: The unique ID of the profile that contains the payment details to use.
+    profile_key: The Key assigned to the payment details value from the specified profile.
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -13062,16 +12570,18 @@ class FormOfPayment:
 class Guarantee:
     """Payment Guarantee Guarantee, Deposit or PrePayment.
 
-    :ivar credit_card:
-    :ivar other_guarantee_info:
-    :ivar type: Guarantee, Deposit for 1G/1V/1P/1J and PrePayment for 1P/1J only
-    :ivar key: Key for update/delete of the element
-    :ivar reuse_fop: Key of the FOP Key to be reused as this Form of Payment.Only Credit and Debit Card will be supported for FOP Reuse.
-    :ivar external_reference:
-    :ivar reusable: Indicates whether the form of payment can be reused or not. Currently applicable for Credit and Debit form of payment
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    credit_card:
+    other_guarantee_info:
+    type: Guarantee, Deposit for 1G/1V/1P/1J and PrePayment for 1P/1J only
+    key: Key for update/delete of the element
+    reuse_fop: Key of the FOP Key to be reused as this Form of Payment.Only Credit and Debit Card will be supported for FOP Reuse.
+    external_reference:
+    reusable: Indicates whether the form of payment can be reused or not. Currently applicable for Credit and Debit form of payment
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -13147,7 +12657,9 @@ class Guarantee:
 class BaseCreateWithFormOfPaymentReq(BaseCreateReservationReq):
     """Container for BaseCreateReservation along with Form Of Payment.
 
-    :ivar form_of_payment: Provider:1G,1V,1P,1J,ACH,SDK.
+    Parameters
+    ----------
+    form_of_payment: Provider:1G,1V,1P,1J,ACH,SDK.
     """
     form_of_payment: List[FormOfPayment] = field(
         default_factory=list,
@@ -13164,12 +12676,14 @@ class BaseCreateWithFormOfPaymentReq(BaseCreateReservationReq):
 class McoexchangeInfo:
     """Information related to the exchange tickets available for the MCO.
 
-    :ivar form_of_payment:
-    :ivar exchanged_coupon:
-    :ivar original_ticket_number: Airline form and serial number of the original ticket issued.
-    :ivar original_city_code: Location of honoring carrier or operator.
-    :ivar original_ticket_date: Date that the Original ticket was issued.
-    :ivar iatacode: IATA code of the issuing agency.
+    Parameters
+    ----------
+    form_of_payment:
+    exchanged_coupon:
+    original_ticket_number: Airline form and serial number of the original ticket issued.
+    original_city_code: Location of honoring carrier or operator.
+    original_ticket_date: Date that the Original ticket was issued.
+    iatacode: IATA code of the issuing agency.
     """
     class Meta:
         name = "MCOExchangeInfo"
@@ -13229,25 +12743,27 @@ class ServiceFeeInfo:
     """Travel Agency Service Fees (TASF) are charged by the agency through BSP or
     Airline Reporting Corporation (ARC).
 
-    :ivar form_of_payment:
-    :ivar service_fee_tax_info:
-    :ivar credit_card_auth:
-    :ivar payment:
-    :ivar status: Status of the service fee. Possible Values – Issued, ReadyToIssue, IssueLater.
-    :ivar description: The description of the service fee.
-    :ivar key:
-    :ivar confirmation: The confirmation number of the service fee in the merchant host system.
-    :ivar ticket_number: The ticket that this fee was issued in connection with.
-    :ivar booking_traveler_ref: A reference to a passenger.
-    :ivar provider_reservation_info_ref: A reference to the provider reservation info to which the service is tied.
-    :ivar passive_provider_reservation_info_ref: A reference to the passive provider reservation info to which the service is tied.
-    :ivar total_amount: The total amount for this Service Fee including base amount and all taxes.
-    :ivar base_amount: Represents the base price for this entity. This does not include any taxes.
-    :ivar taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated Service Fee TaxInfo array for a breakdown of the individual taxes.
-    :ivar el_stat: This attribute is used to show the action results of an element.
+    Parameters
+    ----------
+    form_of_payment:
+    service_fee_tax_info:
+    credit_card_auth:
+    payment:
+    status: Status of the service fee. Possible Values – Issued, ReadyToIssue, IssueLater.
+    description: The description of the service fee.
+    key:
+    confirmation: The confirmation number of the service fee in the merchant host system.
+    ticket_number: The ticket that this fee was issued in connection with.
+    booking_traveler_ref: A reference to a passenger.
+    provider_reservation_info_ref: A reference to the provider reservation info to which the service is tied.
+    passive_provider_reservation_info_ref: A reference to the passive provider reservation info to which the service is tied.
+    total_amount: The total amount for this Service Fee including base amount and all taxes.
+    base_amount: Represents the base price for this entity. This does not include any taxes.
+    taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated Service Fee TaxInfo array for a breakdown of the individual taxes.
+    el_stat: This attribute is used to show the action results of an element.
                   Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    :ivar key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    :ivar booking_traveler_name: The name of the passenger.
+    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+    booking_traveler_name: The name of the passenger.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -13384,32 +12900,34 @@ class ServiceFeeInfo:
 @dataclass
 class Mco(Mcoinformation):
     """
-    :ivar form_of_payment:
-    :ivar endorsement:
-    :ivar mcoexchange_info:
-    :ivar mcofee_info:
-    :ivar mcoremark:
-    :ivar mcoprice_data:
-    :ivar stock_control:
-    :ivar mcotext:
-    :ivar ticket_type: Ticket issue indicator. Possible values "Pre-paid ticket advice", "Ticket on departure" and "Other" .
-    :ivar ticket_number: The ticket that this MCO was issued in connection with. Could be the ticket that caused the fee, a residual from an exchange, or an airline service fee.
-    :ivar mcoissued: Set to true when the MCO is to be issued and set to false if it is stored for issue at a later time.
-    :ivar mcoissue_date: Date and time in which the MCO was issued.
-    :ivar mcodoc_num: MCO document number.
-    :ivar issue_reason_code: MCO issuing reason code. Possible Values (List): A - Air transportation, B - Surface transportation
+    Parameters
+    ----------
+    form_of_payment:
+    endorsement:
+    mcoexchange_info:
+    mcofee_info:
+    mcoremark:
+    mcoprice_data:
+    stock_control:
+    mcotext:
+    ticket_type: Ticket issue indicator. Possible values "Pre-paid ticket advice", "Ticket on departure" and "Other" .
+    ticket_number: The ticket that this MCO was issued in connection with. Could be the ticket that caused the fee, a residual from an exchange, or an airline service fee.
+    mcoissued: Set to true when the MCO is to be issued and set to false if it is stored for issue at a later time.
+    mcoissue_date: Date and time in which the MCO was issued.
+    mcodoc_num: MCO document number.
+    issue_reason_code: MCO issuing reason code. Possible Values (List): A - Air transportation, B - Surface transportation
     C - Bag shipped as cargo, D - Land arrgs for it, E - Car hire, F - Sleeper / berth
     G - Up-grading, H - Under collections, I - Taxes/fees/charges, J - Deposits down payments
     K - Refundable Balances, L - Hotel accommodations, M - Sundry charges, N - Cancellation fee
     O - Other, P thru Z - airline specific, 1 thru 9 - market specific
-    :ivar plating_carrier: The Plating Carrier for this MCO
-    :ivar tour_operator: Tour Operator - name of honoring carrier or operator.
-    :ivar location: Location of honoring carrier or operator.
-    :ivar tour_code: The Tour Code of the MCO.
-    :ivar provider_code: Contains the Provider Code of the provider that houses this MCO.
-    :ivar provider_locator_code: Contains the Provider Locator Code of the Provider Reservation that houses this MCO.
-    :ivar pseudo_city_code: The PCC in the host system.
-    :ivar expiry_date: E-Voucher’s Expiry Date. This expiry date is specific to Rail product
+    plating_carrier: The Plating Carrier for this MCO
+    tour_operator: Tour Operator - name of honoring carrier or operator.
+    location: Location of honoring carrier or operator.
+    tour_code: The Tour Code of the MCO.
+    provider_code: Contains the Provider Code of the provider that houses this MCO.
+    provider_locator_code: Contains the Provider Locator Code of the Provider Reservation that houses this MCO.
+    pseudo_city_code: The PCC in the host system.
+    expiry_date: E-Voucher’s Expiry Date. This expiry date is specific to Rail product
     """
     class Meta:
         name = "MCO"

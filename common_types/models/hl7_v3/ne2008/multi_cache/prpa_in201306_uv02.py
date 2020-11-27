@@ -63,25 +63,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 class PrpaIn201306Uv02MfmiMt700711Uv01Subject1Value(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -103,14 +84,6 @@ class PrpaIn201306Uv02MfmiMt700711Uv01Subject1Value(Enum):
 
 @dataclass
 class PrpaIn201306Uv02MfmiMt700711Uv01Subject2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar patient:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "PRPA_IN201306UV02.MFMI_MT700711UV01.Subject2"
 
@@ -166,23 +139,6 @@ class PrpaIn201306Uv02MfmiMt700711Uv01Subject2:
 
 @dataclass
 class PrpaIn201306Uv02MfmiMt700711Uv01RegistrationEvent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar subject1:
-    :ivar author:
-    :ivar custodian:
-    :ivar in_fulfillment_of:
-    :ivar definition:
-    :ivar replacement_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "PRPA_IN201306UV02.MFMI_MT700711UV01.RegistrationEvent"
 
@@ -314,15 +270,6 @@ class PrpaIn201306Uv02MfmiMt700711Uv01RegistrationEvent:
 
 @dataclass
 class PrpaIn201306Uv02MfmiMt700711Uv01Subject1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar registration_event:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "PRPA_IN201306UV02.MFMI_MT700711UV01.Subject1"
 
@@ -389,29 +336,6 @@ class PrpaIn201306Uv02MfmiMt700711Uv01Subject1:
 
 @dataclass
 class PrpaIn201306Uv02MfmiMt700711Uv01ControlActProcess:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar effective_time:
-    :ivar priority_code:
-    :ivar reason_code:
-    :ivar language_code:
-    :ivar overseer:
-    :ivar author_or_performer:
-    :ivar data_enterer:
-    :ivar information_recipient:
-    :ivar subject:
-    :ivar reason_of:
-    :ivar query_ack:
-    :ivar query_by_parameter:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "PRPA_IN201306UV02.MFMI_MT700711UV01.ControlActProcess"
 
@@ -589,28 +513,6 @@ class PrpaIn201306Uv02MfmiMt700711Uv01ControlActProcess:
 
 @dataclass
 class PrpaIn201306Uv02McciMt000300Uv01Message:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar creation_time:
-    :ivar security_text:
-    :ivar version_code:
-    :ivar interaction_id:
-    :ivar profile_id:
-    :ivar processing_code:
-    :ivar processing_mode_code:
-    :ivar accept_ack_code:
-    :ivar attachment_text:
-    :ivar receiver:
-    :ivar respond_to:
-    :ivar sender:
-    :ivar attention_line:
-    :ivar acknowledgement:
-    :ivar control_act_process:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_IN201306UV02.MCCI_MT000300UV01.Message"
 
@@ -785,9 +687,6 @@ class PrpaIn201306Uv02McciMt000300Uv01Message:
 
 @dataclass
 class PrpaIn201306Uv02(PrpaIn201306Uv02McciMt000300Uv01Message):
-    """
-    :ivar itsversion:
-    """
     class Meta:
         name = "PRPA_IN201306UV02"
         namespace = "urn:hl7-org:v3"

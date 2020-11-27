@@ -65,19 +65,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class PrpaMt201310Uv02AdministrativeObservation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar value:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.AdministrativeObservation"
 
@@ -171,20 +158,6 @@ class PrpaMt201310Uv02AdministrativeObservation:
 
 @dataclass
 class PrpaMt201310Uv02CareGiver:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar care_giver_person:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.CareGiver"
 
@@ -284,30 +257,11 @@ class PrpaMt201310Uv02CareGiver:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class PrpaMt201310Uv02ContactParty:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar contact_person:
-    :ivar contact_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.ContactParty"
 
@@ -425,16 +379,6 @@ class PrpaMt201310Uv02ContactParty:
 
 @dataclass
 class PrpaMt201310Uv02CoveredParty:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar time:
-    :ivar coverage_record:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.CoveredParty"
 
@@ -507,23 +451,6 @@ class PrpaMt201310Uv02CoveredParty:
 
 @dataclass
 class PrpaMt201310Uv02Employee:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar job_title_name:
-    :ivar job_class_code:
-    :ivar occupation_code:
-    :ivar employer_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.Employee"
 
@@ -649,22 +576,6 @@ class PrpaMt201310Uv02Employee:
 
 @dataclass
 class PrpaMt201310Uv02Group:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar desc:
-    :ivar status_code:
-    :ivar existence_time:
-    :ivar telecom:
-    :ivar addr:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.Group"
 
@@ -777,22 +688,6 @@ class PrpaMt201310Uv02Group:
 
 @dataclass
 class PrpaMt201310Uv02Guardian:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar certificate_text:
-    :ivar guardian_person:
-    :ivar guardian_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.Guardian"
 
@@ -909,24 +804,11 @@ class PrpaMt201310Uv02Guardian:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class PrpaMt201310Uv02LanguageCommunication:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar language_code:
-    :ivar mode_code:
-    :ivar proficiency_level_code:
-    :ivar preference_ind:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.LanguageCommunication"
 
@@ -998,16 +880,6 @@ class PrpaMt201310Uv02LanguageCommunication:
 
 @dataclass
 class PrpaMt201310Uv02Nation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.Nation"
 
@@ -1077,17 +949,6 @@ class PrpaMt201310Uv02Nation:
 
 @dataclass
 class PrpaMt201310Uv02OtherIds:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar scoping_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.OtherIDs"
 
@@ -1167,30 +1028,11 @@ class PrpaMt201310Uv02OtherIds:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class PrpaMt201310Uv02PersonalRelationship:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar relationship_holder1:
-    :ivar relationship_holder2:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.PersonalRelationship"
 
@@ -1307,24 +1149,11 @@ class PrpaMt201310Uv02PersonalRelationship:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class PrpaMt201310Uv02QueryMatchObservation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar value:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.QueryMatchObservation"
 
@@ -1396,19 +1225,6 @@ class PrpaMt201310Uv02QueryMatchObservation:
 
 @dataclass
 class PrpaMt201310Uv02Student:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar school_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.Student"
 
@@ -1500,22 +1316,11 @@ class PrpaMt201310Uv02Student:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class PrpaMt201310Uv02Subject2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar position:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.Subject2"
 
@@ -1571,14 +1376,6 @@ class PrpaMt201310Uv02Subject2:
 
 @dataclass
 class PrpaMt201310Uv02Subject3:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar care_provision:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.Subject3"
 
@@ -1634,16 +1431,6 @@ class PrpaMt201310Uv02Subject3:
 
 @dataclass
 class PrpaMt201310Uv02BirthPlace:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar addr:
-    :ivar birthplace:
-    :ivar subject_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.BirthPlace"
 
@@ -1713,24 +1500,11 @@ class PrpaMt201310Uv02BirthPlace:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class PrpaMt201310Uv02Citizen:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar effective_time:
-    :ivar political_nation:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.Citizen"
 
@@ -1800,26 +1574,11 @@ class PrpaMt201310Uv02Citizen:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class PrpaMt201310Uv02Member:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar group:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.Member"
 
@@ -1905,22 +1664,11 @@ class PrpaMt201310Uv02Member:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class PrpaMt201310Uv02PatientOfOtherProvider:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar subject_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.PatientOfOtherProvider"
 
@@ -1976,22 +1724,11 @@ class PrpaMt201310Uv02PatientOfOtherProvider:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class PrpaMt201310Uv02Subject:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar query_match_observation:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.Subject"
 
@@ -2048,14 +1785,6 @@ class PrpaMt201310Uv02Subject:
 
 @dataclass
 class PrpaMt201310Uv02Subject4:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar administrative_observation:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.Subject4"
 
@@ -2112,40 +1841,6 @@ class PrpaMt201310Uv02Subject4:
 
 @dataclass
 class PrpaMt201310Uv02NonPersonLivingSubject:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar desc:
-    :ivar existence_time:
-    :ivar telecom:
-    :ivar risk_code:
-    :ivar handling_code:
-    :ivar administrative_gender_code:
-    :ivar birth_time:
-    :ivar deceased_ind:
-    :ivar deceased_time:
-    :ivar multiple_birth_ind:
-    :ivar multiple_birth_order_number:
-    :ivar organ_donor_ind:
-    :ivar strain_text:
-    :ivar gender_status_code:
-    :ivar as_patient_of_other_provider:
-    :ivar as_member:
-    :ivar as_other_ids:
-    :ivar contact_party:
-    :ivar guardian:
-    :ivar personal_relationship:
-    :ivar care_giver:
-    :ivar birth_place:
-    :ivar guarantor_role:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.NonPersonLivingSubject"
 
@@ -2411,46 +2106,6 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
 
 @dataclass
 class PrpaMt201310Uv02Person:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar desc:
-    :ivar telecom:
-    :ivar administrative_gender_code:
-    :ivar birth_time:
-    :ivar deceased_ind:
-    :ivar deceased_time:
-    :ivar multiple_birth_ind:
-    :ivar multiple_birth_order_number:
-    :ivar organ_donor_ind:
-    :ivar addr:
-    :ivar marital_status_code:
-    :ivar education_level_code:
-    :ivar disability_code:
-    :ivar living_arrangement_code:
-    :ivar religious_affiliation_code:
-    :ivar race_code:
-    :ivar ethnic_group_code:
-    :ivar as_patient_of_other_provider:
-    :ivar as_employee:
-    :ivar as_citizen:
-    :ivar as_student:
-    :ivar as_member:
-    :ivar as_other_ids:
-    :ivar contact_party:
-    :ivar guardian:
-    :ivar personal_relationship:
-    :ivar care_giver:
-    :ivar birth_place:
-    :ivar guarantor_role:
-    :ivar language_communication:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.Person"
 
@@ -2769,26 +2424,6 @@ class PrpaMt201310Uv02Person:
 
 @dataclass
 class PrpaMt201310Uv02Patient:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar confidentiality_code:
-    :ivar very_important_person_code:
-    :ivar patient_person:
-    :ivar patient_non_person_living_subject:
-    :ivar provider_organization:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar covered_party_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "PRPA_MT201310UV02.Patient"
 
@@ -2945,7 +2580,4 @@ class PrpaMt201310Uv02Patient:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"

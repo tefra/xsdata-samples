@@ -9,11 +9,6 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 class AirTripType(Enum):
     """
     Identifies the trip type - one way, return, circle trip, open jaw.
-    :cvar ONE_WAY:
-    :cvar RETURN_VALUE:
-    :cvar CIRCLE:
-    :cvar OPEN_JAW:
-    :cvar OTHER:
     """
     ONE_WAY = "OneWay"
     RETURN_VALUE = "Return"
@@ -26,11 +21,12 @@ class AirTripType(Enum):
 class CompanyNameType:
     """Identifies a company by name.
 
-    :ivar value:
-    :ivar company_short_name:
-    :ivar travel_sector: Refer to OTA Code List Travel Sector (TVS).
-    :ivar code: Identifies a company by the company code.
-    :ivar code_context: Identifies the context of the identifying code, such as DUNS, IATA or internal code, etc.
+    Attributes
+        value:
+        company_short_name:
+        travel_sector: Refer to OTA Code List Travel Sector (TVS).
+        code: Identifies a company by the company code.
+        code_context: Identifies the context of the identifying code, such as DUNS, IATA or internal code, etc.
     """
     value: Optional[str] = field(
         default=None,
@@ -72,10 +68,6 @@ class CompanyNameType:
 
 
 class DepartureOrArrival(Enum):
-    """
-    :cvar DEPARTURE:
-    :cvar ARRIVAL:
-    """
     DEPARTURE = "Departure"
     ARRIVAL = "Arrival"
 
@@ -84,9 +76,10 @@ class DepartureOrArrival(Enum):
 class EquipmentType:
     """Specifies the aircraft equipment type.
 
-    :ivar value:
-    :ivar air_equip_type: This is the 3 character IATA code.
-    :ivar changeof_gauge: Indicates there is an equipment change.
+    Attributes
+        value:
+        air_equip_type: This is the 3 character IATA code.
+        changeof_gauge: Indicates there is an equipment change.
     """
     value: Optional[str] = field(
         default=None,
@@ -111,19 +104,11 @@ class EquipmentType:
 
 
 class FareDirectionality(Enum):
-    """
-    :cvar TO:
-    :cvar FROM_VALUE:
-    """
     TO = "TO"
     FROM_VALUE = "FROM"
 
 
 class OutboundOrInbound(Enum):
-    """
-    :cvar OUTBOUND:
-    :cvar INBOUND:
-    """
     OUTBOUND = "Outbound"
     INBOUND = "Inbound"
 
@@ -131,17 +116,18 @@ class OutboundOrInbound(Enum):
 class StayUnitType(Enum):
     """Defines the 'Units' that can be applied to Stay restrictions.
 
-    :cvar MINUTES:
-    :cvar HOURS:
-    :cvar DAYS:
-    :cvar MONTHS:
-    :cvar MON: Monday
-    :cvar TUES: Tuesday
-    :cvar WED: Wednesday
-    :cvar THU: Thursday
-    :cvar FRI: Friday
-    :cvar SAT: Saturday
-    :cvar SUN: Sunday
+    Attributes
+        MINUTES:
+        HOURS:
+        DAYS:
+        MONTHS:
+        MON: Monday
+        TUES: Tuesday
+        WED: Wednesday
+        THU: Thursday
+        FRI: Friday
+        SAT: Saturday
+        SUN: Sunday
     """
     MINUTES = "Minutes"
     HOURS = "Hours"
@@ -162,11 +148,12 @@ class TravelerCountType:
     be either one of: Adult, YoungDriver, YoungerDriver, or it may be a code that
     is acceptable to both Trading Partners).
 
-    :ivar age:
-    :ivar code: Specify traveler type code.
-    :ivar code_context: Identifies the source authority for the code.
-    :ivar uri: Identifies the location of the code table
-    :ivar quantity: Used to define a quantity of an associated element or attribute.
+    Attributes
+        age:
+        code: Specify traveler type code.
+        code_context: Identifies the source authority for the code.
+        uri: Identifies the location of the code table
+        quantity: Used to define a quantity of an associated element or attribute.
     """
     age: Optional[int] = field(
         default=None,
@@ -218,8 +205,9 @@ class VoluntaryChangesType:
     """Specifies charges and/or penalties associated with making ticket changes
     after purchase.
 
-    :ivar penalty: Specifies penalty charges as either a currency amount or a percentage of the fare.
-    :ivar vol_change_ind: Indicator used to specify whether voluntary change and other penalties are involved in the search or response.
+    Attributes
+        penalty: Specifies penalty charges as either a currency amount or a percentage of the fare.
+        vol_change_ind: Indicator used to specify whether voluntary change and other penalties are involved in the search or response.
     """
     penalty: Optional["VoluntaryChangesType.Penalty"] = field(
         default=None,
@@ -240,12 +228,13 @@ class VoluntaryChangesType:
     @dataclass
     class Penalty:
         """
-        :ivar penalty_type: Indicates the type of penalty involved in the search or response.
-        :ivar departure_status: Identifier used to indicate whether the change occurs before or after departure from the origin city.
-        :ivar amount:
-        :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
-        :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
-        :ivar percent: The penalty charge conveyed as a percent of the total fare.
+        Attributes
+            penalty_type: Indicates the type of penalty involved in the search or response.
+            departure_status: Identifier used to indicate whether the change occurs before or after departure from the origin city.
+            amount:
+            currency_code: A currency code (e.g. USD, EUR, PLN)
+            decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
+            percent: The penalty charge conveyed as a percent of the total fare.
         """
         penalty_type: Optional[str] = field(
             default=None,
@@ -300,10 +289,11 @@ class AdvResTicketingType:
     """Container used to hold information regarding advance reservation and/or
     advance ticketing.
 
-    :ivar adv_reservation: Specifies constraints on date of advance reservations.
-    :ivar adv_ticketing: Specifies advance ticketing restrictions.
-    :ivar adv_res_ind: Indicator for identifying whether or not advance reservation restrictions are involved in the request or response.
-    :ivar adv_ticketing_ind: Indicator for identifying whether or not advance ticketing restrictions are involved in the request or response.
+    Attributes
+        adv_reservation: Specifies constraints on date of advance reservations.
+        adv_ticketing: Specifies advance ticketing restrictions.
+        adv_res_ind: Indicator for identifying whether or not advance reservation restrictions are involved in the request or response.
+        adv_ticketing_ind: Indicator for identifying whether or not advance ticketing restrictions are involved in the request or response.
     """
     adv_reservation: Optional["AdvResTicketingType.AdvReservation"] = field(
         default=None,
@@ -339,9 +329,10 @@ class AdvResTicketingType:
     @dataclass
     class AdvReservation:
         """
-        :ivar latest_time_of_day: The time of day by which reservations must be made on the last day that advance reservations can be made.
-        :ivar latest_period: The amount of elapsed time or number of occurrences of a day of the week before departure needed to satisfy an advance reservation requirement.
-        :ivar latest_unit: The unit of elapsed time or the day of the week to be applied to the LatestPeriod value.
+        Attributes
+            latest_time_of_day: The time of day by which reservations must be made on the last day that advance reservations can be made.
+            latest_period: The amount of elapsed time or number of occurrences of a day of the week before departure needed to satisfy an advance reservation requirement.
+            latest_unit: The unit of elapsed time or the day of the week to be applied to the LatestPeriod value.
         """
         latest_time_of_day: Optional[str] = field(
             default=None,
@@ -369,12 +360,13 @@ class AdvResTicketingType:
     @dataclass
     class AdvTicketing:
         """
-        :ivar from_res_time_of_day: The time of day after reservations are made by which a ticket must be purchased.
-        :ivar from_res_period: A length of time expressed as either an amount of time or the number of occurrences of a day of the week after reservations are made that a ticket must be purchased.
-        :ivar from_res_unit: The unit of elapsed time or the day of the week to be applied to the period after reservation are made that a ticket must be purchased.
-        :ivar from_depart_time_of_day: The time of day prior to departure when the ticket must be purchased.
-        :ivar from_depart_period: A length of time expressed as either an amount of time or the number of occurrences of a day of the week before departure that a ticket must be purchased.
-        :ivar from_depart_unit: The unit of elapsed time or the day of the week to be applied to the the period before departure that a ticket must be purchased.
+        Attributes
+            from_res_time_of_day: The time of day after reservations are made by which a ticket must be purchased.
+            from_res_period: A length of time expressed as either an amount of time or the number of occurrences of a day of the week after reservations are made that a ticket must be purchased.
+            from_res_unit: The unit of elapsed time or the day of the week to be applied to the period after reservation are made that a ticket must be purchased.
+            from_depart_time_of_day: The time of day prior to departure when the ticket must be purchased.
+            from_depart_period: A length of time expressed as either an amount of time or the number of occurrences of a day of the week before departure that a ticket must be purchased.
+            from_depart_unit: The unit of elapsed time or the day of the week to be applied to the the period before departure that a ticket must be purchased.
         """
         from_res_time_of_day: Optional[str] = field(
             default=None,
@@ -426,9 +418,11 @@ class AdvResTicketingType:
 class PassengerTypeQuantityType(TravelerCountType):
     """
     Specifies a PTC (Passenger Type Code) and the associated number of PTC's - for use in specifying passenger lists.
-    :ivar tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
-    :ivar changeable:
-    :ivar index: Allows to identify which one of requested passengers this solution relates to.
+
+    Attributes
+        tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
+        changeable:
+        index: Allows to identify which one of requested passengers this solution relates to.
     """
     tpa_extensions: Optional["PassengerTypeQuantityType.TpaExtensions"] = field(
         default=None,
@@ -456,11 +450,12 @@ class PassengerTypeQuantityType(TravelerCountType):
     @dataclass
     class TpaExtensions:
         """
-        :ivar birth_date:
-        :ivar age: Exchange-specific
-        :ivar state: Exchange-specific
-        :ivar total_number: Exchange-specific
-        :ivar voluntary_changes: Identifies whether penalties associated with voluntary changes should be included in the search results.
+        Attributes
+            birth_date:
+            age: Exchange-specific
+            state: Exchange-specific
+            total_number: Exchange-specific
+            voluntary_changes: Identifies whether penalties associated with voluntary changes should be included in the search results.
         """
         birth_date: Optional["PassengerTypeQuantityType.TpaExtensions.BirthDate"] = field(
             default=None,
@@ -505,9 +500,6 @@ class PassengerTypeQuantityType(TravelerCountType):
 
         @dataclass
         class BirthDate:
-            """
-            :ivar date:
-            """
             date: Optional[str] = field(
                 default=None,
                 metadata={
@@ -518,9 +510,6 @@ class PassengerTypeQuantityType(TravelerCountType):
 
         @dataclass
         class Age:
-            """
-            :ivar years:
-            """
             years: Optional[int] = field(
                 default=None,
                 metadata={
@@ -532,9 +521,6 @@ class PassengerTypeQuantityType(TravelerCountType):
 
         @dataclass
         class State:
-            """
-            :ivar code:
-            """
             code: Optional[str] = field(
                 default=None,
                 metadata={
@@ -546,9 +532,6 @@ class PassengerTypeQuantityType(TravelerCountType):
 
         @dataclass
         class TotalNumber:
-            """
-            :ivar value:
-            """
             value: Optional[int] = field(
                 default=None,
                 metadata={
@@ -563,8 +546,9 @@ class PassengerTypeQuantityType(TravelerCountType):
             """Specifies charges and/or penalties associated with making ticket changes
             after purchase.
 
-            :ivar penalty: Specifies penalty charges as either a currency amount or a percentage of the fare.
-            :ivar match: Indicates relation between conditions.
+            Attributes
+                penalty: Specifies penalty charges as either a currency amount or a percentage of the fare.
+                match: Indicates relation between conditions.
             """
             penalty: List["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty"] = field(
                 default_factory=list,
@@ -586,12 +570,13 @@ class PassengerTypeQuantityType(TravelerCountType):
             @dataclass
             class Penalty:
                 """
-                :ivar type: Indicates the type (Refund or Exchange) of penalty involved in the search or response.
-                :ivar exclude: Indicate that specific penalty type should be excluded from the response.
-                :ivar application: Identifier used to indicate whether the change occurs before or after departure from the origin city.
-                :ivar amount:
-                :ivar currency_code: A currency code (e.g. USD, EUR, PLN)
-                :ivar decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
+                Attributes
+                    type: Indicates the type (Refund or Exchange) of penalty involved in the search or response.
+                    exclude: Indicate that specific penalty type should be excluded from the response.
+                    application: Identifier used to indicate whether the change occurs before or after departure from the origin city.
+                    amount:
+                    currency_code: A currency code (e.g. USD, EUR, PLN)
+                    decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
                 """
                 type: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty.Type"] = field(
                     default=None,
@@ -639,26 +624,19 @@ class PassengerTypeQuantityType(TravelerCountType):
                 )
 
                 class Type(Enum):
-                    """
-                    :cvar REFUND:
-                    :cvar EXCHANGE:
-                    """
                     REFUND = "Refund"
                     EXCHANGE = "Exchange"
 
                 class Application(Enum):
-                    """
-                    :cvar AFTER:
-                    :cvar BEFORE:
-                    """
                     AFTER = "After"
                     BEFORE = "Before"
 
             class Match(Enum):
-                """
-                :cvar ALL: Conditions are joined by logical conjunction - fare needs to fulfill all the conditions to be returned in response.
-                :cvar ANY: Conditions are joined by logical disjunction - fare needs to fulfill at least one of the conditions to be returned in response.
-                :cvar INFO: Return penalty information
+                """Attributes.
+
+                ALL: Conditions are joined by logical conjunction - fare needs to fulfill all the conditions to be returned in response.
+                ANY: Conditions are joined by logical disjunction - fare needs to fulfill at least one of the conditions to be returned in response.
+                INFO: Return penalty information
                 """
                 ALL = "All"
                 ANY = "Any"
@@ -669,9 +647,10 @@ class PassengerTypeQuantityType(TravelerCountType):
 class StayRestrictionsType:
     """Type defining Min and Max Stay Restrictions.
 
-    :ivar minimum_stay: Specifies restrictions for the shortest length/period of time or earliest day return travel can commence or be completed.
-    :ivar maximum_stay: Specifies restrictions for the  longest length/period of time or last day to begin or complete the return.
-    :ivar stay_restrictions_ind: True indicates that Stay Restrictions exist.
+    Attributes
+        minimum_stay: Specifies restrictions for the shortest length/period of time or earliest day return travel can commence or be completed.
+        maximum_stay: Specifies restrictions for the  longest length/period of time or last day to begin or complete the return.
+        stay_restrictions_ind: True indicates that Stay Restrictions exist.
     """
     minimum_stay: Optional["StayRestrictionsType.MinimumStay"] = field(
         default=None,
@@ -700,10 +679,11 @@ class StayRestrictionsType:
     @dataclass
     class MinimumStay:
         """
-        :ivar return_time_of_day: The time of day when return travel may commence.
-        :ivar min_stay: The amount of elapsed time or number of occurrences of a day of the week needed to satisfy a minimum stay requirement.
-        :ivar stay_unit: The unit of elapsed time or the day of the week applied to the MinStay value.
-        :ivar min_stay_date: The specific date for the minimum stay requirement.
+        Attributes
+            return_time_of_day: The time of day when return travel may commence.
+            min_stay: The amount of elapsed time or number of occurrences of a day of the week needed to satisfy a minimum stay requirement.
+            stay_unit: The unit of elapsed time or the day of the week applied to the MinStay value.
+            min_stay_date: The specific date for the minimum stay requirement.
         """
         return_time_of_day: Optional[str] = field(
             default=None,
@@ -739,11 +719,12 @@ class StayRestrictionsType:
     @dataclass
     class MaximumStay:
         """
-        :ivar return_type: Code indicating whether travel must commence or be completed in order to satisfy the stay restriction.
-        :ivar return_time_of_day: The time of day when return travel may commence.
-        :ivar max_stay: The amount of elapsed time or number of occurrences of a day of the week that must occur to satisfy a maximum stay requirement.
-        :ivar stay_unit: The unit of elapsed time or the day of the week applied to the MaxStay value.
-        :ivar max_stay_date: The specific date for the maximum stay requirement.
+        Attributes
+            return_type: Code indicating whether travel must commence or be completed in order to satisfy the stay restriction.
+            return_time_of_day: The time of day when return travel may commence.
+            max_stay: The amount of elapsed time or number of occurrences of a day of the week that must occur to satisfy a maximum stay requirement.
+            stay_unit: The unit of elapsed time or the day of the week applied to the MaxStay value.
+            max_stay_date: The specific date for the maximum stay requirement.
         """
         return_type: Optional["StayRestrictionsType.MaximumStay.ReturnType"] = field(
             default=None,
@@ -785,8 +766,9 @@ class StayRestrictionsType:
 
         class ReturnType(Enum):
             """
-            :cvar C: Return travel must be Completed.
-            :cvar S: Return travel must be Started.
+            Attributes
+                C: Return travel must be Completed.
+                S: Return travel must be Started.
             """
             C = "C"
             S = "S"

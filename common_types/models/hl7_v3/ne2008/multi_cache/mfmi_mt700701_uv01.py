@@ -54,25 +54,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 class MfmiMt700701Uv01Subject4Value(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -94,17 +75,6 @@ class MfmiMt700701Uv01Subject4Value(Enum):
 
 @dataclass
 class MfmiMt700701Uv01ActDefinition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.ActDefinition"
 
@@ -183,15 +153,6 @@ class MfmiMt700701Uv01ActDefinition:
 
 @dataclass
 class MfmiMt700701Uv01Author1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.Author1"
 
@@ -256,18 +217,6 @@ class MfmiMt700701Uv01Author1:
 
 @dataclass
 class MfmiMt700701Uv01Author2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar time:
-    :ivar mode_code:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.Author2"
 
@@ -355,21 +304,6 @@ class MfmiMt700701Uv01Author2:
 
 @dataclass
 class MfmiMt700701Uv01AuthorOrPerformer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar time:
-    :ivar mode_code:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar assigned_device:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.AuthorOrPerformer"
 
@@ -480,15 +414,6 @@ class MfmiMt700701Uv01AuthorOrPerformer:
 
 @dataclass
 class MfmiMt700701Uv01Custodian:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.Custodian"
 
@@ -553,17 +478,6 @@ class MfmiMt700701Uv01Custodian:
 
 @dataclass
 class MfmiMt700701Uv01DataEnterer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar time:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.DataEnterer"
 
@@ -643,16 +557,6 @@ class MfmiMt700701Uv01DataEnterer:
 
 @dataclass
 class MfmiMt700701Uv01InformationRecipient:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.InformationRecipient"
 
@@ -723,20 +627,6 @@ class MfmiMt700701Uv01InformationRecipient:
 
 @dataclass
 class MfmiMt700701Uv01Overseer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar time:
-    :ivar mode_code:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.Overseer"
 
@@ -839,15 +729,6 @@ class MfmiMt700701Uv01Overseer:
 
 @dataclass
 class MfmiMt700701Uv01PriorRegisteredAct:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.PriorRegisteredAct"
 
@@ -910,14 +791,6 @@ class MfmiMt700701Uv01PriorRegisteredAct:
 
 @dataclass
 class MfmiMt700701Uv01PriorRegisteredRole:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.PriorRegisteredRole"
 
@@ -971,23 +844,11 @@ class MfmiMt700701Uv01PriorRegisteredRole:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class MfmiMt700701Uv01Reason:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar detected_issue_event:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.Reason"
 
@@ -1052,14 +913,6 @@ class MfmiMt700701Uv01Reason:
 
 @dataclass
 class MfmiMt700701Uv01Definition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar act_definition:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.Definition"
 
@@ -1116,25 +969,6 @@ class MfmiMt700701Uv01Definition:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -1156,16 +990,6 @@ class MfmiMt700701Uv01Definition:
 
 @dataclass
 class MfmiMt700701Uv01RegistrationRequest:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar author:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.RegistrationRequest"
 
@@ -1237,14 +1061,6 @@ class MfmiMt700701Uv01RegistrationRequest:
 
 @dataclass
 class MfmiMt700701Uv01Subject3:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar prior_registered_role:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.Subject3"
 
@@ -1301,15 +1117,6 @@ class MfmiMt700701Uv01Subject3:
 
 @dataclass
 class MfmiMt700701Uv01Subject4:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar prior_registered_act:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.Subject4"
 
@@ -1376,14 +1183,6 @@ class MfmiMt700701Uv01Subject4:
 
 @dataclass
 class MfmiMt700701Uv01InFulfillmentOf:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar registration_request:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.InFulfillmentOf"
 
@@ -1440,18 +1239,6 @@ class MfmiMt700701Uv01InFulfillmentOf:
 
 @dataclass
 class MfmiMt700701Uv01PriorRegistration:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar status_code:
-    :ivar subject1:
-    :ivar subject2:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.PriorRegistration"
 
@@ -1539,14 +1326,6 @@ class MfmiMt700701Uv01PriorRegistration:
 
 @dataclass
 class MfmiMt700701Uv01ReplacementOf:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar prior_registration:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "MFMI_MT700701UV01.ReplacementOf"
 
@@ -1603,25 +1382,6 @@ class MfmiMt700701Uv01ReplacementOf:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"

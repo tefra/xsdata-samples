@@ -8,10 +8,6 @@ __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
 
 @dataclass
 class AttributedQnameType:
-    """
-    :ivar value:
-    :ivar other_attributes:
-    """
     class Meta:
         name = "AttributedQNameType"
 
@@ -29,10 +25,6 @@ class AttributedQnameType:
 
 @dataclass
 class AttributedUritype:
-    """
-    :ivar value:
-    :ivar other_attributes:
-    """
     class Meta:
         name = "AttributedURIType"
 
@@ -50,10 +42,6 @@ class AttributedUritype:
 
 @dataclass
 class AttributedUnsignedLongType:
-    """
-    :ivar value:
-    :ivar other_attributes:
-    """
     value: Optional[int] = field(
         default=None,
     )
@@ -67,19 +55,6 @@ class AttributedUnsignedLongType:
 
 
 class FaultCodesType(Enum):
-    """
-    :cvar TNS_INVALID_ADDRESSING_HEADER:
-    :cvar TNS_INVALID_ADDRESS:
-    :cvar TNS_INVALID_EPR:
-    :cvar TNS_INVALID_CARDINALITY:
-    :cvar TNS_MISSING_ADDRESS_IN_EPR:
-    :cvar TNS_DUPLICATE_MESSAGE_ID:
-    :cvar TNS_ACTION_MISMATCH:
-    :cvar TNS_MESSAGE_ADDRESSING_HEADER_REQUIRED:
-    :cvar TNS_DESTINATION_UNREACHABLE:
-    :cvar TNS_ACTION_NOT_SUPPORTED:
-    :cvar TNS_ENDPOINT_UNAVAILABLE:
-    """
     TNS_INVALID_ADDRESSING_HEADER = QName("{http://www.w3.org/2005/08/addressing}InvalidAddressingHeader")
     TNS_INVALID_ADDRESS = QName("{http://www.w3.org/2005/08/addressing}InvalidAddress")
     TNS_INVALID_EPR = QName("{http://www.w3.org/2005/08/addressing}InvalidEPR")
@@ -95,10 +70,6 @@ class FaultCodesType(Enum):
 
 @dataclass
 class MetadataType:
-    """
-    :ivar any_element:
-    :ivar other_attributes:
-    """
     any_element: List[object] = field(
         default_factory=list,
         metadata={
@@ -117,10 +88,6 @@ class MetadataType:
 
 @dataclass
 class ReferenceParametersType:
-    """
-    :ivar any_element:
-    :ivar other_attributes:
-    """
     any_element: List[object] = field(
         default_factory=list,
         metadata={
@@ -138,9 +105,6 @@ class ReferenceParametersType:
 
 
 class RelationshipType(Enum):
-    """
-    :cvar HTTP_WWW_W3_ORG_2005_08_ADDRESSING_REPLY:
-    """
     HTTP_WWW_W3_ORG_2005_08_ADDRESSING_REPLY = "http://www.w3.org/2005/08/addressing/reply"
 
 
@@ -185,11 +149,6 @@ class ReferenceParameters(ReferenceParametersType):
 
 @dataclass
 class RelatesToType:
-    """
-    :ivar value:
-    :ivar relationship_type:
-    :ivar other_attributes:
-    """
     value: Optional[str] = field(
         default=None,
     )
@@ -223,13 +182,6 @@ class To(AttributedUritype):
 
 @dataclass
 class EndpointReferenceType:
-    """
-    :ivar address:
-    :ivar reference_parameters:
-    :ivar metadata:
-    :ivar other_element:
-    :ivar other_attributes:
-    """
     address: Optional[AttributedUritype] = field(
         default=None,
         metadata={
@@ -273,11 +225,6 @@ class EndpointReferenceType:
 
 @dataclass
 class ProblemActionType:
-    """
-    :ivar action:
-    :ivar soap_action:
-    :ivar other_attributes:
-    """
     action: Optional[Action] = field(
         default=None,
         metadata={

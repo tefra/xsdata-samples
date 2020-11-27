@@ -28,21 +28,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class QuqiMt020001Uv01AuthorOrPerformer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar time:
-    :ivar mode_code:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar assigned_device:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "QUQI_MT020001UV01.AuthorOrPerformer"
 
@@ -153,16 +138,6 @@ class QuqiMt020001Uv01AuthorOrPerformer:
 
 @dataclass
 class QuqiMt020001Uv01DataEnterer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "QUQI_MT020001UV01.DataEnterer"
 
@@ -234,16 +209,6 @@ class QuqiMt020001Uv01DataEnterer:
 
 @dataclass
 class QuqiMt020001Uv01InformationRecipient:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "QUQI_MT020001UV01.InformationRecipient"
 
@@ -314,20 +279,6 @@ class QuqiMt020001Uv01InformationRecipient:
 
 @dataclass
 class QuqiMt020001Uv01Overseer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar time:
-    :ivar mode_code:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "QUQI_MT020001UV01.Overseer"
 
@@ -430,15 +381,6 @@ class QuqiMt020001Uv01Overseer:
 
 @dataclass
 class QuqiMt020001Uv01Reason:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar detected_issue_event:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "QUQI_MT020001UV01.Reason"
 
@@ -503,15 +445,6 @@ class QuqiMt020001Uv01Reason:
 
 @dataclass
 class QuqiMt020001Uv01SortControl:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar element_name:
-    :ivar direction_code:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "QUQI_MT020001UV01.SortControl"
 

@@ -28,15 +28,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt960000Uv05Author:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT960000UV05.Author"
 
@@ -99,15 +90,6 @@ class CoctMt960000Uv05Author:
 
 @dataclass
 class CoctMt960000Uv05Device1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar assigned_device:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT960000UV05.Device1"
 
@@ -171,15 +153,6 @@ class CoctMt960000Uv05Device1:
 
 @dataclass
 class CoctMt960000Uv05Device2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar assigned_device:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT960000UV05.Device2"
 
@@ -243,16 +216,6 @@ class CoctMt960000Uv05Device2:
 
 @dataclass
 class CoctMt960000Uv05PositionAccuracy:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar value:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT960000UV05.PositionAccuracy"
 
@@ -323,16 +286,6 @@ class CoctMt960000Uv05PositionAccuracy:
 
 @dataclass
 class CoctMt960000Uv05Component2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar position_accuracy:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "COCT_MT960000UV05.Component2"
 
@@ -404,19 +357,6 @@ class CoctMt960000Uv05Component2:
 
 @dataclass
 class CoctMt960000Uv05PositionCoordinate:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar text:
-    :ivar value:
-    :ivar method_code:
-    :ivar device:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT960000UV05.PositionCoordinate"
 
@@ -512,17 +452,6 @@ class CoctMt960000Uv05PositionCoordinate:
 
 @dataclass
 class CoctMt960000Uv05Component1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar position_coordinate:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "COCT_MT960000UV05.Component1"
 
@@ -602,24 +531,6 @@ class CoctMt960000Uv05Component1:
 
 @dataclass
 class CoctMt960000Uv05Position:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar effective_time:
-    :ivar activity_time:
-    :ivar value:
-    :ivar device:
-    :ivar author:
-    :ivar component1:
-    :ivar component2:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT960000UV05.Position"
 

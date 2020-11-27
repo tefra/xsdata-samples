@@ -15,7 +15,7 @@ test-amadeus:
 
 build-sabre:
 	rm -rf sabre/models
-	xsdata sabre/schemas --package sabre.models
+	xsdata sabre/schemas --config sabre/.xsdata.xml
 
 test-sabre:
 	pytest sabre

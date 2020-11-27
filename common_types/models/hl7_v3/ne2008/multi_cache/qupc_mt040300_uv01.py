@@ -18,13 +18,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class QupcMt040300Uv01CareProvisionCode:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "QUPC_MT040300UV01.CareProvisionCode"
 
@@ -71,13 +64,6 @@ class QupcMt040300Uv01CareProvisionCode:
 
 @dataclass
 class QupcMt040300Uv01CareProvisionReason:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "QUPC_MT040300UV01.CareProvisionReason"
 
@@ -124,13 +110,6 @@ class QupcMt040300Uv01CareProvisionReason:
 
 @dataclass
 class QupcMt040300Uv01CareRecordTimePeriod:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "QUPC_MT040300UV01.CareRecordTimePeriod"
 
@@ -177,13 +156,6 @@ class QupcMt040300Uv01CareRecordTimePeriod:
 
 @dataclass
 class QupcMt040300Uv01ClinicalStatementTimePeriod:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "QUPC_MT040300UV01.ClinicalStatementTimePeriod"
 
@@ -230,13 +202,6 @@ class QupcMt040300Uv01ClinicalStatementTimePeriod:
 
 @dataclass
 class QupcMt040300Uv01IncludeCarePlanAttachment:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "QUPC_MT040300UV01.IncludeCarePlanAttachment"
 
@@ -283,13 +248,6 @@ class QupcMt040300Uv01IncludeCarePlanAttachment:
 
 @dataclass
 class QupcMt040300Uv01MaximumHistoryStatements:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "QUPC_MT040300UV01.MaximumHistoryStatements"
 
@@ -336,13 +294,6 @@ class QupcMt040300Uv01MaximumHistoryStatements:
 
 @dataclass
 class QupcMt040300Uv01PatientAdministrativeGender:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "QUPC_MT040300UV01.PatientAdministrativeGender"
 
@@ -389,13 +340,6 @@ class QupcMt040300Uv01PatientAdministrativeGender:
 
 @dataclass
 class QupcMt040300Uv01PatientBirthTime:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "QUPC_MT040300UV01.PatientBirthTime"
 
@@ -442,13 +386,6 @@ class QupcMt040300Uv01PatientBirthTime:
 
 @dataclass
 class QupcMt040300Uv01PatientId:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "QUPC_MT040300UV01.PatientId"
 
@@ -495,13 +432,6 @@ class QupcMt040300Uv01PatientId:
 
 @dataclass
 class QupcMt040300Uv01PatientName:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "QUPC_MT040300UV01.PatientName"
 
@@ -548,22 +478,6 @@ class QupcMt040300Uv01PatientName:
 
 @dataclass
 class QupcMt040300Uv01ParameterList:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar care_provision_code:
-    :ivar care_provision_reason:
-    :ivar care_record_time_period:
-    :ivar clinical_statement_time_period:
-    :ivar include_care_plan_attachment:
-    :ivar maximum_history_statements:
-    :ivar patient_administrative_gender:
-    :ivar patient_birth_time:
-    :ivar patient_id:
-    :ivar patient_name:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "QUPC_MT040300UV01.ParameterList"
 
