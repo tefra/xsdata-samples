@@ -61,25 +61,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 class CoctMt010000Uv01AuthorizationValue(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -100,25 +81,6 @@ class CoctMt010000Uv01AuthorizationValue(Enum):
 
 
 class CoctMt010000Uv01CauseOfValue(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -139,25 +101,6 @@ class CoctMt010000Uv01CauseOfValue(Enum):
 
 
 class CoctMt010000Uv01ReferenceValue(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -179,17 +122,6 @@ class CoctMt010000Uv01ReferenceValue(Enum):
 
 @dataclass
 class CoctMt010000Uv01AccomodationEvent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar reason_code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.AccomodationEvent"
 
@@ -269,16 +201,6 @@ class CoctMt010000Uv01AccomodationEvent:
 
 @dataclass
 class CoctMt010000Uv01Admitter:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar mode_code:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.Admitter"
 
@@ -352,18 +274,6 @@ class CoctMt010000Uv01Admitter:
 
 @dataclass
 class CoctMt010000Uv01Attender:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar mode_code:
-    :ivar id:
-    :ivar status_code:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.Attender"
 
@@ -452,14 +362,6 @@ class CoctMt010000Uv01Attender:
 
 @dataclass
 class CoctMt010000Uv01Authorization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar consent:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.Authorization"
 
@@ -517,15 +419,6 @@ class CoctMt010000Uv01Authorization:
 
 @dataclass
 class CoctMt010000Uv01Component:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar encounter:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.Component"
 
@@ -588,16 +481,6 @@ class CoctMt010000Uv01Component:
 
 @dataclass
 class CoctMt010000Uv01Consultant:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar mode_code:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.Consultant"
 
@@ -670,16 +553,6 @@ class CoctMt010000Uv01Consultant:
 
 @dataclass
 class CoctMt010000Uv01Discharger:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar mode_code:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.Discharger"
 
@@ -753,14 +626,6 @@ class CoctMt010000Uv01Discharger:
 
 @dataclass
 class CoctMt010000Uv01InFulfillmentOf:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar appointment:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.InFulfillmentOf"
 
@@ -816,14 +681,6 @@ class CoctMt010000Uv01InFulfillmentOf:
 
 @dataclass
 class CoctMt010000Uv01NotificationContact:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar responsible_party:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.NotificationContact"
 
@@ -881,17 +738,6 @@ class CoctMt010000Uv01NotificationContact:
 
 @dataclass
 class CoctMt010000Uv01ObservationEvent02:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar text:
-    :ivar value:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT010000UV01.ObservationEvent02"
 
@@ -969,15 +815,6 @@ class CoctMt010000Uv01ObservationEvent02:
 
 @dataclass
 class CoctMt010000Uv01PertinentInformation2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar priority_number:
-    :ivar observation_dx:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.PertinentInformation2"
 
@@ -1041,25 +878,6 @@ class CoctMt010000Uv01PertinentInformation2:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -1081,14 +899,6 @@ class CoctMt010000Uv01PertinentInformation2:
 
 @dataclass
 class CoctMt010000Uv01Reference:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar account:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.Reference"
 
@@ -1146,16 +956,6 @@ class CoctMt010000Uv01Reference:
 
 @dataclass
 class CoctMt010000Uv01Referrer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar mode_code:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.Referrer"
 
@@ -1229,17 +1029,6 @@ class CoctMt010000Uv01Referrer:
 
 @dataclass
 class CoctMt010000Uv01ResponsibleParty1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar id:
-    :ivar status_code:
-    :ivar assigned_organization:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.ResponsibleParty1"
 
@@ -1320,14 +1109,6 @@ class CoctMt010000Uv01ResponsibleParty1:
 
 @dataclass
 class CoctMt010000Uv01SequelTo:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar encounter:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.SequelTo"
 
@@ -1383,14 +1164,6 @@ class CoctMt010000Uv01SequelTo:
 
 @dataclass
 class CoctMt010000Uv01Subject1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar patient:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.Subject1"
 
@@ -1445,14 +1218,6 @@ class CoctMt010000Uv01Subject1:
 
 @dataclass
 class CoctMt010000Uv01TransportedBy:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar transportation:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.TransportedBy"
 
@@ -1508,14 +1273,6 @@ class CoctMt010000Uv01TransportedBy:
 
 @dataclass
 class CoctMt010000Uv01Location3:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar accomodation_event:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.Location3"
 
@@ -1572,14 +1329,6 @@ class CoctMt010000Uv01Location3:
 
 @dataclass
 class CoctMt010000Uv01PertinentInformation3:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar observation_event:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.PertinentInformation3"
 
@@ -1635,25 +1384,6 @@ class CoctMt010000Uv01PertinentInformation3:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -1675,22 +1405,6 @@ class CoctMt010000Uv01PertinentInformation3:
 
 @dataclass
 class CoctMt010000Uv01ServiceDeliveryLocation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar location:
-    :ivar service_provider_organization:
-    :ivar location_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.ServiceDeliveryLocation"
 
@@ -1807,17 +1521,6 @@ class CoctMt010000Uv01ServiceDeliveryLocation:
 
 @dataclass
 class CoctMt010000Uv01Location1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar id:
-    :ivar status_code:
-    :ivar service_delivery_location:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.Location1"
 
@@ -1897,46 +1600,6 @@ class CoctMt010000Uv01Location1:
 
 @dataclass
 class CoctMt010000Uv01Encounter:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar activity_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar reason_code:
-    :ivar admission_referral_source_code:
-    :ivar length_of_stay_quantity:
-    :ivar discharge_disposition_code:
-    :ivar pre_admit_test_ind:
-    :ivar special_courtesies_code:
-    :ivar special_arrangement_code:
-    :ivar subject:
-    :ivar responsible_party:
-    :ivar admitter:
-    :ivar attender:
-    :ivar discharger:
-    :ivar referrer:
-    :ivar consultant:
-    :ivar notification_contact:
-    :ivar location:
-    :ivar in_fulfillment_of:
-    :ivar sequel_to:
-    :ivar cause_of:
-    :ivar authorization:
-    :ivar reference:
-    :ivar pertinent_information1:
-    :ivar pertinent_information2:
-    :ivar transported_by:
-    :ivar component_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.Encounter"
 
@@ -2258,14 +1921,6 @@ class CoctMt010000Uv01Encounter:
 
 @dataclass
 class CoctMt010000Uv01CauseOf:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar encounter:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT010000UV01.CauseOf"
 

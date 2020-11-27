@@ -8,10 +8,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CommunityPrpaIn201306Uv02ResponseType:
-    """
-    :ivar prpa_in201306_uv02:
-    :ivar nhin_target_community:
-    """
     class Meta:
         name = "Community_PRPA_IN201306UV02ResponseType"
 
@@ -37,9 +33,6 @@ class CommunityPrpaIn201306Uv02ResponseType:
 
 @dataclass
 class RespondingGatewayPrpaIn201306Uv02ResponseType:
-    """
-    :ivar community_response:
-    """
     class Meta:
         name = "RespondingGateway_PRPA_IN201306UV02ResponseType"
 

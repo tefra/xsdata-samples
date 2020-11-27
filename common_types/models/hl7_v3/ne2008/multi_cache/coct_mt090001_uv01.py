@@ -15,15 +15,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt090001Uv01AssignedEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT090001UV01.AssignedEntity"
 

@@ -12,13 +12,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class AsyncAdapterPatientDiscoveryErrorRequestType:
-    """
-    :ivar prpa_in201305_uv02:
-    :ivar prpa_in201306_uv02:
-    :ivar assertion:
-    :ivar nhin_target_communities:
-    :ivar error_msg:
-    """
     prpa_in201305_uv02: Optional[PrpaIn201305Uv02] = field(
         default=None,
         metadata={
@@ -67,12 +60,6 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
 
 @dataclass
 class AsyncAdapterPatientDiscoveryErrorSecuredRequestType:
-    """
-    :ivar prpa_in201305_uv02:
-    :ivar prpa_in201306_uv02:
-    :ivar nhin_target_communities:
-    :ivar error_msg:
-    """
     prpa_in201305_uv02: Optional[PrpaIn201305Uv02] = field(
         default=None,
         metadata={

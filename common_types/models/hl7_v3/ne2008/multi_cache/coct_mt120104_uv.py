@@ -21,15 +21,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt120104UvAuthor:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "COCT_MT120104UV.Author"
 
@@ -94,22 +85,6 @@ class CoctMt120104UvAuthor:
 
 @dataclass
 class CoctMt120104UvObservationDx:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar value:
-    :ivar target_site_code:
-    :ivar author:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT120104UV.ObservationDx"
 

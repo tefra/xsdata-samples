@@ -22,15 +22,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt150007UvPerson:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT150007UV.Person"
 
@@ -95,18 +86,6 @@ class CoctMt150007UvPerson:
 
 @dataclass
 class CoctMt150007UvContactParty:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar contact_person:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT150007UV.ContactParty"
 
@@ -190,18 +169,6 @@ class CoctMt150007UvContactParty:
 
 @dataclass
 class CoctMt150007UvOrganization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar contact_party:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT150007UV.Organization"
 

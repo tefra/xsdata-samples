@@ -37,23 +37,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar query_id:
-    :ivar status_code:
-    :ivar modify_code:
-    :ivar response_element_group_id:
-    :ivar response_modality_code:
-    :ivar response_priority_code:
-    :ivar initial_quantity:
-    :ivar initial_quantity_code:
-    :ivar execution_and_delivery_time:
-    :ivar parameter_list:
-    :ivar sort_control:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "QUPC_IN043100UV01.QUQI_MT020001UV01.QueryByParameter"
 
@@ -183,26 +166,6 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
 
 @dataclass
 class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar effective_time:
-    :ivar priority_code:
-    :ivar reason_code:
-    :ivar language_code:
-    :ivar overseer:
-    :ivar author_or_performer:
-    :ivar data_enterer:
-    :ivar information_recipient:
-    :ivar reason_of:
-    :ivar query_by_parameter:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "QUPC_IN043100UV01.QUQI_MT020001UV01.ControlActProcess"
 
@@ -356,27 +319,6 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
 
 @dataclass
 class QupcIn043100Uv01McciMt000100Uv01Message:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar creation_time:
-    :ivar security_text:
-    :ivar version_code:
-    :ivar interaction_id:
-    :ivar profile_id:
-    :ivar processing_code:
-    :ivar processing_mode_code:
-    :ivar accept_ack_code:
-    :ivar sequence_number:
-    :ivar attachment_text:
-    :ivar receiver:
-    :ivar respond_to:
-    :ivar sender:
-    :ivar attention_line:
-    :ivar control_act_process:
-    """
     class Meta:
         name = "QUPC_IN043100UV01.MCCI_MT000100UV01.Message"
 
@@ -544,9 +486,6 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
 
 @dataclass
 class QupcIn043100Uv01(QupcIn043100Uv01McciMt000100Uv01Message):
-    """
-    :ivar itsversion:
-    """
     class Meta:
         name = "QUPC_IN043100UV01"
         namespace = "urn:hl7-org:v3"

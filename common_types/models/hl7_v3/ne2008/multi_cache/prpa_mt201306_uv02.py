@@ -24,14 +24,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class PrpaMt201306Uv02LivingSubjectAdministrativeGender:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.LivingSubjectAdministrativeGender"
 
@@ -87,14 +79,6 @@ class PrpaMt201306Uv02LivingSubjectAdministrativeGender:
 
 @dataclass
 class PrpaMt201306Uv02LivingSubjectBirthPlaceAddress:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.LivingSubjectBirthPlaceAddress"
 
@@ -150,14 +134,6 @@ class PrpaMt201306Uv02LivingSubjectBirthPlaceAddress:
 
 @dataclass
 class PrpaMt201306Uv02LivingSubjectBirthPlaceName:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.LivingSubjectBirthPlaceName"
 
@@ -213,14 +189,6 @@ class PrpaMt201306Uv02LivingSubjectBirthPlaceName:
 
 @dataclass
 class PrpaMt201306Uv02LivingSubjectBirthTime:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.LivingSubjectBirthTime"
 
@@ -276,14 +244,6 @@ class PrpaMt201306Uv02LivingSubjectBirthTime:
 
 @dataclass
 class PrpaMt201306Uv02LivingSubjectDeceasedTime:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.LivingSubjectDeceasedTime"
 
@@ -339,14 +299,6 @@ class PrpaMt201306Uv02LivingSubjectDeceasedTime:
 
 @dataclass
 class PrpaMt201306Uv02LivingSubjectId:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.LivingSubjectId"
 
@@ -402,14 +354,6 @@ class PrpaMt201306Uv02LivingSubjectId:
 
 @dataclass
 class PrpaMt201306Uv02LivingSubjectName:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.LivingSubjectName"
 
@@ -465,14 +409,6 @@ class PrpaMt201306Uv02LivingSubjectName:
 
 @dataclass
 class PrpaMt201306Uv02MatchAlgorithm:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.MatchAlgorithm"
 
@@ -528,14 +464,6 @@ class PrpaMt201306Uv02MatchAlgorithm:
 
 @dataclass
 class PrpaMt201306Uv02MatchWeight:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.MatchWeight"
 
@@ -591,14 +519,6 @@ class PrpaMt201306Uv02MatchWeight:
 
 @dataclass
 class PrpaMt201306Uv02MinimumDegreeMatch:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.MinimumDegreeMatch"
 
@@ -654,14 +574,6 @@ class PrpaMt201306Uv02MinimumDegreeMatch:
 
 @dataclass
 class PrpaMt201306Uv02MothersMaidenName:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.MothersMaidenName"
 
@@ -717,14 +629,6 @@ class PrpaMt201306Uv02MothersMaidenName:
 
 @dataclass
 class PrpaMt201306Uv02OtherIdsScopingOrganization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.OtherIDsScopingOrganization"
 
@@ -780,14 +684,6 @@ class PrpaMt201306Uv02OtherIdsScopingOrganization:
 
 @dataclass
 class PrpaMt201306Uv02PatientAddress:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.PatientAddress"
 
@@ -843,14 +739,6 @@ class PrpaMt201306Uv02PatientAddress:
 
 @dataclass
 class PrpaMt201306Uv02PatientStatusCode:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.PatientStatusCode"
 
@@ -906,14 +794,6 @@ class PrpaMt201306Uv02PatientStatusCode:
 
 @dataclass
 class PrpaMt201306Uv02PatientTelecom:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.PatientTelecom"
 
@@ -969,14 +849,6 @@ class PrpaMt201306Uv02PatientTelecom:
 
 @dataclass
 class PrpaMt201306Uv02PrincipalCareProviderId:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.PrincipalCareProviderId"
 
@@ -1031,14 +903,6 @@ class PrpaMt201306Uv02PrincipalCareProviderId:
 
 @dataclass
 class PrpaMt201306Uv02PrincipalCareProvisionId:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.PrincipalCareProvisionId"
 
@@ -1094,15 +958,6 @@ class PrpaMt201306Uv02PrincipalCareProvisionId:
 
 @dataclass
 class PrpaMt201306Uv02SortControl:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar element_name:
-    :ivar direction_code:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.SortControl"
 
@@ -1165,16 +1020,6 @@ class PrpaMt201306Uv02SortControl:
 
 @dataclass
 class PrpaMt201306Uv02MatchCriterionList:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar match_algorithm:
-    :ivar match_weight:
-    :ivar minimum_degree_match:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.MatchCriterionList"
 
@@ -1247,27 +1092,6 @@ class PrpaMt201306Uv02MatchCriterionList:
 
 @dataclass
 class PrpaMt201306Uv02ParameterList:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar living_subject_administrative_gender:
-    :ivar living_subject_birth_place_address:
-    :ivar living_subject_birth_place_name:
-    :ivar living_subject_birth_time:
-    :ivar living_subject_deceased_time:
-    :ivar living_subject_id:
-    :ivar living_subject_name:
-    :ivar mothers_maiden_name:
-    :ivar other_ids_scoping_organization:
-    :ivar patient_address:
-    :ivar patient_status_code:
-    :ivar patient_telecom:
-    :ivar principal_care_provider_id:
-    :ivar principal_care_provision_id:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.ParameterList"
 
@@ -1439,24 +1263,6 @@ class PrpaMt201306Uv02ParameterList:
 
 @dataclass
 class PrpaMt201306Uv02QueryByParameter:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar query_id:
-    :ivar status_code:
-    :ivar modify_code:
-    :ivar response_element_group_id:
-    :ivar response_modality_code:
-    :ivar response_priority_code:
-    :ivar initial_quantity:
-    :ivar initial_quantity_code:
-    :ivar execution_and_delivery_time:
-    :ivar match_criterion_list:
-    :ivar parameter_list:
-    :ivar sort_control:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201306UV02.QueryByParameter"
 

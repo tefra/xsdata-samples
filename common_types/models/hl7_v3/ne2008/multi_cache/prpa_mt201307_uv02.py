@@ -13,14 +13,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class PrpaMt201307Uv02DataSource:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201307UV02.DataSource"
 
@@ -76,14 +68,6 @@ class PrpaMt201307Uv02DataSource:
 
 @dataclass
 class PrpaMt201307Uv02PatientIdentifier:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar value:
-    :ivar semantics_text:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201307UV02.PatientIdentifier"
 
@@ -139,15 +123,6 @@ class PrpaMt201307Uv02PatientIdentifier:
 
 @dataclass
 class PrpaMt201307Uv02ParameterList:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar data_source:
-    :ivar patient_identifier:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201307UV02.ParameterList"
 
@@ -211,19 +186,6 @@ class PrpaMt201307Uv02ParameterList:
 
 @dataclass
 class PrpaMt201307Uv02QueryByParameter:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar query_id:
-    :ivar status_code:
-    :ivar modify_code:
-    :ivar response_element_group_id:
-    :ivar response_priority_code:
-    :ivar execution_and_delivery_time:
-    :ivar parameter_list:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "PRPA_MT201307UV02.QueryByParameter"
 

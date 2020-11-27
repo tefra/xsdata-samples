@@ -54,11 +54,6 @@ __NAMESPACE__ = "http://www.w3.org/1999/xhtml"
 
 
 class XhtmlParamTypeValuetype(Enum):
-    """
-    :cvar DATA:
-    :cvar REF:
-    :cvar OBJECT:
-    """
     DATA = "data"
     REF = "ref"
     OBJECT = "object"
@@ -66,12 +61,6 @@ class XhtmlParamTypeValuetype(Enum):
 
 @dataclass
 class XhtmlBrType:
-    """
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    """
     class Meta:
         name = "xhtml.br.type"
 
@@ -106,20 +95,6 @@ class XhtmlBrType:
 
 @dataclass
 class XhtmlColType:
-    """
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    :ivar span:
-    :ivar width:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "xhtml.col.type"
 
@@ -204,13 +179,6 @@ class XhtmlColType:
     )
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -218,12 +186,6 @@ class XhtmlColType:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -232,14 +194,6 @@ class XhtmlColType:
 
 @dataclass
 class XhtmlHrType:
-    """
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.hr.type"
 
@@ -287,15 +241,6 @@ class XhtmlHrType:
 
 @dataclass
 class XhtmlOlType:
-    """
-    :ivar li:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.ol.type"
 
@@ -351,13 +296,6 @@ class XhtmlOlType:
 
 @dataclass
 class XhtmlParamType:
-    """
-    :ivar id:
-    :ivar name:
-    :ivar value:
-    :ivar valuetype:
-    :ivar type:
-    """
     class Meta:
         name = "xhtml.param.type"
 
@@ -396,21 +334,6 @@ class XhtmlParamType:
 
 @dataclass
 class XhtmlColgroupType:
-    """
-    :ivar col:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    :ivar span:
-    :ivar width:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "xhtml.colgroup.type"
 
@@ -502,13 +425,6 @@ class XhtmlColgroupType:
     )
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -516,12 +432,6 @@ class XhtmlColgroupType:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -530,40 +440,6 @@ class XhtmlColgroupType:
 
 @dataclass
 class XhtmlQType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    :ivar cite_attribute:
-    """
     class Meta:
         name = "xhtml.q.type"
 
@@ -795,39 +671,6 @@ class XhtmlQType:
 
 @dataclass
 class XhtmlAcronymType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.acronym.type"
 
@@ -1052,39 +895,6 @@ class XhtmlAcronymType:
 
 @dataclass
 class XhtmlAbbrType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.abbr.type"
 
@@ -1309,39 +1119,6 @@ class XhtmlAbbrType:
 
 @dataclass
 class XhtmlCiteType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.cite.type"
 
@@ -1566,39 +1343,6 @@ class XhtmlCiteType:
 
 @dataclass
 class XhtmlVarType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.var.type"
 
@@ -1823,39 +1567,6 @@ class XhtmlVarType:
 
 @dataclass
 class XhtmlKbdType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.kbd.type"
 
@@ -2080,39 +1791,6 @@ class XhtmlKbdType:
 
 @dataclass
 class XhtmlSampType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.samp.type"
 
@@ -2337,39 +2015,6 @@ class XhtmlSampType:
 
 @dataclass
 class XhtmlCodeType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.code.type"
 
@@ -2594,39 +2239,6 @@ class XhtmlCodeType:
 
 @dataclass
 class XhtmlDfnType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.dfn.type"
 
@@ -2851,39 +2463,6 @@ class XhtmlDfnType:
 
 @dataclass
 class XhtmlStrongType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.strong.type"
 
@@ -3108,39 +2687,6 @@ class XhtmlStrongType:
 
 @dataclass
 class XhtmlCaptionType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.caption.type"
 
@@ -3365,39 +2911,6 @@ class XhtmlCaptionType:
 
 @dataclass
 class XhtmlDtType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.dt.type"
 
@@ -3622,39 +3135,6 @@ class XhtmlDtType:
 
 @dataclass
 class XhtmlH2Type:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.h2.type"
 
@@ -3879,39 +3359,6 @@ class XhtmlH2Type:
 
 @dataclass
 class XhtmlH3Type:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.h3.type"
 
@@ -4136,39 +3583,6 @@ class XhtmlH3Type:
 
 @dataclass
 class XhtmlH4Type:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.h4.type"
 
@@ -4393,39 +3807,6 @@ class XhtmlH4Type:
 
 @dataclass
 class XhtmlH5Type:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.h5.type"
 
@@ -4650,39 +4031,6 @@ class XhtmlH5Type:
 
 @dataclass
 class XhtmlH6Type:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.h6.type"
 
@@ -4907,39 +4255,6 @@ class XhtmlH6Type:
 
 @dataclass
 class XhtmlPType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.p.type"
 
@@ -5164,34 +4479,6 @@ class XhtmlPType:
 
 @dataclass
 class XhtmlPreType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar a:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.pre.type"
 
@@ -5381,55 +4668,6 @@ class XhtmlPreType:
 
 @dataclass
 class XhtmlDdType:
-    """
-    :ivar content:
-    :ivar h1:
-    :ivar h2:
-    :ivar h3:
-    :ivar h4:
-    :ivar h5:
-    :ivar h6:
-    :ivar ul:
-    :ivar ol:
-    :ivar dl:
-    :ivar p:
-    :ivar div:
-    :ivar pre:
-    :ivar blockquote:
-    :ivar address:
-    :ivar hr:
-    :ivar table:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.dd.type"
 
@@ -5766,16 +5004,6 @@ class XhtmlDdType:
 
 @dataclass
 class XhtmlDlType:
-    """
-    :ivar dt:
-    :ivar dd:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.dl.type"
 
@@ -5839,65 +5067,6 @@ class XhtmlDlType:
 
 @dataclass
 class XhtmlTdType:
-    """
-    :ivar content:
-    :ivar h1:
-    :ivar h2:
-    :ivar h3:
-    :ivar h4:
-    :ivar h5:
-    :ivar h6:
-    :ivar ul:
-    :ivar ol:
-    :ivar dl:
-    :ivar p:
-    :ivar div:
-    :ivar pre:
-    :ivar blockquote:
-    :ivar address:
-    :ivar hr:
-    :ivar table:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    :ivar abbr_attribute:
-    :ivar axis:
-    :ivar headers:
-    :ivar scope:
-    :ivar rowspan:
-    :ivar colspan:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "xhtml.td.type"
 
@@ -6296,25 +5465,12 @@ class XhtmlTdType:
     )
 
     class Scope(Enum):
-        """
-        :cvar ROW:
-        :cvar COL:
-        :cvar ROWGROUP:
-        :cvar COLGROUP:
-        """
         ROW = "row"
         COL = "col"
         ROWGROUP = "rowgroup"
         COLGROUP = "colgroup"
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -6322,12 +5478,6 @@ class XhtmlTdType:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -6336,65 +5486,6 @@ class XhtmlTdType:
 
 @dataclass
 class XhtmlThType:
-    """
-    :ivar content:
-    :ivar h1:
-    :ivar h2:
-    :ivar h3:
-    :ivar h4:
-    :ivar h5:
-    :ivar h6:
-    :ivar ul:
-    :ivar ol:
-    :ivar dl:
-    :ivar p:
-    :ivar div:
-    :ivar pre:
-    :ivar blockquote:
-    :ivar address:
-    :ivar hr:
-    :ivar table:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    :ivar abbr_attribute:
-    :ivar axis:
-    :ivar headers:
-    :ivar scope:
-    :ivar rowspan:
-    :ivar colspan:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "xhtml.th.type"
 
@@ -6793,25 +5884,12 @@ class XhtmlThType:
     )
 
     class Scope(Enum):
-        """
-        :cvar ROW:
-        :cvar COL:
-        :cvar ROWGROUP:
-        :cvar COLGROUP:
-        """
         ROW = "row"
         COL = "col"
         ROWGROUP = "rowgroup"
         COLGROUP = "colgroup"
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -6819,12 +5897,6 @@ class XhtmlThType:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -6833,20 +5905,6 @@ class XhtmlThType:
 
 @dataclass
 class XhtmlTrType:
-    """
-    :ivar th:
-    :ivar td:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "xhtml.tr.type"
 
@@ -6934,13 +5992,6 @@ class XhtmlTrType:
     )
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -6948,12 +5999,6 @@ class XhtmlTrType:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -6962,19 +6007,6 @@ class XhtmlTrType:
 
 @dataclass
 class XhtmlTbodyType:
-    """
-    :ivar tr:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "xhtml.tbody.type"
 
@@ -7054,13 +6086,6 @@ class XhtmlTbodyType:
     )
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -7068,12 +6093,6 @@ class XhtmlTbodyType:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -7082,19 +6101,6 @@ class XhtmlTbodyType:
 
 @dataclass
 class XhtmlTfootType:
-    """
-    :ivar tr:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "xhtml.tfoot.type"
 
@@ -7174,13 +6180,6 @@ class XhtmlTfootType:
     )
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -7188,12 +6187,6 @@ class XhtmlTfootType:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -7202,19 +6195,6 @@ class XhtmlTfootType:
 
 @dataclass
 class XhtmlTheadType:
-    """
-    :ivar tr:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "xhtml.thead.type"
 
@@ -7294,13 +6274,6 @@ class XhtmlTheadType:
     )
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -7308,12 +6281,6 @@ class XhtmlTheadType:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -7322,28 +6289,6 @@ class XhtmlTheadType:
 
 @dataclass
 class XhtmlTableType:
-    """
-    :ivar caption:
-    :ivar col:
-    :ivar colgroup:
-    :ivar thead:
-    :ivar tfoot:
-    :ivar tbody:
-    :ivar tr:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    :ivar summary:
-    :ivar width:
-    :ivar border:
-    :ivar frame:
-    :ivar rules:
-    :ivar cellspacing:
-    :ivar cellpadding:
-    """
     class Meta:
         name = "xhtml.table.type"
 
@@ -7483,17 +6428,6 @@ class XhtmlTableType:
     )
 
     class Frame(Enum):
-        """
-        :cvar VOID:
-        :cvar ABOVE:
-        :cvar BELOW:
-        :cvar HSIDES:
-        :cvar LHS:
-        :cvar RHS:
-        :cvar VSIDES:
-        :cvar BOX:
-        :cvar BORDER:
-        """
         VOID = "void"
         ABOVE = "above"
         BELOW = "below"
@@ -7505,13 +6439,6 @@ class XhtmlTableType:
         BORDER = "border"
 
     class Rules(Enum):
-        """
-        :cvar NONE_VALUE:
-        :cvar GROUPS:
-        :cvar ROWS:
-        :cvar COLS:
-        :cvar ALL:
-        """
         NONE_VALUE = "none"
         GROUPS = "groups"
         ROWS = "rows"
@@ -7521,33 +6448,6 @@ class XhtmlTableType:
 
 @dataclass
 class XhtmlBlockquoteType:
-    """
-    :ivar h1:
-    :ivar h2:
-    :ivar h3:
-    :ivar h4:
-    :ivar h5:
-    :ivar h6:
-    :ivar ul:
-    :ivar ol:
-    :ivar dl:
-    :ivar p:
-    :ivar div:
-    :ivar pre:
-    :ivar blockquote:
-    :ivar address:
-    :ivar hr:
-    :ivar table:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    :ivar cite:
-    """
     class Meta:
         name = "xhtml.blockquote.type"
 
@@ -7728,55 +6628,6 @@ class XhtmlBlockquoteType:
 
 @dataclass
 class XhtmlDivType:
-    """
-    :ivar content:
-    :ivar h1:
-    :ivar h2:
-    :ivar h3:
-    :ivar h4:
-    :ivar h5:
-    :ivar h6:
-    :ivar ul:
-    :ivar ol:
-    :ivar dl:
-    :ivar p:
-    :ivar div:
-    :ivar pre:
-    :ivar blockquote:
-    :ivar address:
-    :ivar hr:
-    :ivar table:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.div.type"
 
@@ -8113,55 +6964,6 @@ class XhtmlDivType:
 
 @dataclass
 class XhtmlLiType:
-    """
-    :ivar content:
-    :ivar h1:
-    :ivar h2:
-    :ivar h3:
-    :ivar h4:
-    :ivar h5:
-    :ivar h6:
-    :ivar ul:
-    :ivar ol:
-    :ivar dl:
-    :ivar p:
-    :ivar div:
-    :ivar pre:
-    :ivar blockquote:
-    :ivar address:
-    :ivar hr:
-    :ivar table:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.li.type"
 
@@ -8498,15 +7300,6 @@ class XhtmlLiType:
 
 @dataclass
 class XhtmlUlType:
-    """
-    :ivar li:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.ul.type"
 
@@ -8562,68 +7355,6 @@ class XhtmlUlType:
 
 @dataclass
 class XhtmlObjectType:
-    """
-    :ivar content:
-    :ivar param:
-    :ivar h1:
-    :ivar h2:
-    :ivar h3:
-    :ivar h4:
-    :ivar h5:
-    :ivar h6:
-    :ivar ul:
-    :ivar ol:
-    :ivar dl:
-    :ivar p:
-    :ivar div:
-    :ivar pre:
-    :ivar blockquote:
-    :ivar address:
-    :ivar hr:
-    :ivar table:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    :ivar declare:
-    :ivar classid:
-    :ivar codebase:
-    :ivar data:
-    :ivar type:
-    :ivar codetype:
-    :ivar archive:
-    :ivar standby:
-    :ivar height:
-    :ivar width:
-    :ivar name:
-    :ivar tabindex:
-    """
     class Meta:
         name = "xhtml.object.type"
 
@@ -9081,54 +7812,11 @@ class XhtmlObjectType:
     )
 
     class Declare(Enum):
-        """
-        :cvar DECLARE:
-        """
         DECLARE = "declare"
 
 
 @dataclass
 class XhtmlAType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    :ivar href:
-    :ivar charset:
-    :ivar type:
-    :ivar hreflang:
-    :ivar rel:
-    :ivar rev:
-    :ivar accesskey:
-    :ivar tabindex:
-    """
     class Meta:
         name = "xhtml.a.type"
 
@@ -9397,39 +8085,6 @@ class XhtmlAType:
 
 @dataclass
 class XhtmlInlPresType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.InlPres.type"
 
@@ -9654,39 +8309,6 @@ class XhtmlInlPresType:
 
 @dataclass
 class XhtmlEmType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.em.type"
 
@@ -9911,39 +8533,6 @@ class XhtmlEmType:
 
 @dataclass
 class XhtmlH1Type:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.h1.type"
 
@@ -10168,57 +8757,6 @@ class XhtmlH1Type:
 
 @dataclass
 class XhtmlEditType:
-    """
-    :ivar content:
-    :ivar h1:
-    :ivar h2:
-    :ivar h3:
-    :ivar h4:
-    :ivar h5:
-    :ivar h6:
-    :ivar ul:
-    :ivar ol:
-    :ivar dl:
-    :ivar p:
-    :ivar div:
-    :ivar pre:
-    :ivar blockquote:
-    :ivar address:
-    :ivar hr:
-    :ivar table:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    :ivar cite_attribute:
-    :ivar datetime:
-    """
     class Meta:
         name = "xhtml.edit.type"
 
@@ -10568,39 +9106,6 @@ class XhtmlEditType:
 
 @dataclass
 class XhtmlSpanType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.span.type"
 
@@ -10825,39 +9330,6 @@ class XhtmlSpanType:
 
 @dataclass
 class XhtmlAddressType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.address.type"
 
@@ -11082,39 +9554,6 @@ class XhtmlAddressType:
 
 @dataclass
 class XhtmlHeadingType:
-    """
-    :ivar content:
-    :ivar br:
-    :ivar span:
-    :ivar em:
-    :ivar strong:
-    :ivar dfn:
-    :ivar code:
-    :ivar samp:
-    :ivar kbd:
-    :ivar var:
-    :ivar cite:
-    :ivar abbr:
-    :ivar acronym:
-    :ivar q:
-    :ivar tt:
-    :ivar i:
-    :ivar b:
-    :ivar big:
-    :ivar small:
-    :ivar sub:
-    :ivar sup:
-    :ivar a:
-    :ivar object:
-    :ivar ins:
-    :ivar del_value:
-    :ivar space:
-    :ivar id:
-    :ivar class_value:
-    :ivar title:
-    :ivar lang:
-    :ivar style:
-    """
     class Meta:
         name = "xhtml.heading.type"
 

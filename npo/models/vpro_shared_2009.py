@@ -6,16 +6,6 @@ __NAMESPACE__ = "urn:vpro:shared:2009"
 
 
 class ImageTypeEnum(Enum):
-    """
-    :cvar PICTURE:
-    :cvar PORTRAIT:
-    :cvar STILL:
-    :cvar LOGO:
-    :cvar ICON:
-    :cvar PROMO_LANDSCAPE:
-    :cvar PROMO_PORTRAIT:
-    :cvar BACKGROUND:
-    """
     PICTURE = "PICTURE"
     PORTRAIT = "PORTRAIT"
     STILL = "STILL"
@@ -27,41 +17,6 @@ class ImageTypeEnum(Enum):
 
 
 class LicenseEnum(Enum):
-    """
-    :cvar COPYRIGHTED:
-    :cvar PUBLIC_DOMAIN:
-    :cvar CC_BY:
-    :cvar CC_BY_1_0:
-    :cvar CC_BY_2_0:
-    :cvar CC_BY_3_0:
-    :cvar CC_BY_4_0:
-    :cvar CC_BY_SA:
-    :cvar CC_BY_SA_1_0:
-    :cvar CC_BY_SA_2_0:
-    :cvar CC_BY_SA_3_0:
-    :cvar CC_BY_SA_4_0:
-    :cvar CC_BY_ND:
-    :cvar CC_BY_ND_1_0:
-    :cvar CC_BY_ND_2_0:
-    :cvar CC_BY_ND_3_0:
-    :cvar CC_BY_ND_4_0:
-    :cvar CC_BY_NC:
-    :cvar CC_BY_NC_1_0:
-    :cvar CC_BY_NC_2_0:
-    :cvar CC_BY_NC_3_0:
-    :cvar CC_BY_NC_4_0:
-    :cvar CC_BY_NC_SA:
-    :cvar CC_BY_NC_SA_1_0:
-    :cvar CC_BY_NC_SA_2_0:
-    :cvar CC_BY_NC_SA_3_0:
-    :cvar CC_BY_NC_SA_4_0:
-    :cvar CC_BY_NC_ND:
-    :cvar CC_BY_NC_ND_1_0:
-    :cvar CC_BY_NC_ND_2_0:
-    :cvar CC_BY_NC_ND_3_0:
-    :cvar CC_BY_NC_ND_4_0:
-    :cvar USA_GOV:
-    """
     COPYRIGHTED = "COPYRIGHTED"
     PUBLIC_DOMAIN = "PUBLIC_DOMAIN"
     CC_BY = "CC_BY"
@@ -98,20 +53,6 @@ class LicenseEnum(Enum):
 
 
 class OwnerTypeEnum(Enum):
-    """
-    :cvar BROADCASTER:
-    :cvar NEBO:
-    :cvar NPO:
-    :cvar MIS:
-    :cvar CERES:
-    :cvar PLUTO:
-    :cvar PROJECTM:
-    :cvar WHATS_ON:
-    :cvar IMMIX:
-    :cvar AUTHORITY:
-    :cvar RADIOBOX:
-    :cvar BEELDENGELUID:
-    """
     BROADCASTER = "BROADCASTER"
     NEBO = "NEBO"
     NPO = "NPO"
@@ -139,16 +80,6 @@ class SubtitlesTypeEnum(Enum):
 
 
 class SubtitlesWorkflowEnum(Enum):
-    """
-    :cvar IGNORE:
-    :cvar REVOKED:
-    :cvar FOR_DELETION:
-    :cvar DELETED:
-    :cvar FOR_PUBLICATION:
-    :cvar FOR_REPUBLICATION:
-    :cvar PUBLISHED:
-    :cvar PUBLISH_ERROR:
-    """
     IGNORE = "IGNORE"
     REVOKED = "REVOKED"
     FOR_DELETION = "FOR_DELETION"
@@ -187,29 +118,6 @@ class WorkflowEnumType(Enum):
 
 @dataclass
 class ImageType:
-    """
-    :ivar title:
-    :ivar description:
-    :ivar image_uri:
-    :ivar offset:
-    :ivar height:
-    :ivar width:
-    :ivar credits:
-    :ivar source:
-    :ivar source_name:
-    :ivar license:
-    :ivar date:
-    :ivar type:
-    :ivar owner:
-    :ivar highlighted:
-    :ivar urn:
-    :ivar publish_start:
-    :ivar publish_stop:
-    :ivar publish_date:
-    :ivar creation_date:
-    :ivar last_modified:
-    :ivar workflow:
-    """
     class Meta:
         name = "imageType"
 
@@ -363,15 +271,6 @@ class ImageType:
 
 @dataclass
 class PublishableObjectType:
-    """
-    :ivar urn:
-    :ivar publish_start:
-    :ivar publish_stop:
-    :ivar publish_date:
-    :ivar creation_date:
-    :ivar last_modified:
-    :ivar workflow:
-    """
     class Meta:
         name = "publishableObjectType"
 

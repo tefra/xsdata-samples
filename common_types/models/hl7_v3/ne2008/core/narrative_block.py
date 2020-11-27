@@ -13,17 +13,6 @@ class StrucDocBr:
 
 @dataclass
 class StrucDocCol:
-    """
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    :ivar span:
-    :ivar width:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "StrucDoc.Col"
 
@@ -86,13 +75,6 @@ class StrucDocCol:
     )
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -100,12 +82,6 @@ class StrucDocCol:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -114,12 +90,6 @@ class StrucDocCol:
 
 @dataclass
 class StrucDocFootnoteRef:
-    """
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    :ivar idref:
-    """
     class Meta:
         name = "StrucDoc.FootnoteRef"
 
@@ -155,19 +125,12 @@ class StrucDocFootnoteRef:
 
 
 class StrucDocListListType(Enum):
-    """
-    :cvar ORDERED:
-    :cvar UNORDERED:
-    """
     ORDERED = "ordered"
     UNORDERED = "unordered"
 
 
 @dataclass
 class StrucDocSub:
-    """
-    :ivar content:
-    """
     class Meta:
         name = "StrucDoc.Sub"
 
@@ -183,9 +146,6 @@ class StrucDocSub:
 
 @dataclass
 class StrucDocSup:
-    """
-    :ivar content:
-    """
     class Meta:
         name = "StrucDoc.Sup"
 
@@ -201,17 +161,6 @@ class StrucDocSup:
 
 @dataclass
 class StrucDocCaption:
-    """
-    :ivar content:
-    :ivar link_html:
-    :ivar sub:
-    :ivar sup:
-    :ivar footnote:
-    :ivar footnote_ref:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    """
     class Meta:
         name = "StrucDoc.Caption"
 
@@ -285,18 +234,6 @@ class StrucDocCaption:
 
 @dataclass
 class StrucDocColgroup:
-    """
-    :ivar col:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    :ivar span:
-    :ivar width:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "StrucDoc.Colgroup"
 
@@ -366,13 +303,6 @@ class StrucDocColgroup:
     )
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -380,12 +310,6 @@ class StrucDocColgroup:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -394,16 +318,6 @@ class StrucDocColgroup:
 
 @dataclass
 class StrucDocTitleFootnote:
-    """
-    :ivar content_any:
-    :ivar content:
-    :ivar sub:
-    :ivar sup:
-    :ivar br:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    """
     class Meta:
         name = "StrucDoc.TitleFootnote"
 
@@ -468,13 +382,6 @@ class StrucDocTitleFootnote:
 
 @dataclass
 class StrucDocRenderMultiMedia:
-    """
-    :ivar caption:
-    :ivar referenced_object:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    """
     class Meta:
         name = "StrucDoc.RenderMultiMedia"
 
@@ -519,18 +426,6 @@ class StrucDocRenderMultiMedia:
 
 @dataclass
 class StrucDocTitleContent:
-    """
-    :ivar content_any:
-    :ivar content:
-    :ivar sub:
-    :ivar sup:
-    :ivar br:
-    :ivar footnote:
-    :ivar footnote_ref:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    """
     class Meta:
         name = "StrucDoc.TitleContent"
 
@@ -610,21 +505,6 @@ class StrucDocTitleContent:
 
 @dataclass
 class StrucDocParagraph:
-    """
-    :ivar content_any:
-    :ivar caption:
-    :ivar content:
-    :ivar link_html:
-    :ivar sub:
-    :ivar sup:
-    :ivar br:
-    :ivar footnote:
-    :ivar footnote_ref:
-    :ivar render_multi_media:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    """
     class Meta:
         name = "StrucDoc.Paragraph"
 
@@ -735,30 +615,6 @@ class StrucDocParagraph:
 
 @dataclass
 class StrucDocTh:
-    """
-    :ivar content_any:
-    :ivar content:
-    :ivar link_html:
-    :ivar sub:
-    :ivar sup:
-    :ivar br:
-    :ivar footnote:
-    :ivar footnote_ref:
-    :ivar render_multi_media:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    :ivar abbr:
-    :ivar axis:
-    :ivar headers:
-    :ivar scope:
-    :ivar rowspan:
-    :ivar colspan:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "StrucDoc.Th"
 
@@ -913,25 +769,12 @@ class StrucDocTh:
     )
 
     class Scope(Enum):
-        """
-        :cvar ROW:
-        :cvar COL:
-        :cvar ROWGROUP:
-        :cvar COLGROUP:
-        """
         ROW = "row"
         COL = "col"
         ROWGROUP = "rowgroup"
         COLGROUP = "colgroup"
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -939,12 +782,6 @@ class StrucDocTh:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -953,19 +790,6 @@ class StrucDocTh:
 
 @dataclass
 class StrucDocTitle:
-    """
-    :ivar content_any:
-    :ivar content:
-    :ivar sub:
-    :ivar sup:
-    :ivar br:
-    :ivar footnote:
-    :ivar footnote_ref:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    :ivar media_type:
-    """
     class Meta:
         name = "StrucDoc.Title"
 
@@ -1053,32 +877,6 @@ class StrucDocTitle:
 
 @dataclass
 class StrucDocTd:
-    """
-    :ivar content_any:
-    :ivar content:
-    :ivar link_html:
-    :ivar sub:
-    :ivar sup:
-    :ivar br:
-    :ivar footnote:
-    :ivar footnote_ref:
-    :ivar render_multi_media:
-    :ivar paragraph:
-    :ivar list_value:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    :ivar abbr:
-    :ivar axis:
-    :ivar headers:
-    :ivar scope:
-    :ivar rowspan:
-    :ivar colspan:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "StrucDoc.Td"
 
@@ -1248,25 +1046,12 @@ class StrucDocTd:
     )
 
     class Scope(Enum):
-        """
-        :cvar ROW:
-        :cvar COL:
-        :cvar ROWGROUP:
-        :cvar COLGROUP:
-        """
         ROW = "row"
         COL = "col"
         ROWGROUP = "rowgroup"
         COLGROUP = "colgroup"
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -1274,12 +1059,6 @@ class StrucDocTd:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -1288,17 +1067,6 @@ class StrucDocTd:
 
 @dataclass
 class StrucDocTr:
-    """
-    :ivar th:
-    :ivar td:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "StrucDoc.Tr"
 
@@ -1363,13 +1131,6 @@ class StrucDocTr:
     )
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -1377,12 +1138,6 @@ class StrucDocTr:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -1391,16 +1146,6 @@ class StrucDocTr:
 
 @dataclass
 class StrucDocTbody:
-    """
-    :ivar tr:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "StrucDoc.Tbody"
 
@@ -1459,13 +1204,6 @@ class StrucDocTbody:
     )
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -1473,12 +1211,6 @@ class StrucDocTbody:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -1487,16 +1219,6 @@ class StrucDocTbody:
 
 @dataclass
 class StrucDocTfoot:
-    """
-    :ivar tr:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "StrucDoc.Tfoot"
 
@@ -1555,13 +1277,6 @@ class StrucDocTfoot:
     )
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -1569,12 +1284,6 @@ class StrucDocTfoot:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -1583,16 +1292,6 @@ class StrucDocTfoot:
 
 @dataclass
 class StrucDocThead:
-    """
-    :ivar tr:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    :ivar align:
-    :ivar char:
-    :ivar charoff:
-    :ivar valign:
-    """
     class Meta:
         name = "StrucDoc.Thead"
 
@@ -1651,13 +1350,6 @@ class StrucDocThead:
     )
 
     class Align(Enum):
-        """
-        :cvar LEFT:
-        :cvar CENTER:
-        :cvar RIGHT:
-        :cvar JUSTIFY:
-        :cvar CHAR:
-        """
         LEFT = "left"
         CENTER = "center"
         RIGHT = "right"
@@ -1665,12 +1357,6 @@ class StrucDocThead:
         CHAR = "char"
 
     class Valign(Enum):
-        """
-        :cvar TOP:
-        :cvar MIDDLE:
-        :cvar BOTTOM:
-        :cvar BASELINE:
-        """
         TOP = "top"
         MIDDLE = "middle"
         BOTTOM = "bottom"
@@ -1679,24 +1365,6 @@ class StrucDocThead:
 
 @dataclass
 class StrucDocTable:
-    """
-    :ivar caption:
-    :ivar col:
-    :ivar colgroup:
-    :ivar thead:
-    :ivar tfoot:
-    :ivar tbody:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    :ivar summary:
-    :ivar width:
-    :ivar border:
-    :ivar frame:
-    :ivar rules:
-    :ivar cellspacing:
-    :ivar cellpadding:
-    """
     class Meta:
         name = "StrucDoc.Table"
 
@@ -1808,17 +1476,6 @@ class StrucDocTable:
     )
 
     class Frame(Enum):
-        """
-        :cvar VOID:
-        :cvar ABOVE:
-        :cvar BELOW:
-        :cvar HSIDES:
-        :cvar LHS:
-        :cvar RHS:
-        :cvar VSIDES:
-        :cvar BOX:
-        :cvar BORDER:
-        """
         VOID = "void"
         ABOVE = "above"
         BELOW = "below"
@@ -1830,13 +1487,6 @@ class StrucDocTable:
         BORDER = "border"
 
     class Rules(Enum):
-        """
-        :cvar NONE_VALUE:
-        :cvar GROUPS:
-        :cvar ROWS:
-        :cvar COLS:
-        :cvar ALL:
-        """
         NONE_VALUE = "none"
         GROUPS = "groups"
         ROWS = "rows"
@@ -1846,24 +1496,6 @@ class StrucDocTable:
 
 @dataclass
 class StrucDocItem:
-    """
-    :ivar content_any:
-    :ivar caption:
-    :ivar content:
-    :ivar link_html:
-    :ivar sub:
-    :ivar sup:
-    :ivar br:
-    :ivar footnote:
-    :ivar footnote_ref:
-    :ivar render_multi_media:
-    :ivar paragraph:
-    :ivar list_value:
-    :ivar table:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    """
     class Meta:
         name = "StrucDoc.Item"
 
@@ -1999,14 +1631,6 @@ class StrucDocItem:
 
 @dataclass
 class StrucDocList:
-    """
-    :ivar caption:
-    :ivar item:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    :ivar list_type:
-    """
     class Meta:
         name = "StrucDoc.List"
 
@@ -2057,21 +1681,6 @@ class StrucDocList:
 
 @dataclass
 class StrucDocFootnote:
-    """
-    :ivar content_any:
-    :ivar content:
-    :ivar link_html:
-    :ivar sub:
-    :ivar sup:
-    :ivar br:
-    :ivar render_multi_media:
-    :ivar paragraph:
-    :ivar list_value:
-    :ivar table:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    """
     class Meta:
         name = "StrucDoc.Footnote"
 
@@ -2174,19 +1783,6 @@ class StrucDocFootnote:
 
 @dataclass
 class StrucDocLinkHtml:
-    """
-    :ivar content:
-    :ivar footnote:
-    :ivar footnote_ref:
-    :ivar name:
-    :ivar href:
-    :ivar rel:
-    :ivar rev:
-    :ivar title:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    """
     class Meta:
         name = "StrucDoc.LinkHtml"
 
@@ -2268,21 +1864,6 @@ class StrucDocLinkHtml:
 
 @dataclass
 class StrucDocContent:
-    """
-    :ivar content_any:
-    :ivar content:
-    :ivar link_html:
-    :ivar sub:
-    :ivar sup:
-    :ivar br:
-    :ivar footnote:
-    :ivar footnote_ref:
-    :ivar render_multi_media:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    :ivar revised:
-    """
     class Meta:
         name = "StrucDoc.Content"
 
@@ -2382,34 +1963,12 @@ class StrucDocContent:
     )
 
     class Revised(Enum):
-        """
-        :cvar INSERT:
-        :cvar DELETE:
-        """
         INSERT = "insert"
         DELETE = "delete"
 
 
 @dataclass
 class StrucDocText:
-    """
-    :ivar content_any:
-    :ivar content:
-    :ivar link_html:
-    :ivar sub:
-    :ivar sup:
-    :ivar br:
-    :ivar footnote:
-    :ivar footnote_ref:
-    :ivar render_multi_media:
-    :ivar paragraph:
-    :ivar list_value:
-    :ivar table:
-    :ivar id:
-    :ivar language:
-    :ivar style_code:
-    :ivar media_type:
-    """
     class Meta:
         name = "StrucDoc.Text"
 

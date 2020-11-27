@@ -41,16 +41,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class RepcMt000700Uv01LocatedEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar addr:
-    :ivar effective_time:
-    :ivar location:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "REPC_MT000700UV01.LocatedEntity"
 
@@ -120,18 +110,6 @@ class RepcMt000700Uv01LocatedEntity:
 
 @dataclass
 class RepcMt000700Uv01Organization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar telecom:
-    :ivar addr:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "REPC_MT000700UV01.Organization"
 
@@ -215,18 +193,6 @@ class RepcMt000700Uv01Organization:
 
 @dataclass
 class RepcMt000700Uv01Device:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar desc:
-    :ivar manufacturer_model_name:
-    :ivar as_located_entity:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "REPC_MT000700UV01.Device"
 
@@ -313,20 +279,6 @@ class RepcMt000700Uv01Device:
 
 @dataclass
 class RepcMt000700Uv01MaintainedEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar addr:
-    :ivar maintained_device:
-    :ivar maintained_place:
-    :ivar maintaining_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "REPC_MT000700UV01.MaintainedEntity"
 
@@ -428,7 +380,4 @@ class RepcMt000700Uv01MaintainedEntity:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"

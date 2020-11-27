@@ -24,17 +24,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt090003Uv01Device:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar manufacturer_model_name:
-    :ivar software_name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT090003UV01.Device"
 
@@ -113,15 +102,6 @@ class CoctMt090003Uv01Device:
 
 @dataclass
 class CoctMt090003Uv01Organization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT090003UV01.Organization"
 
@@ -185,15 +165,6 @@ class CoctMt090003Uv01Organization:
 
 @dataclass
 class CoctMt090003Uv01Person:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT090003UV01.Person"
 
@@ -258,21 +229,6 @@ class CoctMt090003Uv01Person:
 
 @dataclass
 class CoctMt090003Uv01AssignedEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar assigned_person:
-    :ivar assigned_device:
-    :ivar assigned_organization:
-    :ivar represented_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT090003UV01.AssignedEntity"
 

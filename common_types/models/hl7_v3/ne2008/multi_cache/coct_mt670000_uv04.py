@@ -39,15 +39,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt670000Uv04Account:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT670000UV04.Account"
 
@@ -111,15 +102,6 @@ class CoctMt670000Uv04Account:
 
 @dataclass
 class CoctMt670000Uv04GuarantorLanguage:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar language_code:
-    :ivar mode_code:
-    :ivar preference_ind:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "COCT_MT670000UV04.GuarantorLanguage"
 
@@ -184,17 +166,6 @@ class CoctMt670000Uv04GuarantorLanguage:
 
 @dataclass
 class CoctMt670000Uv04GuarantorOrganization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT670000UV04.GuarantorOrganization"
 
@@ -271,14 +242,6 @@ class CoctMt670000Uv04GuarantorOrganization:
 
 @dataclass
 class CoctMt670000Uv04PersonalRelationship:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT670000UV04.PersonalRelationship"
 
@@ -332,26 +295,11 @@ class CoctMt670000Uv04PersonalRelationship:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt670000Uv04GuarantorPerson:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar as_personal_relationship:
-    :ivar guarantor_language:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT670000UV04.GuarantorPerson"
 
@@ -442,15 +390,6 @@ class CoctMt670000Uv04GuarantorPerson:
 
 @dataclass
 class CoctMt670000Uv04Holder:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar account:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT670000UV04.Holder"
 
@@ -514,22 +453,6 @@ class CoctMt670000Uv04Holder:
 
 @dataclass
 class CoctMt670000Uv04GuarantorRole:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar guarantor_person:
-    :ivar guarantor_organization:
-    :ivar contract_held:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT670000UV04.GuarantorRole"
 
@@ -648,7 +571,4 @@ class CoctMt670000Uv04GuarantorRole:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"

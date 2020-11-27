@@ -41,18 +41,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt090100Uv01Group:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar desc:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT090100UV01.Group"
 
@@ -137,16 +125,6 @@ class CoctMt090100Uv01Group:
 
 @dataclass
 class CoctMt090100Uv01LanguageCommunication:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar language_code:
-    :ivar mode_code:
-    :ivar proficiency_level_code:
-    :ivar preference_ind:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "COCT_MT090100UV01.LanguageCommunication"
 
@@ -217,17 +195,6 @@ class CoctMt090100Uv01LanguageCommunication:
 
 @dataclass
 class CoctMt090100Uv01LicensedEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar issuing_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT090100UV01.LicensedEntity"
 
@@ -305,15 +272,6 @@ class CoctMt090100Uv01LicensedEntity:
 
 @dataclass
 class CoctMt090100Uv01RoleOther:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar scoping_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT090100UV01.RoleOther"
 
@@ -376,28 +334,11 @@ class CoctMt090100Uv01RoleOther:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt090100Uv01Member:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar group:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT090100UV01.Member"
 
@@ -497,28 +438,11 @@ class CoctMt090100Uv01Member:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt090100Uv01Person:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar as_licensed_entity:
-    :ivar as_member:
-    :ivar as_role_other:
-    :ivar as_located_entity:
-    :ivar language_communication:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT090100UV01.Person"
 
@@ -628,21 +552,6 @@ class CoctMt090100Uv01Person:
 
 @dataclass
 class CoctMt090100Uv01AssignedPerson:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar effective_time:
-    :ivar certificate_text:
-    :ivar assigned_person:
-    :ivar represented_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT090100UV01.AssignedPerson"
 

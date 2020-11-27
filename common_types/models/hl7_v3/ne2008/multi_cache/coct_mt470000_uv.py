@@ -24,19 +24,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt470000UvPerformer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar time:
-    :ivar mode_code:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT470000UV.Performer"
 
@@ -132,19 +119,6 @@ class CoctMt470000UvPerformer:
 
 @dataclass
 class CoctMt470000UvResponsibleParty:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar time:
-    :ivar mode_code:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar responsible_party:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT470000UV.ResponsibleParty"
 
@@ -241,22 +215,6 @@ class CoctMt470000UvResponsibleParty:
 
 @dataclass
 class CoctMt470000UvConsent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar responsible_party:
-    :ivar performer:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "COCT_MT470000UV.Consent"
 

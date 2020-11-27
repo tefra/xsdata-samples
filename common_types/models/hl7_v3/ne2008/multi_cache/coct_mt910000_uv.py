@@ -40,17 +40,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt910000UvOtherIds:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar scoping_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT910000UV.OtherIDs"
 
@@ -129,24 +118,11 @@ class CoctMt910000UvOtherIds:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt910000UvSubjectPerson:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT910000UV.SubjectPerson"
 
@@ -218,19 +194,6 @@ class CoctMt910000UvSubjectPerson:
 
 @dataclass
 class CoctMt910000UvEmployee:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar job_class_code:
-    :ivar employee_subject_person:
-    :ivar employer_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT910000UV.Employee"
 
@@ -327,21 +290,6 @@ class CoctMt910000UvEmployee:
 
 @dataclass
 class CoctMt910000UvRelatedPerson:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar telecom:
-    :ivar administrative_gender_code:
-    :ivar birth_time:
-    :ivar deceased_time:
-    :ivar addr:
-    :ivar as_other_ids:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT910000UV.RelatedPerson"
 
@@ -452,18 +400,6 @@ class CoctMt910000UvRelatedPerson:
 
 @dataclass
 class CoctMt910000UvStudent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar student:
-    :ivar school_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT910000UV.Student"
 
@@ -551,27 +487,11 @@ class CoctMt910000UvStudent:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt910000UvCareGiver:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar care_giver_related_person:
-    :ivar care_giver_scoper:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT910000UV.CareGiver"
 
@@ -667,27 +587,11 @@ class CoctMt910000UvCareGiver:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt910000UvPersonalRelationship:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar relationship_holder:
-    :ivar personal_relationship_with:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT910000UV.PersonalRelationship"
 
@@ -784,7 +688,4 @@ class CoctMt910000UvPersonalRelationship:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"

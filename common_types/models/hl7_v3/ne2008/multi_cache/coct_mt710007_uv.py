@@ -21,13 +21,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt710007UvLocatedEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT710007UV.LocatedEntity"
 
@@ -74,22 +67,6 @@ class CoctMt710007UvLocatedEntity:
 
 @dataclass
 class CoctMt710007UvPlace:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar desc:
-    :ivar addr:
-    :ivar directions_text:
-    :ivar position_text:
-    :ivar located_entity:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT710007UV.Place"
 

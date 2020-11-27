@@ -63,25 +63,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 class CoctMt740000Uv04ReferenceValue(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -103,17 +84,6 @@ class CoctMt740000Uv04ReferenceValue(Enum):
 
 @dataclass
 class CoctMt740000Uv04Diagnosis:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar text:
-    :ivar value:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT740000UV04.Diagnosis"
 
@@ -192,14 +162,6 @@ class CoctMt740000Uv04Diagnosis:
 
 @dataclass
 class CoctMt740000Uv04Location:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar service_delivery_location:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT740000UV04.Location"
 
@@ -256,16 +218,6 @@ class CoctMt740000Uv04Location:
 
 @dataclass
 class CoctMt740000Uv04OralHealthSubstanceAdministration:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar reason_code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT740000UV04.OralHealthSubstanceAdministration"
 
@@ -337,17 +289,6 @@ class CoctMt740000Uv04OralHealthSubstanceAdministration:
 
 @dataclass
 class CoctMt740000Uv04ProviderPerson:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar telecom:
-    :ivar addr:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT740000UV04.ProviderPerson"
 
@@ -426,16 +367,6 @@ class CoctMt740000Uv04ProviderPerson:
 
 @dataclass
 class CoctMt740000Uv04HealthCareProvider:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar health_care_provider_person:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT740000UV04.HealthCareProvider"
 
@@ -505,22 +436,11 @@ class CoctMt740000Uv04HealthCareProvider:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt740000Uv04PertinentInformation1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar oral_health_substance_administration:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT740000UV04.PertinentInformation1"
 
@@ -576,25 +496,6 @@ class CoctMt740000Uv04PertinentInformation1:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -616,15 +517,6 @@ class CoctMt740000Uv04PertinentInformation1:
 
 @dataclass
 class CoctMt740000Uv04PertinentInformation2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar diagnosis:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT740000UV04.PertinentInformation2"
 
@@ -687,25 +579,6 @@ class CoctMt740000Uv04PertinentInformation2:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -727,14 +600,6 @@ class CoctMt740000Uv04PertinentInformation2:
 
 @dataclass
 class CoctMt740000Uv04Performer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar health_care_provider:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT740000UV04.Performer"
 
@@ -791,14 +656,6 @@ class CoctMt740000Uv04Performer:
 
 @dataclass
 class CoctMt740000Uv04Referrer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar health_care_provider:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT740000UV04.Referrer"
 
@@ -856,14 +713,6 @@ class CoctMt740000Uv04Referrer:
 
 @dataclass
 class CoctMt740000Uv04ResponsibleParty:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar health_care_provider:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT740000UV04.ResponsibleParty"
 
@@ -921,16 +770,6 @@ class CoctMt740000Uv04ResponsibleParty:
 
 @dataclass
 class CoctMt740000Uv04Referral:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar reason_code:
-    :ivar referrer:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT740000UV04.Referral"
 
@@ -1003,14 +842,6 @@ class CoctMt740000Uv04Referral:
 
 @dataclass
 class CoctMt740000Uv04Reference:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar referral:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT740000UV04.Reference"
 
@@ -1068,25 +899,6 @@ class CoctMt740000Uv04Reference:
 
 @dataclass
 class CoctMt740000Uv04OralHealthService:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar reason_code:
-    :ivar target_site_code:
-    :ivar responsible_party:
-    :ivar performer:
-    :ivar location:
-    :ivar pertinent_information1:
-    :ivar pertinent_information2:
-    :ivar referenced_by:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT740000UV04.OralHealthService"
 

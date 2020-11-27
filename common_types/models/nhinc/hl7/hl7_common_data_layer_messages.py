@@ -14,12 +14,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CareRecordQupcIn043100Uv01RequestType:
-    """
-    :ivar local_device_id:
-    :ivar sender_oid:
-    :ivar receiver_oid:
-    :ivar query:
-    """
     class Meta:
         name = "CareRecord_QUPC_IN043100UV01RequestType"
 
@@ -62,9 +56,6 @@ class CareRecordQupcIn043100Uv01RequestType:
 
 @dataclass
 class CareRecordQupcIn043200Uv01ResponseType:
-    """
-    :ivar care_record:
-    """
     class Meta:
         name = "CareRecord_QUPC_IN043200UV01ResponseType"
 
@@ -81,12 +72,6 @@ class CareRecordQupcIn043200Uv01ResponseType:
 
 @dataclass
 class FindEncountersPrpaIn900300Uv02RequestType:
-    """
-    :ivar local_device_id:
-    :ivar sender_oid:
-    :ivar receiver_oid:
-    :ivar query:
-    """
     class Meta:
         name = "FindEncounters_PRPA_IN900300UV02RequestType"
 
@@ -129,9 +114,6 @@ class FindEncountersPrpaIn900300Uv02RequestType:
 
 @dataclass
 class FindEncountersPrpaMt900350Uv02ResponseType:
-    """
-    :ivar event:
-    """
     class Meta:
         name = "FindEncounters_PRPA_MT900350UV02ResponseType"
 
@@ -146,12 +128,6 @@ class FindEncountersPrpaMt900350Uv02ResponseType:
 
 @dataclass
 class FindPatientsPrpaIn201305Uv02RequestType:
-    """
-    :ivar local_device_id:
-    :ivar sender_oid:
-    :ivar receiver_oid:
-    :ivar query:
-    """
     class Meta:
         name = "FindPatients_PRPA_IN201305UV02RequestType"
 
@@ -194,9 +170,6 @@ class FindPatientsPrpaIn201305Uv02RequestType:
 
 @dataclass
 class FindPatientsPrpaMt201310Uv02ResponseType:
-    """
-    :ivar subject:
-    """
     class Meta:
         name = "FindPatients_PRPA_MT201310UV02ResponseType"
 
@@ -211,12 +184,6 @@ class FindPatientsPrpaMt201310Uv02ResponseType:
 
 @dataclass
 class PatientDemographicsPrpaIn201307Uv02RequestType:
-    """
-    :ivar local_device_id:
-    :ivar sender_oid:
-    :ivar receiver_oid:
-    :ivar query:
-    """
     class Meta:
         name = "PatientDemographics_PRPA_IN201307UV02RequestType"
 
@@ -259,9 +226,6 @@ class PatientDemographicsPrpaIn201307Uv02RequestType:
 
 @dataclass
 class PatientDemographicsPrpaMt201303Uv02ResponseType:
-    """
-    :ivar subject:
-    """
     class Meta:
         name = "PatientDemographics_PRPA_MT201303UV02ResponseType"
 

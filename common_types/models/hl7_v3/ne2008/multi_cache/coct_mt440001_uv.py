@@ -22,20 +22,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt440001UvValuedItem:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar unit_quantity:
-    :ivar unit_price_amt:
-    :ivar net_amt:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT440001UV.ValuedItem"
 

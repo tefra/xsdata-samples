@@ -36,19 +36,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt030202Uv01Place:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar addr:
-    :ivar directions_text:
-    :ivar position_text:
-    :ivar gps_text:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT030202UV01.Place"
 
@@ -142,14 +129,6 @@ class CoctMt030202Uv01Place:
 
 @dataclass
 class CoctMt030202Uv01Birthplace:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar birthplace:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT030202UV01.Birthplace"
 
@@ -205,27 +184,11 @@ class CoctMt030202Uv01Birthplace:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt030202Uv01Person:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar administrative_gender_code:
-    :ivar birth_time:
-    :ivar birthplace:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT030202UV01.Person"
 

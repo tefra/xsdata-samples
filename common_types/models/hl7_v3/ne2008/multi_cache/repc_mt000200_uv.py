@@ -92,25 +92,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 class RepcMt000200UvSubject2Value(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -131,25 +112,6 @@ class RepcMt000200UvSubject2Value(Enum):
 
 
 class RepcMt000200UvSubjectValue(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -171,21 +133,6 @@ class RepcMt000200UvSubjectValue(Enum):
 
 @dataclass
 class RepcMt000200UvAuthor:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar time:
-    :ivar mode_code:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar assigned_entity:
-    :ivar patient:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.Author"
 
@@ -299,20 +246,6 @@ class RepcMt000200UvAuthor:
 
 @dataclass
 class RepcMt000200UvAuthor6:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar time:
-    :ivar mode_code:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar assigned_party:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.Author6"
 
@@ -419,17 +352,6 @@ class RepcMt000200UvAuthor6:
 
 @dataclass
 class RepcMt000200UvComponent2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar guideline:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Component2"
 
@@ -508,17 +430,6 @@ class RepcMt000200UvComponent2:
 
 @dataclass
 class RepcMt000200UvComponent7:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar care_plan:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Component7"
 
@@ -599,14 +510,6 @@ class RepcMt000200UvComponent7:
 
 @dataclass
 class RepcMt000200UvCriterionGroup:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.CriterionGroup"
 
@@ -662,19 +565,6 @@ class RepcMt000200UvCriterionGroup:
 
 @dataclass
 class RepcMt000200UvDataEnterer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar mode_code:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.DataEnterer"
 
@@ -770,23 +660,6 @@ class RepcMt000200UvDataEnterer:
 
 @dataclass
 class RepcMt000200UvInFulfillmentOf:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar act_reference1:
-    :ivar act:
-    :ivar encounter:
-    :ivar observation:
-    :ivar organizer:
-    :ivar procedure:
-    :ivar substance_administration:
-    :ivar supply:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.InFulfillmentOf"
 
@@ -914,16 +787,6 @@ class RepcMt000200UvInFulfillmentOf:
 
 @dataclass
 class RepcMt000200UvMaterialKind2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar desc:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.MaterialKind2"
 
@@ -992,17 +855,6 @@ class RepcMt000200UvMaterialKind2:
 
 @dataclass
 class RepcMt000200UvObservationGoal:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar value:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.ObservationGoal"
 
@@ -1083,17 +935,6 @@ class RepcMt000200UvObservationGoal:
 
 @dataclass
 class RepcMt000200UvParticipant:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar mode_code:
-    :ivar assigned_party:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.Participant"
 
@@ -1173,18 +1014,6 @@ class RepcMt000200UvParticipant:
 
 @dataclass
 class RepcMt000200UvPerformer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar function_code:
-    :ivar time:
-    :ivar mode_code:
-    :ivar assigned_party:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.Performer"
 
@@ -1271,16 +1100,6 @@ class RepcMt000200UvPerformer:
 
 @dataclass
 class RepcMt000200UvPerformer2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.Performer2"
 
@@ -1351,18 +1170,6 @@ class RepcMt000200UvPerformer2:
 
 @dataclass
 class RepcMt000200UvPrecondition2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar conjunction_code:
-    :ivar seperatable_ind:
-    :ivar criterion:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Precondition2"
 
@@ -1449,25 +1256,6 @@ class RepcMt000200UvPrecondition2:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -1489,16 +1277,6 @@ class RepcMt000200UvPrecondition2:
 
 @dataclass
 class RepcMt000200UvReason2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar concern:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Reason2"
 
@@ -1569,20 +1347,6 @@ class RepcMt000200UvReason2:
 
 @dataclass
 class RepcMt000200UvVerifier:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar note_text:
-    :ivar time:
-    :ivar mode_code:
-    :ivar signature_code:
-    :ivar signature_text:
-    :ivar assigned_person:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.Verifier"
 
@@ -1685,17 +1449,6 @@ class RepcMt000200UvVerifier:
 
 @dataclass
 class RepcMt000200UvAnnotation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar text:
-    :ivar status_code:
-    :ivar author:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.Annotation"
 
@@ -1776,20 +1529,6 @@ class RepcMt000200UvAnnotation:
 
 @dataclass
 class RepcMt000200UvCriterion:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar text:
-    :ivar value:
-    :ivar interpretation_code:
-    :ivar precondition:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Criterion"
 
@@ -1892,16 +1631,6 @@ class RepcMt000200UvCriterion:
 
 @dataclass
 class RepcMt000200UvFinalGoal:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar observation_goal:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.FinalGoal"
 
@@ -1973,25 +1702,6 @@ class RepcMt000200UvFinalGoal:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -2013,16 +1723,6 @@ class RepcMt000200UvFinalGoal:
 
 @dataclass
 class RepcMt000200UvGoal:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar observation_goal:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Goal"
 
@@ -2094,25 +1794,6 @@ class RepcMt000200UvGoal:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -2134,14 +1815,6 @@ class RepcMt000200UvGoal:
 
 @dataclass
 class RepcMt000200UvMaterialPart:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar part_material_kind:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.MaterialPart"
 
@@ -2197,19 +1870,6 @@ class RepcMt000200UvMaterialPart:
 
 @dataclass
 class RepcMt000200UvPatientInstructions:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar effective_time:
-    :ivar performer:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.PatientInstructions"
 
@@ -2302,16 +1962,6 @@ class RepcMt000200UvPatientInstructions:
 
 @dataclass
 class RepcMt000200UvPlannedReview:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar effective_time:
-    :ivar performer:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.PlannedReview"
 
@@ -2383,16 +2033,6 @@ class RepcMt000200UvPlannedReview:
 
 @dataclass
 class RepcMt000200UvComponent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar patient_instructions:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Component"
 
@@ -2464,19 +2104,6 @@ class RepcMt000200UvComponent:
 
 @dataclass
 class RepcMt000200UvConditions:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar conjunction_code:
-    :ivar seperatable_ind:
-    :ivar criterion:
-    :ivar criterion_group:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Conditions"
 
@@ -2571,17 +2198,6 @@ class RepcMt000200UvConditions:
 
 @dataclass
 class RepcMt000200UvMaterialKind:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar desc:
-    :ivar material_part:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.MaterialKind"
 
@@ -2659,16 +2275,6 @@ class RepcMt000200UvMaterialKind:
 
 @dataclass
 class RepcMt000200UvSubject:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar planned_review:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Subject"
 
@@ -2742,16 +2348,6 @@ class RepcMt000200UvSubject:
 
 @dataclass
 class RepcMt000200UvSubject2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar annotation:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Subject2"
 
@@ -2824,30 +2420,6 @@ class RepcMt000200UvSubject2:
 
 @dataclass
 class RepcMt000200UvActDefinition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar uncertainty_code:
-    :ivar language_code:
-    :ivar goal:
-    :ivar reason:
-    :ivar conditions:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.ActDefinition"
 
@@ -3032,14 +2604,6 @@ class RepcMt000200UvActDefinition:
 
 @dataclass
 class RepcMt000200UvAdministerableMaterial:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar administerable_material_kind:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.AdministerableMaterial"
 
@@ -3095,35 +2659,11 @@ class RepcMt000200UvAdministerableMaterial:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class RepcMt000200UvEncounterDefinition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar goal:
-    :ivar reason:
-    :ivar conditions:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.EncounterDefinition"
 
@@ -3284,34 +2824,6 @@ class RepcMt000200UvEncounterDefinition:
 
 @dataclass
 class RepcMt000200UvObservationDefinition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar derivation_expr:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar repeat_number:
-    :ivar uncertainty_code:
-    :ivar language_code:
-    :ivar value:
-    :ivar method_code:
-    :ivar target_site_code:
-    :ivar goal:
-    :ivar reason:
-    :ivar conditions:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.ObservationDefinition"
 
@@ -3527,33 +3039,6 @@ class RepcMt000200UvObservationDefinition:
 
 @dataclass
 class RepcMt000200UvProcedureDefinition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar uncertainty_code:
-    :ivar language_code:
-    :ivar method_code:
-    :ivar approach_site_code:
-    :ivar target_site_code:
-    :ivar goal:
-    :ivar reason:
-    :ivar conditions:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.ProcedureDefinition"
 
@@ -3761,22 +3246,6 @@ class RepcMt000200UvProcedureDefinition:
 
 @dataclass
 class RepcMt000200UvSupplyEvent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar derivation_expr:
-    :ivar goal:
-    :ivar reason:
-    :ivar conditions:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.SupplyEvent"
 
@@ -3897,16 +3366,6 @@ class RepcMt000200UvSupplyEvent:
 
 @dataclass
 class RepcMt000200UvConsumable:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar administerable_material:
-    :ivar medication:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.Consumable"
 
@@ -3976,36 +3435,6 @@ class RepcMt000200UvConsumable:
 
 @dataclass
 class RepcMt000200UvSubstanceAdministrationDefinition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar repeat_number:
-    :ivar route_code:
-    :ivar approach_site_code:
-    :ivar dose_quantity:
-    :ivar rate_quantity:
-    :ivar max_dose_quantity:
-    :ivar administration_unit_code:
-    :ivar consumable:
-    :ivar goal:
-    :ivar reason:
-    :ivar conditions:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.SubstanceAdministrationDefinition"
 
@@ -4238,22 +3667,6 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
 
 @dataclass
 class RepcMt000200UvComponent13:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar act_definition:
-    :ivar encounter_definition:
-    :ivar observation_definition:
-    :ivar procedure_definition:
-    :ivar substance_administration_definition:
-    :ivar supply_event:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Component13"
 
@@ -4377,21 +3790,6 @@ class RepcMt000200UvComponent13:
 
 @dataclass
 class RepcMt000200UvInFulfillmentOf2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar act_definition:
-    :ivar encounter_definition:
-    :ivar observation_definition:
-    :ivar procedure_definition:
-    :ivar substance_administration_definition:
-    :ivar supply_event:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.InFulfillmentOf2"
 
@@ -4507,28 +3905,6 @@ class RepcMt000200UvInFulfillmentOf2:
 
 @dataclass
 class RepcMt000200UvGuideline:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar title:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar author:
-    :ivar final_goal:
-    :ivar reason:
-    :ivar component1:
-    :ivar component2:
-    :ivar component3:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.Guideline"
 
@@ -4696,39 +4072,6 @@ class RepcMt000200UvGuideline:
 
 @dataclass
 class RepcMt000200UvObservationIntent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar derivation_expr:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar repeat_number:
-    :ivar uncertainty_code:
-    :ivar language_code:
-    :ivar value:
-    :ivar method_code:
-    :ivar target_site_code:
-    :ivar performer:
-    :ivar goal:
-    :ivar in_fulfillment_of:
-    :ivar reason:
-    :ivar conditions:
-    :ivar component:
-    :ivar fulfillment:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar component_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.ObservationIntent"
 
@@ -4985,38 +4328,6 @@ class RepcMt000200UvObservationIntent:
 
 @dataclass
 class RepcMt000200UvProcedureIntent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar uncertainty_code:
-    :ivar language_code:
-    :ivar method_code:
-    :ivar approach_site_code:
-    :ivar target_site_code:
-    :ivar performer:
-    :ivar goal:
-    :ivar in_fulfillment_of:
-    :ivar reason:
-    :ivar conditions:
-    :ivar component:
-    :ivar fulfillment:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar component_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.ProcedureIntent"
 
@@ -5265,41 +4576,6 @@ class RepcMt000200UvProcedureIntent:
 
 @dataclass
 class RepcMt000200UvSubstanceAdministrationIntent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar repeat_number:
-    :ivar route_code:
-    :ivar approach_site_code:
-    :ivar dose_quantity:
-    :ivar rate_quantity:
-    :ivar max_dose_quantity:
-    :ivar administration_unit_code:
-    :ivar consumable:
-    :ivar performer:
-    :ivar goal:
-    :ivar in_fulfillment_of:
-    :ivar reason:
-    :ivar conditions:
-    :ivar component:
-    :ivar fulfillment:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar component_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.SubstanceAdministrationIntent"
 
@@ -5573,22 +4849,6 @@ class RepcMt000200UvSubstanceAdministrationIntent:
 
 @dataclass
 class RepcMt000200UvComponent3:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar act_intent:
-    :ivar encounter_intent:
-    :ivar observation_intent:
-    :ivar procedure_intent:
-    :ivar substance_administration_intent:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Component3"
 
@@ -5711,16 +4971,6 @@ class RepcMt000200UvComponent3:
 
 @dataclass
 class RepcMt000200UvDefinition1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar guideline:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Definition1"
 
@@ -5791,25 +5041,6 @@ class RepcMt000200UvDefinition1:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -5831,32 +5062,6 @@ class RepcMt000200UvDefinition1:
 
 @dataclass
 class RepcMt000200UvEncounterIntent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar performer:
-    :ivar goal:
-    :ivar in_fulfillment_of:
-    :ivar reason:
-    :ivar conditions:
-    :ivar component:
-    :ivar fulfillment:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar component_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.EncounterIntent"
 
@@ -6058,22 +5263,6 @@ class RepcMt000200UvEncounterIntent:
 
 @dataclass
 class RepcMt000200UvComponent4:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar act_intent:
-    :ivar encounter_intent:
-    :ivar observation_intent:
-    :ivar procedure_intent:
-    :ivar substance_administration_intent:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Component4"
 
@@ -6196,35 +5385,6 @@ class RepcMt000200UvComponent4:
 
 @dataclass
 class RepcMt000200UvActIntent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar availability_time:
-    :ivar priority_code:
-    :ivar confidentiality_code:
-    :ivar uncertainty_code:
-    :ivar language_code:
-    :ivar performer:
-    :ivar goal:
-    :ivar in_fulfillment_of:
-    :ivar reason:
-    :ivar conditions:
-    :ivar component:
-    :ivar fulfillment:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar component_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.ActIntent"
 
@@ -6450,22 +5610,6 @@ class RepcMt000200UvActIntent:
 
 @dataclass
 class RepcMt000200UvComponent10:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar act_intent:
-    :ivar encounter_intent:
-    :ivar observation_intent:
-    :ivar procedure_intent:
-    :ivar substance_administration_intent:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    :ivar context_conduction_ind:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "REPC_MT000200UV.Component10"
 
@@ -6589,33 +5733,6 @@ class RepcMt000200UvComponent10:
 
 @dataclass
 class RepcMt000200UvCarePlan:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar title:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar performer:
-    :ivar author:
-    :ivar data_enterer:
-    :ivar verifier:
-    :ivar participant:
-    :ivar final_goal:
-    :ivar definition:
-    :ivar reason:
-    :ivar component1:
-    :ivar component2:
-    :ivar component3:
-    :ivar subject_of1:
-    :ivar subject_of2:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "REPC_MT000200UV.CarePlan"
 

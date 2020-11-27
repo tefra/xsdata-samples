@@ -7,27 +7,6 @@ __NAMESPACE__ = "http://xml.amadeus.com/FMPTBQ_15_3_1A"
 
 @dataclass
 class FareMasterPricerTravelBoardSearch:
-    """
-    :ivar number_of_unit:
-    :ivar global_options:
-    :ivar pax_reference:
-    :ivar customer_ref:
-    :ivar form_of_payment_by_passenger:
-    :ivar solution_family:
-    :ivar passenger_info_grp:
-    :ivar fare_families:
-    :ivar fare_options:
-    :ivar price_to_beat:
-    :ivar tax_info:
-    :ivar travel_flight_info:
-    :ivar value_search:
-    :ivar buckets:
-    :ivar itinerary:
-    :ivar ticket_change_info:
-    :ivar combination_fare_families:
-    :ivar fee_option:
-    :ivar office_id_details:
-    """
     class Meta:
         name = "Fare_MasterPricerTravelBoardSearch"
         namespace = "http://xml.amadeus.com/FMPTBQ_15_3_1A"
@@ -178,9 +157,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class NumberOfUnit:
-        """
-        :ivar unit_number_detail:
-        """
         unit_number_detail: List["FareMasterPricerTravelBoardSearch.NumberOfUnit.UnitNumberDetail"] = field(
             default_factory=list,
             metadata={
@@ -193,10 +169,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class UnitNumberDetail:
-            """
-            :ivar number_of_units:
-            :ivar type_of_unit:
-            """
             number_of_units: Optional[Decimal] = field(
                 default=None,
                 metadata={
@@ -218,9 +190,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class GlobalOptions:
-        """
-        :ivar selection_details:
-        """
         selection_details: List["FareMasterPricerTravelBoardSearch.GlobalOptions.SelectionDetails"] = field(
             default_factory=list,
             metadata={
@@ -233,10 +202,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class SelectionDetails:
-            """
-            :ivar option:
-            :ivar option_information:
-            """
             option: Optional[str] = field(
                 default=None,
                 metadata={
@@ -258,10 +223,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class PaxReference:
-        """
-        :ivar ptc:
-        :ivar traveller:
-        """
         ptc: List[str] = field(
             default_factory=list,
             metadata={
@@ -282,10 +243,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class Traveller:
-            """
-            :ivar ref:
-            :ivar infant_indicator:
-            """
             ref: Optional[Decimal] = field(
                 default=None,
                 metadata={
@@ -305,9 +262,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class CustomerRef:
-        """
-        :ivar customer_references:
-        """
         customer_references: List["FareMasterPricerTravelBoardSearch.CustomerRef.CustomerReferences"] = field(
             default_factory=list,
             metadata={
@@ -320,12 +274,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class CustomerReferences:
-            """
-            :ivar reference_qualifier:
-            :ivar reference_number:
-            :ivar reference_party_name:
-            :ivar traveller_reference_nbr:
-            """
             reference_qualifier: Optional[str] = field(
                 default=None,
                 metadata={
@@ -366,10 +314,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class FormOfPaymentByPassenger:
-        """
-        :ivar form_of_payment_details:
-        :ivar passenger_fee_reference:
-        """
         form_of_payment_details: Optional["FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails"] = field(
             default=None,
             metadata={
@@ -388,9 +332,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FormOfPaymentDetails:
-            """
-            :ivar form_of_payment_details:
-            """
             form_of_payment_details: List["FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails.FormOfPaymentDetails"] = field(
                 default_factory=list,
                 metadata={
@@ -402,11 +343,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FormOfPaymentDetails:
-                """
-                :ivar type:
-                :ivar charged_amount:
-                :ivar credit_card_number:
-                """
                 type: Optional[str] = field(
                     default=None,
                     metadata={
@@ -435,11 +371,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class PassengerFeeReference:
-            """
-            :ivar passenger_fee_ref_type:
-            :ivar passenger_fee_ref_number:
-            :ivar other_characteristics:
-            """
             passenger_fee_ref_type: Optional[str] = field(
                 default=None,
                 metadata={
@@ -466,9 +397,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class OtherCharacteristics:
-                """
-                :ivar passenger_fee_ref_qualif:
-                """
                 passenger_fee_ref_qualif: Optional[str] = field(
                     default=None,
                     metadata={
@@ -481,14 +409,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class SolutionFamily:
-        """
-        :ivar value_qualifier:
-        :ivar value:
-        :ivar fare_details:
-        :ivar identity_number:
-        :ivar fare_type_grouping:
-        :ivar rate_category:
-        """
         value_qualifier: Optional[str] = field(
             default=None,
             metadata={
@@ -539,12 +459,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FareDetails:
-            """
-            :ivar qualifier:
-            :ivar rate:
-            :ivar country:
-            :ivar fare_category:
-            """
             qualifier: Optional[str] = field(
                 default=None,
                 metadata={
@@ -579,9 +493,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FareTypeGrouping:
-            """
-            :ivar pricing_group:
-            """
             pricing_group: Optional[str] = field(
                 default=None,
                 metadata={
@@ -594,10 +505,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class PassengerInfoGrp:
-        """
-        :ivar passenger_reference:
-        :ivar psg_details_info:
-        """
         passenger_reference: Optional["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PassengerReference"] = field(
             default=None,
             metadata={
@@ -617,9 +524,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class PassengerReference:
-            """
-            :ivar segment_control_details:
-            """
             segment_control_details: List["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PassengerReference.SegmentControlDetails"] = field(
                 default_factory=list,
                 metadata={
@@ -631,9 +535,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class SegmentControlDetails:
-                """
-                :ivar quantity:
-                """
                 quantity: Optional[Decimal] = field(
                     default=None,
                     metadata={
@@ -643,10 +544,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class PsgDetailsInfo:
-            """
-            :ivar discount_ptc:
-            :ivar flequent_flyer_details:
-            """
             discount_ptc: Optional["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.DiscountPtc"] = field(
                 default=None,
                 metadata={
@@ -665,10 +562,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class DiscountPtc:
-                """
-                :ivar value_qualifier:
-                :ivar value:
-                """
                 value_qualifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -687,9 +580,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FlequentFlyerDetails:
-                """
-                :ivar frequent_traveller_details:
-                """
                 frequent_traveller_details: List["FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.FlequentFlyerDetails.FrequentTravellerDetails"] = field(
                     default_factory=list,
                     metadata={
@@ -702,18 +592,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class FrequentTravellerDetails:
-                    """
-                    :ivar carrier:
-                    :ivar number:
-                    :ivar customer_reference:
-                    :ivar status:
-                    :ivar tier_level:
-                    :ivar priority_code:
-                    :ivar tier_description:
-                    :ivar company_code:
-                    :ivar customer_value:
-                    :ivar type:
-                    """
                     carrier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -801,12 +679,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class FareFamilies:
-        """
-        :ivar family_information:
-        :ivar family_criteria:
-        :ivar fare_family_segment:
-        :ivar other_possible_criteria:
-        """
         family_information: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.FamilyInformation"] = field(
             default=None,
             metadata={
@@ -841,12 +713,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FamilyInformation:
-            """
-            :ivar ref_number:
-            :ivar fare_familyname:
-            :ivar hierarchy:
-            :ivar commercial_family_details:
-            """
             ref_number: Optional[Decimal] = field(
                 default=None,
                 metadata={
@@ -880,9 +746,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CommercialFamilyDetails:
-                """
-                :ivar commercial_family:
-                """
                 commercial_family: Optional[str] = field(
                     default=None,
                     metadata={
@@ -896,17 +759,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FamilyCriteria:
-            """
-            :ivar carrier_id:
-            :ivar rdb:
-            :ivar fare_family_info:
-            :ivar fare_product_detail:
-            :ivar corporate_info:
-            :ivar cabin_product:
-            :ivar cabin_processing_identifier:
-            :ivar date_time_details:
-            :ivar other_criteria:
-            """
             carrier_id: List[str] = field(
                 default_factory=list,
                 metadata={
@@ -985,9 +837,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FareFamilyInfo:
-                """
-                :ivar fare_family_qual:
-                """
                 fare_family_qual: List[str] = field(
                     default_factory=list,
                     metadata={
@@ -1002,10 +851,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FareProductDetail:
-                """
-                :ivar fare_basis:
-                :ivar fare_type:
-                """
                 fare_basis: Optional[str] = field(
                     default=None,
                     metadata={
@@ -1028,10 +873,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CorporateInfo:
-                """
-                :ivar corporate_number_identifier:
-                :ivar corporate_name:
-                """
                 corporate_number_identifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -1053,9 +894,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CabinProduct:
-                """
-                :ivar cabin_designator:
-                """
                 cabin_designator: Optional[str] = field(
                     default=None,
                     metadata={
@@ -1069,10 +907,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class DateTimeDetails:
-                """
-                :ivar date:
-                :ivar other_date:
-                """
                 date: Optional[str] = field(
                     default=None,
                     metadata={
@@ -1092,10 +926,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class OtherCriteria:
-                """
-                :ivar name:
-                :ivar value:
-                """
                 name: Optional[str] = field(
                     default=None,
                     metadata={
@@ -1117,10 +947,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FareFamilySegment:
-            """
-            :ivar reference_info:
-            :ivar family_criteria:
-            """
             reference_info: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.ReferenceInfo"] = field(
                 default=None,
                 metadata={
@@ -1139,9 +965,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class ReferenceInfo:
-                """
-                :ivar referencing_detail:
-                """
                 referencing_detail: List["FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.ReferenceInfo.ReferencingDetail"] = field(
                     default_factory=list,
                     metadata={
@@ -1153,10 +976,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class ReferencingDetail:
-                    """
-                    :ivar ref_qualifier:
-                    :ivar ref_number:
-                    """
                     ref_qualifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -1177,17 +996,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FamilyCriteria:
-                """
-                :ivar carrier_id:
-                :ivar rdb:
-                :ivar fare_family_info:
-                :ivar fare_product_detail:
-                :ivar corporate_info:
-                :ivar cabin_product:
-                :ivar cabin_processing_identifier:
-                :ivar date_time_details:
-                :ivar other_criteria:
-                """
                 carrier_id: List[str] = field(
                     default_factory=list,
                     metadata={
@@ -1266,9 +1074,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class FareFamilyInfo:
-                    """
-                    :ivar fare_family_qual:
-                    """
                     fare_family_qual: List[str] = field(
                         default_factory=list,
                         metadata={
@@ -1283,10 +1088,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class FareProductDetail:
-                    """
-                    :ivar fare_basis:
-                    :ivar fare_type:
-                    """
                     fare_basis: Optional[str] = field(
                         default=None,
                         metadata={
@@ -1309,10 +1110,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class CorporateInfo:
-                    """
-                    :ivar corporate_number_identifier:
-                    :ivar corporate_name:
-                    """
                     corporate_number_identifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -1334,9 +1131,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class CabinProduct:
-                    """
-                    :ivar cabin_designator:
-                    """
                     cabin_designator: Optional[str] = field(
                         default=None,
                         metadata={
@@ -1350,10 +1144,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class DateTimeDetails:
-                    """
-                    :ivar date:
-                    :ivar other_date:
-                    """
                     date: Optional[str] = field(
                         default=None,
                         metadata={
@@ -1373,10 +1163,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class OtherCriteria:
-                    """
-                    :ivar name:
-                    :ivar value:
-                    """
                     name: Optional[str] = field(
                         default=None,
                         metadata={
@@ -1398,11 +1184,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class OtherPossibleCriteria:
-            """
-            :ivar logical_link:
-            :ivar family_criteria:
-            :ivar fare_family_segment:
-            """
             logical_link: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink"] = field(
                 default=None,
                 metadata={
@@ -1429,9 +1210,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class LogicalLink:
-                """
-                :ivar boolean_expression:
-                """
                 boolean_expression: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink.BooleanExpression"] = field(
                     default=None,
                     metadata={
@@ -1443,9 +1221,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class BooleanExpression:
-                    """
-                    :ivar code_operator:
-                    """
                     code_operator: Optional[str] = field(
                         default=None,
                         metadata={
@@ -1458,17 +1233,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FamilyCriteria:
-                """
-                :ivar carrier_id:
-                :ivar rdb:
-                :ivar fare_family_info:
-                :ivar fare_product_detail:
-                :ivar corporate_info:
-                :ivar cabin_product:
-                :ivar cabin_processing_identifier:
-                :ivar date_time_details:
-                :ivar other_criteria:
-                """
                 carrier_id: List[str] = field(
                     default_factory=list,
                     metadata={
@@ -1547,9 +1311,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class FareFamilyInfo:
-                    """
-                    :ivar fare_family_qual:
-                    """
                     fare_family_qual: List[str] = field(
                         default_factory=list,
                         metadata={
@@ -1564,10 +1325,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class FareProductDetail:
-                    """
-                    :ivar fare_basis:
-                    :ivar fare_type:
-                    """
                     fare_basis: Optional[str] = field(
                         default=None,
                         metadata={
@@ -1590,10 +1347,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class CorporateInfo:
-                    """
-                    :ivar corporate_number_identifier:
-                    :ivar corporate_name:
-                    """
                     corporate_number_identifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -1615,9 +1368,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class CabinProduct:
-                    """
-                    :ivar cabin_designator:
-                    """
                     cabin_designator: Optional[str] = field(
                         default=None,
                         metadata={
@@ -1631,10 +1381,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class DateTimeDetails:
-                    """
-                    :ivar date:
-                    :ivar other_date:
-                    """
                     date: Optional[str] = field(
                         default=None,
                         metadata={
@@ -1654,10 +1400,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class OtherCriteria:
-                    """
-                    :ivar name:
-                    :ivar value:
-                    """
                     name: Optional[str] = field(
                         default=None,
                         metadata={
@@ -1679,10 +1421,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FareFamilySegment:
-                """
-                :ivar reference_info:
-                :ivar family_criteria:
-                """
                 reference_info: Optional["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.ReferenceInfo"] = field(
                     default=None,
                     metadata={
@@ -1701,9 +1439,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class ReferenceInfo:
-                    """
-                    :ivar referencing_detail:
-                    """
                     referencing_detail: List["FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.ReferenceInfo.ReferencingDetail"] = field(
                         default_factory=list,
                         metadata={
@@ -1715,10 +1450,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class ReferencingDetail:
-                        """
-                        :ivar ref_qualifier:
-                        :ivar ref_number:
-                        """
                         ref_qualifier: Optional[str] = field(
                             default=None,
                             metadata={
@@ -1739,17 +1470,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class FamilyCriteria:
-                    """
-                    :ivar carrier_id:
-                    :ivar rdb:
-                    :ivar fare_family_info:
-                    :ivar fare_product_detail:
-                    :ivar corporate_info:
-                    :ivar cabin_product:
-                    :ivar cabin_processing_identifier:
-                    :ivar date_time_details:
-                    :ivar other_criteria:
-                    """
                     carrier_id: List[str] = field(
                         default_factory=list,
                         metadata={
@@ -1828,9 +1548,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class FareFamilyInfo:
-                        """
-                        :ivar fare_family_qual:
-                        """
                         fare_family_qual: List[str] = field(
                             default_factory=list,
                             metadata={
@@ -1845,10 +1562,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class FareProductDetail:
-                        """
-                        :ivar fare_basis:
-                        :ivar fare_type:
-                        """
                         fare_basis: Optional[str] = field(
                             default=None,
                             metadata={
@@ -1871,10 +1584,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class CorporateInfo:
-                        """
-                        :ivar corporate_number_identifier:
-                        :ivar corporate_name:
-                        """
                         corporate_number_identifier: Optional[str] = field(
                             default=None,
                             metadata={
@@ -1896,9 +1605,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class CabinProduct:
-                        """
-                        :ivar cabin_designator:
-                        """
                         cabin_designator: Optional[str] = field(
                             default=None,
                             metadata={
@@ -1912,10 +1618,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class DateTimeDetails:
-                        """
-                        :ivar date:
-                        :ivar other_date:
-                        """
                         date: Optional[str] = field(
                             default=None,
                             metadata={
@@ -1935,10 +1637,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class OtherCriteria:
-                        """
-                        :ivar name:
-                        :ivar value:
-                        """
                         name: Optional[str] = field(
                             default=None,
                             metadata={
@@ -1960,16 +1658,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class FareOptions:
-        """
-        :ivar pricing_tick_info:
-        :ivar corporate:
-        :ivar ticketing_price_scheme:
-        :ivar fee_id_description:
-        :ivar conversion_rate:
-        :ivar form_of_payment:
-        :ivar frequent_traveller_info:
-        :ivar monetary_cabin_info:
-        """
         pricing_tick_info: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo"] = field(
             default=None,
             metadata={
@@ -2029,15 +1717,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class PricingTickInfo:
-            """
-            :ivar pricing_ticketing:
-            :ivar ticketing_date:
-            :ivar company_id:
-            :ivar selling_point:
-            :ivar ticketing_point:
-            :ivar journey_origin_point:
-            :ivar corporate_id:
-            """
             pricing_ticketing: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.PricingTicketing"] = field(
                 default=None,
                 metadata={
@@ -2090,9 +1769,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class PricingTicketing:
-                """
-                :ivar price_type:
-                """
                 price_type: List[str] = field(
                     default_factory=list,
                     metadata={
@@ -2107,10 +1783,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class TicketingDate:
-                """
-                :ivar date:
-                :ivar rtc_date:
-                """
                 date: Optional[str] = field(
                     default=None,
                     metadata={
@@ -2136,10 +1808,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class SellingPoint:
-                """
-                :ivar location_id:
-                :ivar country:
-                """
                 location_id: Optional[str] = field(
                     default=None,
                     metadata={
@@ -2161,10 +1829,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class TicketingPoint:
-                """
-                :ivar location_id:
-                :ivar country:
-                """
                 location_id: Optional[str] = field(
                     default=None,
                     metadata={
@@ -2186,10 +1850,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class JourneyOriginPoint:
-                """
-                :ivar location_id:
-                :ivar country:
-                """
                 location_id: Optional[str] = field(
                     default=None,
                     metadata={
@@ -2211,11 +1871,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CorporateId:
-                """
-                :ivar arc_number:
-                :ivar ersp_number:
-                :ivar iata_number:
-                """
                 arc_number: Optional[str] = field(
                     default=None,
                     metadata={
@@ -2246,9 +1901,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class Corporate:
-            """
-            :ivar corporate_id:
-            """
             corporate_id: List["FareMasterPricerTravelBoardSearch.FareOptions.Corporate.CorporateId"] = field(
                 default_factory=list,
                 metadata={
@@ -2260,10 +1912,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CorporateId:
-                """
-                :ivar corporate_qualifier:
-                :ivar identity:
-                """
                 corporate_qualifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -2287,12 +1935,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class TicketingPriceScheme:
-            """
-            :ivar reference_number:
-            :ivar name:
-            :ivar status:
-            :ivar description:
-            """
             reference_number: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2330,9 +1972,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FeeIdDescription:
-            """
-            :ivar fee_id:
-            """
             fee_id: List["FareMasterPricerTravelBoardSearch.FareOptions.FeeIdDescription.FeeId"] = field(
                 default_factory=list,
                 metadata={
@@ -2344,10 +1983,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FeeId:
-                """
-                :ivar fee_type:
-                :ivar fee_id_number:
-                """
                 fee_type: Optional[str] = field(
                     default=None,
                     metadata={
@@ -2371,9 +2006,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class ConversionRate:
-            """
-            :ivar conversion_rate_detail:
-            """
             conversion_rate_detail: List["FareMasterPricerTravelBoardSearch.FareOptions.ConversionRate.ConversionRateDetail"] = field(
                 default_factory=list,
                 metadata={
@@ -2386,10 +2018,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class ConversionRateDetail:
-                """
-                :ivar conversion_type:
-                :ivar currency:
-                """
                 conversion_type: Optional[str] = field(
                     default=None,
                     metadata={
@@ -2411,9 +2039,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FormOfPayment:
-            """
-            :ivar form_of_payment_details:
-            """
             form_of_payment_details: List["FareMasterPricerTravelBoardSearch.FareOptions.FormOfPayment.FormOfPaymentDetails"] = field(
                 default_factory=list,
                 metadata={
@@ -2425,11 +2050,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FormOfPaymentDetails:
-                """
-                :ivar type:
-                :ivar charged_amount:
-                :ivar credit_card_number:
-                """
                 type: Optional[str] = field(
                     default=None,
                     metadata={
@@ -2458,9 +2078,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FrequentTravellerInfo:
-            """
-            :ivar frequent_traveller_details:
-            """
             frequent_traveller_details: List["FareMasterPricerTravelBoardSearch.FareOptions.FrequentTravellerInfo.FrequentTravellerDetails"] = field(
                 default_factory=list,
                 metadata={
@@ -2473,15 +2090,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FrequentTravellerDetails:
-                """
-                :ivar carrier:
-                :ivar number:
-                :ivar customer_reference:
-                :ivar tier_level:
-                :ivar priority_code:
-                :ivar tier_description:
-                :ivar type:
-                """
                 carrier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -2546,9 +2154,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class MonetaryCabinInfo:
-            """
-            :ivar money_and_cabin_info:
-            """
             money_and_cabin_info: List["FareMasterPricerTravelBoardSearch.FareOptions.MonetaryCabinInfo.MoneyAndCabinInfo"] = field(
                 default_factory=list,
                 metadata={
@@ -2560,13 +2165,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class MoneyAndCabinInfo:
-                """
-                :ivar amount_type:
-                :ivar amount:
-                :ivar currency:
-                :ivar location_id:
-                :ivar cabin_class_designator:
-                """
                 amount_type: Optional[str] = field(
                     default=None,
                     metadata={
@@ -2613,10 +2211,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class PriceToBeat:
-        """
-        :ivar money_info:
-        :ivar additional_money_info:
-        """
         money_info: Optional["FareMasterPricerTravelBoardSearch.PriceToBeat.MoneyInfo"] = field(
             default=None,
             metadata={
@@ -2636,11 +2230,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class MoneyInfo:
-            """
-            :ivar qualifier:
-            :ivar amount:
-            :ivar currency:
-            """
             qualifier: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2667,12 +2256,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class AdditionalMoneyInfo:
-            """
-            :ivar qualifier:
-            :ivar amount:
-            :ivar currency:
-            :ivar location_id:
-            """
             qualifier: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2708,10 +2291,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class TaxInfo:
-        """
-        :ivar withhold_tax_surcharge:
-        :ivar tax_detail:
-        """
         withhold_tax_surcharge: Optional[str] = field(
             default=None,
             metadata={
@@ -2732,13 +2311,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class TaxDetail:
-            """
-            :ivar rate:
-            :ivar country:
-            :ivar currency:
-            :ivar type:
-            :ivar amount_qualifier:
-            """
             rate: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2783,14 +2355,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class TravelFlightInfo:
-        """
-        :ivar cabin_id:
-        :ivar company_identity:
-        :ivar flight_detail:
-        :ivar inclusion_detail:
-        :ivar exclusion_detail:
-        :ivar unit_number_detail:
-        """
         cabin_id: Optional["FareMasterPricerTravelBoardSearch.TravelFlightInfo.CabinId"] = field(
             default=None,
             metadata={
@@ -2840,10 +2404,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class CabinId:
-            """
-            :ivar cabin_qualifier:
-            :ivar cabin:
-            """
             cabin_qualifier: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2865,10 +2425,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class CompanyIdentity:
-            """
-            :ivar carrier_qualifier:
-            :ivar carrier_id:
-            """
             carrier_qualifier: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2893,9 +2449,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FlightDetail:
-            """
-            :ivar flight_type:
-            """
             flight_type: List[str] = field(
                 default_factory=list,
                 metadata={
@@ -2909,11 +2462,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class InclusionDetail:
-            """
-            :ivar inclusion_identifier:
-            :ivar location_id:
-            :ivar airport_city_qualifier:
-            """
             inclusion_identifier: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2946,11 +2494,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class ExclusionDetail:
-            """
-            :ivar exclusion_identifier:
-            :ivar location_id:
-            :ivar airport_city_qualifier:
-            """
             exclusion_identifier: Optional[str] = field(
                 default=None,
                 metadata={
@@ -2983,10 +2526,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class UnitNumberDetail:
-            """
-            :ivar number_of_units:
-            :ivar type_of_unit:
-            """
             number_of_units: Optional[Decimal] = field(
                 default=None,
                 metadata={
@@ -3008,12 +2547,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class ValueSearch:
-        """
-        :ivar criteria_name:
-        :ivar criteria_code:
-        :ivar value:
-        :ivar criteria_details:
-        """
         criteria_name: Optional[str] = field(
             default=None,
             metadata={
@@ -3051,11 +2584,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class CriteriaDetails:
-            """
-            :ivar type:
-            :ivar value:
-            :ivar attribute:
-            """
             type: Optional[str] = field(
                 default=None,
                 metadata={
@@ -3084,10 +2612,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class Buckets:
-        """
-        :ivar bucket_info:
-        :ivar bucket_details:
-        """
         bucket_info: Optional["FareMasterPricerTravelBoardSearch.Buckets.BucketInfo"] = field(
             default=None,
             metadata={
@@ -3107,16 +2631,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class BucketInfo:
-            """
-            :ivar number:
-            :ivar name:
-            :ivar completion:
-            :ivar mode:
-            :ivar value_ref:
-            :ivar weight:
-            :ivar count:
-            :ivar attribute_count:
-            """
             number: Optional[str] = field(
                 default=None,
                 metadata={
@@ -3180,11 +2694,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class BucketDetails:
-            """
-            :ivar code:
-            :ivar type:
-            :ivar attribute:
-            """
             code: Optional[str] = field(
                 default=None,
                 metadata={
@@ -3211,10 +2720,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class Attribute:
-                """
-                :ivar requested_sgt:
-                :ivar value:
-                """
                 requested_sgt: Optional[str] = field(
                     default=None,
                     metadata={
@@ -3236,19 +2741,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class Itinerary:
-        """
-        :ivar requested_segment_ref:
-        :ivar departure_localization:
-        :ivar arrival_localization:
-        :ivar time_details:
-        :ivar flight_info:
-        :ivar family_information:
-        :ivar value_search:
-        :ivar group_of_flights:
-        :ivar flight_info_pnr:
-        :ivar requested_segment_action:
-        :ivar attributes:
-        """
         requested_segment_ref: Optional["FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentRef"] = field(
             default=None,
             metadata={
@@ -3332,10 +2824,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class RequestedSegmentRef:
-            """
-            :ivar seg_ref:
-            :ivar location_forcing:
-            """
             seg_ref: Optional[Decimal] = field(
                 default=None,
                 metadata={
@@ -3355,10 +2843,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class LocationForcing:
-                """
-                :ivar airport_city_qualifier:
-                :ivar segment_number:
-                """
                 airport_city_qualifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -3380,12 +2864,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class DepartureLocalization:
-            """
-            :ivar departure_point:
-            :ivar dep_multi_city:
-            :ivar first_pnr_segment_ref:
-            :ivar attribute_details:
-            """
             departure_point: Optional["FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.DeparturePoint"] = field(
                 default=None,
                 metadata={
@@ -3419,14 +2897,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class DeparturePoint:
-                """
-                :ivar distance:
-                :ivar distance_unit:
-                :ivar location_id:
-                :ivar airport_city_qualifier:
-                :ivar latitude:
-                :ivar longitude:
-                """
                 distance: Optional[Decimal] = field(
                     default=None,
                     metadata={
@@ -3479,10 +2949,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class DepMultiCity:
-                """
-                :ivar location_id:
-                :ivar airport_city_qualifier:
-                """
                 location_id: Optional[str] = field(
                     default=None,
                     metadata={
@@ -3505,10 +2971,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FirstPnrSegmentRef:
-                """
-                :ivar pnr_segment_tattoo:
-                :ivar pnr_segment_qualifier:
-                """
                 pnr_segment_tattoo: Optional[Decimal] = field(
                     default=None,
                     metadata={
@@ -3528,10 +2990,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class AttributeDetails:
-                """
-                :ivar type:
-                :ivar value:
-                """
                 type: Optional[str] = field(
                     default=None,
                     metadata={
@@ -3552,11 +3010,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class ArrivalLocalization:
-            """
-            :ivar arrival_point_details:
-            :ivar arrival_multi_city:
-            :ivar attribute_details:
-            """
             arrival_point_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization.ArrivalPointDetails"] = field(
                 default=None,
                 metadata={
@@ -3583,14 +3036,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class ArrivalPointDetails:
-                """
-                :ivar distance:
-                :ivar distance_unit:
-                :ivar location_id:
-                :ivar airport_city_qualifier:
-                :ivar latitude:
-                :ivar longitude:
-                """
                 distance: Optional[Decimal] = field(
                     default=None,
                     metadata={
@@ -3643,10 +3088,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class ArrivalMultiCity:
-                """
-                :ivar location_id:
-                :ivar airport_city_qualifier:
-                """
                 location_id: Optional[str] = field(
                     default=None,
                     metadata={
@@ -3669,10 +3110,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class AttributeDetails:
-                """
-                :ivar type:
-                :ivar value:
-                """
                 type: Optional[str] = field(
                     default=None,
                     metadata={
@@ -3693,11 +3130,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class TimeDetails:
-            """
-            :ivar first_date_time_detail:
-            :ivar range_of_date:
-            :ivar trip_details:
-            """
             first_date_time_detail: Optional["FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.FirstDateTimeDetail"] = field(
                 default=None,
                 metadata={
@@ -3723,12 +3155,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FirstDateTimeDetail:
-                """
-                :ivar time_qualifier:
-                :ivar date:
-                :ivar time:
-                :ivar time_window:
-                """
                 time_qualifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -3766,11 +3192,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class RangeOfDate:
-                """
-                :ivar range_qualifier:
-                :ivar day_interval:
-                :ivar time_atdestination:
-                """
                 range_qualifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -3799,11 +3220,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class TripDetails:
-                """
-                :ivar flexibility_qualifier:
-                :ivar trip_interval:
-                :ivar trip_duration:
-                """
                 flexibility_qualifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -3830,14 +3246,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FlightInfo:
-            """
-            :ivar cabin_id:
-            :ivar company_identity:
-            :ivar flight_detail:
-            :ivar inclusion_detail:
-            :ivar exclusion_detail:
-            :ivar unit_number_detail:
-            """
             cabin_id: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.CabinId"] = field(
                 default=None,
                 metadata={
@@ -3887,10 +3295,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CabinId:
-                """
-                :ivar cabin_qualifier:
-                :ivar cabin:
-                """
                 cabin_qualifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -3912,10 +3316,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CompanyIdentity:
-                """
-                :ivar carrier_qualifier:
-                :ivar carrier_id:
-                """
                 carrier_qualifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -3940,9 +3340,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FlightDetail:
-                """
-                :ivar flight_type:
-                """
                 flight_type: List[str] = field(
                     default_factory=list,
                     metadata={
@@ -3956,11 +3353,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class InclusionDetail:
-                """
-                :ivar inclusion_identifier:
-                :ivar location_id:
-                :ivar airport_city_qualifier:
-                """
                 inclusion_identifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -3993,11 +3385,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class ExclusionDetail:
-                """
-                :ivar exclusion_identifier:
-                :ivar location_id:
-                :ivar airport_city_qualifier:
-                """
                 exclusion_identifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -4030,10 +3417,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class UnitNumberDetail:
-                """
-                :ivar number_of_units:
-                :ivar type_of_unit:
-                """
                 number_of_units: Optional[Decimal] = field(
                     default=None,
                     metadata={
@@ -4055,9 +3438,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FamilyInformation:
-            """
-            :ivar commercial_family_details:
-            """
             commercial_family_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FamilyInformation.CommercialFamilyDetails"] = field(
                 default_factory=list,
                 metadata={
@@ -4069,9 +3449,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CommercialFamilyDetails:
-                """
-                :ivar commercial_family:
-                """
                 commercial_family: Optional[str] = field(
                     default=None,
                     metadata={
@@ -4085,12 +3462,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class ValueSearch:
-            """
-            :ivar criteria_name:
-            :ivar criteria_code:
-            :ivar value:
-            :ivar criteria_details:
-            """
             criteria_name: Optional[str] = field(
                 default=None,
                 metadata={
@@ -4128,11 +3499,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CriteriaDetails:
-                """
-                :ivar type:
-                :ivar value:
-                :ivar attribute:
-                """
                 type: Optional[str] = field(
                     default=None,
                     metadata={
@@ -4161,11 +3527,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class GroupOfFlights:
-            """
-            :ivar prop_flight_gr_detail:
-            :ivar price_to_beat:
-            :ivar flight_details:
-            """
             prop_flight_gr_detail: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PropFlightGrDetail"] = field(
                 default=None,
                 metadata={
@@ -4193,11 +3554,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class PropFlightGrDetail:
-                """
-                :ivar flight_proposal:
-                :ivar flight_characteristic:
-                :ivar maj_cabin:
-                """
                 flight_proposal: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PropFlightGrDetail.FlightProposal"] = field(
                     default_factory=list,
                     metadata={
@@ -4228,10 +3584,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class FlightProposal:
-                    """
-                    :ivar ref:
-                    :ivar unit_qualifier:
-                    """
                     ref: Optional[str] = field(
                         default=None,
                         metadata={
@@ -4252,10 +3604,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class PriceToBeat:
-                """
-                :ivar money_info:
-                :ivar additional_money_info:
-                """
                 money_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat.MoneyInfo"] = field(
                     default=None,
                     metadata={
@@ -4275,11 +3623,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class MoneyInfo:
-                    """
-                    :ivar qualifier:
-                    :ivar amount:
-                    :ivar currency:
-                    """
                     qualifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -4306,12 +3649,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class AdditionalMoneyInfo:
-                    """
-                    :ivar qualifier:
-                    :ivar amount:
-                    :ivar currency:
-                    :ivar location_id:
-                    """
                     qualifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -4347,16 +3684,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FlightDetails:
-                """
-                :ivar flight_information:
-                :ivar avl_info:
-                :ivar technical_stop:
-                :ivar commercial_agreement:
-                :ivar add_info:
-                :ivar terminal_equipment_details:
-                :ivar reservation_info:
-                :ivar price_to_beat:
-                """
                 flight_information: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation"] = field(
                     default=None,
                     metadata={
@@ -4420,15 +3747,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class FlightInformation:
-                    """
-                    :ivar product_date_time:
-                    :ivar location:
-                    :ivar company_id:
-                    :ivar flight_ortrain_number:
-                    :ivar product_detail:
-                    :ivar add_product_detail:
-                    :ivar attribute_details:
-                    """
                     product_date_time: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.ProductDateTime"] = field(
                         default=None,
                         metadata={
@@ -4486,13 +3804,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class ProductDateTime:
-                        """
-                        :ivar date_of_departure:
-                        :ivar time_of_departure:
-                        :ivar date_of_arrival:
-                        :ivar time_of_arrival:
-                        :ivar date_variation:
-                        """
                         date_of_departure: Optional[str] = field(
                             default=None,
                             metadata={
@@ -4542,11 +3853,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class Location:
-                        """
-                        :ivar location_id:
-                        :ivar airport_city_qualifier:
-                        :ivar terminal:
-                        """
                         location_id: Optional[str] = field(
                             default=None,
                             metadata={
@@ -4577,10 +3883,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class CompanyId:
-                        """
-                        :ivar marketing_carrier:
-                        :ivar operating_carrier:
-                        """
                         marketing_carrier: Optional[str] = field(
                             default=None,
                             metadata={
@@ -4603,12 +3905,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class ProductDetail:
-                        """
-                        :ivar equipment_type:
-                        :ivar operating_day:
-                        :ivar tech_stop_number:
-                        :ivar location_id:
-                        """
                         equipment_type: Optional[str] = field(
                             default=None,
                             metadata={
@@ -4647,14 +3943,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class AddProductDetail:
-                        """
-                        :ivar last_seat_available:
-                        :ivar level_of_access:
-                        :ivar electronic_ticketing:
-                        :ivar operational_suffix:
-                        :ivar product_detail_qualifier:
-                        :ivar flight_characteristic:
-                        """
                         last_seat_available: Optional[str] = field(
                             default=None,
                             metadata={
@@ -4713,10 +4001,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class AttributeDetails:
-                        """
-                        :ivar attribute_type:
-                        :ivar attribute_description:
-                        """
                         attribute_type: Optional[str] = field(
                             default=None,
                             metadata={
@@ -4739,10 +4023,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class AvlInfo:
-                    """
-                    :ivar cabin_product:
-                    :ivar context_details:
-                    """
                     cabin_product: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AvlInfo.CabinProduct"] = field(
                         default_factory=list,
                         metadata={
@@ -4761,12 +4041,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class CabinProduct:
-                        """
-                        :ivar rbd:
-                        :ivar booking_modifier:
-                        :ivar cabin:
-                        :ivar avl_status:
-                        """
                         rbd: Optional[str] = field(
                             default=None,
                             metadata={
@@ -4805,9 +4079,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class ContextDetails:
-                        """
-                        :ivar avl:
-                        """
                         avl: List[str] = field(
                             default_factory=list,
                             metadata={
@@ -4821,10 +4092,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class TechnicalStop:
-                    """
-                    :ivar stop_details:
-                    :ivar dummy_net:
-                    """
                     stop_details: List["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TechnicalStop.StopDetails"] = field(
                         default_factory=list,
                         metadata={
@@ -4844,13 +4111,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class StopDetails:
-                        """
-                        :ivar date_qualifier:
-                        :ivar date:
-                        :ivar first_time:
-                        :ivar equipement_type:
-                        :ivar location_id:
-                        """
                         date_qualifier: Optional[str] = field(
                             default=None,
                             metadata={
@@ -4898,10 +4158,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class CommercialAgreement:
-                    """
-                    :ivar codeshare_details:
-                    :ivar other_codeshare_details:
-                    """
                     codeshare_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.CommercialAgreement.CodeshareDetails"] = field(
                         default=None,
                         metadata={
@@ -4920,11 +4176,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class CodeshareDetails:
-                        """
-                        :ivar code_share_type:
-                        :ivar airline_designator:
-                        :ivar flight_number:
-                        """
                         code_share_type: Optional[str] = field(
                             default=None,
                             metadata={
@@ -4953,11 +4204,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class OtherCodeshareDetails:
-                        """
-                        :ivar code_share_type:
-                        :ivar airline_designator:
-                        :ivar flight_number:
-                        """
                         code_share_type: Optional[str] = field(
                             default=None,
                             metadata={
@@ -4986,12 +4232,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class AddInfo:
-                    """
-                    :ivar status:
-                    :ivar date_time_period_details:
-                    :ivar reference_number:
-                    :ivar product_identification:
-                    """
                     status: List[str] = field(
                         default_factory=list,
                         metadata={
@@ -5030,10 +4270,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class DateTimePeriodDetails:
-                        """
-                        :ivar qualifier:
-                        :ivar value:
-                        """
                         qualifier: Optional[str] = field(
                             default=None,
                             metadata={
@@ -5054,12 +4290,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class TerminalEquipmentDetails:
-                    """
-                    :ivar leg_details:
-                    :ivar departure_station_info:
-                    :ivar arrival_station_info:
-                    :ivar mileage_time_details:
-                    """
                     leg_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.LegDetails"] = field(
                         default=None,
                         metadata={
@@ -5091,11 +4321,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class LegDetails:
-                        """
-                        :ivar equipment:
-                        :ivar duration:
-                        :ivar complexing_flight_indicator:
-                        """
                         equipment: Optional[str] = field(
                             default=None,
                             metadata={
@@ -5122,9 +4347,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class DepartureStationInfo:
-                        """
-                        :ivar terminal:
-                        """
                         terminal: Optional[str] = field(
                             default=None,
                             metadata={
@@ -5136,9 +4358,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class ArrivalStationInfo:
-                        """
-                        :ivar terminal:
-                        """
                         terminal: Optional[str] = field(
                             default=None,
                             metadata={
@@ -5150,9 +4369,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class MileageTimeDetails:
-                        """
-                        :ivar elapsed_ground_time:
-                        """
                         elapsed_ground_time: Optional[Decimal] = field(
                             default=None,
                             metadata={
@@ -5163,16 +4379,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class ReservationInfo:
-                    """
-                    :ivar booking:
-                    :ivar identifier:
-                    :ivar status:
-                    :ivar item_number:
-                    :ivar date_time_details:
-                    :ivar designator:
-                    :ivar movement_type:
-                    :ivar product_type_details:
-                    """
                     booking: Optional[str] = field(
                         default=None,
                         metadata={
@@ -5238,10 +4444,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class DateTimeDetails:
-                        """
-                        :ivar date:
-                        :ivar time:
-                        """
                         date: Optional[str] = field(
                             default=None,
                             metadata={
@@ -5262,10 +4464,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class ProductTypeDetails:
-                        """
-                        :ivar sequence_number:
-                        :ivar availability_context:
-                        """
                         sequence_number: Optional[str] = field(
                             default=None,
                             metadata={
@@ -5287,10 +4485,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class PriceToBeat:
-                    """
-                    :ivar money_info:
-                    :ivar additional_money_info:
-                    """
                     money_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat.MoneyInfo"] = field(
                         default=None,
                         metadata={
@@ -5310,11 +4504,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class MoneyInfo:
-                        """
-                        :ivar qualifier:
-                        :ivar amount:
-                        :ivar currency:
-                        """
                         qualifier: Optional[str] = field(
                             default=None,
                             metadata={
@@ -5341,12 +4530,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class AdditionalMoneyInfo:
-                        """
-                        :ivar qualifier:
-                        :ivar amount:
-                        :ivar currency:
-                        :ivar location_id:
-                        """
                         qualifier: Optional[str] = field(
                             default=None,
                             metadata={
@@ -5382,17 +4565,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FlightInfoPnr:
-            """
-            :ivar travel_response_details:
-            :ivar time_table_date:
-            :ivar terminal_equipment_details:
-            :ivar codeshare_data:
-            :ivar disclosure:
-            :ivar stop_details:
-            :ivar traffic_restriction_data:
-            :ivar reservation_info:
-            :ivar incidental_stop_info:
-            """
             travel_response_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails"] = field(
                 default=None,
                 metadata={
@@ -5461,14 +4633,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class TravelResponseDetails:
-                """
-                :ivar flight_date:
-                :ivar board_point_details:
-                :ivar offpoint_details:
-                :ivar company_details:
-                :ivar flight_identification:
-                :ivar flight_type_details:
-                """
                 flight_date: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightDate"] = field(
                     default=None,
                     metadata={
@@ -5517,13 +4681,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class FlightDate:
-                    """
-                    :ivar departure_date:
-                    :ivar departure_time:
-                    :ivar arrival_date:
-                    :ivar arrival_time:
-                    :ivar date_variation:
-                    """
                     departure_date: Optional[str] = field(
                         default=None,
                         metadata={
@@ -5572,9 +4729,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class BoardPointDetails:
-                    """
-                    :ivar true_location_id:
-                    """
                     true_location_id: Optional[str] = field(
                         default=None,
                         metadata={
@@ -5588,9 +4742,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class OffpointDetails:
-                    """
-                    :ivar true_location_id:
-                    """
                     true_location_id: Optional[str] = field(
                         default=None,
                         metadata={
@@ -5604,9 +4755,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class CompanyDetails:
-                    """
-                    :ivar marketing_company:
-                    """
                     marketing_company: Optional[str] = field(
                         default=None,
                         metadata={
@@ -5620,10 +4768,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class FlightIdentification:
-                    """
-                    :ivar flight_number:
-                    :ivar operational_suffix:
-                    """
                     flight_number: Optional[Decimal] = field(
                         default=None,
                         metadata={
@@ -5644,9 +4788,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class FlightTypeDetails:
-                    """
-                    :ivar flight_indicator:
-                    """
                     flight_indicator: List[str] = field(
                         default_factory=list,
                         metadata={
@@ -5661,11 +4802,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class TimeTableDate:
-                """
-                :ivar begin_date_time:
-                :ivar end_date_time:
-                :ivar frequency:
-                """
                 begin_date_time: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.BeginDateTime"] = field(
                     default=None,
                     metadata={
@@ -5689,11 +4825,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class BeginDateTime:
-                    """
-                    :ivar year:
-                    :ivar month:
-                    :ivar day:
-                    """
                     year: Optional[str] = field(
                         default=None,
                         metadata={
@@ -5717,11 +4848,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class EndDateTime:
-                    """
-                    :ivar year:
-                    :ivar month:
-                    :ivar day:
-                    """
                     year: Optional[str] = field(
                         default=None,
                         metadata={
@@ -5745,10 +4871,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class Frequency:
-                    """
-                    :ivar qualifier:
-                    :ivar value:
-                    """
                     qualifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -5770,12 +4892,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class TerminalEquipmentDetails:
-                """
-                :ivar leg_details:
-                :ivar departure_station_info:
-                :ivar arrival_station_info:
-                :ivar mileage_time_details:
-                """
                 leg_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.LegDetails"] = field(
                     default=None,
                     metadata={
@@ -5807,11 +4923,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class LegDetails:
-                    """
-                    :ivar equipment:
-                    :ivar duration:
-                    :ivar complexing_flight_indicator:
-                    """
                     equipment: Optional[str] = field(
                         default=None,
                         metadata={
@@ -5838,9 +4949,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class DepartureStationInfo:
-                    """
-                    :ivar terminal:
-                    """
                     terminal: Optional[str] = field(
                         default=None,
                         metadata={
@@ -5852,9 +4960,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class ArrivalStationInfo:
-                    """
-                    :ivar terminal:
-                    """
                     terminal: Optional[str] = field(
                         default=None,
                         metadata={
@@ -5866,9 +4971,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class MileageTimeDetails:
-                    """
-                    :ivar elapsed_ground_time:
-                    """
                     elapsed_ground_time: Optional[Decimal] = field(
                         default=None,
                         metadata={
@@ -5879,10 +4981,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CodeshareData:
-                """
-                :ivar codeshare_details:
-                :ivar other_codeshare_details:
-                """
                 codeshare_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData.CodeshareDetails"] = field(
                     default=None,
                     metadata={
@@ -5902,12 +5000,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class CodeshareDetails:
-                    """
-                    :ivar transport_stage_qualifier:
-                    :ivar airline_designator:
-                    :ivar flight_number:
-                    :ivar operational_suffix:
-                    """
                     transport_stage_qualifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -5946,12 +5038,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class OtherCodeshareDetails:
-                    """
-                    :ivar transport_stage_qualifier:
-                    :ivar airline_designator:
-                    :ivar flight_number:
-                    :ivar operational_suffix:
-                    """
                     transport_stage_qualifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -5990,10 +5076,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class Disclosure:
-                """
-                :ivar free_text_details:
-                :ivar free_text:
-                """
                 free_text_details: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.Disclosure.FreeTextDetails"] = field(
                     default=None,
                     metadata={
@@ -6015,12 +5097,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class FreeTextDetails:
-                    """
-                    :ivar text_subject_qualifier:
-                    :ivar information_type:
-                    :ivar source:
-                    :ivar encoding:
-                    """
                     text_subject_qualifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -6061,9 +5137,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class StopDetails:
-                """
-                :ivar routing_details:
-                """
                 routing_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.StopDetails.RoutingDetails"] = field(
                     default_factory=list,
                     metadata={
@@ -6075,9 +5148,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class RoutingDetails:
-                    """
-                    :ivar station:
-                    """
                     station: Optional[str] = field(
                         default=None,
                         metadata={
@@ -6089,9 +5159,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class TrafficRestrictionData:
-                """
-                :ivar traffic_restriction_details:
-                """
                 traffic_restriction_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TrafficRestrictionData.TrafficRestrictionDetails"] = field(
                     default_factory=list,
                     metadata={
@@ -6103,9 +5170,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class TrafficRestrictionDetails:
-                    """
-                    :ivar code:
-                    """
                     code: Optional[str] = field(
                         default=None,
                         metadata={
@@ -6117,16 +5181,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class ReservationInfo:
-                """
-                :ivar booking:
-                :ivar identifier:
-                :ivar status:
-                :ivar item_number:
-                :ivar date_time_details:
-                :ivar designator:
-                :ivar movement_type:
-                :ivar product_type_details:
-                """
                 booking: Optional[str] = field(
                     default=None,
                     metadata={
@@ -6192,10 +5246,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class DateTimeDetails:
-                    """
-                    :ivar date:
-                    :ivar time:
-                    """
                     date: Optional[str] = field(
                         default=None,
                         metadata={
@@ -6216,10 +5266,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class ProductTypeDetails:
-                    """
-                    :ivar sequence_number:
-                    :ivar availability_context:
-                    """
                     sequence_number: Optional[str] = field(
                         default=None,
                         metadata={
@@ -6241,9 +5287,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class IncidentalStopInfo:
-                """
-                :ivar date_time_info:
-                """
                 date_time_info: Optional["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo.DateTimeInfo"] = field(
                     default=None,
                     metadata={
@@ -6255,9 +5298,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class DateTimeInfo:
-                    """
-                    :ivar date_time_details:
-                    """
                     date_time_details: List["FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo.DateTimeInfo.DateTimeDetails"] = field(
                         default_factory=list,
                         metadata={
@@ -6269,14 +5309,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class DateTimeDetails:
-                        """
-                        :ivar qualifier:
-                        :ivar date:
-                        :ivar time:
-                        :ivar qualifier2:
-                        :ivar reserved1:
-                        :ivar reserved2:
-                        """
                         qualifier: Optional[str] = field(
                             default=None,
                             metadata={
@@ -6328,10 +5360,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class RequestedSegmentAction:
-            """
-            :ivar action_request_code:
-            :ivar product_details:
-            """
             action_request_code: Optional[str] = field(
                 default=None,
                 metadata={
@@ -6352,12 +5380,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class ProductDetails:
-                """
-                :ivar flight_number:
-                :ivar booking_class:
-                :ivar operational_suffix:
-                :ivar modifier:
-                """
                 flight_number: Optional[str] = field(
                     default=None,
                     metadata={
@@ -6398,9 +5420,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class Attributes:
-            """
-            :ivar attribute_details:
-            """
             attribute_details: List["FareMasterPricerTravelBoardSearch.Itinerary.Attributes.AttributeDetails"] = field(
                 default_factory=list,
                 metadata={
@@ -6413,10 +5432,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class AttributeDetails:
-                """
-                :ivar attribute_type:
-                :ivar attribute_description:
-                """
                 attribute_type: Optional[str] = field(
                     default=None,
                     metadata={
@@ -6439,10 +5454,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class TicketChangeInfo:
-        """
-        :ivar ticket_number_details:
-        :ivar ticket_requested_segments:
-        """
         ticket_number_details: Optional["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketNumberDetails"] = field(
             default=None,
             metadata={
@@ -6462,9 +5473,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class TicketNumberDetails:
-            """
-            :ivar document_details:
-            """
             document_details: List["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketNumberDetails.DocumentDetails"] = field(
                 default_factory=list,
                 metadata={
@@ -6477,9 +5485,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class DocumentDetails:
-                """
-                :ivar number:
-                """
                 number: Optional[str] = field(
                     default=None,
                     metadata={
@@ -6491,10 +5496,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class TicketRequestedSegments:
-            """
-            :ivar action_identification:
-            :ivar connect_point_details:
-            """
             action_identification: Optional["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ActionIdentification"] = field(
                 default=None,
                 metadata={
@@ -6513,10 +5514,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class ActionIdentification:
-                """
-                :ivar action_request_code:
-                :ivar product_details:
-                """
                 action_request_code: Optional[str] = field(
                     default=None,
                     metadata={
@@ -6537,12 +5534,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class ProductDetails:
-                    """
-                    :ivar flight_number:
-                    :ivar booking_class:
-                    :ivar operational_suffix:
-                    :ivar modifier:
-                    """
                     flight_number: Optional[str] = field(
                         default=None,
                         metadata={
@@ -6583,9 +5574,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class ConnectPointDetails:
-                """
-                :ivar connection_details:
-                """
                 connection_details: List["FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ConnectPointDetails.ConnectionDetails"] = field(
                     default_factory=list,
                     metadata={
@@ -6598,9 +5586,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class ConnectionDetails:
-                    """
-                    :ivar location:
-                    """
                     location: Optional[str] = field(
                         default=None,
                         metadata={
@@ -6613,11 +5598,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class CombinationFareFamilies:
-        """
-        :ivar item_ffcnumber:
-        :ivar nb_of_units:
-        :ivar reference_info:
-        """
         item_ffcnumber: Optional["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber"] = field(
             default=None,
             metadata={
@@ -6644,9 +5624,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class ItemFfcnumber:
-            """
-            :ivar item_number_id:
-            """
             item_number_id: Optional["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber.ItemNumberId"] = field(
                 default=None,
                 metadata={
@@ -6658,12 +5635,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class ItemNumberId:
-                """
-                :ivar number:
-                :ivar type:
-                :ivar qualifier:
-                :ivar responsible_agency:
-                """
                 number: Optional[str] = field(
                     default=None,
                     metadata={
@@ -6700,9 +5671,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class NbOfUnits:
-            """
-            :ivar unit_number_detail:
-            """
             unit_number_detail: List["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.NbOfUnits.UnitNumberDetail"] = field(
                 default_factory=list,
                 metadata={
@@ -6715,10 +5683,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class UnitNumberDetail:
-                """
-                :ivar number_of_units:
-                :ivar type_of_unit:
-                """
                 number_of_units: Optional[Decimal] = field(
                     default=None,
                     metadata={
@@ -6739,10 +5703,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class ReferenceInfo:
-            """
-            :ivar referencing_detail:
-            :ivar dummy_net:
-            """
             referencing_detail: List["FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ReferenceInfo.ReferencingDetail"] = field(
                 default_factory=list,
                 metadata={
@@ -6761,10 +5721,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class ReferencingDetail:
-                """
-                :ivar ref_qualifier:
-                :ivar ref_number:
-                """
                 ref_qualifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -6785,11 +5741,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class FeeOption:
-        """
-        :ivar fee_type_info:
-        :ivar rate_tax:
-        :ivar fee_details:
-        """
         fee_type_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo"] = field(
             default=None,
             metadata={
@@ -6816,10 +5767,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FeeTypeInfo:
-            """
-            :ivar carrier_fee_details:
-            :ivar other_selection_details:
-            """
             carrier_fee_details: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo.CarrierFeeDetails"] = field(
                 default=None,
                 metadata={
@@ -6839,10 +5786,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CarrierFeeDetails:
-                """
-                :ivar type:
-                :ivar option_information:
-                """
                 type: Optional[str] = field(
                     default=None,
                     metadata={
@@ -6864,10 +5807,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class OtherSelectionDetails:
-                """
-                :ivar option:
-                :ivar option_information:
-                """
                 option: Optional[str] = field(
                     default=None,
                     metadata={
@@ -6889,9 +5828,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class RateTax:
-            """
-            :ivar monetary_details:
-            """
             monetary_details: List["FareMasterPricerTravelBoardSearch.FeeOption.RateTax.MonetaryDetails"] = field(
                 default_factory=list,
                 metadata={
@@ -6904,11 +5840,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class MonetaryDetails:
-                """
-                :ivar type_qualifier:
-                :ivar amount:
-                :ivar currency:
-                """
                 type_qualifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -6938,11 +5869,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FeeDetails:
-            """
-            :ivar fee_info:
-            :ivar associated_amounts:
-            :ivar fee_description_grp:
-            """
             fee_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo"] = field(
                 default=None,
                 metadata={
@@ -6968,10 +5894,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FeeInfo:
-                """
-                :ivar data_type_information:
-                :ivar data_information:
-                """
                 data_type_information: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo.DataTypeInformation"] = field(
                     default=None,
                     metadata={
@@ -6991,10 +5913,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class DataTypeInformation:
-                    """
-                    :ivar sub_type:
-                    :ivar option:
-                    """
                     sub_type: Optional[str] = field(
                         default=None,
                         metadata={
@@ -7016,9 +5934,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class DataInformation:
-                    """
-                    :ivar indicator:
-                    """
                     indicator: Optional[str] = field(
                         default=None,
                         metadata={
@@ -7030,9 +5945,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class AssociatedAmounts:
-                """
-                :ivar monetary_details:
-                """
                 monetary_details: List["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.AssociatedAmounts.MonetaryDetails"] = field(
                     default_factory=list,
                     metadata={
@@ -7045,12 +5957,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class MonetaryDetails:
-                    """
-                    :ivar type_qualifier:
-                    :ivar amount:
-                    :ivar currency:
-                    :ivar location:
-                    """
                     type_qualifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -7088,11 +5994,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FeeDescriptionGrp:
-                """
-                :ivar item_number_info:
-                :ivar service_attributes_info:
-                :ivar service_description_info:
-                """
                 item_number_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo"] = field(
                     default=None,
                     metadata={
@@ -7118,9 +6019,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class ItemNumberInfo:
-                    """
-                    :ivar item_number_details:
-                    """
                     item_number_details: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo.ItemNumberDetails"] = field(
                         default=None,
                         metadata={
@@ -7132,12 +6030,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class ItemNumberDetails:
-                        """
-                        :ivar number:
-                        :ivar type:
-                        :ivar qualifier:
-                        :ivar responsible_agency:
-                        """
                         number: Optional[str] = field(
                             default=None,
                             metadata={
@@ -7174,10 +6066,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class ServiceAttributesInfo:
-                    """
-                    :ivar attribute_qualifier:
-                    :ivar attribute_details:
-                    """
                     attribute_qualifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -7199,10 +6087,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class AttributeDetails:
-                        """
-                        :ivar attribute_type:
-                        :ivar attribute_description:
-                        """
                         attribute_type: Optional[str] = field(
                             default=None,
                             metadata={
@@ -7225,10 +6109,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class ServiceDescriptionInfo:
-                    """
-                    :ivar service_requirements_info:
-                    :ivar seat_details:
-                    """
                     service_requirements_info: Optional["FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo.ServiceRequirementsInfo"] = field(
                         default=None,
                         metadata={
@@ -7248,15 +6128,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class ServiceRequirementsInfo:
-                        """
-                        :ivar service_classification:
-                        :ivar service_status:
-                        :ivar service_number_of_instances:
-                        :ivar service_marketing_carrier:
-                        :ivar service_group:
-                        :ivar service_sub_group:
-                        :ivar service_free_text:
-                        """
                         service_classification: Optional[str] = field(
                             default=None,
                             metadata={
@@ -7323,9 +6194,6 @@ class FareMasterPricerTravelBoardSearch:
 
                     @dataclass
                     class SeatDetails:
-                        """
-                        :ivar seat_characteristics:
-                        """
                         seat_characteristics: List[str] = field(
                             default_factory=list,
                             metadata={
@@ -7339,15 +6207,6 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class OfficeIdDetails:
-        """
-        :ivar office_id_information:
-        :ivar nb_of_units:
-        :ivar uid_option:
-        :ivar pricing_tick_info:
-        :ivar corporate_fare_info:
-        :ivar travel_flight_info:
-        :ivar airline_distribution_details:
-        """
         office_id_information: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.OfficeIdInformation"] = field(
             default=None,
             metadata={
@@ -7402,11 +6261,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class OfficeIdInformation:
-            """
-            :ivar office_identification:
-            :ivar office_type:
-            :ivar office_code:
-            """
             office_identification: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.OfficeIdInformation.OfficeIdentification"] = field(
                 default=None,
                 metadata={
@@ -7435,12 +6289,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class OfficeIdentification:
-                """
-                :ivar office_name:
-                :ivar agent_signin:
-                :ivar confidential_office:
-                :ivar other_office:
-                """
                 office_name: Optional[Decimal] = field(
                     default=None,
                     metadata={
@@ -7478,9 +6326,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class NbOfUnits:
-            """
-            :ivar unit_number_detail:
-            """
             unit_number_detail: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.NbOfUnits.UnitNumberDetail"] = field(
                 default_factory=list,
                 metadata={
@@ -7493,10 +6338,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class UnitNumberDetail:
-                """
-                :ivar number_of_units:
-                :ivar type_of_unit:
-                """
                 number_of_units: Optional[Decimal] = field(
                     default=None,
                     metadata={
@@ -7517,9 +6358,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class UidOption:
-            """
-            :ivar attribute_details:
-            """
             attribute_details: List["FareMasterPricerTravelBoardSearch.OfficeIdDetails.UidOption.AttributeDetails"] = field(
                 default_factory=list,
                 metadata={
@@ -7532,10 +6370,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class AttributeDetails:
-                """
-                :ivar attribute_type:
-                :ivar attribute_description:
-                """
                 attribute_type: Optional[str] = field(
                     default=None,
                     metadata={
@@ -7558,15 +6392,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class PricingTickInfo:
-            """
-            :ivar pricing_ticketing:
-            :ivar ticketing_date:
-            :ivar company_id:
-            :ivar selling_point:
-            :ivar ticketing_point:
-            :ivar journey_origin_point:
-            :ivar corporate_id:
-            """
             pricing_ticketing: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.PricingTicketing"] = field(
                 default=None,
                 metadata={
@@ -7619,9 +6444,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class PricingTicketing:
-                """
-                :ivar price_type:
-                """
                 price_type: List[str] = field(
                     default_factory=list,
                     metadata={
@@ -7636,10 +6458,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class TicketingDate:
-                """
-                :ivar date:
-                :ivar rtc_date:
-                """
                 date: Optional[str] = field(
                     default=None,
                     metadata={
@@ -7665,10 +6483,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class SellingPoint:
-                """
-                :ivar location_id:
-                :ivar country:
-                """
                 location_id: Optional[str] = field(
                     default=None,
                     metadata={
@@ -7690,10 +6504,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class TicketingPoint:
-                """
-                :ivar location_id:
-                :ivar country:
-                """
                 location_id: Optional[str] = field(
                     default=None,
                     metadata={
@@ -7715,10 +6525,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class JourneyOriginPoint:
-                """
-                :ivar location_id:
-                :ivar country:
-                """
                 location_id: Optional[str] = field(
                     default=None,
                     metadata={
@@ -7740,11 +6546,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CorporateId:
-                """
-                :ivar arc_number:
-                :ivar ersp_number:
-                :ivar iata_number:
-                """
                 arc_number: Optional[str] = field(
                     default=None,
                     metadata={
@@ -7775,9 +6576,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class CorporateFareInfo:
-            """
-            :ivar corporate_fare_identifiers:
-            """
             corporate_fare_identifiers: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.CorporateFareInfo.CorporateFareIdentifiers"] = field(
                 default=None,
                 metadata={
@@ -7788,10 +6586,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CorporateFareIdentifiers:
-                """
-                :ivar fare_qualifier:
-                :ivar identify_number:
-                """
                 fare_qualifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -7814,14 +6608,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class TravelFlightInfo:
-            """
-            :ivar cabin_id:
-            :ivar company_identity:
-            :ivar flight_detail:
-            :ivar inclusion_detail:
-            :ivar exclusion_detail:
-            :ivar unit_number_detail:
-            """
             cabin_id: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.CabinId"] = field(
                 default=None,
                 metadata={
@@ -7871,10 +6657,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CabinId:
-                """
-                :ivar cabin_qualifier:
-                :ivar cabin:
-                """
                 cabin_qualifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -7897,10 +6679,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CompanyIdentity:
-                """
-                :ivar carrier_qualifier:
-                :ivar carrier_id:
-                """
                 carrier_qualifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -7925,9 +6703,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FlightDetail:
-                """
-                :ivar flight_type:
-                """
                 flight_type: List[str] = field(
                     default_factory=list,
                     metadata={
@@ -7941,11 +6716,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class InclusionDetail:
-                """
-                :ivar inclusion_identifier:
-                :ivar location_id:
-                :ivar airport_city_qualifier:
-                """
                 inclusion_identifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -7978,11 +6748,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class ExclusionDetail:
-                """
-                :ivar exclusion_identifier:
-                :ivar location_id:
-                :ivar airport_city_qualifier:
-                """
                 exclusion_identifier: Optional[str] = field(
                     default=None,
                     metadata={
@@ -8015,10 +6780,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class UnitNumberDetail:
-                """
-                :ivar number_of_units:
-                :ivar type_of_unit:
-                """
                 number_of_units: Optional[Decimal] = field(
                     default=None,
                     metadata={
@@ -8040,10 +6801,6 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class AirlineDistributionDetails:
-            """
-            :ivar requested_segment_ref:
-            :ivar flight_info:
-            """
             requested_segment_ref: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.RequestedSegmentRef"] = field(
                 default=None,
                 metadata={
@@ -8062,10 +6819,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class RequestedSegmentRef:
-                """
-                :ivar seg_ref:
-                :ivar location_forcing:
-                """
                 seg_ref: Optional[Decimal] = field(
                     default=None,
                     metadata={
@@ -8085,10 +6838,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class LocationForcing:
-                    """
-                    :ivar airport_city_qualifier:
-                    :ivar segment_number:
-                    """
                     airport_city_qualifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -8110,14 +6859,6 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FlightInfo:
-                """
-                :ivar cabin_id:
-                :ivar company_identity:
-                :ivar flight_detail:
-                :ivar inclusion_detail:
-                :ivar exclusion_detail:
-                :ivar unit_number_detail:
-                """
                 cabin_id: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.CabinId"] = field(
                     default=None,
                     metadata={
@@ -8167,10 +6908,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class CabinId:
-                    """
-                    :ivar cabin_qualifier:
-                    :ivar cabin:
-                    """
                     cabin_qualifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -8193,10 +6930,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class CompanyIdentity:
-                    """
-                    :ivar carrier_qualifier:
-                    :ivar carrier_id:
-                    """
                     carrier_qualifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -8221,9 +6954,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class FlightDetail:
-                    """
-                    :ivar flight_type:
-                    """
                     flight_type: List[str] = field(
                         default_factory=list,
                         metadata={
@@ -8237,11 +6967,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class InclusionDetail:
-                    """
-                    :ivar inclusion_identifier:
-                    :ivar location_id:
-                    :ivar airport_city_qualifier:
-                    """
                     inclusion_identifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -8274,11 +6999,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class ExclusionDetail:
-                    """
-                    :ivar exclusion_identifier:
-                    :ivar location_id:
-                    :ivar airport_city_qualifier:
-                    """
                     exclusion_identifier: Optional[str] = field(
                         default=None,
                         metadata={
@@ -8311,10 +7031,6 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class UnitNumberDetail:
-                    """
-                    :ivar number_of_units:
-                    :ivar type_of_unit:
-                    """
                     number_of_units: Optional[Decimal] = field(
                         default=None,
                         metadata={

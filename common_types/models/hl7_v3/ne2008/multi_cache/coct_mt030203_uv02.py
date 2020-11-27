@@ -19,16 +19,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt030203Uv02LanguageCommunication:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar language_code:
-    :ivar mode_code:
-    :ivar proficiency_level_code:
-    :ivar preference_ind:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "COCT_MT030203UV02.LanguageCommunication"
 
@@ -99,19 +89,6 @@ class CoctMt030203Uv02LanguageCommunication:
 
 @dataclass
 class CoctMt030203Uv02Person:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar administrative_gender_code:
-    :ivar birth_time:
-    :ivar language_communication:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT030203UV02.Person"
 

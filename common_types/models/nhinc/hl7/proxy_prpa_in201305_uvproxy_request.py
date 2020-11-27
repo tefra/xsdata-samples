@@ -11,11 +11,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class ProxyPrpaIn201305UvproxyRequestType:
-    """
-    :ivar prpa_in201305_uv02:
-    :ivar assertion:
-    :ivar nhin_target_system:
-    """
     class Meta:
         name = "Proxy_PRPA_IN201305UVProxyRequestType"
 
@@ -49,10 +44,6 @@ class ProxyPrpaIn201305UvproxyRequestType:
 
 @dataclass
 class ProxyPrpaIn201305UvproxySecuredRequestType:
-    """
-    :ivar prpa_in201305_uv02:
-    :ivar nhin_target_system:
-    """
     class Meta:
         name = "Proxy_PRPA_IN201305UVProxySecuredRequestType"
 

@@ -111,25 +111,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 class PocdMt000040AuthorizationValue(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -203,32 +184,10 @@ class PocdMt000040InfrastructureRootTypeId:
 
 
 class PocdMt000040ParticipantRoleValue(Enum):
-    """
-    :cvar ROL:
-    """
     ROL = "ROL"
 
 
 class PocdMt000040ReferenceRangeValue(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -250,15 +209,6 @@ class PocdMt000040ReferenceRangeValue(Enum):
 
 @dataclass
 class PocdMt000040Component5:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar section:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "POCD_MT000040.Component5"
 
@@ -322,17 +272,6 @@ class PocdMt000040Component5:
 
 @dataclass
 class PocdMt000040Consent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.Consent"
 
@@ -410,17 +349,6 @@ class PocdMt000040Consent:
 
 @dataclass
 class PocdMt000040Criterion:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar text:
-    :ivar value:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.Criterion"
 
@@ -495,18 +423,6 @@ class PocdMt000040Criterion:
 
 @dataclass
 class PocdMt000040CustodianOrganization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar telecom:
-    :ivar addr:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "POCD_MT000040.CustodianOrganization"
 
@@ -590,17 +506,6 @@ class PocdMt000040CustodianOrganization:
 
 @dataclass
 class PocdMt000040Device:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar manufacturer_model_name:
-    :ivar software_name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "POCD_MT000040.Device"
 
@@ -677,17 +582,6 @@ class PocdMt000040Device:
 
 @dataclass
 class PocdMt000040Entity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar desc:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "POCD_MT000040.Entity"
 
@@ -762,17 +656,6 @@ class PocdMt000040Entity:
 
 @dataclass
 class PocdMt000040ExternalAct:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.ExternalAct"
 
@@ -847,19 +730,6 @@ class PocdMt000040ExternalAct:
 
 @dataclass
 class PocdMt000040ExternalDocument:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar set_id:
-    :ivar version_number:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.ExternalDocument"
 
@@ -950,17 +820,6 @@ class PocdMt000040ExternalDocument:
 
 @dataclass
 class PocdMt000040ExternalObservation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.ExternalObservation"
 
@@ -1035,17 +894,6 @@ class PocdMt000040ExternalObservation:
 
 @dataclass
 class PocdMt000040ExternalProcedure:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.ExternalProcedure"
 
@@ -1121,16 +969,6 @@ class PocdMt000040ExternalProcedure:
 
 @dataclass
 class PocdMt000040LabeledDrug:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "POCD_MT000040.LabeledDrug"
 
@@ -1199,16 +1037,6 @@ class PocdMt000040LabeledDrug:
 
 @dataclass
 class PocdMt000040LanguageCommunication:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar language_code:
-    :ivar mode_code:
-    :ivar proficiency_level_code:
-    :ivar preference_ind:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "POCD_MT000040.LanguageCommunication"
 
@@ -1279,17 +1107,6 @@ class PocdMt000040LanguageCommunication:
 
 @dataclass
 class PocdMt000040Material:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar name:
-    :ivar lot_number_text:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "POCD_MT000040.Material"
 
@@ -1366,17 +1183,6 @@ class PocdMt000040Material:
 
 @dataclass
 class PocdMt000040NonXmlbody:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar text:
-    :ivar confidentiality_code:
-    :ivar language_code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.NonXMLBody"
 
@@ -1455,18 +1261,6 @@ class PocdMt000040NonXmlbody:
 
 @dataclass
 class PocdMt000040ObservationRange:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar text:
-    :ivar value:
-    :ivar interpretation_code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.ObservationRange"
 
@@ -1549,17 +1343,6 @@ class PocdMt000040ObservationRange:
 
 @dataclass
 class PocdMt000040Order:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar priority_code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.Order"
 
@@ -1636,18 +1419,6 @@ class PocdMt000040Order:
 
 @dataclass
 class PocdMt000040OrganizationPartOf:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar whole_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.OrganizationPartOf"
 
@@ -1731,27 +1502,11 @@ class PocdMt000040OrganizationPartOf:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class PocdMt000040ParentDocument:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar set_id:
-    :ivar version_number:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.ParentDocument"
 
@@ -1844,15 +1599,6 @@ class PocdMt000040ParentDocument:
 
 @dataclass
 class PocdMt000040Person:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "POCD_MT000040.Person"
 
@@ -1914,16 +1660,6 @@ class PocdMt000040Person:
 
 @dataclass
 class PocdMt000040Place:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar addr:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "POCD_MT000040.Place"
 
@@ -1992,19 +1728,6 @@ class PocdMt000040Place:
 
 @dataclass
 class PocdMt000040PlayingEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar quantity:
-    :ivar name:
-    :ivar birth_time:
-    :ivar desc:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "POCD_MT000040.PlayingEntity"
 
@@ -2094,9 +1817,6 @@ class PocdMt000040PlayingEntity:
 
 @dataclass
 class PocdMt000040RegionOfInterestValue(IntType):
-    """
-    :ivar unsorted:
-    """
     class Meta:
         name = "POCD_MT000040.RegionOfInterest.value"
 
@@ -2110,20 +1830,6 @@ class PocdMt000040RegionOfInterestValue(IntType):
 
 @dataclass
 class PocdMt000040SubjectPerson:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar administrative_gender_code:
-    :ivar birth_time:
-    :ivar deceased_ind:
-    :ivar deceased_time:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "POCD_MT000040.SubjectPerson"
 
@@ -2224,14 +1930,6 @@ class PocdMt000040SubjectPerson:
 
 @dataclass
 class PocdMt000040AssignedCustodian:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar represented_custodian_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.AssignedCustodian"
 
@@ -2287,14 +1985,6 @@ class PocdMt000040AssignedCustodian:
 
 @dataclass
 class PocdMt000040Authorization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar consent:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.Authorization"
 
@@ -2350,14 +2040,6 @@ class PocdMt000040Authorization:
 
 @dataclass
 class PocdMt000040Birthplace:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar place:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.Birthplace"
 
@@ -2411,22 +2093,11 @@ class PocdMt000040Birthplace:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class PocdMt000040InFulfillmentOf:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar order:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.InFulfillmentOf"
 
@@ -2481,15 +2152,6 @@ class PocdMt000040InFulfillmentOf:
 
 @dataclass
 class PocdMt000040MaintainedEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar effective_time:
-    :ivar maintaining_person:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.MaintainedEntity"
 
@@ -2552,28 +2214,11 @@ class PocdMt000040MaintainedEntity:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class PocdMt000040Organization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar telecom:
-    :ivar addr:
-    :ivar standard_industry_class_code:
-    :ivar as_organization_part_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "POCD_MT000040.Organization"
 
@@ -2672,20 +2317,6 @@ class PocdMt000040Organization:
 
 @dataclass
 class PocdMt000040ParticipantRole:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar playing_device:
-    :ivar playing_entity:
-    :ivar scoping_entity:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.ParticipantRole"
 
@@ -2784,14 +2415,6 @@ class PocdMt000040ParticipantRole:
 
 @dataclass
 class PocdMt000040Precondition:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar criterion:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.Precondition"
 
@@ -2845,25 +2468,6 @@ class PocdMt000040Precondition:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -2885,18 +2489,6 @@ class PocdMt000040Precondition:
 
 @dataclass
 class PocdMt000040Reference:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar seperatable_ind:
-    :ivar external_act:
-    :ivar external_observation:
-    :ivar external_procedure:
-    :ivar external_document:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.Reference"
 
@@ -2983,14 +2575,6 @@ class PocdMt000040Reference:
 
 @dataclass
 class PocdMt000040ReferenceRange:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar observation_range:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.ReferenceRange"
 
@@ -3047,14 +2631,6 @@ class PocdMt000040ReferenceRange:
 
 @dataclass
 class PocdMt000040RelatedDocument:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar parent_document:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.RelatedDocument"
 
@@ -3110,18 +2686,6 @@ class PocdMt000040RelatedDocument:
 
 @dataclass
 class PocdMt000040RelatedEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar effective_time:
-    :ivar related_person:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.RelatedEntity"
 
@@ -3205,17 +2769,6 @@ class PocdMt000040RelatedEntity:
 
 @dataclass
 class PocdMt000040RelatedSubject:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar subject:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.RelatedSubject"
 
@@ -3289,15 +2842,6 @@ class PocdMt000040RelatedSubject:
 
 @dataclass
 class PocdMt000040SpecimenRole:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar specimen_playing_entity:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.SpecimenRole"
 
@@ -3359,19 +2903,6 @@ class PocdMt000040SpecimenRole:
 
 @dataclass
 class PocdMt000040AssignedEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar assigned_person:
-    :ivar represented_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.AssignedEntity"
 
@@ -3463,19 +2994,6 @@ class PocdMt000040AssignedEntity:
 
 @dataclass
 class PocdMt000040AssociatedEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar associated_person:
-    :ivar scoping_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.AssociatedEntity"
 
@@ -3567,18 +3085,6 @@ class PocdMt000040AssociatedEntity:
 
 @dataclass
 class PocdMt000040AuthoringDevice:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar manufacturer_model_name:
-    :ivar software_name:
-    :ivar as_maintained_entity:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "POCD_MT000040.AuthoringDevice"
 
@@ -3664,14 +3170,6 @@ class PocdMt000040AuthoringDevice:
 
 @dataclass
 class PocdMt000040Custodian:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar assigned_custodian:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.Custodian"
 
@@ -3727,19 +3225,6 @@ class PocdMt000040Custodian:
 
 @dataclass
 class PocdMt000040Guardian:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar guardian_person:
-    :ivar guardian_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.Guardian"
 
@@ -3829,25 +3314,11 @@ class PocdMt000040Guardian:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class PocdMt000040HealthCareFacility:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar location:
-    :ivar service_provider_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.HealthCareFacility"
 
@@ -3922,18 +3393,6 @@ class PocdMt000040HealthCareFacility:
 
 @dataclass
 class PocdMt000040IntendedRecipient:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar addr:
-    :ivar telecom:
-    :ivar information_recipient:
-    :ivar received_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.IntendedRecipient"
 
@@ -4016,17 +3475,6 @@ class PocdMt000040IntendedRecipient:
 
 @dataclass
 class PocdMt000040ManufacturedProduct:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar manufactured_labeled_drug:
-    :ivar manufactured_material:
-    :ivar manufacturer_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.ManufacturedProduct"
 
@@ -4104,17 +3552,6 @@ class PocdMt000040ManufacturedProduct:
 
 @dataclass
 class PocdMt000040Participant2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar awareness_code:
-    :ivar participant_role:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "POCD_MT000040.Participant2"
 
@@ -4193,14 +3630,6 @@ class PocdMt000040Participant2:
 
 @dataclass
 class PocdMt000040Specimen:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar specimen_role:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.Specimen"
 
@@ -4256,16 +3685,6 @@ class PocdMt000040Specimen:
 
 @dataclass
 class PocdMt000040Subject:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar awareness_code:
-    :ivar related_subject:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "POCD_MT000040.Subject"
 
@@ -4337,20 +3756,6 @@ class PocdMt000040Subject:
 
 @dataclass
 class PocdMt000040AssignedAuthor:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar assigned_person:
-    :ivar assigned_authoring_device:
-    :ivar represented_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.AssignedAuthor"
 
@@ -4450,16 +3855,6 @@ class PocdMt000040AssignedAuthor:
 
 @dataclass
 class PocdMt000040Authenticator:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar signature_code:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.Authenticator"
 
@@ -4532,14 +3927,6 @@ class PocdMt000040Authenticator:
 
 @dataclass
 class PocdMt000040Consumable:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar manufactured_product:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.Consumable"
 
@@ -4595,16 +3982,6 @@ class PocdMt000040Consumable:
 
 @dataclass
 class PocdMt000040DataEnterer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "POCD_MT000040.DataEnterer"
 
@@ -4675,15 +4052,6 @@ class PocdMt000040DataEnterer:
 
 @dataclass
 class PocdMt000040EncounterParticipant:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.EncounterParticipant"
 
@@ -4746,16 +4114,6 @@ class PocdMt000040EncounterParticipant:
 
 @dataclass
 class PocdMt000040Informant12:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar assigned_entity:
-    :ivar related_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "POCD_MT000040.Informant12"
 
@@ -4826,14 +4184,6 @@ class PocdMt000040Informant12:
 
 @dataclass
 class PocdMt000040InformationRecipient:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar intended_recipient:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.InformationRecipient"
 
@@ -4888,17 +4238,6 @@ class PocdMt000040InformationRecipient:
 
 @dataclass
 class PocdMt000040LegalAuthenticator:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar signature_code:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "POCD_MT000040.LegalAuthenticator"
 
@@ -4979,14 +4318,6 @@ class PocdMt000040LegalAuthenticator:
 
 @dataclass
 class PocdMt000040Location:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar health_care_facility:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.Location"
 
@@ -5042,17 +4373,6 @@ class PocdMt000040Location:
 
 @dataclass
 class PocdMt000040Participant1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar function_code:
-    :ivar time:
-    :ivar associated_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "POCD_MT000040.Participant1"
 
@@ -5131,25 +4451,6 @@ class PocdMt000040Participant1:
 
 @dataclass
 class PocdMt000040Patient:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar administrative_gender_code:
-    :ivar birth_time:
-    :ivar marital_status_code:
-    :ivar religious_affiliation_code:
-    :ivar race_code:
-    :ivar ethnic_group_code:
-    :ivar guardian:
-    :ivar birthplace:
-    :ivar language_communication:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "POCD_MT000040.Patient"
 
@@ -5288,16 +4589,6 @@ class PocdMt000040Patient:
 
 @dataclass
 class PocdMt000040Performer1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar function_code:
-    :ivar time:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.Performer1"
 
@@ -5368,16 +4659,6 @@ class PocdMt000040Performer1:
 
 @dataclass
 class PocdMt000040Performer2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar mode_code:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.Performer2"
 
@@ -5448,14 +4729,6 @@ class PocdMt000040Performer2:
 
 @dataclass
 class PocdMt000040Product:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar manufactured_product:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.Product"
 
@@ -5511,14 +4784,6 @@ class PocdMt000040Product:
 
 @dataclass
 class PocdMt000040ResponsibleParty:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar assigned_entity:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.ResponsibleParty"
 
@@ -5574,17 +4839,6 @@ class PocdMt000040ResponsibleParty:
 
 @dataclass
 class PocdMt000040Author:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar function_code:
-    :ivar time:
-    :ivar assigned_author:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "POCD_MT000040.Author"
 
@@ -5664,21 +4918,6 @@ class PocdMt000040Author:
 
 @dataclass
 class PocdMt000040EncompassingEncounter:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar discharge_disposition_code:
-    :ivar responsible_party:
-    :ivar encounter_participant:
-    :ivar location:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.EncompassingEncounter"
 
@@ -5787,18 +5026,6 @@ class PocdMt000040EncompassingEncounter:
 
 @dataclass
 class PocdMt000040PatientRole:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar addr:
-    :ivar telecom:
-    :ivar patient:
-    :ivar provider_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "POCD_MT000040.PatientRole"
 
@@ -5881,26 +5108,11 @@ class PocdMt000040PatientRole:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class PocdMt000040ServiceEvent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar performer:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.ServiceEvent"
 
@@ -5983,14 +5195,6 @@ class PocdMt000040ServiceEvent:
 
 @dataclass
 class PocdMt000040Component1:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar encompassing_encounter:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.Component1"
 
@@ -6046,14 +5250,6 @@ class PocdMt000040Component1:
 
 @dataclass
 class PocdMt000040DocumentationOf:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar service_event:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "POCD_MT000040.DocumentationOf"
 
@@ -6108,25 +5304,6 @@ class PocdMt000040DocumentationOf:
     )
 
     class Value(Enum):
-        """
-        :cvar PERT:
-        :cvar NAME:
-        :cvar AUTH:
-        :cvar COVBY:
-        :cvar ELNK:
-        :cvar EXPL:
-        :cvar PREV:
-        :cvar REFV:
-        :cvar SUBJ:
-        :cvar DRIV:
-        :cvar CAUS:
-        :cvar MFST:
-        :cvar ITEMSLOC:
-        :cvar LIMIT:
-        :cvar EVID:
-        :cvar REFR:
-        :cvar SUMM:
-        """
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -6148,30 +5325,6 @@ class PocdMt000040DocumentationOf:
 
 @dataclass
 class PocdMt000040Encounter:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar discharge_disposition_code:
-    :ivar priority_code:
-    :ivar subject:
-    :ivar specimen:
-    :ivar performer:
-    :ivar author:
-    :ivar informant:
-    :ivar participant:
-    :ivar entry_relationship:
-    :ivar reference:
-    :ivar precondition:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.Encounter"
 
@@ -6343,38 +5496,6 @@ class PocdMt000040Encounter:
 
 @dataclass
 class PocdMt000040Observation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar derivation_expr:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar priority_code:
-    :ivar repeat_number:
-    :ivar language_code:
-    :ivar value:
-    :ivar interpretation_code:
-    :ivar method_code:
-    :ivar target_site_code:
-    :ivar subject:
-    :ivar specimen:
-    :ivar performer:
-    :ivar author:
-    :ivar informant:
-    :ivar participant:
-    :ivar entry_relationship:
-    :ivar reference:
-    :ivar precondition:
-    :ivar reference_range:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "POCD_MT000040.Observation"
 
@@ -6610,27 +5731,6 @@ class PocdMt000040Observation:
 
 @dataclass
 class PocdMt000040ObservationMedia:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar language_code:
-    :ivar value:
-    :ivar subject:
-    :ivar specimen:
-    :ivar performer:
-    :ivar author:
-    :ivar informant:
-    :ivar participant:
-    :ivar entry_relationship:
-    :ivar reference:
-    :ivar precondition:
-    :ivar id_attribute:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.ObservationMedia"
 
@@ -6779,34 +5879,6 @@ class PocdMt000040ObservationMedia:
 
 @dataclass
 class PocdMt000040Procedure:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar priority_code:
-    :ivar language_code:
-    :ivar method_code:
-    :ivar approach_site_code:
-    :ivar target_site_code:
-    :ivar subject:
-    :ivar specimen:
-    :ivar performer:
-    :ivar author:
-    :ivar informant:
-    :ivar participant:
-    :ivar entry_relationship:
-    :ivar reference:
-    :ivar precondition:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "POCD_MT000040.Procedure"
 
@@ -7010,15 +6082,6 @@ class PocdMt000040Procedure:
 
 @dataclass
 class PocdMt000040RecordTarget:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar patient_role:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_control_code:
-    """
     class Meta:
         name = "POCD_MT000040.RecordTarget"
 
@@ -7082,27 +6145,6 @@ class PocdMt000040RecordTarget:
 
 @dataclass
 class PocdMt000040RegionOfInterest:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar value:
-    :ivar subject:
-    :ivar specimen:
-    :ivar performer:
-    :ivar author:
-    :ivar informant:
-    :ivar participant:
-    :ivar entry_relationship:
-    :ivar reference:
-    :ivar precondition:
-    :ivar id_attribute:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.RegionOfInterest"
 
@@ -7254,38 +6296,6 @@ class PocdMt000040RegionOfInterest:
 
 @dataclass
 class PocdMt000040SubstanceAdministration:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar priority_code:
-    :ivar repeat_number:
-    :ivar route_code:
-    :ivar approach_site_code:
-    :ivar dose_quantity:
-    :ivar rate_quantity:
-    :ivar max_dose_quantity:
-    :ivar administration_unit_code:
-    :ivar subject:
-    :ivar specimen:
-    :ivar consumable:
-    :ivar performer:
-    :ivar author:
-    :ivar informant:
-    :ivar participant:
-    :ivar entry_relationship:
-    :ivar reference:
-    :ivar precondition:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "POCD_MT000040.SubstanceAdministration"
 
@@ -7522,34 +6532,6 @@ class PocdMt000040SubstanceAdministration:
 
 @dataclass
 class PocdMt000040Supply:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar priority_code:
-    :ivar repeat_number:
-    :ivar independent_ind:
-    :ivar quantity:
-    :ivar expected_use_time:
-    :ivar subject:
-    :ivar specimen:
-    :ivar product:
-    :ivar performer:
-    :ivar author:
-    :ivar informant:
-    :ivar participant:
-    :ivar entry_relationship:
-    :ivar reference:
-    :ivar precondition:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.Supply"
 
@@ -7752,25 +6734,6 @@ class PocdMt000040Supply:
 
 @dataclass
 class PocdMt000040Component4:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar seperatable_ind:
-    :ivar act:
-    :ivar encounter:
-    :ivar observation:
-    :ivar observation_media:
-    :ivar organizer:
-    :ivar procedure:
-    :ivar region_of_interest:
-    :ivar substance_administration:
-    :ivar supply:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "POCD_MT000040.Component4"
 
@@ -7908,27 +6871,6 @@ class PocdMt000040Component4:
 
 @dataclass
 class PocdMt000040Organizer:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar subject:
-    :ivar specimen:
-    :ivar performer:
-    :ivar author:
-    :ivar informant:
-    :ivar participant:
-    :ivar reference:
-    :ivar precondition:
-    :ivar component:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.Organizer"
 
@@ -8077,27 +7019,6 @@ class PocdMt000040Organizer:
 
 @dataclass
 class PocdMt000040EntryRelationship:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar seperatable_ind:
-    :ivar act:
-    :ivar encounter:
-    :ivar observation:
-    :ivar observation_media:
-    :ivar organizer:
-    :ivar procedure:
-    :ivar region_of_interest:
-    :ivar substance_administration:
-    :ivar supply:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar inversion_ind:
-    :ivar context_conduction_ind:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "POCD_MT000040.EntryRelationship"
 
@@ -8250,31 +7171,6 @@ class PocdMt000040EntryRelationship:
 
 @dataclass
 class PocdMt000040Act:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar text:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar priority_code:
-    :ivar language_code:
-    :ivar subject:
-    :ivar specimen:
-    :ivar performer:
-    :ivar author:
-    :ivar informant:
-    :ivar participant:
-    :ivar entry_relationship:
-    :ivar reference:
-    :ivar precondition:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    :ivar negation_ind:
-    """
     class Meta:
         name = "POCD_MT000040.Act"
 
@@ -8455,23 +7351,6 @@ class PocdMt000040Act:
 
 @dataclass
 class PocdMt000040Entry:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar act:
-    :ivar encounter:
-    :ivar observation:
-    :ivar observation_media:
-    :ivar organizer:
-    :ivar procedure:
-    :ivar region_of_interest:
-    :ivar substance_administration:
-    :ivar supply:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "POCD_MT000040.Entry"
 
@@ -8592,26 +7471,6 @@ class PocdMt000040Entry:
 
 @dataclass
 class PocdMt000040Section:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar title:
-    :ivar text:
-    :ivar confidentiality_code:
-    :ivar language_code:
-    :ivar subject:
-    :ivar author:
-    :ivar informant:
-    :ivar entry:
-    :ivar component:
-    :ivar id_attribute:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.Section"
 
@@ -8752,15 +7611,6 @@ class PocdMt000040Section:
 
 @dataclass
 class PocdMt000040Component3:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar section:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "POCD_MT000040.Component3"
 
@@ -8824,17 +7674,6 @@ class PocdMt000040Component3:
 
 @dataclass
 class PocdMt000040StructuredBody:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar confidentiality_code:
-    :ivar language_code:
-    :ivar component:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.StructuredBody"
 
@@ -8913,16 +7752,6 @@ class PocdMt000040StructuredBody:
 
 @dataclass
 class PocdMt000040Component2:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar non_xmlbody:
-    :ivar structured_body:
-    :ivar null_flavor:
-    :ivar type_code:
-    :ivar context_conduction_ind:
-    """
     class Meta:
         name = "POCD_MT000040.Component2"
 
@@ -8994,38 +7823,6 @@ class PocdMt000040Component2:
 
 @dataclass
 class PocdMt000040ClinicalDocument:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar title:
-    :ivar effective_time:
-    :ivar confidentiality_code:
-    :ivar language_code:
-    :ivar set_id:
-    :ivar version_number:
-    :ivar copy_time:
-    :ivar record_target:
-    :ivar author:
-    :ivar data_enterer:
-    :ivar informant:
-    :ivar custodian:
-    :ivar information_recipient:
-    :ivar legal_authenticator:
-    :ivar authenticator:
-    :ivar participant:
-    :ivar in_fulfillment_of:
-    :ivar documentation_of:
-    :ivar related_document:
-    :ivar authorization:
-    :ivar component_of:
-    :ivar component:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "POCD_MT000040.ClinicalDocument"
 

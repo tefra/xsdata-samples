@@ -14,11 +14,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class PixconsumerPrpaIn201301UvproxyRequestType:
-    """
-    :ivar prpa_in201301_uv02:
-    :ivar assertion:
-    :ivar nhin_target_system:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201301UVProxyRequestType"
 
@@ -52,10 +47,6 @@ class PixconsumerPrpaIn201301UvproxyRequestType:
 
 @dataclass
 class PixconsumerPrpaIn201301UvproxySecuredRequestType:
-    """
-    :ivar prpa_in201301_uv02:
-    :ivar nhin_target_system:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201301UVProxySecuredRequestType"
 
@@ -81,11 +72,6 @@ class PixconsumerPrpaIn201301UvproxySecuredRequestType:
 
 @dataclass
 class PixconsumerPrpaIn201302UvproxyRequestType:
-    """
-    :ivar prpa_in201302_uv02:
-    :ivar assertion:
-    :ivar nhin_target_system:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201302UVProxyRequestType"
 
@@ -119,10 +105,6 @@ class PixconsumerPrpaIn201302UvproxyRequestType:
 
 @dataclass
 class PixconsumerPrpaIn201302UvproxySecuredRequestType:
-    """
-    :ivar prpa_in201302_uv02:
-    :ivar nhin_target_system:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201302UVProxySecuredRequestType"
 
@@ -148,11 +130,6 @@ class PixconsumerPrpaIn201302UvproxySecuredRequestType:
 
 @dataclass
 class PixconsumerPrpaIn201304UvproxyRequestType:
-    """
-    :ivar prpa_in201304_uv02:
-    :ivar assertion:
-    :ivar nhin_target_system:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201304UVProxyRequestType"
 
@@ -186,10 +163,6 @@ class PixconsumerPrpaIn201304UvproxyRequestType:
 
 @dataclass
 class PixconsumerPrpaIn201304UvproxySecuredRequestType:
-    """
-    :ivar prpa_in201304_uv02:
-    :ivar nhin_target_system:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201304UVProxySecuredRequestType"
 
@@ -215,11 +188,6 @@ class PixconsumerPrpaIn201304UvproxySecuredRequestType:
 
 @dataclass
 class PixconsumerPrpaIn201309UvproxyRequestType:
-    """
-    :ivar prpa_in201309_uv02:
-    :ivar assertion:
-    :ivar nhin_target_system:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201309UVProxyRequestType"
 
@@ -253,10 +221,6 @@ class PixconsumerPrpaIn201309UvproxyRequestType:
 
 @dataclass
 class PixconsumerPrpaIn201309UvproxySecuredRequestType:
-    """
-    :ivar prpa_in201309_uv02:
-    :ivar nhin_target_system:
-    """
     class Meta:
         name = "PIXConsumer_PRPA_IN201309UVProxySecuredRequestType"
 

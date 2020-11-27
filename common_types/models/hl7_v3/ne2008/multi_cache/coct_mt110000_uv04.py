@@ -42,15 +42,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt110000Uv04AccountHolderLanguage:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar language_code:
-    :ivar mode_code:
-    :ivar preference_ind:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "COCT_MT110000UV04.AccountHolderLanguage"
 
@@ -116,17 +107,6 @@ class CoctMt110000Uv04AccountHolderLanguage:
 
 @dataclass
 class CoctMt110000Uv04AccountHolderOrganization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT110000UV04.AccountHolderOrganization"
 
@@ -203,14 +183,6 @@ class CoctMt110000Uv04AccountHolderOrganization:
 
 @dataclass
 class CoctMt110000Uv04RelationshipRole:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT110000UV04.RelationshipRole"
 
@@ -263,27 +235,11 @@ class CoctMt110000Uv04RelationshipRole:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt110000Uv04AccountHolderPerson:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar addr:
-    :ivar as_relationship_role:
-    :ivar account_holder_language:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT110000UV04.AccountHolderPerson"
 
@@ -380,18 +336,6 @@ class CoctMt110000Uv04AccountHolderPerson:
 
 @dataclass
 class CoctMt110000Uv04AccountHolder:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar addr:
-    :ivar telecom:
-    :ivar held_account_holder_person:
-    :ivar held_account_holder_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT110000UV04.AccountHolder"
 
@@ -477,23 +421,11 @@ class CoctMt110000Uv04AccountHolder:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt110000Uv04Holder:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar time:
-    :ivar account_holder:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT110000UV04.Holder"
 
@@ -558,20 +490,6 @@ class CoctMt110000Uv04Holder:
 
 @dataclass
 class CoctMt110000Uv04Account:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar title:
-    :ivar effective_time:
-    :ivar balance_amt:
-    :ivar holder:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT110000UV04.Account"
 

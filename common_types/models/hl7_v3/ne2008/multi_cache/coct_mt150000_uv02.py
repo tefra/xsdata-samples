@@ -27,18 +27,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CoctMt150000Uv02OrganizationContains:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar part_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT150000UV02.OrganizationContains"
 
@@ -124,18 +112,6 @@ class CoctMt150000Uv02OrganizationContains:
 
 @dataclass
 class CoctMt150000Uv02OrganizationPartOf:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar whole_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT150000UV02.OrganizationPartOf"
 
@@ -221,16 +197,6 @@ class CoctMt150000Uv02OrganizationPartOf:
 
 @dataclass
 class CoctMt150000Uv02Person:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar as_located_entity:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT150000UV02.Person"
 
@@ -303,18 +269,6 @@ class CoctMt150000Uv02Person:
 
 @dataclass
 class CoctMt150000Uv02ContactParty:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar addr:
-    :ivar telecom:
-    :ivar contact_person:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT150000UV02.ContactParty"
 
@@ -398,25 +352,6 @@ class CoctMt150000Uv02ContactParty:
 
 @dataclass
 class CoctMt150000Uv02Organization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar name:
-    :ivar desc:
-    :ivar status_code:
-    :ivar telecom:
-    :ivar addr:
-    :ivar standard_industry_class_code:
-    :ivar as_organization_part_of:
-    :ivar contact_party:
-    :ivar organization_contains:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT150000UV02.Organization"
 

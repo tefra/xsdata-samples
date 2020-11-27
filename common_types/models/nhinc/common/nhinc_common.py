@@ -7,9 +7,6 @@ __NAMESPACE__ = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 @dataclass
 class AcknowledgementType:
-    """
-    :ivar message:
-    """
     message: Optional[str] = field(
         default=None,
         metadata={
@@ -21,9 +18,6 @@ class AcknowledgementType:
 
 @dataclass
 class AssigningAuthorityType:
-    """
-    :ivar assigning_authority_id:
-    """
     assigning_authority_id: Optional[str] = field(
         default=None,
         metadata={
@@ -37,10 +31,6 @@ class AssigningAuthorityType:
 
 @dataclass
 class ConnectcustomHttpHeadersType:
-    """
-    :ivar header_name:
-    :ivar header_value:
-    """
     class Meta:
         name = "CONNECTCustomHttpHeadersType"
 
@@ -66,15 +56,6 @@ class ConnectcustomHttpHeadersType:
 
 @dataclass
 class CeType:
-    """
-    :ivar code:
-    :ivar code_system:
-    :ivar code_system_name:
-    :ivar code_system_version:
-    :ivar display_name:
-    :ivar original_text:
-    :ivar translation:
-    """
     code: Optional[str] = field(
         default=None,
         metadata={
@@ -137,13 +118,6 @@ class CeType:
 
 @dataclass
 class CreateEprrequestType:
-    """
-    :ivar endpoint_url:
-    :ivar namespace_uri:
-    :ivar namespace_prefix:
-    :ivar service_name:
-    :ivar port_name:
-    """
     class Meta:
         name = "CreateEPRRequestType"
 
@@ -196,11 +170,6 @@ class CreateEprrequestType:
 
 @dataclass
 class HomeCommunityType:
-    """
-    :ivar description:
-    :ivar home_community_id:
-    :ivar name:
-    """
     description: Optional[str] = field(
         default=None,
         metadata={
@@ -228,10 +197,6 @@ class HomeCommunityType:
 
 @dataclass
 class QualifiedSubjectIdentifierType:
-    """
-    :ivar subject_identifier:
-    :ivar assigning_authority_identifier:
-    """
     subject_identifier: Optional[str] = field(
         default=None,
         metadata={
@@ -254,10 +219,6 @@ class QualifiedSubjectIdentifierType:
 
 @dataclass
 class ResponseType:
-    """
-    :ivar status:
-    :ivar message:
-    """
     status: Optional[bool] = field(
         default=None,
         metadata={
@@ -278,13 +239,6 @@ class ResponseType:
 
 @dataclass
 class SamlAuthnStatementType:
-    """
-    :ivar auth_instant:
-    :ivar session_index:
-    :ivar auth_context_class_ref:
-    :ivar subject_locality_address:
-    :ivar subject_locality_dnsname:
-    """
     auth_instant: Optional[str] = field(
         default=None,
         metadata={
@@ -331,10 +285,6 @@ class SamlAuthnStatementType:
 
 @dataclass
 class SamlAuthzDecisionStatementEvidenceConditionsType:
-    """
-    :ivar not_before:
-    :ivar not_on_or_after:
-    """
     not_before: Optional[str] = field(
         default=None,
         metadata={
@@ -355,10 +305,6 @@ class SamlAuthzDecisionStatementEvidenceConditionsType:
 
 @dataclass
 class SamlConditionsType:
-    """
-    :ivar not_before:
-    :ivar not_on_or_after:
-    """
     not_before: Optional[str] = field(
         default=None,
         metadata={
@@ -381,10 +327,6 @@ class SamlConditionsType:
 
 @dataclass
 class SamlIssuerType:
-    """
-    :ivar issuer:
-    :ivar issuer_format:
-    """
     issuer: Optional[str] = field(
         default=None,
         metadata={
@@ -404,10 +346,6 @@ class SamlIssuerType:
 
 @dataclass
 class SamlSignatureKeyInfoType:
-    """
-    :ivar rsa_key_value_modulus:
-    :ivar rsa_key_value_exponent:
-    """
     rsa_key_value_modulus: Optional[str] = field(
         default=None,
         metadata={
@@ -428,9 +366,6 @@ class SamlSignatureKeyInfoType:
 
 @dataclass
 class TokenRetrieveInfoType:
-    """
-    :ivar request:
-    """
     request: Optional[str] = field(
         default=None,
         metadata={
@@ -443,10 +378,6 @@ class TokenRetrieveInfoType:
 
 @dataclass
 class UrlInfoType:
-    """
-    :ivar url:
-    :ivar id:
-    """
     url: Optional[str] = field(
         default=None,
         metadata={
@@ -467,9 +398,6 @@ class UrlInfoType:
 
 @dataclass
 class UrlSetType:
-    """
-    :ivar url:
-    """
     url: List[str] = field(
         default_factory=list,
         metadata={
@@ -487,14 +415,6 @@ class Acknowledgement(AcknowledgementType):
 
 @dataclass
 class AddressType:
-    """
-    :ivar address_type:
-    :ivar city:
-    :ivar country:
-    :ivar state:
-    :ivar street_address:
-    :ivar zip_code:
-    """
     address_type: Optional[CeType] = field(
         default=None,
         metadata={
@@ -550,9 +470,6 @@ class AddressType:
 
 @dataclass
 class AssigningAuthoritiesType:
-    """
-    :ivar assigning_authority:
-    """
     assigning_authority: List[AssigningAuthorityType] = field(
         default_factory=list,
         metadata={
@@ -598,9 +515,6 @@ class Epr(EndpointReferenceType):
 
 @dataclass
 class HomeCommunitiesType:
-    """
-    :ivar home_community:
-    """
     home_community: List[HomeCommunityType] = field(
         default_factory=list,
         metadata={
@@ -619,11 +533,6 @@ class HomeCommunity(HomeCommunityType):
 
 @dataclass
 class NhinTargetCommunityType:
-    """
-    :ivar home_community:
-    :ivar list_value:
-    :ivar region:
-    """
     home_community: Optional[HomeCommunityType] = field(
         default=None,
         metadata={
@@ -652,13 +561,6 @@ class NhinTargetCommunityType:
 
 @dataclass
 class NhinTargetSystemType:
-    """
-    :ivar epr:
-    :ivar home_community:
-    :ivar url:
-    :ivar exchange_name:
-    :ivar use_spec_version:
-    """
     epr: Optional[EndpointReferenceType] = field(
         default=None,
         metadata={
@@ -701,15 +603,6 @@ class NhinTargetSystemType:
 
 @dataclass
 class PersonNameType:
-    """
-    :ivar family_name:
-    :ivar given_name:
-    :ivar name_type:
-    :ivar second_name_or_initials:
-    :ivar full_name:
-    :ivar prefix:
-    :ivar suffix:
-    """
     family_name: Optional[str] = field(
         default=None,
         metadata={
@@ -775,13 +668,6 @@ class PersonNameType:
 
 @dataclass
 class PhoneType:
-    """
-    :ivar area_code:
-    :ivar country_code:
-    :ivar extension:
-    :ivar local_number:
-    :ivar phone_number_type:
-    """
     area_code: Optional[str] = field(
         default=None,
         metadata={
@@ -836,9 +722,6 @@ class QualifiedSubjectIdentifier(QualifiedSubjectIdentifierType):
 
 @dataclass
 class QualifiedSubjectIdentifiersType:
-    """
-    :ivar qualified_subject_identifier:
-    """
     qualified_subject_identifier: List[QualifiedSubjectIdentifierType] = field(
         default_factory=list,
         metadata={
@@ -863,17 +746,6 @@ class SamlAuthnStatement(SamlAuthnStatementType):
 
 @dataclass
 class SamlAuthzDecisionStatementEvidenceAssertionType:
-    """
-    :ivar id:
-    :ivar issue_instant:
-    :ivar version:
-    :ivar issuer:
-    :ivar issuer_format:
-    :ivar subject:
-    :ivar conditions:
-    :ivar access_consent_policy:
-    :ivar instance_access_consent_policy:
-    """
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -969,10 +841,6 @@ class SamlSignatureKeyInfo(SamlSignatureKeyInfoType):
 
 @dataclass
 class SamlSignatureType:
-    """
-    :ivar key_info:
-    :ivar signature_value:
-    """
     key_info: Optional[SamlSignatureKeyInfoType] = field(
         default=None,
         metadata={
@@ -993,13 +861,6 @@ class SamlSignatureType:
 
 @dataclass
 class SamlSubjectConfirmationType:
-    """
-    :ivar method:
-    :ivar subject_condition:
-    :ivar recipient:
-    :ivar in_response_to:
-    :ivar address:
-    """
     method: Optional[str] = field(
         default=None,
         metadata={
@@ -1066,9 +927,6 @@ class Address(AddressType):
 
 @dataclass
 class AddressesType:
-    """
-    :ivar address:
-    """
     address: List[AddressType] = field(
         default_factory=list,
         metadata={
@@ -1087,11 +945,6 @@ class HomeCommunities(HomeCommunitiesType):
 
 @dataclass
 class NhinTargetCommunitiesType:
-    """
-    :ivar nhin_target_community:
-    :ivar use_spec_version:
-    :ivar exchange_name:
-    """
     nhin_target_community: List[NhinTargetCommunityType] = field(
         default_factory=list,
         metadata={
@@ -1157,9 +1010,6 @@ class SamlAuthzDecisionStatementEvidenceAssertion(SamlAuthzDecisionStatementEvid
 
 @dataclass
 class SamlAuthzDecisionStatementEvidenceType:
-    """
-    :ivar assertion:
-    """
     assertion: Optional[SamlAuthzDecisionStatementEvidenceAssertionType] = field(
         default=None,
         metadata={
@@ -1177,12 +1027,6 @@ class SamlSignature(SamlSignatureType):
 
 @dataclass
 class UserType:
-    """
-    :ivar person_name:
-    :ivar user_name:
-    :ivar org:
-    :ivar role_coded:
-    """
     person_name: Optional[PersonNameType] = field(
         default=None,
         metadata={
@@ -1235,11 +1079,6 @@ class Addresses(AddressesType):
 
 @dataclass
 class ConfigAssertionType:
-    """
-    :ivar user_info:
-    :ivar config_instance:
-    :ivar auth_method:
-    """
     user_info: Optional[UserType] = field(
         default=None,
         metadata={
@@ -1283,12 +1122,6 @@ class SamlAuthzDecisionStatementEvidence(SamlAuthzDecisionStatementEvidenceType)
 
 @dataclass
 class SamlAuthzDecisionStatementType:
-    """
-    :ivar decision:
-    :ivar resource:
-    :ivar action:
-    :ivar evidence:
-    """
     decision: Optional[str] = field(
         default=None,
         metadata={
@@ -1327,45 +1160,6 @@ class User(UserType):
 
 @dataclass
 class AssertionType:
-    """
-    :ivar address:
-    :ivar date_of_birth:
-    :ivar explanation_non_claimant_signature:
-    :ivar have_second_witness_signature:
-    :ivar have_signature:
-    :ivar have_witness_signature:
-    :ivar home_community:
-    :ivar national_provider_id:
-    :ivar person_name:
-    :ivar phone_number:
-    :ivar second_witness_address:
-    :ivar second_witness_name:
-    :ivar second_witness_phone:
-    :ivar ssn:
-    :ivar unique_patient_id:
-    :ivar witness_address:
-    :ivar witness_name:
-    :ivar witness_phone:
-    :ivar user_info:
-    :ivar authorized:
-    :ivar purpose_of_disclosure_coded:
-    :ivar acp_attribute:
-    :ivar instance_acp_attribute:
-    :ivar saml_conditions:
-    :ivar saml_authn_statement:
-    :ivar saml_authz_decision_statement:
-    :ivar saml_signature:
-    :ivar saml_issuer:
-    :ivar saml_subject_confirmations:
-    :ivar message_id:
-    :ivar relates_to_list:
-    :ivar implements_spec_version:
-    :ivar transaction_timeout:
-    :ivar keep_alive:
-    :ivar connectcustom_http_headers:
-    :ivar signature_algorithm:
-    :ivar digest_algorithm:
-    """
     address: Optional[AddressType] = field(
         default=None,
         metadata={
@@ -1686,11 +1480,6 @@ class Assertion(AssertionType):
 
 @dataclass
 class TokenCreationInfoType:
-    """
-    :ivar assertion:
-    :ivar action_name:
-    :ivar resource_name:
-    """
     assertion: Optional[AssertionType] = field(
         default=None,
         metadata={

@@ -924,8 +924,6 @@ class ConversionRateDetailsTypeI179848C:
 class CriteriaDetailsType:
     """
     Criteria details : weights/parameters list
-    :ivar type:
-    :ivar value:
     """
     class Meta:
         name = "CriteriaiDetaislType"
@@ -1853,10 +1851,7 @@ class ItemNumberIdentificationType234878C:
 
 @dataclass
 class ItemNumberIdentificationType248537C:
-    """Goods identification for a specified source.
-
-    :ivar number:
-    """
+    """Goods identification for a specified source."""
     class Meta:
         name = "ItemNumberIdentificationType_248537C"
 
@@ -2463,13 +2458,7 @@ class ProductDateTimeType:
 
 @dataclass
 class ProductDetailsType:
-    """To specify availability and additional services for a product class.
-
-    :ivar designator:
-    :ivar availability_status:
-    :ivar special_service:
-    :ivar option:
-    """
+    """To specify availability and additional services for a product class."""
     designator: Optional[str] = field(
         default=None,
         metadata={
@@ -4272,10 +4261,7 @@ class ItemNumberType166130S:
 
 @dataclass
 class ItemNumberType176648S:
-    """To specify an item number.
-
-    :ivar item_number_details:
-    """
+    """To specify an item number."""
     class Meta:
         name = "ItemNumberType_176648S"
 
@@ -4398,11 +4384,7 @@ class MonetaryInformationTypeI:
 
 @dataclass
 class MonetaryInformationType174241S:
-    """To convey monetary amounts, rates and percentages.
-
-    :ivar monetary_details:
-    :ivar other_monetary_details:
-    """
+    """To convey monetary amounts, rates and percentages."""
     class Meta:
         name = "MonetaryInformationType_174241S"
 
@@ -5110,12 +5092,7 @@ class UserIdentificationType:
 
 @dataclass
 class ValueSearchCriteriaType:
-    """To specify Criteria with list of parameters.
-
-    :ivar ref:
-    :ivar value:
-    :ivar criteria_details:
-    """
+    """To specify Criteria with list of parameters."""
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -6411,10 +6388,6 @@ class FareMasterPricerTravelBoardSearchReply:
 
     @dataclass
     class MnrGrp:
-        """
-        :ivar mnr:
-        :ivar mnr_details:
-        """
         mnr: Optional[MiniRulesType] = field(
             default=None,
             metadata={

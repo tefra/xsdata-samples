@@ -59,25 +59,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 class CoctMt500000UvLimitationValue(Enum):
-    """
-    :cvar PERT:
-    :cvar NAME:
-    :cvar AUTH:
-    :cvar COVBY:
-    :cvar ELNK:
-    :cvar EXPL:
-    :cvar PREV:
-    :cvar REFV:
-    :cvar SUBJ:
-    :cvar DRIV:
-    :cvar CAUS:
-    :cvar MFST:
-    :cvar ITEMSLOC:
-    :cvar LIMIT:
-    :cvar EVID:
-    :cvar REFR:
-    :cvar SUMM:
-    """
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -99,15 +80,6 @@ class CoctMt500000UvLimitationValue(Enum):
 
 @dataclass
 class CoctMt500000UvAccommodationCoverage:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar code:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT500000UV.AccommodationCoverage"
 
@@ -172,15 +144,6 @@ class CoctMt500000UvAccommodationCoverage:
 
 @dataclass
 class CoctMt500000UvCarrierOrganization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT500000UV.CarrierOrganization"
 
@@ -244,15 +207,6 @@ class CoctMt500000UvCarrierOrganization:
 
 @dataclass
 class CoctMt500000UvEmployerOrganization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT500000UV.EmployerOrganization"
 
@@ -315,16 +269,6 @@ class CoctMt500000UvEmployerOrganization:
 
 @dataclass
 class CoctMt500000UvPolicyHolderOrganization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar addr:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT500000UV.PolicyHolderOrganization"
 
@@ -394,15 +338,6 @@ class CoctMt500000UvPolicyHolderOrganization:
 
 @dataclass
 class CoctMt500000UvCarrierRole:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar underwriting_carrier_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT500000UV.CarrierRole"
 
@@ -466,23 +401,11 @@ class CoctMt500000UvCarrierRole:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt500000UvEmployment:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar employer_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT500000UV.Employment"
 
@@ -545,14 +468,6 @@ class CoctMt500000UvEmployment:
 
 @dataclass
 class CoctMt500000UvLimitation:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar accommodation_coverage:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT500000UV.Limitation"
 
@@ -611,14 +526,6 @@ class CoctMt500000UvLimitation:
 
 @dataclass
 class CoctMt500000UvAuthor:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar carrier_role:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT500000UV.Author"
 
@@ -676,17 +583,6 @@ class CoctMt500000UvAuthor:
 
 @dataclass
 class CoctMt500000UvPolicyHolderPerson:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar name:
-    :ivar birth_time:
-    :ivar as_employment:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "COCT_MT500000UV.PolicyHolderPerson"
 
@@ -768,16 +664,6 @@ class CoctMt500000UvPolicyHolderPerson:
 
 @dataclass
 class CoctMt500000UvPolicyHolder:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar policy_holder_person:
-    :ivar policy_holder_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT500000UV.PolicyHolder"
 
@@ -847,22 +733,11 @@ class CoctMt500000UvPolicyHolder:
     )
 
     class Value(Enum):
-        """
-        :cvar ROL:
-        """
         ROL = "ROL"
 
 
 @dataclass
 class CoctMt500000UvHolder:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar policy_holder:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT500000UV.Holder"
 
@@ -920,21 +795,6 @@ class CoctMt500000UvHolder:
 
 @dataclass
 class CoctMt500000UvPolicyOrAccount:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar status_code:
-    :ivar effective_time:
-    :ivar holder:
-    :ivar author:
-    :ivar limitation:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar mood_code:
-    """
     class Meta:
         name = "COCT_MT500000UV.PolicyOrAccount"
 
@@ -1047,15 +907,6 @@ class CoctMt500000UvPolicyOrAccount:
 
 @dataclass
 class CoctMt500000UvBeneficiary:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar sequence_number:
-    :ivar policy_or_account:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "COCT_MT500000UV.Beneficiary"
 
@@ -1121,17 +972,6 @@ class CoctMt500000UvBeneficiary:
 
 @dataclass
 class CoctMt500000UvCoveredParty:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar code:
-    :ivar effective_time:
-    :ivar beneficiary_of:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "COCT_MT500000UV.CoveredParty"
 

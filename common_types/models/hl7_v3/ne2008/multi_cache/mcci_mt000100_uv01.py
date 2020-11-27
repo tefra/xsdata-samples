@@ -28,14 +28,6 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class McciMt000100Uv01AttentionLine:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar key_word_text:
-    :ivar value:
-    :ivar null_flavor:
-    """
     class Meta:
         name = "MCCI_MT000100UV01.AttentionLine"
 
@@ -89,17 +81,6 @@ class McciMt000100Uv01AttentionLine:
 
 @dataclass
 class McciMt000100Uv01EntityRsp:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar telecom:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "MCCI_MT000100UV01.EntityRsp"
 
@@ -177,18 +158,6 @@ class McciMt000100Uv01EntityRsp:
 
 @dataclass
 class McciMt000100Uv01Organization:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar telecom:
-    :ivar notification_party:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "MCCI_MT000100UV01.Organization"
 
@@ -275,17 +244,6 @@ class McciMt000100Uv01Organization:
 
 @dataclass
 class McciMt000100Uv01Place:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar telecom:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "MCCI_MT000100UV01.Place"
 
@@ -363,14 +321,6 @@ class McciMt000100Uv01Place:
 
 @dataclass
 class McciMt000100Uv01Agent:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar represented_organization:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "MCCI_MT000100UV01.Agent"
 
@@ -426,14 +376,6 @@ class McciMt000100Uv01Agent:
 
 @dataclass
 class McciMt000100Uv01LocatedEntity:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar location:
-    :ivar null_flavor:
-    :ivar class_code:
-    """
     class Meta:
         name = "MCCI_MT000100UV01.LocatedEntity"
 
@@ -488,15 +430,6 @@ class McciMt000100Uv01LocatedEntity:
 
 @dataclass
 class McciMt000100Uv01RespondTo:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar telecom:
-    :ivar entity_rsp:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "MCCI_MT000100UV01.RespondTo"
 
@@ -560,23 +493,6 @@ class McciMt000100Uv01RespondTo:
 
 @dataclass
 class McciMt000100Uv01Device:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar id:
-    :ivar name:
-    :ivar desc:
-    :ivar existence_time:
-    :ivar telecom:
-    :ivar manufacturer_model_name:
-    :ivar software_name:
-    :ivar as_agent:
-    :ivar as_located_entity:
-    :ivar null_flavor:
-    :ivar class_code:
-    :ivar determiner_code:
-    """
     class Meta:
         name = "MCCI_MT000100UV01.Device"
 
@@ -703,15 +619,6 @@ class McciMt000100Uv01Device:
 
 @dataclass
 class McciMt000100Uv01Receiver:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar telecom:
-    :ivar device:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "MCCI_MT000100UV01.Receiver"
 
@@ -773,15 +680,6 @@ class McciMt000100Uv01Receiver:
 
 @dataclass
 class McciMt000100Uv01Sender:
-    """
-    :ivar realm_code:
-    :ivar type_id:
-    :ivar template_id:
-    :ivar telecom:
-    :ivar device:
-    :ivar null_flavor:
-    :ivar type_code:
-    """
     class Meta:
         name = "MCCI_MT000100UV01.Sender"
 
