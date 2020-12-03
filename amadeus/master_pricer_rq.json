@@ -1,92 +1,209 @@
 {
-  "fareOptions":
-    {
-      "conversionRate": {
-        "conversionRateDetail": {
-          "currency": "EUR"
-        }
-      },
-      "pricingTickInfo": {
-        "pricingTicketing": {
-          "priceType": ["RP", "RU", "TAC", "CUC", "ET", "FCX", "FDX", "MTK"]
-        }
-      }
+    "number_of_unit": {
+        "unit_number_detail": [
+            {
+                "number_of_units": "1",
+                "type_of_unit": "PX"
+            },
+            {
+                "number_of_units": "250",
+                "type_of_unit": "RC"
+            },
+            {
+                "number_of_units": "75",
+                "type_of_unit": "OWO"
+            },
+            {
+                "number_of_units": "75",
+                "type_of_unit": "OWI"
+            },
+            {
+                "number_of_units": "100",
+                "type_of_unit": "RT"
+            }
+        ]
     },
-  "itinerary": [
-    {
-      "arrivalLocalization": {
-        "arrivalPointDetails": {
-          "locationId": "NYC"
-        }
-      },
-      "departureLocalization": {
-        "departurePoint": {
-          "locationId": "LON"
-        }
-      },
-      "flightInfo": {
-        "flightDetail": {
-          "flightType": ["D", "C", "N"]
-        }
-      },
-      "requestedSegmentRef": {
-        "segRef": 1
-      },
-      "timeDetails": {
-        "firstDateTimeDetail": {
-          "date": "101219"
-        }
-      }
+    "global_options": null,
+    "pax_reference": [],
+    "customer_ref": null,
+    "form_of_payment_by_passenger": [],
+    "solution_family": [],
+    "passenger_info_grp": [],
+    "fare_families": [],
+    "fare_options": {
+        "pricing_tick_info": {
+            "pricing_ticketing": {
+                "price_type": [
+                    "RP",
+                    "RU",
+                    "TAC",
+                    "CUC",
+                    "ET",
+                    "FCX",
+                    "FDX",
+                    "MTK"
+                ]
+            },
+            "ticketing_date": null,
+            "company_id": null,
+            "selling_point": null,
+            "ticketing_point": null,
+            "journey_origin_point": null,
+            "corporate_id": null
+        },
+        "corporate": null,
+        "ticketing_price_scheme": null,
+        "fee_id_description": null,
+        "conversion_rate": {
+            "conversion_rate_detail": [
+                {
+                    "conversion_type": null,
+                    "currency": "EUR"
+                }
+            ]
+        },
+        "form_of_payment": null,
+        "frequent_traveller_info": null,
+        "monetary_cabin_info": null
     },
-    {
-      "arrivalLocalization": {
-        "arrivalPointDetails": {
-          "locationId": "LON"
+    "price_to_beat": null,
+    "tax_info": [],
+    "travel_flight_info": {
+        "cabin_id": null,
+        "company_identity": [],
+        "flight_detail": null,
+        "inclusion_detail": [],
+        "exclusion_detail": [],
+        "unit_number_detail": []
+    },
+    "value_search": [],
+    "buckets": [],
+    "itinerary": [
+        {
+            "requested_segment_ref": {
+                "seg_ref": "1",
+                "location_forcing": []
+            },
+            "departure_localization": {
+                "departure_point": {
+                    "distance": null,
+                    "distance_unit": null,
+                    "location_id": "LON",
+                    "airport_city_qualifier": null,
+                    "latitude": null,
+                    "longitude": null
+                },
+                "dep_multi_city": [],
+                "first_pnr_segment_ref": null,
+                "attribute_details": []
+            },
+            "arrival_localization": {
+                "arrival_point_details": {
+                    "distance": null,
+                    "distance_unit": null,
+                    "location_id": "NYC",
+                    "airport_city_qualifier": null,
+                    "latitude": null,
+                    "longitude": null
+                },
+                "arrival_multi_city": [],
+                "attribute_details": []
+            },
+            "time_details": {
+                "first_date_time_detail": {
+                    "time_qualifier": null,
+                    "date": "101219",
+                    "time": null,
+                    "time_window": null
+                },
+                "range_of_date": null,
+                "trip_details": null
+            },
+            "flight_info": {
+                "cabin_id": null,
+                "company_identity": [],
+                "flight_detail": {
+                    "flight_type": [
+                        "D",
+                        "C",
+                        "N"
+                    ]
+                },
+                "inclusion_detail": [],
+                "exclusion_detail": [],
+                "unit_number_detail": []
+            },
+            "family_information": null,
+            "value_search": [],
+            "group_of_flights": [],
+            "flight_info_pnr": [],
+            "requested_segment_action": null,
+            "attributes": null
+        },
+        {
+            "requested_segment_ref": {
+                "seg_ref": "2",
+                "location_forcing": []
+            },
+            "departure_localization": {
+                "departure_point": {
+                    "distance": null,
+                    "distance_unit": null,
+                    "location_id": "NYC",
+                    "airport_city_qualifier": null,
+                    "latitude": null,
+                    "longitude": null
+                },
+                "dep_multi_city": [],
+                "first_pnr_segment_ref": null,
+                "attribute_details": []
+            },
+            "arrival_localization": {
+                "arrival_point_details": {
+                    "distance": null,
+                    "distance_unit": null,
+                    "location_id": "LON",
+                    "airport_city_qualifier": null,
+                    "latitude": null,
+                    "longitude": null
+                },
+                "arrival_multi_city": [],
+                "attribute_details": []
+            },
+            "time_details": {
+                "first_date_time_detail": {
+                    "time_qualifier": null,
+                    "date": "190314",
+                    "time": null,
+                    "time_window": null
+                },
+                "range_of_date": null,
+                "trip_details": null
+            },
+            "flight_info": {
+                "cabin_id": null,
+                "company_identity": [],
+                "flight_detail": {
+                    "flight_type": [
+                        "D",
+                        "C",
+                        "N"
+                    ]
+                },
+                "inclusion_detail": [],
+                "exclusion_detail": [],
+                "unit_number_detail": []
+            },
+            "family_information": null,
+            "value_search": [],
+            "group_of_flights": [],
+            "flight_info_pnr": [],
+            "requested_segment_action": null,
+            "attributes": null
         }
-      },
-      "departureLocalization": {
-        "departurePoint": {
-          "locationId": "NYC"
-        }
-      },
-      "flightInfo": {
-        "flightDetail": {
-          "flightType": ["D", "C", "N"]
-        }
-      },
-      "requestedSegmentRef": {
-        "segRef": 2
-      },
-      "timeDetails": {
-        "firstDateTimeDetail": {
-          "date": "190314"
-        }
-      }
-    }
-  ],
-  "numberOfUnit": {
-    "unitNumberDetail": [
-      {
-        "numberOfUnits": 1,
-        "typeOfUnit": "PX"
-      },
-      {
-        "numberOfUnits": 250,
-        "typeOfUnit": "RC"
-      },
-      {
-        "numberOfUnits": 75,
-        "typeOfUnit": "OWO"
-      },
-      {
-        "numberOfUnits": 75,
-        "typeOfUnit": "OWI"
-      },
-      {
-        "numberOfUnits": 100,
-        "typeOfUnit": "RT"
-      }
-    ]
-  },
-  "travelFlightInfo": {}
+    ],
+    "ticket_change_info": null,
+    "combination_fare_families": [],
+    "fee_option": [],
+    "office_id_details": []
 }
