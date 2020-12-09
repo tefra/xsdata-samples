@@ -68,7 +68,9 @@ class AltCitiesCombinationsLocationsType(Enum):
 
 @dataclass
 class ApplyResidentDiscountType:
-    """Apply resident discount in CLFE."""
+    """
+    Apply resident discount in CLFE.
+    """
     ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -172,12 +174,18 @@ class BillingInformationType:
 
 @dataclass
 class BookingChannelType:
-    """Specifies the booking channel types and whether it is the primary means of
+    """
+    Specifies the booking channel types and whether it is the primary means of
     connectivity of the source.
 
     Attributes
-        type: The type of booking channel (e.g. Global Distribution System (GDS), Alternative Distribution System (ADS), Sales and Catering System (SCS), Property Management System (PMS), Central Reservation System (CRS), Tour Operator System (TOS), Internet and ALL). Refer to OTA Code List Booking Channel Type (BCT).
-        primary: Indicates whether the enumerated booking channel is the primary means of connectivity used by the source.
+        type: The type of booking channel (e.g. Global Distribution System
+            (GDS), Alternative Distribution System (ADS), Sales and Catering
+            System (SCS), Property Management System (PMS), Central Reservation
+            System (CRS), Tour Operator System (TOS), Internet and ALL). Refer
+            to OTA Code List Booking Channel Type (BCT).
+        primary: Indicates whether the enumerated booking channel is the
+            primary means of connectivity used by the source.
     """
     type: Optional[str] = field(
         default=None,
@@ -208,8 +216,10 @@ class BrandType:
 
 
 class CabinType(Enum):
-    """A cabin is either Premium First (P), First (F), Premium Business (J),
-    Business (C), Premium Economy (S) or Economy (Y)"""
+    """
+    A cabin is either Premium First (P), First (F), Premium Business (J),
+    Business (C), Premium Economy (S) or Economy (Y)
+    """
     PREMIUM_FIRST = "PremiumFirst"
     FIRST = "First"
     PREMIUM_BUSINESS = "PremiumBusiness"
@@ -238,14 +248,17 @@ class CachePartitionType:
 
 
 class CarrierType(Enum):
-    """Used to specify if carrier type is  marketing or operating."""
+    """
+    Used to specify if carrier type is  marketing or operating.
+    """
     MARKETING = "Marketing"
     OPERATING = "Operating"
 
 
 @dataclass
 class CountryNameType:
-    """The name or code of a country (e.g. as used in an address or to specify
+    """
+    The name or code of a country (e.g. as used in an address or to specify
     citizenship of a traveller).
 
     Attributes
@@ -271,18 +284,25 @@ class CountryNameType:
 
 @dataclass
 class CustLoyaltyType:
-    """Program rewarding frequent use by accumulating credits for services provided
-    by vendors.
+    """
+    Program rewarding frequent use by accumulating credits for services
+    provided by vendors.
 
     Attributes
         share_synch_ind:
         share_market_ind:
-        program_id: Identifier to indicate the company owner of the loyalty program.
-        membership_id: Unique identifier of the member in the program (membership number, account number, etc.).
-        travel_sector: Identifies the travel sector. Refer to OTA Code List Travel Sector (TVS).
-        loyal_level: Indicates special privileges in program assigned to individual.
-        single_vendor_ind: Indicates if program is affiliated with a group of related offers accumulating credits.
-        signup_date: Indicates when the member signed up for the loyalty program.
+        program_id: Identifier to indicate the company owner of the loyalty
+            program.
+        membership_id: Unique identifier of the member in the program
+            (membership number, account number, etc.).
+        travel_sector: Identifies the travel sector. Refer to OTA Code List
+            Travel Sector (TVS).
+        loyal_level: Indicates special privileges in program assigned to
+            individual.
+        single_vendor_ind: Indicates if program is affiliated with a group of
+            related offers accumulating credits.
+        signup_date: Indicates when the member signed up for the loyalty
+            program.
         effective_date: Indicates the starting date.
         expire_date: Indicates the ending date.
         rph: Reference place holder, to reference it back in the response.
@@ -373,14 +393,18 @@ class CustLoyaltyType:
     )
 
     class ShareSynchInd(Enum):
-        """value="Inherit" Permission for sharing data for synchronization of
-        information held by other travel service providers."""
+        """
+        value="Inherit" Permission for sharing data for synchronization of
+        information held by other travel service providers.
+        """
         YES = "Yes"
         NO = "No"
         INHERIT = "Inherit"
 
     class ShareMarketInd(Enum):
-        """value="Inherit" Permission for sharing data for marketing purposes."""
+        """
+        value="Inherit" Permission for sharing data for marketing purposes.
+        """
         YES = "Yes"
         NO = "No"
         INHERIT = "Inherit"
@@ -419,8 +443,10 @@ class DateTimeType:
     Attributes
         time_window_start: Allowed amount of time before specified time.
         time_window_end: Allowed amount of time after specified time.
-        time_tolerance: Maximum time difference between actual and desired time.
-        date_flexibility: The number of alternate days around the travel date to search.
+        time_tolerance: Maximum time difference between actual and desired
+            time.
+        date_flexibility: The number of alternate days around the travel date
+            to search.
         max_options_per_date: Number of options for requested date.
         connection_time_min: Minimal amount of time between flights
         connection_time_max: Maximal amount of time between flights
@@ -480,10 +506,14 @@ class DateTimeType:
 
 @dataclass
 class DepartureDaysType:
-    """Specify which days of week  to consider for departure.
+    """
+    Specify which days of week  to consider for departure.
 
     Attributes
-        value: Value format: First letter of the name of the day or '_', eg. 'SMT___S' means we are interested in departing at Saturday, Sunday, Monday or Tuesday. Even if there are schedules for Wednesday, Thursday or Friday, they won't be returned in ISell response.
+        value: Value format: First letter of the name of the day or '_', eg.
+            'SMT___S' means we are interested in departing at Saturday, Sunday,
+            Monday or Tuesday. Even if there are schedules for Wednesday,
+            Thursday or Friday, they won't be returned in ISell response.
     """
     value: Optional[str] = field(
         default=None,
@@ -498,19 +528,27 @@ class DepartureDaysType:
 
 @dataclass
 class DocumentType:
-    """Provides information on a specific documents.
+    """
+    Provides information on a specific documents.
 
     Attributes
         doc_holder_name: Specify document holder name.
-        doc_limitations: Used to indicate any limitations on the document (e.g. as a person may only be allowed to spend a max of 30 days in country on a visitor's visa).
+        doc_limitations: Used to indicate any limitations on the document (e.g.
+            as a person may only be allowed to spend a max of 30 days in
+            country on a visitor's visa).
         share_synch_ind:
         share_market_ind:
-        doc_issue_authority: Indicates the group or association that granted the document.
-        doc_issue_location: Indicates the location where the document was issued.
+        doc_issue_authority: Indicates the group or association that granted
+            the document.
+        doc_issue_location: Indicates the location where the document was
+            issued.
         doc_id: Unique number assigned by authorities to document.
-        doc_type: Indicates the type of document (e.g. Passport, Military ID, Drivers License, national ID, Vaccination Certificate). Refer to OTA Code List Document Type (DOC).
+        doc_type: Indicates the type of document (e.g. Passport, Military ID,
+            Drivers License, national ID, Vaccination Certificate). Refer to
+            OTA Code List Document Type (DOC).
         gender:
-        birth_date: Indicates the date of birth as indicated in the document, in ISO 8601 prescribed format.
+        birth_date: Indicates the date of birth as indicated in the document,
+            in ISO 8601 prescribed format.
         effective_date: Indicates the starting date.
         expire_date: Indicates the ending date.
     """
@@ -613,14 +651,18 @@ class DocumentType:
     )
 
     class ShareSynchInd(Enum):
-        """value="Inherit" Permission for sharing data for synchronization of
-        information held by other travel service providers."""
+        """
+        value="Inherit" Permission for sharing data for synchronization of
+        information held by other travel service providers.
+        """
         YES = "Yes"
         NO = "No"
         INHERIT = "Inherit"
 
     class ShareMarketInd(Enum):
-        """value="Inherit" Permission for sharing data for marketing purposes."""
+        """
+        value="Inherit" Permission for sharing data for marketing purposes.
+        """
         YES = "Yes"
         NO = "No"
         INHERIT = "Inherit"
@@ -633,14 +675,17 @@ class DocumentType:
 
 @dataclass
 class EmailType:
-    """Electronic email addresses, in IETF specified format.
+    """
+    Electronic email addresses, in IETF specified format.
 
     Attributes
         value:
         share_synch_ind:
         share_market_ind:
         default_ind:
-        email_type: Defines the purpose of the e-mail address (e.g. personal, business, listserve). Refer to OTA Code List Email Address Type (EAT).
+        email_type: Defines the purpose of the e-mail address (e.g. personal,
+            business, listserve). Refer to OTA Code List Email Address Type
+            (EAT).
     """
     value: Optional[str] = field(
         default=None,
@@ -679,14 +724,18 @@ class EmailType:
     )
 
     class ShareSynchInd(Enum):
-        """value="Inherit" Permission for sharing data for synchronization of
-        information held by other travel service providers."""
+        """
+        value="Inherit" Permission for sharing data for synchronization of
+        information held by other travel service providers.
+        """
         YES = "Yes"
         NO = "No"
         INHERIT = "Inherit"
 
     class ShareMarketInd(Enum):
-        """value="Inherit" Permission for sharing data for marketing purposes."""
+        """
+        value="Inherit" Permission for sharing data for marketing purposes.
+        """
         YES = "Yes"
         NO = "No"
         INHERIT = "Inherit"
@@ -697,11 +746,13 @@ class ExchangeFareType:
     """
     Attributes
         base_fare_amount: Base fare amount
-        non_refundable_amount: Non-refundable Base Fare Amount. Currency is defined by @BaseFareCurrency.
+        non_refundable_amount: Non-refundable Base Fare Amount. Currency is
+            defined by @BaseFareCurrency.
         base_fare_currency: Base fare currency
         fare_calc_currency: Fare calc currency
         validating_carrier: Validating carrier
-        roe: Rate of Exchange override (note: doesn't need to be specified if FareCalc currency and BaseFare currency is the same).
+        roe: Rate of Exchange override (note: doesn't need to be specified if
+            FareCalc currency and BaseFare currency is the same).
     """
     base_fare_amount: Optional[Decimal] = field(
         default=None,
@@ -759,13 +810,20 @@ class ExchangeFareType:
 class ExchangeSettingsType:
     """
     Attributes
-        reprice_current_itin: If set to ''false'', disables processing of Current Itin path.
-        attach_exchange_info: If set to ''true'', adds exchange-specific information to the response.
-    					The information includes richer Tax elements, ReissueVsExchange attribute and currency conversion rates.
+        reprice_current_itin: If set to ''false'', disables processing of
+            Current Itin path.
+        attach_exchange_info: If set to ''true'', adds exchange-specific
+            information to the response. The information includes richer Tax
+            elements, ReissueVsExchange attribute and currency conversion
+            rates.
         reissue_exchange: Process Type Indicator for Primary Request Type
-        branded_results: Enables branded results (if brands are available for returned options)
-        miptimeout_threshold: Hints MIP that it should return options within this amount of time (in seconds)
-        request_type: Used to specify if the request is an usual Exchange request (basic) or an Exchange Context Shopping request (context). When not specified, basic is assumed.
+        branded_results: Enables branded results (if brands are available for
+            returned options)
+        miptimeout_threshold: Hints MIP that it should return options within
+            this amount of time (in seconds)
+        request_type: Used to specify if the request is an usual Exchange
+            request (basic) or an Exchange Context Shopping request (context).
+            When not specified, basic is assumed.
     """
     reprice_current_itin: bool = field(
         default=True,
@@ -820,10 +878,11 @@ class ExchangeSettingsType:
 
 @dataclass
 class FareDetailsType:
-    """You don't need to specify all of these attributes for a given flight. For
-    some of them it is sufficient to be specified in the last flight of a given
-    fare component. For details, see notes below --- the attributes are annotated
-    with ,,last Flight in Fare Component''.
+    """You don't need to specify all of these attributes for a given flight.
+
+    For some of them it is sufficient to be specified in the last flight
+    of a given fare component. For details, see notes below --- the
+    attributes are annotated with ,,last Flight in Fare Component''.
 
     Attributes
         component_no: Fare component number
@@ -911,10 +970,11 @@ class FareDetailsType:
 
 @dataclass
 class FareOptionalDetailsType:
-    """You don't need to specify all of these attributes for a given flight. For
-    some of them it is sufficient to be specified in the last flight of a given
-    fare component. For details, see notes below --- the attributes are annotated
-    with ,,last Flight in Fare Component''.
+    """You don't need to specify all of these attributes for a given flight.
+
+    For some of them it is sufficient to be specified in the last flight
+    of a given fare component. For details, see notes below --- the
+    attributes are annotated with ,,last Flight in Fare Component''.
 
     Attributes
         component_no: Fare component number
@@ -1000,7 +1060,9 @@ class FareOptionalDetailsType:
 
 @dataclass
 class FlightStopsAsConnectionsType:
-    """Treat all stops as connections."""
+    """
+    Treat all stops as connections.
+    """
     ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -1012,13 +1074,13 @@ class FlightStopsAsConnectionsType:
 
 
 class FlightTypeType(Enum):
-    """
-    Identifies a particular type of flight - Direct, Stopover etc.
+    """Identifies a particular type of flight - Direct, Stopover etc.
 
     Attributes
         NONSTOP: Flight without plane change and without intermediate landing.
         DIRECT: Flight without plane change and possible intermediate landing.
-        CONNECTION: Flight with plane changes, allowing maximum of 24 hours for each change
+        CONNECTION: Flight with plane changes, allowing maximum of 24 hours for
+            each change
     """
     NONSTOP = "Nonstop"
     DIRECT = "Direct"
@@ -1027,9 +1089,10 @@ class FlightTypeType(Enum):
 
 @dataclass
 class GoverningCarrierOverrideType:
-    """Attributes.
-
-    airline_code: Airline Carrier Code - override the GOVERNING CARRIER to get the fare filed by that carrier.
+    """
+    Attributes
+        airline_code: Airline Carrier Code - override the GOVERNING CARRIER to
+            get the fare filed by that carrier.
     """
     airline_code: Optional[str] = field(
         default=None,
@@ -1044,7 +1107,8 @@ class GoverningCarrierOverrideType:
 
 @dataclass
 class IncludeVendorPrefType:
-    """Consider only these carriers for this leg.
+    """
+    Consider only these carriers for this leg.
 
     Attributes
         code: Identifies a company by the company code.
@@ -1065,7 +1129,8 @@ class IncludeVendorPrefType:
 class JumpCabinLogicType:
     """
     Attributes
-        disabled: Controls if response could contain options with cabin class different than requested.
+        disabled: Controls if response could contain options with cabin class
+            different than requested.
     """
     disabled: Optional[bool] = field(
         default=None,
@@ -1081,7 +1146,8 @@ class JumpCabinLogicType:
 class KeepSameCabinType:
     """
     Attributes
-        enabled: Set to "true" guarantees that all segments within single shopping option belong to the requested cabin.
+        enabled: Set to "true" guarantees that all segments within single
+            shopping option belong to the requested cabin.
     """
     enabled: Optional[bool] = field(
         default=None,
@@ -1128,14 +1194,20 @@ class MileageDisplayType:
 
 @dataclass
 class NumTripsType:
-    """This element allows a user to specify the number of itineraries returned.
+    """
+    This element allows a user to specify the number of itineraries returned.
 
     Attributes
         number:
-        per_date_min: Minimum number of options to be retrieved for each combination of outbound/inbound dates.
-        per_date_max: Maximum number of options to be retrieved for each combination of outbound/inbound dates.
-        per_market: Number of itineraries per market for alternate cities request. It allows to control market diversity only.
-        per_month: In Advanced Calendar API: Maximum number of itineraries to be retrieved for each departure month and departure/arrival combination.
+        per_date_min: Minimum number of options to be retrieved for each
+            combination of outbound/inbound dates.
+        per_date_max: Maximum number of options to be retrieved for each
+            combination of outbound/inbound dates.
+        per_market: Number of itineraries per market for alternate cities
+            request. It allows to control market diversity only.
+        per_month: In Advanced Calendar API: Maximum number of itineraries to
+            be retrieved for each departure month and departure/arrival
+            combination.
     """
     number: int = field(
         default=9,
@@ -1226,7 +1298,8 @@ class OptionsPerDatePairType:
 
 @dataclass
 class PersonNameType:
-    """This is an XML Schema representing the OTA Person Name object.
+    """
+    This is an XML Schema representing the OTA Person Name object.
 
     Attributes
         name_prefix: Salutation of honorific. (e.g., Mr. Mrs., Ms., Miss, Dr.)
@@ -1234,11 +1307,13 @@ class PersonNameType:
         middle_name: Person's middle name
         surname_prefix: e.g "van der", "von", "de"
         surname: Family name, last name.
-        name_suffix: Hold various name suffixes and letters (e.g. Jr., Sr., III, Ret., Esq.).
+        name_suffix: Hold various name suffixes and letters (e.g. Jr., Sr.,
+            III, Ret., Esq.).
         name_title: Degree or honors (e.g., Ph.D., M.D.)
         share_synch_ind:
         share_market_ind:
-        name_type: Type of name of the individual, such as former, nickname, alternate or alias name. Refer to OTA Code List Name Type (NAM).
+        name_type: Type of name of the individual, such as former, nickname,
+            alternate or alias name. Refer to OTA Code List Name Type (NAM).
     """
     name_prefix: List[str] = field(
         default_factory=list,
@@ -1339,14 +1414,18 @@ class PersonNameType:
     )
 
     class ShareSynchInd(Enum):
-        """value="Inherit" Permission for sharing data for synchronization of
-        information held by other travel service providers."""
+        """
+        value="Inherit" Permission for sharing data for synchronization of
+        information held by other travel service providers.
+        """
         YES = "Yes"
         NO = "No"
         INHERIT = "Inherit"
 
     class ShareMarketInd(Enum):
-        """value="Inherit" Permission for sharing data for marketing purposes."""
+        """
+        value="Inherit" Permission for sharing data for marketing purposes.
+        """
         YES = "Yes"
         NO = "No"
         INHERIT = "Inherit"
@@ -1463,7 +1542,9 @@ class PointOfTicketingOverrideType:
 
 @dataclass
 class PositionType:
-    """Used to identify geospatial postion of the requesting entity."""
+    """
+    Used to identify geospatial postion of the requesting entity.
+    """
     latitude: Optional[str] = field(
         default=None,
         metadata={
@@ -1494,9 +1575,11 @@ class PositionType:
 
 
 class PreferLevelType(Enum):
-    """Used to specify a preference level for something that is or will be
-    requested (e.g. a supplier of a service, a type of service, a form of payment,
-    etc.)."""
+    """
+    Used to specify a preference level for something that is or will be
+    requested (e.g. a supplier of a service, a type of service, a form of
+    payment, etc.).
+    """
     ONLY = "Only"
     UNACCEPTABLE = "Unacceptable"
     PREFERRED = "Preferred"
@@ -1504,13 +1587,17 @@ class PreferLevelType(Enum):
 
 @dataclass
 class RequestLocationType:
-    """Code and optional string to describe a location point.
+    """
+    Code and optional string to describe a location point.
 
     Attributes
         value:
-        location_code: Location identifying code. Required unless AirportsGroup or AllAirports is specified. Cannot appear with AirportsGroup nor AllAirports.
+        location_code: Location identifying code. Required unless AirportsGroup
+            or AllAirports is specified. Cannot appear with AirportsGroup nor
+            AllAirports.
         airports_group: Name of the airports group
-        code_context: Identifies the context of the identifying code, such as IATA, ARC, or internal code, etc.
+        code_context: Identifies the context of the identifying code, such as
+            IATA, ARC, or internal code, etc.
     """
     value: Optional[str] = field(
         default=None,
@@ -1543,7 +1630,9 @@ class RequestLocationType:
 
 
 class RequestPricingSourceType(Enum):
-    """It can be used to indicate whether the fare is public or private."""
+    """
+    It can be used to indicate whether the fare is public or private.
+    """
     PUBLISHED = "Published"
     PRIVATE = "Private"
     BOTH = "Both"
@@ -1579,7 +1668,8 @@ class RetailerRulesType:
     """
     Attributes
         retailer_rule:
-        force: If set to true, only fares with a matched Business Rule containing the specified Retailer Rule Qualifier will be returned
+        force: If set to true, only fares with a matched Business Rule
+            containing the specified Retailer Rule Qualifier will be returned
     """
     retailer_rule: List["RetailerRulesType.RetailerRule"] = field(
         default_factory=list,
@@ -1614,7 +1704,9 @@ class RetailerRulesType:
 
 @dataclass
 class RoutingLegType:
-    """Definition of individual routing legs, at least one leg must be present."""
+    """
+    Definition of individual routing legs, at least one leg must be present.
+    """
     inbound_outbound_carrier: List[str] = field(
         default_factory=list,
         metadata={
@@ -1705,11 +1797,13 @@ class SideTripType:
 
 @dataclass
 class StateProvType:
-    """State, province, or region name or code needed to identify location.
+    """
+    State, province, or region name or code needed to identify location.
 
     Attributes
         value:
-        state_code: The postal service standard code or abbreviation for the state, province, or region.
+        state_code: The postal service standard code or abbreviation for the
+            state, province, or region.
     """
     value: Optional[str] = field(
         default=None,
@@ -1731,7 +1825,8 @@ class StateProvType:
 
 @dataclass
 class StreetNmbrType:
-    """Street name; number on street.
+    """
+    Street name; number on street.
 
     Attributes
         value:
@@ -1757,7 +1852,8 @@ class StreetNmbrType:
 
 @dataclass
 class TaxCodeType:
-    """Defines the data fields available for tax code.
+    """
+    Defines the data fields available for tax code.
 
     Attributes
         tax_code: Identifies the code for the tax.
@@ -1775,19 +1871,25 @@ class TaxCodeType:
 
 @dataclass
 class TelephoneType:
-    """Construct for holding a telephone number.
+    """
+    Construct for holding a telephone number.
 
     Attributes
         share_synch_ind:
         share_market_ind:
         phone_location_type: Refer to OTA Code List Phone Location Type (PLT).
-        phone_tech_type: Indicates type of technology associated with this telephone number, such as Voice, Data, Fax, Pager, Mobile, TTY, etc. Refer to OTA Code List Phone Technology Type (PTT).
-        country_access_code: Code assigned by telecommunications authorities for international country access identifier.
-        area_city_code: Code assigned for telephones in a specific region, city, or area.
+        phone_tech_type: Indicates type of technology associated with this
+            telephone number, such as Voice, Data, Fax, Pager, Mobile, TTY,
+            etc. Refer to OTA Code List Phone Technology Type (PTT).
+        country_access_code: Code assigned by telecommunications authorities
+            for international country access identifier.
+        area_city_code: Code assigned for telephones in a specific region,
+            city, or area.
         phone_number: Telephone number assigned to a single location.
         extension: Extension to reach a specific party at the phone number.
         pin: Additional codes used for pager or telephone access rights.
-        formatted_ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
+        formatted_ind: Specifies if the associated data is formatted or not. If
+            true, then it is formatted, if false, then not formatted.
     """
     share_synch_ind: Optional["TelephoneType.ShareSynchInd"] = field(
         default=None,
@@ -1869,14 +1971,18 @@ class TelephoneType:
     )
 
     class ShareSynchInd(Enum):
-        """value="Inherit" Permission for sharing data for synchronization of
-        information held by other travel service providers."""
+        """
+        value="Inherit" Permission for sharing data for synchronization of
+        information held by other travel service providers.
+        """
         YES = "Yes"
         NO = "No"
         INHERIT = "Inherit"
 
     class ShareMarketInd(Enum):
-        """value="Inherit" Permission for sharing data for marketing purposes."""
+        """
+        value="Inherit" Permission for sharing data for marketing purposes.
+        """
         YES = "Yes"
         NO = "No"
         INHERIT = "Inherit"
@@ -1884,11 +1990,13 @@ class TelephoneType:
 
 @dataclass
 class TravelDateTimeType:
-    """Date and time of trip, that allows specifying a time window before and after
-    the given date.
+    """
+    Date and time of trip, that allows specifying a time window before and
+    after the given date.
 
     Attributes
-        departure_date_time: This date should be of the form YYYY-MM-DDTHH:MM:SS
+        departure_date_time: This date should be of the form YYYY-MM-
+            DDTHH:MM:SS
         arrival_date_time: This date should be of the form YYYY-MM-DDTHH:MM:SS
         departure_dates:
         arrival_dates: Allowed only for Advanced Calendar API.
@@ -1954,9 +2062,11 @@ class TravelDateTimeType:
         Attributes
             day:
             days_range:
-            length_of_stay: Amount of days between previous leg's DEPARTURE date and current leg's DEPARTURE date. NOTE: Allowed only in 2nd or further "OriginDestinationInformation".
-
-        											Example: for outbound departing on Jan 20, LengthOfStay/@Days="2" means inbound departing on Jan 22.
+            length_of_stay: Amount of days between previous leg's DEPARTURE
+                date and current leg's DEPARTURE date. NOTE: Allowed only in
+                2nd or further "OriginDestinationInformation".  Example: for
+                outbound departing on Jan 20, LengthOfStay/@Days="2" means
+                inbound departing on Jan 22.
             length_of_stay_range: See comment on "LengthOfStay" element.
         """
         day: List["TravelDateTimeType.DepartureDates.Day"] = field(
@@ -2137,7 +2247,8 @@ class TravelDateTimeType:
 class TravelerInfoSummaryTpaExtensionsType:
     """
     Attributes
-        traveler_rating: Customer Value Scores and Frequent Flyer Tiers for one traveler. It can influence Availability results when provided.
+        traveler_rating: Customer Value Scores and Frequent Flyer Tiers for one
+            traveler. It can influence Availability results when provided.
     """
     class Meta:
         name = "TravelerInfoSummary_TPA_ExtensionsType"
@@ -2211,7 +2322,8 @@ class TravelerInfoSummaryTpaExtensionsType:
 
 @dataclass
 class TravelerRefNumberType:
-    """A reference place holder used as a pointer to link back to the traveler.
+    """
+    A reference place holder used as a pointer to link back to the traveler.
 
     Attributes
         rph: Reference place holder.
@@ -2237,7 +2349,9 @@ class ValidatingCarrierPreferLevelType(Enum):
 
 @dataclass
 class XofaresType:
-    """XOFares indicator."""
+    """
+    XOFares indicator.
+    """
     class Meta:
         name = "XOFaresType"
 
@@ -2263,10 +2377,12 @@ class AddressType:
         county: County Name eg. Fairfax
         state_prov: State name eg. Texas
         country_name: Country name eg. Ireland
-        formatted_ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
+        formatted_ind: Specifies if the associated data is formatted or not. If
+            true, then it is formatted, if false, then not formatted.
         share_synch_ind:
         share_market_ind:
-        type: Defines the type of address (e.g. home, business, other). Refer to OTA Code List Communication Location Type (CLT).
+        type: Defines the type of address (e.g. home, business, other). Refer
+            to OTA Code List Communication Location Type (CLT).
     """
     street_nmbr: Optional[StreetNmbrType] = field(
         default=None,
@@ -2373,14 +2489,18 @@ class AddressType:
     )
 
     class ShareSynchInd(Enum):
-        """value="Inherit" Permission for sharing data for synchronization of
-        information held by other travel service providers."""
+        """
+        value="Inherit" Permission for sharing data for synchronization of
+        information held by other travel service providers.
+        """
         YES = "Yes"
         NO = "No"
         INHERIT = "Inherit"
 
     class ShareMarketInd(Enum):
-        """value="Inherit" Permission for sharing data for marketing purposes."""
+        """
+        value="Inherit" Permission for sharing data for marketing purposes.
+        """
         YES = "Yes"
         NO = "No"
         INHERIT = "Inherit"
@@ -2388,12 +2508,14 @@ class AddressType:
 
 @dataclass
 class AltCitiesCombinationsType:
-    """Which (if any) alt cities locations should be handled in a special way (i.e.
-    Validate instead of precomputed path).
+    """
+    Which (if any) alt cities locations should be handled in a special way
+    (i.e. Validate instead of precomputed path).
 
     Attributes
         origins: Which origins to process in live path (All or Main only)
-        destinations: Which destinations to process in live path (All or Main only)
+        destinations: Which destinations to process in live path (All or Main
+            only)
     """
     origins: AltCitiesCombinationsLocationsType = field(
         default=AltCitiesCombinationsLocationsType.MAIN,
@@ -2449,7 +2571,8 @@ class ArunkType:
 
 @dataclass
 class BookingClassPrefType:
-    """Booking class code and preference level for specifying booking classes
+    """
+    Booking class code and preference level for specifying booking classes
     preferred/not preferred in a request.
 
     Attributes
@@ -2476,7 +2599,8 @@ class BookingClassPrefType:
 
 @dataclass
 class CabinPrefType:
-    """Indicates preferences for choice of airline cabin for a given travel
+    """
+    Indicates preferences for choice of airline cabin for a given travel
     situation.
 
     Attributes
@@ -2514,7 +2638,8 @@ class CachePartitionGroupType:
 
 @dataclass
 class CompanyNamePrefType(CompanyNameType):
-    """Identifies a preferred company by name.
+    """
+    Identifies a preferred company by name.
 
     Attributes
         prefer_level:
@@ -2538,8 +2663,10 @@ class CompanyNamePrefType(CompanyNameType):
 
 @dataclass
 class ConnectionType:
-    """To specify connection locations, preference level for each, min connection
-    time, and whether location is specified for stopping or changing."""
+    """
+    To specify connection locations, preference level for each, min connection
+    time, and whether location is specified for stopping or changing.
+    """
     connection_location: List["ConnectionType.ConnectionLocation"] = field(
         default_factory=list,
         metadata={
@@ -2603,9 +2730,11 @@ class ConnectionType:
 
 @dataclass
 class DiversityControlType:
-    """These parameters control how IntellSell should select itineraries based not
+    """
+    These parameters control how IntellSell should select itineraries based not
     necessarily on cheapest price, but also on other criteria that guarantee a
-    diverse response."""
+    diverse response.
+    """
     low_fare_bucket: Optional["DiversityControlType.LowFareBucket"] = field(
         default=None,
         metadata={
@@ -2843,7 +2972,8 @@ class DiversityControlType:
         class TimeOfDay:
             """
             Attributes
-                distribution: Exactly one attribute: either Direction or Leg must be provided
+                distribution: Exactly one attribute: either Direction or Leg
+                    must be provided
                 weight:
             """
             distribution: List["DiversityControlType.Dimensions.TimeOfDay.Distribution"] = field(
@@ -2900,7 +3030,8 @@ class DiversityControlType:
 
                 @dataclass
                 class Range:
-                    """Either all Range elements shall contain attribute Options or none.
+                    """Either all Range elements shall contain attribute
+                    Options or none.
 
                     Ranges shall not overlap.
                     """
@@ -3140,7 +3271,8 @@ class ExchangeOriginDestinationFlightType:
         class Adjustment:
             """
             Attributes
-                value: Adjustment Value, can be positive or negative, number or percentage
+                value: Adjustment Value, can be positive or negative, number or
+                    percentage
                 currency: Currency of Adjustment's Value
                 group: Markup/Discount Group
             """
@@ -3187,8 +3319,9 @@ class ExchangeTpaExtensionsType:
 
 @dataclass
 class FareRestrictPrefType:
-    """Identifies preferences for airfare restrictions acceptable or not acceptable
-    for a given travel situation.
+    """
+    Identifies preferences for airfare restrictions acceptable or not
+    acceptable for a given travel situation.
 
     Attributes
         prefer_level:
@@ -3231,17 +3364,32 @@ class FlexibleFaresType:
     class FareParameters:
         """
         Attributes
-            exclude_restricted: Setting this to true means the same as setting ResTicketing, MinMaxStay and RefundPenalty to false.
-            res_ticketing: If set to true, fares that have a reservation/ticketing can be included in the responses. If set to false, then no fares that include reservation/ticketing requirement will be included in the response. This is negation of XA qualifier.
-            min_max_stay: If set to true, fares that have a min/max stay can be included in the responses. If set to false, then no fares that include a min/max stay requirement will be included in the response. This is negation of XS qualifier.
-            refund_penalty: If set to true, fares that have a refund penalty can be included in the responses. If set to false, then no fares that include a refund penalty requirement will be included in the response. This is negation of XP qualifier.
+            exclude_restricted: Setting this to true means the same as setting
+                ResTicketing, MinMaxStay and RefundPenalty to false.
+            res_ticketing: If set to true, fares that have a
+                reservation/ticketing can be included in the responses. If set
+                to false, then no fares that include reservation/ticketing
+                requirement will be included in the response. This is negation
+                of XA qualifier.
+            min_max_stay: If set to true, fares that have a min/max stay can be
+                included in the responses. If set to false, then no fares that
+                include a min/max stay requirement will be included in the
+                response. This is negation of XS qualifier.
+            refund_penalty: If set to true, fares that have a refund penalty
+                can be included in the responses. If set to false, then no
+                fares that include a refund penalty requirement will be
+                included in the response. This is negation of XP qualifier.
             public_fare: This element finds only public fares.
             private_fare: This element finds only private fares.
             cabin: This element specifies preffered cabin type.
             passenger_type: This element specifies PTC used to find this fare.
-            negotiated_fares_only: If set to true then returned fares need to match AcccountCode/CorpID specified in Fare Group definition on all fare components.
-            xofares: If set to true only fares matching PTC specified in the Flex Fare Group will be returned on all fare components.
-            passenger_type_quantity: Define information on the number of passengers of a specific type.
+            negotiated_fares_only: If set to true then returned fares need to
+                match AcccountCode/CorpID specified in Fare Group definition on
+                all fare components.
+            xofares: If set to true only fares matching PTC specified in the
+                Flex Fare Group will be returned on all fare components.
+            passenger_type_quantity: Define information on the number of
+                passengers of a specific type.
             jump_cabin_logic:
             keep_same_cabin:
             corporate_id:
@@ -3515,13 +3663,15 @@ class FlexibleFaresType:
 
 @dataclass
 class FlightTypePrefType:
-    """Indicates preferences for certain types of flights, such as connections or
+    """
+    Indicates preferences for certain types of flights, such as connections or
     stopovers, when used for a specific travel situation.
 
     Attributes
         prefer_level:
         flight_type:
-        max_connections: Indicates that if connection is chosen, then this attribute defines the maximum number of connections preferred.
+        max_connections: Indicates that if connection is chosen, then this
+            attribute defines the maximum number of connections preferred.
     """
     prefer_level: PreferLevelType = field(
         default=PreferLevelType.PREFERRED,
@@ -3568,7 +3718,9 @@ class InterlineBrandsType:
     """
     Attributes
         brand: Brand list to be returned
-        change_brand_for_soldout: If specific XX brand is not available for requested date/flight, another cheapest brand will be returned combined with available XX brand.
+        change_brand_for_soldout: If specific XX brand is not available for
+            requested date/flight, another cheapest brand will be returned
+            combined with available XX brand.
     """
     brand: List[BrandType] = field(
         default_factory=list,
@@ -3769,21 +3921,29 @@ class OverrideDateTimeType(DateTimeType):
 
 @dataclass
 class PriceRequestInformationType:
-    """Identify pricing source, if negotiated fares are requested and if it is a
+    """
+    Identify pricing source, if negotiated fares are requested and if it is a
     reprice request.
 
     Attributes
         negotiated_fare_code:
         account_code:
-        tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
-        fare_qualifier: Fare Type is specific to a specific fare and this is a request for a set of fares based on these qualifiers.
-        negotiated_fares_only: If set to true then returned fares need to match requested AcccountCode/CorpID on all fare components
-        currency_code: Type of funds preferred for reviewing monetary values, in ISO 4217 codes.
-        pricing_source: It can be used to indicate whether the fare is public or private.
+        tpa_extensions: Additional elements and attributes to be included if
+            required, per Trading Partner Agreement (TPA).
+        fare_qualifier: Fare Type is specific to a specific fare and this is a
+            request for a set of fares based on these qualifiers.
+        negotiated_fares_only: If set to true then returned fares need to match
+            requested AcccountCode/CorpID on all fare components
+        currency_code: Type of funds preferred for reviewing monetary values,
+            in ISO 4217 codes.
+        pricing_source: It can be used to indicate whether the fare is public
+            or private.
         reprice:
         process_thru_fares_only: Activates processing of thru fares only.
-        purchase_date: Specify purchase date. Fares returned will be based on the purchase date.
-        purchase_time: Specify purchase time. Fares returned will be based on the purchase time.
+        purchase_date: Specify purchase date. Fares returned will be based on
+            the purchase date.
+        purchase_time: Specify purchase time. Fares returned will be based on
+            the purchase time.
         net_fares_used: Set to true when exchange ticket uses net fare.
     """
     negotiated_fare_code: List["PriceRequestInformationType.NegotiatedFareCode"] = field(
@@ -3885,22 +4045,33 @@ class PriceRequestInformationType:
             private_fare: This element finds only private fares.
             iatafare: This element finds only IATA fares.
             web_fare:
-            priority: This element governs how flights are returned. A user can uses a priority of 1-4 to make this determination.
-            indicators: This element restricts fares which can be returned in response. If a customer passes this element, all its children should be specified.
-            promo_id: Promotional Identifier - a string which identifies a promotion, possibly giving a discount prices etc.
+            priority: This element governs how flights are returned. A user can
+                uses a priority of 1-4 to make this determination.
+            indicators: This element restricts fares which can be returned in
+                response. If a customer passes this element, all its children
+                should be specified.
+            promo_id: Promotional Identifier - a string which identifies a
+                promotion, possibly giving a discount prices etc.
             customer_type:
-            multiple_traveler_groups: This element governs how flights are returned when multiple passenger groups are requested.
+            multiple_traveler_groups: This element governs how flights are
+                returned when multiple passenger groups are requested.
             branded_fare_indicators:
             passenger_status:
-            point_of_sale_override: Will return the fares available for specified point of sale and priced in this point of sale currency. Currency is overriden by PriceRequestInformation@CurrencyCode.
+            point_of_sale_override: Will return the fares available for
+                specified point of sale and priced in this point of sale
+                currency. Currency is overriden by
+                PriceRequestInformation@CurrencyCode.
             point_of_ticketing_override:
             apply_resident_discount: Apply resident discount in CLFE
             eticketable_override:
             currency:
-            use_reduced_constructions: Use reduced constructions (simple fare paths with restrictions on the number of fare components).
+            use_reduced_constructions: Use reduced constructions (simple fare
+                paths with restrictions on the number of fare components).
             obfees:
-            fare_breaks_at_legs: Force fare breaks at leg points if split taxes by leg requested. By default set to true.
-            fare_adjustment: Capability to specify Plus-Up and Discount Amount and Percentage.
+            fare_breaks_at_legs: Force fare breaks at leg points if split taxes
+                by leg requested. By default set to true.
+            fare_adjustment: Capability to specify Plus-Up and Discount Amount
+                and Percentage.
         """
         public_fare: Optional["PriceRequestInformationType.TpaExtensions.PublicFare"] = field(
             default=None,
@@ -4203,10 +4374,21 @@ class PriceRequestInformationType:
             """
             Attributes
                 retain_fare: Currently must be set to true.
-                min_max_stay: If set to true, fares that have a min/max stay can be included in the responses. If set to false, then no fares that include a min/max stay requirement will be included in the response.
-                refund_penalty: If set to true, fares that have a refund penalty can be included in the responses. If set to false, then no fares that include a refund penalty requirement will be included in the response.
-                res_ticketing: If set to true, fares that have a reservation/ticketing can be included in the responses. If set to false, then no fares that include reservation/ticketing requirement will be included in the response.
-                travel_policy: This element is currently ignored whether it is true or false.
+                min_max_stay: If set to true, fares that have a min/max stay
+                    can be included in the responses. If set to false, then no
+                    fares that include a min/max stay requirement will be
+                    included in the response.
+                refund_penalty: If set to true, fares that have a refund
+                    penalty can be included in the responses. If set to false,
+                    then no fares that include a refund penalty requirement
+                    will be included in the response.
+                res_ticketing: If set to true, fares that have a
+                    reservation/ticketing can be included in the responses. If
+                    set to false, then no fares that include
+                    reservation/ticketing requirement will be included in the
+                    response.
+                travel_policy: This element is currently ignored whether it is
+                    true or false.
             """
             retain_fare: Optional["PriceRequestInformationType.TpaExtensions.Indicators.RetainFare"] = field(
                 default=None,
@@ -4332,7 +4514,9 @@ class PriceRequestInformationType:
         class MultipleTravelerGroups:
             """
             Attributes
-                itineraries_per_group: Indicates desired number of itineraries to be returned in each passenger group at beggining of response.
+                itineraries_per_group: Indicates desired number of itineraries
+                    to be returned in each passenger group at beggining of
+                    response.
             """
             itineraries_per_group: Optional[int] = field(
                 default=None,
@@ -4379,7 +4563,9 @@ class PriceRequestInformationType:
             class ReturnCheapestUnbrandedFare:
                 """
                 Attributes
-                    ind: Indicator to turn on or off return of cheapest unbranded fare referred as "catch all" fare for the branded carriers from the branded fares service.
+                    ind: Indicator to turn on or off return of cheapest
+                        unbranded fare referred as "catch all" fare for the
+                        branded carriers from the branded fares service.
                 """
                 ind: Optional[bool] = field(
                     default=None,
@@ -4523,7 +4709,8 @@ class PriceRequestInformationType:
         class FareAdjustment:
             """
             Attributes
-                value: Adjustment Value, can be positive or negative, number or percentage
+                value: Adjustment Value, can be positive or negative, number or
+                    percentage
                 currency: Currency of Adjustment's Value
             """
             value: Optional[str] = field(
@@ -4549,14 +4736,20 @@ class PriceRequestInformationType:
         """
         Attributes
             content:
-            supplier: This element indicates the supplier associated with a negotiated fare code.
+            supplier: This element indicates the supplier associated with a
+                negotiated fare code.
             tpa_extensions: This is a place holder for additional elements.
-            code: Any code used to specify an item, for example, type of traveler, service code, room amenity, etc.
+            code: Any code used to specify an item, for example, type of
+                traveler, service code, room amenity, etc.
             code_context: Identifies the source authority for the code.
             uri: Identifies the location of the code table
-            quantity: Used to define a quantity of an associated element or attribute.
-            secondary_code: An additional attribute to allow flexibility for particular organizations who require an additional code.
-            supplier_code: An additional attribute to allow flexibility for particular organizations who require an additional supplier code.
+            quantity: Used to define a quantity of an associated element or
+                attribute.
+            secondary_code: An additional attribute to allow flexibility for
+                particular organizations who require an additional code.
+            supplier_code: An additional attribute to allow flexibility for
+                particular organizations who require an additional supplier
+                code.
         """
         content: List[object] = field(
             default_factory=list,
@@ -4650,11 +4843,14 @@ class PriceRequestInformationType:
 
 @dataclass
 class RoutingDefinitionType:
-    """Definition of a routing.
+    """
+    Definition of a routing.
 
     Attributes
         routing_leg:
-        add_wildcards: If true, wildcards will be automatically inserted between each two leg (RoutingLeg) elements. Will be set to 'false' if not present.
+        add_wildcards: If true, wildcards will be automatically inserted
+            between each two leg (RoutingLeg) elements. Will be set to 'false'
+            if not present.
     """
     routing_leg: List[RoutingLegType] = field(
         default_factory=list,
@@ -4676,11 +4872,13 @@ class RoutingDefinitionType:
 
 @dataclass
 class SourceBookingChannelType(BookingChannelType):
-    """Specifies the booking channel type and whether it is the primary means of
+    """
+    Specifies the booking channel type and whether it is the primary means of
     connectivity of the source.
 
     Attributes
-        company_name: Identifies the company that is associated with the booking channel.
+        company_name: Identifies the company that is associated with the
+            booking channel.
     """
     company_name: Optional[CompanyNameType] = field(
         default=None,
@@ -4694,7 +4892,9 @@ class SourceBookingChannelType(BookingChannelType):
 
 @dataclass
 class TaxCodeAmountType(TaxCodeType):
-    """Defines the data fields available for tax code and amount."""
+    """
+    Defines the data fields available for tax code and amount.
+    """
     amount: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -4707,13 +4907,16 @@ class TaxCodeAmountType(TaxCodeType):
 
 @dataclass
 class TicketDistribPrefType:
-    """Type of ticket distribution to be used with this collection of preferences.
+    """
+    Type of ticket distribution to be used with this collection of preferences.
 
     Attributes
         value:
         prefer_level:
-        distrib_type: Ticket distribution method; such as Fax, Email, Courier, Mail, Airport_Pickup, City_Office, Hotel_Desk, WillCall, etc.
-        ticket_time: Ticket turnaround time desired, amount of time requested to deliver tickets.
+        distrib_type: Ticket distribution method; such as Fax, Email, Courier,
+            Mail, Airport_Pickup, City_Office, Hotel_Desk, WillCall, etc.
+        ticket_time: Ticket turnaround time desired, amount of time requested
+            to deliver tickets.
     """
     value: Optional[str] = field(
         default=None,
@@ -4747,17 +4950,27 @@ class TicketDistribPrefType:
 
 @dataclass
 class UniqueIdType:
-    """An identifier used to uniquely reference an object in a system (e.g. an
-    airline reservation reference, customer profile reference, booking confirmation
-    number, or a reference to a previous availability quote).
+    """
+    An identifier used to uniquely reference an object in a system (e.g. an
+    airline reservation reference, customer profile reference, booking
+    confirmation number, or a reference to a previous availability quote).
 
     Attributes
-        company_name: Identifies the company that is associated with the UniqueID.
-        url: URL that identifies the location associated with the record identified by the UniqueID.
-        type: A reference to the type of object defined by the UniqueID element. Refer to OTA Code List Unique ID Type (UIT).
-        instance: The identification of a record as it exists at a point in time. An instance is used in update messages where the sender must assure the server that the update sent refers to the most recent modification level of the object being updated.
-        id: A unique identifying value assigned by the creating system. The ID attribute may be used to reference a primary-key value within a database or in a particular implementation.
-        id_context: Used to identify the source of the identifier (e.g. IATA, ABTA, etc.).
+        company_name: Identifies the company that is associated with the
+            UniqueID.
+        url: URL that identifies the location associated with the record
+            identified by the UniqueID.
+        type: A reference to the type of object defined by the UniqueID
+            element. Refer to OTA Code List Unique ID Type (UIT).
+        instance: The identification of a record as it exists at a point in
+            time. An instance is used in update messages where the sender must
+            assure the server that the update sent refers to the most recent
+            modification level of the object being updated.
+        id: A unique identifying value assigned by the creating system. The ID
+            attribute may be used to reference a primary-key value within a
+            database or in a particular implementation.
+        id_context: Used to identify the source of the identifier (e.g. IATA,
+            ABTA, etc.).
     """
     class Meta:
         name = "UniqueID_Type"
@@ -4862,28 +5075,46 @@ class ValidatingCarrierType:
 
 @dataclass
 class AirSearchPrefsType:
-    """Defines user preferences to be used in conducting a search.
+    """
+    Defines user preferences to be used in conducting a search.
 
     Attributes
         vendor_pref: Specify vendors to include and exclude from the response.
-        flight_type_pref: Defines preferred flight characteristics to be used in a search.
-        fare_restrict_pref: Constrains a fare search to those with restrictions that satisfy user-imposed limitations.
-        equip_pref: Defines preferred equipment profile(s) to be used in a search.
-        cabin_pref: Defines preferred cabin(s) to be used in a search. The Cabin type specified in a OriginDestinationInformation/TPA_Extensions overrides this Cabin type for that specific segment/leg. If a Cabin type is not specified in a OriginDestinationInformation/TPA_Extensions the cabin type in this element will be used as default cabin type for that segment/leg.
+        flight_type_pref: Defines preferred flight characteristics to be used
+            in a search.
+        fare_restrict_pref: Constrains a fare search to those with restrictions
+            that satisfy user-imposed limitations.
+        equip_pref: Defines preferred equipment profile(s) to be used in a
+            search.
+        cabin_pref: Defines preferred cabin(s) to be used in a search. The
+            Cabin type specified in a
+            OriginDestinationInformation/TPA_Extensions overrides this Cabin
+            type for that specific segment/leg. If a Cabin type is not
+            specified in a OriginDestinationInformation/TPA_Extensions the
+            cabin type in this element will be used as default cabin type for
+            that segment/leg.
         ticket_distrib_pref: Defines Distribution prefernces.
-        tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
+        tpa_extensions: Additional elements and attributes to be included if
+            required, per Trading Partner Agreement (TPA).
         ancillary_fees:
         frequent_flyer: Frequent Flyer Status Information
         spanish_family_discount:
         interline_brands:
         smoking_allowed:
-        on_time_rate: Request for flights in response that meet the given Department of Transport on-time rate. This is a number between 0 and 100.
+        on_time_rate: Request for flights in response that meet the given
+            Department of Transport on-time rate. This is a number between 0
+            and 100.
         eticket_desired: Request flights that are e-ticketable in the response.
-        valid_interline_ticket: Request options that are validated on base of interline ticketing aggrement.
-        max_stops_quantity: Request flights that have no more than the requested number of stops.
+        valid_interline_ticket: Request options that are validated on base of
+            interline ticketing aggrement.
+        max_stops_quantity: Request flights that have no more than the
+            requested number of stops.
         use_all_flights: Each flight should appear at least once.
-        all_flights_data: Return flights not combinable into roundtrips as one ways is a separate section.
-        hybrid: If false no solutions priced outside of ATSE systems will be returned in response for carriers operating in hybrid content distribution model.
+        all_flights_data: Return flights not combinable into roundtrips as one
+            ways is a separate section.
+        hybrid: If false no solutions priced outside of ATSE systems will be
+            returned in response for carriers operating in hybrid content
+            distribution model.
     """
     vendor_pref: List[CompanyNamePrefType] = field(
         default_factory=list,
@@ -5042,9 +5273,12 @@ class AirSearchPrefsType:
     class FareRestrictPref(FareRestrictPrefType):
         """
         Attributes
-            adv_res_ticketing: Identifies whether advance reservation or ticketing restrictions are acceptable in the search results.
-            stay_restrictions: Identifies whether restrictions on minimum or maximum stays should be included in the search results.
-            voluntary_changes: Identifies whether penalties associated with voluntary changes should be included in the search results.
+            adv_res_ticketing: Identifies whether advance reservation or
+                ticketing restrictions are acceptable in the search results.
+            stay_restrictions: Identifies whether restrictions on minimum or
+                maximum stays should be included in the search results.
+            voluntary_changes: Identifies whether penalties associated with
+                voluntary changes should be included in the search results.
         """
         adv_res_ticketing: Optional[AdvResTicketingType] = field(
             default=None,
@@ -5077,59 +5311,93 @@ class AirSearchPrefsType:
         Attributes
             departure_window: This should be of the form HHMMHHMM.
             arrival_window: This should be of the form HHMMHHMM.
-            exclude_vendor_pref: This element allows a user to exclude certain carriers from the search.
+            exclude_vendor_pref: This element allows a user to exclude certain
+                carriers from the search.
             include_alliance_pref: Consider only these alliances.
             exclude_alliance_pref: Do not consider these alliances.
             num_trips:
             alt_cities_combinations:
-            num_trips_with_routing: This element allows a user to specify the number of itineraries with special routing returned.
+            num_trips_with_routing: This element allows a user to specify the
+                number of itineraries with special routing returned.
             online_indicator:
             interline_indicator:
             trip_type: Specify air trip type.
             max_price: Maximum price returned from LFE service.
             content_type: Restrict content type returned by LFE service.
             domestic_layover_time: Domestic maximum connecting hours.
-            long_connect_time: Change minimum and maximum connect time per connection in long connection schedules if Long Connect Time logic is enabled. Specified values should be less than 1440 minutes (24 hours).
-            long_connect_points: Minimum and maximum number of connection points (not necessarily long) for Long Connections.
+            long_connect_time: Change minimum and maximum connect time per
+                connection in long connection schedules if Long Connect Time
+                logic is enabled. Specified values should be less than 1440
+                minutes (24 hours).
+            long_connect_points: Minimum and maximum number of connection
+                points (not necessarily long) for Long Connections.
             air_service_only: Return air service only.
             jet_service_only: Return jet service only.
-            same_connection_airport_only: Same airport at connection point restriction
+            same_connection_airport_only: Same airport at connection point
+                restriction
             same_origin_airport_only: Same airport at origin point restriction
-            same_turnaround_airport_only: Same airport at turnaround point restriction
-            aircraft_type_penalty: Aircraft type penalty (in dollars). Used to penalize propeller aircraft type in the response.
-            alternate_airport_penalty: Alternate airport penalty (in dollars). Used to penalize options with alternate airports.
+            same_turnaround_airport_only: Same airport at turnaround point
+                restriction
+            aircraft_type_penalty: Aircraft type penalty (in dollars). Used to
+                penalize propeller aircraft type in the response.
+            alternate_airport_penalty: Alternate airport penalty (in dollars).
+                Used to penalize options with alternate airports.
             fare_amount_threshold: % ESV value above the lowest itinerary
             num_of_low_fare_sol: Number of low fare solutions for ESV2
-            num_of_must_price_onl_sol: Number of must price online solutions for ESV2
-            num_of_must_price_inrl_sol: Number of must price interline solutions for ESV2
-            num_of_must_price_nstp_onl_sol: Number of must price non-stop online solutions for ESV2
-            num_of_must_price_nstp_inrl_sol: Number of must price non-stop interline solutions for ESV2
-            num_of_must_price_sstop_onl_sol: Number of must price single stop online solutions for ESV2
+            num_of_must_price_onl_sol: Number of must price online solutions
+                for ESV2
+            num_of_must_price_inrl_sol: Number of must price interline
+                solutions for ESV2
+            num_of_must_price_nstp_onl_sol: Number of must price non-stop
+                online solutions for ESV2
+            num_of_must_price_nstp_inrl_sol: Number of must price non-stop
+                interline solutions for ESV2
+            num_of_must_price_sstop_onl_sol: Number of must price single stop
+                online solutions for ESV2
             stp_penalty_in_usd: Stop penalty in dollars for ESV2
             dur_penalty_in_usd: Duration penalty in dollars for ESV2
             dep_penalty_in_usd: Departure penalty in dollars for ESV2
-            max_allowed_must_price_overage_per_crr: Max allowed must price overage per carrier for ESV2
-            flt_opt_must_price_reuse_limit: Flight option reuse limit (must price) for ESV2
-            upper_bound_must_price_factor_for_not_non_stp: Upper bound factor for not non-stops (must price) for ESV2
+            max_allowed_must_price_overage_per_crr: Max allowed must price
+                overage per carrier for ESV2
+            flt_opt_must_price_reuse_limit: Flight option reuse limit (must
+                price) for ESV2
+            upper_bound_must_price_factor_for_not_non_stp: Upper bound factor
+                for not non-stops (must price) for ESV2
             upper_bound_lfsfactor: Low fare search upper bound factor for ESV2
-            num_of_must_price_nstp1_stp_onl_sol: Number of must price non-stop/one-stop online solutions for ESV2
-            num_of_must_price_nstp1_stp_inrl_sol: Number of must price non-stop/one-stop interline solutions for ESV2
-            upper_bound_must_price_factor_for_non_stp: Upper bound factor for non-stops (must price) for ESV2
-            max_allowed_lfsoverage_per_crr_percent: Low fare search max allowed overage per carrier % for ESV2
-            target_min_num_of_lfsonl_sol_per_crr: Low fare search target minimum number of online solutions per carrier for ESV2
-            target_min_num_of_lfstot_onl_sol_percent: Low fare search target minimum number of total online solutions % for ESV2
-            flt_opt_lfsreuse_limit_for_non_avs: Low fare search flight option reuse limit for non AVS for ESV2
-            flt_opt_lfsreuse_limit_for_avs: Low fare search flight option reuse limit for AVS for ESV2
+            num_of_must_price_nstp1_stp_onl_sol: Number of must price non-
+                stop/one-stop online solutions for ESV2
+            num_of_must_price_nstp1_stp_inrl_sol: Number of must price non-
+                stop/one-stop interline solutions for ESV2
+            upper_bound_must_price_factor_for_non_stp: Upper bound factor for
+                non-stops (must price) for ESV2
+            max_allowed_lfsoverage_per_crr_percent: Low fare search max allowed
+                overage per carrier % for ESV2
+            target_min_num_of_lfsonl_sol_per_crr: Low fare search target
+                minimum number of online solutions per carrier for ESV2
+            target_min_num_of_lfstot_onl_sol_percent: Low fare search target
+                minimum number of total online solutions % for ESV2
+            flt_opt_lfsreuse_limit_for_non_avs: Low fare search flight option
+                reuse limit for non AVS for ESV2
+            flt_opt_lfsreuse_limit_for_avs: Low fare search flight option reuse
+                limit for AVS for ESV2
             avs_penalty_crrs: AVS penalty carrier list (| delimited) for ESV2
-            max_num_of_non_stp_onl_sol: Max number of nonstop online solutions for ESV2
-            max_num_of_non_stp_inrl_sol: Max number of nonstop interline solutions for ESV2
-            max_num_of_single_stp_onl_sol: Max number of single stop online solutions for ESV2
+            max_num_of_non_stp_onl_sol: Max number of nonstop online solutions
+                for ESV2
+            max_num_of_non_stp_inrl_sol: Max number of nonstop interline
+                solutions for ESV2
+            max_num_of_single_stp_onl_sol: Max number of single stop online
+                solutions for ESV2
             max_num_of2_plus_stp_sol: Max number of 2+ stops solutions for ESV2
-            min_allowed_overage_per_crr_percent: Min allowed overage per carrier % for ESV2
-            min_allowed_overage_per_crr: Min allowed overage per carrier for ESV2
-            max_rel_fare_lvl_ofx_for_non_stp: Max relative fare level of x for nonstops for ESV2
-            max_rel_fare_lvl_ofx_for_cnx: Max relative fare level of x for carrier for ESV2
-            num_of_must_price2_plus_stp_sol: Number of must price 2+ stops solutions for ESV2
+            min_allowed_overage_per_crr_percent: Min allowed overage per
+                carrier % for ESV2
+            min_allowed_overage_per_crr: Min allowed overage per carrier for
+                ESV2
+            max_rel_fare_lvl_ofx_for_non_stp: Max relative fare level of x for
+                nonstops for ESV2
+            max_rel_fare_lvl_ofx_for_cnx: Max relative fare level of x for
+                carrier for ESV2
+            num_of_must_price2_plus_stp_sol: Number of must price 2+ stops
+                solutions for ESV2
             itinerary_number_threshold: Number of preffered/good itins to price
             xofares:
             exempt_all_taxes: Exempt all taxes (/TE)
@@ -5137,8 +5405,10 @@ class AirSearchPrefsType:
             taxes: Specify Taxes (/TX)
             exempt_tax: Exempt Tax (/TE)
             flight_stops_as_connections:
-            ticketing_sum_of_locals: Settings specific to Ticketing Sum of Locals processing
-            multi_airport_codes: Settings specific to Multi Airport Codes processing
+            ticketing_sum_of_locals: Settings specific to Ticketing Sum of
+                Locals processing
+            multi_airport_codes: Settings specific to Multi Airport Codes
+                processing
             jump_cabin_logic:
             keep_same_cabin:
             governing_carrier_override:
@@ -5153,7 +5423,8 @@ class AirSearchPrefsType:
             fare_focus_rules:
             selling_levels:
             budget: Budget Shopping settings
-            options_per_date_pair_list: List of dates/date pairs with different requested number of options
+            options_per_date_pair_list: List of dates/date pairs with different
+                requested number of options
             country_pref: List of countries to be excluded from processing
             retailer_rules:
         """
@@ -6395,7 +6666,8 @@ class AirSearchPrefsType:
         class ExcludeCallDirectCarriers:
             """
             Attributes
-                enabled: Force DSF to return schedules only for carriers bookable by Sabre.
+                enabled: Force DSF to return schedules only for carriers
+                    bookable by Sabre.
             """
             enabled: Optional[bool] = field(
                 default=None,
@@ -6444,7 +6716,9 @@ class AirSearchPrefsType:
 
             @dataclass
             class SettlementValidation:
-                """If set to true validate BSP agreement for given carriers."""
+                """
+                If set to true validate BSP agreement for given carriers.
+                """
                 ind: Optional[bool] = field(
                     default=None,
                     metadata={
@@ -6456,7 +6730,9 @@ class AirSearchPrefsType:
 
             @dataclass
             class Ietvalidation:
-                """If set to true validate IET agreement for listed countries."""
+                """
+                If set to true validate IET agreement for listed countries.
+                """
                 ind: Optional[bool] = field(
                     default=None,
                     metadata={
@@ -6509,11 +6785,21 @@ class AirSearchPrefsType:
         class DiversityParameters:
             """
             Attributes
-                weightings: Defines how important various parameter options are in the response. Sum of all weightings needs to equal 10.
-                time_of_day_distribution: Defines how the options in the response should be distributed between certain departure time of day ranges. All defined TimeOfDayRanges need to cover the whole day and the sum of all Percentages needs to equal 100.
-                inbound_outbound_pairing: Defines the requested ratio of inbounds to outbounds in the response.
-                additional_non_stops_number: Defines how many additional non-stop options should be added to the response. Overrides @Percentage.
-                additional_non_stops_percentage: Defines how many additional non-stop options should be added to the response as a percentage of the requested number of options.
+                weightings: Defines how important various parameter options are
+                    in the response. Sum of all weightings needs to equal 10.
+                time_of_day_distribution: Defines how the options in the
+                    response should be distributed between certain departure
+                    time of day ranges. All defined TimeOfDayRanges need to
+                    cover the whole day and the sum of all Percentages needs to
+                    equal 100.
+                inbound_outbound_pairing: Defines the requested ratio of
+                    inbounds to outbounds in the response.
+                additional_non_stops_number: Defines how many additional non-
+                    stop options should be added to the response. Overrides
+                    @Percentage.
+                additional_non_stops_percentage: Defines how many additional
+                    non-stop options should be added to the response as a
+                    percentage of the requested number of options.
             """
             weightings: Optional["AirSearchPrefsType.TpaExtensions.DiversityParameters.Weightings"] = field(
                 default=None,
@@ -6562,8 +6848,10 @@ class AirSearchPrefsType:
             class Weightings:
                 """
                 Attributes
-                    price_weight: Defines how important price options are on a scale from 0 to 10.
-                    travel_time_weight: Defines how important travel time options are on a scale from 0 to 10.
+                    price_weight: Defines how important price options are on a
+                        scale from 0 to 10.
+                    travel_time_weight: Defines how important travel time
+                        options are on a scale from 0 to 10.
                 """
                 price_weight: Optional[int] = field(
                     default=None,
@@ -6605,7 +6893,8 @@ class AirSearchPrefsType:
                     Attributes
                         begin: Beginning of the TimeOfDayRange in HHMM format.
                         end: End of the TimeOfDayRange in HHMM format.
-                        percentage: Defines how many percent options should be in the TimeOfDayRange.
+                        percentage: Defines how many percent options should be
+                            in the TimeOfDayRange.
                     """
                     begin: Optional[str] = field(
                         default=None,
@@ -6703,8 +6992,10 @@ class AirSearchPrefsType:
             class ShowFareAmounts:
                 """
                 Attributes
-                    original: Show original selling fare level amounts and total adjusted amount in Fare Calc line
-                    adjusted: Show selling level amounts and total adjusted amount in Fare Calc line
+                    original: Show original selling fare level amounts and
+                        total adjusted amount in Fare Calc line
+                    adjusted: Show selling level amounts and total adjusted
+                        amount in Fare Calc line
                 """
                 original: Optional[bool] = field(
                     default=None,
@@ -6727,7 +7018,8 @@ class AirSearchPrefsType:
             Attributes
                 minimum_price: Minimum price to include in response
                 maximum_price: Maximum price to include in response
-                relative_price_threshold: Relative price difference threshold to be respected while choosing alternative options
+                relative_price_threshold: Relative price difference threshold
+                    to be respected while choosing alternative options
             """
             minimum_price: Optional[str] = field(
                 default=None,
@@ -6789,7 +7081,8 @@ class AirSearchPrefsType:
         class OnlineIndicator:
             """
             Attributes
-                ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
+                ind: Specifies if the associated data is formatted or not. If
+                    true, then it is formatted, if false, then not formatted.
             """
             ind: Optional[bool] = field(
                 default=None,
@@ -6803,7 +7096,8 @@ class AirSearchPrefsType:
         class InterlineIndicator:
             """
             Attributes
-                ind: Specifies if the associated data is formatted or not. If true, then it is formatted, if false, then not formatted.
+                ind: Specifies if the associated data is formatted or not. If
+                    true, then it is formatted, if false, then not formatted.
             """
             ind: Optional[bool] = field(
                 default=None,
@@ -6932,7 +7226,8 @@ class AirSearchPrefsType:
     class SpanishFamilyDiscount:
         """
         Attributes
-            level: Spanish Large Family Discount Level. Valid values are 1 or 2.
+            level: Spanish Large Family Discount Level. Valid values are 1 or
+                2.
         """
         level: Optional["AirSearchPrefsType.SpanishFamilyDiscount.Level"] = field(
             default=None,
@@ -6950,27 +7245,34 @@ class AirSearchPrefsType:
 
 @dataclass
 class AirTravelerType:
-    """
-    Information about the person traveling. Gender - the gender of the customer, if needed. BirthDate - Date of Birth. Currency - the preferred currency in which monetary amounts should be returned.
+    """Information about the person traveling.
+
+    Gender - the gender of the customer, if needed. BirthDate - Date of Birth. Currency - the preferred currency in which monetary amounts should be returned.
 
     Attributes
-        profile_ref: Stored information about a customer. May contain readily available information relevant to the booking.
+        profile_ref: Stored information about a customer. May contain readily
+            available information relevant to the booking.
         person_name:
         telephone:
         email:
         address:
         cust_loyalty: Specify a customer loyalty program.
         document:
-        passenger_type_quantity: Define information on the number of passengers of a specific type.
-        traveler_ref_number: Direct reference of traveler assigned by requesting system. Used as a cross reference between data segments.
+        passenger_type_quantity: Define information on the number of passengers
+            of a specific type.
+        traveler_ref_number: Direct reference of traveler assigned by
+            requesting system. Used as a cross reference between data segments.
         flight_segment_rphs: Reference pointers to flight segments
         gender:
         share_synch_ind:
         share_market_ind:
         birth_date: Date of Birth.
-        currency_code: The preferred currency in which monetary amounts should be returned.
-        passenger_type_code: A three-letter code representing passenger type (e.g. .ADT. for adult, .CNN. for child)
-        accompanied_by_infant: Indicates if an infant accompanying a traveler is with or without a seat.
+        currency_code: The preferred currency in which monetary amounts should
+            be returned.
+        passenger_type_code: A three-letter code representing passenger type
+            (e.g. .ADT. for adult, .CNN. for child)
+        accompanied_by_infant: Indicates if an infant accompanying a traveler
+            is with or without a seat.
     """
     profile_ref: Optional["AirTravelerType.ProfileRef"] = field(
         default=None,
@@ -7128,7 +7430,8 @@ class AirTravelerType:
     class FlightSegmentRphs:
         """
         Attributes
-            flight_segment_rph: Reference to the flight segments for this traveler
+            flight_segment_rph: Reference to the flight segments for this
+                traveler
         """
         flight_segment_rph: List[str] = field(
             default_factory=list,
@@ -7148,14 +7451,18 @@ class AirTravelerType:
         UNKNOWN = "Unknown"
 
     class ShareSynchInd(Enum):
-        """value="Inherit" Permission for sharing data for synchronization of
-        information held by other travel service providers."""
+        """
+        value="Inherit" Permission for sharing data for synchronization of
+        information held by other travel service providers.
+        """
         YES = "Yes"
         NO = "No"
         INHERIT = "Inherit"
 
     class ShareMarketInd(Enum):
-        """value="Inherit" Permission for sharing data for marketing purposes."""
+        """
+        value="Inherit" Permission for sharing data for marketing purposes.
+        """
         YES = "Yes"
         NO = "No"
         INHERIT = "Inherit"
@@ -7167,18 +7474,22 @@ class ExchangeSourceType:
     Attributes
         booking_channel:
         agent_sine: Identifies the party within the requesting entity.
-        pseudo_city_code: An identification code assigned to an office/agency by a reservation system.
+        pseudo_city_code: An identification code assigned to an office/agency
+            by a reservation system.
         isocountry: The country code of the requesting party.
-        isocurrency: The currency code in which the reservation will be ticketed.
+        isocurrency: The currency code in which the reservation will be
+            ticketed.
         agent_duty_code: An authority code assigned to a requestor.
         airline_vendor_id: The IATA assigned airline code.
         airport_code: The IATA assigned airport code.
         first_depart_point: The point of first departure in a trip.
-        ersp_user_id: Electronic Reservation Service Provider (ERSP) assigned identifier used to identify the individual using the ERSP system.
+        ersp_user_id: Electronic Reservation Service Provider (ERSP) assigned
+            identifier used to identify the individual using the ERSP system.
         personal_city_code: City code part of Office Accounting Code
         accounting_code: Accounting Code part of Office Accounting Code
         office_code: Office Code part of Office Accounting Code
-        default_ticketing_carrier: Default Ticketing Carrier for Office Accounting Code
+        default_ticketing_carrier: Default Ticketing Carrier for Office
+            Accounting Code
         airline_channel_code: Airline Channel Code
         agent_department_code: Agent department code
         agent_function: Agent function
@@ -7529,13 +7840,18 @@ class ExchangeTravelPreferencesTpaExtensionsType:
 
 @dataclass
 class OriginDestinationInformationType(TravelDateTimeType):
-    """Origin and Destination location, and time information for the request. Also
-    includes the ability to specify a connection location for the search.
+    """Origin and Destination location, and time information for the request.
+
+    Also includes the ability to specify a connection location for the
+    search.
 
     Attributes
-        origin_location: Travel Origin Location - for example, air uses the IATA 3 letter code.
-        destination_location: Travel Destination Location - for example, air uses the IATA 3 letter code.
-        connection_locations: Travel Connection Location - for example, air uses the IATA 3 letter code.
+        origin_location: Travel Origin Location - for example, air uses the
+            IATA 3 letter code.
+        destination_location: Travel Destination Location - for example, air
+            uses the IATA 3 letter code.
+        connection_locations: Travel Connection Location - for example, air
+            uses the IATA 3 letter code.
     """
     origin_location: Optional["OriginDestinationInformationType.OriginLocation"] = field(
         default=None,
@@ -7568,7 +7884,8 @@ class OriginDestinationInformationType(TravelDateTimeType):
     class OriginLocation(RequestLocationType):
         """
         Attributes
-            all_airports: Flag indicating if all cached origin cities are to be processed as origin airports.
+            all_airports: Flag indicating if all cached origin cities are to be
+                processed as origin airports.
         """
         all_airports: Optional[bool] = field(
             default=None,
@@ -7582,7 +7899,8 @@ class OriginDestinationInformationType(TravelDateTimeType):
     class DestinationLocation(RequestLocationType):
         """
         Attributes
-            all_airports: Flag indicating if all cached destination cities are to be processed as destination airports.
+            all_airports: Flag indicating if all cached destination cities are
+                to be processed as destination airports.
         """
         all_airports: Optional[bool] = field(
             default=None,
@@ -7597,22 +7915,28 @@ class OriginDestinationInformationType(TravelDateTimeType):
 class SourceType:
     """
     Attributes
-        requestor_id: An identifier of the entity making the request (e.g. ATA/IATA/ID number, Electronic Reservation Service Provider (ERSP), Association of British Travel Agents (ABTA)).
+        requestor_id: An identifier of the entity making the request (e.g.
+            ATA/IATA/ID number, Electronic Reservation Service Provider (ERSP),
+            Association of British Travel Agents (ABTA)).
         position:
         booking_channel:
         agent_sine: Identifies the party within the requesting entity.
-        pseudo_city_code: An identification code assigned to an office/agency by a reservation system.
+        pseudo_city_code: An identification code assigned to an office/agency
+            by a reservation system.
         isocountry: The country code of the requesting party.
-        isocurrency: The currency code in which the reservation will be ticketed.
+        isocurrency: The currency code in which the reservation will be
+            ticketed.
         agent_duty_code: An authority code assigned to a requestor.
         airline_vendor_id: The IATA assigned airline code.
         airport_code: The IATA assigned airport code.
         first_depart_point: The point of first departure in a trip.
-        ersp_user_id: Electronic Reservation Service Provider (ERSP) assigned identifier used to identify the individual using the ERSP system.
+        ersp_user_id: Electronic Reservation Service Provider (ERSP) assigned
+            identifier used to identify the individual using the ERSP system.
         personal_city_code: City code part of Office Accounting Code
         accounting_code: Accounting Code part of Office Accounting Code
         office_code: Office Code part of Office Accounting Code
-        default_ticketing_carrier: Default Ticketing Carrier for Office Accounting Code
+        default_ticketing_carrier: Default Ticketing Carrier for Office
+            Accounting Code
         airline_channel_code: Airline Channel Code
         agent_department_code: Agent department code
         agent_function: Agent function
@@ -7869,16 +8193,25 @@ class SourceType:
 
 @dataclass
 class TransactionType:
-    """IntelliSell Type.
+    """
+    IntelliSell Type.
 
     Attributes
         request_type: Identifier of the type of request.
         service_tag: Identifier of the transaction path.
-        purchase_type: A target available for user, that can be used to create specific rules. For example, if the client wants to target preferred customer request, we can use this element to achieve this.
-        sabre_ath: Sabre authentication ID (ATH) - passed into the request to keep session information when communicating with TPF. The use of this element had been deprecated and is achieved by session pooling mechanism in Intellisell.
+        purchase_type: A target available for user, that can be used to create
+            specific rules. For example, if the client wants to target
+            preferred customer request, we can use this element to achieve
+            this.
+        sabre_ath: Sabre authentication ID (ATH) - passed into the request to
+            keep session information when communicating with TPF. The use of
+            this element had been deprecated and is achieved by session pooling
+            mechanism in Intellisell.
         tran_id: Transaction ID.
-        client_session_id: A unique identifier to relate all transactions within a single session. Used by AirShop/LFE transactions.
-        branch: Attribute of the Rule that can be passed in to selectively target a rule. This has been deprecated.
+        client_session_id: A unique identifier to relate all transactions
+            within a single session. Used by AirShop/LFE transactions.
+        branch: Attribute of the Rule that can be passed in to selectively
+            target a rule. This has been deprecated.
         compress_response: Decides if the response should be compressed.
         fare_overrides: Contains a sequence of fare overrides.
         diagnostics: For internal use
@@ -7886,13 +8219,17 @@ class TransactionType:
         response_sorting: Settings for IntelliSell merchandising
         seat_status_sim:
         available_level:
-        atsetest: Allows ATSE Team to test new features. This element and its content is meant to never be published.
+        atsetest: Allows ATSE Team to test new features. This element and its
+            content is meant to never be published.
         debug: Turns on or off debug mode.
         debug_key: Key unlocking disabled debug mode.
         config_set: Alternative configuration selector.
-        disable_cache: Disables itinerary cache for this request (if it is enabled in this service).
-        chunk_number: Helps Forwarder in keeping track of response parts generated as a result of request processing (AB only).
-        show_itin_source: If enabled, Intellisell will return source for each itinerary.
+        disable_cache: Disables itinerary cache for this request (if it is
+            enabled in this service).
+        chunk_number: Helps Forwarder in keeping track of response parts
+            generated as a result of request processing (AB only).
+        show_itin_source: If enabled, Intellisell will return source for each
+            itinerary.
     """
     request_type: Optional["TransactionType.RequestType"] = field(
         default=None,
@@ -8161,7 +8498,9 @@ class TransactionType:
     class FareOverrides:
         """
         Attributes
-            fare_override: Contains attributes of the FareGroup functionality used during shopping and pricing. If passed in this request, it will override setting in the rule.
+            fare_override: Contains attributes of the FareGroup functionality
+                used during shopping and pricing. If passed in this request, it
+                will override setting in the rule.
         """
         fare_override: List["TransactionType.FareOverrides.FareOverride"] = field(
             default_factory=list,
@@ -8178,11 +8517,14 @@ class TransactionType:
         class FareOverride:
             """
             Attributes
-                vendor_pref: Specify vendors to include and exclude from the response.
+                vendor_pref: Specify vendors to include and exclude from the
+                    response.
                 tpa_extensions: This is a place holder for additional elements.
-                fare_type: Attribute of FareGroup functionality, used in search of fares during shopping.
+                fare_type: Attribute of FareGroup functionality, used in search
+                    of fares during shopping.
                 pseudo_city_code:
-                corporate_id: Attribute of FareGroup functionality, used in search of fares during shopping.
+                corporate_id: Attribute of FareGroup functionality, used in
+                    search of fares during shopping.
                 callable: Indicator to enable/disable this FareOverride.
             """
             vendor_pref: List[CompanyNamePrefType] = field(
@@ -8235,7 +8577,8 @@ class TransactionType:
     class Diagnostics:
         """
         Attributes
-            diagnostic: Specify diagnostic code and which service to sent it to.
+            diagnostic: Specify diagnostic code and which service to sent it
+                to.
         """
         diagnostic: List["TransactionType.Diagnostics.Diagnostic"] = field(
             default_factory=list,
@@ -8251,7 +8594,8 @@ class TransactionType:
         class Diagnostic:
             """
             Attributes
-                diagnostic_argument: Name-value pairs to be used as arguments for the diagnostic.
+                diagnostic_argument: Name-value pairs to be used as arguments
+                    for the diagnostic.
                 tpa_extensions: This is a place holder for additional elements.
                 target:
                 code:
@@ -8342,7 +8686,8 @@ class TransactionType:
     class Atsetest:
         """
         Attributes
-            feature: Meaning of that attribute is dependent on MIP Team, ISell sends it in all ShoppingRequests when specified.
+            feature: Meaning of that attribute is dependent on MIP Team, ISell
+                sends it in all ShoppingRequests when specified.
         """
         feature: Optional[str] = field(
             default=None,
@@ -8358,7 +8703,8 @@ class ExchangeAirSearchPrefsType:
     """
     Attributes
         tpa_extensions:
-        valid_interline_ticket: Request itins that are validated on base of interline ticketing aggrement.
+        valid_interline_ticket: Request itins that are validated on base of
+            interline ticketing aggrement.
     """
     tpa_extensions: Optional[ExchangeTravelPreferencesTpaExtensionsType] = field(
         default=None,
@@ -8382,8 +8728,10 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
     """
     Attributes
         flight:
-        date_flexibility: The number of alternate days around the travel date to search.
-        sister_destination_location: List of alternate destination cities to search
+        date_flexibility: The number of alternate days around the travel date
+            to search.
+        sister_destination_location: List of alternate destination cities to
+            search
         sister_destination_mileage:
         sister_origin_location: List of alternate origin cities to search
         sister_origin_mileage:
@@ -8391,7 +8739,14 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
         alternate_time: Maximum time difference/deviation allowed.
         max_one_way_options: Maximum number of options to return.
         num_one_way_options: Number of options for requested date.
-        cabin_pref: Defines preferred cabin to be used in a search for this leg level (if SegmentType is "O") or segment (if SegmentType is "X"). The cabin type specified in this element will override the cabin type specified at the request level for this leg/segment. If a cabin type is not specified for this element the cabin type at request level will be used as default for this leg or segment. If the cabin type is not specified at both the leg/segment level and request level a default cabin of "Economy" will be used?
+        cabin_pref: Defines preferred cabin to be used in a search for this leg
+            level (if SegmentType is "O") or segment (if SegmentType is "X").
+            The cabin type specified in this element will override the cabin
+            type specified at the request level for this leg/segment. If a
+            cabin type is not specified for this element the cabin type at
+            request level will be used as default for this leg or segment. If
+            the cabin type is not specified at both the leg/segment level and
+            request level a default cabin of "Economy" will be used?
         connection_time: Connection time between segments.
         total_travel_time: Total travel time settings
     """
@@ -8506,10 +8861,12 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
     class DateFlexibility:
         """
         Attributes
-            nbr_of_days: Number of alternate dates before and after requested travel date.
+            nbr_of_days: Number of alternate dates before and after requested
+                travel date.
             plus: Number of alternate dates before requested travel date.
             minus: Number of alternate dates after requested travel date.
-            validate: Flag telling if dates within the specified range should be processed in the validate path.
+            validate: Flag telling if dates within the specified range should
+                be processed in the validate path.
         """
         nbr_of_days: Optional[int] = field(
             default=None,
@@ -8559,7 +8916,9 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
             Attributes
                 ARUNK: Arrival unknown
                 O: Normal
-                X: Connection. Collapses this and subsequent OriginDestinationInformation so that they are treated as single leg.
+                X: Connection. Collapses this and subsequent
+                    OriginDestinationInformation so that they are treated as
+                    single leg.
             """
             ARUNK = "ARUNK"
             O = "O"
@@ -8569,7 +8928,8 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
     class AlternateTime:
         """
         Attributes
-            plus_minus: Maximum time difference between actual and desired time.
+            plus_minus: Maximum time difference between actual and desired
+                time.
             plus: Maximum number of hours after desired time.
             minus: Maximum number of hours before desired time.
         """
@@ -8629,9 +8989,12 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
         Attributes
             min:
             max:
-            excluded_connection_begin: Excluded connection time begin in format HHMM
-            excluded_connection_end: Excluded connection time end in format HHMM
-            enable_excluded_connection: Enable excluded connection time (default: true)
+            excluded_connection_begin: Excluded connection time begin in format
+                HHMM
+            excluded_connection_end: Excluded connection time end in format
+                HHMM
+            enable_excluded_connection: Enable excluded connection time
+                (default: true)
         """
         min: Optional[int] = field(
             default=None,
@@ -8729,11 +9092,13 @@ class ExchangePostype:
 
 @dataclass
 class PosType:
-    """Point of Sale (POS) is the details identifying the party or connection
+    """
+    Point of Sale (POS) is the details identifying the party or connection
     channel making the request.
 
     Attributes
-        source: This holds details regarding the requestor. It may be repeated to also accommodate the delivery systems.
+        source: This holds details regarding the requestor. It may be repeated
+            to also accommodate the delivery systems.
     """
     class Meta:
         name = "POS_Type"
@@ -8752,11 +9117,16 @@ class PosType:
 
 @dataclass
 class TravelerInformationType:
-    """Specifies passenger numbers and types.
+    """
+    Specifies passenger numbers and types.
 
     Attributes
-        passenger_type_quantity: Specifies number of passengers using Passenger Type Codes.
-        air_traveler: Information profiling the person traveling Gender - the gender of the customer, if needed BirthDate - Date of Birth Currency - the preferred currency in which monetary amounts should be returned.
+        passenger_type_quantity: Specifies number of passengers using Passenger
+            Type Codes.
+        air_traveler: Information profiling the person traveling Gender - the
+            gender of the customer, if needed BirthDate - Date of Birth
+            Currency - the preferred currency in which monetary amounts should
+            be returned.
     """
     passenger_type_quantity: List[PassengerTypeQuantityType] = field(
         default_factory=list,
@@ -8780,14 +9150,19 @@ class TravelerInformationType:
 
 @dataclass
 class TravelerInfoSummaryType:
-    """Specifies passenger numbers and types.
+    """
+    Specifies passenger numbers and types.
 
     Attributes
         seats_requested: The sum of all seats required by all passenger groups.
         air_traveler_avail: Specifies passenger numbers and types.
-        price_request_information: Identify pricing source, if negotiated fares are requested and if it is a reprice request.
-        tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
-        specific_ptc_indicator: If true, this request is for a specific PTC and only fares applicable to that PTC will be checked and returned. It is the same as XOFares flag in Intellisell request.
+        price_request_information: Identify pricing source, if negotiated fares
+            are requested and if it is a reprice request.
+        tpa_extensions: Additional elements and attributes to be included if
+            required, per Trading Partner Agreement (TPA).
+        specific_ptc_indicator: If true, this request is for a specific PTC and
+            only fares applicable to that PTC will be checked and returned. It
+            is the same as XOFares flag in Intellisell request.
     """
     seats_requested: List[int] = field(
         default_factory=list,
@@ -8954,32 +9329,60 @@ class ExchangeType:
 
 @dataclass
 class OtaAirLowFareSearchRq:
-    """
-    The Low Fare Search Request message requests priced itinerary options for flights between specific city pairs on specific dates for specific numbers and types of passengers. Optional request information can include: - Time / Time Window - Connecting cities. - Client Preferences (airlines, cabin, flight types etc.) The Low Fare Search request contains similar information to a Low Fare Search entry on an airline CRS or GDS.
+    """The Low Fare Search Request message requests priced itinerary options
+    for flights between specific city pairs on specific dates for specific
+    numbers and types of passengers.
+
+    Optional request information can include: - Time / Time Window - Connecting cities. - Client Preferences (airlines, cabin, flight types etc.) The Low Fare Search request contains similar information to a Low Fare Search entry on an airline CRS or GDS.
 
     Attributes
         pos: Point of sale object.
-        origin_destination_information: Origin and Destination location, and time information for the Air Low Fare Search request.
+        origin_destination_information: Origin and Destination location, and
+            time information for the Air Low Fare Search request.
         leg: Single leg specification
         travel_preferences: Air Low Fare Search Request preference information.
-        traveler_info_summary: Specifies the number of passengers and types for Air Low Fare Search.
-        tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
-        echo_token: A sequence number for additional message identification, assigned by the requesting host system. When a request message includes an echo token the corresponding response message MUST include an echo token with an identical value.
-        time_stamp: Indicates the creation date and time of the message in UTC using the following format specified by ISO 8601; YYYY-MM-DDThh:mm:ssZ with time values using the 24 hour clock (e.g. 20 November 2003, 1:59:38 pm UTC becomes 2003-11-20T13:59:38Z).
-        target: Used to indicate whether the request is for the Test or Production system.
-        version: For all OTA versioned messages, the version of the message is indicated by a decimal value.
-        transaction_identifier: A unique identifier to relate all messages within a transaction (e.g. this would be sent in all request and response messages that are part of an on-going transaction).
-        sequence_nmbr: Used to identify the sequence number of the transaction as assigned by the sending system; allows for an application to process messages in a certain order or to request a resynchronization of messages in the event that a system has been off-line and needs to retrieve messages that were missed.
-        transaction_status_code: This indicates where this message falls within a sequence of messages.
-        primary_lang_id: Identifes the primary language preference for the form of travel represented in a collection. The human language is identified by ISO 639 codes.
+        traveler_info_summary: Specifies the number of passengers and types for
+            Air Low Fare Search.
+        tpa_extensions: Additional elements and attributes to be included if
+            required, per Trading Partner Agreement (TPA).
+        echo_token: A sequence number for additional message identification,
+            assigned by the requesting host system. When a request message
+            includes an echo token the corresponding response message MUST
+            include an echo token with an identical value.
+        time_stamp: Indicates the creation date and time of the message in UTC
+            using the following format specified by ISO 8601; YYYY-MM-
+            DDThh:mm:ssZ with time values using the 24 hour clock (e.g. 20
+            November 2003, 1:59:38 pm UTC becomes 2003-11-20T13:59:38Z).
+        target: Used to indicate whether the request is for the Test or
+            Production system.
+        version: For all OTA versioned messages, the version of the message is
+            indicated by a decimal value.
+        transaction_identifier: A unique identifier to relate all messages
+            within a transaction (e.g. this would be sent in all request and
+            response messages that are part of an on-going transaction).
+        sequence_nmbr: Used to identify the sequence number of the transaction
+            as assigned by the sending system; allows for an application to
+            process messages in a certain order or to request a
+            resynchronization of messages in the event that a system has been
+            off-line and needs to retrieve messages that were missed.
+        transaction_status_code: This indicates where this message falls within
+            a sequence of messages.
+        primary_lang_id: Identifes the primary language preference for the form
+            of travel represented in a collection. The human language is
+            identified by ISO 639 codes.
         alt_lang_id:
-        max_responses: A positive integer value that indicates the maximum number of responses desired in the return.
-        direct_flights_only: Request direct flights between given locations. This defaults to false.
-        available_flights_only: Include only flights with available booking codes (when True or when attribute not present).
+        max_responses: A positive integer value that indicates the maximum
+            number of responses desired in the return.
+        direct_flights_only: Request direct flights between given locations.
+            This defaults to false.
+        available_flights_only: Include only flights with available booking
+            codes (when True or when attribute not present).
         response_type:
         response_version:
-        separate_messages: Whether all messages should be printed in separate MTP element or not. Works only with PSS response serializers.
-        truncate_messages: Whether each MTP content should be truncated to specified length or not. Works only with PSS response serializers.
+        separate_messages: Whether all messages should be printed in separate
+            MTP element or not. Works only with PSS response serializers.
+        truncate_messages: Whether each MTP content should be truncated to
+            specified length or not. Works only with PSS response serializers.
     """
     class Meta:
         name = "OTA_AirLowFareSearchRQ"
@@ -9155,8 +9558,10 @@ class OtaAirLowFareSearchRq:
             intelli_sell_transaction:
             diversity_control:
             messaging_details:
-            alternate_airport_cities: For each specified location provide an alternate location.
-            alternate_airport_mileage: Specify maximum allowed distance from specified airport.
+            alternate_airport_cities: For each specified location provide an
+                alternate location.
+            alternate_airport_mileage: Specify maximum allowed distance from
+                specified airport.
             award_shopping:
             billing:
             exchange_settings:
@@ -9357,10 +9762,10 @@ class OtaAirLowFareSearchRq:
         class MultiTicket:
             """
             Attributes
-                display_policy: Display Option Policy, takes values:
-            												- SOW - Show OneWays separately
-            												- GOW2RT - Group OneWays and match to RoundTrip
-            												- SCHS - Group OneWays, match to RoundTrip and show cheaper solution
+                display_policy: Display Option Policy, takes values: - SOW -
+                    Show OneWays separately - GOW2RT - Group OneWays and match
+                    to RoundTrip - SCHS - Group OneWays, match to RoundTrip and
+                    show cheaper solution
             """
             display_policy: Optional["OtaAirLowFareSearchRq.TpaExtensions.MultiTicket.DisplayPolicy"] = field(
                 default=None,
@@ -9411,7 +9816,8 @@ class OtaAirLowFareSearchRq:
             """
             Attributes
                 travel_preferences:
-                pseudo_city_code: An identification code assigned to an office/agency by a reservation system.
+                pseudo_city_code: An identification code assigned to an
+                    office/agency by a reservation system.
             """
             travel_preferences: Optional["OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences"] = field(
                 default=None,
@@ -9561,10 +9967,16 @@ class OtaAirLowFareSearchRq:
     class OriginDestinationInformation(OriginDestinationInformationType):
         """
         Attributes
-            tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
-            rph: A placeholder for OriginDestinationInformation to be referenced wihin the OTA_AirLowFareSearchRS message. PricedItineraryType carries the reference to this RPH.
-            fixed: OriginDestination node with flight and fare information fixed. Used in context shopping
-            full_diversity: Request for full diversity of flights for the particular OriginDestination node. Used in Exchange Context Shopping
+            tpa_extensions: Additional elements and attributes to be included
+                if required, per Trading Partner Agreement (TPA).
+            rph: A placeholder for OriginDestinationInformation to be
+                referenced wihin the OTA_AirLowFareSearchRS message.
+                PricedItineraryType carries the reference to this RPH.
+            fixed: OriginDestination node with flight and fare information
+                fixed. Used in context shopping
+            full_diversity: Request for full diversity of flights for the
+                particular OriginDestination node. Used in Exchange Context
+                Shopping
         """
         tpa_extensions: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions"] = field(
             default=None,
@@ -9602,16 +10014,28 @@ class OtaAirLowFareSearchRq:
             Attributes
                 flight:
                 routing:
-                date_flexibility: The number of alternate days around the travel date to search.
-                sister_destination_location: List of alternate destination cities to search
+                date_flexibility: The number of alternate days around the
+                    travel date to search.
+                sister_destination_location: List of alternate destination
+                    cities to search
                 sister_destination_mileage:
-                sister_origin_location: List of alternate origin cities to search
+                sister_origin_location: List of alternate origin cities to
+                    search
                 sister_origin_mileage:
                 segment_type:
                 alternate_time: Maximum time difference/deviation allowed.
                 max_one_way_options: Maximum number of options to return.
                 num_one_way_options: Number of options for requested date.
-                cabin_pref: Defines preferred cabin to be used in a search for this leg level (if SegmentType is "O") or segment (if SegmentType is "X"). The cabin type specified in this element will override the cabin type specified at the request level for this leg/segment. If a cabin type is not specified for this element the cabin type at request level will be used as default for this leg or segment. If the cabin type is not specified at both the leg/segment level and request level a default cabin of "Economy" will be used?
+                cabin_pref: Defines preferred cabin to be used in a search for
+                    this leg level (if SegmentType is "O") or segment (if
+                    SegmentType is "X"). The cabin type specified in this
+                    element will override the cabin type specified at the
+                    request level for this leg/segment. If a cabin type is not
+                    specified for this element the cabin type at request level
+                    will be used as default for this leg or segment. If the
+                    cabin type is not specified at both the leg/segment level
+                    and request level a default cabin of "Economy" will be
+                    used?
                 connection_time: Connection time between segments.
                 total_travel_time: Total travel time settings
                 include_vendor_pref:
@@ -9743,10 +10167,14 @@ class OtaAirLowFareSearchRq:
             class DateFlexibility:
                 """
                 Attributes
-                    nbr_of_days: Number of alternate dates before and after requested travel date.
-                    plus: Number of alternate dates before requested travel date.
-                    minus: Number of alternate dates after requested travel date.
-                    validate: Flag telling if dates within the specified range should be processed in the validate path.
+                    nbr_of_days: Number of alternate dates before and after
+                        requested travel date.
+                    plus: Number of alternate dates before requested travel
+                        date.
+                    minus: Number of alternate dates after requested travel
+                        date.
+                    validate: Flag telling if dates within the specified range
+                        should be processed in the validate path.
                 """
                 nbr_of_days: Optional[int] = field(
                     default=None,
@@ -9781,7 +10209,8 @@ class OtaAirLowFareSearchRq:
             class SegmentType:
                 """
                 Attributes
-                    code: "Code" can be "ARUNK", "O" for normal, or "X" for connection.
+                    code: "Code" can be "ARUNK", "O" for normal, or "X" for
+                        connection.
                 """
                 code: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SegmentType.Code"] = field(
                     default=None,
@@ -9796,7 +10225,9 @@ class OtaAirLowFareSearchRq:
                     Attributes
                         ARUNK: Arrival unknown
                         O: Normal
-                        X: Connection. Collapses this and subsequent OriginDestinationInformation so that they are treated as single leg.
+                        X: Connection. Collapses this and subsequent
+                            OriginDestinationInformation so that they are
+                            treated as single leg.
                     """
                     ARUNK = "ARUNK"
                     O = "O"
@@ -9806,7 +10237,8 @@ class OtaAirLowFareSearchRq:
             class AlternateTime:
                 """
                 Attributes
-                    plus_minus: Maximum time difference between actual and desired time.
+                    plus_minus: Maximum time difference between actual and
+                        desired time.
                     plus: Maximum number of hours after desired time.
                     minus: Maximum number of hours before desired time.
                 """
@@ -9866,9 +10298,12 @@ class OtaAirLowFareSearchRq:
                 Attributes
                     min:
                     max:
-                    excluded_connection_begin: Excluded connection time begin in format HHMM
-                    excluded_connection_end: Excluded connection time end in format HHMM
-                    enable_excluded_connection: Enable excluded connection time (default: true)
+                    excluded_connection_begin: Excluded connection time begin
+                        in format HHMM
+                    excluded_connection_end: Excluded connection time end in
+                        format HHMM
+                    enable_excluded_connection: Enable excluded connection time
+                        (default: true)
                 """
                 min: Optional[int] = field(
                     default=None,
@@ -9955,10 +10390,14 @@ class OtaAirLowFareSearchRq:
             arrival_date_time:
             origins:
             destinations:
-            connection_locations: Travel Connection Location - for example, air uses the IATA 3 letter code.
+            connection_locations: Travel Connection Location - for example, air
+                uses the IATA 3 letter code.
             carriers: Carrier preferrence information
-            cabin: Defines preferred cabin to be used in a search for this leg level.
-            rph: A placeholder for OriginDestinationInformation to be referenced wihin the OTA_AirLowFareSearchRS message. PricedItineraryType carries the reference to this RPH.
+            cabin: Defines preferred cabin to be used in a search for this leg
+                level.
+            rph: A placeholder for OriginDestinationInformation to be
+                referenced wihin the OTA_AirLowFareSearchRS message.
+                PricedItineraryType carries the reference to this RPH.
             max_options: Maximum number of options to return.
         """
         departure_date_time: Optional["OtaAirLowFareSearchRq.Leg.DepartureDateTime"] = field(
@@ -10042,13 +10481,16 @@ class OtaAirLowFareSearchRq:
 
             @dataclass
             class Origin:
-                """Attributes.
-
-                connection_locations: Travel Connection Location - for example, air uses the IATA 3 letter code.
-                carriers: Carrier preferrence information
-                departure_date_time_override: Overrides DepartureDateTime attributes
-                airport_code: Required unless AirportsGroup is specified. Cannot appear with AirportsGroup.
-                airports_group: Name of the airports group
+                """
+                Attributes
+                    connection_locations: Travel Connection Location - for
+                        example, air uses the IATA 3 letter code.
+                    carriers: Carrier preferrence information
+                    departure_date_time_override: Overrides DepartureDateTime
+                        attributes
+                    airport_code: Required unless AirportsGroup is specified.
+                        Cannot appear with AirportsGroup.
+                    airports_group: Name of the airports group
                 """
                 connection_locations: Optional[ConnectionType] = field(
                     default=None,
@@ -10093,7 +10535,8 @@ class OtaAirLowFareSearchRq:
                     """
                     Attributes
                         include_vendor_pref:
-                        exclude_vendor_pref: Do not consider these carriers for this leg.
+                        exclude_vendor_pref: Do not consider these carriers for
+                            this leg.
                     """
                     include_vendor_pref: List[IncludeVendorPrefType] = field(
                         default_factory=list,
@@ -10140,13 +10583,16 @@ class OtaAirLowFareSearchRq:
 
             @dataclass
             class Destination:
-                """Attributes.
-
-                connection_locations: Travel Connection Location - for example, air uses the IATA 3 letter code.
-                carriers: Carrier preferrence information
-                arrival_date_time_override: Overrides ArrivalDateTime attributes
-                airport_code: Required unless AirportsGroup is specified. Cannot appear with AirportsGroup.
-                airports_group: Name of the airports group
+                """
+                Attributes
+                    connection_locations: Travel Connection Location - for
+                        example, air uses the IATA 3 letter code.
+                    carriers: Carrier preferrence information
+                    arrival_date_time_override: Overrides ArrivalDateTime
+                        attributes
+                    airport_code: Required unless AirportsGroup is specified.
+                        Cannot appear with AirportsGroup.
+                    airports_group: Name of the airports group
                 """
                 connection_locations: Optional[ConnectionType] = field(
                     default=None,
@@ -10191,7 +10637,8 @@ class OtaAirLowFareSearchRq:
                     """
                     Attributes
                         include_vendor_pref:
-                        exclude_vendor_pref: Do not consider these carriers for this leg.
+                        exclude_vendor_pref: Do not consider these carriers for
+                            this leg.
                     """
                     include_vendor_pref: List[IncludeVendorPrefType] = field(
                         default_factory=list,
@@ -10230,7 +10677,8 @@ class OtaAirLowFareSearchRq:
             """
             Attributes
                 include_vendor_pref:
-                exclude_vendor_pref: Do not consider these carriers for this leg.
+                exclude_vendor_pref: Do not consider these carriers for this
+                    leg.
             """
             include_vendor_pref: List[IncludeVendorPrefType] = field(
                 default_factory=list,
@@ -10290,7 +10738,12 @@ class OtaAirLowFareSearchRq:
         class DepartureDateTime(GlobalDateTimeType):
             """
             Attributes
-                week_days: Specify which days of week  to consider for departure. Value format: First letter of the name of the day or '_', eg. 'SMT___S' means we are interested in departing at Saturday, Sunday, Monday or Tuesday. Even if there are schedules for Wednesday, Thursday or Friday, they won't be returned in ISell response.
+                week_days: Specify which days of week  to consider for
+                    departure. Value format: First letter of the name of the
+                    day or '_', eg. 'SMT___S' means we are interested in
+                    departing at Saturday, Sunday, Monday or Tuesday. Even if
+                    there are schedules for Wednesday, Thursday or Friday, they
+                    won't be returned in ISell response.
             """
             week_days: Optional[str] = field(
                 default=None,
@@ -10306,8 +10759,10 @@ class OtaAirLowFareSearchRq:
         Attributes
             START: This is the first message within a transaction.
             END: This is the last message within a transaction.
-            ROLLBACK: This indicates that all messages within the current transaction must be ignored.
-            IN_SERIES: This is any message that is not the first or last message within a transaction.
+            ROLLBACK: This indicates that all messages within the current
+                transaction must be ignored.
+            IN_SERIES: This is any message that is not the first or last
+                message within a transaction.
         """
         START = "Start"
         END = "End"

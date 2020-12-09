@@ -52,7 +52,7 @@ mypy-reqif:
 
 build-npo:
 	rm -rf npo/models
-	xsdata npo/schemas/rs.poms.omroep.nl/v1/schema/urn:vpro:api:2013 --package npo.models --ns-struct
+	xsdata npo/schemas/rs.poms.omroep.nl/v1/schema/urn:vpro:api:2013 --config npo/.xsdata.xml
 
 test-npo:
 	pytest npo

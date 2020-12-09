@@ -6,7 +6,8 @@ __NAMESPACE__ = "http://www.travelport.com/soa/common/security/SessionContext_v1
 
 @dataclass
 class SessionContext:
-    """A XML payload that contains either the Session Context Token or the Session
+    """
+    A XML payload that contains either the Session Context Token or the Session
     Properties.
 
     Parameters

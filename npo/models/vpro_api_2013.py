@@ -1611,31 +1611,8 @@ class MediaSearchResultType(GenericMediaSearchResultType):
 
 @dataclass
 class MediaSearchType:
-    """Limits the search result to media with certain properties.
-
-    :ivar text:
-    :ivar media_ids: The MID must match one of the mediaIds
-    :ivar types: The media type must match one of these.
-    :ivar av_types:
-    :ivar sort_dates:
-    :ivar publish_dates:
-    :ivar creation_dates:
-    :ivar last_modified_dates:
-    :ivar broadcasters:
-    :ivar locations:
-    :ivar tags:
-    :ivar genres:
-    :ivar durations:
-    :ivar descendant_of:
-    :ivar episode_of:
-    :ivar member_of:
-    :ivar relations:
-    :ivar schedule_events:
-    :ivar age_ratings:
-    :ivar content_ratings:
-    :ivar titles:
-    :ivar geo_locations:
-    :ivar match:
+    """
+    Limits the search result to media with certain properties.
     """
     class Meta:
         name = "mediaSearchType"
@@ -1653,6 +1630,7 @@ class MediaSearchType:
             "name": "mediaIds",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
+            "doc": "The MID must match one of the mediaIds",
         }
     )
     types: Optional[TextMatcherListType] = field(
@@ -1660,6 +1638,7 @@ class MediaSearchType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
+            "doc": "The media type must match one of these.",
         }
     )
     av_types: Optional[TextMatcherListType] = field(

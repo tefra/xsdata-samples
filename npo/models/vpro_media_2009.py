@@ -11,16 +11,6 @@ __NAMESPACE__ = "urn:vpro:media:2009"
 
 
 class AgeRatingType(Enum):
-    """
-    :cvar VALUE_6: Suitable for people of age 6 and up.
-    :cvar VALUE_9: Suitable for people of age 9 and up.
-    :cvar VALUE_12: Suitable for people of age 12 and up.
-    :cvar VALUE_14: Suitable for people of age 12 and up.
-    :cvar VALUE_16: Suitable for people of age 16 and up.
-    :cvar VALUE_18: Suitable for people of age 18 and up.
-    :cvar ALL: Suitable for people of all ages.
-    :cvar NOT_YET_RATED: Not yet rated
-    """
     VALUE_6 = "6"
     VALUE_9 = "9"
     VALUE_12 = "12"
@@ -29,6 +19,16 @@ class AgeRatingType(Enum):
     VALUE_18 = "18"
     ALL = "ALL"
     NOT_YET_RATED = "NOT_YET_RATED"
+
+
+AgeRatingType.VALUE_6.__doc__ = "Suitable for people of age 6 and up."
+AgeRatingType.VALUE_9.__doc__ = "Suitable for people of age 9 and up."
+AgeRatingType.VALUE_12.__doc__ = "Suitable for people of age 12 and up."
+AgeRatingType.VALUE_14.__doc__ = "Suitable for people of age 12 and up."
+AgeRatingType.VALUE_16.__doc__ = "Suitable for people of age 16 and up."
+AgeRatingType.VALUE_18.__doc__ = "Suitable for people of age 18 and up."
+AgeRatingType.ALL.__doc__ = "Suitable for people of all ages."
+AgeRatingType.NOT_YET_RATED.__doc__ = "Not yet rated"
 
 
 class AspectRatioEnum(Enum):
@@ -112,305 +112,6 @@ class AvailableSubtitleType:
 
 
 class ChannelEnum(Enum):
-    """
-    :cvar NED1: NPO 1.
-    :cvar NED2: NPO 2.
-    :cvar NED3: NPO 3 &amp; Z@pp.
-    :cvar NEDE: Nederland-e.
-    :cvar RTL4: RTL 4.
-    :cvar RTL5: RTL 5.
-    :cvar SBS6: SBS 6.
-    :cvar RTL7: RTL 7.
-    :cvar VERO: Veronica/Jetix.
-    :cvar NET5: Net 5.
-    :cvar RTL8: RTL 8.
-    :cvar REGI: Regional TV combi-channel.
-    :cvar OFRY: Omrop Fryslân tv.
-    :cvar NOOR: TV Noord.
-    :cvar RTVD: RTV Drenthe.
-    :cvar OOST: TV Oost.
-    :cvar GELD: TV Gelderland.
-    :cvar FLEV: TV Flevoland.
-    :cvar BRAB: Omroep Brabant.
-    :cvar REGU: Regio TV Utrecht.
-    :cvar NORH: TV Noord-Holland.
-    :cvar WEST: TV West.
-    :cvar RIJN: TV Rijnmond.
-    :cvar L1_TV: L1 TV.
-    :cvar OZEE: Omroep Zeeland.
-    :cvar AT5: AT5.
-    :cvar RNN7: RNN7.
-    :cvar BVNT: BVN.
-    :cvar EEN: Eén.
-    :cvar KETN: Ketnet &amp; Canvas.
-    :cvar VTM: VTM.
-    :cvar KA2: 2BE.
-    :cvar VT4: VT4.
-    :cvar LUNE: La Une (RTBF 1).
-    :cvar LDUE: La Deux (RTBF 2).
-    :cvar RTBF: RTBF Sat.
-    :cvar ARD: ARD.
-    :cvar ZDF: ZDF.
-    :cvar WDR: WDR Fehrsehen
-    :cvar N_3: N3 (NDR).
-    :cvar SUDW: SWF Baden-Württemberg.
-    :cvar SWF: SWF Rheinland-Pfalz.
-    :cvar RTL: RTL Television.
-    :cvar SAT1: Sat1.
-    :cvar PRO7: Pro7.
-    :cvar VALUE_3_SAT: 3 Sat.
-    :cvar KABE: Kabel 1.
-    :cvar ARTE: ARTE.
-    :cvar T5_ME: TV 5 Monde Europe.
-    :cvar FRA2: France 2.
-    :cvar FRA3: France 3.
-    :cvar BBC1: BBC 1.
-    :cvar BBC2: BBC 2.
-    :cvar BBTH: BBC Three.
-    :cvar BBTC: BBC Three / CBBC.
-    :cvar BBCF: BBC Four.
-    :cvar BBFC: BBC Four / Ceebies.
-    :cvar BBCP: BBC Prime.
-    :cvar TRTI: TRT International.
-    :cvar SHOW: ShowTV.
-    :cvar LIGT: LigTV.
-    :cvar TURK: Türkmax.
-    :cvar ATVT: ATV.
-    :cvar FOXT: Fox Türk.
-    :cvar HABN: HaberTürk.
-    :cvar STTV: Star TV.
-    :cvar RRTM: RTM.
-    :cvar RMBC: MBC.
-    :cvar RART: ART Europe.
-    :cvar ARTM: ART Movie.
-    :cvar TVBS: TVBS Europe.
-    :cvar ASIA: Sony Ent TV MAX.
-    :cvar TIVI: A-Tivi.
-    :cvar B4_UM: B4U Movies.
-    :cvar PCNE: Phoenix CNE.
-    :cvar PATN: ATN.
-    :cvar ZEET: Zee TV.
-    :cvar ZEEC: Zee Cinema.
-    :cvar TVE: TVE.
-    :cvar RAI: Rai Uno.
-    :cvar RAID: Rai Due.
-    :cvar RAIT: Rai Tre.
-    :cvar TEVE: TeVe Sur.
-    :cvar ERTS: ERT Sat.
-    :cvar STV: STV.
-    :cvar NTV: NTV.
-    :cvar TVPO: TV Polonia.
-    :cvar NOSJ: NOS Journaal 24.
-    :cvar CULT: Cultura.
-    :cvar VALUE_101: 101.
-    :cvar PO24: Politiek24.
-    :cvar HILV: HilversumBest.
-    :cvar HOLL: Holland Doc.
-    :cvar GESC: /Geschiedenis.
-    :cvar VALUE_3_VCN: 3voor12 Central.
-    :cvar VALUE_3_VOS: 3voor12 On Stage.
-    :cvar STER: Sterren.nl.
-    :cvar NCRV: Spirit24.
-    :cvar OPVO: Zappelin24/Familie24.
-    :cvar CONS: Consumenten TV.
-    :cvar HUMO: Humor TV.
-    :cvar ENTE: E! Enterntainment.
-    :cvar FASH: Fashion TV.
-    :cvar COMC: Comedy Central/Nickelodeon.
-    :cvar TBN: TBN Europe.
-    :cvar DISC: Discovery Channel.
-    :cvar ZONE: Zone Reality (UK).
-    :cvar ANPL: Animal Planet.
-    :cvar CLUB: Zone Club.
-    :cvar NAGE: National Geographic/CNBC.
-    :cvar TRAC: Trace TV.
-    :cvar NGHD: National Geographic HD.
-    :cvar WILD: Nat Geo Wild.
-    :cvar GARU: Garuda TV.
-    :cvar ZAZA: Zazaro TV.
-    :cvar FAM7: Family7.
-    :cvar DTAL: Discovery Travel &amp; Living.
-    :cvar SCIE: Discovery Science.
-    :cvar CIVI: Discovery Civilisation.
-    :cvar DIHD: Discovery HD.
-    :cvar HIST: The History Channel.
-    :cvar TRAV: Travel Channel.
-    :cvar HETG: Het Gesprek.
-    :cvar GOED: GoedTV.
-    :cvar BABY: Baby TV (NL).
-    :cvar DH1: HD-NL.
-    :cvar LITV: Liberty TV.
-    :cvar LIVE: Liveshop.
-    :cvar STAR: Star!
-    :cvar WEER: Weerkanaal.
-    :cvar REAL: Zone Reality.
-    :cvar SCIF: Sci-Fi Channel.
-    :cvar VALUE_13_ST: 13th Street.
-    :cvar CARC: Car Channel.
-    :cvar NOSN: NostalgieNet.
-    :cvar HISH: The History Channel HD.
-    :cvar BRHD: Brava HD.
-    :cvar FANT: Fan TV.
-    :cvar RACW: Raceworld TV.
-    :cvar COMF: Comedy Family.
-    :cvar DIER: AVRO Dier en Natuur.
-    :cvar POKE: Poker Channel.
-    :cvar MNET: Misdaadnet.
-    :cvar VOOM: Voom HD.
-    :cvar ZONH: Zone Horror.
-    :cvar KPN1: Eredivisie Live 1.
-    :cvar KPN2: Eredivisie Live 2.
-    :cvar KPN3: Eredivisie Live 3.
-    :cvar KPN4: Eredivisie Live 4.
-    :cvar ZIZO: PO Zizone TV.
-    :cvar DVIC: Viceland.
-    :cvar DVB1: PO DVB-H 1.
-    :cvar DVB2: PO DVB-H 2.
-    :cvar DVB3: PO DVB-H 3.
-    :cvar NICK: Nickelodeon.
-    :cvar NIJN: Nick Jr.
-    :cvar NIKT: Nick Toons.
-    :cvar NIKH: Nick Hits.
-    :cvar CART: Cartoon Network.
-    :cvar BOOM: Boomerang.
-    :cvar CNN: CNN.
-    :cvar BBCW: BBC World.
-    :cvar EURN: Euronews.
-    :cvar SKNE: Sky News.
-    :cvar BLOO: Bloomberg TV.
-    :cvar CNBC: CNBC Europe.
-    :cvar PALJ: Al Jazeera Arabic.
-    :cvar ALJA: Al Jazeera.
-    :cvar FOXN: Fox News.
-    :cvar FXNL: Fox Nederland.
-    :cvar MTV: MTV.
-    :cvar MTV2: MTV2.
-    :cvar HITS: MTV Hits.
-    :cvar BASE: MTV Base.
-    :cvar MTVB: MTV Brand New.
-    :cvar TMF: TMF.
-    :cvar TMFN: TMF NL.
-    :cvar TMFP: TMF Party.
-    :cvar TMFY: TMF Pure.
-    :cvar TVOR: TV Oranje.
-    :cvar VH1_E: VH-1 (EU).
-    :cvar VH1_C: VH-1 Classic.
-    :cvar PERC: Performance Channel.
-    :cvar MEZZ: Mezzo.
-    :cvar EURO: Eurosport.
-    :cvar EUR2: Eurosport 2.
-    :cvar EXTR: Extreme Sports Channel (EU).
-    :cvar MOTO: Motors TV.
-    :cvar SAIL: Sailing channel.
-    :cvar ESPN: ESPN.
-    :cvar NASE: ESPN America.
-    :cvar SP11: Sport1.1.
-    :cvar SP12: Sport1.2.
-    :cvar SP13: Sport1.3.
-    :cvar SP14: Sport1.4.
-    :cvar SP15: Sport1.5.
-    :cvar SP16: Sport1.6.
-    :cvar SP17: Sport1.7.
-    :cvar SP18: Sport1.8.
-    :cvar S1_HD: Sport1 HD.
-    :cvar FIL1: Film1.1 pepe.
-    :cvar FIL2: Film1.2 pepe.
-    :cvar FIL3: Film1.3 pepe.
-    :cvar FL11: Film1.1 DI.
-    :cvar FL1_P: Film1+1 DI.
-    :cvar FL12: Film1.2 DI.
-    :cvar FL13: Film1.3 DI.
-    :cvar FLHD: Film1 HD DI.
-    :cvar MGMM: MGM Movie Channel.
-    :cvar TCM: TCM.
-    :cvar HALL: Hallmark.
-    :cvar ACNW: Action Now!
-    :cvar RHUS: Hustler TV.
-    :cvar PLAY: Playboy TV.
-    :cvar ADUL: Adult Channel.
-    :cvar PSPI: Private Spice.
-    :cvar HUST: Blue Hustler.
-    :cvar OXMO: PO X-MO.
-    :cvar XM24: X-MO DI.
-    :cvar OU24: PO Out TV.
-    :cvar RAD1: NPO Radio 1.
-    :cvar RAD2: NPO Radio 2.
-    :cvar R2_SJ:
-    :cvar RAD3: NPO 3FM.
-    :cvar R3_KX:
-    :cvar RAD4: NPO Radio 4.
-    :cvar R4_CO:
-    :cvar RAD5: NPO Radio 5.
-    :cvar R5_ST:
-    :cvar RAD6: NPO Radio 6.
-    :cvar REGR: Regional radio combi-channel.
-    :cvar RFRY: Omrop Fryslân radio.
-    :cvar RNOO: Radio Noord.
-    :cvar ROST: Radio Oost.
-    :cvar RGEL: Radio Gelderland.
-    :cvar RFLE: Radio Flevoland.
-    :cvar RBRA: Omroep Brabant.
-    :cvar RUTR: Radio M Utrecht.
-    :cvar RNOH: Radio Noord-Holland.
-    :cvar RWST: 89,3 Radio West.
-    :cvar RRIJ: Radio Rijnmond.
-    :cvar LRAD: L1 Radio.
-    :cvar RZEE: Omroep Zeeland.
-    :cvar COMM: Commercial radio combi-channel.
-    :cvar RVER: Radio Veronica.
-    :cvar SLAM: SLAM! FM.
-    :cvar SKYR: Sky Radio.
-    :cvar BNRN: BNR Nieuwsradio.
-    :cvar KINK: Kink FM.
-    :cvar PCAZ: CAZ!.
-    :cvar QMUS: Qmusic.
-    :cvar R538: Radio 538.
-    :cvar GOLD: Radio 10 Gold.
-    :cvar ARRO: Arrow Classic Rock.
-    :cvar FUNX: FunX.
-    :cvar FNXA: FunX Amsterdam.
-    :cvar FNXR: FunX Rotterdam.
-    :cvar FNXU: FunX Utrecht.
-    :cvar FNXD: FunX Den Haag.
-    :cvar FNXAR: FunX Arab
-    :cvar FNXDA: FunX Dance
-    :cvar FNXHH: FunX HipHop
-    :cvar FNXLA: FunX Latin
-    :cvar FNXRE: FunX Reggae
-    :cvar FNXSJ: FunX SlowJamz
-    :cvar CLAS: Classic FM.
-    :cvar BEL1: VRT/Radio 1.
-    :cvar BEL2: VRT/Radio 2.
-    :cvar KLAR: Klara.
-    :cvar BBR1: BBC Radio 1.
-    :cvar BBR2: BBC Radio 2.
-    :cvar BBR3: BBC Radio 3.
-    :cvar BBR4: BBC Radio 4.
-    :cvar BBWS: BBC Worldservice.
-    :cvar BBCX: BBC 1XTRA.
-    :cvar NDR3: NDR3.
-    :cvar WDR4: WDR 4.
-    :cvar WDR3: WDR3.
-    :cvar ONL1: NPO Online 1
-    :cvar OMEG: Omega TV
-    :cvar D24_K:
-    :cvar H1_NL:
-    :cvar SYFY:
-    :cvar SBS9:
-    :cvar DIXD:
-    :cvar BRNL:
-    :cvar FOXL:
-    :cvar TLC:
-    :cvar BCFS:
-    :cvar AMC:
-    :cvar FLM1:
-    :cvar ZGS1:
-    :cvar BRTZ:
-    :cvar RTLF:
-    :cvar TVDR:
-    :cvar VRTC:
-    :cvar XXXX: Test channel. This channel only exist for the sake of testing.
-    """
     NED1 = "NED1"
     NED2 = "NED2"
     NED3 = "NED3"
@@ -710,6 +411,287 @@ class ChannelEnum(Enum):
     XXXX = "XXXX"
 
 
+ChannelEnum.NED1.__doc__ = "NPO 1."
+ChannelEnum.NED2.__doc__ = "NPO 2."
+ChannelEnum.NED3.__doc__ = "NPO 3 &amp; Z@pp."
+ChannelEnum.NEDE.__doc__ = "Nederland-e."
+ChannelEnum.RTL4.__doc__ = "RTL 4."
+ChannelEnum.RTL5.__doc__ = "RTL 5."
+ChannelEnum.SBS6.__doc__ = "SBS 6."
+ChannelEnum.RTL7.__doc__ = "RTL 7."
+ChannelEnum.VERO.__doc__ = "Veronica/Jetix."
+ChannelEnum.NET5.__doc__ = "Net 5."
+ChannelEnum.RTL8.__doc__ = "RTL 8."
+ChannelEnum.REGI.__doc__ = "Regional TV combi-channel."
+ChannelEnum.OFRY.__doc__ = "Omrop Fryslân tv."
+ChannelEnum.NOOR.__doc__ = "TV Noord."
+ChannelEnum.RTVD.__doc__ = "RTV Drenthe."
+ChannelEnum.OOST.__doc__ = "TV Oost."
+ChannelEnum.GELD.__doc__ = "TV Gelderland."
+ChannelEnum.FLEV.__doc__ = "TV Flevoland."
+ChannelEnum.BRAB.__doc__ = "Omroep Brabant."
+ChannelEnum.REGU.__doc__ = "Regio TV Utrecht."
+ChannelEnum.NORH.__doc__ = "TV Noord-Holland."
+ChannelEnum.WEST.__doc__ = "TV West."
+ChannelEnum.RIJN.__doc__ = "TV Rijnmond."
+ChannelEnum.L1_TV.__doc__ = "L1 TV."
+ChannelEnum.OZEE.__doc__ = "Omroep Zeeland."
+ChannelEnum.AT5.__doc__ = "AT5."
+ChannelEnum.RNN7.__doc__ = "RNN7."
+ChannelEnum.BVNT.__doc__ = "BVN."
+ChannelEnum.EEN.__doc__ = "Eén."
+ChannelEnum.KETN.__doc__ = "Ketnet &amp; Canvas."
+ChannelEnum.VTM.__doc__ = "VTM."
+ChannelEnum.KA2.__doc__ = "2BE."
+ChannelEnum.VT4.__doc__ = "VT4."
+ChannelEnum.LUNE.__doc__ = "La Une (RTBF 1)."
+ChannelEnum.LDUE.__doc__ = "La Deux (RTBF 2)."
+ChannelEnum.RTBF.__doc__ = "RTBF Sat."
+ChannelEnum.ARD.__doc__ = "ARD."
+ChannelEnum.ZDF.__doc__ = "ZDF."
+ChannelEnum.WDR.__doc__ = "WDR Fehrsehen"
+ChannelEnum.N_3.__doc__ = "N3 (NDR)."
+ChannelEnum.SUDW.__doc__ = "SWF Baden-Württemberg."
+ChannelEnum.SWF.__doc__ = "SWF Rheinland-Pfalz."
+ChannelEnum.RTL.__doc__ = "RTL Television."
+ChannelEnum.SAT1.__doc__ = "Sat1."
+ChannelEnum.PRO7.__doc__ = "Pro7."
+ChannelEnum.VALUE_3_SAT.__doc__ = "3 Sat."
+ChannelEnum.KABE.__doc__ = "Kabel 1."
+ChannelEnum.ARTE.__doc__ = "ARTE."
+ChannelEnum.T5_ME.__doc__ = "TV 5 Monde Europe."
+ChannelEnum.FRA2.__doc__ = "France 2."
+ChannelEnum.FRA3.__doc__ = "France 3."
+ChannelEnum.BBC1.__doc__ = "BBC 1."
+ChannelEnum.BBC2.__doc__ = "BBC 2."
+ChannelEnum.BBTH.__doc__ = "BBC Three."
+ChannelEnum.BBTC.__doc__ = "BBC Three / CBBC."
+ChannelEnum.BBCF.__doc__ = "BBC Four."
+ChannelEnum.BBFC.__doc__ = "BBC Four / Ceebies."
+ChannelEnum.BBCP.__doc__ = "BBC Prime."
+ChannelEnum.TRTI.__doc__ = "TRT International."
+ChannelEnum.SHOW.__doc__ = "ShowTV."
+ChannelEnum.LIGT.__doc__ = "LigTV."
+ChannelEnum.TURK.__doc__ = "Türkmax."
+ChannelEnum.ATVT.__doc__ = "ATV."
+ChannelEnum.FOXT.__doc__ = "Fox Türk."
+ChannelEnum.HABN.__doc__ = "HaberTürk."
+ChannelEnum.STTV.__doc__ = "Star TV."
+ChannelEnum.RRTM.__doc__ = "RTM."
+ChannelEnum.RMBC.__doc__ = "MBC."
+ChannelEnum.RART.__doc__ = "ART Europe."
+ChannelEnum.ARTM.__doc__ = "ART Movie."
+ChannelEnum.TVBS.__doc__ = "TVBS Europe."
+ChannelEnum.ASIA.__doc__ = "Sony Ent TV MAX."
+ChannelEnum.TIVI.__doc__ = "A-Tivi."
+ChannelEnum.B4_UM.__doc__ = "B4U Movies."
+ChannelEnum.PCNE.__doc__ = "Phoenix CNE."
+ChannelEnum.PATN.__doc__ = "ATN."
+ChannelEnum.ZEET.__doc__ = "Zee TV."
+ChannelEnum.ZEEC.__doc__ = "Zee Cinema."
+ChannelEnum.TVE.__doc__ = "TVE."
+ChannelEnum.RAI.__doc__ = "Rai Uno."
+ChannelEnum.RAID.__doc__ = "Rai Due."
+ChannelEnum.RAIT.__doc__ = "Rai Tre."
+ChannelEnum.TEVE.__doc__ = "TeVe Sur."
+ChannelEnum.ERTS.__doc__ = "ERT Sat."
+ChannelEnum.STV.__doc__ = "STV."
+ChannelEnum.NTV.__doc__ = "NTV."
+ChannelEnum.TVPO.__doc__ = "TV Polonia."
+ChannelEnum.NOSJ.__doc__ = "NOS Journaal 24."
+ChannelEnum.CULT.__doc__ = "Cultura."
+ChannelEnum.VALUE_101.__doc__ = "101."
+ChannelEnum.PO24.__doc__ = "Politiek24."
+ChannelEnum.HILV.__doc__ = "HilversumBest."
+ChannelEnum.HOLL.__doc__ = "Holland Doc."
+ChannelEnum.GESC.__doc__ = "/Geschiedenis."
+ChannelEnum.VALUE_3_VCN.__doc__ = "3voor12 Central."
+ChannelEnum.VALUE_3_VOS.__doc__ = "3voor12 On Stage."
+ChannelEnum.STER.__doc__ = "Sterren.nl."
+ChannelEnum.NCRV.__doc__ = "Spirit24."
+ChannelEnum.OPVO.__doc__ = "Zappelin24/Familie24."
+ChannelEnum.CONS.__doc__ = "Consumenten TV."
+ChannelEnum.HUMO.__doc__ = "Humor TV."
+ChannelEnum.ENTE.__doc__ = "E! Enterntainment."
+ChannelEnum.FASH.__doc__ = "Fashion TV."
+ChannelEnum.COMC.__doc__ = "Comedy Central/Nickelodeon."
+ChannelEnum.TBN.__doc__ = "TBN Europe."
+ChannelEnum.DISC.__doc__ = "Discovery Channel."
+ChannelEnum.ZONE.__doc__ = "Zone Reality (UK)."
+ChannelEnum.ANPL.__doc__ = "Animal Planet."
+ChannelEnum.CLUB.__doc__ = "Zone Club."
+ChannelEnum.NAGE.__doc__ = "National Geographic/CNBC."
+ChannelEnum.TRAC.__doc__ = "Trace TV."
+ChannelEnum.NGHD.__doc__ = "National Geographic HD."
+ChannelEnum.WILD.__doc__ = "Nat Geo Wild."
+ChannelEnum.GARU.__doc__ = "Garuda TV."
+ChannelEnum.ZAZA.__doc__ = "Zazaro TV."
+ChannelEnum.FAM7.__doc__ = "Family7."
+ChannelEnum.DTAL.__doc__ = "Discovery Travel &amp; Living."
+ChannelEnum.SCIE.__doc__ = "Discovery Science."
+ChannelEnum.CIVI.__doc__ = "Discovery Civilisation."
+ChannelEnum.DIHD.__doc__ = "Discovery HD."
+ChannelEnum.HIST.__doc__ = "The History Channel."
+ChannelEnum.TRAV.__doc__ = "Travel Channel."
+ChannelEnum.HETG.__doc__ = "Het Gesprek."
+ChannelEnum.GOED.__doc__ = "GoedTV."
+ChannelEnum.BABY.__doc__ = "Baby TV (NL)."
+ChannelEnum.DH1.__doc__ = "HD-NL."
+ChannelEnum.LITV.__doc__ = "Liberty TV."
+ChannelEnum.LIVE.__doc__ = "Liveshop."
+ChannelEnum.STAR.__doc__ = "Star!"
+ChannelEnum.WEER.__doc__ = "Weerkanaal."
+ChannelEnum.REAL.__doc__ = "Zone Reality."
+ChannelEnum.SCIF.__doc__ = "Sci-Fi Channel."
+ChannelEnum.VALUE_13_ST.__doc__ = "13th Street."
+ChannelEnum.CARC.__doc__ = "Car Channel."
+ChannelEnum.NOSN.__doc__ = "NostalgieNet."
+ChannelEnum.HISH.__doc__ = "The History Channel HD."
+ChannelEnum.BRHD.__doc__ = "Brava HD."
+ChannelEnum.FANT.__doc__ = "Fan TV."
+ChannelEnum.RACW.__doc__ = "Raceworld TV."
+ChannelEnum.COMF.__doc__ = "Comedy Family."
+ChannelEnum.DIER.__doc__ = "AVRO Dier en Natuur."
+ChannelEnum.POKE.__doc__ = "Poker Channel."
+ChannelEnum.MNET.__doc__ = "Misdaadnet."
+ChannelEnum.VOOM.__doc__ = "Voom HD."
+ChannelEnum.ZONH.__doc__ = "Zone Horror."
+ChannelEnum.KPN1.__doc__ = "Eredivisie Live 1."
+ChannelEnum.KPN2.__doc__ = "Eredivisie Live 2."
+ChannelEnum.KPN3.__doc__ = "Eredivisie Live 3."
+ChannelEnum.KPN4.__doc__ = "Eredivisie Live 4."
+ChannelEnum.ZIZO.__doc__ = "PO Zizone TV."
+ChannelEnum.DVIC.__doc__ = "Viceland."
+ChannelEnum.DVB1.__doc__ = "PO DVB-H 1."
+ChannelEnum.DVB2.__doc__ = "PO DVB-H 2."
+ChannelEnum.DVB3.__doc__ = "PO DVB-H 3."
+ChannelEnum.NICK.__doc__ = "Nickelodeon."
+ChannelEnum.NIJN.__doc__ = "Nick Jr."
+ChannelEnum.NIKT.__doc__ = "Nick Toons."
+ChannelEnum.NIKH.__doc__ = "Nick Hits."
+ChannelEnum.CART.__doc__ = "Cartoon Network."
+ChannelEnum.BOOM.__doc__ = "Boomerang."
+ChannelEnum.CNN.__doc__ = "CNN."
+ChannelEnum.BBCW.__doc__ = "BBC World."
+ChannelEnum.EURN.__doc__ = "Euronews."
+ChannelEnum.SKNE.__doc__ = "Sky News."
+ChannelEnum.BLOO.__doc__ = "Bloomberg TV."
+ChannelEnum.CNBC.__doc__ = "CNBC Europe."
+ChannelEnum.PALJ.__doc__ = "Al Jazeera Arabic."
+ChannelEnum.ALJA.__doc__ = "Al Jazeera."
+ChannelEnum.FOXN.__doc__ = "Fox News."
+ChannelEnum.FXNL.__doc__ = "Fox Nederland."
+ChannelEnum.MTV.__doc__ = "MTV."
+ChannelEnum.MTV2.__doc__ = "MTV2."
+ChannelEnum.HITS.__doc__ = "MTV Hits."
+ChannelEnum.BASE.__doc__ = "MTV Base."
+ChannelEnum.MTVB.__doc__ = "MTV Brand New."
+ChannelEnum.TMF.__doc__ = "TMF."
+ChannelEnum.TMFN.__doc__ = "TMF NL."
+ChannelEnum.TMFP.__doc__ = "TMF Party."
+ChannelEnum.TMFY.__doc__ = "TMF Pure."
+ChannelEnum.TVOR.__doc__ = "TV Oranje."
+ChannelEnum.VH1_E.__doc__ = "VH-1 (EU)."
+ChannelEnum.VH1_C.__doc__ = "VH-1 Classic."
+ChannelEnum.PERC.__doc__ = "Performance Channel."
+ChannelEnum.MEZZ.__doc__ = "Mezzo."
+ChannelEnum.EURO.__doc__ = "Eurosport."
+ChannelEnum.EUR2.__doc__ = "Eurosport 2."
+ChannelEnum.EXTR.__doc__ = "Extreme Sports Channel (EU)."
+ChannelEnum.MOTO.__doc__ = "Motors TV."
+ChannelEnum.SAIL.__doc__ = "Sailing channel."
+ChannelEnum.ESPN.__doc__ = "ESPN."
+ChannelEnum.NASE.__doc__ = "ESPN America."
+ChannelEnum.SP11.__doc__ = "Sport1.1."
+ChannelEnum.SP12.__doc__ = "Sport1.2."
+ChannelEnum.SP13.__doc__ = "Sport1.3."
+ChannelEnum.SP14.__doc__ = "Sport1.4."
+ChannelEnum.SP15.__doc__ = "Sport1.5."
+ChannelEnum.SP16.__doc__ = "Sport1.6."
+ChannelEnum.SP17.__doc__ = "Sport1.7."
+ChannelEnum.SP18.__doc__ = "Sport1.8."
+ChannelEnum.S1_HD.__doc__ = "Sport1 HD."
+ChannelEnum.FIL1.__doc__ = "Film1.1 pepe."
+ChannelEnum.FIL2.__doc__ = "Film1.2 pepe."
+ChannelEnum.FIL3.__doc__ = "Film1.3 pepe."
+ChannelEnum.FL11.__doc__ = "Film1.1 DI."
+ChannelEnum.FL1_P.__doc__ = "Film1+1 DI."
+ChannelEnum.FL12.__doc__ = "Film1.2 DI."
+ChannelEnum.FL13.__doc__ = "Film1.3 DI."
+ChannelEnum.FLHD.__doc__ = "Film1 HD DI."
+ChannelEnum.MGMM.__doc__ = "MGM Movie Channel."
+ChannelEnum.TCM.__doc__ = "TCM."
+ChannelEnum.HALL.__doc__ = "Hallmark."
+ChannelEnum.ACNW.__doc__ = "Action Now!"
+ChannelEnum.RHUS.__doc__ = "Hustler TV."
+ChannelEnum.PLAY.__doc__ = "Playboy TV."
+ChannelEnum.ADUL.__doc__ = "Adult Channel."
+ChannelEnum.PSPI.__doc__ = "Private Spice."
+ChannelEnum.HUST.__doc__ = "Blue Hustler."
+ChannelEnum.OXMO.__doc__ = "PO X-MO."
+ChannelEnum.XM24.__doc__ = "X-MO DI."
+ChannelEnum.OU24.__doc__ = "PO Out TV."
+ChannelEnum.RAD1.__doc__ = "NPO Radio 1."
+ChannelEnum.RAD2.__doc__ = "NPO Radio 2."
+ChannelEnum.RAD3.__doc__ = "NPO 3FM."
+ChannelEnum.RAD4.__doc__ = "NPO Radio 4."
+ChannelEnum.RAD5.__doc__ = "NPO Radio 5."
+ChannelEnum.RAD6.__doc__ = "NPO Radio 6."
+ChannelEnum.REGR.__doc__ = "Regional radio combi-channel."
+ChannelEnum.RFRY.__doc__ = "Omrop Fryslân radio."
+ChannelEnum.RNOO.__doc__ = "Radio Noord."
+ChannelEnum.ROST.__doc__ = "Radio Oost."
+ChannelEnum.RGEL.__doc__ = "Radio Gelderland."
+ChannelEnum.RFLE.__doc__ = "Radio Flevoland."
+ChannelEnum.RBRA.__doc__ = "Omroep Brabant."
+ChannelEnum.RUTR.__doc__ = "Radio M Utrecht."
+ChannelEnum.RNOH.__doc__ = "Radio Noord-Holland."
+ChannelEnum.RWST.__doc__ = "89,3 Radio West."
+ChannelEnum.RRIJ.__doc__ = "Radio Rijnmond."
+ChannelEnum.LRAD.__doc__ = "L1 Radio."
+ChannelEnum.RZEE.__doc__ = "Omroep Zeeland."
+ChannelEnum.COMM.__doc__ = "Commercial radio combi-channel."
+ChannelEnum.RVER.__doc__ = "Radio Veronica."
+ChannelEnum.SLAM.__doc__ = "SLAM! FM."
+ChannelEnum.SKYR.__doc__ = "Sky Radio."
+ChannelEnum.BNRN.__doc__ = "BNR Nieuwsradio."
+ChannelEnum.KINK.__doc__ = "Kink FM."
+ChannelEnum.PCAZ.__doc__ = "CAZ!."
+ChannelEnum.QMUS.__doc__ = "Qmusic."
+ChannelEnum.R538.__doc__ = "Radio 538."
+ChannelEnum.GOLD.__doc__ = "Radio 10 Gold."
+ChannelEnum.ARRO.__doc__ = "Arrow Classic Rock."
+ChannelEnum.FUNX.__doc__ = "FunX."
+ChannelEnum.FNXA.__doc__ = "FunX Amsterdam."
+ChannelEnum.FNXR.__doc__ = "FunX Rotterdam."
+ChannelEnum.FNXU.__doc__ = "FunX Utrecht."
+ChannelEnum.FNXD.__doc__ = "FunX Den Haag."
+ChannelEnum.FNXAR.__doc__ = "FunX Arab"
+ChannelEnum.FNXDA.__doc__ = "FunX Dance"
+ChannelEnum.FNXHH.__doc__ = "FunX HipHop"
+ChannelEnum.FNXLA.__doc__ = "FunX Latin"
+ChannelEnum.FNXRE.__doc__ = "FunX Reggae"
+ChannelEnum.FNXSJ.__doc__ = "FunX SlowJamz"
+ChannelEnum.CLAS.__doc__ = "Classic FM."
+ChannelEnum.BEL1.__doc__ = "VRT/Radio 1."
+ChannelEnum.BEL2.__doc__ = "VRT/Radio 2."
+ChannelEnum.KLAR.__doc__ = "Klara."
+ChannelEnum.BBR1.__doc__ = "BBC Radio 1."
+ChannelEnum.BBR2.__doc__ = "BBC Radio 2."
+ChannelEnum.BBR3.__doc__ = "BBC Radio 3."
+ChannelEnum.BBR4.__doc__ = "BBC Radio 4."
+ChannelEnum.BBWS.__doc__ = "BBC Worldservice."
+ChannelEnum.BBCX.__doc__ = "BBC 1XTRA."
+ChannelEnum.NDR3.__doc__ = "NDR3."
+ChannelEnum.WDR4.__doc__ = "WDR 4."
+ChannelEnum.WDR3.__doc__ = "WDR3."
+ChannelEnum.ONL1.__doc__ = "NPO Online 1"
+ChannelEnum.OMEG.__doc__ = "Omega TV"
+ChannelEnum.XXXX.__doc__ = (
+    "Test channel. This channel only exist for the sake of testing."
+)
+
+
 class ColorType(Enum):
     COLOR = "COLOR"
     BLACK_AND_WHITE = "BLACK AND WHITE"
@@ -718,20 +700,31 @@ class ColorType(Enum):
 
 
 class ContentRatingType(Enum):
-    """
-    :cvar DISCRIMINATIE: Discrimination. Contains depictions, or material which may encourage, discrimination.
-    :cvar GROF_TAALGEBRUIK: Coarse language.
-    :cvar ANGST: Fear. May be frightening or scary for young children.
-    :cvar GEWELD: Violence. Contains depictions of violence.
-    :cvar SEKS: Sex. Contains nudity and/or sexual behavior or sexual references.
-    :cvar DRUGS_EN_ALCOHOL: Drugs. Refers to or depicts the use of drugs.
-    """
     DISCRIMINATIE = "DISCRIMINATIE"
     GROF_TAALGEBRUIK = "GROF_TAALGEBRUIK"
     ANGST = "ANGST"
     GEWELD = "GEWELD"
     SEKS = "SEKS"
     DRUGS_EN_ALCOHOL = "DRUGS_EN_ALCOHOL"
+
+
+ContentRatingType.DISCRIMINATIE.__doc__ = (
+    "Discrimination. Contains depictions, or material which may encourage, "
+    "discrimination."
+)
+ContentRatingType.GROF_TAALGEBRUIK.__doc__ = "Coarse language."
+ContentRatingType.ANGST.__doc__ = (
+    "Fear. May be frightening or scary for young children."
+)
+ContentRatingType.GEWELD.__doc__ = (
+    "Violence. Contains depictions of violence."
+)
+ContentRatingType.SEKS.__doc__ = (
+    "Sex. Contains nudity and/or sexual behavior or sexual references."
+)
+ContentRatingType.DRUGS_EN_ALCOHOL.__doc__ = (
+    "Drugs. Refers to or depicts the use of drugs."
+)
 
 
 @dataclass
@@ -779,20 +772,30 @@ class GenreType:
 
 
 class GeoRestrictionEnum(Enum):
-    """
-    :cvar NL: Media only playable in the Netherlands.
-    :cvar BENELUX: Media only playable in the Benelux (Belgium, Netherlands, Luxembourg). This is unused.
-    :cvar NLBES: New in 5.6.  Nederland plus BES gemeentes
-    :cvar NLALL: New in 5.6. Nederland plus BES gemeentes plus Curacao, St. Maarten en Aruba
-    :cvar EU: New in 5.6. EU (incl. BES gemeentes, Curacao, St. Maarten en Aruba)
-    :cvar EUROPE: New in 5.6. Europa in breedste zin van het woord
-    """
     NL = "NL"
     BENELUX = "BENELUX"
     NLBES = "NLBES"
     NLALL = "NLALL"
     EU = "EU"
     EUROPE = "EUROPE"
+
+
+GeoRestrictionEnum.NL.__doc__ = "Media only playable in the Netherlands."
+GeoRestrictionEnum.BENELUX.__doc__ = (
+    "Media only playable in the Benelux (Belgium, Netherlands, Luxembourg). "
+    "This is unused."
+)
+GeoRestrictionEnum.NLBES.__doc__ = "New in 5.6.  Nederland plus BES gemeentes"
+GeoRestrictionEnum.NLALL.__doc__ = (
+    "New in 5.6. Nederland plus BES gemeentes plus Curacao, St. Maarten en "
+    "Aruba"
+)
+GeoRestrictionEnum.EU.__doc__ = (
+    "New in 5.6. EU (incl. BES gemeentes, Curacao, St. Maarten en Aruba)"
+)
+GeoRestrictionEnum.EUROPE.__doc__ = (
+    "New in 5.6. Europa in breedste zin van het woord"
+)
 
 
 class GeoRoleType(Enum):
@@ -869,30 +872,6 @@ class LocationTypeEnum(Enum):
 
 
 class MediaTypeEnum(Enum):
-    """
-    :cvar MEDIA: The abstract type denoting every possible media type
-    :cvar GROUP: The abstract type denoting every possible group type
-    :cvar PROGRAM: The abstract type denoting every possible program type
-    :cvar SEGMENTTYPE: The abstract type denoting every possible segment type
-    :cvar STRAND:
-    :cvar ALBUM:
-    :cvar PLAYLIST:
-    :cvar ARCHIVE:
-    :cvar SEASON:
-    :cvar SERIES:
-    :cvar UMBRELLA:
-    :cvar BROADCAST:
-    :cvar MOVIE:
-    :cvar TRAILER:
-    :cvar CLIP:
-    :cvar TRACK:
-    :cvar SEGMENT:
-    :cvar VISUALRADIO:
-    :cvar VISUALRADIOSEGMENT:
-    :cvar PROMO:
-    :cvar RECORDING:
-    :cvar COLLECTION:
-    """
     MEDIA = "MEDIA"
     GROUP = "GROUP"
     PROGRAM = "PROGRAM"
@@ -915,6 +894,20 @@ class MediaTypeEnum(Enum):
     PROMO = "PROMO"
     RECORDING = "RECORDING"
     COLLECTION = "COLLECTION"
+
+
+MediaTypeEnum.MEDIA.__doc__ = (
+    "The abstract type denoting every possible media type"
+)
+MediaTypeEnum.GROUP.__doc__ = (
+    "The abstract type denoting every possible group type"
+)
+MediaTypeEnum.PROGRAM.__doc__ = (
+    "The abstract type denoting every possible program type"
+)
+MediaTypeEnum.SEGMENTTYPE.__doc__ = (
+    "The abstract type denoting every possible segment type"
+)
 
 
 @dataclass
@@ -971,16 +964,15 @@ class PortalRestrictionType:
 
 
 class PredictionStateEnum(Enum):
-    """
-    :cvar NOT_ANNOUNCED: This value is not exposed, it can be present in the database though.
-    :cvar ANNOUNCED:
-    :cvar REALIZED:
-    :cvar REVOKED:
-    """
     NOT_ANNOUNCED = "NOT_ANNOUNCED"
     ANNOUNCED = "ANNOUNCED"
     REALIZED = "REALIZED"
     REVOKED = "REVOKED"
+
+
+PredictionStateEnum.NOT_ANNOUNCED.__doc__ = (
+    "This value is not exposed, it can be present in the database though."
+)
 
 
 class ProgramTypeEnum(Enum):
@@ -1052,26 +1044,6 @@ class RepeatType:
 
 
 class RoleType(Enum):
-    """
-    :cvar DIRECTOR:
-    :cvar CHIEF_EDITOR:
-    :cvar EDITOR:
-    :cvar PRESENTER:
-    :cvar INTERVIEWER:
-    :cvar PRODUCER:
-    :cvar RESEARCH:
-    :cvar GUEST:
-    :cvar REPORTER:
-    :cvar ACTOR:
-    :cvar COMMENTATOR:
-    :cvar SCRIPTWRITER:
-    :cvar COMPOSER:
-    :cvar SUBJECT:
-    :cvar PARTICIPANT:
-    :cvar SIDEKICK: Introduced for MediaConnect sync. This is experimental
-    :cvar NEWS_PRESENTER: Introduced for MediaConnect sync. This is experimental
-    :cvar UNDEFINED:
-    """
     DIRECTOR = "DIRECTOR"
     CHIEF_EDITOR = "CHIEF_EDITOR"
     EDITOR = "EDITOR"
@@ -1090,6 +1062,14 @@ class RoleType(Enum):
     SIDEKICK = "SIDEKICK"
     NEWS_PRESENTER = "NEWS_PRESENTER"
     UNDEFINED = "UNDEFINED"
+
+
+RoleType.SIDEKICK.__doc__ = (
+    "Introduced for MediaConnect sync. This is experimental"
+)
+RoleType.NEWS_PRESENTER.__doc__ = (
+    "Introduced for MediaConnect sync. This is experimental"
+)
 
 
 class ScheduleEventTypeEnum(Enum):
@@ -1692,14 +1672,6 @@ class TopicType:
 
 @dataclass
 class VideoAttributesType:
-    """
-    :ivar color:
-    :ivar video_coding:
-    :ivar aspect_ratio:
-    :ivar height:
-    :ivar heigth: This obviously is a typo.
-    :ivar width:
-    """
     class Meta:
         name = "videoAttributesType"
 
@@ -1736,6 +1708,7 @@ class VideoAttributesType:
         default=None,
         metadata={
             "type": "Attribute",
+            "doc": "This obviously is a typo.",
         }
     )
     width: Optional[int] = field(
@@ -1838,20 +1811,6 @@ class GeoLocationsType:
 
 @dataclass
 class MemberRefType:
-    """
-    :ivar episode_of:
-    :ivar member_of:
-    :ivar segment_of:
-    :ivar mid_ref: Reference to the MID of the parent of this object.
-    :ivar urn_ref: Reference to the URN of the parent of this object. URN's are no longer actively used, but the attribute is
-              still available for backwards compatibility.
-    :ivar crid_ref: Reference to a crid of the parent of this object. This is only used for imports from systems that cannot
-              supply a MID or URN. POMS does not export or publish parent crids.
-    :ivar type:
-    :ivar index:
-    :ivar highlighted:
-    :ivar added:
-    """
     class Meta:
         name = "memberRefType"
 
@@ -1887,6 +1846,7 @@ class MemberRefType:
             "min_length": 4,
             "max_length": 255,
             "pattern": r"[ \.a-zA-Z0-9_-]+",
+            "doc": "Reference to the MID of the parent of this object.",
         }
     )
     urn_ref: Optional[str] = field(
@@ -1894,6 +1854,11 @@ class MemberRefType:
         metadata={
             "name": "urnRef",
             "type": "Attribute",
+            "doc": (
+                "Reference to the URN of the parent of this object. URN's are "
+                "no longer actively used, but the attribute is\nstill "
+                "available for backwards compatibility."
+            ),
         }
     )
     crid_ref: Optional[str] = field(
@@ -1901,6 +1866,11 @@ class MemberRefType:
         metadata={
             "name": "cridRef",
             "type": "Attribute",
+            "doc": (
+                "Reference to a crid of the parent of this object. This is "
+                "only used for imports from systems that cannot\nsupply a MID "
+                "or URN. POMS does not export or publish parent crids."
+            ),
         }
     )
     type: Optional[MediaTypeEnum] = field(
@@ -2338,70 +2308,9 @@ class ScheduleType:
 
 @dataclass
 class BaseMediaType:
-    """This is the abstract base entity for programs, groups and segments. Actually
-    these objects are very similar and share most properties.
+    """This is the abstract base entity for programs, groups and segments.
 
-    :ivar crid: A crid (content reference identifier) is a reference to an entity in another system. E.g. a crid like
-                crid://broadcast.radiobox2/335793 refers to a broadcast with id 335793 in Radiobox. A crid must be a valid
-                URI starting with "crid://". Crids must be unique, but they can be made up freely. It is a good idea to use
-                a logical structure which can easily be associated with another system. Any POMS object can have zero or
-                more crids. They can refer to different systems, but a POMS object could also actually represent more than
-                one entity in a remote system.
-    :ivar broadcaster: One or more broadcasters can be the owner of a POMS media object. This information is meta information about the object, but it is also used
-                for assigning write access to the object in the POMS backend to employees of these given broadcasting companies.
-    :ivar portal: Optionally 'portals' can be assigned to a media object. Portals are also 'owners', and employees can also work for a certain portal.
-                This is because some portal are shared by several broadcasting companies.
-    :ivar exclusive: Besides having portals, which mainly indicates where the object originates, a media object can also be assigned 'portal restrictions'.
-                If a media object has any portal restrictions the media object may only be shown on these portals.
-    :ivar region: Media with a geo restriction can only be played in the indicated region (NL, BENELUX, WORLD). This
-                restriction doesn't apply to the metadata of the media object. It only applies to the actual playable content.
-    :ivar title: A media object has one or more titles. All titles have a type (MAIN, SUB etc.) and an owner (BROADCASTER, MIS etc.).
-                The combination of type and owner is always unique for a particular media object, so a media object cannot
-                have multiple titles of the same type and owner. Titles are sorted in order of the textualTypeEnum and the in order
-                of ownerTypeEnum when published, so the first title in a published document will be a title owned by BROADCASTER of type
-                MAIN, if that title exists.
-    :ivar description: Optional descriptions for the media object. Descriptions have an owner and a type, and are ordered just like titles.
-    :ivar genre:
-    :ivar tag:
-    :ivar intentions:
-    :ivar target_groups:
-    :ivar geo_locations:
-    :ivar topics:
-    :ivar source:
-    :ivar country:
-    :ivar language:
-    :ivar is_dubbed:
-    :ivar available_subtitles:
-    :ivar av_attributes:
-    :ivar release_year:
-    :ivar duration:
-    :ivar credits:
-    :ivar award:
-    :ivar descendant_of:
-    :ivar member_of:
-    :ivar age_rating:
-    :ivar content_rating:
-    :ivar email:
-    :ivar website:
-    :ivar twitter:
-    :ivar teletext:
-    :ivar prediction:
-    :ivar locations:
-    :ivar relation:
-    :ivar images:
-    :ivar mid:
-    :ivar av_type:
-    :ivar sort_date:
-    :ivar embeddable:
-    :ivar has_subtitles:
-    :ivar urn:
-    :ivar publish_start:
-    :ivar publish_stop:
-    :ivar publish_date:
-    :ivar creation_date:
-    :ivar last_modified:
-    :ivar workflow:
-    :ivar merged_to:
+    Actually these objects are very similar and share most properties.
     """
     class Meta:
         name = "baseMediaType"
@@ -2411,6 +2320,18 @@ class BaseMediaType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
+            "doc": (
+                "A crid (content reference identifier) is a reference to an "
+                "entity in another system. E.g. a crid "
+                "like\ncrid://broadcast.radiobox2/335793 refers to a broadcast"
+                " with id 335793 in Radiobox. A crid must be a valid\nURI "
+                "starting with \"crid://\". Crids must be unique, but they can"
+                " be made up freely. It is a good idea to use\na logical "
+                "structure which can easily be associated with another system."
+                " Any POMS object can have zero or\nmore crids. They can refer"
+                " to different systems, but a POMS object could also actually "
+                "represent more than\none entity in a remote system."
+            ),
         }
     )
     broadcaster: List[BroadcasterType] = field(
@@ -2419,6 +2340,13 @@ class BaseMediaType:
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "min_occurs": 1,
+            "doc": (
+                "One or more broadcasters can be the owner of a POMS media "
+                "object. This information is meta information about the "
+                "object, but it is also used\nfor assigning write access to "
+                "the object in the POMS backend to employees of these given "
+                "broadcasting companies."
+            ),
         }
     )
     portal: List[OrganizationType] = field(
@@ -2426,6 +2354,12 @@ class BaseMediaType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
+            "doc": (
+                "Optionally 'portals' can be assigned to a media object. "
+                "Portals are also 'owners', and employees can also work for a "
+                "certain portal.\nThis is because some portal are shared by "
+                "several broadcasting companies."
+            ),
         }
     )
     exclusive: List[PortalRestrictionType] = field(
@@ -2433,6 +2367,13 @@ class BaseMediaType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
+            "doc": (
+                "Besides having portals, which mainly indicates where the "
+                "object originates, a media object can also be assigned "
+                "'portal restrictions'.\nIf a media object has any portal "
+                "restrictions the media object may only be shown on these "
+                "portals."
+            ),
         }
     )
     region: List[GeoRestrictionType] = field(
@@ -2440,6 +2381,12 @@ class BaseMediaType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
+            "doc": (
+                "Media with a geo restriction can only be played in the "
+                "indicated region (NL, BENELUX, WORLD). This\nrestriction "
+                "doesn't apply to the metadata of the media object. It only "
+                "applies to the actual playable content."
+            ),
         }
     )
     title: List[TitleType] = field(
@@ -2448,6 +2395,17 @@ class BaseMediaType:
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "min_occurs": 1,
+            "doc": (
+                "A media object has one or more titles. All titles have a type"
+                " (MAIN, SUB etc.) and an owner (BROADCASTER, MIS etc.).\nThe "
+                "combination of type and owner is always unique for a "
+                "particular media object, so a media object cannot\nhave "
+                "multiple titles of the same type and owner. Titles are sorted"
+                " in order of the textualTypeEnum and the in order\nof "
+                "ownerTypeEnum when published, so the first title in a "
+                "published document will be a title owned by BROADCASTER of "
+                "type\nMAIN, if that title exists."
+            ),
         }
     )
     description: List[DescriptionType] = field(
@@ -2455,6 +2413,10 @@ class BaseMediaType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
+            "doc": (
+                "Optional descriptions for the media object. Descriptions have"
+                " an owner and a type, and are ordered just like titles."
+            ),
         }
     )
     genre: List[GenreType] = field(
@@ -2765,9 +2727,9 @@ class BaseMediaType:
 class Schedule(ScheduleType):
     """Programs of type 'BROADCAST' can contain schedule events.
 
-    A schedule indicates on which channel and at what time the program is
-    broadcast. A schedule is a container which contains the schedule events
-    of different programs, for a certain period of time.
+    A schedule indicates on which channel and at what time the program
+    is broadcast. A schedule is a container which contains the schedule
+    events of different programs, for a certain period of time.
     """
     class Meta:
         name = "schedule"
@@ -2913,12 +2875,6 @@ class GroupTableType:
 
 @dataclass
 class ProgramType(BaseMediaType):
-    """
-    :ivar schedule_events:
-    :ivar episode_of: A program (only if its type is 'BROADCAST') can be an episode of a group of type 'SERIES' or 'SEASON'.
-    :ivar segments:
-    :ivar type: The type of this program (e.g. BROADCAST, TRACK, CLIP)
-    """
     class Meta:
         name = "programType"
 
@@ -2936,6 +2892,10 @@ class ProgramType(BaseMediaType):
             "name": "episodeOf",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
+            "doc": (
+                "A program (only if its type is 'BROADCAST') can be an episode"
+                " of a group of type 'SERIES' or 'SEASON'."
+            ),
         }
     )
     segments: Optional[SegmentsType] = field(
@@ -2950,6 +2910,7 @@ class ProgramType(BaseMediaType):
         metadata={
             "type": "Attribute",
             "required": True,
+            "doc": "The type of this program (e.g. BROADCAST, TRACK, CLIP)",
         }
     )
 
@@ -2959,7 +2920,8 @@ class Program(ProgramType):
     """This is the most used entity in POMS.
 
     It represents e.g. one broadcast program or one web-only clip. It
-    represent a standalone entity which a consumer can view or listen to.
+    represent a standalone entity which a consumer can view or listen
+    to.
     """
     class Meta:
         name = "program"
@@ -2982,15 +2944,6 @@ class ProgramTableType:
 
 @dataclass
 class MediaTableType:
-    """
-    :ivar program_table: A table with all program objects in this container
-    :ivar group_table: A table with all group objects in this container
-    :ivar location_table:
-    :ivar schedule: A table with all schedule information in this container
-    :ivar publisher:
-    :ivar publication_time:
-    :ivar version:
-    """
     class Meta:
         name = "mediaTableType"
 
@@ -3000,6 +2953,7 @@ class MediaTableType:
             "name": "programTable",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
+            "doc": "A table with all program objects in this container",
         }
     )
     group_table: Optional[GroupTableType] = field(
@@ -3008,6 +2962,7 @@ class MediaTableType:
             "name": "groupTable",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
+            "doc": "A table with all group objects in this container",
         }
     )
     location_table: Optional[LocationTableType] = field(
@@ -3023,6 +2978,7 @@ class MediaTableType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
+            "doc": "A table with all schedule information in this container",
         }
     )
     publisher: Optional[str] = field(
@@ -3048,8 +3004,8 @@ class MediaTableType:
 
 @dataclass
 class MediaInformation(MediaTableType):
-    """Base element only used when programs, groups and schedule information need
-    to be bundled in one XML.
+    """Base element only used when programs, groups and schedule information
+    need to be bundled in one XML.
 
     E.g. when distributing to cable companies.
     """

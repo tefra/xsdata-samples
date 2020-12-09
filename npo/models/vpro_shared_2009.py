@@ -68,15 +68,28 @@ class OwnerTypeEnum(Enum):
 
 
 class SubtitlesTypeEnum(Enum):
-    """The type of a subtitles object. TODO these descriptions are provisional?
+    """The type of a subtitles object.
 
-    :cvar CAPTION: The subtitles represent a textual version of what is spoken or wat is happening. They are expected to be in the same language as the video itself. Teletekst 888 subtitles are captions.
-    :cvar TRANSLATION: The subtitles represent a translation. They are expected to be in a different language than the main language that can be heard
-    :cvar TRANSCRIPT: The subtitles represent a precise or automatic version of what is being said.
+    TODO these descriptions are provisional?
     """
     CAPTION = "CAPTION"
     TRANSLATION = "TRANSLATION"
     TRANSCRIPT = "TRANSCRIPT"
+
+
+SubtitlesTypeEnum.CAPTION.__doc__ = (
+    "The subtitles represent a textual version of what is spoken or wat is "
+    "happening. They are expected to be in the same language as the video "
+    "itself. Teletekst 888 subtitles are captions."
+)
+SubtitlesTypeEnum.TRANSLATION.__doc__ = (
+    "The subtitles represent a translation. They are expected to be in a "
+    "different language than the main language that can be heard"
+)
+SubtitlesTypeEnum.TRANSCRIPT.__doc__ = (
+    "The subtitles represent a precise or automatic version of what is being "
+    "said."
+)
 
 
 class SubtitlesWorkflowEnum(Enum):
@@ -91,19 +104,10 @@ class SubtitlesWorkflowEnum(Enum):
 
 
 class WorkflowEnumType(Enum):
-    """These are the possible values of several 'workflow' fields. These serve
-    administrative purposes only. In the Frontent API you should only encounter
-    'PUBLISHED'.
+    """These are the possible values of several 'workflow' fields.
 
-    :cvar FOR_PUBLICATION:
-    :cvar FOR_REPUBLICATION:
-    :cvar PUBLISHED:
-    :cvar PARENT_REVOKED:
-    :cvar REVOKED:
-    :cvar FOR_DELETION:
-    :cvar DELETED:
-    :cvar MERGED:
-    :cvar IGNORE: This means that the object is ignored for workflow changes. This is mainly usefull during testing.
+    These serve administrative purposes only. In the Frontent API you
+    should only encounter 'PUBLISHED'.
     """
     FOR_PUBLICATION = "FOR PUBLICATION"
     FOR_REPUBLICATION = "FOR REPUBLICATION"
@@ -114,6 +118,12 @@ class WorkflowEnumType(Enum):
     DELETED = "DELETED"
     MERGED = "MERGED"
     IGNORE = "IGNORE"
+
+
+WorkflowEnumType.IGNORE.__doc__ = (
+    "This means that the object is ignored for workflow changes. This is "
+    "mainly usefull during testing."
+)
 
 
 @dataclass

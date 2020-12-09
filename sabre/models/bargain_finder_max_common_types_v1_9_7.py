@@ -7,9 +7,7 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
 class AirTripType(Enum):
-    """
-    Identifies the trip type - one way, return, circle trip, open jaw.
-    """
+    """Identifies the trip type - one way, return, circle trip, open jaw."""
     ONE_WAY = "OneWay"
     RETURN_VALUE = "Return"
     CIRCLE = "Circle"
@@ -19,14 +17,16 @@ class AirTripType(Enum):
 
 @dataclass
 class CompanyNameType:
-    """Identifies a company by name.
+    """
+    Identifies a company by name.
 
     Attributes
         value:
         company_short_name:
         travel_sector: Refer to OTA Code List Travel Sector (TVS).
         code: Identifies a company by the company code.
-        code_context: Identifies the context of the identifying code, such as DUNS, IATA or internal code, etc.
+        code_context: Identifies the context of the identifying code, such as
+            DUNS, IATA or internal code, etc.
     """
     value: Optional[str] = field(
         default=None,
@@ -74,7 +74,8 @@ class DepartureOrArrival(Enum):
 
 @dataclass
 class EquipmentType:
-    """Specifies the aircraft equipment type.
+    """
+    Specifies the aircraft equipment type.
 
     Attributes
         value:
@@ -114,7 +115,8 @@ class OutboundOrInbound(Enum):
 
 
 class StayUnitType(Enum):
-    """Defines the 'Units' that can be applied to Stay restrictions.
+    """
+    Defines the 'Units' that can be applied to Stay restrictions.
 
     Attributes
         MINUTES:
@@ -144,16 +146,18 @@ class StayUnitType(Enum):
 
 @dataclass
 class TravelerCountType:
-    """Defines the number of travelers of a specific type (e.g. a driver type can
-    be either one of: Adult, YoungDriver, YoungerDriver, or it may be a code that
-    is acceptable to both Trading Partners).
+    """
+    Defines the number of travelers of a specific type (e.g. a driver type can
+    be either one of: Adult, YoungDriver, YoungerDriver, or it may be a code
+    that is acceptable to both Trading Partners).
 
     Attributes
         age:
         code: Specify traveler type code.
         code_context: Identifies the source authority for the code.
         uri: Identifies the location of the code table
-        quantity: Used to define a quantity of an associated element or attribute.
+        quantity: Used to define a quantity of an associated element or
+            attribute.
     """
     age: Optional[int] = field(
         default=None,
@@ -202,12 +206,15 @@ class TravelerCountType:
 
 @dataclass
 class VoluntaryChangesType:
-    """Specifies charges and/or penalties associated with making ticket changes
+    """
+    Specifies charges and/or penalties associated with making ticket changes
     after purchase.
 
     Attributes
-        penalty: Specifies penalty charges as either a currency amount or a percentage of the fare.
-        vol_change_ind: Indicator used to specify whether voluntary change and other penalties are involved in the search or response.
+        penalty: Specifies penalty charges as either a currency amount or a
+            percentage of the fare.
+        vol_change_ind: Indicator used to specify whether voluntary change and
+            other penalties are involved in the search or response.
     """
     penalty: Optional["VoluntaryChangesType.Penalty"] = field(
         default=None,
@@ -229,12 +236,17 @@ class VoluntaryChangesType:
     class Penalty:
         """
         Attributes
-            penalty_type: Indicates the type of penalty involved in the search or response.
-            departure_status: Identifier used to indicate whether the change occurs before or after departure from the origin city.
+            penalty_type: Indicates the type of penalty involved in the search
+                or response.
+            departure_status: Identifier used to indicate whether the change
+                occurs before or after departure from the origin city.
             amount:
             currency_code: A currency code (e.g. USD, EUR, PLN)
-            decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
-            percent: The penalty charge conveyed as a percent of the total fare.
+            decimal_places: Indicates the number of decimal places for a
+                particular currency. This is equivalent to the ISO 4217
+                standard "minor unit".
+            percent: The penalty charge conveyed as a percent of the total
+                fare.
         """
         penalty_type: Optional[str] = field(
             default=None,
@@ -286,14 +298,17 @@ class VoluntaryChangesType:
 
 @dataclass
 class AdvResTicketingType:
-    """Container used to hold information regarding advance reservation and/or
+    """
+    Container used to hold information regarding advance reservation and/or
     advance ticketing.
 
     Attributes
         adv_reservation: Specifies constraints on date of advance reservations.
         adv_ticketing: Specifies advance ticketing restrictions.
-        adv_res_ind: Indicator for identifying whether or not advance reservation restrictions are involved in the request or response.
-        adv_ticketing_ind: Indicator for identifying whether or not advance ticketing restrictions are involved in the request or response.
+        adv_res_ind: Indicator for identifying whether or not advance
+            reservation restrictions are involved in the request or response.
+        adv_ticketing_ind: Indicator for identifying whether or not advance
+            ticketing restrictions are involved in the request or response.
     """
     adv_reservation: Optional["AdvResTicketingType.AdvReservation"] = field(
         default=None,
@@ -330,9 +345,13 @@ class AdvResTicketingType:
     class AdvReservation:
         """
         Attributes
-            latest_time_of_day: The time of day by which reservations must be made on the last day that advance reservations can be made.
-            latest_period: The amount of elapsed time or number of occurrences of a day of the week before departure needed to satisfy an advance reservation requirement.
-            latest_unit: The unit of elapsed time or the day of the week to be applied to the LatestPeriod value.
+            latest_time_of_day: The time of day by which reservations must be
+                made on the last day that advance reservations can be made.
+            latest_period: The amount of elapsed time or number of occurrences
+                of a day of the week before departure needed to satisfy an
+                advance reservation requirement.
+            latest_unit: The unit of elapsed time or the day of the week to be
+                applied to the LatestPeriod value.
         """
         latest_time_of_day: Optional[str] = field(
             default=None,
@@ -361,12 +380,22 @@ class AdvResTicketingType:
     class AdvTicketing:
         """
         Attributes
-            from_res_time_of_day: The time of day after reservations are made by which a ticket must be purchased.
-            from_res_period: A length of time expressed as either an amount of time or the number of occurrences of a day of the week after reservations are made that a ticket must be purchased.
-            from_res_unit: The unit of elapsed time or the day of the week to be applied to the period after reservation are made that a ticket must be purchased.
-            from_depart_time_of_day: The time of day prior to departure when the ticket must be purchased.
-            from_depart_period: A length of time expressed as either an amount of time or the number of occurrences of a day of the week before departure that a ticket must be purchased.
-            from_depart_unit: The unit of elapsed time or the day of the week to be applied to the the period before departure that a ticket must be purchased.
+            from_res_time_of_day: The time of day after reservations are made
+                by which a ticket must be purchased.
+            from_res_period: A length of time expressed as either an amount of
+                time or the number of occurrences of a day of the week after
+                reservations are made that a ticket must be purchased.
+            from_res_unit: The unit of elapsed time or the day of the week to
+                be applied to the period after reservation are made that a
+                ticket must be purchased.
+            from_depart_time_of_day: The time of day prior to departure when
+                the ticket must be purchased.
+            from_depart_period: A length of time expressed as either an amount
+                of time or the number of occurrences of a day of the week
+                before departure that a ticket must be purchased.
+            from_depart_unit: The unit of elapsed time or the day of the week
+                to be applied to the the period before departure that a ticket
+                must be purchased.
         """
         from_res_time_of_day: Optional[str] = field(
             default=None,
@@ -416,13 +445,14 @@ class AdvResTicketingType:
 
 @dataclass
 class PassengerTypeQuantityType(TravelerCountType):
-    """
-    Specifies a PTC (Passenger Type Code) and the associated number of PTC's - for use in specifying passenger lists.
+    """Specifies a PTC (Passenger Type Code) and the associated number of PTC's - for use in specifying passenger lists.
 
     Attributes
-        tpa_extensions: Additional elements and attributes to be included if required, per Trading Partner Agreement (TPA).
+        tpa_extensions: Additional elements and attributes to be included if
+            required, per Trading Partner Agreement (TPA).
         changeable:
-        index: Allows to identify which one of requested passengers this solution relates to.
+        index: Allows to identify which one of requested passengers this
+            solution relates to.
     """
     tpa_extensions: Optional["PassengerTypeQuantityType.TpaExtensions"] = field(
         default=None,
@@ -455,7 +485,8 @@ class PassengerTypeQuantityType(TravelerCountType):
             age: Exchange-specific
             state: Exchange-specific
             total_number: Exchange-specific
-            voluntary_changes: Identifies whether penalties associated with voluntary changes should be included in the search results.
+            voluntary_changes: Identifies whether penalties associated with
+                voluntary changes should be included in the search results.
         """
         birth_date: Optional["PassengerTypeQuantityType.TpaExtensions.BirthDate"] = field(
             default=None,
@@ -543,11 +574,13 @@ class PassengerTypeQuantityType(TravelerCountType):
 
         @dataclass
         class VoluntaryChanges:
-            """Specifies charges and/or penalties associated with making ticket changes
-            after purchase.
+            """
+            Specifies charges and/or penalties associated with making ticket
+            changes after purchase.
 
             Attributes
-                penalty: Specifies penalty charges as either a currency amount or a percentage of the fare.
+                penalty: Specifies penalty charges as either a currency amount
+                    or a percentage of the fare.
                 match: Indicates relation between conditions.
             """
             penalty: List["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty"] = field(
@@ -571,12 +604,17 @@ class PassengerTypeQuantityType(TravelerCountType):
             class Penalty:
                 """
                 Attributes
-                    type: Indicates the type (Refund or Exchange) of penalty involved in the search or response.
-                    exclude: Indicate that specific penalty type should be excluded from the response.
-                    application: Identifier used to indicate whether the change occurs before or after departure from the origin city.
+                    type: Indicates the type (Refund or Exchange) of penalty
+                        involved in the search or response.
+                    exclude: Indicate that specific penalty type should be
+                        excluded from the response.
+                    application: Identifier used to indicate whether the change
+                        occurs before or after departure from the origin city.
                     amount:
                     currency_code: A currency code (e.g. USD, EUR, PLN)
-                    decimal_places: Indicates the number of decimal places for a particular currency. This is equivalent to the ISO 4217 standard "minor unit".
+                    decimal_places: Indicates the number of decimal places for
+                        a particular currency. This is equivalent to the ISO
+                        4217 standard "minor unit".
                 """
                 type: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty.Type"] = field(
                     default=None,
@@ -632,11 +670,15 @@ class PassengerTypeQuantityType(TravelerCountType):
                     BEFORE = "Before"
 
             class Match(Enum):
-                """Attributes.
-
-                ALL: Conditions are joined by logical conjunction - fare needs to fulfill all the conditions to be returned in response.
-                ANY: Conditions are joined by logical disjunction - fare needs to fulfill at least one of the conditions to be returned in response.
-                INFO: Return penalty information
+                """
+                Attributes
+                    ALL: Conditions are joined by logical conjunction - fare
+                        needs to fulfill all the conditions to be returned in
+                        response.
+                    ANY: Conditions are joined by logical disjunction - fare
+                        needs to fulfill at least one of the conditions to be
+                        returned in response.
+                    INFO: Return penalty information
                 """
                 ALL = "All"
                 ANY = "Any"
@@ -645,11 +687,14 @@ class PassengerTypeQuantityType(TravelerCountType):
 
 @dataclass
 class StayRestrictionsType:
-    """Type defining Min and Max Stay Restrictions.
+    """
+    Type defining Min and Max Stay Restrictions.
 
     Attributes
-        minimum_stay: Specifies restrictions for the shortest length/period of time or earliest day return travel can commence or be completed.
-        maximum_stay: Specifies restrictions for the  longest length/period of time or last day to begin or complete the return.
+        minimum_stay: Specifies restrictions for the shortest length/period of
+            time or earliest day return travel can commence or be completed.
+        maximum_stay: Specifies restrictions for the  longest length/period of
+            time or last day to begin or complete the return.
         stay_restrictions_ind: True indicates that Stay Restrictions exist.
     """
     minimum_stay: Optional["StayRestrictionsType.MinimumStay"] = field(
@@ -680,9 +725,12 @@ class StayRestrictionsType:
     class MinimumStay:
         """
         Attributes
-            return_time_of_day: The time of day when return travel may commence.
-            min_stay: The amount of elapsed time or number of occurrences of a day of the week needed to satisfy a minimum stay requirement.
-            stay_unit: The unit of elapsed time or the day of the week applied to the MinStay value.
+            return_time_of_day: The time of day when return travel may
+                commence.
+            min_stay: The amount of elapsed time or number of occurrences of a
+                day of the week needed to satisfy a minimum stay requirement.
+            stay_unit: The unit of elapsed time or the day of the week applied
+                to the MinStay value.
             min_stay_date: The specific date for the minimum stay requirement.
         """
         return_time_of_day: Optional[str] = field(
@@ -720,10 +768,15 @@ class StayRestrictionsType:
     class MaximumStay:
         """
         Attributes
-            return_type: Code indicating whether travel must commence or be completed in order to satisfy the stay restriction.
-            return_time_of_day: The time of day when return travel may commence.
-            max_stay: The amount of elapsed time or number of occurrences of a day of the week that must occur to satisfy a maximum stay requirement.
-            stay_unit: The unit of elapsed time or the day of the week applied to the MaxStay value.
+            return_type: Code indicating whether travel must commence or be
+                completed in order to satisfy the stay restriction.
+            return_time_of_day: The time of day when return travel may
+                commence.
+            max_stay: The amount of elapsed time or number of occurrences of a
+                day of the week that must occur to satisfy a maximum stay
+                requirement.
+            stay_unit: The unit of elapsed time or the day of the week applied
+                to the MaxStay value.
             max_stay_date: The specific date for the maximum stay requirement.
         """
         return_type: Optional["StayRestrictionsType.MaximumStay.ReturnType"] = field(
