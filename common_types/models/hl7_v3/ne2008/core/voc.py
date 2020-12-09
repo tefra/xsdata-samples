@@ -4,27 +4,21 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 class Abenakian(Enum):
-    """
-    abstDomain: A18174 (C-0-T18130-A18131-A18132-A18171-A18174-cpt)
-    """
+    """abstDomain: A18174 (C-0-T18130-A18131-A18132-A18171-A18174-cpt)"""
     X_AAQ = "x-AAQ"
     X_MAC = "x-MAC"
     X_ABE = "x-ABE"
 
 
 class AcknowledgementCondition(Enum):
-    """
-    vocSet: T155 (C-0-T155-cpt)
-    """
+    """vocSet: T155 (C-0-T155-cpt)"""
     AL = "AL"
     ER = "ER"
     NE = "NE"
 
 
 class AcknowledgementDetailCode(Enum):
-    """
-    vocSet: T19638 (C-0-T19638-cpt)
-    """
+    """vocSet: T19638 (C-0-T19638-cpt)"""
     NS260 = "NS260"
     NS261 = "NS261"
     NS200 = "NS200"
@@ -47,9 +41,7 @@ class AcknowledgementDetailCode(Enum):
 
 
 class AcknowledgementDetailNotSupportedCode(Enum):
-    """
-    abstDomain: A19640 (C-0-T19638-A19640-cpt)
-    """
+    """abstDomain: A19640 (C-0-T19638-A19640-cpt)"""
     NS260 = "NS260"
     NS261 = "NS261"
     NS200 = "NS200"
@@ -59,9 +51,7 @@ class AcknowledgementDetailNotSupportedCode(Enum):
 
 
 class AcknowledgementDetailSyntaxErrorCode(Enum):
-    """
-    specDomain: S22075 (C-0-T19638-S22075-cpt)
-    """
+    """specDomain: S22075 (C-0-T19638-S22075-cpt)"""
     SYN = "SYN"
     SYN102 = "SYN102"
     SYN104 = "SYN104"
@@ -73,18 +63,14 @@ class AcknowledgementDetailSyntaxErrorCode(Enum):
 
 
 class AcknowledgementDetailType(Enum):
-    """
-    vocSet: T19358 (C-0-T19358-cpt)
-    """
+    """vocSet: T19358 (C-0-T19358-cpt)"""
     E = "E"
     I = "I"
     W = "W"
 
 
 class AcknowledgementType(Enum):
-    """
-    vocSet: T8 (C-0-T8-cpt)
-    """
+    """vocSet: T8 (C-0-T8-cpt)"""
     CA = "CA"
     CE = "CE"
     CR = "CR"
@@ -94,9 +80,7 @@ class AcknowledgementType(Enum):
 
 
 class ActAccommodationReason(Enum):
-    """
-    abstDomain: A17425 (C-0-T14878-A17425-cpt)
-    """
+    """abstDomain: A17425 (C-0-T14878-A17425-cpt)"""
     ACCREQNA = "ACCREQNA"
     FLRCNV = "FLRCNV"
     MEDNEC = "MEDNEC"
@@ -104,9 +88,7 @@ class ActAccommodationReason(Enum):
 
 
 class ActAccountCode(Enum):
-    """
-    abstDomain: A14809 (C-0-T13953-A13954-A14809-cpt)
-    """
+    """abstDomain: A14809 (C-0-T13953-A13954-A14809-cpt)"""
     AE = "AE"
     DN = "DN"
     DV = "DV"
@@ -118,9 +100,7 @@ class ActAccountCode(Enum):
 
 
 class ActAdjudicationCode(Enum):
-    """
-    abstDomain: A17616 (C-0-T13953-A13954-A17616-cpt)
-    """
+    """abstDomain: A17616 (C-0-T13953-A13954-A17616-cpt)"""
     AA = "AA"
     ANF = "ANF"
     AR = "AR"
@@ -128,9 +108,7 @@ class ActAdjudicationCode(Enum):
 
 
 class ActAdjudicationGroupCode(Enum):
-    """
-    abstDomain: A17968 (C-0-T13953-A13954-A17968-cpt)
-    """
+    """abstDomain: A17968 (C-0-T13953-A13954-A17968-cpt)"""
     CONT = "CONT"
     DAY = "DAY"
     LOC = "LOC"
@@ -142,17 +120,13 @@ class ActAdjudicationGroupCode(Enum):
 
 
 class ActAdjudicationResultActionCode(Enum):
-    """
-    abstDomain: A17472 (C-0-T13953-A13954-A17472-cpt)
-    """
+    """abstDomain: A17472 (C-0-T13953-A13954-A17472-cpt)"""
     DISPLAY = "DISPLAY"
     FORM = "FORM"
 
 
 class ActAdministrativeAuthorizationDetectedIssueCode(Enum):
-    """
-    abstDomain: A19620 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-cpt)
-    """
+    """abstDomain: A19620 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-cpt)"""
     CODE_INVAL = "CODE_INVAL"
     CODE_DEPREC = "CODE_DEPREC"
     DUPTHPY = "DUPTHPY"
@@ -198,25 +172,19 @@ class ActAdministrativeAuthorizationDetectedIssueCode(Enum):
 
 
 class ActAdministrativeRuleDetectedIssueCode(Enum):
-    """
-    abstDomain: A19621 (C-0-T14878-A19692-A19781-A16124-A19429-A19621-cpt)
-    """
+    """abstDomain: A19621 (C-0-T14878-A19692-A19781-A16124-A19429-A19621-cpt)"""
     KEY205 = "KEY205"
     KEY204 = "KEY204"
 
 
 class ActBillableModifierCode(Enum):
-    """
-    abstDomain: A19821 (C-0-T13953-A13954-A19821-cpt)
-    """
+    """abstDomain: A19821 (C-0-T13953-A13954-A19821-cpt)"""
     CPTM = "CPTM"
     HCPCSA = "HCPCSA"
 
 
 class ActBillingArrangementCode(Enum):
-    """
-    abstDomain: A17478 (C-0-T13953-A13954-A17478-cpt)
-    """
+    """abstDomain: A17478 (C-0-T13953-A13954-A17478-cpt)"""
     FFS = "FFS"
     FFCS = "FFCS"
     TFS = "TFS"
@@ -230,17 +198,13 @@ class ActBillingArrangementCode(Enum):
 
 
 class ActBoundedRoicode(Enum):
-    """
-    abstDomain: A17896 (C-0-T13953-A13954-A17896-cpt)
-    """
+    """abstDomain: A17896 (C-0-T13953-A13954-A17896-cpt)"""
     ROIFS = "ROIFS"
     ROIPS = "ROIPS"
 
 
 class ActClass(Enum):
-    """
-    vocSet: T11527 (C-0-T11527-cpt)
-    """
+    """vocSet: T11527 (C-0-T11527-cpt)"""
     PCPR = "PCPR"
     ENC = "ENC"
     DOCCLIN = "DOCCLIN"
@@ -338,25 +302,19 @@ class ActClass(Enum):
 
 
 class ActClassCareProvision(Enum):
-    """
-    specDomain: S18964 (C-0-T11527-S13856-S18964-cpt)
-    """
+    """specDomain: S18964 (C-0-T11527-S13856-S18964-cpt)"""
     PCPR = "PCPR"
     ENC = "ENC"
 
 
 class ActClassClinicalDocument(Enum):
-    """
-    specDomain: S13948 (C-0-T11527-S13856-A19445-S20083-S18938-S13948-cpt)
-    """
+    """specDomain: S13948 (C-0-T11527-S13856-A19445-S20083-S18938-S13948-cpt)"""
     DOCCLIN = "DOCCLIN"
     CDALVLONE = "CDALVLONE"
 
 
 class ActClassComposition(Enum):
-    """
-    specDomain: S20083 (C-0-T11527-S13856-A19445-S20083-cpt)
-    """
+    """specDomain: S20083 (C-0-T11527-S13856-A19445-S20083-cpt)"""
     DOCCLIN = "DOCCLIN"
     CDALVLONE = "CDALVLONE"
     DOC = "DOC"
@@ -364,18 +322,14 @@ class ActClassComposition(Enum):
 
 
 class ActClassCondition(Enum):
-    """
-    specDomain: S18862 (C-0-T11527-S13856-S11529-S18862-cpt)
-    """
+    """specDomain: S18862 (C-0-T11527-S13856-S11529-S18862-cpt)"""
     CASE = "CASE"
     OUTB = "OUTB"
     COND = "COND"
 
 
 class ActClassContainer(Enum):
-    """
-    abstDomain: A19445 (C-0-T11527-S13856-A19445-cpt)
-    """
+    """abstDomain: A19445 (C-0-T11527-S13856-A19445-cpt)"""
     DOCCLIN = "DOCCLIN"
     CDALVLONE = "CDALVLONE"
     DOC = "DOC"
@@ -394,18 +348,14 @@ class ActClassContainer(Enum):
 
 
 class ActClassContract(Enum):
-    """
-    specDomain: S14002 (C-0-T11527-S13856-S14002-cpt)
-    """
+    """specDomain: S14002 (C-0-T11527-S13856-S14002-cpt)"""
     FCNTRCT = "FCNTRCT"
     COV = "COV"
     CNTRCT = "CNTRCT"
 
 
 class ActClassControlAct(Enum):
-    """
-    specDomain: S11534 (C-0-T11527-S13856-S11534-cpt)
-    """
+    """specDomain: S11534 (C-0-T11527-S13856-S11534-cpt)"""
     CACT = "CACT"
     ACTN = "ACTN"
     INFO = "INFO"
@@ -413,52 +363,40 @@ class ActClassControlAct(Enum):
 
 
 class ActClassDocument(Enum):
-    """
-    specDomain: S18938 (C-0-T11527-S13856-A19445-S20083-S18938-cpt)
-    """
+    """specDomain: S18938 (C-0-T11527-S13856-A19445-S20083-S18938-cpt)"""
     DOCCLIN = "DOCCLIN"
     CDALVLONE = "CDALVLONE"
     DOC = "DOC"
 
 
 class ActClassEntry(Enum):
-    """
-    specDomain: S20087 (C-0-T11527-S13856-A19445-S20087-cpt)
-    """
+    """specDomain: S20087 (C-0-T11527-S13856-A19445-S20087-cpt)"""
     ENTRY = "ENTRY"
     CLUSTER = "CLUSTER"
     BATTERY = "BATTERY"
 
 
 class ActClassExposure(Enum):
-    """
-    specDomain: S21980 (C-0-T11527-S13856-S21980-cpt)
-    """
+    """specDomain: S21980 (C-0-T11527-S13856-S21980-cpt)"""
     EXPOS = "EXPOS"
     AEXPOS = "AEXPOS"
     TEXPOS = "TEXPOS"
 
 
 class ActClassExtract(Enum):
-    """
-    specDomain: S20080 (C-0-T11527-S13856-A19445-S20080-cpt)
-    """
+    """specDomain: S20080 (C-0-T11527-S13856-A19445-S20080-cpt)"""
     EXTRACT = "EXTRACT"
     EHR = "EHR"
 
 
 class ActClassFinancialContract(Enum):
-    """
-    specDomain: S14003 (C-0-T11527-S13856-S14002-S14003-cpt)
-    """
+    """specDomain: S14003 (C-0-T11527-S13856-S14002-S14003-cpt)"""
     FCNTRCT = "FCNTRCT"
     COV = "COV"
 
 
 class ActClassGenomicObservation(Enum):
-    """
-    specDomain: S21997 (C-0-T11527-S13856-S11529-S21997-cpt)
-    """
+    """specDomain: S21997 (C-0-T11527-S13856-S11529-S21997-cpt)"""
     GEN = "GEN"
     SEQ = "SEQ"
     SEQVAR = "SEQVAR"
@@ -470,9 +408,7 @@ class ActClassGenomicObservation(Enum):
 
 
 class ActClassObservation(Enum):
-    """
-    specDomain: S11529 (C-0-T11527-S13856-S11529-cpt)
-    """
+    """specDomain: S11529 (C-0-T11527-S13856-S11529-cpt)"""
     CASE = "CASE"
     OUTB = "OUTB"
     COND = "COND"
@@ -512,17 +448,13 @@ class ActClassObservation(Enum):
 
 
 class ActClassObservationSeries(Enum):
-    """
-    specDomain: S18875 (C-0-T11527-S13856-S11529-S18875-cpt)
-    """
+    """specDomain: S18875 (C-0-T11527-S13856-S11529-S18875-cpt)"""
     OBSSER = "OBSSER"
     OBSCOR = "OBSCOR"
 
 
 class ActClassOrganizer(Enum):
-    """
-    specDomain: S20084 (C-0-T11527-S13856-A19445-S20084-cpt)
-    """
+    """specDomain: S20084 (C-0-T11527-S13856-A19445-S20084-cpt)"""
     ORGANIZER = "ORGANIZER"
     CATEGORY = "CATEGORY"
     DOCBODY = "DOCBODY"
@@ -531,9 +463,7 @@ class ActClassOrganizer(Enum):
 
 
 class ActClassPolicy(Enum):
-    """
-    specDomain: S21981 (C-0-T11527-S13856-S21981-cpt)
-    """
+    """specDomain: S21981 (C-0-T11527-S13856-S21981-cpt)"""
     POLICY = "POLICY"
     JURISPOL = "JURISPOL"
     ORGPOL = "ORGPOL"
@@ -542,42 +472,32 @@ class ActClassPolicy(Enum):
 
 
 class ActClassPosition(Enum):
-    """
-    specDomain: S21646 (C-0-T11527-S13856-S11529-S21646-cpt)
-    """
+    """specDomain: S21646 (C-0-T11527-S13856-S11529-S21646-cpt)"""
     POS = "POS"
     POSACC = "POSACC"
     POSCOORD = "POSCOORD"
 
 
 class ActClassProcedure(Enum):
-    """
-    specDomain: S11532 (C-0-T11527-S13856-S11532-cpt)
-    """
+    """specDomain: S11532 (C-0-T11527-S13856-S11532-cpt)"""
     PROC = "PROC"
     SPECCOLLECT = "SPECCOLLECT"
 
 
 class ActClassPublicHealthCase(Enum):
-    """
-    specDomain: S11530 (C-0-T11527-S13856-S11529-S18862-S11530-cpt)
-    """
+    """specDomain: S11530 (C-0-T11527-S13856-S11529-S18862-S11530-cpt)"""
     CASE = "CASE"
     OUTB = "OUTB"
 
 
 class ActClassRoi(Enum):
-    """
-    abstDomain: A17893 (C-0-T11527-S13856-S11529-A17893-cpt)
-    """
+    """abstDomain: A17893 (C-0-T11527-S13856-S11529-A17893-cpt)"""
     ROIBND = "ROIBND"
     ROIOVL = "ROIOVL"
 
 
 class ActClassRoot(Enum):
-    """
-    specDomain: S13856 (C-0-T11527-S13856-cpt)
-    """
+    """specDomain: S13856 (C-0-T11527-S13856-cpt)"""
     PCPR = "PCPR"
     ENC = "ENC"
     DOCCLIN = "DOCCLIN"
@@ -675,9 +595,7 @@ class ActClassRoot(Enum):
 
 
 class ActClassSubjectBodyPosition(Enum):
-    """
-    abstDomain: A19798 (C-0-T11527-S13856-S11529-A19796-A19798-cpt)
-    """
+    """abstDomain: A19798 (C-0-T11527-S13856-S11529-A19796-A19798-cpt)"""
     SUP = "SUP"
     RTRD = "RTRD"
     TRD = "TRD"
@@ -690,9 +608,7 @@ class ActClassSubjectBodyPosition(Enum):
 
 
 class ActClassSubjectPhysicalPosition(Enum):
-    """
-    abstDomain: A19796 (C-0-T11527-S13856-S11529-A19796-cpt)
-    """
+    """abstDomain: A19796 (C-0-T11527-S13856-S11529-A19796-cpt)"""
     SUP = "SUP"
     RTRD = "RTRD"
     TRD = "TRD"
@@ -706,26 +622,20 @@ class ActClassSubjectPhysicalPosition(Enum):
 
 
 class ActClassSupine(Enum):
-    """
-    specDomain: S21935 (C-0-T11527-S13856-S11529-A19796-A19798-S21935-cpt)
-    """
+    """specDomain: S21935 (C-0-T11527-S13856-S11529-A19796-A19798-S21935-cpt)"""
     SUP = "SUP"
     RTRD = "RTRD"
     TRD = "TRD"
 
 
 class ActClassSupply(Enum):
-    """
-    specDomain: S11535 (C-0-T11527-S13856-S11535-cpt)
-    """
+    """specDomain: S11535 (C-0-T11527-S13856-S11535-cpt)"""
     SPLY = "SPLY"
     DIET = "DIET"
 
 
 class ActConditionList(Enum):
-    """
-    specDomain: S21322 (C-0-T13953-A13954-A19364-A19370-S21322-cpt)
-    """
+    """specDomain: S21322 (C-0-T13953-A13954-A19364-A19370-S21322-cpt)"""
     CONDLIST = "CONDLIST"
     INTOLIST = "INTOLIST"
     PROBLIST = "PROBLIST"
@@ -733,9 +643,7 @@ class ActConditionList(Enum):
 
 
 class ActConsentInformationAccessOverrideReason(Enum):
-    """
-    abstDomain: A19894 (C-0-T14878-A19894-cpt)
-    """
+    """abstDomain: A19894 (C-0-T14878-A19894-cpt)"""
     OVRER = "OVRER"
     OVRPJ = "OVRPJ"
     OVRPS = "OVRPS"
@@ -743,9 +651,7 @@ class ActConsentInformationAccessOverrideReason(Enum):
 
 
 class ActConsentType(Enum):
-    """
-    abstDomain: A19897 (C-0-T13953-A19897-cpt)
-    """
+    """abstDomain: A19897 (C-0-T13953-A19897-cpt)"""
     INFA = "INFA"
     INFASO = "INFASO"
     INFAO = "INFAO"
@@ -758,9 +664,7 @@ class ActConsentType(Enum):
 
 
 class ActContainerRegistrationCode(Enum):
-    """
-    abstDomain: A14058 (C-0-T13953-A13954-A14058-cpt)
-    """
+    """abstDomain: A14058 (C-0-T13953-A13954-A14058-cpt)"""
     X = "X"
     ID = "ID"
     IP = "IP"
@@ -771,26 +675,20 @@ class ActContainerRegistrationCode(Enum):
 
 
 class ActCoverageAuthorizationConfirmationCode(Enum):
-    """
-    abstDomain: A17491 (C-0-T13953-A13954-A17487-A17491-cpt)
-    """
+    """abstDomain: A17491 (C-0-T13953-A13954-A17487-A17491-cpt)"""
     AUTH = "AUTH"
     NAUTH = "NAUTH"
 
 
 class ActCoverageMaximaCodes(Enum):
-    """
-    specDomain: S22239 (C-0-T13953-A13954-A17496-S22239-cpt)
-    """
+    """specDomain: S22239 (C-0-T13953-A13954-A17496-S22239-cpt)"""
     COVMX = "COVMX"
     LFEMX = "LFEMX"
     PRDMX = "PRDMX"
 
 
 class ActCoverageQuantityLimitCode(Enum):
-    """
-    abstDomain: A19933 (C-0-T13953-A13954-A17496-A19933-cpt)
-    """
+    """abstDomain: A19933 (C-0-T13953-A13954-A17496-A19933-cpt)"""
     NETAMT = "NETAMT"
     UNITPRICE = "UNITPRICE"
     UNITQTY = "UNITQTY"
@@ -800,9 +698,7 @@ class ActCoverageQuantityLimitCode(Enum):
 
 
 class ActCredentialedCareProvisionPersonCode(Enum):
-    """
-    abstDomain: A19791 (C-0-T13953-A19789-A19790-A19791-cpt)
-    """
+    """abstDomain: A19791 (C-0-T13953-A19789-A19790-A19791-cpt)"""
     CPGC = "CPGC"
     CAMC = "CAMC"
     CAIC = "CAIC"
@@ -844,9 +740,7 @@ class ActCredentialedCareProvisionPersonCode(Enum):
 
 
 class ActCredentialedCareProvisionProgramCode(Enum):
-    """
-    abstDomain: A19792 (C-0-T13953-A19789-A19790-A19792-cpt)
-    """
+    """abstDomain: A19792 (C-0-T13953-A19789-A19790-A19792-cpt)"""
     AAMC = "AAMC"
     AALC = "AALC"
     ABHC = "ABHC"
@@ -889,9 +783,7 @@ class ActCredentialedCareProvisionProgramCode(Enum):
 
 
 class ActDietCode(Enum):
-    """
-    abstDomain: A10376 (C-0-T13953-A13954-A10376-cpt)
-    """
+    """abstDomain: A10376 (C-0-T13953-A13954-A10376-cpt)"""
     BR = "BR"
     DM = "DM"
     FAST = "FAST"
@@ -911,9 +803,7 @@ class ActDietCode(Enum):
 
 
 class ActEncounterCode(Enum):
-    """
-    abstDomain: A13955 (C-0-T13953-A19820-A13955-cpt)
-    """
+    """abstDomain: A13955 (C-0-T13953-A19820-A13955-cpt)"""
     IMP = "IMP"
     ACUTE = "ACUTE"
     NONAC = "NONAC"
@@ -941,9 +831,7 @@ class ActEncounterCode(Enum):
 
 
 class ActExposureCode(Enum):
-    """
-    abstDomain: A19938 (C-0-T13953-A13954-A19938-cpt)
-    """
+    """abstDomain: A19938 (C-0-T13953-A13954-A19938-cpt)"""
     HOMECARE = "HOMECARE"
     CONVEYNC = "CONVEYNC"
     PLACE = "PLACE"
@@ -964,26 +852,20 @@ class ActExposureCode(Enum):
 
 
 class ActExposureLevelCode(Enum):
-    """
-    vocSet: T19939 (C-0-T19939-cpt)
-    """
+    """vocSet: T19939 (C-0-T19939-cpt)"""
     HIGH = "HIGH"
     LOW = "LOW"
     MEDIUM = "MEDIUM"
 
 
 class ActFinancialTransactionCode(Enum):
-    """
-    abstDomain: A14804 (C-0-T13953-A13954-A14804-cpt)
-    """
+    """abstDomain: A14804 (C-0-T13953-A13954-A14804-cpt)"""
     CHRG = "CHRG"
     REV = "REV"
 
 
 class ActHealthInsuranceTypeCode(Enum):
-    """
-    abstDomain: A19857 (C-0-T13953-A13954-A19855-A19856-A19857-cpt)
-    """
+    """abstDomain: A19857 (C-0-T13953-A13954-A19855-A19856-A19857-cpt)"""
     MCPOL = "MCPOL"
     HMO = "HMO"
     POS = "POS"
@@ -1001,27 +883,21 @@ class ActHealthInsuranceTypeCode(Enum):
 
 
 class ActIneligibilityReason(Enum):
-    """
-    abstDomain: A19355 (C-0-T14878-A19871-A19694-A19355-cpt)
-    """
+    """abstDomain: A19355 (C-0-T14878-A19871-A19694-A19355-cpt)"""
     COVSUS = "COVSUS"
     DECSD = "DECSD"
     REGERR = "REGERR"
 
 
 class ActInformationAccess(Enum):
-    """
-    specDomain: S22200 (C-0-T13953-A19897-S22200-cpt)
-    """
+    """specDomain: S22200 (C-0-T13953-A19897-S22200-cpt)"""
     INFA = "INFA"
     INFASO = "INFASO"
     INFAO = "INFAO"
 
 
 class ActInformationAccessCode(Enum):
-    """
-    abstDomain: A19910 (C-0-T13953-A19910-cpt)
-    """
+    """abstDomain: A19910 (C-0-T13953-A19910-cpt)"""
     ACADR = "ACADR"
     ACALLG = "ACALLG"
     ACOBS = "ACOBS"
@@ -1036,9 +912,7 @@ class ActInformationAccessCode(Enum):
 
 
 class ActInformationAccessContextCode(Enum):
-    """
-    abstDomain: A19928 (C-0-T13953-A13954-A19928-cpt)
-    """
+    """abstDomain: A19928 (C-0-T13953-A13954-A19928-cpt)"""
     INFCON = "INFCON"
     INFDNG = "INFDNG"
     INFPWR = "INFPWR"
@@ -1047,9 +921,7 @@ class ActInformationAccessContextCode(Enum):
 
 
 class ActInformationCategoryCode(Enum):
-    """
-    abstDomain: A19752 (C-0-T13953-A19752-cpt)
-    """
+    """abstDomain: A19752 (C-0-T13953-A19752-cpt)"""
     ALLGCAT = "ALLGCAT"
     COBSCAT = "COBSCAT"
     DEMOCAT = "DEMOCAT"
@@ -1062,18 +934,14 @@ class ActInformationCategoryCode(Enum):
 
 
 class ActInpatientEncounterCode(Enum):
-    """
-    specDomain: S16847 (C-0-T13953-A19820-A13955-S16847-cpt)
-    """
+    """specDomain: S16847 (C-0-T13953-A19820-A13955-S16847-cpt)"""
     IMP = "IMP"
     ACUTE = "ACUTE"
     NONAC = "NONAC"
 
 
 class ActInsurancePolicyCode(Enum):
-    """
-    abstDomain: A19350 (C-0-T13953-A13954-A19855-A19350-cpt)
-    """
+    """abstDomain: A19350 (C-0-T13953-A13954-A19855-A19350-cpt)"""
     AUTOPOL = "AUTOPOL"
     COL = "COL"
     UNINSMOT = "UNINSMOT"
@@ -1096,18 +964,14 @@ class ActInsurancePolicyCode(Enum):
 
 
 class ActInsurancePolicyCodeAutomobileByBot(Enum):
-    """
-    specDomain: S19721 (C-0-T13953-A13954-A19855-A19350-S19721-cpt)
-    """
+    """specDomain: S19721 (C-0-T13953-A13954-A19855-A19350-S19721-cpt)"""
     AUTOPOL = "AUTOPOL"
     COL = "COL"
     UNINSMOT = "UNINSMOT"
 
 
 class ActInsurancePolicyCodeDiseaseProgramByBot(Enum):
-    """
-    specDomain: S22133 (C-0-T13953-A13954-A19855-A19350-S19718-S22133-cpt)
-    """
+    """specDomain: S22133 (C-0-T13953-A13954-A19855-A19350-S19718-S22133-cpt)"""
     DISEASEPRG = "DISEASEPRG"
     HIVAIDS = "HIVAIDS"
     CANPRG = "CANPRG"
@@ -1115,9 +979,7 @@ class ActInsurancePolicyCodeDiseaseProgramByBot(Enum):
 
 
 class ActInsurancePolicyCodePublicHealthcareByBot(Enum):
-    """
-    specDomain: S19718 (C-0-T13953-A13954-A19855-A19350-S19718-cpt)
-    """
+    """specDomain: S19718 (C-0-T13953-A13954-A19855-A19350-S19718-cpt)"""
     DISEASEPRG = "DISEASEPRG"
     HIVAIDS = "HIVAIDS"
     CANPRG = "CANPRG"
@@ -1134,18 +996,14 @@ class ActInsurancePolicyCodePublicHealthcareByBot(Enum):
 
 
 class ActInsurancePolicyCodeSubsidizedHealthProgramByBot(Enum):
-    """
-    specDomain: S22137 (C-0-T13953-A13954-A19855-A19350-S19718-S22137-cpt)
-    """
+    """specDomain: S22137 (C-0-T13953-A13954-A19855-A19350-S19718-S22137-cpt)"""
     SUBSIDIZ = "SUBSIDIZ"
     SUBSIDMC = "SUBSIDMC"
     SUBSUPP = "SUBSUPP"
 
 
 class ActInsuranceTypeCode(Enum):
-    """
-    abstDomain: A19856 (C-0-T13953-A13954-A19855-A19856-cpt)
-    """
+    """abstDomain: A19856 (C-0-T13953-A13954-A19855-A19856-cpt)"""
     MCPOL = "MCPOL"
     HMO = "HMO"
     POS = "POS"
@@ -1177,9 +1035,7 @@ class ActInsuranceTypeCode(Enum):
 
 
 class ActInvoiceAdjudicationPaymentSummaryCode(Enum):
-    """
-    abstDomain: A19413 (C-0-T13953-A13954-A19397-A19412-A19413-cpt)
-    """
+    """abstDomain: A19413 (C-0-T13953-A13954-A19397-A19412-A19413-cpt)"""
     CONT = "CONT"
     DAY = "DAY"
     INVTYPE = "INVTYPE"
@@ -1195,9 +1051,7 @@ class ActInvoiceAdjudicationPaymentSummaryCode(Enum):
 
 
 class ActInvoiceDetailGenericAdjudicatorCode(Enum):
-    """
-    abstDomain: A19411 (C-0-T13953-A13954-A19397-A19401-A19415-A19407-A19411-cpt)
-    """
+    """abstDomain: A19411 (C-0-T13953-A13954-A19397-A19401-A19415-A19407-A19411-cpt)"""
     COIN = "COIN"
     DEDUCTIBLE = "DEDUCTIBLE"
     COPAYMENT = "COPAYMENT"
@@ -1206,18 +1060,14 @@ class ActInvoiceDetailGenericAdjudicatorCode(Enum):
 
 
 class ActInvoiceDetailGenericModifierCode(Enum):
-    """
-    abstDomain: A19410 (C-0-T13953-A13954-A19397-A19401-A19415-A19407-A19410-cpt)
-    """
+    """abstDomain: A19410 (C-0-T13953-A13954-A19397-A19401-A19415-A19407-A19410-cpt)"""
     ISOL = "ISOL"
     AFTHRS = "AFTHRS"
     OOO = "OOO"
 
 
 class ActInvoiceDetailGenericProviderCode(Enum):
-    """
-    abstDomain: A19408 (C-0-T13953-A13954-A19397-A19401-A19415-A19407-A19408-cpt)
-    """
+    """abstDomain: A19408 (C-0-T13953-A13954-A19397-A19401-A19415-A19407-A19408-cpt)"""
     CANCAPT = "CANCAPT"
     DSC = "DSC"
     ESA = "ESA"
@@ -1234,18 +1084,14 @@ class ActInvoiceDetailGenericProviderCode(Enum):
 
 
 class ActInvoiceDetailTaxCode(Enum):
-    """
-    abstDomain: A19409 (C-0-T13953-A13954-A19397-A19401-A19415-A19407-A19409-cpt)
-    """
+    """abstDomain: A19409 (C-0-T13953-A13954-A19397-A19401-A19415-A19407-A19409-cpt)"""
     FST = "FST"
     HST = "HST"
     PST = "PST"
 
 
 class ActInvoiceElementModifier(Enum):
-    """
-    vocSet: T17704 (C-0-T17704-cpt)
-    """
+    """vocSet: T17704 (C-0-T17704-cpt)"""
     EFORM = "EFORM"
     FAX = "FAX"
     LINV = "LINV"
@@ -1253,9 +1099,7 @@ class ActInvoiceElementModifier(Enum):
 
 
 class ActInvoiceInterGroupCode(Enum):
-    """
-    abstDomain: A19400 (C-0-T13953-A13954-A19397-A19398-A19400-cpt)
-    """
+    """abstDomain: A19400 (C-0-T13953-A13954-A19397-A19398-A19400-cpt)"""
     CPNDDRGING = "CPNDDRGING"
     CPNDINDING = "CPNDINDING"
     CPNDSUPING = "CPNDSUPING"
@@ -1266,9 +1110,7 @@ class ActInvoiceInterGroupCode(Enum):
 
 
 class ActInvoiceOverrideCode(Enum):
-    """
-    abstDomain: A17590 (C-0-T13953-A13954-A17590-cpt)
-    """
+    """abstDomain: A17590 (C-0-T13953-A13954-A17590-cpt)"""
     COVGE = "COVGE"
     PYRDELAY = "PYRDELAY"
     EFORM = "EFORM"
@@ -1287,9 +1129,7 @@ class ActInvoiceOverrideCode(Enum):
 
 
 class ActInvoicePaymentCode(Enum):
-    """
-    abstDomain: A19673 (C-0-T13953-A19673-cpt)
-    """
+    """abstDomain: A19673 (C-0-T13953-A19673-cpt)"""
     BONUS = "BONUS"
     CFWD = "CFWD"
     EPYMT = "EPYMT"
@@ -1305,9 +1145,7 @@ class ActInvoicePaymentCode(Enum):
 
 
 class ActInvoiceRootGroupCode(Enum):
-    """
-    abstDomain: A19399 (C-0-T13953-A13954-A19397-A19398-A19399-cpt)
-    """
+    """abstDomain: A19399 (C-0-T13953-A13954-A19397-A19398-A19399-cpt)"""
     RXCINV = "RXCINV"
     RXDINV = "RXDINV"
     CPINV = "CPINV"
@@ -1321,9 +1159,7 @@ class ActInvoiceRootGroupCode(Enum):
 
 
 class ActMedicalServiceCode(Enum):
-    """
-    abstDomain: A17449 (C-0-T13953-A19820-A13955-A17449-cpt)
-    """
+    """abstDomain: A17449 (C-0-T13953-A19820-A13955-A17449-cpt)"""
     ALC = "ALC"
     CARD = "CARD"
     CHR = "CHR"
@@ -1342,9 +1178,7 @@ class ActMedicalServiceCode(Enum):
 
 
 class ActMedicationList(Enum):
-    """
-    specDomain: S19976 (C-0-T13953-A13954-A19364-S19976-cpt)
-    """
+    """specDomain: S19976 (C-0-T13953-A13954-A19364-S19976-cpt)"""
     MEDLIST = "MEDLIST"
     CURMEDLIST = "CURMEDLIST"
     DISCMEDLIST = "DISCMEDLIST"
@@ -1352,9 +1186,7 @@ class ActMedicationList(Enum):
 
 
 class ActMedicationTherapyDurationWorkingListCode(Enum):
-    """
-    abstDomain: A19788 (C-0-T13953-A13954-A19364-A19710-A19788-cpt)
-    """
+    """abstDomain: A19788 (C-0-T13953-A13954-A19364-A19710-A19788-cpt)"""
     PRN = "PRN"
     CHRON = "CHRON"
     ONET = "ONET"
@@ -1362,9 +1194,7 @@ class ActMedicationTherapyDurationWorkingListCode(Enum):
 
 
 class ActMood(Enum):
-    """
-    vocSet: T10196 (C-0-T10196-cpt)
-    """
+    """vocSet: T10196 (C-0-T10196-cpt)"""
     PRP = "PRP"
     RMD = "RMD"
     INT_VALUE = "INT"
@@ -1386,9 +1216,7 @@ class ActMood(Enum):
 
 
 class ActMoodCompletionTrack(Enum):
-    """
-    abstDomain: A10197 (C-0-T10196-A10197-cpt)
-    """
+    """abstDomain: A10197 (C-0-T10196-A10197-cpt)"""
     PRP = "PRP"
     RMD = "RMD"
     INT_VALUE = "INT"
@@ -1402,17 +1230,13 @@ class ActMoodCompletionTrack(Enum):
 
 
 class ActMoodCriterion(Enum):
-    """
-    specDomain: S22042 (C-0-T10196-A10202-S22042-cpt)
-    """
+    """specDomain: S22042 (C-0-T10196-A10202-S22042-cpt)"""
     CRT = "CRT"
     EVN_CRT = "EVN.CRT"
 
 
 class ActMoodIntent(Enum):
-    """
-    specDomain: S10199 (C-0-T10196-A10197-S10199-cpt)
-    """
+    """specDomain: S10199 (C-0-T10196-A10197-S10199-cpt)"""
     PRP = "PRP"
     RMD = "RMD"
     INT_VALUE = "INT"
@@ -1424,9 +1248,7 @@ class ActMoodIntent(Enum):
 
 
 class ActMoodPredicate(Enum):
-    """
-    abstDomain: A10202 (C-0-T10196-A10202-cpt)
-    """
+    """abstDomain: A10202 (C-0-T10196-A10202-cpt)"""
     CRT = "CRT"
     EVN_CRT = "EVN.CRT"
     GOL = "GOL"
@@ -1438,17 +1260,13 @@ class ActMoodPredicate(Enum):
 
 
 class ActMoodProposal(Enum):
-    """
-    specDomain: S16726 (C-0-T10196-A10197-S10199-S16726-cpt)
-    """
+    """specDomain: S16726 (C-0-T10196-A10197-S10199-S16726-cpt)"""
     PRP = "PRP"
     RMD = "RMD"
 
 
 class ActNoImmunizationReason(Enum):
-    """
-    abstDomain: A19717 (C-0-T14878-A19717-cpt)
-    """
+    """abstDomain: A19717 (C-0-T14878-A19717-cpt)"""
     IMMUNE = "IMMUNE"
     MEDPREC = "MEDPREC"
     OSTOCK = "OSTOCK"
@@ -1460,9 +1278,7 @@ class ActNoImmunizationReason(Enum):
 
 
 class ActNonObservationIndicationCode(Enum):
-    """
-    abstDomain: A19778 (C-0-T13953-A19778-cpt)
-    """
+    """abstDomain: A19778 (C-0-T13953-A19778-cpt)"""
     IND02 = "IND02"
     IND01 = "IND01"
     IND05 = "IND05"
@@ -1471,9 +1287,7 @@ class ActNonObservationIndicationCode(Enum):
 
 
 class ActObservationList(Enum):
-    """
-    abstDomain: A19370 (C-0-T13953-A13954-A19364-A19370-cpt)
-    """
+    """abstDomain: A19370 (C-0-T13953-A13954-A19364-A19370-cpt)"""
     CONDLIST = "CONDLIST"
     INTOLIST = "INTOLIST"
     PROBLIST = "PROBLIST"
@@ -1483,9 +1297,7 @@ class ActObservationList(Enum):
 
 
 class ActPatientTransportationModeCode(Enum):
-    """
-    abstDomain: A19733 (C-0-T13953-A19820-A19732-A19733-cpt)
-    """
+    """abstDomain: A19733 (C-0-T13953-A19820-A19732-A19733-cpt)"""
     AMBT = "AMBT"
     AMBAIR = "AMBAIR"
     AMBGRND = "AMBGRND"
@@ -1497,9 +1309,7 @@ class ActPatientTransportationModeCode(Enum):
 
 
 class ActPaymentCode(Enum):
-    """
-    abstDomain: A17610 (C-0-T13953-A13954-A17610-cpt)
-    """
+    """abstDomain: A17610 (C-0-T13953-A13954-A17610-cpt)"""
     ACH = "ACH"
     CHK = "CHK"
     DDP = "DDP"
@@ -1507,9 +1317,7 @@ class ActPaymentCode(Enum):
 
 
 class ActPharmacySupplyType(Enum):
-    """
-    abstDomain: A16208 (C-0-T13953-A13954-A16208-cpt)
-    """
+    """abstDomain: A16208 (C-0-T13953-A13954-A16208-cpt)"""
     EM = "EM"
     SO = "SO"
     FFC = "FFC"
@@ -1537,16 +1345,12 @@ class ActPharmacySupplyType(Enum):
 
 
 class ActPolicyType(Enum):
-    """
-    abstDomain: A19886 (C-0-T13953-A13954-A19886-cpt)
-    """
+    """abstDomain: A19886 (C-0-T13953-A13954-A19886-cpt)"""
     COVPOL = "COVPOL"
 
 
 class ActPriority(Enum):
-    """
-    vocSet: T16866 (C-0-T16866-cpt)
-    """
+    """vocSet: T16866 (C-0-T16866-cpt)"""
     CS = "CS"
     CSP = "CSP"
     CSR = "CSR"
@@ -1565,18 +1369,14 @@ class ActPriority(Enum):
 
 
 class ActPriorityCallback(Enum):
-    """
-    specDomain: S16871 (C-0-T16866-S16871-cpt)
-    """
+    """specDomain: S16871 (C-0-T16866-S16871-cpt)"""
     CS = "CS"
     CSP = "CSP"
     CSR = "CSR"
 
 
 class ActProgramTypeCode(Enum):
-    """
-    abstDomain: A19858 (C-0-T13953-A13954-A19855-A19858-cpt)
-    """
+    """abstDomain: A19858 (C-0-T13953-A13954-A19855-A19858-cpt)"""
     DISEASEPRG = "DISEASEPRG"
     HIVAIDS = "HIVAIDS"
     CANPRG = "CANPRG"
@@ -1604,9 +1404,7 @@ class ActProgramTypeCode(Enum):
 
 
 class ActRelationshipCheckpoint(Enum):
-    """
-    vocSet: T10349 (C-0-T10349-cpt)
-    """
+    """vocSet: T10349 (C-0-T10349-cpt)"""
     B = "B"
     E = "E"
     S = "S"
@@ -1615,9 +1413,7 @@ class ActRelationshipCheckpoint(Enum):
 
 
 class ActRelationshipConditional(Enum):
-    """
-    abstDomain: A18977 (C-0-T10317-A18977-cpt)
-    """
+    """abstDomain: A18977 (C-0-T10317-A18977-cpt)"""
     MITGT = "MITGT"
     RCVY = "RCVY"
     RSON = "RSON"
@@ -1633,25 +1429,19 @@ class ActRelationshipConditional(Enum):
 
 
 class ActRelationshipCostTracking(Enum):
-    """
-    abstDomain: A19610 (C-0-T10317-S10329-A14900-A19610-cpt)
-    """
+    """abstDomain: A19610 (C-0-T10317-S10329-A14900-A19610-cpt)"""
     CHRG = "CHRG"
     COST = "COST"
 
 
 class ActRelationshipExcerpt(Enum):
-    """
-    specDomain: S18660 (C-0-T10317-S10337-S18660-cpt)
-    """
+    """specDomain: S18660 (C-0-T10317-S10337-S18660-cpt)"""
     XCRPT = "XCRPT"
     VRXCRPT = "VRXCRPT"
 
 
 class ActRelationshipFulfills(Enum):
-    """
-    specDomain: S10342 (C-0-T10317-S10337-S10342-cpt)
-    """
+    """specDomain: S10342 (C-0-T10317-S10337-S10342-cpt)"""
     FLFS = "FLFS"
     OCCR = "OCCR"
     OREF = "OREF"
@@ -1659,9 +1449,7 @@ class ActRelationshipFulfills(Enum):
 
 
 class ActRelationshipHasComponent(Enum):
-    """
-    specDomain: S10318 (C-0-T10317-S10318-cpt)
-    """
+    """specDomain: S10318 (C-0-T10317-S10318-cpt)"""
     COMP = "COMP"
     ARR = "ARR"
     DEP = "DEP"
@@ -1669,17 +1457,13 @@ class ActRelationshipHasComponent(Enum):
 
 
 class ActRelationshipHasSupport(Enum):
-    """
-    specDomain: S10330 (C-0-T10317-S10329-S10330-cpt)
-    """
+    """specDomain: S10330 (C-0-T10317-S10329-S10330-cpt)"""
     SPRT = "SPRT"
     SPRTBND = "SPRTBND"
 
 
 class ActRelationshipJoin(Enum):
-    """
-    vocSet: T10360 (C-0-T10360-cpt)
-    """
+    """vocSet: T10360 (C-0-T10360-cpt)"""
     D = "D"
     X = "X"
     K = "K"
@@ -1687,25 +1471,19 @@ class ActRelationshipJoin(Enum):
 
 
 class ActRelationshipMitigates(Enum):
-    """
-    specDomain: S19986 (C-0-T10317-A18977-S10321-S19986-cpt)
-    """
+    """specDomain: S19986 (C-0-T10317-A18977-S10321-S19986-cpt)"""
     MITGT = "MITGT"
     RCVY = "RCVY"
 
 
 class ActRelationshipObjective(Enum):
-    """
-    abstDomain: A19617 (C-0-T10317-S10324-A19617-cpt)
-    """
+    """abstDomain: A19617 (C-0-T10317-S10324-A19617-cpt)"""
     OBJC = "OBJC"
     OBJF = "OBJF"
 
 
 class ActRelationshipOutcome(Enum):
-    """
-    specDomain: S10324 (C-0-T10317-S10324-cpt)
-    """
+    """specDomain: S10324 (C-0-T10317-S10324-cpt)"""
     OBJC = "OBJC"
     OBJF = "OBJF"
     OUTC = "OUTC"
@@ -1714,17 +1492,13 @@ class ActRelationshipOutcome(Enum):
 
 
 class ActRelationshipPosting(Enum):
-    """
-    abstDomain: A19609 (C-0-T10317-S10329-A14900-A19609-cpt)
-    """
+    """abstDomain: A19609 (C-0-T10317-S10329-A14900-A19609-cpt)"""
     CREDIT = "CREDIT"
     DEBIT = "DEBIT"
 
 
 class ActRelationshipReason(Enum):
-    """
-    specDomain: S10321 (C-0-T10317-A18977-S10321-cpt)
-    """
+    """specDomain: S10321 (C-0-T10317-A18977-S10321-cpt)"""
     MITGT = "MITGT"
     RCVY = "RCVY"
     RSON = "RSON"
@@ -1737,9 +1511,7 @@ class ActRelationshipReason(Enum):
 
 
 class ActRelationshipSequel(Enum):
-    """
-    specDomain: S10337 (C-0-T10317-S10337-cpt)
-    """
+    """specDomain: S10337 (C-0-T10317-S10337-cpt)"""
     XCRPT = "XCRPT"
     VRXCRPT = "VRXCRPT"
     FLFS = "FLFS"
@@ -1764,9 +1536,7 @@ class ActRelationshipSequel(Enum):
 
 
 class ActRelationshipSplit(Enum):
-    """
-    vocSet: T10355 (C-0-T10355-cpt)
-    """
+    """vocSet: T10355 (C-0-T10355-cpt)"""
     E1 = "E1"
     EW = "EW"
     I1 = "I1"
@@ -1774,9 +1544,7 @@ class ActRelationshipSplit(Enum):
 
 
 class ActRelationshipSubset(Enum):
-    """
-    vocSet: T19613 (C-0-T19613-cpt)
-    """
+    """vocSet: T19613 (C-0-T19613-cpt)"""
     FUTURE = "FUTURE"
     LAST = "LAST"
     NEXT = "NEXT"
@@ -1791,26 +1559,20 @@ class ActRelationshipSubset(Enum):
 
 
 class ActRelationshipTemporallyPertains(Enum):
-    """
-    abstDomain: A19587 (C-0-T10317-S10329-A19587-cpt)
-    """
+    """abstDomain: A19587 (C-0-T10317-S10329-A19587-cpt)"""
     SAE = "SAE"
     SAS = "SAS"
 
 
 class ActResearchInformationAccess(Enum):
-    """
-    specDomain: S22206 (C-0-T13953-A19897-S22206-cpt)
-    """
+    """specDomain: S22206 (C-0-T13953-A19897-S22206-cpt)"""
     RESEARCH = "RESEARCH"
     RSDID = "RSDID"
     RSREID = "RSREID"
 
 
 class ActSpecObsCode(Enum):
-    """
-    abstDomain: A13957 (C-0-T13953-A13954-A13957-cpt)
-    """
+    """abstDomain: A13957 (C-0-T13953-A13954-A13957-cpt)"""
     DILUTION = "DILUTION"
     AUTO_HIGH = "AUTO-HIGH"
     AUTO_LOW = "AUTO-LOW"
@@ -1831,9 +1593,7 @@ class ActSpecObsCode(Enum):
 
 
 class ActSpecObsDilutionCode(Enum):
-    """
-    specDomain: S14352 (C-0-T13953-A13954-A13957-S14352-cpt)
-    """
+    """specDomain: S14352 (C-0-T13953-A13954-A13957-S14352-cpt)"""
     DILUTION = "DILUTION"
     AUTO_HIGH = "AUTO-HIGH"
     AUTO_LOW = "AUTO-LOW"
@@ -1842,9 +1602,7 @@ class ActSpecObsDilutionCode(Enum):
 
 
 class ActSpecObsInterferenceCode(Enum):
-    """
-    specDomain: S14382 (C-0-T13953-A13954-A13957-S14382-cpt)
-    """
+    """specDomain: S14382 (C-0-T13953-A13954-A13957-S14382-cpt)"""
     INTFR = "INTFR"
     FIBRIN = "FIBRIN"
     HEMOLYSIS = "HEMOLYSIS"
@@ -1853,9 +1611,7 @@ class ActSpecObsInterferenceCode(Enum):
 
 
 class ActSpecObsVolumeCode(Enum):
-    """
-    specDomain: S14369 (C-0-T13953-A13954-A13957-S14369-cpt)
-    """
+    """specDomain: S14369 (C-0-T13953-A13954-A13957-S14369-cpt)"""
     VOLUME = "VOLUME"
     AVAILABLE = "AVAILABLE"
     CONSUMPTION = "CONSUMPTION"
@@ -1864,18 +1620,14 @@ class ActSpecObsVolumeCode(Enum):
 
 
 class ActSpecimenTransportCode(Enum):
-    """
-    abstDomain: A19663 (C-0-T13953-A19656-A19663-cpt)
-    """
+    """abstDomain: A19663 (C-0-T13953-A19656-A19663-cpt)"""
     SSTOR = "SSTOR"
     STRAN = "STRAN"
     SREC = "SREC"
 
 
 class ActSpecimenTreatmentCode(Enum):
-    """
-    abstDomain: A14040 (C-0-T13953-A13954-A14040-cpt)
-    """
+    """abstDomain: A14040 (C-0-T13953-A13954-A14040-cpt)"""
     ACID = "ACID"
     ALK = "ALK"
     DEFB = "DEFB"
@@ -1887,9 +1639,7 @@ class ActSpecimenTreatmentCode(Enum):
 
 
 class ActStatus(Enum):
-    """
-    vocSet: T15933 (C-0-T15933-cpt)
-    """
+    """vocSet: T15933 (C-0-T15933-cpt)"""
     NORMAL = "normal"
     ABORTED = "aborted"
     ACTIVE = "active"
@@ -1903,9 +1653,7 @@ class ActStatus(Enum):
 
 
 class ActStatusNormal(Enum):
-    """
-    specDomain: S15936 (C-0-T15933-S15936-cpt)
-    """
+    """specDomain: S15936 (C-0-T15933-S15936-cpt)"""
     NORMAL = "normal"
     ABORTED = "aborted"
     ACTIVE = "active"
@@ -1917,9 +1665,7 @@ class ActStatusNormal(Enum):
 
 
 class ActSubstanceAdminSubstitutionCode(Enum):
-    """
-    abstDomain: A16621 (C-0-T13953-A13954-A16621-cpt)
-    """
+    """abstDomain: A16621 (C-0-T13953-A13954-A16621-cpt)"""
     G = "G"
     TE = "TE"
     F = "F"
@@ -1927,9 +1673,7 @@ class ActSubstanceAdminSubstitutionCode(Enum):
 
 
 class ActSubstanceAdministrationCode(Enum):
-    """
-    abstDomain: A19708 (C-0-T13953-A13954-A19708-cpt)
-    """
+    """abstDomain: A19708 (C-0-T13953-A13954-A19708-cpt)"""
     IMMUNIZ = "IMMUNIZ"
     BOOSTER = "BOOSTER"
     INITIMMUNIZ = "INITIMMUNIZ"
@@ -1937,18 +1681,14 @@ class ActSubstanceAdministrationCode(Enum):
 
 
 class ActSubstanceAdministrationImmunizationCode(Enum):
-    """
-    specDomain: S21519 (C-0-T13953-A13954-A19708-S21519-cpt)
-    """
+    """specDomain: S21519 (C-0-T13953-A13954-A19708-S21519-cpt)"""
     IMMUNIZ = "IMMUNIZ"
     BOOSTER = "BOOSTER"
     INITIMMUNIZ = "INITIMMUNIZ"
 
 
 class ActSupplyFulfillmentRefusalReason(Enum):
-    """
-    abstDomain: A19718 (C-0-T14878-A19718-cpt)
-    """
+    """abstDomain: A19718 (C-0-T14878-A19718-cpt)"""
     FRR05 = "FRR05"
     FRR03 = "FRR03"
     FRR01 = "FRR01"
@@ -1958,9 +1698,7 @@ class ActSupplyFulfillmentRefusalReason(Enum):
 
 
 class ActTaskClinicalNoteEntryCode(Enum):
-    """
-    specDomain: S22068 (C-0-T13953-A19846-S22067-S22068-cpt)
-    """
+    """specDomain: S22068 (C-0-T13953-A19846-S22067-S22068-cpt)"""
     CLINNOTEE = "CLINNOTEE"
     DIAGLISTE = "DIAGLISTE"
     DISCHSUME = "DISCHSUME"
@@ -1970,43 +1708,33 @@ class ActTaskClinicalNoteEntryCode(Enum):
 
 
 class ActTaskClinicalNoteReviewCode(Enum):
-    """
-    specDomain: S22065 (C-0-T13953-A19846-S22051-S22065-cpt)
-    """
+    """specDomain: S22065 (C-0-T13953-A19846-S22051-S22065-cpt)"""
     CLINNOTEREV = "CLINNOTEREV"
     DISCHSUMREV = "DISCHSUMREV"
 
 
 class ActTaskMedicationListReviewCode(Enum):
-    """
-    specDomain: S22053 (C-0-T13953-A19846-S22051-S22053-cpt)
-    """
+    """specDomain: S22053 (C-0-T13953-A19846-S22051-S22053-cpt)"""
     MLREV = "MLREV"
     MARWLREV = "MARWLREV"
 
 
 class ActTaskMicrobiologyResultsReviewCode(Enum):
-    """
-    specDomain: S22056 (C-0-T13953-A19846-S22051-S22056-cpt)
-    """
+    """specDomain: S22056 (C-0-T13953-A19846-S22051-S22056-cpt)"""
     MICRORREV = "MICRORREV"
     MICROORGRREV = "MICROORGRREV"
     MICROSENSRREV = "MICROSENSRREV"
 
 
 class ActTaskOrderEntryCode(Enum):
-    """
-    specDomain: S22048 (C-0-T13953-A19846-S22048-cpt)
-    """
+    """specDomain: S22048 (C-0-T13953-A19846-S22048-cpt)"""
     OE = "OE"
     LABOE = "LABOE"
     MEDOE = "MEDOE"
 
 
 class ActTaskPatientDocumentationCode(Enum):
-    """
-    specDomain: S22067 (C-0-T13953-A19846-S22067-cpt)
-    """
+    """specDomain: S22067 (C-0-T13953-A19846-S22067-cpt)"""
     CLINNOTEE = "CLINNOTEE"
     DIAGLISTE = "DIAGLISTE"
     DISCHSUME = "DISCHSUME"
@@ -2017,9 +1745,7 @@ class ActTaskPatientDocumentationCode(Enum):
 
 
 class ActTaskPatientInformationReviewCode(Enum):
-    """
-    specDomain: S22051 (C-0-T13953-A19846-S22051-cpt)
-    """
+    """specDomain: S22051 (C-0-T13953-A19846-S22051-cpt)"""
     CLINNOTEREV = "CLINNOTEREV"
     DISCHSUMREV = "DISCHSUMREV"
     MLREV = "MLREV"
@@ -2039,41 +1765,31 @@ class ActTaskPatientInformationReviewCode(Enum):
 
 
 class ActTaskRiskAssessmentInstrumentCode(Enum):
-    """
-    specDomain: S22063 (C-0-T13953-A19846-S22051-S22063-cpt)
-    """
+    """specDomain: S22063 (C-0-T13953-A19846-S22051-S22063-cpt)"""
     RISKASSESS = "RISKASSESS"
     FALLRISK = "FALLRISK"
 
 
 class ActUncertainty(Enum):
-    """
-    vocSet: T16899 (C-0-T16899-cpt)
-    """
+    """vocSet: T16899 (C-0-T16899-cpt)"""
     N = "N"
     U = "U"
 
 
 class ActiveEditStatus(Enum):
-    """
-    specDomain: S11042 (C-0-T11040-S11042-cpt)
-    """
+    """specDomain: S11042 (C-0-T11040-S11042-cpt)"""
     A = "A"
 
 
 class AdditionalLocator(Enum):
-    """
-    specDomain: S10651 (C-0-T10642-S10651-cpt)
-    """
+    """specDomain: S10651 (C-0-T10642-S10651-cpt)"""
     ADL = "ADL"
     UNIT = "UNIT"
     UNID = "UNID"
 
 
 class AddressPartType(Enum):
-    """
-    vocSet: T10642 (C-0-T10642-cpt)
-    """
+    """vocSet: T10642 (C-0-T10642-cpt)"""
     ADL = "ADL"
     UNIT = "UNIT"
     UNID = "UNID"
@@ -2104,9 +1820,7 @@ class AddressPartType(Enum):
 
 
 class AddressUse(Enum):
-    """
-    abstDomain: A190 (C-0-T201-A190-cpt)
-    """
+    """abstDomain: A190 (C-0-T201-A190-cpt)"""
     H = "H"
     HP = "HP"
     HV = "HV"
@@ -2118,17 +1832,13 @@ class AddressUse(Enum):
 
 
 class AdjudicatedWithAdjustments(Enum):
-    """
-    specDomain: S19347 (C-0-T13953-A13954-A17616-S19347-cpt)
-    """
+    """specDomain: S19347 (C-0-T13953-A13954-A17616-S19347-cpt)"""
     AA = "AA"
     ANF = "ANF"
 
 
 class AdministrableDrugForm(Enum):
-    """
-    abstDomain: A14570 (C-0-T19651-A14411-A14570-cpt)
-    """
+    """abstDomain: A14570 (C-0-T19651-A14411-A14570-cpt)"""
     DROP = "DROP"
     NDROP = "NDROP"
     OPDROP = "OPDROP"
@@ -2141,18 +1851,14 @@ class AdministrableDrugForm(Enum):
 
 
 class AdministrationDetectedIssueCodeDuplicateTherapyAlertByBot(Enum):
-    """
-    specDomain: S16688 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16688-cpt)
-    """
+    """specDomain: S16688 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16688-cpt)"""
     DUPTHPY = "DUPTHPY"
     DUPTHPGEN = "DUPTHPGEN"
     DUPTHPCLS = "DUPTHPCLS"
 
 
 class AdministrationMedicalDevice(Enum):
-    """
-    abstDomain: A16189 (C-0-T16040-A16041-A19867-A16188-A16189-cpt)
-    """
+    """abstDomain: A16189 (C-0-T16040-A16041-A19867-A16188-A16189-cpt)"""
     INH = "INH"
     DSKUNH = "DSKUNH"
     DSKS = "DSKS"
@@ -2165,36 +1871,28 @@ class AdministrationMedicalDevice(Enum):
 
 
 class AdministrativeContactRoleType(Enum):
-    """
-    abstDomain: A17622 (C-0-T12206-A15920-A17622-cpt)
-    """
+    """abstDomain: A17622 (C-0-T12206-A15920-A17622-cpt)"""
     BILL = "BILL"
     PAYOR = "PAYOR"
     ORG = "ORG"
 
 
 class AdministrativeGender(Enum):
-    """
-    vocSet: T1 (C-0-T1-cpt)
-    """
+    """vocSet: T1 (C-0-T1-cpt)"""
     F = "F"
     M = "M"
     UN = "UN"
 
 
 class AdoptedChild(Enum):
-    """
-    specDomain: S11564 (C-0-T12206-A19563-S17926-S16360-S11564-cpt)
-    """
+    """specDomain: S11564 (C-0-T12206-A19563-S17926-S16360-S11564-cpt)"""
     CHLDADOPT = "CHLDADOPT"
     DAUADOPT = "DAUADOPT"
     SONADOPT = "SONADOPT"
 
 
 class AerosolDrugForm(Enum):
-    """
-    specDomain: S14551 (C-0-T19651-A14411-A14412-A14545-S14551-cpt)
-    """
+    """specDomain: S14551 (C-0-T19651-A14411-A14412-A14545-S14551-cpt)"""
     AER = "AER"
     BAINHL = "BAINHL"
     INHLSOL = "INHLSOL"
@@ -2203,18 +1901,14 @@ class AerosolDrugForm(Enum):
 
 
 class AgeDetectedIssueCode(Enum):
-    """
-    specDomain: S16669 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-S16669-cpt)
-    """
+    """specDomain: S16669 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-S16669-cpt)"""
     AGE = "AGE"
     DOSEHINDA = "DOSEHINDA"
     DOSELINDA = "DOSELINDA"
 
 
 class AgenciesProviderCodes(Enum):
-    """
-    specDomain: S20669 (C-0-T19465-S20669-cpt)
-    """
+    """specDomain: S20669 (C-0-T19465-S20669-cpt)"""
     VALUE_250000000_X = "250000000X"
     VALUE_251_B00000_X = "251B00000X"
     VALUE_251_C00000_X = "251C00000X"
@@ -2227,33 +1921,25 @@ class AgenciesProviderCodes(Enum):
 
 
 class Aleut(Enum):
-    """
-    abstDomain: A18221 (C-0-T18130-A18191-A18221-cpt)
-    """
+    """abstDomain: A18221 (C-0-T18130-A18191-A18221-cpt)"""
     X_ALW = "x-ALW"
 
 
 class AlgorithmicDecisionObservationMethod(Enum):
-    """
-    specDomain: S19992 (C-0-T14079-A19378-S19992-cpt)
-    """
+    """specDomain: S19992 (C-0-T14079-A19378-S19992-cpt)"""
     ALGM = "ALGM"
     BYCL = "BYCL"
 
 
 class AllergyandImmunologyProviderCodes(Enum):
-    """
-    specDomain: S20097 (C-0-T19465-S20096-S20097-cpt)
-    """
+    """specDomain: S20097 (C-0-T19465-S20096-S20097-cpt)"""
     VALUE_207_K00000_X = "207K00000X"
     VALUE_207_KA0200_X = "207KA0200X"
     VALUE_207_KI0005_X = "207KI0005X"
 
 
 class AllopathicandOsteopathicPhysiciansProviderCodes(Enum):
-    """
-    specDomain: S20096 (C-0-T19465-S20096-cpt)
-    """
+    """specDomain: S20096 (C-0-T19465-S20096-cpt)"""
     VALUE_207_K00000_X = "207K00000X"
     VALUE_207_KA0200_X = "207KA0200X"
     VALUE_207_KI0005_X = "207KI0005X"
@@ -2436,9 +2122,7 @@ class AllopathicandOsteopathicPhysiciansProviderCodes(Enum):
 
 
 class Ambulance(Enum):
-    """
-    specDomain: S21547 (C-0-T13953-A19820-A19732-A19733-S21547-cpt)
-    """
+    """specDomain: S21547 (C-0-T13953-A19820-A19732-A19733-S21547-cpt)"""
     AMBT = "AMBT"
     AMBAIR = "AMBAIR"
     AMBGRND = "AMBGRND"
@@ -2446,18 +2130,14 @@ class Ambulance(Enum):
 
 
 class AmbulanceHipaa(Enum):
-    """
-    abstDomain: A13850 (C-0-T13129-A13715-A13849-A13850-cpt)
-    """
+    """abstDomain: A13850 (C-0-T13129-A13715-A13849-A13850-cpt)"""
     VALUE_3416_A0800_N = "3416A0800N"
     VALUE_3416_L0300_N = "3416L0300N"
     VALUE_3416_S0300_N = "3416S0300N"
 
 
 class AmbulanceProviderCodes(Enum):
-    """
-    specDomain: S20789 (C-0-T19465-S20788-S20789-cpt)
-    """
+    """specDomain: S20789 (C-0-T19465-S20788-S20789-cpt)"""
     VALUE_341600000_X = "341600000X"
     VALUE_3416_A0800_X = "3416A0800X"
     VALUE_3416_L0300_X = "3416L0300X"
@@ -2465,9 +2145,7 @@ class AmbulanceProviderCodes(Enum):
 
 
 class AmbulatoryClinicOrCenterHipaa(Enum):
-    """
-    abstDomain: A13726 (C-0-T13129-A13715-A13725-A13726-cpt)
-    """
+    """abstDomain: A13726 (C-0-T13129-A13715-A13725-A13726-cpt)"""
     CARD = "CARD"
     PEDCARD = "PEDCARD"
     RADDX = "RADDX"
@@ -2520,9 +2198,7 @@ class AmbulatoryClinicOrCenterHipaa(Enum):
 
 
 class AmbulatoryHealthCareFacilitiesProviderCodes(Enum):
-    """
-    specDomain: S20678 (C-0-T19465-S20678-cpt)
-    """
+    """specDomain: S20678 (C-0-T19465-S20678-cpt)"""
     VALUE_261_Q00000_X = "261Q00000X"
     VALUE_261_QM0855_X = "261QM0855X"
     VALUE_261_QA0600_X = "261QA0600X"
@@ -2589,16 +2265,12 @@ class AmbulatoryHealthCareFacilitiesProviderCodes(Enum):
 
 
 class AmnioticFluidSacRoute(Enum):
-    """
-    abstDomain: A17022 (C-0-T14581-A17021-A17022-cpt)
-    """
+    """abstDomain: A17022 (C-0-T14581-A17021-A17022-cpt)"""
     AMNINJ = "AMNINJ"
 
 
 class AnesthesiologyProviderCodes(Enum):
-    """
-    specDomain: S20100 (C-0-T19465-S20096-S20100-cpt)
-    """
+    """specDomain: S20100 (C-0-T19465-S20096-S20100-cpt)"""
     VALUE_207_L00000_X = "207L00000X"
     VALUE_207_LA0401_X = "207LA0401X"
     VALUE_207_LC0200_X = "207LC0200X"
@@ -2606,9 +2278,7 @@ class AnesthesiologyProviderCodes(Enum):
 
 
 class Apachean(Enum):
-    """
-    abstDomain: A18399 (C-0-T18130-A18352-A18356-A18358-A18399-cpt)
-    """
+    """abstDomain: A18399 (C-0-T18130-A18352-A18356-A18358-A18399-cpt)"""
     X_APJ = "x-APJ"
     X_APL = "x-APL"
     X_NAV = "x-NAV"
@@ -2618,26 +2288,20 @@ class Apachean(Enum):
 
 
 class ApplicationMediaType(Enum):
-    """
-    abstDomain: A14832 (C-0-T14824-A14832-cpt)
-    """
+    """abstDomain: A14832 (C-0-T14824-A14832-cpt)"""
     APPLICATION_DICOM = "application/dicom"
     APPLICATION_MSWORD = "application/msword"
     APPLICATION_PDF = "application/pdf"
 
 
 class ArapahoGrosVentre(Enum):
-    """
-    abstDomain: A18143 (C-0-T18130-A18131-A18132-A18142-A18143-cpt)
-    """
+    """abstDomain: A18143 (C-0-T18130-A18131-A18132-A18142-A18143-cpt)"""
     X_ARP = "x-ARP"
     X_ATS = "x-ATS"
 
 
 class ArtificialDentition(Enum):
-    """
-    abstDomain: A19345 (C-0-T16537-A16538-A19346-A19345-cpt)
-    """
+    """abstDomain: A19345 (C-0-T16537-A16538-A19346-A19345-cpt)"""
     TID10A = "TID10a"
     TID10I = "TID10i"
     TID10P = "TID10p"
@@ -2825,17 +2489,13 @@ class ArtificialDentition(Enum):
 
 
 class AskedButUnknown(Enum):
-    """
-    specDomain: S10614 (C-0-T10609-S10610-S10612-S10614-cpt)
-    """
+    """specDomain: S10614 (C-0-T10609-S10610-S10612-S10614-cpt)"""
     ASKU = "ASKU"
     NAV = "NAV"
 
 
 class AssignedNonPersonLivingSubjectRoleType(Enum):
-    """
-    abstDomain: A19869 (C-0-T12206-A19679-A19869-cpt)
-    """
+    """abstDomain: A19869 (C-0-T12206-A19679-A19869-cpt)"""
     BIOTH = "BIOTH"
     ANTIBIOT = "ANTIBIOT"
     DEBR = "DEBR"
@@ -2846,52 +2506,40 @@ class AssignedNonPersonLivingSubjectRoleType(Enum):
 
 
 class AssistedLivingFacilityProviderCodes(Enum):
-    """
-    specDomain: S20820 (C-0-T19465-S20758-S20820-cpt)
-    """
+    """specDomain: S20820 (C-0-T19465-S20758-S20820-cpt)"""
     VALUE_310400000_X = "310400000X"
     VALUE_3104_A0630_X = "3104A0630X"
     VALUE_3104_A0625_X = "3104A0625X"
 
 
 class AudioMediaType(Enum):
-    """
-    abstDomain: A14835 (C-0-T14824-A14835-cpt)
-    """
+    """abstDomain: A14835 (C-0-T14824-A14835-cpt)"""
     AUDIO_BASIC = "audio/basic"
     AUDIO_K32ADPCM = "audio/k32adpcm"
     AUDIO_MPEG = "audio/mpeg"
 
 
 class AudiologistProviderCodes(Enum):
-    """
-    specDomain: S20599 (C-0-T19465-S20598-S20599-cpt)
-    """
+    """specDomain: S20599 (C-0-T19465-S20598-S20599-cpt)"""
     VALUE_231_H00000_X = "231H00000X"
     VALUE_231_HA2400_X = "231HA2400X"
     VALUE_231_HA2500_X = "231HA2500X"
 
 
 class AuthorizationIssueManagementCode(Enum):
-    """
-    abstDomain: A19619 (C-0-T13953-A13954-A16695-A19431-A19619-cpt)
-    """
+    """abstDomain: A19619 (C-0-T13953-A13954-A16695-A19431-A19619-cpt)"""
     EMAUTH = "EMAUTH"
 
 
 class AutomobileInsurancePolicy(Enum):
-    """
-    specDomain: S19721 (C-0-T13953-A13954-A19855-A19856-S19721-cpt)
-    """
+    """specDomain: S19721 (C-0-T13953-A13954-A19855-A19856-S19721-cpt)"""
     AUTOPOL = "AUTOPOL"
     COL = "COL"
     UNINSMOT = "UNINSMOT"
 
 
 class BarDrugForm(Enum):
-    """
-    specDomain: S14485 (C-0-T19651-A14411-A14412-A14484-S14485-cpt)
-    """
+    """specDomain: S14485 (C-0-T19651-A14411-A14412-A14484-S14485-cpt)"""
     BARSOAP = "BARSOAP"
     MEDBAR = "MEDBAR"
     BAR = "BAR"
@@ -2899,17 +2547,13 @@ class BarDrugForm(Enum):
 
 
 class BarSoapDrugForm(Enum):
-    """
-    specDomain: S14486 (C-0-T19651-A14411-A14412-A14484-S14485-S14486-cpt)
-    """
+    """specDomain: S14486 (C-0-T19651-A14411-A14412-A14484-S14485-S14486-cpt)"""
     BARSOAP = "BARSOAP"
     MEDBAR = "MEDBAR"
 
 
 class BehavioralHealthAndOrSocialServiceCounselorHipaa(Enum):
-    """
-    specDomain: S13132 (C-0-T13129-A13130-A13131-S13132-cpt)
-    """
+    """specDomain: S13132 (C-0-T13129-A13130-A13131-S13132-cpt)"""
     VALUE_101_Y00000_N = "101Y00000N"
     VALUE_101_YA0400_N = "101YA0400N"
     VALUE_101_YM0800_N = "101YM0800N"
@@ -2919,9 +2563,7 @@ class BehavioralHealthAndOrSocialServiceCounselorHipaa(Enum):
 
 
 class BehavioralHealthAndOrSocialServiceProviderHipaa(Enum):
-    """
-    abstDomain: A13131 (C-0-T13129-A13130-A13131-cpt)
-    """
+    """abstDomain: A13131 (C-0-T13129-A13130-A13131-cpt)"""
     VALUE_101_Y00000_N = "101Y00000N"
     VALUE_101_YA0400_N = "101YA0400N"
     VALUE_101_YM0800_N = "101YM0800N"
@@ -2959,9 +2601,7 @@ class BehavioralHealthAndOrSocialServiceProviderHipaa(Enum):
 
 
 class BehavioralHealthandSocialServiceProvidersProviderCodes(Enum):
-    """
-    specDomain: S20275 (C-0-T19465-S20275-cpt)
-    """
+    """specDomain: S20275 (C-0-T19465-S20275-cpt)"""
     VALUE_101_Y00000_X = "101Y00000X"
     VALUE_101_YA0400_X = "101YA0400X"
     VALUE_101_YM0800_X = "101YM0800X"
@@ -2998,34 +2638,26 @@ class BehavioralHealthandSocialServiceProvidersProviderCodes(Enum):
 
 
 class BiliaryRoute(Enum):
-    """
-    abstDomain: A17024 (C-0-T14581-A17021-A17024-cpt)
-    """
+    """abstDomain: A17024 (C-0-T14581-A17021-A17024-cpt)"""
     BILINJ = "BILINJ"
     CHOLINJ = "CHOLINJ"
 
 
 class BiotherapeuticNonPersonLivingSubjectRoleType(Enum):
-    """
-    specDomain: S22157 (C-0-T12206-A19679-A19869-S22157-cpt)
-    """
+    """specDomain: S22157 (C-0-T12206-A19679-A19869-S22157-cpt)"""
     BIOTH = "BIOTH"
     ANTIBIOT = "ANTIBIOT"
     DEBR = "DEBR"
 
 
 class BlisterPackEntityType(Enum):
-    """
-    specDomain: S16171 (C-0-T16040-A16041-A19867-A16143-S16144-A16152-S16171-cpt)
-    """
+    """specDomain: S16171 (C-0-T16040-A16041-A19867-A16143-S16144-A16152-S16171-cpt)"""
     BLSTRPK = "BLSTRPK"
     CARD = "CARD"
 
 
 class BodySurfaceRoute(Enum):
-    """
-    abstDomain: A17027 (C-0-T14581-A17021-A17027-cpt)
-    """
+    """abstDomain: A17027 (C-0-T14581-A17021-A17027-cpt)"""
     ELECTOSMOS = "ELECTOSMOS"
     SOAK = "SOAK"
     TOPICAL = "TOPICAL"
@@ -3035,9 +2667,7 @@ class BodySurfaceRoute(Enum):
 
 
 class BottleEntityType(Enum):
-    """
-    specDomain: S16155 (C-0-T16040-A16041-A19867-A16143-S16144-A16152-A16153-S16155-cpt)
-    """
+    """specDomain: S16155 (C-0-T16040-A16041-A19867-A16143-S16144-A16152-A16153-S16155-cpt)"""
     BOTP = "BOTP"
     BOTPLY = "BOTPLY"
     BOT = "BOT"
@@ -3047,24 +2677,18 @@ class BottleEntityType(Enum):
 
 
 class BuccalMucosaRoute(Enum):
-    """
-    abstDomain: A17034 (C-0-T14581-A17021-A17034-cpt)
-    """
+    """abstDomain: A17034 (C-0-T14581-A17021-A17034-cpt)"""
     BUC = "BUC"
 
 
 class BuccalTablet(Enum):
-    """
-    specDomain: S14518 (C-0-T19651-A14411-A14412-A14484-S14506-S14515-S14516-S14518-cpt)
-    """
+    """specDomain: S14518 (C-0-T19651-A14411-A14412-A14484-S14506-S14515-S14516-S14518-cpt)"""
     BUCTAB = "BUCTAB"
     SRBUCTAB = "SRBUCTAB"
 
 
 class BuildingNumber(Enum):
-    """
-    specDomain: S10649 (C-0-T10642-S14822-S10649-cpt)
-    """
+    """specDomain: S10649 (C-0-T10642-S14822-S10649-cpt)"""
     BNS = "BNS"
     POB = "POB"
     BNR = "BNR"
@@ -3072,40 +2696,30 @@ class BuildingNumber(Enum):
 
 
 class BuildingNumberSuffixByBot(Enum):
-    """
-    specDomain: S17882 (C-0-T10642-S14822-S10649-S17882-cpt)
-    """
+    """specDomain: S17882 (C-0-T10642-S14822-S10649-S17882-cpt)"""
     BNS = "BNS"
     POB = "POB"
 
 
 class CvdiagTherPracticeSetting(Enum):
-    """
-    specDomain: S10903 (C-0-T12206-A17660-A19450-A10588-S10902-S10903-cpt)
-    """
+    """specDomain: S10903 (C-0-T12206-A17660-A19450-A10588-S10902-S10903-cpt)"""
     CVDX = "CVDX"
     CATH = "CATH"
     ECHO = "ECHO"
 
 
 class Cahitan(Enum):
-    """
-    abstDomain: A18637 (C-0-T18130-A18605-A18636-A18637-cpt)
-    """
+    """abstDomain: A18637 (C-0-T18130-A18605-A18636-A18637-cpt)"""
     X_YAQ = "x-YAQ"
 
 
 class Calendar(Enum):
-    """
-    vocSet: T17422 (C-0-T17422-cpt)
-    """
+    """vocSet: T17422 (C-0-T17422-cpt)"""
     GREG = "GREG"
 
 
 class CalendarCycleOneLetter(Enum):
-    """
-    abstDomain: A10701 (C-0-T10684-A10701-cpt)
-    """
+    """abstDomain: A10701 (C-0-T10684-A10701-cpt)"""
     D = "D"
     J = "J"
     H = "H"
@@ -3117,24 +2731,18 @@ class CalendarCycleOneLetter(Enum):
 
 
 class CalendarType(Enum):
-    """
-    vocSet: T10682 (C-0-T10682-cpt)
-    """
+    """vocSet: T10682 (C-0-T10682-cpt)"""
     GREG = "GREG"
 
 
 class CaliforniaAthapaskan(Enum):
-    """
-    abstDomain: A18391 (C-0-T18130-A18352-A18356-A18358-A18386-A18391-cpt)
-    """
+    """abstDomain: A18391 (C-0-T18130-A18352-A18356-A18358-A18386-A18391-cpt)"""
     X_KTW = "x-KTW"
     X_HUP = "x-HUP"
 
 
 class CapsuleDrugForm(Enum):
-    """
-    specDomain: S14507 (C-0-T19651-A14411-A14412-A14484-S14506-S14507-cpt)
-    """
+    """specDomain: S14507 (C-0-T19651-A14411-A14412-A14484-S14506-S14507-cpt)"""
     ENTCAP = "ENTCAP"
     ERENTCAP = "ERENTCAP"
     ERCAP = "ERCAP"
@@ -3146,17 +2754,13 @@ class CapsuleDrugForm(Enum):
 
 
 class CardClinPracticeSetting(Enum):
-    """
-    specDomain: S10590 (C-0-T12206-A17660-A19450-A10588-S10589-S10590-cpt)
-    """
+    """specDomain: S10590 (C-0-T12206-A17660-A19450-A10588-S10589-S10590-cpt)"""
     CARD = "CARD"
     PEDCARD = "PEDCARD"
 
 
 class CardiologySpecialistOrTechnologistHipaa(Enum):
-    """
-    abstDomain: A13660 (C-0-T13129-A13130-A13644-A13660-cpt)
-    """
+    """abstDomain: A13660 (C-0-T13129-A13130-A13644-A13660-cpt)"""
     VALUE_246_VC0100_N = "246VC0100N"
     VALUE_246_VC2400_N = "246VC2400N"
     VALUE_246_VC2901_N = "246VC2901N"
@@ -3168,17 +2772,13 @@ class CardiologySpecialistOrTechnologistHipaa(Enum):
 
 
 class CardiologyTechnicianHipaa(Enum):
-    """
-    abstDomain: A13700 (C-0-T13129-A13130-A13634-S13635-A13637-A13700-cpt)
-    """
+    """abstDomain: A13700 (C-0-T13129-A13130-A13634-S13635-A13637-A13700-cpt)"""
     VALUE_246_WC3000_N = "246WC3000N"
     VALUE_246_WE0400_N = "246WE0400N"
 
 
 class CaseTransmissionMode(Enum):
-    """
-    abstDomain: A19795 (C-0-T13953-A19820-A16226-A19712-A19795-cpt)
-    """
+    """abstDomain: A19795 (C-0-T13953-A19820-A16226-A19712-A19795-cpt)"""
     AIRTRNS = "AIRTRNS"
     ANANTRNS = "ANANTRNS"
     ANHUMTRNS = "ANHUMTRNS"
@@ -3202,9 +2802,7 @@ class CaseTransmissionMode(Enum):
 
 
 class Catawba(Enum):
-    """
-    specDomain: S14972 (C-0-T14914-S14915-S14916-S14972-cpt)
-    """
+    """specDomain: S14972 (C-0-T14914-S14915-S14916-S14972-cpt)"""
     VALUE_1076_9 = "1076-9"
     VALUE_1744_2 = "1744-2"
     VALUE_1741_8 = "1741-8"
@@ -3278,43 +2876,33 @@ class Catawba(Enum):
 
 
 class CecostomyRoute(Enum):
-    """
-    abstDomain: A17036 (C-0-T14581-A17021-A17036-cpt)
-    """
+    """abstDomain: A17036 (C-0-T14581-A17021-A17036-cpt)"""
     CECINSTL = "CECINSTL"
 
 
 class CentralMuskogean(Enum):
-    """
-    abstDomain: A18342 (C-0-T18130-A18338-A18342-cpt)
-    """
+    """abstDomain: A18342 (C-0-T18130-A18338-A18342-cpt)"""
     X_AKZ = "x-AKZ"
     X_CKU = "x-CKU"
     X_MIK = "x-MIK"
 
 
 class CentralNumic(Enum):
-    """
-    abstDomain: A18611 (C-0-T18130-A18605-A18606-A18611-cpt)
-    """
+    """abstDomain: A18611 (C-0-T18130-A18605-A18606-A18611-cpt)"""
     X_COM = "x-COM"
     X_PAR = "x-PAR"
     X_SHH = "x-SHH"
 
 
 class CentralSalish(Enum):
-    """
-    abstDomain: A18524 (C-0-T18130-A18523-A18524-cpt)
-    """
+    """abstDomain: A18524 (C-0-T18130-A18523-A18524-cpt)"""
     X_CLM = "x-CLM"
     X_LUT = "x-LUT"
     X_STR = "x-STR"
 
 
 class CervicalRoute(Enum):
-    """
-    abstDomain: A17038 (C-0-T14581-A17021-A17038-cpt)
-    """
+    """abstDomain: A17038 (C-0-T14581-A17021-A17038-cpt)"""
     CERVINJ = "CERVINJ"
     CERVINS = "CERVINS"
     DENRINSE = "DENRINSE"
@@ -3323,9 +2911,7 @@ class CervicalRoute(Enum):
 
 
 class Charset(Enum):
-    """
-    vocSet: T14853 (C-0-T14853-cpt)
-    """
+    """vocSet: T14853 (C-0-T14853-cpt)"""
     EBCDIC = "EBCDIC"
     ISO_10646_UCS_2 = "ISO-10646-UCS-2"
     ISO_10646_UCS_4 = "ISO-10646-UCS-4"
@@ -3339,16 +2925,12 @@ class Charset(Enum):
 
 
 class Chew(Enum):
-    """
-    abstDomain: A14582 (C-0-T14581-A16931-A14582-cpt)
-    """
+    """abstDomain: A14582 (C-0-T14581-A16931-A14582-cpt)"""
     CHEW = "CHEW"
 
 
 class Child(Enum):
-    """
-    specDomain: S16360 (C-0-T12206-A19563-S17926-S16360-cpt)
-    """
+    """specDomain: S16360 (C-0-T12206-A19563-S17926-S16360-cpt)"""
     CHLDADOPT = "CHLDADOPT"
     DAUADOPT = "DAUADOPT"
     SONADOPT = "SONADOPT"
@@ -3368,25 +2950,19 @@ class Child(Enum):
 
 
 class ChildInLaw(Enum):
-    """
-    specDomain: S11563 (C-0-T12206-A19563-S17926-S16360-S11563-cpt)
-    """
+    """specDomain: S11563 (C-0-T12206-A19563-S17926-S16360-S11563-cpt)"""
     CHLDINLAW = "CHLDINLAW"
     DAUINLAW = "DAUINLAW"
     SONINLAW = "SONINLAW"
 
 
 class Chimakuan(Enum):
-    """
-    abstDomain: A18238 (C-0-T18130-A18238-cpt)
-    """
+    """abstDomain: A18238 (C-0-T18130-A18238-cpt)"""
     X_QUI = "x-QUI"
 
 
 class ChiropractersHipaa(Enum):
-    """
-    specDomain: S13175 (C-0-T13129-A13130-A13174-S13175-cpt)
-    """
+    """specDomain: S13175 (C-0-T13129-A13130-A13174-S13175-cpt)"""
     VALUE_111_N00000_N = "111N00000N"
     VALUE_111_NI0900_N = "111NI0900N"
     VALUE_111_NN0400_N = "111NN0400N"
@@ -3399,9 +2975,7 @@ class ChiropractersHipaa(Enum):
 
 
 class ChiropracticProvidersProviderCodes(Enum):
-    """
-    specDomain: S20308 (C-0-T19465-S20308-cpt)
-    """
+    """specDomain: S20308 (C-0-T19465-S20308-cpt)"""
     VALUE_111_N00000_X = "111N00000X"
     VALUE_111_NI0900_X = "111NI0900X"
     VALUE_111_NN0400_X = "111NN0400X"
@@ -3415,9 +2989,7 @@ class ChiropracticProvidersProviderCodes(Enum):
 
 
 class ChiropractorProviderCodes(Enum):
-    """
-    specDomain: S20309 (C-0-T19465-S20308-S20309-cpt)
-    """
+    """specDomain: S20309 (C-0-T19465-S20308-S20309-cpt)"""
     VALUE_111_N00000_X = "111N00000X"
     VALUE_111_NI0900_X = "111NI0900X"
     VALUE_111_NN0400_X = "111NN0400X"
@@ -3430,42 +3002,32 @@ class ChiropractorProviderCodes(Enum):
 
 
 class ChiwereWinnebago(Enum):
-    """
-    abstDomain: A18593 (C-0-T18130-A18552-A18553-A18562-A18593-cpt)
-    """
+    """abstDomain: A18593 (C-0-T18130-A18552-A18553-A18562-A18593-cpt)"""
     X_IOW = "x-IOW"
     X_WIN = "x-WIN"
 
 
 class ChronicCareFacility(Enum):
-    """
-    specDomain: S13792 (C-0-T12206-A17660-A19450-A10588-S10602-S13792-cpt)
-    """
+    """specDomain: S13792 (C-0-T12206-A17660-A19450-A10588-S10602-S13792-cpt)"""
     CHR = "CHR"
     VALUE_281_PC2000_N = "281PC2000N"
 
 
 class ChronicDiseaseHospitalProviderCodes(Enum):
-    """
-    specDomain: S20735 (C-0-T19465-S20733-S20735-cpt)
-    """
+    """specDomain: S20735 (C-0-T19465-S20733-S20735-cpt)"""
     VALUE_281_P00000_X = "281P00000X"
     VALUE_281_PC2000_X = "281PC2000X"
 
 
 class ClaimantCoveredPartyRoleType(Enum):
-    """
-    abstDomain: A19810 (C-0-T12206-A19809-A19805-A19810-cpt)
-    """
+    """abstDomain: A19810 (C-0-T12206-A19809-A19805-A19810-cpt)"""
     CRIMEVIC = "CRIMEVIC"
     INJ = "INJ"
     INJWKR = "INJWKR"
 
 
 class ClinicCenterProviderCodes(Enum):
-    """
-    specDomain: S20679 (C-0-T19465-S20678-S20679-cpt)
-    """
+    """specDomain: S20679 (C-0-T19465-S20678-S20679-cpt)"""
     VALUE_261_Q00000_X = "261Q00000X"
     VALUE_261_QM0855_X = "261QM0855X"
     VALUE_261_QA0600_X = "261QA0600X"
@@ -3531,9 +3093,7 @@ class ClinicCenterProviderCodes(Enum):
 
 
 class ClinicalNurseSpecialistHipaa(Enum):
-    """
-    specDomain: S13364 (C-0-T13129-A13130-A13363-S13364-cpt)
-    """
+    """specDomain: S13364 (C-0-T13129-A13130-A13363-S13364-cpt)"""
     VALUE_364_S00000_N = "364S00000N"
     VALUE_364_SA2100_N = "364SA2100N"
     VALUE_364_SA2200_N = "364SA2200N"
@@ -3573,9 +3133,7 @@ class ClinicalNurseSpecialistHipaa(Enum):
 
 
 class ClinicalNurseSpecialistProviderCodes(Enum):
-    """
-    specDomain: S20465 (C-0-T19465-S20463-S20465-cpt)
-    """
+    """specDomain: S20465 (C-0-T19465-S20463-S20465-cpt)"""
     VALUE_364_S00000_X = "364S00000X"
     VALUE_364_SA2100_X = "364SA2100X"
     VALUE_364_SA2200_X = "364SA2200X"
@@ -3613,9 +3171,7 @@ class ClinicalNurseSpecialistProviderCodes(Enum):
 
 
 class ClinicalResearchEventReason(Enum):
-    """
-    abstDomain: A19755 (C-0-T14878-A19754-A19755-cpt)
-    """
+    """abstDomain: A19755 (C-0-T14878-A19754-A19755-cpt)"""
     RET = "RET"
     SCH = "SCH"
     TRM = "TRM"
@@ -3623,26 +3179,20 @@ class ClinicalResearchEventReason(Enum):
 
 
 class ClinicalResearchObservationReason(Enum):
-    """
-    abstDomain: A19756 (C-0-T14878-A19754-A19756-cpt)
-    """
+    """abstDomain: A19756 (C-0-T14878-A19754-A19756-cpt)"""
     NPT = "NPT"
     UPT = "UPT"
     PPT = "PPT"
 
 
 class CodeIsNotValid(Enum):
-    """
-    specDomain: S21659 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-S21659-cpt)
-    """
+    """specDomain: S21659 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-S21659-cpt)"""
     CODE_INVAL = "CODE_INVAL"
     CODE_DEPREC = "CODE_DEPREC"
 
 
 class CodeSystem(Enum):
-    """
-    vocSet: T396 (C-0-T396-cpt)
-    """
+    """vocSet: T396 (C-0-T396-cpt)"""
     ABCCODES = "ABCcodes"
     AS4_E = "AS4E"
     AS4 = "AS4"
@@ -3895,27 +3445,21 @@ class CodeSystem(Enum):
 
 
 class CodeSystemType(Enum):
-    """
-    vocSet: T19359 (C-0-T19359-cpt)
-    """
+    """vocSet: T19359 (C-0-T19359-cpt)"""
     E = "E"
     EI = "EI"
     I = "I"
 
 
 class CodingRationale(Enum):
-    """
-    vocSet: T19250 (C-0-T19250-cpt)
-    """
+    """vocSet: T19250 (C-0-T19250-cpt)"""
     SH = "SH"
     HL7 = "HL7"
     SRC = "SRC"
 
 
 class CombinedPharmacyOrderSuspendReasonCode(Enum):
-    """
-    abstDomain: A19779 (C-0-T14878-A19692-A19779-cpt)
-    """
+    """abstDomain: A19779 (C-0-T14878-A19692-A19779-cpt)"""
     HOSPADM = "HOSPADM"
     SALG = "SALG"
     SDDI = "SDDI"
@@ -3932,18 +3476,14 @@ class CombinedPharmacyOrderSuspendReasonCode(Enum):
 
 
 class CommunicationFunctionType(Enum):
-    """
-    vocSet: T16031 (C-0-T16031-cpt)
-    """
+    """vocSet: T16031 (C-0-T16031-cpt)"""
     RCV = "RCV"
     RSP = "RSP"
     SND = "SND"
 
 
 class ComplianceAlert(Enum):
-    """
-    specDomain: S16687 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-S16687-cpt)
-    """
+    """specDomain: S16687 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-S16687-cpt)"""
     DUPTHPY = "DUPTHPY"
     DUPTHPGEN = "DUPTHPGEN"
     DUPTHPCLS = "DUPTHPCLS"
@@ -3955,9 +3495,7 @@ class ComplianceAlert(Enum):
 
 
 class ComplianceDetectedIssueCode(Enum):
-    """
-    specDomain: S16687 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16687-cpt)
-    """
+    """specDomain: S16687 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16687-cpt)"""
     DUPTHPY = "DUPTHPY"
     DUPTHPGEN = "DUPTHPGEN"
     DUPTHPCLS = "DUPTHPCLS"
@@ -3969,18 +3507,14 @@ class ComplianceDetectedIssueCode(Enum):
 
 
 class ComplianceDetectedIssueCodeDuplicateTherapyAlertByBot(Enum):
-    """
-    specDomain: S16688 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16687-S16688-cpt)
-    """
+    """specDomain: S16688 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16687-S16688-cpt)"""
     DUPTHPY = "DUPTHPY"
     DUPTHPGEN = "DUPTHPGEN"
     DUPTHPCLS = "DUPTHPCLS"
 
 
 class CompliancePackageEntityType(Enum):
-    """
-    specDomain: S16170 (C-0-T16040-A16041-A19867-A16143-S16144-S16170-cpt)
-    """
+    """specDomain: S16170 (C-0-T16040-A16041-A19867-A16143-S16144-S16170-cpt)"""
     BLSTRPK = "BLSTRPK"
     CARD = "CARD"
     COMPPKG = "COMPPKG"
@@ -3991,9 +3525,7 @@ class CompliancePackageEntityType(Enum):
 
 
 class CompressionAlgorithm(Enum):
-    """
-    vocSet: T10620 (C-0-T10620-cpt)
-    """
+    """vocSet: T10620 (C-0-T10620-cpt)"""
     Z = "Z"
     DF = "DF"
     GZ = "GZ"
@@ -4001,27 +3533,21 @@ class CompressionAlgorithm(Enum):
 
 
 class ConceptCodeRelationship(Enum):
-    """
-    vocSet: T19363 (C-0-T19363-cpt)
-    """
+    """vocSet: T19363 (C-0-T19363-cpt)"""
     HAS_PART = "hasPart"
     HAS_SUBTYPE = "hasSubtype"
     SMALLER_THAN = "smallerThan"
 
 
 class ConceptGenerality(Enum):
-    """
-    vocSet: T11033 (C-0-T11033-cpt)
-    """
+    """vocSet: T11033 (C-0-T11033-cpt)"""
     A = "A"
     L = "L"
     S = "S"
 
 
 class ConceptPropertyId(Enum):
-    """
-    vocSet: T19361 (C-0-T19361-cpt)
-    """
+    """vocSet: T19361 (C-0-T19361-cpt)"""
     OID = "OID"
     VALUE_SET_PROPERTY_ID = "_ValueSetPropertyId"
     APPLIES_TO = "appliesTo"
@@ -4031,9 +3557,7 @@ class ConceptPropertyId(Enum):
 
 
 class ConceptStatus(Enum):
-    """
-    vocSet: T19360 (C-0-T19360-cpt)
-    """
+    """vocSet: T19360 (C-0-T19360-cpt)"""
     A = "A"
     D = "D"
     P = "P"
@@ -4041,9 +3565,7 @@ class ConceptStatus(Enum):
 
 
 class ConditionDetectedIssueCode(Enum):
-    """
-    specDomain: S16665 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-S16665-cpt)
-    """
+    """specDomain: S16665 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-S16665-cpt)"""
     DOSEHINDSA = "DOSEHINDSA"
     DOSELINDSA = "DOSELINDSA"
     DOSEHINDW = "DOSEHINDW"
@@ -4054,17 +3576,13 @@ class ConditionDetectedIssueCode(Enum):
 
 
 class Conditional(Enum):
-    """
-    abstDomain: A17720 (C-0-T17719-A17720-cpt)
-    """
+    """abstDomain: A17720 (C-0-T17719-A17720-cpt)"""
     CONFIRM = "CONFIRM"
     NOTIFY = "NOTIFY"
 
 
 class Confidentiality(Enum):
-    """
-    vocSet: T10228 (C-0-T10228-cpt)
-    """
+    """vocSet: T10228 (C-0-T10228-cpt)"""
     B = "B"
     D = "D"
     I = "I"
@@ -4082,9 +3600,7 @@ class Confidentiality(Enum):
 
 
 class ConfidentialityByAccessKind(Enum):
-    """
-    abstDomain: A10229 (C-0-T10228-A10229-cpt)
-    """
+    """abstDomain: A10229 (C-0-T10228-A10229-cpt)"""
     B = "B"
     D = "D"
     I = "I"
@@ -4095,9 +3611,7 @@ class ConfidentialityByAccessKind(Enum):
 
 
 class ConfidentialityByInfoType(Enum):
-    """
-    abstDomain: A10240 (C-0-T10228-A10240-cpt)
-    """
+    """abstDomain: A10240 (C-0-T10228-A10240-cpt)"""
     HIV = "HIV"
     PSY = "PSY"
     SDV = "SDV"
@@ -4105,34 +3619,26 @@ class ConfidentialityByInfoType(Enum):
 
 
 class ConfidentialityModifiers(Enum):
-    """
-    abstDomain: A10236 (C-0-T10228-A10236-cpt)
-    """
+    """abstDomain: A10236 (C-0-T10228-A10236-cpt)"""
     C = "C"
     S = "S"
     T = "T"
 
 
 class ConrolActNullificationReasonCode(Enum):
-    """
-    abstDomain: A19826 (C-0-T14878-A19692-A19826-cpt)
-    """
+    """abstDomain: A19826 (C-0-T14878-A19692-A19826-cpt)"""
     ALTD = "ALTD"
     EIE = "EIE"
 
 
 class ConsultedPrescriberManagementCode(Enum):
-    """
-    specDomain: S16700 (C-0-T13953-A13954-A16695-S16696-S16700-cpt)
-    """
+    """specDomain: S16700 (C-0-T13953-A13954-A16695-S16696-S16700-cpt)"""
     VALUE_5 = "5"
     VALUE_6 = "6"
 
 
 class ContactRoleType(Enum):
-    """
-    abstDomain: A15920 (C-0-T12206-A15920-cpt)
-    """
+    """abstDomain: A15920 (C-0-T12206-A15920-cpt)"""
     BILL = "BILL"
     PAYOR = "PAYOR"
     ORG = "ORG"
@@ -4141,9 +3647,7 @@ class ContactRoleType(Enum):
 
 
 class ContainerCap(Enum):
-    """
-    vocSet: T14049 (C-0-T14049-cpt)
-    """
+    """vocSet: T14049 (C-0-T14049-cpt)"""
     CHILD = "CHILD"
     EASY = "EASY"
     FILM = "FILM"
@@ -4153,25 +3657,19 @@ class ContainerCap(Enum):
 
 
 class ContainerSeparator(Enum):
-    """
-    vocSet: T14054 (C-0-T14054-cpt)
-    """
+    """vocSet: T14054 (C-0-T14054-cpt)"""
     GEL = "GEL"
     NONE_VALUE = "NONE"
 
 
 class ContentProcessingMode(Enum):
-    """
-    vocSet: T19823 (C-0-T19823-cpt)
-    """
+    """vocSet: T19823 (C-0-T19823-cpt)"""
     SEQL = "SEQL"
     UNOR = "UNOR"
 
 
 class ContextControl(Enum):
-    """
-    vocSet: T16478 (C-0-T16478-cpt)
-    """
+    """vocSet: T16478 (C-0-T16478-cpt)"""
     AN = "AN"
     AP = "AP"
     ON = "ON"
@@ -4179,57 +3677,43 @@ class ContextControl(Enum):
 
 
 class ContextControlAdditive(Enum):
-    """
-    abstDomain: A18934 (C-0-T16478-A18934-cpt)
-    """
+    """abstDomain: A18934 (C-0-T16478-A18934-cpt)"""
     AN = "AN"
     AP = "AP"
 
 
 class ContextControlNonPropagating(Enum):
-    """
-    abstDomain: A18937 (C-0-T16478-A18937-cpt)
-    """
+    """abstDomain: A18937 (C-0-T16478-A18937-cpt)"""
     AN = "AN"
     ON = "ON"
 
 
 class ContextControlOverriding(Enum):
-    """
-    abstDomain: A18935 (C-0-T16478-A18935-cpt)
-    """
+    """abstDomain: A18935 (C-0-T16478-A18935-cpt)"""
     ON = "ON"
     OP = "OP"
 
 
 class ContextControlPropagating(Enum):
-    """
-    abstDomain: A18936 (C-0-T16478-A18936-cpt)
-    """
+    """abstDomain: A18936 (C-0-T16478-A18936-cpt)"""
     AP = "AP"
     OP = "OP"
 
 
 class ContractorProviderCodes(Enum):
-    """
-    specDomain: S20436 (C-0-T19465-S20434-S20436-cpt)
-    """
+    """specDomain: S20436 (C-0-T19465-S20434-S20436-cpt)"""
     VALUE_171_W00000_X = "171W00000X"
     VALUE_171_WH0202_X = "171WH0202X"
     VALUE_171_WV0202_X = "171WV0202X"
 
 
 class Coosan(Enum):
-    """
-    abstDomain: A18421 (C-0-T18130-A18413-A18421-cpt)
-    """
+    """abstDomain: A18421 (C-0-T18130-A18413-A18421-cpt)"""
     X_COS = "x-COS"
 
 
 class CounselorProviderCodes(Enum):
-    """
-    specDomain: S20276 (C-0-T19465-S20275-S20276-cpt)
-    """
+    """specDomain: S20276 (C-0-T19465-S20275-S20276-cpt)"""
     VALUE_101_Y00000_X = "101Y00000X"
     VALUE_101_YA0400_X = "101YA0400X"
     VALUE_101_YM0800_X = "101YM0800X"
@@ -4239,9 +3723,7 @@ class CounselorProviderCodes(Enum):
 
 
 class CoverageEligibilityReason(Enum):
-    """
-    abstDomain: A19735 (C-0-T14878-A19871-A19694-A19735-cpt)
-    """
+    """abstDomain: A19735 (C-0-T14878-A19871-A19694-A19735-cpt)"""
     AGE = "AGE"
     CRIME = "CRIME"
     DIS = "DIS"
@@ -4256,9 +3738,7 @@ class CoverageEligibilityReason(Enum):
 
 
 class CoverageRoleType(Enum):
-    """
-    abstDomain: A18877 (C-0-T12206-A19809-A18877-cpt)
-    """
+    """abstDomain: A18877 (C-0-T12206-A19809-A18877-cpt)"""
     STUD = "STUD"
     FSTUD = "FSTUD"
     PSTUD = "PSTUD"
@@ -4270,17 +3750,13 @@ class CoverageRoleType(Enum):
 
 
 class CoverageSponsorRoleType(Enum):
-    """
-    abstDomain: A19877 (C-0-T12206-A19690-A19877-cpt)
-    """
+    """abstDomain: A19877 (C-0-T12206-A19690-A19877-cpt)"""
     FULLINS = "FULLINS"
     SELFINS = "SELFINS"
 
 
 class CreamDrugForm(Enum):
-    """
-    specDomain: S14466 (C-0-T19651-A14411-A14412-A14463-S14466-cpt)
-    """
+    """specDomain: S14466 (C-0-T19651-A14411-A14412-A14463-S14466-cpt)"""
     VAGCRM = "VAGCRM"
     VAGCRMAPL = "VAGCRMAPL"
     CRM = "CRM"
@@ -4293,9 +3769,7 @@ class CreamDrugForm(Enum):
 
 
 class CreditCard(Enum):
-    """
-    abstDomain: A14811 (C-0-T13953-A13954-A14809-A14811-cpt)
-    """
+    """abstDomain: A14811 (C-0-T13953-A13954-A14809-A14811-cpt)"""
     AE = "AE"
     DN = "DN"
     DV = "DV"
@@ -4304,25 +3778,19 @@ class CreditCard(Enum):
 
 
 class Cree(Enum):
-    """
-    abstDomain: A18136 (C-0-T18130-A18131-A18132-A18135-A18136-cpt)
-    """
+    """abstDomain: A18136 (C-0-T18130-A18131-A18132-A18135-A18136-cpt)"""
     X_CRP = "x-CRP"
 
 
 class Cupan(Enum):
-    """
-    abstDomain: A18624 (C-0-T18130-A18605-A18621-A18624-cpt)
-    """
+    """abstDomain: A18624 (C-0-T18130-A18605-A18621-A18624-cpt)"""
     X_CHL = "x-CHL"
     X_CUP = "x-CUP"
     X_LUI = "x-LUI"
 
 
 class Currency(Enum):
-    """
-    vocSet: T17388 (C-0-T17388-cpt)
-    """
+    """vocSet: T17388 (C-0-T17388-cpt)"""
     ARS = "ARS"
     AUD = "AUD"
     THB = "THB"
@@ -4353,17 +3821,13 @@ class Currency(Enum):
 
 
 class CustodialCareFacilityProviderCodes(Enum):
-    """
-    specDomain: S20761 (C-0-T19465-S20758-S20761-cpt)
-    """
+    """specDomain: S20761 (C-0-T19465-S20758-S20761-cpt)"""
     VALUE_311_Z00000_X = "311Z00000X"
     VALUE_311_ZA0620_X = "311ZA0620X"
 
 
 class Dakotan(Enum):
-    """
-    abstDomain: A18563 (C-0-T18130-A18552-A18553-A18562-A18563-cpt)
-    """
+    """abstDomain: A18563 (C-0-T18130-A18552-A18553-A18562-A18563-cpt)"""
     X_ASB = "x-ASB"
     X_DHG = "x-DHG"
     X_LKT = "x-LKT"
@@ -4371,62 +3835,46 @@ class Dakotan(Enum):
 
 
 class DataTypeAddressPart(Enum):
-    """
-    specDomain: S10792 (C-0-T10774-A10775-S10821-S10822-S10777-S10778-S10779-S10792-cpt)
-    """
+    """specDomain: S10792 (C-0-T10774-A10775-S10821-S10822-S10777-S10778-S10779-S10792-cpt)"""
     ADXP = "ADXP"
 
 
 class DataTypeAnnotated(Enum):
-    """
-    specDomain: S10845 (C-0-T10774-A10775-S10845-cpt)
-    """
+    """specDomain: S10845 (C-0-T10774-A10775-S10845-cpt)"""
     ANT_CD = "ANT&lt;CD&gt;"
     ANT_PQ = "ANT&lt;PQ&gt;"
     ANT_ANY = "ANT&lt;ANY&gt;"
 
 
 class DataTypeAnnotatedConceptDescriptor(Enum):
-    """
-    specDomain: S10846 (C-0-T10774-A10775-S10845-S10846-cpt)
-    """
+    """specDomain: S10846 (C-0-T10774-A10775-S10845-S10846-cpt)"""
     ANT_CD = "ANT&lt;CD&gt;"
 
 
 class DataTypeAnnotatedPhysicalQuantity(Enum):
-    """
-    specDomain: S10848 (C-0-T10774-A10775-S10845-S10848-cpt)
-    """
+    """specDomain: S10848 (C-0-T10774-A10775-S10845-S10848-cpt)"""
     ANT_PQ = "ANT&lt;PQ&gt;"
 
 
 class DataTypeBag(Enum):
-    """
-    specDomain: S10831 (C-0-T10774-A10775-S10831-cpt)
-    """
+    """specDomain: S10831 (C-0-T10774-A10775-S10831-cpt)"""
     BAG_CD = "BAG&lt;CD&gt;"
     BAG_PQ = "BAG&lt;PQ&gt;"
     BAG_ANY = "BAG&lt;ANY&gt;"
 
 
 class DataTypeBagOfConceptDescriptors(Enum):
-    """
-    specDomain: S10832 (C-0-T10774-A10775-S10831-S10832-cpt)
-    """
+    """specDomain: S10832 (C-0-T10774-A10775-S10831-S10832-cpt)"""
     BAG_CD = "BAG&lt;CD&gt;"
 
 
 class DataTypeBagOfPhysicalQuantities(Enum):
-    """
-    specDomain: S10833 (C-0-T10774-A10775-S10831-S10833-cpt)
-    """
+    """specDomain: S10833 (C-0-T10774-A10775-S10831-S10833-cpt)"""
     BAG_PQ = "BAG&lt;PQ&gt;"
 
 
 class DataTypeBinaryData(Enum):
-    """
-    specDomain: S10777 (C-0-T10774-A10775-S10821-S10822-S10777-cpt)
-    """
+    """specDomain: S10777 (C-0-T10774-A10775-S10821-S10822-S10777-cpt)"""
     ADXP = "ADXP"
     ON = "ON"
     PNXP = "PNXP"
@@ -4436,16 +3884,12 @@ class DataTypeBinaryData(Enum):
 
 
 class DataTypeBoolean(Enum):
-    """
-    specDomain: S10776 (C-0-T10774-A10775-S10776-cpt)
-    """
+    """specDomain: S10776 (C-0-T10774-A10775-S10776-cpt)"""
     BL = "BL"
 
 
 class DataTypeCharacterString(Enum):
-    """
-    specDomain: S10779 (C-0-T10774-A10775-S10821-S10822-S10777-S10778-S10779-cpt)
-    """
+    """specDomain: S10779 (C-0-T10774-A10775-S10821-S10822-S10777-S10778-S10779-cpt)"""
     ADXP = "ADXP"
     ON = "ON"
     PNXP = "PNXP"
@@ -4453,30 +3897,22 @@ class DataTypeCharacterString(Enum):
 
 
 class DataTypeCodedSimpleValue(Enum):
-    """
-    specDomain: S10782 (C-0-T10774-A10775-S10780-S10782-cpt)
-    """
+    """specDomain: S10782 (C-0-T10774-A10775-S10780-S10782-cpt)"""
     CS = "CS"
 
 
 class DataTypeCodedValue(Enum):
-    """
-    specDomain: S10783 (C-0-T10774-A10775-S10780-S10783-cpt)
-    """
+    """specDomain: S10783 (C-0-T10774-A10775-S10780-S10783-cpt)"""
     CV = "CV"
 
 
 class DataTypeCodedWithEquivalents(Enum):
-    """
-    specDomain: S10784 (C-0-T10774-A10775-S10780-S10784-cpt)
-    """
+    """specDomain: S10784 (C-0-T10774-A10775-S10780-S10784-cpt)"""
     CE = "CE"
 
 
 class DataTypeConceptDescriptor(Enum):
-    """
-    specDomain: S10780 (C-0-T10774-A10775-S10780-cpt)
-    """
+    """specDomain: S10780 (C-0-T10774-A10775-S10780-cpt)"""
     CS = "CS"
     CV = "CV"
     CE = "CE"
@@ -4484,16 +3920,12 @@ class DataTypeConceptDescriptor(Enum):
 
 
 class DataTypeConceptRole(Enum):
-    """
-    specDomain: S10781 (C-0-T10774-A10775-S10781-cpt)
-    """
+    """specDomain: S10781 (C-0-T10774-A10775-S10781-cpt)"""
     CR = "CR"
 
 
 class DataTypeEncodedData(Enum):
-    """
-    specDomain: S10778 (C-0-T10774-A10775-S10821-S10822-S10777-S10778-cpt)
-    """
+    """specDomain: S10778 (C-0-T10774-A10775-S10821-S10822-S10777-S10778-cpt)"""
     ADXP = "ADXP"
     ON = "ON"
     PNXP = "PNXP"
@@ -4502,59 +3934,43 @@ class DataTypeEncodedData(Enum):
 
 
 class DataTypeEventRelatedInterval(Enum):
-    """
-    specDomain: S10844 (C-0-T10774-A10775-S10834-S10841-S10807-S10844-cpt)
-    """
+    """specDomain: S10844 (C-0-T10774-A10775-S10834-S10841-S10807-S10844-cpt)"""
     EIVL_TS = "EIVL&lt;TS&gt;"
 
 
 class DataTypeGeneralTimingSpecification(Enum):
-    """
-    specDomain: S10808 (C-0-T10774-A10775-S10834-S10841-S10807-S10808-cpt)
-    """
+    """specDomain: S10808 (C-0-T10774-A10775-S10834-S10841-S10807-S10808-cpt)"""
     GTS = "GTS"
 
 
 class DataTypeHistorical(Enum):
-    """
-    specDomain: S10850 (C-0-T10774-A10775-S10850-cpt)
-    """
+    """specDomain: S10850 (C-0-T10774-A10775-S10850-cpt)"""
     HXIT_AD = "HXIT&lt;AD&gt;"
     HXIT_ANY = "HXIT&lt;ANY&gt;"
 
 
 class DataTypeHistoricalAddress(Enum):
-    """
-    specDomain: S10851 (C-0-T10774-A10775-S10850-S10851-cpt)
-    """
+    """specDomain: S10851 (C-0-T10774-A10775-S10850-S10851-cpt)"""
     HXIT_AD = "HXIT&lt;AD&gt;"
 
 
 class DataTypeHistoryOfAddress(Enum):
-    """
-    specDomain: S10813 (C-0-T10774-A10775-S10801-S10810-S10811-S10812-S10813-cpt)
-    """
+    """specDomain: S10813 (C-0-T10774-A10775-S10801-S10810-S10811-S10812-S10813-cpt)"""
     HIST_AD = "HIST&lt;AD&gt;"
 
 
 class DataTypeInstanceIdentifier(Enum):
-    """
-    specDomain: S10785 (C-0-T10774-A10775-S10785-cpt)
-    """
+    """specDomain: S10785 (C-0-T10774-A10775-S10785-cpt)"""
     II = "II"
 
 
 class DataTypeIntegerNumber(Enum):
-    """
-    specDomain: S10795 (C-0-T10774-A10775-A10794-S10795-cpt)
-    """
+    """specDomain: S10795 (C-0-T10774-A10775-A10794-S10795-cpt)"""
     INT_VALUE = "INT"
 
 
 class DataTypeInterval(Enum):
-    """
-    specDomain: S10834 (C-0-T10774-A10775-S10834-cpt)
-    """
+    """specDomain: S10834 (C-0-T10774-A10775-S10834-cpt)"""
     IVL_INT = "IVL&lt;INT&gt;"
     UVP_IVL_PQ = "UVP&lt;IVL&lt;PQ&gt;&gt;"
     IVL_PQ = "IVL&lt;PQ&gt;"
@@ -4568,24 +3984,18 @@ class DataTypeInterval(Enum):
 
 
 class DataTypeIntervalOfIntegerNumbers(Enum):
-    """
-    specDomain: S10835 (C-0-T10774-A10775-S10834-S10835-cpt)
-    """
+    """specDomain: S10835 (C-0-T10774-A10775-S10834-S10835-cpt)"""
     IVL_INT = "IVL&lt;INT&gt;"
 
 
 class DataTypeIntervalOfPhysicalQuantities(Enum):
-    """
-    specDomain: S10839 (C-0-T10774-A10775-S10834-S10839-cpt)
-    """
+    """specDomain: S10839 (C-0-T10774-A10775-S10834-S10839-cpt)"""
     UVP_IVL_PQ = "UVP&lt;IVL&lt;PQ&gt;&gt;"
     IVL_PQ = "IVL&lt;PQ&gt;"
 
 
 class DataTypeIntervalOfPointsInTime(Enum):
-    """
-    specDomain: S10841 (C-0-T10774-A10775-S10834-S10841-cpt)
-    """
+    """specDomain: S10841 (C-0-T10774-A10775-S10834-S10841-cpt)"""
     EIVL_TS = "EIVL&lt;TS&gt;"
     GTS = "GTS"
     PIVL_TS = "PIVL&lt;TS&gt;"
@@ -4594,137 +4004,99 @@ class DataTypeIntervalOfPointsInTime(Enum):
 
 
 class DataTypeIntervalOfRealNumbers(Enum):
-    """
-    specDomain: S10837 (C-0-T10774-A10775-S10834-S10837-cpt)
-    """
+    """specDomain: S10837 (C-0-T10774-A10775-S10834-S10837-cpt)"""
     IVL_REAL = "IVL&lt;REAL&gt;"
 
 
 class DataTypeMonetaryAmount(Enum):
-    """
-    specDomain: S10798 (C-0-T10774-A10775-A10794-S10798-cpt)
-    """
+    """specDomain: S10798 (C-0-T10774-A10775-A10794-S10798-cpt)"""
     MO = "MO"
 
 
 class DataTypeNonParametricProbabilityDistribution(Enum):
-    """
-    specDomain: S10815 (C-0-T10774-A10775-S10801-S10814-S10815-cpt)
-    """
+    """specDomain: S10815 (C-0-T10774-A10775-S10801-S10814-S10815-cpt)"""
     NPPD_ANY = "NPPD&lt;ANY&gt;"
 
 
 class DataTypeNonParametricProbabilityDistributionOfConceptDescriptor(Enum):
-    """
-    specDomain: S10862 (C-0-T10774-A10775-S10801-S10816-S10862-cpt)
-    """
+    """specDomain: S10862 (C-0-T10774-A10775-S10801-S10816-S10862-cpt)"""
     NPPD_CD = "NPPD&lt;CD&gt;"
 
 
 class DataTypeNonParametricProbabilityDistributionOfIntervalOfPhysicalQuantities(Enum):
-    """
-    specDomain: S10863 (C-0-T10774-A10775-S10801-S10819-S10863-cpt)
-    """
+    """specDomain: S10863 (C-0-T10774-A10775-S10801-S10819-S10863-cpt)"""
     NPPD_IVL_PQ = "NPPD&lt;IVL&lt;PQ&gt;&gt;"
 
 
 class DataTypeObjectIdentifier(Enum):
-    """
-    specDomain: S10786 (C-0-T10774-A10775-S10786-cpt)
-    """
+    """specDomain: S10786 (C-0-T10774-A10775-S10786-cpt)"""
     OID = "OID"
 
 
 class DataTypeOrganizationName(Enum):
-    """
-    specDomain: S10793 (C-0-T10774-A10775-S10821-S10822-S10777-S10778-S10779-S10793-cpt)
-    """
+    """specDomain: S10793 (C-0-T10774-A10775-S10821-S10822-S10777-S10778-S10779-S10793-cpt)"""
     ON = "ON"
 
 
 class DataTypeParametricProbabilityDistribution(Enum):
-    """
-    specDomain: S10864 (C-0-T10774-A10775-A10794-S10864-cpt)
-    """
+    """specDomain: S10864 (C-0-T10774-A10775-A10794-S10864-cpt)"""
     PPD_QTY = "PPD&lt;QTY&gt;"
 
 
 class DataTypeParametricProbabilityDistributionOfPhysicalQuantities(Enum):
-    """
-    specDomain: S10866 (C-0-T10774-A10775-A10794-S10797-S10866-cpt)
-    """
+    """specDomain: S10866 (C-0-T10774-A10775-A10794-S10797-S10866-cpt)"""
     PPD_PQ = "PPD&lt;PQ&gt;"
 
 
 class DataTypeParametricProbabilityDistributionOfRealNumbers(Enum):
-    """
-    specDomain: S10865 (C-0-T10774-A10775-A10794-S10796-S10865-cpt)
-    """
+    """specDomain: S10865 (C-0-T10774-A10775-A10794-S10796-S10865-cpt)"""
     PPD_REAL = "PPD&lt;REAL&gt;"
 
 
 class DataTypePeriodicIntervalOfTime(Enum):
-    """
-    specDomain: S10843 (C-0-T10774-A10775-S10834-S10841-S10807-S10843-cpt)
-    """
+    """specDomain: S10843 (C-0-T10774-A10775-S10834-S10841-S10807-S10843-cpt)"""
     PIVL_TS = "PIVL&lt;TS&gt;"
 
 
 class DataTypePersonNamePart(Enum):
-    """
-    specDomain: S10790 (C-0-T10774-A10775-S10821-S10822-S10777-S10778-S10779-S10790-cpt)
-    """
+    """specDomain: S10790 (C-0-T10774-A10775-S10821-S10822-S10777-S10778-S10779-S10790-cpt)"""
     PNXP = "PNXP"
 
 
 class DataTypePersonNameType(Enum):
-    """
-    specDomain: S10789 (C-0-T10774-A10775-S10821-S10823-S10824-S10825-S10826-S10827-S10828-S10789-cpt)
-    """
+    """specDomain: S10789 (C-0-T10774-A10775-S10821-S10823-S10824-S10825-S10826-S10827-S10828-S10789-cpt)"""
     PN = "PN"
 
 
 class DataTypePhysicalQuantity(Enum):
-    """
-    specDomain: S10797 (C-0-T10774-A10775-A10794-S10797-cpt)
-    """
+    """specDomain: S10797 (C-0-T10774-A10775-A10794-S10797-cpt)"""
     PPD_PQ = "PPD&lt;PQ&gt;"
     PQ = "PQ"
 
 
 class DataTypePointInTime(Enum):
-    """
-    specDomain: S10799 (C-0-T10774-A10775-A10794-S10799-cpt)
-    """
+    """specDomain: S10799 (C-0-T10774-A10775-A10794-S10799-cpt)"""
     TS = "TS"
 
 
 class DataTypePostalAndResidentialAddress(Enum):
-    """
-    specDomain: S10791 (C-0-T10774-A10775-S10821-S10823-S10824-S10825-S10826-S10827-S10829-S10791-cpt)
-    """
+    """specDomain: S10791 (C-0-T10774-A10775-S10821-S10823-S10824-S10825-S10826-S10827-S10829-S10791-cpt)"""
     AD = "AD"
 
 
 class DataTypeRatio(Enum):
-    """
-    specDomain: S10800 (C-0-T10774-A10775-A10794-S10800-cpt)
-    """
+    """specDomain: S10800 (C-0-T10774-A10775-A10794-S10800-cpt)"""
     RTO = "RTO"
 
 
 class DataTypeRealNumber(Enum):
-    """
-    specDomain: S10796 (C-0-T10774-A10775-A10794-S10796-cpt)
-    """
+    """specDomain: S10796 (C-0-T10774-A10775-A10794-S10796-cpt)"""
     PPD_REAL = "PPD&lt;REAL&gt;"
     REAL = "REAL"
 
 
 class DataTypeSequence(Enum):
-    """
-    specDomain: S10821 (C-0-T10774-A10775-S10821-cpt)
-    """
+    """specDomain: S10821 (C-0-T10774-A10775-S10821-cpt)"""
     ADXP = "ADXP"
     ON = "ON"
     PNXP = "PNXP"
@@ -4745,9 +4117,7 @@ class DataTypeSequence(Enum):
 
 
 class DataTypeSequenceOfBinaryData(Enum):
-    """
-    specDomain: S10825 (C-0-T10774-A10775-S10821-S10823-S10824-S10825-cpt)
-    """
+    """specDomain: S10825 (C-0-T10774-A10775-S10821-S10823-S10824-S10825-cpt)"""
     PN = "PN"
     LIST_PNXP = "LIST&lt;PNXP&gt;"
     AD = "AD"
@@ -4758,9 +4128,7 @@ class DataTypeSequenceOfBinaryData(Enum):
 
 
 class DataTypeSequenceOfBooleans(Enum):
-    """
-    specDomain: S10822 (C-0-T10774-A10775-S10821-S10822-cpt)
-    """
+    """specDomain: S10822 (C-0-T10774-A10775-S10821-S10822-cpt)"""
     ADXP = "ADXP"
     ON = "ON"
     PNXP = "PNXP"
@@ -4771,9 +4139,7 @@ class DataTypeSequenceOfBooleans(Enum):
 
 
 class DataTypeSequenceOfCharacterStrings(Enum):
-    """
-    specDomain: S10827 (C-0-T10774-A10775-S10821-S10823-S10824-S10825-S10826-S10827-cpt)
-    """
+    """specDomain: S10827 (C-0-T10774-A10775-S10821-S10823-S10824-S10825-S10826-S10827-cpt)"""
     PN = "PN"
     LIST_PNXP = "LIST&lt;PNXP&gt;"
     AD = "AD"
@@ -4782,9 +4148,7 @@ class DataTypeSequenceOfCharacterStrings(Enum):
 
 
 class DataTypeSequenceOfEncodedData(Enum):
-    """
-    specDomain: S10826 (C-0-T10774-A10775-S10821-S10823-S10824-S10825-S10826-cpt)
-    """
+    """specDomain: S10826 (C-0-T10774-A10775-S10821-S10823-S10824-S10825-S10826-cpt)"""
     PN = "PN"
     LIST_PNXP = "LIST&lt;PNXP&gt;"
     AD = "AD"
@@ -4794,25 +4158,19 @@ class DataTypeSequenceOfEncodedData(Enum):
 
 
 class DataTypeSequenceOfPersonNameParts(Enum):
-    """
-    specDomain: S10828 (C-0-T10774-A10775-S10821-S10823-S10824-S10825-S10826-S10827-S10828-cpt)
-    """
+    """specDomain: S10828 (C-0-T10774-A10775-S10821-S10823-S10824-S10825-S10826-S10827-S10828-cpt)"""
     PN = "PN"
     LIST_PNXP = "LIST&lt;PNXP&gt;"
 
 
 class DataTypeSequenceOfPostalAddressParts(Enum):
-    """
-    specDomain: S10829 (C-0-T10774-A10775-S10821-S10823-S10824-S10825-S10826-S10827-S10829-cpt)
-    """
+    """specDomain: S10829 (C-0-T10774-A10775-S10821-S10823-S10824-S10825-S10826-S10827-S10829-cpt)"""
     AD = "AD"
     LIST_ADXP = "LIST&lt;ADXP&gt;"
 
 
 class DataTypeSequenceOfSequenceOfBooleans(Enum):
-    """
-    specDomain: S10824 (C-0-T10774-A10775-S10821-S10823-S10824-cpt)
-    """
+    """specDomain: S10824 (C-0-T10774-A10775-S10821-S10823-S10824-cpt)"""
     PN = "PN"
     LIST_PNXP = "LIST&lt;PNXP&gt;"
     AD = "AD"
@@ -4824,9 +4182,7 @@ class DataTypeSequenceOfSequenceOfBooleans(Enum):
 
 
 class DataTypeSequenceOfSequencesOfDataValues(Enum):
-    """
-    specDomain: S10823 (C-0-T10774-A10775-S10821-S10823-cpt)
-    """
+    """specDomain: S10823 (C-0-T10774-A10775-S10821-S10823-cpt)"""
     PN = "PN"
     LIST_PNXP = "LIST&lt;PNXP&gt;"
     AD = "AD"
@@ -4839,9 +4195,7 @@ class DataTypeSequenceOfSequencesOfDataValues(Enum):
 
 
 class DataTypeSet(Enum):
-    """
-    specDomain: S10801 (C-0-T10774-A10775-S10801-cpt)
-    """
+    """specDomain: S10801 (C-0-T10774-A10775-S10801-cpt)"""
     SET_ST = "SET&lt;ST&gt;"
     SET_CS = "SET&lt;CS&gt;"
     SET_CV = "SET&lt;CV&gt;"
@@ -4867,46 +4221,34 @@ class DataTypeSet(Enum):
 
 
 class DataTypeSetOfAddresses(Enum):
-    """
-    specDomain: S10811 (C-0-T10774-A10775-S10801-S10810-S10811-cpt)
-    """
+    """specDomain: S10811 (C-0-T10774-A10775-S10801-S10810-S10811-cpt)"""
     HIST_AD = "HIST&lt;AD&gt;"
     SET_HXIT_AD = "SET&lt;HXIT&lt;AD&gt;&gt;"
     SET_AD = "SET&lt;AD&gt;"
 
 
 class DataTypeSetOfCharacterStrings(Enum):
-    """
-    specDomain: S10809 (C-0-T10774-A10775-S10801-S10809-cpt)
-    """
+    """specDomain: S10809 (C-0-T10774-A10775-S10801-S10809-cpt)"""
     SET_ST = "SET&lt;ST&gt;"
 
 
 class DataTypeSetOfCodedSimpleValue(Enum):
-    """
-    specDomain: S10803 (C-0-T10774-A10775-S10801-S10802-S10803-cpt)
-    """
+    """specDomain: S10803 (C-0-T10774-A10775-S10801-S10802-S10803-cpt)"""
     SET_CS = "SET&lt;CS&gt;"
 
 
 class DataTypeSetOfCodedValue(Enum):
-    """
-    specDomain: S10804 (C-0-T10774-A10775-S10801-S10802-S10804-cpt)
-    """
+    """specDomain: S10804 (C-0-T10774-A10775-S10801-S10802-S10804-cpt)"""
     SET_CV = "SET&lt;CV&gt;"
 
 
 class DataTypeSetOfCodedWithEquivalents(Enum):
-    """
-    specDomain: S10805 (C-0-T10774-A10775-S10801-S10802-S10805-cpt)
-    """
+    """specDomain: S10805 (C-0-T10774-A10775-S10801-S10802-S10805-cpt)"""
     SET_CE = "SET&lt;CE&gt;"
 
 
 class DataTypeSetOfConceptDescriptors(Enum):
-    """
-    specDomain: S10802 (C-0-T10774-A10775-S10801-S10802-cpt)
-    """
+    """specDomain: S10802 (C-0-T10774-A10775-S10801-S10802-cpt)"""
     SET_CS = "SET&lt;CS&gt;"
     SET_CV = "SET&lt;CV&gt;"
     SET_CE = "SET&lt;CE&gt;"
@@ -4916,41 +4258,31 @@ class DataTypeSetOfConceptDescriptors(Enum):
 
 
 class DataTypeSetOfHistoricalAddresses(Enum):
-    """
-    specDomain: S10812 (C-0-T10774-A10775-S10801-S10810-S10811-S10812-cpt)
-    """
+    """specDomain: S10812 (C-0-T10774-A10775-S10801-S10810-S10811-S10812-cpt)"""
     HIST_AD = "HIST&lt;AD&gt;"
     SET_HXIT_AD = "SET&lt;HXIT&lt;AD&gt;&gt;"
 
 
 class DataTypeSetOfIntegerNumbers(Enum):
-    """
-    specDomain: S10867 (C-0-T10774-A10775-S10801-S10867-cpt)
-    """
+    """specDomain: S10867 (C-0-T10774-A10775-S10801-S10867-cpt)"""
     SET_INT = "SET&lt;INT&gt;"
     IVL_INT = "IVL&lt;INT&gt;"
 
 
 class DataTypeSetOfIntervalsOfPhysicalQuantitiy(Enum):
-    """
-    specDomain: S10869 (C-0-T10774-A10775-S10801-S10869-cpt)
-    """
+    """specDomain: S10869 (C-0-T10774-A10775-S10801-S10869-cpt)"""
     NPPD_IVL_PQ = "NPPD&lt;IVL&lt;PQ&gt;&gt;"
     SET_UVP_IVL_PQ = "SET&lt;UVP&lt;IVL&lt;PQ&gt;&gt;&gt;"
     SET_IVL_PQ = "SET&lt;IVL&lt;PQ&gt;&gt;"
 
 
 class DataTypeSetOfPhysicalQuantities(Enum):
-    """
-    specDomain: S10818 (C-0-T10774-A10775-S10801-S10818-cpt)
-    """
+    """specDomain: S10818 (C-0-T10774-A10775-S10801-S10818-cpt)"""
     SET_PQ = "SET&lt;PQ&gt;"
 
 
 class DataTypeSetOfPointsInTime(Enum):
-    """
-    specDomain: S10807 (C-0-T10774-A10775-S10834-S10841-S10807-cpt)
-    """
+    """specDomain: S10807 (C-0-T10774-A10775-S10834-S10841-S10807-cpt)"""
     EIVL_TS = "EIVL&lt;TS&gt;"
     GTS = "GTS"
     PIVL_TS = "PIVL&lt;TS&gt;"
@@ -4958,17 +4290,13 @@ class DataTypeSetOfPointsInTime(Enum):
 
 
 class DataTypeSetOfRealNumbers(Enum):
-    """
-    specDomain: S10868 (C-0-T10774-A10775-S10801-S10868-cpt)
-    """
+    """specDomain: S10868 (C-0-T10774-A10775-S10801-S10868-cpt)"""
     SET_REAL = "SET&lt;REAL&gt;"
     IVL_REAL = "IVL&lt;REAL&gt;"
 
 
 class DataTypeSetOfSequencesOfCharacterStrings(Enum):
-    """
-    specDomain: S10810 (C-0-T10774-A10775-S10801-S10810-cpt)
-    """
+    """specDomain: S10810 (C-0-T10774-A10775-S10801-S10810-cpt)"""
     HIST_AD = "HIST&lt;AD&gt;"
     SET_HXIT_AD = "SET&lt;HXIT&lt;AD&gt;&gt;"
     SET_AD = "SET&lt;AD&gt;"
@@ -4976,95 +4304,71 @@ class DataTypeSetOfSequencesOfCharacterStrings(Enum):
 
 
 class DataTypeSetOfUncertainProbabilisticConceptDescriptor(Enum):
-    """
-    specDomain: S10816 (C-0-T10774-A10775-S10801-S10816-cpt)
-    """
+    """specDomain: S10816 (C-0-T10774-A10775-S10801-S10816-cpt)"""
     NPPD_CD = "NPPD&lt;CD&gt;"
     SET_UVP_CD = "SET&lt;UVP&lt;CD&gt;&gt;"
 
 
 class DataTypeSetOfUncertainProbabilisticIntervalOfPhysicalQuantities(Enum):
-    """
-    specDomain: S10819 (C-0-T10774-A10775-S10801-S10819-cpt)
-    """
+    """specDomain: S10819 (C-0-T10774-A10775-S10801-S10819-cpt)"""
     NPPD_IVL_PQ = "NPPD&lt;IVL&lt;PQ&gt;&gt;"
     SET_UVP_IVL_PQ = "SET&lt;UVP&lt;IVL&lt;PQ&gt;&gt;&gt;"
 
 
 class DataTypeSetOfUncertainValueProbabilistic(Enum):
-    """
-    specDomain: S10814 (C-0-T10774-A10775-S10801-S10814-cpt)
-    """
+    """specDomain: S10814 (C-0-T10774-A10775-S10801-S10814-cpt)"""
     NPPD_ANY = "NPPD&lt;ANY&gt;"
     SET_UVP_ANY = "SET&lt;UVP&lt;ANY&gt;&gt;"
 
 
 class DataTypeTelecommunicationAddress(Enum):
-    """
-    specDomain: S10787 (C-0-T10774-A10775-S10788-S10787-cpt)
-    """
+    """specDomain: S10787 (C-0-T10774-A10775-S10788-S10787-cpt)"""
     TEL = "TEL"
 
 
 class DataTypeUncertainNarrativeConceptDescriptor(Enum):
-    """
-    specDomain: S10854 (C-0-T10774-A10775-S10853-S10854-cpt)
-    """
+    """specDomain: S10854 (C-0-T10774-A10775-S10853-S10854-cpt)"""
     UVN_CD = "UVN&lt;CD&gt;"
 
 
 class DataTypeUncertainProbabilisticConceptDescriptor(Enum):
-    """
-    specDomain: S10857 (C-0-T10774-A10775-S10856-S10857-cpt)
-    """
+    """specDomain: S10857 (C-0-T10774-A10775-S10856-S10857-cpt)"""
     UVP_CD = "UVP&lt;CD&gt;"
 
 
 class DataTypeUncertainProbabilisticIntervalOfPhysicalQuantities(Enum):
-    """
-    specDomain: S10859 (C-0-T10774-A10775-S10856-S10859-cpt)
-    """
+    """specDomain: S10859 (C-0-T10774-A10775-S10856-S10859-cpt)"""
     UVP_IVL_PQ = "UVP&lt;IVL&lt;PQ&gt;&gt;"
 
 
 class DataTypeUncertainValueNarrative(Enum):
-    """
-    specDomain: S10853 (C-0-T10774-A10775-S10853-cpt)
-    """
+    """specDomain: S10853 (C-0-T10774-A10775-S10853-cpt)"""
     UVN_CD = "UVN&lt;CD&gt;"
     UVN_ANY = "UVN&lt;ANY&gt;"
 
 
 class DataTypeUncertainValueProbabilistic(Enum):
-    """
-    specDomain: S10856 (C-0-T10774-A10775-S10856-cpt)
-    """
+    """specDomain: S10856 (C-0-T10774-A10775-S10856-cpt)"""
     UVP_CD = "UVP&lt;CD&gt;"
     UVP_IVL_PQ = "UVP&lt;IVL&lt;PQ&gt;&gt;"
     UVP_ANY = "UVP&lt;ANY&gt;"
 
 
 class DataTypeUniversalResourceLocator(Enum):
-    """
-    specDomain: S10788 (C-0-T10774-A10775-S10788-cpt)
-    """
+    """specDomain: S10788 (C-0-T10774-A10775-S10788-cpt)"""
     TEL = "TEL"
     URL = "URL"
 
 
 class DecisionObservationMethod(Enum):
-    """
-    abstDomain: A19378 (C-0-T14079-A19378-cpt)
-    """
+    """abstDomain: A19378 (C-0-T14079-A19378-cpt)"""
     ALGM = "ALGM"
     BYCL = "BYCL"
     GINT = "GINT"
 
 
 class DedicatedNonClinicalLocationRoleType(Enum):
-    """
-    abstDomain: A19452 (C-0-T12206-A17660-A19450-A19452-cpt)
-    """
+    """abstDomain: A19452 (C-0-T12206-A17660-A19450-A19452-cpt)"""
     MOBL = "MOBL"
     AMB = "AMB"
     DADDR = "DADDR"
@@ -5072,16 +4376,12 @@ class DedicatedNonClinicalLocationRoleType(Enum):
 
 
 class Delawaran(Enum):
-    """
-    abstDomain: A18184 (C-0-T18130-A18131-A18132-A18171-A18184-cpt)
-    """
+    """abstDomain: A18184 (C-0-T18130-A18131-A18132-A18171-A18184-cpt)"""
     X_DEL = "x-DEL"
 
 
 class DeliveryAddressLine(Enum):
-    """
-    specDomain: S17887 (C-0-T10642-S17887-cpt)
-    """
+    """specDomain: S17887 (C-0-T10642-S17887-cpt)"""
     DAL = "DAL"
     DINSTA = "DINSTA"
     DINSTQ = "DINSTQ"
@@ -5091,17 +4391,13 @@ class DeliveryAddressLine(Enum):
 
 
 class DeltaCalifornia(Enum):
-    """
-    abstDomain: A18291 (C-0-T18130-A18241-A18274-A18275-A18291-cpt)
-    """
+    """abstDomain: A18291 (C-0-T18130-A18241-A18274-A18275-A18291-cpt)"""
     X_DIH = "x-DIH"
     X_COC = "x-COC"
 
 
 class DentalProvidersProviderCodes(Enum):
-    """
-    specDomain: S20318 (C-0-T19465-S20318-cpt)
-    """
+    """specDomain: S20318 (C-0-T19465-S20318-cpt)"""
     VALUE_122300000_X = "122300000X"
     VALUE_1223_D0001_X = "1223D0001X"
     VALUE_1223_E0200_X = "1223E0200X"
@@ -5121,9 +4417,7 @@ class DentalProvidersProviderCodes(Enum):
 
 
 class DentalServiceProviderHipaa(Enum):
-    """
-    abstDomain: A16460 (C-0-T13129-A13130-A16460-cpt)
-    """
+    """abstDomain: A16460 (C-0-T13129-A13130-A16460-cpt)"""
     VALUE_1327_D0700_N = "1327D0700N"
     VALUE_122300000_N = "122300000N"
     VALUE_1223_D0001_Y = "1223D0001Y"
@@ -5139,9 +4433,7 @@ class DentalServiceProviderHipaa(Enum):
 
 
 class DentistHipaa(Enum):
-    """
-    specDomain: S13188 (C-0-T13129-A13130-A16460-S13188-cpt)
-    """
+    """specDomain: S13188 (C-0-T13129-A13130-A16460-S13188-cpt)"""
     VALUE_1327_D0700_N = "1327D0700N"
     VALUE_122300000_N = "122300000N"
     VALUE_1223_D0001_Y = "1223D0001Y"
@@ -5154,9 +4446,7 @@ class DentistHipaa(Enum):
 
 
 class DentistProviderCodes(Enum):
-    """
-    specDomain: S20322 (C-0-T19465-S20318-S20322-cpt)
-    """
+    """specDomain: S20322 (C-0-T19465-S20318-S20322-cpt)"""
     VALUE_122300000_X = "122300000X"
     VALUE_1223_D0001_X = "1223D0001X"
     VALUE_1223_E0200_X = "1223E0200X"
@@ -5171,9 +4461,7 @@ class DentistProviderCodes(Enum):
 
 
 class DependentCoveredPartyRoleType(Enum):
-    """
-    abstDomain: A19815 (C-0-T12206-A19809-A19805-A19815-cpt)
-    """
+    """abstDomain: A19815 (C-0-T12206-A19809-A19805-A19815-cpt)"""
     STUD = "STUD"
     FSTUD = "FSTUD"
     PSTUD = "PSTUD"
@@ -5183,9 +4471,7 @@ class DependentCoveredPartyRoleType(Enum):
 
 
 class DermatologyProviderCodes(Enum):
-    """
-    specDomain: S20106 (C-0-T19465-S20096-S20106-cpt)
-    """
+    """specDomain: S20106 (C-0-T19465-S20096-S20106-cpt)"""
     VALUE_207_N00000_X = "207N00000X"
     VALUE_207_NI0002_X = "207NI0002X"
     VALUE_207_NS0135_X = "207NS0135X"
@@ -5195,9 +4481,7 @@ class DermatologyProviderCodes(Enum):
 
 
 class DeviceAlertLevel(Enum):
-    """
-    vocSet: T14066 (C-0-T14066-cpt)
-    """
+    """vocSet: T14066 (C-0-T14066-cpt)"""
     C = "C"
     N = "N"
     S = "S"
@@ -5205,9 +4489,7 @@ class DeviceAlertLevel(Enum):
 
 
 class Dhegiha(Enum):
-    """
-    abstDomain: A18580 (C-0-T18130-A18552-A18553-A18562-A18580-cpt)
-    """
+    """abstDomain: A18580 (C-0-T18130-A18552-A18553-A18562-A18580-cpt)"""
     X_KAA = "x-KAA"
     X_OMA = "x-OMA"
     X_OSA = "x-OSA"
@@ -5215,9 +4497,7 @@ class Dhegiha(Enum):
 
 
 class DiagTherPracticeSetting(Enum):
-    """
-    specDomain: S10902 (C-0-T12206-A17660-A19450-A10588-S10902-cpt)
-    """
+    """specDomain: S10902 (C-0-T12206-A17660-A19450-A10588-S10902-cpt)"""
     CVDX = "CVDX"
     CATH = "CATH"
     ECHO = "ECHO"
@@ -5232,16 +4512,12 @@ class DiagTherPracticeSetting(Enum):
 
 
 class Diegueno(Enum):
-    """
-    abstDomain: A18292 (C-0-T18130-A18241-A18274-A18275-A18291-A18292-cpt)
-    """
+    """abstDomain: A18292 (C-0-T18130-A18241-A18274-A18275-A18291-A18292-cpt)"""
     X_DIH = "x-DIH"
 
 
 class DietaryandNutritionalServiceProvidersProviderCodes(Enum):
-    """
-    specDomain: S20334 (C-0-T19465-S20334-cpt)
-    """
+    """specDomain: S20334 (C-0-T19465-S20334-cpt)"""
     VALUE_133_V00000_X = "133V00000X"
     VALUE_133_VN1006_X = "133VN1006X"
     VALUE_133_VN1004_X = "133VN1004X"
@@ -5254,9 +4530,7 @@ class DietaryandNutritionalServiceProvidersProviderCodes(Enum):
 
 
 class DietitianRegisteredProviderCodes(Enum):
-    """
-    specDomain: S20337 (C-0-T19465-S20334-S20337-cpt)
-    """
+    """specDomain: S20337 (C-0-T19465-S20334-S20337-cpt)"""
     VALUE_133_V00000_X = "133V00000X"
     VALUE_133_VN1006_X = "133VN1006X"
     VALUE_133_VN1004_X = "133VN1004X"
@@ -5264,18 +4538,14 @@ class DietitianRegisteredProviderCodes(Enum):
 
 
 class Diffusion(Enum):
-    """
-    abstDomain: A14584 (C-0-T14581-A16931-A14584-cpt)
-    """
+    """abstDomain: A14584 (C-0-T14581-A16931-A14584-cpt)"""
     EXTCORPDIF = "EXTCORPDIF"
     HEMODIFF = "HEMODIFF"
     TRNSDERMD = "TRNSDERMD"
 
 
 class DiseaseProgram(Enum):
-    """
-    specDomain: S22133 (C-0-T13953-A13954-A19855-A19858-S19718-S22133-cpt)
-    """
+    """specDomain: S22133 (C-0-T13953-A13954-A19855-A19858-S19718-S22133-cpt)"""
     DISEASEPRG = "DISEASEPRG"
     HIVAIDS = "HIVAIDS"
     CANPRG = "CANPRG"
@@ -5283,17 +4553,13 @@ class DiseaseProgram(Enum):
 
 
 class Dissolve(Enum):
-    """
-    abstDomain: A14586 (C-0-T14581-A16931-A14586-cpt)
-    """
+    """abstDomain: A14586 (C-0-T14581-A16931-A14586-cpt)"""
     DISSOLVE = "DISSOLVE"
     SL = "SL"
 
 
 class DocumentCompletion(Enum):
-    """
-    vocSet: T271 (C-0-T271-cpt)
-    """
+    """vocSet: T271 (C-0-T271-cpt)"""
     AU = "AU"
     DI = "DI"
     DO = "DO"
@@ -5304,9 +4570,7 @@ class DocumentCompletion(Enum):
 
 
 class DocumentStorage(Enum):
-    """
-    vocSet: T275 (C-0-T275-cpt)
-    """
+    """vocSet: T275 (C-0-T275-cpt)"""
     AC = "AC"
     AA = "AA"
     AR = "AR"
@@ -5314,17 +4578,13 @@ class DocumentStorage(Enum):
 
 
 class DocumentStorageActive(Enum):
-    """
-    specDomain: S10584 (C-0-T275-S10584-cpt)
-    """
+    """specDomain: S10584 (C-0-T275-S10584-cpt)"""
     AC = "AC"
     AA = "AA"
 
 
 class DosageProblem(Enum):
-    """
-    specDomain: S16680 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-S16680-cpt)
-    """
+    """specDomain: S16680 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-S16680-cpt)"""
     DOSE = "DOSE"
     DOSEDUR = "DOSEDUR"
     DOSEIVL = "DOSEIVL"
@@ -5335,9 +4595,7 @@ class DosageProblem(Enum):
 
 
 class DosageProblemDetectedIssueCode(Enum):
-    """
-    specDomain: S16680 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16680-cpt)
-    """
+    """specDomain: S16680 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16680-cpt)"""
     DOSEDURH = "DOSEDURH"
     DOSEDURHIND = "DOSEDURHIND"
     DOSEDURL = "DOSEDURL"
@@ -5361,9 +4619,7 @@ class DosageProblemDetectedIssueCode(Enum):
 
 
 class DoseDurationDetectedIssueCode(Enum):
-    """
-    specDomain: S16684 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16680-S16684-cpt)
-    """
+    """specDomain: S16684 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16680-S16684-cpt)"""
     DOSEDURH = "DOSEDURH"
     DOSEDURHIND = "DOSEDURHIND"
     DOSEDURL = "DOSEDURL"
@@ -5372,25 +4628,19 @@ class DoseDurationDetectedIssueCode(Enum):
 
 
 class DoseDurationHighDetectedIssueCode(Enum):
-    """
-    specDomain: S16686 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16680-S16684-S16686-cpt)
-    """
+    """specDomain: S16686 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16680-S16684-S16686-cpt)"""
     DOSEDURH = "DOSEDURH"
     DOSEDURHIND = "DOSEDURHIND"
 
 
 class DoseDurationLowDetectedIssueCode(Enum):
-    """
-    specDomain: S16685 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16680-S16684-S16685-cpt)
-    """
+    """specDomain: S16685 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16680-S16684-S16685-cpt)"""
     DOSEDURL = "DOSEDURL"
     DOSEDURLIND = "DOSEDURLIND"
 
 
 class DoseHighDetectedIssueCode(Enum):
-    """
-    specDomain: S16681 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16680-S16681-cpt)
-    """
+    """specDomain: S16681 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16680-S16681-cpt)"""
     DOSEH = "DOSEH"
     DOSEHINDA = "DOSEHINDA"
     DOSEHINDSA = "DOSEHINDSA"
@@ -5399,17 +4649,13 @@ class DoseHighDetectedIssueCode(Enum):
 
 
 class DoseIntervalDetectedIssueCode(Enum):
-    """
-    specDomain: S16683 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16680-S16683-cpt)
-    """
+    """specDomain: S16683 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16680-S16683-cpt)"""
     DOSEIVL = "DOSEIVL"
     DOSEIVLIND = "DOSEIVLIND"
 
 
 class DoseLowDetectedIssueCode(Enum):
-    """
-    specDomain: S16682 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16680-S16682-cpt)
-    """
+    """specDomain: S16682 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S16680-S16682-cpt)"""
     DOSEL = "DOSEL"
     DOSELINDA = "DOSELINDA"
     DOSELINDSA = "DOSELINDSA"
@@ -5418,16 +4664,12 @@ class DoseLowDetectedIssueCode(Enum):
 
 
 class Douche(Enum):
-    """
-    abstDomain: A14589 (C-0-T14581-A16931-A14589-cpt)
-    """
+    """abstDomain: A14589 (C-0-T14581-A16931-A14589-cpt)"""
     DOUCHE = "DOUCHE"
 
 
 class DropsDrugForm(Enum):
-    """
-    specDomain: S14420 (C-0-T19651-A14411-A14412-A14413-S14419-S14420-cpt)
-    """
+    """specDomain: S14420 (C-0-T19651-A14411-A14412-A14413-S14419-S14420-cpt)"""
     DROP = "DROP"
     NDROP = "NDROP"
     OPDROP = "OPDROP"
@@ -5436,18 +4678,14 @@ class DropsDrugForm(Enum):
 
 
 class DuplicateTherapyAlert(Enum):
-    """
-    specDomain: S16688 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-S16687-S16688-cpt)
-    """
+    """specDomain: S16688 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-S16687-S16688-cpt)"""
     DUPTHPY = "DUPTHPY"
     DUPTHPGEN = "DUPTHPGEN"
     DUPTHPCLS = "DUPTHPCLS"
 
 
 class DurableMedicalEquipmentAndOrMedicalSupplySupplierHipaa(Enum):
-    """
-    specDomain: S13835 (C-0-T13129-A13715-A13833-S13835-cpt)
-    """
+    """specDomain: S13835 (C-0-T13129-A13715-A13833-S13835-cpt)"""
     VALUE_332_B00000_N = "332B00000N"
     VALUE_332_BC3200_N = "332BC3200N"
     VALUE_332_BD1200_N = "332BD1200N"
@@ -5457,9 +4695,7 @@ class DurableMedicalEquipmentAndOrMedicalSupplySupplierHipaa(Enum):
 
 
 class DurableMedicalEquipmentandMedicalSuppliesProviderCodes(Enum):
-    """
-    specDomain: S20774 (C-0-T19465-S20772-S20774-cpt)
-    """
+    """specDomain: S20774 (C-0-T19465-S20772-S20774-cpt)"""
     VALUE_332_B00000_X = "332B00000X"
     VALUE_332_BC3200_X = "332BC3200X"
     VALUE_332_BD1200_X = "332BD1200X"
@@ -5469,25 +4705,19 @@ class DurableMedicalEquipmentandMedicalSuppliesProviderCodes(Enum):
 
 
 class EcgobservationSeriesType(Enum):
-    """
-    abstDomain: A19322 (C-0-T13953-A19820-A16226-A19321-A19322-cpt)
-    """
+    """abstDomain: A19322 (C-0-T13953-A19820-A16226-A19321-A19322-cpt)"""
     REPRESENTATIVE_BEAT = "REPRESENTATIVE_BEAT"
     RHYTHM = "RHYTHM"
 
 
 class ErpracticeSetting(Enum):
-    """
-    specDomain: S10598 (C-0-T12206-A17660-A19450-A10588-S10596-S10598-cpt)
-    """
+    """specDomain: S10598 (C-0-T12206-A17660-A19450-A10588-S10596-S10598-cpt)"""
     ER = "ER"
     ETU = "ETU"
 
 
 class EasternAlgonquin(Enum):
-    """
-    abstDomain: A18171 (C-0-T18130-A18131-A18132-A18171-cpt)
-    """
+    """abstDomain: A18171 (C-0-T18130-A18131-A18132-A18171-cpt)"""
     X_AAQ = "x-AAQ"
     X_MAC = "x-MAC"
     X_ABE = "x-ABE"
@@ -5496,17 +4726,13 @@ class EasternAlgonquin(Enum):
 
 
 class EasternApachean(Enum):
-    """
-    abstDomain: A18407 (C-0-T18130-A18352-A18356-A18358-A18399-A18407-cpt)
-    """
+    """abstDomain: A18407 (C-0-T18130-A18352-A18356-A18358-A18399-A18407-cpt)"""
     X_APJ = "x-APJ"
     X_APL = "x-APL"
 
 
 class EasternMiwok(Enum):
-    """
-    abstDomain: A18463 (C-0-T18130-A18413-A18458-A18459-A18463-cpt)
-    """
+    """abstDomain: A18463 (C-0-T18130-A18413-A18458-A18459-A18463-cpt)"""
     X_CSM = "x-CSM"
     X_NSQ = "x-NSQ"
     X_PMW = "x-PMW"
@@ -5514,9 +4740,7 @@ class EasternMiwok(Enum):
 
 
 class EditStatus(Enum):
-    """
-    vocSet: T11040 (C-0-T11040-cpt)
-    """
+    """vocSet: T11040 (C-0-T11040-cpt)"""
     A = "A"
     I = "I"
     O = "O"
@@ -5525,9 +4749,7 @@ class EditStatus(Enum):
 
 
 class EducationLevel(Enum):
-    """
-    vocSet: T19175 (C-0-T19175-cpt)
-    """
+    """vocSet: T19175 (C-0-T19175-cpt)"""
     ASSOC = "ASSOC"
     BD = "BD"
     POSTG = "POSTG"
@@ -5540,25 +4762,19 @@ class EducationLevel(Enum):
 
 
 class ElectroOsmosisRoute(Enum):
-    """
-    abstDomain: A17019 (C-0-T14581-A16931-A17019-cpt)
-    """
+    """abstDomain: A17019 (C-0-T14581-A16931-A17019-cpt)"""
     ELECTOSMOS = "ELECTOSMOS"
 
 
 class EmergencyMedicalServiceProviderHipaa(Enum):
-    """
-    abstDomain: A13207 (C-0-T13129-A13130-A13207-cpt)
-    """
+    """abstDomain: A13207 (C-0-T13129-A13130-A13207-cpt)"""
     VALUE_146_N00000_N = "146N00000N"
     VALUE_146_M00000_N = "146M00000N"
     VALUE_146_L00000_N = "146L00000N"
 
 
 class EmergencyMedicalServiceProvidersProviderCodes(Enum):
-    """
-    specDomain: S20343 (C-0-T19465-S20343-cpt)
-    """
+    """specDomain: S20343 (C-0-T19465-S20343-cpt)"""
     VALUE_140000000_X = "140000000X"
     VALUE_146_N00000_X = "146N00000X"
     VALUE_146_M00000_X = "146M00000X"
@@ -5567,9 +4783,7 @@ class EmergencyMedicalServiceProvidersProviderCodes(Enum):
 
 
 class EmergencyMedicineProviderCodes(Enum):
-    """
-    specDomain: S20112 (C-0-T19465-S20096-S20112-cpt)
-    """
+    """specDomain: S20112 (C-0-T19465-S20096-S20112-cpt)"""
     VALUE_207_P00000_X = "207P00000X"
     VALUE_207_PE0004_X = "207PE0004X"
     VALUE_207_PT0002_X = "207PT0002X"
@@ -5579,26 +4793,20 @@ class EmergencyMedicineProviderCodes(Enum):
 
 
 class EmergencyPharmacySupplyType(Enum):
-    """
-    specDomain: S16220 (C-0-T13953-A13954-A16208-S16220-cpt)
-    """
+    """specDomain: S16220 (C-0-T13953-A13954-A16208-S16220-cpt)"""
     EM = "EM"
     SO = "SO"
 
 
 class EncounterAdmissionSource(Enum):
-    """
-    vocSet: T12234 (C-0-T12234-cpt)
-    """
+    """vocSet: T12234 (C-0-T12234-cpt)"""
     E = "E"
     LD = "LD"
     NB = "NB"
 
 
 class EncounterSpecialCourtesy(Enum):
-    """
-    vocSet: T12242 (C-0-T12242-cpt)
-    """
+    """vocSet: T12242 (C-0-T12242-cpt)"""
     EXT = "EXT"
     NRM = "NRM"
     PRF = "PRF"
@@ -5607,57 +4815,43 @@ class EncounterSpecialCourtesy(Enum):
 
 
 class EndocervicalRoute(Enum):
-    """
-    abstDomain: A17045 (C-0-T14581-A17021-A17045-cpt)
-    """
+    """abstDomain: A17045 (C-0-T14581-A17021-A17045-cpt)"""
     AMNINJ = "AMNINJ"
     BILINJ = "BILINJ"
 
 
 class EndocrinologyClinic(Enum):
-    """
-    specDomain: S10931 (C-0-T12206-A17660-A19450-A10588-S10589-S10931-cpt)
-    """
+    """specDomain: S10931 (C-0-T12206-A17660-A19450-A10588-S10589-S10931-cpt)"""
     ENDO = "ENDO"
     PEDE = "PEDE"
 
 
 class Enema(Enum):
-    """
-    abstDomain: A14591 (C-0-T14581-A16931-A14591-cpt)
-    """
+    """abstDomain: A14591 (C-0-T14581-A16931-A14591-cpt)"""
     ENEMA = "ENEMA"
     RETENEMA = "RETENEMA"
 
 
 class EnteralRoute(Enum):
-    """
-    abstDomain: A17048 (C-0-T14581-A17021-A17048-cpt)
-    """
+    """abstDomain: A17048 (C-0-T14581-A17021-A17048-cpt)"""
     ENTINSTL = "ENTINSTL"
     EFT = "EFT"
 
 
 class EntericCoatedCapsule(Enum):
-    """
-    specDomain: S14509 (C-0-T19651-A14411-A14412-A14484-S14506-S14507-S14508-S14509-cpt)
-    """
+    """specDomain: S14509 (C-0-T19651-A14411-A14412-A14484-S14506-S14507-S14508-S14509-cpt)"""
     ENTCAP = "ENTCAP"
     ERENTCAP = "ERENTCAP"
 
 
 class EntericCoatedTablet(Enum):
-    """
-    specDomain: S14524 (C-0-T19651-A14411-A14412-A14484-S14506-S14515-S14516-S14524-cpt)
-    """
+    """specDomain: S14524 (C-0-T19651-A14411-A14412-A14484-S14506-S14515-S14516-S14524-cpt)"""
     ECTAB = "ECTAB"
     ERECTAB = "ERECTAB"
 
 
 class EntityClass(Enum):
-    """
-    vocSet: T10882 (C-0-T10882-cpt)
-    """
+    """vocSet: T10882 (C-0-T10882-cpt)"""
     NLIV = "NLIV"
     ANM = "ANM"
     MIC = "MIC"
@@ -5688,26 +4882,20 @@ class EntityClass(Enum):
 
 
 class EntityClassContainer(Enum):
-    """
-    specDomain: S11622 (C-0-T10882-S13922-S10883-S13934-S11622-cpt)
-    """
+    """specDomain: S11622 (C-0-T10882-S13922-S10883-S13934-S11622-cpt)"""
     CONT = "CONT"
     HOLD = "HOLD"
 
 
 class EntityClassDevice(Enum):
-    """
-    specDomain: S11623 (C-0-T10882-S13922-S10883-S13934-S11623-cpt)
-    """
+    """specDomain: S11623 (C-0-T10882-S13922-S10883-S13934-S11623-cpt)"""
     DEV = "DEV"
     CER = "CER"
     MODDV = "MODDV"
 
 
 class EntityClassLivingSubject(Enum):
-    """
-    specDomain: S10884 (C-0-T10882-S13922-S10884-cpt)
-    """
+    """specDomain: S10884 (C-0-T10882-S13922-S10884-cpt)"""
     NLIV = "NLIV"
     ANM = "ANM"
     MIC = "MIC"
@@ -5717,9 +4905,7 @@ class EntityClassLivingSubject(Enum):
 
 
 class EntityClassManufacturedMaterial(Enum):
-    """
-    specDomain: S13934 (C-0-T10882-S13922-S10883-S13934-cpt)
-    """
+    """specDomain: S13934 (C-0-T10882-S13922-S10883-S13934-cpt)"""
     CONT = "CONT"
     HOLD = "HOLD"
     DEV = "DEV"
@@ -5729,9 +4915,7 @@ class EntityClassManufacturedMaterial(Enum):
 
 
 class EntityClassMaterial(Enum):
-    """
-    specDomain: S10883 (C-0-T10882-S13922-S10883-cpt)
-    """
+    """specDomain: S10883 (C-0-T10882-S13922-S10883-cpt)"""
     CONT = "CONT"
     HOLD = "HOLD"
     DEV = "DEV"
@@ -5744,9 +4928,7 @@ class EntityClassMaterial(Enum):
 
 
 class EntityClassNonPersonLivingSubject(Enum):
-    """
-    specDomain: S11621 (C-0-T10882-S13922-S10884-S11621-cpt)
-    """
+    """specDomain: S11621 (C-0-T10882-S13922-S10884-S11621-cpt)"""
     NLIV = "NLIV"
     ANM = "ANM"
     MIC = "MIC"
@@ -5754,9 +4936,7 @@ class EntityClassNonPersonLivingSubject(Enum):
 
 
 class EntityClassOrganization(Enum):
-    """
-    specDomain: S10889 (C-0-T10882-S13922-S10889-cpt)
-    """
+    """specDomain: S10889 (C-0-T10882-S13922-S10889-cpt)"""
     STATE = "STATE"
     NAT = "NAT"
     ORG = "ORG"
@@ -5764,9 +4944,7 @@ class EntityClassOrganization(Enum):
 
 
 class EntityClassPlace(Enum):
-    """
-    specDomain: S10892 (C-0-T10882-S13922-S10892-cpt)
-    """
+    """specDomain: S10892 (C-0-T10882-S13922-S10892-cpt)"""
     PLC = "PLC"
     CITY = "CITY"
     COUNTRY = "COUNTRY"
@@ -5775,9 +4953,7 @@ class EntityClassPlace(Enum):
 
 
 class EntityClassRoot(Enum):
-    """
-    specDomain: S13922 (C-0-T10882-S13922-cpt)
-    """
+    """specDomain: S13922 (C-0-T10882-S13922-cpt)"""
     NLIV = "NLIV"
     ANM = "ANM"
     MIC = "MIC"
@@ -5808,34 +4984,26 @@ class EntityClassRoot(Enum):
 
 
 class EntityClassState(Enum):
-    """
-    specDomain: S10890 (C-0-T10882-S13922-S10889-S10890-cpt)
-    """
+    """specDomain: S10890 (C-0-T10882-S13922-S10889-S10890-cpt)"""
     STATE = "STATE"
     NAT = "NAT"
 
 
 class EntityDeterminer(Enum):
-    """
-    vocSet: T10878 (C-0-T10878-cpt)
-    """
+    """vocSet: T10878 (C-0-T10878-cpt)"""
     KIND = "KIND"
     QUANTIFIED_KIND = "QUANTIFIED_KIND"
     INSTANCE = "INSTANCE"
 
 
 class EntityDeterminerDetermined(Enum):
-    """
-    specDomain: S10879 (C-0-T10878-S10879-cpt)
-    """
+    """specDomain: S10879 (C-0-T10878-S10879-cpt)"""
     KIND = "KIND"
     QUANTIFIED_KIND = "QUANTIFIED_KIND"
 
 
 class EntityHandling(Enum):
-    """
-    vocSet: T13988 (C-0-T13988-cpt)
-    """
+    """vocSet: T13988 (C-0-T13988-cpt)"""
     AMB = "AMB"
     C37 = "C37"
     CAMB = "CAMB"
@@ -5857,9 +5025,7 @@ class EntityHandling(Enum):
 
 
 class EntityNamePartQualifier(Enum):
-    """
-    vocSet: T15888 (C-0-T15888-cpt)
-    """
+    """vocSet: T15888 (C-0-T15888-cpt)"""
     LS = "LS"
     AC = "AC"
     NB = "NB"
@@ -5874,9 +5040,7 @@ class EntityNamePartQualifier(Enum):
 
 
 class EntityNamePartType(Enum):
-    """
-    vocSet: T15880 (C-0-T15880-cpt)
-    """
+    """vocSet: T15880 (C-0-T15880-cpt)"""
     DEL_VALUE = "DEL"
     PFX = "PFX"
     SFX = "SFX"
@@ -5885,18 +5049,14 @@ class EntityNamePartType(Enum):
 
 
 class EntityNameSearchUse(Enum):
-    """
-    specDomain: S21363 (C-0-T15913-A200-S21363-cpt)
-    """
+    """specDomain: S21363 (C-0-T15913-A200-S21363-cpt)"""
     SRCH = "SRCH"
     SNDX = "SNDX"
     PHON = "PHON"
 
 
 class EntityNameUse(Enum):
-    """
-    vocSet: T15913 (C-0-T15913-cpt)
-    """
+    """vocSet: T15913 (C-0-T15913-cpt)"""
     SRCH = "SRCH"
     SNDX = "SNDX"
     PHON = "PHON"
@@ -5914,9 +5074,7 @@ class EntityNameUse(Enum):
 
 
 class EntityRisk(Enum):
-    """
-    vocSet: T10405 (C-0-T10405-cpt)
-    """
+    """vocSet: T10405 (C-0-T10405-cpt)"""
     INF = "INF"
     BHZ = "BHZ"
     IFL = "IFL"
@@ -5931,9 +5089,7 @@ class EntityRisk(Enum):
 
 
 class EntityStatus(Enum):
-    """
-    vocSet: T16005 (C-0-T16005-cpt)
-    """
+    """vocSet: T16005 (C-0-T16005-cpt)"""
     NORMAL = "normal"
     ACTIVE = "active"
     INACTIVE = "inactive"
@@ -5941,18 +5097,14 @@ class EntityStatus(Enum):
 
 
 class EntityStatusNormal(Enum):
-    """
-    specDomain: S16006 (C-0-T16005-S16006-cpt)
-    """
+    """specDomain: S16006 (C-0-T16005-S16006-cpt)"""
     NORMAL = "normal"
     ACTIVE = "active"
     INACTIVE = "inactive"
 
 
 class EpiduralRoute(Enum):
-    """
-    abstDomain: A17051 (C-0-T14581-A17021-A17051-cpt)
-    """
+    """abstDomain: A17051 (C-0-T14581-A17021-A17051-cpt)"""
     EPI = "EPI"
     EPIDURINJ = "EPIDURINJ"
     EPIINJ = "EPIINJ"
@@ -5960,9 +5112,7 @@ class EpiduralRoute(Enum):
 
 
 class EquipmentAlertLevel(Enum):
-    """
-    vocSet: T10896 (C-0-T10896-cpt)
-    """
+    """vocSet: T10896 (C-0-T10896-cpt)"""
     C = "C"
     N = "N"
     S = "S"
@@ -5970,9 +5120,7 @@ class EquipmentAlertLevel(Enum):
 
 
 class Ethnicity(Enum):
-    """
-    vocSet: T15836 (C-0-T15836-cpt)
-    """
+    """vocSet: T15836 (C-0-T15836-cpt)"""
     VALUE_2155_0 = "2155-0"
     VALUE_2163_4 = "2163-4"
     VALUE_2162_6 = "2162-6"
@@ -6019,9 +5167,7 @@ class Ethnicity(Enum):
 
 
 class EthnicityHispanic(Enum):
-    """
-    specDomain: S15837 (C-0-T15836-S15837-cpt)
-    """
+    """specDomain: S15837 (C-0-T15836-S15837-cpt)"""
     VALUE_2155_0 = "2155-0"
     VALUE_2163_4 = "2163-4"
     VALUE_2162_6 = "2162-6"
@@ -6067,9 +5213,7 @@ class EthnicityHispanic(Enum):
 
 
 class EthnicityHispanicCentralAmerican(Enum):
-    """
-    specDomain: S15854 (C-0-T15836-S15837-S15854-cpt)
-    """
+    """specDomain: S15854 (C-0-T15836-S15837-S15854-cpt)"""
     VALUE_2155_0 = "2155-0"
     VALUE_2163_4 = "2163-4"
     VALUE_2162_6 = "2162-6"
@@ -6082,9 +5226,7 @@ class EthnicityHispanicCentralAmerican(Enum):
 
 
 class EthnicityHispanicMexican(Enum):
-    """
-    specDomain: S15848 (C-0-T15836-S15837-S15848-cpt)
-    """
+    """specDomain: S15848 (C-0-T15836-S15837-S15848-cpt)"""
     VALUE_2148_5 = "2148-5"
     VALUE_2151_9 = "2151-9"
     VALUE_2152_7 = "2152-7"
@@ -6094,9 +5236,7 @@ class EthnicityHispanicMexican(Enum):
 
 
 class EthnicityHispanicSouthAmerican(Enum):
-    """
-    specDomain: S15863 (C-0-T15836-S15837-S15863-cpt)
-    """
+    """specDomain: S15863 (C-0-T15836-S15837-S15863-cpt)"""
     VALUE_2165_9 = "2165-9"
     VALUE_2166_7 = "2166-7"
     VALUE_2167_5 = "2167-5"
@@ -6112,9 +5252,7 @@ class EthnicityHispanicSouthAmerican(Enum):
 
 
 class EthnicityHispanicSpaniard(Enum):
-    """
-    specDomain: S15838 (C-0-T15836-S15837-S15838-cpt)
-    """
+    """specDomain: S15838 (C-0-T15836-S15837-S15838-cpt)"""
     VALUE_2137_8 = "2137-8"
     VALUE_2138_6 = "2138-6"
     VALUE_2139_4 = "2139-4"
@@ -6128,9 +5266,7 @@ class EthnicityHispanicSpaniard(Enum):
 
 
 class ExpectedSubset(Enum):
-    """
-    specDomain: S21368 (C-0-T19613-A19736-S21368-cpt)
-    """
+    """specDomain: S21368 (C-0-T19613-A19736-S21368-cpt)"""
     FUTURE = "FUTURE"
     LAST = "LAST"
     NEXT = "NEXT"
@@ -6138,9 +5274,7 @@ class ExpectedSubset(Enum):
 
 
 class ExposureMode(Enum):
-    """
-    vocSet: T19940 (C-0-T19940-cpt)
-    """
+    """vocSet: T19940 (C-0-T19940-cpt)"""
     AIRBORNE = "AIRBORNE"
     CONTACT = "CONTACT"
     FOODBORNE = "FOODBORNE"
@@ -6148,9 +5282,7 @@ class ExposureMode(Enum):
 
 
 class ExtendedReleaseCapsule(Enum):
-    """
-    specDomain: S14511 (C-0-T19651-A14411-A14412-A14484-S14506-S14507-S14508-S14511-cpt)
-    """
+    """specDomain: S14511 (C-0-T19651-A14411-A14412-A14484-S14506-S14507-S14508-S14511-cpt)"""
     ERCAP = "ERCAP"
     ERCAP12 = "ERCAP12"
     ERCAP24 = "ERCAP24"
@@ -6158,18 +5290,14 @@ class ExtendedReleaseCapsule(Enum):
 
 
 class ExtendedReleaseSuspension(Enum):
-    """
-    specDomain: S14458 (C-0-T19651-A14411-A14412-A14441-S14454-S14457-S14458-cpt)
-    """
+    """specDomain: S14458 (C-0-T19651-A14411-A14412-A14441-S14454-S14457-S14458-cpt)"""
     ERSUSP = "ERSUSP"
     ERSUSP12 = "ERSUSP12"
     ERSUSP24 = "ERSUSP24"
 
 
 class ExtendedReleaseTablet(Enum):
-    """
-    specDomain: S14526 (C-0-T19651-A14411-A14412-A14484-S14506-S14515-S14516-S14526-cpt)
-    """
+    """specDomain: S14526 (C-0-T19651-A14411-A14412-A14484-S14506-S14515-S14516-S14526-cpt)"""
     ERTAB = "ERTAB"
     ERTAB12 = "ERTAB12"
     ERTAB24 = "ERTAB24"
@@ -6177,32 +5305,24 @@ class ExtendedReleaseTablet(Enum):
 
 
 class Extensibility(Enum):
-    """
-    abstDomain: A11047 (C-0-T11046-A11047-cpt)
-    """
+    """abstDomain: A11047 (C-0-T11046-A11047-cpt)"""
     CNE = "CNE"
     CWE = "CWE"
 
 
 class ExtraAmnioticRoute(Enum):
-    """
-    abstDomain: A17059 (C-0-T14581-A17021-A17059-cpt)
-    """
+    """abstDomain: A17059 (C-0-T14581-A17021-A17059-cpt)"""
     EXTRAMNINJ = "EXTRAMNINJ"
 
 
 class ExtracorporealCirculationRoute(Enum):
-    """
-    abstDomain: A17056 (C-0-T14581-A17021-A17056-cpt)
-    """
+    """abstDomain: A17056 (C-0-T14581-A17021-A17056-cpt)"""
     EXTCORPDIF = "EXTCORPDIF"
     EXTCORPINJ = "EXTCORPINJ"
 
 
 class EyeAndVisionServiceProviderTechnicianAndOrTechnologistHipaa(Enum):
-    """
-    abstDomain: A13219 (C-0-T13129-A13130-A13211-A13219-cpt)
-    """
+    """abstDomain: A13219 (C-0-T13129-A13130-A13211-A13219-cpt)"""
     VALUE_156_FC0800_N = "156FC0800N"
     VALUE_156_FC0801_N = "156FC0801N"
     VALUE_156_FX1700_N = "156FX1700N"
@@ -6215,9 +5335,7 @@ class EyeAndVisionServiceProviderTechnicianAndOrTechnologistHipaa(Enum):
 
 
 class EyeandVisionServiceProvidersProviderCodes(Enum):
-    """
-    specDomain: S20348 (C-0-T19465-S20348-cpt)
-    """
+    """specDomain: S20348 (C-0-T19465-S20348-cpt)"""
     VALUE_152_W00000_X = "152W00000X"
     VALUE_152_WC0802_X = "152WC0802X"
     VALUE_152_WL0500_X = "152WL0500X"
@@ -6239,9 +5357,7 @@ class EyeandVisionServiceProvidersProviderCodes(Enum):
 
 
 class FamilyMember(Enum):
-    """
-    specDomain: S17926 (C-0-T12206-A19563-S17926-cpt)
-    """
+    """specDomain: S17926 (C-0-T12206-A19563-S17926-cpt)"""
     CHLDADOPT = "CHLDADOPT"
     DAUADOPT = "DAUADOPT"
     SONADOPT = "SONADOPT"
@@ -6329,36 +5445,28 @@ class FamilyMember(Enum):
 
 
 class FamilyMemberAunt(Enum):
-    """
-    specDomain: S19748 (C-0-T12206-A19563-S17926-S19748-cpt)
-    """
+    """specDomain: S19748 (C-0-T12206-A19563-S17926-S19748-cpt)"""
     AUNT = "AUNT"
     MAUNT = "MAUNT"
     PAUNT = "PAUNT"
 
 
 class FamilyMemberCousin(Enum):
-    """
-    specDomain: S19749 (C-0-T12206-A19563-S17926-S19749-cpt)
-    """
+    """specDomain: S19749 (C-0-T12206-A19563-S17926-S19749-cpt)"""
     COUSN = "COUSN"
     MCOUSN = "MCOUSN"
     PCOUSN = "PCOUSN"
 
 
 class FamilyMemberUncle(Enum):
-    """
-    specDomain: S19753 (C-0-T12206-A19563-S17926-S19753-cpt)
-    """
+    """specDomain: S19753 (C-0-T12206-A19563-S17926-S19753-cpt)"""
     UNCLE = "UNCLE"
     MUNCLE = "MUNCLE"
     PUNCLE = "PUNCLE"
 
 
 class FamilyPracticeProviderCodes(Enum):
-    """
-    specDomain: S20118 (C-0-T19465-S20096-S20118-cpt)
-    """
+    """specDomain: S20118 (C-0-T19465-S20096-S20118-cpt)"""
     VALUE_207_Q00000_X = "207Q00000X"
     VALUE_207_QA0401_X = "207QA0401X"
     VALUE_207_QA0000_X = "207QA0000X"
@@ -6368,17 +5476,13 @@ class FamilyPracticeProviderCodes(Enum):
 
 
 class FirstFillCompletePharmacySupplyType(Enum):
-    """
-    specDomain: S16210 (C-0-T13953-A13954-A16208-S16209-S16210-cpt)
-    """
+    """specDomain: S16210 (C-0-T13953-A13954-A16208-S16209-S16210-cpt)"""
     FFC = "FFC"
     FFCS = "FFCS"
 
 
 class FirstFillPartialPharmacySupplyType(Enum):
-    """
-    specDomain: S17479 (C-0-T13953-A13954-A16208-S16209-S17479-cpt)
-    """
+    """specDomain: S17479 (C-0-T13953-A13954-A16208-S16209-S17479-cpt)"""
     FFS = "FFS"
     FFCS = "FFCS"
     TFS = "TFS"
@@ -6386,9 +5490,7 @@ class FirstFillPartialPharmacySupplyType(Enum):
 
 
 class FirstFillPharmacySupplyType(Enum):
-    """
-    specDomain: S16209 (C-0-T13953-A13954-A16208-S16209-cpt)
-    """
+    """specDomain: S16209 (C-0-T13953-A13954-A16208-S16209-cpt)"""
     FFC = "FFC"
     FFCS = "FFCS"
     FFS = "FFS"
@@ -6400,16 +5502,12 @@ class FirstFillPharmacySupplyType(Enum):
 
 
 class Flush(Enum):
-    """
-    abstDomain: A14594 (C-0-T14581-A16931-A14594-cpt)
-    """
+    """abstDomain: A14594 (C-0-T14581-A16931-A14594-cpt)"""
     IVFLUSH = "IVFLUSH"
 
 
 class FoamDrugForm(Enum):
-    """
-    specDomain: S14546 (C-0-T19651-A14411-A14412-A14545-S14546-cpt)
-    """
+    """specDomain: S14546 (C-0-T19651-A14411-A14412-A14545-S14546-cpt)"""
     VAGFOAM = "VAGFOAM"
     VAGFOAMAPL = "VAGFOAMAPL"
     FOAM = "FOAM"
@@ -6418,9 +5516,7 @@ class FoamDrugForm(Enum):
 
 
 class FontStyle(Enum):
-    """
-    abstDomain: A19603 (C-0-T19602-A19603-cpt)
-    """
+    """abstDomain: A19603 (C-0-T19602-A19603-cpt)"""
     BOLD = "bold"
     EMPHASIS = "emphasis"
     ITALICS = "italics"
@@ -6428,35 +5524,27 @@ class FontStyle(Enum):
 
 
 class FosterChild(Enum):
-    """
-    specDomain: S11565 (C-0-T12206-A19563-S17926-S16360-S11565-cpt)
-    """
+    """specDomain: S11565 (C-0-T12206-A19563-S17926-S16360-S11565-cpt)"""
     CHLDFOST = "CHLDFOST"
     DAUFOST = "DAUFOST"
     SONFOST = "SONFOST"
 
 
 class GiclinicPracticeSetting(Enum):
-    """
-    specDomain: S10934 (C-0-T12206-A17660-A19450-A10588-S10589-S10934-cpt)
-    """
+    """specDomain: S10934 (C-0-T12206-A17660-A19450-A10588-S10589-S10934-cpt)"""
     GI = "GI"
     PEDGI = "PEDGI"
 
 
 class GidiagTherPracticeSetting(Enum):
-    """
-    specDomain: S10906 (C-0-T12206-A17660-A19450-A10588-S10902-S10906-cpt)
-    """
+    """specDomain: S10906 (C-0-T12206-A17660-A19450-A10588-S10902-S10906-cpt)"""
     GIDX = "GIDX"
     VALUE_261_QE0800_N = "261QE0800N"
     ENDOS = "ENDOS"
 
 
 class Gtsabbreviation(Enum):
-    """
-    vocSet: T10720 (C-0-T10720-cpt)
-    """
+    """vocSet: T10720 (C-0-T10720-cpt)"""
     JHCHREAS = "JHCHREAS"
     JHCHRGFR = "JHCHRGFR"
     JHCHRNEW = "JHCHRNEW"
@@ -6488,9 +5576,7 @@ class Gtsabbreviation(Enum):
 
 
 class GtsabbreviationHolidays(Enum):
-    """
-    specDomain: S10725 (C-0-T10720-S10725-cpt)
-    """
+    """specDomain: S10725 (C-0-T10720-S10725-cpt)"""
     JHCHREAS = "JHCHREAS"
     JHCHRGFR = "JHCHRGFR"
     JHCHRNEW = "JHCHRNEW"
@@ -6515,9 +5601,7 @@ class GtsabbreviationHolidays(Enum):
 
 
 class GtsabbreviationHolidaysChristianRoman(Enum):
-    """
-    abstDomain: A10726 (C-0-T10720-S10725-A10726-cpt)
-    """
+    """abstDomain: A10726 (C-0-T10720-S10725-A10726-cpt)"""
     JHCHREAS = "JHCHREAS"
     JHCHRGFR = "JHCHRGFR"
     JHCHRNEW = "JHCHRNEW"
@@ -6527,9 +5611,7 @@ class GtsabbreviationHolidaysChristianRoman(Enum):
 
 
 class GtsabbreviationHolidaysUsnational(Enum):
-    """
-    specDomain: S10733 (C-0-T10720-S10725-S10733-cpt)
-    """
+    """specDomain: S10733 (C-0-T10720-S10725-S10733-cpt)"""
     JHNUS = "JHNUS"
     JHNUSCLM = "JHNUSCLM"
     JHNUSIND = "JHNUSIND"
@@ -6547,16 +5629,12 @@ class GtsabbreviationHolidaysUsnational(Enum):
 
 
 class GasDrugForm(Enum):
-    """
-    abstDomain: A14568 (C-0-T19651-A14411-A14412-A14568-cpt)
-    """
+    """abstDomain: A14568 (C-0-T19651-A14411-A14412-A14568-cpt)"""
     GASINHL = "GASINHL"
 
 
 class GasLiquidMixture(Enum):
-    """
-    abstDomain: A14545 (C-0-T19651-A14411-A14412-A14545-cpt)
-    """
+    """abstDomain: A14545 (C-0-T19651-A14411-A14412-A14545-cpt)"""
     AER = "AER"
     BAINHL = "BAINHL"
     INHLSOL = "INHLSOL"
@@ -6573,9 +5651,7 @@ class GasLiquidMixture(Enum):
 
 
 class GasSolidSpray(Enum):
-    """
-    abstDomain: A14559 (C-0-T19651-A14411-A14412-A14559-cpt)
-    """
+    """abstDomain: A14559 (C-0-T19651-A14411-A14412-A14559-cpt)"""
     INHL = "INHL"
     BAINHLPWD = "BAINHLPWD"
     INHLPWD = "INHLPWD"
@@ -6587,9 +5663,7 @@ class GasSolidSpray(Enum):
 
 
 class GastricRoute(Enum):
-    """
-    abstDomain: A17061 (C-0-T14581-A17021-A17061-cpt)
-    """
+    """abstDomain: A17061 (C-0-T14581-A17021-A17061-cpt)"""
     GBINJ = "GBINJ"
     GT = "GT"
     NGT = "NGT"
@@ -6597,9 +5671,7 @@ class GastricRoute(Enum):
 
 
 class GelDrugForm(Enum):
-    """
-    specDomain: S14442 (C-0-T19651-A14411-A14412-A14441-S14442-cpt)
-    """
+    """specDomain: S14442 (C-0-T19651-A14411-A14412-A14441-S14442-cpt)"""
     VAGGEL = "VAGGEL"
     VGELAPL = "VGELAPL"
     GEL = "GEL"
@@ -6612,17 +5684,13 @@ class GelDrugForm(Enum):
 
 
 class GenderStatus(Enum):
-    """
-    vocSet: T11523 (C-0-T11523-cpt)
-    """
+    """vocSet: T11523 (C-0-T11523-cpt)"""
     I = "I"
     N = "N"
 
 
 class GeneralAcuteCareHospital(Enum):
-    """
-    specDomain: S10603 (C-0-T12206-A17660-A19450-A10588-S10602-S10603-cpt)
-    """
+    """specDomain: S10603 (C-0-T12206-A17660-A19450-A10588-S10602-S10603-cpt)"""
     VALUE_282_NW0100_N = "282NW0100N"
     VALUE_2865_C1500_N = "2865C1500N"
     VALUE_2865_M2000_N = "2865M2000N"
@@ -6633,9 +5701,7 @@ class GeneralAcuteCareHospital(Enum):
 
 
 class GeneralAcuteCareHospitalProviderCodes(Enum):
-    """
-    specDomain: S20737 (C-0-T19465-S20733-S20737-cpt)
-    """
+    """specDomain: S20737 (C-0-T19465-S20733-S20737-cpt)"""
     VALUE_282_N00000_X = "282N00000X"
     VALUE_282_NC2000_X = "282NC2000X"
     VALUE_282_NC0060_X = "282NC0060X"
@@ -6644,9 +5710,7 @@ class GeneralAcuteCareHospitalProviderCodes(Enum):
 
 
 class GeneralAcuteCareHospitalWomen(Enum):
-    """
-    specDomain: S13798 (C-0-T12206-A17660-A19450-A10588-S10602-S10603-S13798-cpt)
-    """
+    """specDomain: S13798 (C-0-T12206-A17660-A19450-A10588-S10602-S10603-S13798-cpt)"""
     VALUE_282_NW0100_N = "282NW0100N"
     VALUE_2865_C1500_N = "2865C1500N"
     VALUE_2865_M2000_N = "2865M2000N"
@@ -6654,42 +5718,32 @@ class GeneralAcuteCareHospitalWomen(Enum):
 
 
 class GenericUpdateReasonCode(Enum):
-    """
-    abstDomain: A19777 (C-0-T14878-A19692-A19777-cpt)
-    """
+    """abstDomain: A19777 (C-0-T14878-A19692-A19777-cpt)"""
     FIXDATA = "FIXDATA"
     CHGDATA = "CHGDATA"
     NEWDATA = "NEWDATA"
 
 
 class GenitourinaryRoute(Enum):
-    """
-    abstDomain: A17066 (C-0-T14581-A17021-A17066-cpt)
-    """
+    """abstDomain: A17066 (C-0-T14581-A17021-A17066-cpt)"""
     GUIRR = "GUIRR"
 
 
 class GingivalRoute(Enum):
-    """
-    abstDomain: A17068 (C-0-T14581-A17021-A17068-cpt)
-    """
+    """abstDomain: A17068 (C-0-T14581-A17021-A17068-cpt)"""
     GINGINJ = "GINGINJ"
     GIN = "GIN"
 
 
 class GrandChild(Enum):
-    """
-    specDomain: S19745 (C-0-T12206-A19563-S17926-S19745-cpt)
-    """
+    """specDomain: S19745 (C-0-T12206-A19563-S17926-S19745-cpt)"""
     GRNDCHILD = "GRNDCHILD"
     GRNDDAU = "GRNDDAU"
     GRNDSON = "GRNDSON"
 
 
 class Grandparent(Enum):
-    """
-    specDomain: S16349 (C-0-T12206-A19563-S17926-S16349-cpt)
-    """
+    """specDomain: S16349 (C-0-T12206-A19563-S17926-S16349-cpt)"""
     GRPRN = "GRPRN"
     GRFTH = "GRFTH"
     GRMTH = "GRMTH"
@@ -6702,9 +5756,7 @@ class Grandparent(Enum):
 
 
 class GreatGrandparent(Enum):
-    """
-    specDomain: S19739 (C-0-T12206-A19563-S17926-S19739-cpt)
-    """
+    """specDomain: S19739 (C-0-T12206-A19563-S17926-S19739-cpt)"""
     GGRPRN = "GGRPRN"
     MGGRFTH = "MGGRFTH"
     MGGRMTH = "MGGRMTH"
@@ -6717,18 +5769,14 @@ class GreatGrandparent(Enum):
 
 
 class GroupProviderCodes(Enum):
-    """
-    specDomain: S20800 (C-0-T19465-S20800-cpt)
-    """
+    """specDomain: S20800 (C-0-T19465-S20800-cpt)"""
     VALUE_190000000_X = "190000000X"
     VALUE_193200000_X = "193200000X"
     VALUE_193400000_X = "193400000X"
 
 
 class Hl7AccommodationCode(Enum):
-    """
-    abstDomain: A19866 (C-0-T13953-A19820-A16130-A19866-cpt)
-    """
+    """abstDomain: A19866 (C-0-T13953-A19820-A16130-A19866-cpt)"""
     I = "I"
     P = "P"
     SP = "SP"
@@ -6737,9 +5785,7 @@ class Hl7AccommodationCode(Enum):
 
 
 class Hl7CommitteeIdinRim(Enum):
-    """
-    vocSet: T10034 (C-0-T10034-cpt)
-    """
+    """vocSet: T10034 (C-0-T10034-cpt)"""
     C02 = "C02"
     C06 = "C06"
     C09 = "C09"
@@ -6754,9 +5800,7 @@ class Hl7CommitteeIdinRim(Enum):
 
 
 class Hl7ConformanceInclusion(Enum):
-    """
-    vocSet: T10010 (C-0-T10010-cpt)
-    """
+    """vocSet: T10010 (C-0-T10010-cpt)"""
     NR = "NR"
     X = "X"
     RE = "RE"
@@ -6766,9 +5810,7 @@ class Hl7ConformanceInclusion(Enum):
 
 
 class Hl7DefinedRoseProperty(Enum):
-    """
-    vocSet: T10083 (C-0-T10083-cpt)
-    """
+    """vocSet: T10083 (C-0-T10083-cpt)"""
     APPLICATION_ROLE_I = "ApplicationRoleI"
     CARDINALITY = "Cardinality"
     MAY_REPEAT = "MayRepeat"
@@ -6804,16 +5846,12 @@ class Hl7DefinedRoseProperty(Enum):
 
 
 class Hl7ItsversionCode(Enum):
-    """
-    vocSet: T19449 (C-0-T19449-cpt)
-    """
+    """vocSet: T19449 (C-0-T19449-cpt)"""
     XMLV1_PR1 = "XMLV1PR1"
 
 
 class Hl7StandardVersionCode(Enum):
-    """
-    vocSet: T19373 (C-0-T19373-cpt)
-    """
+    """vocSet: T19373 (C-0-T19373-cpt)"""
     ACT_RELATIONSHIP_EXPECTED_SUBSET = "ActRelationshipExpectedSubset"
     ACT_RELATIONSHIP_PAST_SUBSET = "ActRelationshipPastSubset"
     PARTICIPATION_SUBSET = "_ParticipationSubset"
@@ -6831,9 +5869,7 @@ class Hl7StandardVersionCode(Enum):
 
 
 class Hl7UpdateMode(Enum):
-    """
-    vocSet: T10018 (C-0-T10018-cpt)
-    """
+    """vocSet: T10018 (C-0-T10018-cpt)"""
     ESA = "ESA"
     ESAC = "ESAC"
     ESC = "ESC"
@@ -6846,42 +5882,32 @@ class Hl7UpdateMode(Enum):
 
 
 class HairRoute(Enum):
-    """
-    abstDomain: A17071 (C-0-T14581-A17021-A17071-cpt)
-    """
+    """abstDomain: A17071 (C-0-T14581-A17021-A17071-cpt)"""
     SHAMPOO = "SHAMPOO"
     HAIR = "HAIR"
 
 
 class HalfSibling(Enum):
-    """
-    specDomain: S19776 (C-0-T12206-A19563-S17926-S11567-S19776-cpt)
-    """
+    """specDomain: S19776 (C-0-T12206-A19563-S17926-S11567-S19776-cpt)"""
     HSIB = "HSIB"
     HBRO = "HBRO"
     HSIS = "HSIS"
 
 
 class HealthInformationSpecialistOrTechnologistHipaa(Enum):
-    """
-    abstDomain: A13669 (C-0-T13129-A13130-A13644-A13669-cpt)
-    """
+    """abstDomain: A13669 (C-0-T13129-A13130-A13644-A13669-cpt)"""
     VALUE_246_YC3301_N = "246YC3301N"
     VALUE_246_YC3302_N = "246YC3302N"
     VALUE_246_YR1600_N = "246YR1600N"
 
 
 class HealthInformationTechnicianHipaa(Enum):
-    """
-    abstDomain: A13703 (C-0-T13129-A13130-A13644-A13703-cpt)
-    """
+    """abstDomain: A13703 (C-0-T13129-A13130-A13644-A13703-cpt)"""
     VALUE_2470_A2800_N = "2470A2800N"
 
 
 class HealthcareProviderAgencyHipaa(Enum):
-    """
-    abstDomain: A13717 (C-0-T13129-A13715-A13716-A13717-cpt)
-    """
+    """abstDomain: A13717 (C-0-T13129-A13715-A13716-A13717-cpt)"""
     VALUE_2514_C0400_N = "2514C0400N"
     VALUE_2514_H0200_N = "2514H0200N"
     VALUE_2514_H0201_N = "2514H0201N"
@@ -6892,43 +5918,33 @@ class HealthcareProviderAgencyHipaa(Enum):
 
 
 class HeightSurfaceAreaAlert(Enum):
-    """
-    abstDomain: A17795 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-S16665-A17795-cpt)
-    """
+    """abstDomain: A17795 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-S16665-A17795-cpt)"""
     DOSEHINDSA = "DOSEHINDSA"
     DOSELINDSA = "DOSELINDSA"
 
 
 class HemClinPracticeSetting(Enum):
-    """
-    specDomain: S10936 (C-0-T12206-A17660-A19450-A10588-S10589-S10936-cpt)
-    """
+    """specDomain: S10936 (C-0-T12206-A17660-A19450-A10588-S10589-S10936-cpt)"""
     HEM = "HEM"
     PEDHEM = "PEDHEM"
 
 
 class HomeAddressUse(Enum):
-    """
-    specDomain: S10628 (C-0-T201-A190-S10628-cpt)
-    """
+    """specDomain: S10628 (C-0-T201-A190-S10628-cpt)"""
     H = "H"
     HP = "HP"
     HV = "HV"
 
 
 class Homeless(Enum):
-    """
-    specDomain: S22193 (C-0-T220-S22193-cpt)
-    """
+    """specDomain: S22193 (C-0-T220-S22193-cpt)"""
     HL = "HL"
     M = "M"
     T = "T"
 
 
 class HospitalPracticeSetting(Enum):
-    """
-    specDomain: S10602 (C-0-T12206-A17660-A19450-A10588-S10602-cpt)
-    """
+    """specDomain: S10602 (C-0-T12206-A17660-A19450-A10588-S10602-cpt)"""
     CHR = "CHR"
     VALUE_281_PC2000_N = "281PC2000N"
     VALUE_282_NW0100_N = "282NW0100N"
@@ -6946,9 +5962,7 @@ class HospitalPracticeSetting(Enum):
 
 
 class HospitalUnitPracticeSetting(Enum):
-    """
-    specDomain: S10596 (C-0-T12206-A17660-A19450-A10588-S10596-cpt)
-    """
+    """specDomain: S10596 (C-0-T12206-A17660-A19450-A10588-S10596-cpt)"""
     ER = "ER"
     ETU = "ETU"
     PEDICU = "PEDICU"
@@ -6971,9 +5985,7 @@ class HospitalUnitPracticeSetting(Enum):
 
 
 class HospitalUnitsProviderCodes(Enum):
-    """
-    specDomain: S20728 (C-0-T19465-S20728-cpt)
-    """
+    """specDomain: S20728 (C-0-T19465-S20728-cpt)"""
     VALUE_270000000_X = "270000000X"
     VALUE_275_N00000_X = "275N00000X"
     VALUE_273_R00000_X = "273R00000X"
@@ -6982,9 +5994,7 @@ class HospitalUnitsProviderCodes(Enum):
 
 
 class HospitalsProviderCodes(Enum):
-    """
-    specDomain: S20733 (C-0-T19465-S20733-cpt)
-    """
+    """specDomain: S20733 (C-0-T19465-S20733-cpt)"""
     VALUE_281_P00000_X = "281P00000X"
     VALUE_281_PC2000_X = "281PC2000X"
     VALUE_282_N00000_X = "282N00000X"
@@ -7005,9 +6015,7 @@ class HospitalsProviderCodes(Enum):
 
 
 class HtmlLinkType(Enum):
-    """
-    vocSet: T11017 (C-0-T11017-cpt)
-    """
+    """vocSet: T11017 (C-0-T11017-cpt)"""
     ALTERNATE = "alternate"
     APPENDIX = "appendix"
     BOOKMARK = "bookmark"
@@ -7026,9 +6034,7 @@ class HtmlLinkType(Enum):
 
 
 class HumanSubstanceAdministrationSite(Enum):
-    """
-    abstDomain: A19724 (C-0-T16537-A16538-A19724-cpt)
-    """
+    """abstDomain: A19724 (C-0-T16537-A16538-A19724-cpt)"""
     BE = "BE"
     OU = "OU"
     BU = "BU"
@@ -7083,26 +6089,20 @@ class HumanSubstanceAdministrationSite(Enum):
 
 
 class IcupracticeSetting(Enum):
-    """
-    specDomain: S10599 (C-0-T12206-A17660-A19450-A10588-S10596-S10599-cpt)
-    """
+    """specDomain: S10599 (C-0-T12206-A17660-A19450-A10588-S10596-S10599-cpt)"""
     PEDICU = "PEDICU"
     PEDNICU = "PEDNICU"
     ICU = "ICU"
 
 
 class IdclinPracticeSetting(Enum):
-    """
-    specDomain: S10939 (C-0-T12206-A17660-A19450-A10588-S10589-S10939-cpt)
-    """
+    """specDomain: S10939 (C-0-T12206-A17660-A19450-A10588-S10589-S10939-cpt)"""
     INFD = "INFD"
     PEDID = "PEDID"
 
 
 class ImageMediaType(Enum):
-    """
-    abstDomain: A14839 (C-0-T14824-A14839-cpt)
-    """
+    """abstDomain: A14839 (C-0-T14824-A14839-cpt)"""
     IMAGE_G3FAX = "image/g3fax"
     IMAGE_GIF = "image/gif"
     IMAGE_JPEG = "image/jpeg"
@@ -7111,25 +6111,19 @@ class ImageMediaType(Enum):
 
 
 class Implantation(Enum):
-    """
-    abstDomain: A14598 (C-0-T14581-A16931-A14598-cpt)
-    """
+    """abstDomain: A14598 (C-0-T14581-A16931-A14598-cpt)"""
     IDIMPLNT = "IDIMPLNT"
     IVITIMPLNT = "IVITIMPLNT"
     SQIMPLNT = "SQIMPLNT"
 
 
 class InactiveEditStatus(Enum):
-    """
-    specDomain: S11044 (C-0-T11040-S11044-cpt)
-    """
+    """specDomain: S11044 (C-0-T11040-S11044-cpt)"""
     I = "I"
 
 
 class IncidentalServiceDeliveryLocationRoleType(Enum):
-    """
-    abstDomain: A19451 (C-0-T12206-A17660-A19451-cpt)
-    """
+    """abstDomain: A19451 (C-0-T12206-A17660-A19451-cpt)"""
     COMM = "COMM"
     PTRES = "PTRES"
     ACC = "ACC"
@@ -7138,9 +6132,7 @@ class IncidentalServiceDeliveryLocationRoleType(Enum):
 
 
 class InclusionNotMandatory(Enum):
-    """
-    abstDomain: A10012 (C-0-T10010-A10012-cpt)
-    """
+    """abstDomain: A10012 (C-0-T10010-A10012-cpt)"""
     NR = "NR"
     X = "X"
     RE = "RE"
@@ -7149,18 +6141,14 @@ class InclusionNotMandatory(Enum):
 
 
 class InclusionNotRequired(Enum):
-    """
-    specDomain: S10015 (C-0-T10010-A10012-S10015-cpt)
-    """
+    """specDomain: S10015 (C-0-T10010-A10012-S10015-cpt)"""
     NR = "NR"
     X = "X"
     RE = "RE"
 
 
 class IndividualInsuredCoveredPartyRoleType(Enum):
-    """
-    abstDomain: A19813 (C-0-T12206-A19809-A19805-A19813-cpt)
-    """
+    """abstDomain: A19813 (C-0-T12206-A19809-A19805-A19813-cpt)"""
     STUD = "STUD"
     FSTUD = "FSTUD"
     PSTUD = "PSTUD"
@@ -7169,9 +6157,7 @@ class IndividualInsuredCoveredPartyRoleType(Enum):
 
 
 class IndividualPackageEntityType(Enum):
-    """
-    abstDomain: A16176 (C-0-T16040-A16041-A19867-A16143-S16144-A16152-A16176-cpt)
-    """
+    """abstDomain: A16176 (C-0-T16040-A16041-A19867-A16143-S16144-A16152-A16176-cpt)"""
     AMP = "AMP"
     MINIM = "MINIM"
     NEBAMP = "NEBAMP"
@@ -7179,9 +6165,7 @@ class IndividualPackageEntityType(Enum):
 
 
 class Infusion(Enum):
-    """
-    abstDomain: A14602 (C-0-T14581-A16931-A14602-cpt)
-    """
+    """abstDomain: A14602 (C-0-T14581-A16931-A14602-cpt)"""
     IV = "IV"
     IVC = "IVC"
     IVCC = "IVCC"
@@ -7198,9 +6182,7 @@ class Infusion(Enum):
 
 
 class InhalantDrugForm(Enum):
-    """
-    specDomain: S14560 (C-0-T19651-A14411-A14412-A14559-S14560-cpt)
-    """
+    """specDomain: S14560 (C-0-T19651-A14411-A14412-A14559-S14560-cpt)"""
     INHL = "INHL"
     BAINHLPWD = "BAINHLPWD"
     INHLPWD = "INHLPWD"
@@ -7210,9 +6192,7 @@ class InhalantDrugForm(Enum):
 
 
 class Inhalation(Enum):
-    """
-    abstDomain: A14615 (C-0-T14581-A16931-A14615-cpt)
-    """
+    """abstDomain: A14615 (C-0-T14581-A16931-A14615-cpt)"""
     NASINHL = "NASINHL"
     NASINHLC = "NASINHLC"
     NP = "NP"
@@ -7229,9 +6209,7 @@ class Inhalation(Enum):
 
 
 class InhalerMedicalDevice(Enum):
-    """
-    specDomain: S16196 (C-0-T16040-A16041-A19867-A16188-A16189-S16196-cpt)
-    """
+    """specDomain: S16196 (C-0-T16040-A16041-A19867-A16188-A16189-S16196-cpt)"""
     INH = "INH"
     DSKUNH = "DSKUNH"
     DSKS = "DSKS"
@@ -7239,9 +6217,7 @@ class InhalerMedicalDevice(Enum):
 
 
 class Injection(Enum):
-    """
-    abstDomain: A14628 (C-0-T14581-A16931-A14628-cpt)
-    """
+    """abstDomain: A14628 (C-0-T14581-A16931-A14628-cpt)"""
     IAINJ = "IAINJ"
     IAINJP = "IAINJP"
     IAINJSP = "IAINJSP"
@@ -7342,18 +6318,14 @@ class Injection(Enum):
 
 
 class InjectionMedicalDevice(Enum):
-    """
-    abstDomain: A16191 (C-0-T16040-A16041-A19867-A16188-A16189-A16191-cpt)
-    """
+    """abstDomain: A16191 (C-0-T16040-A16041-A19867-A16188-A16189-A16191-cpt)"""
     AINJ = "AINJ"
     PEN = "PEN"
     SYR = "SYR"
 
 
 class Insertion(Enum):
-    """
-    abstDomain: A14687 (C-0-T14581-A16931-A14687-cpt)
-    """
+    """abstDomain: A14687 (C-0-T14581-A16931-A14687-cpt)"""
     CERVINS = "CERVINS"
     IOSURGINS = "IOSURGINS"
     IU = "IU"
@@ -7365,9 +6337,7 @@ class Insertion(Enum):
 
 
 class Instillation(Enum):
-    """
-    abstDomain: A14696 (C-0-T14581-A16931-A14696-cpt)
-    """
+    """abstDomain: A14696 (C-0-T14581-A16931-A14696-cpt)"""
     RECINSTL = "RECINSTL"
     RECTINSTL = "RECTINSTL"
     CECINSTL = "CECINSTL"
@@ -7407,9 +6377,7 @@ class Instillation(Enum):
 
 
 class Institution(Enum):
-    """
-    specDomain: S10189 (C-0-T220-S10189-cpt)
-    """
+    """specDomain: S10189 (C-0-T220-S10189-cpt)"""
     I = "I"
     X = "X"
     G = "G"
@@ -7418,17 +6386,13 @@ class Institution(Enum):
 
 
 class IntegrityCheckAlgorithm(Enum):
-    """
-    vocSet: T17385 (C-0-T17385-cpt)
-    """
+    """vocSet: T17385 (C-0-T17385-cpt)"""
     SHA_1 = "SHA-1"
     SHA_256 = "SHA-256"
 
 
 class InteractionDetectedIssueCode(Enum):
-    """
-    abstDomain: A16659 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-A16659-cpt)
-    """
+    """abstDomain: A16659 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-A16659-cpt)"""
     TPROD = "TPROD"
     DRG = "DRG"
     NHP = "NHP"
@@ -7437,16 +6401,12 @@ class InteractionDetectedIssueCode(Enum):
 
 
 class InterameningealRoute(Enum):
-    """
-    abstDomain: A17074 (C-0-T14581-A17021-A17074-cpt)
-    """
+    """abstDomain: A17074 (C-0-T14581-A17021-A17074-cpt)"""
     INTERMENINJ = "INTERMENINJ"
 
 
 class InteriorSalish(Enum):
-    """
-    abstDomain: A18540 (C-0-T18130-A18523-A18540-cpt)
-    """
+    """abstDomain: A18540 (C-0-T18130-A18523-A18540-cpt)"""
     X_CRD = "x-CRD"
     X_COL = "x-COL"
     X_FLA = "x-FLA"
@@ -7454,9 +6414,7 @@ class InteriorSalish(Enum):
 
 
 class InternalMedicineProviderCodes(Enum):
-    """
-    specDomain: S20126 (C-0-T19465-S20096-S20126-cpt)
-    """
+    """specDomain: S20126 (C-0-T19465-S20096-S20126-cpt)"""
     VALUE_207_R00000_X = "207R00000X"
     VALUE_207_RA0401_X = "207RA0401X"
     VALUE_207_RA0000_X = "207RA0000X"
@@ -7482,32 +6440,24 @@ class InternalMedicineProviderCodes(Enum):
 
 
 class InterstitialRoute(Enum):
-    """
-    abstDomain: A17076 (C-0-T14581-A17021-A17076-cpt)
-    """
+    """abstDomain: A17076 (C-0-T14581-A17021-A17076-cpt)"""
     INTERSTITINJ = "INTERSTITINJ"
 
 
 class IntraabdominalRoute(Enum):
-    """
-    abstDomain: A17078 (C-0-T14581-A17021-A17078-cpt)
-    """
+    """abstDomain: A17078 (C-0-T14581-A17021-A17078-cpt)"""
     IABDINJ = "IABDINJ"
 
 
 class IntraarterialInjection(Enum):
-    """
-    specDomain: S14639 (C-0-T14581-A17021-A17080-S14639-cpt)
-    """
+    """specDomain: S14639 (C-0-T14581-A17021-A17080-S14639-cpt)"""
     IAINJ = "IAINJ"
     IAINJP = "IAINJP"
     IAINJSP = "IAINJSP"
 
 
 class IntraarterialRoute(Enum):
-    """
-    abstDomain: A17080 (C-0-T14581-A17021-A17080-cpt)
-    """
+    """abstDomain: A17080 (C-0-T14581-A17021-A17080-cpt)"""
     IAINJ = "IAINJ"
     IAINJP = "IAINJP"
     IAINJSP = "IAINJSP"
@@ -7515,30 +6465,22 @@ class IntraarterialRoute(Enum):
 
 
 class IntraarticularRoute(Enum):
-    """
-    abstDomain: A17085 (C-0-T14581-A17021-A17085-cpt)
-    """
+    """abstDomain: A17085 (C-0-T14581-A17021-A17085-cpt)"""
     IARTINJ = "IARTINJ"
 
 
 class IntrabronchialRoute(Enum):
-    """
-    abstDomain: A17087 (C-0-T14581-A17021-A17087-cpt)
-    """
+    """abstDomain: A17087 (C-0-T14581-A17021-A17087-cpt)"""
     IBRONCHINSTIL = "IBRONCHINSTIL"
 
 
 class IntrabursalRoute(Enum):
-    """
-    abstDomain: A17089 (C-0-T14581-A17021-A17089-cpt)
-    """
+    """abstDomain: A17089 (C-0-T14581-A17021-A17089-cpt)"""
     IBURSINJ = "IBURSINJ"
 
 
 class IntracardiacInjection(Enum):
-    """
-    specDomain: S14644 (C-0-T14581-A17021-A17091-S14644-cpt)
-    """
+    """specDomain: S14644 (C-0-T14581-A17021-A17091-S14644-cpt)"""
     ICARDINJ = "ICARDINJ"
     ICARINJP = "ICARINJP"
     ICARDINJRP = "ICARDINJRP"
@@ -7546,9 +6488,7 @@ class IntracardiacInjection(Enum):
 
 
 class IntracardiacRoute(Enum):
-    """
-    abstDomain: A17091 (C-0-T14581-A17021-A17091-cpt)
-    """
+    """abstDomain: A17091 (C-0-T14581-A17021-A17091-cpt)"""
     ICARDINJ = "ICARDINJ"
     ICARINJP = "ICARINJP"
     ICARDINJRP = "ICARDINJRP"
@@ -7557,212 +6497,156 @@ class IntracardiacRoute(Enum):
 
 
 class IntracartilaginousRoute(Enum):
-    """
-    abstDomain: A17097 (C-0-T14581-A17021-A17097-cpt)
-    """
+    """abstDomain: A17097 (C-0-T14581-A17021-A17097-cpt)"""
     ICARTINJ = "ICARTINJ"
 
 
 class IntracaudalRoute(Enum):
-    """
-    abstDomain: A17099 (C-0-T14581-A17021-A17099-cpt)
-    """
+    """abstDomain: A17099 (C-0-T14581-A17021-A17099-cpt)"""
     ICAUDINJ = "ICAUDINJ"
 
 
 class IntracavernosalRoute(Enum):
-    """
-    abstDomain: A17101 (C-0-T14581-A17021-A17101-cpt)
-    """
+    """abstDomain: A17101 (C-0-T14581-A17021-A17101-cpt)"""
     ICAVINJ = "ICAVINJ"
 
 
 class IntracavitaryRoute(Enum):
-    """
-    abstDomain: A17103 (C-0-T14581-A17021-A17103-cpt)
-    """
+    """abstDomain: A17103 (C-0-T14581-A17021-A17103-cpt)"""
     ICAVITINJ = "ICAVITINJ"
 
 
 class IntracerebralRoute(Enum):
-    """
-    abstDomain: A17105 (C-0-T14581-A17021-A17105-cpt)
-    """
+    """abstDomain: A17105 (C-0-T14581-A17021-A17105-cpt)"""
     ICEREBINJ = "ICEREBINJ"
 
 
 class IntracervicalRoute(Enum):
-    """
-    abstDomain: A17107 (C-0-T14581-A17021-A17107-cpt)
-    """
+    """abstDomain: A17107 (C-0-T14581-A17021-A17107-cpt)"""
     IUINJC = "IUINJC"
 
 
 class IntracisternalRoute(Enum):
-    """
-    abstDomain: A17109 (C-0-T14581-A17021-A17109-cpt)
-    """
+    """abstDomain: A17109 (C-0-T14581-A17021-A17109-cpt)"""
     ICISTERNINJ = "ICISTERNINJ"
 
 
 class IntracornealRoute(Enum):
-    """
-    abstDomain: A17111 (C-0-T14581-A17021-A17111-cpt)
-    """
+    """abstDomain: A17111 (C-0-T14581-A17021-A17111-cpt)"""
     ICORNTA = "ICORNTA"
 
 
 class IntracoronalRoute(Enum):
-    """
-    abstDomain: A17113 (C-0-T14581-A17021-A17113-cpt)
-    """
+    """abstDomain: A17113 (C-0-T14581-A17021-A17113-cpt)"""
     ICORONTA = "ICORONTA"
 
 
 class IntracoronaryInjection(Enum):
-    """
-    specDomain: S14650 (C-0-T14581-A17021-A17115-S14650-cpt)
-    """
+    """specDomain: S14650 (C-0-T14581-A17021-A17115-S14650-cpt)"""
     ICORONINJ = "ICORONINJ"
     ICORONINJP = "ICORONINJP"
 
 
 class IntracoronaryRoute(Enum):
-    """
-    abstDomain: A17115 (C-0-T14581-A17021-A17115-cpt)
-    """
+    """abstDomain: A17115 (C-0-T14581-A17021-A17115-cpt)"""
     ICORONINJ = "ICORONINJ"
     ICORONINJP = "ICORONINJP"
     ICOR = "ICOR"
 
 
 class IntracorpusCavernosumRoute(Enum):
-    """
-    abstDomain: A17119 (C-0-T14581-A17021-A17119-cpt)
-    """
+    """abstDomain: A17119 (C-0-T14581-A17021-A17119-cpt)"""
     ICORPCAVINJ = "ICORPCAVINJ"
 
 
 class IntradermalRoute(Enum):
-    """
-    abstDomain: A17123 (C-0-T14581-A17021-A17123-cpt)
-    """
+    """abstDomain: A17123 (C-0-T14581-A17021-A17123-cpt)"""
     IDIMPLNT = "IDIMPLNT"
     IDINJ = "IDINJ"
 
 
 class IntradiscalRoute(Enum):
-    """
-    abstDomain: A17126 (C-0-T14581-A17021-A17126-cpt)
-    """
+    """abstDomain: A17126 (C-0-T14581-A17021-A17126-cpt)"""
     IDISCINJ = "IDISCINJ"
 
 
 class IntraductalRoute(Enum):
-    """
-    abstDomain: A17128 (C-0-T14581-A17021-A17128-cpt)
-    """
+    """abstDomain: A17128 (C-0-T14581-A17021-A17128-cpt)"""
     IDUCTINJ = "IDUCTINJ"
 
 
 class IntraduodenalRoute(Enum):
-    """
-    abstDomain: A17130 (C-0-T14581-A17021-A17130-cpt)
-    """
+    """abstDomain: A17130 (C-0-T14581-A17021-A17130-cpt)"""
     IDUODINSTIL = "IDUODINSTIL"
     IDOUDMAB = "IDOUDMAB"
 
 
 class IntraduralRoute(Enum):
-    """
-    abstDomain: A17133 (C-0-T14581-A17021-A17133-cpt)
-    """
+    """abstDomain: A17133 (C-0-T14581-A17021-A17133-cpt)"""
     IDURINJ = "IDURINJ"
 
 
 class IntraepidermalRoute(Enum):
-    """
-    abstDomain: A17135 (C-0-T14581-A17021-A17135-cpt)
-    """
+    """abstDomain: A17135 (C-0-T14581-A17021-A17135-cpt)"""
     IEPIDINJ = "IEPIDINJ"
 
 
 class IntraepithelialRoute(Enum):
-    """
-    abstDomain: A17137 (C-0-T14581-A17021-A17137-cpt)
-    """
+    """abstDomain: A17137 (C-0-T14581-A17021-A17137-cpt)"""
     IEPITHINJ = "IEPITHINJ"
 
 
 class IntraesophagealRoute(Enum):
-    """
-    abstDomain: A17139 (C-0-T14581-A17021-A17139-cpt)
-    """
+    """abstDomain: A17139 (C-0-T14581-A17021-A17139-cpt)"""
     IESOPHINSTIL = "IESOPHINSTIL"
     IESOPHTA = "IESOPHTA"
 
 
 class IntragastricRoute(Enum):
-    """
-    abstDomain: A17142 (C-0-T14581-A17021-A17142-cpt)
-    """
+    """abstDomain: A17142 (C-0-T14581-A17021-A17142-cpt)"""
     IGASTINSTIL = "IGASTINSTIL"
     IGASTIRR = "IGASTIRR"
     IGASTLAV = "IGASTLAV"
 
 
 class IntrailealRoute(Enum):
-    """
-    abstDomain: A17146 (C-0-T14581-A17021-A17146-cpt)
-    """
+    """abstDomain: A17146 (C-0-T14581-A17021-A17146-cpt)"""
     IILEALINJ = "IILEALINJ"
     IILEALTA = "IILEALTA"
 
 
 class IntralesionalRoute(Enum):
-    """
-    abstDomain: A17149 (C-0-T14581-A17021-A17149-cpt)
-    """
+    """abstDomain: A17149 (C-0-T14581-A17021-A17149-cpt)"""
     ILESINJ = "ILESINJ"
     ILESIRR = "ILESIRR"
     ILTOP = "ILTOP"
 
 
 class IntraluminalRoute(Enum):
-    """
-    abstDomain: A17153 (C-0-T14581-A17021-A17153-cpt)
-    """
+    """abstDomain: A17153 (C-0-T14581-A17021-A17153-cpt)"""
     ILUMINJ = "ILUMINJ"
     ILUMTA = "ILUMTA"
 
 
 class IntralymphaticRoute(Enum):
-    """
-    abstDomain: A17156 (C-0-T14581-A17021-A17156-cpt)
-    """
+    """abstDomain: A17156 (C-0-T14581-A17021-A17156-cpt)"""
     ILYMPJINJ = "ILYMPJINJ"
 
 
 class IntramedullaryRoute(Enum):
-    """
-    abstDomain: A17158 (C-0-T14581-A17021-A17158-cpt)
-    """
+    """abstDomain: A17158 (C-0-T14581-A17021-A17158-cpt)"""
     IMEDULINJ = "IMEDULINJ"
 
 
 class IntramuscularInjection(Enum):
-    """
-    specDomain: S14657 (C-0-T14581-A17021-A17160-S14657-cpt)
-    """
+    """specDomain: S14657 (C-0-T14581-A17021-A17160-S14657-cpt)"""
     IM = "IM"
     IMD = "IMD"
     IMZ = "IMZ"
 
 
 class IntraocularRoute(Enum):
-    """
-    abstDomain: A17164 (C-0-T14581-A17021-A17164-cpt)
-    """
+    """abstDomain: A17164 (C-0-T14581-A17021-A17164-cpt)"""
     IOINJ = "IOINJ"
     IOSURGINS = "IOSURGINS"
     IOINSTL = "IOINSTL"
@@ -7771,31 +6655,23 @@ class IntraocularRoute(Enum):
 
 
 class IntraosseousRoute(Enum):
-    """
-    abstDomain: A17170 (C-0-T14581-A17021-A17170-cpt)
-    """
+    """abstDomain: A17170 (C-0-T14581-A17021-A17170-cpt)"""
     IOSSC = "IOSSC"
     IOSSINJ = "IOSSINJ"
 
 
 class IntraovarianRoute(Enum):
-    """
-    abstDomain: A17173 (C-0-T14581-A17021-A17173-cpt)
-    """
+    """abstDomain: A17173 (C-0-T14581-A17021-A17173-cpt)"""
     IOVARINJ = "IOVARINJ"
 
 
 class IntrapericardialRoute(Enum):
-    """
-    abstDomain: A17175 (C-0-T14581-A17021-A17175-cpt)
-    """
+    """abstDomain: A17175 (C-0-T14581-A17021-A17175-cpt)"""
     IPCARDINJ = "IPCARDINJ"
 
 
 class IntraperitonealRoute(Enum):
-    """
-    abstDomain: A17177 (C-0-T14581-A17021-A17177-cpt)
-    """
+    """abstDomain: A17177 (C-0-T14581-A17021-A17177-cpt)"""
     IPERINJ = "IPERINJ"
     PDPINJ = "PDPINJ"
     CAPDINSTL = "CAPDINSTL"
@@ -7803,118 +6679,86 @@ class IntraperitonealRoute(Enum):
 
 
 class IntrapleuralRoute(Enum):
-    """
-    abstDomain: A17182 (C-0-T14581-A17021-A17182-cpt)
-    """
+    """abstDomain: A17182 (C-0-T14581-A17021-A17182-cpt)"""
     IPLRINJ = "IPLRINJ"
     CTINSTL = "CTINSTL"
 
 
 class IntraprostaticRoute(Enum):
-    """
-    abstDomain: A17185 (C-0-T14581-A17021-A17185-cpt)
-    """
+    """abstDomain: A17185 (C-0-T14581-A17021-A17185-cpt)"""
     IPROSTINJ = "IPROSTINJ"
 
 
 class IntrapulmonaryRoute(Enum):
-    """
-    abstDomain: A17187 (C-0-T14581-A17021-A17187-cpt)
-    """
+    """abstDomain: A17187 (C-0-T14581-A17021-A17187-cpt)"""
     EXTCORPINJ = "EXTCORPINJ"
     IPINJ = "IPINJ"
 
 
 class IntrasinalRoute(Enum):
-    """
-    abstDomain: A17190 (C-0-T14581-A17021-A17190-cpt)
-    """
+    """abstDomain: A17190 (C-0-T14581-A17021-A17190-cpt)"""
     ISININSTIL = "ISININSTIL"
 
 
 class IntraspinalRoute(Enum):
-    """
-    abstDomain: A17192 (C-0-T14581-A17021-A17192-cpt)
-    """
+    """abstDomain: A17192 (C-0-T14581-A17021-A17192-cpt)"""
     ISINJ = "ISINJ"
 
 
 class IntrasternalRoute(Enum):
-    """
-    abstDomain: A17194 (C-0-T14581-A17021-A17194-cpt)
-    """
+    """abstDomain: A17194 (C-0-T14581-A17021-A17194-cpt)"""
     ISTERINJ = "ISTERINJ"
 
 
 class IntrasynovialRoute(Enum):
-    """
-    abstDomain: A17196 (C-0-T14581-A17021-A17196-cpt)
-    """
+    """abstDomain: A17196 (C-0-T14581-A17021-A17196-cpt)"""
     ISYNINJ = "ISYNINJ"
 
 
 class IntratendinousRoute(Enum):
-    """
-    abstDomain: A17121 (C-0-T14581-A17021-A17121-cpt)
-    """
+    """abstDomain: A17121 (C-0-T14581-A17021-A17121-cpt)"""
     ITENDINJ = "ITENDINJ"
 
 
 class IntratesticularRoute(Enum):
-    """
-    abstDomain: A17198 (C-0-T14581-A17021-A17198-cpt)
-    """
+    """abstDomain: A17198 (C-0-T14581-A17021-A17198-cpt)"""
     ITESTINJ = "ITESTINJ"
 
 
 class IntrathecalRoute(Enum):
-    """
-    abstDomain: A17200 (C-0-T14581-A17021-A17200-cpt)
-    """
+    """abstDomain: A17200 (C-0-T14581-A17021-A17200-cpt)"""
     IT = "IT"
     ITINJ = "ITINJ"
 
 
 class IntrathoracicRoute(Enum):
-    """
-    abstDomain: A17203 (C-0-T14581-A17021-A17203-cpt)
-    """
+    """abstDomain: A17203 (C-0-T14581-A17021-A17203-cpt)"""
     ITHORINJ = "ITHORINJ"
 
 
 class IntratrachealRoute(Enum):
-    """
-    abstDomain: A17205 (C-0-T14581-A17021-A17205-cpt)
-    """
+    """abstDomain: A17205 (C-0-T14581-A17021-A17205-cpt)"""
     ITRACHINSTIL = "ITRACHINSTIL"
     ITRACHMAB = "ITRACHMAB"
 
 
 class IntratubularRoute(Enum):
-    """
-    abstDomain: A17208 (C-0-T14581-A17021-A17208-cpt)
-    """
+    """abstDomain: A17208 (C-0-T14581-A17021-A17208-cpt)"""
     ITUBINJ = "ITUBINJ"
 
 
 class IntratumorRoute(Enum):
-    """
-    abstDomain: A17210 (C-0-T14581-A17021-A17210-cpt)
-    """
+    """abstDomain: A17210 (C-0-T14581-A17021-A17210-cpt)"""
     ITUMINJ = "ITUMINJ"
 
 
 class IntratympanicRoute(Enum):
-    """
-    abstDomain: A17212 (C-0-T14581-A17021-A17212-cpt)
-    """
+    """abstDomain: A17212 (C-0-T14581-A17021-A17212-cpt)"""
     ITYMPINJ = "ITYMPINJ"
 
 
 class IntrauterineRoute(Enum):
-    """
-    abstDomain: A17214 (C-0-T14581-A17021-A17214-cpt)
-    """
+    """abstDomain: A17214 (C-0-T14581-A17021-A17214-cpt)"""
     IURETINJ = "IURETINJ"
     IUINJ = "IUINJ"
     IU = "IU"
@@ -7922,9 +6766,7 @@ class IntrauterineRoute(Enum):
 
 
 class IntravascularRoute(Enum):
-    """
-    abstDomain: A17219 (C-0-T14581-A17021-A17219-cpt)
-    """
+    """abstDomain: A17219 (C-0-T14581-A17021-A17219-cpt)"""
     HEMODIFF = "HEMODIFF"
     IVASCINFUS = "IVASCINFUS"
     HEMOPORT = "HEMOPORT"
@@ -7932,9 +6774,7 @@ class IntravascularRoute(Enum):
 
 
 class IntravenousInfusion(Enum):
-    """
-    specDomain: S14609 (C-0-T14581-A16931-A14602-S14609-cpt)
-    """
+    """specDomain: S14609 (C-0-T14581-A16931-A14602-S14609-cpt)"""
     IV = "IV"
     IVC = "IVC"
     IVCC = "IVCC"
@@ -7943,9 +6783,7 @@ class IntravenousInfusion(Enum):
 
 
 class IntravenousInjection(Enum):
-    """
-    specDomain: S14670 (C-0-T14581-A17021-A17224-S14670-cpt)
-    """
+    """specDomain: S14670 (C-0-T14581-A17021-A17224-S14670-cpt)"""
     IVINJ = "IVINJ"
     IVINJBOL = "IVINJBOL"
     IVPUSH = "IVPUSH"
@@ -7954,9 +6792,7 @@ class IntravenousInjection(Enum):
 
 
 class IntravenousRoute(Enum):
-    """
-    abstDomain: A17224 (C-0-T14581-A17021-A17224-cpt)
-    """
+    """abstDomain: A17224 (C-0-T14581-A17021-A17224-cpt)"""
     IVINJ = "IVINJ"
     IVINJBOL = "IVINJBOL"
     IVPUSH = "IVPUSH"
@@ -7966,38 +6802,28 @@ class IntravenousRoute(Enum):
 
 
 class IntraventricularRoute(Enum):
-    """
-    abstDomain: A17235 (C-0-T14581-A17021-A17235-cpt)
-    """
+    """abstDomain: A17235 (C-0-T14581-A17021-A17235-cpt)"""
     IVENTINJ = "IVENTINJ"
 
 
 class IntravesicleRoute(Enum):
-    """
-    abstDomain: A17237 (C-0-T14581-A17021-A17237-cpt)
-    """
+    """abstDomain: A17237 (C-0-T14581-A17021-A17237-cpt)"""
     IVESINJ = "IVESINJ"
 
 
 class IntravitrealRoute(Enum):
-    """
-    abstDomain: A17239 (C-0-T14581-A17021-A17239-cpt)
-    """
+    """abstDomain: A17239 (C-0-T14581-A17021-A17239-cpt)"""
     IVITINJ = "IVITINJ"
 
 
 class InuitInupiaq(Enum):
-    """
-    abstDomain: A18210 (C-0-T18130-A18191-A18192-A18210-cpt)
-    """
+    """abstDomain: A18210 (C-0-T18130-A18191-A18192-A18210-cpt)"""
     X_ESI = "x-ESI"
     X_ESK = "x-ESK"
 
 
 class InvoiceElementAdjudicated(Enum):
-    """
-    abstDomain: A17530 (C-0-T13953-A13954-A17522-A17530-cpt)
-    """
+    """abstDomain: A17530 (C-0-T13953-A13954-A17522-A17530-cpt)"""
     ADNPPPELAT = "ADNPPPELAT"
     ADNPPPELCT = "ADNPPPELCT"
     ADNPPPMNAT = "ADNPPPMNAT"
@@ -8033,9 +6859,7 @@ class InvoiceElementAdjudicated(Enum):
 
 
 class InvoiceElementPaid(Enum):
-    """
-    abstDomain: A17563 (C-0-T13953-A13954-A17522-A17563-cpt)
-    """
+    """abstDomain: A17563 (C-0-T13953-A13954-A17522-A17563-cpt)"""
     PDNPPPELAT = "PDNPPPELAT"
     PDNPPPELCT = "PDNPPPELCT"
     PDNPPPMNAT = "PDNPPPMNAT"
@@ -8063,9 +6887,7 @@ class InvoiceElementPaid(Enum):
 
 
 class InvoiceElementSubmitted(Enum):
-    """
-    abstDomain: A17523 (C-0-T13953-A13954-A17522-A17523-cpt)
-    """
+    """abstDomain: A17523 (C-0-T13953-A13954-A17522-A17523-cpt)"""
     SBBLELAT = "SBBLELAT"
     SBBLELCT = "SBBLELCT"
     SBNFELCT = "SBNFELCT"
@@ -8075,16 +6897,12 @@ class InvoiceElementSubmitted(Enum):
 
 
 class IontophoresisRoute(Enum):
-    """
-    abstDomain: A16990 (C-0-T14581-A16931-A16990-cpt)
-    """
+    """abstDomain: A16990 (C-0-T14581-A16931-A16990-cpt)"""
     IONTO = "IONTO"
 
 
 class Iroquoian(Enum):
-    """
-    abstDomain: A18306 (C-0-T18130-A18306-cpt)
-    """
+    """abstDomain: A18306 (C-0-T18130-A18306-cpt)"""
     X_CAY = "x-CAY"
     X_MOH = "x-MOH"
     X_ONE = "x-ONE"
@@ -8095,9 +6913,7 @@ class Iroquoian(Enum):
 
 
 class Irrigation(Enum):
-    """
-    abstDomain: A14721 (C-0-T14581-A16931-A14721-cpt)
-    """
+    """abstDomain: A14721 (C-0-T14581-A16931-A14721-cpt)"""
     BLADIRR = "BLADIRR"
     BLADIRRC = "BLADIRRC"
     BLADIRRT = "BLADIRRT"
@@ -8109,9 +6925,7 @@ class Irrigation(Enum):
 
 
 class IrrigationSolution(Enum):
-    """
-    specDomain: S14427 (C-0-T19651-A14411-A14412-A14413-S14419-S14427-cpt)
-    """
+    """specDomain: S14427 (C-0-T19651-A14411-A14412-A14413-S14419-S14427-cpt)"""
     IRSOL = "IRSOL"
     DOUCHE = "DOUCHE"
     ENEMA = "ENEMA"
@@ -8119,42 +6933,32 @@ class IrrigationSolution(Enum):
 
 
 class IssueFilterCode(Enum):
-    """
-    abstDomain: A19819 (C-0-T19726-A19819-cpt)
-    """
+    """abstDomain: A19819 (C-0-T19726-A19819-cpt)"""
     ISSFA = "ISSFA"
     ISSFI = "ISSFI"
     ISSFU = "ISSFU"
 
 
 class JejunumRoute(Enum):
-    """
-    abstDomain: A17241 (C-0-T14581-A17021-A17241-cpt)
-    """
+    """abstDomain: A17241 (C-0-T14581-A17021-A17241-cpt)"""
     GJT = "GJT"
     JJTINSTL = "JJTINSTL"
     OJJ = "OJJ"
 
 
 class Kalapuyan(Enum):
-    """
-    abstDomain: A18425 (C-0-T18130-A18413-A18424-A18425-cpt)
-    """
+    """abstDomain: A18425 (C-0-T18130-A18413-A18424-A18425-cpt)"""
     X_KAL = "x-KAL"
 
 
 class Keresan(Enum):
-    """
-    abstDomain: A18319 (C-0-T18130-A18319-cpt)
-    """
+    """abstDomain: A18319 (C-0-T18130-A18319-cpt)"""
     X_KJQ = "x-KJQ"
     X_KEE = "x-KEE"
 
 
 class KiowaTanoan(Enum):
-    """
-    abstDomain: A18327 (C-0-T18130-A18327-cpt)
-    """
+    """abstDomain: A18327 (C-0-T18130-A18327-cpt)"""
     X_TAO = "x-TAO"
     X_TIX = "x-TIX"
     X_TOW = "x-TOW"
@@ -8163,34 +6967,26 @@ class KiowaTanoan(Enum):
 
 
 class KitEntityType(Enum):
-    """
-    specDomain: S16145 (C-0-T16040-A16041-A19867-A16143-S16144-S16145-cpt)
-    """
+    """specDomain: S16145 (C-0-T16040-A16041-A19867-A16143-S16144-S16145-cpt)"""
     KIT = "KIT"
     SYSTM = "SYSTM"
 
 
 class KoyukonIngalik(Enum):
-    """
-    abstDomain: A18366 (C-0-T18130-A18352-A18356-A18358-A18365-A18366-cpt)
-    """
+    """abstDomain: A18366 (C-0-T18130-A18352-A18356-A18358-A18365-A18366-cpt)"""
     X_ING = "x-ING"
     X_HOI = "x-HOI"
     X_KOY = "x-KOY"
 
 
 class KutchinHan(Enum):
-    """
-    abstDomain: A18379 (C-0-T18130-A18352-A18356-A18358-A18365-A18379-cpt)
-    """
+    """abstDomain: A18379 (C-0-T18130-A18352-A18356-A18358-A18365-A18379-cpt)"""
     X_HAA = "x-HAA"
     X_KUC = "x-KUC"
 
 
 class LoincobservationActContextAgeType(Enum):
-    """
-    abstDomain: A19758 (C-0-T13953-A19820-A16226-A19757-A19758-cpt)
-    """
+    """abstDomain: A19758 (C-0-T13953-A19820-A16226-A19757-A19758-cpt)"""
     VALUE_30972_4 = "30972-4"
     VALUE_29553_5 = "29553-5"
     VALUE_30525_0 = "30525-0"
@@ -8199,9 +6995,7 @@ class LoincobservationActContextAgeType(Enum):
 
 
 class LaboratoriesProviderCodes(Enum):
-    """
-    specDomain: S20749 (C-0-T19465-S20749-cpt)
-    """
+    """specDomain: S20749 (C-0-T19465-S20749-cpt)"""
     VALUE_290000000_X = "290000000X"
     VALUE_291_U00000_X = "291U00000X"
     VALUE_292200000_X = "292200000X"
@@ -8209,25 +7003,19 @@ class LaboratoriesProviderCodes(Enum):
 
 
 class LaboratoryHipaa(Enum):
-    """
-    abstDomain: A13808 (C-0-T13129-A13715-A13808-cpt)
-    """
+    """abstDomain: A13808 (C-0-T13129-A13715-A13808-cpt)"""
     VALUE_291_U00000_N = "291U00000N"
     VALUE_292200000_N = "292200000N"
     VALUE_293_D00000_N = "293D00000N"
 
 
 class LacrimalPunctaRoute(Enum):
-    """
-    abstDomain: A17245 (C-0-T14581-A17021-A17245-cpt)
-    """
+    """abstDomain: A17245 (C-0-T14581-A17021-A17245-cpt)"""
     LPINS = "LPINS"
 
 
 class LanguageAbilityMode(Enum):
-    """
-    vocSet: T12249 (C-0-T12249-cpt)
-    """
+    """vocSet: T12249 (C-0-T12249-cpt)"""
     ESGN = "ESGN"
     ESP = "ESP"
     EWR = "EWR"
@@ -8237,9 +7025,7 @@ class LanguageAbilityMode(Enum):
 
 
 class LanguageAbilityProficiency(Enum):
-    """
-    vocSet: T12199 (C-0-T12199-cpt)
-    """
+    """vocSet: T12199 (C-0-T12199-cpt)"""
     E = "E"
     F = "F"
     G = "G"
@@ -8247,33 +7033,25 @@ class LanguageAbilityProficiency(Enum):
 
 
 class LaryngealRoute(Enum):
-    """
-    abstDomain: A17247 (C-0-T14581-A17021-A17247-cpt)
-    """
+    """abstDomain: A17247 (C-0-T14581-A17021-A17247-cpt)"""
     LARYNGINSTIL = "LARYNGINSTIL"
     LARYNGTA = "LARYNGTA"
 
 
 class LavageRoute(Enum):
-    """
-    abstDomain: A16995 (C-0-T14581-A16931-A16995-cpt)
-    """
+    """abstDomain: A16995 (C-0-T14581-A16931-A16995-cpt)"""
     IGASTLAV = "IGASTLAV"
 
 
 class LengthOutOfRange(Enum):
-    """
-    specDomain: S21656 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-S21656-cpt)
-    """
+    """specDomain: S21656 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-S21656-cpt)"""
     LEN_RANGE = "LEN_RANGE"
     LEN_LONG = "LEN_LONG"
     LEN_SHORT = "LEN_SHORT"
 
 
 class LifeInsurancePolicy(Enum):
-    """
-    specDomain: S22148 (C-0-T13953-A13954-A19855-A19856-S22148-cpt)
-    """
+    """specDomain: S22148 (C-0-T13953-A13954-A19855-A19856-S22148-cpt)"""
     LIFE = "LIFE"
     ANNU = "ANNU"
     TLIFE = "TLIFE"
@@ -8281,34 +7059,26 @@ class LifeInsurancePolicy(Enum):
 
 
 class LineAccessMedicalDevice(Enum):
-    """
-    specDomain: S16201 (C-0-T16040-A16041-A19867-A16188-A16200-S16201-cpt)
-    """
+    """specDomain: S16201 (C-0-T16040-A16041-A19867-A16188-A16200-S16201-cpt)"""
     LINE = "LINE"
     IALINE = "IALINE"
     IVLINE = "IVLINE"
 
 
 class LingualRoute(Enum):
-    """
-    abstDomain: A17250 (C-0-T14581-A17021-A17250-cpt)
-    """
+    """abstDomain: A17250 (C-0-T14581-A17021-A17250-cpt)"""
     TRNSLING = "TRNSLING"
 
 
 class LiquidCleanser(Enum):
-    """
-    specDomain: S14414 (C-0-T19651-A14411-A14412-A14413-S14414-cpt)
-    """
+    """specDomain: S14414 (C-0-T19651-A14411-A14412-A14413-S14414-cpt)"""
     LIQCLN = "LIQCLN"
     LIQSOAP = "LIQSOAP"
     SHMP = "SHMP"
 
 
 class LivingArrangement(Enum):
-    """
-    vocSet: T220 (C-0-T220-cpt)
-    """
+    """vocSet: T220 (C-0-T220-cpt)"""
     HL = "HL"
     M = "M"
     T = "T"
@@ -8324,9 +7094,7 @@ class LivingArrangement(Enum):
 
 
 class LivingSubjectProductionClass(Enum):
-    """
-    abstDomain: A16368 (C-0-T12206-A16368-cpt)
-    """
+    """abstDomain: A16368 (C-0-T12206-A16368-cpt)"""
     BF = "BF"
     BR = "BR"
     BL = "BL"
@@ -8347,41 +7115,31 @@ class LivingSubjectProductionClass(Enum):
 
 
 class Loan(Enum):
-    """
-    specDomain: S17961 (C-0-T13953-A13954-A17958-S17961-cpt)
-    """
+    """specDomain: S17961 (C-0-T13953-A13954-A17958-S17961-cpt)"""
     LOAN = "LOAN"
     RENT = "RENT"
 
 
 class LocalMarkupIgnore(Enum):
-    """
-    vocSet: T10975 (C-0-T10975-cpt)
-    """
+    """vocSet: T10975 (C-0-T10975-cpt)"""
     ALL = "all"
     MARKUP = "markup"
 
 
 class LocalRemoteControlState(Enum):
-    """
-    vocSet: T10893 (C-0-T10893-cpt)
-    """
+    """vocSet: T10893 (C-0-T10893-cpt)"""
     L = "L"
     R = "R"
 
 
 class LotionDrugForm(Enum):
-    """
-    specDomain: S14464 (C-0-T19651-A14411-A14412-A14463-S14464-cpt)
-    """
+    """specDomain: S14464 (C-0-T19651-A14411-A14412-A14463-S14464-cpt)"""
     LTN = "LTN"
     TOPLTN = "TOPLTN"
 
 
 class MdfattributeType(Enum):
-    """
-    vocSet: T10045 (C-0-T10045-cpt)
-    """
+    """vocSet: T10045 (C-0-T10045-cpt)"""
     ADDR = "ADDR"
     CD = "CD"
     COM = "COM"
@@ -8402,9 +7160,7 @@ class MdfattributeType(Enum):
 
 
 class MdfsubjectAreaPrefix(Enum):
-    """
-    vocSet: T10029 (C-0-T10029-cpt)
-    """
+    """vocSet: T10029 (C-0-T10029-cpt)"""
     COI = "COI"
     DIM = "DIM"
     RIM = "RIM"
@@ -8412,18 +7168,14 @@ class MdfsubjectAreaPrefix(Enum):
 
 
 class Maiduan(Enum):
-    """
-    abstDomain: A18435 (C-0-T18130-A18413-A18435-cpt)
-    """
+    """abstDomain: A18435 (C-0-T18130-A18413-A18435-cpt)"""
     X_NSZ = "x-NSZ"
     X_NMU = "x-NMU"
     X_MAI = "x-MAI"
 
 
 class ManagedCareOrganizationHipaa(Enum):
-    """
-    abstDomain: A13812 (C-0-T13129-A13715-A13812-cpt)
-    """
+    """abstDomain: A13812 (C-0-T13129-A13715-A13812-cpt)"""
     VALUE_302_F00000_N = "302F00000N"
     VALUE_302_R00000_N = "302R00000N"
     VALUE_305_S00000_N = "305S00000N"
@@ -8431,9 +7183,7 @@ class ManagedCareOrganizationHipaa(Enum):
 
 
 class ManagedCareOrganizationsProviderCodes(Enum):
-    """
-    specDomain: S20753 (C-0-T19465-S20753-cpt)
-    """
+    """specDomain: S20753 (C-0-T19465-S20753-cpt)"""
     VALUE_300000000_X = "300000000X"
     VALUE_302_F00000_X = "302F00000X"
     VALUE_302_R00000_X = "302R00000X"
@@ -8442,9 +7192,7 @@ class ManagedCareOrganizationsProviderCodes(Enum):
 
 
 class ManagedCarePolicy(Enum):
-    """
-    specDomain: S22147 (C-0-T13953-A13954-A19855-A19856-A19857-S22147-cpt)
-    """
+    """specDomain: S22147 (C-0-T13953-A13954-A19855-A19856-A19857-S22147-cpt)"""
     MCPOL = "MCPOL"
     HMO = "HMO"
     POS = "POS"
@@ -8452,9 +7200,7 @@ class ManagedCarePolicy(Enum):
 
 
 class ManagedParticipationStatus(Enum):
-    """
-    vocSet: T15992 (C-0-T15992-cpt)
-    """
+    """vocSet: T15992 (C-0-T15992-cpt)"""
     NORMAL = "normal"
     ACTIVE = "active"
     CANCELLED = "cancelled"
@@ -8464,9 +7210,7 @@ class ManagedParticipationStatus(Enum):
 
 
 class ManagedParticipationStatusNormal(Enum):
-    """
-    specDomain: S15993 (C-0-T15992-S15993-cpt)
-    """
+    """specDomain: S15993 (C-0-T15992-S15993-cpt)"""
     NORMAL = "normal"
     ACTIVE = "active"
     CANCELLED = "cancelled"
@@ -8475,34 +7219,26 @@ class ManagedParticipationStatusNormal(Enum):
 
 
 class MapRelationship(Enum):
-    """
-    vocSet: T11052 (C-0-T11052-cpt)
-    """
+    """vocSet: T11052 (C-0-T11052-cpt)"""
     BT = "BT"
     E = "E"
     NT = "NT"
 
 
 class MaterialDangerInfectious(Enum):
-    """
-    specDomain: S10407 (C-0-T10405-S10407-cpt)
-    """
+    """specDomain: S10407 (C-0-T10405-S10407-cpt)"""
     INF = "INF"
     BHZ = "BHZ"
 
 
 class MaterialDangerInflammable(Enum):
-    """
-    specDomain: S10412 (C-0-T10405-S10412-cpt)
-    """
+    """specDomain: S10412 (C-0-T10405-S10412-cpt)"""
     IFL = "IFL"
     EXP = "EXP"
 
 
 class MaterialEntityAdditive(Enum):
-    """
-    abstDomain: A16042 (C-0-T16040-A16041-A19867-A16042-cpt)
-    """
+    """abstDomain: A16042 (C-0-T16040-A16041-A19867-A16042-cpt)"""
     F10 = "F10"
     C32 = "C32"
     C38 = "C38"
@@ -8560,9 +7296,7 @@ class MaterialEntityAdditive(Enum):
 
 
 class MdfHmdMetSourceType(Enum):
-    """
-    vocSet: T10076 (C-0-T10076-cpt)
-    """
+    """vocSet: T10076 (C-0-T10076-cpt)"""
     C = "C"
     D = "D"
     N = "N"
@@ -8572,9 +7306,7 @@ class MdfHmdMetSourceType(Enum):
 
 
 class MdfHmdRowType(Enum):
-    """
-    vocSet: T10069 (C-0-T10069-cpt)
-    """
+    """vocSet: T10069 (C-0-T10069-cpt)"""
     ASSOC = "assoc"
     ATTR = "attr"
     ITEM = "item"
@@ -8584,9 +7316,7 @@ class MdfHmdRowType(Enum):
 
 
 class MdfRmimRowType(Enum):
-    """
-    vocSet: T10063 (C-0-T10063-cpt)
-    """
+    """vocSet: T10063 (C-0-T10063-cpt)"""
     ASSOC = "assoc"
     ATTR = "attr"
     CLASS_VALUE = "class"
@@ -8595,17 +7325,13 @@ class MdfRmimRowType(Enum):
 
 
 class MedOncClinPracticeSetting(Enum):
-    """
-    specDomain: S10947 (C-0-T12206-A17660-A19450-A10588-S10589-S10947-cpt)
-    """
+    """specDomain: S10947 (C-0-T12206-A17660-A19450-A10588-S10589-S10947-cpt)"""
     ONCL = "ONCL"
     PEDHO = "PEDHO"
 
 
 class MediaType(Enum):
-    """
-    vocSet: T14824 (C-0-T14824-cpt)
-    """
+    """vocSet: T14824 (C-0-T14824-cpt)"""
     APPLICATION_DICOM = "application/dicom"
     APPLICATION_MSWORD = "application/msword"
     APPLICATION_PDF = "application/pdf"
@@ -8630,9 +7356,7 @@ class MediaType(Enum):
 
 
 class MedicalGeneticsProviderCodes(Enum):
-    """
-    specDomain: S20149 (C-0-T19465-S20096-S20149-cpt)
-    """
+    """specDomain: S20149 (C-0-T19465-S20096-S20149-cpt)"""
     VALUE_207_S00000_X = "207S00000X"
     VALUE_207_SG0202_X = "207SG0202X"
     VALUE_207_SC0300_X = "207SC0300X"
@@ -8643,17 +7367,13 @@ class MedicalGeneticsProviderCodes(Enum):
 
 
 class MedicationCap(Enum):
-    """
-    abstDomain: A16184 (C-0-T14049-A16184-cpt)
-    """
+    """abstDomain: A16184 (C-0-T14049-A16184-cpt)"""
     CHILD = "CHILD"
     EASY = "EASY"
 
 
 class MedicationGeneralizationRoleType(Enum):
-    """
-    abstDomain: A19720 (C-0-T12206-A19720-cpt)
-    """
+    """abstDomain: A19720 (C-0-T12206-A19720-cpt)"""
     GD = "GD"
     GDF = "GDF"
     GDS = "GDS"
@@ -8662,9 +7382,7 @@ class MedicationGeneralizationRoleType(Enum):
 
 
 class MedicationObservationType(Enum):
-    """
-    abstDomain: A19751 (C-0-T13953-A19820-A16226-A19751-cpt)
-    """
+    """abstDomain: A19751 (C-0-T13953-A19820-A16226-A19751-cpt)"""
     SPLCOATING = "SPLCOATING"
     SPLCOLOR = "SPLCOLOR"
     SPLIMAGE = "SPLIMAGE"
@@ -8677,24 +7395,18 @@ class MedicationObservationType(Enum):
 
 
 class MedicationOrderReleaseReasonCode(Enum):
-    """
-    abstDomain: A19782 (C-0-T14878-A19692-A19782-cpt)
-    """
+    """abstDomain: A19782 (C-0-T14878-A19692-A19782-cpt)"""
     HOLDINAP = "HOLDINAP"
     HOLDDONE = "HOLDDONE"
 
 
 class MemberRoleType(Enum):
-    """
-    abstDomain: A15925 (C-0-T12206-A15925-cpt)
-    """
+    """abstDomain: A15925 (C-0-T12206-A15925-cpt)"""
     TRB = "TRB"
 
 
 class MessageCondition(Enum):
-    """
-    vocSet: T357 (C-0-T357-cpt)
-    """
+    """vocSet: T357 (C-0-T357-cpt)"""
     VALUE_207 = "207"
     VALUE_206 = "206"
     VALUE_102 = "102"
@@ -8711,25 +7423,19 @@ class MessageCondition(Enum):
 
 
 class MessageWaitingPriority(Enum):
-    """
-    vocSet: T19581 (C-0-T19581-cpt)
-    """
+    """vocSet: T19581 (C-0-T19581-cpt)"""
     H = "H"
     L = "L"
     M = "M"
 
 
 class MilitaryHospital(Enum):
-    """
-    specDomain: S13799 (C-0-T12206-A17660-A19450-A10588-S10602-S13799-cpt)
-    """
+    """specDomain: S13799 (C-0-T12206-A17660-A19450-A10588-S10602-S13799-cpt)"""
     MHSP = "MHSP"
 
 
 class MilitaryHospitalProviderCodes(Enum):
-    """
-    specDomain: S20741 (C-0-T19465-S20733-S20741-cpt)
-    """
+    """specDomain: S20741 (C-0-T19465-S20733-S20741-cpt)"""
     VALUE_286500000_X = "286500000X"
     VALUE_2865_C1500_X = "2865C1500X"
     VALUE_2865_M2000_X = "2865M2000X"
@@ -8737,9 +7443,7 @@ class MilitaryHospitalProviderCodes(Enum):
 
 
 class MilitaryRoleType(Enum):
-    """
-    specDomain: S21968 (C-0-T12206-A19809-A19805-A19814-S21968-cpt)
-    """
+    """specDomain: S21968 (C-0-T12206-A19809-A19805-A19814-S21968-cpt)"""
     MIL = "MIL"
     ACTMIL = "ACTMIL"
     RETMIL = "RETMIL"
@@ -8747,25 +7451,19 @@ class MilitaryRoleType(Enum):
 
 
 class MissouriRiver(Enum):
-    """
-    abstDomain: A18554 (C-0-T18130-A18552-A18553-A18554-cpt)
-    """
+    """abstDomain: A18554 (C-0-T18130-A18552-A18553-A18554-cpt)"""
     X_CRO = "x-CRO"
     X_HID = "x-HID"
 
 
 class MobileUnit(Enum):
-    """
-    specDomain: S18100 (C-0-T12206-A17660-A19450-A19452-S18100-cpt)
-    """
+    """specDomain: S18100 (C-0-T12206-A17660-A19450-A19452-S18100-cpt)"""
     MOBL = "MOBL"
     AMB = "AMB"
 
 
 class MobilityImpaired(Enum):
-    """
-    specDomain: S10186 (C-0-T295-S10186-cpt)
-    """
+    """specDomain: S10186 (C-0-T295-S10186-cpt)"""
     VALUE_5 = "5"
     CB = "CB"
     CR = "CR"
@@ -8775,40 +7473,30 @@ class MobilityImpaired(Enum):
 
 
 class ModelMediaType(Enum):
-    """
-    abstDomain: A14848 (C-0-T14824-A14848-cpt)
-    """
+    """abstDomain: A14848 (C-0-T14824-A14848-cpt)"""
     MODEL_VRML = "model/vrml"
 
 
 class ModifyIndicator(Enum):
-    """
-    vocSet: T395 (C-0-T395-cpt)
-    """
+    """vocSet: T395 (C-0-T395-cpt)"""
     M = "M"
     N = "N"
 
 
 class MucosalAbsorptionRoute(Enum):
-    """
-    abstDomain: A16997 (C-0-T14581-A16931-A16997-cpt)
-    """
+    """abstDomain: A16997 (C-0-T14581-A16931-A16997-cpt)"""
     IDOUDMAB = "IDOUDMAB"
     ITRACHMAB = "ITRACHMAB"
     SMUCMAB = "SMUCMAB"
 
 
 class MucousMembraneRoute(Enum):
-    """
-    abstDomain: A17252 (C-0-T14581-A17021-A17252-cpt)
-    """
+    """abstDomain: A17252 (C-0-T14581-A17021-A17252-cpt)"""
     MUC = "MUC"
 
 
 class MultiUseContainerEntityType(Enum):
-    """
-    abstDomain: A16153 (C-0-T16040-A16041-A19867-A16143-S16144-A16152-A16153-cpt)
-    """
+    """abstDomain: A16153 (C-0-T16040-A16041-A19867-A16143-S16144-A16152-A16153-cpt)"""
     BOTP = "BOTP"
     BOTPLY = "BOTPLY"
     BOT = "BOT"
@@ -8828,16 +7516,12 @@ class MultiUseContainerEntityType(Enum):
 
 
 class MultipartMediaType(Enum):
-    """
-    abstDomain: A14850 (C-0-T14824-A14850-cpt)
-    """
+    """abstDomain: A14850 (C-0-T14824-A14850-cpt)"""
     MULTIPART_X_HL7_CDA_LEVEL_ONE = "multipart/x-hl7-cda-level-one"
 
 
 class Muskogean(Enum):
-    """
-    abstDomain: A18338 (C-0-T18130-A18338-cpt)
-    """
+    """abstDomain: A18338 (C-0-T18130-A18338-cpt)"""
     X_AKZ = "x-AKZ"
     X_CKU = "x-CKU"
     X_MIK = "x-MIK"
@@ -8847,42 +7531,32 @@ class Muskogean(Enum):
 
 
 class NailRoute(Enum):
-    """
-    abstDomain: A17254 (C-0-T14581-A17021-A17254-cpt)
-    """
+    """abstDomain: A17254 (C-0-T14581-A17021-A17254-cpt)"""
     NAIL = "NAIL"
 
 
 class NameLegalUse(Enum):
-    """
-    specDomain: S10176 (C-0-T15913-S10176-cpt)
-    """
+    """specDomain: S10176 (C-0-T15913-S10176-cpt)"""
     L = "L"
     OR_VALUE = "OR"
 
 
 class NameRepresentationUse(Enum):
-    """
-    abstDomain: A17860 (C-0-T10637-A17860-cpt)
-    """
+    """abstDomain: A17860 (C-0-T10637-A17860-cpt)"""
     ABC = "ABC"
     IDE = "IDE"
     SYL = "SYL"
 
 
 class NasalInhalation(Enum):
-    """
-    specDomain: S14617 (C-0-T14581-A17021-A17256-S14617-cpt)
-    """
+    """specDomain: S14617 (C-0-T14581-A17021-A17256-S14617-cpt)"""
     NASINHL = "NASINHL"
     NASINHLC = "NASINHLC"
     NP = "NP"
 
 
 class NasalRoute(Enum):
-    """
-    abstDomain: A17256 (C-0-T14581-A17021-A17256-cpt)
-    """
+    """abstDomain: A17256 (C-0-T14581-A17021-A17256-cpt)"""
     NASINHL = "NASINHL"
     NASINHLC = "NASINHLC"
     NP = "NP"
@@ -8892,9 +7566,7 @@ class NasalRoute(Enum):
 
 
 class NativeEntityAlaska(Enum):
-    """
-    abstDomain: A11969 (C-0-T11631-A11969-cpt)
-    """
+    """abstDomain: A11969 (C-0-T11631-A11969-cpt)"""
     VALUE_339 = "339"
     VALUE_341 = "341"
     VALUE_342 = "342"
@@ -9127,9 +7799,7 @@ class NativeEntityAlaska(Enum):
 
 
 class NativeEntityContiguous(Enum):
-    """
-    abstDomain: A12548 (C-0-T11631-A12548-cpt)
-    """
+    """abstDomain: A12548 (C-0-T11631-A12548-cpt)"""
     VALUE_1 = "1"
     VALUE_2 = "2"
     VALUE_3 = "3"
@@ -9470,26 +8140,20 @@ class NativeEntityContiguous(Enum):
 
 
 class NaturalChild(Enum):
-    """
-    specDomain: S17930 (C-0-T12206-A19563-S17926-S16360-S17930-cpt)
-    """
+    """specDomain: S17930 (C-0-T12206-A19563-S17926-S16360-S17930-cpt)"""
     NCHILD = "NCHILD"
     DAU = "DAU"
     SON = "SON"
 
 
 class NaturalFather(Enum):
-    """
-    specDomain: S19765 (C-0-T12206-A19563-S17926-S16346-S19764-S19765-cpt)
-    """
+    """specDomain: S19765 (C-0-T12206-A19563-S17926-S16346-S19764-S19765-cpt)"""
     NFTH = "NFTH"
     NFTHF = "NFTHF"
 
 
 class NaturalParent(Enum):
-    """
-    specDomain: S19764 (C-0-T12206-A19563-S17926-S16346-S19764-cpt)
-    """
+    """specDomain: S19764 (C-0-T12206-A19563-S17926-S16346-S19764-cpt)"""
     NFTH = "NFTH"
     NFTHF = "NFTHF"
     NPRN = "NPRN"
@@ -9497,66 +8161,50 @@ class NaturalParent(Enum):
 
 
 class NaturalSibling(Enum):
-    """
-    specDomain: S19773 (C-0-T12206-A19563-S17926-S11567-S19773-cpt)
-    """
+    """specDomain: S19773 (C-0-T12206-A19563-S17926-S11567-S19773-cpt)"""
     NSIB = "NSIB"
     NBRO = "NBRO"
     NSIS = "NSIS"
 
 
 class Nebulization(Enum):
-    """
-    abstDomain: A14728 (C-0-T14581-A16931-A14728-cpt)
-    """
+    """abstDomain: A14728 (C-0-T14581-A16931-A14728-cpt)"""
     ETNEB = "ETNEB"
 
 
 class NebulizationInhalation(Enum):
-    """
-    specDomain: S14619 (C-0-T14581-A16931-A14615-S14619-cpt)
-    """
+    """specDomain: S14619 (C-0-T14581-A16931-A14615-S14619-cpt)"""
     NEB = "NEB"
     NASNEB = "NASNEB"
     ORNEB = "ORNEB"
 
 
 class NephClinPracticeSetting(Enum):
-    """
-    specDomain: S10943 (C-0-T12206-A17660-A19450-A10588-S10589-S10943-cpt)
-    """
+    """specDomain: S10943 (C-0-T12206-A17660-A19450-A10588-S10589-S10943-cpt)"""
     NEPH = "NEPH"
     PEDNEPH = "PEDNEPH"
 
 
 class NeuropsychologistHipaa(Enum):
-    """
-    abstDomain: A13147 (C-0-T13129-A13130-A13131-A13147-cpt)
-    """
+    """abstDomain: A13147 (C-0-T13129-A13130-A13131-A13147-cpt)"""
     VALUE_103_GC0700_N = "103GC0700N"
 
 
 class NeuropsychologistProviderCodes(Enum):
-    """
-    specDomain: S20283 (C-0-T19465-S20275-S20283-cpt)
-    """
+    """specDomain: S20283 (C-0-T19465-S20275-S20283-cpt)"""
     VALUE_103_G00000_X = "103G00000X"
     VALUE_103_GC0700_X = "103GC0700X"
 
 
 class NieceNephew(Enum):
-    """
-    specDomain: S19750 (C-0-T12206-A19563-S17926-S19750-cpt)
-    """
+    """specDomain: S19750 (C-0-T12206-A19563-S17926-S19750-cpt)"""
     NIENEPH = "NIENEPH"
     NEPHEW = "NEPHEW"
     NIECE = "NIECE"
 
 
 class NoInformation(Enum):
-    """
-    specDomain: S10610 (C-0-T10609-S10610-cpt)
-    """
+    """specDomain: S10610 (C-0-T10609-S10610-cpt)"""
     OTH = "OTH"
     NINF = "NINF"
     PINF = "PINF"
@@ -9573,9 +8221,7 @@ class NoInformation(Enum):
 
 
 class NonDrugAgentEntity(Enum):
-    """
-    abstDomain: A19699 (C-0-T16040-A16041-A19698-A19699-cpt)
-    """
+    """abstDomain: A19699 (C-0-T16040-A16041-A19698-A19699-cpt)"""
     NDA16 = "NDA16"
     NDA17 = "NDA17"
     NDA01 = "NDA01"
@@ -9596,9 +8242,7 @@ class NonDrugAgentEntity(Enum):
 
 
 class NonRigidContainerEntityType(Enum):
-    """
-    abstDomain: A16147 (C-0-T16040-A16041-A19867-A16143-S16144-A16147-cpt)
-    """
+    """abstDomain: A16147 (C-0-T16040-A16041-A19867-A16143-S16144-A16147-cpt)"""
     BAG = "BAG"
     PACKT = "PACKT"
     PCH = "PCH"
@@ -9606,25 +8250,19 @@ class NonRigidContainerEntityType(Enum):
 
 
 class Nootkan(Enum):
-    """
-    abstDomain: A18641 (C-0-T18130-A18640-A18641-cpt)
-    """
+    """abstDomain: A18641 (C-0-T18130-A18640-A18641-cpt)"""
     X_MYH = "x-MYH"
 
 
 class NorthernCaddoan(Enum):
-    """
-    abstDomain: A18224 (C-0-T18130-A18223-A18224-cpt)
-    """
+    """abstDomain: A18224 (C-0-T18130-A18223-A18224-cpt)"""
     X_ARI = "x-ARI"
     X_PAW = "x-PAW"
     X_WIC = "x-WIC"
 
 
 class NorthernIroquoian(Enum):
-    """
-    abstDomain: A18307 (C-0-T18130-A18306-A18307-cpt)
-    """
+    """abstDomain: A18307 (C-0-T18130-A18306-A18307-cpt)"""
     X_CAY = "x-CAY"
     X_MOH = "x-MOH"
     X_ONE = "x-ONE"
@@ -9634,9 +8272,7 @@ class NorthernIroquoian(Enum):
 
 
 class NuclearMedicineProviderCodes(Enum):
-    """
-    specDomain: S20159 (C-0-T19465-S20096-S20159-cpt)
-    """
+    """specDomain: S20159 (C-0-T19465-S20096-S20159-cpt)"""
     VALUE_207_U00000_X = "207U00000X"
     VALUE_207_UN0903_X = "207UN0903X"
     VALUE_207_UN0901_X = "207UN0901X"
@@ -9644,9 +8280,7 @@ class NuclearMedicineProviderCodes(Enum):
 
 
 class NullFlavor(Enum):
-    """
-    vocSet: T10609 (C-0-T10609-cpt)
-    """
+    """vocSet: T10609 (C-0-T10609-cpt)"""
     OTH = "OTH"
     NINF = "NINF"
     PINF = "PINF"
@@ -9663,9 +8297,7 @@ class NullFlavor(Enum):
 
 
 class NursePractitionerHipaa(Enum):
-    """
-    specDomain: S13402 (C-0-T13129-A13130-A13363-S13402-cpt)
-    """
+    """specDomain: S13402 (C-0-T13129-A13130-A13363-S13402-cpt)"""
     VALUE_363_L00000_N = "363L00000N"
     VALUE_363_LA2100_N = "363LA2100N"
     VALUE_363_LA2200_N = "363LA2200N"
@@ -9688,9 +8320,7 @@ class NursePractitionerHipaa(Enum):
 
 
 class NursePractitionerProviderCodes(Enum):
-    """
-    specDomain: S20501 (C-0-T19465-S20463-S20501-cpt)
-    """
+    """specDomain: S20501 (C-0-T19465-S20463-S20501-cpt)"""
     VALUE_363_A00000_X = "363A00000X"
     VALUE_363_AM0700_X = "363AM0700X"
     VALUE_363_AS0400_X = "363AS0400X"
@@ -9715,18 +8345,14 @@ class NursePractitionerProviderCodes(Enum):
 
 
 class NursingOrCustodialCarePracticeSetting(Enum):
-    """
-    specDomain: S10605 (C-0-T12206-A17660-A19450-A10588-S10605-cpt)
-    """
+    """specDomain: S10605 (C-0-T12206-A17660-A19450-A10588-S10605-cpt)"""
     NCCF = "NCCF"
     VALUE_314000000_N = "314000000N"
     SNF = "SNF"
 
 
 class NursingServiceProviderHipaa(Enum):
-    """
-    abstDomain: A13229 (C-0-T13129-A13130-A13229-cpt)
-    """
+    """abstDomain: A13229 (C-0-T13129-A13130-A13229-cpt)"""
     VALUE_163_W00000_N = "163W00000N"
     VALUE_163_WA0400_N = "163WA0400N"
     VALUE_163_WA2000_N = "163WA2000N"
@@ -9789,9 +8415,7 @@ class NursingServiceProviderHipaa(Enum):
 
 
 class NursingServiceProvidersProviderCodes(Enum):
-    """
-    specDomain: S20366 (C-0-T19465-S20366-cpt)
-    """
+    """specDomain: S20366 (C-0-T19465-S20366-cpt)"""
     VALUE_163_W00000_X = "163W00000X"
     VALUE_163_WA0400_X = "163WA0400X"
     VALUE_163_WA2000_X = "163WA2000X"
@@ -9854,24 +8478,18 @@ class NursingServiceProvidersProviderCodes(Enum):
 
 
 class NursingServiceRelatedProviderHipaa(Enum):
-    """
-    specDomain: S13134 (C-0-T13129-A13130-S13134-cpt)
-    """
+    """specDomain: S13134 (C-0-T13129-A13130-S13134-cpt)"""
     VALUE_3747_P1801_N = "3747P1801N"
     VALUE_374700000_N = "374700000N"
 
 
 class NursingServiceRelatedProviderTechnicianHipaa(Enum):
-    """
-    abstDomain: A13134 (C-0-T13129-A13130-S13134-A13134-cpt)
-    """
+    """abstDomain: A13134 (C-0-T13129-A13130-S13134-A13134-cpt)"""
     VALUE_3747_P1801_N = "3747P1801N"
 
 
 class NursingServiceRelatedProvidersProviderCodes(Enum):
-    """
-    specDomain: S20425 (C-0-T19465-S20425-cpt)
-    """
+    """specDomain: S20425 (C-0-T19465-S20425-cpt)"""
     VALUE_374700000_X = "374700000X"
     VALUE_3747_A0650_X = "3747A0650X"
     VALUE_3747_P1801_X = "3747P1801X"
@@ -9887,9 +8505,7 @@ class NursingServiceRelatedProvidersProviderCodes(Enum):
 
 
 class NursingandCustodialCareFacilitiesProviderCodes(Enum):
-    """
-    specDomain: S20758 (C-0-T19465-S20758-cpt)
-    """
+    """specDomain: S20758 (C-0-T19465-S20758-cpt)"""
     VALUE_310400000_X = "310400000X"
     VALUE_3104_A0630_X = "3104A0630X"
     VALUE_3104_A0625_X = "3104A0625X"
@@ -9907,25 +8523,19 @@ class NursingandCustodialCareFacilitiesProviderCodes(Enum):
 
 
 class NutritionistHipaa(Enum):
-    """
-    specDomain: S13205 (C-0-T13129-A13130-A13197-S13205-cpt)
-    """
+    """specDomain: S13205 (C-0-T13129-A13130-A13197-S13205-cpt)"""
     VALUE_133_N00000_N = "133N00000N"
     VALUE_133_NN1002_N = "133NN1002N"
 
 
 class NutritionistProviderCodes(Enum):
-    """
-    specDomain: S20341 (C-0-T19465-S20334-S20341-cpt)
-    """
+    """specDomain: S20341 (C-0-T19465-S20334-S20341-cpt)"""
     VALUE_133_N00000_X = "133N00000X"
     VALUE_133_NN1002_X = "133NN1002X"
 
 
 class ObservationAlert(Enum):
-    """
-    specDomain: S16664 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-S16664-cpt)
-    """
+    """specDomain: S16664 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-S16664-cpt)"""
     OBSA = "OBSA"
     AGE = "AGE"
     COND = "COND"
@@ -9938,9 +8548,7 @@ class ObservationAlert(Enum):
 
 
 class ObservationAllergyType(Enum):
-    """
-    specDomain: S21499 (C-0-T13953-A19820-A16226-S21498-S21499-cpt)
-    """
+    """specDomain: S21499 (C-0-T13953-A19820-A16226-S21498-S21499-cpt)"""
     ALG = "ALG"
     DALG = "DALG"
     EALG = "EALG"
@@ -9948,9 +8556,7 @@ class ObservationAllergyType(Enum):
 
 
 class ObservationAssetValue(Enum):
-    """
-    specDomain: S22316 (C-0-T16614-A19918-A19924-S22316-cpt)
-    """
+    """specDomain: S22316 (C-0-T16614-A19918-A19924-S22316-cpt)"""
     ASSET = "ASSET"
     ANNUITY = "ANNUITY"
     PROP = "PROP"
@@ -9959,9 +8565,7 @@ class ObservationAssetValue(Enum):
 
 
 class ObservationDetectedIssueCode(Enum):
-    """
-    specDomain: S16664 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-cpt)
-    """
+    """specDomain: S16664 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-cpt)"""
     AGE = "AGE"
     DOSEHINDA = "DOSEHINDA"
     DOSELINDA = "DOSELINDA"
@@ -9987,9 +8591,7 @@ class ObservationDetectedIssueCode(Enum):
 
 
 class ObservationDiagnosisTypes(Enum):
-    """
-    specDomain: S20927 (C-0-T13953-A19820-A16226-S20927-cpt)
-    """
+    """specDomain: S20927 (C-0-T13953-A19820-A16226-S20927-cpt)"""
     DX = "DX"
     ADMDX = "ADMDX"
     DISDX = "DISDX"
@@ -9998,18 +8600,14 @@ class ObservationDiagnosisTypes(Enum):
 
 
 class ObservationDrugIntoleranceType(Enum):
-    """
-    specDomain: S21501 (C-0-T13953-A19820-A16226-S21498-S21501-cpt)
-    """
+    """specDomain: S21501 (C-0-T13953-A19820-A16226-S21498-S21501-cpt)"""
     DINT = "DINT"
     DALG = "DALG"
     DNAINT = "DNAINT"
 
 
 class ObservationEligibilityIndicatorValue(Enum):
-    """
-    specDomain: S22295 (C-0-T16614-A19918-S22295-cpt)
-    """
+    """specDomain: S22295 (C-0-T16614-A19918-S22295-cpt)"""
     ELSTAT = "ELSTAT"
     ADOPT = "ADOPT"
     BTHCERT = "BTHCERT"
@@ -10024,27 +8622,21 @@ class ObservationEligibilityIndicatorValue(Enum):
 
 
 class ObservationEnvironmentalIntoleranceType(Enum):
-    """
-    specDomain: S21503 (C-0-T13953-A19820-A16226-S21498-S21503-cpt)
-    """
+    """specDomain: S21503 (C-0-T13953-A19820-A16226-S21498-S21503-cpt)"""
     EINT = "EINT"
     EALG = "EALG"
     ENAINT = "ENAINT"
 
 
 class ObservationFoodIntoleranceType(Enum):
-    """
-    specDomain: S21502 (C-0-T13953-A19820-A16226-S21498-S21502-cpt)
-    """
+    """specDomain: S21502 (C-0-T13953-A19820-A16226-S21498-S21502-cpt)"""
     FINT = "FINT"
     FALG = "FALG"
     FNAINT = "FNAINT"
 
 
 class ObservationHealthStatusValue(Enum):
-    """
-    specDomain: S22290 (C-0-T16614-A19918-S22290-cpt)
-    """
+    """specDomain: S22290 (C-0-T16614-A19918-S22290-cpt)"""
     HLSTAT = "HLSTAT"
     IVDRG = "IVDRG"
     DISABLE = "DISABLE"
@@ -10053,9 +8645,7 @@ class ObservationHealthStatusValue(Enum):
 
 
 class ObservationIncomeValue(Enum):
-    """
-    specDomain: S22307 (C-0-T16614-A19918-A19924-S22307-cpt)
-    """
+    """specDomain: S22307 (C-0-T16614-A19918-A19924-S22307-cpt)"""
     INCOME = "INCOME"
     CHILD = "CHILD"
     DISABL = "DISABL"
@@ -10068,9 +8658,7 @@ class ObservationIncomeValue(Enum):
 
 
 class ObservationInterpretationChange(Enum):
-    """
-    abstDomain: A10214 (C-0-T78-A10214-cpt)
-    """
+    """abstDomain: A10214 (C-0-T78-A10214-cpt)"""
     B = "B"
     D = "D"
     U = "U"
@@ -10078,17 +8666,13 @@ class ObservationInterpretationChange(Enum):
 
 
 class ObservationInterpretationExceptions(Enum):
-    """
-    abstDomain: A10225 (C-0-T78-A10225-cpt)
-    """
+    """abstDomain: A10225 (C-0-T78-A10225-cpt)"""
     VALUE = "&gt;"
     VALUE_1 = "&lt;"
 
 
 class ObservationInterpretationNormality(Enum):
-    """
-    abstDomain: A10206 (C-0-T78-A10206-cpt)
-    """
+    """abstDomain: A10206 (C-0-T78-A10206-cpt)"""
     AA = "AA"
     HH = "HH"
     LL = "LL"
@@ -10099,9 +8683,7 @@ class ObservationInterpretationNormality(Enum):
 
 
 class ObservationInterpretationNormalityAbnormal(Enum):
-    """
-    specDomain: S10208 (C-0-T78-A10206-S10208-cpt)
-    """
+    """specDomain: S10208 (C-0-T78-A10206-S10208-cpt)"""
     AA = "AA"
     HH = "HH"
     LL = "LL"
@@ -10111,43 +8693,33 @@ class ObservationInterpretationNormalityAbnormal(Enum):
 
 
 class ObservationInterpretationNormalityAlert(Enum):
-    """
-    specDomain: S10211 (C-0-T78-A10206-S10208-S10211-cpt)
-    """
+    """specDomain: S10211 (C-0-T78-A10206-S10208-S10211-cpt)"""
     AA = "AA"
     HH = "HH"
     LL = "LL"
 
 
 class ObservationInterpretationNormalityHigh(Enum):
-    """
-    specDomain: S10210 (C-0-T78-A10206-S10208-S10210-cpt)
-    """
+    """specDomain: S10210 (C-0-T78-A10206-S10208-S10210-cpt)"""
     H = "H"
     HH = "HH"
 
 
 class ObservationInterpretationNormalityLow(Enum):
-    """
-    specDomain: S10209 (C-0-T78-A10206-S10208-S10209-cpt)
-    """
+    """specDomain: S10209 (C-0-T78-A10206-S10208-S10209-cpt)"""
     L = "L"
     LL = "LL"
 
 
 class ObservationInterpretationOustsideThreshold(Enum):
-    """
-    specDomain: S21634 (C-0-T78-A19759-S21634-cpt)
-    """
+    """specDomain: S21634 (C-0-T78-A19759-S21634-cpt)"""
     EX = "EX"
     HX = "HX"
     LX = "LX"
 
 
 class ObservationInterpretationSusceptibility(Enum):
-    """
-    abstDomain: A10219 (C-0-T78-A10219-cpt)
-    """
+    """abstDomain: A10219 (C-0-T78-A10219-cpt)"""
     I = "I"
     MS = "MS"
     R = "R"
@@ -10156,9 +8728,7 @@ class ObservationInterpretationSusceptibility(Enum):
 
 
 class ObservationIntoleranceType(Enum):
-    """
-    specDomain: S21498 (C-0-T13953-A19820-A16226-S21498-cpt)
-    """
+    """specDomain: S21498 (C-0-T13953-A19820-A16226-S21498-cpt)"""
     ALG = "ALG"
     DALG = "DALG"
     EALG = "EALG"
@@ -10174,9 +8744,7 @@ class ObservationIntoleranceType(Enum):
 
 
 class ObservationLivingDependencyValue(Enum):
-    """
-    specDomain: S22286 (C-0-T16614-A19918-S22286-cpt)
-    """
+    """specDomain: S22286 (C-0-T16614-A19918-S22286-cpt)"""
     LIVDEP = "LIVDEP"
     RELDEP = "RELDEP"
     SPSDEP = "SPSDEP"
@@ -10184,9 +8752,7 @@ class ObservationLivingDependencyValue(Enum):
 
 
 class ObservationLivingExpenseValue(Enum):
-    """
-    specDomain: S22321 (C-0-T16614-A19918-A19924-S22321-cpt)
-    """
+    """specDomain: S22321 (C-0-T16614-A19918-A19924-S22321-cpt)"""
     LIVEXP = "LIVEXP"
     CLOTH = "CLOTH"
     FOOD = "FOOD"
@@ -10201,9 +8767,7 @@ class ObservationLivingExpenseValue(Enum):
 
 
 class ObservationLivingSituationValue(Enum):
-    """
-    specDomain: S22277 (C-0-T16614-A19918-S22277-cpt)
-    """
+    """specDomain: S22277 (C-0-T16614-A19918-S22277-cpt)"""
     LIVSIT = "LIVSIT"
     ALONE = "ALONE"
     DEPCHD = "DEPCHD"
@@ -10216,9 +8780,7 @@ class ObservationLivingSituationValue(Enum):
 
 
 class ObservationNonAllergyIntoleranceType(Enum):
-    """
-    specDomain: S21500 (C-0-T13953-A19820-A16226-S21498-S21500-cpt)
-    """
+    """specDomain: S21500 (C-0-T13953-A19820-A16226-S21498-S21500-cpt)"""
     NAINT = "NAINT"
     DNAINT = "DNAINT"
     ENAINT = "ENAINT"
@@ -10226,9 +8788,7 @@ class ObservationNonAllergyIntoleranceType(Enum):
 
 
 class ObservationSocioEconomicStatusValue(Enum):
-    """
-    specDomain: S22269 (C-0-T16614-A19918-S22269-cpt)
-    """
+    """specDomain: S22269 (C-0-T16614-A19918-S22269-cpt)"""
     SOECSTAT = "SOECSTAT"
     ABUSE = "ABUSE"
     HMLESS = "HMLESS"
@@ -10240,16 +8800,12 @@ class ObservationSocioEconomicStatusValue(Enum):
 
 
 class ObsoleteEditStatus(Enum):
-    """
-    specDomain: S11045 (C-0-T11040-S11045-cpt)
-    """
+    """specDomain: S11045 (C-0-T11040-S11045-cpt)"""
     O = "O"
 
 
 class ObstetricsGynecologyProviderCodes(Enum):
-    """
-    specDomain: S20163 (C-0-T19465-S20096-S20163-cpt)
-    """
+    """specDomain: S20163 (C-0-T19465-S20096-S20163-cpt)"""
     VALUE_207_V00000_X = "207V00000X"
     VALUE_207_VC0200_X = "207VC0200X"
     VALUE_207_VX0201_X = "207VX0201X"
@@ -10260,9 +8816,7 @@ class ObstetricsGynecologyProviderCodes(Enum):
 
 
 class OccupationalTherapistHipaa(Enum):
-    """
-    specDomain: S13598 (C-0-T13129-A13130-A13592-S13598-cpt)
-    """
+    """specDomain: S13598 (C-0-T13129-A13130-A13592-S13598-cpt)"""
     VALUE_225_X00000_N = "225X00000N"
     VALUE_225_XC0400_N = "225XC0400N"
     VALUE_225_XE1200_N = "225XE1200N"
@@ -10274,9 +8828,7 @@ class OccupationalTherapistHipaa(Enum):
 
 
 class OccupationalTherapistProviderCodes(Enum):
-    """
-    specDomain: S20538 (C-0-T19465-S20532-S20538-cpt)
-    """
+    """specDomain: S20538 (C-0-T19465-S20532-S20538-cpt)"""
     VALUE_225_X00000_X = "225X00000X"
     VALUE_225_XE1200_X = "225XE1200X"
     VALUE_225_XH1200_X = "225XH1200X"
@@ -10287,17 +8839,13 @@ class OccupationalTherapistProviderCodes(Enum):
 
 
 class OilDrugForm(Enum):
-    """
-    specDomain: S14417 (C-0-T19651-A14411-A14412-A14413-S14417-cpt)
-    """
+    """specDomain: S14417 (C-0-T19651-A14411-A14412-A14413-S14417-cpt)"""
     OIL = "OIL"
     TOPOIL = "TOPOIL"
 
 
 class OintmentDrugForm(Enum):
-    """
-    specDomain: S14475 (C-0-T19651-A14411-A14412-A14463-S14475-cpt)
-    """
+    """specDomain: S14475 (C-0-T19651-A14411-A14412-A14463-S14475-cpt)"""
     VAGOINT = "VAGOINT"
     VAGOINTAPL = "VAGOINTAPL"
     OINT = "OINT"
@@ -10310,24 +8858,18 @@ class OintmentDrugForm(Enum):
 
 
 class Ojibwayan(Enum):
-    """
-    abstDomain: A18156 (C-0-T18130-A18131-A18132-A18156-cpt)
-    """
+    """abstDomain: A18156 (C-0-T18130-A18131-A18132-A18156-cpt)"""
     X_POT = "x-POT"
     X_OJB = "x-OJB"
 
 
 class OphthalmicRoute(Enum):
-    """
-    abstDomain: A17264 (C-0-T14581-A17021-A17264-cpt)
-    """
+    """abstDomain: A17264 (C-0-T14581-A17021-A17264-cpt)"""
     OPTHALTA = "OPTHALTA"
 
 
 class OptometristHipaa(Enum):
-    """
-    specDomain: S13212 (C-0-T13129-A13130-A13211-S13212-cpt)
-    """
+    """specDomain: S13212 (C-0-T13129-A13130-A13211-S13212-cpt)"""
     VALUE_152_W00000_N = "152W00000N"
     VALUE_152_WC0800_N = "152WC0800N"
     VALUE_152_WL0500_N = "152WL0500N"
@@ -10338,9 +8880,7 @@ class OptometristHipaa(Enum):
 
 
 class OptometristProviderCodes(Enum):
-    """
-    specDomain: S20349 (C-0-T19465-S20348-S20349-cpt)
-    """
+    """specDomain: S20349 (C-0-T19465-S20348-S20349-cpt)"""
     VALUE_152_W00000_X = "152W00000X"
     VALUE_152_WC0802_X = "152WC0802X"
     VALUE_152_WL0500_X = "152WL0500X"
@@ -10351,9 +8891,7 @@ class OptometristProviderCodes(Enum):
 
 
 class OralCapsule(Enum):
-    """
-    specDomain: S14508 (C-0-T19651-A14411-A14412-A14484-S14506-S14507-S14508-cpt)
-    """
+    """specDomain: S14508 (C-0-T19651-A14411-A14412-A14484-S14506-S14507-S14508-cpt)"""
     ENTCAP = "ENTCAP"
     ERENTCAP = "ERENTCAP"
     ERCAP = "ERCAP"
@@ -10364,18 +8902,14 @@ class OralCapsule(Enum):
 
 
 class OralInhalation(Enum):
-    """
-    specDomain: S14622 (C-0-T14581-A17021-A17319-S14622-cpt)
-    """
+    """specDomain: S14622 (C-0-T14581-A17021-A17319-S14622-cpt)"""
     ORINHL = "ORINHL"
     ORIFINHL = "ORIFINHL"
     REBREATH = "REBREATH"
 
 
 class OralRoute(Enum):
-    """
-    abstDomain: A17266 (C-0-T14581-A17021-A17266-cpt)
-    """
+    """abstDomain: A17266 (C-0-T14581-A17021-A17266-cpt)"""
     ORINHL = "ORINHL"
     ORIFINHL = "ORIFINHL"
     REBREATH = "REBREATH"
@@ -10387,9 +8921,7 @@ class OralRoute(Enum):
 
 
 class OralSolution(Enum):
-    """
-    specDomain: S14431 (C-0-T19651-A14411-A14412-A14413-S14419-S14431-cpt)
-    """
+    """specDomain: S14431 (C-0-T19651-A14411-A14412-A14413-S14419-S14431-cpt)"""
     ORALSOL = "ORALSOL"
     ELIXIR = "ELIXIR"
     RINSE = "RINSE"
@@ -10398,9 +8930,7 @@ class OralSolution(Enum):
 
 
 class OralSuspension(Enum):
-    """
-    specDomain: S14457 (C-0-T19651-A14411-A14412-A14441-S14454-S14457-cpt)
-    """
+    """specDomain: S14457 (C-0-T19651-A14411-A14412-A14441-S14454-S14457-cpt)"""
     ERSUSP = "ERSUSP"
     ERSUSP12 = "ERSUSP12"
     ERSUSP24 = "ERSUSP24"
@@ -10408,9 +8938,7 @@ class OralSuspension(Enum):
 
 
 class OralTablet(Enum):
-    """
-    specDomain: S14516 (C-0-T19651-A14411-A14412-A14484-S14506-S14515-S14516-cpt)
-    """
+    """specDomain: S14516 (C-0-T19651-A14411-A14412-A14484-S14506-S14515-S14516-cpt)"""
     BUCTAB = "BUCTAB"
     SRBUCTAB = "SRBUCTAB"
     ECTAB = "ECTAB"
@@ -10429,9 +8957,7 @@ class OralTablet(Enum):
 
 
 class OrderedListStyle(Enum):
-    """
-    abstDomain: A19606 (C-0-T19602-A19605-A19606-cpt)
-    """
+    """abstDomain: A19606 (C-0-T19602-A19605-A19606-cpt)"""
     ARABIC = "Arabic"
     BIG_ALPHA = "BigAlpha"
     BIG_ROMAN = "BigRoman"
@@ -10440,33 +8966,25 @@ class OrderedListStyle(Enum):
 
 
 class OregonAthapaskan(Enum):
-    """
-    abstDomain: A18387 (C-0-T18130-A18352-A18356-A18358-A18386-A18387-cpt)
-    """
+    """abstDomain: A18387 (C-0-T18130-A18352-A18356-A18358-A18386-A18387-cpt)"""
     X_TOL = "x-TOL"
     X_TUU = "x-TUU"
 
 
 class OrganizationNamePartQualifier(Enum):
-    """
-    abstDomain: A15889 (C-0-T15888-A15889-cpt)
-    """
+    """abstDomain: A15889 (C-0-T15888-A15889-cpt)"""
     LS = "LS"
 
 
 class OrganizationNameType(Enum):
-    """
-    vocSet: T204 (C-0-T204-cpt)
-    """
+    """vocSet: T204 (C-0-T204-cpt)"""
     A = "A"
     L = "L"
     ST = "ST"
 
 
 class OrganizationNameUse(Enum):
-    """
-    abstDomain: A15914 (C-0-T15913-A15914-cpt)
-    """
+    """abstDomain: A15914 (C-0-T15913-A15914-cpt)"""
     SRCH = "SRCH"
     SNDX = "SNDX"
     PHON = "PHON"
@@ -10479,17 +8997,13 @@ class OrganizationNameUse(Enum):
 
 
 class OrganizationNameUseLegalByBot(Enum):
-    """
-    specDomain: S10176 (C-0-T15913-A15914-S10176-cpt)
-    """
+    """specDomain: S10176 (C-0-T15913-A15914-S10176-cpt)"""
     L = "L"
     OR_VALUE = "OR"
 
 
 class OromucosalRoute(Enum):
-    """
-    abstDomain: A17276 (C-0-T14581-A17021-A17276-cpt)
-    """
+    """abstDomain: A17276 (C-0-T14581-A17021-A17276-cpt)"""
     GARGLE = "GARGLE"
     SUCK = "SUCK"
     SWISHSPIT = "SWISHSPIT"
@@ -10498,24 +9012,18 @@ class OromucosalRoute(Enum):
 
 
 class OropharyngealRoute(Enum):
-    """
-    abstDomain: A17282 (C-0-T14581-A17021-A17282-cpt)
-    """
+    """abstDomain: A17282 (C-0-T14581-A17021-A17282-cpt)"""
     OROPHARTA = "OROPHARTA"
 
 
 class OrthoClinPracticeSetting(Enum):
-    """
-    specDomain: S10949 (C-0-T12206-A17660-A19450-A10588-S10589-S10949-cpt)
-    """
+    """specDomain: S10949 (C-0-T12206-A17660-A19450-A10588-S10589-S10949-cpt)"""
     ORTHO = "ORTHO"
     HAND = "HAND"
 
 
 class OrthopaedicSurgeryProviderCodes(Enum):
-    """
-    specDomain: S20172 (C-0-T19465-S20096-S20172-cpt)
-    """
+    """specDomain: S20172 (C-0-T19465-S20096-S20172-cpt)"""
     VALUE_207_X00000_X = "207X00000X"
     VALUE_207_XS0114_X = "207XS0114X"
     VALUE_207_XX0004_X = "207XX0004X"
@@ -10526,18 +9034,14 @@ class OrthopaedicSurgeryProviderCodes(Enum):
 
 
 class Other(Enum):
-    """
-    specDomain: S10616 (C-0-T10609-S10610-S10616-cpt)
-    """
+    """specDomain: S10616 (C-0-T10609-S10610-S10616-cpt)"""
     OTH = "OTH"
     NINF = "NINF"
     PINF = "PINF"
 
 
 class OtherActionTakenManagementCode(Enum):
-    """
-    specDomain: S16703 (C-0-T13953-A13954-A16695-S16703-cpt)
-    """
+    """specDomain: S16703 (C-0-T13953-A13954-A16695-S16703-cpt)"""
     VALUE_8 = "8"
     VALUE_11 = "11"
     VALUE_9 = "9"
@@ -10547,33 +9051,25 @@ class OtherActionTakenManagementCode(Enum):
 
 
 class OtherIndicationValue(Enum):
-    """
-    abstDomain: A19731 (C-0-T16614-A19729-A19731-cpt)
-    """
+    """abstDomain: A19731 (C-0-T16614-A19729-A19731-cpt)"""
     DIAGNOSIS_VALUE = "_DiagnosisValue"
     INDICATION_VALUE = "_IndicationValue"
     SYMPTOM_VALUE = "_SymptomValue"
 
 
 class OtherPhysicianOsteopathHipaa(Enum):
-    """
-    abstDomain: A13579 (C-0-T13129-A13130-A13578-A13579-cpt)
-    """
+    """abstDomain: A13579 (C-0-T13129-A13130-A13578-A13579-cpt)"""
     VALUE_353_BL0002_N = "353BL0002N"
     VALUE_353_BS0900_N = "353BS0900N"
 
 
 class OtherServiceProviderContractorHipaa(Enum):
-    """
-    abstDomain: A13139 (C-0-T13129-A13130-A13136-A13139-cpt)
-    """
+    """abstDomain: A13139 (C-0-T13129-A13130-A13136-A13139-cpt)"""
     VALUE_171_WH0202_N = "171WH0202N"
 
 
 class OtherServiceProviderHipaa(Enum):
-    """
-    abstDomain: A13136 (C-0-T13129-A13130-A13136-cpt)
-    """
+    """abstDomain: A13136 (C-0-T13129-A13130-A13136-cpt)"""
     VALUE_171_WH0202_N = "171WH0202N"
     VALUE_1744_G0900_N = "1744G0900N"
     VALUE_1744_P3200_N = "1744P3200N"
@@ -10590,9 +9086,7 @@ class OtherServiceProviderHipaa(Enum):
 
 
 class OtherServiceProviderSpecialistHipaa(Enum):
-    """
-    abstDomain: A13347 (C-0-T13129-A13130-A13136-A13347-cpt)
-    """
+    """abstDomain: A13347 (C-0-T13129-A13130-A13136-A13347-cpt)"""
     VALUE_1744_G0900_N = "1744G0900N"
     VALUE_1744_P3200_N = "1744P3200N"
     VALUE_1744_R1103_N = "1744R1103N"
@@ -10600,9 +9094,7 @@ class OtherServiceProviderSpecialistHipaa(Enum):
 
 
 class OtherServiceProvidersProviderCodes(Enum):
-    """
-    specDomain: S20434 (C-0-T19465-S20434-cpt)
-    """
+    """specDomain: S20434 (C-0-T19465-S20434-cpt)"""
     VALUE_171_W00000_X = "171W00000X"
     VALUE_171_WH0202_X = "171WH0202X"
     VALUE_171_WV0202_X = "171WV0202X"
@@ -10627,9 +9119,7 @@ class OtherServiceProvidersProviderCodes(Enum):
 
 
 class OtherTechnologistOrTechnicianHipaa(Enum):
-    """
-    abstDomain: A13673 (C-0-T13129-A13130-A13644-A13673-cpt)
-    """
+    """abstDomain: A13673 (C-0-T13129-A13130-A13644-A13673-cpt)"""
     VALUE_246_ZA2600_N = "246ZA2600N"
     VALUE_246_ZB0500_N = "246ZB0500N"
     VALUE_246_ZB0301_N = "246ZB0301N"
@@ -10647,9 +9137,7 @@ class OtherTechnologistOrTechnicianHipaa(Enum):
 
 
 class OtherTechnologistOrTechnicianProviderHipaa(Enum):
-    """
-    abstDomain: A13705 (C-0-T13129-A13130-A13644-A13705-cpt)
-    """
+    """abstDomain: A13705 (C-0-T13129-A13130-A13644-A13705-cpt)"""
     VALUE_2472_B0301_N = "2472B0301N"
     VALUE_2472_D0500_N = "2472D0500N"
     VALUE_2472_E0500_N = "2472E0500N"
@@ -10658,16 +9146,12 @@ class OtherTechnologistOrTechnicianProviderHipaa(Enum):
 
 
 class OticRoute(Enum):
-    """
-    abstDomain: A17284 (C-0-T14581-A17021-A17284-cpt)
-    """
+    """abstDomain: A17284 (C-0-T14581-A17021-A17284-cpt)"""
     OT = "OT"
 
 
 class OtolaryngologyProviderCodes(Enum):
-    """
-    specDomain: S20179 (C-0-T19465-S20096-S20179-cpt)
-    """
+    """specDomain: S20179 (C-0-T19465-S20096-S20179-cpt)"""
     VALUE_207_Y00000_X = "207Y00000X"
     VALUE_207_YS0123_X = "207YS0123X"
     VALUE_207_YX0602_X = "207YX0602X"
@@ -10678,9 +9162,7 @@ class OtolaryngologyProviderCodes(Enum):
 
 
 class OutpatientFacilityPracticeSetting(Enum):
-    """
-    specDomain: S10589 (C-0-T12206-A17660-A19450-A10588-S10589-cpt)
-    """
+    """specDomain: S10589 (C-0-T12206-A17660-A19450-A10588-S10589-cpt)"""
     CARD = "CARD"
     PEDCARD = "PEDCARD"
     ENDO = "ENDO"
@@ -10746,41 +9228,31 @@ class OutpatientFacilityPracticeSetting(Enum):
 
 
 class PadDrugForm(Enum):
-    """
-    specDomain: S14497 (C-0-T19651-A14411-A14412-A14484-S14497-cpt)
-    """
+    """specDomain: S14497 (C-0-T19651-A14411-A14412-A14484-S14497-cpt)"""
     PAD = "PAD"
     MEDPAD = "MEDPAD"
 
 
 class Pai(Enum):
-    """
-    abstDomain: A18276 (C-0-T18130-A18241-A18274-A18275-A18276-cpt)
-    """
+    """abstDomain: A18276 (C-0-T18130-A18241-A18274-A18275-A18276-cpt)"""
     X_YUF = "x-YUF"
 
 
 class PainMedicineProviderCodes(Enum):
-    """
-    specDomain: S20186 (C-0-T19465-S20096-S20186-cpt)
-    """
+    """specDomain: S20186 (C-0-T19465-S20096-S20186-cpt)"""
     VALUE_208_V00000_X = "208V00000X"
     VALUE_208_VP0014_X = "208VP0014X"
     VALUE_208_VP0000_X = "208VP0000X"
 
 
 class Palaihnihan(Enum):
-    """
-    abstDomain: A18248 (C-0-T18130-A18241-A18248-cpt)
-    """
+    """abstDomain: A18248 (C-0-T18130-A18241-A18248-cpt)"""
     X_ACH = "x-ACH"
     X_ATW = "x-ATW"
 
 
 class ParameterizedDataType(Enum):
-    """
-    vocSet: T10759 (C-0-T10759-cpt)
-    """
+    """vocSet: T10759 (C-0-T10759-cpt)"""
     BAG_T = "BAG&lt;T&gt;"
     LIST_T = "LIST&lt;T&gt;"
     EIVL_T = "EIVL&lt;T&gt;"
@@ -10797,72 +9269,52 @@ class ParameterizedDataType(Enum):
 
 
 class ParameterizedDataTypeAnnotated(Enum):
-    """
-    specDomain: S10767 (C-0-T10759-S10760-S10767-cpt)
-    """
+    """specDomain: S10767 (C-0-T10759-S10760-S10767-cpt)"""
     ANT_T = "ANT&lt;T&gt;"
 
 
 class ParameterizedDataTypeBag(Enum):
-    """
-    specDomain: S10763 (C-0-T10759-S10763-cpt)
-    """
+    """specDomain: S10763 (C-0-T10759-S10763-cpt)"""
     BAG_T = "BAG&lt;T&gt;"
 
 
 class ParameterizedDataTypeEventRelatedInterval(Enum):
-    """
-    specDomain: S10766 (C-0-T10759-S10761-S10766-cpt)
-    """
+    """specDomain: S10766 (C-0-T10759-S10761-S10766-cpt)"""
     EIVL_T = "EIVL&lt;T&gt;"
 
 
 class ParameterizedDataTypeHistorical(Enum):
-    """
-    specDomain: S10768 (C-0-T10759-S10760-S10768-cpt)
-    """
+    """specDomain: S10768 (C-0-T10759-S10760-S10768-cpt)"""
     HXIT_T = "HXIT&lt;T&gt;"
 
 
 class ParameterizedDataTypeInterval(Enum):
-    """
-    specDomain: S10764 (C-0-T10759-S10761-S10764-cpt)
-    """
+    """specDomain: S10764 (C-0-T10759-S10761-S10764-cpt)"""
     IVL_T = "IVL&lt;T&gt;"
 
 
 class ParameterizedDataTypeNonParametricProbabilityDistribution(Enum):
-    """
-    specDomain: S10771 (C-0-T10759-S10760-S10771-cpt)
-    """
+    """specDomain: S10771 (C-0-T10759-S10760-S10771-cpt)"""
     NPPD_T = "NPPD&lt;T&gt;"
 
 
 class ParameterizedDataTypeParametricProbabilityDistribution(Enum):
-    """
-    specDomain: S10772 (C-0-T10759-S10760-S10772-cpt)
-    """
+    """specDomain: S10772 (C-0-T10759-S10760-S10772-cpt)"""
     PPD_T = "PPD&lt;T&gt;"
 
 
 class ParameterizedDataTypePeriodicInterval(Enum):
-    """
-    specDomain: S10765 (C-0-T10759-S10761-S10765-cpt)
-    """
+    """specDomain: S10765 (C-0-T10759-S10761-S10765-cpt)"""
     PIVL_T = "PIVL&lt;T&gt;"
 
 
 class ParameterizedDataTypeSequence(Enum):
-    """
-    specDomain: S10762 (C-0-T10759-S10762-cpt)
-    """
+    """specDomain: S10762 (C-0-T10759-S10762-cpt)"""
     LIST_T = "LIST&lt;T&gt;"
 
 
 class ParameterizedDataTypeSet(Enum):
-    """
-    specDomain: S10761 (C-0-T10759-S10761-cpt)
-    """
+    """specDomain: S10761 (C-0-T10759-S10761-cpt)"""
     EIVL_T = "EIVL&lt;T&gt;"
     IVL_T = "IVL&lt;T&gt;"
     PIVL_T = "PIVL&lt;T&gt;"
@@ -10870,9 +9322,7 @@ class ParameterizedDataTypeSet(Enum):
 
 
 class ParameterizedDataTypeType(Enum):
-    """
-    specDomain: S10760 (C-0-T10759-S10760-cpt)
-    """
+    """specDomain: S10760 (C-0-T10759-S10760-cpt)"""
     ANT_T = "ANT&lt;T&gt;"
     HXIT_T = "HXIT&lt;T&gt;"
     NPPD_T = "NPPD&lt;T&gt;"
@@ -10883,31 +9333,23 @@ class ParameterizedDataTypeType(Enum):
 
 
 class ParameterizedDataTypeUncertainValueNarrative(Enum):
-    """
-    specDomain: S10769 (C-0-T10759-S10760-S10769-cpt)
-    """
+    """specDomain: S10769 (C-0-T10759-S10760-S10769-cpt)"""
     UVN_T = "UVN&lt;T&gt;"
 
 
 class ParameterizedDataTypeUncertainValueProbabilistic(Enum):
-    """
-    specDomain: S10770 (C-0-T10759-S10760-S10770-cpt)
-    """
+    """specDomain: S10770 (C-0-T10759-S10760-S10770-cpt)"""
     UVP_T = "UVP&lt;T&gt;"
 
 
 class ParanasalSinusesRoute(Enum):
-    """
-    abstDomain: A17286 (C-0-T14581-A17021-A17286-cpt)
-    """
+    """abstDomain: A17286 (C-0-T14581-A17021-A17286-cpt)"""
     PNSINJ = "PNSINJ"
     PNSINSTL = "PNSINSTL"
 
 
 class Parent(Enum):
-    """
-    specDomain: S16346 (C-0-T12206-A19563-S17926-S16346-cpt)
-    """
+    """specDomain: S16346 (C-0-T12206-A19563-S17926-S16346-cpt)"""
     NFTH = "NFTH"
     NFTHF = "NFTHF"
     NPRN = "NPRN"
@@ -10924,25 +9366,19 @@ class Parent(Enum):
 
 
 class ParentInLaw(Enum):
-    """
-    specDomain: S19770 (C-0-T12206-A19563-S17926-S16346-S19770-cpt)
-    """
+    """specDomain: S19770 (C-0-T12206-A19563-S17926-S16346-S19770-cpt)"""
     PRNINLAW = "PRNINLAW"
     FTHINLAW = "FTHINLAW"
     MTHINLAW = "MTHINLAW"
 
 
 class ParenteralRoute(Enum):
-    """
-    abstDomain: A17289 (C-0-T14581-A17021-A17289-cpt)
-    """
+    """abstDomain: A17289 (C-0-T14581-A17021-A17289-cpt)"""
     PARENTINJ = "PARENTINJ"
 
 
 class PartialCompletionScale(Enum):
-    """
-    abstDomain: A18120 (C-0-T16614-A18120-cpt)
-    """
+    """abstDomain: A18120 (C-0-T16614-A18120-cpt)"""
     G = "G"
     LE = "LE"
     ME = "ME"
@@ -10952,9 +9388,7 @@ class PartialCompletionScale(Enum):
 
 
 class ParticipationAncillary(Enum):
-    """
-    abstDomain: A10247 (C-0-T10901-S21573-A10247-cpt)
-    """
+    """abstDomain: A10247 (C-0-T10901-S21573-A10247-cpt)"""
     ADM = "ADM"
     ATND = "ATND"
     CALLBCK = "CALLBCK"
@@ -10965,18 +9399,14 @@ class ParticipationAncillary(Enum):
 
 
 class ParticipationExposureparticipation(Enum):
-    """
-    specDomain: S21978 (C-0-T10901-S21573-S10286-S21978-cpt)
-    """
+    """specDomain: S21978 (C-0-T10901-S21573-S10286-S21978-cpt)"""
     EXPART = "EXPART"
     EXSRC = "EXSRC"
     EXPTRGT = "EXPTRGT"
 
 
 class ParticipationIndirectTarget(Enum):
-    """
-    specDomain: S19032 (C-0-T10901-S21573-S19032-cpt)
-    """
+    """specDomain: S19032 (C-0-T10901-S21573-S19032-cpt)"""
     IND = "IND"
     BEN = "BEN"
     CAGNT = "CAGNT"
@@ -10988,9 +9418,7 @@ class ParticipationIndirectTarget(Enum):
 
 
 class ParticipationInformationGenerator(Enum):
-    """
-    abstDomain: A10251 (C-0-T10901-S21573-A10251-cpt)
-    """
+    """abstDomain: A10251 (C-0-T10901-S21573-A10251-cpt)"""
     TRANS = "TRANS"
     ENT = "ENT"
     AUT = "AUT"
@@ -10999,9 +9427,7 @@ class ParticipationInformationGenerator(Enum):
 
 
 class ParticipationInformationRecipient(Enum):
-    """
-    specDomain: S10263 (C-0-T10901-S21573-S10263-cpt)
-    """
+    """specDomain: S10263 (C-0-T10901-S21573-S10263-cpt)"""
     IRCP = "IRCP"
     REFB = "REFB"
     REFT = "REFT"
@@ -11011,17 +9437,13 @@ class ParticipationInformationRecipient(Enum):
 
 
 class ParticipationInformationTranscriber(Enum):
-    """
-    specDomain: S21463 (C-0-T10901-S21573-A10251-S21463-cpt)
-    """
+    """specDomain: S21463 (C-0-T10901-S21573-A10251-S21463-cpt)"""
     TRANS = "TRANS"
     ENT = "ENT"
 
 
 class ParticipationMode(Enum):
-    """
-    vocSet: T16543 (C-0-T16543-cpt)
-    """
+    """vocSet: T16543 (C-0-T16543-cpt)"""
     ELECTRONIC = "ELECTRONIC"
     VERBAL = "VERBAL"
     DICTATE = "DICTATE"
@@ -11038,16 +9460,12 @@ class ParticipationMode(Enum):
 
 
 class ParticipationModeElectronicData(Enum):
-    """
-    specDomain: S16554 (C-0-T16543-S16554-cpt)
-    """
+    """specDomain: S16554 (C-0-T16543-S16554-cpt)"""
     ELECTRONIC = "ELECTRONIC"
 
 
 class ParticipationModeVerbal(Enum):
-    """
-    specDomain: S16544 (C-0-T16543-S16544-cpt)
-    """
+    """specDomain: S16544 (C-0-T16543-S16544-cpt)"""
     VERBAL = "VERBAL"
     DICTATE = "DICTATE"
     FACE = "FACE"
@@ -11056,9 +9474,7 @@ class ParticipationModeVerbal(Enum):
 
 
 class ParticipationModeWritten(Enum):
-    """
-    specDomain: S16549 (C-0-T16543-S16549-cpt)
-    """
+    """specDomain: S16549 (C-0-T16543-S16549-cpt)"""
     WRITTEN = "WRITTEN"
     EMAILWRIT = "EMAILWRIT"
     HANDWRIT = "HANDWRIT"
@@ -11067,9 +9483,7 @@ class ParticipationModeWritten(Enum):
 
 
 class ParticipationParticipation(Enum):
-    """
-    specDomain: S21573 (C-0-T10901-S21573-cpt)
-    """
+    """specDomain: S21573 (C-0-T10901-S21573-cpt)"""
     ADM = "ADM"
     ATND = "ATND"
     CALLBCK = "CALLBCK"
@@ -11129,9 +9543,7 @@ class ParticipationParticipation(Enum):
 
 
 class ParticipationPhysicalPerformer(Enum):
-    """
-    specDomain: S10248 (C-0-T10901-S21573-S10248-cpt)
-    """
+    """specDomain: S10248 (C-0-T10901-S21573-S10248-cpt)"""
     PRF = "PRF"
     DIST = "DIST"
     PPRF = "PPRF"
@@ -11139,18 +9551,14 @@ class ParticipationPhysicalPerformer(Enum):
 
 
 class ParticipationSignature(Enum):
-    """
-    vocSet: T10282 (C-0-T10282-cpt)
-    """
+    """vocSet: T10282 (C-0-T10282-cpt)"""
     I = "I"
     X = "X"
     S = "S"
 
 
 class ParticipationSubset(Enum):
-    """
-    abstDomain: A19736 (C-0-T19613-A19736-cpt)
-    """
+    """abstDomain: A19736 (C-0-T19613-A19736-cpt)"""
     FUTURE = "FUTURE"
     LAST = "LAST"
     NEXT = "NEXT"
@@ -11163,18 +9571,14 @@ class ParticipationSubset(Enum):
 
 
 class ParticipationTargetDevice(Enum):
-    """
-    specDomain: S10298 (C-0-T10901-S21573-S10286-S10298-cpt)
-    """
+    """specDomain: S10298 (C-0-T10901-S21573-S10286-S10298-cpt)"""
     DEV = "DEV"
     NRD = "NRD"
     RDV = "RDV"
 
 
 class ParticipationTargetDirect(Enum):
-    """
-    specDomain: S10286 (C-0-T10901-S21573-S10286-cpt)
-    """
+    """specDomain: S10286 (C-0-T10901-S21573-S10286-cpt)"""
     EXPART = "EXPART"
     EXSRC = "EXSRC"
     EXPTRGT = "EXPTRGT"
@@ -11192,9 +9596,7 @@ class ParticipationTargetDirect(Enum):
 
 
 class ParticipationTargetLocation(Enum):
-    """
-    specDomain: S10302 (C-0-T10901-S21573-S10302-cpt)
-    """
+    """specDomain: S10302 (C-0-T10901-S21573-S10302-cpt)"""
     LOC = "LOC"
     DST = "DST"
     ELOC = "ELOC"
@@ -11204,17 +9606,13 @@ class ParticipationTargetLocation(Enum):
 
 
 class ParticipationTargetSubject(Enum):
-    """
-    specDomain: S10287 (C-0-T10901-S21573-S10286-S10287-cpt)
-    """
+    """specDomain: S10287 (C-0-T10901-S21573-S10286-S10287-cpt)"""
     SBJ = "SBJ"
     SPC = "SPC"
 
 
 class ParticipationType(Enum):
-    """
-    vocSet: T10901 (C-0-T10901-cpt)
-    """
+    """vocSet: T10901 (C-0-T10901-cpt)"""
     ADM = "ADM"
     ATND = "ATND"
     CALLBCK = "CALLBCK"
@@ -11274,18 +9672,14 @@ class ParticipationType(Enum):
 
 
 class ParticipationVerifier(Enum):
-    """
-    specDomain: S10259 (C-0-T10901-S21573-S10259-cpt)
-    """
+    """specDomain: S10259 (C-0-T10901-S21573-S10259-cpt)"""
     VRF = "VRF"
     AUTHEN = "AUTHEN"
     LA = "LA"
 
 
 class PastSubset(Enum):
-    """
-    specDomain: S21367 (C-0-T19613-S21367-cpt)
-    """
+    """specDomain: S21367 (C-0-T19613-S21367-cpt)"""
     PAST = "PAST"
     FIRST = "FIRST"
     RECENT = "RECENT"
@@ -11293,18 +9687,14 @@ class PastSubset(Enum):
 
 
 class PasteDrugForm(Enum):
-    """
-    specDomain: S14451 (C-0-T19651-A14411-A14412-A14441-S14451-cpt)
-    """
+    """specDomain: S14451 (C-0-T19651-A14411-A14412-A14441-S14451-cpt)"""
     PASTE = "PASTE"
     PUD = "PUD"
     TPASTE = "TPASTE"
 
 
 class PatchDrugForm(Enum):
-    """
-    specDomain: S14499 (C-0-T19651-A14411-A14412-A14484-S14499-cpt)
-    """
+    """specDomain: S14499 (C-0-T19651-A14411-A14412-A14484-S14499-cpt)"""
     TPATCH = "TPATCH"
     TPATH16 = "TPATH16"
     TPATH24 = "TPATH24"
@@ -11315,9 +9705,7 @@ class PatchDrugForm(Enum):
 
 
 class PathologyProviderCodes(Enum):
-    """
-    specDomain: S20189 (C-0-T19465-S20096-S20189-cpt)
-    """
+    """specDomain: S20189 (C-0-T19465-S20096-S20189-cpt)"""
     VALUE_207_Z00000_X = "207Z00000X"
     VALUE_207_ZP0101_X = "207ZP0101X"
     VALUE_207_ZP0102_X = "207ZP0102X"
@@ -11336,9 +9724,7 @@ class PathologyProviderCodes(Enum):
 
 
 class PathologySpecialistOrTechnologistHipaa(Enum):
-    """
-    abstDomain: A13688 (C-0-T13129-A13130-A13644-A13688-cpt)
-    """
+    """abstDomain: A13688 (C-0-T13129-A13130-A13644-A13688-cpt)"""
     VALUE_246_QB0000_N = "246QB0000N"
     VALUE_246_QC1000_N = "246QC1000N"
     VALUE_246_QC2700_N = "246QC2700N"
@@ -11353,18 +9739,14 @@ class PathologySpecialistOrTechnologistHipaa(Enum):
 
 
 class PathologyTechnicianHipaa(Enum):
-    """
-    abstDomain: A13711 (C-0-T13129-A13130-A13644-A13711-cpt)
-    """
+    """abstDomain: A13711 (C-0-T13129-A13130-A13644-A13711-cpt)"""
     VALUE_246_RH0600_N = "246RH0600N"
     VALUE_246_RM2200_N = "246RM2200N"
     VALUE_246_RP1900_N = "246RP1900N"
 
 
 class PatientImportance(Enum):
-    """
-    vocSet: T19265 (C-0-T19265-cpt)
-    """
+    """vocSet: T19265 (C-0-T19265-cpt)"""
     BM = "BM"
     FD = "FD"
     FOR_VALUE = "FOR"
@@ -11377,9 +9759,7 @@ class PatientImportance(Enum):
 
 
 class PatientProfileQueryReasonCode(Enum):
-    """
-    abstDomain: A19784 (C-0-T14878-A19692-A19784-cpt)
-    """
+    """abstDomain: A19784 (C-0-T14878-A19692-A19784-cpt)"""
     ADMREV = "ADMREV"
     PATCAR = "PATCAR"
     PATREQ = "PATREQ"
@@ -11391,9 +9771,7 @@ class PatientProfileQueryReasonCode(Enum):
 
 
 class PaymentTerms(Enum):
-    """
-    vocSet: T14908 (C-0-T14908-cpt)
-    """
+    """vocSet: T14908 (C-0-T14908-cpt)"""
     COD = "COD"
     N30 = "N30"
     N60 = "N60"
@@ -11401,9 +9779,7 @@ class PaymentTerms(Enum):
 
 
 class PayorParticipationFunction(Enum):
-    """
-    abstDomain: A19906 (C-0-T10267-A19903-A19906-cpt)
-    """
+    """abstDomain: A19906 (C-0-T10267-A19903-A19906-cpt)"""
     CLMADJ = "CLMADJ"
     ENROLL = "ENROLL"
     FFSMGT = "FFSMGT"
@@ -11413,18 +9789,14 @@ class PayorParticipationFunction(Enum):
 
 
 class PayorRoleType(Enum):
-    """
-    abstDomain: A19853 (C-0-T12206-A19690-A19853-cpt)
-    """
+    """abstDomain: A19853 (C-0-T12206-A19690-A19853-cpt)"""
     ENROLBKR = "ENROLBKR"
     TPA = "TPA"
     UMO = "UMO"
 
 
 class PediatricsProviderCodes(Enum):
-    """
-    specDomain: S20204 (C-0-T19465-S20096-S20204-cpt)
-    """
+    """specDomain: S20204 (C-0-T19465-S20096-S20204-cpt)"""
     VALUE_208000000_X = "208000000X"
     VALUE_2080_A0000_X = "2080A0000X"
     VALUE_2080_I0007_X = "2080I0007X"
@@ -11447,9 +9819,7 @@ class PediatricsProviderCodes(Enum):
 
 
 class PedsClinPracticeSetting(Enum):
-    """
-    specDomain: S10953 (C-0-T12206-A17660-A19450-A10588-S10589-S10953-cpt)
-    """
+    """specDomain: S10953 (C-0-T12206-A17660-A19450-A10588-S10589-S10953-cpt)"""
     PEDC = "PEDC"
     PEDCARD = "PEDCARD"
     PEDE = "PEDE"
@@ -11462,69 +9832,51 @@ class PedsClinPracticeSetting(Enum):
 
 
 class PedsIcupracticeSetting(Enum):
-    """
-    specDomain: S10916 (C-0-T12206-A17660-A19450-A10588-S10596-S10920-S10916-cpt)
-    """
+    """specDomain: S10916 (C-0-T12206-A17660-A19450-A10588-S10596-S10920-S10916-cpt)"""
     PEDICU = "PEDICU"
     PEDNICU = "PEDNICU"
 
 
 class PedsPracticeSetting(Enum):
-    """
-    specDomain: S10920 (C-0-T12206-A17660-A19450-A10588-S10596-S10920-cpt)
-    """
+    """specDomain: S10920 (C-0-T12206-A17660-A19450-A10588-S10596-S10920-cpt)"""
     PEDICU = "PEDICU"
     PEDNICU = "PEDNICU"
     PEDU = "PEDU"
 
 
 class PerianalRoute(Enum):
-    """
-    abstDomain: A17291 (C-0-T14581-A17021-A17291-cpt)
-    """
+    """abstDomain: A17291 (C-0-T14581-A17021-A17291-cpt)"""
     PERIANAL = "PERIANAL"
 
 
 class PeriarticularRoute(Enum):
-    """
-    abstDomain: A17293 (C-0-T14581-A17021-A17293-cpt)
-    """
+    """abstDomain: A17293 (C-0-T14581-A17021-A17293-cpt)"""
     PAINJ = "PAINJ"
 
 
 class PeriduralRoute(Enum):
-    """
-    abstDomain: A17298 (C-0-T14581-A17021-A17298-cpt)
-    """
+    """abstDomain: A17298 (C-0-T14581-A17021-A17298-cpt)"""
     PDURINJ = "PDURINJ"
 
 
 class PerinealRoute(Enum):
-    """
-    abstDomain: A17300 (C-0-T14581-A17021-A17300-cpt)
-    """
+    """abstDomain: A17300 (C-0-T14581-A17021-A17300-cpt)"""
     PERINEAL = "PERINEAL"
 
 
 class PerineuralRoute(Enum):
-    """
-    abstDomain: A17302 (C-0-T14581-A17021-A17302-cpt)
-    """
+    """abstDomain: A17302 (C-0-T14581-A17021-A17302-cpt)"""
     PNINJ = "PNINJ"
 
 
 class PeriodontalRoute(Enum):
-    """
-    abstDomain: A17295 (C-0-T14581-A17021-A17295-cpt)
-    """
+    """abstDomain: A17295 (C-0-T14581-A17021-A17295-cpt)"""
     PDONTINJ = "PDONTINJ"
     PDONTTA = "PDONTTA"
 
 
 class PermanentDentition(Enum):
-    """
-    abstDomain: A19342 (C-0-T16537-A16538-A19346-A19342-cpt)
-    """
+    """abstDomain: A19342 (C-0-T16537-A16538-A19346-A19342-cpt)"""
     TID1 = "TID1"
     TID10 = "TID10"
     TID11 = "TID11"
@@ -11572,9 +9924,7 @@ class PermanentDentition(Enum):
 
 
 class PersonDisabilityType(Enum):
-    """
-    vocSet: T295 (C-0-T295-cpt)
-    """
+    """vocSet: T295 (C-0-T295-cpt)"""
     VALUE_5 = "5"
     CB = "CB"
     CR = "CR"
@@ -11588,9 +9938,7 @@ class PersonDisabilityType(Enum):
 
 
 class PersonNamePartAffixTypes(Enum):
-    """
-    abstDomain: A10666 (C-0-T15888-A10659-A10666-cpt)
-    """
+    """abstDomain: A10666 (C-0-T15888-A10659-A10666-cpt)"""
     AC = "AC"
     NB = "NB"
     PR = "PR"
@@ -11598,25 +9946,19 @@ class PersonNamePartAffixTypes(Enum):
 
 
 class PersonNamePartChangeQualifier(Enum):
-    """
-    abstDomain: A10660 (C-0-T15888-A10659-A10660-cpt)
-    """
+    """abstDomain: A10660 (C-0-T15888-A10659-A10660-cpt)"""
     AD = "AD"
     BR = "BR"
     SP = "SP"
 
 
 class PersonNamePartMiscQualifier(Enum):
-    """
-    abstDomain: A10671 (C-0-T15888-A10659-A10671-cpt)
-    """
+    """abstDomain: A10671 (C-0-T15888-A10659-A10671-cpt)"""
     CL = "CL"
 
 
 class PersonNamePartQualifier(Enum):
-    """
-    abstDomain: A10659 (C-0-T15888-A10659-cpt)
-    """
+    """abstDomain: A10659 (C-0-T15888-A10659-cpt)"""
     AC = "AC"
     NB = "NB"
     PR = "PR"
@@ -11630,9 +9972,7 @@ class PersonNamePartQualifier(Enum):
 
 
 class PersonNameUse(Enum):
-    """
-    abstDomain: A200 (C-0-T15913-A200-cpt)
-    """
+    """abstDomain: A200 (C-0-T15913-A200-cpt)"""
     SRCH = "SRCH"
     SNDX = "SNDX"
     PHON = "PHON"
@@ -11650,25 +9990,19 @@ class PersonNameUse(Enum):
 
 
 class PersonNameUseLegalByBot(Enum):
-    """
-    specDomain: S10176 (C-0-T15913-A200-S10176-cpt)
-    """
+    """specDomain: S10176 (C-0-T15913-A200-S10176-cpt)"""
     L = "L"
     OR_VALUE = "OR"
 
 
 class PersonNameUsePseudonym(Enum):
-    """
-    specDomain: S21321 (C-0-T15913-A200-S21321-cpt)
-    """
+    """specDomain: S21321 (C-0-T15913-A200-S21321-cpt)"""
     P = "P"
     A = "A"
 
 
 class PersonalRelationshipRoleType(Enum):
-    """
-    abstDomain: A19563 (C-0-T12206-A19563-cpt)
-    """
+    """abstDomain: A19563 (C-0-T12206-A19563-cpt)"""
     CHLDADOPT = "CHLDADOPT"
     DAUADOPT = "DAUADOPT"
     SONADOPT = "SONADOPT"
@@ -11758,9 +10092,7 @@ class PersonalRelationshipRoleType(Enum):
 
 
 class PharmacistHipaa(Enum):
-    """
-    specDomain: S13355 (C-0-T13129-A13130-A13354-S13355-cpt)
-    """
+    """specDomain: S13355 (C-0-T13129-A13130-A13354-S13355-cpt)"""
     VALUE_183500000_N = "183500000N"
     VALUE_1835_G0000_N = "1835G0000N"
     VALUE_1835_N0905_N = "1835N0905N"
@@ -11770,9 +10102,7 @@ class PharmacistHipaa(Enum):
 
 
 class PharmacistProviderCodes(Enum):
-    """
-    specDomain: S20456 (C-0-T19465-S20455-S20456-cpt)
-    """
+    """specDomain: S20456 (C-0-T19465-S20455-S20456-cpt)"""
     VALUE_183500000_X = "183500000X"
     VALUE_1835_G0000_X = "1835G0000X"
     VALUE_1835_N0905_X = "1835N0905X"
@@ -11782,16 +10112,12 @@ class PharmacistProviderCodes(Enum):
 
 
 class PharmacyServiceProviderTechnicianHipaa(Enum):
-    """
-    abstDomain: A13361 (C-0-T13129-A13130-A13354-A13361-cpt)
-    """
+    """abstDomain: A13361 (C-0-T13129-A13130-A13354-A13361-cpt)"""
     VALUE_1847_P3400_N = "1847P3400N"
 
 
 class PharmacyServiceProvidersProviderCodes(Enum):
-    """
-    specDomain: S20455 (C-0-T19465-S20455-cpt)
-    """
+    """specDomain: S20455 (C-0-T19465-S20455-cpt)"""
     VALUE_183500000_X = "183500000X"
     VALUE_1835_G0000_X = "1835G0000X"
     VALUE_1835_N0905_X = "1835N0905X"
@@ -11803,9 +10129,7 @@ class PharmacyServiceProvidersProviderCodes(Enum):
 
 
 class PharmacySupplyEventStockReasonCode(Enum):
-    """
-    abstDomain: A19785 (C-0-T14878-A19785-cpt)
-    """
+    """abstDomain: A19785 (C-0-T14878-A19785-cpt)"""
     FLRSTCK = "FLRSTCK"
     LTC = "LTC"
     OFFICE = "OFFICE"
@@ -11814,9 +10138,7 @@ class PharmacySupplyEventStockReasonCode(Enum):
 
 
 class PharmacySupplyRequestRenewalRefusalReasonCode(Enum):
-    """
-    abstDomain: A19786 (C-0-T14878-A19786-cpt)
-    """
+    """abstDomain: A19786 (C-0-T14878-A19786-cpt)"""
     FAMPHYS = "FAMPHYS"
     ONHOLD = "ONHOLD"
     MODIFY = "MODIFY"
@@ -11829,9 +10151,7 @@ class PharmacySupplyRequestRenewalRefusalReasonCode(Enum):
 
 
 class PhysicalMedicineandRehabilitationProviderCodes(Enum):
-    """
-    specDomain: S20223 (C-0-T19465-S20096-S20223-cpt)
-    """
+    """specDomain: S20223 (C-0-T19465-S20096-S20223-cpt)"""
     VALUE_208100000_X = "208100000X"
     VALUE_2081_P2900_X = "2081P2900X"
     VALUE_2081_P0010_X = "2081P0010X"
@@ -11840,9 +10160,7 @@ class PhysicalMedicineandRehabilitationProviderCodes(Enum):
 
 
 class PhysicalTherapistHipaa(Enum):
-    """
-    specDomain: S13609 (C-0-T13129-A13130-A13592-S13609-cpt)
-    """
+    """specDomain: S13609 (C-0-T13129-A13130-A13592-S13609-cpt)"""
     VALUE_225100000_N = "225100000N"
     VALUE_2251_C2600_N = "2251C2600N"
     VALUE_2251_C0400_N = "2251C0400N"
@@ -11858,9 +10176,7 @@ class PhysicalTherapistHipaa(Enum):
 
 
 class PhysicalTherapistProviderCodes(Enum):
-    """
-    specDomain: S20548 (C-0-T19465-S20532-S20548-cpt)
-    """
+    """specDomain: S20548 (C-0-T19465-S20532-S20548-cpt)"""
     VALUE_225100000_X = "225100000X"
     VALUE_2251_C2600_X = "2251C2600X"
     VALUE_2251_E1300_X = "2251E1300X"
@@ -11875,9 +10191,7 @@ class PhysicalTherapistProviderCodes(Enum):
 
 
 class PhysicianAndOrOsteopathHipaa(Enum):
-    """
-    specDomain: S13426 (C-0-T13129-A13130-A13425-S13426-cpt)
-    """
+    """specDomain: S13426 (C-0-T13129-A13130-A13425-S13426-cpt)"""
     VALUE_203_B00000_N = "203B00000N"
     VALUE_203_BA0401_N = "203BA0401N"
     VALUE_203_BA0000_Y = "203BA0000Y"
@@ -12080,27 +10394,21 @@ class PhysicianAndOrOsteopathHipaa(Enum):
 
 
 class PhysicianAssistantHipaa(Enum):
-    """
-    specDomain: S13422 (C-0-T13129-A13130-A13363-S13422-cpt)
-    """
+    """specDomain: S13422 (C-0-T13129-A13130-A13363-S13422-cpt)"""
     VALUE_363_A00000_N = "363A00000N"
     VALUE_363_AM0700_N = "363AM0700N"
     VALUE_363_AS0400_N = "363AS0400N"
 
 
 class PhysicianAssistantProviderCodes(Enum):
-    """
-    specDomain: S20519 (C-0-T19465-S20463-S20501-S20519-cpt)
-    """
+    """specDomain: S20519 (C-0-T19465-S20463-S20501-S20519-cpt)"""
     VALUE_363_A00000_X = "363A00000X"
     VALUE_363_AM0700_X = "363AM0700X"
     VALUE_363_AS0400_X = "363AS0400X"
 
 
 class PhysicianAssistantsAndOrAdvancedPracticeNursingProviderHipaa(Enum):
-    """
-    abstDomain: A13363 (C-0-T13129-A13130-A13363-cpt)
-    """
+    """abstDomain: A13363 (C-0-T13129-A13130-A13363-cpt)"""
     VALUE_364_S00000_N = "364S00000N"
     VALUE_364_SA2100_N = "364SA2100N"
     VALUE_364_SA2200_N = "364SA2200N"
@@ -12164,9 +10472,7 @@ class PhysicianAssistantsAndOrAdvancedPracticeNursingProviderHipaa(Enum):
 
 
 class PhysicianAssistantsandAdvancedPracticeNursingProvidersProviderCodes(Enum):
-    """
-    specDomain: S20463 (C-0-T19465-S20463-cpt)
-    """
+    """specDomain: S20463 (C-0-T19465-S20463-cpt)"""
     VALUE_364_S00000_X = "364S00000X"
     VALUE_364_SA2100_X = "364SA2100X"
     VALUE_364_SA2200_X = "364SA2200X"
@@ -12229,16 +10535,12 @@ class PhysicianAssistantsandAdvancedPracticeNursingProvidersProviderCodes(Enum):
 
 
 class Pidgin(Enum):
-    """
-    abstDomain: A18518 (C-0-T18130-A18518-cpt)
-    """
+    """abstDomain: A18518 (C-0-T18130-A18518-cpt)"""
     X_CHH = "x-CHH"
 
 
 class PillDrugForm(Enum):
-    """
-    specDomain: S14506 (C-0-T19651-A14411-A14412-A14484-S14506-cpt)
-    """
+    """specDomain: S14506 (C-0-T19651-A14411-A14412-A14484-S14506-cpt)"""
     ENTCAP = "ENTCAP"
     ERENTCAP = "ERENTCAP"
     ERCAP = "ERCAP"
@@ -12268,26 +10570,20 @@ class PillDrugForm(Enum):
 
 
 class PlasticBottleEntityType(Enum):
-    """
-    specDomain: S16159 (C-0-T16040-A16041-A19867-A16143-S16144-A16152-A16153-S16155-S16159-cpt)
-    """
+    """specDomain: S16159 (C-0-T16040-A16041-A19867-A16143-S16144-A16152-A16153-S16155-S16159-cpt)"""
     BOTP = "BOTP"
     BOTPLY = "BOTPLY"
 
 
 class PlasticSurgeryProviderCodes(Enum):
-    """
-    specDomain: S20228 (C-0-T19465-S20096-S20228-cpt)
-    """
+    """specDomain: S20228 (C-0-T19465-S20096-S20228-cpt)"""
     VALUE_208200000_X = "208200000X"
     VALUE_2082_S0099_X = "2082S0099X"
     VALUE_2082_S0105_X = "2082S0105X"
 
 
 class PlateauPenutian(Enum):
-    """
-    abstDomain: A18498 (C-0-T18130-A18413-A18498-cpt)
-    """
+    """abstDomain: A18498 (C-0-T18130-A18413-A18498-cpt)"""
     X_WAR = "x-WAR"
     X_UMA = "x-UMA"
     X_WAA = "x-WAA"
@@ -12297,9 +10593,7 @@ class PlateauPenutian(Enum):
 
 
 class PodiatricMedicineAndOrSurgeryServiceProviderHipaa(Enum):
-    """
-    abstDomain: A13582 (C-0-T13129-A13130-A13582-cpt)
-    """
+    """abstDomain: A13582 (C-0-T13129-A13130-A13582-cpt)"""
     VALUE_213_E00000_N = "213E00000N"
     VALUE_213_EG0000_N = "213EG0000N"
     VALUE_213_EP0504_N = "213EP0504N"
@@ -12312,9 +10606,7 @@ class PodiatricMedicineAndOrSurgeryServiceProviderHipaa(Enum):
 
 
 class PodiatricMedicineandSurgeryProvidersProviderCodes(Enum):
-    """
-    specDomain: S20522 (C-0-T19465-S20522-cpt)
-    """
+    """specDomain: S20522 (C-0-T19465-S20522-cpt)"""
     VALUE_213_E00000_X = "213E00000X"
     VALUE_213_EG0000_X = "213EG0000X"
     VALUE_213_EP1101_X = "213EP1101X"
@@ -12328,9 +10620,7 @@ class PodiatricMedicineandSurgeryProvidersProviderCodes(Enum):
 
 
 class PodiatristHipaa(Enum):
-    """
-    specDomain: S13584 (C-0-T13129-A13130-A13582-S13584-cpt)
-    """
+    """specDomain: S13584 (C-0-T13129-A13130-A13582-S13584-cpt)"""
     VALUE_213_E00000_N = "213E00000N"
     VALUE_213_EG0000_N = "213EG0000N"
     VALUE_213_EP0504_N = "213EP0504N"
@@ -12342,9 +10632,7 @@ class PodiatristHipaa(Enum):
 
 
 class PodiatristProviderCodes(Enum):
-    """
-    specDomain: S20524 (C-0-T19465-S20522-S20524-cpt)
-    """
+    """specDomain: S20524 (C-0-T19465-S20522-S20524-cpt)"""
     VALUE_213_E00000_X = "213E00000X"
     VALUE_213_EG0000_X = "213EG0000X"
     VALUE_213_EP1101_X = "213EP1101X"
@@ -12356,9 +10644,7 @@ class PodiatristProviderCodes(Enum):
 
 
 class Pomoan(Enum):
-    """
-    abstDomain: A18253 (C-0-T18130-A18241-A18253-cpt)
-    """
+    """abstDomain: A18253 (C-0-T18130-A18241-A18253-cpt)"""
     X_POO = "x-POO"
     X_KJU = "x-KJU"
     X_PEF = "x-PEF"
@@ -12367,18 +10653,14 @@ class Pomoan(Enum):
 
 
 class Position(Enum):
-    """
-    specDomain: S21646 (C-0-T11527-S13856-A19822-S11529-S21646-cpt)
-    """
+    """specDomain: S21646 (C-0-T11527-S13856-A19822-S11529-S21646-cpt)"""
     POS = "POS"
     POSACC = "POSACC"
     POSCOORD = "POSCOORD"
 
 
 class PostalAddressUse(Enum):
-    """
-    vocSet: T10637 (C-0-T10637-cpt)
-    """
+    """vocSet: T10637 (C-0-T10637-cpt)"""
     H = "H"
     HP = "HP"
     HV = "HV"
@@ -12395,9 +10677,7 @@ class PostalAddressUse(Enum):
 
 
 class PowderDrugForm(Enum):
-    """
-    specDomain: S14534 (C-0-T19651-A14411-A14412-A14484-S14534-cpt)
-    """
+    """specDomain: S14534 (C-0-T19651-A14411-A14412-A14484-S14534-cpt)"""
     TOPPWD = "TOPPWD"
     RECPWD = "RECPWD"
     VAGPWD = "VAGPWD"
@@ -12405,9 +10685,7 @@ class PowderDrugForm(Enum):
 
 
 class PowerOfAttorney(Enum):
-    """
-    specDomain: S22034 (C-0-T12206-A19690-S22030-S22034-cpt)
-    """
+    """specDomain: S22034 (C-0-T12206-A19690-S22030-S22034-cpt)"""
     POWATT = "POWATT"
     DPOWATT = "DPOWATT"
     HPOWATT = "HPOWATT"
@@ -12415,18 +10693,14 @@ class PowerOfAttorney(Enum):
 
 
 class PrescriptionDispenseFilterCode(Enum):
-    """
-    abstDomain: A19727 (C-0-T19726-A19727-cpt)
-    """
+    """abstDomain: A19727 (C-0-T19726-A19727-cpt)"""
     C = "C"
     R = "R"
     N = "N"
 
 
 class PreventiveMedicineProviderCodes(Enum):
-    """
-    specDomain: S20231 (C-0-T19465-S20096-S20231-cpt)
-    """
+    """specDomain: S20231 (C-0-T19465-S20096-S20231-cpt)"""
     VALUE_208300000_X = "208300000X"
     VALUE_2083_A0100_X = "2083A0100X"
     VALUE_2083_T0002_X = "2083T0002X"
@@ -12438,9 +10712,7 @@ class PreventiveMedicineProviderCodes(Enum):
 
 
 class PrimaryDentition(Enum):
-    """
-    abstDomain: A19344 (C-0-T16537-A16538-A19346-A19344-cpt)
-    """
+    """abstDomain: A19344 (C-0-T16537-A16538-A19346-A19344-cpt)"""
     TIDA = "TIDA"
     TIDB = "TIDB"
     TIDC = "TIDC"
@@ -12464,9 +10736,7 @@ class PrimaryDentition(Enum):
 
 
 class PrivateResidence(Enum):
-    """
-    specDomain: S22190 (C-0-T220-S22190-cpt)
-    """
+    """specDomain: S22190 (C-0-T220-S22190-cpt)"""
     PR = "PR"
     H = "H"
     R = "R"
@@ -12474,9 +10744,7 @@ class PrivateResidence(Enum):
 
 
 class ProbabilityDistributionType(Enum):
-    """
-    vocSet: T10747 (C-0-T10747-cpt)
-    """
+    """vocSet: T10747 (C-0-T10747-cpt)"""
     G = "G"
     F = "F"
     T = "T"
@@ -12489,18 +10757,14 @@ class ProbabilityDistributionType(Enum):
 
 
 class ProcessingId(Enum):
-    """
-    vocSet: T103 (C-0-T103-cpt)
-    """
+    """vocSet: T103 (C-0-T103-cpt)"""
     D = "D"
     P = "P"
     T = "T"
 
 
 class ProcessingMode(Enum):
-    """
-    vocSet: T207 (C-0-T207-cpt)
-    """
+    """vocSet: T207 (C-0-T207-cpt)"""
     A = "A"
     T = "T"
     I = "I"
@@ -12508,9 +10772,7 @@ class ProcessingMode(Enum):
 
 
 class ProgramEligibleCoveredPartyRoleType(Enum):
-    """
-    abstDomain: A19811 (C-0-T12206-A19809-A19805-A19811-cpt)
-    """
+    """abstDomain: A19811 (C-0-T12206-A19809-A19805-A19811-cpt)"""
     MIL = "MIL"
     ACTMIL = "ACTMIL"
     RETMIL = "RETMIL"
@@ -12523,16 +10785,12 @@ class ProgramEligibleCoveredPartyRoleType(Enum):
 
 
 class Prosthodontics(Enum):
-    """
-    abstDomain: A13195 (C-0-T13129-A13130-A16460-S13188-A13195-cpt)
-    """
+    """abstDomain: A13195 (C-0-T13129-A13130-A16460-S13188-A13195-cpt)"""
     VALUE_1327_D0700_N = "1327D0700N"
 
 
 class ProviderCodes(Enum):
-    """
-    vocSet: T19465 (C-0-T19465-cpt)
-    """
+    """vocSet: T19465 (C-0-T19465-cpt)"""
     VALUE_250000000_X = "250000000X"
     VALUE_251_B00000_X = "251B00000X"
     VALUE_251_C00000_X = "251C00000X"
@@ -13275,9 +11533,7 @@ class ProviderCodes(Enum):
 
 
 class PsychiatryandNeurologyProviderCodes(Enum):
-    """
-    specDomain: S20239 (C-0-T19465-S20096-S20239-cpt)
-    """
+    """specDomain: S20239 (C-0-T19465-S20096-S20239-cpt)"""
     VALUE_208400000_X = "208400000X"
     VALUE_2084_A0401_X = "2084A0401X"
     VALUE_2084_P0802_X = "2084P0802X"
@@ -13295,18 +11551,14 @@ class PsychiatryandNeurologyProviderCodes(Enum):
 
 
 class PsychoanalystHipaa(Enum):
-    """
-    specDomain: S13149 (C-0-T13129-A13130-A13131-S13149-cpt)
-    """
+    """specDomain: S13149 (C-0-T13129-A13130-A13131-S13149-cpt)"""
     VALUE_103_S00000_N = "103S00000N"
     VALUE_103_SA1800_N = "103SA1800N"
     VALUE_103_SA1400_N = "103SA1400N"
 
 
 class PsychologistHipaa(Enum):
-    """
-    specDomain: S13152 (C-0-T13129-A13130-A13131-S13152-cpt)
-    """
+    """specDomain: S13152 (C-0-T13129-A13130-A13131-S13152-cpt)"""
     VALUE_103_T00000_N = "103T00000N"
     VALUE_103_TA0400_N = "103TA0400N"
     VALUE_103_TA0700_N = "103TA0700N"
@@ -13329,9 +11581,7 @@ class PsychologistHipaa(Enum):
 
 
 class PsychologistProviderCodes(Enum):
-    """
-    specDomain: S20285 (C-0-T19465-S20275-S20285-cpt)
-    """
+    """specDomain: S20285 (C-0-T19465-S20275-S20285-cpt)"""
     VALUE_103_T00000_X = "103T00000X"
     VALUE_103_TA0400_X = "103TA0400X"
     VALUE_103_TA0700_X = "103TA0700X"
@@ -13355,9 +11605,7 @@ class PsychologistProviderCodes(Enum):
 
 
 class PublicHealthcareProgram(Enum):
-    """
-    specDomain: S19718 (C-0-T13953-A13954-A19855-A19858-S19718-cpt)
-    """
+    """specDomain: S19718 (C-0-T13953-A13954-A19855-A19858-S19718-cpt)"""
     DISEASEPRG = "DISEASEPRG"
     HIVAIDS = "HIVAIDS"
     CANPRG = "CANPRG"
@@ -13374,9 +11622,7 @@ class PublicHealthcareProgram(Enum):
 
 
 class PulmonaryRoute(Enum):
-    """
-    abstDomain: A17304 (C-0-T14581-A17021-A17304-cpt)
-    """
+    """abstDomain: A17304 (C-0-T14581-A17021-A17304-cpt)"""
     IPPB = "IPPB"
     VENT = "VENT"
     VENTMASK = "VENTMASK"
@@ -13386,9 +11632,7 @@ class PulmonaryRoute(Enum):
 
 
 class QualitySpecimenRoleType(Enum):
-    """
-    specDomain: S16521 (C-0-T12206-A16515-S16521-cpt)
-    """
+    """specDomain: S16521 (C-0-T12206-A16515-S16521-cpt)"""
     Q = "Q"
     B = "B"
     E = "E"
@@ -13398,9 +11642,7 @@ class QualitySpecimenRoleType(Enum):
 
 
 class QueryParameterValue(Enum):
-    """
-    vocSet: T19726 (C-0-T19726-cpt)
-    """
+    """vocSet: T19726 (C-0-T19726-cpt)"""
     ISSFA = "ISSFA"
     ISSFI = "ISSFI"
     ISSFU = "ISSFU"
@@ -13410,17 +11652,13 @@ class QueryParameterValue(Enum):
 
 
 class QueryPriority(Enum):
-    """
-    vocSet: T91 (C-0-T91-cpt)
-    """
+    """vocSet: T91 (C-0-T91-cpt)"""
     D = "D"
     I = "I"
 
 
 class QueryQuantityUnit(Enum):
-    """
-    vocSet: T126 (C-0-T126-cpt)
-    """
+    """vocSet: T126 (C-0-T126-cpt)"""
     CH = "CH"
     LI = "LI"
     PG = "PG"
@@ -13428,16 +11666,12 @@ class QueryQuantityUnit(Enum):
 
 
 class QueryRequestLimit(Enum):
-    """
-    vocSet: T19911 (C-0-T19911-cpt)
-    """
+    """vocSet: T19911 (C-0-T19911-cpt)"""
     RD = "RD"
 
 
 class QueryResponse(Enum):
-    """
-    vocSet: T208 (C-0-T208-cpt)
-    """
+    """vocSet: T208 (C-0-T208-cpt)"""
     AE = "AE"
     OK = "OK"
     NF = "NF"
@@ -13445,9 +11679,7 @@ class QueryResponse(Enum):
 
 
 class QueryStatusCode(Enum):
-    """
-    vocSet: T18899 (C-0-T18899-cpt)
-    """
+    """vocSet: T18899 (C-0-T18899-cpt)"""
     ABORTED = "aborted"
     DELIVERED_RESPONSE = "deliveredResponse"
     EXECUTING = "executing"
@@ -13456,9 +11688,7 @@ class QueryStatusCode(Enum):
 
 
 class RoioverlayShape(Enum):
-    """
-    abstDomain: A16117 (C-0-T13953-A13954-A16117-cpt)
-    """
+    """abstDomain: A16117 (C-0-T13953-A13954-A16117-cpt)"""
     CIRCLE = "CIRCLE"
     ELLIPSE = "ELLIPSE"
     POINT = "POINT"
@@ -13466,9 +11696,7 @@ class RoioverlayShape(Enum):
 
 
 class Race(Enum):
-    """
-    vocSet: T14914 (C-0-T14914-cpt)
-    """
+    """vocSet: T14914 (C-0-T14914-cpt)"""
     VALUE_2028_9 = "2028-9"
     VALUE_2029_7 = "2029-7"
     VALUE_2030_5 = "2030-5"
@@ -14393,9 +12621,7 @@ class Race(Enum):
 
 
 class RaceAfricanAmericanAfrican(Enum):
-    """
-    specDomain: S15771 (C-0-T14914-S15768-S15771-cpt)
-    """
+    """specDomain: S15771 (C-0-T14914-S15768-S15771-cpt)"""
     VALUE_2060_2 = "2060-2"
     VALUE_2061_0 = "2061-0"
     VALUE_2062_8 = "2062-8"
@@ -14406,9 +12632,7 @@ class RaceAfricanAmericanAfrican(Enum):
 
 
 class RaceAlaskanIndian(Enum):
-    """
-    specDomain: S15471 (C-0-T14914-S14915-S15470-S15471-cpt)
-    """
+    """specDomain: S15471 (C-0-T14914-S14915-S15470-S15471-cpt)"""
     VALUE_1739_2 = "1739-2"
     VALUE_1740_0 = "1740-0"
     VALUE_1813_5 = "1813-5"
@@ -14441,17 +12665,13 @@ class RaceAlaskanIndian(Enum):
 
 
 class RaceAlaskanIndianAthabascan(Enum):
-    """
-    specDomain: S15472 (C-0-T14914-S14915-S15470-S15471-S15472-cpt)
-    """
+    """specDomain: S15472 (C-0-T14914-S14915-S15470-S15471-S15472-cpt)"""
     VALUE_1739_2 = "1739-2"
     VALUE_1740_0 = "1740-0"
 
 
 class RaceAlaskanNative(Enum):
-    """
-    specDomain: S15470 (C-0-T14914-S14915-S15470-cpt)
-    """
+    """specDomain: S15470 (C-0-T14914-S14915-S15470-cpt)"""
     VALUE_1739_2 = "1739-2"
     VALUE_1740_0 = "1740-0"
     VALUE_1813_5 = "1813-5"
@@ -14659,9 +12879,7 @@ class RaceAlaskanNative(Enum):
 
 
 class RaceAlaskanNativeAleut(Enum):
-    """
-    specDomain: S15690 (C-0-T14914-S14915-S15470-S15690-cpt)
-    """
+    """specDomain: S15690 (C-0-T14914-S14915-S15470-S15690-cpt)"""
     VALUE_1968_7 = "1968-7"
     VALUE_1969_5 = "1969-5"
     VALUE_1970_3 = "1970-3"
@@ -14718,18 +12936,14 @@ class RaceAlaskanNativeAleut(Enum):
 
 
 class RaceAlaskanNativeAleutAlutiiq(Enum):
-    """
-    specDomain: S15691 (C-0-T14914-S14915-S15470-S15690-S15691-cpt)
-    """
+    """specDomain: S15691 (C-0-T14914-S14915-S15470-S15690-S15691-cpt)"""
     VALUE_1968_7 = "1968-7"
     VALUE_1969_5 = "1969-5"
     VALUE_1970_3 = "1970-3"
 
 
 class RaceAlaskanNativeAleutBristolBay(Enum):
-    """
-    specDomain: S16466 (C-0-T14914-S14915-S15470-S15690-S16466-cpt)
-    """
+    """specDomain: S16466 (C-0-T14914-S14915-S15470-S15690-S16466-cpt)"""
     VALUE_1972_9 = "1972-9"
     VALUE_1973_7 = "1973-7"
     VALUE_1974_5 = "1974-5"
@@ -14744,9 +12958,7 @@ class RaceAlaskanNativeAleutBristolBay(Enum):
 
 
 class RaceAlaskanNativeAleutChugach(Enum):
-    """
-    specDomain: S15705 (C-0-T14914-S14915-S15470-S15690-S15705-cpt)
-    """
+    """specDomain: S15705 (C-0-T14914-S14915-S15470-S15690-S15705-cpt)"""
     VALUE_1984_4 = "1984-4"
     VALUE_1985_1 = "1985-1"
     VALUE_1986_9 = "1986-9"
@@ -14755,9 +12967,7 @@ class RaceAlaskanNativeAleutChugach(Enum):
 
 
 class RaceAlaskanNativeAleutKoniag(Enum):
-    """
-    specDomain: S15711 (C-0-T14914-S14915-S15470-S15690-S15711-cpt)
-    """
+    """specDomain: S15711 (C-0-T14914-S14915-S15470-S15690-S15711-cpt)"""
     VALUE_1992_7 = "1992-7"
     VALUE_1994_3 = "1994-3"
     VALUE_1993_5 = "1993-5"
@@ -14770,9 +12980,7 @@ class RaceAlaskanNativeAleutKoniag(Enum):
 
 
 class RaceAlaskanNativeAleutUnangan(Enum):
-    """
-    specDomain: S15722 (C-0-T14914-S14915-S15470-S15690-S15722-cpt)
-    """
+    """specDomain: S15722 (C-0-T14914-S14915-S15470-S15690-S15722-cpt)"""
     VALUE_2006_5 = "2006-5"
     VALUE_2007_3 = "2007-3"
     VALUE_2008_1 = "2008-1"
@@ -14797,9 +13005,7 @@ class RaceAlaskanNativeAleutUnangan(Enum):
 
 
 class RaceAlaskanNativeEskimo(Enum):
-    """
-    specDomain: S15569 (C-0-T14914-S14915-S15470-S15569-cpt)
-    """
+    """specDomain: S15569 (C-0-T14914-S14915-S15470-S15569-cpt)"""
     VALUE_1844_0 = "1844-0"
     VALUE_1845_7 = "1845-7"
     VALUE_1846_5 = "1846-5"
@@ -14924,9 +13130,7 @@ class RaceAlaskanNativeEskimo(Enum):
 
 
 class RaceAlaskanNativeInupiatEskimo(Enum):
-    """
-    specDomain: S15571 (C-0-T14914-S14915-S15470-S15569-S15571-cpt)
-    """
+    """specDomain: S15571 (C-0-T14914-S14915-S15470-S15569-S15571-cpt)"""
     VALUE_1844_0 = "1844-0"
     VALUE_1845_7 = "1845-7"
     VALUE_1846_5 = "1846-5"
@@ -14976,9 +13180,7 @@ class RaceAlaskanNativeInupiatEskimo(Enum):
 
 
 class RaceAlaskanNativeSiberianEskimo(Enum):
-    """
-    specDomain: S15617 (C-0-T14914-S14915-S15470-S15569-S15617-cpt)
-    """
+    """specDomain: S15617 (C-0-T14914-S14915-S15470-S15569-S15617-cpt)"""
     VALUE_1891_1 = "1891-1"
     VALUE_1892_9 = "1892-9"
     VALUE_1893_7 = "1893-7"
@@ -14986,9 +13188,7 @@ class RaceAlaskanNativeSiberianEskimo(Enum):
 
 
 class RaceAlaskanNativeYupikEskimo(Enum):
-    """
-    specDomain: S15621 (C-0-T14914-S14915-S15470-S15569-S15621-cpt)
-    """
+    """specDomain: S15621 (C-0-T14914-S14915-S15470-S15569-S15621-cpt)"""
     VALUE_1896_0 = "1896-0"
     VALUE_1897_8 = "1897-8"
     VALUE_1898_6 = "1898-6"
@@ -15061,9 +13261,7 @@ class RaceAlaskanNativeYupikEskimo(Enum):
 
 
 class RaceAmericanIndian(Enum):
-    """
-    specDomain: S14916 (C-0-T14914-S14915-S14916-cpt)
-    """
+    """specDomain: S14916 (C-0-T14914-S14915-S14916-cpt)"""
     VALUE_1076_9 = "1076-9"
     VALUE_1744_2 = "1744-2"
     VALUE_1741_8 = "1741-8"
@@ -15690,9 +13888,7 @@ class RaceAmericanIndian(Enum):
 
 
 class RaceAmericanIndianApache(Enum):
-    """
-    specDomain: S14919 (C-0-T14914-S14915-S14916-S14919-cpt)
-    """
+    """specDomain: S14919 (C-0-T14914-S14915-S14916-S14919-cpt)"""
     VALUE_1010_8 = "1010-8"
     VALUE_1011_6 = "1011-6"
     VALUE_1012_4 = "1012-4"
@@ -15706,9 +13902,7 @@ class RaceAmericanIndianApache(Enum):
 
 
 class RaceAmericanIndianArapaho(Enum):
-    """
-    specDomain: S14929 (C-0-T14914-S14915-S14916-S14929-cpt)
-    """
+    """specDomain: S14929 (C-0-T14914-S14915-S14916-S14929-cpt)"""
     VALUE_1021_5 = "1021-5"
     VALUE_1022_3 = "1022-3"
     VALUE_1023_1 = "1023-1"
@@ -15716,25 +13910,19 @@ class RaceAmericanIndianArapaho(Enum):
 
 
 class RaceAmericanIndianAssiniboineSioux(Enum):
-    """
-    specDomain: S14935 (C-0-T14914-S14915-S14916-S14935-cpt)
-    """
+    """specDomain: S14935 (C-0-T14914-S14915-S14916-S14935-cpt)"""
     VALUE_1030_6 = "1030-6"
     VALUE_1031_4 = "1031-4"
 
 
 class RaceAmericanIndianCaddo(Enum):
-    """
-    specDomain: S14941 (C-0-T14914-S14915-S14916-S14941-cpt)
-    """
+    """specDomain: S14941 (C-0-T14914-S14915-S14916-S14941-cpt)"""
     VALUE_1041_3 = "1041-3"
     VALUE_1042_1 = "1042-1"
 
 
 class RaceAmericanIndianCahuilla(Enum):
-    """
-    specDomain: S14943 (C-0-T14914-S14915-S14916-S14943-cpt)
-    """
+    """specDomain: S14943 (C-0-T14914-S14915-S14916-S14943-cpt)"""
     VALUE_1044_7 = "1044-7"
     VALUE_1045_4 = "1045-4"
     VALUE_1046_2 = "1046-2"
@@ -15746,9 +13934,7 @@ class RaceAmericanIndianCahuilla(Enum):
 
 
 class RaceAmericanIndianCalifornia(Enum):
-    """
-    specDomain: S14951 (C-0-T14914-S14915-S14916-S14951-cpt)
-    """
+    """specDomain: S14951 (C-0-T14914-S14915-S14916-S14951-cpt)"""
     VALUE_1053_8 = "1053-8"
     VALUE_1054_6 = "1054-6"
     VALUE_1055_3 = "1055-3"
@@ -15766,18 +13952,14 @@ class RaceAmericanIndianCalifornia(Enum):
 
 
 class RaceAmericanIndianChemakuan(Enum):
-    """
-    specDomain: S14975 (C-0-T14914-S14915-S14916-S14975-cpt)
-    """
+    """specDomain: S14975 (C-0-T14914-S14915-S14916-S14975-cpt)"""
     VALUE_1082_7 = "1082-7"
     VALUE_1083_5 = "1083-5"
     VALUE_1084_3 = "1084-3"
 
 
 class RaceAmericanIndianCherokee(Enum):
-    """
-    specDomain: S14979 (C-0-T14914-S14915-S14916-S14979-cpt)
-    """
+    """specDomain: S14979 (C-0-T14914-S14915-S14916-S14979-cpt)"""
     VALUE_1088_4 = "1088-4"
     VALUE_1089_2 = "1089-2"
     VALUE_1090_0 = "1090-0"
@@ -15792,27 +13974,21 @@ class RaceAmericanIndianCherokee(Enum):
 
 
 class RaceAmericanIndianCheyenne(Enum):
-    """
-    specDomain: S14991 (C-0-T14914-S14915-S14916-S14991-cpt)
-    """
+    """specDomain: S14991 (C-0-T14914-S14915-S14916-S14991-cpt)"""
     VALUE_1102_3 = "1102-3"
     VALUE_1103_1 = "1103-1"
     VALUE_1104_9 = "1104-9"
 
 
 class RaceAmericanIndianChickahominy(Enum):
-    """
-    specDomain: S14995 (C-0-T14914-S14915-S14916-S14995-cpt)
-    """
+    """specDomain: S14995 (C-0-T14914-S14915-S14916-S14995-cpt)"""
     VALUE_1108_0 = "1108-0"
     VALUE_1109_8 = "1109-8"
     VALUE_1110_6 = "1110-6"
 
 
 class RaceAmericanIndianChinook(Enum):
-    """
-    specDomain: S14999 (C-0-T14914-S14915-S14916-S14999-cpt)
-    """
+    """specDomain: S14999 (C-0-T14914-S14915-S14916-S14999-cpt)"""
     VALUE_1114_8 = "1114-8"
     VALUE_1115_5 = "1115-5"
     VALUE_1116_3 = "1116-3"
@@ -15824,9 +14000,7 @@ class RaceAmericanIndianChinook(Enum):
 
 
 class RaceAmericanIndianChippewa(Enum):
-    """
-    specDomain: S15007 (C-0-T14914-S14915-S14916-S15007-cpt)
-    """
+    """specDomain: S15007 (C-0-T14914-S14915-S14916-S15007-cpt)"""
     VALUE_1123_9 = "1123-9"
     VALUE_1124_7 = "1124-7"
     VALUE_1125_4 = "1125-4"
@@ -15856,17 +14030,13 @@ class RaceAmericanIndianChippewa(Enum):
 
 
 class RaceAmericanIndianChippewaCree(Enum):
-    """
-    specDomain: S15033 (C-0-T14914-S14915-S14916-S15033-cpt)
-    """
+    """specDomain: S15033 (C-0-T14914-S14915-S14916-S15033-cpt)"""
     VALUE_1150_2 = "1150-2"
     VALUE_1151_0 = "1151-0"
 
 
 class RaceAmericanIndianChoctaw(Enum):
-    """
-    specDomain: S15036 (C-0-T14914-S14915-S14916-S15036-cpt)
-    """
+    """specDomain: S15036 (C-0-T14914-S14915-S14916-S15036-cpt)"""
     VALUE_1155_1 = "1155-1"
     VALUE_1156_9 = "1156-9"
     VALUE_1157_7 = "1157-7"
@@ -15876,33 +14046,25 @@ class RaceAmericanIndianChoctaw(Enum):
 
 
 class RaceAmericanIndianChumash(Enum):
-    """
-    specDomain: S15042 (C-0-T14914-S14915-S14916-S15042-cpt)
-    """
+    """specDomain: S15042 (C-0-T14914-S14915-S14916-S15042-cpt)"""
     VALUE_1162_7 = "1162-7"
     VALUE_1163_5 = "1163-5"
 
 
 class RaceAmericanIndianComanche(Enum):
-    """
-    specDomain: S15049 (C-0-T14914-S14915-S14916-S15049-cpt)
-    """
+    """specDomain: S15049 (C-0-T14914-S14915-S14916-S15049-cpt)"""
     VALUE_1175_9 = "1175-9"
     VALUE_1176_7 = "1176-7"
 
 
 class RaceAmericanIndianCoushatta(Enum):
-    """
-    specDomain: S15055 (C-0-T14914-S14915-S14916-S15055-cpt)
-    """
+    """specDomain: S15055 (C-0-T14914-S14915-S14916-S15055-cpt)"""
     VALUE_1186_6 = "1186-6"
     VALUE_1187_4 = "1187-4"
 
 
 class RaceAmericanIndianCreek(Enum):
-    """
-    specDomain: S15059 (C-0-T14914-S14915-S14916-S15059-cpt)
-    """
+    """specDomain: S15059 (C-0-T14914-S14915-S14916-S15059-cpt)"""
     VALUE_1193_2 = "1193-2"
     VALUE_1194_0 = "1194-0"
     VALUE_1195_7 = "1195-7"
@@ -15919,17 +14081,13 @@ class RaceAmericanIndianCreek(Enum):
 
 
 class RaceAmericanIndianCupeno(Enum):
-    """
-    specDomain: S15074 (C-0-T14914-S14915-S14916-S15074-cpt)
-    """
+    """specDomain: S15074 (C-0-T14914-S14915-S14916-S15074-cpt)"""
     VALUE_1211_2 = "1211-2"
     VALUE_1212_0 = "1212-0"
 
 
 class RaceAmericanIndianDelaware(Enum):
-    """
-    specDomain: S15076 (C-0-T14914-S14915-S14916-S15076-cpt)
-    """
+    """specDomain: S15076 (C-0-T14914-S14915-S14916-S15076-cpt)"""
     VALUE_1214_6 = "1214-6"
     VALUE_1215_3 = "1215-3"
     VALUE_1216_1 = "1216-1"
@@ -15940,9 +14098,7 @@ class RaceAmericanIndianDelaware(Enum):
 
 
 class RaceAmericanIndianDiegueno(Enum):
-    """
-    specDomain: S15083 (C-0-T14914-S14915-S14916-S15083-cpt)
-    """
+    """specDomain: S15083 (C-0-T14914-S14915-S14916-S15083-cpt)"""
     VALUE_1222_9 = "1222-9"
     VALUE_1223_7 = "1223-7"
     VALUE_1224_5 = "1224-5"
@@ -15956,9 +14112,7 @@ class RaceAmericanIndianDiegueno(Enum):
 
 
 class RaceAmericanIndianEasternTribes(Enum):
-    """
-    specDomain: S15093 (C-0-T14914-S14915-S14916-S15093-cpt)
-    """
+    """specDomain: S15093 (C-0-T14914-S14915-S14916-S15093-cpt)"""
     VALUE_1233_6 = "1233-6"
     VALUE_1234_4 = "1234-4"
     VALUE_1235_1 = "1235-1"
@@ -15978,35 +14132,27 @@ class RaceAmericanIndianEasternTribes(Enum):
 
 
 class RaceAmericanIndianGrosVentres(Enum):
-    """
-    specDomain: S15116 (C-0-T14914-S14915-S14916-S15116-cpt)
-    """
+    """specDomain: S15116 (C-0-T14914-S14915-S14916-S15116-cpt)"""
     VALUE_1264_1 = "1264-1"
     VALUE_1265_8 = "1265-8"
 
 
 class RaceAmericanIndianHoopa(Enum):
-    """
-    specDomain: S15120 (C-0-T14914-S14915-S14916-S15120-cpt)
-    """
+    """specDomain: S15120 (C-0-T14914-S14915-S14916-S15120-cpt)"""
     VALUE_1271_6 = "1271-6"
     VALUE_1272_4 = "1272-4"
     VALUE_1273_2 = "1273-2"
 
 
 class RaceAmericanIndianIowa(Enum):
-    """
-    specDomain: S15126 (C-0-T14914-S14915-S14916-S15126-cpt)
-    """
+    """specDomain: S15126 (C-0-T14914-S14915-S14916-S15126-cpt)"""
     VALUE_1281_5 = "1281-5"
     VALUE_1282_3 = "1282-3"
     VALUE_1283_1 = "1283-1"
 
 
 class RaceAmericanIndianIroquois(Enum):
-    """
-    specDomain: S15129 (C-0-T14914-S14915-S14916-S15129-cpt)
-    """
+    """specDomain: S15129 (C-0-T14914-S14915-S14916-S15129-cpt)"""
     VALUE_1285_6 = "1285-6"
     VALUE_1286_4 = "1286-4"
     VALUE_1287_2 = "1287-2"
@@ -16021,26 +14167,20 @@ class RaceAmericanIndianIroquois(Enum):
 
 
 class RaceAmericanIndianKickapoo(Enum):
-    """
-    specDomain: S15144 (C-0-T14914-S14915-S14916-S15144-cpt)
-    """
+    """specDomain: S15144 (C-0-T14914-S14915-S14916-S15144-cpt)"""
     VALUE_1305_2 = "1305-2"
     VALUE_1306_0 = "1306-0"
     VALUE_1307_8 = "1307-8"
 
 
 class RaceAmericanIndianKiowa(Enum):
-    """
-    specDomain: S15147 (C-0-T14914-S14915-S14916-S15147-cpt)
-    """
+    """specDomain: S15147 (C-0-T14914-S14915-S14916-S15147-cpt)"""
     VALUE_1309_4 = "1309-4"
     VALUE_1310_2 = "1310-2"
 
 
 class RaceAmericanIndianKlallam(Enum):
-    """
-    specDomain: S15149 (C-0-T14914-S14915-S14916-S15149-cpt)
-    """
+    """specDomain: S15149 (C-0-T14914-S14915-S14916-S15149-cpt)"""
     VALUE_1312_8 = "1312-8"
     VALUE_1313_6 = "1313-6"
     VALUE_1314_4 = "1314-4"
@@ -16048,9 +14188,7 @@ class RaceAmericanIndianKlallam(Enum):
 
 
 class RaceAmericanIndianLongIsland(Enum):
-    """
-    specDomain: S15157 (C-0-T14914-S14915-S14916-S15157-cpt)
-    """
+    """specDomain: S15157 (C-0-T14914-S14915-S14916-S15157-cpt)"""
     VALUE_1325_0 = "1325-0"
     VALUE_1326_8 = "1326-8"
     VALUE_1327_6 = "1327-6"
@@ -16059,9 +14197,7 @@ class RaceAmericanIndianLongIsland(Enum):
 
 
 class RaceAmericanIndianLuiseno(Enum):
-    """
-    specDomain: S15162 (C-0-T14914-S14915-S14916-S15162-cpt)
-    """
+    """specDomain: S15162 (C-0-T14914-S14915-S14916-S15162-cpt)"""
     VALUE_1331_8 = "1331-8"
     VALUE_1332_6 = "1332-6"
     VALUE_1333_4 = "1333-4"
@@ -16073,18 +14209,14 @@ class RaceAmericanIndianLuiseno(Enum):
 
 
 class RaceAmericanIndianMaidu(Enum):
-    """
-    specDomain: S15172 (C-0-T14914-S14915-S14916-S15172-cpt)
-    """
+    """specDomain: S15172 (C-0-T14914-S14915-S14916-S15172-cpt)"""
     VALUE_1344_1 = "1344-1"
     VALUE_1345_8 = "1345-8"
     VALUE_1346_6 = "1346-6"
 
 
 class RaceAmericanIndianMiami(Enum):
-    """
-    specDomain: S15180 (C-0-T14914-S14915-S14916-S15180-cpt)
-    """
+    """specDomain: S15180 (C-0-T14914-S14915-S14916-S15180-cpt)"""
     VALUE_1358_1 = "1358-1"
     VALUE_1359_9 = "1359-9"
     VALUE_1360_7 = "1360-7"
@@ -16092,17 +14224,13 @@ class RaceAmericanIndianMiami(Enum):
 
 
 class RaceAmericanIndianMicmac(Enum):
-    """
-    specDomain: S15185 (C-0-T14914-S14915-S14916-S15185-cpt)
-    """
+    """specDomain: S15185 (C-0-T14914-S14915-S14916-S15185-cpt)"""
     VALUE_1365_6 = "1365-6"
     VALUE_1366_4 = "1366-4"
 
 
 class RaceAmericanIndianNavajo(Enum):
-    """
-    specDomain: S15194 (C-0-T14914-S14915-S14916-S15194-cpt)
-    """
+    """specDomain: S15194 (C-0-T14914-S14915-S14916-S15194-cpt)"""
     VALUE_1382_1 = "1382-1"
     VALUE_1383_9 = "1383-9"
     VALUE_1384_7 = "1384-7"
@@ -16110,9 +14238,7 @@ class RaceAmericanIndianNavajo(Enum):
 
 
 class RaceAmericanIndianNorthwestTribes(Enum):
-    """
-    specDomain: S15200 (C-0-T14914-S14915-S14916-S15200-cpt)
-    """
+    """specDomain: S15200 (C-0-T14914-S14915-S14916-S15200-cpt)"""
     VALUE_1391_2 = "1391-2"
     VALUE_1392_0 = "1392-0"
     VALUE_1393_8 = "1393-8"
@@ -16127,9 +14253,7 @@ class RaceAmericanIndianNorthwestTribes(Enum):
 
 
 class RaceAmericanIndianOttawa(Enum):
-    """
-    specDomain: S15215 (C-0-T14914-S14915-S14916-S15215-cpt)
-    """
+    """specDomain: S15215 (C-0-T14914-S14915-S14916-S15215-cpt)"""
     VALUE_1411_8 = "1411-8"
     VALUE_1412_6 = "1412-6"
     VALUE_1413_4 = "1413-4"
@@ -16137,9 +14261,7 @@ class RaceAmericanIndianOttawa(Enum):
 
 
 class RaceAmericanIndianPaiute(Enum):
-    """
-    specDomain: S15219 (C-0-T14914-S14915-S14916-S15219-cpt)
-    """
+    """specDomain: S15219 (C-0-T14914-S14915-S14916-S15219-cpt)"""
     VALUE_1416_7 = "1416-7"
     VALUE_1417_5 = "1417-5"
     VALUE_1418_3 = "1418-3"
@@ -16165,51 +14287,39 @@ class RaceAmericanIndianPaiute(Enum):
 
 
 class RaceAmericanIndianPassamaquoddy(Enum):
-    """
-    specDomain: S15242 (C-0-T14914-S14915-S14916-S15242-cpt)
-    """
+    """specDomain: S15242 (C-0-T14914-S14915-S14916-S15242-cpt)"""
     VALUE_1441_5 = "1441-5"
     VALUE_1442_3 = "1442-3"
     VALUE_1443_1 = "1443-1"
 
 
 class RaceAmericanIndianPawnee(Enum):
-    """
-    specDomain: S15245 (C-0-T14914-S14915-S14916-S15245-cpt)
-    """
+    """specDomain: S15245 (C-0-T14914-S14915-S14916-S15245-cpt)"""
     VALUE_1445_6 = "1445-6"
     VALUE_1446_4 = "1446-4"
 
 
 class RaceAmericanIndianPeoria(Enum):
-    """
-    specDomain: S15248 (C-0-T14914-S14915-S14916-S15248-cpt)
-    """
+    """specDomain: S15248 (C-0-T14914-S14915-S14916-S15248-cpt)"""
     VALUE_1450_6 = "1450-6"
     VALUE_1451_4 = "1451-4"
 
 
 class RaceAmericanIndianPequot(Enum):
-    """
-    specDomain: S15250 (C-0-T14914-S14915-S14916-S15250-cpt)
-    """
+    """specDomain: S15250 (C-0-T14914-S14915-S14916-S15250-cpt)"""
     VALUE_1453_0 = "1453-0"
     VALUE_1454_8 = "1454-8"
 
 
 class RaceAmericanIndianPima(Enum):
-    """
-    specDomain: S15252 (C-0-T14914-S14915-S14916-S15252-cpt)
-    """
+    """specDomain: S15252 (C-0-T14914-S14915-S14916-S15252-cpt)"""
     VALUE_1456_3 = "1456-3"
     VALUE_1457_1 = "1457-1"
     VALUE_1458_9 = "1458-9"
 
 
 class RaceAmericanIndianPomo(Enum):
-    """
-    specDomain: S15257 (C-0-T14914-S14915-S14916-S15257-cpt)
-    """
+    """specDomain: S15257 (C-0-T14914-S14915-S14916-S15257-cpt)"""
     VALUE_1464_7 = "1464-7"
     VALUE_1465_4 = "1465-4"
     VALUE_1466_2 = "1466-2"
@@ -16222,18 +14332,14 @@ class RaceAmericanIndianPomo(Enum):
 
 
 class RaceAmericanIndianPonca(Enum):
-    """
-    specDomain: S15266 (C-0-T14914-S14915-S14916-S15266-cpt)
-    """
+    """specDomain: S15266 (C-0-T14914-S14915-S14916-S15266-cpt)"""
     VALUE_1474_6 = "1474-6"
     VALUE_1475_3 = "1475-3"
     VALUE_1476_1 = "1476-1"
 
 
 class RaceAmericanIndianPotawatomi(Enum):
-    """
-    specDomain: S15269 (C-0-T14914-S14915-S14916-S15269-cpt)
-    """
+    """specDomain: S15269 (C-0-T14914-S14915-S14916-S15269-cpt)"""
     VALUE_1478_7 = "1478-7"
     VALUE_1479_5 = "1479-5"
     VALUE_1480_3 = "1480-3"
@@ -16245,9 +14351,7 @@ class RaceAmericanIndianPotawatomi(Enum):
 
 
 class RaceAmericanIndianPueblo(Enum):
-    """
-    specDomain: S15278 (C-0-T14914-S14915-S14916-S15278-cpt)
-    """
+    """specDomain: S15278 (C-0-T14914-S14915-S14916-S15278-cpt)"""
     VALUE_1489_4 = "1489-4"
     VALUE_1490_2 = "1490-2"
     VALUE_1491_0 = "1491-0"
@@ -16279,9 +14383,7 @@ class RaceAmericanIndianPueblo(Enum):
 
 
 class RaceAmericanIndianPugetSoundSalish(Enum):
-    """
-    specDomain: S15306 (C-0-T14914-S14915-S14916-S15306-cpt)
-    """
+    """specDomain: S15306 (C-0-T14914-S14915-S14916-S15306-cpt)"""
     VALUE_1518_0 = "1518-0"
     VALUE_1519_8 = "1519-8"
     VALUE_1520_6 = "1520-6"
@@ -16307,9 +14409,7 @@ class RaceAmericanIndianPugetSoundSalish(Enum):
 
 
 class RaceAmericanIndianSacFox(Enum):
-    """
-    specDomain: S15333 (C-0-T14914-S14915-S14916-S15333-cpt)
-    """
+    """specDomain: S15333 (C-0-T14914-S14915-S14916-S15333-cpt)"""
     VALUE_1551_1 = "1551-1"
     VALUE_1552_9 = "1552-9"
     VALUE_1553_7 = "1553-7"
@@ -16317,9 +14417,7 @@ class RaceAmericanIndianSacFox(Enum):
 
 
 class RaceAmericanIndianSeminole(Enum):
-    """
-    specDomain: S15342 (C-0-T14914-S14915-S14916-S15342-cpt)
-    """
+    """specDomain: S15342 (C-0-T14914-S14915-S14916-S15342-cpt)"""
     VALUE_1566_9 = "1566-9"
     VALUE_1567_7 = "1567-7"
     VALUE_1568_5 = "1568-5"
@@ -16329,26 +14427,20 @@ class RaceAmericanIndianSeminole(Enum):
 
 
 class RaceAmericanIndianSerrano(Enum):
-    """
-    specDomain: S15348 (C-0-T14914-S14915-S14916-S15348-cpt)
-    """
+    """specDomain: S15348 (C-0-T14914-S14915-S14916-S15348-cpt)"""
     VALUE_1573_5 = "1573-5"
     VALUE_1574_3 = "1574-3"
 
 
 class RaceAmericanIndianShawnee(Enum):
-    """
-    specDomain: S15351 (C-0-T14914-S14915-S14916-S15351-cpt)
-    """
+    """specDomain: S15351 (C-0-T14914-S14915-S14916-S15351-cpt)"""
     VALUE_1578_4 = "1578-4"
     VALUE_1579_2 = "1579-2"
     VALUE_1580_0 = "1580-0"
 
 
 class RaceAmericanIndianShoshone(Enum):
-    """
-    specDomain: S15356 (C-0-T14914-S14915-S14916-S15356-cpt)
-    """
+    """specDomain: S15356 (C-0-T14914-S14915-S14916-S15356-cpt)"""
     VALUE_1586_7 = "1586-7"
     VALUE_1587_5 = "1587-5"
     VALUE_1588_3 = "1588-3"
@@ -16367,9 +14459,7 @@ class RaceAmericanIndianShoshone(Enum):
 
 
 class RaceAmericanIndianShoshonePaiute(Enum):
-    """
-    specDomain: S15371 (C-0-T14914-S14915-S14916-S15371-cpt)
-    """
+    """specDomain: S15371 (C-0-T14914-S14915-S14916-S15371-cpt)"""
     VALUE_1602_2 = "1602-2"
     VALUE_1603_0 = "1603-0"
     VALUE_1604_8 = "1604-8"
@@ -16377,9 +14467,7 @@ class RaceAmericanIndianShoshonePaiute(Enum):
 
 
 class RaceAmericanIndianSioux(Enum):
-    """
-    specDomain: S15376 (C-0-T14914-S14915-S14916-S15376-cpt)
-    """
+    """specDomain: S15376 (C-0-T14914-S14915-S14916-S15376-cpt)"""
     VALUE_1609_7 = "1609-7"
     VALUE_1610_5 = "1610-5"
     VALUE_1611_3 = "1611-3"
@@ -16416,9 +14504,7 @@ class RaceAmericanIndianSioux(Enum):
 
 
 class RaceAmericanIndianTohonoOodham(Enum):
-    """
-    specDomain: S15414 (C-0-T14914-S14915-S14916-S15414-cpt)
-    """
+    """specDomain: S15414 (C-0-T14914-S14915-S14916-S15414-cpt)"""
     VALUE_1653_5 = "1653-5"
     VALUE_1654_3 = "1654-3"
     VALUE_1655_0 = "1655-0"
@@ -16427,17 +14513,13 @@ class RaceAmericanIndianTohonoOodham(Enum):
 
 
 class RaceAmericanIndianUmpqua(Enum):
-    """
-    specDomain: S15423 (C-0-T14914-S14915-S14916-S15423-cpt)
-    """
+    """specDomain: S15423 (C-0-T14914-S14915-S14916-S15423-cpt)"""
     VALUE_1667_5 = "1667-5"
     VALUE_1668_3 = "1668-3"
 
 
 class RaceAmericanIndianUte(Enum):
-    """
-    specDomain: S15425 (C-0-T14914-S14915-S14916-S15425-cpt)
-    """
+    """specDomain: S15425 (C-0-T14914-S14915-S14916-S15425-cpt)"""
     VALUE_1670_9 = "1670-9"
     VALUE_1671_7 = "1671-7"
     VALUE_1672_5 = "1672-5"
@@ -16445,18 +14527,14 @@ class RaceAmericanIndianUte(Enum):
 
 
 class RaceAmericanIndianWampanoag(Enum):
-    """
-    specDomain: S15431 (C-0-T14914-S14915-S14916-S15431-cpt)
-    """
+    """specDomain: S15431 (C-0-T14914-S14915-S14916-S15431-cpt)"""
     VALUE_1679_0 = "1679-0"
     VALUE_1680_8 = "1680-8"
     VALUE_1681_6 = "1681-6"
 
 
 class RaceAmericanIndianWashoe(Enum):
-    """
-    specDomain: S15436 (C-0-T14914-S14915-S14916-S15436-cpt)
-    """
+    """specDomain: S15436 (C-0-T14914-S14915-S14916-S15436-cpt)"""
     VALUE_1687_3 = "1687-3"
     VALUE_1688_1 = "1688-1"
     VALUE_1689_9 = "1689-9"
@@ -16464,18 +14542,14 @@ class RaceAmericanIndianWashoe(Enum):
 
 
 class RaceAmericanIndianWinnebago(Enum):
-    """
-    specDomain: S15442 (C-0-T14914-S14915-S14916-S15442-cpt)
-    """
+    """specDomain: S15442 (C-0-T14914-S14915-S14916-S15442-cpt)"""
     VALUE_1696_4 = "1696-4"
     VALUE_1697_2 = "1697-2"
     VALUE_1698_0 = "1698-0"
 
 
 class RaceAmericanIndianYuman(Enum):
-    """
-    specDomain: S15460 (C-0-T14914-S14915-S14916-S15460-cpt)
-    """
+    """specDomain: S15460 (C-0-T14914-S14915-S14916-S15460-cpt)"""
     VALUE_1724_4 = "1724-4"
     VALUE_1725_1 = "1725-1"
     VALUE_1726_9 = "1726-9"
@@ -16487,17 +14561,13 @@ class RaceAmericanIndianYuman(Enum):
 
 
 class RaceAmericanIndianYurok(Enum):
-    """
-    specDomain: S15468 (C-0-T14914-S14915-S14916-S15468-cpt)
-    """
+    """specDomain: S15468 (C-0-T14914-S14915-S14916-S15468-cpt)"""
     VALUE_1732_7 = "1732-7"
     VALUE_1733_5 = "1733-5"
 
 
 class RaceAsian(Enum):
-    """
-    specDomain: S15743 (C-0-T14914-S15743-cpt)
-    """
+    """specDomain: S15743 (C-0-T14914-S15743-cpt)"""
     VALUE_2028_9 = "2028-9"
     VALUE_2029_7 = "2029-7"
     VALUE_2030_5 = "2030-5"
@@ -16526,9 +14596,7 @@ class RaceAsian(Enum):
 
 
 class RaceBlackOrAfricanAmerican(Enum):
-    """
-    specDomain: S15768 (C-0-T14914-S15768-cpt)
-    """
+    """specDomain: S15768 (C-0-T14914-S15768-cpt)"""
     VALUE_2060_2 = "2060-2"
     VALUE_2061_0 = "2061-0"
     VALUE_2062_8 = "2062-8"
@@ -16551,9 +14619,7 @@ class RaceBlackOrAfricanAmerican(Enum):
 
 
 class RaceCanadianLatinIndian(Enum):
-    """
-    specDomain: S14965 (C-0-T14914-S14915-S14916-S14965-cpt)
-    """
+    """specDomain: S14965 (C-0-T14914-S14915-S14916-S14965-cpt)"""
     VALUE_1068_6 = "1068-6"
     VALUE_1069_4 = "1069-4"
     VALUE_1070_2 = "1070-2"
@@ -16563,9 +14629,7 @@ class RaceCanadianLatinIndian(Enum):
 
 
 class RaceHawaiianOrPacificIsland(Enum):
-    """
-    specDomain: S15787 (C-0-T14914-S15787-cpt)
-    """
+    """specDomain: S15787 (C-0-T14914-S15787-cpt)"""
     VALUE_2100_6 = "2100-6"
     VALUE_2101_4 = "2101-4"
     VALUE_2104_8 = "2104-8"
@@ -16596,9 +14660,7 @@ class RaceHawaiianOrPacificIsland(Enum):
 
 
 class RaceNativeAmerican(Enum):
-    """
-    specDomain: S14915 (C-0-T14914-S14915-cpt)
-    """
+    """specDomain: S14915 (C-0-T14914-S14915-cpt)"""
     VALUE_1739_2 = "1739-2"
     VALUE_1740_0 = "1740-0"
     VALUE_1813_5 = "1813-5"
@@ -17430,9 +15492,7 @@ class RaceNativeAmerican(Enum):
 
 
 class RacePacificIslandMelanesian(Enum):
-    """
-    specDomain: S15808 (C-0-T14914-S15787-S15808-cpt)
-    """
+    """specDomain: S15808 (C-0-T14914-S15787-S15808-cpt)"""
     VALUE_2100_6 = "2100-6"
     VALUE_2101_4 = "2101-4"
     VALUE_2104_8 = "2104-8"
@@ -17441,9 +15501,7 @@ class RacePacificIslandMelanesian(Enum):
 
 
 class RacePacificIslandMicronesian(Enum):
-    """
-    specDomain: S15794 (C-0-T14914-S15787-S15794-cpt)
-    """
+    """specDomain: S15794 (C-0-T14914-S15787-S15794-cpt)"""
     VALUE_2085_9 = "2085-9"
     VALUE_2092_5 = "2092-5"
     VALUE_2088_3 = "2088-3"
@@ -17461,9 +15519,7 @@ class RacePacificIslandMicronesian(Enum):
 
 
 class RacePacificIslandPolynesian(Enum):
-    """
-    specDomain: S15788 (C-0-T14914-S15787-S15788-cpt)
-    """
+    """specDomain: S15788 (C-0-T14914-S15787-S15788-cpt)"""
     VALUE_2078_4 = "2078-4"
     VALUE_2079_2 = "2079-2"
     VALUE_2080_0 = "2080-0"
@@ -17473,9 +15529,7 @@ class RacePacificIslandPolynesian(Enum):
 
 
 class RaceSoutheastAlaskanIndian(Enum):
-    """
-    specDomain: S15543 (C-0-T14914-S14915-S15470-S15471-S15543-cpt)
-    """
+    """specDomain: S15543 (C-0-T14914-S14915-S15470-S15471-S15543-cpt)"""
     VALUE_1813_5 = "1813-5"
     VALUE_1814_3 = "1814-3"
     VALUE_1815_0 = "1815-0"
@@ -17505,9 +15559,7 @@ class RaceSoutheastAlaskanIndian(Enum):
 
 
 class RaceSoutheastAlaskanIndianTlingit(Enum):
-    """
-    specDomain: S15544 (C-0-T14914-S14915-S15470-S15471-S15543-S15544-cpt)
-    """
+    """specDomain: S15544 (C-0-T14914-S14915-S15470-S15471-S15543-S15544-cpt)"""
     VALUE_1813_5 = "1813-5"
     VALUE_1814_3 = "1814-3"
     VALUE_1815_0 = "1815-0"
@@ -17534,17 +15586,13 @@ class RaceSoutheastAlaskanIndianTlingit(Enum):
 
 
 class RaceSoutheastAlaskanIndianTsimshian(Enum):
-    """
-    specDomain: S15567 (C-0-T14914-S14915-S15470-S15471-S15543-S15567-cpt)
-    """
+    """specDomain: S15567 (C-0-T14914-S14915-S15470-S15471-S15543-S15567-cpt)"""
     VALUE_1837_4 = "1837-4"
     VALUE_1838_2 = "1838-2"
 
 
 class RaceWhite(Enum):
-    """
-    specDomain: S15814 (C-0-T14914-S15814-cpt)
-    """
+    """specDomain: S15814 (C-0-T14914-S15814-cpt)"""
     VALUE_2129_5 = "2129-5"
     VALUE_2108_9 = "2108-9"
     VALUE_2109_7 = "2109-7"
@@ -17569,16 +15617,12 @@ class RaceWhite(Enum):
 
 
 class RaceWhiteArab(Enum):
-    """
-    specDomain: S15834 (C-0-T14914-S15814-S15834-cpt)
-    """
+    """specDomain: S15834 (C-0-T14914-S15814-S15834-cpt)"""
     VALUE_2129_5 = "2129-5"
 
 
 class RaceWhiteEuropean(Enum):
-    """
-    specDomain: S15815 (C-0-T14914-S15814-S15815-cpt)
-    """
+    """specDomain: S15815 (C-0-T14914-S15814-S15815-cpt)"""
     VALUE_2108_9 = "2108-9"
     VALUE_2109_7 = "2109-7"
     VALUE_2110_5 = "2110-5"
@@ -17591,9 +15635,7 @@ class RaceWhiteEuropean(Enum):
 
 
 class RaceWhiteMiddleEast(Enum):
-    """
-    specDomain: S15824 (C-0-T14914-S15814-S15824-cpt)
-    """
+    """specDomain: S15824 (C-0-T14914-S15814-S15824-cpt)"""
     VALUE_2118_8 = "2118-8"
     VALUE_2126_1 = "2126-1"
     VALUE_2119_6 = "2119-6"
@@ -17607,9 +15649,7 @@ class RaceWhiteMiddleEast(Enum):
 
 
 class RadDiagTherPracticeSetting(Enum):
-    """
-    specDomain: S10908 (C-0-T12206-A17660-A19450-A10588-S10902-S10908-cpt)
-    """
+    """specDomain: S10908 (C-0-T12206-A17660-A19450-A10588-S10902-S10908-cpt)"""
     RADDX = "RADDX"
     RNEU = "RNEU"
     VALUE_261_QX0203_N = "261QX0203N"
@@ -17617,9 +15657,7 @@ class RadDiagTherPracticeSetting(Enum):
 
 
 class RadiologicTechnologistHipaa(Enum):
-    """
-    abstDomain: A13645 (C-0-T13129-A13130-A13644-A13645-cpt)
-    """
+    """abstDomain: A13645 (C-0-T13129-A13130-A13644-A13645-cpt)"""
     VALUE_2471_C1101_N = "2471C1101N"
     VALUE_2471_C3401_N = "2471C3401N"
     VALUE_2471_C3402_N = "2471C3402N"
@@ -17637,9 +15675,7 @@ class RadiologicTechnologistHipaa(Enum):
 
 
 class RadiologicTechnologistProviderCodes(Enum):
-    """
-    specDomain: S20609 (C-0-T19465-S20608-S20609-cpt)
-    """
+    """specDomain: S20609 (C-0-T19465-S20608-S20609-cpt)"""
     VALUE_247100000_X = "247100000X"
     VALUE_2471_B0102_X = "2471B0102X"
     VALUE_2471_C1106_X = "2471C1106X"
@@ -17657,9 +15693,7 @@ class RadiologicTechnologistProviderCodes(Enum):
 
 
 class RadiologyProviderCodes(Enum):
-    """
-    specDomain: S20253 (C-0-T19465-S20096-S20253-cpt)
-    """
+    """specDomain: S20253 (C-0-T19465-S20096-S20253-cpt)"""
     VALUE_208500000_X = "208500000X"
     VALUE_2085_B0100_X = "2085B0100X"
     VALUE_2085_R0202_X = "2085R0202X"
@@ -17674,18 +15708,14 @@ class RadiologyProviderCodes(Enum):
 
 
 class ReactionDetectedIssueCode(Enum):
-    """
-    specDomain: S16672 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-S16672-cpt)
-    """
+    """specDomain: S16672 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-S16672-cpt)"""
     REACT = "REACT"
     ALGY = "ALGY"
     INT_VALUE = "INT"
 
 
 class RealmOfUse(Enum):
-    """
-    abstDomain: A11050 (C-0-T11046-A11050-cpt)
-    """
+    """abstDomain: A11050 (C-0-T11046-A11050-cpt)"""
     CANADA = "Canada"
     NORTH_AMERICA = "NorthAmerica"
     USA = "USA"
@@ -17693,17 +15723,13 @@ class RealmOfUse(Enum):
 
 
 class RectalInstillation(Enum):
-    """
-    specDomain: S14715 (C-0-T14581-A17021-A17311-S14715-cpt)
-    """
+    """specDomain: S14715 (C-0-T14581-A17021-A17311-S14715-cpt)"""
     RECINSTL = "RECINSTL"
     RECTINSTL = "RECTINSTL"
 
 
 class RectalRoute(Enum):
-    """
-    abstDomain: A17311 (C-0-T14581-A17021-A17311-cpt)
-    """
+    """abstDomain: A17311 (C-0-T14581-A17021-A17311-cpt)"""
     RECINSTL = "RECINSTL"
     RECTINSTL = "RECTINSTL"
     ENEMA = "ENEMA"
@@ -17714,33 +15740,25 @@ class RectalRoute(Enum):
 
 
 class RefillCompletePharmacySupplyType(Enum):
-    """
-    specDomain: S16216 (C-0-T13953-A13954-A16208-S16215-S16216-cpt)
-    """
+    """specDomain: S16216 (C-0-T13953-A13954-A16208-S16215-S16216-cpt)"""
     RFC = "RFC"
     RFCS = "RFCS"
 
 
 class RefillFirstHerePharmacySupplyType(Enum):
-    """
-    specDomain: S16218 (C-0-T13953-A13954-A16208-S16215-S16218-cpt)
-    """
+    """specDomain: S16218 (C-0-T13953-A13954-A16208-S16215-S16218-cpt)"""
     RFF = "RFF"
     RFFS = "RFFS"
 
 
 class RefillPartFillPharmacySupplyType(Enum):
-    """
-    specDomain: S16217 (C-0-T13953-A13954-A16208-S16215-S16217-cpt)
-    """
+    """specDomain: S16217 (C-0-T13953-A13954-A16208-S16215-S16217-cpt)"""
     RFP = "RFP"
     RFPS = "RFPS"
 
 
 class RefillPharmacySupplyType(Enum):
-    """
-    specDomain: S16215 (C-0-T13953-A13954-A16208-S16215-cpt)
-    """
+    """specDomain: S16215 (C-0-T13953-A13954-A16208-S16215-cpt)"""
     RFC = "RFC"
     RFCS = "RFCS"
     RFF = "RFF"
@@ -17756,17 +15774,13 @@ class RefillPharmacySupplyType(Enum):
 
 
 class RefillTrialBalancePharmacySupplyType(Enum):
-    """
-    specDomain: S16213 (C-0-T13953-A13954-A16208-S16215-S16213-cpt)
-    """
+    """specDomain: S16213 (C-0-T13953-A13954-A16208-S16215-S16213-cpt)"""
     TB = "TB"
     TBS = "TBS"
 
 
 class RegisteredDieticianHipaa(Enum):
-    """
-    specDomain: S13201 (C-0-T13129-A13130-A13197-S13201-cpt)
-    """
+    """specDomain: S13201 (C-0-T13129-A13130-A13197-S13201-cpt)"""
     VALUE_133_V00000_N = "133V00000N"
     VALUE_133_VN1006_N = "133VN1006N"
     VALUE_133_VN1004_N = "133VN1004N"
@@ -17774,9 +15788,7 @@ class RegisteredDieticianHipaa(Enum):
 
 
 class RegisteredNurseHipaa(Enum):
-    """
-    specDomain: S13232 (C-0-T13129-A13130-A13229-S13232-cpt)
-    """
+    """specDomain: S13232 (C-0-T13129-A13130-A13229-S13232-cpt)"""
     VALUE_163_W00000_N = "163W00000N"
     VALUE_163_WA0400_N = "163WA0400N"
     VALUE_163_WA2000_N = "163WA2000N"
@@ -17837,9 +15849,7 @@ class RegisteredNurseHipaa(Enum):
 
 
 class RegisteredNurseProviderCodes(Enum):
-    """
-    specDomain: S20370 (C-0-T19465-S20366-S20370-cpt)
-    """
+    """specDomain: S20370 (C-0-T19465-S20366-S20370-cpt)"""
     VALUE_163_W00000_X = "163W00000X"
     VALUE_163_WA0400_X = "163WA0400X"
     VALUE_163_WA2000_X = "163WA2000X"
@@ -17898,49 +15908,37 @@ class RegisteredNurseProviderCodes(Enum):
 
 
 class RehabilitationCounselorHipaa(Enum):
-    """
-    specDomain: S13625 (C-0-T13129-A13130-A13592-S13625-cpt)
-    """
+    """specDomain: S13625 (C-0-T13129-A13130-A13592-S13625-cpt)"""
     VALUE_225_C00000_N = "225C00000N"
     VALUE_225_CA2400_N = "225CA2400N"
 
 
 class RehabilitationCounselorProviderCodes(Enum):
-    """
-    specDomain: S20563 (C-0-T19465-S20532-S20563-cpt)
-    """
+    """specDomain: S20563 (C-0-T19465-S20532-S20563-cpt)"""
     VALUE_225_C00000_X = "225C00000X"
     VALUE_225_CA2400_X = "225CA2400X"
     VALUE_225_CA2500_X = "225CA2500X"
 
 
 class RehabilitationHospital(Enum):
-    """
-    specDomain: S10604 (C-0-T12206-A17660-A19450-A10588-S10602-S10604-cpt)
-    """
+    """specDomain: S10604 (C-0-T12206-A17660-A19450-A10588-S10602-S10604-cpt)"""
     RH = "RH"
     VALUE_283_XC2000_N = "283XC2000N"
 
 
 class RehabilitationHospitalProviderCodes(Enum):
-    """
-    specDomain: S20746 (C-0-T19465-S20733-S20746-cpt)
-    """
+    """specDomain: S20746 (C-0-T19465-S20733-S20746-cpt)"""
     VALUE_283_X00000_X = "283X00000X"
     VALUE_283_XC2000_X = "283XC2000X"
 
 
 class RejectedEditStatus(Enum):
-    """
-    specDomain: S11043 (C-0-T11040-S11043-cpt)
-    """
+    """specDomain: S11043 (C-0-T11040-S11043-cpt)"""
     R = "R"
 
 
 class RelatedReactionDetectedIssueCode(Enum):
-    """
-    specDomain: S16676 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-S16676-cpt)
-    """
+    """specDomain: S16676 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-S16676-cpt)"""
     RREACT = "RREACT"
     RALG = "RALG"
     RINT = "RINT"
@@ -17948,9 +15946,7 @@ class RelatedReactionDetectedIssueCode(Enum):
 
 
 class RelationalOperator(Enum):
-    """
-    vocSet: T209 (C-0-T209-cpt)
-    """
+    """vocSet: T209 (C-0-T209-cpt)"""
     CT = "CT"
     EQ = "EQ"
     GN = "GN"
@@ -17962,18 +15958,14 @@ class RelationalOperator(Enum):
 
 
 class RelationshipConjunction(Enum):
-    """
-    vocSet: T10365 (C-0-T10365-cpt)
-    """
+    """vocSet: T10365 (C-0-T10365-cpt)"""
     AND_VALUE = "AND"
     XOR = "XOR"
     OR_VALUE = "OR"
 
 
 class ReligiousAffiliation(Enum):
-    """
-    vocSet: T19185 (C-0-T19185-cpt)
-    """
+    """vocSet: T19185 (C-0-T19185-cpt)"""
     VALUE_1001 = "1001"
     VALUE_1002 = "1002"
     VALUE_1003 = "1003"
@@ -18059,26 +16051,20 @@ class ReligiousAffiliation(Enum):
 
 
 class RepetitionsOutOfRange(Enum):
-    """
-    specDomain: S21662 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-S21662-cpt)
-    """
+    """specDomain: S21662 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-S21662-cpt)"""
     REP_RANGE = "REP_RANGE"
     MAXOCCURS = "MAXOCCURS"
     MINOCCURS = "MINOCCURS"
 
 
 class ResearchSubjectRoleBasis(Enum):
-    """
-    abstDomain: A19417 (C-0-T12206-A19417-cpt)
-    """
+    """abstDomain: A19417 (C-0-T12206-A19417-cpt)"""
     ERL = "ERL"
     SCN = "SCN"
 
 
 class ResidentialTreatmentFacilitiesProviderCodes(Enum):
-    """
-    specDomain: S20766 (C-0-T19465-S20766-cpt)
-    """
+    """specDomain: S20766 (C-0-T19465-S20766-cpt)"""
     VALUE_324500000_X = "324500000X"
     VALUE_3245_S0500_X = "3245S0500X"
     VALUE_320000000_X = "320000000X"
@@ -18091,9 +16077,7 @@ class ResidentialTreatmentFacilitiesProviderCodes(Enum):
 
 
 class ResidentialTreatmentPracticeSetting(Enum):
-    """
-    specDomain: S10607 (C-0-T12206-A17660-A19450-A10588-S10607-cpt)
-    """
+    """specDomain: S10607 (C-0-T12206-A17660-A19450-A10588-S10607-cpt)"""
     RTF = "RTF"
     PRC = "PRC"
     VALUE_324500000_N = "324500000N"
@@ -18101,16 +16085,12 @@ class ResidentialTreatmentPracticeSetting(Enum):
 
 
 class ResourceGroupEntityType(Enum):
-    """
-    abstDomain: A19652 (C-0-T16040-A19652-cpt)
-    """
+    """abstDomain: A19652 (C-0-T16040-A19652-cpt)"""
     PRAC = "PRAC"
 
 
 class RespiratoryAndOrRehabilitativeAndOrRestorativeProviderHipaa(Enum):
-    """
-    abstDomain: A13592 (C-0-T13129-A13130-A13592-cpt)
-    """
+    """abstDomain: A13592 (C-0-T13129-A13130-A13592-cpt)"""
     VALUE_225_X00000_N = "225X00000N"
     VALUE_225_XC0400_N = "225XC0400N"
     VALUE_225_XE1200_N = "225XE1200N"
@@ -18153,17 +16133,13 @@ class RespiratoryAndOrRehabilitativeAndOrRestorativeProviderHipaa(Enum):
 
 
 class RespiratoryAndOrRehabilitativeAndOrRestorativeSpecialistOrTechnologistHipaa(Enum):
-    """
-    abstDomain: A13631 (C-0-T13129-A13130-A13592-A13631-cpt)
-    """
+    """abstDomain: A13631 (C-0-T13129-A13130-A13592-A13631-cpt)"""
     VALUE_2255_A2300_N = "2255A2300N"
     VALUE_2255_R0406_N = "2255R0406N"
 
 
 class RespiratoryRehabilitativeandRestorativeServiceProvidersProviderCodes(Enum):
-    """
-    specDomain: S20532 (C-0-T19465-S20532-cpt)
-    """
+    """specDomain: S20532 (C-0-T19465-S20532-cpt)"""
     VALUE_225_X00000_X = "225X00000X"
     VALUE_225_XE1200_X = "225XE1200X"
     VALUE_225_XH1200_X = "225XH1200X"
@@ -18233,9 +16209,7 @@ class RespiratoryRehabilitativeandRestorativeServiceProvidersProviderCodes(Enum)
 
 
 class RespiratoryTherapistCertifiedProviderCodes(Enum):
-    """
-    specDomain: S20567 (C-0-T19465-S20532-S20567-cpt)
-    """
+    """specDomain: S20567 (C-0-T19465-S20532-S20567-cpt)"""
     VALUE_227800000_X = "227800000X"
     VALUE_2278_C0205_X = "2278C0205X"
     VALUE_2278_E0002_X = "2278E0002X"
@@ -18253,17 +16227,13 @@ class RespiratoryTherapistCertifiedProviderCodes(Enum):
 
 
 class RespiratoryTherapistHipaa(Enum):
-    """
-    specDomain: S13629 (C-0-T13129-A13130-A13592-S13629-cpt)
-    """
+    """specDomain: S13629 (C-0-T13129-A13130-A13592-S13629-cpt)"""
     VALUE_225900000_N = "225900000N"
     VALUE_2259_P1700_N = "2259P1700N"
 
 
 class RespiratoryTherapistRegisteredProviderCodes(Enum):
-    """
-    specDomain: S20581 (C-0-T19465-S20532-S20581-cpt)
-    """
+    """specDomain: S20581 (C-0-T19465-S20532-S20581-cpt)"""
     VALUE_227900000_X = "227900000X"
     VALUE_2279_C0205_X = "2279C0205X"
     VALUE_2279_E0002_X = "2279E0002X"
@@ -18281,9 +16251,7 @@ class RespiratoryTherapistRegisteredProviderCodes(Enum):
 
 
 class RespiteCareFacilityProviderCodes(Enum):
-    """
-    specDomain: S20770 (C-0-T19465-S20770-cpt)
-    """
+    """specDomain: S20770 (C-0-T19465-S20770-cpt)"""
     VALUE_385_H00000_X = "385H00000X"
     VALUE_385_HR2050_X = "385HR2050X"
     VALUE_385_HR2055_X = "385HR2055X"
@@ -18293,9 +16261,7 @@ class RespiteCareFacilityProviderCodes(Enum):
 
 
 class RespiteCareProviderCodes(Enum):
-    """
-    specDomain: S20771 (C-0-T19465-S20770-S20771-cpt)
-    """
+    """specDomain: S20771 (C-0-T19465-S20770-S20771-cpt)"""
     VALUE_385_H00000_X = "385H00000X"
     VALUE_385_HR2050_X = "385HR2050X"
     VALUE_385_HR2055_X = "385HR2055X"
@@ -18304,9 +16270,7 @@ class RespiteCareProviderCodes(Enum):
 
 
 class ResponseLevel(Enum):
-    """
-    vocSet: T14761 (C-0-T14761-cpt)
-    """
+    """vocSet: T14761 (C-0-T14761-cpt)"""
     C = "C"
     F = "F"
     D = "D"
@@ -18317,27 +16281,21 @@ class ResponseLevel(Enum):
 
 
 class ResponseModality(Enum):
-    """
-    vocSet: T394 (C-0-T394-cpt)
-    """
+    """vocSet: T394 (C-0-T394-cpt)"""
     B = "B"
     T = "T"
     R = "R"
 
 
 class ResponseMode(Enum):
-    """
-    vocSet: T19650 (C-0-T19650-cpt)
-    """
+    """vocSet: T19650 (C-0-T19650-cpt)"""
     D = "D"
     I = "I"
     Q = "Q"
 
 
 class ResponsibleParty(Enum):
-    """
-    specDomain: S22030 (C-0-T12206-A19690-S22030-cpt)
-    """
+    """specDomain: S22030 (C-0-T12206-A19690-S22030-cpt)"""
     POWATT = "POWATT"
     DPOWATT = "DPOWATT"
     HPOWATT = "HPOWATT"
@@ -18349,48 +16307,36 @@ class ResponsibleParty(Enum):
 
 
 class RetrobulbarRoute(Enum):
-    """
-    abstDomain: A17321 (C-0-T14581-A17021-A17321-cpt)
-    """
+    """abstDomain: A17321 (C-0-T14581-A17021-A17321-cpt)"""
     RBINJ = "RBINJ"
 
 
 class RheumClinPracticeSetting(Enum):
-    """
-    specDomain: S10593 (C-0-T12206-A17660-A19450-A10588-S10589-S10593-cpt)
-    """
+    """specDomain: S10593 (C-0-T12206-A17660-A19450-A10588-S10589-S10593-cpt)"""
     RHEUM = "RHEUM"
     PEDRHEUM = "PEDRHEUM"
 
 
 class Rinse(Enum):
-    """
-    abstDomain: A14730 (C-0-T14581-A16931-A14730-cpt)
-    """
+    """abstDomain: A14730 (C-0-T14581-A16931-A14730-cpt)"""
     DENRINSE = "DENRINSE"
     ORRINSE = "ORRINSE"
 
 
 class Ritwan(Enum):
-    """
-    abstDomain: A18189 (C-0-T18130-A18131-A18189-cpt)
-    """
+    """abstDomain: A18189 (C-0-T18130-A18131-A18189-cpt)"""
     X_YUR = "x-YUR"
 
 
 class River(Enum):
-    """
-    abstDomain: A18282 (C-0-T18130-A18241-A18274-A18275-A18282-cpt)
-    """
+    """abstDomain: A18282 (C-0-T18130-A18241-A18274-A18275-A18282-cpt)"""
     X_MRC = "x-MRC"
     X_MOV = "x-MOV"
     X_YUM = "x-YUM"
 
 
 class RoleClassAgent(Enum):
-    """
-    specDomain: S14006 (C-0-T11555-S13940-A19313-A19316-A10416-S14006-cpt)
-    """
+    """specDomain: S14006 (C-0-T11555-S13940-A19313-A19316-A10416-S14006-cpt)"""
     CON = "CON"
     ECON = "ECON"
     NOK = "NOK"
@@ -18402,9 +16348,7 @@ class RoleClassAgent(Enum):
 
 
 class RoleClassAssignedEntity(Enum):
-    """
-    specDomain: S11595 (C-0-T11555-S13940-A19313-A19316-A10416-S14006-S11595-cpt)
-    """
+    """specDomain: S11595 (C-0-T11555-S13940-A19313-A19316-A10416-S14006-S11595-cpt)"""
     CON = "CON"
     ECON = "ECON"
     NOK = "NOK"
@@ -18414,18 +16358,14 @@ class RoleClassAssignedEntity(Enum):
 
 
 class RoleClassContact(Enum):
-    """
-    specDomain: S12205 (C-0-T11555-S13940-A19313-A19316-A10416-S14006-S11595-S12205-cpt)
-    """
+    """specDomain: S12205 (C-0-T11555-S13940-A19313-A19316-A10416-S14006-S11595-S12205-cpt)"""
     CON = "CON"
     ECON = "ECON"
     NOK = "NOK"
 
 
 class RoleClassCoveredParty(Enum):
-    """
-    specDomain: S14011 (C-0-T11555-S13940-A19313-A19316-A10416-S14011-cpt)
-    """
+    """specDomain: S14011 (C-0-T11555-S13940-A19313-A19316-A10416-S14011-cpt)"""
     NAMED = "NAMED"
     DEPEN = "DEPEN"
     INDIV = "INDIV"
@@ -18436,42 +16376,32 @@ class RoleClassCoveredParty(Enum):
 
 
 class RoleClassDistributedMaterial(Enum):
-    """
-    specDomain: S10418 (C-0-T11555-S13940-A19313-A19105-S10418-cpt)
-    """
+    """specDomain: S10418 (C-0-T11555-S13940-A19313-A19105-S10418-cpt)"""
     DST = "DST"
     RET = "RET"
 
 
 class RoleClassEmployee(Enum):
-    """
-    specDomain: S11569 (C-0-T11555-S13940-A19313-A19316-A10416-S11569-cpt)
-    """
+    """specDomain: S11569 (C-0-T11555-S13940-A19313-A19316-A10416-S11569-cpt)"""
     EMP = "EMP"
     MIL = "MIL"
 
 
 class RoleClassEquivalentEntity(Enum):
-    """
-    vocSet: O20270 (C-0-O20270-cpt)
-    """
+    """vocSet: O20270 (C-0-O20270-cpt)"""
     SAME = "SAME"
     SUBY = "SUBY"
 
 
 class RoleClassExposureAgentCarrier(Enum):
-    """
-    specDomain: S22350 (C-0-T11555-S13940-A10429-S22350-cpt)
-    """
+    """specDomain: S22350 (C-0-T11555-S13940-A10429-S22350-cpt)"""
     EXPAGTCAR = "EXPAGTCAR"
     EXPVECTOR = "EXPVECTOR"
     FOMITE = "FOMITE"
 
 
 class RoleClassInactiveIngredient(Enum):
-    """
-    specDomain: S19089 (C-0-T11555-S13940-A10429-S10430-S19089-cpt)
-    """
+    """specDomain: S19089 (C-0-T11555-S13940-A10429-S10430-S19089-cpt)"""
     IACT = "IACT"
     COLR = "COLR"
     FLVR = "FLVR"
@@ -18480,9 +16410,7 @@ class RoleClassInactiveIngredient(Enum):
 
 
 class RoleClassIngredientEntity(Enum):
-    """
-    specDomain: S10430 (C-0-T11555-S13940-A10429-S10430-cpt)
-    """
+    """specDomain: S10430 (C-0-T11555-S13940-A10429-S10430-cpt)"""
     IACT = "IACT"
     COLR = "COLR"
     FLVR = "FLVR"
@@ -18498,9 +16426,7 @@ class RoleClassIngredientEntity(Enum):
 
 
 class RoleClassIngredientEntityActiveIngredientByBot(Enum):
-    """
-    specDomain: S10433 (C-0-T11555-S13940-A10429-S10430-S10433-cpt)
-    """
+    """specDomain: S10433 (C-0-T11555-S13940-A10429-S10430-S10433-cpt)"""
     ACTI = "ACTI"
     ACTIB = "ACTIB"
     ACTIM = "ACTIM"
@@ -18508,51 +16434,39 @@ class RoleClassIngredientEntityActiveIngredientByBot(Enum):
 
 
 class RoleClassInvestigationSubject(Enum):
-    """
-    specDomain: S21464 (C-0-T11555-S13940-A19313-A19316-A10416-S21464-cpt)
-    """
+    """specDomain: S21464 (C-0-T11555-S13940-A19313-A19316-A10416-S21464-cpt)"""
     INVSBJ = "INVSBJ"
     CASEBJ = "CASEBJ"
     RESBJ = "RESBJ"
 
 
 class RoleClassIsSpeciesEntity(Enum):
-    """
-    specDomain: S10441 (C-0-T11555-S13940-A10428-S10441-cpt)
-    """
+    """specDomain: S10441 (C-0-T11555-S13940-A10428-S10441-cpt)"""
     GEN = "GEN"
     GRIC = "GRIC"
 
 
 class RoleClassLicensedEntity(Enum):
-    """
-    specDomain: S16773 (C-0-T11555-S13940-A19313-A19316-A10416-S16773-cpt)
-    """
+    """specDomain: S16773 (C-0-T11555-S13940-A19313-A19316-A10416-S16773-cpt)"""
     LIC = "LIC"
     PROV = "PROV"
     NOT_VALUE = "NOT"
 
 
 class RoleClassLocatedEntity(Enum):
-    """
-    specDomain: S16815 (C-0-T11555-S13940-A10429-S16815-cpt)
-    """
+    """specDomain: S16815 (C-0-T11555-S13940-A10429-S16815-cpt)"""
     LOCE = "LOCE"
     STOR = "STOR"
 
 
 class RoleClassManufacturedProduct(Enum):
-    """
-    specDomain: S11580 (C-0-T11555-S13940-A19313-A19105-S11580-cpt)
-    """
+    """specDomain: S11580 (C-0-T11555-S13940-A19313-A19105-S11580-cpt)"""
     MANU = "MANU"
     THER = "THER"
 
 
 class RoleClassMutualRelationship(Enum):
-    """
-    abstDomain: A19316 (C-0-T11555-S13940-A19313-A19316-cpt)
-    """
+    """abstDomain: A19316 (C-0-T11555-S13940-A19313-A19316-cpt)"""
     CON = "CON"
     ECON = "ECON"
     NOK = "NOK"
@@ -18594,9 +16508,7 @@ class RoleClassMutualRelationship(Enum):
 
 
 class RoleClassNamedInsured(Enum):
-    """
-    specDomain: S21957 (C-0-T11555-S13940-A19313-A19316-A10416-S14011-S21957-cpt)
-    """
+    """specDomain: S21957 (C-0-T11555-S13940-A19313-A19316-A10416-S14011-S21957-cpt)"""
     NAMED = "NAMED"
     DEPEN = "DEPEN"
     INDIV = "INDIV"
@@ -18604,9 +16516,7 @@ class RoleClassNamedInsured(Enum):
 
 
 class RoleClassOntological(Enum):
-    """
-    abstDomain: A10428 (C-0-T11555-S13940-A10428-cpt)
-    """
+    """abstDomain: A10428 (C-0-T11555-S13940-A10428-cpt)"""
     GEN = "GEN"
     GRIC = "GRIC"
     EQUIV = "EQUIV"
@@ -18617,18 +16527,14 @@ class RoleClassOntological(Enum):
 
 
 class RoleClassOntologicalEquivalentEntityByBot(Enum):
-    """
-    specDomain: S22399 (C-0-T11555-S13940-A10428-S22399-cpt)
-    """
+    """specDomain: S22399 (C-0-T11555-S13940-A10428-S22399-cpt)"""
     EQUIV = "EQUIV"
     SAME = "SAME"
     SUBY = "SUBY"
 
 
 class RoleClassPartitive(Enum):
-    """
-    abstDomain: A10429 (C-0-T11555-S13940-A10429-cpt)
-    """
+    """abstDomain: A10429 (C-0-T11555-S13940-A10429-cpt)"""
     EXPAGTCAR = "EXPAGTCAR"
     EXPVECTOR = "EXPVECTOR"
     FOMITE = "FOMITE"
@@ -18656,17 +16562,13 @@ class RoleClassPartitive(Enum):
 
 
 class RoleClassPartitivePartByBot(Enum):
-    """
-    specDomain: S19102 (C-0-T11555-S13940-A10429-S19102-cpt)
-    """
+    """specDomain: S19102 (C-0-T11555-S13940-A10429-S19102-cpt)"""
     PART = "PART"
     ACTM = "ACTM"
 
 
 class RoleClassPassive(Enum):
-    """
-    abstDomain: A19105 (C-0-T11555-S13940-A19313-A19105-cpt)
-    """
+    """abstDomain: A19105 (C-0-T11555-S13940-A19313-A19105-cpt)"""
     DST = "DST"
     RET = "RET"
     MANU = "MANU"
@@ -18690,9 +16592,7 @@ class RoleClassPassive(Enum):
 
 
 class RoleClassRelationshipFormal(Enum):
-    """
-    abstDomain: A10416 (C-0-T11555-S13940-A19313-A19316-A10416-cpt)
-    """
+    """abstDomain: A10416 (C-0-T11555-S13940-A19313-A19316-A10416-cpt)"""
     CON = "CON"
     ECON = "ECON"
     NOK = "NOK"
@@ -18732,27 +16632,21 @@ class RoleClassRelationshipFormal(Enum):
 
 
 class RoleClassServiceDeliveryLocation(Enum):
-    """
-    specDomain: S16927 (C-0-T11555-S13940-A19313-A19105-S16927-cpt)
-    """
+    """specDomain: S16927 (C-0-T11555-S13940-A19313-A19105-S16927-cpt)"""
     SDLOC = "SDLOC"
     DSDLOC = "DSDLOC"
     ISDLOC = "ISDLOC"
 
 
 class RoleClassSpecimen(Enum):
-    """
-    specDomain: S11591 (C-0-T11555-S13940-A10429-S11591-cpt)
-    """
+    """specDomain: S11591 (C-0-T11555-S13940-A10429-S11591-cpt)"""
     SPEC = "SPEC"
     ALQT = "ALQT"
     ISLT = "ISLT"
 
 
 class RoleLinkRelated(Enum):
-    """
-    specDomain: S21429 (C-0-T11603-S21429-cpt)
-    """
+    """specDomain: S21429 (C-0-T11603-S21429-cpt)"""
     REL = "REL"
     IDENT = "IDENT"
     DIRAUTH = "DIRAUTH"
@@ -18763,9 +16657,7 @@ class RoleLinkRelated(Enum):
 
 
 class RoleLinkType(Enum):
-    """
-    vocSet: T11603 (C-0-T11603-cpt)
-    """
+    """vocSet: T11603 (C-0-T11603-cpt)"""
     REL = "REL"
     IDENT = "IDENT"
     DIRAUTH = "DIRAUTH"
@@ -18776,9 +16668,7 @@ class RoleLinkType(Enum):
 
 
 class RoleStatus(Enum):
-    """
-    vocSet: T15999 (C-0-T15999-cpt)
-    """
+    """vocSet: T15999 (C-0-T15999-cpt)"""
     NORMAL = "normal"
     ACTIVE = "active"
     CANCELLED = "cancelled"
@@ -18789,9 +16679,7 @@ class RoleStatus(Enum):
 
 
 class RoleStatusNormal(Enum):
-    """
-    specDomain: S16000 (C-0-T15999-S16000-cpt)
-    """
+    """specDomain: S16000 (C-0-T15999-S16000-cpt)"""
     NORMAL = "normal"
     ACTIVE = "active"
     CANCELLED = "cancelled"
@@ -18801,9 +16689,7 @@ class RoleStatusNormal(Enum):
 
 
 class Sahaptian(Enum):
-    """
-    abstDomain: A18500 (C-0-T18130-A18413-A18498-A18500-cpt)
-    """
+    """abstDomain: A18500 (C-0-T18130-A18413-A18498-A18500-cpt)"""
     X_WAR = "x-WAR"
     X_UMA = "x-UMA"
     X_WAA = "x-WAA"
@@ -18811,25 +16697,19 @@ class Sahaptian(Enum):
 
 
 class SaukFoxKickapoo(Enum):
-    """
-    abstDomain: A18164 (C-0-T18130-A18131-A18132-A18164-cpt)
-    """
+    """abstDomain: A18164 (C-0-T18130-A18131-A18132-A18164-cpt)"""
     X_KIC = "x-KIC"
     X_SAC = "x-SAC"
     X_SJW = "x-SJW"
 
 
 class ScalpRoute(Enum):
-    """
-    abstDomain: A17323 (C-0-T14581-A17021-A17323-cpt)
-    """
+    """abstDomain: A17323 (C-0-T14581-A17021-A17323-cpt)"""
     SCALP = "SCALP"
 
 
 class SchedulingActReason(Enum):
-    """
-    abstDomain: A14879 (C-0-T14878-A14879-cpt)
-    """
+    """abstDomain: A14879 (C-0-T14878-A14879-cpt)"""
     MTG = "MTG"
     MED = "MED"
     FIN = "FIN"
@@ -18840,25 +16720,19 @@ class SchedulingActReason(Enum):
 
 
 class Sequencing(Enum):
-    """
-    vocSet: T390 (C-0-T390-cpt)
-    """
+    """vocSet: T390 (C-0-T390-cpt)"""
     A = "A"
     D = "D"
     N = "N"
 
 
 class SerranoGabrielino(Enum):
-    """
-    abstDomain: A18622 (C-0-T18130-A18605-A18621-A18622-cpt)
-    """
+    """abstDomain: A18622 (C-0-T18130-A18605-A18621-A18622-cpt)"""
     X_SER = "x-SER"
 
 
 class SetOperator(Enum):
-    """
-    vocSet: T17416 (C-0-T17416-cpt)
-    """
+    """vocSet: T17416 (C-0-T17416-cpt)"""
     VALUE_SET_OPERATOR = "_ValueSetOperator"
     H = "H"
     E = "E"
@@ -18868,9 +16742,7 @@ class SetOperator(Enum):
 
 
 class SetUpdateMode(Enum):
-    """
-    abstDomain: A10024 (C-0-T10018-A10024-cpt)
-    """
+    """abstDomain: A10024 (C-0-T10018-A10024-cpt)"""
     ESA = "ESA"
     ESAC = "ESAC"
     ESC = "ESC"
@@ -18878,25 +16750,19 @@ class SetUpdateMode(Enum):
 
 
 class SeverityObservation(Enum):
-    """
-    abstDomain: A16643 (C-0-T16614-A16643-cpt)
-    """
+    """abstDomain: A16643 (C-0-T16614-A16643-cpt)"""
     H = "H"
     L = "L"
     M = "M"
 
 
 class Shasta(Enum):
-    """
-    abstDomain: A18244 (C-0-T18130-A18241-A18244-cpt)
-    """
+    """abstDomain: A18244 (C-0-T18130-A18241-A18244-cpt)"""
     X_SHT = "x-SHT"
 
 
 class Sibling(Enum):
-    """
-    specDomain: S11567 (C-0-T12206-A19563-S17926-S11567-cpt)
-    """
+    """specDomain: S11567 (C-0-T12206-A19563-S17926-S11567-cpt)"""
     HSIB = "HSIB"
     HBRO = "HBRO"
     HSIS = "HSIS"
@@ -18915,18 +16781,14 @@ class Sibling(Enum):
 
 
 class SiblingInLaw(Enum):
-    """
-    specDomain: S19782 (C-0-T12206-A19563-S17926-S11567-S19782-cpt)
-    """
+    """specDomain: S19782 (C-0-T12206-A19563-S17926-S11567-S19782-cpt)"""
     SIBINLAW = "SIBINLAW"
     BROINLAW = "BROINLAW"
     SISINLAW = "SISINLAW"
 
 
 class SignificantOtherRoleType(Enum):
-    """
-    specDomain: S19755 (C-0-T12206-A19563-S17926-S19755-cpt)
-    """
+    """specDomain: S19755 (C-0-T12206-A19563-S17926-S19755-cpt)"""
     SPS = "SPS"
     HUSB = "HUSB"
     WIFE = "WIFE"
@@ -18934,68 +16796,52 @@ class SignificantOtherRoleType(Enum):
 
 
 class SinusUnspecifiedRoute(Enum):
-    """
-    abstDomain: A17325 (C-0-T14581-A17021-A17325-cpt)
-    """
+    """abstDomain: A17325 (C-0-T14581-A17021-A17325-cpt)"""
     ENDOSININJ = "ENDOSININJ"
     SININSTIL = "SININSTIL"
 
 
 class SirenikskiYupik(Enum):
-    """
-    abstDomain: A18193 (C-0-T18130-A18191-A18192-A18193-cpt)
-    """
+    """abstDomain: A18193 (C-0-T18130-A18191-A18192-A18193-cpt)"""
     X_ESU = "x-ESU"
     X_ESS = "x-ESS"
     X_EMS = "x-EMS"
 
 
 class SkilledNursingFacilityProviderCodes(Enum):
-    """
-    specDomain: S20765 (C-0-T19465-S20758-S20765-cpt)
-    """
+    """specDomain: S20765 (C-0-T19465-S20758-S20765-cpt)"""
     VALUE_314000000_X = "314000000X"
     VALUE_3140_N1450_X = "3140N1450X"
 
 
 class SkinRoute(Enum):
-    """
-    abstDomain: A17328 (C-0-T14581-A17021-A17328-cpt)
-    """
+    """abstDomain: A17328 (C-0-T14581-A17021-A17328-cpt)"""
     OCDRESTA = "OCDRESTA"
     SKIN = "SKIN"
 
 
 class SocialWorkerHipaa(Enum):
-    """
-    specDomain: S13171 (C-0-T13129-A13130-A13131-S13171-cpt)
-    """
+    """specDomain: S13171 (C-0-T13129-A13130-A13131-S13171-cpt)"""
     VALUE_104100000_N = "104100000N"
     VALUE_1041_C0700_N = "1041C0700N"
     VALUE_1041_S0200_N = "1041S0200N"
 
 
 class SocialWorkerProviderCodes(Enum):
-    """
-    specDomain: S20305 (C-0-T19465-S20275-S20305-cpt)
-    """
+    """specDomain: S20305 (C-0-T19465-S20275-S20305-cpt)"""
     VALUE_104100000_X = "104100000X"
     VALUE_1041_C0700_X = "1041C0700X"
     VALUE_1041_S0200_X = "1041S0200X"
 
 
 class SoftTissueRoute(Enum):
-    """
-    abstDomain: A17331 (C-0-T14581-A17021-A17331-cpt)
-    """
+    """abstDomain: A17331 (C-0-T14581-A17021-A17331-cpt)"""
     SOFTISINJ = "SOFTISINJ"
     SOFTISINSTIL = "SOFTISINSTIL"
 
 
 class SolidDrugForm(Enum):
-    """
-    abstDomain: A14484 (C-0-T19651-A14411-A14412-A14484-cpt)
-    """
+    """abstDomain: A14484 (C-0-T19651-A14411-A14412-A14484-cpt)"""
     BARSOAP = "BARSOAP"
     MEDBAR = "MEDBAR"
     BAR = "BAR"
@@ -19058,9 +16904,7 @@ class SolidDrugForm(Enum):
 
 
 class SolutionDrugForm(Enum):
-    """
-    specDomain: S14419 (C-0-T19651-A14411-A14412-A14413-S14419-cpt)
-    """
+    """specDomain: S14419 (C-0-T19651-A14411-A14412-A14413-S14419-cpt)"""
     DROP = "DROP"
     NDROP = "NDROP"
     OPDROP = "OPDROP"
@@ -19085,32 +16929,24 @@ class SolutionDrugForm(Enum):
 
 
 class SouthernAlaska(Enum):
-    """
-    abstDomain: A18359 (C-0-T18130-A18352-A18356-A18358-A18359-cpt)
-    """
+    """abstDomain: A18359 (C-0-T18130-A18352-A18356-A18358-A18359-cpt)"""
     X_AHT = "x-AHT"
     X_TFN = "x-TFN"
 
 
 class SouthernCaddoan(Enum):
-    """
-    abstDomain: A18233 (C-0-T18130-A18223-A18233-cpt)
-    """
+    """abstDomain: A18233 (C-0-T18130-A18223-A18233-cpt)"""
     X_CAD = "x-CAD"
 
 
 class SouthernNumic(Enum):
-    """
-    abstDomain: A18617 (C-0-T18130-A18605-A18606-A18617-cpt)
-    """
+    """abstDomain: A18617 (C-0-T18130-A18605-A18606-A18617-cpt)"""
     X_KAW = "x-KAW"
     X_UTE = "x-UTE"
 
 
 class SpecialistProviderCodes(Enum):
-    """
-    specDomain: S20448 (C-0-T19465-S20434-S20448-cpt)
-    """
+    """specDomain: S20448 (C-0-T19465-S20434-S20448-cpt)"""
     VALUE_174_M00000_X = "174M00000X"
     VALUE_174_MM1900_X = "174MM1900X"
     VALUE_174400000_X = "174400000X"
@@ -19121,9 +16957,7 @@ class SpecialistProviderCodes(Enum):
 
 
 class SpecialistTechnologistCardiovascularProviderCodes(Enum):
-    """
-    specDomain: S20623 (C-0-T19465-S20608-S20623-cpt)
-    """
+    """specDomain: S20623 (C-0-T19465-S20608-S20623-cpt)"""
     VALUE_246_X00000_X = "246X00000X"
     VALUE_246_XC2901_X = "246XC2901X"
     VALUE_246_XS1301_X = "246XS1301X"
@@ -19131,9 +16965,7 @@ class SpecialistTechnologistCardiovascularProviderCodes(Enum):
 
 
 class SpecialistTechnologistHealthInformationProviderCodes(Enum):
-    """
-    specDomain: S20627 (C-0-T19465-S20608-S20627-cpt)
-    """
+    """specDomain: S20627 (C-0-T19465-S20608-S20627-cpt)"""
     VALUE_246_Y00000_X = "246Y00000X"
     VALUE_246_YC3301_X = "246YC3301X"
     VALUE_246_YC3302_X = "246YC3302X"
@@ -19141,9 +16973,7 @@ class SpecialistTechnologistHealthInformationProviderCodes(Enum):
 
 
 class SpecialistTechnologistOtherProviderCodes(Enum):
-    """
-    specDomain: S20631 (C-0-T19465-S20608-S20631-cpt)
-    """
+    """specDomain: S20631 (C-0-T19465-S20608-S20631-cpt)"""
     VALUE_246_Z00000_X = "246Z00000X"
     VALUE_246_ZA2600_X = "246ZA2600X"
     VALUE_246_ZB0500_X = "246ZB0500X"
@@ -19160,9 +16990,7 @@ class SpecialistTechnologistOtherProviderCodes(Enum):
 
 
 class SpecialistTechnologistPathologyProviderCodes(Enum):
-    """
-    specDomain: S20644 (C-0-T19465-S20608-S20644-cpt)
-    """
+    """specDomain: S20644 (C-0-T19465-S20608-S20644-cpt)"""
     VALUE_246_Q00000_X = "246Q00000X"
     VALUE_246_QB0000_X = "246QB0000X"
     VALUE_246_QC1000_X = "246QC1000X"
@@ -19178,18 +17006,14 @@ class SpecialistTechnologistPathologyProviderCodes(Enum):
 
 
 class SpecialistTechnologistProviderCodes(Enum):
-    """
-    specDomain: S20595 (C-0-T19465-S20532-S20595-cpt)
-    """
+    """specDomain: S20595 (C-0-T19465-S20532-S20595-cpt)"""
     VALUE_225500000_X = "225500000X"
     VALUE_2255_A2300_X = "2255A2300X"
     VALUE_2255_R0406_X = "2255R0406X"
 
 
 class SpecimenEntityType(Enum):
-    """
-    abstDomain: A19464 (C-0-T16040-A16041-A19464-cpt)
-    """
+    """abstDomain: A19464 (C-0-T16040-A16041-A19464-cpt)"""
     ABS = "ABS"
     AMN = "AMN"
     ASP = "ASP"
@@ -19318,9 +17142,7 @@ class SpecimenEntityType(Enum):
 
 
 class SpecimenRoleType(Enum):
-    """
-    abstDomain: A16515 (C-0-T12206-A16515-cpt)
-    """
+    """abstDomain: A16515 (C-0-T12206-A16515-cpt)"""
     Q = "Q"
     B = "B"
     E = "E"
@@ -19335,26 +17157,20 @@ class SpecimenRoleType(Enum):
 
 
 class SpeechAndOrLanguageAndOrHearingServiceSpecialistOrTechnologistHipaa(Enum):
-    """
-    abstDomain: A13640 (C-0-T13129-A13130-A13634-A13640-cpt)
-    """
+    """abstDomain: A13640 (C-0-T13129-A13130-A13634-A13640-cpt)"""
     VALUE_2355_A2700_N = "2355A2700N"
     VALUE_2355_S0801_N = "2355S0801N"
 
 
 class SpeechLanguageTechnologistProviderCodes(Enum):
-    """
-    specDomain: S20604 (C-0-T19465-S20598-S20604-cpt)
-    """
+    """specDomain: S20604 (C-0-T19465-S20598-S20604-cpt)"""
     VALUE_235500000_X = "235500000X"
     VALUE_2355_A2700_X = "2355A2700X"
     VALUE_2355_S0801_X = "2355S0801X"
 
 
 class SpeechLanguageandHearingProvidersProviderCodes(Enum):
-    """
-    specDomain: S20598 (C-0-T19465-S20598-cpt)
-    """
+    """specDomain: S20598 (C-0-T19465-S20598-cpt)"""
     VALUE_231_H00000_X = "231H00000X"
     VALUE_231_HA2400_X = "231HA2400X"
     VALUE_231_HA2500_X = "231HA2500X"
@@ -19368,53 +17184,41 @@ class SpeechLanguageandHearingProvidersProviderCodes(Enum):
 
 
 class SponsorParticipationFunction(Enum):
-    """
-    abstDomain: A19905 (C-0-T10267-A19903-A19905-cpt)
-    """
+    """abstDomain: A19905 (C-0-T10267-A19903-A19905-cpt)"""
     FULINRD = "FULINRD"
     SELFINRD = "SELFINRD"
 
 
 class Spouse(Enum):
-    """
-    specDomain: S19742 (C-0-T12206-A19563-S17926-S19755-S19742-cpt)
-    """
+    """specDomain: S19742 (C-0-T12206-A19563-S17926-S19755-S19742-cpt)"""
     SPS = "SPS"
     HUSB = "HUSB"
     WIFE = "WIFE"
 
 
 class StepChild(Enum):
-    """
-    specDomain: S11562 (C-0-T12206-A19563-S17926-S16360-S11562-cpt)
-    """
+    """specDomain: S11562 (C-0-T12206-A19563-S17926-S16360-S11562-cpt)"""
     STPCHLD = "STPCHLD"
     STPDAU = "STPDAU"
     STPSON = "STPSON"
 
 
 class StepParent(Enum):
-    """
-    specDomain: S19767 (C-0-T12206-A19563-S17926-S16346-S19767-cpt)
-    """
+    """specDomain: S19767 (C-0-T12206-A19563-S17926-S16346-S19767-cpt)"""
     STPPRN = "STPPRN"
     STPFTH = "STPFTH"
     STPMTH = "STPMTH"
 
 
 class StepSibling(Enum):
-    """
-    specDomain: S19779 (C-0-T12206-A19563-S17926-S11567-S19779-cpt)
-    """
+    """specDomain: S19779 (C-0-T12206-A19563-S17926-S11567-S19779-cpt)"""
     STPSIB = "STPSIB"
     STPBRO = "STPBRO"
     STPSIS = "STPSIS"
 
 
 class StreetAddressLine(Enum):
-    """
-    specDomain: S14822 (C-0-T10642-S14822-cpt)
-    """
+    """specDomain: S14822 (C-0-T10642-S14822-cpt)"""
     BNS = "BNS"
     POB = "POB"
     BNR = "BNR"
@@ -19427,42 +17231,32 @@ class StreetAddressLine(Enum):
 
 
 class StreetName(Enum):
-    """
-    specDomain: S10648 (C-0-T10642-S14822-S10648-cpt)
-    """
+    """specDomain: S10648 (C-0-T10642-S14822-S10648-cpt)"""
     STR_VALUE = "STR"
     STB = "STB"
     STTYP = "STTYP"
 
 
 class StudentRoleType(Enum):
-    """
-    specDomain: S21318 (C-0-T12206-A19809-A19805-A19813-S21318-cpt)
-    """
+    """specDomain: S21318 (C-0-T12206-A19809-A19805-A19813-S21318-cpt)"""
     STUD = "STUD"
     FSTUD = "FSTUD"
     PSTUD = "PSTUD"
 
 
 class SubarachnoidRoute(Enum):
-    """
-    abstDomain: A17334 (C-0-T14581-A17021-A17334-cpt)
-    """
+    """abstDomain: A17334 (C-0-T14581-A17021-A17334-cpt)"""
     SUBARACHINJ = "SUBARACHINJ"
 
 
 class SubconjunctivalRoute(Enum):
-    """
-    abstDomain: A17336 (C-0-T14581-A17021-A17336-cpt)
-    """
+    """abstDomain: A17336 (C-0-T14581-A17021-A17336-cpt)"""
     SCINJ = "SCINJ"
     SUBCONJTA = "SUBCONJTA"
 
 
 class SubcutaneousRoute(Enum):
-    """
-    abstDomain: A17339 (C-0-T14581-A17021-A17339-cpt)
-    """
+    """abstDomain: A17339 (C-0-T14581-A17021-A17339-cpt)"""
     SQIMPLNT = "SQIMPLNT"
     SQINFUS = "SQINFUS"
     IPUMPINJ = "IPUMPINJ"
@@ -19471,31 +17265,23 @@ class SubcutaneousRoute(Enum):
 
 
 class SublesionalRoute(Enum):
-    """
-    abstDomain: A17345 (C-0-T14581-A17021-A17345-cpt)
-    """
+    """abstDomain: A17345 (C-0-T14581-A17021-A17345-cpt)"""
     SLESINJ = "SLESINJ"
 
 
 class SublingualRoute(Enum):
-    """
-    abstDomain: A17347 (C-0-T14581-A17021-A17347-cpt)
-    """
+    """abstDomain: A17347 (C-0-T14581-A17021-A17347-cpt)"""
     SL = "SL"
 
 
 class SubmucosalRoute(Enum):
-    """
-    abstDomain: A17349 (C-0-T14581-A17021-A17349-cpt)
-    """
+    """abstDomain: A17349 (C-0-T14581-A17021-A17349-cpt)"""
     SUBMUCINJ = "SUBMUCINJ"
     SMUCMAB = "SMUCMAB"
 
 
 class SubscriberCoveredPartyRoleType(Enum):
-    """
-    abstDomain: A19814 (C-0-T12206-A19809-A19805-A19814-cpt)
-    """
+    """abstDomain: A19814 (C-0-T12206-A19809-A19805-A19814-cpt)"""
     MIL = "MIL"
     ACTMIL = "ACTMIL"
     RETMIL = "RETMIL"
@@ -19505,34 +17291,26 @@ class SubscriberCoveredPartyRoleType(Enum):
 
 
 class SubsidizedHealthProgram(Enum):
-    """
-    specDomain: S22137 (C-0-T13953-A13954-A19855-A19858-S19718-S22137-cpt)
-    """
+    """specDomain: S22137 (C-0-T13953-A13954-A19855-A19858-S19718-S22137-cpt)"""
     SUBSIDIZ = "SUBSIDIZ"
     SUBSIDMC = "SUBSIDMC"
     SUBSUPP = "SUBSUPP"
 
 
 class SubstanceAbuseDisorderRehabilitationFacilityProviderCodes(Enum):
-    """
-    specDomain: S20769 (C-0-T19465-S20766-S20769-cpt)
-    """
+    """specDomain: S20769 (C-0-T19465-S20766-S20769-cpt)"""
     VALUE_324500000_X = "324500000X"
     VALUE_3245_S0500_X = "3245S0500X"
 
 
 class SubstanceAdminGenericSubstitution(Enum):
-    """
-    specDomain: S16623 (C-0-T13953-A13954-A16621-S16623-cpt)
-    """
+    """specDomain: S16623 (C-0-T13953-A13954-A16621-S16623-cpt)"""
     G = "G"
     TE = "TE"
 
 
 class SubstanceAdminSubstitutionNotAllowedReason(Enum):
-    """
-    abstDomain: A19719 (C-0-T14878-A19719-cpt)
-    """
+    """abstDomain: A19719 (C-0-T14878-A19719-cpt)"""
     PAT = "PAT"
     ALGINT = "ALGINT"
     TRIAL = "TRIAL"
@@ -19541,9 +17319,7 @@ class SubstanceAdminSubstitutionNotAllowedReason(Enum):
 
 
 class SubstanceAdminSubstitutionReason(Enum):
-    """
-    abstDomain: A19377 (C-0-T14878-A19377-cpt)
-    """
+    """abstDomain: A19377 (C-0-T14878-A19377-cpt)"""
     CT = "CT"
     FP = "FP"
     OS = "OS"
@@ -19551,9 +17327,7 @@ class SubstanceAdminSubstitutionReason(Enum):
 
 
 class SubstitutionCondition(Enum):
-    """
-    vocSet: T17719 (C-0-T17719-cpt)
-    """
+    """vocSet: T17719 (C-0-T17719-cpt)"""
     CONFIRM = "CONFIRM"
     NOTIFY = "NOTIFY"
     NOSUB = "NOSUB"
@@ -19561,9 +17335,7 @@ class SubstitutionCondition(Enum):
 
 
 class SupernumeraryTooth(Enum):
-    """
-    abstDomain: A19343 (C-0-T16537-A16538-A19346-A19343-cpt)
-    """
+    """abstDomain: A19343 (C-0-T16537-A16538-A19346-A19343-cpt)"""
     TID10S = "TID10s"
     TID11S = "TID11s"
     TID12S = "TID12s"
@@ -19619,9 +17391,7 @@ class SupernumeraryTooth(Enum):
 
 
 class SupplierHipaa(Enum):
-    """
-    abstDomain: A13833 (C-0-T13129-A13715-A13833-cpt)
-    """
+    """abstDomain: A13833 (C-0-T13129-A13715-A13833-cpt)"""
     VALUE_332_B00000_N = "332B00000N"
     VALUE_332_BC3200_N = "332BC3200N"
     VALUE_332_BD1200_N = "332BD1200N"
@@ -19640,9 +17410,7 @@ class SupplierHipaa(Enum):
 
 
 class SuppliersProviderCodes(Enum):
-    """
-    specDomain: S20772 (C-0-T19465-S20772-cpt)
-    """
+    """specDomain: S20772 (C-0-T19465-S20772-cpt)"""
     VALUE_332_B00000_X = "332B00000X"
     VALUE_332_BC3200_X = "332BC3200X"
     VALUE_332_BD1200_X = "332BD1200X"
@@ -19662,9 +17430,7 @@ class SuppliersProviderCodes(Enum):
 
 
 class SupplyAppropriateManagementCode(Enum):
-    """
-    specDomain: S16709 (C-0-T13953-A13954-A16695-S16709-cpt)
-    """
+    """specDomain: S16709 (C-0-T13953-A13954-A16695-S16709-cpt)"""
     VALUE_14 = "14"
     VALUE_18 = "18"
     VALUE_15 = "15"
@@ -19673,17 +17439,13 @@ class SupplyAppropriateManagementCode(Enum):
 
 
 class SupplyDetectedIssueCode(Enum):
-    """
-    abstDomain: A16691 (C-0-T14878-A19692-A19781-A16124-A16656-A16691-cpt)
-    """
+    """abstDomain: A16691 (C-0-T14878-A19692-A19781-A16124-A16656-A16691-cpt)"""
     TOOLATE = "TOOLATE"
     TOOSOON = "TOOSOON"
 
 
 class SupplyOrderAbortReasonCode(Enum):
-    """
-    abstDomain: A19787 (C-0-T14878-A19692-A19787-cpt)
-    """
+    """abstDomain: A19787 (C-0-T14878-A19692-A19787-cpt)"""
     IMPROV = "IMPROV"
     INTOL = "INTOL"
     NEWSTR = "NEWSTR"
@@ -19691,9 +17453,7 @@ class SupplyOrderAbortReasonCode(Enum):
 
 
 class SuppositoryDrugForm(Enum):
-    """
-    specDomain: S14538 (C-0-T19651-A14411-A14412-A14484-S14538-cpt)
-    """
+    """specDomain: S14538 (C-0-T19651-A14411-A14412-A14484-S14538-cpt)"""
     SUPP = "SUPP"
     RECSUPP = "RECSUPP"
     URETHSUPP = "URETHSUPP"
@@ -19701,25 +17461,19 @@ class SuppositoryDrugForm(Enum):
 
 
 class SuppositoryRoute(Enum):
-    """
-    abstDomain: A17003 (C-0-T14581-A16931-A17003-cpt)
-    """
+    """abstDomain: A17003 (C-0-T14581-A16931-A17003-cpt)"""
     URETHSUP = "URETHSUP"
 
 
 class SurgClinPracticeSetting(Enum):
-    """
-    specDomain: S10968 (C-0-T12206-A17660-A19450-A10588-S10589-S10968-cpt)
-    """
+    """specDomain: S10968 (C-0-T12206-A17660-A19450-A10588-S10589-S10968-cpt)"""
     SU = "SU"
     PLS = "PLS"
     URO = "URO"
 
 
 class SurgeryProviderCodes(Enum):
-    """
-    specDomain: S20264 (C-0-T19465-S20096-S20264-cpt)
-    """
+    """specDomain: S20264 (C-0-T19465-S20096-S20264-cpt)"""
     VALUE_208600000_X = "208600000X"
     VALUE_2086_S0120_X = "2086S0120X"
     VALUE_2086_S0122_X = "2086S0122X"
@@ -19733,9 +17487,7 @@ class SurgeryProviderCodes(Enum):
 
 
 class SuspensionDrugForm(Enum):
-    """
-    specDomain: S14454 (C-0-T19651-A14411-A14412-A14441-S14454-cpt)
-    """
+    """specDomain: S14454 (C-0-T19651-A14411-A14412-A14441-S14454-cpt)"""
     ERSUSP = "ERSUSP"
     ERSUSP12 = "ERSUSP12"
     ERSUSP24 = "ERSUSP24"
@@ -19748,25 +17500,19 @@ class SuspensionDrugForm(Enum):
 
 
 class SwabDrugForm(Enum):
-    """
-    specDomain: S14542 (C-0-T19651-A14411-A14412-A14484-S14542-cpt)
-    """
+    """specDomain: S14542 (C-0-T19651-A14411-A14412-A14484-S14542-cpt)"""
     SWAB = "SWAB"
     MEDSWAB = "MEDSWAB"
 
 
 class Swish(Enum):
-    """
-    abstDomain: A14736 (C-0-T14581-A16931-A14736-cpt)
-    """
+    """abstDomain: A14736 (C-0-T14581-A16931-A14736-cpt)"""
     SWISHSPIT = "SWISHSPIT"
     SWISHSWAL = "SWISHSWAL"
 
 
 class TableCellHorizontalAlign(Enum):
-    """
-    vocSet: T10981 (C-0-T10981-cpt)
-    """
+    """vocSet: T10981 (C-0-T10981-cpt)"""
     CENTER = "center"
     CHAR = "char"
     JUSTIFY = "justify"
@@ -19775,9 +17521,7 @@ class TableCellHorizontalAlign(Enum):
 
 
 class TableCellScope(Enum):
-    """
-    vocSet: T11012 (C-0-T11012-cpt)
-    """
+    """vocSet: T11012 (C-0-T11012-cpt)"""
     COL = "col"
     COLGROUP = "colgroup"
     ROW = "row"
@@ -19785,9 +17529,7 @@ class TableCellScope(Enum):
 
 
 class TableCellVerticalAlign(Enum):
-    """
-    vocSet: T10987 (C-0-T10987-cpt)
-    """
+    """vocSet: T10987 (C-0-T10987-cpt)"""
     BASELINE = "baseline"
     BOTTOM = "bottom"
     MIDDLE = "middle"
@@ -19795,9 +17537,7 @@ class TableCellVerticalAlign(Enum):
 
 
 class TableFrame(Enum):
-    """
-    vocSet: T10992 (C-0-T10992-cpt)
-    """
+    """vocSet: T10992 (C-0-T10992-cpt)"""
     ABOVE = "above"
     BELOW = "below"
     BORDER = "border"
@@ -19810,9 +17550,7 @@ class TableFrame(Enum):
 
 
 class TableRuleStyle(Enum):
-    """
-    abstDomain: A19604 (C-0-T19602-A19604-cpt)
-    """
+    """abstDomain: A19604 (C-0-T19602-A19604-cpt)"""
     BOTRULE = "Botrule"
     LRULE = "Lrule"
     RRULE = "Rrule"
@@ -19820,9 +17558,7 @@ class TableRuleStyle(Enum):
 
 
 class TableRules(Enum):
-    """
-    vocSet: T11002 (C-0-T11002-cpt)
-    """
+    """vocSet: T11002 (C-0-T11002-cpt)"""
     ALL = "all"
     COLS = "cols"
     GROUPS = "groups"
@@ -19831,9 +17567,7 @@ class TableRules(Enum):
 
 
 class TabletDrugForm(Enum):
-    """
-    specDomain: S14515 (C-0-T19651-A14411-A14412-A14484-S14506-S14515-cpt)
-    """
+    """specDomain: S14515 (C-0-T19651-A14411-A14412-A14484-S14506-S14515-cpt)"""
     BUCTAB = "BUCTAB"
     SRBUCTAB = "SRBUCTAB"
     ECTAB = "ECTAB"
@@ -19854,18 +17588,14 @@ class TabletDrugForm(Enum):
 
 
 class Tanana(Enum):
-    """
-    abstDomain: A18374 (C-0-T18130-A18352-A18356-A18358-A18365-A18371-A18374-cpt)
-    """
+    """abstDomain: A18374 (C-0-T18130-A18352-A18356-A18358-A18365-A18371-A18374-cpt)"""
     X_TAA = "x-TAA"
     X_TCB = "x-TCB"
     X_TAU = "x-TAU"
 
 
 class TananaTutchone(Enum):
-    """
-    abstDomain: A18371 (C-0-T18130-A18352-A18356-A18358-A18365-A18371-cpt)
-    """
+    """abstDomain: A18371 (C-0-T18130-A18352-A18356-A18358-A18365-A18371-cpt)"""
     X_TAA = "x-TAA"
     X_TCB = "x-TCB"
     X_TAU = "x-TAU"
@@ -19873,9 +17603,7 @@ class TananaTutchone(Enum):
 
 
 class TargetAwareness(Enum):
-    """
-    vocSet: T10310 (C-0-T10310-cpt)
-    """
+    """vocSet: T10310 (C-0-T10310-cpt)"""
     D = "D"
     F = "F"
     I = "I"
@@ -19885,17 +17613,13 @@ class TargetAwareness(Enum):
 
 
 class TechnicianHealthInformationProviderCodes(Enum):
-    """
-    specDomain: S20657 (C-0-T19465-S20608-S20657-cpt)
-    """
+    """specDomain: S20657 (C-0-T19465-S20608-S20657-cpt)"""
     VALUE_247000000_X = "247000000X"
     VALUE_2470_A2800_X = "2470A2800X"
 
 
 class TechnicianOtherProviderCodes(Enum):
-    """
-    specDomain: S20659 (C-0-T19465-S20608-S20659-cpt)
-    """
+    """specDomain: S20659 (C-0-T19465-S20608-S20659-cpt)"""
     VALUE_247200000_X = "247200000X"
     VALUE_2472_B0301_X = "2472B0301X"
     VALUE_2472_D0500_X = "2472D0500X"
@@ -19905,9 +17629,7 @@ class TechnicianOtherProviderCodes(Enum):
 
 
 class TechnicianPathologyProviderCodes(Enum):
-    """
-    specDomain: S20665 (C-0-T19465-S20608-S20665-cpt)
-    """
+    """specDomain: S20665 (C-0-T19465-S20608-S20665-cpt)"""
     VALUE_246_R00000_X = "246R00000X"
     VALUE_246_RH0600_X = "246RH0600X"
     VALUE_246_RM2200_X = "246RM2200X"
@@ -19915,18 +17637,14 @@ class TechnicianPathologyProviderCodes(Enum):
 
 
 class TechnicianProviderCodes(Enum):
-    """
-    specDomain: S20432 (C-0-T19465-S20425-S20432-cpt)
-    """
+    """specDomain: S20432 (C-0-T19465-S20425-S20432-cpt)"""
     VALUE_374700000_X = "374700000X"
     VALUE_3747_A0650_X = "3747A0650X"
     VALUE_3747_P1801_X = "3747P1801X"
 
 
 class TechnicianTechnologistProviderCodes(Enum):
-    """
-    specDomain: S20356 (C-0-T19465-S20348-S20356-cpt)
-    """
+    """specDomain: S20356 (C-0-T19465-S20348-S20356-cpt)"""
     VALUE_156_F00000_X = "156F00000X"
     VALUE_156_FC0800_X = "156FC0800X"
     VALUE_156_FC0801_X = "156FC0801X"
@@ -19940,9 +17658,7 @@ class TechnicianTechnologistProviderCodes(Enum):
 
 
 class TechnologistTechnicianandOtherTechnicalServiceProvidersProviderCodes(Enum):
-    """
-    specDomain: S20608 (C-0-T19465-S20608-cpt)
-    """
+    """specDomain: S20608 (C-0-T19465-S20608-cpt)"""
     VALUE_247100000_X = "247100000X"
     VALUE_2471_B0102_X = "2471B0102X"
     VALUE_2471_C1106_X = "2471C1106X"
@@ -20007,9 +17723,7 @@ class TechnologistTechnicianandOtherTechnicalServiceProvidersProviderCodes(Enum)
 
 
 class TelecommunicationAddressUse(Enum):
-    """
-    vocSet: T201 (C-0-T201-cpt)
-    """
+    """vocSet: T201 (C-0-T201-cpt)"""
     H = "H"
     HP = "HP"
     HV = "HV"
@@ -20025,16 +17739,12 @@ class TelecommunicationAddressUse(Enum):
 
 
 class Tepiman(Enum):
-    """
-    abstDomain: A18629 (C-0-T18130-A18605-A18629-cpt)
-    """
+    """abstDomain: A18629 (C-0-T18130-A18605-A18629-cpt)"""
     X_PAP = "x-PAP"
 
 
 class TextMediaType(Enum):
-    """
-    abstDomain: A14825 (C-0-T14824-A14825-cpt)
-    """
+    """abstDomain: A14825 (C-0-T14824-A14825-cpt)"""
     TEXT_X_HL7_FT = "text/x-hl7-ft"
     TEXT_HTML = "text/html"
     TEXT_PLAIN = "text/plain"
@@ -20044,9 +17754,7 @@ class TextMediaType(Enum):
 
 
 class TherapeuticProductDetectedIssueCode(Enum):
-    """
-    specDomain: S17807 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-A16659-S17807-cpt)
-    """
+    """specDomain: S17807 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-A16659-S17807-cpt)"""
     TPROD = "TPROD"
     DRG = "DRG"
     NHP = "NHP"
@@ -20054,9 +17762,7 @@ class TherapeuticProductDetectedIssueCode(Enum):
 
 
 class TherapyAppropriateManagementCode(Enum):
-    """
-    specDomain: S16696 (C-0-T13953-A13954-A16695-S16696-cpt)
-    """
+    """specDomain: S16696 (C-0-T13953-A13954-A16695-S16696-cpt)"""
     VALUE_5 = "5"
     VALUE_6 = "6"
     VALUE_1 = "1"
@@ -20068,18 +17774,14 @@ class TherapyAppropriateManagementCode(Enum):
 
 
 class TimingDetectedIssueCode(Enum):
-    """
-    specDomain: S21700 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S21700-cpt)
-    """
+    """specDomain: S21700 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-S21700-cpt)"""
     TIME = "TIME"
     ENDLATE = "ENDLATE"
     STRTLATE = "STRTLATE"
 
 
 class TimingEvent(Enum):
-    """
-    vocSet: T10706 (C-0-T10706-cpt)
-    """
+    """vocSet: T10706 (C-0-T10706-cpt)"""
     AC = "AC"
     ACD = "ACD"
     ACM = "ACM"
@@ -20096,24 +17798,18 @@ class TimingEvent(Enum):
 
 
 class Tiwa(Enum):
-    """
-    abstDomain: A18331 (C-0-T18130-A18327-A18331-cpt)
-    """
+    """abstDomain: A18331 (C-0-T18130-A18327-A18331-cpt)"""
     X_TAO = "x-TAO"
     X_TIX = "x-TIX"
 
 
 class TopicalAbsorptionRoute(Enum):
-    """
-    abstDomain: A17006 (C-0-T14581-A16931-A17006-cpt)
-    """
+    """abstDomain: A17006 (C-0-T14581-A16931-A17006-cpt)"""
     TTYMPTABSORP = "TTYMPTABSORP"
 
 
 class TopicalApplication(Enum):
-    """
-    abstDomain: A14739 (C-0-T14581-A16931-A14739-cpt)
-    """
+    """abstDomain: A14739 (C-0-T14581-A16931-A14739-cpt)"""
     OCDRESTA = "OCDRESTA"
     SUBCONJTA = "SUBCONJTA"
     TOPICAL = "TOPICAL"
@@ -20151,18 +17847,14 @@ class TopicalApplication(Enum):
 
 
 class TopicalPowder(Enum):
-    """
-    specDomain: S14535 (C-0-T19651-A14411-A14412-A14484-S14534-S14535-cpt)
-    """
+    """specDomain: S14535 (C-0-T19651-A14411-A14412-A14484-S14534-S14535-cpt)"""
     TOPPWD = "TOPPWD"
     RECPWD = "RECPWD"
     VAGPWD = "VAGPWD"
 
 
 class TopicalSolution(Enum):
-    """
-    specDomain: S14437 (C-0-T19651-A14411-A14412-A14413-S14419-S14437-cpt)
-    """
+    """specDomain: S14437 (C-0-T19651-A14411-A14412-A14413-S14419-S14437-cpt)"""
     TOPSOL = "TOPSOL"
     LIN = "LIN"
     MUCTOPSOL = "MUCTOPSOL"
@@ -20170,24 +17862,18 @@ class TopicalSolution(Enum):
 
 
 class TracheostomyRoute(Enum):
-    """
-    abstDomain: A17352 (C-0-T14581-A17021-A17352-cpt)
-    """
+    """abstDomain: A17352 (C-0-T14581-A17021-A17352-cpt)"""
     TRACH = "TRACH"
     TRACHINSTL = "TRACHINSTL"
 
 
 class Transdermal(Enum):
-    """
-    abstDomain: A17356 (C-0-T14581-A17021-A17356-cpt)
-    """
+    """abstDomain: A17356 (C-0-T14581-A17021-A17356-cpt)"""
     TRNSDERMD = "TRNSDERMD"
 
 
 class TransdermalPatch(Enum):
-    """
-    specDomain: S14500 (C-0-T19651-A14411-A14412-A14484-S14499-S14500-cpt)
-    """
+    """specDomain: S14500 (C-0-T19651-A14411-A14412-A14484-S14499-S14500-cpt)"""
     TPATCH = "TPATCH"
     TPATH16 = "TPATH16"
     TPATH24 = "TPATH24"
@@ -20197,46 +17883,34 @@ class TransdermalPatch(Enum):
 
 
 class Transfer(Enum):
-    """
-    specDomain: S17959 (C-0-T13953-A13954-A17958-S17959-cpt)
-    """
+    """specDomain: S17959 (C-0-T13953-A13954-A17958-S17959-cpt)"""
     TRANSFER = "TRANSFER"
     SALE = "SALE"
 
 
 class TransferActReason(Enum):
-    """
-    abstDomain: A15983 (C-0-T14878-A15983-cpt)
-    """
+    """abstDomain: A15983 (C-0-T14878-A15983-cpt)"""
     ER = "ER"
     RQ = "RQ"
 
 
 class TransmissionRelationshipTypeCode(Enum):
-    """
-    vocSet: T19833 (C-0-T19833-cpt)
-    """
+    """vocSet: T19833 (C-0-T19833-cpt)"""
     SEQL = "SEQL"
 
 
 class TransmucosalRoute(Enum):
-    """
-    abstDomain: A17357 (C-0-T14581-A17021-A17357-cpt)
-    """
+    """abstDomain: A17357 (C-0-T14581-A17021-A17357-cpt)"""
     TMUCTA = "TMUCTA"
 
 
 class TransplacentalRoute(Enum):
-    """
-    abstDomain: A17359 (C-0-T14581-A17021-A17359-cpt)
-    """
+    """abstDomain: A17359 (C-0-T14581-A17021-A17359-cpt)"""
     TRPLACINJ = "TRPLACINJ"
 
 
 class TransportationServiceHipaa(Enum):
-    """
-    abstDomain: A13849 (C-0-T13129-A13715-A13849-cpt)
-    """
+    """abstDomain: A13849 (C-0-T13129-A13715-A13849-cpt)"""
     VALUE_3416_A0800_N = "3416A0800N"
     VALUE_3416_L0300_N = "3416L0300N"
     VALUE_3416_S0300_N = "3416S0300N"
@@ -20245,9 +17919,7 @@ class TransportationServiceHipaa(Enum):
 
 
 class TransportationServicesProviderCodes(Enum):
-    """
-    specDomain: S20788 (C-0-T19465-S20788-cpt)
-    """
+    """specDomain: S20788 (C-0-T19465-S20788-cpt)"""
     VALUE_341600000_X = "341600000X"
     VALUE_3416_A0800_X = "3416A0800X"
     VALUE_3416_L0300_X = "3416L0300X"
@@ -20263,24 +17935,18 @@ class TransportationServicesProviderCodes(Enum):
 
 
 class TranstrachealRoute(Enum):
-    """
-    abstDomain: A17361 (C-0-T14581-A17021-A17361-cpt)
-    """
+    """abstDomain: A17361 (C-0-T14581-A17021-A17361-cpt)"""
     TRTRACHINJ = "TRTRACHINJ"
 
 
 class TranstympanicRoute(Enum):
-    """
-    abstDomain: A17363 (C-0-T14581-A17021-A17363-cpt)
-    """
+    """abstDomain: A17363 (C-0-T14581-A17021-A17363-cpt)"""
     TRTYMPINSTIL = "TRTYMPINSTIL"
     TTYMPTABSORP = "TTYMPTABSORP"
 
 
 class TribalEntityUs(Enum):
-    """
-    vocSet: T11631 (C-0-T11631-cpt)
-    """
+    """vocSet: T11631 (C-0-T11631-cpt)"""
     VALUE_339 = "339"
     VALUE_341 = "341"
     VALUE_342 = "342"
@@ -20850,9 +18516,7 @@ class TribalEntityUs(Enum):
 
 
 class Tsamosan(Enum):
-    """
-    abstDomain: A18533 (C-0-T18130-A18523-A18533-cpt)
-    """
+    """abstDomain: A18533 (C-0-T18130-A18523-A18533-cpt)"""
     X_COW = "x-COW"
     X_CEA = "x-CEA"
     X_QUN = "x-QUN"
@@ -20860,16 +18524,12 @@ class Tsamosan(Enum):
 
 
 class Tsimshianic(Enum):
-    """
-    abstDomain: A18511 (C-0-T18130-A18413-A18511-cpt)
-    """
+    """abstDomain: A18511 (C-0-T18130-A18413-A18511-cpt)"""
     X_TSI = "x-TSI"
 
 
 class Urlscheme(Enum):
-    """
-    vocSet: T14866 (C-0-T14866-cpt)
-    """
+    """vocSet: T14866 (C-0-T14866-cpt)"""
     FAX = "fax"
     MAILTO = "mailto"
     TEL = "tel"
@@ -20883,9 +18543,7 @@ class Urlscheme(Enum):
 
 
 class UnderwriterParticipationFunction(Enum):
-    """
-    abstDomain: A19904 (C-0-T10267-A19903-A19904-cpt)
-    """
+    """abstDomain: A19904 (C-0-T10267-A19903-A19904-cpt)"""
     PAYORCNTR = "PAYORCNTR"
     REINS = "REINS"
     RETROCES = "RETROCES"
@@ -20894,9 +18552,7 @@ class UnderwriterParticipationFunction(Enum):
 
 
 class UnitOfMeasureAtomBaseUnitInsens(Enum):
-    """
-    abstDomain: A12550 (C-0-T12549-A12550-cpt)
-    """
+    """abstDomain: A12550 (C-0-T12549-A12550-cpt)"""
     C = "C"
     K = "K"
     CD = "CD"
@@ -20907,9 +18563,7 @@ class UnitOfMeasureAtomBaseUnitInsens(Enum):
 
 
 class UnitOfMeasureAtomBaseUnitSens(Enum):
-    """
-    abstDomain: A12840 (C-0-T12839-A12840-cpt)
-    """
+    """abstDomain: A12840 (C-0-T12839-A12840-cpt)"""
     C = "C"
     K = "K"
     CD = "cd"
@@ -20920,9 +18574,7 @@ class UnitOfMeasureAtomBaseUnitSens(Enum):
 
 
 class UnitOfMeasureAtomInsens(Enum):
-    """
-    abstDomain: A12558 (C-0-T12549-A12558-cpt)
-    """
+    """abstDomain: A12558 (C-0-T12549-A12558-cpt)"""
     APL_U = "[APL'U]"
     A = "A"
     AO = "AO"
@@ -21180,9 +18832,7 @@ class UnitOfMeasureAtomInsens(Enum):
 
 
 class UnitOfMeasureAtomSens(Enum):
-    """
-    abstDomain: A12848 (C-0-T12839-A12848-cpt)
-    """
+    """abstDomain: A12848 (C-0-T12839-A12848-cpt)"""
     APL_U = "[APL'U]"
     A = "A"
     AO = "Ao"
@@ -21440,9 +19090,7 @@ class UnitOfMeasureAtomSens(Enum):
 
 
 class UnitOfMeasurePrefixInsens(Enum):
-    """
-    abstDomain: A12814 (C-0-T12549-A12814-cpt)
-    """
+    """abstDomain: A12814 (C-0-T12549-A12814-cpt)"""
     A = "A"
     C = "C"
     D = "D"
@@ -21470,9 +19118,7 @@ class UnitOfMeasurePrefixInsens(Enum):
 
 
 class UnitOfMeasurePrefixSens(Enum):
-    """
-    abstDomain: A13104 (C-0-T12839-A13104-cpt)
-    """
+    """abstDomain: A13104 (C-0-T12839-A13104-cpt)"""
     A = "a"
     C = "c"
     D = "d"
@@ -21500,9 +19146,7 @@ class UnitOfMeasurePrefixSens(Enum):
 
 
 class UnitsOfMeasureCaseInsensitive(Enum):
-    """
-    vocSet: T12549 (C-0-T12549-cpt)
-    """
+    """vocSet: T12549 (C-0-T12549-cpt)"""
     C = "C"
     K = "K"
     CD = "CD"
@@ -21781,9 +19425,7 @@ class UnitsOfMeasureCaseInsensitive(Enum):
 
 
 class UnitsOfMeasureCaseSensitive(Enum):
-    """
-    vocSet: T12839 (C-0-T12839-cpt)
-    """
+    """vocSet: T12839 (C-0-T12839-cpt)"""
     C = "C"
     K = "K"
     CD = "cd"
@@ -22064,9 +19706,7 @@ class UnitsOfMeasureCaseSensitive(Enum):
 
 
 class Unknown(Enum):
-    """
-    specDomain: S10612 (C-0-T10609-S10610-S10612-cpt)
-    """
+    """specDomain: S10612 (C-0-T10609-S10610-S10612-cpt)"""
     ASKU = "ASKU"
     NAV = "NAV"
     UNK = "UNK"
@@ -22076,32 +19716,24 @@ class Unknown(Enum):
 
 
 class UnorderedListStyle(Enum):
-    """
-    abstDomain: A19607 (C-0-T19602-A19605-A19607-cpt)
-    """
+    """abstDomain: A19607 (C-0-T19602-A19605-A19607-cpt)"""
     CIRCLE = "Circle"
     DISC = "Disc"
     SQUARE = "Square"
 
 
 class UpperChinook(Enum):
-    """
-    abstDomain: A18415 (C-0-T18130-A18413-A18414-A18415-cpt)
-    """
+    """abstDomain: A18415 (C-0-T18130-A18413-A18414-A18415-cpt)"""
     X_WAC = "x-WAC"
 
 
 class UreteralRoute(Enum):
-    """
-    abstDomain: A17366 (C-0-T14581-A17021-A17366-cpt)
-    """
+    """abstDomain: A17366 (C-0-T14581-A17021-A17366-cpt)"""
     URETINJ = "URETINJ"
 
 
 class UrethralRoute(Enum):
-    """
-    abstDomain: A17368 (C-0-T14581-A17021-A17368-cpt)
-    """
+    """abstDomain: A17368 (C-0-T14581-A17021-A17368-cpt)"""
     URETHINJ = "URETHINJ"
     URETHINS = "URETHINS"
     URETHSUP = "URETHSUP"
@@ -22109,18 +19741,14 @@ class UrethralRoute(Enum):
 
 
 class UrinaryBladderIrrigation(Enum):
-    """
-    specDomain: S14725 (C-0-T14581-A17021-A17373-S14725-cpt)
-    """
+    """specDomain: S14725 (C-0-T14581-A17021-A17373-S14725-cpt)"""
     BLADIRR = "BLADIRR"
     BLADIRRC = "BLADIRRC"
     BLADIRRT = "BLADIRRT"
 
 
 class UrinaryBladderRoute(Enum):
-    """
-    abstDomain: A17373 (C-0-T14581-A17021-A17373-cpt)
-    """
+    """abstDomain: A17373 (C-0-T14581-A17021-A17373-cpt)"""
     BLADIRR = "BLADIRR"
     BLADIRRC = "BLADIRRC"
     BLADIRRT = "BLADIRRT"
@@ -22128,23 +19756,17 @@ class UrinaryBladderRoute(Enum):
 
 
 class UrinaryTractRoute(Enum):
-    """
-    abstDomain: A17378 (C-0-T14581-A17021-A17378-cpt)
-    """
+    """abstDomain: A17378 (C-0-T14581-A17021-A17378-cpt)"""
     BLADINSTL = "BLADINSTL"
 
 
 class VaccineEntityType(Enum):
-    """
-    specDomain: S21458 (C-0-T16040-A19667-A19668-S21458-cpt)
-    """
+    """specDomain: S21458 (C-0-T16040-A19667-A19668-S21458-cpt)"""
     VCCNE = "VCCNE"
 
 
 class VaccineManufacturer(Enum):
-    """
-    vocSet: T227 (C-0-T227-cpt)
-    """
+    """vocSet: T227 (C-0-T227-cpt)"""
     AB = "AB"
     AD = "AD"
     ALP = "ALP"
@@ -22188,9 +19810,7 @@ class VaccineManufacturer(Enum):
 
 
 class VaccineType(Enum):
-    """
-    vocSet: T228 (C-0-T228-cpt)
-    """
+    """vocSet: T228 (C-0-T228-cpt)"""
     VALUE_24 = "24"
     VALUE_19 = "19"
     VALUE_29 = "29"
@@ -22294,50 +19914,38 @@ class VaccineType(Enum):
 
 
 class VaginalCream(Enum):
-    """
-    specDomain: S14473 (C-0-T19651-A14411-A14412-A14463-S14466-S14473-cpt)
-    """
+    """specDomain: S14473 (C-0-T19651-A14411-A14412-A14463-S14466-S14473-cpt)"""
     VAGCRM = "VAGCRM"
     VAGCRMAPL = "VAGCRMAPL"
 
 
 class VaginalFoam(Enum):
-    """
-    specDomain: S14549 (C-0-T19651-A14411-A14412-A14545-S14546-S14549-cpt)
-    """
+    """specDomain: S14549 (C-0-T19651-A14411-A14412-A14545-S14546-S14549-cpt)"""
     VAGFOAM = "VAGFOAM"
     VAGFOAMAPL = "VAGFOAMAPL"
 
 
 class VaginalGel(Enum):
-    """
-    specDomain: S14449 (C-0-T19651-A14411-A14412-A14441-S14442-S14449-cpt)
-    """
+    """specDomain: S14449 (C-0-T19651-A14411-A14412-A14441-S14442-S14449-cpt)"""
     VAGGEL = "VAGGEL"
     VGELAPL = "VGELAPL"
 
 
 class VaginalOintment(Enum):
-    """
-    specDomain: S14482 (C-0-T19651-A14411-A14412-A14463-S14475-S14482-cpt)
-    """
+    """specDomain: S14482 (C-0-T19651-A14411-A14412-A14463-S14475-S14482-cpt)"""
     VAGOINT = "VAGOINT"
     VAGOINTAPL = "VAGOINTAPL"
 
 
 class VaginalRoute(Enum):
-    """
-    abstDomain: A17380 (C-0-T14581-A17021-A17380-cpt)
-    """
+    """abstDomain: A17380 (C-0-T14581-A17021-A17380-cpt)"""
     DOUCHE = "DOUCHE"
     VAGINSI = "VAGINSI"
     VAGINS = "VAGINS"
 
 
 class ValidationIssue(Enum):
-    """
-    specDomain: S21651 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-cpt)
-    """
+    """specDomain: S21651 (C-0-T14878-A19692-A19781-A16124-A19429-A19620-S21651-cpt)"""
     CODE_INVAL = "CODE_INVAL"
     CODE_DEPREC = "CODE_DEPREC"
     DUPTHPY = "DUPTHPY"
@@ -22382,26 +19990,20 @@ class ValidationIssue(Enum):
 
 
 class ValueSetOperator(Enum):
-    """
-    vocSet: T11037 (C-0-T11037-cpt)
-    """
+    """vocSet: T11037 (C-0-T11037-cpt)"""
     E = "E"
     I = "I"
 
 
 class ValueSetPropertyId(Enum):
-    """
-    vocSet: T19362 (C-0-T19362-cpt)
-    """
+    """vocSet: T19362 (C-0-T19362-cpt)"""
     APPLIES_TO = "appliesTo"
     HOW_APPLIES = "howApplies"
     OPEN_ISSUE = "openIssue"
 
 
 class ValueSetStatus(Enum):
-    """
-    vocSet: T19360-1 (C-0-T19360-1-cpt)
-    """
+    """vocSet: T19360-1 (C-0-T19360-1-cpt)"""
     A = "A"
     D = "D"
     P = "P"
@@ -22409,9 +20011,7 @@ class ValueSetStatus(Enum):
 
 
 class VerificationMethod(Enum):
-    """
-    abstDomain: A19707 (C-0-T14079-A19707-cpt)
-    """
+    """abstDomain: A19707 (C-0-T14079-A19707-cpt)"""
     VDOC = "VDOC"
     VTOKEN = "VTOKEN"
     VREG = "VREG"
@@ -22419,9 +20019,7 @@ class VerificationMethod(Enum):
 
 
 class VerificationOutcomeValue(Enum):
-    """
-    abstDomain: A19793 (C-0-T16614-A19793-cpt)
-    """
+    """abstDomain: A19793 (C-0-T16614-A19793-cpt)"""
     ACTPEND = "ACTPEND"
     ACT = "ACT"
     ELG = "ELG"
@@ -22432,39 +20030,29 @@ class VerificationOutcomeValue(Enum):
 
 
 class VeterinarianHipaa(Enum):
-    """
-    abstDomain: A13352 (C-0-T13129-A13130-A13136-A13352-cpt)
-    """
+    """abstDomain: A13352 (C-0-T13129-A13130-A13136-A13352-cpt)"""
     VALUE_174_MM1900_N = "174MM1900N"
 
 
 class VeterinarianProviderCodes(Enum):
-    """
-    specDomain: S20453 (C-0-T19465-S20434-S20448-S20453-cpt)
-    """
+    """specDomain: S20453 (C-0-T19465-S20434-S20448-S20453-cpt)"""
     VALUE_174_M00000_X = "174M00000X"
     VALUE_174_MM1900_X = "174MM1900X"
 
 
 class VideoMediaType(Enum):
-    """
-    abstDomain: A14845 (C-0-T14824-A14845-cpt)
-    """
+    """abstDomain: A14845 (C-0-T14824-A14845-cpt)"""
     VIDEO_MPEG = "video/mpeg"
     VIDEO_X_AVI = "video/x-avi"
 
 
 class VitreousHumourRoute(Enum):
-    """
-    abstDomain: A17384 (C-0-T14581-A17021-A17384-cpt)
-    """
+    """abstDomain: A17384 (C-0-T14581-A17021-A17384-cpt)"""
     IVITIMPLNT = "IVITIMPLNT"
 
 
 class VocabularyDomainQualifier(Enum):
-    """
-    vocSet: T11046 (C-0-T11046-cpt)
-    """
+    """vocSet: T11046 (C-0-T11046-cpt)"""
     CNE = "CNE"
     CWE = "CWE"
     CANADA = "Canada"
@@ -22474,83 +20062,63 @@ class VocabularyDomainQualifier(Enum):
 
 
 class WeightAlert(Enum):
-    """
-    abstDomain: A17794 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-S16665-A17794-cpt)
-    """
+    """abstDomain: A17794 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-S16665-A17794-cpt)"""
     DOSEHINDW = "DOSEHINDW"
     DOSELINDW = "DOSELINDW"
 
 
 class WesternApachean(Enum):
-    """
-    abstDomain: A18400 (C-0-T18130-A18352-A18356-A18358-A18399-A18400-cpt)
-    """
+    """abstDomain: A18400 (C-0-T18130-A18352-A18356-A18358-A18399-A18400-cpt)"""
     X_NAV = "x-NAV"
     X_APM = "x-APM"
     X_APW = "x-APW"
 
 
 class WesternMiwok(Enum):
-    """
-    abstDomain: A18460 (C-0-T18130-A18413-A18458-A18459-A18460-cpt)
-    """
+    """abstDomain: A18460 (C-0-T18130-A18413-A18458-A18459-A18460-cpt)"""
     X_CSI = "x-CSI"
     X_LMW = "x-LMW"
 
 
 class WesternMuskogean(Enum):
-    """
-    abstDomain: A18339 (C-0-T18130-A18338-A18339-cpt)
-    """
+    """abstDomain: A18339 (C-0-T18130-A18338-A18339-cpt)"""
     X_CIC = "x-CIC"
     X_CCT = "x-CCT"
 
 
 class WesternNumic(Enum):
-    """
-    abstDomain: A18607 (C-0-T18130-A18605-A18606-A18607-cpt)
-    """
+    """abstDomain: A18607 (C-0-T18130-A18605-A18606-A18607-cpt)"""
     X_MON = "x-MON"
     X_PAO = "x-PAO"
 
 
 class Wintuan(Enum):
-    """
-    abstDomain: A18431 (C-0-T18130-A18413-A18431-cpt)
-    """
+    """abstDomain: A18431 (C-0-T18130-A18413-A18431-cpt)"""
     X_WIT = "x-WIT"
 
 
 class Wiyot(Enum):
-    """
-    specDomain: S15447 (C-0-T14914-S14915-S14916-S15447-cpt)
-    """
+    """specDomain: S15447 (C-0-T14914-S14915-S14916-S15447-cpt)"""
     VALUE_1704_6 = "1704-6"
     VALUE_1705_3 = "1705-3"
 
 
 class WorkPlaceAddressUse(Enum):
-    """
-    specDomain: S10631 (C-0-T201-A190-S10631-cpt)
-    """
+    """specDomain: S10631 (C-0-T201-A190-S10631-cpt)"""
     WP = "WP"
     DIR = "DIR"
     PUB = "PUB"
 
 
 class Yaqui(Enum):
-    """
-    specDomain: S15451 (C-0-T14914-S14915-S14916-S15451-cpt)
-    """
+    """specDomain: S15451 (C-0-T14914-S14915-S14916-S15451-cpt)"""
     VALUE_1711_1 = "1711-1"
     VALUE_1712_9 = "1712-9"
     VALUE_1713_7 = "1713-7"
 
 
 class Yokuts(Enum):
-    """
-    specDomain: S15455 (C-0-T14914-S14915-S14916-S15455-cpt)
-    """
+    """specDomain: S15455 (C-0-T14914-S14915-S14916-S15455-cpt)"""
     VALUE_1717_8 = "1717-8"
     VALUE_1718_6 = "1718-6"
     VALUE_1719_4 = "1719-4"
@@ -22558,9 +20126,7 @@ class Yokuts(Enum):
 
 
 class Yokutsan(Enum):
-    """
-    abstDomain: A18479 (C-0-T18130-A18413-A18479-cpt)
-    """
+    """abstDomain: A18479 (C-0-T18130-A18413-A18479-cpt)"""
     X_GSH = "x-GSH"
     X_ENH = "x-ENH"
     X_PYL = "x-PYL"
@@ -22568,33 +20134,25 @@ class Yokutsan(Enum):
 
 
 class Yukian(Enum):
-    """
-    abstDomain: A18646 (C-0-T18130-A18646-cpt)
-    """
+    """abstDomain: A18646 (C-0-T18130-A18646-cpt)"""
     X_WAO = "x-WAO"
     X_YUK = "x-YUK"
 
 
 class Type0272(Enum):
-    """
-    specDomain: S21445 (C-0-T14079-S21445-cpt)
-    """
+    """specDomain: S21445 (C-0-T14079-S21445-cpt)"""
     VALUE_0272 = "0272"
     VALUE_0245 = "0245"
     VALUE_0246 = "0246"
 
 
 class Type0275A(Enum):
-    """
-    specDomain: S21449 (C-0-T14079-S21449-cpt)
-    """
+    """specDomain: S21449 (C-0-T14079-S21449-cpt)"""
     VALUE_0275A = "0275a"
 
 
 class Type0280(Enum):
-    """
-    specDomain: S21454 (C-0-T14079-S21454-cpt)
-    """
+    """specDomain: S21454 (C-0-T14079-S21454-cpt)"""
     VALUE_0280 = "0280"
     VALUE_0278 = "0278"
     VALUE_0240 = "0240"
@@ -22611,9 +20169,7 @@ class Type0280(Enum):
 
 
 class XAccommodationRequestorRole(Enum):
-    """
-    abstDomain: A19352 (C-0-T11555-A19352-cpt)
-    """
+    """abstDomain: A19352 (C-0-T11555-A19352-cpt)"""
     AGNT = "AGNT"
     PROV = "PROV"
     PAT = "PAT"
@@ -22621,33 +20177,25 @@ class XAccommodationRequestorRole(Enum):
 
 
 class XActClassCareProvisionEncounter(Enum):
-    """
-    abstDomain: A19887 (C-0-T11527-A19887-cpt)
-    """
+    """abstDomain: A19887 (C-0-T11527-A19887-cpt)"""
     PCPR = "PCPR"
     ENC = "ENC"
 
 
 class XActClassCareProvisionObservation(Enum):
-    """
-    abstDomain: A19888 (C-0-T11527-A19888-cpt)
-    """
+    """abstDomain: A19888 (C-0-T11527-A19888-cpt)"""
     PCPR = "PCPR"
     OBS = "OBS"
 
 
 class XActClassCareProvisionProcedure(Enum):
-    """
-    abstDomain: A19889 (C-0-T11527-A19889-cpt)
-    """
+    """abstDomain: A19889 (C-0-T11527-A19889-cpt)"""
     PCPR = "PCPR"
     PROC = "PROC"
 
 
 class XActClassDocumentEntryAct(Enum):
-    """
-    abstDomain: A19599 (C-0-T11527-A19599-cpt)
-    """
+    """abstDomain: A19599 (C-0-T11527-A19599-cpt)"""
     ACCM = "ACCM"
     ACT = "ACT"
     PCPR = "PCPR"
@@ -22661,50 +20209,38 @@ class XActClassDocumentEntryAct(Enum):
 
 
 class XActClassDocumentEntryOrganizer(Enum):
-    """
-    abstDomain: A19598 (C-0-T11527-A19598-cpt)
-    """
+    """abstDomain: A19598 (C-0-T11527-A19598-cpt)"""
     CLUSTER = "CLUSTER"
     BATTERY = "BATTERY"
 
 
 class XActEncounterReason(Enum):
-    """
-    abstDomain: A19456 (C-0-T14878-A19456-cpt)
-    """
+    """abstDomain: A19456 (C-0-T14878-A19456-cpt)"""
     MEDNEC = "MEDNEC"
     PAT = "PAT"
 
 
 class XActFinancialProductAcquisitionCode(Enum):
-    """
-    abstDomain: A17963 (C-0-T13953-A13954-A17963-cpt)
-    """
+    """abstDomain: A17963 (C-0-T13953-A13954-A17963-cpt)"""
     RENT = "RENT"
     SALE = "SALE"
 
 
 class XActMoodDefEvn(Enum):
-    """
-    abstDomain: A19375 (C-0-T10196-A19375-cpt)
-    """
+    """abstDomain: A19375 (C-0-T10196-A19375-cpt)"""
     DEF_VALUE = "DEF"
     EVN = "EVN"
 
 
 class XActMoodDefEvnRqo(Enum):
-    """
-    abstDomain: A19762 (C-0-T10196-A19762-cpt)
-    """
+    """abstDomain: A19762 (C-0-T10196-A19762-cpt)"""
     DEF_VALUE = "DEF"
     EVN = "EVN"
     RQO = "RQO"
 
 
 class XActMoodDefEvnRqoPrmsPrp(Enum):
-    """
-    abstDomain: A19371 (C-0-T10196-A19371-cpt)
-    """
+    """abstDomain: A19371 (C-0-T10196-A19371-cpt)"""
     DEF_VALUE = "DEF"
     EVN = "EVN"
     PRMS = "PRMS"
@@ -22713,9 +20249,7 @@ class XActMoodDefEvnRqoPrmsPrp(Enum):
 
 
 class XActMoodDocumentObservation(Enum):
-    """
-    abstDomain: A18943 (C-0-T10196-A18943-cpt)
-    """
+    """abstDomain: A18943 (C-0-T10196-A18943-cpt)"""
     GOL = "GOL"
     DEF_VALUE = "DEF"
     EVN = "EVN"
@@ -22726,9 +20260,7 @@ class XActMoodDocumentObservation(Enum):
 
 
 class XActMoodEvnOrdPrmsPrp(Enum):
-    """
-    abstDomain: A18965 (C-0-T10196-A18965-cpt)
-    """
+    """abstDomain: A18965 (C-0-T10196-A18965-cpt)"""
     EVN = "EVN"
     PRMS = "PRMS"
     PRP = "PRP"
@@ -22736,49 +20268,37 @@ class XActMoodEvnOrdPrmsPrp(Enum):
 
 
 class XActMoodIntentEvent(Enum):
-    """
-    abstDomain: A16742 (C-0-T10196-A16742-cpt)
-    """
+    """abstDomain: A16742 (C-0-T10196-A16742-cpt)"""
     EVN = "EVN"
 
 
 class XActMoodOrdPrms(Enum):
-    """
-    abstDomain: A16735 (C-0-T10196-A16735-cpt)
-    """
+    """abstDomain: A16735 (C-0-T10196-A16735-cpt)"""
     PRMS = "PRMS"
     RQO = "RQO"
 
 
 class XActMoodOrdPrmsEvn(Enum):
-    """
-    abstDomain: A16730 (C-0-T10196-A16730-cpt)
-    """
+    """abstDomain: A16730 (C-0-T10196-A16730-cpt)"""
     EVN = "EVN"
     PRMS = "PRMS"
     RQO = "RQO"
 
 
 class XActMoodPermPermrq(Enum):
-    """
-    abstDomain: A19689 (C-0-T10196-A19689-cpt)
-    """
+    """abstDomain: A19689 (C-0-T10196-A19689-cpt)"""
     PERM = "PERM"
     PERMRQ = "PERMRQ"
 
 
 class XActMoodRequestEvent(Enum):
-    """
-    abstDomain: A19763 (C-0-T10196-A19763-cpt)
-    """
+    """abstDomain: A19763 (C-0-T10196-A19763-cpt)"""
     EVN = "EVN"
     RQO = "RQO"
 
 
 class XActMoodRqoPrpAptArq(Enum):
-    """
-    abstDomain: A19372 (C-0-T10196-A19372-cpt)
-    """
+    """abstDomain: A19372 (C-0-T10196-A19372-cpt)"""
     APT = "APT"
     ARQ = "ARQ"
     PRP = "PRP"
@@ -22786,9 +20306,7 @@ class XActMoodRqoPrpAptArq(Enum):
 
 
 class XActOrderableOrBillable(Enum):
-    """
-    abstDomain: A19822 (C-0-T11527-A19822-cpt)
-    """
+    """abstDomain: A19822 (C-0-T11527-A19822-cpt)"""
     ACCM = "ACCM"
     PCPR = "PCPR"
     ENC = "ENC"
@@ -22797,26 +20315,20 @@ class XActOrderableOrBillable(Enum):
 
 
 class XActRelationshipDocument(Enum):
-    """
-    abstDomain: A11610 (C-0-T10317-A11610-cpt)
-    """
+    """abstDomain: A11610 (C-0-T10317-A11610-cpt)"""
     APND = "APND"
     RPLC = "RPLC"
     XFRM = "XFRM"
 
 
 class XActRelationshipEntry(Enum):
-    """
-    abstDomain: A19446 (C-0-T10317-A19446-cpt)
-    """
+    """abstDomain: A19446 (C-0-T10317-A19446-cpt)"""
     COMP = "COMP"
     DRIV = "DRIV"
 
 
 class XActRelationshipEntryRelationship(Enum):
-    """
-    abstDomain: A19447 (C-0-T10317-A19447-cpt)
-    """
+    """abstDomain: A19447 (C-0-T10317-A19447-cpt)"""
     XCRPT = "XCRPT"
     GEVL = "GEVL"
     COMP = "COMP"
@@ -22830,9 +20342,7 @@ class XActRelationshipEntryRelationship(Enum):
 
 
 class XActRelationshipExternalReference(Enum):
-    """
-    abstDomain: A19000 (C-0-T10317-A19000-cpt)
-    """
+    """abstDomain: A19000 (C-0-T10317-A19000-cpt)"""
     XCRPT = "XCRPT"
     ELNK = "ELNK"
     SUBJ = "SUBJ"
@@ -22842,17 +20352,13 @@ class XActRelationshipExternalReference(Enum):
 
 
 class XActRelationshipPatientTransport(Enum):
-    """
-    abstDomain: A19005 (C-0-T10317-A19005-cpt)
-    """
+    """abstDomain: A19005 (C-0-T10317-A19005-cpt)"""
     ARR = "ARR"
     DEP = "DEP"
 
 
 class XActRelationshipPertinentInfo(Enum):
-    """
-    abstDomain: A19562 (C-0-T10317-A19562-cpt)
-    """
+    """abstDomain: A19562 (C-0-T10317-A19562-cpt)"""
     SUBJ = "SUBJ"
     SPRT = "SPRT"
     CAUS = "CAUS"
@@ -22861,59 +20367,45 @@ class XActRelationshipPertinentInfo(Enum):
 
 
 class XActRelationshipRelatedAuthorizations(Enum):
-    """
-    abstDomain: A19825 (C-0-T10317-A19825-cpt)
-    """
+    """abstDomain: A19825 (C-0-T10317-A19825-cpt)"""
     AUTH = "AUTH"
     REFR = "REFR"
 
 
 class XActReplaceOrRevise(Enum):
-    """
-    abstDomain: A19764 (C-0-T10317-A19764-cpt)
-    """
+    """abstDomain: A19764 (C-0-T10317-A19764-cpt)"""
     MOD = "MOD"
     RPLC = "RPLC"
 
 
 class XActStatusActiveComplete(Enum):
-    """
-    abstDomain: A19890 (C-0-T15933-A19890-cpt)
-    """
+    """abstDomain: A19890 (C-0-T15933-A19890-cpt)"""
     ACTIVE = "active"
     COMPLETED = "completed"
 
 
 class XActStatusActiveSuspended(Enum):
-    """
-    abstDomain: A19891 (C-0-T15933-A19891-cpt)
-    """
+    """abstDomain: A19891 (C-0-T15933-A19891-cpt)"""
     ACTIVE = "active"
     SUSPENDED = "suspended"
 
 
 class XAdverseEventCausalityAssessmentMethods(Enum):
-    """
-    abstDomain: A19380 (C-0-T14079-A19380-cpt)
-    """
+    """abstDomain: A19380 (C-0-T14079-A19380-cpt)"""
     ALGM = "ALGM"
     BYCL = "BYCL"
     GINT = "GINT"
 
 
 class XBasicConfidentialityKind(Enum):
-    """
-    abstDomain: A16926 (C-0-T10228-A16926-cpt)
-    """
+    """abstDomain: A16926 (C-0-T10228-A16926-cpt)"""
     N = "N"
     R = "R"
     V = "V"
 
 
 class XClinicalStatementActMood(Enum):
-    """
-    abstDomain: A19649 (C-0-T10196-A19649-cpt)
-    """
+    """abstDomain: A19649 (C-0-T10196-A19649-cpt)"""
     APT = "APT"
     ARQ = "ARQ"
     DEF_VALUE = "DEF"
@@ -22925,9 +20417,7 @@ class XClinicalStatementActMood(Enum):
 
 
 class XClinicalStatementEncounterMood(Enum):
-    """
-    abstDomain: A19648 (C-0-T10196-A19648-cpt)
-    """
+    """abstDomain: A19648 (C-0-T10196-A19648-cpt)"""
     APT = "APT"
     ARQ = "ARQ"
     EVN = "EVN"
@@ -22938,9 +20428,7 @@ class XClinicalStatementEncounterMood(Enum):
 
 
 class XClinicalStatementObservationMood(Enum):
-    """
-    abstDomain: A19644 (C-0-T10196-A19644-cpt)
-    """
+    """abstDomain: A19644 (C-0-T10196-A19644-cpt)"""
     GOL = "GOL"
     APT = "APT"
     ARQ = "ARQ"
@@ -22953,9 +20441,7 @@ class XClinicalStatementObservationMood(Enum):
 
 
 class XClinicalStatementProcedureMood(Enum):
-    """
-    abstDomain: A19647 (C-0-T10196-A19647-cpt)
-    """
+    """abstDomain: A19647 (C-0-T10196-A19647-cpt)"""
     APT = "APT"
     ARQ = "ARQ"
     DEF_VALUE = "DEF"
@@ -22967,9 +20453,7 @@ class XClinicalStatementProcedureMood(Enum):
 
 
 class XClinicalStatementSubstanceMood(Enum):
-    """
-    abstDomain: A19645 (C-0-T10196-A19645-cpt)
-    """
+    """abstDomain: A19645 (C-0-T10196-A19645-cpt)"""
     EVN = "EVN"
     INT_VALUE = "INT"
     PRMS = "PRMS"
@@ -22978,26 +20462,20 @@ class XClinicalStatementSubstanceMood(Enum):
 
 
 class XClinicalStatementSupplyMood(Enum):
-    """
-    abstDomain: A19646 (C-0-T10196-A19646-cpt)
-    """
+    """abstDomain: A19646 (C-0-T10196-A19646-cpt)"""
     EVN = "EVN"
     INT_VALUE = "INT"
 
 
 class XDeterminerInstanceKind(Enum):
-    """
-    abstDomain: A19670 (C-0-T10878-A19670-cpt)
-    """
+    """abstDomain: A19670 (C-0-T10878-A19670-cpt)"""
     KIND = "KIND"
     QUANTIFIED_KIND = "QUANTIFIED_KIND"
     INSTANCE = "INSTANCE"
 
 
 class XDocumentActMood(Enum):
-    """
-    abstDomain: A19458 (C-0-T10196-A19458-cpt)
-    """
+    """abstDomain: A19458 (C-0-T10196-A19458-cpt)"""
     APT = "APT"
     ARQ = "ARQ"
     DEF_VALUE = "DEF"
@@ -23009,9 +20487,7 @@ class XDocumentActMood(Enum):
 
 
 class XDocumentEncounterMood(Enum):
-    """
-    abstDomain: A19459 (C-0-T10196-A19459-cpt)
-    """
+    """abstDomain: A19459 (C-0-T10196-A19459-cpt)"""
     APT = "APT"
     ARQ = "ARQ"
     EVN = "EVN"
@@ -23022,18 +20498,14 @@ class XDocumentEncounterMood(Enum):
 
 
 class XDocumentEntrySubject(Enum):
-    """
-    abstDomain: A19367 (C-0-T11555-A19367-cpt)
-    """
+    """abstDomain: A19367 (C-0-T11555-A19367-cpt)"""
     PAT = "PAT"
     PRS = "PRS"
     SPEC = "SPEC"
 
 
 class XDocumentProcedureMood(Enum):
-    """
-    abstDomain: A19460 (C-0-T10196-A19460-cpt)
-    """
+    """abstDomain: A19460 (C-0-T10196-A19460-cpt)"""
     APT = "APT"
     ARQ = "ARQ"
     DEF_VALUE = "DEF"
@@ -23045,9 +20517,7 @@ class XDocumentProcedureMood(Enum):
 
 
 class XDocumentStatus(Enum):
-    """
-    abstDomain: A16916 (C-0-T15933-A16916-cpt)
-    """
+    """abstDomain: A16916 (C-0-T15933-A16916-cpt)"""
     ACTIVE = "active"
     CANCELLED = "cancelled"
     NEW = "new"
@@ -23055,17 +20525,13 @@ class XDocumentStatus(Enum):
 
 
 class XDocumentSubject(Enum):
-    """
-    abstDomain: A19368 (C-0-T11555-A19368-cpt)
-    """
+    """abstDomain: A19368 (C-0-T11555-A19368-cpt)"""
     PAT = "PAT"
     PRS = "PRS"
 
 
 class XDocumentSubstanceMood(Enum):
-    """
-    abstDomain: A19461 (C-0-T10196-A19461-cpt)
-    """
+    """abstDomain: A19461 (C-0-T10196-A19461-cpt)"""
     EVN = "EVN"
     INT_VALUE = "INT"
     PRMS = "PRMS"
@@ -23074,9 +20540,7 @@ class XDocumentSubstanceMood(Enum):
 
 
 class XEncounterAdmissionUrgency(Enum):
-    """
-    abstDomain: A19457 (C-0-T16866-A19457-cpt)
-    """
+    """abstDomain: A19457 (C-0-T16866-A19457-cpt)"""
     EL = "EL"
     EM = "EM"
     R = "R"
@@ -23084,9 +20548,7 @@ class XEncounterAdmissionUrgency(Enum):
 
 
 class XEncounterParticipant(Enum):
-    """
-    abstDomain: A19600 (C-0-T10901-A19600-cpt)
-    """
+    """abstDomain: A19600 (C-0-T10901-A19600-cpt)"""
     ADM = "ADM"
     ATND = "ATND"
     CON = "CON"
@@ -23095,49 +20557,37 @@ class XEncounterParticipant(Enum):
 
 
 class XEncounterPerformerParticipation(Enum):
-    """
-    abstDomain: A16764 (C-0-T10901-A16764-cpt)
-    """
+    """abstDomain: A16764 (C-0-T10901-A16764-cpt)"""
     CON = "CON"
     PRF = "PRF"
     SPRF = "SPRF"
 
 
 class XEntityClassDocumentReceiving(Enum):
-    """
-    abstDomain: A19462 (C-0-T10882-A19462-cpt)
-    """
+    """abstDomain: A19462 (C-0-T10882-A19462-cpt)"""
     HCE = "HCE"
     PSN = "PSN"
 
 
 class XEntityClassPersonOrOrgReceiving(Enum):
-    """
-    abstDomain: A19463 (C-0-T10882-A19463-cpt)
-    """
+    """abstDomain: A19463 (C-0-T10882-A19463-cpt)"""
     PSN = "PSN"
 
 
 class XInformationRecipient(Enum):
-    """
-    abstDomain: A19366 (C-0-T10901-A19366-cpt)
-    """
+    """abstDomain: A19366 (C-0-T10901-A19366-cpt)"""
     PRCP = "PRCP"
     TRC = "TRC"
 
 
 class XInformationRecipientRole(Enum):
-    """
-    abstDomain: A16772 (C-0-T11555-A16772-cpt)
-    """
+    """abstDomain: A16772 (C-0-T11555-A16772-cpt)"""
     ASSIGNED = "ASSIGNED"
     HLTHCHRT = "HLTHCHRT"
 
 
 class XLabProcessClassCodes(Enum):
-    """
-    abstDomain: A19657 (C-0-T11527-A19657-cpt)
-    """
+    """abstDomain: A19657 (C-0-T11527-A19657-cpt)"""
     ACSN = "ACSN"
     CONTREG = "CONTREG"
     PROC = "PROC"
@@ -23146,9 +20596,7 @@ class XLabProcessClassCodes(Enum):
 
 
 class XLabSpecimenCollectionProviders(Enum):
-    """
-    abstDomain: A19748 (C-0-T12206-A19679-A19748-cpt)
-    """
+    """abstDomain: A19748 (C-0-T12206-A19679-A19748-cpt)"""
     COMMUNITY_LABORATORY = "communityLaboratory"
     HOME_HEALTH = "homeHealth"
     LABORATORY = "laboratory"
@@ -23159,51 +20607,39 @@ class XLabSpecimenCollectionProviders(Enum):
 
 
 class XMedicationOrImmunization(Enum):
-    """
-    abstDomain: A19745 (C-0-T13953-A13954-A19708-A19745-cpt)
-    """
+    """abstDomain: A19745 (C-0-T13953-A13954-A19708-A19745-cpt)"""
     DRUG = "DRUG"
     IMMUNIZ = "IMMUNIZ"
 
 
 class XOrganizationNamePartType(Enum):
-    """
-    abstDomain: A15881 (C-0-T15880-A15881-cpt)
-    """
+    """abstDomain: A15881 (C-0-T15880-A15881-cpt)"""
     DEL_VALUE = "DEL"
     PFX = "PFX"
     SFX = "SFX"
 
 
 class XParticipationAuthorPerformer(Enum):
-    """
-    abstDomain: A19080 (C-0-T10901-A19080-cpt)
-    """
+    """abstDomain: A19080 (C-0-T10901-A19080-cpt)"""
     AUT = "AUT"
     PRF = "PRF"
 
 
 class XParticipationEntVrf(Enum):
-    """
-    abstDomain: A19588 (C-0-T10901-A19588-cpt)
-    """
+    """abstDomain: A19588 (C-0-T10901-A19588-cpt)"""
     ENT = "ENT"
     VRF = "VRF"
 
 
 class XParticipationPrfEntVrf(Enum):
-    """
-    abstDomain: A19589 (C-0-T10901-A19589-cpt)
-    """
+    """abstDomain: A19589 (C-0-T10901-A19589-cpt)"""
     ENT = "ENT"
     PRF = "PRF"
     VRF = "VRF"
 
 
 class XParticipationVrfRespSprfWit(Enum):
-    """
-    abstDomain: A19083 (C-0-T10901-A19083-cpt)
-    """
+    """abstDomain: A19083 (C-0-T10901-A19083-cpt)"""
     RESP = "RESP"
     SPRF = "SPRF"
     VRF = "VRF"
@@ -23211,9 +20647,7 @@ class XParticipationVrfRespSprfWit(Enum):
 
 
 class XPayeeRelationshipRoleType(Enum):
-    """
-    abstDomain: A18105 (C-0-T12206-A18105-cpt)
-    """
+    """abstDomain: A18105 (C-0-T12206-A18105-cpt)"""
     FM = "FM"
     GT = "GT"
     PT = "PT"
@@ -23221,9 +20655,7 @@ class XPayeeRelationshipRoleType(Enum):
 
 
 class XPersonNamePartType(Enum):
-    """
-    abstDomain: A10653 (C-0-T15880-A10653-cpt)
-    """
+    """abstDomain: A10653 (C-0-T15880-A10653-cpt)"""
     DEL_VALUE = "DEL"
     FAM = "FAM"
     GIV = "GIV"
@@ -23232,34 +20664,26 @@ class XPersonNamePartType(Enum):
 
 
 class XPhoneOrEmailUrlscheme(Enum):
-    """
-    abstDomain: A19741 (C-0-T14866-A19741-cpt)
-    """
+    """abstDomain: A19741 (C-0-T14866-A19741-cpt)"""
     FAX = "fax"
     MAILTO = "mailto"
     TEL = "tel"
 
 
 class XPhoneUrlscheme(Enum):
-    """
-    abstDomain: A19742 (C-0-T14866-A19742-cpt)
-    """
+    """abstDomain: A19742 (C-0-T14866-A19742-cpt)"""
     FAX = "fax"
     TEL = "tel"
 
 
 class XPhysicalVerbalParticipationMode(Enum):
-    """
-    abstDomain: A19739 (C-0-T16543-A19739-cpt)
-    """
+    """abstDomain: A19739 (C-0-T16543-A19739-cpt)"""
     PHYSICAL = "PHYSICAL"
     VERBAL = "VERBAL"
 
 
 class XRoleClassAccommodationRequestor(Enum):
-    """
-    abstDomain: A19382 (C-0-T11555-A19382-cpt)
-    """
+    """abstDomain: A19382 (C-0-T11555-A19382-cpt)"""
     AGNT = "AGNT"
     PROV = "PROV"
     PAT = "PAT"
@@ -23267,9 +20691,7 @@ class XRoleClassAccommodationRequestor(Enum):
 
 
 class XRoleClassCoverage(Enum):
-    """
-    abstDomain: A14008 (C-0-T11555-A14008-cpt)
-    """
+    """abstDomain: A14008 (C-0-T11555-A14008-cpt)"""
     SPNSR = "SPNSR"
     COVPTY = "COVPTY"
     POLHOLD = "POLHOLD"
@@ -23277,25 +20699,19 @@ class XRoleClassCoverage(Enum):
 
 
 class XRoleClassCoverageInvoice(Enum):
-    """
-    abstDomain: A14013 (C-0-T11555-A14013-cpt)
-    """
+    """abstDomain: A14013 (C-0-T11555-A14013-cpt)"""
     PAYOR = "PAYOR"
     PAYEE = "PAYEE"
 
 
 class XRoleClassCredentialedEntity(Enum):
-    """
-    abstDomain: A16930 (C-0-T11555-A16930-cpt)
-    """
+    """abstDomain: A16930 (C-0-T11555-A16930-cpt)"""
     ASSIGNED = "ASSIGNED"
     QUAL = "QUAL"
 
 
 class XRoleClassPayeePolicyRelationship(Enum):
-    """
-    abstDomain: A19395 (C-0-T11555-A19395-cpt)
-    """
+    """abstDomain: A19395 (C-0-T11555-A19395-cpt)"""
     COVPTY = "COVPTY"
     GUAR = "GUAR"
     PROV = "PROV"
@@ -23304,33 +20720,25 @@ class XRoleClassPayeePolicyRelationship(Enum):
 
 
 class XSuccReplPrev(Enum):
-    """
-    abstDomain: A19753 (C-0-T10317-A19753-cpt)
-    """
+    """abstDomain: A19753 (C-0-T10317-A19753-cpt)"""
     PREV = "PREV"
     RPLC = "RPLC"
     SUCC = "SUCC"
 
 
 class XServiceEventPerformer(Enum):
-    """
-    abstDomain: A19601 (C-0-T10901-A19601-cpt)
-    """
+    """abstDomain: A19601 (C-0-T10901-A19601-cpt)"""
     PRF = "PRF"
     SPRF = "SPRF"
 
 
 class XSubstitutionConditionNoneOrUnconditional(Enum):
-    """
-    abstDomain: A19740 (C-0-T17719-A19740-cpt)
-    """
+    """abstDomain: A19740 (C-0-T17719-A19740-cpt)"""
     NOSUB = "NOSUB"
     UNCOND = "UNCOND"
 
 
 class XVeryBasicConfidentialityKind(Enum):
-    """
-    abstDomain: A19738 (C-0-T10228-A19738-cpt)
-    """
+    """abstDomain: A19738 (C-0-T10228-A19738-cpt)"""
     N = "N"
     R = "R"

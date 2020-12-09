@@ -8,7 +8,8 @@ __NAMESPACE__ = "http://www.travelport.com/schema/common_v48_0"
 
 @dataclass
 class Arcpayment:
-    """ARC form of payment.ACH Only.
+    """
+    ARC form of payment.ACH Only.
 
     Parameters
     ----------
@@ -40,16 +41,19 @@ class Arcpayment:
 
 @dataclass
 class AccountCode:
-    """Account Code is used to get Private Fares.If ProviderCode or SupplierCode is
-    not specified, it will be considered a default AccounCode to be sent to all the
-    Providers or Suppliers.
+    """
+    Account Code is used to get Private Fares.If ProviderCode or SupplierCode
+    is not specified, it will be considered a default AccounCode to be sent to
+    all the Providers or Suppliers.
 
     Parameters
     ----------
     code:
     provider_code:
     supplier_code:
-    type: An identifier to categorize this account code. For example, FlightPass for AC Flight Pass or RFB for AC corporate Rewards for Business.
+    type: An identifier to categorize this account code. For example,
+        FlightPass for AC Flight Pass or RFB for AC corporate Rewards for
+        Business.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -91,8 +95,7 @@ class AccountCode:
 
 @dataclass
 class AddSvc:
-    """
-    1P - Add SVC segments to collect additional fee
+    """1P - Add SVC segments to collect additional fee
 
     Parameters
     ----------
@@ -100,12 +103,12 @@ class AddSvc:
     rfisc: 1P - Resaon for issuance sub-code
     svc_description: 1P - SVC fee description
     origin: Origin location - Airport code. If this value not
-    					provided, the last air segment arrival location is taken as
-    					default. 1P only.
+        provided, the last air segment arrival location is taken as
+        default. 1P only.
     destination: Destination location - Airport code.
     start_date: The start date of the SVC segment. If the value
-    					not specified, the default value is set as the date next to the
-    					last airsegment arrival date. 1P only
+        not specified, the default value is set as the date next to the
+        last airsegment arrival date. 1P only
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -160,7 +163,8 @@ class AddSvc:
 
 @dataclass
 class AgencySellInfo:
-    """Information about the agency selling the reservation.
+    """
+    Information about the agency selling the reservation.
 
     Parameters
     ----------
@@ -229,18 +233,23 @@ class AgencySellInfo:
 
 @dataclass
 class AgentAction:
-    """Depending on context, this will represent information about which agent
+    """
+    Depending on context, this will represent information about which agent
     perform different actions.
 
     Parameters
     ----------
     action_type: The type of action the agent performed.
     agent_code: The AgenctCode who performed the action.
-    branch_code: The BranchCode of the branch (working branch, branchcode used for the request. If nothing specified, branchcode for the agent) who performed the action.
+    branch_code: The BranchCode of the branch (working branch, branchcode used
+        for the request. If nothing specified, branchcode for the agent) who
+        performed the action.
     agency_code: The AgencyCode of the agent who performed the action.
-    agent_sine: The sign in user name of the agent logged into the terminal. PROVIDER SUPPORTED: ACH
+    agent_sine: The sign in user name of the agent logged into the terminal.
+        PROVIDER SUPPORTED: ACH
     event_time: Date and time at which this event took place.
-    agent_override: AgentSine value that was used during PNR creation or End Transact.
+    agent_override: AgentSine value that was used during PNR creation or End
+        Transact.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -312,12 +321,14 @@ class AgentAction:
 
 @dataclass
 class AgentIdoverride:
-    """Vendor specific agent identifier overrides to be used to access vendor
+    """
+    Vendor specific agent identifier overrides to be used to access vendor
     systems.
 
     Parameters
     ----------
-    supplier_code: Supplier code to determine which vendor this AgentId belongs to.
+    supplier_code: Supplier code to determine which vendor this AgentId belongs
+        to.
     provider_code: Provider code to route the AgentId to proper provider.
     agent_id: The Agent ID for the applicable supplier/vendor
     """
@@ -358,7 +369,9 @@ class AgentIdoverride:
 
 @dataclass
 class AgentVoucher:
-    """Agent Voucher Form of Payments."""
+    """
+    Agent Voucher Form of Payments.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -374,7 +387,9 @@ class AgentVoucher:
 
 @dataclass
 class AirSearchParameters:
-    """Search Parameters."""
+    """
+    Search Parameters.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -445,7 +460,8 @@ class Auxdata:
 
 @dataclass
 class Bsppayment:
-    """BSP form of payment.ACH Only.
+    """
+    BSP form of payment.ACH Only.
 
     Parameters
     ----------
@@ -477,14 +493,15 @@ class Bsppayment:
 
 @dataclass
 class BaseAsyncProviderSpecificResponse:
-    """Identifies pending responses from a specific provider using MoreResults
+    """
+    Identifies pending responses from a specific provider using MoreResults
     attribute.
 
     Parameters
     ----------
     provider_code: Provider code of a specific host
     more_results: Identifies whether more results are available for
-                      specific host or not.
+        specific host or not.
     """
     provider_code: Optional[str] = field(
         default=None,
@@ -508,11 +525,14 @@ class BaseAsyncProviderSpecificResponse:
 
 @dataclass
 class BillingPointOfSaleInfo:
-    """Point of Sale information for Billing.
+    """
+    Point of Sale information for Billing.
 
     Parameters
     ----------
-    origin_application: Name of the Point of Sale application which initiated the Request.This information will be provided as part of the provisioning of the user.
+    origin_application: Name of the Point of Sale application which initiated
+        the Request.This information will be provided as part of the
+        provisioning of the user.
     cidbnumber: A 10 Digit customer number generated by CIDB system.
     """
     class Meta:
@@ -538,7 +558,9 @@ class BillingPointOfSaleInfo:
 
 @dataclass
 class BookingDates:
-    """Check in and Check out Date information."""
+    """
+    Check in and Check out Date information.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -566,7 +588,10 @@ class BookingSource:
     Parameters
     ----------
     code: Alternate booking source code or number.
-    type: Type of booking source sent in the Code attribute. Possible values are “PseudoCityCode”,” ArcNumber”,” IataNumber”, “CustomerId” and “BookingSourceOverrride”. “BookingSourceOverrride” is only applicable in VehicleCreateReservationReq. 1P/1J.
+    type: Type of booking source sent in the Code attribute. Possible values
+        are “PseudoCityCode”,” ArcNumber”,” IataNumber”, “CustomerId” and
+        “BookingSourceOverrride”. “BookingSourceOverrride” is only applicable
+        in VehicleCreateReservationReq. 1P/1J.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -597,8 +622,11 @@ class BookingSource:
         ARC_NUMBER:
         IATA_NUMBER:
         CUSTOMER_ID:
-        BOOKING_SOURCE_OVERRIDE: The Booking Source Override is usually used when the car supplier has assigned a number (which can be alpha/numeric)
-        								to the agency/e-commerce to use in place of an IATA number. Supported provider(s) : 1P/1J
+        BOOKING_SOURCE_OVERRIDE: The Booking Source Override is usually used
+            when the car supplier has assigned a number (which can be
+            alpha/numeric)
+            to the agency/e-commerce to use in place of an IATA number.
+            Supported provider(s) : 1P/1J
         """
         PSEUDO_CITY_CODE = "PseudoCityCode"
         ARC_NUMBER = "ArcNumber"
@@ -609,7 +637,8 @@ class BookingSource:
 
 @dataclass
 class BookingTravelerName:
-    """Complete name fields.
+    """
+    Complete name fields.
 
     Parameters
     ----------
@@ -673,8 +702,10 @@ class BookingTravelerName:
 
 @dataclass
 class CabinClass:
-    """Requests cabin class (First, Business and Economy, etc.) as supported by the
-    provider or supplier."""
+    """
+    Requests cabin class (First, Business and Economy, etc.) as supported by
+    the provider or supplier.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -690,7 +721,9 @@ class CabinClass:
 
 @dataclass
 class Carrier:
-    """Carrier identifier."""
+    """
+    Carrier identifier.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -707,7 +740,8 @@ class Carrier:
 
 @dataclass
 class Certificate:
-    """Certificate Form of Payment.
+    """
+    Certificate Form of Payment.
 
     Parameters
     ----------
@@ -768,12 +802,15 @@ class Certificate:
 
 @dataclass
 class Characteristic:
-    """Identifies the characteristics of the seat with seat type, value and
+    """
+    Identifies the characteristics of the seat with seat type, value and
     description.
 
     Parameters
     ----------
-    seat_type: Indicates codeset of values such as Seat Type like Place,Position, Smoking Choice, Place Arrangement, Place Direction, Compartment.
+    seat_type: Indicates codeset of values such as Seat Type like
+        Place,Position, Smoking Choice, Place Arrangement, Place Direction,
+        Compartment.
     seat_description: Description of the seat type.
     seat_value: Indicates the value specific to the selected type.
     seat_value_description: Description of the seat value.
@@ -821,7 +858,8 @@ class Characteristic:
 
 @dataclass
 class Check:
-    """Check Form of Payment.
+    """
+    Check Form of Payment.
 
     Parameters
     ----------
@@ -893,14 +931,15 @@ class ContinuityCheckOverride:
 
 @dataclass
 class CorporateDiscountId:
-    """These are zero or more negotiated rate codes.
+    """
+    These are zero or more negotiated rate codes.
 
     Parameters
     ----------
     value:
-    negotiated_rate_code: When set to true,
-                                the data in the CorporateDiscountID is a negotiated rate code.
-                                Otherwise, this data is a Corporate Discount ID rate.
+    negotiated_rate_code: When set to true,                             the
+        data in the CorporateDiscountID is a negotiated rate code.
+        Otherwise, this data is a Corporate Discount ID rate.
     """
     class Meta:
         name = "CorporateDiscountID"
@@ -920,11 +959,13 @@ class CorporateDiscountId:
 
 @dataclass
 class Credentials:
-    """Container to send login id and password on each request.
+    """
+    Container to send login id and password on each request.
 
     Parameters
     ----------
-    user_id: The UserID associated with the entity using this request withing this BranchCode.
+    user_id: The UserID associated with the entity using this request withing
+        this BranchCode.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -942,8 +983,9 @@ class Credentials:
 
 @dataclass
 class CreditCardAuth:
-    """The result of a Credit Auth Request. Will contain all the authorization info
-    and result codes.
+    """The result of a Credit Auth Request.
+
+    Will contain all the authorization info and result codes.
 
     Parameters
     ----------
@@ -1047,15 +1089,19 @@ class CreditCardAuth:
 
 @dataclass
 class CustomProfileInformation:
-    """Custom Profile Field Data required for File Finishing."""
+    """
+    Custom Profile Field Data required for File Finishing.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
 
 @dataclass
 class CustomizedNameData:
-    """Customized Name Data is used to print customized name on the different
-    documents."""
+    """
+    Customized Name Data is used to print customized name on the different
+    documents.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1080,7 +1126,9 @@ class CustomizedNameData:
 
 @dataclass
 class DirectPayment:
-    """Direct Payment Form of Payments."""
+    """
+    Direct Payment Form of Payments.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1130,16 +1178,18 @@ class DriversLicenseRef:
 
 @dataclass
 class EmailNotification:
-    """
-    Send Email Notification to the emails specified in Booking Traveler. Supported Provider : 1G/1V
+    """Send Email Notification to the emails specified in Booking Traveler.
+
+    Supported Provider : 1G/1V
 
     Parameters
     ----------
     email_ref: Reference to Booking Traveler Email.
-    recipients: Indicates the recipients of the mail addresses for which the user requires the system to send the itinerary.List of Possible Values:
-    						All = Send Email to All addresses
-    						Default = Send Email to Primary Booking Traveler
-    						Specific = Send Email to specific address Referred in EmailRef.
+    recipients: Indicates the recipients of the mail addresses for which the
+        user requires the system to send the itinerary.List of Possible Values:
+        All = Send Email to All addresses Default = Send Email to Primary
+        Booking Traveler Specific = Send Email to specific address Referred in
+        EmailRef.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1169,7 +1219,9 @@ class EmailNotification:
 
 @dataclass
 class Endorsement:
-    """Restrictions or instructions about the fare or ticket."""
+    """
+    Restrictions or instructions about the fare or ticket.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1187,14 +1239,26 @@ class Endorsement:
 
 @dataclass
 class EnettVan:
-    """Container for all eNett Van information.
+    """
+    Container for all eNett Van information.
 
     Parameters
     ----------
-    min_percentage: The minimum percentage that will be applied on the Total price and sent to enett,which will denote the minimum authorized amount approved by eNett.uApi will default this to zero for multi-use Van's.
-    max_percentage: The maximum percentage that will be applied on the Total price and sent to enett, which will denote the maximum authorized amount as approved by eNett. This value will be ignored and not used for Multi-Use VAN’s.
-    expiry_days: The number of days from the VAN generation date that the VAN will be active for, after which the VAN cannot be used.
-    multi_use: Acceptable values are true or false. If set to true it will denote that the VAN being requested is multi-use else it will indicate a single -use VAN.A Single use VAN can only be debited once while the multiple use VAN's can be debited multiple times subjected to the maximum value it has been authorized for. The default value will be TRUE to indicate a multi-use VAN is being issued.
+    min_percentage: The minimum percentage that will be applied on the Total
+        price and sent to enett,which will denote the minimum authorized amount
+        approved by eNett.uApi will default this to zero for multi-use Van's.
+    max_percentage: The maximum percentage that will be applied on the Total
+        price and sent to enett, which will denote the maximum authorized
+        amount as approved by eNett. This value will be ignored and not used
+        for Multi-Use VAN’s.
+    expiry_days: The number of days from the VAN generation date that the VAN
+        will be active for, after which the VAN cannot be used.
+    multi_use: Acceptable values are true or false. If set to true it will
+        denote that the VAN being requested is multi-use else it will indicate
+        a single -use VAN.A Single use VAN can only be debited once while the
+        multiple use VAN's can be debited multiple times subjected to the
+        maximum value it has been authorized for. The default value will be
+        TRUE to indicate a multi-use VAN is being issued.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1237,11 +1301,14 @@ class EnettVan:
 
 @dataclass
 class ExchangedCoupon:
-    """The coupon numbers that were used in the exchange process to create the MCO.
+    """
+    The coupon numbers that were used in the exchange process to create the
+    MCO.
 
     Parameters
     ----------
-    ticket_number: The ticket number for which the exchange coupons are present.
+    ticket_number: The ticket number for which the exchange coupons are
+        present.
     coupon_number: Coupon numbers that were exchanged specific to this ticket
     """
     class Meta:
@@ -1267,7 +1334,9 @@ class ExchangedCoupon:
 
 @dataclass
 class FormOfPaymentRef:
-    """A reference to a Form of Payment in the existing UR."""
+    """
+    A reference to a Form of Payment in the existing UR.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1283,14 +1352,17 @@ class FormOfPaymentRef:
 
 @dataclass
 class FormattedTextTextType:
-    """Provides text and indicates whether it is formatted or not.
+    """
+    Provides text and indicates whether it is formatted or not.
 
     Parameters
     ----------
     value:
-    formatted: Textual information, which may be formatted as a line of information, or unformatted, as a paragraph of text.
+    formatted: Textual information, which may be formatted as a line of
+        information, or unformatted, as a paragraph of text.
     language: Language identification.
-    text_format: Indicates the format of text used in the description e.g. unformatted  or html.
+    text_format: Indicates the format of text used in the description e.g.
+        unformatted  or html.
     """
     value: Optional[str] = field(
         default=None,
@@ -1330,7 +1402,9 @@ class FormattedTextTextType:
 
 @dataclass
 class GuaranteeType:
-    """A type of guarantee i.e."""
+    """
+    A type of guarantee i.e.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1345,11 +1419,14 @@ class GuaranteeType:
 
 @dataclass
 class IncludedInBase:
-    """Shows the taxes and fees included in the base fare. (ACH only)
+    """Shows the taxes and fees included in the base fare.
+
+    (ACH only)
 
     Parameters
     ----------
-    amount: this attribute shows the amount included in the base fare for the specific fee or tax
+    amount: this attribute shows the amount included in the base fare for the
+        specific fee or tax
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1365,11 +1442,13 @@ class IncludedInBase:
 
 @dataclass
 class IndustryStandardSsr:
-    """Indicates Carrier Supports this industry standard.
+    """
+    Indicates Carrier Supports this industry standard.
 
     Parameters
     ----------
-    code: This code indicates which Standard of SSR's they support. Sucha as the 'AIRIMP' standard identified by 'IATA.org'
+    code: This code indicates which Standard of SSR's they support. Sucha as
+        the 'AIRIMP' standard identified by 'IATA.org'
     """
     class Meta:
         name = "IndustryStandardSSR"
@@ -1386,7 +1465,8 @@ class IndustryStandardSsr:
 
 @dataclass
 class KeyMapping:
-    """Element for which mapping key sent in the request is different from the
+    """
+    Element for which mapping key sent in the request is different from the
     mapping key comes in the response.
 
     Parameters
@@ -1426,12 +1506,16 @@ class KeyMapping:
 
 @dataclass
 class Location:
-    """Used during search to specify an origin or destination location."""
+    """
+    Used during search to specify an origin or destination location.
+    """
 
 
 @dataclass
 class LocatorCode:
-    """A locator code that identifies a PNR or searches for one."""
+    """
+    A locator code that identifies a PNR or searches for one.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1460,14 +1544,16 @@ class LoyaltyCardRef:
 
 @dataclass
 class McofeeInfo:
-    """Information related to the PTA/TOD (Prepaid Ticket Advice / Ticket on
+    """
+    Information related to the PTA/TOD (Prepaid Ticket Advice / Ticket on
     Departure) related to the MCO.
 
     Parameters
     ----------
     amount: The monetary amount.
     percentage: The percentage.
-    fee_applies_to_ind: Indicates if PTA/TOD fee is for the entire MCO or is per person.
+    fee_applies_to_ind: Indicates if PTA/TOD fee is for the entire MCO or is
+        per person.
     """
     class Meta:
         name = "MCOFeeInfo"
@@ -1503,7 +1589,9 @@ class McofeeInfo:
 
 @dataclass
 class Mcoremark:
-    """Information related to fare construction, free form text etc. of the MCO.
+    """Information related to fare construction, free form text etc.
+
+    of the MCO
 
     Parameters
     ----------
@@ -1528,13 +1616,13 @@ class Mcoremark:
 
 @dataclass
 class Mcotext:
-    """
-    All type of free format text messages related to MCO like - Command Text, Agent Entry, MCO Modifiers, Text Message
+    """All type of free format text messages related to MCO like - Command Text, Agent Entry, MCO Modifiers, Text Message
 
     Parameters
     ----------
     value:
-    type: The type of text. Possible values: Command Text, Agent Entry, MCO Modifiers, Text Message
+    type: The type of text. Possible values: Command Text, Agent Entry, MCO
+        Modifiers, Text Message
     """
     class Meta:
         name = "MCOText"
@@ -1554,7 +1642,9 @@ class Mcotext:
 
 @dataclass
 class MarketingInformation:
-    """Marketing text or Notices for Suppliers."""
+    """
+    Marketing text or Notices for Suppliers.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1571,7 +1661,9 @@ class MarketingInformation:
 
 @dataclass
 class MealRequest:
-    """Special meal requests like Vegetarian."""
+    """
+    Special meal requests like Vegetarian.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1619,25 +1711,25 @@ class MetaData:
 
 @dataclass
 class MiscFormOfPayment:
-    """Miscellaneous Form of Payments.
+    """
+    Miscellaneous Form of Payments.
 
     Parameters
     ----------
-    credit_card_type: The 2 letter credit/ debit card type or code which may not have been issued using the standard bank card types  - i.e. an airline issued card
+    credit_card_type: The 2 letter credit/ debit card type or code which may
+        not have been issued using the standard bank card types  - i.e. an
+        airline issued card
     credit_card_number:
     exp_date: The Expiration date of this card in YYYY-MM format.
-    text: Any free form text which may be associated with the Miscellaneous Form of Payment. This text may be provider or GDS specific
-    category: Indicates what Category the Miscellaneous Form Of Payment is being used for payment - The category may vary by GDS.
-    Allowable values are
-                            "Text"
-                            "Credit"
-                            "CreditCard"
-                            "FreeFormCreditCard"
-                            "Invoice"
-                            "NonRefundable"
-                            "MultipleReceivables"
-                            "Exchange"
-                            "Cash"
+    text: Any free form text which may be associated with the Miscellaneous
+        Form of Payment. This text may be provider or GDS specific
+    category: Indicates what Category the Miscellaneous Form Of Payment is
+        being used for payment - The category may vary by GDS. Allowable values
+        are                         "Text"                         "Credit"
+        "CreditCard"                         "FreeFormCreditCard"
+        "Invoice"                         "NonRefundable"
+        "MultipleReceivables"                         "Exchange"
+        "Cash"
     acceptance_override: Override airline restriction on the credit card.
     """
     class Meta:
@@ -1692,7 +1784,8 @@ class MiscFormOfPayment:
 
 
 class ModificationType(Enum):
-    """The modification types supported.
+    """
+    The modification types supported.
 
     Properties
     ----------
@@ -1701,7 +1794,8 @@ class ModificationType(Enum):
     REPLACE_SEGMENT: Replace a segment in the itinerary with a new segment
     ADD_PASSENGER: Add a passenger to the itinerary
     REMOVE_PASSENGER: Remove a passenger from the itinerary
-    OPTIONS_ONLY: Modification where only options are added / removed from the itinerary
+    OPTIONS_ONLY: Modification where only options are added / removed from the
+        itinerary
     OTHER: Other modification types
     """
     ADD_SEGMENT = "AddSegment"
@@ -1715,7 +1809,8 @@ class ModificationType(Enum):
 
 @dataclass
 class Name:
-    """Complete name fields.
+    """
+    Complete name fields.
 
     Parameters
     ----------
@@ -1787,7 +1882,8 @@ class Name:
 
 @dataclass
 class NameOverride:
-    """To be used if the name is different from booking travelers in the PNR.
+    """
+    To be used if the name is different from booking travelers in the PNR.
 
     Parameters
     ----------
@@ -1829,7 +1925,8 @@ class NameOverride:
 
 @dataclass
 class NextResultReference:
-    """Container to return/send additional retrieve/request additional search
+    """
+    Container to return/send additional retrieve/request additional search
     results.
 
     Parameters
@@ -1860,7 +1957,9 @@ class NextResultReference:
 
 @dataclass
 class OperatedBy:
-    """This is the carrier code to support Cross Accrual."""
+    """
+    This is the carrier code to support Cross Accrual.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -1874,7 +1973,8 @@ class OperatedBy:
 
 
 class OptionalServiceApplicabilityType(Enum):
-    """The different levels at which an optional service may be applied.
+    """
+    The different levels at which an optional service may be applied.
 
     Properties
     ----------
@@ -1900,9 +2000,9 @@ class OtherGuaranteeInfo:
     ----------
     value:
     type: 1) IATA/ARC Number
-    							2) Agency Address
-    							2) Deposit Taken
-    							3) Others
+        2) Agency Address
+        2) Deposit Taken
+        3) Others
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1928,7 +2028,9 @@ class OtherGuaranteeInfo:
 
 @dataclass
 class OverridePcc:
-    """Used to emulate to another PCC or SID.  Providers: 1G, 1V, 1P, 1J.
+    """Used to emulate to another PCC or SID.
+
+    Providers: 1G, 1V, 1P, 1J.
 
     Parameters
     ----------
@@ -1963,8 +2065,9 @@ class OverridePcc:
 
 @dataclass
 class OwnershipChange:
-    """Element to change the ownership of the PNR in the UR. PROVIDER SUPPORTED:
-    Worldspan and JAL.
+    """Element to change the ownership of the PNR in the UR.
+
+    PROVIDER SUPPORTED: Worldspan and JAL.
 
     Parameters
     ----------
@@ -1985,16 +2088,17 @@ class OwnershipChange:
 
 @dataclass
 class PaymentAdvice:
-    """Contains other form of payment for Cruise Reservations.
+    """
+    Contains other form of payment for Cruise Reservations.
 
     Parameters
     ----------
     type: Other Payment Yype. Possible Values: AGC - Agency
-                                                    Check, AGG - Agency Guarantee, AWC - Award Check, CSH - Cash
-                                                    Equivalent, DBC - Denied Boarding Compensation, MCO -
-                                                    Miscellaneous Charge Order, TOO - Tour Order, TOV - Tour Voucher
+        Check, AGG - Agency Guarantee, AWC - Award Check, CSH - Cash
+        Equivalent, DBC - Denied Boarding Compensation, MCO -
+        Miscellaneous Charge Order, TOO - Tour Order, TOV - Tour Voucher
     document_number: Payment Document Number Examples: 1234567890,
-                                                    R7777
+        R7777
     issue_date: Document Issuance date
     issue_city: City code of document issuance
     original_fop: Original form of payment Examples: CHECK 3500
@@ -2065,7 +2169,9 @@ class PaymentRef:
 
 @dataclass
 class Penalty:
-    """Exchange penalty information."""
+    """
+    Exchange penalty information.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -2143,7 +2249,8 @@ class Penalty:
 
 @dataclass
 class PersonalGeography:
-    """Personal geography details of the associated passenger.
+    """
+    Personal geography details of the associated passenger.
 
     Parameters
     ----------
@@ -2182,12 +2289,15 @@ class PersonalGeography:
 
 @dataclass
 class PointOfCommencement:
-    """Point of Commencement is optional. CityOrAirportCode and date portion of the
-    Time attribute is mandatory.
+    """Point of Commencement is optional.
+
+    CityOrAirportCode and date portion of the Time attribute is
+    mandatory.
 
     Parameters
     ----------
-    city_or_airport_code: Three digit Airport or City code that would be the Point of Commencement location for the trips/legs mentioned.
+    city_or_airport_code: Three digit Airport or City code that would be the
+        Point of Commencement location for the trips/legs mentioned.
     time: Specify a date or date and time
     """
     class Meta:
@@ -2215,17 +2325,18 @@ class PointOfCommencement:
 
 @dataclass
 class PointOfSale:
-    """User can use this node to send a specific PCC to access fares allowed only
-    for that PCC. This node gives the capability for fare redistribution at UR
-    level.  For fare redistribution at the stored fare level see
-    AirPricingSolution/AirPricingInfo/AirPricingModifiers/PointOfSale.
+    """User can use this node to send a specific PCC to access fares allowed
+    only for that PCC.
+
+    This node gives the capability for fare redistribution at UR level.  For fare redistribution at the stored fare level see AirPricingSolution/AirPricingInfo/AirPricingModifiers/PointOfSale.
 
     Parameters
     ----------
     provider_code: The provider in which the PCC is defined.
     pseudo_city_code: The PCC in the host system.
     key:
-    iata: Used for rapid reprice. This field is the IATA associated to this Point of Sale PCC. Providers: 1G/1V
+    iata: Used for rapid reprice. This field is the IATA associated to this
+        Point of Sale PCC. Providers: 1G/1V
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2365,7 +2476,9 @@ class PriceMatchError:
 
 @dataclass
 class Provider:
-    """Provider identifier."""
+    """
+    Provider identifier.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -2383,7 +2496,9 @@ class Provider:
 
 @dataclass
 class ProviderReservationInfoRef:
-    """Container for Provider reservation reference key."""
+    """
+    Container for Provider reservation reference key.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -2413,15 +2528,17 @@ class PseudoCityCode:
 
 @dataclass
 class QueueSelector:
-    """Identifies the Queue with Queue Number , Category and Date Range.
+    """
+    Identifies the Queue with Queue Number , Category and Date Range.
 
     Parameters
     ----------
     queue: Queue Number . Possible values are 01, AA , A1 etc.
     category: Queue Category Number. 2 Character Alpha or Numeric Number.
-    Either Alpha or Numeric Number is allowed.
-    If using for Sabre is mandatory and is Prefatory Instruction Code value of 0-999.
-    date_range: Date range number where the PNR should be queued. Possible values are 1,2,1-4 etc.
+        Either Alpha or Numeric Number is allowed. If using for Sabre is
+        mandatory and is Prefatory Instruction Code value of 0-999.
+    date_range: Date range number where the PNR should be queued. Possible
+        values are 1,2,1-4 etc.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -2465,7 +2582,8 @@ class ReferencePoint:
 
 @dataclass
 class RefundRemark:
-    """A textual remark displayed in Refund Quote and Refund response.
+    """
+    A textual remark displayed in Refund Quote and Refund response.
 
     Parameters
     ----------
@@ -2542,7 +2660,8 @@ class RequiredField:
 
 @dataclass
 class Requisition:
-    """Requisition Form of Payment.
+    """
+    Requisition Form of Payment.
 
     Parameters
     ----------
@@ -2586,7 +2705,9 @@ class Requisition:
 
 @dataclass
 class ResponseMessage:
-    """A simple textual fare note. Used within several other objects.
+    """A simple textual fare note.
+
+    Used within several other objects.
 
     Parameters
     ----------
@@ -2644,7 +2765,8 @@ class ResponseMessage:
 
 @dataclass
 class Restriction:
-    """Which activities are supported for a particular element.
+    """
+    Which activities are supported for a particular element.
 
     Parameters
     ----------
@@ -2673,7 +2795,8 @@ class Restriction:
 
 @dataclass
 class RoleInfo:
-    """Container to specify the role of the agent.
+    """
+    Container to specify the role of the agent.
 
     Parameters
     ----------
@@ -2734,7 +2857,9 @@ class SearchTicketingTicketStatus(Enum):
 
 @dataclass
 class SeatAttribute:
-    """Identifies the seat attribute of the service."""
+    """
+    Identifies the seat attribute of the service.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -2792,7 +2917,8 @@ class SellMessage:
 
 @dataclass
 class ServiceFeeTaxInfo:
-    """The taxes associated to a particular Service Fee.
+    """
+    The taxes associated to a particular Service Fee.
 
     Parameters
     ----------
@@ -2822,14 +2948,15 @@ class ServiceFeeTaxInfo:
 
 @dataclass
 class ShopInformation:
-    """Shopping Information required for File Finishing.
+    """
+    Shopping Information required for File Finishing.
 
     Parameters
     ----------
     search_request: Search parameters that were used in LFS
-                                                            request
+        request
     flights_offered: Flights with lowest logical airfare
-                                                            returned as response to LFS request
+        returned as response to LFS request
     cabin_shopped:
     cabin_selected:
     lowest_fare_offered:
@@ -2883,8 +3010,8 @@ class ShopInformation:
         origin:
         destination:
         departure_time: Date and Time at which this entity
-        									departs. This does not include Time Zone information since it
-        									can be derived from origin location
+            departs. This does not include Time Zone information since it
+            can be derived from origin location
         class_of_service:
         """
         origin: Optional[str] = field(
@@ -2930,8 +3057,8 @@ class ShopInformation:
         origin:
         destination:
         departure_time: Date and Time at which this entity
-        									departs. This does not include Time Zone information since it
-        									can be derived from origin location
+            departs. This does not include Time Zone information since it
+            can be derived from origin location
         travel_order:
         carrier:
         flight_number:
@@ -3014,7 +3141,9 @@ class ShopInformation:
 
 @dataclass
 class SimpleName:
-    """Free text name."""
+    """
+    Free text name.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -3028,7 +3157,9 @@ class SimpleName:
 
 @dataclass
 class State:
-    """Container to house the state code for an address."""
+    """
+    Container to house the state code for an address.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -3039,11 +3170,13 @@ class State:
 
 @dataclass
 class StockControl:
-    """The Stock Control Numbers related details of the MCO.
+    """
+    The Stock Control Numbers related details of the MCO.
 
     Parameters
     ----------
-    type: Stock control type valid options include: Pending, Failed, Plain Paper, Blank, Suppressed.
+    type: Stock control type valid options include: Pending, Failed, Plain
+        Paper, Blank, Suppressed.
     number: Stock control number.
     """
     class Meta:
@@ -3067,7 +3200,9 @@ class StockControl:
 
 @dataclass
 class TaxDetail:
-    """The tax idetail nformation for a fare quote tax."""
+    """
+    The tax idetail nformation for a fare quote tax.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -3131,7 +3266,9 @@ class TerminalSessionInfo:
 
 @dataclass
 class TicketNumber:
-    """The identifying number for the actual ticket."""
+    """
+    The identifying number for the actual ticket.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -3147,7 +3284,8 @@ class TicketNumber:
 
 @dataclass
 class TravelInfo:
-    """Traveler information details like Travel Purpose and Trip Name.
+    """
+    Traveler information details like Travel Purpose and Trip Name.
 
     Parameters
     ----------
@@ -3177,7 +3315,9 @@ class TravelInfo:
 
 @dataclass
 class TravelerType:
-    """The 3-char IATA traveler type code."""
+    """
+    The 3-char IATA traveler type code.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -3194,8 +3334,10 @@ class TravelerType:
 
 
 class UrticketStatus(Enum):
-    """Information on whether the Universal Record ticket status is Ticketed,
-    Unticketed , Partially Ticketed or Not Applicable status."""
+    """
+    Information on whether the Universal Record ticket status is Ticketed,
+    Unticketed , Partially Ticketed or Not Applicable status.
+    """
     TICKETED = "Ticketed"
     UNTICKETED = "Unticketed"
     PARTIALLY_TICKETED = "Partially Ticketed"
@@ -3204,7 +3346,9 @@ class UrticketStatus(Enum):
 
 @dataclass
 class UnitedNations:
-    """United Nations Form of Payments."""
+    """
+    United Nations Form of Payments.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -3231,7 +3375,8 @@ class TypeAdjustmentType(Enum):
 
 @dataclass
 class TypeAgencyPayment:
-    """Type for Agency Payment.
+    """
+    Type for Agency Payment.
 
     Parameters
     ----------
@@ -3270,7 +3415,9 @@ class TypeAgencyPayment:
 
 
 class TypeAgencyProfileLevel(Enum):
-    """Profile levels in the Agency Hierarchy."""
+    """
+    Profile levels in the Agency Hierarchy.
+    """
     AGENCY = "Agency"
     BRANCH = "Branch"
     BRANCH_GROUP = "BranchGroup"
@@ -3288,7 +3435,8 @@ class TypeBookingTransactionsAllowed:
     """
     Parameters
     ----------
-    booking_enabled: Allow or prohibit booking transaction for the given product type on this Provider/Supplier. Inheritable.
+    booking_enabled: Allow or prohibit booking transaction for the given
+        product type on this Provider/Supplier. Inheritable.
     """
     class Meta:
         name = "typeBookingTransactionsAllowed"
@@ -3303,24 +3451,31 @@ class TypeBookingTransactionsAllowed:
 
 
 class TypeCommissionLevel(Enum):
-    """ATA/IATA Standard commission level."""
+    """
+    ATA/IATA Standard commission level.
+    """
     RECALLED = "Recalled"
     FARE = "Fare"
     PENALTY = "Penalty"
 
 
 class TypeCommissionModifier(Enum):
-    """Optional commission modifier.
+    """
+    Optional commission modifier.
 
     Properties
     ----------
     FARE_PERCENT: Commission percentage applied to the fare
     FARE_AMOUNT: Commission amount applied to the fare
     COMMISSION_AMOUNT: Specific commission amount to be applied
-    LESS_STANDARD_COMMISSION: Indicates commission percentage applied to the fare less the standard commission
-    STANDARD_PLUS_SUPPLEMENTARY_PERCENT: Indicates commission percentage includes standard and supplementary commission
-    SUPPLEMENTARY_PERCENT: Supplementary commission percent which is applied to the fare
-    SUPPLEMENTARY_AMOUNT: Supplementary commission amount which is applied to the fare
+    LESS_STANDARD_COMMISSION: Indicates commission percentage applied to the
+        fare less the standard commission
+    STANDARD_PLUS_SUPPLEMENTARY_PERCENT: Indicates commission percentage
+        includes standard and supplementary commission
+    SUPPLEMENTARY_PERCENT: Supplementary commission percent which is applied to
+        the fare
+    SUPPLEMENTARY_AMOUNT: Supplementary commission amount which is applied to
+        the fare
     """
     FARE_PERCENT = "FarePercent"
     FARE_AMOUNT = "FareAmount"
@@ -3332,7 +3487,9 @@ class TypeCommissionModifier(Enum):
 
 
 class TypeCommissionType(Enum):
-    """Types of possible commission."""
+    """
+    Types of possible commission.
+    """
     FLAT = "Flat"
     PERCENT_BASE = "PercentBase"
     PERCENT_TOTAL = "PercentTotal"
@@ -3340,7 +3497,9 @@ class TypeCommissionType(Enum):
 
 @dataclass
 class TypeDateRange:
-    """Specify a range of dates."""
+    """
+    Specify a range of dates.
+    """
     class Meta:
         name = "typeDateRange"
 
@@ -3363,13 +3522,17 @@ class TypeDateRange:
 
 
 class TypeDirection(Enum):
-    """Defines the Direction for Incoming or Outgoing."""
+    """
+    Defines the Direction for Incoming or Outgoing.
+    """
     INCOMING = "Incoming"
     OUTGOING = "Outgoing"
 
 
 class TypeDistance(Enum):
-    """2 Letter distance unit code."""
+    """
+    2 Letter distance unit code.
+    """
     MI = "MI"
     KM = "KM"
 
@@ -3381,7 +3544,9 @@ class TypeDoorCount(Enum):
 
 
 class TypeElement(Enum):
-    """Defines the list of available data types for modifications."""
+    """
+    Defines the list of available data types for modifications.
+    """
     PAYMENT = "Payment"
     CREDIT_CARD_AUTHORIZATION = "CreditCardAuthorization"
     DELIVERY_INFO = "DeliveryInfo"
@@ -3439,9 +3604,9 @@ class TypeElement(Enum):
 class TypeElementStatus(Enum):
     """Values to specify the state of the element.
 
-    "A" refers to "Add" , "M" refers to "Modified" and "C" refers to error
-    conditions when value provided in "Key" attribute is not retained in
-    response
+    "A" refers to "Add" , "M" refers to "Modified" and "C" refers to
+    error conditions when value provided in "Key" attribute is not
+    retained in response
     """
     A = "A"
     M = "M"
@@ -3449,7 +3614,9 @@ class TypeElementStatus(Enum):
 
 
 class TypeEventType(Enum):
-    """The various reservation events (book, cancel, void, etc)"""
+    """
+    The various reservation events (book, cancel, void, etc)
+    """
     CREATE = "Create"
     CANCEL = "Cancel"
     TICKET = "Ticket"
@@ -3469,7 +3636,8 @@ class TypeFormOfPaymentPnrreference:
     Parameters
     ----------
     key: Unique ID to identify a ProviderReservationInfo
-    provider_reservation_level: It means that the form of payment is applied at ProviderReservation level.
+    provider_reservation_level: It means that the form of payment is applied at
+        ProviderReservation level.
     """
     class Meta:
         name = "typeFormOfPaymentPNRReference"
@@ -3507,8 +3675,10 @@ class TypeFuel(Enum):
 
 
 class TypeFulfillmentIdtype(Enum):
-    """IdentificationType to define how the customer will identify himself when
-    collecting the ticket."""
+    """
+    IdentificationType to define how the customer will identify himself when
+    collecting the ticket.
+    """
     BAHN_CARD = "Bahn Card"
     CREDIT_CARD = "Credit Card"
     EURO_CHEQUE_CARD = "Euro Cheque Card"
@@ -3516,8 +3686,10 @@ class TypeFulfillmentIdtype(Enum):
 
 
 class TypeFulfillmentType(Enum):
-    """Defines how the client wishes to receive travel documents, e.g. collect
-    ticket at a kiosk, print in agency."""
+    """
+    Defines how the client wishes to receive travel documents, e.g. collect
+    ticket at a kiosk, print in agency.
+    """
     KIOSK = "Kiosk"
     TRAVEL_AGENCY = "Travel Agency"
     COURIER = "Courier"
@@ -3550,7 +3722,8 @@ class TypeGeneralReference:
 
 @dataclass
 class TypeGuaranteeInformation:
-    """Information pertaining to the payment of type Guarantee.
+    """
+    Information pertaining to the payment of type Guarantee.
 
     Parameters
     ----------
@@ -3630,7 +3803,9 @@ class TypeImageSize(Enum):
 
 
 class TypeInvoiceRecordCategory(Enum):
-    """Invoice record type: Invoice, Void, Refund, Manual."""
+    """
+    Invoice record type: Invoice, Void, Refund, Manual.
+    """
     INVOICE = "Invoice"
     VOID = "Void"
     REFUND = "Refund"
@@ -3661,7 +3836,9 @@ class TypeItineraryType(Enum):
 
 @dataclass
 class TypeKeyBasedReference:
-    """Generic type to be used for Key based reference."""
+    """
+    Generic type to be used for Key based reference.
+    """
     class Meta:
         name = "typeKeyBasedReference"
 
@@ -3676,7 +3853,9 @@ class TypeKeyBasedReference:
 
 
 class TypeLicenseCode(Enum):
-    """The type of license assigned to an agent."""
+    """
+    The type of license assigned to an agent.
+    """
     STANDARD = "Standard"
     STANDARD_PLUS = "Standard Plus"
     ENTERPRISE = "Enterprise"
@@ -3685,7 +3864,9 @@ class TypeLicenseCode(Enum):
 
 
 class TypeLoggingLevel(Enum):
-    """The type of various Logging levels."""
+    """
+    The type of various Logging levels.
+    """
     TRACE = "TRACE"
     DEBUG = "DEBUG"
     INFO = "INFO"
@@ -3695,13 +3876,17 @@ class TypeLoggingLevel(Enum):
 
 
 class TypeMcofeeType(Enum):
-    """The available Airline service fee types for an MCO."""
+    """
+    The available Airline service fee types for an MCO.
+    """
     CURRENTLY = "CURRENTLY"
     UNDEFINED = "UNDEFINED"
 
 
 class TypeMcostatus(Enum):
-    """The available status codes for an MCO."""
+    """
+    The available status codes for an MCO.
+    """
     OPEN = "Open"
     USED = "Used"
     REFUNDED = "Refunded"
@@ -3710,7 +3895,9 @@ class TypeMcostatus(Enum):
 
 
 class TypeMcotype(Enum):
-    """The available types for an MCO."""
+    """
+    The available types for an MCO.
+    """
     AGENCY_SERVICE_FEE = "AgencyServiceFee"
     EXCHANGE_RESIDUAL = "ExchangeResidual"
     AIRLINE_SERVICE_FEE = "AirlineServiceFee"
@@ -3735,12 +3922,14 @@ class TypeNonAirReservationRef:
 
 @dataclass
 class TypeOtasubKey:
-    """The attributes and elements in a SubKey.
+    """
+    The attributes and elements in a SubKey.
 
     Parameters
     ----------
     text: Information for a sub key.
-    name: A subkey to identify the special equipment codes. Applicable when Policy/@Name is EQUIP. Uses OTA CODE "EQP". 1P/1J.
+    name: A subkey to identify the special equipment codes. Applicable when
+        Policy/@Name is EQUIP. Uses OTA CODE "EQP". 1P/1J.
     description: A brief description of a subkey.
     """
     class Meta:
@@ -3773,12 +3962,16 @@ class TypeOtasubKey:
 
 
 class TypeOtherImageSize(Enum):
-    """Other unknown image sizes."""
+    """
+    Other unknown image sizes.
+    """
     X = "X"
 
 
 class TypePolicy(Enum):
-    """Available product types."""
+    """
+    Available product types.
+    """
     AIR = "Air"
     VEHICLE = "Vehicle"
     HOTEL = "Hotel"
@@ -3791,9 +3984,12 @@ class TypePolicyCodesList:
     """
     Parameters
     ----------
-    policy_code: A code that indicates why an item was determined to be ‘out of policy’.
-    min_policy_code: A code that indicates why the minimum fare or rate was determined to be ‘out of policy’.
-    max_policy_code: A code that indicates why the maximum fare or rate was determined to be ‘out of policy’.
+    policy_code: A code that indicates why an item was determined to be ‘out of
+        policy’.
+    min_policy_code: A code that indicates why the minimum fare or rate was
+        determined to be ‘out of policy’.
+    max_policy_code: A code that indicates why the maximum fare or rate was
+        determined to be ‘out of policy’.
     """
     class Meta:
         name = "typePolicyCodesList"
@@ -3839,7 +4035,9 @@ class TypePricingType(Enum):
 
 
 class TypeProduct(Enum):
-    """Available product types."""
+    """
+    Available product types.
+    """
     AIR = "Air"
     VEHICLE = "Vehicle"
     HOTEL = "Hotel"
@@ -3849,7 +4047,9 @@ class TypeProduct(Enum):
 
 
 class TypeProfileApplicability(Enum):
-    """The applicability of the profile or profile template value."""
+    """
+    The applicability of the profile or profile template value.
+    """
     ALWAYS = "Always"
     OPTIONAL_VALUE = "Optional"
     NEVER = "Never"
@@ -3866,14 +4066,18 @@ class TypeProfileEntityStatus(Enum):
 
 
 class TypeProfileEntityStatusWithDelete(Enum):
-    """Specify whether the change is to update or delete the field."""
+    """
+    Specify whether the change is to update or delete the field.
+    """
     DELETED = "Deleted"
     ACTIVE = "Active"
     INACTIVE = "Inactive"
 
 
 class TypeProfileLevel(Enum):
-    """The type of the profile or profile template."""
+    """
+    The type of the profile or profile template.
+    """
     AGENCY = "Agency"
     BRANCH = "Branch"
     BRANCH_GROUP = "BranchGroup"
@@ -3884,14 +4088,18 @@ class TypeProfileLevel(Enum):
 
 
 class TypeProfileLevelWithCredential(Enum):
-    """The "profile level" used for association of workflow etc."""
+    """
+    The "profile level" used for association of workflow etc.
+    """
     AGENCY = "Agency"
     BRANCH = "Branch"
     AGENT = "Agent"
 
 
 class TypeProfileLevelWithSystem(Enum):
-    """The "profile level" used for association of workflow etc."""
+    """
+    The "profile level" used for association of workflow etc.
+    """
     SYSTEM = "System"
     AGENCY = "Agency"
     BRANCH = "Branch"
@@ -3903,7 +4111,9 @@ class TypeProfileLevelWithSystem(Enum):
 
 
 class TypeProfileType(Enum):
-    """A type for unique party identifiers of any party role."""
+    """
+    A type for unique party identifiers of any party role.
+    """
     AGENCY_GROUP = "AgencyGroup"
     AGENCY = "Agency"
     BRANCH_GROUP = "BranchGroup"
@@ -3946,12 +4156,16 @@ class TypeProviderReservationDetail:
 
 
 class TypeProviderToken(Enum):
-    """List of known hosts with terminal access."""
+    """
+    List of known hosts with terminal access.
+    """
     SABRE = "Sabre"
 
 
 class TypePurchaseWindow(Enum):
-    """The purchase windows available for merchandising service."""
+    """
+    The purchase windows available for merchandising service.
+    """
     BOOKING_ONLY = "BookingOnly"
     TICKETING_ONLY = "TicketingOnly"
     CHECK_IN_ONLY = "CheckInOnly"
@@ -3960,7 +4174,9 @@ class TypePurchaseWindow(Enum):
 
 
 class TypeQueueModifyAction(Enum):
-    """Queue action: remove, requeue, move, add, unlock."""
+    """
+    Queue action: remove, requeue, move, add, unlock.
+    """
     REMOVE = "Remove"
     REQUEUE = "Requeue"
     MOVE = "Move"
@@ -3969,7 +4185,9 @@ class TypeQueueModifyAction(Enum):
 
 
 class TypeRateCategory(Enum):
-    """The category of the rate (Best, etc)"""
+    """
+    The category of the rate (Best, etc)
+    """
     ASSOCIATION = "Association"
     BUSINESS = "Business"
     CORPORATE = "Corporate"
@@ -3992,7 +4210,8 @@ class TypeRateDescription:
     Parameters
     ----------
     text:
-    name: Optional context name of the text block being returned i.e. Room details
+    name: Optional context name of the text block being returned i.e. Room
+        details
     """
     class Meta:
         name = "typeRateDescription"
@@ -4017,14 +4236,18 @@ class TypeRateDescription:
 
 
 class TypeRateGuarantee(Enum):
-    """The guarantee for this rate."""
+    """
+    The guarantee for this rate.
+    """
     RATE_GUARANTEED = "Rate Guaranteed"
     RATE_QUOTED = "Rate Quoted"
     AGENT_ENTERED = "Agent Entered"
 
 
 class TypeRateTimePeriod(Enum):
-    """The period for the rate code (daily, weekly, etc)"""
+    """
+    The period for the rate code (daily, weekly, etc)
+    """
     HOURLY = "Hourly"
     DAILY = "Daily"
     WEEKLY = "Weekly"
@@ -4037,8 +4260,10 @@ class TypeRateTimePeriod(Enum):
 
 
 class TypeRecordStatus(Enum):
-    """Information on whether the Universal Record is Current, Past , Cancelled or
-    Any status."""
+    """
+    Information on whether the Universal Record is Current, Past , Cancelled or
+    Any status.
+    """
     ALL = "All"
     PAST = "Past"
     CURRENT = "Current"
@@ -4053,7 +4278,8 @@ class TypeRemark:
     ----------
     value:
     provider_reservation_info_ref: Provider reservation reference key.
-    provider_code: Contains the Provider Code of the provider for which this element is used
+    provider_code: Contains the Provider Code of the provider for which this
+        element is used
     """
     class Meta:
         name = "typeRemark"
@@ -4087,7 +4313,8 @@ class TypeRemarkWithTravelerRef:
     remark_data: Actual remarks data.
     booking_traveler_ref: Reference to Booking Traveler.
     provider_reservation_info_ref: Provider reservation reference key.
-    provider_code: Contains the Provider Code of the provider for which this element is used
+    provider_code: Contains the Provider Code of the provider for which this
+        element is used
     """
     class Meta:
         name = "typeRemarkWithTravelerRef"
@@ -4138,8 +4365,10 @@ class TypeReqSeat(Enum):
 
 
 class TypeReserveRequirement(Enum):
-    """Type of payment required to reserve travel i.e. Hotel Reservation
-    requirement."""
+    """
+    Type of payment required to reserve travel i.e. Hotel Reservation
+    requirement.
+    """
     DEPOSIT = "Deposit"
     GUARANTEE = "Guarantee"
     PREPAYMENT = "Prepayment"
@@ -4147,15 +4376,19 @@ class TypeReserveRequirement(Enum):
 
 
 class TypeResidency(Enum):
-    """The passenger residency type.Residence Type can be Employee, National or
-    Resident."""
+    """
+    The passenger residency type.Residence Type can be Employee, National or
+    Resident.
+    """
     EMPLOYEE = "Employee"
     NATIONAL = "National"
     RESIDENT = "Resident"
 
 
 class TypeResponseImageSize(Enum):
-    """Allowable images sizes in response."""
+    """
+    Allowable images sizes in response.
+    """
     T = "T"
     I = "I"
     S = "S"
@@ -4174,7 +4407,8 @@ class TypeResponseImageSize(Enum):
 
 @dataclass
 class TypeResultMessage:
-    """Used to identify the results of a requests.
+    """
+    Used to identify the results of a requests.
 
     Parameters
     ----------
@@ -4232,8 +4466,10 @@ class TypeSegmentRef:
 
 
 class TypeSource(Enum):
-    """The source/level at which is item is defined (available through
-    inheritance)"""
+    """
+    The source/level at which is item is defined (available through
+    inheritance)
+    """
     AGENCY = "Agency"
     BRANCH_GROUP = "BranchGroup"
     BRANCH = "Branch"
@@ -4261,7 +4497,8 @@ class TypeSpecificTime:
 
 
 class TypeStatus(Enum):
-    """The status of the service fees.
+    """
+    The status of the service fees.
 
     Properties
     ----------
@@ -4276,7 +4513,8 @@ class TypeStatus(Enum):
 
 @dataclass
 class TypeSubKey:
-    """The attributes and elements in a SubKey.
+    """
+    The attributes and elements in a SubKey.
 
     Parameters
     ----------
@@ -4335,7 +4573,8 @@ class TypeTax:
 
 
 class TypeTicketStatus(Enum):
-    """Status for the ticket (Ticketed, Voided, etc)
+    """
+    Status for the ticket (Ticketed, Voided, etc)
 
     Properties
     ----------
@@ -4360,7 +4599,9 @@ class TypeTicketStatus(Enum):
 
 @dataclass
 class TypeTimeRange:
-    """Specify a range of times."""
+    """
+    Specify a range of times.
+    """
     class Meta:
         name = "typeTimeRange"
 
@@ -4383,14 +4624,18 @@ class TypeTimeRange:
 
 
 class TypeTrinary(Enum):
-    """Extension of boolean, that allows for unknown values."""
+    """
+    Extension of boolean, that allows for unknown values.
+    """
     TRUE_VALUE = "true"
     FALSE_VALUE = "false"
     UNKNOWN = "unknown"
 
 
 class TypeVehicleCategory(Enum):
-    """The category of vehicle."""
+    """
+    The category of vehicle.
+    """
     CAR = "Car"
     VAN = "Van"
     SUV = "SUV"
@@ -4417,7 +4662,9 @@ class TypeVehicleCategory(Enum):
 
 
 class TypeVehicleClass(Enum):
-    """The class of vehicle."""
+    """
+    The class of vehicle.
+    """
     MINI = "Mini"
     ECONOMY = "Economy"
     COMPACT = "Compact"
@@ -4461,7 +4708,9 @@ class TypeVehicleClass(Enum):
 
 
 class TypeVehicleLocation(Enum):
-    """The type of location requested, such as resort, city center."""
+    """
+    The type of location requested, such as resort, city center.
+    """
     TERMINAL = "Terminal"
     SHUTTLE_ON_AIRPORT = "ShuttleOnAirport"
     SHUTTLE_OFF_AIRPORT = "ShuttleOffAirport"
@@ -4498,7 +4747,8 @@ class TypeVendorLocation:
     preferred_option: Preferred Option marker for Location.
     vendor_location_id: Location identifier
     key: Key which maps vendor location with vehicles
-    more_rates_token: Enter the Token when provided by hotel property, more rates exist. HADS/HSS  support only.
+    more_rates_token: Enter the Token when provided by hotel property, more
+        rates exist. HADS/HSS  support only.
     """
     class Meta:
         name = "typeVendorLocation"
@@ -4566,7 +4816,8 @@ class TypeVoucherType(Enum):
 
 @dataclass
 class AccountingRemark:
-    """An accounting remark container to hold any printable text.
+    """
+    An accounting remark container to hold any printable text.
 
     Parameters
     ----------
@@ -4574,16 +4825,19 @@ class AccountingRemark:
     booking_traveler_ref: Reference to Booking Traveler.
     key:
     category: A category to group and organize the various
-                        remarks. This is not required, but it is recommended.
+        remarks. This is not required, but it is recommended.
     type_in_gds:
     provider_reservation_info_ref: Provider reservation reference key.
     provider_code: Contains the Provider Code of the provider
-                        for which this accounting remark is used
+        for which this accounting remark is used
     use_provider_native_mode: Will be true when terminal process required,
-                        else false
+        else false
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -4669,26 +4923,37 @@ class AccountingRemark:
 @dataclass
 class ActionStatus:
     """Status of the action that will happen or has happened to the air
-    reservation. One Action status for each provider reservation.
+    reservation.
+
+    One Action status for each provider reservation
 
     Parameters
     ----------
     remark:
-    type: Identifies the type of action (if any) to take on this air reservation. Only TTL, TAU, TAX and TAW can be set by the user.
-    ticket_date: Identifies when the action type will happen, or
-                            has happened according to the type.
-    key: Identifies when the action type will happen, or
-                            has happened according to the type.
+    type: Identifies the type of action (if any) to take on this air
+        reservation. Only TTL, TAU, TAX and TAW can be set by the user.
+    ticket_date: Identifies when the action type will happen, or has happened
+        according to the type.
+    key: Identifies when the action type will happen, or has happened according
+        to the type.
     provider_reservation_info_ref: Provider reservation reference key.
-    queue_category: Add Category placement to ticketing queue (required in 1P - default is 00)
-    airport_code: Used with Time Limit to specify the airport location where the ticket is to be issued.
+    queue_category: Add Category placement to ticketing queue (required in 1P -
+        default is 00)
+    airport_code: Used with Time Limit to specify the airport location where
+        the ticket is to be issued.
     provider_code:
     supplier_code:
-    pseudo_city_code: The Branch PCC in the host system where PNR can be queued for ticketing. When used with TAU it will auto queue to Q10. When used with TAW agent performs manual move to Q.
-    account_code: Used with TAW. Used to specify a corporate or in house account code to the PNR as part of ticketing arrangement field.
+    pseudo_city_code: The Branch PCC in the host system where PNR can be queued
+        for ticketing. When used with TAU it will auto queue to Q10. When used
+        with TAW agent performs manual move to Q.
+    account_code: Used with TAW. Used to specify a corporate or in house
+        account code to the PNR as part of ticketing arrangement field.
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -4834,7 +5099,9 @@ class AddressRestriction:
 
 @dataclass
 class AgencyInfo:
-    """Tracks the various agent/agency information."""
+    """
+    Tracks the various agent/agency information.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -4851,14 +5118,18 @@ class AgencyInfo:
 
 @dataclass
 class AgencyPayment(TypeAgencyPayment):
-    """Container for Agency Payment."""
+    """
+    Container for Agency Payment.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
 
 @dataclass
 class Airport(Location):
-    """Airport identifier."""
+    """
+    Airport identifier.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -4876,7 +5147,8 @@ class Airport(Location):
 
 @dataclass
 class AppliedProfile:
-    """A simple container to specify the profiles that were applied to a
+    """
+    A simple container to specify the profiles that were applied to a
     reservation.
 
     Parameters
@@ -4889,8 +5161,11 @@ class AppliedProfile:
     immediate_parent_id: The ID of the immediate parent that was applied
     immediate_parent_name: The name of the immediate parent that was applied
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -4968,12 +5243,21 @@ class BaseCoreReq:
     billing_point_of_sale_info:
     agent_idoverride:
     terminal_session_info:
-    trace_id: Unique identifier for this atomic transaction traced by the user. Use is optional.
-    token_id: Authentication Token ID used when running in statefull operation. Obtained from the LoginRsp. Use is optional.
+    trace_id: Unique identifier for this atomic transaction traced by the user.
+        Use is optional.
+    token_id: Authentication Token ID used when running in statefull operation.
+        Obtained from the LoginRsp. Use is optional.
     authorized_by: Used in showing who authorized the request. Use is optional.
-    target_branch: Used for Emulation - If authorised will execute the request as if the agent's parent branch is the TargetBranch specified.
+    target_branch: Used for Emulation - If authorised will execute the request
+        as if the agent's parent branch is the TargetBranch specified.
     override_logging: Use to override the default logging level
-    language_code: ISO 639 two-character language codes are used to retrieve specific information in the requested language. For Rich Content and Branding, language codes ZH-HANT (Chinese Traditional), ZH-HANS (Chinese Simplified), FR-CA (French Canadian) and PT-BR (Portuguese Brazil) can also be used. For RCH, language codes ENGB, ENUS, DEDE, DECH can also be used. Only certain services support this attribute. Providers: ACH, RCH, 1G, 1V, 1P, 1J.
+    language_code: ISO 639 two-character language codes are used to retrieve
+        specific information in the requested language. For Rich Content and
+        Branding, language codes ZH-HANT (Chinese Traditional), ZH-HANS
+        (Chinese Simplified), FR-CA (French Canadian) and PT-BR (Portuguese
+        Brazil) can also be used. For RCH, language codes ENGB, ENUS, DEDE,
+        DECH can also be used. Only certain services support this attribute.
+        Providers: ACH, RCH, 1G, 1V, 1P, 1J.
     """
     billing_point_of_sale_info: Optional[BillingPointOfSaleInfo] = field(
         default=None,
@@ -5049,15 +5333,21 @@ class BaseCoreReq:
 
 @dataclass
 class BaseRsp:
-    """The base type for all responses.
+    """
+    The base type for all responses.
 
     Parameters
     ----------
     response_message:
-    trace_id: Unique identifier for this atomic transaction traced by the user. Use is optional.
-    transaction_id: System generated unique identifier for this atomic transaction.
-    response_time: The time (in ms) the system spent processing this request, not including transmission times.
-    command_history: HTTP link to download command history and debugging information of the request that generated this response. Must be enabled on the system.
+    trace_id: Unique identifier for this atomic transaction traced by the user.
+        Use is optional.
+    transaction_id: System generated unique identifier for this atomic
+        transaction.
+    response_time: The time (in ms) the system spent processing this request,
+        not including transmission times.
+    command_history: HTTP link to download command history and debugging
+        information of the request that generated this response. Must be
+        enabled on the system.
     """
     response_message: List[ResponseMessage] = field(
         default_factory=list,
@@ -5100,7 +5390,8 @@ class BaseRsp:
 
 @dataclass
 class BookingTravelerInformation:
-    """Booking Traveler information tied to invoice.
+    """
+    Booking Traveler information tied to invoice.
 
     Parameters
     ----------
@@ -5129,7 +5420,9 @@ class BookingTravelerInformation:
 
 @dataclass
 class BookingTravelerRef:
-    """Reference Element for Booking Traveler and Loyalty cards."""
+    """
+    Reference Element for Booking Traveler and Loyalty cards.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -5216,7 +5509,9 @@ class CardRestriction:
 
 @dataclass
 class City(Location):
-    """City identifier."""
+    """
+    City identifier.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -5234,13 +5529,15 @@ class City(Location):
 
 @dataclass
 class CityOrAirport(Location):
-    """This element can be used when it is not known whether the value is an
+    """
+    This element can be used when it is not known whether the value is an
     airport or a city code.
 
     Parameters
     ----------
     code: The airport or city IATA code.
-    prefer_city: Indicates that the search should prefer city results over airport results.
+    prefer_city: Indicates that the search should prefer city results over
+        airport results.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5266,7 +5563,8 @@ class CityOrAirport(Location):
 
 @dataclass
 class Commission:
-    """Identifies the agency commission.
+    """
+    Identifies the agency commission.
 
     Parameters
     ----------
@@ -5275,10 +5573,12 @@ class Commission:
     type: The commission type.
     modifier: Optional commission modifier.
     amount: The monetary amount of the commission.
-    value: Contains alphanumeric or alpha characters intended as 1G Value Code as applicable by BSP of client.
+    value: Contains alphanumeric or alpha characters intended as 1G Value Code
+        as applicable by BSP of client.
     percentage: The percent of the commission.
     booking_traveler_ref: A reference to a passenger.
-    commission_override: This is enabled to override CAT-35 commission error during air ticketing. PROVIDER SUPPORTED:Worldspan and JAL
+    commission_override: This is enabled to override CAT-35 commission error
+        during air ticketing. PROVIDER SUPPORTED:Worldspan and JAL
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5355,21 +5655,26 @@ class Commission:
 
 @dataclass
 class CommissionRemark:
-    """Identifies the agency commision remarks. Specifically used for Worldspan.
+    """Identifies the agency commision remarks.
+
+    Specifically used for Worldspan.
 
     Parameters
     ----------
     provider_reservation_level: Specify commission which is applicable to
-                                                            PNR level.
+        PNR level.
     passenger_type_level: Specify commission which is applicable to
-                                                            per PTC level.
+        per PTC level.
     key: Key to be used for internal processing.
     provider_reservation_info_ref: Provider reservation reference key.
     provider_code: Contains the Provider Code of the provider
-                                                    for which this accounting remark is used
+        for which this accounting remark is used
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5505,19 +5810,25 @@ class CommissionRemark:
 
 @dataclass
 class ConsolidatorRemark:
-    """Authorization remark for Consolidator access to a PNR . Contains PCC
-    information created by retail agent to  allow a consolidator or other Axess
-    users to service their PNR. PROVIDER SUPPORTED: Worldspan and JAL.
+    """Authorization remark for Consolidator access to a PNR .
+
+    Contains PCC information created by retail agent to  allow a
+    consolidator or other Axess users to service their PNR. PROVIDER
+    SUPPORTED: Worldspan and JAL.
 
     Parameters
     ----------
     pseudo_city_code:
     key: Key to be used for internal processing.
     provider_reservation_info_ref: Provider reservation reference key.
-    provider_code: Contains the Provider Code of the provider for which this element is used
+    provider_code: Contains the Provider Code of the provider for which this
+        element is used
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5574,7 +5885,9 @@ class ConsolidatorRemark:
 
 @dataclass
 class CoordinateLocation(Location):
-    """Specific lat/long location, usually associated with a Distance."""
+    """
+    Specific lat/long location, usually associated with a Distance.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -5598,8 +5911,8 @@ class CoordinateLocation(Location):
 class CustomerId(TypeRemark):
     """A provider reservation field used to store customer information.
 
-    It may be used to identify reservations which will/will not be available
-    for access.
+    It may be used to identify reservations which will/will not be
+    available for access.
     """
     class Meta:
         name = "CustomerID"
@@ -5616,7 +5929,8 @@ class CustomerId(TypeRemark):
 
 @dataclass
 class DiscountCard:
-    """Rail Discount Card Information.
+    """
+    Rail Discount Card Information.
 
     Parameters
     ----------
@@ -5625,8 +5939,11 @@ class DiscountCard:
     description:
     number:
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5684,7 +6001,8 @@ class DiscountCard:
 
 @dataclass
 class Distance:
-    """Container to encapsulate the a distance value with its unit of measure.
+    """
+    Container to encapsulate the a distance value with its unit of measure.
 
     Parameters
     ----------
@@ -5723,15 +6041,19 @@ class Distance:
 
 @dataclass
 class DriversLicense:
-    """Details of drivers license.
+    """
+    Details of drivers license.
 
     Parameters
     ----------
     key:
     license_number: The driving license number of the booking traveler.
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5769,18 +6091,23 @@ class DriversLicense:
 
 @dataclass
 class Email:
-    """Container for an email address with a type specifier (max 128 chars)
+    """
+    Container for an email address with a type specifier (max 128 chars)
 
     Parameters
     ----------
-    provider_reservation_info_ref: Tagging provider reservation info with Email.
+    provider_reservation_info_ref: Tagging provider reservation info with
+        Email.
     key:
     type:
     comment:
     email_id:
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5843,14 +6170,17 @@ class Email:
 
 @dataclass
 class GeneralRemark:
-    """A textual remark container to hold any printable text. (max 512 chars)
+    """A textual remark container to hold any printable text.
+
+    (max 512 chars)
 
     Parameters
     ----------
     remark_data: Actual remarks data.
     booking_traveler_ref: Reference to Booking Traveler.
     key:
-    category: A category to group and organize the various remarks. This is not required, but it is recommended.
+    category: A category to group and organize the various remarks. This is not
+        required, but it is recommended.
     type_in_gds:
     supplier_type: The type of product this reservation is relative to
     provider_reservation_info_ref: Provider reservation reference key.
@@ -5858,10 +6188,14 @@ class GeneralRemark:
     supplier_code:
     direction: Direction Incoming or Outgoing of the GeneralRemark.
     create_date: The date and time that this GeneralRemark was created.
-    use_provider_native_mode: Will be true when terminal process required, else false
+    use_provider_native_mode: Will be true when terminal process required, else
+        false
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -5976,22 +6310,28 @@ class GeneralRemark:
 
 @dataclass
 class HostToken:
-    """This is a host token. It contains some kind of payload we got from a host
-    that must be passed in on successive calls they know who you are as our system
-    does not maintain state. The format of this string isn't important as long as
-    it is not altered in any way between calls. Since a host token is only valid on
-    the host it is assocated with, there is also an attribute called Host so we
-    know how to route the command(s). You can have multiple active sessions between
-    one or more hosts.
+    """This is a host token.
+
+    It contains some kind of payload we got from a host that must be
+    passed in on successive calls they know who you are as our system
+    does not maintain state. The format of this string isn't important
+    as long as it is not altered in any way between calls. Since a host
+    token is only valid on the host it is assocated with, there is also
+    an attribute called Host so we know how to route the command(s). You
+    can have multiple active sessions between one or more hosts
 
     Parameters
     ----------
     value:
     host: The host associated with this token
-    key: Unique identifier for this token - use this key when a single HostToken is shared by multiple elements.
+    key: Unique identifier for this token - use this key when a single
+        HostToken is shared by multiple elements.
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6036,11 +6376,15 @@ class LinkedUniversalRecord:
     """
     Parameters
     ----------
-    locator_code: A Universal Record that need to be linked to the current Universal Record.
+    locator_code: A Universal Record that need to be linked to the current
+        Universal Record.
     key:
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6084,12 +6428,17 @@ class LoyaltyProgram:
     Parameters
     ----------
     key:
-    supplier_code: The code used to identify the Loyalty supplier, e.g. AA, ZE, MC
+    supplier_code: The code used to identify the Loyalty supplier, e.g. AA, ZE,
+        MC
     alliance_level:
-    membership_program: Loyalty Program membership Id of the traveler specific to Amtrak(2V) Guest Rewards
+    membership_program: Loyalty Program membership Id of the traveler specific
+        to Amtrak(2V) Guest Rewards
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     level:
     """
     class Meta:
@@ -6152,7 +6501,9 @@ class LoyaltyProgram:
 
 @dataclass
 class MediaItem:
-    """Photos and other media urls for the property referenced above."""
+    """
+    Photos and other media urls for the property referenced above.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -6203,17 +6554,23 @@ class MediaItem:
 
 @dataclass
 class NameRemark:
-    """Text that support Name Remarks.
+    """
+    Text that support Name Remarks.
 
     Parameters
     ----------
     remark_data: Actual remarks data.
-    provider_reservation_info_ref: Tagging provider reservation info with NameRemark.
+    provider_reservation_info_ref: Tagging provider reservation info with
+        NameRemark.
     key:
-    category: A category to group and organize the various remarks. This is not required, but it is recommended.
+    category: A category to group and organize the various remarks. This is not
+        required, but it is recommended.
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6266,7 +6623,8 @@ class NameRemark:
 
 @dataclass
 class Osi:
-    """Other Service information sent to the carriers during air bookings.
+    """
+    Other Service information sent to the carriers during air bookings.
 
     Parameters
     ----------
@@ -6275,10 +6633,14 @@ class Osi:
     code:
     text:
     provider_reservation_info_ref: Provider reservation reference key.
-    provider_code: Contains the Provider Code of the provider for which this OSI is used
+    provider_code: Contains the Provider Code of the provider for which this
+        OSI is used
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         name = "OSI"
@@ -6351,14 +6713,17 @@ class Osi:
 
 @dataclass
 class OptionalServiceApplicationLimitType:
-    """The optional service application limit.
+    """
+    The optional service application limit.
 
     Parameters
     ----------
     applicable_level: Indicates the applicable level for the option
-    provider_defined_applicable_levels: Indicates the actual provider defined ApplicableLevels which is mapped to Other
+    provider_defined_applicable_levels: Indicates the actual provider defined
+        ApplicableLevels which is mapped to Other
     maximum_quantity: The maximum quantity allowed for the type
-    minimum_quantity: Indicates the minimum number of the option that can be selected.
+    minimum_quantity: Indicates the minimum number of the option that can be
+        selected.
     """
     applicable_level: Optional[OptionalServiceApplicabilityType] = field(
         default=None,
@@ -6394,7 +6759,8 @@ class OptionalServiceApplicationLimitType:
 
 @dataclass
 class PassengerInfo:
-    """Booking Traveler information tied to invoice.
+    """
+    Booking Traveler information tied to invoice.
 
     Parameters
     ----------
@@ -6432,22 +6798,29 @@ class PassengerInfo:
 
 @dataclass
 class Payment:
-    """
-    Payment information - must be used in conjunction with credit card info
+    """Payment information - must be used in conjunction with credit card info
 
     Parameters
     ----------
     key:
-    type: Identifies the type of payment. This can be for an itinerary, a traveler, or a service fee for example.
-    form_of_payment_ref: The credit card that is will be used to make this payment.
-    booking_traveler_ref: If the type represents a per traveler payment, then this will reference the traveler this payment refers to.
+    type: Identifies the type of payment. This can be for an itinerary, a
+        traveler, or a service fee for example.
+    form_of_payment_ref: The credit card that is will be used to make this
+        payment.
+    booking_traveler_ref: If the type represents a per traveler payment, then
+        this will reference the traveler this payment refers to.
     amount:
-    amount_type: This field displays type of payment amount when it is non-monetary. Presently available/supported value is "Flight Pass Credits".
-    approximate_amount: It stores the converted payment amount in agency's default currency
+    amount_type: This field displays type of payment amount when it is non-
+        monetary. Presently available/supported value is "Flight Pass Credits".
+    approximate_amount: It stores the converted payment amount in agency's
+        default currency
     status: Status to indicate the business association of the payment element.
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6532,10 +6905,12 @@ class Payment:
         """
         Properties
         ----------
-        AIRLINE_FEE: Payment for all airline based fees (paper ticket fee, SSR, etc.)
+        AIRLINE_FEE: Payment for all airline based fees (paper ticket fee, SSR,
+            etc.)
         DELIVERY_FEE: Payment for agency ticket delivery fee
         ITINERARY: Payment for all passengers
-        PASSENGER: Payment for a single passenger. The BookingTravelerRef attribute must be set.
+        PASSENGER: Payment for a single passenger. The BookingTravelerRef
+            attribute must be set.
         SERVICE_FEE: Payment for a service fee other than an MCO
         OPTIONAL_SERVICE: Payment for an optional service
         TICKET_FEE: Deprecated
@@ -6566,7 +6941,8 @@ class PermittedProviders:
 
 @dataclass
 class PhoneNumber:
-    """Consists of type (office, home, fax), location (city code), the country
+    """
+    Consists of type (office, home, fax), location (city code), the country
     code, the number, and an extension.
 
     Parameters
@@ -6575,14 +6951,18 @@ class PhoneNumber:
     key:
     type:
     location: IATA code for airport or city
-    country_code: Hosts/providers will expect this to be international dialing digits
+    country_code: Hosts/providers will expect this to be international dialing
+        digits
     area_code:
     number: The local phone number
     extension:
     text:
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6689,13 +7069,14 @@ class PhoneNumber:
 
 @dataclass
 class PolicyInformation:
-    """Policy Information required for File Finishing.
+    """
+    Policy Information required for File Finishing.
 
     Parameters
     ----------
     reason_code: Reason Code
     type: Policy Type - Air, Hotel, Car, Rail,
-                                                    Ticketing
+        Ticketing
     name: Policy Name
     out_of_policy: In Policy / Out of Policy Indicator
     segment_ref:
@@ -6774,7 +7155,9 @@ class PolicyInformation:
 
 @dataclass
 class Postscript(TypeRemark):
-    """Postscript Notes."""
+    """
+    Postscript Notes.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -6789,7 +7172,8 @@ class Postscript(TypeRemark):
 
 @dataclass
 class ProviderArnksegment:
-    """Represents host ARNK segments.
+    """
+    Represents host ARNK segments.
 
     Parameters
     ----------
@@ -6797,7 +7181,8 @@ class ProviderArnksegment:
     next_segment:
     key:
     provider_reservation_info_ref: Provider reservation reference key.
-    provider_segment_order: To identify the appropriate travel sequence for Air/Car/Hotel/Rail segments/reservations in the provider reservation.
+    provider_segment_order: To identify the appropriate travel sequence for
+        Air/Car/Hotel/Rail segments/reservations in the provider reservation.
     """
     class Meta:
         name = "ProviderARNKSegment"
@@ -6846,12 +7231,12 @@ class ProviderArnksegment:
         Parameters
         ----------
         air_segment_ref: Reference to AirSegment from an Air
-        										Reservation.
+            Reservation.
         hotel_reservation_ref: Specify the locator code of Hotel reservation.
         vehicle_reservation_ref: Specify the locator code of Vehicle
-        										reservation.
+            reservation.
         passive_segment_ref: Reference to PassiveSegment from a Passive
-        										Reservation.
+            Reservation.
         """
         air_segment_ref: Optional[TypeSegmentRef] = field(
             default=None,
@@ -6888,12 +7273,12 @@ class ProviderArnksegment:
         Parameters
         ----------
         air_segment_ref: Reference to AirSegment from an Air
-        										Reservation.
+            Reservation.
         hotel_reservation_ref: Specify the locator code of Hotel reservation.
         vehicle_reservation_ref: Specify the locator code of Vehicle
-        										reservation.
+            reservation.
         passive_segment_ref: Reference to PassiveSegment from a Passive
-        										Reservation.
+            Reservation.
         """
         air_segment_ref: Optional[TypeSegmentRef] = field(
             default=None,
@@ -6927,21 +7312,25 @@ class ProviderArnksegment:
 
 @dataclass
 class ProviderReservationDetail(TypeProviderReservationDetail):
-    """common element for mentioning provider reservation locator (PNR) details in
-    request."""
+    """
+    common element for mentioning provider reservation locator (PNR) details in
+    request.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
 
 @dataclass
 class QueuePlace:
-    """Allow queue placement of a PNR at the time of booking to be used for
+    """
+    Allow queue placement of a PNR at the time of booking to be used for
     Providers 1G,1V,1P and 1J.
 
     Parameters
     ----------
     pseudo_city_code: Pseudo City Code
-    queue_selector: Identifies the Queue Information to be selected for placing the UR
+    queue_selector: Identifies the Queue Information to be selected for placing
+        the UR
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6967,8 +7356,10 @@ class QueuePlace:
 
 @dataclass
 class RailLocation(Location):
-    """RCH specific location code (a.k.a UCodes) which uniquely identifies a train
-    station."""
+    """
+    RCH specific location code (a.k.a UCodes) which uniquely identifies a train
+    station.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -6987,7 +7378,8 @@ class RailLocation(Location):
 
 @dataclass
 class RailSeatAssignment:
-    """Identifies the seat assignment for a passenger on RailSegment.
+    """
+    Identifies the seat assignment for a passenger on RailSegment.
 
     Parameters
     ----------
@@ -6998,8 +7390,11 @@ class RailSeatAssignment:
     rail_segment_ref:
     coach_number:
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7069,8 +7464,10 @@ class RailSeatAssignment:
 
 @dataclass
 class RequestKeyMappings:
-    """All the elements for which mapping key sent in the request is different from
-    the mapping key comes in the response."""
+    """
+    All the elements for which mapping key sent in the request is different
+    from the mapping key comes in the response.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -7087,22 +7484,31 @@ class RequestKeyMappings:
 @dataclass
 class ReviewBooking:
     """Review Booking or Queue Minders is to add the reminders in the Provider
-    Reservation along with the date time and Queue details. On the date time
-    defined in reminders, the message along with the PNR goes to the desired Queue.
+    Reservation along with the date time and Queue details.
+
+    On the date time defined in reminders, the message along with the
+    PNR goes to the desired Queue.
 
     Parameters
     ----------
     key: Returned in response. Use it for update of saved review booking.
     queue: Queue number, Must be numeric and less than 100.
     queue_category: Queue Category, 2 Character Alpha or Numeric.
-    date_time: Date and Time to place message on designated Queue, Should be prior to the last segment date in the PNR.
-    pseudo_city_code: Input PCC optional value for placing the PNR into Queue. If not passed, will add as default PNR's Pseudo.
+    date_time: Date and Time to place message on designated Queue, Should be
+        prior to the last segment date in the PNR.
+    pseudo_city_code: Input PCC optional value for placing the PNR into Queue.
+        If not passed, will add as default PNR's Pseudo.
     provider_code: The code of the Provider (e.g 1G,1V).
-    provider_reservation_info_ref: Provider Reservation reference. Returned in the response. Use it for update of saved Review Booking.
-    remarks: Remark or reminder message. It can be truncated depending on the provider.
+    provider_reservation_info_ref: Provider Reservation reference. Returned in
+        the response. Use it for update of saved Review Booking.
+    remarks: Remark or reminder message. It can be truncated depending on the
+        provider.
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7191,7 +7597,8 @@ class ReviewBooking:
 
 @dataclass
 class Ssr:
-    """Special serivces like wheel chair, or pet carrier.
+    """
+    Special serivces like wheel chair, or pet carrier.
 
     Parameters
     ----------
@@ -7199,20 +7606,30 @@ class Ssr:
     segment_ref: Reference to the air segment. May be required for some Types.
     passive_segment_ref: Reference to the passive segment.
     provider_reservation_info_ref: Provider reservation reference key.
-    type: Programmatic SSRs use codes recognized by the provider/supplier (example, VGML=vegetarian meal code). Manual SSRs do not have an associated programmatic code.
+    type: Programmatic SSRs use codes recognized by the provider/supplier
+        (example, VGML=vegetarian meal code). Manual SSRs do not have an
+        associated programmatic code.
     status:
-    free_text: Certain SSR types will require a free text message. For example MAAS (Meet and assist).
+    free_text: Certain SSR types will require a free text message. For example
+        MAAS (Meet and assist).
     carrier:
-    carrier_specific_text: Carrier specific information which are not captured in the FreeText field(not present in IATA's standard SSR DOCO format). An example is VISA Expiration Date.
+    carrier_specific_text: Carrier specific information which are not captured
+        in the FreeText field(not present in IATA's standard SSR DOCO format).
+        An example is VISA Expiration Date.
     description:
     provider_defined_type: Original Type as sent by the provider
     ssrrule_ref: UniqueID to associate a rule to the SSR
     url:
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    profile_id: Key assigned for Secure Flight Document value from the specified profile
-    profile_secure_flight_doc_key: Unique ID of Booking Traveler's Profile that contains the Secure flight Detail
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
+    profile_id: Key assigned for Secure Flight Document value from the
+        specified profile
+    profile_secure_flight_doc_key: Unique ID of Booking Traveler's Profile that
+        contains the Secure flight Detail
     """
     class Meta:
         name = "SSR"
@@ -7349,7 +7766,9 @@ class Ssr:
 
 @dataclass
 class SearchEvent(TypeTimeRange):
-    """Search for various reservation events."""
+    """
+    Search for various reservation events.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -7364,13 +7783,16 @@ class SearchEvent(TypeTimeRange):
 
 @dataclass
 class SearchTicketing:
-    """Search restriction by Agent.
+    """
+    Search restriction by Agent.
 
     Parameters
     ----------
     ticket_status: Return only PNRs with ticketed, non-ticketed or both
-    reservation_status: Used only if "TicketStatus" set to "No" or "Both". Return only PNRs with specific reservation status or both statuses.
-    ticket_date: Identifies when this reservation was ticketed, or when it should be ticketed by (in the event of a TTL)
+    reservation_status: Used only if "TicketStatus" set to "No" or "Both".
+        Return only PNRs with specific reservation status or both statuses.
+    ticket_date: Identifies when this reservation was ticketed, or when it
+        should be ticketed by (in the event of a TTL)
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7410,9 +7832,13 @@ class SeatAssignment:
     segment_ref:
     flight_details_ref:
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
-    rail_coach_number: Coach number for which rail seatmap/coachmap is returned.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
+    rail_coach_number: Coach number for which rail seatmap/coachmap is
+        returned.
     """
     key: Optional[str] = field(
         default=None,
@@ -7487,7 +7913,9 @@ class SeatAssignment:
 
 @dataclass
 class SeatAttributes:
-    """Identifies the seat attribute of the service."""
+    """
+    Identifies the seat attribute of the service.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -7503,7 +7931,8 @@ class SeatAttributes:
 
 @dataclass
 class Segment:
-    """The base segment type.
+    """
+    The base segment type.
 
     Parameters
     ----------
@@ -7511,11 +7940,17 @@ class Segment:
     key:
     status: Status of this segment.
     passive:
-    travel_order: To identify the appropriate travel sequence for Air/Car/Hotel segments/reservations based on travel dates. This ordering is applicable across the UR not provider or traveler specific
-    provider_segment_order: To identify the appropriate travel sequence for Air/Car/Hotel/Rail segments/reservations in the provider reservation.
+    travel_order: To identify the appropriate travel sequence for Air/Car/Hotel
+        segments/reservations based on travel dates. This ordering is
+        applicable across the UR not provider or traveler specific
+    provider_segment_order: To identify the appropriate travel sequence for
+        Air/Car/Hotel/Rail segments/reservations in the provider reservation.
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     segment_remark: List[SegmentRemark] = field(
         default_factory=list,
@@ -7587,8 +8022,11 @@ class SpecialEquipment:
     key:
     type: Special equipment associated with a specific vehicle
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7626,7 +8064,8 @@ class SpecialEquipment:
 
 @dataclass
 class SupplierLocator:
-    """Locator code on the host carrier system.
+    """
+    Locator code on the host carrier system.
 
     Parameters
     ----------
@@ -7634,7 +8073,8 @@ class SupplierLocator:
     supplier_code: Carrier Code
     supplier_locator_code: Carrier reservation locator code
     provider_reservation_info_ref: Provider Reservation  reference
-    create_date_time: The Date and Time which the reservation is received from the Vendor as a SupplierLocator creation Date.
+    create_date_time: The Date and Time which the reservation is received from
+        the Vendor as a SupplierLocator creation Date.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7682,8 +8122,9 @@ class SupplierLocator:
 
 @dataclass
 class ThirdPartyInformation:
-    """Third party supplier locator information. Specifically applicable for SDK
-    booking.
+    """Third party supplier locator information.
+
+    Specifically applicable for SDK booking.
 
     Parameters
     ----------
@@ -7692,10 +8133,14 @@ class ThirdPartyInformation:
     third_party_locator_code: Confirmation number for third party supplier.
     third_party_name: Third party supplier name.
     provider_reservation_info_ref: Provider Reservation  reference
-    key: Unique identifier of the third party supplier. Key can be used to modify or delete saved third party information.
+    key: Unique identifier of the third party supplier. Key can be used to
+        modify or delete saved third party information.
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7765,7 +8210,8 @@ class ThirdPartyInformation:
 
 @dataclass
 class TravelComplianceData:
-    """Travel Compliance and Preferred Supplier information of the traveler
+    """
+    Travel Compliance and Preferred Supplier information of the traveler
     specific to a segment.
 
     Parameters
@@ -7773,14 +8219,24 @@ class TravelComplianceData:
     policy_compliance:
     contract_compliance:
     preferred_supplier:
-    key: System generated key, returned back in the response. This can be used to modify or delete a saved TravelComplianceData.
-    air_segment_ref: Refers to Air Segment. Applicable only for Air. Ignored for others.
-    passive_segment_ref: Refers to Passive Segment. Applicable only for Passive. Ignored for others.
-    rail_segment_ref: Refers to Rail Segment. Applicable only for Rail. Ignored for others.
-    reservation_locator_ref: This is returned in the response. Any input will be ignored for this attribute. This represents the association of Travel Compliance Data with the uAPI reservation locator code, mainly relevant to Hotel and Vehicle.
+    key: System generated key, returned back in the response. This can be used
+        to modify or delete a saved TravelComplianceData.
+    air_segment_ref: Refers to Air Segment. Applicable only for Air. Ignored
+        for others.
+    passive_segment_ref: Refers to Passive Segment. Applicable only for
+        Passive. Ignored for others.
+    rail_segment_ref: Refers to Rail Segment. Applicable only for Rail. Ignored
+        for others.
+    reservation_locator_ref: This is returned in the response. Any input will
+        be ignored for this attribute. This represents the association of
+        Travel Compliance Data with the uAPI reservation locator code, mainly
+        relevant to Hotel and Vehicle.
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7866,8 +8322,10 @@ class TravelComplianceData:
         """
         Parameters
         ----------
-        in_policy: Policy Compliance Indicator. For In-Policy set to 'true', For Out-Of-Policy set to 'false''.
-        policy_token: Optional text message to set the rule or token for which it's In Policy or Out Of Policy.
+        in_policy: Policy Compliance Indicator. For In-Policy set to 'true',
+            For Out-Of-Policy set to 'false''.
+        policy_token: Optional text message to set the rule or token for which
+            it's In Policy or Out Of Policy.
         """
         in_policy: Optional[bool] = field(
             default=None,
@@ -7892,8 +8350,10 @@ class TravelComplianceData:
         """
         Parameters
         ----------
-        in_contract: Contract Compliance Indicator. For In-Contract set to 'true', For Out-Of-Contract set to 'false'.
-        contract_token: Optional text message to set the rule or token for which it's In Contract or Out Of Contract.
+        in_contract: Contract Compliance Indicator. For In-Contract set to
+            'true', For Out-Of-Contract set to 'false'.
+        contract_token: Optional text message to set the rule or token for
+            which it's In Contract or Out Of Contract.
         """
         in_contract: Optional[bool] = field(
             default=None,
@@ -7919,7 +8379,8 @@ class TravelComplianceData:
         Parameters
         ----------
         preferred: Preferred Supplier - 'true', 'false'.
-        profile_type: Indicate profile type. e.g. if Agency Preferred then pass Agency, if Traveler Preferred then pass Traveler.
+        profile_type: Indicate profile type. e.g. if Agency Preferred then pass
+            Agency, if Traveler Preferred then pass Traveler.
         """
         preferred: Optional[bool] = field(
             default=None,
@@ -7941,14 +8402,18 @@ class TravelComplianceData:
 
 @dataclass
 class UnassociatedRemark(TypeRemarkWithTravelerRef):
-    """A textual remark container to hold non-associated itinerary remarks.
+    """
+    A textual remark container to hold non-associated itinerary remarks.
 
     Parameters
     ----------
     key:
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7978,25 +8443,32 @@ class UnassociatedRemark(TypeRemarkWithTravelerRef):
 
 @dataclass
 class VendorLocation(TypeVendorLocation):
-    """Location definition specific to a Vendor in a specific provider (e.g. 1G)
-    system."""
+    """
+    Location definition specific to a Vendor in a specific provider (e.g. 1G)
+    system.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
 
 @dataclass
 class Xmlremark:
-    """A remark container to hold an XML document. (max 1024 chars) This will be
-    encoded with xml encoding.
+    """A remark container to hold an XML document.
+
+    (max 1024 chars) This will be encoded with xml encoding.
 
     Parameters
     ----------
     value:
     key:
-    category: A category to group and organize the various remarks. This is not required, but it is recommended.
+    category: A category to group and organize the various remarks. This is not
+        required, but it is recommended.
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         name = "XMLRemark"
@@ -8061,14 +8533,18 @@ class TypeAgencyHierarchyReference:
 
 @dataclass
 class TypeAssociatedRemark(TypeRemarkWithTravelerRef):
-    """A textual remark container to hold Associated itinerary remarks.
+    """
+    A textual remark container to hold Associated itinerary remarks.
 
     Parameters
     ----------
     key:
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         name = "typeAssociatedRemark"
@@ -8098,7 +8574,9 @@ class TypeAssociatedRemark(TypeRemarkWithTravelerRef):
 
 @dataclass
 class TypeErrorInfo:
-    """Container for error data when there is an application error."""
+    """
+    Container for error data when there is an application error.
+    """
     class Meta:
         name = "typeErrorInfo"
 
@@ -8183,12 +8661,14 @@ class TypeErrorInfo:
 
 @dataclass
 class TypeFeeInfo:
-    """A generic type of fee for those charges which are incurred by the passenger,
-    but not necessarily shown on tickets.
+    """
+    A generic type of fee for those charges which are incurred by the
+    passenger, but not necessarily shown on tickets.
 
     Parameters
     ----------
-    tax_info_ref: This reference elements will associate relevant taxes to this fee
+    tax_info_ref: This reference elements will associate relevant taxes to this
+        fee
     included_in_base:
     base_amount:
     description:
@@ -8198,15 +8678,18 @@ class TypeFeeInfo:
     code:
     fee_token:
     payment_ref: The reference to the one of the air
-                      reservation payments if fee included in charge
+        reservation payments if fee included in charge
     booking_traveler_ref: Reference to booking traveler
     passenger_type_code:
     text: Additional Information returned from Supplier.(ACH  only)
     provider_code:
     supplier_code:
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         name = "typeFeeInfo"
@@ -8359,7 +8842,8 @@ class TypeFeeInfo:
 
 @dataclass
 class TypeKeyword:
-    """A complexType for keyword information.
+    """
+    A complexType for keyword information.
 
     Parameters
     ----------
@@ -8368,7 +8852,13 @@ class TypeKeyword:
     name: The keyword name.
     number: The number for this keyword.
     description: A brief description of the keyword
-    language_code: ISO 639 two-character language codes are used to retrieve specific information in the requested language. For Rich Content and Branding, language codes ZH-HANT (Chinese Traditional), ZH-HANS (Chinese Simplified), FR-CA (French Canadian) and PT-BR (Portuguese Brazil) can also be used. For RCH, language codes ENGB, ENUS, DEDE, DECH can also be used. Only certain services support this attribute. Providers: ACH, RCH, 1G, 1V, 1P, 1J.
+    language_code: ISO 639 two-character language codes are used to retrieve
+        specific information in the requested language. For Rich Content and
+        Branding, language codes ZH-HANT (Chinese Traditional), ZH-HANS
+        (Chinese Simplified), FR-CA (French Canadian) and PT-BR (Portuguese
+        Brazil) can also be used. For RCH, language codes ENGB, ENUS, DEDE,
+        DECH can also be used. Only certain services support this attribute.
+        Providers: ACH, RCH, 1G, 1V, 1P, 1J.
     """
     class Meta:
         name = "typeKeyword"
@@ -8425,7 +8915,8 @@ class TypeKeyword:
 
 @dataclass
 class TypeOtakeyword:
-    """A complexType for keyword information.
+    """
+    A complexType for keyword information.
 
     Parameters
     ----------
@@ -8483,7 +8974,9 @@ class TypeOtakeyword:
 
 @dataclass
 class TypeProfileRef:
-    """ProfileEntityID and ProfileLevel together identity a profile entity."""
+    """
+    ProfileEntityID and ProfileLevel together identity a profile entity.
+    """
     class Meta:
         name = "typeProfileRef"
 
@@ -8511,9 +9004,13 @@ class TypeProviderReservationSpecificInfo:
     Parameters
     ----------
     operated_by: Cross accrual carrier info
-    provider_reservation_info_ref: Tagging provider reservation info with LoyaltyCard.
-    provider_reservation_level: If true means Loyalty card is applied at ProviderReservation level.
-    reservation_level: If true means Loyalty card is applied at Universal Record Reservation level e.g. Hotel Reservation, Vehicle Reservation etc.
+    provider_reservation_info_ref: Tagging provider reservation info with
+        LoyaltyCard.
+    provider_reservation_level: If true means Loyalty card is applied at
+        ProviderReservation level.
+    reservation_level: If true means Loyalty card is applied at Universal
+        Record Reservation level e.g. Hotel Reservation, Vehicle Reservation
+        etc.
     """
     class Meta:
         name = "typeProviderReservationSpecificInfo"
@@ -8555,7 +9052,8 @@ class TypeProviderReservationSpecificInfo:
 
 @dataclass
 class TypeStructuredAddress:
-    """A fully structured address.
+    """
+    A fully structured address.
 
     Parameters
     ----------
@@ -8563,13 +9061,20 @@ class TypeStructuredAddress:
     street: The Address street and number, e.g. 105 Main St.
     city: The city name for the requested address, e.g. Atlanta.
     state: The State or Province of address requested, e.g. CA, Ontario.
-    postal_code: The 5-15 alphanumeric postal Code for the requested address, e.g. 90210.
-    country: The Full country name or two letter ISO country code e.g. US, France. A two letter country code is required for a Postal Code Searches.
-    provider_reservation_info_ref: Tagging provider reservation info with Address.
+    postal_code: The 5-15 alphanumeric postal Code for the requested address,
+        e.g. 90210.
+    country: The Full country name or two letter ISO country code e.g. US,
+        France. A two letter country code is required for a Postal Code
+        Searches.
+    provider_reservation_info_ref: Tagging provider reservation info with
+        Address.
     key: Key for update/delete of the element
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         name = "typeStructuredAddress"
@@ -8672,23 +9177,23 @@ class TypeTaxInfo:
     included_in_base:
     key: The tax key represents a valid key of tax
     category: The tax category represents a valid IATA tax
-                     code.
+        code.
     carrier_defined_category: Optional category, where a carrier has
-                       used a non-standard IATA tax category. The tax category will be
-                       set to "DU"
+        used a non-standard IATA tax category. The tax category will be
+        set to "DU"
     segment_ref: The segment to which that tax is relative (if
-                       applicable)
+        applicable)
     flight_details_ref: The flight details that this tax is relative
-                     to (if applicable)
+        to (if applicable)
     coupon_ref: The coupon to which that tax is relative (if
-                     applicable)
+        applicable)
     amount:
     origin_airport:
     destination_airport:
     country_code:
     fare_info_ref:
     tax_exempted: This indicates whether the tax specified by
-                     tax category is exempted.
+        tax category is exempted.
     provider_code: Code of the provider returning this TaxInfo.
     supplier_code: Code of the supplier returning this TaxInfo.
     text: Additional Information returned from Supplier.(ACH  only)
@@ -8832,13 +9337,15 @@ class TypeTaxInfo:
 
 @dataclass
 class TypeTimeSpec:
-    """Specifies times as either specific times, or a time range.
+    """
+    Specifies times as either specific times, or a time range.
 
     Parameters
     ----------
     time_range:
     specific_time:
-    preferred_time: Specifies a time that would be preferred within the time range specified.
+    preferred_time: Specifies a time that would be preferred within the time
+        range specified.
     """
     class Meta:
         name = "typeTimeSpec"
@@ -8873,8 +9380,10 @@ class TypeTransactionsAllowed(TypeBookingTransactionsAllowed):
     """
     Parameters
     ----------
-    shopping_enabled: Allow or prohibit shopping transaction for the given product type on this Provider/Supplier. Inheritable.
-    pricing_enabled: Allow or prohibit pricing transaction for the given product type on this Provider/Supplier. Inheritable.
+    shopping_enabled: Allow or prohibit shopping transaction for the given
+        product type on this Provider/Supplier. Inheritable.
+    pricing_enabled: Allow or prohibit pricing transaction for the given
+        product type on this Provider/Supplier. Inheritable.
     """
     class Meta:
         name = "typeTransactionsAllowed"
@@ -8897,15 +9406,19 @@ class TypeTransactionsAllowed(TypeBookingTransactionsAllowed):
 
 @dataclass
 class TypeVoucherInformation:
-    """Information pertaining to the payment of a Vehicle Rental.
+    """
+    Information pertaining to the payment of a Vehicle Rental.
 
     Parameters
     ----------
-    voucher_type: Specifies if the Voucher is for Full Credit or a Group/Day or a Monetary Amount or RegularVoucher.
+    voucher_type: Specifies if the Voucher is for Full Credit or a Group/Day or
+        a Monetary Amount or RegularVoucher.
     amount: Amount associated with the Voucher.
     confirmation_number: Confirmation from the vendor for the voucher
     account_name: Associated account name for the voucher
-    number: To advise car associates of the voucher number and store in the car segment. It is required when VoucherType selected as   "RegularVoucher" for 1P, 1J only.
+    number: To advise car associates of the voucher number and store in the car
+        segment. It is required when VoucherType selected as   "RegularVoucher"
+        for 1P, 1J only.
     """
     class Meta:
         name = "typeVoucherInformation"
@@ -8952,7 +9465,9 @@ class TypeVoucherInformation:
 
 @dataclass
 class AccountInformation:
-    """Account Information required for File Finishing."""
+    """
+    Account Information required for File Finishing.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -9009,7 +9524,9 @@ class AgencyContactInfo:
 
 @dataclass
 class AgencyInformation:
-    """Agency Information required for File Finishing."""
+    """
+    Agency Information required for File Finishing.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -9040,7 +9557,8 @@ class AgencyInformation:
 
 @dataclass
 class AirExchangeInfo:
-    """Provides results of a exchange quote.
+    """
+    Provides results of a exchange quote.
 
     Parameters
     ----------
@@ -9048,8 +9566,8 @@ class AirExchangeInfo:
     paid_tax:
     ticket_fee_info: Used for rapid reprice. Providers: 1G/1V/1P/1S/1A
     reason: Used for rapid reprice. The reason code or text is returned if the
-                                                    PricingTag is not equal to A, and explains why A was not returned.
-                                                    Providers: 1G/1V/1P/1S/1A
+        PricingTag is not equal to A, and explains why A was not returned.
+        Providers: 1G/1V/1P/1S/1A
     fee_info:
     tax_info: Itinerary level taxes
     exchange_amount:
@@ -9074,7 +9592,8 @@ class AirExchangeInfo:
     fare_pull:
     passenger_type_code:
     passenger_count:
-    form_of_refund: How the refund will be issued. Values will be MCO or FormOfPayment
+    form_of_refund: How the refund will be issued. Values will be MCO or
+        FormOfPayment
     refund: Total refund amount.
     """
     class Meta:
@@ -9344,14 +9863,18 @@ class AirExchangeInfo:
 
 @dataclass
 class AirSeatAssignment(SeatAssignment):
-    """Identifies the seat assignment for a passenger."""
+    """
+    Identifies the seat assignment for a passenger.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
 
 @dataclass
 class BaseCoreSearchReq(BaseCoreReq):
-    """Base Request for Air Search."""
+    """
+    Base Request for Air Search.
+    """
     next_result_reference: List[NextResultReference] = field(
         default_factory=list,
         metadata={
@@ -9397,7 +9920,8 @@ class BaseSearchRsp(BaseRsp):
 
 @dataclass
 class DeliveryInfo:
-    """Container to encapsulate all delivery related information.
+    """
+    Container to encapsulate all delivery related information.
 
     Parameters
     ----------
@@ -9405,10 +9929,13 @@ class DeliveryInfo:
     phone_number:
     email:
     general_remark:
-    provider_reservation_info_ref: Tagging provider reservation info with Delivery Info.
+    provider_reservation_info_ref: Tagging provider reservation info with
+        Delivery Info.
     type: An arbitrary identifier to categorize this delivery info
-    signature_required: Indicates whether a signature shoud be required in order to make the delivery.
-    tracking_number: The tracking number of the shipping company making the delivery.
+    signature_required: Indicates whether a signature shoud be required in
+        order to make the delivery.
+    tracking_number: The tracking number of the shipping company making the
+        delivery.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -9480,14 +10007,18 @@ class DeliveryInfo:
 
 @dataclass
 class ErrorInfo(TypeErrorInfo):
-    """Container for error data when there is an application error."""
+    """
+    Container for error data when there is an application error.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
 
 @dataclass
 class HostTokenList:
-    """The shared object list of Host Tokens."""
+    """
+    The shared object list of Host Tokens.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -9504,7 +10035,8 @@ class HostTokenList:
 
 @dataclass
 class InvoiceData:
-    """List of invoices only for 1G/1V.
+    """
+    List of invoices only for 1G/1V.
 
     Parameters
     ----------
@@ -9566,7 +10098,8 @@ class InvoiceRemark(TypeAssociatedRemark):
     air_segment_ref: Reference to AirSegment from an Air Reservation.
     hotel_reservation_ref: Specify the locator code of Hotel reservation.
     vehicle_reservation_ref: Specify the locator code of Vehicle reservation.
-    passive_segment_ref: Reference to PassiveSegment from a Passive Reservation.
+    passive_segment_ref: Reference to PassiveSegment from a Passive
+        Reservation.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -9603,7 +10136,9 @@ class InvoiceRemark(TypeAssociatedRemark):
 
 @dataclass
 class Keyword(TypeKeyword):
-    """Detail information of keywords."""
+    """
+    Detail information of keywords.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -9616,18 +10151,24 @@ class LocationAddress(TypeStructuredAddress):
 
 @dataclass
 class LoyaltyCard:
-    """Provider loyalty card information.
+    """
+    Provider loyalty card information.
 
     Parameters
     ----------
     provider_reservation_specific_info:
     key:
-    supplier_code: The code used to identify the Loyalty supplier, e.g. AA, ZE, MC
+    supplier_code: The code used to identify the Loyalty supplier, e.g. AA, ZE,
+        MC
     alliance_level:
-    membership_program: Loyalty Program membership Id of the traveler specific to Amtrak(2V) Guest Rewards
+    membership_program: Loyalty Program membership Id of the traveler specific
+        to Amtrak(2V) Guest Rewards
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     card_number:
     status:
     membership_status:
@@ -9765,7 +10306,8 @@ class Mcoinformation:
     passenger_info:
     mconumber: The unique MCO number
     status: Current status of the MCO
-    mcotype: The Type of MCO. Once of Agency Fee, Airline Service Fee, or Residual value from an Exchange.
+    mcotype: The Type of MCO. Once of Agency Fee, Airline Service Fee, or
+        Residual value from an Exchange.
     """
     class Meta:
         name = "MCOInformation"
@@ -9882,8 +10424,10 @@ class McopriceData:
 
 @dataclass
 class PassiveInfo:
-    """Used by CreateReservationReq for passing in elements normally found post-
-    booking."""
+    """
+    Used by CreateReservationReq for passing in elements normally found post-
+    booking.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -9966,12 +10510,14 @@ class PaymentRestriction:
 
 @dataclass
 class ReservationName:
-    """Container to represent reservation name as appears in GDS booking.
+    """
+    Container to represent reservation name as appears in GDS booking.
 
     Parameters
     ----------
     booking_traveler_ref:
-    name_override: To be used if the reservation name is other than booking travelers in the PNR
+    name_override: To be used if the reservation name is other than booking
+        travelers in the PNR
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -9994,7 +10540,8 @@ class ReservationName:
 
 @dataclass
 class Ssrinfo:
-    """Bundle SSR with BookingTraveler reference in order to add SSR post booking.
+    """
+    Bundle SSR with BookingTraveler reference in order to add SSR post booking.
 
     Parameters
     ----------
@@ -10030,15 +10577,23 @@ class ServiceData:
     ----------
     seat_attributes:
     cabin_class:
-    ssrref: References to the related SSRs. At present, only reference to ASVC SSR is supported. Supported providers are 1G/1V/1P/1J
-    data: Data that specifies the details of the merchandising offering (e.g. seat number for seat service)
-    air_segment_ref: Reference to a segment if the merchandising offering only pertains to that segment. If no segment reference is present this means this offering is for the whole itinerary.
-    booking_traveler_ref: Reference to a passenger if the merchandising offering only pertains to that passenger. If no passenger reference is present this means this offering is for all passengers.
+    ssrref: References to the related SSRs. At present, only reference to ASVC
+        SSR is supported. Supported providers are 1G/1V/1P/1J
+    data: Data that specifies the details of the merchandising offering (e.g.
+        seat number for seat service)
+    air_segment_ref: Reference to a segment if the merchandising offering only
+        pertains to that segment. If no segment reference is present this means
+        this offering is for the whole itinerary.
+    booking_traveler_ref: Reference to a passenger if the merchandising
+        offering only pertains to that passenger. If no passenger reference is
+        present this means this offering is for all passengers.
     stop_over: Indicates that there is a significant
-                            delay between flights (usually 12 hours or more)
+        delay between flights (usually 12 hours or more)
     traveler_type: Passenger Type Code.
-    emdsummary_ref: Reference to the corresponding EMD issued. Supported providers are 1G/1V/1P/1J
-    emdcoupon_ref: Reference to the corresponding EMD coupon issued. Supported providers are 1G/1V/1P/1J
+    emdsummary_ref: Reference to the corresponding EMD issued. Supported
+        providers are 1G/1V/1P/1J
+    emdcoupon_ref: Reference to the corresponding EMD coupon issued. Supported
+        providers are 1G/1V/1P/1J
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -10123,7 +10678,8 @@ class ServiceInfo:
     """
     Parameters
     ----------
-    description: Description of the Service.  Usually used in tandem with  one or more media items.
+    description: Description of the Service.  Usually used in tandem with  one
+        or more media items.
     media_item:
     """
     class Meta:
@@ -10150,7 +10706,9 @@ class ServiceInfo:
 
 @dataclass
 class TransactionType:
-    """Configuration for products by type. Inheritable.
+    """Configuration for products by type.
+
+    Inheritable.
 
     Parameters
     ----------
@@ -10213,14 +10771,22 @@ class TransactionType:
         Parameters
         ----------
         tier: Indicate the Tier Level
-        days_enabled: Allow or prohibit Flexible Days (within a date range) shopping option
+        days_enabled: Allow or prohibit Flexible Days (within a date range)
+            shopping option
         weekends_enabled: Allow or prohibit Flexible Weekends shopping option
-        airports_enabled: Allow or prohibit Flexible Airport (choice of Origin and Destination airports) shopping option
-        odenabled: Allow or prohibit Flexible Origin and Destination (choice of airports within a radius) shopping option
-        one_way_shop: Allows or prohibits one way shopping functionality for the associated provisioning provider configuration
-        flex_explore: Allows or prohibits flex explore functionality for the associated provisioning provider configuration
-        rapid_reprice_enabled: Allows or prohibits rapid reprice functionality for the associated provisioning provider configuration. Providers: 1G/1V
-        return_upsell_fare: When set to “true”, Upsell information will be returned in the shop response.  Provider: 1G, 1V, 1P, 1J, ACH
+        airports_enabled: Allow or prohibit Flexible Airport (choice of Origin
+            and Destination airports) shopping option
+        odenabled: Allow or prohibit Flexible Origin and Destination (choice of
+            airports within a radius) shopping option
+        one_way_shop: Allows or prohibits one way shopping functionality for
+            the associated provisioning provider configuration
+        flex_explore: Allows or prohibits flex explore functionality for the
+            associated provisioning provider configuration
+        rapid_reprice_enabled: Allows or prohibits rapid reprice functionality
+            for the associated provisioning provider configuration. Providers:
+            1G/1V
+        return_upsell_fare: When set to “true”, Upsell information will be
+            returned in the shop response.  Provider: 1G, 1V, 1P, 1J, ACH
         """
         tier: Optional["TransactionType.Air.Tier"] = field(
             default=None,
@@ -10294,15 +10860,20 @@ class TransactionType:
 
 @dataclass
 class TravelSegment(Segment):
-    """Generic segment used to provide travel information that was not processed by
-    the system.
+    """
+    Generic segment used to provide travel information that was not processed
+    by the system.
 
     Parameters
     ----------
     origin: The IATA location code for this origination of this entity.
     destination: The IATA location code for this destination of this entity.
-    departure_time: The date and time at which this entity departs. This does not include time zone information since it can be derived from the origin location.
-    arrival_time: The date and time at which this entity arrives at the destination. This does not include time zone information since it can be derived from the origin location.
+    departure_time: The date and time at which this entity departs. This does
+        not include time zone information since it can be derived from the
+        origin location.
+    arrival_time: The date and time at which this entity arrives at the
+        destination. This does not include time zone information since it can
+        be derived from the origin location.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -10343,7 +10914,8 @@ class TravelSegment(Segment):
 
 @dataclass
 class TravelerInformation:
-    """Traveler Information required for File Finishing.
+    """
+    Traveler Information required for File Finishing.
 
     Parameters
     ----------
@@ -10394,7 +10966,7 @@ class TravelerInformation:
         phone_number:
         name: Name of Emergency Contact Person
         relationship: Relationship between Traveler and
-        									Emergency Contact Person
+            Emergency Contact Person
         """
         phone_number: Optional[PhoneNumber] = field(
             default=None,
@@ -10425,7 +10997,9 @@ class TypeAgencyHierarchyLongReference(TypeAgencyHierarchyReference):
     Parameters
     ----------
     profile_version:
-    profile_name: Initially: Agent: Last, First, Branch: BranchCode, Agency: Name. After new profile  implementation: Agent: UserName, others levels: Name.
+    profile_name: Initially: Agent: Last, First, Branch: BranchCode, Agency:
+        Name. After new profile  implementation: Agent: UserName, others
+        levels: Name.
     """
     class Meta:
         name = "typeAgencyHierarchyLongReference"
@@ -10451,8 +11025,9 @@ class TypeAgencyHierarchyLongReference(TypeAgencyHierarchyReference):
 
 @dataclass
 class TypeAssociatedRemarkWithSegmentRef(TypeAssociatedRemark):
-    """A textual remark container to hold Associated itinerary remarks with segment
-    association.
+    """
+    A textual remark container to hold Associated itinerary remarks with
+    segment association.
 
     Parameters
     ----------
@@ -10472,12 +11047,14 @@ class TypeAssociatedRemarkWithSegmentRef(TypeAssociatedRemark):
 
 @dataclass
 class TypeFlexibleTimeSpec(TypeTimeSpec):
-    """A type which can be used for flexible date/time specification -extends the
+    """
+    A type which can be used for flexible date/time specification -extends the
     generic type typeTimeSpec to provide extra options for search.
 
     Parameters
     ----------
-    search_extra_days: Options to search for extra days on top of the specified date
+    search_extra_days: Options to search for extra days on top of the specified
+        date
     """
     class Meta:
         name = "typeFlexibleTimeSpec"
@@ -10548,19 +11125,22 @@ class TypeLocation:
 
 @dataclass
 class TypePaymentCard:
-    """Container for all credit and debit card information.
+    """
+    Container for all credit and debit card information.
 
     Parameters
     ----------
     phone_number:
     billing_address: The address to where the billing statements
-                            for this card are sent. Used for address verification purposes.
+        for this card are sent. Used for address verification purposes.
     type: The 2 letter credit/ debit card type.
     number:
     exp_date: The Expiration date of this card in YYYY-MM format.
     name: The name as it appears on the card.
     cvv: Card Verification Code
-    approval_code: This code is required for an authorization process from the Credit Card company directly,required for some of the CCH carriers.This attribute is also used for EMD retrieve and issuance transactions.
+    approval_code: This code is required for an authorization process from the
+        Credit Card company directly,required for some of the CCH carriers.This
+        attribute is also used for EMD retrieve and issuance transactions.
     """
     class Meta:
         name = "typePaymentCard"
@@ -10773,9 +11353,11 @@ class BaseReservation:
     general_remark:
     restriction:
     passive_info:
-    locator_code: The unique identifier for this reservation. If this is this View Only UR LocatorCode is '999999'.
+    locator_code: The unique identifier for this reservation. If this is this
+        View Only UR LocatorCode is '999999'.
     create_date: The date and time that this reservation was created.
-    modified_date: The date and time that this reservation was last modified for any reason.
+    modified_date: The date and time that this reservation was last modified
+        for any reason.
     customer_number:
     """
     accounting_remark: List[AccountingRemark] = field(
@@ -10863,7 +11445,8 @@ class BaseSearchReq(BaseReq):
 
 @dataclass
 class BookingTraveler:
-    """A traveler and all their accompanying data.
+    """
+    A traveler and all their accompanying data.
 
     Parameters
     ----------
@@ -10882,18 +11465,27 @@ class BookingTraveler:
     drivers_license:
     applied_profile:
     customized_name_data:
-    travel_compliance_data: Travel Compliance and Preferred Supplier information of the booking traveler specific to a segment. Not applicable to Saved Trip.
+    travel_compliance_data: Travel Compliance and Preferred Supplier
+        information of the booking traveler specific to a segment. Not
+        applicable to Saved Trip.
     travel_info:
     key:
-    traveler_type: Defines the type of traveler used for booking which could be a non-defining type (Companion, Web-fare, etc), or a standard type (Adult, Child, etc).
+    traveler_type: Defines the type of traveler used for booking which could be
+        a non-defining type (Companion, Web-fare, etc), or a standard type
+        (Adult, Child, etc).
     age: BookingTraveler age
-    vip: When set to True indicates that the Booking Traveler is a VIP based on agency/customer criteria
+    vip: When set to True indicates that the Booking Traveler is a VIP based on
+        agency/customer criteria
     dob: Traveler Date of Birth
     gender: The BookingTraveler gender type
-    nationality: Specify ISO country code for nationality of the Booking Traveler
+    nationality: Specify ISO country code for nationality of the Booking
+        Traveler
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     name_number: Host Name Number
     """
     class Meta:
@@ -11112,7 +11704,8 @@ class BookingTraveler:
 
 @dataclass
 class BookingTravelerInfo:
-    """Container that will allow modifying Universal record data that is not
+    """
+    Container that will allow modifying Universal record data that is not
     product specific.
 
     Parameters
@@ -11249,20 +11842,25 @@ class BookingTravelerInfo:
 
 @dataclass
 class ConnectionPoint(TypeLocation):
-    """A connection point can be eith an IATA airport or cir city code."""
+    """
+    A connection point can be eith an IATA airport or cir city code.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
 
 @dataclass
 class DebitCard(TypePaymentCard):
-    """Container for all debit card information.
+    """
+    Container for all debit card information.
 
     Parameters
     ----------
     issue_number: Verification number for Debit Cards
-    profile_id: The unique ID of the profile that contains the payment details to use.
-    key: The Key assigned to the payment details value from the specified profile.
+    profile_id: The unique ID of the profile that contains the payment details
+        to use.
+    key: The Key assigned to the payment details value from the specified
+        profile.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -11293,14 +11891,15 @@ class DebitCard(TypePaymentCard):
 
 @dataclass
 class FileFinishingInfo:
-    """Misc Data required for File Finishing. This data is transient and not saved
-    in database.
+    """Misc Data required for File Finishing.
+
+    This data is transient and not saved in database.
 
     Parameters
     ----------
     shop_information:
     policy_information: Policy Information required for File
-                                                            Finishing. Would repeat per Policy Type
+        Finishing. Would repeat per Policy Type
     account_information:
     agency_information:
     traveler_information:
@@ -11358,7 +11957,9 @@ class FileFinishingInfo:
 @dataclass
 class Group:
     """Represents a traveler group for Group booking and all their accompanying
-    data. SUPPORTED PROVIDER: Worldspan and JAL.
+    data.
+
+    SUPPORTED PROVIDER: Worldspan and JAL.
 
     Parameters
     ----------
@@ -11370,12 +11971,15 @@ class Group:
     booking_traveler_ref: Reference Element for Booking Traveler.
     key:
     traveler_type: Defines the type of traveler used for booking
-                        which could be a non-defining type (Companion, Web-fare, etc), or a
-                        standard type (Adult, Child, etc).
+        which could be a non-defining type (Companion, Web-fare, etc), or a
+        standard type (Adult, Child, etc).
     group_size: Represents size of the group
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -11492,14 +12096,18 @@ class Group:
 
 @dataclass
 class ServiceRuleType:
-    """Contains the rules for applying service rules.
+    """
+    Contains the rules for applying service rules.
 
     Parameters
     ----------
     application_rules: The rules to apply the rule to the itinerary
-    application_level: Lists the levels where the option is applied in the itinerary. Some options are applied for the entire itinerary, some for entire segments, etc.
+    application_level: Lists the levels where the option is applied in the
+        itinerary. Some options are applied for the entire itinerary, some for
+        entire segments, etc.
     modify_rules: Groups the modification rules for the Option
-    secondary_type_rules: Lists the supported Secondary Codes for the optional / additional service.
+    secondary_type_rules: Lists the supported Secondary Codes for the optional
+        / additional service.
     remarks: Adds text remarks / rules for the optional / additional service
     key: Unique ID to identify an optional service rule
     """
@@ -11558,11 +12166,18 @@ class ServiceRuleType:
         """
         Parameters
         ----------
-        required_for_all_travelers: Indicates if the option needs to be applied to all travelers in the itinerary if selected
-        required_for_all_segments: Indicates if the option needs to be applied to all segments in the itinerary if selected
-        required_for_all_segments_in_od: Indicates if the option needs to be applied to all segments in a origin / destination (connection flights) if selected for one segment in the OD
-        unselected_option_required: If an UnselectedOption is present in the option, then the Unselected option  needs to be selected even if the option is not selected when this flag is set to true
-        secondary_option_code_required: If set to true, the secondary option code is required for this option
+        required_for_all_travelers: Indicates if the option needs to be applied
+            to all travelers in the itinerary if selected
+        required_for_all_segments: Indicates if the option needs to be applied
+            to all segments in the itinerary if selected
+        required_for_all_segments_in_od: Indicates if the option needs to be
+            applied to all segments in a origin / destination (connection
+            flights) if selected for one segment in the OD
+        unselected_option_required: If an UnselectedOption is present in the
+            option, then the Unselected option  needs to be selected even if
+            the option is not selected when this flag is set to true
+        secondary_option_code_required: If set to true, the secondary option
+            code is required for this option
         """
         required_for_all_travelers: Optional[bool] = field(
             default=None,
@@ -11605,10 +12220,13 @@ class ServiceRuleType:
         """
         Parameters
         ----------
-        application_limits: Adds the limits on the number of options that can be selected for a particular type
+        application_limits: Adds the limits on the number of options that can
+            be selected for a particular type
         service_data:
-        applicable_levels: Indicates the level in the itinerary when the option is applied.
-        provider_defined_applicable_levels: Indicates the actual provider defined ApplicableLevels which is mapped to Other
+        applicable_levels: Indicates the level in the itinerary when the option
+            is applied.
+        provider_defined_applicable_levels: Indicates the actual provider
+            defined ApplicableLevels which is mapped to Other
         """
         application_limits: Optional["ServiceRuleType.ApplicationLevel.ApplicationLimits"] = field(
             default=None,
@@ -11666,9 +12284,12 @@ class ServiceRuleType:
         """
         Parameters
         ----------
-        modify_rule: Indicates modification rules for the particular modification type.
-        supported_modifications: Lists the supported modifications for the itinerary.
-        provider_defined_modification_type: Indicates the actual provider defined modification type which is mapped to Other
+        modify_rule: Indicates modification rules for the particular
+            modification type.
+        supported_modifications: Lists the supported modifications for the
+            itinerary.
+        provider_defined_modification_type: Indicates the actual provider
+            defined modification type which is mapped to Other
         """
         modify_rule: List["ServiceRuleType.ModifyRules.ModifyRule"] = field(
             default_factory=list,
@@ -11702,11 +12323,16 @@ class ServiceRuleType:
             Parameters
             ----------
             modification: The modificaiton for which this rule group applies.
-            automatically_applied_on_add: Indicates if the option will be automatically added to new segments / passengers in the itinerary.
-            can_delete: Indicates if the option can be deleted from the itinerary without segment or passenger modifications
-            can_add: Indicates if the option can be added to the itinerary without segment or passenger modification
+            automatically_applied_on_add: Indicates if the option will be
+                automatically added to new segments / passengers in the
+                itinerary.
+            can_delete: Indicates if the option can be deleted from the
+                itinerary without segment or passenger modifications
+            can_add: Indicates if the option can be added to the itinerary
+                without segment or passenger modification
             refundable: Indicates if the price of the option is refundable.
-            provider_defined_modification_type: Indicates the actual provider defined modification type which is mapped to Other
+            provider_defined_modification_type: Indicates the actual provider
+                defined modification type which is mapped to Other
             """
             modification: Optional[ModificationType] = field(
                 default=None,
@@ -11757,7 +12383,8 @@ class ServiceRuleType:
         """
         Parameters
         ----------
-        secondary_type_rule: Lists a single secondary code for the optional / additional service.
+        secondary_type_rule: Lists a single secondary code for the optional /
+            additional service.
         """
         secondary_type_rule: List["ServiceRuleType.SecondaryTypeRules.SecondaryTypeRule"] = field(
             default_factory=list,
@@ -11776,7 +12403,8 @@ class ServiceRuleType:
             Parameters
             ----------
             application_limit:
-            secondary_type: The unique type to associate a secondary type in an optional service
+            secondary_type: The unique type to associate a secondary type in an
+                optional service
             """
             application_limit: List[OptionalServiceApplicationLimitType] = field(
                 default_factory=list,
@@ -11803,13 +12431,17 @@ class TypeCreditCardType(TypePaymentCard):
     Parameters
     ----------
     extended_payment: Used for American Express cards.
-    customer_reference: Agencies use this to pass the traveler information to the credit card company.
+    customer_reference: Agencies use this to pass the traveler information to
+        the credit card company.
     acceptance_override: Override airline restriction on the credit card.
-    third_party_payment: If true, this indicates that the credit card holder is not one of the passengers.
+    third_party_payment: If true, this indicates that the credit card holder is
+        not one of the passengers.
     bank_name: Issuing bank name for this credit card
     bank_country_code: ISO Country code associated with the issuing bank
     bank_state_code: State code associated with the issuing bank.
-    enett: Acceptable values are true or false. If set to true it will denote that the credit card used has been issued through Enett. For all other credit card payments this value will be set to false.
+    enett: Acceptable values are true or false. If set to true it will denote
+        that the credit card used has been issued through Enett. For all other
+        credit card payments this value will be set to false.
     """
     class Meta:
         name = "typeCreditCardType"
@@ -11876,21 +12508,28 @@ class TypeCreditCardType(TypePaymentCard):
 
 @dataclass
 class TypePassengerType:
-    """Passenger type code with optional age information.
+    """
+    Passenger type code with optional age information.
 
     Parameters
     ----------
-    name: Optional passenger Name with associated LoyaltyCard may provide benefit when pricing itineraries using Low Cost Carriers. In general, most carriers do not consider passenger LoyalyCard information when initially pricing itineraries.
+    name: Optional passenger Name with associated LoyaltyCard may provide
+        benefit when pricing itineraries using Low Cost Carriers. In general,
+        most carriers do not consider passenger LoyalyCard information when
+        initially pricing itineraries.
     loyalty_card:
     discount_card:
-    personal_geography: Passenger personal geography detail to be sent to Host for accessing location specific fares
+    personal_geography: Passenger personal geography detail to be sent to Host
+        for accessing location specific fares
     code: The 3-char IATA passenger type code
     age:
     dob: Passenger Date of Birth
     gender: The passenger gender type
     price_ptconly:
-    booking_traveler_ref: This value should be set for Multiple Passengers in the request.
-    accompanied_passenger: Container to identify accompanied passenger. Set true means this passenger is accompanied
+    booking_traveler_ref: This value should be set for Multiple Passengers in
+        the request.
+    accompanied_passenger: Container to identify accompanied passenger. Set
+        true means this passenger is accompanied
     residency_type: The passenger residence type.
     """
     class Meta:
@@ -12007,20 +12646,29 @@ class BaseCreateReservationReq(BaseReq):
     unassociated_remark:
     postscript:
     passive_info:
-    continuity_check_override: This element will be used if user wants to override segment continuity check.
+    continuity_check_override: This element will be used if user wants to
+        override segment continuity check.
     agency_contact_info:
     customer_id:
     file_finishing_info:
     commission_remark:
     consolidator_remark:
     invoice_remark:
-    ssr: SSR element outside Booking Traveler without any Segment Ref or Booking Traveler Ref.
+    ssr: SSR element outside Booking Traveler without any Segment Ref or
+        Booking Traveler Ref.
     email_notification:
-    queue_place: Allow queue placement of a PNR at the time of booking in AirCreateReservationReq,HotelCreateReservationReq,PassiveCreateReservationReq and VehicleCreateReservationReq for providers 1G,1V,1P and 1J.
-    rule_name: This attribute is meant to attach a mandatory custom check rule name to a PNR. A non-mandatory custom check rule too can be attached to a PNR.
-    universal_record_locator_code: Which UniversalRecord should this new reservation be applied to.  If blank, then a new one is created.
-    provider_locator_code: Which Provider reservation does this reservation get added to.
-    provider_code: To be used with ProviderLocatorCode, which host the reservation being added to belongs to.
+    queue_place: Allow queue placement of a PNR at the time of booking in
+        AirCreateReservationReq,HotelCreateReservationReq,PassiveCreateReservationReq
+        and VehicleCreateReservationReq for providers 1G,1V,1P and 1J.
+    rule_name: This attribute is meant to attach a mandatory custom check rule
+        name to a PNR. A non-mandatory custom check rule too can be attached to
+        a PNR.
+    universal_record_locator_code: Which UniversalRecord should this new
+        reservation be applied to.  If blank, then a new one is created.
+    provider_locator_code: Which Provider reservation does this reservation get
+        added to.
+    provider_code: To be used with ProviderLocatorCode, which host the
+        reservation being added to belongs to.
     customer_number: Optional client centric customer identifier
     version:
     """
@@ -12236,12 +12884,15 @@ class BaseCreateReservationReq(BaseReq):
 
 @dataclass
 class CreditCard(TypeCreditCardType):
-    """Container for all credit card information.
+    """
+    Container for all credit card information.
 
     Parameters
     ----------
-    profile_id: The unique ID of the profile that contains the payment details to use.
-    key: The Key assigned to the payment details value from the specified profile.
+    profile_id: The unique ID of the profile that contains the payment details
+        to use.
+    key: The Key assigned to the payment details value from the specified
+        profile.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -12264,7 +12915,9 @@ class CreditCard(TypeCreditCardType):
 
 @dataclass
 class SearchPassenger(TypePassengerType):
-    """Passenger type with code and optional age information."""
+    """
+    Passenger type with code and optional age information.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
@@ -12279,7 +12932,8 @@ class SearchPassenger(TypePassengerType):
 
 @dataclass
 class FormOfPayment:
-    """A Form of Payment used to purchase all or part of a booking.
+    """
+    A Form of Payment used to purchase all or part of a booking.
 
     Parameters
     ----------
@@ -12302,33 +12956,46 @@ class FormOfPayment:
     arcpayment:
     key:
     type:
-    fulfillment_type: Defines how the client wishes to receive travel documents. Type does not define where or how payment is made. The supported values are  "Ticket on Departure",
-                                                            "Travel Agency",
-                                                            "Courier",
-                                                            "Standard Mail",
-                                                            "Ticketless",
-                                                            "Ticket Office",
-                                                            "Express Mail",
-                                                            "Corporate Kiosk",
-                                                            "Train Station Service Desk",
-                                                            "Direct Printing of Ticket",
-                                                            "Ticket by Email",
-                                                            "Digital Printing of Ticket at Home",
-                                                            "Retrieve Ticket at Eurostar in London"
-    Collect booking ticket at a Kiosk, print in agency.
+    fulfillment_type: Defines how the client wishes to receive travel
+        documents. Type does not define where or how payment is made. The
+        supported values are  "Ticket on Departure",
+        "Travel Agency",
+        "Courier",
+        "Standard Mail",
+        "Ticketless",
+        "Ticket Office",
+        "Express Mail",
+        "Corporate Kiosk",
+        "Train Station Service Desk",
+        "Direct Printing of Ticket",
+        "Ticket by Email",
+        "Digital Printing of Ticket at Home",
+        "Retrieve Ticket at Eurostar in London" Collect booking ticket at a
+        Kiosk, print in agency.
     fulfillment_location: Information about the location of the printer.
-    fulfillment_idtype: Identification type, e.g. credit card, to define how the customer will identify himself when collecting the ticket
-    fulfillment_idnumber: Identification number, e.g. card number, to define how the customer will identify himself when collecting the ticket
-    is_agent_type: If this is true then FormOfPayment mention in Type is anAgent type FormOfPayment.
-    agent_text: This is only relevent when IsAgentType is specified as true. Otherwise this will be ignored.
-    reuse_fop: Key of the FOP Key to be reused as this Form of Payment.Only Credit and Debit Card will be supported for FOP Reuse.
+    fulfillment_idtype: Identification type, e.g. credit card, to define how
+        the customer will identify himself when collecting the ticket
+    fulfillment_idnumber: Identification number, e.g. card number, to define
+        how the customer will identify himself when collecting the ticket
+    is_agent_type: If this is true then FormOfPayment mention in Type is
+        anAgent type FormOfPayment.
+    agent_text: This is only relevent when IsAgentType is specified as true.
+        Otherwise this will be ignored.
+    reuse_fop: Key of the FOP Key to be reused as this Form of Payment.Only
+        Credit and Debit Card will be supported for FOP Reuse.
     external_reference:
-    reusable: Indicates whether the form of payment can be reused or not. Currently applicable for Credit and Debit form of payment
-    profile_id: The unique ID of the profile that contains the payment details to use.
-    profile_key: The Key assigned to the payment details value from the specified profile.
+    reusable: Indicates whether the form of payment can be reused or not.
+        Currently applicable for Credit and Debit form of payment
+    profile_id: The unique ID of the profile that contains the payment details
+        to use.
+    profile_key: The Key assigned to the payment details value from the
+        specified profile.
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -12568,7 +13235,8 @@ class FormOfPayment:
 
 @dataclass
 class Guarantee:
-    """Payment Guarantee Guarantee, Deposit or PrePayment.
+    """
+    Payment Guarantee Guarantee, Deposit or PrePayment.
 
     Parameters
     ----------
@@ -12576,12 +13244,17 @@ class Guarantee:
     other_guarantee_info:
     type: Guarantee, Deposit for 1G/1V/1P/1J and PrePayment for 1P/1J only
     key: Key for update/delete of the element
-    reuse_fop: Key of the FOP Key to be reused as this Form of Payment.Only Credit and Debit Card will be supported for FOP Reuse.
+    reuse_fop: Key of the FOP Key to be reused as this Form of Payment.Only
+        Credit and Debit Card will be supported for FOP Reuse.
     external_reference:
-    reusable: Indicates whether the form of payment can be reused or not. Currently applicable for Credit and Debit form of payment
+    reusable: Indicates whether the form of payment can be reused or not.
+        Currently applicable for Credit and Debit form of payment
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -12655,7 +13328,8 @@ class Guarantee:
 
 @dataclass
 class BaseCreateWithFormOfPaymentReq(BaseCreateReservationReq):
-    """Container for BaseCreateReservation along with Form Of Payment.
+    """
+    Container for BaseCreateReservation along with Form Of Payment.
 
     Parameters
     ----------
@@ -12674,13 +13348,15 @@ class BaseCreateWithFormOfPaymentReq(BaseCreateReservationReq):
 
 @dataclass
 class McoexchangeInfo:
-    """Information related to the exchange tickets available for the MCO.
+    """
+    Information related to the exchange tickets available for the MCO.
 
     Parameters
     ----------
     form_of_payment:
     exchanged_coupon:
-    original_ticket_number: Airline form and serial number of the original ticket issued.
+    original_ticket_number: Airline form and serial number of the original
+        ticket issued.
     original_city_code: Location of honoring carrier or operator.
     original_ticket_date: Date that the Original ticket was issued.
     iatacode: IATA code of the issuing agency.
@@ -12740,7 +13416,8 @@ class McoexchangeInfo:
 
 @dataclass
 class ServiceFeeInfo:
-    """Travel Agency Service Fees (TASF) are charged by the agency through BSP or
+    """
+    Travel Agency Service Fees (TASF) are charged by the agency through BSP or
     Airline Reporting Corporation (ARC).
 
     Parameters
@@ -12749,20 +13426,31 @@ class ServiceFeeInfo:
     service_fee_tax_info:
     credit_card_auth:
     payment:
-    status: Status of the service fee. Possible Values – Issued, ReadyToIssue, IssueLater.
+    status: Status of the service fee. Possible Values – Issued, ReadyToIssue,
+        IssueLater.
     description: The description of the service fee.
     key:
-    confirmation: The confirmation number of the service fee in the merchant host system.
+    confirmation: The confirmation number of the service fee in the merchant
+        host system.
     ticket_number: The ticket that this fee was issued in connection with.
     booking_traveler_ref: A reference to a passenger.
-    provider_reservation_info_ref: A reference to the provider reservation info to which the service is tied.
-    passive_provider_reservation_info_ref: A reference to the passive provider reservation info to which the service is tied.
-    total_amount: The total amount for this Service Fee including base amount and all taxes.
-    base_amount: Represents the base price for this entity. This does not include any taxes.
-    taxes: The aggregated amount of all the taxes that are associated with this entity. See the associated Service Fee TaxInfo array for a breakdown of the individual taxes.
+    provider_reservation_info_ref: A reference to the provider reservation info
+        to which the service is tied.
+    passive_provider_reservation_info_ref: A reference to the passive provider
+        reservation info to which the service is tied.
+    total_amount: The total amount for this Service Fee including base amount
+        and all taxes.
+    base_amount: Represents the base price for this entity. This does not
+        include any taxes.
+    taxes: The aggregated amount of all the taxes that are associated with this
+        entity. See the associated Service Fee TaxInfo array for a breakdown of
+        the individual taxes.
     el_stat: This attribute is used to show the action results of an element.
-                  Possible values are "A" (when elements have been added to the UR) and "M" (when existing elements have been modified). Response only.
-    key_override: If a duplicate key is found where we are adding elements in some cases like URAdd, then instead of erroring out set this attribute to true.
+        Possible values are "A" (when elements have been added to the UR) and
+        "M" (when existing elements have been modified). Response only.
+    key_override: If a duplicate key is found where we are adding elements in
+        some cases like URAdd, then instead of erroring out set this attribute
+        to true.
     booking_traveler_name: The name of the passenger.
     """
     class Meta:
@@ -12910,24 +13598,33 @@ class Mco(Mcoinformation):
     mcoprice_data:
     stock_control:
     mcotext:
-    ticket_type: Ticket issue indicator. Possible values "Pre-paid ticket advice", "Ticket on departure" and "Other" .
-    ticket_number: The ticket that this MCO was issued in connection with. Could be the ticket that caused the fee, a residual from an exchange, or an airline service fee.
-    mcoissued: Set to true when the MCO is to be issued and set to false if it is stored for issue at a later time.
+    ticket_type: Ticket issue indicator. Possible values "Pre-paid ticket
+        advice", "Ticket on departure" and "Other" .
+    ticket_number: The ticket that this MCO was issued in connection with.
+        Could be the ticket that caused the fee, a residual from an exchange,
+        or an airline service fee.
+    mcoissued: Set to true when the MCO is to be issued and set to false if it
+        is stored for issue at a later time.
     mcoissue_date: Date and time in which the MCO was issued.
     mcodoc_num: MCO document number.
-    issue_reason_code: MCO issuing reason code. Possible Values (List): A - Air transportation, B - Surface transportation
-    C - Bag shipped as cargo, D - Land arrgs for it, E - Car hire, F - Sleeper / berth
-    G - Up-grading, H - Under collections, I - Taxes/fees/charges, J - Deposits down payments
-    K - Refundable Balances, L - Hotel accommodations, M - Sundry charges, N - Cancellation fee
-    O - Other, P thru Z - airline specific, 1 thru 9 - market specific
+    issue_reason_code: MCO issuing reason code. Possible Values (List): A - Air
+        transportation, B - Surface transportation C - Bag shipped as cargo, D
+        - Land arrgs for it, E - Car hire, F - Sleeper / berth G - Up-grading,
+        H - Under collections, I - Taxes/fees/charges, J - Deposits down
+        payments K - Refundable Balances, L - Hotel accommodations, M - Sundry
+        charges, N - Cancellation fee O - Other, P thru Z - airline specific, 1
+        thru 9 - market specific
     plating_carrier: The Plating Carrier for this MCO
     tour_operator: Tour Operator - name of honoring carrier or operator.
     location: Location of honoring carrier or operator.
     tour_code: The Tour Code of the MCO.
-    provider_code: Contains the Provider Code of the provider that houses this MCO.
-    provider_locator_code: Contains the Provider Locator Code of the Provider Reservation that houses this MCO.
+    provider_code: Contains the Provider Code of the provider that houses this
+        MCO.
+    provider_locator_code: Contains the Provider Locator Code of the Provider
+        Reservation that houses this MCO.
     pseudo_city_code: The PCC in the host system.
-    expiry_date: E-Voucher’s Expiry Date. This expiry date is specific to Rail product
+    expiry_date: E-Voucher’s Expiry Date. This expiry date is specific to Rail
+        product
     """
     class Meta:
         name = "MCO"

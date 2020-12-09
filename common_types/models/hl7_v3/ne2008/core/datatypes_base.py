@@ -27,17 +27,19 @@ class BinaryDataEncoding(Enum):
 @dataclass
 class AdxpExplicit:
     """A character string that may have a type-tag signifying its role in the
-    address. Typical parts that exist in about every address are street, house
-    number, or post box, postal code, city, country but other roles may be defined
-    regionally, nationally, or on an enterprise level (e.g. in military addresses).
-    Addresses are usually broken up into lines, which are indicated by special
-    line-breaking delimiter elements (e.g., DEL).
+    address.
+
+    Typical parts that exist in about every address are street, house
+    number, or post box, postal code, city, country but other roles may
+    be defined regionally, nationally, or on an enterprise level (e.g.
+    in military addresses). Addresses are usually broken up into lines,
+    which are indicated by special line-breaking delimiter elements
+    (e.g., DEL).
 
     :ivar content:
-    :ivar part_type: Specifies whether an address part names the street,
-                 city, country, postal code, post box, etc. If the type
-                 is NULL the address part is unclassified and would
-                 simply appear on an address label as is.
+    :ivar part_type: Specifies whether an address part names the street, city,
+        country, postal code, post box, etc. If the type is NULL the address
+        part is unclassified and would simply appear on an address label as is.
     """
     class Meta:
         name = "ADXP_explicit"
@@ -61,13 +63,14 @@ class AdxpExplicit:
 
 @dataclass
 class Any:
-    """Defines the basic properties of every data value. This is an abstract type,
-    meaning that no value can be just a data value without belonging to any
-    concrete type. Every concrete type is a specialization of this general abstract
-    DataValue type.
+    """Defines the basic properties of every data value.
 
-    :ivar null_flavor: An exceptional value expressing missing information
-                   and possibly the reason why the information is missing.
+    This is an abstract type, meaning that no value can be just a data
+    value without belonging to any concrete type. Every concrete type is
+    a specialization of this general abstract DataValue type.
+
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
     """
     class Meta:
         name = "ANY"
@@ -83,19 +86,21 @@ class Any:
 
 @dataclass
 class EnxpExplicit:
-    """A character string token representing a part of a name. May have a type code
-    signifying the role of the part in the whole entity name, and a qualifier code
-    for more detail about the name part type. Typical name parts for person names
-    are given names, and family names, titles, etc.
+    """A character string token representing a part of a name.
+
+    May have a type code signifying the role of the part in the whole
+    entity name, and a qualifier code for more detail about the name
+    part type. Typical name parts for person names are given names, and
+    family names, titles, etc.
 
     :ivar content:
     :ivar part_type: Indicates whether the name part is a given name, family
-                        name, prefix, suffix, etc.
+        name, prefix, suffix, etc.
     :ivar qualifier: is a set of codes each of which specifies
-                             a certain subcategory of the name part in addition to
-                             the main name part type. For example, a given name may
-                             be flagged as a nickname, a family name may be a
-                             pseudonym or a name of public records.
+        a certain subcategory of the name part in addition to
+        the main name part type. For example, a given name may
+        be flagged as a nickname, a family name may be a
+        pseudonym or a name of public records.
     """
     class Meta:
         name = "ENXP_explicit"
@@ -127,12 +132,11 @@ class EnxpExplicit:
 @dataclass
 class IvxbTsExplicit:
     """
-    :ivar null_flavor: An exceptional value expressing missing information
-                        and possibly the reason why the information is missing.
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
     :ivar value:
-    :ivar inclusive: Specifies whether the limit is included in the
-                        interval (interval is closed) or excluded from the
-                        interval (interval is open).
+    :ivar inclusive: Specifies whether the limit is included in the interval
+        (interval is closed) or excluded from the interval (interval is open).
     """
     class Meta:
         name = "IVXB_TS_explicit"
@@ -163,14 +167,13 @@ class IvxbTsExplicit:
 @dataclass
 class SxcmTsExplicit:
     """
-    :ivar null_flavor: An exceptional value expressing missing information
-                        and possibly the reason why the information is missing.
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
     :ivar value:
     :ivar operator: A code specifying whether the set component is included
-                 (union) or excluded (set-difference) from the set, or
-                 other set operations with the current set component and
-                 the set as constructed from the representation stream
-                 up to the current point.
+        (union) or excluded (set-difference) from the set, or other set
+        operations with the current set component and the set as constructed
+        from the representation stream up to the current point.
     """
     class Meta:
         name = "SXCM_TS_explicit"
@@ -199,11 +202,12 @@ class SxcmTsExplicit:
 
 @dataclass
 class TsExplicit:
-    """A quantity specifying a point on the axis of natural time. A point in time
-    is most often represented as a calendar expression.
+    """A quantity specifying a point on the axis of natural time.
 
-    :ivar null_flavor: An exceptional value expressing missing information
-                        and possibly the reason why the information is missing.
+    A point in time is most often represented as a calendar expression.
+
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
     :ivar value:
     """
     class Meta:
@@ -1473,10 +1477,10 @@ class EnDelimiter:
     :ivar content:
     :ivar part_type:
     :ivar qualifier: is a set of codes each of which specifies
-                         a certain subcategory of the name part in addition to
-                         the main name part type. For example, a given name may
-                         be flagged as a nickname, a family name may be a
-                         pseudonym or a name of public records.
+        a certain subcategory of the name part in addition to
+        the main name part type. For example, a given name may
+        be flagged as a nickname, a family name may be a
+        pseudonym or a name of public records.
     """
     class Meta:
         name = "en.delimiter"
@@ -1512,10 +1516,10 @@ class EnFamily:
     :ivar content:
     :ivar part_type:
     :ivar qualifier: is a set of codes each of which specifies
-                         a certain subcategory of the name part in addition to
-                         the main name part type. For example, a given name may
-                         be flagged as a nickname, a family name may be a
-                         pseudonym or a name of public records.
+        a certain subcategory of the name part in addition to
+        the main name part type. For example, a given name may
+        be flagged as a nickname, a family name may be a
+        pseudonym or a name of public records.
     """
     class Meta:
         name = "en.family"
@@ -1551,10 +1555,10 @@ class EnGiven:
     :ivar content:
     :ivar part_type:
     :ivar qualifier: is a set of codes each of which specifies
-                         a certain subcategory of the name part in addition to
-                         the main name part type. For example, a given name may
-                         be flagged as a nickname, a family name may be a
-                         pseudonym or a name of public records.
+        a certain subcategory of the name part in addition to
+        the main name part type. For example, a given name may
+        be flagged as a nickname, a family name may be a
+        pseudonym or a name of public records.
     """
     class Meta:
         name = "en.given"
@@ -1590,10 +1594,10 @@ class EnPrefix:
     :ivar content:
     :ivar part_type:
     :ivar qualifier: is a set of codes each of which specifies
-                         a certain subcategory of the name part in addition to
-                         the main name part type. For example, a given name may
-                         be flagged as a nickname, a family name may be a
-                         pseudonym or a name of public records.
+        a certain subcategory of the name part in addition to
+        the main name part type. For example, a given name may
+        be flagged as a nickname, a family name may be a
+        pseudonym or a name of public records.
     """
     class Meta:
         name = "en.prefix"
@@ -1629,10 +1633,10 @@ class EnSuffix:
     :ivar content:
     :ivar part_type:
     :ivar qualifier: is a set of codes each of which specifies
-                         a certain subcategory of the name part in addition to
-                         the main name part type. For example, a given name may
-                         be flagged as a nickname, a family name may be a
-                         pseudonym or a name of public records.
+        a certain subcategory of the name part in addition to
+        the main name part type. For example, a given name may
+        be flagged as a nickname, a family name may be a
+        pseudonym or a name of public records.
     """
     class Meta:
         name = "en.suffix"
@@ -1814,8 +1818,10 @@ class EnExplicitSuffix:
 
 @dataclass
 class AdExplicit:
-    """Mailing and home or office addresses. A sequence of address parts, such as
-    street or post office Box, city, postal code, country, etc.
+    """Mailing and home or office addresses.
+
+    A sequence of address parts, such as street or post office Box,
+    city, postal code, country, etc.
 
     :ivar content:
     :ivar delimiter:
@@ -1845,21 +1851,17 @@ class AdExplicit:
     :ivar building_number_suffix:
     :ivar post_box:
     :ivar precinct:
-    :ivar useable_period: A GTS specifying the
-                    periods of time during which the address can be used.
-                    This is used to specify different addresses for
-                    different times of the year or to refer to historical
-                    addresses.
-    :ivar null_flavor: An exceptional value expressing missing information
-                        and possibly the reason why the information is missing.
-    :ivar use: A set of codes advising a system or user which address
-                 in a set of like addresses to select for a given purpose.
+    :ivar useable_period: A GTS specifying the periods of time during which the
+        address can be used. This is used to specify different addresses for
+        different times of the year or to refer to historical addresses.
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
+    :ivar use: A set of codes advising a system or user which address in a set
+        of like addresses to select for a given purpose.
     :ivar is_not_ordered: A boolean value specifying whether the order of the
-                 address parts is known or not. While the address parts
-                 are always a Sequence, the order in which they are
-                 presented may or may not be known. Where this matters,
-                  can be used to convey this
-                 information.
+        address parts is known or not. While the address parts are always a
+        Sequence, the order in which they are presented may or may not be
+        known. Where this matters,  can be used to convey this information.
     """
     class Meta:
         name = "AD_explicit"
@@ -2142,7 +2144,8 @@ class AdExplicit:
 
 @dataclass
 class AnynonNull(Any):
-    """The BooleanNonNull type is used where a Boolean cannot have a null value.
+    """The BooleanNonNull type is used where a Boolean cannot have a null
+    value.
 
     A Boolean value can be either true or false.
     """
@@ -2152,12 +2155,14 @@ class AnynonNull(Any):
 
 @dataclass
 class Bin(Any):
-    """Binary data is a raw block of bits. Binary data is a protected type that
-    MUST not be used outside the data type specification.
+    """Binary data is a raw block of bits.
+
+    Binary data is a protected type that MUST not be used outside the
+    data type specification.
 
     :ivar content:
     :ivar representation: Specifies the representation of the binary data that
-                         is the content of the binary data value.
+        is the content of the binary data value.
     """
     class Meta:
         name = "BIN"
@@ -2182,8 +2187,8 @@ class Bin(Any):
 class Bl(Any):
     """The Boolean type stands for the values of two-valued logic.
 
-    A Boolean value can be either true or false, or, as any other value may
-    be NULL.
+    A Boolean value can be either true or false, or, as any other value
+    may be NULL.
     """
     class Meta:
         name = "BL"
@@ -2199,32 +2204,30 @@ class Bl(Any):
 
 @dataclass
 class Cr(Any):
-    """A concept qualifier code with optionally named role. Both qualifier role and
-    value codes must be defined by the coding system.  For example, if SNOMED RT
-    defines a concept "leg", a role relation "has-laterality", and another concept
-    "left", the concept role relation allows to add the qualifier "has-laterality:
-    left" to a primary code "leg" to construct the meaning "left leg".
+    """A concept qualifier code with optionally named role.
+
+    Both qualifier role and value codes must be defined by the coding
+    system.  For example, if SNOMED RT defines a concept "leg", a role
+    relation "has-laterality", and another concept "left", the concept
+    role relation allows to add the qualifier "has-laterality: left" to
+    a primary code "leg" to construct the meaning "left leg".
 
     :ivar name: Specifies the manner in which the concept role value
-                            contributes to the meaning of a code phrase.  For
-                            example, if SNOMED RT defines a concept "leg", a role
-                            relation "has-laterality", and another concept "left",
-                            the concept role relation allows to add the qualifier
-                            "has-laterality: left" to a primary code "leg" to
-                            construct the meaning "left leg".  In this example
-                            "has-laterality" is .
-    :ivar value: The concept that modifies the primary code of a code
-                            phrase through the role relation.  For example, if
-                            SNOMED RT defines a concept "leg", a role relation
-                            "has-laterality", and another concept "left", the
-                            concept role relation allows adding the qualifier
-                            "has-laterality: left" to a primary code "leg" to
-                            construct the meaning "left leg".  In this example
-                            "left" is .
-    :ivar inverted: Indicates if the sense of the role name is inverted.
-                         This can be used in cases where the underlying code
-                         system defines inversion but does not provide reciprocal
-                         pairs of role names. By default, inverted is false.
+        contributes to the meaning of a code phrase.  For example, if SNOMED RT
+        defines a concept "leg", a role relation "has-laterality", and another
+        concept "left", the concept role relation allows to add the qualifier
+        "has-laterality: left" to a primary code "leg" to construct the meaning
+        "left leg".  In this example "has-laterality" is .
+    :ivar value: The concept that modifies the primary code of a code phrase
+        through the role relation.  For example, if SNOMED RT defines a concept
+        "leg", a role relation "has-laterality", and another concept "left",
+        the concept role relation allows adding the qualifier "has-laterality:
+        left" to a primary code "leg" to construct the meaning "left leg".  In
+        this example "left" is .
+    :ivar inverted: Indicates if the sense of the role name is inverted. This
+        can be used in cases where the underlying code system defines inversion
+        but does not provide reciprocal pairs of role names. By default,
+        inverted is false.
     """
     class Meta:
         name = "CR"
@@ -2254,26 +2257,26 @@ class Cr(Any):
 
 @dataclass
 class Ii(Any):
-    """An identifier that uniquely identifies a thing or object. Examples are
-    object identifier for HL7 RIM objects, medical record number, order id, service
-    catalog item id, Vehicle Identification Number (VIN), etc. Instance identifiers
-    are defined based on ISO object identifiers.
+    """An identifier that uniquely identifies a thing or object.
 
-    :ivar root: A unique identifier that guarantees the global uniqueness
-                         of the instance identifier. The root alone may be the
-                         entire instance identifier.
-    :ivar extension: A character string as a unique identifier within the
-                         scope of the identifier root.
-    :ivar assigning_authority_name: A human readable name or mnemonic for the assigning
-                         authority. This name may be provided solely for the
-                         convenience of unaided humans interpreting an  value
-                         and can have no computational meaning. Note: no
-                         automated processing must depend on the assigning
-                         authority name to be present in any form.
+    Examples are object identifier for HL7 RIM objects, medical record
+    number, order id, service catalog item id, Vehicle Identification
+    Number (VIN), etc. Instance identifiers are defined based on ISO
+    object identifiers.
+
+    :ivar root: A unique identifier that guarantees the global uniqueness of
+        the instance identifier. The root alone may be the entire instance
+        identifier.
+    :ivar extension: A character string as a unique identifier within the scope
+        of the identifier root.
+    :ivar assigning_authority_name: A human readable name or mnemonic for the
+        assigning authority. This name may be provided solely for the
+        convenience of unaided humans interpreting an  value and can have no
+        computational meaning. Note: no automated processing must depend on the
+        assigning authority name to be present in any form.
     :ivar displayable: Specifies if the identifier is intended for human
-                         display and data entry (displayable = true) as
-                         opposed to pure machine interoperation (displayable
-                         = false).
+        display and data entry (displayable = true) as opposed to pure machine
+        interoperation (displayable = false).
     """
     class Meta:
         name = "II"
@@ -2311,12 +2314,12 @@ class Ii(Any):
 
 @dataclass
 class Qty(Any):
-    """is an abstract generalization for all data types (1) whose value set has an
-    order relation (less-or-equal) and (2) where difference is defined in all of
-    the data type's totally ordered value subsets.
+    """is an abstract generalization for all data types (1) whose value set has
+    an order relation (less-or-equal) and (2) where difference is defined in
+    all of the data type's totally ordered value subsets.
 
-    The quantity type abstraction is needed in defining certain other types,
-    such as the interval and the probability distribution.
+    The quantity type abstraction is needed in defining certain other
+    types, such as the interval and the probability distribution.
     """
     class Meta:
         name = "QTY"
@@ -2324,24 +2327,25 @@ class Qty(Any):
 
 @dataclass
 class TelExplicit:
-    """A telephone number (voice or fax), e-mail address, or other locator for a
-    resource (information or service) mediated by telecommunication equipment. The
-    address is specified as a URL qualified by time specification and use codes
-    that help in deciding which address to use for a given time and purpose.
+    """A telephone number (voice or fax), e-mail address, or other locator for
+    a resource (information or service) mediated by telecommunication
+    equipment.
+
+    The address is specified as a URL qualified by time specification
+    and use codes that help in deciding which address to use for a given
+    time and purpose.
 
     :ivar useable_period: Specifies the periods of time during which the
-                 telecommunication address can be used.  For a
-                 telephone number, this can indicate the time of day
-                 in which the party can be reached on that telephone.
-                 For a web address, it may specify a time range in
-                 which the web content is promised to be available
-                 under the given address.
-    :ivar null_flavor: An exceptional value expressing missing information
-                        and possibly the reason why the information is missing.
+        telecommunication address can be used.  For a telephone number, this
+        can indicate the time of day in which the party can be reached on that
+        telephone. For a web address, it may specify a time range in which the
+        web content is promised to be available under the given address.
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
     :ivar value:
     :ivar use: One or more codes advising a system or user which
-                 telecommunication address in a set of like addresses
-                 to select for a given telecommunication need.
+        telecommunication address in a set of like addresses to select for a
+        given telecommunication need.
     """
     class Meta:
         name = "TEL_explicit"
@@ -2378,14 +2382,14 @@ class TelExplicit:
 
 @dataclass
 class Url(Any):
-    """A telecommunications address  specified according to Internet standard RFC
-    1738.
+    """A telecommunications address  specified according to Internet standard
+    RFC 1738.
 
-    [http://www.ietf.org/rfc/rfc1738.txt]. The URL specifies the protocol
-    and the contact point defined by that protocol for the resource.
-    Notable uses of the telecommunication address data type are for
-    telephone and telefax numbers, e-mail addresses, Hypertext references,
-    FTP references, etc.
+    [http://www.ietf.org/rfc/rfc1738.txt]. The URL specifies the
+    protocol and the contact point defined by that protocol for the
+    resource.  Notable uses of the telecommunication address data type
+    are for telephone and telefax numbers, e-mail addresses, Hypertext
+    references, FTP references, etc.
     """
     class Meta:
         name = "URL"
@@ -2400,7 +2404,8 @@ class Url(Any):
 
 @dataclass
 class Bn(AnynonNull):
-    """The BooleanNonNull type is used where a Boolean cannot have a null value.
+    """The BooleanNonNull type is used where a Boolean cannot have a null
+    value.
 
     A Boolean value can be either true or false.
     """
@@ -2418,8 +2423,8 @@ class Bn(AnynonNull):
 
 @dataclass
 class IntType(Qty):
-    """Integer numbers (-1,0,1,2, 100, 3398129, etc.) are precise numbers that are
-    results of counting and enumerating.
+    """Integer numbers (-1,0,1,2, 100, 3398129, etc.) are precise numbers that
+    are results of counting and enumerating.
 
     Integer numbers are discrete, the set of integers is infinite but
     countable.  No arbitrary limit is imposed on the range of integer
@@ -2440,14 +2445,17 @@ class IntType(Qty):
 @dataclass
 class Mo(Qty):
     """A monetary amount is a quantity expressing the amount of money in some
-    currency. Currencies are the units in which monetary amounts are denominated in
-    different economic regions. While the monetary amount is a single kind of
-    quantity (money) the exchange rates between the different units are variable.
-    This is the principle difference between physical quantity and monetary
-    amounts, and the reason why currency units are not physical units.
+    currency.
 
-    :ivar value: The magnitude of the monetary amount in terms of the
-                         currency unit.
+    Currencies are the units in which monetary amounts are denominated
+    in different economic regions. While the monetary amount is a single
+    kind of quantity (money) the exchange rates between the different
+    units are variable.  This is the principle difference between
+    physical quantity and monetary amounts, and the reason why currency
+    units are not physical units.
+
+    :ivar value: The magnitude of the monetary amount in terms of the currency
+        unit.
     :ivar currency: The currency unit as defined in ISO 4217.
     """
     class Meta:
@@ -2472,14 +2480,15 @@ class Mo(Qty):
 class Real(Qty):
     """Fractional numbers.
 
-    Typically used whenever quantities are measured, estimated, or computed
-    from other real numbers.  The typical representation is decimal, where
-    the number of significant decimal digits is known as the precision. Real
-    numbers are needed beyond integers whenever quantities of the real world
-    are measured, estimated, or computed from other real numbers. The term
-    "Real number" in this specification is used to mean that fractional
-    values are covered without necessarily implying the full set of the
-    mathematical real numbers.
+    Typically used whenever quantities are measured, estimated, or
+    computed from other real numbers.  The typical representation is
+    decimal, where the number of significant decimal digits is known as
+    the precision. Real numbers are needed beyond integers whenever
+    quantities of the real world are measured, estimated, or computed
+    from other real numbers. The term "Real number" in this
+    specification is used to mean that fractional values are covered
+    without necessarily implying the full set of the mathematical real
+    numbers.
     """
     class Meta:
         name = "REAL"
@@ -2496,10 +2505,10 @@ class Real(Qty):
 class RtoQtyQty(Qty):
     """
     :ivar numerator: The quantity that is being divided in the ratio.  The
-                            default is the integer number 1 (one).
+        default is the integer number 1 (one).
     :ivar denominator: The quantity that devides the numerator in the ratio.
-                            The default is the integer number 1 (one).
-                            The denominator must not be zero.
+        The default is the integer number 1 (one). The denominator must not be
+        zero.
     """
     class Meta:
         name = "RTO_QTY_QTY"
@@ -2542,33 +2551,34 @@ class Ts(Qty):
 
 @dataclass
 class ThumbnailExplicit:
-    """A thumbnail is an abbreviated rendition of the full data. A thumbnail
-    requires significantly fewer resources than the full data, while still
-    maintaining some distinctive similarity with the full data. A thumbnail is
-    typically used with by-reference encapsulated data. It allows a user to select
-    data more efficiently before actually downloading through the reference.
+    """A thumbnail is an abbreviated rendition of the full data.
+
+    A thumbnail requires significantly fewer resources than the full
+    data, while still maintaining some distinctive similarity with the
+    full data. A thumbnail is typically used with by-reference
+    encapsulated data. It allows a user to select data more efficiently
+    before actually downloading through the reference.
 
     :ivar content:
     :ivar reference:
-    :ivar null_flavor: An exceptional value expressing missing information
-                        and possibly the reason why the information is missing.
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
     :ivar representation: Specifies the representation of the binary data that
-                 is the content of the binary data value.
+        is the content of the binary data value.
     :ivar media_type: Identifies the type of the encapsulated data and
-                 identifies a method to interpret or render the data.
+        identifies a method to interpret or render the data.
     :ivar language: For character based information the language property
-                 specifies the human language of the text.
-    :ivar compression: Indicates whether the raw byte data is compressed,
-                 and what compression algorithm was used.
-    :ivar integrity_check: The integrity check is a short binary value representing
-                 a cryptographically strong checksum that is calculated
-                 over the binary data. The purpose of this property, when
-                 communicated with a reference is for anyone to validate
-                 later whether the reference still resolved to the same
-                 data that the reference resolved to when the encapsulated
-                 data value with reference was created.
-    :ivar integrity_check_algorithm: Specifies the algorithm used to compute the
-                 integrityCheck value.
+        specifies the human language of the text.
+    :ivar compression: Indicates whether the raw byte data is compressed, and
+        what compression algorithm was used.
+    :ivar integrity_check: The integrity check is a short binary value
+        representing a cryptographically strong checksum that is calculated
+        over the binary data. The purpose of this property, when communicated
+        with a reference is for anyone to validate later whether the reference
+        still resolved to the same data that the reference resolved to when the
+        encapsulated data value with reference was created.
+    :ivar integrity_check_algorithm: Specifies the algorithm used to compute
+        the integrityCheck value.
     """
     class Meta:
         name = "thumbnail_explicit"
@@ -2641,37 +2651,37 @@ class ThumbnailExplicit:
 @dataclass
 class EdExplicit:
     """Data that is primarily intended for human interpretation or for further
-    machine processing is outside the scope of HL7. This includes unformatted or
-    formatted written language, multimedia data, or structured information as
-    defined by a different standard (e.g., XML-signatures.)  Instead of the data
-    itself, an ED may contain only a reference (see TEL.) Note that the ST data
-    type is a specialization of when the  is text/plain.
+    machine processing is outside the scope of HL7.
+
+    This includes unformatted or formatted written language, multimedia
+    data, or structured information as defined by a different standard
+    (e.g., XML-signatures.)  Instead of the data itself, an ED may
+    contain only a reference (see TEL.) Note that the ST data type is a
+    specialization of when the  is text/plain.
 
     :ivar content:
-    :ivar reference: A telecommunication address (TEL), such as a URL
-                    for HTTP or FTP, which will resolve to precisely
-                    the same binary data that could as well have been
-                    provided as inline data.
+    :ivar reference: A telecommunication address (TEL), such as a URL for HTTP
+        or FTP, which will resolve to precisely the same binary data that could
+        as well have been provided as inline data.
     :ivar thumbnail:
-    :ivar null_flavor: An exceptional value expressing missing information
-                        and possibly the reason why the information is missing.
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
     :ivar representation: Specifies the representation of the binary data that
-                 is the content of the binary data value.
+        is the content of the binary data value.
     :ivar media_type: Identifies the type of the encapsulated data and
-                 identifies a method to interpret or render the data.
+        identifies a method to interpret or render the data.
     :ivar language: For character based information the language property
-                 specifies the human language of the text.
-    :ivar compression: Indicates whether the raw byte data is compressed,
-                 and what compression algorithm was used.
-    :ivar integrity_check: The integrity check is a short binary value representing
-                 a cryptographically strong checksum that is calculated
-                 over the binary data. The purpose of this property, when
-                 communicated with a reference is for anyone to validate
-                 later whether the reference still resolved to the same
-                 data that the reference resolved to when the encapsulated
-                 data value with reference was created.
-    :ivar integrity_check_algorithm: Specifies the algorithm used to compute the
-                 integrityCheck value.
+        specifies the human language of the text.
+    :ivar compression: Indicates whether the raw byte data is compressed, and
+        what compression algorithm was used.
+    :ivar integrity_check: The integrity check is a short binary value
+        representing a cryptographically strong checksum that is calculated
+        over the binary data. The purpose of this property, when communicated
+        with a reference is for anyone to validate later whether the reference
+        still resolved to the same data that the reference resolved to when the
+        encapsulated data value with reference was created.
+    :ivar integrity_check_algorithm: Specifies the algorithm used to compute
+        the integrityCheck value.
     """
     class Meta:
         name = "ED_explicit"
@@ -2751,9 +2761,8 @@ class EdExplicit:
 @dataclass
 class IvxbTs(Ts):
     """
-    :ivar inclusive: Specifies whether the limit is included in the
-                         interval (interval is closed) or excluded from the
-                         interval (interval is open).
+    :ivar inclusive: Specifies whether the limit is included in the interval
+        (interval is closed) or excluded from the interval (interval is open).
     """
     class Meta:
         name = "IVXB_TS"
@@ -2769,15 +2778,15 @@ class IvxbTs(Ts):
 
 @dataclass
 class Rto(RtoQtyQty):
-    """A quantity constructed as the quotient of a numerator quantity divided by a
-    denominator quantity.
+    """A quantity constructed as the quotient of a numerator quantity divided
+    by a denominator quantity.
 
-    Common factors in the numerator and denominator are not automatically
-    cancelled out.   supports titers (e.g., "1:128") and other quantities
-    produced by laboratories that truly represent ratios. Ratios are not
-    simply "structured numerics", particularly blood pressure measurements
-    (e.g. "120/60") are not ratios. In many cases REAL should be used
-    instead of .
+    Common factors in the numerator and denominator are not
+    automatically cancelled out.   supports titers (e.g., "1:128") and
+    other quantities produced by laboratories that truly represent
+    ratios. Ratios are not simply "structured numerics", particularly
+    blood pressure measurements (e.g. "120/60") are not ratios. In many
+    cases REAL should be used instead of .
     """
     class Meta:
         name = "RTO"
@@ -2785,43 +2794,42 @@ class Rto(RtoQtyQty):
 
 @dataclass
 class ScExplicit:
-    """An ST that optionally may have a code attached. The text must always be
-    present if a code is present. The code is often a local code.
+    """An ST that optionally may have a code attached.
+
+    The text must always be present if a code is present. The code is
+    often a local code.
 
     :ivar content:
-    :ivar reference: A telecommunication address (TEL), such as a URL
-                    for HTTP or FTP, which will resolve to precisely
-                    the same binary data that could as well have been
-                    provided as inline data.
+    :ivar reference: A telecommunication address (TEL), such as a URL for HTTP
+        or FTP, which will resolve to precisely the same binary data that could
+        as well have been provided as inline data.
     :ivar thumbnail:
-    :ivar null_flavor: An exceptional value expressing missing information
-                   and possibly the reason why the information is missing.
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
     :ivar representation: Specifies the representation of the binary data that
-                 is the content of the binary data value.
+        is the content of the binary data value.
     :ivar media_type: Identifies the type of the encapsulated data and
-                 identifies a method to interpret or render the data.
+        identifies a method to interpret or render the data.
     :ivar language: For character based information the language property
-                 specifies the human language of the text.
-    :ivar compression: Indicates whether the raw byte data is compressed,
-                 and what compression algorithm was used.
-    :ivar integrity_check: The integrity check is a short binary value representing
-                 a cryptographically strong checksum that is calculated
-                 over the binary data. The purpose of this property, when
-                 communicated with a reference is for anyone to validate
-                 later whether the reference still resolved to the same
-                 data that the reference resolved to when the encapsulated
-                 data value with reference was created.
-    :ivar integrity_check_algorithm: Specifies the algorithm used to compute the
-                 integrityCheck value.
-    :ivar code: The plain code symbol defined by the code system.
-                             For example, "784.0" is the code symbol of the ICD-9
-                             code "784.0" for headache.
+        specifies the human language of the text.
+    :ivar compression: Indicates whether the raw byte data is compressed, and
+        what compression algorithm was used.
+    :ivar integrity_check: The integrity check is a short binary value
+        representing a cryptographically strong checksum that is calculated
+        over the binary data. The purpose of this property, when communicated
+        with a reference is for anyone to validate later whether the reference
+        still resolved to the same data that the reference resolved to when the
+        encapsulated data value with reference was created.
+    :ivar integrity_check_algorithm: Specifies the algorithm used to compute
+        the integrityCheck value.
+    :ivar code: The plain code symbol defined by the code system. For example,
+        "784.0" is the code symbol of the ICD-9 code "784.0" for headache.
     :ivar code_system: Specifies the code system that defines the code.
     :ivar code_system_name: A common name of the coding system.
     :ivar code_system_version: If applicable, a version descriptor defined
-                             specifically for the given code system.
+        specifically for the given code system.
     :ivar display_name: A name or title for the code, under which the sending
-                             system shows the code value to its users.
+        system shows the code value to its users.
     """
     class Meta:
         name = "SC_explicit"
@@ -2939,33 +2947,32 @@ class ScExplicit:
 
 @dataclass
 class StExplicit:
-    """The character string data type stands for text data, primarily intended for
-    machine processing (e.g., sorting, querying, indexing, etc.) Used for names,
-    symbols, and formal expressions.
+    """
+    The character string data type stands for text data, primarily intended for
+    machine processing (e.g., sorting, querying, indexing, etc.) Used for
+    names, symbols, and formal expressions.
 
     :ivar content:
-    :ivar reference: A telecommunication address (TEL), such as a URL
-                    for HTTP or FTP, which will resolve to precisely
-                    the same binary data that could as well have been
-                    provided as inline data.
+    :ivar reference: A telecommunication address (TEL), such as a URL for HTTP
+        or FTP, which will resolve to precisely the same binary data that could
+        as well have been provided as inline data.
     :ivar thumbnail:
     :ivar representation: Specifies the representation of the binary data that
-                 is the content of the binary data value.
+        is the content of the binary data value.
     :ivar media_type: Identifies the type of the encapsulated data and
-                 identifies a method to interpret or render the data.
+        identifies a method to interpret or render the data.
     :ivar language: For character based information the language property
-                 specifies the human language of the text.
-    :ivar compression: Indicates whether the raw byte data is compressed,
-                 and what compression algorithm was used.
-    :ivar integrity_check: The integrity check is a short binary value representing
-                 a cryptographically strong checksum that is calculated
-                 over the binary data. The purpose of this property, when
-                 communicated with a reference is for anyone to validate
-                 later whether the reference still resolved to the same
-                 data that the reference resolved to when the encapsulated
-                 data value with reference was created.
-    :ivar integrity_check_algorithm: Specifies the algorithm used to compute the
-                 integrityCheck value.
+        specifies the human language of the text.
+    :ivar compression: Indicates whether the raw byte data is compressed, and
+        what compression algorithm was used.
+    :ivar integrity_check: The integrity check is a short binary value
+        representing a cryptographically strong checksum that is calculated
+        over the binary data. The purpose of this property, when communicated
+        with a reference is for anyone to validate later whether the reference
+        still resolved to the same data that the reference resolved to when the
+        encapsulated data value with reference was created.
+    :ivar integrity_check_algorithm: Specifies the algorithm used to compute
+        the integrityCheck value.
     """
     class Meta:
         name = "ST_explicit"
@@ -3039,10 +3046,9 @@ class StExplicit:
 class SxcmTs(Ts):
     """
     :ivar operator: A code specifying whether the set component is included
-                         (union) or excluded (set-difference) from the set, or
-                         other set operations with the current set component and
-                         the set as constructed from the representation stream
-                         up to the current point.
+        (union) or excluded (set-difference) from the set, or other set
+        operations with the current set component and the set as constructed
+        from the representation stream up to the current point.
     """
     class Meta:
         name = "SXCM_TS"
@@ -3057,8 +3063,10 @@ class SxcmTs(Ts):
 
 @dataclass
 class Ad(Any):
-    """Mailing and home or office addresses. A sequence of address parts, such as
-    street or post office Box, city, postal code, country, etc.
+    """Mailing and home or office addresses.
+
+    A sequence of address parts, such as street or post office Box,
+    city, postal code, country, etc.
 
     :ivar content:
     :ivar delimiter:
@@ -3088,19 +3096,15 @@ class Ad(Any):
     :ivar building_number_suffix:
     :ivar post_box:
     :ivar precinct:
-    :ivar useable_period: A GTS specifying the
-                            periods of time during which the address can be used.
-                            This is used to specify different addresses for
-                            different times of the year or to refer to historical
-                            addresses.
-    :ivar use: A set of codes advising a system or user which address
-                         in a set of like addresses to select for a given purpose.
+    :ivar useable_period: A GTS specifying the periods of time during which the
+        address can be used. This is used to specify different addresses for
+        different times of the year or to refer to historical addresses.
+    :ivar use: A set of codes advising a system or user which address in a set
+        of like addresses to select for a given purpose.
     :ivar is_not_ordered: A boolean value specifying whether the order of the
-                         address parts is known or not. While the address parts
-                         are always a Sequence, the order in which they are
-                         presented may or may not be known. Where this matters,
-                          can be used to convey this
-                         information.
+        address parts is known or not. While the address parts are always a
+        Sequence, the order in which they are presented may or may not be
+        known. Where this matters,  can be used to convey this information.
     """
     class Meta:
         name = "AD"
@@ -3376,23 +3380,23 @@ class Ad(Any):
 
 @dataclass
 class PqrExplicit:
-    """A representation of a physical quantity in a unit from any code system. Used
-    to show alternative representation for a physical quantity.
+    """A representation of a physical quantity in a unit from any code system.
+
+    Used to show alternative representation for a physical quantity.
 
     :ivar original_text: The text or phrase used as the basis for the coding.
-    :ivar null_flavor: An exceptional value expressing missing information
-                        and possibly the reason why the information is missing.
-    :ivar code: The plain code symbol defined by the code system.
-                        For example, "784.0" is the code symbol of the ICD-9
-                        code "784.0" for headache.
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
+    :ivar code: The plain code symbol defined by the code system. For example,
+        "784.0" is the code symbol of the ICD-9 code "784.0" for headache.
     :ivar code_system: Specifies the code system that defines the code.
     :ivar code_system_name: A common name of the coding system.
     :ivar code_system_version: If applicable, a version descriptor defined
-                        specifically for the given code system.
+        specifically for the given code system.
     :ivar display_name: A name or title for the code, under which the sending
-                        system shows the code value to its users.
-    :ivar value: The magnitude of the measurement value in terms of
-                        the unit specified in the code.
+        system shows the code value to its users.
+    :ivar value: The magnitude of the measurement value in terms of the unit
+        specified in the code.
     """
     class Meta:
         name = "PQR_explicit"
@@ -3461,21 +3465,22 @@ class PqrExplicit:
 
 @dataclass
 class Tel(Url):
-    """A telephone number (voice or fax), e-mail address, or other locator for a
-    resource (information or service) mediated by telecommunication equipment. The
-    address is specified as a URL qualified by time specification and use codes
-    that help in deciding which address to use for a given time and purpose.
+    """A telephone number (voice or fax), e-mail address, or other locator for
+    a resource (information or service) mediated by telecommunication
+    equipment.
+
+    The address is specified as a URL qualified by time specification
+    and use codes that help in deciding which address to use for a given
+    time and purpose.
 
     :ivar useable_period: Specifies the periods of time during which the
-                         telecommunication address can be used.  For a
-                         telephone number, this can indicate the time of day
-                         in which the party can be reached on that telephone.
-                         For a web address, it may specify a time range in
-                         which the web content is promised to be available
-                         under the given address.
+        telecommunication address can be used.  For a telephone number, this
+        can indicate the time of day in which the party can be reached on that
+        telephone. For a web address, it may specify a time range in which the
+        web content is promised to be available under the given address.
     :ivar use: One or more codes advising a system or user which
-                         telecommunication address in a set of like addresses
-                         to select for a given telecommunication need.
+        telecommunication address in a set of like addresses to select for a
+        given telecommunication need.
     """
     class Meta:
         name = "TEL"
@@ -3499,18 +3504,17 @@ class Tel(Url):
 
 @dataclass
 class PqExplicit:
-    """A dimensioned quantity expressing the result of a measurement act.
+    """
+    A dimensioned quantity expressing the result of a measurement act.
 
     :ivar translation: An alternative representation of the same physical
-                            quantity expressed in a different unit, of a different
-                            unit code system and possibly with a different value.
-    :ivar null_flavor: An exceptional value expressing missing information
-                        and possibly the reason why the information is missing.
-    :ivar value: The magnitude of the quantity measured in terms of
-                        the unit.
-    :ivar unit: The unit of measure specified in the Unified Code for
-                        Units of Measure (UCUM)
-                        [http://aurora.rg.iupui.edu/UCUM].
+        quantity expressed in a different unit, of a different unit code system
+        and possibly with a different value.
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
+    :ivar value: The magnitude of the quantity measured in terms of the unit.
+    :ivar unit: The unit of measure specified in the Unified Code for Units of
+        Measure (UCUM) [http://aurora.rg.iupui.edu/UCUM].
     """
     class Meta:
         name = "PQ_explicit"
@@ -3546,30 +3550,31 @@ class PqExplicit:
 
 @dataclass
 class Thumbnail:
-    """A thumbnail is an abbreviated rendition of the full data. A thumbnail
-    requires significantly fewer resources than the full data, while still
-    maintaining some distinctive similarity with the full data. A thumbnail is
-    typically used with by-reference encapsulated data. It allows a user to select
-    data more efficiently before actually downloading through the reference.
+    """A thumbnail is an abbreviated rendition of the full data.
+
+    A thumbnail requires significantly fewer resources than the full
+    data, while still maintaining some distinctive similarity with the
+    full data. A thumbnail is typically used with by-reference
+    encapsulated data. It allows a user to select data more efficiently
+    before actually downloading through the reference.
 
     :ivar content:
     :ivar reference:
     :ivar thumbnail:
     :ivar media_type: Identifies the type of the encapsulated data and
-                         identifies a method to interpret or render the data.
+        identifies a method to interpret or render the data.
     :ivar language: For character based information the language property
-                         specifies the human language of the text.
-    :ivar compression: Indicates whether the raw byte data is compressed,
-                         and what compression algorithm was used.
-    :ivar integrity_check: The integrity check is a short binary value representing
-                         a cryptographically strong checksum that is calculated
-                         over the binary data. The purpose of this property, when
-                         communicated with a reference is for anyone to validate
-                         later whether the reference still resolved to the same
-                         data that the reference resolved to when the encapsulated
-                         data value with reference was created.
-    :ivar integrity_check_algorithm: Specifies the algorithm used to compute the
-                         integrityCheck value.
+        specifies the human language of the text.
+    :ivar compression: Indicates whether the raw byte data is compressed, and
+        what compression algorithm was used.
+    :ivar integrity_check: The integrity check is a short binary value
+        representing a cryptographically strong checksum that is calculated
+        over the binary data. The purpose of this property, when communicated
+        with a reference is for anyone to validate later whether the reference
+        still resolved to the same data that the reference resolved to when the
+        encapsulated data value with reference was created.
+    :ivar integrity_check_algorithm: Specifies the algorithm used to compute
+        the integrityCheck value.
     """
     class Meta:
         name = "thumbnail"
@@ -3636,33 +3641,33 @@ class Thumbnail:
 @dataclass
 class Ed(Bin):
     """Data that is primarily intended for human interpretation or for further
-    machine processing is outside the scope of HL7. This includes unformatted or
-    formatted written language, multimedia data, or structured information as
-    defined by a different standard (e.g., XML-signatures.)  Instead of the data
-    itself, an ED may contain only a reference (see TEL.) Note that the ST data
-    type is a specialization of when the  is text/plain.
+    machine processing is outside the scope of HL7.
+
+    This includes unformatted or formatted written language, multimedia
+    data, or structured information as defined by a different standard
+    (e.g., XML-signatures.)  Instead of the data itself, an ED may
+    contain only a reference (see TEL.) Note that the ST data type is a
+    specialization of when the  is text/plain.
 
     :ivar content:
-    :ivar reference: A telecommunication address (TEL), such as a URL
-                            for HTTP or FTP, which will resolve to precisely
-                            the same binary data that could as well have been
-                            provided as inline data.
+    :ivar reference: A telecommunication address (TEL), such as a URL for HTTP
+        or FTP, which will resolve to precisely the same binary data that could
+        as well have been provided as inline data.
     :ivar thumbnail:
     :ivar media_type: Identifies the type of the encapsulated data and
-                         identifies a method to interpret or render the data.
+        identifies a method to interpret or render the data.
     :ivar language: For character based information the language property
-                         specifies the human language of the text.
-    :ivar compression: Indicates whether the raw byte data is compressed,
-                         and what compression algorithm was used.
-    :ivar integrity_check: The integrity check is a short binary value representing
-                         a cryptographically strong checksum that is calculated
-                         over the binary data. The purpose of this property, when
-                         communicated with a reference is for anyone to validate
-                         later whether the reference still resolved to the same
-                         data that the reference resolved to when the encapsulated
-                         data value with reference was created.
-    :ivar integrity_check_algorithm: Specifies the algorithm used to compute the
-                         integrityCheck value.
+        specifies the human language of the text.
+    :ivar compression: Indicates whether the raw byte data is compressed, and
+        what compression algorithm was used.
+    :ivar integrity_check: The integrity check is a short binary value
+        representing a cryptographically strong checksum that is calculated
+        over the binary data. The purpose of this property, when communicated
+        with a reference is for anyone to validate later whether the reference
+        still resolved to the same data that the reference resolved to when the
+        encapsulated data value with reference was created.
+    :ivar integrity_check_algorithm: Specifies the algorithm used to compute
+        the integrityCheck value.
     """
     class Meta:
         name = "ED"
@@ -3730,25 +3735,22 @@ class Ed(Bin):
 class IvlTsExplicit:
     """
     :ivar low: The low limit of the interval.
-    :ivar width: The difference between high and low boundary. The
-                                    purpose of distinguishing a width property is to
-                                    handle all cases of incomplete information
-                                    symmetrically. In any interval representation only
-                                    two of the three properties high, low, and width need
-                                    to be stated and the third can be derived.
+    :ivar width: The difference between high and low boundary. The purpose of
+        distinguishing a width property is to handle all cases of incomplete
+        information symmetrically. In any interval representation only two of
+        the three properties high, low, and width need to be stated and the
+        third can be derived.
     :ivar high: The high limit of the interval.
-    :ivar center: The arithmetic mean of the interval (low plus high
-                                divided by 2). The purpose of distinguishing the center
-                                as a semantic property is for conversions of intervals
-                                from and to point values.
-    :ivar null_flavor: An exceptional value expressing missing information
-                        and possibly the reason why the information is missing.
+    :ivar center: The arithmetic mean of the interval (low plus high divided by
+        2). The purpose of distinguishing the center as a semantic property is
+        for conversions of intervals from and to point values.
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
     :ivar value:
     :ivar operator: A code specifying whether the set component is included
-                         (union) or excluded (set-difference) from the set, or
-                         other set operations with the current set component and
-                         the set as constructed from the representation stream
-                         up to the current point.
+        (union) or excluded (set-difference) from the set, or other set
+        operations with the current set component and the set as constructed
+        from the representation stream up to the current point.
     """
     class Meta:
         name = "IVL_TS_explicit"
@@ -3809,29 +3811,31 @@ class IvlTsExplicit:
 
 @dataclass
 class Cd(Any):
-    """A concept descriptor represents any kind of concept usually by giving a code
-    defined in a code system.  A concept descriptor can contain the original text
-    or phrase that served as the basis of the coding and one or more translations
-    into different coding systems. A concept descriptor can also contain qualifiers
-    to describe, e.g., the concept of a "left foot" as a postcoordinated term built
-    from the primary code "FOOT" and the qualifier "LEFT". In exceptional cases,
-    the concept descriptor need not contain a code but only the original text
-    describing that concept.
+    """A concept descriptor represents any kind of concept usually by giving a
+    code defined in a code system.
+
+    A concept descriptor can contain the original text or phrase that
+    served as the basis of the coding and one or more translations into
+    different coding systems. A concept descriptor can also contain
+    qualifiers to describe, e.g., the concept of a "left foot" as a
+    postcoordinated term built from the primary code "FOOT" and the
+    qualifier "LEFT". In exceptional cases, the concept descriptor need
+    not contain a code but only the original text describing that
+    concept.
 
     :ivar original_text: The text or phrase used as the basis for the coding.
-    :ivar qualifier: Specifies additional codes that increase the
-                            specificity of the primary code.
-    :ivar translation: A set of other concept descriptors that translate
-                            this concept descriptor into other code systems.
-    :ivar code: The plain code symbol defined by the code system.
-                         For example, "784.0" is the code symbol of the ICD-9
-                         code "784.0" for headache.
+    :ivar qualifier: Specifies additional codes that increase the specificity
+        of the primary code.
+    :ivar translation: A set of other concept descriptors that translate this
+        concept descriptor into other code systems.
+    :ivar code: The plain code symbol defined by the code system. For example,
+        "784.0" is the code symbol of the ICD-9 code "784.0" for headache.
     :ivar code_system: Specifies the code system that defines the code.
     :ivar code_system_name: A common name of the coding system.
     :ivar code_system_version: If applicable, a version descriptor defined
-                         specifically for the given code system.
+        specifically for the given code system.
     :ivar display_name: A name or title for the code, under which the sending
-                         system shows the code value to its users.
+        system shows the code value to its users.
     :ivar value_set:
     :ivar value_set_version:
     """
@@ -3921,8 +3925,10 @@ class Cd(Any):
 
 @dataclass
 class EnExplicit:
-    """A name for a person. A sequence of name parts, such as given name or family
-    name, prefix, suffix, etc. PN differs from EN because the qualifier type cannot
+    """A name for a person.
+
+    A sequence of name parts, such as given name or family name, prefix,
+    suffix, etc. PN differs from EN because the qualifier type cannot
     include LS (Legal Status).
 
     :ivar content:
@@ -3931,17 +3937,15 @@ class EnExplicit:
     :ivar given:
     :ivar prefix:
     :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during which
-                            the name is or was used for the entity. This
-                            accomodates the fact that people change names for
-                            people, places and things.
-    :ivar null_flavor: An exceptional value expressing missing information
-                        and possibly the reason why the information is missing.
-    :ivar use: A set of codes advising a system or user which name
-                        in a set of like names to select for a given purpose.
-                        A name without specific use code might be a default
-                        name useful for any purpose, but a name with a specific
-                        use code would be preferred for that respective purpose.
+    :ivar valid_time: An interval of time specifying the time during which the
+        name is or was used for the entity. This accomodates the fact that
+        people change names for people, places and things.
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
+    :ivar use: A set of codes advising a system or user which name in a set of
+        like names to select for a given purpose. A name without specific use
+        code might be a default name useful for any purpose, but a name with a
+        specific use code would be preferred for that respective purpose.
     """
     class Meta:
         name = "EN_explicit"
@@ -4020,25 +4024,25 @@ class EnExplicit:
 
 @dataclass
 class OnExplicit:
-    """A name for a person. A sequence of name parts, such as given name or family
-    name, prefix, suffix, etc. PN differs from EN because the qualifier type cannot
+    """A name for a person.
+
+    A sequence of name parts, such as given name or family name, prefix,
+    suffix, etc. PN differs from EN because the qualifier type cannot
     include LS (Legal Status).
 
     :ivar content:
     :ivar delimiter:
     :ivar prefix:
     :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during which
-                            the name is or was used for the entity. This
-                            accomodates the fact that people change names for
-                            people, places and things.
-    :ivar null_flavor: An exceptional value expressing missing information
-                        and possibly the reason why the information is missing.
-    :ivar use: A set of codes advising a system or user which name
-                        in a set of like names to select for a given purpose.
-                        A name without specific use code might be a default
-                        name useful for any purpose, but a name with a specific
-                        use code would be preferred for that respective purpose.
+    :ivar valid_time: An interval of time specifying the time during which the
+        name is or was used for the entity. This accomodates the fact that
+        people change names for people, places and things.
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
+    :ivar use: A set of codes advising a system or user which name in a set of
+        like names to select for a given purpose. A name without specific use
+        code might be a default name useful for any purpose, but a name with a
+        specific use code would be preferred for that respective purpose.
     """
     class Meta:
         name = "ON_explicit"
@@ -4101,8 +4105,10 @@ class OnExplicit:
 
 @dataclass
 class PnExplicit:
-    """A name for a person. A sequence of name parts, such as given name or family
-    name, prefix, suffix, etc. PN differs from EN because the qualifier type cannot
+    """A name for a person.
+
+    A sequence of name parts, such as given name or family name, prefix,
+    suffix, etc. PN differs from EN because the qualifier type cannot
     include LS (Legal Status).
 
     :ivar content:
@@ -4111,17 +4117,15 @@ class PnExplicit:
     :ivar given:
     :ivar prefix:
     :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during which
-                            the name is or was used for the entity. This
-                            accomodates the fact that people change names for
-                            people, places and things.
-    :ivar null_flavor: An exceptional value expressing missing information
-                        and possibly the reason why the information is missing.
-    :ivar use: A set of codes advising a system or user which name
-                        in a set of like names to select for a given purpose.
-                        A name without specific use code might be a default
-                        name useful for any purpose, but a name with a specific
-                        use code would be preferred for that respective purpose.
+    :ivar valid_time: An interval of time specifying the time during which the
+        name is or was used for the entity. This accomodates the fact that
+        people change names for people, places and things.
+    :ivar null_flavor: An exceptional value expressing missing information and
+        possibly the reason why the information is missing.
+    :ivar use: A set of codes advising a system or user which name in a set of
+        like names to select for a given purpose. A name without specific use
+        code might be a default name useful for any purpose, but a name with a
+        specific use code would be preferred for that respective purpose.
     """
     class Meta:
         name = "PN_explicit"
@@ -4200,26 +4204,26 @@ class PnExplicit:
 
 @dataclass
 class St:
-    """The character string data type stands for text data, primarily intended for
-    machine processing (e.g., sorting, querying, indexing, etc.) Used for names,
-    symbols, and formal expressions.
+    """
+    The character string data type stands for text data, primarily intended for
+    machine processing (e.g., sorting, querying, indexing, etc.) Used for
+    names, symbols, and formal expressions.
 
     :ivar content:
     :ivar reference:
     :ivar thumbnail:
     :ivar representation:
     :ivar media_type:
-    :ivar compression: Indicates whether the raw byte data is compressed,
-                         and what compression algorithm was used.
-    :ivar integrity_check: The integrity check is a short binary value representing
-                         a cryptographically strong checksum that is calculated
-                         over the binary data. The purpose of this property, when
-                         communicated with a reference is for anyone to validate
-                         later whether the reference still resolved to the same
-                         data that the reference resolved to when the encapsulated
-                         data value with reference was created.
-    :ivar integrity_check_algorithm: Specifies the algorithm used to compute the
-                         integrityCheck value.
+    :ivar compression: Indicates whether the raw byte data is compressed, and
+        what compression algorithm was used.
+    :ivar integrity_check: The integrity check is a short binary value
+        representing a cryptographically strong checksum that is calculated
+        over the binary data. The purpose of this property, when communicated
+        with a reference is for anyone to validate later whether the reference
+        still resolved to the same data that the reference resolved to when the
+        encapsulated data value with reference was created.
+    :ivar integrity_check_algorithm: Specifies the algorithm used to compute
+        the integrityCheck value.
     :ivar language:
     """
     class Meta:
@@ -4295,17 +4299,19 @@ class St:
 @dataclass
 class Adxp(St):
     """A character string that may have a type-tag signifying its role in the
-    address. Typical parts that exist in about every address are street, house
-    number, or post box, postal code, city, country but other roles may be defined
-    regionally, nationally, or on an enterprise level (e.g. in military addresses).
-    Addresses are usually broken up into lines, which are indicated by special
-    line-breaking delimiter elements (e.g., DEL).
+    address.
+
+    Typical parts that exist in about every address are street, house
+    number, or post box, postal code, city, country but other roles may
+    be defined regionally, nationally, or on an enterprise level (e.g.
+    in military addresses). Addresses are usually broken up into lines,
+    which are indicated by special line-breaking delimiter elements
+    (e.g., DEL).
 
     :ivar content:
-    :ivar part_type: Specifies whether an address part names the street,
-                         city, country, postal code, post box, etc. If the type
-                         is NULL the address part is unclassified and would
-                         simply appear on an address label as is.
+    :ivar part_type: Specifies whether an address part names the street, city,
+        country, postal code, post box, etc. If the type is NULL the address
+        part is unclassified and would simply appear on an address label as is.
     """
     class Meta:
         name = "ADXP"
@@ -4329,29 +4335,31 @@ class Adxp(St):
 
 @dataclass
 class CdExplicit(Any):
-    """A concept descriptor represents any kind of concept usually by giving a code
-    defined in a code system.  A concept descriptor can contain the original text
-    or phrase that served as the basis of the coding and one or more translations
-    into different coding systems. A concept descriptor can also contain qualifiers
-    to describe, e.g., the concept of a "left foot" as a postcoordinated term built
-    from the primary code "FOOT" and the qualifier "LEFT". In exceptional cases,
-    the concept descriptor need not contain a code but only the original text
-    describing that concept.
+    """A concept descriptor represents any kind of concept usually by giving a
+    code defined in a code system.
+
+    A concept descriptor can contain the original text or phrase that
+    served as the basis of the coding and one or more translations into
+    different coding systems. A concept descriptor can also contain
+    qualifiers to describe, e.g., the concept of a "left foot" as a
+    postcoordinated term built from the primary code "FOOT" and the
+    qualifier "LEFT". In exceptional cases, the concept descriptor need
+    not contain a code but only the original text describing that
+    concept.
 
     :ivar original_text: The text or phrase used as the basis for the coding.
-    :ivar qualifier: Specifies additional codes that increase the
-                            specificity of the primary code.
-    :ivar translation: A set of other concept descriptors that translate
-                            this concept descriptor into other code systems.
-    :ivar code: The plain code symbol defined by the code system.
-                         For example, "784.0" is the code symbol of the ICD-9
-                         code "784.0" for headache.
+    :ivar qualifier: Specifies additional codes that increase the specificity
+        of the primary code.
+    :ivar translation: A set of other concept descriptors that translate this
+        concept descriptor into other code systems.
+    :ivar code: The plain code symbol defined by the code system. For example,
+        "784.0" is the code symbol of the ICD-9 code "784.0" for headache.
     :ivar code_system: Specifies the code system that defines the code.
     :ivar code_system_name: A common name of the coding system.
     :ivar code_system_version: If applicable, a version descriptor defined
-                         specifically for the given code system.
+        specifically for the given code system.
     :ivar display_name: A name or title for the code, under which the sending
-                         system shows the code value to its users.
+        system shows the code value to its users.
     :ivar value_set:
     :ivar value_set_version:
     """
@@ -4441,23 +4449,23 @@ class CdExplicit(Any):
 
 @dataclass
 class Ce:
-    """Coded data, consists of a coded value (CV) and, optionally, coded value(s)
-    from other coding systems that identify the same concept. Used when alternative
-    codes may exist.
+    """Coded data, consists of a coded value (CV) and, optionally, coded
+    value(s) from other coding systems that identify the same concept.
+
+    Used when alternative codes may exist.
 
     :ivar original_text: The text or phrase used as the basis for the coding.
     :ivar qualifier:
-    :ivar translation: A set of other concept descriptors that translate
-                            this concept descriptor into other code systems.
-    :ivar code: The plain code symbol defined by the code system.
-                         For example, "784.0" is the code symbol of the ICD-9
-                         code "784.0" for headache.
+    :ivar translation: A set of other concept descriptors that translate this
+        concept descriptor into other code systems.
+    :ivar code: The plain code symbol defined by the code system. For example,
+        "784.0" is the code symbol of the ICD-9 code "784.0" for headache.
     :ivar code_system: Specifies the code system that defines the code.
     :ivar code_system_name: A common name of the coding system.
     :ivar code_system_version: If applicable, a version descriptor defined
-                         specifically for the given code system.
+        specifically for the given code system.
     :ivar display_name: A name or title for the code, under which the sending
-                         system shows the code value to its users.
+        system shows the code value to its users.
     :ivar value_set:
     :ivar value_set_version:
     """
@@ -4547,23 +4555,23 @@ class Ce:
 
 @dataclass
 class CeExplicit:
-    """Coded data, consists of a coded value (CV) and, optionally, coded value(s)
-    from other coding systems that identify the same concept. Used when alternative
-    codes may exist.
+    """Coded data, consists of a coded value (CV) and, optionally, coded
+    value(s) from other coding systems that identify the same concept.
+
+    Used when alternative codes may exist.
 
     :ivar original_text: The text or phrase used as the basis for the coding.
     :ivar qualifier:
-    :ivar translation: A set of other concept descriptors that translate
-                            this concept descriptor into other code systems.
-    :ivar code: The plain code symbol defined by the code system.
-                         For example, "784.0" is the code symbol of the ICD-9
-                         code "784.0" for headache.
+    :ivar translation: A set of other concept descriptors that translate this
+        concept descriptor into other code systems.
+    :ivar code: The plain code symbol defined by the code system. For example,
+        "784.0" is the code symbol of the ICD-9 code "784.0" for headache.
     :ivar code_system: Specifies the code system that defines the code.
     :ivar code_system_name: A common name of the coding system.
     :ivar code_system_version: If applicable, a version descriptor defined
-                         specifically for the given code system.
+        specifically for the given code system.
     :ivar display_name: A name or title for the code, under which the sending
-                         system shows the code value to its users.
+        system shows the code value to its users.
     :ivar value_set:
     :ivar value_set_version:
     """
@@ -4654,20 +4662,21 @@ class CeExplicit:
 @dataclass
 class Cs:
     """Coded data, consists of a code, display name, code system, and original
-    text. Used when a single code value must be sent.
+    text.
+
+    Used when a single code value must be sent.
 
     :ivar original_text: The text or phrase used as the basis for the coding.
     :ivar qualifier:
     :ivar translation:
-    :ivar code: The plain code symbol defined by the code system.
-                         For example, "784.0" is the code symbol of the ICD-9
-                         code "784.0" for headache.
+    :ivar code: The plain code symbol defined by the code system. For example,
+        "784.0" is the code symbol of the ICD-9 code "784.0" for headache.
     :ivar code_system: Specifies the code system that defines the code.
     :ivar code_system_name: A common name of the coding system.
     :ivar code_system_version: If applicable, a version descriptor defined
-                         specifically for the given code system.
+        specifically for the given code system.
     :ivar display_name: A name or title for the code, under which the sending
-                         system shows the code value to its users.
+        system shows the code value to its users.
     :ivar value_set:
     :ivar value_set_version:
     """
@@ -4758,20 +4767,21 @@ class Cs:
 @dataclass
 class Cv:
     """Coded data, consists of a code, display name, code system, and original
-    text. Used when a single code value must be sent.
+    text.
+
+    Used when a single code value must be sent.
 
     :ivar original_text: The text or phrase used as the basis for the coding.
     :ivar qualifier:
     :ivar translation:
-    :ivar code: The plain code symbol defined by the code system.
-                         For example, "784.0" is the code symbol of the ICD-9
-                         code "784.0" for headache.
+    :ivar code: The plain code symbol defined by the code system. For example,
+        "784.0" is the code symbol of the ICD-9 code "784.0" for headache.
     :ivar code_system: Specifies the code system that defines the code.
     :ivar code_system_name: A common name of the coding system.
     :ivar code_system_version: If applicable, a version descriptor defined
-                         specifically for the given code system.
+        specifically for the given code system.
     :ivar display_name: A name or title for the code, under which the sending
-                         system shows the code value to its users.
+        system shows the code value to its users.
     :ivar value_set:
     :ivar value_set_version:
     """
@@ -4861,20 +4871,21 @@ class Cv:
 
 @dataclass
 class EivlEvent:
-    """A code for a common (periodical) activity of daily living based on which the
-    event related periodic interval is specified.
+    """
+    A code for a common (periodical) activity of daily living based on which
+    the event related periodic interval is specified.
 
     :ivar original_text: The text or phrase used as the basis for the coding.
     :ivar qualifier:
-    :ivar translation: A set of other concept descriptors that translate
-                            this concept descriptor into other code systems.
+    :ivar translation: A set of other concept descriptors that translate this
+        concept descriptor into other code systems.
     :ivar code:
     :ivar code_system:
     :ivar code_system_name:
     :ivar code_system_version: If applicable, a version descriptor defined
-                         specifically for the given code system.
+        specifically for the given code system.
     :ivar display_name: A name or title for the code, under which the sending
-                         system shows the code value to its users.
+        system shows the code value to its users.
     :ivar value_set:
     :ivar value_set_version:
     """
@@ -4965,19 +4976,21 @@ class EivlEvent:
 
 @dataclass
 class Enxp(St):
-    """A character string token representing a part of a name. May have a type code
-    signifying the role of the part in the whole entity name, and a qualifier code
-    for more detail about the name part type. Typical name parts for person names
-    are given names, and family names, titles, etc.
+    """A character string token representing a part of a name.
+
+    May have a type code signifying the role of the part in the whole
+    entity name, and a qualifier code for more detail about the name
+    part type. Typical name parts for person names are given names, and
+    family names, titles, etc.
 
     :ivar content:
     :ivar part_type: Indicates whether the name part is a given name, family
-                         name, prefix, suffix, etc.
+        name, prefix, suffix, etc.
     :ivar qualifier: is a set of codes each of which specifies
-                         a certain subcategory of the name part in addition to
-                         the main name part type. For example, a given name may
-                         be flagged as a nickname, a family name may be a
-                         pseudonym or a name of public records.
+        a certain subcategory of the name part in addition to
+        the main name part type. For example, a given name may
+        be flagged as a nickname, a family name may be a
+        pseudonym or a name of public records.
     """
     class Meta:
         name = "ENXP"
@@ -5008,19 +5021,20 @@ class Enxp(St):
 
 @dataclass
 class Sc(St):
-    """An ST that optionally may have a code attached. The text must always be
-    present if a code is present. The code is often a local code.
+    """An ST that optionally may have a code attached.
+
+    The text must always be present if a code is present. The code is
+    often a local code.
 
     :ivar content:
-    :ivar code: The plain code symbol defined by the code system.
-                         For example, "784.0" is the code symbol of the ICD-9
-                         code "784.0" for headache.
+    :ivar code: The plain code symbol defined by the code system. For example,
+        "784.0" is the code symbol of the ICD-9 code "784.0" for headache.
     :ivar code_system: Specifies the code system that defines the code.
     :ivar code_system_name: A common name of the coding system.
     :ivar code_system_version: If applicable, a version descriptor defined
-                         specifically for the given code system.
+        specifically for the given code system.
     :ivar display_name: A name or title for the code, under which the sending
-                         system shows the code value to its users.
+        system shows the code value to its users.
     """
     class Meta:
         name = "SC"
@@ -5078,9 +5092,10 @@ class Sc(St):
 class Co(Cv):
     """Coded data, where the domain from which the codeset comes is ordered.
 
-    The Coded Ordinal data type adds semantics related to ordering so that
-    models that make use of such domains may introduce model elements that
-    involve statements about the order of the terms in a domain.
+    The Coded Ordinal data type adds semantics related to ordering so
+    that models that make use of such domains may introduce model
+    elements that involve statements about the order of the terms in a
+    domain.
     """
     class Meta:
         name = "CO"
@@ -5088,11 +5103,12 @@ class Co(Cv):
 
 @dataclass
 class Pqr(Cv):
-    """A representation of a physical quantity in a unit from any code system. Used
-    to show alternative representation for a physical quantity.
+    """A representation of a physical quantity in a unit from any code system.
 
-    :ivar value: The magnitude of the measurement value in terms of
-                         the unit specified in the code.
+    Used to show alternative representation for a physical quantity.
+
+    :ivar value: The magnitude of the measurement value in terms of the unit
+        specified in the code.
     """
     class Meta:
         name = "PQR"
@@ -5107,16 +5123,15 @@ class Pqr(Cv):
 
 @dataclass
 class Pq(Qty):
-    """A dimensioned quantity expressing the result of a measurement act.
+    """
+    A dimensioned quantity expressing the result of a measurement act.
 
     :ivar translation: An alternative representation of the same physical
-                            quantity expressed in a different unit, of a different
-                            unit code system and possibly with a different value.
-    :ivar value: The magnitude of the quantity measured in terms of
-                         the unit.
-    :ivar unit: The unit of measure specified in the Unified Code for
-                         Units of Measure (UCUM)
-                         [http://aurora.rg.iupui.edu/UCUM].
+        quantity expressed in a different unit, of a different unit code system
+        and possibly with a different value.
+    :ivar value: The magnitude of the quantity measured in terms of the unit.
+    :ivar unit: The unit of measure specified in the Unified Code for Units of
+        Measure (UCUM) [http://aurora.rg.iupui.edu/UCUM].
     """
     class Meta:
         name = "PQ"
@@ -5147,17 +5162,15 @@ class Pq(Qty):
 class IvlTs(SxcmTs):
     """
     :ivar low: The low limit of the interval.
-    :ivar width: The difference between high and low boundary. The
-                               purpose of distinguishing a width property is to
-                               handle all cases of incomplete information
-                               symmetrically. In any interval representation only
-                               two of the three properties high, low, and width need
-                               to be stated and the third can be derived.
+    :ivar width: The difference between high and low boundary. The purpose of
+        distinguishing a width property is to handle all cases of incomplete
+        information symmetrically. In any interval representation only two of
+        the three properties high, low, and width need to be stated and the
+        third can be derived.
     :ivar high: The high limit of the interval.
-    :ivar center: The arithmetic mean of the interval (low plus high
-                               divided by 2). The purpose of distinguishing the center
-                               as a semantic property is for conversions of intervals
-                               from and to point values.
+    :ivar center: The arithmetic mean of the interval (low plus high divided by
+        2). The purpose of distinguishing the center as a semantic property is
+        for conversions of intervals from and to point values.
     """
     class Meta:
         name = "IVL_TS"
@@ -5198,12 +5211,14 @@ class IvlTs(SxcmTs):
 
 @dataclass
 class En(Any):
-    """A name for a person, organization, place or thing. A sequence of name parts,
-    such as given name or family name, prefix, suffix, etc. Examples for entity
-    name values are "Jim Bob Walton, Jr.", "Health Level Seven, Inc.", "Lake
-    Tahoe", etc. An entity name may be as simple as a character string or may
-    consist of several entity name parts, such as, "Jim", "Bob", "Walton", and
-    "Jr.", "Health Level Seven" and "Inc.", "Lake" and "Tahoe".
+    """A name for a person, organization, place or thing.
+
+    A sequence of name parts, such as given name or family name, prefix,
+    suffix, etc. Examples for entity name values are "Jim Bob Walton,
+    Jr.", "Health Level Seven, Inc.", "Lake Tahoe", etc. An entity name
+    may be as simple as a character string or may consist of several
+    entity name parts, such as, "Jim", "Bob", "Walton", and "Jr.",
+    "Health Level Seven" and "Inc.", "Lake" and "Tahoe".
 
     :ivar content:
     :ivar delimiter:
@@ -5211,15 +5226,13 @@ class En(Any):
     :ivar given:
     :ivar prefix:
     :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during which
-                            the name is or was used for the entity. This
-                            accomodates the fact that people change names for
-                            people, places and things.
-    :ivar use: A set of codes advising a system or user which name
-                         in a set of like names to select for a given purpose.
-                         A name without specific use code might be a default
-                         name useful for any purpose, but a name with a specific
-                         use code would be preferred for that respective purpose.
+    :ivar valid_time: An interval of time specifying the time during which the
+        name is or was used for the entity. This accomodates the fact that
+        people change names for people, places and things.
+    :ivar use: A set of codes advising a system or user which name in a set of
+        like names to select for a given purpose. A name without specific use
+        code might be a default name useful for any purpose, but a name with a
+        specific use code would be preferred for that respective purpose.
     """
     class Meta:
         name = "EN"
@@ -5291,7 +5304,9 @@ class En(Any):
 
 @dataclass
 class On:
-    """A name for an organization. A sequence of name parts.
+    """A name for an organization.
+
+    A sequence of name parts.
 
     :ivar content:
     :ivar delimiter:
@@ -5299,15 +5314,13 @@ class On:
     :ivar given:
     :ivar prefix:
     :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during which
-                            the name is or was used for the entity. This
-                            accomodates the fact that people change names for
-                            people, places and things.
-    :ivar use: A set of codes advising a system or user which name
-                         in a set of like names to select for a given purpose.
-                         A name without specific use code might be a default
-                         name useful for any purpose, but a name with a specific
-                         use code would be preferred for that respective purpose.
+    :ivar valid_time: An interval of time specifying the time during which the
+        name is or was used for the entity. This accomodates the fact that
+        people change names for people, places and things.
+    :ivar use: A set of codes advising a system or user which name in a set of
+        like names to select for a given purpose. A name without specific use
+        code might be a default name useful for any purpose, but a name with a
+        specific use code would be preferred for that respective purpose.
     """
     class Meta:
         name = "ON"
@@ -5379,7 +5392,8 @@ class On:
 
 @dataclass
 class Tn:
-    """A restriction of entity name that is effectively a simple string used for a
+    """
+    A restriction of entity name that is effectively a simple string used for a
     simple name for things and places.
 
     :ivar content:
@@ -5388,15 +5402,13 @@ class Tn:
     :ivar given:
     :ivar prefix:
     :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during which
-                            the name is or was used for the entity. This
-                            accomodates the fact that people change names for
-                            people, places and things.
-    :ivar use: A set of codes advising a system or user which name
-                         in a set of like names to select for a given purpose.
-                         A name without specific use code might be a default
-                         name useful for any purpose, but a name with a specific
-                         use code would be preferred for that respective purpose.
+    :ivar valid_time: An interval of time specifying the time during which the
+        name is or was used for the entity. This accomodates the fact that
+        people change names for people, places and things.
+    :ivar use: A set of codes advising a system or user which name in a set of
+        like names to select for a given purpose. A name without specific use
+        code might be a default name useful for any purpose, but a name with a
+        specific use code would be preferred for that respective purpose.
     """
     class Meta:
         name = "TN"
