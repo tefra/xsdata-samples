@@ -135,14 +135,15 @@ class PocdMt000040InfrastructureRootTypeId:
     """
     :ivar root:
     :ivar extension:
-    :ivar assigning_authority_name: A human readable name or mnemonic for the
-        assigning authority. This name may be provided solely for the
-        convenience of unaided humans interpreting an  value and can have no
-        computational meaning. Note: no automated processing must depend on the
-        assigning authority name to be present in any form.
+    :ivar assigning_authority_name: A human readable name or mnemonic
+        for the assigning authority. This name may be provided solely
+        for the convenience of unaided humans interpreting an  value and
+        can have no computational meaning. Note: no automated processing
+        must depend on the assigning authority name to be present in any
+        form.
     :ivar displayable: Specifies if the identifier is intended for human
-        display and data entry (displayable = true) as opposed to pure machine
-        interoperation (displayable = false).
+        display and data entry (displayable = true) as opposed to pure
+        machine interoperation (displayable = false).
     """
     class Meta:
         name = "POCD_MT000040.InfrastructureRoot.typeId"
