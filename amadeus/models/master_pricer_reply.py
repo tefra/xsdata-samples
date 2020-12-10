@@ -63,8 +63,8 @@ class AdditionalProductDetailsType:
     """
     :ivar equipment_type: Type of aircraft
     :ivar operating_day: Day number of the week
-    :ivar tech_stop_number: Number of stops made in a journey if different from
-        0
+    :ivar tech_stop_number: Number of stops made in a journey if
+        different from 0
     :ivar location_id: Location places of the stops
     """
     equipment_type: Optional[str] = field(
@@ -228,8 +228,8 @@ class BaggageDetailsType:
     To specify the number and weight of baggage.
 
     :ivar free_allowance: Number of pieces or weight
-    :ivar quantity_code: Nature of the free allowance ( Number of pieces or
-        weight)
+    :ivar quantity_code: Nature of the free allowance ( Number of pieces
+        or weight)
     :ivar unit_qualifier: Unit qualifier
     """
     free_allowance: Optional[str] = field(
@@ -882,7 +882,8 @@ class ConversionRateDetailsTypeI179848C:
     :ivar currency: Currency
     :ivar rate: Conversion rate for pricing
     :ivar converted_amount_link: Converted value amount
-    :ivar tax_qualifier: Applicable ISO country code or Tax designator code.
+    :ivar tax_qualifier: Applicable ISO country code or Tax designator
+        code.
     """
     class Meta:
         name = "ConversionRateDetailsTypeI_179848C"
@@ -989,8 +990,8 @@ class DataTypeInformationType:
     required.
 
     :ivar sub_type: service group/sub-group/sub-code information
-    :ivar option: Status (automated, manually added, exempted). Default is
-        automated
+    :ivar option: Status (automated, manually added, exempted). Default
+        is automated
     """
     sub_type: Optional[str] = field(
         default=None,
@@ -1205,7 +1206,8 @@ class DiscountPenaltyMonetaryInformationType:
     amount, and associated information.
 
     :ivar fee_type: Type of discount/penalty
-    :ivar fee_amount_type: The amount Type can be a percentage or an amount
+    :ivar fee_amount_type: The amount Type can be a percentage or an
+        amount
     :ivar fee_amount: specify the value
     :ivar fee_currency: Fee currency code.
     """
@@ -1587,8 +1589,8 @@ class FareTypeGroupingInformationType:
 class FreeTextQualificationType:
     """
     :ivar text_subject_qualifier: Type of message
-    :ivar information_type: Coded Text or type of information in 4440 (e.g.
-        type of OSI or free text, canned message value)
+    :ivar information_type: Coded Text or type of information in 4440
+        (e.g. type of OSI or free text, canned message value)
     """
     text_subject_qualifier: Optional[str] = field(
         default=None,
@@ -1638,9 +1640,10 @@ class FreeTextQualificationTypeI:
 class FreeTextQualificationType120769C:
     """
     :ivar text_subject_qualifier: Type of message
-    :ivar information_type: Coded Text or type of information in 4440 (e.g.
-        type of OSI or free text, canned message value)
-    :ivar language: ISO code for language of free text (default is English)
+    :ivar information_type: Coded Text or type of information in 4440
+        (e.g. type of OSI or free text, canned message value)
+    :ivar language: ISO code for language of free text (default is
+        English)
     """
     class Meta:
         name = "FreeTextQualificationType_120769C"
@@ -2003,9 +2006,9 @@ class ItineraryDetailsType:
     """
     Forces arrival or departure to/from the same city or airport option.
 
-    :ivar airport_city_qualifier: Airport/City Qualifier: the passenger wants
-        to depart/arrive from/to the same airport or city in the specified
-        requested segment
+    :ivar airport_city_qualifier: Airport/City Qualifier: the passenger
+        wants to depart/arrive from/to the same airport or city in the
+        specified requested segment
     :ivar segment_number: Requested segment number
     """
     airport_city_qualifier: Optional[str] = field(
@@ -2035,8 +2038,8 @@ class ItineraryDetailsType:
 class LocationIdentificationDetailsType:
     """
     :ivar location_id: 3 characters ATA/IATA airport/city code
-    :ivar airport_city_qualifier: Airport/city qualifier: the requested point
-        is an airport when ambiguity exists (e.g. HOU)
+    :ivar airport_city_qualifier: Airport/city qualifier: the requested
+        point is an airport when ambiguity exists (e.g. HOU)
     :ivar terminal: Terminal information
     """
     location_id: Optional[str] = field(
@@ -2101,7 +2104,8 @@ class MiniRulesDetailsType:
 @dataclass
 class MiniRulesIndicatorType:
     """
-    :ivar rule_indicator: See rule indicator and free form text indicator
+    :ivar rule_indicator: See rule indicator and free form text
+        indicator
     """
     rule_indicator: List[str] = field(
         default_factory=list,
@@ -2460,8 +2464,8 @@ class ProductDateTimeType:
     :ivar time_of_departure: Departure time
     :ivar date_of_arrival: Arrival date
     :ivar time_of_arrival: Arrival time
-    :ivar date_variation: Arrival date compared to departure date, only if
-        different from 0
+    :ivar date_variation: Arrival date compared to departure date, only
+        if different from 0
     """
     date_of_departure: Optional[str] = field(
         default=None,
@@ -2563,14 +2567,16 @@ class ProductFacilitiesType:
     """
     Level of access.
 
-    :ivar last_seat_available: Yes-No indicator whether Last Seat Available
+    :ivar last_seat_available: Yes-No indicator whether Last Seat
+        Available
     :ivar level_of_access: Level of access
-    :ivar electronic_ticketing: Yes-No indicator whether electronic ticketing
+    :ivar electronic_ticketing: Yes-No indicator whether electronic
+        ticketing
     :ivar operational_suffix: Product identification suffix
-    :ivar product_detail_qualifier: Define whether a flight has been polled or
-        not
-    :ivar flight_characteristic: Add some flight restrictions (See code set
-        list)
+    :ivar product_detail_qualifier: Define whether a flight has been
+        polled or not
+    :ivar flight_characteristic: Add some flight restrictions (See code
+        set list)
     """
     last_seat_available: Optional[str] = field(
         default=None,
@@ -3027,12 +3033,13 @@ class SpecialRequirementsDataDetailsType:
 @dataclass
 class SpecialRequirementsTypeDetailsType:
     """
-    :ivar service_classification: To specify the Service Classification of the
-        Service Requirement.
+    :ivar service_classification: To specify the Service Classification
+        of the Service Requirement.
     :ivar service_status: Status
-    :ivar service_number_of_instances: To specify the number of items involved
-    :ivar service_marketing_carrier: To specify to which marketing carrier the
-        service applies
+    :ivar service_number_of_instances: To specify the number of items
+        involved
+    :ivar service_marketing_carrier: To specify to which marketing
+        carrier the service applies
     :ivar service_group: Specify the Service group
     :ivar service_sub_group: Specify the Service Sub-Group
     :ivar service_free_text: Free Text attached to the Service.
@@ -3182,8 +3189,8 @@ class StatusDetailsType256255C:
     To specify a status, the action to be taken, and an additional
     qualification of the status.
 
-    :ivar indicator: list of status/qualifiers Either His for Historical or
-        Crt for Current
+    :ivar indicator: list of status/qualifiers Either His for Historical
+        or     Crt for Current
     :ivar action:
     """
     class Meta:
@@ -3273,7 +3280,8 @@ class TaxDetailsType:
 @dataclass
 class TravellerDetailsType:
     """
-    :ivar ref: Direct reference of passenger assigned by requesting system.
+    :ivar ref: Direct reference of passenger assigned by requesting
+        system.
     :ivar infant_indicator: Traveller is an infant
     """
     ref: Optional[str] = field(
@@ -3502,8 +3510,8 @@ class ConversionRateTypeI:
     """
     To specify conversion rate details.
 
-    :ivar conversion_rate_detail: Detail of conversion rate of First Monetary
-        Unit.
+    :ivar conversion_rate_detail: Detail of conversion rate of First
+        Monetary Unit.
     """
     conversion_rate_detail: List[ConversionRateDetailsTypeI179848C] = field(
         default_factory=list,
@@ -3603,8 +3611,8 @@ class DiscountAndPenaltyInformationType:
     """
     To specify information about discounts and penalties.
 
-    :ivar fee_identification: Used to specify airline collected fee or agent
-        collected fee.
+    :ivar fee_identification: Used to specify airline collected fee or
+        agent collected fee.
     :ivar fee_information: Used to specify penalty information
     """
     fee_identification: Optional[str] = field(
@@ -3661,8 +3669,8 @@ class FareFamilyType:
     :ivar fare_familyname: Fare Family Short Name
     :ivar hierarchy: HIERARCHICAL ORDER WITHIN FARE FAMILY
     :ivar cabin: CABIN USED FOR FARE FAMILY
-    :ivar commercial_family_details: Indicates Commercial Fare Family Short
-        names
+    :ivar commercial_family_details: Indicates Commercial Fare Family
+        Short names
     :ivar description: Short description of the fare family
     :ivar carrier: Carrier code
     :ivar services: Reference to the services details
@@ -4125,8 +4133,8 @@ class HeaderInformationTypeI:
     :ivar status: Status
     :ivar date_time_period_details: Date and Time info
     :ivar reference_number: Reference number
-    :ivar product_identification: Contains product identification such as UIC
-        code...
+    :ivar product_identification: Contains product identification such
+        as UIC code...
     """
     status: List[str] = field(
         default_factory=list,
@@ -4576,8 +4584,8 @@ class OriginAndDestinationRequestType:
     To convey information regarding Requested Segments.
 
     :ivar seg_ref: Requested segment number
-    :ivar location_forcing: Forces arrival or departure, from/to the same
-        airport/city
+    :ivar location_forcing: Forces arrival or departure, from/to the
+        same airport/city
     """
     seg_ref: Optional[str] = field(
         default=None,
@@ -4677,8 +4685,8 @@ class ProductInformationType:
     To specify details related to routing status of a product.
 
     :ivar product_details_qualifier: value of the Qualifier: INT for
-        International DOM for Domestic EUR for European  otherwise CM#10569
-        INVALID INTERNATIONAL INDICATOR is returned.
+        International DOM for Domestic EUR for European  otherwise
+        CM#10569 INVALID INTERNATIONAL INDICATOR is returned.
     :ivar booking_class_details:
     """
     product_details_qualifier: Optional[str] = field(
@@ -4936,8 +4944,8 @@ class SpecialRequirementsDetailsType:
     To specify special requests or service s information relating to a
     traveller.
 
-    :ivar service_requirements_info: To specify the Service Requirement of the
-        customer
+    :ivar service_requirements_info: To specify the Service Requirement
+        of the customer
     :ivar seat_details: Seat details
     """
     service_requirements_info: Optional[SpecialRequirementsTypeDetailsType] = field(
@@ -5205,7 +5213,8 @@ class UserIdentificationType:
     User Identification.
 
     :ivar office_identification: Originator Identification Details
-    :ivar office_type: Used to specify which kind of info is given in DE 9900.
+    :ivar office_type: Used to specify which kind of info is given in DE
+        9900.
     :ivar office_code: The code given to an agent by the originating
         reservation system.
     """
@@ -5278,8 +5287,8 @@ class FareMasterPricerTravelBoardSearchReply:
     """
     Master Pricer Travel Board Search Reply Flex Pricer Flex Pricer.
 
-    :ivar reply_status: Gives status about reply : type of process, region ,
-        CPU etc..
+    :ivar reply_status: Gives status about reply : type of process,
+        region , CPU etc..
     :ivar error_message: Error message
     :ivar conversion_rate: Specifies the currency used for pricing.
     :ivar solution_family: Solution Family
@@ -5288,11 +5297,13 @@ class FareMasterPricerTravelBoardSearchReply:
     :ivar amount_info_per_pax: Amount information per passengers
     :ivar fee_details: Fee/Reduction details.
     :ivar bucket_info: Bucket information
-    :ivar company_id_text: Free text identifying an airline in a code share.
+    :ivar company_id_text: Free text identifying an airline in a code
+        share.
     :ivar office_id_details: List of Office Id Details
     :ivar flight_index: List of flights
     :ivar recommendation: Recommendation details
-    :ivar other_solutions: Additional solutions, such as Rail solutions...
+    :ivar other_solutions: Additional solutions, such as Rail
+        solutions...
     :ivar warning_info: Warning information
     :ivar global_information: Global information
     :ivar service_fees_grp:
@@ -5498,8 +5509,8 @@ class FareMasterPricerTravelBoardSearchReply:
         class AmountsPerSgt:
             """
             :ivar sgt_ref: Requested segment reference
-            :ivar amounts: Amounts : Issue total amount, issue taxes amount,
-                non refundable taxes amount
+            :ivar amounts: Amounts : Issue total amount, issue taxes
+                amount, non refundable taxes amount
             """
             sgt_ref: Optional[ReferenceInfoType133176S] = field(
                 default=None,
@@ -5560,8 +5571,8 @@ class FareMasterPricerTravelBoardSearchReply:
         class AmountsPerSgt:
             """
             :ivar sgt_ref: Requested segment reference
-            :ivar amounts: Amounts : Issue total amount, issue taxes amount,
-                non refundable taxes amount
+            :ivar amounts: Amounts : Issue total amount, issue taxes
+                amount, non refundable taxes amount
             """
             sgt_ref: Optional[ReferenceInfoType133176S] = field(
                 default=None,
@@ -5584,7 +5595,8 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar fee_reference: Fee/Reduction Reference number.
         :ivar fee_information: Fee/Reduction information.
         :ivar fee_parameters: Fee/Reduction parameters.
-        :ivar converted_or_original_info: To specify conversion rate details
+        :ivar converted_or_original_info: To specify conversion rate
+            details
         """
         fee_reference: Optional[ItemReferencesAndVersionsType78564S] = field(
             default=None,
@@ -5642,8 +5654,8 @@ class FareMasterPricerTravelBoardSearchReply:
     @dataclass
     class FlightIndex:
         """
-        :ivar requested_segment_ref: Indicates references and details about
-            requested segments
+        :ivar requested_segment_ref: Indicates references and details
+            about requested segments
         :ivar group_of_flights: List of flights per requested segment
         """
         requested_segment_ref: Optional[OriginAndDestinationRequestType] = field(
@@ -5667,8 +5679,8 @@ class FareMasterPricerTravelBoardSearchReply:
         @dataclass
         class GroupOfFlights:
             """
-            :ivar prop_flight_gr_detail: To indicate parameters for proposed
-                flight group.
+            :ivar prop_flight_gr_detail: To indicate parameters for
+                proposed flight group.
             :ivar flight_details: List of flight per Elapse Flying time
             """
             prop_flight_gr_detail: Optional[ProposedSegmentType] = field(
@@ -5692,15 +5704,16 @@ class FareMasterPricerTravelBoardSearchReply:
             @dataclass
             class FlightDetails:
                 """
-                :ivar flight_information: Specification of details on the
-                    flight and posting availability
-                :ivar avl_info: returns booking class and availability context
-                :ivar technical_stop: Details on Flight date, time and location
-                    of technical stop or change of gauge
-                :ivar commercial_agreement: Code Share Agreement description
-                    for current flight.
-                :ivar add_info: Additional Info about flight, such as Reference
-                    number, and several options
+                :ivar flight_information: Specification of details on
+                    the flight and posting availability
+                :ivar avl_info: returns booking class and availability
+                    context
+                :ivar technical_stop: Details on Flight date, time and
+                    location of technical stop or change of gauge
+                :ivar commercial_agreement: Code Share Agreement
+                    description for current flight.
+                :ivar add_info: Additional Info about flight, such as
+                    Reference number, and several options
                 :ivar flight_characteristics: Flight characteristics
                 :ivar flight_services: Flight Services by cabin/rbd
                 """
@@ -5766,11 +5779,12 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar fare_family_ref: Indicates the Fare family reference.
         :ivar rec_price_info: Recommendation Price and Taxes.
         :ivar mini_rule: Mini rules
-        :ivar segment_flight_ref: Indicates reference of Flight or the fee
-            reference valid for all pax (usage:start with the 1 possible Fee
-            reference, then provide the segments references)
-        :ivar recommandation_segments_fare_details: Fare details per reuqested
-            segments for all passengers.
+        :ivar segment_flight_ref: Indicates reference of Flight or the
+            fee reference valid for all pax (usage:start with the 1
+            possible Fee reference, then provide the segments
+            references)
+        :ivar recommandation_segments_fare_details: Fare details per
+            reuqested segments for all passengers.
         :ivar pax_fare_product: Passenger fare product details
         :ivar specific_rec_details: Specific recommendation details
         """
@@ -5850,9 +5864,10 @@ class FareMasterPricerTravelBoardSearchReply:
         @dataclass
         class RecommandationSegmentsFareDetails:
             """
-            :ivar recommendation_seg_ref: Reference and details about requested
-                segments.
-            :ivar segment_monetary_information: Amounts per requested segment.
+            :ivar recommendation_seg_ref: Reference and details about
+                requested segments.
+            :ivar segment_monetary_information: Amounts per requested
+                segment.
             """
             recommendation_seg_ref: Optional[OriginAndDestinationRequestType] = field(
                 default=None,
@@ -5874,11 +5889,12 @@ class FareMasterPricerTravelBoardSearchReply:
         class PaxFareProduct:
             """
             :ivar pax_fare_detail: Passenger Fare Details.
-            :ivar fee_ref: Indicates Fee references (usage: start with the 1
-                possible Fee reference, then provide the segments references)
+            :ivar fee_ref: Indicates Fee references (usage: start with
+                the 1 possible Fee reference, then provide the segments
+                references)
             :ivar pax_reference: Passenger Reference
-            :ivar passenger_tax_details: add tax details for each passenger of
-                each recommendations.
+            :ivar passenger_tax_details: add tax details for each
+                passenger of each recommendations.
             :ivar fare: fare Details
             :ivar fare_details: Fare details by Requested segment number
             """
@@ -5934,7 +5950,8 @@ class FareMasterPricerTravelBoardSearchReply:
             class Fare:
                 """
                 :ivar pricing_message: Last Date to Ticket, Penalties
-                :ivar monetary_information: Amount of penalties, Surcharges...
+                :ivar monetary_information: Amount of penalties,
+                    Surcharges...
                 """
                 pricing_message: Optional[InteractiveFreeTextType78559S] = field(
                     default=None,
@@ -5956,10 +5973,10 @@ class FareMasterPricerTravelBoardSearchReply:
             class FareDetails:
                 """
                 :ivar segment_ref: Reference of the Requested Segment
-                :ivar group_of_fares: Contains the fare details as PTC,Fare
-                    Basis, Fare Family applied for each segment
-                :ivar psg_seg_monetary_information: Amounts per passenger per
-                    requested segment.
+                :ivar group_of_fares: Contains the fare details as
+                    PTC,Fare Basis, Fare Family applied for each segment
+                :ivar psg_seg_monetary_information: Amounts per
+                    passenger per requested segment.
                 :ivar maj_cabin: Majority Cabin Info
                 """
                 segment_ref: Optional[OriginAndDestinationRequestType] = field(
@@ -5997,14 +6014,14 @@ class FareMasterPricerTravelBoardSearchReply:
                 @dataclass
                 class GroupOfFares:
                     """
-                    :ivar product_information: Contains details of Flight and
-                        Fare
-                    :ivar fare_calculation_code_details: Fare calculation code
-                        details
-                    :ivar ticket_infos: Ticket designator, ticket code and fare
-                        basis.
-                    :ivar fare_families_ref: Reference of Fare Family for each
-                        Fare Component
+                    :ivar product_information: Contains details of
+                        Flight and Fare
+                    :ivar fare_calculation_code_details: Fare
+                        calculation code details
+                    :ivar ticket_infos: Ticket designator, ticket code
+                        and fare basis.
+                    :ivar fare_families_ref: Reference of Fare Family
+                        for each Fare Component
                     """
                     product_information: Optional[FlightProductInformationType176659S] = field(
                         default=None,
@@ -6041,7 +6058,8 @@ class FareMasterPricerTravelBoardSearchReply:
         class SpecificRecDetails:
             """
             :ivar specific_rec_item: Recommendation details
-            :ivar specific_product_details: Specific fare product details
+            :ivar specific_product_details: Specific fare product
+                details
             """
             specific_rec_item: Optional[ItemReferencesAndVersionsType] = field(
                 default=None,
@@ -6064,8 +6082,8 @@ class FareMasterPricerTravelBoardSearchReply:
             class SpecificProductDetails:
                 """
                 :ivar product_references: Product details
-                :ivar fare_context_details: Specific fare details per requested
-                    segments.
+                :ivar fare_context_details: Specific fare details per
+                    requested segments.
                 """
                 product_references: Optional[PricingTicketingSubsequentType] = field(
                     default=None,
@@ -6089,7 +6107,8 @@ class FareMasterPricerTravelBoardSearchReply:
                     """
                     :ivar requested_segment_info: Reference of requested
                         segment
-                    :ivar cnx_context_details: Fare connection context details
+                    :ivar cnx_context_details: Fare connection context
+                        details
                     """
                     requested_segment_info: Optional[OriginAndDestinationRequestType134833S] = field(
                         default=None,
@@ -6111,7 +6130,8 @@ class FareMasterPricerTravelBoardSearchReply:
                     @dataclass
                     class CnxContextDetails:
                         """
-                        :ivar fare_cnx_info: Fare connection context details
+                        :ivar fare_cnx_info: Fare connection context
+                            details
                         """
                         fare_cnx_info: Optional[FlightProductInformationType] = field(
                             default=None,
@@ -6127,8 +6147,8 @@ class FareMasterPricerTravelBoardSearchReply:
         """
         :ivar reference: Reference to the current solution
         :ivar amt_group: Describes several amount for each sequence
-        :ivar psg_info: Passenger Related info (discount card, PTC, fare info,
-            amount ...)
+        :ivar psg_info: Passenger Related info (discount card, PTC, fare
+            info, amount ...)
         """
         reference: Optional[SequenceDetailsTypeU] = field(
             default=None,
@@ -6266,12 +6286,14 @@ class FareMasterPricerTravelBoardSearchReply:
         """
         :ivar service_type_info: Service fee type (OC)
         :ivar service_fee_ref_grp: Service fee reference  (OC ,OCM, OCC)
-        :ivar service_coverage_info_grp: Service coverage information per
-            passenger
+        :ivar service_coverage_info_grp: Service coverage information
+            per passenger
         :ivar global_message_marker: Globalmessage marker
-        :ivar service_fee_info_grp: Service fee information per passenger
+        :ivar service_fee_info_grp: Service fee information per
+            passenger
         :ivar service_details_grp: Description of applicable services
-        :ivar free_bag_allowance_grp: Free baggage allowance information group
+        :ivar free_bag_allowance_grp: Free baggage allowance information
+            group
         """
         service_type_info: Optional[SelectionDetailsType] = field(
             default=None,
@@ -6347,9 +6369,10 @@ class FareMasterPricerTravelBoardSearchReply:
         @dataclass
         class ServiceCoverageInfoGrp:
             """
-            :ivar item_number_info: Item reference number for service coverage
-                details
-            :ivar service_cov_info_grp: Service coverage information group
+            :ivar item_number_info: Item reference number for service
+                coverage details
+            :ivar service_cov_info_grp: Service coverage information
+                group
             """
             item_number_info: Optional[ItemNumberType] = field(
                 default=None,
@@ -6372,8 +6395,9 @@ class FareMasterPricerTravelBoardSearchReply:
             class ServiceCovInfoGrp:
                 """
                 :ivar pax_ref_info: Passenger reference number
-                :ivar coverage_per_flights_info: Service coverage information
-                    at flight level Matched seat characteristics
+                :ivar coverage_per_flights_info: Service coverage
+                    information at flight level Matched seat
+                    characteristics
                 :ivar carrier_info: Carrier information
                 :ivar ref_info: Service reference number
                 """
@@ -6435,7 +6459,8 @@ class FareMasterPricerTravelBoardSearchReply:
             class ServiceDetailsGrp:
                 """
                 :ivar ref_info: Service reference number
-                :ivar service_matched_info_group: Service matched information
+                :ivar service_matched_info_group: Service matched
+                    information
                 """
                 ref_info: Optional[ReferenceInfoType134840S] = field(
                     default=None,
@@ -6512,10 +6537,10 @@ class FareMasterPricerTravelBoardSearchReply:
             class FeeDescriptionGrp:
                 """
                 :ivar item_number_info: Specification of the item number
-                :ivar service_attributes_info: Attributes  (SSR code EMD, RFIC,
-                    SSIM)
-                :ivar service_description_info: Other service information
-                    (service description, ...)
+                :ivar service_attributes_info: Attributes  (SSR code
+                    EMD, RFIC, SSIM)
+                :ivar service_description_info: Other service
+                    information (service description, ...)
                 :ivar commercial_name: Commercial name
                 """
                 item_number_info: Optional[ItemNumberType80866S] = field(
@@ -6551,7 +6576,8 @@ class FareMasterPricerTravelBoardSearchReply:
         @dataclass
         class FreeBagAllowanceGrp:
             """
-            :ivar free_bag_allownce_info: Free baggage allownce information
+            :ivar free_bag_allownce_info: Free baggage allownce
+                information
             :ivar item_number_info: Item number information
             """
             free_bag_allownce_info: Optional[ExcessBaggageType] = field(

@@ -32,8 +32,9 @@ class AirFeeType:
         fee_code: Identifies the code for the fee.
         amount:
         currency_code: A currency code (e.g. USD, EUR, PLN)
-        decimal_places: Indicates the number of decimal places for a particular
-            currency. This is equivalent to the ISO 4217 standard "minor unit".
+        decimal_places: Indicates the number of decimal places for a
+            particular currency. This is equivalent to the ISO 4217
+            standard "minor unit".
     """
     value: Optional[str] = field(
         default=None,
@@ -83,15 +84,16 @@ class AirTaxType:
         tax_code: Identifies the code for the tax.
         amount:
         currency_code: A currency code (e.g. USD, EUR, PLN)
-        decimal_places: Indicates the number of decimal places for a particular
-            currency. This is equivalent to the ISO 4217 standard "minor unit".
+        decimal_places: Indicates the number of decimal places for a
+            particular currency. This is equivalent to the ISO 4217
+            standard "minor unit".
         carrier_code: carrier used for this tax
         min_amount: Minumum tax amount
         max_amount: Maximum tax amount
         min_max_currency: Min/Max tax currency code
         rate_used: Tax rate used
-        station_code: Airport code at which the tax or surcharge is being
-            applied
+        station_code: Airport code at which the tax or surcharge is
+            being applied
         reissue_tax_type: Reissue tax type
         reissue_restriction_applies:
         reissue_tax_refundable:
@@ -271,7 +273,8 @@ class BaggageInformationType:
     class Segment:
         """
         Attributes
-            id: Id of segment that current baggage information applies to.
+            id: Id of segment that current baggage information applies
+                to.
         """
         id: Optional[int] = field(
             default=None,
@@ -357,8 +360,9 @@ class CurrencyAmountType:
     Attributes
         amount:
         currency_code: A currency code (e.g. USD, EUR, PLN)
-        decimal_places: Indicates the number of decimal places for a particular
-            currency. This is equivalent to the ISO 4217 standard "minor unit".
+        decimal_places: Indicates the number of decimal places for a
+            particular currency. This is equivalent to the ISO 4217
+            standard "minor unit".
     """
     amount: Optional[Decimal] = field(
         default=None,
@@ -587,11 +591,11 @@ class FreeTextType:
 class HandlingMarkupSummaryType:
     """
     Attributes
-        type_code: Value M: Embedded Mark Up, J: Adjusted Selling, H: Handling
-            Fee, G: GST Taxes
+        type_code: Value M: Embedded Mark Up, J: Adjusted Selling, H:
+            Handling Fee, G: GST Taxes
         description: Max 10 chars
-        monetary_amount_value: Can be negative. This is in equivalent amount
-            currency.
+        monetary_amount_value: Can be negative. This is in equivalent
+            amount currency.
     """
     type_code: Optional[str] = field(
         default=None,
@@ -647,8 +651,9 @@ class ObfeeType:
         description: OB Fee description
         amount:
         currency_code: A currency code (e.g. USD, EUR, PLN)
-        decimal_places: Indicates the number of decimal places for a particular
-            currency. This is equivalent to the ISO 4217 standard "minor unit".
+        decimal_places: Indicates the number of decimal places for a
+            particular currency. This is equivalent to the ISO 4217
+            standard "minor unit".
     """
     class Meta:
         name = "OBFeeType"
@@ -935,9 +940,9 @@ class ReissueInfoType:
                 highest_change_fee:
                 amount:
                 currency_code: A currency code (e.g. USD, EUR, PLN)
-                decimal_places: Indicates the number of decimal places for a
-                    particular currency. This is equivalent to the ISO 4217
-                    standard "minor unit".
+                decimal_places: Indicates the number of decimal places
+                    for a particular currency. This is equivalent to the
+                    ISO 4217 standard "minor unit".
                 change_fee_waived:
                 change_fee_not_applicable:
             """
@@ -995,8 +1000,8 @@ class ResponseLocationType:
     Attributes
         value:
         location_code: Location identifying code.
-        code_context: Identifies the context of the identifying code, such as
-            IATA, ARC, or internal code, etc.
+        code_context: Identifies the context of the identifying code,
+            such as IATA, ARC, or internal code, etc.
     """
     value: Optional[str] = field(
         default=None,
@@ -1067,8 +1072,9 @@ class UnflownPriceType:
     Attributes
         amount:
         currency_code: A currency code (e.g. USD, EUR, PLN)
-        decimal_places: Indicates the number of decimal places for a particular
-            currency. This is equivalent to the ISO 4217 standard "minor unit".
+        decimal_places: Indicates the number of decimal places for a
+            particular currency. This is equivalent to the ISO 4217
+            standard "minor unit".
     """
     amount: Optional[Decimal] = field(
         default=None,
@@ -1394,37 +1400,40 @@ class ErrorType(FreeTextType):
     OTA message.
 
     Attributes
-        type: The Error element MUST contain the Type attribute that uses a
-            recommended set of values to indicate the error type. The
-            validating XSD can expect to accept values that it has NOT been
-            explicitly coded for and process them by using Type ="Unknown".
-            Refer to OTA Code List Error Warning Type (EWT).
+        type: The Error element MUST contain the Type attribute that
+            uses a recommended set of values to indicate the error type.
+            The validating XSD can expect to accept values that it has
+            NOT been explicitly coded for and process them by using Type
+            ="Unknown".  Refer to OTA Code List Error Warning Type
+            (EWT).
         short_text:
-        code: If present, this refers to a table of coded values exchanged
-            between applications to identify errors or warnings. Refer to OTA
-            Code List Error Codes (ERR).
-        doc_url: If present, this URL refers to an online description of the
-            error that occurred.
-        status: If present, recommended values are those enumerated in the
-            OTA_ErrorRS, (NotProcessed | Incomplete | Complete | Unknown)
-            however, the data type is designated as string data, recognizing
-            that trading partners may identify additional status conditions not
-            included in the enumeration.
-        tag: If present, this attribute may identify an unknown or misspelled
-            tag that caused an error in processing. It is recommended that the
-            Tag attribute use XPath notation to identify the location of a tag
-            in the event that more than one tag of the same name is present in
-            the document. Alternatively, the tag name alone can be used to
-            identify missing data [Type=ReqFieldMissing].
-        record_id: If present, this attribute allows for batch processing and
-            the identification of the record that failed amongst a group of
-            records.
+        code: If present, this refers to a table of coded values
+            exchanged between applications to identify errors or
+            warnings. Refer to OTA Code List Error Codes (ERR).
+        doc_url: If present, this URL refers to an online description of
+            the error that occurred.
+        status: If present, recommended values are those enumerated in
+            the OTA_ErrorRS, (NotProcessed | Incomplete | Complete |
+            Unknown) however, the data type is designated as string
+            data, recognizing that trading partners may identify
+            additional status conditions not included in the
+            enumeration.
+        tag: If present, this attribute may identify an unknown or
+            misspelled tag that caused an error in processing. It is
+            recommended that the Tag attribute use XPath notation to
+            identify the location of a tag in the event that more than
+            one tag of the same name is present in the document.
+            Alternatively, the tag name alone can be used to identify
+            missing data [Type=ReqFieldMissing].
+        record_id: If present, this attribute allows for batch
+            processing and the identification of the record that failed
+            amongst a group of records.
         message_class: If present specify the message class.
-        node_list: An XPath expression that selects all the nodes whose data
-            caused this error.  Further, this expression should have an
-            additional contraint which contains the data of the node.  This
-            will provide the offending data back to systems that cannot
-            maintain the original message.
+        node_list: An XPath expression that selects all the nodes whose
+            data caused this error.  Further, this expression should
+            have an   additional contraint which contains the data of
+            the node.  This will provide the offending data back to
+            systems that cannot maintain the original message.
     """
     type: Optional[str] = field(
         default=None,
@@ -1500,8 +1509,8 @@ class ErrorType(FreeTextType):
 class FareComponentTaxesType:
     """
     Attributes
-        flight_segment: A container for necessary data to describe one or more
-            flight segments.
+        flight_segment: A container for necessary data to describe one
+            or more flight segments.
         tax: Any individual tax applied to the fare
     """
     flight_segment: List["FareComponentTaxesType.FlightSegment"] = field(
@@ -1631,8 +1640,8 @@ class RuleInfoType:
     class ResTicketingRules:
         """
         Attributes
-            adv_res_ticketing: Container for holding rules regarding advance
-                reservation or ticketing restrictions.
+            adv_res_ticketing: Container for holding rules regarding
+                advance reservation or ticketing restrictions.
         """
         adv_res_ticketing: Optional[AdvResTicketingType] = field(
             default=None,
@@ -1673,15 +1682,16 @@ class TicketingInfoRsType:
         ticket_advisory: Open text field available for additional ticket
             information.
         tpa_extensions: Place holder for additional elements.
-        e_ticket_number: If reservation is electronically ticketed at time of
-            booking, this is the field for the eTicket number.
+        e_ticket_number: If reservation is electronically ticketed at
+            time of booking, this is the field for the eTicket number.
         ticket_time_limit: TicketTimeLimit - Indicates the ticketing
-            arrangement, and allows for the requirement that an itinerary must
-            be ticketed by a certain date and time.
-        ticket_type: TicketType - Indicates the type of ticket (Paper, eTicket)
-        valid_interline: ValidInterline - Indicates validation of interline
-            ticketing aggrement,         possible values (Yes, No, Unknown),
-            default=unknown
+            arrangement, and allows for the requirement that an
+            itinerary must be ticketed by a certain date and time.
+        ticket_type: TicketType - Indicates the type of ticket (Paper,
+            eTicket)
+        valid_interline: ValidInterline - Indicates validation of
+            interline ticketing aggrement,         possible values (Yes,
+            No, Unknown), default=unknown
     """
     class Meta:
         name = "TicketingInfoRS_Type"
@@ -1743,9 +1753,10 @@ class VccinformationType:
     Attributes
         fare_component_breakdown:
         validating_carrier:
-        commission_amount: Commission Amount (in equivalent amount currency)
-        total_amount_including_mark_up: Total Commision amount including Mark-
-            Up
+        commission_amount: Commission Amount (in equivalent amount
+            currency)
+        total_amount_including_mark_up: Total Commision amount including
+            Mark-Up
         commission_percent:
     """
     class Meta:
@@ -1802,31 +1813,34 @@ class WarningType(FreeTextType):
     in which warnings are generated.
 
     Attributes
-        type: The Warning element MUST contain the Type attribute that uses a
-            recommended set of values to indicate the warning type. The
-            validating XSD can expect to accept values that it has NOT been
-            explicitly coded for and process them by using Type ="Unknown".
-            Refer to OTA Code List Error Warning Type (EWT).
+        type: The Warning element MUST contain the Type attribute that
+            uses a recommended set of values to indicate the warning
+            type. The validating XSD can expect to accept values that it
+            has NOT been explicitly coded for and process them by using
+            Type ="Unknown".  Refer to OTA Code List Error Warning Type
+            (EWT).
         short_text:
-        code: If present, this refers to a table of coded values exchanged
-            between applications to identify errors or warnings. Refer to OTA
-            Code List Error Codes (ERR).
-        doc_url: If present, this URL refers to an online description of the
-            error that occurred.
-        status: If present, recommended values are those enumerated in the
-            OTA_ErrorRS, (NotProcessed | Incomplete | Complete | Unknown)
-            however, the data type is designated as string data, recognizing
-            that trading partners may identify additional status conditions not
-            included in the enumeration.
-        tag: If present, this attribute may identify an unknown or misspelled
-            tag that caused an error in processing. It is recommended that the
-            Tag attribute use XPath notation to identify the location of a tag
-            in the event that more than one tag of the same name is present in
-            the document. Alternatively, the tag name alone can be used to
-            identify missing data [Type=ReqFieldMissing].
-        record_id: If present, this attribute allows for batch processing and
-            the identification of the record that failed amongst a group of
-            records.
+        code: If present, this refers to a table of coded values
+            exchanged between applications to identify errors or
+            warnings. Refer to OTA Code List Error Codes (ERR).
+        doc_url: If present, this URL refers to an online description of
+            the error that occurred.
+        status: If present, recommended values are those enumerated in
+            the OTA_ErrorRS, (NotProcessed | Incomplete | Complete |
+            Unknown) however, the data type is designated as string
+            data, recognizing that trading partners may identify
+            additional status conditions not included in the
+            enumeration.
+        tag: If present, this attribute may identify an unknown or
+            misspelled tag that caused an error in processing. It is
+            recommended that the Tag attribute use XPath notation to
+            identify the location of a tag in the event that more than
+            one tag of the same name is present in the document.
+            Alternatively, the tag name alone can be used to identify
+            missing data [Type=ReqFieldMissing].
+        record_id: If present, this attribute allows for batch
+            processing and the identification of the record that failed
+            amongst a group of records.
         message_class: If present specify the message class.
     """
     type: Optional[str] = field(
@@ -1900,19 +1914,20 @@ class BookFlightSegmentType:
     Attributes
         departure_airport: Departure point of flight segment.
         arrival_airport: Arrival point of flight segment.
-        operating_airline: The operating airline of the flight if it is a
-            codeshare  flight.
+        operating_airline: The operating airline of the flight if it is
+            a codeshare  flight.
         equipment: The type of equipment  used for the  flight..
-        marketing_airline: The marketing airline. This is required for use with
-            scheduled airline messages but may be omitted for requests by tour
-            operators.
-        disclosure_airline: The disclosure airline. This is required by the DOT
-            mandate.
-        marriage_grp: Many airlines link connection flights together by terming
-            them married segments.  When two or more segments are married, they
-            must be processed as one unit. The segments must be moved,
-            cancelled, and/or priced together. The value of the marriage group
-            must be the same for all segments.
+        marketing_airline: The marketing airline. This is required for
+            use with scheduled airline messages but may be omitted for
+            requests by tour operators.
+        disclosure_airline: The disclosure airline. This is required by
+            the DOT mandate.
+        marriage_grp: Many airlines link connection flights together by
+            terming them married segments.  When two or more segments
+            are married, they must be processed as one unit. The
+            segments must be moved, cancelled, and/or priced together.
+            The value of the marriage group must be the same for all
+            segments.
         stop_airports:
         departure_time_zone:
         arrival_time_zone:
@@ -1923,12 +1938,13 @@ class BookFlightSegmentType:
         stop_quantity: The number of stops the flight makes
         rph:
         info_source:
-        flight_number: The flight number of the flight. This is required for
-            use with scheduled airline messages but may be omitted for requests
-            by tour operators.
+        flight_number: The flight number of the flight. This is required
+            for use with scheduled airline messages but may be omitted
+            for requests by tour operators.
         tour_operator_flight_id: ID of a flight in the Tour Operator's
-            inventory. This flight is not necessarily in the inventory of an
-            airline. Rather, it is a code created by tour operators.
+            inventory. This flight is not necessarily in the inventory
+            of an airline. Rather, it is a code created by tour
+            operators.
         res_book_desig_code: Specific Booking Class for this segment.
         action_code:
         number_in_party:
@@ -2141,10 +2157,10 @@ class BookFlightSegmentType:
         class StopAirport(ResponseLocationType):
             """
             Attributes
-                arrival_date_time: This date should be of the form YYYY-MM-
-                    DDTHH:MM:SS
-                departure_date_time: This date should be of the form YYYY-MM-
-                    DDTHH:MM:SS
+                arrival_date_time: This date should be of the form YYYY-
+                    MM-DDTHH:MM:SS
+                departure_date_time: This date should be of the form
+                    YYYY-MM-DDTHH:MM:SS
                 elapsed_time: Elapsed Time in minutes
                 duration: Layover time in minutes
                 gmtoffset:
@@ -2301,8 +2317,8 @@ class ErrorsType:
     A collection of errors that occurred during the processing of a message.
 
     Attributes
-        error: Describes an error that occurred during the processing of an OTA
-            message
+        error: Describes an error that occurred during the processing of
+            an OTA message
     """
     error: List[ErrorType] = field(
         default_factory=list,
@@ -2322,10 +2338,10 @@ class FareInfoType:
 
     Attributes
         departure_date: Departure Date for this priced fare.
-        fare_reference: FareReferenceCode can be used for either the Fare Basis
-            Code or the Fare Class Code.
-        rule_info: Information regarding restrictions governing use of the
-            fare.
+        fare_reference: FareReferenceCode can be used for either the
+            Fare Basis Code or the Fare Class Code.
+        rule_info: Information regarding restrictions governing use of
+            the fare.
         marketing_airline: The marketing airline.
         departure_airport: Departure point of flight segment.
         arrival_airport: Arrival point of flight segment.
@@ -2411,19 +2427,19 @@ class FareType:
         base_fare: Price of the inventory excluding taxes and fees.
         non_refundable_base_fare: Non-refundable base fare amount
         fare_construction: Fare construction total amount.
-        equiv_fare: Price of the inventory excluding taxes and fees in the
-            payable currency.
+        equiv_fare: Price of the inventory excluding taxes and fees in
+            the payable currency.
         taxes: This is a collection of Taxes
         fees: This is a collection of Fees
         obfees: This is a collection of ob Fees
         rate_of_exchange:
         currency_conversions:
-        total_fare: The total price that the passenger would pay (includes
-            fare, taxes, fees)
+        total_fare: The total price that the passenger would pay
+            (includes fare, taxes, fees)
         reissue_info_list: Reissue information
         penalties_info: Penalties information
-        tpa_extensions: Additional elements and attributes to be included if
-            required, per Trading Partner Agreement (TPA).
+        tpa_extensions: Additional elements and attributes to be
+            included if required, per Trading Partner Agreement (TPA).
         negotiated_fare: Indicator to show if this is a private fare.
         negotiated_fare_code: Code used to identify the private fare.
     """
@@ -2662,8 +2678,8 @@ class FareType:
     class Fees:
         """
         Attributes
-            fee: Any additional fee incurred by the passenger but not shown on
-                the ticket.
+            fee: Any additional fee incurred by the passenger but not
+                shown on the ticket.
         """
         fee: List[AirFeeType] = field(
             default_factory=list,
@@ -2744,9 +2760,9 @@ class FareType:
                 conditions_apply:
                 amount:
                 currency_code: A currency code (e.g. USD, EUR, PLN)
-                decimal_places: Indicates the number of decimal places for a
-                    particular currency. This is equivalent to the ISO 4217
-                    standard "minor unit".
+                decimal_places: Indicates the number of decimal places
+                    for a particular currency. This is equivalent to the
+                    ISO 4217 standard "minor unit".
                 cat16_info:
             """
             cat16_text_only: List["FareType.PenaltiesInfo.Penalty.Cat16TextOnly"] = field(
@@ -2864,8 +2880,8 @@ class FareType:
         Attributes
             surcharges: Surcharge information
             legs: This is a collection of Leg Information
-            fare_components: A collection of additional information for each
-                Fare Component
+            fare_components: A collection of additional information for
+                each Fare Component
             messages:
             baggage_information_list:
             selling_fare_data_list:
@@ -2948,18 +2964,20 @@ class FareType:
             class Leg:
                 """
                 Attributes
-                    base_fare: Price of the inventory excluding taxes and fees.
-                    equiv_fare: Price of the inventory excluding taxes and fees
-                        in the payable currency.
+                    base_fare: Price of the inventory excluding taxes
+                        and fees.
+                    equiv_fare: Price of the inventory excluding taxes
+                        and fees in the payable currency.
                     taxes: This is a collection of Taxes
-                    total_fare: The total price that the passenger would pay
-                        (includes fare, taxes, fees)
+                    total_fare: The total price that the passenger would
+                        pay (includes fare, taxes, fees)
                     total_mileage:
                     number:
-                    fare_status: Detailed reason why fare could not be returned
-                        (when FareReturned="false"). "A" means "Class is not
-                        available", "O" - "Class is not offered", "F" - "No
-                        fare found or applicable", "N" - unknown status.
+                    fare_status: Detailed reason why fare could not be
+                        returned (when FareReturned="false"). "A" means
+                        "Class is not available", "O" - "Class is not
+                        offered", "F" - "No fare found or applicable",
+                        "N" - unknown status.
                 """
                 base_fare: Optional[CurrencyAmountType] = field(
                     default=None,
@@ -3022,7 +3040,8 @@ class FareType:
                 class EquivFare(CurrencyAmountType):
                     """
                     Attributes
-                        effective_price_deviation: Effective Price Deviation
+                        effective_price_deviation: Effective Price
+                            Deviation
                     """
                     effective_price_deviation: Optional[Decimal] = field(
                         default=None,
@@ -3064,7 +3083,8 @@ class FareType:
         class FareComponents:
             """
             Attributes
-                fare_component: Subtotal pricing summary for Fare Component.
+                fare_component: Subtotal pricing summary for Fare
+                    Component.
             """
             fare_component: List["FareType.TpaExtensions.FareComponents.FareComponent"] = field(
                 default_factory=list,
@@ -3080,18 +3100,21 @@ class FareType:
             class FareComponent:
                 """
                 Attributes
-                    base_fare: Price of the inventory excluding taxes and fees.
-                    equiv_fare: Price of the inventory excluding taxes and fees
-                        in the payable currency.
+                    base_fare: Price of the inventory excluding taxes
+                        and fees.
+                    equiv_fare: Price of the inventory excluding taxes
+                        and fees in the payable currency.
                     taxes: This is a collection of Taxes
-                    total_fare: The total price that the passenger would pay
-                        (includes fare, taxes, fees)
+                    total_fare: The total price that the passenger would
+                        pay (includes fare, taxes, fees)
                     segment:
                     handling_markup_detail:
-                    fare_retailer_rule: Matched General Retailer Rule Code or
-                        Adjusted Selling Level Retailer Rule Code
+                    fare_retailer_rule: Matched General Retailer Rule
+                        Code or Adjusted Selling Level Retailer Rule
+                        Code
                     program_id:
-                    program_description: Used to indicate program description
+                    program_description: Used to indicate program
+                        description
                     program_system_code:
                     brand_id: Used to indicate brand code
                     brand_name: Used to indicate brand name
@@ -3192,7 +3215,8 @@ class FareType:
                 class EquivFare(CurrencyAmountType):
                     """
                     Attributes
-                        effective_price_deviation: Effective Price Deviation
+                        effective_price_deviation: Effective Price
+                            Deviation
                     """
                     effective_price_deviation: Optional[Decimal] = field(
                         default=None,
@@ -3223,8 +3247,8 @@ class FareType:
                 class Segment:
                     """
                     Attributes
-                        leg_index: Refers to OriginDestinationOption of current
-                            itinerary
+                        leg_index: Refers to OriginDestinationOption of
+                            current itinerary
                         flight_index: Refers to FlightSegment within
                             OriginDestinationOption of current itinerary
                     """
@@ -3251,9 +3275,10 @@ class FareType:
                     Attributes
                         markup_handling_fee_app_id: Markup/Handling fee
                             Application ID
-                        markup_type_code: Markup type code, reserved for future
-                            extension
-                        fare_amount_after_markup: Fare Amount after markup
+                        markup_type_code: Markup type code, reserved for
+                            future extension
+                        fare_amount_after_markup: Fare Amount after
+                            markup
                         markup_amount: Markup Amount
                         amount_currency: Markup currency
                         markup_rule_source_pcc: Markup Rule Source PCC
@@ -3317,7 +3342,8 @@ class FareType:
                 class FareRetailerRule:
                     """
                     Attributes
-                        transaction_type: General or AdjustedSellingLevel
+                        transaction_type: General or
+                            AdjustedSellingLevel
                         code:
                     """
                     transaction_type: Optional[str] = field(
@@ -3356,14 +3382,15 @@ class FareType:
             """
             Attributes
                 vccinformation:
-                cat35_commission_percentage: Cat 35 Commission Percentage
+                cat35_commission_percentage: Cat 35 Commission
+                    Percentage
                 cat35_commission_amount: Cat 35 Commission Amount
-                cat35_markup_amount: Cat 35 Markup Amount in equivalent amount
-                    currency
+                cat35_markup_amount: Cat 35 Markup Amount in equivalent
+                    amount currency
                 commission_amount_in_equivalent: Commission Amount in
                     equivalent amount currency
-                commission_source: Commission Source [value C for Cat 35, A for
-                    AMC, M for Manual]
+                commission_source: Commission Source [value C for Cat
+                    35, A for AMC, M for Manual]
             """
             vccinformation: List[VccinformationType] = field(
                 default_factory=list,
@@ -3533,8 +3560,8 @@ class OriginDestinationOptionType:
     A container for flight segments.
 
     Attributes
-        flight_segment: A container for necessary data to describe one or more
-            legs of a single flight number.
+        flight_segment: A container for necessary data to describe one
+            or more legs of a single flight number.
         elapsed_time: Elapsed leg trip time in minutes
     """
     flight_segment: List[BookFlightSegmentType] = field(
@@ -3563,18 +3590,20 @@ class PtcfareBreakdownType:
     Set if fareBreakdown was requested.
 
     Attributes
-        passenger_type_quantity: Number of individuals traveling under this PTC
+        passenger_type_quantity: Number of individuals traveling under
+            this PTC
         fare_basis_codes: This is a collection of Fare Basis Codes
         passenger_fare: The total passenger fare with cost breakdown.
         endorsements: Container for endorsements.
-        tpa_extensions: Additional elements and attributes to be included if
-            required, per Trading Partner Agreement (TPA).
+        tpa_extensions: Additional elements and attributes to be
+            included if required, per Trading Partner Agreement (TPA).
         fare_infos: This is a collection of FareInfo
         pricing_source: Indicates whether the fare is public or private.
         private_fare_type: Private fare type symbol.
         last_ticket_date: Last day to ticket.
         previous_exchange_date: Previous Exchange Date
-        reissue_exchange: Indicates whether priced as Reissue or Exchange
+        reissue_exchange: Indicates whether priced as Reissue or
+            Exchange
     """
     class Meta:
         name = "PTCFareBreakdownType"
@@ -3695,23 +3724,26 @@ class PtcfareBreakdownType:
                 account_code: Matched Account Code
                 mileage: Mileage (AWARD Shopping)
                 booking_code: Booking code
-                availability_break: Availability break after this segment
-                departure_airport_code: Departure point of flight segment.
+                availability_break: Availability break after this
+                    segment
+                departure_airport_code: Departure point of flight
+                    segment.
                 arrival_airport_code: Arrival point of flight segment.
-                fare_component_begin_airport: If this attribute is present, the
-                    enclosing FareBasisCode element is the first portion of a
-                    new fare component. It represents the origin airport of the
-                    fare component.
-                fare_component_end_airport: If this attribute is present, the
-                    enclosing FareBasisCode element is the first portion of a
-                    new fare component. It represents the destination airport
-                    of the fare component.
-                fare_component_directionality: If this attribute is present,
-                    the enclosing FareBasisCode element is the first portion of
-                    a new fare component. If its value is "FROM" it means that
-                    fare component origin and destination are ordered the same
-                    as the departure and arival airports of the leg. Value "TO"
-                    means the opposite ordering of fare component origin and
+                fare_component_begin_airport: If this attribute is
+                    present, the enclosing FareBasisCode element is the
+                    first portion of a new fare component. It represents
+                    the origin airport of the fare component.
+                fare_component_end_airport: If this attribute is
+                    present, the enclosing FareBasisCode element is the
+                    first portion of a new fare component. It represents
+                    the destination airport of the fare component.
+                fare_component_directionality: If this attribute is
+                    present, the enclosing FareBasisCode element is the
+                    first portion of a new fare component. If its value
+                    is "FROM" it means that fare component origin and
+                    destination are ordered the same as the departure
+                    and arival airports of the leg. Value "TO" means the
+                    opposite ordering of fare component origin and
                     destination.
                 gov_carrier: Governing carrier
             """
@@ -3921,14 +3953,16 @@ class PtcfareBreakdownType:
             Attributes
                 departure_date: Departure Date for this priced fare.
                 fare_reference: FareReference is the booking code.
-                rule_info: Information regarding restrictions governing use of
-                    the fare.
+                rule_info: Information regarding restrictions governing
+                    use of the fare.
                 marketing_airline: The marketing airline.
                 departure_airport: Departure point of flight segment.
                 arrival_airport: Arrival point of flight segment.
                 tpa_extensions:
-                negotiated_fare: Indicator to show if this is a private fare.
-                negotiated_fare_code: Code used to identify the private fare.
+                negotiated_fare: Indicator to show if this is a private
+                    fare.
+                negotiated_fare_code: Code used to identify the private
+                    fare.
             """
             departure_date: Optional[str] = field(
                 default=None,
@@ -4144,41 +4178,44 @@ class AirItineraryPricingInfoType:
         itin_total_fare: Total price of the itinerary
         ptc_fare_breakdowns: This is a collection of PTC Fare Breakdowns
         fare_infos: This is a collection of FareInfo
-        tpa_extensions: Additional elements and attributes to be included if
-            required, per Trading Partner Agreement (TPA).
-        pricing_source: Used to indicate whether the pricing is public or
-            private
+        tpa_extensions: Additional elements and attributes to be
+            included if required, per Trading Partner Agreement (TPA).
+        pricing_source: Used to indicate whether the pricing is public
+            or private
         pricing_sub_source: Pricing sub source.
-        pseudo_city_code: (MultiPCC) Information about Pseudo City Code for
-            wich the fare was produced.
-        brand_id: Used to indicate brand code (e.g. SS for SuperSaver) or type
-            of Fare (e.g. Sale Fare or Full Coach and so on...)
-        fare_returned: Boolean to indicate if a fare returned for the BrandID
-            or not (true if fare is returned and false if no fare returned)
-        fare_status: Detailed reason why fare could not be returned (when
-            FareReturned="false"). "A" means "Class is not available", "O" -
-            "Class is not offered", "F" - "No fare found or applicable".
-        cached_itin: Indicates whether the itin is from Cache. If true, it is
-            from Cache.
+        pseudo_city_code: (MultiPCC) Information about Pseudo City Code
+            for wich the fare was produced.
+        brand_id: Used to indicate brand code (e.g. SS for SuperSaver)
+            or type of Fare (e.g. Sale Fare or Full Coach and so on...)
+        fare_returned: Boolean to indicate if a fare returned for the
+            BrandID or not (true if fare is returned and false if no
+            fare returned)
+        fare_status: Detailed reason why fare could not be returned
+            (when FareReturned="false"). "A" means "Class is not
+            available", "O" - "Class is not offered", "F" - "No fare
+            found or applicable".
+        cached_itin: Indicates whether the itin is from Cache. If true,
+            it is from Cache.
         cache_partition: Indicates source partition of cached itin
-        cache_partition_priority: Indicates source partition priority of cached
-            itin
+        cache_partition_priority: Indicates source partition priority of
+            cached itin
         cache_version: Indicates source version of cached itin
         time_to_live: Time to live in cache (in minutes).
-        alternate_city_option: Indicates that this option is alternate dates
-            option.
+        alternate_city_option: Indicates that this option is alternate
+            dates option.
         last_ticket_date: Last day to ticket.
         private_fare_type: Private fare type symbol.
-        spanish_family_discount_indicator: Spanish Discount indicator with
-            values of "A", "B", "C" where
+        spanish_family_discount_indicator: Spanish Discount indicator
+            with values of "A", "B", "C" where
             "A" indicates Spanish Large Family discount only
-            "B" indicates Spanish Large Family discount + Spanish Islander
-            discount                                         "C" indicates
-            Spanish Islander discount only
-        flexible_fare_id: If the fare is an additional flexible fare, this is
-            the fare group ID
+            "B" indicates Spanish Large Family discount + Spanish
+            Islander discount
+            "C" indicates Spanish Islander discount only
+        flexible_fare_id: If the fare is an additional flexible fare,
+            this is the fare group ID
         previous_exchange_date: Previous Exchange Date
-        reissue_exchange: Indicates whether priced as Reissue or Exchange
+        reissue_exchange: Indicates whether priced as Reissue or
+            Exchange
         advanced_purchase_date:
         purchase_by_date:
     """
@@ -4395,14 +4432,16 @@ class AirItineraryPricingInfoType:
             Attributes
                 departure_date: Departure Date for this priced fare.
                 fare_reference: FareReference is the booking code.
-                rule_info: Information regarding restrictions governing use of
-                    the fare.
+                rule_info: Information regarding restrictions governing
+                    use of the fare.
                 marketing_airline: The marketing airline.
                 departure_airport: Departure point of flight segment.
                 arrival_airport: Arrival point of flight segment.
                 tpa_extensions:
-                negotiated_fare: Indicator to show if this is a private fare.
-                negotiated_fare_code: Code used to identify the private fare.
+                negotiated_fare: Indicator to show if this is a private
+                    fare.
+                negotiated_fare_code: Code used to identify the private
+                    fare.
             """
             departure_date: Optional[str] = field(
                 default=None,
@@ -4603,12 +4642,13 @@ class AirItineraryPricingInfoType:
     class TpaExtensions:
         """
         Attributes
-            divide_in_party: Indicates if different passenger types are booked
-                in different inventories.
+            divide_in_party: Indicates if different passenger types are
+                booked in different inventories.
             promo_offer: Promotional offer
             fare_note:
-            promo_redemption: Populated if  "Coupon Redemption" rule has been
-                hit. This had been developed for Travelocity but never used.
+            promo_redemption: Populated if  "Coupon Redemption" rule has
+                been hit. This had been developed for Travelocity but
+                never used.
             rule: Describes a rule that was hit.
             multiple_traveler_groups:
             ancillary_fee_groups: Ancillary fee groups returned
@@ -4713,9 +4753,10 @@ class AirItineraryPricingInfoType:
             Attributes
                 promo_id: Promotional offer identifier
                 corp_id: Airline identifier.
-                content_id: This information comes from Fare Notes Rule fired
-                    and is taken by Travelocity to look up detailed data on
-                    their database to put on the website.
+                content_id: This information comes from Fare Notes Rule
+                    fired and is taken by Travelocity to look up
+                    detailed data on their database to put on the
+                    website.
             """
             promo_id: Optional[str] = field(
                 default=None,
@@ -4743,11 +4784,13 @@ class AirItineraryPricingInfoType:
         class FareNote:
             """
             Attributes
-                fare_type_name: Corresponds to data in the Fare Note rule
-                    (action target: Fare Type). For example: "PROMOTIONAL"
+                fare_type_name: Corresponds to data in the Fare Note
+                    rule (action target: Fare Type). For example:
+                    "PROMOTIONAL"
                 priority_level: FareNote Itin priority
-                content_id: Corresponds to data in the Fare Note rule (action
-                    target: Content ID Action). For example: "112"
+                content_id: Corresponds to data in the Fare Note rule
+                    (action target: Content ID Action). For example:
+                    "112"
             """
             fare_type_name: Optional[str] = field(
                 default=None,
@@ -4926,10 +4969,11 @@ class AirItineraryPricingInfoType:
                     program_id:
                     program_code:
                     program_system_code:
-                    fare_status: Detailed reason why fare could not be returned
-                        (when FareReturned="false"). "A" means "Class is not
-                        available", "O" - "Class is not offered", "F" - "No
-                        fare found or applicable", "N" - unknown status.
+                    fare_status: Detailed reason why fare could not be
+                        returned (when FareReturned="false"). "A" means
+                        "Class is not available", "O" - "Class is not
+                        offered", "F" - "No fare found or applicable",
+                        "N" - unknown status.
                 """
                 segment: List["AirItineraryPricingInfoType.TpaExtensions.Legs.Leg.Segment"] = field(
                     default_factory=list,
@@ -5006,10 +5050,11 @@ class AirItineraryPricingInfoType:
                         program_system_code:
                         brand_id:
                         brand_name: Used to indicate brand name
-                        fare_status: If possible detailed reason why fare could
-                            not be returned. "A" means "Class is not
-                            available", "O" - "Class is not offered", "F" - "No
-                            fare found or applicable", "N" - unknown status.
+                        fare_status: If possible detailed reason why
+                            fare could not be returned. "A" means "Class
+                            is not available", "O" - "Class is not
+                            offered", "F" - "No fare found or
+                            applicable", "N" - unknown status.
                     """
                     number: Optional[int] = field(
                         default=None,
@@ -5082,9 +5127,10 @@ class AirItineraryType:
     Specifies the origin and destination of the traveler.
 
     Attributes
-        origin_destination_options: A collection of  OriginDestinationOption
-        direction_ind: A directional indicator that identifies a type of air
-            booking (e.g. one-way, round-trip, open-jaw).
+        origin_destination_options: A collection of
+            OriginDestinationOption
+        direction_ind: A directional indicator that identifies a type of
+            air booking (e.g. one-way, round-trip, open-jaw).
         departure_date: Itinerary departure date
     """
     origin_destination_options: Optional["AirItineraryType.OriginDestinationOptions"] = field(
@@ -5136,11 +5182,11 @@ class TicketPricingType:
     Attributes
         origin_destination_options:
         air_itinerary_pricing_info: Pricing Information for a Ticket.
-        notes: Provides for free form descriptive information for the priced
-            itinerary.
+        notes: Provides for free form descriptive information for the
+            priced itinerary.
         ticketing_info: Container for TicketingInfoRS_Type.
-        tpa_extensions: Additional elements and attributes to be included if
-            required, per Trading Partner Agreement (TPA).
+        tpa_extensions: Additional elements and attributes to be
+            included if required, per Trading Partner Agreement (TPA).
         number: Ticket position related to entire itinerary
     """
     origin_destination_options: Optional["TicketPricingType.OriginDestinationOptions"] = field(
@@ -5228,7 +5274,8 @@ class TicketPricingType:
             class FlightSegment:
                 """
                 Attributes
-                    departure_airport: Departure point of flight segment.
+                    departure_airport: Departure point of flight
+                        segment.
                     arrival_airport: Arrival point of flight segment.
                     departure_date_time:
                 """
@@ -5263,10 +5310,11 @@ class TicketPricingType:
     class TpaExtensions:
         """
         Attributes
-            validating_carrier: Issuing airline whose numeric airline code is
-                reflected in the electronic transaction for the flight/value
-                coupon(s).The Validating Carrier shall be the controlling and
-                authorising entity for Electronic Ticketing transactions..
+            validating_carrier: Issuing airline whose numeric airline
+                code is reflected in the electronic transaction for the
+                flight/value coupon(s).The Validating Carrier shall be
+                the controlling and authorising entity for Electronic
+                Ticketing transactions..
         """
         validating_carrier: Optional["TicketPricingType.TpaExtensions.ValidatingCarrier"] = field(
             default=None,
@@ -5313,28 +5361,31 @@ class PricedItineraryType:
     Itinerary with pricing information.
 
     Attributes
-        air_itinerary: Specifies the origin and destination of the traveler.
-        air_itinerary_pricing_info: Pricing Information for an Air Itinerary.
-        notes: Provides for free form descriptive information for the priced
-            itinerary.
+        air_itinerary: Specifies the origin and destination of the
+            traveler.
+        air_itinerary_pricing_info: Pricing Information for an Air
+            Itinerary.
+        notes: Provides for free form descriptive information for the
+            priced itinerary.
         ticketing_info: Container for TicketingInfoRS_Type.
-        tpa_extensions: Additional elements and attributes to be included if
-            required, per Trading Partner Agreement (TPA).
-        is_from_custom_path: Indicates if itin come from custom carrier/routing
-            path.
+        tpa_extensions: Additional elements and attributes to be
+            included if required, per Trading Partner Agreement (TPA).
+        is_from_custom_path: Indicates if itin come from custom
+            carrier/routing path.
         sequence_number: Assigns a number to priced itineraries.
-        origin_destination_rph: When a PricedItinerary element contains flights
-            and pricing information for a single OriginDestinationPair from the
-            OTA_LowFareSearchRQ message, this RPH attribute identifies that
-            OriginDestinationPair from the RQ. When the PricedItinerary
-            contains flights and pricing information for all
-            OriginDestinationPairs from the OTA_LowFareSearchRQ message, this
-            attribute should not be included.
-        campaign_id: Program/campaign ID, which the downline clients need to
-            determine which marketing text to display.
+        origin_destination_rph: When a PricedItinerary element contains
+            flights and pricing information for a single
+            OriginDestinationPair from the OTA_LowFareSearchRQ message,
+            this RPH attribute identifies that OriginDestinationPair
+            from the RQ. When the PricedItinerary contains flights and
+            pricing information for all OriginDestinationPairs from the
+            OTA_LowFareSearchRQ message, this attribute should not be
+            included.
+        campaign_id: Program/campaign ID, which the downline clients
+            need to determine which marketing text to display.
         alternate_airport: Alternate airport itineraries indicator
-        multiple_tickets: Indicates that itinerary should be sold on multiple
-            separate tickets
+        multiple_tickets: Indicates that itinerary should be sold on
+            multiple separate tickets
     """
     air_itinerary: Optional[AirItineraryType] = field(
         default=None,
@@ -5444,16 +5495,18 @@ class PricedItineraryType:
             additional_fares:
             ops: Populated if an Ops rule has been hit.
             itin_source: The source of the itinerary
-            value_bucket: Additional information for Value Bucket sorting
-            validating_carrier: Issuing airline whose numeric airline code is
-                reflected in the electronic transaction for the flight/value
-                coupon(s).The Validating Carrier shall be the controlling and
-                authorising entity for Electronic Ticketing transactions..
+            value_bucket: Additional information for Value Bucket
+                sorting
+            validating_carrier: Issuing airline whose numeric airline
+                code is reflected in the electronic transaction for the
+                flight/value coupon(s).The Validating Carrier shall be
+                the controlling and authorising entity for Electronic
+                Ticketing transactions..
             unflown_price: Sum of
                 AirItineraryPricingInfo/TPA_Extensions/UnflownPrice
             diversity_swapper:
-            failed: Information on problems that occurred while processing this
-                itinerary.
+            failed: Information on problems that occurred while
+                processing this itinerary.
         """
         additional_fares: List["PricedItineraryType.TpaExtensions.AdditionalFares"] = field(
             default_factory=list,
@@ -5524,14 +5577,14 @@ class PricedItineraryType:
         class AdditionalFares:
             """
             Attributes
-                air_itinerary_pricing_info: Pricing Information for an Air
-                    Itinerary.
-                notes: Provides for free form descriptive information for the
-                    priced itinerary.
+                air_itinerary_pricing_info: Pricing Information for an
+                    Air Itinerary.
+                notes: Provides for free form descriptive information
+                    for the priced itinerary.
                 ticketing_info: Information about ticketing (including
                     eTicketNumber).
-                multiple_tickets: Indicates that itinerary should be sold on
-                    multiple separate tickets
+                multiple_tickets: Indicates that itinerary should be
+                    sold on multiple separate tickets
             """
             air_itinerary_pricing_info: Optional["PricedItineraryType.TpaExtensions.AdditionalFares.AirItineraryPricingInfo"] = field(
                 default=None,
@@ -5570,7 +5623,8 @@ class PricedItineraryType:
             class AirItineraryPricingInfo(AirItineraryPricingInfoType):
                 """
                 Attributes
-                    tickets: Pricing information for multiple separate tickets
+                    tickets: Pricing information for multiple separate
+                        tickets
                 """
                 tickets: Optional[TicketsPricingType] = field(
                     default=None,
@@ -5587,8 +5641,8 @@ class PricedItineraryType:
             Attributes
                 fare_types:
                 action_code: Corresponds to data in the Ops rule (action
-                    target: Ops Action). The numeric id corresponds to an
-                    action performed by Travelocity.
+                    target: Ops Action). The numeric id corresponds to
+                    an action performed by Travelocity.
             """
             fare_types: Optional["PricedItineraryType.TpaExtensions.Ops.FareTypes"] = field(
                 default=None,
@@ -5688,8 +5742,8 @@ class PricedItineraryType:
         class DiversitySwapper:
             """
             Attributes
-                weighed_price_amount: (Penalty * price / 10) -- by which itins
-                    are sorted in Diversity Swapper
+                weighed_price_amount: (Penalty * price / 10) -- by which
+                    itins are sorted in Diversity Swapper
             """
             weighed_price_amount: Optional[float] = field(
                 default=None,
@@ -5704,9 +5758,9 @@ class PricedItineraryType:
         class Failed:
             """
             Attributes
-                minimum_connect_time: Indicates that the itinerary does not
-                    fullfill the Minimum Connect Time requirement. It cannot be
-                    sold.
+                minimum_connect_time: Indicates that the itinerary does
+                    not fullfill the Minimum Connect Time requirement.
+                    It cannot be sold.
             """
             minimum_connect_time: Optional[bool] = field(
                 default=None,
@@ -5738,41 +5792,48 @@ class OtaAirLowFareSearchRs:
         departed_itineraries: Departed Itineraries
         sold_out_itineraries: Sold Out Itineraries
         available_itineraries: Available Itineraries
-        tpa_extensions: Additional elements and attributes to be included if
-            required, per Trading Partner Agreement (TPA).
-        echo_token: A sequence number for additional message identification,
-            assigned by the requesting host system. When a request message
-            includes an echo token the corresponding response message MUST
-            include an echo token with an identical value.
-        time_stamp: Indicates the creation date and time of the message in UTC
-            using the following format specified by ISO 8601; YYYY-MM-
-            DDThh:mm:ssZ with time values using the 24 hour clock (e.g. 20
-            November 2003, 1:59:38 pm UTC becomes 2003-11-20T13:59:38Z).
+        tpa_extensions: Additional elements and attributes to be
+            included if required, per Trading Partner Agreement (TPA).
+        echo_token: A sequence number for additional message
+            identification, assigned by the requesting host system. When
+            a request message includes an echo token the corresponding
+            response message MUST include an echo token with an
+            identical value.
+        time_stamp: Indicates the creation date and time of the message
+            in UTC using the following format specified by ISO 8601;
+            YYYY-MM-DDThh:mm:ssZ with time values using the 24 hour
+            clock (e.g. 20 November 2003, 1:59:38 pm UTC becomes
+            2003-11-20T13:59:38Z).
         target: Used to indicate whether the request is for the Test or
             Production system.
-        version: For all OTA versioned messages, the version of the message is
-            indicated by a decimal value.
-        transaction_identifier: A unique identifier to relate all messages
-            within a transaction (e.g. this would be sent in all request and
-            response messages that are part of an on-going transaction).
-        sequence_nmbr: Used to identify the sequence number of the transaction
-            as assigned by the sending system; allows for an application to
-            process messages in a certain order or to request a
-            resynchronization of messages in the event that a system has been
-            off-line and needs to retrieve messages that were missed.
-        transaction_status_code: This indicates where this message falls within
-            a sequence of messages.
-        primary_lang_id: Identifes the primary language preference for the form
-            of travel represented in a collection. The human language is
-            identified by ISO 639 codes.
+        version: For all OTA versioned messages, the version of the
+            message is indicated by a decimal value.
+        transaction_identifier: A unique identifier to relate all
+            messages within a transaction (e.g. this would be sent in
+            all request and response messages that are part of an on-
+            going transaction).
+        sequence_nmbr: Used to identify the sequence number of the
+            transaction as assigned by the sending system; allows for an
+            application to process messages in a certain order or to
+            request a resynchronization of messages in the event that a
+            system has been off-line and needs to retrieve messages that
+            were missed.
+        transaction_status_code: This indicates where this message falls
+            within a sequence of messages.
+        primary_lang_id: Identifes the primary language preference for
+            the form of travel represented in a collection. The human
+            language is identified by ISO 639 codes.
         alt_lang_id:
-        priced_itin_count: Itinerary count for Priced Round-Trip itineraries
+        priced_itin_count: Itinerary count for Priced Round-Trip
+            itineraries
         branded_one_way_itin_count: Itinerary count for Branded One-Way
             itineraries
         simple_one_way_itin_count: Itinerary count for Simple One-Way
             itineraries
-        departed_itin_count: Itinerary count for departed itineraries returned
-        sold_out_itin_count: Itinerary count for sold out itineraries returned
+        departed_itin_count: Itinerary count for departed itineraries
+            returned
+        sold_out_itin_count: Itinerary count for sold out itineraries
+            returned
         available_itin_count: Itinerary count for available itineraries
             returned
     """
@@ -5982,7 +6043,8 @@ class OtaAirLowFareSearchRs:
         class TpaExtensions:
             """
             Attributes
-                processing_message: Container for itinerary message type.
+                processing_message: Container for itinerary message
+                    type.
             """
             processing_message: List[ComplexProcessingMessageType] = field(
                 default_factory=list,
@@ -5996,8 +6058,8 @@ class OtaAirLowFareSearchRs:
     class OneWayItineraries:
         """
         Attributes
-            branded_one_way_itineraries: Container for priced itineraries
-                assigned to particular leg.
+            branded_one_way_itineraries: Container for priced
+                itineraries assigned to particular leg.
             simple_one_way_itineraries: Container for priced itineraries
                 assigned to particular leg.
         """
@@ -6054,7 +6116,8 @@ class OtaAirLowFareSearchRs:
             class TpaExtensions:
                 """
                 Attributes
-                    processing_message: Container for itinerary message type.
+                    processing_message: Container for itinerary message
+                        type.
                 """
                 processing_message: List[OneWayProcessingMessageType] = field(
                     default_factory=list,
@@ -6100,7 +6163,8 @@ class OtaAirLowFareSearchRs:
             class TpaExtensions:
                 """
                 Attributes
-                    processing_message: Container for itinerary message type.
+                    processing_message: Container for itinerary message
+                        type.
                 """
                 processing_message: List[OneWayProcessingMessageType] = field(
                     default_factory=list,
@@ -6115,8 +6179,8 @@ class OtaAirLowFareSearchRs:
         """
         Attributes
             priced_itineraries: Low Fare priced itineraries container.
-            one_way_itineraries: Successfull Low Fare priced itineraries in
-                response to a Simplified One Way request.
+            one_way_itineraries: Successfull Low Fare priced itineraries
+                in response to a Simplified One Way request.
         """
         priced_itineraries: Optional["OtaAirLowFareSearchRs.DepartedItineraries.PricedItineraries"] = field(
             default=None,
@@ -6138,8 +6202,9 @@ class OtaAirLowFareSearchRs:
             """
             Attributes
                 tpa_extensions:
-                priced_itinerary: Successfull Low Fare priced itineraries in
-                    response to a Low Fare Search request.
+                priced_itinerary: Successfull Low Fare priced
+                    itineraries in response to a Low Fare Search
+                    request.
             """
             tpa_extensions: Optional["OtaAirLowFareSearchRs.DepartedItineraries.PricedItineraries.TpaExtensions"] = field(
                 default=None,
@@ -6161,7 +6226,8 @@ class OtaAirLowFareSearchRs:
             class TpaExtensions:
                 """
                 Attributes
-                    processing_message: Container for itinerary message type.
+                    processing_message: Container for itinerary message
+                        type.
                 """
                 processing_message: List[ComplexProcessingMessageType] = field(
                     default_factory=list,
@@ -6175,10 +6241,10 @@ class OtaAirLowFareSearchRs:
         class OneWayItineraries:
             """
             Attributes
-                branded_one_way_itineraries: Container for priced itineraries
-                    assigned to particular leg.
-                simple_one_way_itineraries: Container for priced itineraries
-                    assigned to particular leg.
+                branded_one_way_itineraries: Container for priced
+                    itineraries assigned to particular leg.
+                simple_one_way_itineraries: Container for priced
+                    itineraries assigned to particular leg.
             """
             branded_one_way_itineraries: List["OtaAirLowFareSearchRs.DepartedItineraries.OneWayItineraries.BrandedOneWayItineraries"] = field(
                 default_factory=list,
@@ -6202,7 +6268,8 @@ class OtaAirLowFareSearchRs:
                 """
                 Attributes
                     tpa_extensions:
-                    priced_itinerary: Container for priced itinerary type.
+                    priced_itinerary: Container for priced itinerary
+                        type.
                     rph: Leg ID from request.
                 """
                 tpa_extensions: Optional["OtaAirLowFareSearchRs.DepartedItineraries.OneWayItineraries.BrandedOneWayItineraries.TpaExtensions"] = field(
@@ -6233,8 +6300,8 @@ class OtaAirLowFareSearchRs:
                 class TpaExtensions:
                     """
                     Attributes
-                        processing_message: Container for itinerary message
-                            type.
+                        processing_message: Container for itinerary
+                            message type.
                     """
                     processing_message: List[OneWayProcessingMessageType] = field(
                         default_factory=list,
@@ -6249,7 +6316,8 @@ class OtaAirLowFareSearchRs:
                 """
                 Attributes
                     tpa_extensions:
-                    priced_itinerary: Container for priced itinerary type.
+                    priced_itinerary: Container for priced itinerary
+                        type.
                     rph: Leg ID from request.
                 """
                 tpa_extensions: Optional["OtaAirLowFareSearchRs.DepartedItineraries.OneWayItineraries.SimpleOneWayItineraries.TpaExtensions"] = field(
@@ -6280,8 +6348,8 @@ class OtaAirLowFareSearchRs:
                 class TpaExtensions:
                     """
                     Attributes
-                        processing_message: Container for itinerary message
-                            type.
+                        processing_message: Container for itinerary
+                            message type.
                     """
                     processing_message: List[OneWayProcessingMessageType] = field(
                         default_factory=list,
@@ -6296,8 +6364,8 @@ class OtaAirLowFareSearchRs:
         """
         Attributes
             priced_itineraries: Low Fare priced itineraries container.
-            one_way_itineraries: Successfull Low Fare priced itineraries in
-                response to a Simplified One Way request.
+            one_way_itineraries: Successfull Low Fare priced itineraries
+                in response to a Simplified One Way request.
         """
         priced_itineraries: Optional["OtaAirLowFareSearchRs.SoldOutItineraries.PricedItineraries"] = field(
             default=None,
@@ -6319,8 +6387,9 @@ class OtaAirLowFareSearchRs:
             """
             Attributes
                 tpa_extensions:
-                priced_itinerary: Successfull Low Fare priced itineraries in
-                    response to a Low Fare Search request.
+                priced_itinerary: Successfull Low Fare priced
+                    itineraries in response to a Low Fare Search
+                    request.
             """
             tpa_extensions: Optional["OtaAirLowFareSearchRs.SoldOutItineraries.PricedItineraries.TpaExtensions"] = field(
                 default=None,
@@ -6342,7 +6411,8 @@ class OtaAirLowFareSearchRs:
             class TpaExtensions:
                 """
                 Attributes
-                    processing_message: Container for itinerary message type.
+                    processing_message: Container for itinerary message
+                        type.
                 """
                 processing_message: List[ComplexProcessingMessageType] = field(
                     default_factory=list,
@@ -6356,10 +6426,10 @@ class OtaAirLowFareSearchRs:
         class OneWayItineraries:
             """
             Attributes
-                branded_one_way_itineraries: Container for priced itineraries
-                    assigned to particular leg.
-                simple_one_way_itineraries: Container for priced itineraries
-                    assigned to particular leg.
+                branded_one_way_itineraries: Container for priced
+                    itineraries assigned to particular leg.
+                simple_one_way_itineraries: Container for priced
+                    itineraries assigned to particular leg.
             """
             branded_one_way_itineraries: List["OtaAirLowFareSearchRs.SoldOutItineraries.OneWayItineraries.BrandedOneWayItineraries"] = field(
                 default_factory=list,
@@ -6383,7 +6453,8 @@ class OtaAirLowFareSearchRs:
                 """
                 Attributes
                     tpa_extensions:
-                    priced_itinerary: Container for priced itinerary type.
+                    priced_itinerary: Container for priced itinerary
+                        type.
                     rph: Leg ID from request.
                 """
                 tpa_extensions: Optional["OtaAirLowFareSearchRs.SoldOutItineraries.OneWayItineraries.BrandedOneWayItineraries.TpaExtensions"] = field(
@@ -6414,8 +6485,8 @@ class OtaAirLowFareSearchRs:
                 class TpaExtensions:
                     """
                     Attributes
-                        processing_message: Container for itinerary message
-                            type.
+                        processing_message: Container for itinerary
+                            message type.
                     """
                     processing_message: List[OneWayProcessingMessageType] = field(
                         default_factory=list,
@@ -6430,7 +6501,8 @@ class OtaAirLowFareSearchRs:
                 """
                 Attributes
                     tpa_extensions:
-                    priced_itinerary: Container for priced itinerary type.
+                    priced_itinerary: Container for priced itinerary
+                        type.
                     rph: Leg ID from request.
                 """
                 tpa_extensions: Optional["OtaAirLowFareSearchRs.SoldOutItineraries.OneWayItineraries.SimpleOneWayItineraries.TpaExtensions"] = field(
@@ -6461,8 +6533,8 @@ class OtaAirLowFareSearchRs:
                 class TpaExtensions:
                     """
                     Attributes
-                        processing_message: Container for itinerary message
-                            type.
+                        processing_message: Container for itinerary
+                            message type.
                     """
                     processing_message: List[OneWayProcessingMessageType] = field(
                         default_factory=list,
@@ -6477,8 +6549,8 @@ class OtaAirLowFareSearchRs:
         """
         Attributes
             priced_itineraries: Low Fare priced itineraries container.
-            one_way_itineraries: Successfull Low Fare priced itineraries in
-                response to a Simplified One Way request.
+            one_way_itineraries: Successfull Low Fare priced itineraries
+                in response to a Simplified One Way request.
         """
         priced_itineraries: Optional["OtaAirLowFareSearchRs.AvailableItineraries.PricedItineraries"] = field(
             default=None,
@@ -6500,8 +6572,9 @@ class OtaAirLowFareSearchRs:
             """
             Attributes
                 tpa_extensions:
-                priced_itinerary: Successfull Low Fare priced itineraries in
-                    response to a Low Fare Search request.
+                priced_itinerary: Successfull Low Fare priced
+                    itineraries in response to a Low Fare Search
+                    request.
             """
             tpa_extensions: Optional["OtaAirLowFareSearchRs.AvailableItineraries.PricedItineraries.TpaExtensions"] = field(
                 default=None,
@@ -6523,7 +6596,8 @@ class OtaAirLowFareSearchRs:
             class TpaExtensions:
                 """
                 Attributes
-                    processing_message: Container for itinerary message type.
+                    processing_message: Container for itinerary message
+                        type.
                 """
                 processing_message: List[ComplexProcessingMessageType] = field(
                     default_factory=list,
@@ -6537,10 +6611,10 @@ class OtaAirLowFareSearchRs:
         class OneWayItineraries:
             """
             Attributes
-                branded_one_way_itineraries: Container for priced itineraries
-                    assigned to particular leg.
-                simple_one_way_itineraries: Container for priced itineraries
-                    assigned to particular leg.
+                branded_one_way_itineraries: Container for priced
+                    itineraries assigned to particular leg.
+                simple_one_way_itineraries: Container for priced
+                    itineraries assigned to particular leg.
             """
             branded_one_way_itineraries: List["OtaAirLowFareSearchRs.AvailableItineraries.OneWayItineraries.BrandedOneWayItineraries"] = field(
                 default_factory=list,
@@ -6564,7 +6638,8 @@ class OtaAirLowFareSearchRs:
                 """
                 Attributes
                     tpa_extensions:
-                    priced_itinerary: Container for priced itinerary type.
+                    priced_itinerary: Container for priced itinerary
+                        type.
                     rph: Leg ID from request.
                 """
                 tpa_extensions: Optional["OtaAirLowFareSearchRs.AvailableItineraries.OneWayItineraries.BrandedOneWayItineraries.TpaExtensions"] = field(
@@ -6595,8 +6670,8 @@ class OtaAirLowFareSearchRs:
                 class TpaExtensions:
                     """
                     Attributes
-                        processing_message: Container for itinerary message
-                            type.
+                        processing_message: Container for itinerary
+                            message type.
                     """
                     processing_message: List[OneWayProcessingMessageType] = field(
                         default_factory=list,
@@ -6611,7 +6686,8 @@ class OtaAirLowFareSearchRs:
                 """
                 Attributes
                     tpa_extensions:
-                    priced_itinerary: Container for priced itinerary type.
+                    priced_itinerary: Container for priced itinerary
+                        type.
                     rph: Leg ID from request.
                 """
                 tpa_extensions: Optional["OtaAirLowFareSearchRs.AvailableItineraries.OneWayItineraries.SimpleOneWayItineraries.TpaExtensions"] = field(
@@ -6642,8 +6718,8 @@ class OtaAirLowFareSearchRs:
                 class TpaExtensions:
                     """
                     Attributes
-                        processing_message: Container for itinerary message
-                            type.
+                        processing_message: Container for itinerary
+                            message type.
                     """
                     processing_message: List[OneWayProcessingMessageType] = field(
                         default_factory=list,
@@ -6694,8 +6770,8 @@ class OtaAirLowFareSearchRs:
         Attributes
             START: This is the first message within a transaction.
             END: This is the last message within a transaction.
-            ROLLBACK: This indicates that all messages within the current
-                transaction must be ignored.
+            ROLLBACK: This indicates that all messages within the
+                current transaction must be ignored.
             IN_SERIES: This is any message that is not the first or last
                 message within a transaction.
         """
