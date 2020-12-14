@@ -5848,7 +5848,7 @@ class OtaAirLowFareSearchRs:
             "type": "Element",
         }
     )
-    success: Optional[str] = field(
+    success: Optional[object] = field(
         default=None,
         metadata={
             "name": "Success",

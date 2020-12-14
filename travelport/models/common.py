@@ -12027,7 +12027,7 @@ class FileFinishingInfo:
             "max_occurs": 999,
         }
     )
-    custom_profile_information: Optional[str] = field(
+    custom_profile_information: Optional[object] = field(
         default=None,
         metadata={
             "name": "CustomProfileInformation",
