@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
+from xsdata.models.datatype import XmlDate, XmlDateTime
 from npo.models.vpro_media_2009 import (
     BroadcasterType,
     Group,
@@ -482,35 +483,35 @@ class PageType:
             "required": True,
         }
     )
-    creation_date: Optional[str] = field(
+    creation_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "creationDate",
             "type": "Attribute",
         }
     )
-    last_modified: Optional[str] = field(
+    last_modified: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "lastModified",
             "type": "Attribute",
         }
     )
-    last_published: Optional[str] = field(
+    last_published: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "lastPublished",
             "type": "Attribute",
         }
     )
-    publish_start: Optional[str] = field(
+    publish_start: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
         }
     )
-    publish_stop: Optional[str] = field(
+    publish_stop: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishStop",
@@ -524,7 +525,7 @@ class PageType:
             "type": "Attribute",
         }
     )
-    sort_date: Optional[str] = field(
+    sort_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "sortDate",

@@ -346,20 +346,22 @@ class SamlIssuerType:
 
 @dataclass
 class SamlSignatureKeyInfoType:
-    rsa_key_value_modulus: Optional[str] = field(
+    rsa_key_value_modulus: Optional[bytes] = field(
         default=None,
         metadata={
             "name": "rsaKeyValueModulus",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
+            "format": "base64",
         }
     )
-    rsa_key_value_exponent: Optional[str] = field(
+    rsa_key_value_exponent: Optional[bytes] = field(
         default=None,
         metadata={
             "name": "rsaKeyValueExponent",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
+            "format": "base64",
         }
     )
 
@@ -849,12 +851,13 @@ class SamlSignatureType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         }
     )
-    signature_value: Optional[str] = field(
+    signature_value: Optional[bytes] = field(
         default=None,
         metadata={
             "name": "signatureValue",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
+            "format": "base64",
         }
     )
 

@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
+from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
 from npo.models.vpro_shared_2009 import (
     Image,
     OwnerTypeEnum,
@@ -949,13 +950,13 @@ class PortalRestrictionType:
             "type": "Attribute",
         }
     )
-    start: Optional[str] = field(
+    start: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    stop: Optional[str] = field(
+    stop: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1274,13 +1275,13 @@ class GeoRestrictionType:
             "type": "Attribute",
         }
     )
-    start: Optional[str] = field(
+    start: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    stop: Optional[str] = field(
+    stop: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1445,14 +1446,14 @@ class PredictionType:
             "type": "Attribute",
         }
     )
-    publish_start: Optional[str] = field(
+    publish_start: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
         }
     )
-    publish_stop: Optional[str] = field(
+    publish_stop: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishStop",
@@ -1891,7 +1892,7 @@ class MemberRefType:
             "type": "Attribute",
         }
     )
-    added: Optional[str] = field(
+    added: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1948,14 +1949,14 @@ class LocationType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    offset: Optional[str] = field(
+    offset: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    duration: Optional[str] = field(
+    duration: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1987,35 +1988,35 @@ class LocationType:
             "type": "Attribute",
         }
     )
-    publish_start: Optional[str] = field(
+    publish_start: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
         }
     )
-    publish_stop: Optional[str] = field(
+    publish_stop: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishStop",
             "type": "Attribute",
         }
     )
-    publish_date: Optional[str] = field(
+    publish_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishDate",
             "type": "Attribute",
         }
     )
-    creation_date: Optional[str] = field(
+    creation_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "creationDate",
             "type": "Attribute",
         }
     )
-    last_modified: Optional[str] = field(
+    last_modified: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "lastModified",
@@ -2088,7 +2089,7 @@ class ScheduleEventType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    guide_day: Optional[str] = field(
+    guide_day: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "guideDay",
@@ -2097,7 +2098,7 @@ class ScheduleEventType:
             "required": True,
         }
     )
-    start: Optional[str] = field(
+    start: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2105,14 +2106,14 @@ class ScheduleEventType:
             "required": True,
         }
     )
-    offset: Optional[str] = field(
+    offset: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    duration: Optional[str] = field(
+    duration: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2162,7 +2163,7 @@ class ScheduleEventType:
             "type": "Attribute",
         }
     )
-    guide_day_attribute: Optional[str] = field(
+    guide_day_attribute: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "guideDay",
@@ -2273,7 +2274,7 @@ class ScheduleType:
             "type": "Attribute",
         }
     )
-    date: Optional[str] = field(
+    date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2286,13 +2287,13 @@ class ScheduleType:
             "type": "Attribute",
         }
     )
-    start: Optional[str] = field(
+    start: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    stop: Optional[str] = field(
+    stop: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2516,7 +2517,7 @@ class BaseMediaType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    duration: Optional[str] = field(
+    duration: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2644,7 +2645,7 @@ class BaseMediaType:
             "required": True,
         }
     )
-    sort_date: Optional[str] = field(
+    sort_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "sortDate",
@@ -2670,35 +2671,35 @@ class BaseMediaType:
             "type": "Attribute",
         }
     )
-    publish_start: Optional[str] = field(
+    publish_start: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
         }
     )
-    publish_stop: Optional[str] = field(
+    publish_stop: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishStop",
             "type": "Attribute",
         }
     )
-    publish_date: Optional[str] = field(
+    publish_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishDate",
             "type": "Attribute",
         }
     )
-    creation_date: Optional[str] = field(
+    creation_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "creationDate",
             "type": "Attribute",
         }
     )
-    last_modified: Optional[str] = field(
+    last_modified: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "lastModified",
@@ -2786,7 +2787,7 @@ class SegmentType(BaseMediaType):
             "namespace": "urn:vpro:media:2009",
         }
     )
-    start: Optional[str] = field(
+    start: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2987,7 +2988,7 @@ class MediaTableType:
             "type": "Attribute",
         }
     )
-    publication_time: Optional[str] = field(
+    publication_time: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publicationTime",

@@ -2648,11 +2648,12 @@ class ThumbnailExplicit:
             "type": "Attribute",
         }
     )
-    integrity_check: Optional[str] = field(
+    integrity_check: Optional[bytes] = field(
         default=None,
         metadata={
             "name": "integrityCheck",
             "type": "Attribute",
+            "format": "base64",
         }
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
@@ -2760,11 +2761,12 @@ class EdExplicit:
             "type": "Attribute",
         }
     )
-    integrity_check: Optional[str] = field(
+    integrity_check: Optional[bytes] = field(
         default=None,
         metadata={
             "name": "integrityCheck",
             "type": "Attribute",
+            "format": "base64",
         }
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
@@ -2912,11 +2914,12 @@ class ScExplicit:
             "type": "Attribute",
         }
     )
-    integrity_check: Optional[str] = field(
+    integrity_check: Optional[bytes] = field(
         default=None,
         metadata={
             "name": "integrityCheck",
             "type": "Attribute",
+            "format": "base64",
         }
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
@@ -3049,11 +3052,12 @@ class StExplicit:
             "type": "Attribute",
         }
     )
-    integrity_check: Optional[str] = field(
+    integrity_check: Optional[bytes] = field(
         default=None,
         metadata={
             "name": "integrityCheck",
             "type": "Attribute",
+            "format": "base64",
         }
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
@@ -3655,11 +3659,12 @@ class Thumbnail:
             "type": "Attribute",
         }
     )
-    integrity_check: Optional[str] = field(
+    integrity_check: Optional[bytes] = field(
         default=None,
         metadata={
             "name": "integrityCheck",
             "type": "Attribute",
+            "format": "base64",
         }
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
@@ -3749,11 +3754,12 @@ class Ed(Bin):
             "type": "Attribute",
         }
     )
-    integrity_check: Optional[str] = field(
+    integrity_check: Optional[bytes] = field(
         default=None,
         metadata={
             "name": "integrityCheck",
             "type": "Attribute",
+            "format": "base64",
         }
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
@@ -4319,11 +4325,12 @@ class St:
             "type": "Attribute",
         }
     )
-    integrity_check: Optional[str] = field(
+    integrity_check: Optional[bytes] = field(
         default=None,
         metadata={
             "name": "integrityCheck",
             "type": "Attribute",
+            "format": "base64",
         }
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(

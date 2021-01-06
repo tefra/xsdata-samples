@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
 from typing import List, Optional, Union
+from xsdata.models.datatype import XmlDate, XmlDuration
 from sabre.models.bargain_finder_max_common_types_v1_9_7 import (
     AdvResTicketingType,
     AirTripType,
@@ -364,21 +365,21 @@ class CustLoyaltyType:
             "type": "Attribute",
         }
     )
-    signup_date: Optional[str] = field(
+    signup_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "SignupDate",
             "type": "Attribute",
         }
     )
-    effective_date: Optional[str] = field(
+    effective_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
         }
     )
-    expire_date: Optional[str] = field(
+    expire_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "ExpireDate",
@@ -423,7 +424,7 @@ class DateRangeType:
         outbound_date: Outbound date
         date_range: Number of date range
     """
-    outbound_date: Optional[str] = field(
+    outbound_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "OutboundDate",
@@ -631,21 +632,21 @@ class DocumentType:
             "type": "Attribute",
         }
     )
-    birth_date: Optional[str] = field(
+    birth_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "BirthDate",
             "type": "Attribute",
         }
     )
-    effective_date: Optional[str] = field(
+    effective_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
         }
     )
-    expire_date: Optional[str] = field(
+    expire_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "ExpireDate",
@@ -4046,7 +4047,7 @@ class PriceRequestInformationType:
             "type": "Attribute",
         }
     )
-    purchase_date: Optional[str] = field(
+    purchase_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "PurchaseDate",
@@ -4978,7 +4979,7 @@ class TicketDistribPrefType:
             "type": "Attribute",
         }
     )
-    ticket_time: Optional[str] = field(
+    ticket_time: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "name": "TicketTime",
@@ -5263,8 +5264,8 @@ class AirSearchPrefsType:
         metadata={
             "name": "OnTimeRate",
             "type": "Attribute",
-            "min_inclusive": 0.01,
-            "max_inclusive": 100.00,
+            "min_inclusive": Decimal("0.01"),
+            "max_inclusive": Decimal("100.00"),
         }
     )
     eticket_desired: bool = field(
@@ -7448,7 +7449,7 @@ class AirTravelerType:
             "type": "Attribute",
         }
     )
-    birth_date: Optional[str] = field(
+    birth_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "BirthDate",

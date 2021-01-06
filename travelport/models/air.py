@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
 from typing import List, Optional
+from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration, XmlTime
 from travelport.models.common import (
     AccountCode,
     AddSvc,
@@ -366,28 +367,28 @@ class Advtype:
             "type": "Attribute",
         }
     )
-    earliest_rsvn_dt: Optional[str] = field(
+    earliest_rsvn_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "EarliestRsvnDt",
             "type": "Attribute",
         }
     )
-    earliest_tk_dt: Optional[str] = field(
+    earliest_tk_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "EarliestTkDt",
             "type": "Attribute",
         }
     )
-    latest_rsvn_dt: Optional[str] = field(
+    latest_rsvn_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "LatestRsvnDt",
             "type": "Attribute",
         }
     )
-    latest_tk_dt: Optional[str] = field(
+    latest_tk_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "LatestTkDt",
@@ -431,14 +432,14 @@ class ActionDetails:
             "type": "Attribute",
         }
     )
-    event_date: Optional[str] = field(
+    event_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "EventDate",
             "type": "Attribute",
         }
     )
-    event_time: Optional[str] = field(
+    event_time: Optional[XmlTime] = field(
         default=None,
         metadata={
             "name": "EventTime",
@@ -2132,14 +2133,14 @@ class FareRestrictionSaleDate:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    start_date: Optional[str] = field(
+    start_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "StartDate",
             "type": "Attribute",
         }
     )
-    end_date: Optional[str] = field(
+    end_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -2692,7 +2693,7 @@ class FlightInfoCriteria:
             "white_space": "collapse",
         }
     )
-    departure_date: Optional[str] = field(
+    departure_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "DepartureDate",
@@ -3737,7 +3738,7 @@ class Othtype:
             "type": "Attribute",
         }
     )
-    restrictive_dt: Optional[str] = field(
+    restrictive_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "RestrictiveDt",
@@ -3866,7 +3867,7 @@ class OptionalServiceModifier:
             "required": True,
         }
     )
-    travel_date: Optional[str] = field(
+    travel_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "TravelDate",
@@ -5289,7 +5290,7 @@ class SvcSegment:
             "white_space": "collapse",
         }
     )
-    start_date: Optional[str] = field(
+    start_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -5487,14 +5488,14 @@ class TicketValidity:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    not_valid_before: Optional[str] = field(
+    not_valid_before: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "NotValidBefore",
             "type": "Attribute",
         }
     )
-    not_valid_after: Optional[str] = field(
+    not_valid_after: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "NotValidAfter",
@@ -8182,7 +8183,7 @@ class AirSegmentDetails:
             "white_space": "collapse",
         }
     )
-    departure_time: Optional[str] = field(
+    departure_time: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "DepartureTime",
@@ -8190,7 +8191,7 @@ class AirSegmentDetails:
             "required": True,
         }
     )
-    arrival_time: Optional[str] = field(
+    arrival_time: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
@@ -9298,7 +9299,7 @@ class ConjunctedTicketInfo:
             "max_length": 8,
         }
     )
-    ticket_issue_date: Optional[str] = field(
+    ticket_issue_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "TicketIssueDate",
@@ -9510,14 +9511,14 @@ class Coupon:
             "required": True,
         }
     )
-    not_valid_before: Optional[str] = field(
+    not_valid_before: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "NotValidBefore",
             "type": "Attribute",
         }
     )
-    not_valid_after: Optional[str] = field(
+    not_valid_after: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "NotValidAfter",
@@ -9716,7 +9717,7 @@ class Emd:
             "white_space": "collapse",
         }
     )
-    date: Optional[str] = field(
+    date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "Date",
@@ -10195,7 +10196,7 @@ class FareGuaranteeInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    guarantee_date: Optional[str] = field(
+    guarantee_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "GuaranteeDate",
@@ -10521,14 +10522,14 @@ class FareRuleLookup:
             "max_length": 5,
         }
     )
-    departure_date: Optional[str] = field(
+    departure_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "DepartureDate",
             "type": "Attribute",
         }
     )
-    ticketing_date: Optional[str] = field(
+    ticketing_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "TicketingDate",
@@ -10774,14 +10775,14 @@ class GeneralTimeTable:
             "type": "Attribute",
         }
     )
-    start_time: Optional[str] = field(
+    start_time: Optional[XmlTime] = field(
         default=None,
         metadata={
             "name": "StartTime",
             "type": "Attribute",
         }
     )
-    end_time: Optional[str] = field(
+    end_time: Optional[XmlTime] = field(
         default=None,
         metadata={
             "name": "EndTime",
@@ -10946,7 +10947,7 @@ class Journey:
             "max_occurs": 999,
         }
     )
-    travel_time: Optional[str] = field(
+    travel_time: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "name": "TravelTime",
@@ -11327,7 +11328,7 @@ class OriginalItineraryDetails:
             "max_length": 15,
         }
     )
-    ticketing_date: Optional[str] = field(
+    ticketing_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "TicketingDate",
@@ -11683,14 +11684,14 @@ class PricingDetails:
             "length": 2,
         }
     )
-    for_ticketing_on_date: Optional[str] = field(
+    for_ticketing_on_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "ForTicketingOnDate",
             "type": "Attribute",
         }
     )
-    last_date_to_ticket: Optional[str] = field(
+    last_date_to_ticket: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "LastDateToTicket",
@@ -12550,7 +12551,7 @@ class Tcrinfo:
             "required": True,
         }
     )
-    date: Optional[str] = field(
+    date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "Date",
@@ -12776,7 +12777,7 @@ class TypeRestrictionLengthOfStay:
             "type": "Attribute",
         }
     )
-    stay_date: Optional[str] = field(
+    stay_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "StayDate",
@@ -13085,21 +13086,21 @@ class AirFareDisplayModifiers:
             "type": "Attribute",
         }
     )
-    departure_date: Optional[str] = field(
+    departure_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "DepartureDate",
             "type": "Attribute",
         }
     )
-    ticketing_date: Optional[str] = field(
+    ticketing_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "TicketingDate",
             "type": "Attribute",
         }
     )
-    return_date: Optional[str] = field(
+    return_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "ReturnDate",
@@ -15216,7 +15217,7 @@ class Emdsummary:
             "length": 2,
         }
     )
-    issue_date: Optional[str] = field(
+    issue_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -15329,7 +15330,7 @@ class ElectronicMiscDocument:
             "length": 2,
         }
     )
-    issue_date: Optional[str] = field(
+    issue_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -15489,7 +15490,7 @@ class ExpertSolution:
             "type": "Attribute",
         }
     )
-    created_date: Optional[str] = field(
+    created_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "CreatedDate",
@@ -15895,7 +15896,7 @@ class FareRulesFilter:
             "type": "Element",
         }
     )
-    latest_ticketing_time: Optional[str] = field(
+    latest_ticketing_time: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LatestTicketingTime",
@@ -16524,7 +16525,7 @@ class RepricingModifiers:
             "type": "Attribute",
         }
     )
-    create_date: Optional[str] = field(
+    create_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "CreateDate",
@@ -16949,7 +16950,7 @@ class TicketInfo:
             "max_length": 8,
         }
     )
-    ticket_issue_date: Optional[str] = field(
+    ticket_issue_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "TicketIssueDate",
@@ -18657,7 +18658,7 @@ class FlightInfo:
             "white_space": "collapse",
         }
     )
-    departure_date: Optional[str] = field(
+    departure_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "DepartureDate",
@@ -18768,14 +18769,14 @@ class FlightTimeDetail:
             "length": 3,
         }
     )
-    departure_time: Optional[str] = field(
+    departure_time: Optional[XmlTime] = field(
         default=None,
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
         }
     )
-    arrival_time: Optional[str] = field(
+    arrival_time: Optional[XmlTime] = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
@@ -18797,14 +18798,14 @@ class FlightTimeDetail:
             "length": 3,
         }
     )
-    schedule_start_date: Optional[str] = field(
+    schedule_start_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "ScheduleStartDate",
             "type": "Attribute",
         }
     )
-    schedule_end_date: Optional[str] = field(
+    schedule_end_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "ScheduleEndDate",
@@ -19023,7 +19024,7 @@ class Option:
             "required": True,
         }
     )
-    travel_time: Optional[str] = field(
+    travel_time: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "name": "TravelTime",
@@ -19364,7 +19365,7 @@ class OptionalService:
             "type": "Attribute",
         }
     )
-    create_date: Optional[str] = field(
+    create_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "CreateDate",
@@ -19770,14 +19771,14 @@ class PrePayAccount:
             "type": "Attribute",
         }
     )
-    effective_date: Optional[str] = field(
+    effective_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
         }
     )
-    expire_date: Optional[str] = field(
+    expire_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "ExpireDate",
@@ -21900,7 +21901,7 @@ class TypeBaseAirSegment(Segment):
             "max_length": 4,
         }
     )
-    booking_date: Optional[str] = field(
+    booking_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "BookingDate",
@@ -22854,14 +22855,14 @@ class FareInfo:
             "required": True,
         }
     )
-    travel_date: Optional[str] = field(
+    travel_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "TravelDate",
             "type": "Attribute",
         }
     )
-    departure_date: Optional[str] = field(
+    departure_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "DepartureDate",
@@ -22904,14 +22905,14 @@ class FareInfo:
             "type": "Attribute",
         }
     )
-    not_valid_before: Optional[str] = field(
+    not_valid_before: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "NotValidBefore",
             "type": "Attribute",
         }
     )
-    not_valid_after: Optional[str] = field(
+    not_valid_after: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "NotValidAfter",
@@ -24477,7 +24478,7 @@ class BaseAirPriceReq(BaseCoreReq):
             "max_length": 5,
         }
     )
-    ticket_date: Optional[str] = field(
+    ticket_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "TicketDate",
@@ -25016,7 +25017,7 @@ class AirPricingSolution:
             "type": "Attribute",
         }
     )
-    quote_date: Optional[str] = field(
+    quote_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "QuoteDate",

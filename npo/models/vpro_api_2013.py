@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
+from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
 from npo.models.vpro_media_2009 import (
     ChannelEnum,
     GeoRoleType,
@@ -34,14 +35,14 @@ class DateRangeFacetItemType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    begin: Optional[str] = field(
+    begin: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    end: Optional[str] = field(
+    end: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -73,14 +74,14 @@ class DurationRangeFacetItemType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    begin: Optional[str] = field(
+    begin: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    end: Optional[str] = field(
+    end: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -468,7 +469,7 @@ class RedirectList:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    last_update: Optional[str] = field(
+    last_update: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "lastUpdate",
@@ -735,14 +736,14 @@ class DateFacetResultItemType(RangeFacetResultItem):
     class Meta:
         name = "dateFacetResultItemType"
 
-    begin: Optional[str] = field(
+    begin: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    end: Optional[str] = field(
+    end: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -763,14 +764,14 @@ class DateRangeMatcherType(RangeMatcherType):
     class Meta:
         name = "dateRangeMatcherType"
 
-    begin: Optional[str] = field(
+    begin: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    end: Optional[str] = field(
+    end: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -784,14 +785,14 @@ class DurationFacetResultItemType(RangeFacetResultItem):
     class Meta:
         name = "durationFacetResultItemType"
 
-    begin: Optional[str] = field(
+    begin: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    end: Optional[str] = field(
+    end: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -805,14 +806,14 @@ class DurationRangeMatcherType(RangeMatcherType):
     class Meta:
         name = "durationRangeMatcherType"
 
-    begin: Optional[str] = field(
+    begin: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    end: Optional[str] = field(
+    end: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -959,14 +960,14 @@ class ScheduleEventSearchType(RangeMatcherType):
     class Meta:
         name = "scheduleEventSearchType"
 
-    begin: Optional[str] = field(
+    begin: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    end: Optional[str] = field(
+    end: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Element",

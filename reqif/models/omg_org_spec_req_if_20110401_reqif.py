@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
+from xsdata.models.datatype import XmlDate, XmlDateTime
 from reqif.models.w3_org_1999_xhtml import (
     XhtmlDivType,
     XhtmlPType,
@@ -73,7 +74,7 @@ class AttributeValueDate:
             "required": True,
         }
     )
-    the_value: Optional[str] = field(
+    the_value: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "THE-VALUE",
@@ -281,7 +282,7 @@ class ReqIfHeader:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    creation_time: Optional[str] = field(
+    creation_time: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "CREATION-TIME",
@@ -411,7 +412,7 @@ class AttributeDefinitionBoolean:
             "type": "Attribute",
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -513,7 +514,7 @@ class AttributeDefinitionDate:
             "type": "Attribute",
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -615,7 +616,7 @@ class AttributeDefinitionEnumeration:
             "type": "Attribute",
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -725,7 +726,7 @@ class AttributeDefinitionInteger:
             "type": "Attribute",
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -827,7 +828,7 @@ class AttributeDefinitionReal:
             "type": "Attribute",
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -929,7 +930,7 @@ class AttributeDefinitionString:
             "type": "Attribute",
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1007,7 +1008,7 @@ class DatatypeDefinitionBoolean:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1063,7 +1064,7 @@ class DatatypeDefinitionDate:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1119,7 +1120,7 @@ class DatatypeDefinitionInteger:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1199,7 +1200,7 @@ class DatatypeDefinitionReal:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1271,7 +1272,7 @@ class DatatypeDefinitionString:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1335,7 +1336,7 @@ class DatatypeDefinitionXhtml:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1400,7 +1401,7 @@ class EnumValue:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1502,7 +1503,7 @@ class RelationGroup:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1641,7 +1642,7 @@ class SpecHierarchy:
             "type": "Attribute",
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1858,7 +1859,7 @@ class DatatypeDefinitionEnumeration:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1949,7 +1950,7 @@ class AttributeDefinitionXhtml:
             "type": "Attribute",
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -2044,7 +2045,7 @@ class SpecObject:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -2205,7 +2206,7 @@ class SpecRelation:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -2378,7 +2379,7 @@ class Specification:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -2523,7 +2524,7 @@ class RelationGroupType:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -2646,7 +2647,7 @@ class SpecObjectType:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -2769,7 +2770,7 @@ class SpecRelationType:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -2892,7 +2893,7 @@ class SpecificationType:
             "required": True,
         }
     )
-    last_change: Optional[str] = field(
+    last_change: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",

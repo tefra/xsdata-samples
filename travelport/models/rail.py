@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
+from xsdata.models.datatype import XmlDate, XmlDateTime
 from travelport.models.common import (
     BaseReservation,
     BookingTravelerRef,
@@ -44,14 +45,14 @@ class FareValidity:
             "required": True,
         }
     )
-    not_valid_before: Optional[str] = field(
+    not_valid_before: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "NotValidBefore",
             "type": "Attribute",
         }
     )
-    not_valid_after: Optional[str] = field(
+    not_valid_after: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "NotValidAfter",
@@ -1370,7 +1371,7 @@ class RailTicketInfo:
             "max_length": 255,
         }
     )
-    issued_date: Optional[str] = field(
+    issued_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "IssuedDate",
