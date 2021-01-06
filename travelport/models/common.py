@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
 from typing import List, Optional
+from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration, XmlPeriod
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v48_0"
 
@@ -152,7 +153,7 @@ class AddSvc:
             "white_space": "collapse",
         }
     )
-    start_date: Optional[str] = field(
+    start_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -296,7 +297,7 @@ class AgentAction:
             "type": "Attribute",
         }
     )
-    event_time: Optional[str] = field(
+    event_time: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "EventTime",
@@ -788,14 +789,14 @@ class Certificate:
             "type": "Attribute",
         }
     )
-    not_valid_before: Optional[str] = field(
+    not_valid_before: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "NotValidBefore",
             "type": "Attribute",
         }
     )
-    not_valid_after: Optional[str] = field(
+    not_valid_after: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "NotValidAfter",
@@ -1289,13 +1290,13 @@ class EnettVan:
             "max_inclusive": 100,
         }
     )
-    expiry_days: Optional[str] = field(
+    expiry_days: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "name": "ExpiryDays",
             "type": "Attribute",
-            "min_inclusive": "P1D",
-            "max_inclusive": "P366D",
+            "min_inclusive": XmlDuration("P1D"),
+            "max_inclusive": XmlDuration("P366D"),
         }
     )
     multi_use: bool = field(
@@ -1763,7 +1764,7 @@ class MiscFormOfPayment:
             "max_length": 128,
         }
     )
-    exp_date: Optional[str] = field(
+    exp_date: Optional[XmlPeriod] = field(
         default=None,
         metadata={
             "name": "ExpDate",
@@ -2136,7 +2137,7 @@ class PaymentAdvice:
             "max_length": 22,
         }
     )
-    issue_date: Optional[str] = field(
+    issue_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -3519,7 +3520,7 @@ class TypeDateRange:
     class Meta:
         name = "typeDateRange"
 
-    start_date: Optional[str] = field(
+    start_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -3527,7 +3528,7 @@ class TypeDateRange:
             "required": True,
         }
     )
-    end_date: Optional[str] = field(
+    end_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -6312,7 +6313,7 @@ class GeneralRemark:
             "type": "Attribute",
         }
     )
-    create_date: Optional[str] = field(
+    create_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "CreateDate",
@@ -7588,7 +7589,7 @@ class ReviewBooking:
             "max_length": 2,
         }
     )
-    date_time: Optional[str] = field(
+    date_time: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "DateTime",
@@ -7865,7 +7866,7 @@ class SearchTicketing:
             "type": "Attribute",
         }
     )
-    ticket_date: Optional[str] = field(
+    ticket_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "TicketDate",
@@ -8170,7 +8171,7 @@ class SupplierLocator:
             "type": "Attribute",
         }
     )
-    create_date_time: Optional[str] = field(
+    create_date_time: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "CreateDateTime",
@@ -10143,7 +10144,7 @@ class InvoiceData:
             "required": True,
         }
     )
-    issue_date: Optional[str] = field(
+    issue_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -11021,7 +11022,7 @@ class TravelerInformation:
             "length": 3,
         }
     )
-    visa_expiration_date: Optional[str] = field(
+    visa_expiration_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "VisaExpirationDate",
@@ -11259,7 +11260,7 @@ class TypePaymentCard:
             "max_length": 128,
         }
     )
-    exp_date: Optional[str] = field(
+    exp_date: Optional[XmlPeriod] = field(
         default=None,
         metadata={
             "name": "ExpDate",
@@ -11737,7 +11738,7 @@ class BookingTraveler:
             "type": "Attribute",
         }
     )
-    dob: Optional[str] = field(
+    dob: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "DOB",
@@ -11825,7 +11826,7 @@ class BookingTravelerInfo:
             "type": "Element",
         }
     )
-    dob: Optional[str] = field(
+    dob: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "DOB",
@@ -12677,7 +12678,7 @@ class TypePassengerType:
             "type": "Attribute",
         }
     )
-    dob: Optional[str] = field(
+    dob: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "DOB",
@@ -13814,7 +13815,7 @@ class Mco(Mcoinformation):
             "required": True,
         }
     )
-    mcoissue_date: Optional[str] = field(
+    mcoissue_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "MCOIssueDate",
@@ -13890,7 +13891,7 @@ class Mco(Mcoinformation):
             "max_length": 10,
         }
     )
-    expiry_date: Optional[str] = field(
+    expiry_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "ExpiryDate",

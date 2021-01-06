@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
+from xsdata.models.datatype import XmlDate, XmlDateTime
 from reqif.models.w3_org_xml_1998_namespace import (
     XhtmlInlPresTypeValue,
     XhtmlATypeValue,
@@ -9096,7 +9097,7 @@ class XhtmlEditType:
             "type": "Attribute",
         }
     )
-    datetime: Optional[str] = field(
+    datetime: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -1,7 +1,8 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
-from typing import List, Optional
+from typing import List, Optional, Union
+from xsdata.models.datatype import XmlDate, XmlTime
 
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
@@ -292,8 +293,8 @@ class VoluntaryChangesType:
             metadata={
                 "name": "Percent",
                 "type": "Attribute",
-                "min_inclusive": 0.01,
-                "max_inclusive": 100.00,
+                "min_inclusive": Decimal("0.01"),
+                "max_inclusive": Decimal("100.00"),
             }
         )
 
@@ -359,7 +360,7 @@ class AdvResTicketingType:
             latest_unit: The unit of elapsed time or the day of the week
                 to be applied to the LatestPeriod value.
         """
-        latest_time_of_day: Optional[str] = field(
+        latest_time_of_day: Optional[Union[str, XmlTime]] = field(
             default=None,
             metadata={
                 "name": "LatestTimeOfDay",
@@ -405,7 +406,7 @@ class AdvResTicketingType:
                 week to be applied to the the period before departure
                 that a ticket must be purchased.
         """
-        from_res_time_of_day: Optional[str] = field(
+        from_res_time_of_day: Optional[Union[str, XmlTime]] = field(
             default=None,
             metadata={
                 "name": "FromResTimeOfDay",
@@ -427,7 +428,7 @@ class AdvResTicketingType:
                 "type": "Attribute",
             }
         )
-        from_depart_time_of_day: Optional[str] = field(
+        from_depart_time_of_day: Optional[Union[str, XmlTime]] = field(
             default=None,
             metadata={
                 "name": "FromDepartTimeOfDay",
@@ -540,7 +541,7 @@ class PassengerTypeQuantityType(TravelerCountType):
 
         @dataclass
         class BirthDate:
-            date: Optional[str] = field(
+            date: Optional[XmlDate] = field(
                 default=None,
                 metadata={
                     "name": "Date",
@@ -749,7 +750,7 @@ class StayRestrictionsType:
             min_stay_date: The specific date for the minimum stay
                 requirement.
         """
-        return_time_of_day: Optional[str] = field(
+        return_time_of_day: Optional[Union[str, XmlTime]] = field(
             default=None,
             metadata={
                 "name": "ReturnTimeOfDay",
@@ -772,7 +773,7 @@ class StayRestrictionsType:
                 "type": "Attribute",
             }
         )
-        min_stay_date: Optional[str] = field(
+        min_stay_date: Optional[Union[str, XmlTime]] = field(
             default=None,
             metadata={
                 "name": "MinStayDate",
@@ -803,7 +804,7 @@ class StayRestrictionsType:
                 "type": "Attribute",
             }
         )
-        return_time_of_day: Optional[str] = field(
+        return_time_of_day: Optional[Union[str, XmlTime]] = field(
             default=None,
             metadata={
                 "name": "ReturnTimeOfDay",
@@ -826,7 +827,7 @@ class StayRestrictionsType:
                 "type": "Attribute",
             }
         )
-        max_stay_date: Optional[str] = field(
+        max_stay_date: Optional[Union[str, XmlTime]] = field(
             default=None,
             metadata={
                 "name": "MaxStayDate",

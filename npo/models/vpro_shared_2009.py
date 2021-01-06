@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional
+from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
 
 __NAMESPACE__ = "urn:vpro:shared:2009"
 
@@ -154,7 +155,7 @@ class ImageType:
             "namespace": "urn:vpro:shared:2009",
         }
     )
-    offset: Optional[str] = field(
+    offset: Optional[XmlDuration] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -236,35 +237,35 @@ class ImageType:
             "type": "Attribute",
         }
     )
-    publish_start: Optional[str] = field(
+    publish_start: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
         }
     )
-    publish_stop: Optional[str] = field(
+    publish_stop: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishStop",
             "type": "Attribute",
         }
     )
-    publish_date: Optional[str] = field(
+    publish_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishDate",
             "type": "Attribute",
         }
     )
-    creation_date: Optional[str] = field(
+    creation_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "creationDate",
             "type": "Attribute",
         }
     )
-    last_modified: Optional[str] = field(
+    last_modified: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "lastModified",
@@ -290,35 +291,35 @@ class PublishableObjectType:
             "type": "Attribute",
         }
     )
-    publish_start: Optional[str] = field(
+    publish_start: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
         }
     )
-    publish_stop: Optional[str] = field(
+    publish_stop: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishStop",
             "type": "Attribute",
         }
     )
-    publish_date: Optional[str] = field(
+    publish_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "publishDate",
             "type": "Attribute",
         }
     )
-    creation_date: Optional[str] = field(
+    creation_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "creationDate",
             "type": "Attribute",
         }
     )
-    last_modified: Optional[str] = field(
+    last_modified: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "lastModified",

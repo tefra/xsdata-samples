@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
 from typing import List, Optional, Union
+from xsdata.models.datatype import XmlDate, XmlTime
 from sabre.models.bargain_finder_max_common_types_v1_9_7 import (
     AdvResTicketingType,
     AirTripType,
@@ -1383,7 +1384,7 @@ class ComplexProcessingMessageType(ProcessingMessageType):
         Attributes
             departure_date: Departure date
         """
-        departure_date: Optional[str] = field(
+        departure_date: Optional[XmlDate] = field(
             default=None,
             metadata={
                 "name": "DepartureDate",
@@ -1563,7 +1564,7 @@ class OneWayProcessingMessageType(ProcessingMessageType):
         departure_airport: Location identifying code.
         arrival_airport: Location identifying code.
     """
-    departure_date: Optional[str] = field(
+    departure_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "DepartureDate",
@@ -3675,14 +3676,14 @@ class PtcfareBreakdownType:
             "length": 1,
         }
     )
-    last_ticket_date: Optional[str] = field(
+    last_ticket_date: Optional[Union[str, XmlTime]] = field(
         default=None,
         metadata={
             "name": "LastTicketDate",
             "type": "Attribute",
         }
     )
-    previous_exchange_date: Optional[str] = field(
+    previous_exchange_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "PreviousExchangeDate",
@@ -4338,7 +4339,7 @@ class AirItineraryPricingInfoType:
             "type": "Attribute",
         }
     )
-    last_ticket_date: Optional[str] = field(
+    last_ticket_date: Optional[Union[str, XmlTime]] = field(
         default=None,
         metadata={
             "name": "LastTicketDate",
@@ -4367,7 +4368,7 @@ class AirItineraryPricingInfoType:
             "type": "Attribute",
         }
     )
-    previous_exchange_date: Optional[str] = field(
+    previous_exchange_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "PreviousExchangeDate",
@@ -4381,14 +4382,14 @@ class AirItineraryPricingInfoType:
             "type": "Attribute",
         }
     )
-    advanced_purchase_date: Optional[str] = field(
+    advanced_purchase_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "AdvancedPurchaseDate",
             "type": "Attribute",
         }
     )
-    purchase_by_date: Optional[str] = field(
+    purchase_by_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "PurchaseByDate",
@@ -5148,7 +5149,7 @@ class AirItineraryType:
             "type": "Attribute",
         }
     )
-    departure_date: Optional[str] = field(
+    departure_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "DepartureDate",

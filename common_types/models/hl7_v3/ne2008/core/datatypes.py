@@ -686,8 +686,8 @@ class UvpTs(Ts):
         default=None,
         metadata={
             "type": "Attribute",
-            "min_inclusive": 0.0,
-            "max_inclusive": 1.0,
+            "min_inclusive": Decimal("0.0"),
+            "max_inclusive": Decimal("1.0"),
         }
     )
 
