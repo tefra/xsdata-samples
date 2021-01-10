@@ -21,6 +21,7 @@ jobs:
           - { name: "Common Types", id: "common_types", xsdata: true, mypy: true }
           - { name: "Requirements Interchange Format", id: "reqif", mypy: true, pytest: true, xsdata: true }
           - { name: "NPO API", id: "npo", mypy: true, pytest: true, xsdata: true }
+          - { name: "DateX II", id: "datexii", mypy: true, pytest: true, xsdata: true }
 
     steps:
       - uses: actions/checkout@v2
