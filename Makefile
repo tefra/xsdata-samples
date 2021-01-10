@@ -1,61 +1,61 @@
-all: build test mypy
+build-amadeus: schema = amadeus/schemas
+build-sabre: schema = sabre/schemas
+build-travelport: schema = travelport/schemas/air_v48_0/Air.wsdl
+build-common_types: schema = common_types/Common-Types/src/main/resources/schemas/nhinc/hl7
+build-reqif: schema = reqif/schemas/reqif.xsd
+build-npo: schema = npo/schemas/rs.poms.omroep.nl/v1/schema/urn:vpro:api:2013
+build-datexii: schema = datexii/schemas
 
-build: build-amadeus build-sabre build-travelport build-common build-reqif build-npo
+builds = $\
+	build-amadeus $\
+	build-sabre $\
+	build-travelport $\
+	build-common_types $\
+	build-reqif $\
+	build-npo $\
+	build-datexii
 
-test: test-amadeus test-sabre test-travelport test-bnm test-reqif test-npo
+tests = $\
+	test-amadeus $\
+	test-sabre $\
+	test-travelport $\
+	test-reqif $\
+	test-npo $\
+	test-datexii $\
+	test-bnm
 
-mypy: mypy-common mypy-reqif mypy-npo
+mypies = $\
+	mypy-amadeus $\
+	mypy-sabre $\
+	mypy-travelport $\
+	mypy-common_types $\
+	mypy-reqif $\
+	mypy-npo $\
+	mypy-datexii
 
-build-amadeus:
-	rm -rf amadeus/models
-	xsdata amadeus/schemas --config amadeus/.xsdata.xml
+all: $(builds) $(tests) $(mypies)
 
-test-amadeus:
-	pytest amadeus
+amadeus: build-amadeus test-amadeus mypy-amadeus
+sabre: build-sabre test-sabre mypy-sabre
+travelport: build-travelport test-travelport mypy-travelport
+common_types: build-common_types test-common_types mypy-common_types
+reqif: build-reqif test-reqif mypy-reqif
+npo: build-npo test-npo mypy-npo
+datexii: build-datexii test-datexii mypy-datexii
 
-build-sabre:
-	rm -rf sabre/models
-	xsdata sabre/schemas --config sabre/.xsdata.xml
+build: $(builds)
+test: $(tests)
+mypy: $(mypies)
 
-test-sabre:
-	pytest sabre
+build-%:
+	@echo "**** Generating models: $* ****"
+	@rm -rf $*/models
+	@xsdata $(schema) --config $*/.xsdata.xml
 
-build-travelport:
-	rm -rf travelport/models
-	xsdata travelport/schemas/air_v48_0/Air.wsdl --config travelport/.xsdata.xml
+test-%:
+	@echo "**** Running tests: $* ****"
+	pytest $*/
 
-test-travelport:
-	pytest travelport
-
-mypy-travelport:
-	mypy travelport/models
-
-test-bnm:
-	pytest bnm
-
-build-common:
-	rm -rf common_types/models
-	xsdata common_types/Common-Types/src/main/resources/schemas/nhinc/hl7 --config common_types/.xsdata.xml
-
-mypy-common:
-	mypy common_types
-
-build-reqif:
-	rm -rf reqif/models
-	xsdata reqif/schemas/reqif.xsd --package reqif.models --ns-struct
-
-test-reqif:
-	pytest reqif
-
-mypy-reqif:
-	mypy reqif/models
-
-build-npo:
-	rm -rf npo/models
-	xsdata npo/schemas/rs.poms.omroep.nl/v1/schema/urn:vpro:api:2013 --config npo/.xsdata.xml
-
-test-npo:
-	pytest npo
-
-mypy-npo:
-	mypy npo/models
+mypy-%:
+	@echo "**** Running static analysis: $* ****"
+	mypy $*/models
