@@ -1,0 +1,1290 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:roa="http://datex2.eu/schema/3/roadTrafficData" version="3.1" targetNamespace="http://datex2.eu/schema/3/roadTrafficData" xmlns:com="http://datex2.eu/schema/3/common" xmlns:loc="http://datex2.eu/schema/3/locationReferencing" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://datex2.eu/schema/3/locationReferencing" schemaLocation="DATEXII_3_LocationReferencing.xsd" />
+  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd" />
+  <xs:complexType name="_MeasuredOrDerivedDataTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="roa:MeasuredOrDerivedDataTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_MeasurementSiteIndexMeasurementSpecificCharacteristics">
+    <xs:sequence>
+      <xs:element name="measurementSpecificCharacteristics" type="roa:MeasurementSpecificCharacteristics" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="index" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="_MeasurementSiteTableVersionedReference">
+    <xs:complexContent>
+      <xs:extension base="com:VersionedReference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="roa:MeasurementSiteTable" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="_MeasurementSiteVersionedReference">
+    <xs:complexContent>
+      <xs:extension base="com:VersionedReference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="roa:MeasurementSite" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="_PhysicalQuantityFaultEnum">
+    <xs:simpleContent>
+      <xs:extension base="roa:PhysicalQuantityFaultEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_PredefinedLocationGroupVersionedReference">
+    <xs:complexContent>
+      <xs:extension base="com:VersionedReference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="loc:PredefinedLocationGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="_SiteMeasurementsIndexPhysicalQuantity">
+    <xs:sequence>
+      <xs:element name="physicalQuantity" type="roa:PhysicalQuantity" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="index" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="_TimeMeaningEnum">
+    <xs:simpleContent>
+      <xs:extension base="roa:TimeMeaningEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_TrafficStatusEnum">
+    <xs:simpleContent>
+      <xs:extension base="roa:TrafficStatusEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_TravelTimeTrendTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="roa:TravelTimeTrendTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_TravelTimeTypeEnum">
+    <xs:simpleContent>
+      <xs:extension base="roa:TravelTimeTypeEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="AxleCharacteristics">
+    <xs:annotation>
+      <xs:documentation>Characteristics of vehicle axles</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="maximumWeight" type="com:Tonnes" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Maximum axle weight</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="minimumWeight" type="com:Tonnes" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Minimum axle weight</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="_axleCharacteristicsExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AxleFlowValue">
+    <xs:annotation>
+      <xs:documentation>A measured or calculated value of the flow rate of vehicle axles.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="com:DataValue">
+        <xs:sequence>
+          <xs:element name="axleFlowRate" type="com:AxlesPerHour" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>A value of the flow rate of vehicle axles expressed in axles per hour.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_axleFlowValueExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="BasicData" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Data that are either measured or calculated at the same time or over the same time period.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="measurementOrCalculationTime" type="roa:MeasurementOrCalculationTime" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Characteristics of the measurement or calculation time which should be considered to override any specified defaults</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="_basicDataExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DailyTrafficFlowValue">
+    <xs:annotation>
+      <xs:documentation>A measured or calculated value of daily traffic flow</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="com:DataValue">
+        <xs:sequence>
+          <xs:element name="vehicleFlowRate" type="roa:VehiclesPerDay" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Value of daily vehicle flow in units of vehicles per day</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_dailyTrafficFlowValueExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DateTimeValue">
+    <xs:annotation>
+      <xs:documentation>A measured or calculated value of an instant in time.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="com:DataValue">
+        <xs:sequence>
+          <xs:element name="dateTime" type="com:DateTime" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>A time stamp defining an instant in time.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_dateTimeValueExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="DensityVehiclesPerKilometre">
+    <xs:annotation>
+      <xs:documentation>A measure of traffic density defined in number of vehicles per kilometre of road.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="com:NonNegativeInteger" />
+  </xs:simpleType>
+  <xs:complexType name="DurationValue">
+    <xs:annotation>
+      <xs:documentation>A measured or calculated value of a period of time.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="com:DataValue">
+        <xs:sequence>
+          <xs:element name="duration" type="com:Seconds" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>A period of time expressed in seconds.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_durationValueExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ElaboratedDataPublication">
+    <xs:annotation>
+      <xs:documentation>A publication containing one or more elaborated data sets.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="com:PayloadPublication">
+        <xs:sequence>
+          <xs:element name="forecastDefault" type="com:Boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The default value for the publication of whether the elaborated data is a forecast (true = forecast).</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="periodDefault" type="com:Seconds" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The default value for the publication of the time elapsed between the beginning and the end of the sampling or measurement period. This item may differ from the unit attribute; e.g. an hourly flow can be estimated from a 5-minute measurement period.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="timeDefault" type="com:DateTime" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The default for the publication of the time at which the values have been computed/derived.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="headerInformation" type="com:HeaderInformation" />
+          <xs:element name="referenceSettings" type="roa:ReferenceSettings" minOccurs="0" />
+          <xs:element name="physicalQuantity" type="roa:PhysicalQuantity" maxOccurs="unbounded" />
+          <xs:element name="informationManager" type="com:InternationalIdentifier" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>Organisation that manages the information content (is responsible for updates of this information) typically the organisation that first made the DATEX II publication of this content.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_elaboratedDataPublicationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="HumidityInformation">
+    <xs:annotation>
+      <xs:documentation>Measurements of atmospheric humidity.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:WeatherData">
+        <xs:sequence>
+          <xs:element name="humidity" type="com:Humidity" />
+          <xs:element name="_humidityInformationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="IndividualVehicleDataValues">
+    <xs:annotation>
+      <xs:documentation>Measured or calculated data values relating to individual vehicles derived from detectors at the specified measurement site.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:TrafficData">
+        <xs:sequence>
+          <xs:element name="arrivalTime" type="com:DateTime" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The time of the arrival of an individual vehicle in a detection zone.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="distanceGap" type="com:MetresAsFloat" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The measured distance between the front of this vehicle and the rear of the preceding one, in metres at the specified measurement site.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="distanceHeadway" type="com:MetresAsFloat" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The measured distance between one end (normally the front) of this vehicle and the same end of the preceding vehicle at the specified measurement site.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="exitTime" type="com:DateTime" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The time when an individual vehicle leaves a detection zone.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="passageDuration" type="com:Seconds" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The time elapsed between an individual vehicle entering a detection zone and exiting the same detection zone as detected by entry and exit sensors.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="presenceDuration" type="com:Seconds" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The period of time during which a vehicle activates a presence sensor.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="speed" type="com:KilometresPerHour" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The measured speed of the individual vehicle at the specified measurement site.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="timeGap" type="com:Seconds" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The time interval between the arrival of this vehicle's front at a point on the roadway, and that of the departure of the rear of the preceding one.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="timeHeadway" type="com:Seconds" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The measured time interval between this vehicle's arrival at (or departure from) a point on the roadway, and the equivalent event for the preceding vehicle.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="individualVehicle" type="com:Vehicle" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>Properties of the individual vehicle to which the measurement values relate</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_individualVehicleDataValuesExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="MeasuredDataPublication">
+    <xs:annotation>
+      <xs:documentation>A publication containing one or more measurement data sets, each set being measured at a single measurement site.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="com:PayloadPublication">
+        <xs:sequence>
+          <xs:element name="measurementSiteTableReference" type="roa:_MeasurementSiteTableVersionedReference" minOccurs="1" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>A reference to a versioned Measurement Site table.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="headerInformation" type="com:HeaderInformation" />
+          <xs:element name="siteMeasurements" type="roa:SiteMeasurements" maxOccurs="unbounded" />
+          <xs:element name="_measuredDataPublicationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="MeasuredOrDerivedDataTypeEnum">
+    <xs:annotation>
+      <xs:documentation>Types of measured or derived data.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="humidityInformation">
+        <xs:annotation>
+          <xs:documentation>Measured or derived humidity information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="individualVehicleMeasurements">
+        <xs:annotation>
+          <xs:documentation>Measured or derived individual vehicle measurements.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="pollutionInformation">
+        <xs:annotation>
+          <xs:documentation>Measured or derived pollution information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="precipitationInformation">
+        <xs:annotation>
+          <xs:documentation>Measured or derived precipitation information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="pressureInformation">
+        <xs:annotation>
+          <xs:documentation>Measured or derived pressure information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="roadSurfaceConditionInformation">
+        <xs:annotation>
+          <xs:documentation>Measured or derived road surface conditions information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="temperatureInformation">
+        <xs:annotation>
+          <xs:documentation>Measured or derived temperature information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="trafficConcentration">
+        <xs:annotation>
+          <xs:documentation>Measured or derived traffic concentration information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="trafficFlow">
+        <xs:annotation>
+          <xs:documentation>Measured or derived traffic flow information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="trafficGap">
+        <xs:annotation>
+          <xs:documentation>Measured or derived traffic gap information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="trafficHeadway">
+        <xs:annotation>
+          <xs:documentation>Measured or derived traffic headway information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="trafficSpeed">
+        <xs:annotation>
+          <xs:documentation>Measured or derived traffic speed information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="trafficStatusInformation">
+        <xs:annotation>
+          <xs:documentation>Measured or derived traffic status information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="travelTimeInformation">
+        <xs:annotation>
+          <xs:documentation>Measured or derived travel time information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="visibilityInformation">
+        <xs:annotation>
+          <xs:documentation>Measured or derived visibility information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="windInformation">
+        <xs:annotation>
+          <xs:documentation>Measured or derived wind information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MeasurementOrCalculationTime">
+    <xs:annotation>
+      <xs:documentation>Describes the time at which a measured or calculated value or set of values was measured or calculated. It may be a future time at which a data value is predicted to apply.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="timeMeaning" type="roa:_TimeMeaningEnum" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Meaning of associated time value</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="timeValue" type="com:DateTime" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Point in time at which this specific value or set of values has been measured or calculated. It may also be a future time at which a data value is predicted.  It may be the time of the beginning, the end or the middle of a measurement period.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="period" type="com:Period" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>The measurement or calculation period</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="_measurementOrCalculationTimeExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="timePrecision" type="com:TimePrecisionEnum" use="optional">
+      <xs:annotation>
+        <xs:documentation>The precision to which the time of measurement or calculation is given.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="MeasurementSite">
+    <xs:annotation>
+      <xs:documentation>An identifiable single measurement site entry/record in the measurement site table.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="measurementSiteRecordVersionTime" type="com:DateTime" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>The date/time that this version of the measurement site record was defined. The identity and version of the measurement site record are defined by the class stereotype implementation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="measurementEquipmentReference" type="com:String" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>The reference given to the measurement equipment at the site.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="measurementEquipmentTypeUsed" type="com:MultilingualString" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>The type of equipment used to gather the raw information from which the data values are determined, e.g. 'loop', 'ANPR' (automatic number plate recognition) or 'urban traffic management system' (such as SCOOT).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="measurementSiteName" type="com:MultilingualString" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Name of a measurement site.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="measurementSiteNumberOfLanes" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>The number of lanes over which the measured value is determined.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="measurementSiteIdentification" type="com:String" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Identification of a measurement site used by the supplier or consumer systems.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="measurementSpecificCharacteristics" type="roa:_MeasurementSiteIndexMeasurementSpecificCharacteristics" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Indexed measurement-specific characteristics associated with the measurement site. The index uniquely associates the measurement characteristics with the corresponding indexed measurement values for the measurement site.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="measurementSiteLocation" type="loc:LocationReference" />
+      <xs:element name="informationManagerOverride" type="com:InternationalIdentifier" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Organisation that manages the information content (is responsible for updates of this information) typically the organisation that first made the DATEX II publication of this content. This value overrides any value specified at a more general level.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="_measurementSiteExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="version" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="MeasurementSiteTable">
+    <xs:annotation>
+      <xs:documentation>A Measurement Site Table comprising a number of sets of data, each describing the location from where a stream of measured data may be derived.  Each location is known as a "measurement site" which can be a point, a linear road section or an area.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="measurementSiteTableIdentification" type="com:String" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>An alphanumeric identification for the measurement site table, possibly human readable. </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="measurementSite" type="roa:MeasurementSite" maxOccurs="unbounded" />
+      <xs:element name="informationManager" type="com:InternationalIdentifier" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Organisation that manages the information content (is responsible for updates of this information) typically the organisation that first made the DATEX II publication of this content.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="_measurementSiteTableExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="version" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="MeasurementSiteTablePublication">
+    <xs:annotation>
+      <xs:documentation>A publication containing one or more Measurement Site Tables.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="com:PayloadPublication">
+        <xs:sequence>
+          <xs:element name="headerInformation" type="com:HeaderInformation" />
+          <xs:element name="measurementSiteTable" type="roa:MeasurementSiteTable" maxOccurs="unbounded" />
+          <xs:element name="_measurementSiteTablePublicationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="MeasurementSpecificCharacteristics">
+    <xs:annotation>
+      <xs:documentation>Characteristics which are specific to an individual measurement type (specified in a known order) at the given measurement site.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="accuracy" type="com:Percentage" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>The extent to which the value is expected to be free from error, measured as a percentage of the data value. 100% means fully accurate.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="computationMethod" type="com:_ComputationMethodEnum" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Method of computation which is used to compute the measured value at the measurement site.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="defaultMeasurementHeight" type="com:MetresAsFloat" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Default height, above (positive value) or below (negative value) ground level, at which measurements are made. For example in wind measurement this could be the height of an anemometer.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="measurementSide" type="loc:_DirectionEnum" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Side of the road on which measurements are acquired, corresponding to the direction of the road.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="period" type="com:Seconds" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>The time elapsed between the beginning and the end of the sampling or measurement period. This item may differ from the unit attribute; e.g. an hourly flow can be estimated from a 5-minute measurement period.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="smoothingFactor" type="com:Float" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Coefficient required when a moving average is computed to give specific weights to the former average and the new data. A typical formula is, F being the smoothing factor: New average = (old average) F + (new data) (1 - F).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="specificMeasurementValueType" type="roa:_MeasuredOrDerivedDataTypeEnum" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>The type of this specific measurement at the measurement site.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="specificVehicleCharacteristics" type="com:VehicleCharacteristics" minOccurs="0" />
+      <xs:element name="specificLane" type="loc:Lane" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>The lane(s) to which the specific measurement at the measurement site relate(s). This overrides any lane specified for the measurement site as a whole.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="axleCharacteristics" type="roa:AxleCharacteristics" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Axle characteristics for which the measurement applies</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="_measurementSpecificCharacteristicsExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PassengerCarUnitsPerHour">
+    <xs:annotation>
+      <xs:documentation>Passenger car units per hour.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="com:NonNegativeInteger" />
+  </xs:simpleType>
+  <xs:complexType name="PcuFlowValue">
+    <xs:annotation>
+      <xs:documentation>A measured or calculated value of the flow rate of passenger car units.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="com:DataValue">
+        <xs:sequence>
+          <xs:element name="pcuFlowRate" type="roa:PassengerCarUnitsPerHour" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>A value of passenger car unit flow rate expressed in passenger car units per hour.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_pcuFlowValueExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PhysicalQuantity" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A measured or calculated physical quantity, with related properties explaining its context, meaning or status</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="forecast" type="com:Boolean" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Indication of whether this quantity data is a forecast (true = forecast).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="measurementEquipmentTypeUsed" type="com:MultilingualString" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>The type of equipment used to gather the raw information from which the data values are determined, e.g. 'loop', 'ANPR' (automatic number plate recognition) or 'urban traffic management system' (such as SCOOT).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="pertinentLocation" type="loc:LocationReference" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>The location (e.g. the stretch of road or area) to which the data value(s) is or are pertinent/relevant. This may be different from the location of the measurement equipment (i.e. the measurement site location). </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="physicalQuantityFault" type="roa:PhysicalQuantityFault" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="source" type="com:Source" minOccurs="0" />
+      <xs:element name="informationManagerOverride" type="com:InternationalIdentifier" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Organisation that manages the information content (is responsible for updates of this information) typically the organisation that first made the DATEX II publication of this content. This value overrides any value specified at a more general level.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="_physicalQuantityExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PhysicalQuantityFault">
+    <xs:annotation>
+      <xs:documentation>Details of a fault related to the derivation of a quantity</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="com:Fault">
+        <xs:sequence>
+          <xs:element name="physicalQuantityFaultType" type="roa:_PhysicalQuantityFaultEnum" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The type of fault related to the measurement or calculation of the physical quantity</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_physicalQuantityFaultExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="PhysicalQuantityFaultEnum">
+    <xs:annotation>
+      <xs:documentation>Types of faults that may affect the measurement or calculation of physical quantities</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="intermittentDataValues">
+        <xs:annotation>
+          <xs:documentation>Data values are being produced at intermittent intervals which are not consistent with the expected reporting interval.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="noDataValuesAvailable">
+        <xs:annotation>
+          <xs:documentation>No measured or calculated data values are currently available.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="spuriousUnreliableDataValues">
+        <xs:annotation>
+          <xs:documentation>Spurious or unreliable data values are being produced.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unspecifiedOrUnknownFault">
+        <xs:annotation>
+          <xs:documentation>An unspecified or unknown fault exists in the process which is generating the measured or calculated data.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="other">
+        <xs:annotation>
+          <xs:documentation>Other than as defined in this enumeration.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PollutionInformation">
+    <xs:annotation>
+      <xs:documentation>Measurements of atmospheric pollution.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:WeatherData">
+        <xs:sequence>
+          <xs:element name="pollution" type="com:Pollution" maxOccurs="unbounded" />
+          <xs:element name="_pollutionInformationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PrecipitationInformation">
+    <xs:annotation>
+      <xs:documentation>Measurements of precipitation.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:WeatherData">
+        <xs:sequence>
+          <xs:element name="noPrecipitation" type="com:Boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Indication of whether precipitation is present or not. True indicates that there is no precipitation.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="precipitationDetail" type="com:PrecipitationDetail" minOccurs="0" />
+          <xs:element name="_precipitationInformationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PressureInformation">
+    <xs:annotation>
+      <xs:documentation>Measurements of atmospheric pressure.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:WeatherData">
+        <xs:sequence>
+          <xs:element name="pressure" type="com:Pressure" />
+          <xs:element name="_pressureInformationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ReferenceSettings">
+    <xs:annotation>
+      <xs:documentation>Specification of default values for locations on the road network. Where a default status value is supplied, it shall apply for all specified locations, unless the publication includes an additional status value for a specified location.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="predefinedLocationGroupReference" type="roa:_PredefinedLocationGroupVersionedReference" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>A reference to a versioned instance of a predefined non-ordered location group as specified in a PredefinedLocationsPublication.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="trafficStatusDefault" type="roa:_TrafficStatusEnum" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>The default value of traffic status that can be assumed to apply to the locations defined by the associated predefined location set.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="_referenceSettingsExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RoadSurfaceConditionInformation">
+    <xs:annotation>
+      <xs:documentation>Measurements of road surface conditions which are related to the weather.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:WeatherData">
+        <xs:sequence>
+          <xs:element name="weatherRelatedRoadConditionType" type="com:_WeatherRelatedRoadConditionTypeEnum" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>The type of road surface condition that is related to the weather which is affecting the driving conditions.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="roadSurfaceConditionMeasurements" type="com:RoadSurfaceConditionMeasurements" />
+          <xs:element name="_roadSurfaceConditionInformationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SinglePhysicalQuantity">
+    <xs:annotation>
+      <xs:documentation>A measured or calculated physical quantity at a single instant or period in time, with related properties explaining its context, meaning or status</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:PhysicalQuantity">
+        <xs:sequence>
+          <xs:element name="basicData" type="roa:BasicData" minOccurs="0" />
+          <xs:element name="_singlePhysicalQuantityExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SiteMeasurements">
+    <xs:annotation>
+      <xs:documentation>A  measurement data set derived from a specific measurement site.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="measurementSiteReference" type="roa:_MeasurementSiteVersionedReference" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>A reference to a versioned measurement site record defined in a Measurement Site table.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="physicalQuantity" type="roa:_SiteMeasurementsIndexPhysicalQuantity" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Indexed measured value associated with the measurement site. The index uniquely associates the measurement value with the corresponding indexed measurement characteristics defined for the measurement site.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="measurementTimeDefault" type="roa:MeasurementOrCalculationTime">
+        <xs:annotation>
+          <xs:documentation>The time associated with the set of measurements.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="_siteMeasurementsExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SpeedPercentile">
+    <xs:annotation>
+      <xs:documentation>Details of percentage (from an observation set) of vehicles whose speeds fall below a stated value.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="vehiclePercentage" type="com:PercentageValue">
+        <xs:annotation>
+          <xs:documentation>The percentage of vehicles from the observation set whose speeds fall below the stated speed (speedPercentile).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="speedPercentile" type="com:SpeedValue">
+        <xs:annotation>
+          <xs:documentation>The speed below which the associated percentage of vehicles in the measurement set are travelling at.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="_speedPercentileExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TemperatureInformation">
+    <xs:annotation>
+      <xs:documentation>Measurements of atmospheric temperature.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:WeatherData">
+        <xs:sequence>
+          <xs:element name="temperature" type="com:Temperature" />
+          <xs:element name="_temperatureInformationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="TimeMeaningEnum">
+    <xs:annotation>
+      <xs:documentation>Explains the meaning of a specific time value with respect to a time period</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="beginTime">
+        <xs:annotation>
+          <xs:documentation>Meaning the beginning of a period</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="endTime">
+        <xs:annotation>
+          <xs:documentation>Meaning the end of a period</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="middleTime">
+        <xs:annotation>
+          <xs:documentation>Meaning the mid-point of a period</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TimeProfiledPhysicalQuantity">
+    <xs:annotation>
+      <xs:documentation>A set of values for a measured or calculated physical quantity over a set of measurement or calculation times</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:PhysicalQuantity">
+        <xs:sequence>
+          <xs:element name="basicData" type="roa:BasicData" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="_timeProfiledPhysicalQuantityExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TrafficConcentration">
+    <xs:annotation>
+      <xs:documentation>Averaged measurements or calculations of traffic concentration.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:TrafficData">
+        <xs:sequence>
+          <xs:element name="density" type="roa:TrafficDensityValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>An averaged measurement or calculation of the concentration of vehicles at the specified measurement site.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="occupancy" type="com:PercentageValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>An averaged measurement or calculation of the percentage of time that a section of road at the specified measurement site is occupied by vehicles.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_trafficConcentrationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TrafficData" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Measured or derived values relating to traffic or individual vehicle movements on a specific section or at a specific point on the road network.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:BasicData">
+        <xs:sequence>
+          <xs:element name="forVehiclesWithCharacteristicsOf" type="com:VehicleCharacteristics" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>Used to define the vehicle characteristics to which the TrafficValue is applicable primarily in Elaborated Data Publications, but may also be used in Measured Data Publications to override vehicle characteristics defined for the measurement site.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_trafficDataExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TrafficDensityValue">
+    <xs:annotation>
+      <xs:documentation>A measured or calculated value of the density of vehicles on a unit stretch of road in a given direction.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="com:DataValue">
+        <xs:sequence>
+          <xs:element name="densityOfVehicles" type="roa:DensityVehiclesPerKilometre" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>A value of traffic density expressed in the number of vehicles per kilometre of road.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_trafficDensityValueExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TrafficFlow">
+    <xs:annotation>
+      <xs:documentation>Averaged measurements or calculations of traffic flow rates.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:TrafficData">
+        <xs:sequence>
+          <xs:element name="axleFlow" type="roa:AxleFlowValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>An averaged measurement or calculation of flow rate defined in terms of the number of vehicle axles passing the specified measurement site.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="pcuFlow" type="roa:PcuFlowValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>An averaged measurement or calculation of flow rate defined in terms of the number of passenger car units passing the specified measurement site.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="percentageLongVehicles" type="com:PercentageValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>An averaged measurement or calculation of the percentage of long vehicles contained in the traffic flow at the specified measurement site.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="vehicleFlow" type="com:VehicleFlowValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>An averaged measurement of flow rate defined in terms of the number of vehicles passing the specified measurement site.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="normallyExpectedFlow" type="com:VehicleFlowValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>The vehicle flow which is expected for the given period (e.g. date/time, holiday status etc.) and any known quasi-static conditions (e.g. long-term roadworks). This value is derived from historical analysis.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="annualAverageDailyTraffic" type="roa:DailyTrafficFlowValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>Daily traffic flow averaged from the total over one year.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="monthlyAverageDailyTraffic" type="roa:DailyTrafficFlowValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>Daily traffic flow averaged from the total over one month.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="axleCharacteristics" type="roa:AxleCharacteristics" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>Axle characteristics for which the flow measurement applies.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_trafficFlowExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TrafficGap">
+    <xs:annotation>
+      <xs:documentation>Averaged measurements or calculations of traffic gap i.e. the distance or time interval between vehicles, measured between the rear of one vehicle and the front of the following vehicle.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:TrafficData">
+        <xs:sequence>
+          <xs:element name="averageDistanceGap" type="com:FloatingPointMetreDistanceValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>The average distance between the front of one vehicle and the rear of the preceding vehicle, averaged for all vehicles within a defined measurement period at the specified measurement site.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="averageTimeGap" type="roa:DurationValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>The average time gap between the front of one vehicle and the rear of the preceding vehicle, averaged for all vehicles within a defined measurement period at the specified measurement site.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_trafficGapExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TrafficHeadway">
+    <xs:annotation>
+      <xs:documentation>Averaged measurements or calculations of traffic headway, i.e. the distance or time interval between vehicles. This is measured one end (normally the front) of one vehicle to the same end of the following vehicle.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:TrafficData">
+        <xs:sequence>
+          <xs:element name="averageDistanceHeadway" type="com:FloatingPointMetreDistanceValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>The average distance between one end (normally the front) of this vehicle and the same end of the preceding vehicle, averaged for all vehicles within a defined measurement period at the specified measurement site.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="averageTimeHeadway" type="roa:DurationValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>The average time interval between one end (normally the front) of this vehicle and the same end of the preceding vehicle, averaged for all vehicles within a defined measurement period at the specified measurement site.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_trafficHeadwayExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TrafficSpeed">
+    <xs:annotation>
+      <xs:documentation>Averaged measurements or calculations of traffic speed.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:TrafficData">
+        <xs:sequence>
+          <xs:element name="averageVehicleSpeed" type="com:SpeedValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>An averaged measurement or calculation of the speed of vehicles at the specified location.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="speedPercentile" type="roa:SpeedPercentile" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="normallyExpectedSpeed" type="com:SpeedValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>The average vehicle speed which is expected for the given period (e.g. date/time, holiday status etc.) and any known quasi-static conditions (e.g. long-term roadworks). This value is derived from historical analysis.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="minimumSpeed" type="com:SpeedValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>The minimum speed</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="maximumSpeed" type="com:SpeedValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>The maximum speed</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_trafficSpeedExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TrafficStatus">
+    <xs:annotation>
+      <xs:documentation>The status of traffic conditions on a specific section or at a specific point on the road network.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:BasicData">
+        <xs:sequence>
+          <xs:element name="trafficTrendType" type="com:_TrafficTrendTypeEnum" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>A characterization of the trend in the traffic conditions at the specified location and direction.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="trafficStatus" type="roa:TrafficStatusValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>Status of traffic conditions on the identified section of road in the specified direction.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_trafficStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="TrafficStatusEnum">
+    <xs:annotation>
+      <xs:documentation>List of terms used to describe traffic conditions.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="stationary">
+        <xs:annotation>
+          <xs:documentation>Traffic is stationary, or very near stationary, at the specified location (i.e. average speed is less than 10% of its free-flow level).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="queuing">
+        <xs:annotation>
+          <xs:documentation>Traffic is queuing at the specified location, although there is still some traffic movement (i.e. average speed is between 10% and 25% of its free-flow level).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="slow">
+        <xs:annotation>
+          <xs:documentation>Traffic is slow moving at the specified location, but not yet forming queues (i.e. average speed is between 25% and 75% of its free-flow level).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="heavy">
+        <xs:annotation>
+          <xs:documentation>Traffic in the specified direction is heavier than usual making driving conditions more difficult than normal.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unspecifiedAbnormal">
+        <xs:annotation>
+          <xs:documentation>There are abnormal traffic conditions of an unspecified nature at the specified location.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="freeFlow">
+        <xs:annotation>
+          <xs:documentation>Traffic at the specified location is free-flowing.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unknown">
+        <xs:annotation>
+          <xs:documentation>Traffic conditions are unknown.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="other">
+        <xs:annotation>
+          <xs:documentation>Other than as defined in this enumeration.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TrafficStatusValue">
+    <xs:annotation>
+      <xs:documentation>A measured or calculated value of the status of traffic conditions on a section of road in a specified direction.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="com:DataValue">
+        <xs:sequence>
+          <xs:element name="trafficStatusValue" type="roa:_TrafficStatusEnum" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>A status value of traffic conditions on the identified section of road in the specified direction.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_trafficStatusValueExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TravelTimeData">
+    <xs:annotation>
+      <xs:documentation>Derived/computed travel time information relating to a linear section of the road network; forecast = true means a forecast for a vehicle at the start of the specified location, forecast = false means calculation/measurement at the end.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:BasicData">
+        <xs:sequence>
+          <xs:element name="travelTimeTrendType" type="roa:_TravelTimeTrendTypeEnum" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>The current trend in the travel time between the defined locations in the specified direction.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="travelTimeType" type="roa:_TravelTimeTypeEnum" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Indication of the way in which the travel time is derived.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="vehicleType" type="com:_VehicleTypeEnum" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>Vehicle type.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="travelTime" type="roa:DurationValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>Derived/computed travel time information relating to a specific group of locations.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="freeFlowTravelTime" type="roa:DurationValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>The travel time which would be expected under ideal free flow conditions.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="normallyExpectedTravelTime" type="roa:DurationValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>The travel time which is expected for the given period (e.g. date/time, holiday status etc.) and any known quasi-static conditions (e.g. long-term roadworks). This value is derived from historical analysis.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="travelTimeDelay" type="roa:DurationValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>Delay in travel time compared to free-flow conditions</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="freeFlowSpeed" type="com:SpeedValue" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>The free flow speed expected under ideal conditions, corresponding to the freeFlowTravelTime.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="_travelTimeDataExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="TravelTimeTrendTypeEnum">
+    <xs:annotation>
+      <xs:documentation>List of terms used to describe the trend in travel times.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="decreasing">
+        <xs:annotation>
+          <xs:documentation>Travel times are decreasing.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="increasing">
+        <xs:annotation>
+          <xs:documentation>Travel times are increasing.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="stable">
+        <xs:annotation>
+          <xs:documentation>Travel times are stable.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TravelTimeTypeEnum">
+    <xs:annotation>
+      <xs:documentation>List of ways in which travel times are derived.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="best">
+        <xs:annotation>
+          <xs:documentation>Travel time is derived from the best out of a monitored sample.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="estimated">
+        <xs:annotation>
+          <xs:documentation>Travel time is an automated estimate.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="instantaneous">
+        <xs:annotation>
+          <xs:documentation>Travel time is derived from instantaneous measurements.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="reconstituted">
+        <xs:annotation>
+          <xs:documentation>Travel time is reconstituted from other measurements.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="predictor">
+        <xs:annotation>
+          <xs:documentation>Travel time is the output of a predictor, for example a blend of current and historical data, or a traffic flow model using current measurements.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="profile">
+        <xs:annotation>
+          <xs:documentation>Travel time is based on past observations, without use of current measurements.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sum">
+        <xs:annotation>
+          <xs:documentation>Travel time is the sum of current travel times on subsections of the specified location.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VehiclesPerDay">
+    <xs:annotation>
+      <xs:documentation>A rate of vehicle flow in units of vehicles per day</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="com:NonNegativeInteger" />
+  </xs:simpleType>
+  <xs:complexType name="VisibilityInformation">
+    <xs:annotation>
+      <xs:documentation>Measurements of atmospheric visibility.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:WeatherData">
+        <xs:sequence>
+          <xs:element name="visibility" type="com:Visibility" />
+          <xs:element name="_visibilityInformationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WeatherData" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Measured or derived values relating to the weather at a specific location or locations.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:BasicData">
+        <xs:sequence>
+          <xs:element name="_weatherDataExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WindInformation">
+    <xs:annotation>
+      <xs:documentation>Measurements of wind conditions.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="roa:WeatherData">
+        <xs:sequence>
+          <xs:element name="wind" type="com:Wind" />
+          <xs:element name="_windInformationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
