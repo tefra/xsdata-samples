@@ -18,7 +18,7 @@ jobs:
           - { name: "Sabre", id: "sabre", xsdata: true, pytest: true }
           - { name: "Travelport", id: "travelport", xsdata: true, pytest: true }
           - { name: "Exchange Rates", id: "bnm", pytest: true }
-          - { name: "Common Types", id: "common", xsdata: true, mypy: true }
+          - { name: "Common Types", id: "common_types", xsdata: true, mypy: true }
           - { name: "Requirements Interchange Format", id: "reqif", mypy: true, pytest: true, xsdata: true }
           - { name: "NPO API", id: "npo", mypy: true, pytest: true, xsdata: true }
 
