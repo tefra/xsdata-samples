@@ -310,7 +310,7 @@ class PivlTs(SxcmTs):
             "namespace": "urn:hl7-org:v3",
         }
     )
-    alignment: Optional[Union[CalendarCycleOneLetter, str, "PivlTs.Value"]] = field(
+    alignment: Optional[Union[CalendarCycleOneLetter, str, "PivlTs.Alignment"]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -326,7 +326,7 @@ class PivlTs(SxcmTs):
         }
     )
 
-    class Value(Enum):
+    class Alignment(Enum):
         CD = "CD"
         DM = "DM"
         DW = "DW"
@@ -1217,7 +1217,7 @@ class PivlPpdTs(SxcmPpdTs):
             "namespace": "urn:hl7-org:v3",
         }
     )
-    alignment: Optional[Union[CalendarCycleOneLetter, str, "PivlPpdTs.Value"]] = field(
+    alignment: Optional[Union[CalendarCycleOneLetter, str, "PivlPpdTs.Alignment"]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1233,7 +1233,7 @@ class PivlPpdTs(SxcmPpdTs):
         }
     )
 
-    class Value(Enum):
+    class Alignment(Enum):
         CD = "CD"
         DM = "DM"
         DW = "DW"

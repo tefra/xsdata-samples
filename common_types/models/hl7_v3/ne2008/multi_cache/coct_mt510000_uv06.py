@@ -99,7 +99,7 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt810000_uv import CoctM
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-class CoctMt510000Uv06Coverage2Value(Enum):
+class CoctMt510000Uv06Coverage2TypeCode(Enum):
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -119,7 +119,7 @@ class CoctMt510000Uv06Coverage2Value(Enum):
     SUMM = "SUMM"
 
 
-class CoctMt510000Uv06Limitation2Value(Enum):
+class CoctMt510000Uv06Limitation2TypeCode(Enum):
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -139,7 +139,7 @@ class CoctMt510000Uv06Limitation2Value(Enum):
     SUMM = "SUMM"
 
 
-class CoctMt510000Uv06Limitation3Value(Enum):
+class CoctMt510000Uv06Limitation3TypeCode(Enum):
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -159,7 +159,7 @@ class CoctMt510000Uv06Limitation3Value(Enum):
     SUMM = "SUMM"
 
 
-class CoctMt510000Uv06LimitationValue(Enum):
+class CoctMt510000Uv06LimitationTypeCode(Enum):
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -179,7 +179,7 @@ class CoctMt510000Uv06LimitationValue(Enum):
     SUMM = "SUMM"
 
 
-class CoctMt510000Uv06Reference2Value(Enum):
+class CoctMt510000Uv06Reference2TypeCode(Enum):
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -199,7 +199,7 @@ class CoctMt510000Uv06Reference2Value(Enum):
     SUMM = "SUMM"
 
 
-class CoctMt510000Uv06ReferenceValue(Enum):
+class CoctMt510000Uv06ReferenceTypeCode(Enum):
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -1115,7 +1115,7 @@ class CoctMt510000Uv06Precondition:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt510000Uv06Precondition.Value", ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt510000Uv06Precondition.TypeCode", ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
         default=ActRelationshipConditional.PRCN,
         metadata={
@@ -1126,7 +1126,7 @@ class CoctMt510000Uv06Precondition:
         }
     )
 
-    class Value(Enum):
+    class TypeCode(Enum):
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -1437,7 +1437,7 @@ class CoctMt510000Uv06Beneficiary:
             "type": "Attribute",
         }
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt510000Uv06Beneficiary.Value", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt510000Uv06Beneficiary.ClassCode", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassPartitive.MBR,
         metadata={
@@ -1448,7 +1448,7 @@ class CoctMt510000Uv06Beneficiary:
         }
     )
 
-    class Value(Enum):
+    class ClassCode(Enum):
         ROL = "ROL"
 
 
@@ -1634,7 +1634,7 @@ class CoctMt510000Uv06Definition:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt510000Uv06Definition.Value", ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt510000Uv06Definition.TypeCode", ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
         default=ActRelationshipSequel.INST,
         metadata={
@@ -1645,7 +1645,7 @@ class CoctMt510000Uv06Definition:
         }
     )
 
-    class Value(Enum):
+    class TypeCode(Enum):
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -1711,7 +1711,7 @@ class CoctMt510000Uv06Definition3:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt510000Uv06Definition3.Value", ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt510000Uv06Definition3.TypeCode", ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
         default=ActRelationshipSequel.INST,
         metadata={
@@ -1722,7 +1722,7 @@ class CoctMt510000Uv06Definition3:
         }
     )
 
-    class Value(Enum):
+    class TypeCode(Enum):
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -1788,9 +1788,9 @@ class CoctMt510000Uv06Limitation:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt510000Uv06LimitationValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt510000Uv06LimitationTypeCode, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
-        default=CoctMt510000Uv06LimitationValue.LIMIT,
+        default=CoctMt510000Uv06LimitationTypeCode.LIMIT,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
@@ -1846,9 +1846,9 @@ class CoctMt510000Uv06Limitation3:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt510000Uv06Limitation3Value, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt510000Uv06Limitation3TypeCode, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
-        default=CoctMt510000Uv06Limitation3Value.LIMIT,
+        default=CoctMt510000Uv06Limitation3TypeCode.LIMIT,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
@@ -1964,7 +1964,7 @@ class CoctMt510000Uv06Payor:
             "type": "Attribute",
         }
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt510000Uv06Payor.Value", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt510000Uv06Payor.ClassCode", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassMutualRelationship.PAYOR,
         metadata={
@@ -1975,7 +1975,7 @@ class CoctMt510000Uv06Payor:
         }
     )
 
-    class Value(Enum):
+    class ClassCode(Enum):
         ROL = "ROL"
 
 
@@ -2047,7 +2047,7 @@ class CoctMt510000Uv06PersonalRelationship:
             "type": "Attribute",
         }
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt510000Uv06PersonalRelationship.Value", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt510000Uv06PersonalRelationship.ClassCode", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassMutualRelationship.PRS,
         metadata={
@@ -2058,7 +2058,7 @@ class CoctMt510000Uv06PersonalRelationship:
         }
     )
 
-    class Value(Enum):
+    class ClassCode(Enum):
         ROL = "ROL"
 
 
@@ -2146,7 +2146,7 @@ class CoctMt510000Uv06PolicyHolder:
             "type": "Attribute",
         }
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt510000Uv06PolicyHolder.Value", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt510000Uv06PolicyHolder.ClassCode", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassMutualRelationship.POLHOLD,
         metadata={
@@ -2157,7 +2157,7 @@ class CoctMt510000Uv06PolicyHolder:
         }
     )
 
-    class Value(Enum):
+    class ClassCode(Enum):
         ROL = "ROL"
 
 
@@ -2207,9 +2207,9 @@ class CoctMt510000Uv06Reference:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt510000Uv06ReferenceValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt510000Uv06ReferenceTypeCode, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
-        default=CoctMt510000Uv06ReferenceValue.REFR,
+        default=CoctMt510000Uv06ReferenceTypeCode.REFR,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
@@ -2265,9 +2265,9 @@ class CoctMt510000Uv06Reference2:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt510000Uv06Reference2Value, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt510000Uv06Reference2TypeCode, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
-        default=CoctMt510000Uv06Reference2Value.REFR,
+        default=CoctMt510000Uv06Reference2TypeCode.REFR,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
@@ -2323,7 +2323,7 @@ class CoctMt510000Uv06ReplacementOf:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt510000Uv06ReplacementOf.Value", ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt510000Uv06ReplacementOf.TypeCode", ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
         default=ActRelationshipSequel.RPLC,
         metadata={
@@ -2334,7 +2334,7 @@ class CoctMt510000Uv06ReplacementOf:
         }
     )
 
-    class Value(Enum):
+    class TypeCode(Enum):
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -3397,9 +3397,9 @@ class CoctMt510000Uv06Limitation2:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt510000Uv06Limitation2Value, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt510000Uv06Limitation2TypeCode, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
-        default=CoctMt510000Uv06Limitation2Value.LIMIT,
+        default=CoctMt510000Uv06Limitation2TypeCode.LIMIT,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
@@ -3524,7 +3524,7 @@ class CoctMt510000Uv06Underwriter:
             "type": "Attribute",
         }
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt510000Uv06Underwriter.Value", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt510000Uv06Underwriter.ClassCode", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassMutualRelationship.UNDWRT,
         metadata={
@@ -3535,7 +3535,7 @@ class CoctMt510000Uv06Underwriter:
         }
     )
 
-    class Value(Enum):
+    class ClassCode(Enum):
         ROL = "ROL"
 
 
@@ -3899,9 +3899,9 @@ class CoctMt510000Uv06Coverage2:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt510000Uv06Coverage2Value, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt510000Uv06Coverage2TypeCode, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
-        default=CoctMt510000Uv06Coverage2Value.COVBY,
+        default=CoctMt510000Uv06Coverage2TypeCode.COVBY,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
@@ -4025,7 +4025,7 @@ class CoctMt510000Uv06Sponsor:
             "type": "Attribute",
         }
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt510000Uv06Sponsor.Value", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt510000Uv06Sponsor.ClassCode", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassMutualRelationship.SPNSR,
         metadata={
@@ -4036,7 +4036,7 @@ class CoctMt510000Uv06Sponsor:
         }
     )
 
-    class Value(Enum):
+    class ClassCode(Enum):
         ROL = "ROL"
 
 

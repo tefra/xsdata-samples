@@ -636,7 +636,7 @@ class CoctMt600000Uv06HealthCareProvider:
             "type": "Attribute",
         }
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt600000Uv06HealthCareProvider.Value", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt600000Uv06HealthCareProvider.ClassCode", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassMutualRelationship.PROV,
         metadata={
@@ -647,7 +647,7 @@ class CoctMt600000Uv06HealthCareProvider:
         }
     )
 
-    class Value(Enum):
+    class ClassCode(Enum):
         ROL = "ROL"
 
 
@@ -704,7 +704,7 @@ class CoctMt600000Uv06PertinentInformation:
             "type": "Attribute",
         }
     )
-    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt600000Uv06PertinentInformation.Value"]] = field(
+    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt600000Uv06PertinentInformation.TypeCode"]] = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -714,7 +714,7 @@ class CoctMt600000Uv06PertinentInformation:
         }
     )
 
-    class Value(Enum):
+    class TypeCode(Enum):
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -780,7 +780,7 @@ class CoctMt600000Uv06PertinentInformation1:
             "type": "Attribute",
         }
     )
-    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt600000Uv06PertinentInformation1.Value"]] = field(
+    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt600000Uv06PertinentInformation1.TypeCode"]] = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -790,7 +790,7 @@ class CoctMt600000Uv06PertinentInformation1:
         }
     )
 
-    class Value(Enum):
+    class TypeCode(Enum):
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -1351,7 +1351,7 @@ class CoctMt600000Uv06PertinentInformation2:
             "type": "Attribute",
         }
     )
-    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt600000Uv06PertinentInformation2.Value"]] = field(
+    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt600000Uv06PertinentInformation2.TypeCode"]] = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -1361,7 +1361,7 @@ class CoctMt600000Uv06PertinentInformation2:
         }
     )
 
-    class Value(Enum):
+    class TypeCode(Enum):
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"

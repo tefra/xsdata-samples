@@ -54,7 +54,7 @@ from common_types.models.hl7_v3.ne2008.multi_cache.mcai_mt900001_uv01 import Mca
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-class MfmiMt700711Uv01Subject4Value(Enum):
+class MfmiMt700711Uv01Subject4TypeCode(Enum):
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -834,7 +834,7 @@ class MfmiMt700711Uv01PriorRegisteredRole:
             "type": "Attribute",
         }
     )
-    class_code: Optional[Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "MfmiMt700711Uv01PriorRegisteredRole.Value"]] = field(
+    class_code: Optional[Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "MfmiMt700711Uv01PriorRegisteredRole.ClassCode"]] = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -844,7 +844,7 @@ class MfmiMt700711Uv01PriorRegisteredRole:
         }
     )
 
-    class Value(Enum):
+    class ClassCode(Enum):
         ROL = "ROL"
 
 
@@ -1045,7 +1045,7 @@ class MfmiMt700711Uv01Definition:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "MfmiMt700711Uv01Definition.Value", ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "MfmiMt700711Uv01Definition.TypeCode", ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
         default=ActRelationshipSequel.INST,
         metadata={
@@ -1056,7 +1056,7 @@ class MfmiMt700711Uv01Definition:
         }
     )
 
-    class Value(Enum):
+    class TypeCode(Enum):
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -1249,9 +1249,9 @@ class MfmiMt700711Uv01Subject4:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, MfmiMt700711Uv01Subject4Value, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, MfmiMt700711Uv01Subject4TypeCode, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
-        default=MfmiMt700711Uv01Subject4Value.SUBJ,
+        default=MfmiMt700711Uv01Subject4TypeCode.SUBJ,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
@@ -1458,7 +1458,7 @@ class MfmiMt700711Uv01ReplacementOf:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "MfmiMt700711Uv01ReplacementOf.Value", ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "MfmiMt700711Uv01ReplacementOf.TypeCode", ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
         default=ActRelationshipSequel.RPLC,
         metadata={
@@ -1469,7 +1469,7 @@ class MfmiMt700711Uv01ReplacementOf:
         }
     )
 
-    class Value(Enum):
+    class TypeCode(Enum):
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"

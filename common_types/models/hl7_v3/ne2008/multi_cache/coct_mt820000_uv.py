@@ -108,7 +108,7 @@ class CoctMt820000UvHealthCareProvider:
             "type": "Attribute",
         }
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt820000UvHealthCareProvider.Value", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt820000UvHealthCareProvider.ClassCode", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassMutualRelationship.PROV,
         metadata={
@@ -119,7 +119,7 @@ class CoctMt820000UvHealthCareProvider:
         }
     )
 
-    class Value(Enum):
+    class ClassCode(Enum):
         ROL = "ROL"
 
 
@@ -176,7 +176,7 @@ class CoctMt820000UvRoleOther:
             "type": "Attribute",
         }
     )
-    class_code: Optional[Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt820000UvRoleOther.Value"]] = field(
+    class_code: Optional[Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt820000UvRoleOther.ClassCode"]] = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -186,7 +186,7 @@ class CoctMt820000UvRoleOther:
         }
     )
 
-    class Value(Enum):
+    class ClassCode(Enum):
         ROL = "ROL"
 
 

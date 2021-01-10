@@ -61,7 +61,7 @@ from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt004000_uv01 import Rep
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-class QupcIn043200Uv01MfmiMt700712Uv01Subject1Value(Enum):
+class QupcIn043200Uv01MfmiMt700712Uv01Subject1TypeCode(Enum):
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -81,7 +81,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1Value(Enum):
     SUMM = "SUMM"
 
 
-class QupcIn043200Uv01MfmiMt700712Uv01Subject5Value(Enum):
+class QupcIn043200Uv01MfmiMt700712Uv01Subject5TypeCode(Enum):
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -147,9 +147,9 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, QupcIn043200Uv01MfmiMt700712Uv01Subject5Value, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, QupcIn043200Uv01MfmiMt700712Uv01Subject5TypeCode, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
-        default=QupcIn043200Uv01MfmiMt700712Uv01Subject5Value.SUBJ,
+        default=QupcIn043200Uv01MfmiMt700712Uv01Subject5TypeCode.SUBJ,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
@@ -344,9 +344,9 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, QupcIn043200Uv01MfmiMt700712Uv01Subject1Value, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, QupcIn043200Uv01MfmiMt700712Uv01Subject1TypeCode, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
-        default=QupcIn043200Uv01MfmiMt700712Uv01Subject1Value.SUBJ,
+        default=QupcIn043200Uv01MfmiMt700712Uv01Subject1TypeCode.SUBJ,
         metadata={
             "name": "typeCode",
             "type": "Attribute",

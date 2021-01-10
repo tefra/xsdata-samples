@@ -60,7 +60,7 @@ from common_types.models.hl7_v3.ne2008.multi_cache.prpa_mt201302_uv02 import Prp
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-class PrpaIn201302Uv02MfmiMt700701Uv01Subject1Value(Enum):
+class PrpaIn201302Uv02MfmiMt700701Uv01Subject1TypeCode(Enum):
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -312,9 +312,9 @@ class PrpaIn201302Uv02MfmiMt700701Uv01Subject1:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, PrpaIn201302Uv02MfmiMt700701Uv01Subject1Value, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, PrpaIn201302Uv02MfmiMt700701Uv01Subject1TypeCode, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
-        default=PrpaIn201302Uv02MfmiMt700701Uv01Subject1Value.SUBJ,
+        default=PrpaIn201302Uv02MfmiMt700701Uv01Subject1TypeCode.SUBJ,
         metadata={
             "name": "typeCode",
             "type": "Attribute",

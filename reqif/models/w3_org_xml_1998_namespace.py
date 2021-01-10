@@ -3,231 +3,231 @@ from enum import Enum
 __NAMESPACE__ = "http://www.w3.org/XML/1998/namespace"
 
 
-class XhtmlInlPresTypeValue(Enum):
+class XhtmlInlPresTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlATypeValue(Enum):
+class XhtmlATypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlAbbrTypeValue(Enum):
+class XhtmlAbbrTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlAcronymTypeValue(Enum):
+class XhtmlAcronymTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlAddressTypeValue(Enum):
+class XhtmlAddressTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlBlockquoteTypeValue(Enum):
+class XhtmlBlockquoteTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlBrTypeValue(Enum):
+class XhtmlBrTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlCaptionTypeValue(Enum):
+class XhtmlCaptionTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlCiteTypeValue(Enum):
+class XhtmlCiteTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlCodeTypeValue(Enum):
+class XhtmlCodeTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlColTypeValue(Enum):
+class XhtmlColTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlColgroupTypeValue(Enum):
+class XhtmlColgroupTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlDdTypeValue(Enum):
+class XhtmlDdTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlDfnTypeValue(Enum):
+class XhtmlDfnTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlDivTypeValue(Enum):
+class XhtmlDivTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlDlTypeValue(Enum):
+class XhtmlDlTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlDtTypeValue(Enum):
+class XhtmlDtTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlEditTypeValue(Enum):
+class XhtmlEditTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlEmTypeValue(Enum):
+class XhtmlEmTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlH1TypeValue(Enum):
+class XhtmlH1TypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlH2TypeValue(Enum):
+class XhtmlH2TypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlH3TypeValue(Enum):
+class XhtmlH3TypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlH4TypeValue(Enum):
+class XhtmlH4TypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlH5TypeValue(Enum):
+class XhtmlH5TypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlH6TypeValue(Enum):
+class XhtmlH6TypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlHeadingTypeValue(Enum):
+class XhtmlHeadingTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlHrTypeValue(Enum):
+class XhtmlHrTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlKbdTypeValue(Enum):
+class XhtmlKbdTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlLiTypeValue(Enum):
+class XhtmlLiTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlObjectTypeValue(Enum):
+class XhtmlObjectTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlOlTypeValue(Enum):
+class XhtmlOlTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlPTypeValue(Enum):
+class XhtmlPTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlPreTypeValue(Enum):
+class XhtmlPreTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlQTypeValue(Enum):
+class XhtmlQTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlSampTypeValue(Enum):
+class XhtmlSampTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlSpanTypeValue(Enum):
+class XhtmlSpanTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlStrongTypeValue(Enum):
+class XhtmlStrongTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlTableTypeValue(Enum):
+class XhtmlTableTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlTbodyTypeValue(Enum):
+class XhtmlTbodyTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlTdTypeValue(Enum):
+class XhtmlTdTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlTfootTypeValue(Enum):
+class XhtmlTfootTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlThTypeValue(Enum):
+class XhtmlThTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlTheadTypeValue(Enum):
+class XhtmlTheadTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlTrTypeValue(Enum):
+class XhtmlTrTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlUlTypeValue(Enum):
+class XhtmlUlTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"
 
 
-class XhtmlVarTypeValue(Enum):
+class XhtmlVarTypeSpace(Enum):
     DEFAULT = "default"
     PRESERVE = "preserve"

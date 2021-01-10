@@ -329,7 +329,7 @@ class CoctMt060000Uv01RoleTransport:
             "type": "Attribute",
         }
     )
-    class_code: Optional[Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt060000Uv01RoleTransport.Value"]] = field(
+    class_code: Optional[Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt060000Uv01RoleTransport.ClassCode"]] = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -339,7 +339,7 @@ class CoctMt060000Uv01RoleTransport:
         }
     )
 
-    class Value(Enum):
+    class ClassCode(Enum):
         ROL = "ROL"
 
 
