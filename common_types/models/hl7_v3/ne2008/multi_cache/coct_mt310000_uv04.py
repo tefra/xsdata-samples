@@ -384,7 +384,7 @@ class CoctMt310000Uv04PertinentInformation1:
             "type": "Attribute",
         }
     )
-    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt310000Uv04PertinentInformation1.Value"]] = field(
+    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt310000Uv04PertinentInformation1.TypeCode"]] = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -394,7 +394,7 @@ class CoctMt310000Uv04PertinentInformation1:
         }
     )
 
-    class Value(Enum):
+    class TypeCode(Enum):
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -459,7 +459,7 @@ class CoctMt310000Uv04PertinentInformation3:
             "type": "Attribute",
         }
     )
-    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt310000Uv04PertinentInformation3.Value"]] = field(
+    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt310000Uv04PertinentInformation3.TypeCode"]] = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -469,7 +469,7 @@ class CoctMt310000Uv04PertinentInformation3:
         }
     )
 
-    class Value(Enum):
+    class TypeCode(Enum):
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"
@@ -749,7 +749,7 @@ class CoctMt310000Uv04PertinentInformation2:
             "type": "Attribute",
         }
     )
-    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt310000Uv04PertinentInformation2.Value"]] = field(
+    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt310000Uv04PertinentInformation2.TypeCode"]] = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -759,7 +759,7 @@ class CoctMt310000Uv04PertinentInformation2:
         }
     )
 
-    class Value(Enum):
+    class TypeCode(Enum):
         PERT = "PERT"
         NAME = "NAME"
         AUTH = "AUTH"

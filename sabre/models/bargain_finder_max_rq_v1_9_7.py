@@ -8976,6 +8976,28 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
         )
 
     @dataclass
+    class SisterDestinationMileage:
+        number: Optional[int] = field(
+            default=None,
+            metadata={
+                "name": "Number",
+                "type": "Attribute",
+                "required": True,
+            }
+        )
+
+    @dataclass
+    class SisterOriginMileage:
+        number: Optional[int] = field(
+            default=None,
+            metadata={
+                "name": "Number",
+                "type": "Attribute",
+                "required": True,
+            }
+        )
+
+    @dataclass
     class SegmentType:
         """
         Attributes
@@ -9127,28 +9149,6 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
             metadata={
                 "name": "Max",
                 "type": "Attribute",
-            }
-        )
-
-    @dataclass
-    class SisterDestinationMileage:
-        number: Optional[int] = field(
-            default=None,
-            metadata={
-                "name": "Number",
-                "type": "Attribute",
-                "required": True,
-            }
-        )
-
-    @dataclass
-    class SisterOriginMileage:
-        number: Optional[int] = field(
-            default=None,
-            metadata={
-                "name": "Number",
-                "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -10307,6 +10307,28 @@ class OtaAirLowFareSearchRq:
                 )
 
             @dataclass
+            class SisterDestinationMileage:
+                number: Optional[int] = field(
+                    default=None,
+                    metadata={
+                        "name": "Number",
+                        "type": "Attribute",
+                        "required": True,
+                    }
+                )
+
+            @dataclass
+            class SisterOriginMileage:
+                number: Optional[int] = field(
+                    default=None,
+                    metadata={
+                        "name": "Number",
+                        "type": "Attribute",
+                        "required": True,
+                    }
+                )
+
+            @dataclass
             class SegmentType:
                 """
                 Attributes
@@ -10458,28 +10480,6 @@ class OtaAirLowFareSearchRq:
                     metadata={
                         "name": "Max",
                         "type": "Attribute",
-                    }
-                )
-
-            @dataclass
-            class SisterDestinationMileage:
-                number: Optional[int] = field(
-                    default=None,
-                    metadata={
-                        "name": "Number",
-                        "type": "Attribute",
-                        "required": True,
-                    }
-                )
-
-            @dataclass
-            class SisterOriginMileage:
-                number: Optional[int] = field(
-                    default=None,
-                    metadata={
-                        "name": "Number",
-                        "type": "Attribute",
-                        "required": True,
                     }
                 )
 

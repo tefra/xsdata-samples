@@ -3,52 +3,52 @@ from enum import Enum
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
 from reqif.models.w3_org_xml_1998_namespace import (
-    XhtmlInlPresTypeValue,
-    XhtmlATypeValue,
-    XhtmlAbbrTypeValue,
-    XhtmlAcronymTypeValue,
-    XhtmlAddressTypeValue,
-    XhtmlBlockquoteTypeValue,
-    XhtmlBrTypeValue,
-    XhtmlCaptionTypeValue,
-    XhtmlCiteTypeValue,
-    XhtmlCodeTypeValue,
-    XhtmlColTypeValue,
-    XhtmlColgroupTypeValue,
-    XhtmlDdTypeValue,
-    XhtmlDfnTypeValue,
-    XhtmlDivTypeValue,
-    XhtmlDlTypeValue,
-    XhtmlDtTypeValue,
-    XhtmlEditTypeValue,
-    XhtmlEmTypeValue,
-    XhtmlH1TypeValue,
-    XhtmlH2TypeValue,
-    XhtmlH3TypeValue,
-    XhtmlH4TypeValue,
-    XhtmlH5TypeValue,
-    XhtmlH6TypeValue,
-    XhtmlHeadingTypeValue,
-    XhtmlHrTypeValue,
-    XhtmlKbdTypeValue,
-    XhtmlLiTypeValue,
-    XhtmlObjectTypeValue,
-    XhtmlOlTypeValue,
-    XhtmlPTypeValue,
-    XhtmlPreTypeValue,
-    XhtmlQTypeValue,
-    XhtmlSampTypeValue,
-    XhtmlSpanTypeValue,
-    XhtmlStrongTypeValue,
-    XhtmlTableTypeValue,
-    XhtmlTbodyTypeValue,
-    XhtmlTdTypeValue,
-    XhtmlTfootTypeValue,
-    XhtmlThTypeValue,
-    XhtmlTheadTypeValue,
-    XhtmlTrTypeValue,
-    XhtmlUlTypeValue,
-    XhtmlVarTypeValue,
+    XhtmlInlPresTypeSpace,
+    XhtmlATypeSpace,
+    XhtmlAbbrTypeSpace,
+    XhtmlAcronymTypeSpace,
+    XhtmlAddressTypeSpace,
+    XhtmlBlockquoteTypeSpace,
+    XhtmlBrTypeSpace,
+    XhtmlCaptionTypeSpace,
+    XhtmlCiteTypeSpace,
+    XhtmlCodeTypeSpace,
+    XhtmlColTypeSpace,
+    XhtmlColgroupTypeSpace,
+    XhtmlDdTypeSpace,
+    XhtmlDfnTypeSpace,
+    XhtmlDivTypeSpace,
+    XhtmlDlTypeSpace,
+    XhtmlDtTypeSpace,
+    XhtmlEditTypeSpace,
+    XhtmlEmTypeSpace,
+    XhtmlH1TypeSpace,
+    XhtmlH2TypeSpace,
+    XhtmlH3TypeSpace,
+    XhtmlH4TypeSpace,
+    XhtmlH5TypeSpace,
+    XhtmlH6TypeSpace,
+    XhtmlHeadingTypeSpace,
+    XhtmlHrTypeSpace,
+    XhtmlKbdTypeSpace,
+    XhtmlLiTypeSpace,
+    XhtmlObjectTypeSpace,
+    XhtmlOlTypeSpace,
+    XhtmlPTypeSpace,
+    XhtmlPreTypeSpace,
+    XhtmlQTypeSpace,
+    XhtmlSampTypeSpace,
+    XhtmlSpanTypeSpace,
+    XhtmlStrongTypeSpace,
+    XhtmlTableTypeSpace,
+    XhtmlTbodyTypeSpace,
+    XhtmlTdTypeSpace,
+    XhtmlTfootTypeSpace,
+    XhtmlThTypeSpace,
+    XhtmlTheadTypeSpace,
+    XhtmlTrTypeSpace,
+    XhtmlUlTypeSpace,
+    XhtmlVarTypeSpace,
 )
 
 __NAMESPACE__ = "http://www.w3.org/1999/xhtml"
@@ -65,9 +65,9 @@ class XhtmlBrType:
     class Meta:
         name = "xhtml.br.type"
 
-    space: XhtmlBrTypeValue = field(
+    space: XhtmlBrTypeSpace = field(
         init=False,
-        default=XhtmlBrTypeValue.PRESERVE,
+        default=XhtmlBrTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -99,9 +99,9 @@ class XhtmlColType:
     class Meta:
         name = "xhtml.col.type"
 
-    space: XhtmlColTypeValue = field(
+    space: XhtmlColTypeSpace = field(
         init=False,
-        default=XhtmlColTypeValue.PRESERVE,
+        default=XhtmlColTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -198,9 +198,9 @@ class XhtmlHrType:
     class Meta:
         name = "xhtml.hr.type"
 
-    space: XhtmlHrTypeValue = field(
+    space: XhtmlHrTypeSpace = field(
         init=False,
-        default=XhtmlHrTypeValue.PRESERVE,
+        default=XhtmlHrTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -253,9 +253,9 @@ class XhtmlOlType:
             "min_occurs": 1,
         }
     )
-    space: XhtmlOlTypeValue = field(
+    space: XhtmlOlTypeSpace = field(
         init=False,
-        default=XhtmlOlTypeValue.PRESERVE,
+        default=XhtmlOlTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -345,9 +345,9 @@ class XhtmlColgroupType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlColgroupTypeValue = field(
+    space: XhtmlColgroupTypeSpace = field(
         init=False,
-        default=XhtmlColgroupTypeValue.PRESERVE,
+        default=XhtmlColgroupTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -621,9 +621,9 @@ class XhtmlQType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlQTypeValue = field(
+    space: XhtmlQTypeSpace = field(
         init=False,
-        default=XhtmlQTypeValue.PRESERVE,
+        default=XhtmlQTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -852,9 +852,9 @@ class XhtmlAcronymType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlAcronymTypeValue = field(
+    space: XhtmlAcronymTypeSpace = field(
         init=False,
-        default=XhtmlAcronymTypeValue.PRESERVE,
+        default=XhtmlAcronymTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -1076,9 +1076,9 @@ class XhtmlAbbrType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlAbbrTypeValue = field(
+    space: XhtmlAbbrTypeSpace = field(
         init=False,
-        default=XhtmlAbbrTypeValue.PRESERVE,
+        default=XhtmlAbbrTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -1300,9 +1300,9 @@ class XhtmlCiteType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlCiteTypeValue = field(
+    space: XhtmlCiteTypeSpace = field(
         init=False,
-        default=XhtmlCiteTypeValue.PRESERVE,
+        default=XhtmlCiteTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -1524,9 +1524,9 @@ class XhtmlVarType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlVarTypeValue = field(
+    space: XhtmlVarTypeSpace = field(
         init=False,
-        default=XhtmlVarTypeValue.PRESERVE,
+        default=XhtmlVarTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -1748,9 +1748,9 @@ class XhtmlKbdType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlKbdTypeValue = field(
+    space: XhtmlKbdTypeSpace = field(
         init=False,
-        default=XhtmlKbdTypeValue.PRESERVE,
+        default=XhtmlKbdTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -1972,9 +1972,9 @@ class XhtmlSampType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlSampTypeValue = field(
+    space: XhtmlSampTypeSpace = field(
         init=False,
-        default=XhtmlSampTypeValue.PRESERVE,
+        default=XhtmlSampTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -2196,9 +2196,9 @@ class XhtmlCodeType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlCodeTypeValue = field(
+    space: XhtmlCodeTypeSpace = field(
         init=False,
-        default=XhtmlCodeTypeValue.PRESERVE,
+        default=XhtmlCodeTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -2420,9 +2420,9 @@ class XhtmlDfnType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlDfnTypeValue = field(
+    space: XhtmlDfnTypeSpace = field(
         init=False,
-        default=XhtmlDfnTypeValue.PRESERVE,
+        default=XhtmlDfnTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -2644,9 +2644,9 @@ class XhtmlStrongType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlStrongTypeValue = field(
+    space: XhtmlStrongTypeSpace = field(
         init=False,
-        default=XhtmlStrongTypeValue.PRESERVE,
+        default=XhtmlStrongTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -2868,9 +2868,9 @@ class XhtmlCaptionType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlCaptionTypeValue = field(
+    space: XhtmlCaptionTypeSpace = field(
         init=False,
-        default=XhtmlCaptionTypeValue.PRESERVE,
+        default=XhtmlCaptionTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -3092,9 +3092,9 @@ class XhtmlDtType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlDtTypeValue = field(
+    space: XhtmlDtTypeSpace = field(
         init=False,
-        default=XhtmlDtTypeValue.PRESERVE,
+        default=XhtmlDtTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -3316,9 +3316,9 @@ class XhtmlH2Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlH2TypeValue = field(
+    space: XhtmlH2TypeSpace = field(
         init=False,
-        default=XhtmlH2TypeValue.PRESERVE,
+        default=XhtmlH2TypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -3540,9 +3540,9 @@ class XhtmlH3Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlH3TypeValue = field(
+    space: XhtmlH3TypeSpace = field(
         init=False,
-        default=XhtmlH3TypeValue.PRESERVE,
+        default=XhtmlH3TypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -3764,9 +3764,9 @@ class XhtmlH4Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlH4TypeValue = field(
+    space: XhtmlH4TypeSpace = field(
         init=False,
-        default=XhtmlH4TypeValue.PRESERVE,
+        default=XhtmlH4TypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -3988,9 +3988,9 @@ class XhtmlH5Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlH5TypeValue = field(
+    space: XhtmlH5TypeSpace = field(
         init=False,
-        default=XhtmlH5TypeValue.PRESERVE,
+        default=XhtmlH5TypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -4212,9 +4212,9 @@ class XhtmlH6Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlH6TypeValue = field(
+    space: XhtmlH6TypeSpace = field(
         init=False,
-        default=XhtmlH6TypeValue.PRESERVE,
+        default=XhtmlH6TypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -4436,9 +4436,9 @@ class XhtmlPType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlPTypeValue = field(
+    space: XhtmlPTypeSpace = field(
         init=False,
-        default=XhtmlPTypeValue.PRESERVE,
+        default=XhtmlPTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -4625,9 +4625,9 @@ class XhtmlPreType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlPreTypeValue = field(
+    space: XhtmlPreTypeSpace = field(
         init=False,
-        default=XhtmlPreTypeValue.PRESERVE,
+        default=XhtmlPreTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -4961,9 +4961,9 @@ class XhtmlDdType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlDdTypeValue = field(
+    space: XhtmlDdTypeSpace = field(
         init=False,
-        default=XhtmlDdTypeValue.PRESERVE,
+        default=XhtmlDdTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -5024,9 +5024,9 @@ class XhtmlDlType:
             "sequential": True,
         }
     )
-    space: XhtmlDlTypeValue = field(
+    space: XhtmlDlTypeSpace = field(
         init=False,
-        default=XhtmlDlTypeValue.PRESERVE,
+        default=XhtmlDlTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -5360,9 +5360,9 @@ class XhtmlTdType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlTdTypeValue = field(
+    space: XhtmlTdTypeSpace = field(
         init=False,
-        default=XhtmlTdTypeValue.PRESERVE,
+        default=XhtmlTdTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -5779,9 +5779,9 @@ class XhtmlThType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlThTypeValue = field(
+    space: XhtmlThTypeSpace = field(
         init=False,
-        default=XhtmlThTypeValue.PRESERVE,
+        default=XhtmlThTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -5925,9 +5925,9 @@ class XhtmlTrType:
             "sequential": True,
         }
     )
-    space: XhtmlTrTypeValue = field(
+    space: XhtmlTrTypeSpace = field(
         init=False,
-        default=XhtmlTrTypeValue.PRESERVE,
+        default=XhtmlTrTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -6019,9 +6019,9 @@ class XhtmlTbodyType:
             "min_occurs": 1,
         }
     )
-    space: XhtmlTbodyTypeValue = field(
+    space: XhtmlTbodyTypeSpace = field(
         init=False,
-        default=XhtmlTbodyTypeValue.PRESERVE,
+        default=XhtmlTbodyTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -6113,9 +6113,9 @@ class XhtmlTfootType:
             "min_occurs": 1,
         }
     )
-    space: XhtmlTfootTypeValue = field(
+    space: XhtmlTfootTypeSpace = field(
         init=False,
-        default=XhtmlTfootTypeValue.PRESERVE,
+        default=XhtmlTfootTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -6207,9 +6207,9 @@ class XhtmlTheadType:
             "min_occurs": 1,
         }
     )
-    space: XhtmlTheadTypeValue = field(
+    space: XhtmlTheadTypeSpace = field(
         init=False,
-        default=XhtmlTheadTypeValue.PRESERVE,
+        default=XhtmlTheadTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -6342,9 +6342,9 @@ class XhtmlTableType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlTableTypeValue = field(
+    space: XhtmlTableTypeSpace = field(
         init=False,
-        default=XhtmlTableTypeValue.PRESERVE,
+        default=XhtmlTableTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -6579,9 +6579,9 @@ class XhtmlBlockquoteType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlBlockquoteTypeValue = field(
+    space: XhtmlBlockquoteTypeSpace = field(
         init=False,
-        default=XhtmlBlockquoteTypeValue.PRESERVE,
+        default=XhtmlBlockquoteTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -6921,9 +6921,9 @@ class XhtmlDivType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlDivTypeValue = field(
+    space: XhtmlDivTypeSpace = field(
         init=False,
-        default=XhtmlDivTypeValue.PRESERVE,
+        default=XhtmlDivTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -7257,9 +7257,9 @@ class XhtmlLiType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlLiTypeValue = field(
+    space: XhtmlLiTypeSpace = field(
         init=False,
-        default=XhtmlLiTypeValue.PRESERVE,
+        default=XhtmlLiTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -7312,9 +7312,9 @@ class XhtmlUlType:
             "min_occurs": 1,
         }
     )
-    space: XhtmlUlTypeValue = field(
+    space: XhtmlUlTypeSpace = field(
         init=False,
-        default=XhtmlUlTypeValue.PRESERVE,
+        default=XhtmlUlTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -7696,9 +7696,9 @@ class XhtmlObjectType:
             "sequential": True,
         }
     )
-    space: XhtmlObjectTypeValue = field(
+    space: XhtmlObjectTypeSpace = field(
         init=False,
-        default=XhtmlObjectTypeValue.PRESERVE,
+        default=XhtmlObjectTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -7991,9 +7991,9 @@ class XhtmlAType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlATypeValue = field(
+    space: XhtmlATypeSpace = field(
         init=False,
-        default=XhtmlATypeValue.PRESERVE,
+        default=XhtmlATypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -8266,9 +8266,9 @@ class XhtmlInlPresType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlInlPresTypeValue = field(
+    space: XhtmlInlPresTypeSpace = field(
         init=False,
-        default=XhtmlInlPresTypeValue.PRESERVE,
+        default=XhtmlInlPresTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -8490,9 +8490,9 @@ class XhtmlEmType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlEmTypeValue = field(
+    space: XhtmlEmTypeSpace = field(
         init=False,
-        default=XhtmlEmTypeValue.PRESERVE,
+        default=XhtmlEmTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -8714,9 +8714,9 @@ class XhtmlH1Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlH1TypeValue = field(
+    space: XhtmlH1TypeSpace = field(
         init=False,
-        default=XhtmlH1TypeValue.PRESERVE,
+        default=XhtmlH1TypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -9050,9 +9050,9 @@ class XhtmlEditType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlEditTypeValue = field(
+    space: XhtmlEditTypeSpace = field(
         init=False,
-        default=XhtmlEditTypeValue.PRESERVE,
+        default=XhtmlEditTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -9287,9 +9287,9 @@ class XhtmlSpanType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlSpanTypeValue = field(
+    space: XhtmlSpanTypeSpace = field(
         init=False,
-        default=XhtmlSpanTypeValue.PRESERVE,
+        default=XhtmlSpanTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -9511,9 +9511,9 @@ class XhtmlAddressType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlAddressTypeValue = field(
+    space: XhtmlAddressTypeSpace = field(
         init=False,
-        default=XhtmlAddressTypeValue.PRESERVE,
+        default=XhtmlAddressTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -9735,9 +9735,9 @@ class XhtmlHeadingType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlHeadingTypeValue = field(
+    space: XhtmlHeadingTypeSpace = field(
         init=False,
-        default=XhtmlHeadingTypeValue.PRESERVE,
+        default=XhtmlHeadingTypeSpace.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
