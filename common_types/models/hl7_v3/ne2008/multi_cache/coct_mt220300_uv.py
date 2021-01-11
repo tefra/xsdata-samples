@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from enum import Enum
 from typing import List, Optional, Union
 from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     AdExplicit,
@@ -43,6 +42,7 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     RoleClassPartitive,
     RoleClassPartitivePartByBot,
     RoleClassPassive,
+    RoleClassRootValue,
     XAccommodationRequestorRole,
     XDocumentEntrySubject,
     XDocumentSubject,
@@ -541,7 +541,7 @@ class CoctMt220300UvSubContent:
             "type": "Attribute",
         }
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt220300UvSubContent.ClassCode", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassPartitive.CONT,
         metadata={
@@ -551,9 +551,6 @@ class CoctMt220300UvSubContent:
             "pattern": r"[^\s]+",
         }
     )
-
-    class ClassCode(Enum):
-        ROL = "ROL"
 
 
 @dataclass
@@ -608,7 +605,7 @@ class CoctMt220300UvSuperContent:
             "type": "Attribute",
         }
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt220300UvSuperContent.ClassCode", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassPartitive.CONT,
         metadata={
@@ -618,9 +615,6 @@ class CoctMt220300UvSuperContent:
             "pattern": r"[^\s]+",
         }
     )
-
-    class ClassCode(Enum):
-        ROL = "ROL"
 
 
 @dataclass
@@ -1050,7 +1044,7 @@ class CoctMt220300UvTerritorialAuthority:
             "type": "Attribute",
         }
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt220300UvTerritorialAuthority.ClassCode", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassPassive.TERR,
         metadata={
@@ -1060,9 +1054,6 @@ class CoctMt220300UvTerritorialAuthority:
             "pattern": r"[^\s]+",
         }
     )
-
-    class ClassCode(Enum):
-        ROL = "ROL"
 
 
 @dataclass
@@ -1354,7 +1345,7 @@ class CoctMt220300UvRole:
             "type": "Attribute",
         }
     )
-    class_code: Optional[Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt220300UvRole.ClassCode"]] = field(
+    class_code: Optional[Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue]] = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -1363,9 +1354,6 @@ class CoctMt220300UvRole:
             "pattern": r"[^\s]+",
         }
     )
-
-    class ClassCode(Enum):
-        ROL = "ROL"
 
 
 @dataclass
@@ -2088,7 +2076,7 @@ class CoctMt220300UvContent:
             "type": "Attribute",
         }
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt220300UvContent.ClassCode", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassPartitive.CONT,
         metadata={
@@ -2098,6 +2086,3 @@ class CoctMt220300UvContent:
             "pattern": r"[^\s]+",
         }
     )
-
-    class ClassCode(Enum):
-        ROL = "ROL"

@@ -94,6 +94,27 @@ class AccountCode:
     )
 
 
+class ActionStatusType(Enum):
+    """
+    Properties
+    ----------
+    TAW:
+    TTL:
+    TLCXL:
+    ACTIVE:
+    CXL:
+    TAU: Equivalent to TAX in Worldspan
+    TRH:
+    """
+    TAW = "TAW"
+    TTL = "TTL"
+    TLCXL = "TLCXL"
+    ACTIVE = "ACTIVE"
+    CXL = "CXL"
+    TAU = "TAU"
+    TRH = "TRH"
+
+
 @dataclass
 class AddSvc:
     """1P - Add SVC segments to collect additional fee
@@ -233,92 +254,10 @@ class AgencySellInfo:
     )
 
 
-@dataclass
-class AgentAction:
-    """
-    Depending on context, this will represent information about which agent
-    perform different actions.
-
-    Parameters
-    ----------
-    action_type: The type of action the agent performed.
-    agent_code: The AgenctCode who performed the action.
-    branch_code: The BranchCode of the branch (working branch,
-        branchcode used for the request. If nothing specified,
-        branchcode for the agent) who performed the action.
-    agency_code: The AgencyCode of the agent who performed the action.
-    agent_sine: The sign in user name of the agent logged into the
-        terminal. PROVIDER SUPPORTED: ACH
-    event_time: Date and time at which this event took place.
-    agent_override: AgentSine value that was used during PNR creation or
-        End Transact.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    action_type: Optional["AgentAction.ActionType"] = field(
-        default=None,
-        metadata={
-            "name": "ActionType",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-    agent_code: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AgentCode",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-    branch_code: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "BranchCode",
-            "type": "Attribute",
-            "required": True,
-            "min_length": 1,
-            "max_length": 25,
-        }
-    )
-    agency_code: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AgencyCode",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-    agent_sine: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AgentSine",
-            "type": "Attribute",
-        }
-    )
-    event_time: Optional[XmlDateTime] = field(
-        default=None,
-        metadata={
-            "name": "EventTime",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-    agent_override: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AgentOverride",
-            "type": "Attribute",
-            "min_length": 1,
-            "max_length": 32,
-        }
-    )
-
-    class ActionType(Enum):
-        CREATED = "Created"
-        MODIFIED = "Modified"
-        TICKETED = "Ticketed"
+class AgentActionActionType(Enum):
+    CREATED = "Created"
+    MODIFIED = "Modified"
+    TICKETED = "Ticketed"
 
 
 @dataclass
@@ -585,58 +524,25 @@ class BookingDates:
     )
 
 
-@dataclass
-class BookingSource:
+class BookingSourceType(Enum):
     """
-    Parameters
+    Properties
     ----------
-    code: Alternate booking source code or number.
-    type: Type of booking source sent in the Code attribute. Possible
-        values are “PseudoCityCode”,” ArcNumber”,” IataNumber”,
-        “CustomerId” and “BookingSourceOverrride”.
-        “BookingSourceOverrride” is only applicable in
-        VehicleCreateReservationReq. 1P/1J.
+    PSEUDO_CITY_CODE:
+    ARC_NUMBER:
+    IATA_NUMBER:
+    CUSTOMER_ID:
+    BOOKING_SOURCE_OVERRIDE: The Booking Source Override is usually used
+        when the car supplier has assigned a number (which can be
+        alpha/numeric)
+        to the agency/e-commerce to use in place of an IATA number.
+        Supported provider(s) : 1P/1J
     """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    code: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Code",
-            "type": "Attribute",
-            "required": True,
-            "min_length": 1,
-        }
-    )
-    type: Optional["BookingSource.Type"] = field(
-        default=None,
-        metadata={
-            "name": "Type",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-
-    class Type(Enum):
-        """
-        Properties
-        ----------
-        PSEUDO_CITY_CODE:
-        ARC_NUMBER:
-        IATA_NUMBER:
-        CUSTOMER_ID:
-        BOOKING_SOURCE_OVERRIDE: The Booking Source Override is usually
-            used when the car supplier has assigned a number (which can
-            be alpha/numeric)
-            to the agency/e-commerce to use in place of an IATA number.
-            Supported provider(s) : 1P/1J
-        """
-        PSEUDO_CITY_CODE = "PseudoCityCode"
-        ARC_NUMBER = "ArcNumber"
-        IATA_NUMBER = "IataNumber"
-        CUSTOMER_ID = "CustomerId"
-        BOOKING_SOURCE_OVERRIDE = "BookingSourceOverride"
+    PSEUDO_CITY_CODE = "PseudoCityCode"
+    ARC_NUMBER = "ArcNumber"
+    IATA_NUMBER = "IataNumber"
+    CUSTOMER_ID = "CustomerId"
+    BOOKING_SOURCE_OVERRIDE = "BookingSourceOverride"
 
 
 @dataclass
@@ -1183,45 +1089,10 @@ class DriversLicenseRef:
     )
 
 
-@dataclass
-class EmailNotification:
-    """Send Email Notification to the emails specified in Booking Traveler.
-
-    Supported Provider : 1G/1V
-
-    Parameters
-    ----------
-    email_ref: Reference to Booking Traveler Email.
-    recipients: Indicates the recipients of the mail addresses for which
-        the user requires the system to send the itinerary.List of
-        Possible Values: All = Send Email to All addresses Default =
-        Send Email to Primary Booking Traveler Specific = Send Email to
-        specific address Referred in EmailRef.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    email_ref: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "EmailRef",
-            "type": "Element",
-            "max_occurs": 999,
-        }
-    )
-    recipients: Optional["EmailNotification.Recipients"] = field(
-        default=None,
-        metadata={
-            "name": "Recipients",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-
-    class Recipients(Enum):
-        ALL = "All"
-        DEFAULT = "Default"
-        SPECIFIC = "Specific"
+class EmailNotificationRecipients(Enum):
+    ALL = "All"
+    DEFAULT = "Default"
+    SPECIFIC = "Specific"
 
 
 @dataclass
@@ -1360,54 +1231,15 @@ class FormOfPaymentRef:
     )
 
 
-@dataclass
-class FormattedTextTextType:
+class FormattedTextTextTypeTextFormat(Enum):
     """
-    Provides text and indicates whether it is formatted or not.
-
-    Parameters
+    Properties
     ----------
-    value:
-    formatted: Textual information, which may be formatted as a line of
-        information, or unformatted, as a paragraph of text.
-    language: Language identification.
-    text_format: Indicates the format of text used in the description
-        e.g. unformatted  or html.
+    PLAIN_TEXT: Textual data that is in ASCII format.
+    HTML: HTML formatted text.
     """
-    value: Optional[str] = field(
-        default=None,
-    )
-    formatted: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "Formatted",
-            "type": "Attribute",
-        }
-    )
-    language: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Language",
-            "type": "Attribute",
-        }
-    )
-    text_format: Optional["FormattedTextTextType.TextFormat"] = field(
-        default=None,
-        metadata={
-            "name": "TextFormat",
-            "type": "Attribute",
-        }
-    )
-
-    class TextFormat(Enum):
-        """
-        Properties
-        ----------
-        PLAIN_TEXT: Textual data that is in ASCII format.
-        HTML: HTML formatted text.
-        """
-        PLAIN_TEXT = "PlainText"
-        HTML = "HTML"
+    PLAIN_TEXT = "PlainText"
+    HTML = "HTML"
 
 
 @dataclass
@@ -1552,49 +1384,9 @@ class LoyaltyCardRef:
     )
 
 
-@dataclass
-class McofeeInfo:
-    """
-    Information related to the PTA/TOD (Prepaid Ticket Advice / Ticket on
-    Departure) related to the MCO.
-
-    Parameters
-    ----------
-    amount: The monetary amount.
-    percentage: The percentage.
-    fee_applies_to_ind: Indicates if PTA/TOD fee is for the entire MCO
-        or is per person.
-    """
-    class Meta:
-        name = "MCOFeeInfo"
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    amount: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Amount",
-            "type": "Attribute",
-        }
-    )
-    percentage: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Percentage",
-            "type": "Attribute",
-            "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-        }
-    )
-    fee_applies_to_ind: Optional["McofeeInfo.FeeAppliesToInd"] = field(
-        default=None,
-        metadata={
-            "name": "FeeAppliesToInd",
-            "type": "Attribute",
-        }
-    )
-
-    class FeeAppliesToInd(Enum):
-        PER_PERSON = "Per-Person"
-        PER_MCO = "Per-MCO"
+class McofeeInfoFeeAppliesToInd(Enum):
+    PER_PERSON = "Per-Person"
+    PER_MCO = "Per-MCO"
 
 
 @dataclass
@@ -2006,37 +1798,28 @@ class OptionalServiceApplicabilityType(Enum):
     OTHER = "Other"
 
 
-@dataclass
-class OtherGuaranteeInfo:
+class OptionalServicesTypeCodeGroupType(Enum):
     """
-    Parameters
+    Properties
     ----------
-    value:
-    type: 1) IATA/ARC Number
-        2) Agency Address
-        2) Deposit Taken
-        3) Others
+    ADDITIONAL_OPTION: Identifies an additional option which has to be
+        paid for.
+    FREE_OPTION: Identifies an additional option which can be selected
+        without additional charge
+    DISCOUNT_OPTION: Identifies an option included in the base fare, and
+        can be de-selected by the user resulting in a discount in the
+        price
     """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
+    ADDITIONAL_OPTION = "AdditionalOption"
+    FREE_OPTION = "FreeOption"
+    DISCOUNT_OPTION = "DiscountOption"
 
-    value: Optional[str] = field(
-        default=None,
-    )
-    type: Optional["OtherGuaranteeInfo.Type"] = field(
-        default=None,
-        metadata={
-            "name": "Type",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
 
-    class Type(Enum):
-        IATA_ARC_NUMBER = "IATA/ARC Number"
-        AGENCY_ADDRESS = "Agency Address"
-        DEPOSIT_TAKEN = "Deposit Taken"
-        OTHERS = "Others"
+class OtherGuaranteeInfoType(Enum):
+    IATA_ARC_NUMBER = "IATA/ARC Number"
+    AGENCY_ADDRESS = "Agency Address"
+    DEPOSIT_TAKEN = "Deposit Taken"
+    OTHERS = "Others"
 
 
 @dataclass
@@ -2180,6 +1963,29 @@ class PaymentRef:
     )
 
 
+class PaymentType(Enum):
+    """
+    Properties
+    ----------
+    AIRLINE_FEE: Payment for all airline based fees (paper ticket fee,
+        SSR, etc.)
+    DELIVERY_FEE: Payment for agency ticket delivery fee
+    ITINERARY: Payment for all passengers
+    PASSENGER: Payment for a single passenger. The BookingTravelerRef
+        attribute must be set.
+    SERVICE_FEE: Payment for a service fee other than an MCO
+    OPTIONAL_SERVICE: Payment for an optional service
+    TICKET_FEE: Deprecated
+    """
+    AIRLINE_FEE = "AirlineFee"
+    DELIVERY_FEE = "DeliveryFee"
+    ITINERARY = "Itinerary"
+    PASSENGER = "Passenger"
+    SERVICE_FEE = "ServiceFee"
+    OPTIONAL_SERVICE = "OptionalService"
+    TICKET_FEE = "TicketFee"
+
+
 @dataclass
 class Penalty:
     """
@@ -2298,6 +2104,19 @@ class PersonalGeography:
             "length": 3,
         }
     )
+
+
+class PhoneNumberType(Enum):
+    AGENCY = "Agency"
+    BUSINESS = "Business"
+    MOBILE = "Mobile"
+    HOME = "Home"
+    FAX = "Fax"
+    HOTEL = "Hotel"
+    OTHER = "Other"
+    NONE_VALUE = "None"
+    EMAIL = "Email"
+    RESERVATIONS = "Reservations"
 
 
 @dataclass
@@ -2637,144 +2456,36 @@ class Remark:
     )
 
 
-@dataclass
-class RequiredField:
-    """
-    Parameters
-    ----------
-    name: The name of the required field
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    name: Optional["RequiredField.Name"] = field(
-        default=None,
-        metadata={
-            "name": "Name",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-
-    class Name(Enum):
-        CARD_TYPE = "CardType"
-        NUMBER = "Number"
-        CUSTOMER_REFERENCE = "CustomerReference"
-        ISSUE_NUMBER = "IssueNumber"
-        START_DATE = "StartDate"
-        NAME_ON_CARD = "NameOnCard"
-        EXPIRATION_DATE = "ExpirationDate"
-        CVV = "CVV"
-        ADDRESS_LINE1 = "AddressLine1"
-        ADDRESS_LINE2 = "AddressLine2"
-        CITY = "City"
-        STATE = "State"
-        POSTAL_CODE = "PostalCode"
+class RequiredFieldName(Enum):
+    CARD_TYPE = "CardType"
+    NUMBER = "Number"
+    CUSTOMER_REFERENCE = "CustomerReference"
+    ISSUE_NUMBER = "IssueNumber"
+    START_DATE = "StartDate"
+    NAME_ON_CARD = "NameOnCard"
+    EXPIRATION_DATE = "ExpirationDate"
+    CVV = "CVV"
+    ADDRESS_LINE1 = "AddressLine1"
+    ADDRESS_LINE2 = "AddressLine2"
+    CITY = "City"
+    STATE = "State"
+    POSTAL_CODE = "PostalCode"
 
 
-@dataclass
-class Requisition:
-    """
-    Requisition Form of Payment.
-
-    Parameters
-    ----------
-    number: Requisition number used for accounting
-    category: Classification Category for the requisition payment
-    type: Type can be Cash or Credit for category as Government
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    number: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Number",
-            "type": "Attribute",
-        }
-    )
-    category: Optional["Requisition.Category"] = field(
-        default=None,
-        metadata={
-            "name": "Category",
-            "type": "Attribute",
-        }
-    )
-    type: Optional["Requisition.Type"] = field(
-        default=None,
-        metadata={
-            "name": "Type",
-            "type": "Attribute",
-        }
-    )
-
-    class Category(Enum):
-        GOVERNMENT = "Government"
-        OTHER = "Other"
-
-    class Type(Enum):
-        CASH = "Cash"
-        CREDIT = "Credit"
+class RequisitionCategory(Enum):
+    GOVERNMENT = "Government"
+    OTHER = "Other"
 
 
-@dataclass
-class ResponseMessage:
-    """A simple textual fare note.
+class RequisitionType(Enum):
+    CASH = "Cash"
+    CREDIT = "Credit"
 
-    Used within several other objects.
 
-    Parameters
-    ----------
-    value:
-    code:
-    type: Indicates the type of message (Warning, Error, Info)
-    provider_code:
-    supplier_code:
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    value: Optional[str] = field(
-        default=None,
-    )
-    code: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "Code",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-    type: Optional["ResponseMessage.Type"] = field(
-        default=None,
-        metadata={
-            "name": "Type",
-            "type": "Attribute",
-        }
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ProviderCode",
-            "type": "Attribute",
-            "min_length": 2,
-            "max_length": 5,
-        }
-    )
-    supplier_code: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "SupplierCode",
-            "type": "Attribute",
-            "min_length": 1,
-            "max_length": 5,
-        }
-    )
-
-    class Type(Enum):
-        WARNING = "Warning"
-        ERROR = "Error"
-        INFO = "Info"
+class ResponseMessageType(Enum):
+    WARNING = "Warning"
+    ERROR = "Error"
+    INFO = "Info"
 
 
 @dataclass
@@ -3379,6 +3090,19 @@ class UnitedNations:
     )
 
 
+class AttrDocumentDocumentType(Enum):
+    SERVICE_FEE = "Service Fee"
+    PAPER_TICKET = "Paper Ticket"
+    MCO = "MCO"
+    E_TICKET = "E-Ticket"
+
+
+class AttrFlexShoppingTier(Enum):
+    VALUE_1 = 1
+    VALUE_2 = 2
+    VALUE_3 = 3
+
+
 class TypeAdjustmentTarget(Enum):
     BASE = "Base"
     TOTAL = "Total"
@@ -3737,56 +3461,14 @@ class TypeGeneralReference:
     )
 
 
-@dataclass
-class TypeGuaranteeInformation:
-    """
-    Information pertaining to the payment of type Guarantee.
+class TypeGuaranteeInformationAgencyType(Enum):
+    AGENCY_IATA = "AgencyIATA"
+    OTHER_AGENCY_IATA = "OtherAgencyIATA"
 
-    Parameters
-    ----------
-    type: Guarantee only or Deposit
-    agency_type: Guarantee to Agency IATA or Guarantee to Another Agency
-        IATA
-    iatanumber: Payment IATA number. (ie. IATA of Agency or Other
-        Agency)
-    """
-    class Meta:
-        name = "typeGuaranteeInformation"
 
-    type: Optional["TypeGuaranteeInformation.Type"] = field(
-        default=None,
-        metadata={
-            "name": "Type",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-    agency_type: Optional["TypeGuaranteeInformation.AgencyType"] = field(
-        default=None,
-        metadata={
-            "name": "AgencyType",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-    iatanumber: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "IATANumber",
-            "type": "Attribute",
-            "required": True,
-            "min_length": 1,
-            "max_length": 128,
-        }
-    )
-
-    class Type(Enum):
-        GUARANTEE = "Guarantee"
-        DEPOSIT = "Deposit"
-
-    class AgencyType(Enum):
-        AGENCY_IATA = "AgencyIATA"
-        OTHER_AGENCY_IATA = "OtherAgencyIATA"
+class TypeGuaranteeInformationType(Enum):
+    GUARANTEE = "Guarantee"
+    DEPOSIT = "Deposit"
 
 
 class TypeImageSize(Enum):
@@ -4424,43 +4106,10 @@ class TypeResponseImageSize(Enum):
     X = "X"
 
 
-@dataclass
-class TypeResultMessage:
-    """
-    Used to identify the results of a requests.
-
-    Parameters
-    ----------
-    value:
-    code:
-    type: Indicates the type of message (Warning, Error, Info)
-    """
-    class Meta:
-        name = "typeResultMessage"
-
-    value: Optional[str] = field(
-        default=None,
-    )
-    code: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "Code",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-    type: Optional["TypeResultMessage.Type"] = field(
-        default=None,
-        metadata={
-            "name": "Type",
-            "type": "Attribute",
-        }
-    )
-
-    class Type(Enum):
-        WARNING = "Warning"
-        ERROR = "Error"
-        INFO = "Info"
+class TypeResultMessageType(Enum):
+    WARNING = "Warning"
+    ERROR = "Error"
+    INFO = "Info"
 
 
 @dataclass
@@ -4987,7 +4636,7 @@ class ActionStatus:
             "type": "Element",
         }
     )
-    type: Optional["ActionStatus.Type"] = field(
+    type: Optional[ActionStatusType] = field(
         default=None,
         metadata={
             "name": "Type",
@@ -5082,61 +4731,6 @@ class ActionStatus:
         }
     )
 
-    class Type(Enum):
-        """
-        Properties
-        ----------
-        TAW:
-        TTL:
-        TLCXL:
-        ACTIVE:
-        CXL:
-        TAU: Equivalent to TAX in Worldspan
-        TRH:
-        """
-        TAW = "TAW"
-        TTL = "TTL"
-        TLCXL = "TLCXL"
-        ACTIVE = "ACTIVE"
-        CXL = "CXL"
-        TAU = "TAU"
-        TRH = "TRH"
-
-
-@dataclass
-class AddressRestriction:
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    required_field: List[RequiredField] = field(
-        default_factory=list,
-        metadata={
-            "name": "RequiredField",
-            "type": "Element",
-            "min_occurs": 1,
-            "max_occurs": 999,
-        }
-    )
-
-
-@dataclass
-class AgencyInfo:
-    """
-    Tracks the various agent/agency information.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    agent_action: List[AgentAction] = field(
-        default_factory=list,
-        metadata={
-            "name": "AgentAction",
-            "type": "Element",
-            "min_occurs": 1,
-            "max_occurs": 999,
-        }
-    )
-
 
 @dataclass
 class AgencyPayment(TypeAgencyPayment):
@@ -5145,6 +4739,89 @@ class AgencyPayment(TypeAgencyPayment):
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
+
+
+@dataclass
+class AgentAction:
+    """
+    Depending on context, this will represent information about which agent
+    perform different actions.
+
+    Parameters
+    ----------
+    action_type: The type of action the agent performed.
+    agent_code: The AgenctCode who performed the action.
+    branch_code: The BranchCode of the branch (working branch,
+        branchcode used for the request. If nothing specified,
+        branchcode for the agent) who performed the action.
+    agency_code: The AgencyCode of the agent who performed the action.
+    agent_sine: The sign in user name of the agent logged into the
+        terminal. PROVIDER SUPPORTED: ACH
+    event_time: Date and time at which this event took place.
+    agent_override: AgentSine value that was used during PNR creation or
+        End Transact.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    action_type: Optional[AgentActionActionType] = field(
+        default=None,
+        metadata={
+            "name": "ActionType",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+    agent_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "AgentCode",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+    branch_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "BranchCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 25,
+        }
+    )
+    agency_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "AgencyCode",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+    agent_sine: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "AgentSine",
+            "type": "Attribute",
+        }
+    )
+    event_time: Optional[XmlDateTime] = field(
+        default=None,
+        metadata={
+            "name": "EventTime",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+    agent_override: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "AgentOverride",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
+    )
 
 
 @dataclass
@@ -5359,58 +5036,35 @@ class BaseCoreReq:
 
 
 @dataclass
-class BaseRsp:
+class BookingSource:
     """
-    The base type for all responses.
-
     Parameters
     ----------
-    response_message:
-    trace_id: Unique identifier for this atomic transaction traced by
-        the user. Use is optional.
-    transaction_id: System generated unique identifier for this atomic
-        transaction.
-    response_time: The time (in ms) the system spent processing this
-        request, not including transmission times.
-    command_history: HTTP link to download command history and debugging
-        information of the request that generated this response. Must be
-        enabled on the system.
+    code: Alternate booking source code or number.
+    type: Type of booking source sent in the Code attribute. Possible
+        values are “PseudoCityCode”,” ArcNumber”,” IataNumber”,
+        “CustomerId” and “BookingSourceOverrride”.
+        “BookingSourceOverrride” is only applicable in
+        VehicleCreateReservationReq. 1P/1J.
     """
-    response_message: List[ResponseMessage] = field(
-        default_factory=list,
-        metadata={
-            "name": "ResponseMessage",
-            "type": "Element",
-            "namespace": "http://www.travelport.com/schema/common_v48_0",
-            "max_occurs": 999,
-        }
-    )
-    trace_id: Optional[str] = field(
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    code: Optional[str] = field(
         default=None,
         metadata={
-            "name": "TraceId",
+            "name": "Code",
             "type": "Attribute",
+            "required": True,
+            "min_length": 1,
         }
     )
-    transaction_id: Optional[str] = field(
+    type: Optional[BookingSourceType] = field(
         default=None,
         metadata={
-            "name": "TransactionId",
+            "name": "Type",
             "type": "Attribute",
-        }
-    )
-    response_time: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "ResponseTime",
-            "type": "Attribute",
-        }
-    )
-    command_history: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CommandHistory",
-            "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -5490,47 +5144,6 @@ class BookingTravelerRef:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class CardRestriction:
-    """
-    Parameters
-    ----------
-    required_field:
-    code: 2 letter Credit/Debit Card merchant type
-    name: Card merchant description
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    required_field: List[RequiredField] = field(
-        default_factory=list,
-        metadata={
-            "name": "RequiredField",
-            "type": "Element",
-            "min_occurs": 1,
-            "max_occurs": 999,
-        }
-    )
-    code: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Code",
-            "type": "Attribute",
-            "required": True,
-            "min_length": 2,
-            "max_length": 2,
-        }
-    )
-    name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Name",
-            "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -6203,6 +5816,82 @@ class Email:
 
 
 @dataclass
+class EmailNotification:
+    """Send Email Notification to the emails specified in Booking Traveler.
+
+    Supported Provider : 1G/1V
+
+    Parameters
+    ----------
+    email_ref: Reference to Booking Traveler Email.
+    recipients: Indicates the recipients of the mail addresses for which
+        the user requires the system to send the itinerary.List of
+        Possible Values: All = Send Email to All addresses Default =
+        Send Email to Primary Booking Traveler Specific = Send Email to
+        specific address Referred in EmailRef.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    email_ref: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "EmailRef",
+            "type": "Element",
+            "max_occurs": 999,
+        }
+    )
+    recipients: Optional[EmailNotificationRecipients] = field(
+        default=None,
+        metadata={
+            "name": "Recipients",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+
+
+@dataclass
+class FormattedTextTextType:
+    """
+    Provides text and indicates whether it is formatted or not.
+
+    Parameters
+    ----------
+    value:
+    formatted: Textual information, which may be formatted as a line of
+        information, or unformatted, as a paragraph of text.
+    language: Language identification.
+    text_format: Indicates the format of text used in the description
+        e.g. unformatted  or html.
+    """
+    value: Optional[str] = field(
+        default=None,
+    )
+    formatted: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "Formatted",
+            "type": "Attribute",
+        }
+    )
+    language: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Language",
+            "type": "Attribute",
+        }
+    )
+    text_format: Optional[FormattedTextTextTypeTextFormat] = field(
+        default=None,
+        metadata={
+            "name": "TextFormat",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
 class GeneralRemark:
     """A textual remark container to hold any printable text.
 
@@ -6538,6 +6227,47 @@ class LoyaltyProgram:
 
 
 @dataclass
+class McofeeInfo:
+    """
+    Information related to the PTA/TOD (Prepaid Ticket Advice / Ticket on
+    Departure) related to the MCO.
+
+    Parameters
+    ----------
+    amount: The monetary amount.
+    percentage: The percentage.
+    fee_applies_to_ind: Indicates if PTA/TOD fee is for the entire MCO
+        or is per person.
+    """
+    class Meta:
+        name = "MCOFeeInfo"
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    amount: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Amount",
+            "type": "Attribute",
+        }
+    )
+    percentage: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Percentage",
+            "type": "Attribute",
+            "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
+        }
+    )
+    fee_applies_to_ind: Optional[McofeeInfoFeeAppliesToInd] = field(
+        default=None,
+        metadata={
+            "name": "FeeAppliesToInd",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
 class MediaItem:
     """
     Photos and other media urls for the property referenced above.
@@ -6798,6 +6528,33 @@ class OptionalServiceApplicationLimitType:
 
 
 @dataclass
+class OtherGuaranteeInfo:
+    """
+    Parameters
+    ----------
+    value:
+    type: 1) IATA/ARC Number
+        2) Agency Address
+        2) Deposit Taken
+        3) Others
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    value: Optional[str] = field(
+        default=None,
+    )
+    type: Optional[OtherGuaranteeInfoType] = field(
+        default=None,
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+
+
+@dataclass
 class PassengerInfo:
     """
     Booking Traveler information tied to invoice.
@@ -6876,7 +6633,7 @@ class Payment:
             "type": "Attribute",
         }
     )
-    type: Optional["Payment.Type"] = field(
+    type: Optional[PaymentType] = field(
         default=None,
         metadata={
             "name": "Type",
@@ -6945,28 +6702,6 @@ class Payment:
         }
     )
 
-    class Type(Enum):
-        """
-        Properties
-        ----------
-        AIRLINE_FEE: Payment for all airline based fees (paper ticket
-            fee, SSR, etc.)
-        DELIVERY_FEE: Payment for agency ticket delivery fee
-        ITINERARY: Payment for all passengers
-        PASSENGER: Payment for a single passenger. The
-            BookingTravelerRef attribute must be set.
-        SERVICE_FEE: Payment for a service fee other than an MCO
-        OPTIONAL_SERVICE: Payment for an optional service
-        TICKET_FEE: Deprecated
-        """
-        AIRLINE_FEE = "AirlineFee"
-        DELIVERY_FEE = "DeliveryFee"
-        ITINERARY = "Itinerary"
-        PASSENGER = "Passenger"
-        SERVICE_FEE = "ServiceFee"
-        OPTIONAL_SERVICE = "OptionalService"
-        TICKET_FEE = "TicketFee"
-
 
 @dataclass
 class PermittedProviders:
@@ -7027,7 +6762,7 @@ class PhoneNumber:
             "type": "Attribute",
         }
     )
-    type: Optional["PhoneNumber.Type"] = field(
+    type: Optional[PhoneNumberType] = field(
         default=None,
         metadata={
             "name": "Type",
@@ -7098,18 +6833,6 @@ class PhoneNumber:
             "type": "Attribute",
         }
     )
-
-    class Type(Enum):
-        AGENCY = "Agency"
-        BUSINESS = "Business"
-        MOBILE = "Mobile"
-        HOME = "Home"
-        FAX = "Fax"
-        HOTEL = "Hotel"
-        OTHER = "Other"
-        NONE_VALUE = "None"
-        EMAIL = "Email"
-        RESERVATIONS = "Reservations"
 
 
 @dataclass
@@ -7526,6 +7249,118 @@ class RequestKeyMappings:
             "name": "KeyMapping",
             "type": "Element",
             "max_occurs": 999,
+        }
+    )
+
+
+@dataclass
+class RequiredField:
+    """
+    Parameters
+    ----------
+    name: The name of the required field
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    name: Optional[RequiredFieldName] = field(
+        default=None,
+        metadata={
+            "name": "Name",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+
+
+@dataclass
+class Requisition:
+    """
+    Requisition Form of Payment.
+
+    Parameters
+    ----------
+    number: Requisition number used for accounting
+    category: Classification Category for the requisition payment
+    type: Type can be Cash or Credit for category as Government
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    number: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Number",
+            "type": "Attribute",
+        }
+    )
+    category: Optional[RequisitionCategory] = field(
+        default=None,
+        metadata={
+            "name": "Category",
+            "type": "Attribute",
+        }
+    )
+    type: Optional[RequisitionType] = field(
+        default=None,
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class ResponseMessage:
+    """A simple textual fare note.
+
+    Used within several other objects.
+
+    Parameters
+    ----------
+    value:
+    code:
+    type: Indicates the type of message (Warning, Error, Info)
+    provider_code:
+    supplier_code:
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    value: Optional[str] = field(
+        default=None,
+    )
+    code: Optional[int] = field(
+        default=None,
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+    type: Optional[ResponseMessageType] = field(
+        default=None,
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+        }
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
+    )
+    supplier_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "SupplierCode",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 5,
         }
     )
 
@@ -8908,6 +8743,50 @@ class TypeFeeInfo:
 
 
 @dataclass
+class TypeGuaranteeInformation:
+    """
+    Information pertaining to the payment of type Guarantee.
+
+    Parameters
+    ----------
+    type: Guarantee only or Deposit
+    agency_type: Guarantee to Agency IATA or Guarantee to Another Agency
+        IATA
+    iatanumber: Payment IATA number. (ie. IATA of Agency or Other
+        Agency)
+    """
+    class Meta:
+        name = "typeGuaranteeInformation"
+
+    type: Optional[TypeGuaranteeInformationType] = field(
+        default=None,
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+    agency_type: Optional[TypeGuaranteeInformationAgencyType] = field(
+        default=None,
+        metadata={
+            "name": "AgencyType",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+    iatanumber: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "IATANumber",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 128,
+        }
+    )
+
+
+@dataclass
 class TypeKeyword:
     """
     A complexType for keyword information.
@@ -9113,6 +8992,40 @@ class TypeProviderReservationSpecificInfo:
         default=None,
         metadata={
             "name": "ReservationLevel",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class TypeResultMessage:
+    """
+    Used to identify the results of a requests.
+
+    Parameters
+    ----------
+    value:
+    code:
+    type: Indicates the type of message (Warning, Error, Info)
+    """
+    class Meta:
+        name = "typeResultMessage"
+
+    value: Optional[str] = field(
+        default=None,
+    )
+    code: Optional[int] = field(
+        default=None,
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+    type: Optional[TypeResultMessageType] = field(
+        default=None,
+        metadata={
+            "name": "Type",
             "type": "Attribute",
         }
     )
@@ -9565,6 +9478,22 @@ class AccountInformation:
 
 
 @dataclass
+class AddressRestriction:
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    required_field: List[RequiredField] = field(
+        default_factory=list,
+        metadata={
+            "name": "RequiredField",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 999,
+        }
+    )
+
+
+@dataclass
 class AgencyContactInfo:
     """Generic agency contact information container.
 
@@ -9587,6 +9516,25 @@ class AgencyContactInfo:
         metadata={
             "name": "Key",
             "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AgencyInfo:
+    """
+    Tracks the various agent/agency information.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    agent_action: List[AgentAction] = field(
+        default_factory=list,
+        metadata={
+            "name": "AgentAction",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 999,
         }
     )
 
@@ -9977,14 +9925,99 @@ class BaseReq(BaseCoreReq):
 
 
 @dataclass
-class BaseSearchRsp(BaseRsp):
-    next_result_reference: List[NextResultReference] = field(
+class BaseRsp:
+    """
+    The base type for all responses.
+
+    Parameters
+    ----------
+    response_message:
+    trace_id: Unique identifier for this atomic transaction traced by
+        the user. Use is optional.
+    transaction_id: System generated unique identifier for this atomic
+        transaction.
+    response_time: The time (in ms) the system spent processing this
+        request, not including transmission times.
+    command_history: HTTP link to download command history and debugging
+        information of the request that generated this response. Must be
+        enabled on the system.
+    """
+    response_message: List[ResponseMessage] = field(
         default_factory=list,
         metadata={
-            "name": "NextResultReference",
+            "name": "ResponseMessage",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v48_0",
             "max_occurs": 999,
+        }
+    )
+    trace_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "TraceId",
+            "type": "Attribute",
+        }
+    )
+    transaction_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "TransactionId",
+            "type": "Attribute",
+        }
+    )
+    response_time: Optional[int] = field(
+        default=None,
+        metadata={
+            "name": "ResponseTime",
+            "type": "Attribute",
+        }
+    )
+    command_history: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "CommandHistory",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class CardRestriction:
+    """
+    Parameters
+    ----------
+    required_field:
+    code: 2 letter Credit/Debit Card merchant type
+    name: Card merchant description
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    required_field: List[RequiredField] = field(
+        default_factory=list,
+        metadata={
+            "name": "RequiredField",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 999,
+        }
+    )
+    code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 2,
+            "max_length": 2,
+        }
+    )
+    name: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Name",
+            "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -10560,30 +10593,6 @@ class PassiveInfo:
 
 
 @dataclass
-class PaymentRestriction:
-    class Meta:
-        namespace = "http://www.travelport.com/schema/common_v48_0"
-
-    card_restriction: List[CardRestriction] = field(
-        default_factory=list,
-        metadata={
-            "name": "CardRestriction",
-            "type": "Element",
-            "min_occurs": 1,
-            "max_occurs": 999,
-        }
-    )
-    address_restriction: Optional[AddressRestriction] = field(
-        default=None,
-        metadata={
-            "name": "AddressRestriction",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass
 class ReservationName:
     """
     Container to represent reservation name as appears in GDS booking.
@@ -10867,7 +10876,7 @@ class TransactionType:
             be returned in the shop response.  Provider: 1G, 1V, 1P, 1J,
             ACH
         """
-        tier: Optional["TransactionType.Air.Tier"] = field(
+        tier: Optional[AttrFlexShoppingTier] = field(
             default=None,
             metadata={
                 "name": "Tier",
@@ -10930,11 +10939,6 @@ class TransactionType:
                 "type": "Attribute",
             }
         )
-
-        class Tier(Enum):
-            VALUE_1 = 1
-            VALUE_2 = 2
-            VALUE_3 = 3
 
 
 @dataclass
@@ -11514,6 +11518,19 @@ class BaseReservation:
 
 @dataclass
 class BaseSearchReq(BaseReq):
+    next_result_reference: List[NextResultReference] = field(
+        default_factory=list,
+        metadata={
+            "name": "NextResultReference",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 999,
+        }
+    )
+
+
+@dataclass
+class BaseSearchRsp(BaseRsp):
     next_result_reference: List[NextResultReference] = field(
         default_factory=list,
         metadata={
@@ -12176,6 +12193,30 @@ class Group:
                 "required": True,
             }
         )
+
+
+@dataclass
+class PaymentRestriction:
+    class Meta:
+        namespace = "http://www.travelport.com/schema/common_v48_0"
+
+    card_restriction: List[CardRestriction] = field(
+        default_factory=list,
+        metadata={
+            "name": "CardRestriction",
+            "type": "Element",
+            "min_occurs": 1,
+            "max_occurs": 999,
+        }
+    )
+    address_restriction: Optional[AddressRestriction] = field(
+        default=None,
+        metadata={
+            "name": "AddressRestriction",
+            "type": "Element",
+            "required": True,
+        }
+    )
 
 
 @dataclass

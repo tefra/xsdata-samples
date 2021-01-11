@@ -674,6 +674,12 @@ class ActContainerRegistrationCode(Enum):
     R = "R"
 
 
+class ActControlVariableValue(Enum):
+    AUTO = "AUTO"
+    ENDC = "ENDC"
+    REFLEX = "REFLEX"
+
+
 class ActCoverageAuthorizationConfirmationCode(Enum):
     """abstDomain: A17491 (C-0-T13953-A13954-A17487-A17491-cpt)"""
     AUTH = "AUTH"
@@ -880,6 +886,13 @@ class ActHealthInsuranceTypeCode(Enum):
     MENTPOL = "MENTPOL"
     SUBPOL = "SUBPOL"
     VISPOL = "VISPOL"
+
+
+class ActIncidentCodeValue(Enum):
+    MVA = "MVA"
+    SCHOOL = "SCHOOL"
+    SPT = "SPT"
+    WPA = "WPA"
 
 
 class ActIneligibilityReason(Enum):
@@ -1193,6 +1206,11 @@ class ActMedicationTherapyDurationWorkingListCode(Enum):
     ACU = "ACU"
 
 
+class ActMonitoringProtocolCodeValue(Enum):
+    LU = "LU"
+    SAC = "SAC"
+
+
 class ActMood(Enum):
     """vocSet: T10196 (C-0-T10196-cpt)"""
     PRP = "PRP"
@@ -1403,6 +1421,11 @@ class ActProgramTypeCode(Enum):
     WCBPOL = "WCBPOL"
 
 
+class ActReasonValue(Enum):
+    MEDNEC = "MEDNEC"
+    PAT = "PAT"
+
+
 class ActRelationshipCheckpoint(Enum):
     """vocSet: T10349 (C-0-T10349-cpt)"""
     B = "B"
@@ -1489,6 +1512,26 @@ class ActRelationshipOutcome(Enum):
     OUTC = "OUTC"
     GOAL = "GOAL"
     RISK = "RISK"
+
+
+class ActRelationshipPertainsValue(Enum):
+    PERT = "PERT"
+    NAME = "NAME"
+    AUTH = "AUTH"
+    COVBY = "COVBY"
+    ELNK = "ELNK"
+    EXPL = "EXPL"
+    PREV = "PREV"
+    REFV = "REFV"
+    SUBJ = "SUBJ"
+    DRIV = "DRIV"
+    CAUS = "CAUS"
+    MFST = "MFST"
+    ITEMSLOC = "ITEMSLOC"
+    LIMIT = "LIMIT"
+    EVID = "EVID"
+    REFR = "REFR"
+    SUMM = "SUMM"
 
 
 class ActRelationshipPosting(Enum):
@@ -1857,6 +1900,11 @@ class AdministrationDetectedIssueCodeDuplicateTherapyAlertByBot(Enum):
     DUPTHPCLS = "DUPTHPCLS"
 
 
+class AdministrationDetectedIssueCodeValue(Enum):
+    DRUG_ACTION_DETECTED_ISSUE_CODE = "_DrugActionDetectedIssueCode"
+    DACT = "DACT"
+
+
 class AdministrationMedicalDevice(Enum):
     """abstDomain: A16189 (C-0-T16040-A16041-A19867-A16188-A16189-cpt)"""
     INH = "INH"
@@ -1923,6 +1971,12 @@ class AgenciesProviderCodes(Enum):
 class Aleut(Enum):
     """abstDomain: A18221 (C-0-T18130-A18191-A18221-cpt)"""
     X_ALW = "x-ALW"
+
+
+class AlgonquianValue(Enum):
+    X_BLC = "x-BLC"
+    X_CHY = "x-CHY"
+    X_MEZ = "x-MEZ"
 
 
 class AlgorithmicDecisionObservationMethod(Enum):
@@ -2264,6 +2318,14 @@ class AmbulatoryHealthCareFacilitiesProviderCodes(Enum):
     VALUE_260000000_X = "260000000X"
 
 
+class AmericanIndianAlaskaNativeLanguagesValue(Enum):
+    X_HAI = "x-HAI"
+    X_KUN = "x-KUN"
+    X_PSD = "x-PSD"
+    X_YUC = "x-YUC"
+    X_ZUN = "x-ZUN"
+
+
 class AmnioticFluidSacRoute(Enum):
     """abstDomain: A17022 (C-0-T14581-A17021-A17022-cpt)"""
     AMNINJ = "AMNINJ"
@@ -2512,11 +2574,21 @@ class AssistedLivingFacilityProviderCodes(Enum):
     VALUE_3104_A0625_X = "3104A0625X"
 
 
+class AthapaskanEyakValue(Enum):
+    X_EYA = "x-EYA"
+
+
 class AudioMediaType(Enum):
     """abstDomain: A14835 (C-0-T14824-A14835-cpt)"""
     AUDIO_BASIC = "audio/basic"
     AUDIO_K32ADPCM = "audio/k32adpcm"
     AUDIO_MPEG = "audio/mpeg"
+
+
+class AudiologistHipaaValue(Enum):
+    VALUE_231_H00000_N = "231H00000N"
+    VALUE_231_HA2400_N = "231HA2400N"
+    VALUE_231_HA2500_N = "231HA2500N"
 
 
 class AudiologistProviderCodes(Enum):
@@ -2728,6 +2800,24 @@ class CalendarCycleOneLetter(Enum):
     S = "S"
     W = "W"
     Y = "Y"
+
+
+class CalendarCycleTwoLetterValue(Enum):
+    CD = "CD"
+    DM = "DM"
+    DW = "DW"
+    DY = "DY"
+    CH = "CH"
+    HD = "HD"
+    CN = "CN"
+    NH = "NH"
+    CM = "CM"
+    MY = "MY"
+    CS = "CS"
+    SN = "SN"
+    CW = "CW"
+    WY = "WY"
+    CY = "CY"
 
 
 class CalendarType(Enum):
@@ -3707,6 +3797,10 @@ class ContractorProviderCodes(Enum):
     VALUE_171_WV0202_X = "171WV0202X"
 
 
+class ControlledSubstanceMonitoringProtocolValue(Enum):
+    CTLSUB = "CTLSUB"
+
+
 class Coosan(Enum):
     """abstDomain: A18421 (C-0-T18130-A18413-A18421-cpt)"""
     X_COS = "x-COS"
@@ -4516,6 +4610,10 @@ class Diegueno(Enum):
     X_DIH = "x-DIH"
 
 
+class DietaryAndOrNutritionalServiceProviderHipaaValue(Enum):
+    VALUE_136_A00000_N = "136A00000N"
+
+
 class DietaryandNutritionalServiceProvidersProviderCodes(Enum):
     """specDomain: S20334 (C-0-T19465-S20334-cpt)"""
     VALUE_133_V00000_X = "133V00000X"
@@ -4796,6 +4894,12 @@ class EmergencyPharmacySupplyType(Enum):
     """specDomain: S16220 (C-0-T13953-A13954-A16208-S16220-cpt)"""
     EM = "EM"
     SO = "SO"
+
+
+class EmployeeJobClassValue(Enum):
+    EMPLOYEE_OCCUPATION_CODE = "_EmployeeOccupationCode"
+    FT = "FT"
+    PT = "PT"
 
 
 class EncounterAdmissionSource(Enum):
@@ -5809,6 +5913,11 @@ class Hl7ConformanceInclusion(Enum):
     M = "M"
 
 
+class Hl7DefinedActCodesValue(Enum):
+    ACT_CLAIM_ATTACHMENT_CODE = "_ActClaimAttachmentCode"
+    ACT_REGISTRY_CODE = "_ActRegistryCode"
+
+
 class Hl7DefinedRoseProperty(Enum):
     """vocSet: T10083 (C-0-T10083-cpt)"""
     APPLICATION_ROLE_I = "ApplicationRoleI"
@@ -5927,6 +6036,11 @@ class HemClinPracticeSetting(Enum):
     """specDomain: S10936 (C-0-T12206-A17660-A19450-A10588-S10589-S10936-cpt)"""
     HEM = "HEM"
     PEDHEM = "PEDHEM"
+
+
+class HokanValue(Enum):
+    X_KYH = "x-KYH"
+    X_WAS = "x-WAS"
 
 
 class HomeAddressUse(Enum):
@@ -7225,6 +7339,18 @@ class MapRelationship(Enum):
     NT = "NT"
 
 
+class MaritalStatusValue(Enum):
+    A = "A"
+    D = "D"
+    T = "T"
+    I = "I"
+    L = "L"
+    M = "M"
+    S = "S"
+    P = "P"
+    W = "W"
+
+
 class MaterialDangerInfectious(Enum):
     """specDomain: S10407 (C-0-T10405-S10407-cpt)"""
     INF = "INF"
@@ -7293,6 +7419,10 @@ class MaterialEntityAdditive(Enum):
     TOLU = "TOLU"
     URETM = "URETM"
     VIRTM = "VIRTM"
+
+
+class MaterialEntityClassTypeValue(Enum):
+    BLDPRD = "BLDPRD"
 
 
 class MdfHmdMetSourceType(Enum):
@@ -7392,6 +7522,18 @@ class MedicationObservationType(Enum):
     SPLSHAPE = "SPLSHAPE"
     SPLSIZE = "SPLSIZE"
     SPLSYMBOL = "SPLSYMBOL"
+
+
+class MedicationOrderAbortReasonCodeValue(Enum):
+    DOSECHG = "DOSECHG"
+    INEFFECT = "INEFFECT"
+    NOREQ = "NOREQ"
+    NOTCOVER = "NOTCOVER"
+    PREFUS = "PREFUS"
+    DISCONT = "DISCONT"
+    RECALL = "RECALL"
+    MONIT = "MONIT"
+    UNABLE = "UNABLE"
 
 
 class MedicationOrderReleaseReasonCode(Enum):
@@ -7528,6 +7670,10 @@ class Muskogean(Enum):
     X_CIC = "x-CIC"
     X_CCT = "x-CCT"
     X_CRK = "x-CRK"
+
+
+class NadeneValue(Enum):
+    X_TLI = "x-TLI"
 
 
 class NailRoute(Enum):
@@ -8779,12 +8925,291 @@ class ObservationLivingSituationValue(Enum):
     UNREL = "UNREL"
 
 
+class ObservationMethodValue(Enum):
+    VALUE_0119 = "0119"
+    VALUE_0075 = "0075"
+    VALUE_0076 = "0076"
+    VALUE_0077 = "0077"
+    VALUE_0078 = "0078"
+    VALUE_0079 = "0079"
+    VALUE_0080 = "0080"
+    VALUE_0081 = "0081"
+    VALUE_0082 = "0082"
+    VALUE_0083 = "0083"
+    VALUE_0084 = "0084"
+    VALUE_0085 = "0085"
+    VALUE_0143 = "0143"
+    VALUE_0145 = "0145"
+    VALUE_0146 = "0146"
+    VALUE_0144 = "0144"
+    VALUE_0147 = "0147"
+    VALUE_0148 = "0148"
+    VALUE_0149 = "0149"
+    VALUE_0050 = "0050"
+    VALUE_0039 = "0039"
+    VALUE_0065 = "0065"
+    VALUE_0063 = "0063"
+    VALUE_0062 = "0062"
+    VALUE_0014 = "0014"
+    VALUE_0150 = "0150"
+    VALUE_0151 = "0151"
+    VALUE_0152 = "0152"
+    VALUE_0051 = "0051"
+    VALUE_0026 = "0026"
+    VALUE_0257 = "0257"
+    VALUE_0240 = "0240"
+    VALUE_0154 = "0154"
+    VALUE_0153 = "0153"
+    VALUE_0263 = "0263"
+    VALUE_0047 = "0047"
+    VALUE_0155 = "0155"
+    VALUE_0241 = "0241"
+    VALUE_0086 = "0086"
+    VALUE_0156 = "0156"
+    VALUE_0157 = "0157"
+    VALUE_0158 = "0158"
+    VALUE_0159 = "0159"
+    VALUE_0160 = "0160"
+    VALUE_0025 = "0025"
+    VALUE_0031 = "0031"
+    VALUE_0032 = "0032"
+    VALUE_0161 = "0161"
+    VALUE_0162 = "0162"
+    VALUE_0120 = "0120"
+    VALUE_0163 = "0163"
+    VALUE_0015 = "0015"
+    VALUE_0164 = "0164"
+    VALUE_0165 = "0165"
+    VALUE_0166 = "0166"
+    VALUE_0016 = "0016"
+    VALUE_0167 = "0167"
+    VALUE_0033 = "0033"
+    VALUE_0052 = "0052"
+    VALUE_0038 = "0038"
+    VALUE_0168 = "0168"
+    VALUE_0044 = "0044"
+    VALUE_0001 = "0001"
+    VALUE_0002 = "0002"
+    VALUE_0169 = "0169"
+    VALUE_0170 = "0170"
+    VALUE_0171 = "0171"
+    VALUE_0027 = "0027"
+    VALUE_0108 = "0108"
+    VALUE_0172 = "0172"
+    VALUE_0053 = "0053"
+    VALUE_0173 = "0173"
+    VALUE_0034 = "0034"
+    VALUE_0035 = "0035"
+    VALUE_0036 = "0036"
+    VALUE_0242 = "0242"
+    VALUE_0070 = "0070"
+    VALUE_0071 = "0071"
+    VALUE_0072 = "0072"
+    VALUE_0074 = "0074"
+    VALUE_0250 = "0250"
+    VALUE_0109 = "0109"
+    VALUE_0110 = "0110"
+    VALUE_0111 = "0111"
+    VALUE_0112 = "0112"
+    VALUE_0113 = "0113"
+    VALUE_0064 = "0064"
+    VALUE_0066 = "0066"
+    VALUE_0028 = "0028"
+    VALUE_0029 = "0029"
+    VALUE_0255 = "0255"
+    VALUE_0174 = "0174"
+    VALUE_0139 = "0139"
+    VALUE_0251 = "0251"
+    VALUE_0253 = "0253"
+    VALUE_0175 = "0175"
+    VALUE_0176 = "0176"
+    VALUE_0258 = "0258"
+    VALUE_0265 = "0265"
+    VALUE_0040 = "0040"
+    VALUE_0178 = "0178"
+    VALUE_0177 = "0177"
+    VALUE_0179 = "0179"
+    VALUE_0180 = "0180"
+    VALUE_0181 = "0181"
+    VALUE_0183 = "0183"
+    VALUE_0182 = "0182"
+    VALUE_0003 = "0003"
+    VALUE_0184 = "0184"
+    VALUE_0185 = "0185"
+    VALUE_0186 = "0186"
+    VALUE_0187 = "0187"
+    VALUE_0017 = "0017"
+    VALUE_0018 = "0018"
+    VALUE_0188 = "0188"
+    VALUE_0041 = "0041"
+    VALUE_0189 = "0189"
+    VALUE_0190 = "0190"
+    VALUE_0121 = "0121"
+    VALUE_0269 = "0269"
+    VALUE_0260 = "0260"
+    VALUE_0122 = "0122"
+    VALUE_0140 = "0140"
+    VALUE_0095 = "0095"
+    VALUE_0101 = "0101"
+    VALUE_0102 = "0102"
+    VALUE_0103 = "0103"
+    VALUE_0105 = "0105"
+    VALUE_0106 = "0106"
+    VALUE_0267 = "0267"
+    VALUE_0067 = "0067"
+    VALUE_0254 = "0254"
+    VALUE_0096 = "0096"
+    VALUE_0097 = "0097"
+    VALUE_0098 = "0098"
+    VALUE_0099 = "0099"
+    VALUE_0100 = "0100"
+    VALUE_0270 = "0270"
+    VALUE_0123 = "0123"
+    VALUE_0264 = "0264"
+    VALUE_0191 = "0191"
+    VALUE_0266 = "0266"
+    VALUE_0193 = "0193"
+    VALUE_0192 = "0192"
+    VALUE_0073 = "0073"
+    VALUE_0256 = "0256"
+    VALUE_0194 = "0194"
+    VALUE_0019 = "0019"
+    VALUE_0195 = "0195"
+    VALUE_0124 = "0124"
+    VALUE_0125 = "0125"
+    VALUE_0042 = "0042"
+    VALUE_0196 = "0196"
+    VALUE_0198 = "0198"
+    VALUE_0197 = "0197"
+    VALUE_0261 = "0261"
+    VALUE_0199 = "0199"
+    VALUE_0004 = "0004"
+    VALUE_0005 = "0005"
+    VALUE_0200 = "0200"
+    VALUE_0048 = "0048"
+    VALUE_0201 = "0201"
+    VALUE_0204 = "0204"
+    VALUE_0202 = "0202"
+    VALUE_0203 = "0203"
+    VALUE_0206 = "0206"
+    VALUE_0205 = "0205"
+    VALUE_0054 = "0054"
+    VALUE_0268 = "0268"
+    VALUE_0107 = "0107"
+    VALUE_0114 = "0114"
+    VALUE_0141 = "0141"
+    VALUE_0245 = "0245"
+    VALUE_0246 = "0246"
+    VALUE_0243 = "0243"
+    VALUE_0244 = "0244"
+    VALUE_0207 = "0207"
+    VALUE_0208 = "0208"
+    VALUE_0209 = "0209"
+    VALUE_0006 = "0006"
+    VALUE_0030 = "0030"
+    VALUE_0210 = "0210"
+    VALUE_0211 = "0211"
+    VALUE_0259 = "0259"
+    VALUE_0212 = "0212"
+    VALUE_0213 = "0213"
+    VALUE_0214 = "0214"
+    VALUE_0126 = "0126"
+    VALUE_0131 = "0131"
+    VALUE_0127 = "0127"
+    VALUE_0128 = "0128"
+    VALUE_0129 = "0129"
+    VALUE_0130 = "0130"
+    VALUE_0215 = "0215"
+    VALUE_0216 = "0216"
+    VALUE_0217 = "0217"
+    VALUE_0088 = "0088"
+    VALUE_0218 = "0218"
+    VALUE_0271 = "0271"
+    VALUE_0020 = "0020"
+    VALUE_0049 = "0049"
+    VALUE_0115 = "0115"
+    VALUE_0068 = "0068"
+    VALUE_0132 = "0132"
+    VALUE_0007 = "0007"
+    VALUE_0219 = "0219"
+    VALUE_0142 = "0142"
+    VALUE_0043 = "0043"
+    VALUE_0220 = "0220"
+    VALUE_0221 = "0221"
+    VALUE_0133 = "0133"
+    VALUE_0089 = "0089"
+    VALUE_0055 = "0055"
+    VALUE_0056 = "0056"
+    VALUE_0057 = "0057"
+    VALUE_0058 = "0058"
+    VALUE_0059 = "0059"
+    VALUE_0060 = "0060"
+    VALUE_0222 = "0222"
+    VALUE_0090 = "0090"
+    VALUE_0022 = "0022"
+    VALUE_0252 = "0252"
+    VALUE_0104 = "0104"
+    VALUE_0021 = "0021"
+    VALUE_0248 = "0248"
+    VALUE_0134 = "0134"
+    VALUE_0223 = "0223"
+    VALUE_0224 = "0224"
+    VALUE_0023 = "0023"
+    VALUE_0008 = "0008"
+    VALUE_0009 = "0009"
+    VALUE_0225 = "0225"
+    VALUE_0116 = "0116"
+    VALUE_0226 = "0226"
+    VALUE_0227 = "0227"
+    VALUE_0010 = "0010"
+    VALUE_0228 = "0228"
+    VALUE_0061 = "0061"
+    VALUE_0135 = "0135"
+    VALUE_0229 = "0229"
+    VALUE_0262 = "0262"
+    VALUE_0091 = "0091"
+    VALUE_0069 = "0069"
+    VALUE_0230 = "0230"
+    VALUE_0136 = "0136"
+    VALUE_0231 = "0231"
+    VALUE_0232 = "0232"
+    VALUE_0233 = "0233"
+    VALUE_0234 = "0234"
+    VALUE_0037 = "0037"
+    VALUE_0249 = "0249"
+    VALUE_0235 = "0235"
+    VALUE_0236 = "0236"
+    VALUE_0045 = "0045"
+    VALUE_0046 = "0046"
+    VALUE_0011 = "0011"
+    VALUE_0137 = "0137"
+    VALUE_0117 = "0117"
+    VALUE_0118 = "0118"
+    VALUE_0024 = "0024"
+    VALUE_0247 = "0247"
+    VALUE_0012 = "0012"
+    VALUE_0092 = "0092"
+    VALUE_0094 = "0094"
+    VALUE_0237 = "0237"
+    VALUE_0238 = "0238"
+    VALUE_0093 = "0093"
+    VALUE_0138 = "0138"
+    VALUE_0013 = "0013"
+    VALUE_0087 = "0087"
+    VALUE_0239 = "0239"
+
+
 class ObservationNonAllergyIntoleranceType(Enum):
     """specDomain: S21500 (C-0-T13953-A19820-A16226-S21498-S21500-cpt)"""
     NAINT = "NAINT"
     DNAINT = "DNAINT"
     ENAINT = "ENAINT"
     FNAINT = "FNAINT"
+
+
+class ObservationSequenceTypeValue(Enum):
+    TIME_ABSOLUTE = "TIME_ABSOLUTE"
+    TIME_RELATIVE = "TIME_RELATIVE"
 
 
 class ObservationSocioEconomicStatusValue(Enum):
@@ -8797,6 +9222,13 @@ class ObservationSocioEconomicStatusValue(Enum):
     PROB = "PROB"
     REFUG = "REFUG"
     UNEMPL = "UNEMPL"
+
+
+class ObservationTypeValue(Enum):
+    ADVERSE_REACTION = "ADVERSE_REACTION"
+    ASSERTION = "ASSERTION"
+    FDALABEL_DATA = "_FDALabelData"
+    SEV = "SEV"
 
 
 class ObsoleteEditStatus(Enum):
@@ -8969,6 +9401,10 @@ class OregonAthapaskan(Enum):
     """abstDomain: A18387 (C-0-T18130-A18352-A18356-A18358-A18386-A18387-cpt)"""
     X_TOL = "x-TOL"
     X_TUU = "x-TUU"
+
+
+class OrganizationEntityTypeValue(Enum):
+    RELIG = "RELIG"
 
 
 class OrganizationNamePartQualifier(Enum):
@@ -9227,6 +9663,10 @@ class OutpatientFacilityPracticeSetting(Enum):
     WND = "WND"
 
 
+class PackageEntityTypeValue(Enum):
+    PKG = "PKG"
+
+
 class PadDrugForm(Enum):
     """specDomain: S14497 (C-0-T19651-A14411-A14412-A14484-S14497-cpt)"""
     PAD = "PAD"
@@ -9403,6 +9843,44 @@ class ParticipationExposureparticipation(Enum):
     EXPART = "EXPART"
     EXSRC = "EXSRC"
     EXPTRGT = "EXPTRGT"
+
+
+class ParticipationFunctionValue(Enum):
+    AUTHORIZED_PARTICIPATION_FUNCTION = "_AuthorizedParticipationFunction"
+    AUTHORIZED_RECEIVER_PARTICIPATION_FUNCTION = "_AuthorizedReceiverParticipationFunction"
+    CONSENTER_PARTICIPATION_FUNCTION = "_ConsenterParticipationFunction"
+    COVERAGE_PARTICIPATION_FUNCTION = "_CoverageParticipationFunction"
+    OVERRIDER_PARTICIPATION_FUNCTION = "_OverriderParticipationFunction"
+    PAYOR_PARTICIPATION_FUNCTION = "_PayorParticipationFunction"
+    SPONSOR_PARTICIPATION_FUNCTION = "_SponsorParticipationFunction"
+    UNDERWRITER_PARTICIPATION_FUNCTION = "_UnderwriterParticipationFunction"
+    ADMPHYS = "ADMPHYS"
+    ANRS = "ANRS"
+    ANEST = "ANEST"
+    ATTPHYS = "ATTPHYS"
+    CLMADJ = "CLMADJ"
+    DISPHYS = "DISPHYS"
+    ENROLL = "ENROLL"
+    FFSMGT = "FFSMGT"
+    FASST = "FASST"
+    FULINRD = "FULINRD"
+    MCMGT = "MCMGT"
+    MDWF = "MDWF"
+    NASST = "NASST"
+    PAYORCNTR = "PAYORCNTR"
+    PCP = "PCP"
+    PRISURG = "PRISURG"
+    PROVMGT = "PROVMGT"
+    REINS = "REINS"
+    RETROCES = "RETROCES"
+    RNDPHYS = "RNDPHYS"
+    SNRS = "SNRS"
+    SASST = "SASST"
+    SELFINRD = "SELFINRD"
+    SUBCTRT = "SUBCTRT"
+    TASST = "TASST"
+    UNDERWRTNG = "UNDERWRTNG"
+    UMGT = "UMGT"
 
 
 class ParticipationIndirectTarget(Enum):
@@ -10567,6 +11045,14 @@ class PillDrugForm(Enum):
     TAB = "TAB"
     VAGTAB = "VAGTAB"
     PILL = "PILL"
+
+
+class PlaceEntityTypeValue(Enum):
+    BED = "BED"
+    BLDG = "BLDG"
+    FLOOR = "FLOOR"
+    ROOM = "ROOM"
+    WING = "WING"
 
 
 class PlasticBottleEntityType(Enum):
@@ -16631,6 +17117,10 @@ class RoleClassRelationshipFormal(Enum):
     UNDWRT = "UNDWRT"
 
 
+class RoleClassRootValue(Enum):
+    ROL = "ROL"
+
+
 class RoleClassServiceDeliveryLocation(Enum):
     """specDomain: S16927 (C-0-T11555-S13940-A19313-A19105-S16927-cpt)"""
     SDLOC = "SDLOC"
@@ -16686,6 +17176,16 @@ class RoleStatusNormal(Enum):
     PENDING = "pending"
     SUSPENDED = "suspended"
     TERMINATED = "terminated"
+
+
+class RouteByMethodValue(Enum):
+    GARGLE = "GARGLE"
+    SOAK = "SOAK"
+    INSUF = "INSUF"
+    SHAMPOO = "SHAMPOO"
+    SUCK = "SUCK"
+    PO = "PO"
+    TRNSLING = "TRNSLING"
 
 
 class Sahaptian(Enum):
@@ -16799,6 +17299,10 @@ class SinusUnspecifiedRoute(Enum):
     """abstDomain: A17325 (C-0-T14581-A17021-A17325-cpt)"""
     ENDOSININJ = "ENDOSININJ"
     SININSTIL = "SININSTIL"
+
+
+class SiouanValue(Enum):
+    X_MHQ = "x-MHQ"
 
 
 class SirenikskiYupik(Enum):
@@ -17154,6 +17658,12 @@ class SpecimenRoleType(Enum):
     P = "P"
     L = "L"
     R = "R"
+
+
+class SpeechAndOrLanguageAndOrHearingServiceProviderHipaaValue(Enum):
+    VALUE_237600000_N = "237600000N"
+    VALUE_237700000_N = "237700000N"
+    VALUE_235_Z00000_N = "235Z00000N"
 
 
 class SpeechAndOrLanguageAndOrHearingServiceSpecialistOrTechnologistHipaa(Enum):
@@ -19760,6 +20270,11 @@ class UrinaryTractRoute(Enum):
     BLADINSTL = "BLADINSTL"
 
 
+class UtoAztecanValue(Enum):
+    X_HOP = "x-HOP"
+    X_TUB = "x-TUB"
+
+
 class VaccineEntityType(Enum):
     """specDomain: S21458 (C-0-T16040-A19667-A19668-S21458-cpt)"""
     VCCNE = "VCCNE"
@@ -20390,6 +20905,10 @@ class XActStatusActiveSuspended(Enum):
     SUSPENDED = "suspended"
 
 
+class XAdministeredSubstanceValue(Enum):
+    VCCNE = "VCCNE"
+
+
 class XAdverseEventCausalityAssessmentMethods(Enum):
     """abstDomain: A19380 (C-0-T14079-A19380-cpt)"""
     ALGM = "ALGM"
@@ -20610,6 +21129,10 @@ class XMedicationOrImmunization(Enum):
     """abstDomain: A19745 (C-0-T13953-A13954-A19708-A19745-cpt)"""
     DRUG = "DRUG"
     IMMUNIZ = "IMMUNIZ"
+
+
+class XMedicineValue(Enum):
+    BLDPRD = "BLDPRD"
 
 
 class XOrganizationNamePartType(Enum):

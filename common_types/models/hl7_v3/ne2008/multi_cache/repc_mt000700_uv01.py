@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from enum import Enum
 from typing import List, Optional, Union
 from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     Ad,
@@ -24,6 +23,7 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     RoleClassOntological,
     RoleClassPartitive,
     RoleClassPassive,
+    RoleClassRootValue,
     XAccommodationRequestorRole,
     XDocumentEntrySubject,
     XDocumentSubject,
@@ -368,7 +368,7 @@ class RepcMt000700Uv01MaintainedEntity:
             "type": "Attribute",
         }
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "RepcMt000700Uv01MaintainedEntity.ClassCode", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassPassive.MNT,
         metadata={
@@ -378,6 +378,3 @@ class RepcMt000700Uv01MaintainedEntity:
             "pattern": r"[^\s]+",
         }
     )
-
-    class ClassCode(Enum):
-        ROL = "ROL"

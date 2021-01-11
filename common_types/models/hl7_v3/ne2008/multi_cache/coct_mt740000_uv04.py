@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from enum import Enum
 from typing import List, Optional, Union
 from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     AdExplicit,
@@ -24,6 +23,7 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     ActRelationshipHasComponent,
     ActRelationshipHasSupport,
     ActRelationshipOutcome,
+    ActRelationshipPertainsValue,
     ActRelationshipPosting,
     ActRelationshipSequel,
     ActRelationshipTemporallyPertains,
@@ -37,6 +37,7 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     RoleClassOntological,
     RoleClassPartitive,
     RoleClassPassive,
+    RoleClassRootValue,
     XAccommodationRequestorRole,
     XActMoodIntentEvent,
     XActRelationshipDocument,
@@ -60,26 +61,6 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
 from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt240003_uv02 import CoctMt240003Uv02ServiceDeliveryLocation
 
 __NAMESPACE__ = "urn:hl7-org:v3"
-
-
-class CoctMt740000Uv04ReferenceTypeCode(Enum):
-    PERT = "PERT"
-    NAME = "NAME"
-    AUTH = "AUTH"
-    COVBY = "COVBY"
-    ELNK = "ELNK"
-    EXPL = "EXPL"
-    PREV = "PREV"
-    REFV = "REFV"
-    SUBJ = "SUBJ"
-    DRIV = "DRIV"
-    CAUS = "CAUS"
-    MFST = "MFST"
-    ITEMSLOC = "ITEMSLOC"
-    LIMIT = "LIMIT"
-    EVID = "EVID"
-    REFR = "REFR"
-    SUMM = "SUMM"
 
 
 @dataclass
@@ -424,7 +405,7 @@ class CoctMt740000Uv04HealthCareProvider:
             "type": "Attribute",
         }
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "CoctMt740000Uv04HealthCareProvider.ClassCode", XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
         init=False,
         default=RoleClassMutualRelationship.PROV,
         metadata={
@@ -434,9 +415,6 @@ class CoctMt740000Uv04HealthCareProvider:
             "pattern": r"[^\s]+",
         }
     )
-
-    class ClassCode(Enum):
-        ROL = "ROL"
 
 
 @dataclass
@@ -485,7 +463,7 @@ class CoctMt740000Uv04PertinentInformation1:
             "type": "Attribute",
         }
     )
-    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt740000Uv04PertinentInformation1.TypeCode"]] = field(
+    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue]] = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -494,25 +472,6 @@ class CoctMt740000Uv04PertinentInformation1:
             "pattern": r"[^\s]+",
         }
     )
-
-    class TypeCode(Enum):
-        PERT = "PERT"
-        NAME = "NAME"
-        AUTH = "AUTH"
-        COVBY = "COVBY"
-        ELNK = "ELNK"
-        EXPL = "EXPL"
-        PREV = "PREV"
-        REFV = "REFV"
-        SUBJ = "SUBJ"
-        DRIV = "DRIV"
-        CAUS = "CAUS"
-        MFST = "MFST"
-        ITEMSLOC = "ITEMSLOC"
-        LIMIT = "LIMIT"
-        EVID = "EVID"
-        REFR = "REFR"
-        SUMM = "SUMM"
 
 
 @dataclass
@@ -568,7 +527,7 @@ class CoctMt740000Uv04PertinentInformation2:
             "type": "Attribute",
         }
     )
-    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt740000Uv04PertinentInformation2.TypeCode"]] = field(
+    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue]] = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -577,25 +536,6 @@ class CoctMt740000Uv04PertinentInformation2:
             "pattern": r"[^\s]+",
         }
     )
-
-    class TypeCode(Enum):
-        PERT = "PERT"
-        NAME = "NAME"
-        AUTH = "AUTH"
-        COVBY = "COVBY"
-        ELNK = "ELNK"
-        EXPL = "EXPL"
-        PREV = "PREV"
-        REFV = "REFV"
-        SUBJ = "SUBJ"
-        DRIV = "DRIV"
-        CAUS = "CAUS"
-        MFST = "MFST"
-        ITEMSLOC = "ITEMSLOC"
-        LIMIT = "LIMIT"
-        EVID = "EVID"
-        REFR = "REFR"
-        SUMM = "SUMM"
 
 
 @dataclass
@@ -885,9 +825,9 @@ class CoctMt740000Uv04Reference:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt740000Uv04ReferenceTypeCode, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
-        default=CoctMt740000Uv04ReferenceTypeCode.REFR,
+        default=ActRelationshipPertainsValue.REFR,
         metadata={
             "name": "typeCode",
             "type": "Attribute",

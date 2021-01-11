@@ -175,6 +175,7 @@ from npo.models.vpro_media_2009 import (
     TopicType,
     TopicsType,
     TwitterType,
+    TwitterTypeType,
     VideoAttributesType,
     WorkflowTypeEnum,
 )
@@ -205,4 +206,8 @@ from npo.models.vpro_shared_2009 import (
     SubtitlesTypeEnum,
     SubtitlesWorkflowEnum,
     WorkflowEnumType,
+)
+from npo.models.w3_org_xml_1998_namespace import (
+    LangValue,
+    SpaceValue,
 )

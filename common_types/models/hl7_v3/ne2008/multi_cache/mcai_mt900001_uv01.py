@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from enum import Enum
 from typing import List, Optional, Union
 from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     Any,
@@ -20,6 +19,7 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     ActRelationshipHasSupport,
     ActRelationshipMitigates,
     ActRelationshipOutcome,
+    ActRelationshipPertainsValue,
     ActRelationshipPosting,
     ActRelationshipSequel,
     ActRelationshipTemporallyPertains,
@@ -29,6 +29,7 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     RoleClassOntological,
     RoleClassPartitive,
     RoleClassPassive,
+    RoleClassRootValue,
     XActMoodDefEvn,
     XActRelationshipDocument,
     XActRelationshipEntry,
@@ -155,7 +156,7 @@ class McaiMt900001Uv01Role:
             "type": "Attribute",
         }
     )
-    class_code: Optional[Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, "McaiMt900001Uv01Role.ClassCode"]] = field(
+    class_code: Optional[Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue]] = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -164,9 +165,6 @@ class McaiMt900001Uv01Role:
             "pattern": r"[^\s]+",
         }
     )
-
-    class ClassCode(Enum):
-        ROL = "ROL"
 
 
 @dataclass
@@ -412,7 +410,7 @@ class McaiMt900001Uv01Requires:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "McaiMt900001Uv01Requires.TypeCode", ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
         default=ActRelationshipConditional.TRIG,
         metadata={
@@ -438,25 +436,6 @@ class McaiMt900001Uv01Requires:
             "pattern": r"true|false",
         }
     )
-
-    class TypeCode(Enum):
-        PERT = "PERT"
-        NAME = "NAME"
-        AUTH = "AUTH"
-        COVBY = "COVBY"
-        ELNK = "ELNK"
-        EXPL = "EXPL"
-        PREV = "PREV"
-        REFV = "REFV"
-        SUBJ = "SUBJ"
-        DRIV = "DRIV"
-        CAUS = "CAUS"
-        MFST = "MFST"
-        ITEMSLOC = "ITEMSLOC"
-        LIMIT = "LIMIT"
-        EVID = "EVID"
-        REFR = "REFR"
-        SUMM = "SUMM"
 
 
 @dataclass

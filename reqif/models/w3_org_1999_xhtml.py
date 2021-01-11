@@ -2,62 +2,61 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
-from reqif.models.w3_org_xml_1998_namespace import (
-    XhtmlInlPresTypeSpace,
-    XhtmlATypeSpace,
-    XhtmlAbbrTypeSpace,
-    XhtmlAcronymTypeSpace,
-    XhtmlAddressTypeSpace,
-    XhtmlBlockquoteTypeSpace,
-    XhtmlBrTypeSpace,
-    XhtmlCaptionTypeSpace,
-    XhtmlCiteTypeSpace,
-    XhtmlCodeTypeSpace,
-    XhtmlColTypeSpace,
-    XhtmlColgroupTypeSpace,
-    XhtmlDdTypeSpace,
-    XhtmlDfnTypeSpace,
-    XhtmlDivTypeSpace,
-    XhtmlDlTypeSpace,
-    XhtmlDtTypeSpace,
-    XhtmlEditTypeSpace,
-    XhtmlEmTypeSpace,
-    XhtmlH1TypeSpace,
-    XhtmlH2TypeSpace,
-    XhtmlH3TypeSpace,
-    XhtmlH4TypeSpace,
-    XhtmlH5TypeSpace,
-    XhtmlH6TypeSpace,
-    XhtmlHeadingTypeSpace,
-    XhtmlHrTypeSpace,
-    XhtmlKbdTypeSpace,
-    XhtmlLiTypeSpace,
-    XhtmlObjectTypeSpace,
-    XhtmlOlTypeSpace,
-    XhtmlPTypeSpace,
-    XhtmlPreTypeSpace,
-    XhtmlQTypeSpace,
-    XhtmlSampTypeSpace,
-    XhtmlSpanTypeSpace,
-    XhtmlStrongTypeSpace,
-    XhtmlTableTypeSpace,
-    XhtmlTbodyTypeSpace,
-    XhtmlTdTypeSpace,
-    XhtmlTfootTypeSpace,
-    XhtmlThTypeSpace,
-    XhtmlTheadTypeSpace,
-    XhtmlTrTypeSpace,
-    XhtmlUlTypeSpace,
-    XhtmlVarTypeSpace,
-)
+from reqif.models.w3_org_xml_1998_namespace import SpaceValue
 
 __NAMESPACE__ = "http://www.w3.org/1999/xhtml"
 
 
-class XhtmlParamTypeValuetype(Enum):
+class XhtmlCellHalignAttribAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class XhtmlCellValignAttribValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
+
+
+class XhtmlFrameAttribFrame(Enum):
+    VOID = "void"
+    ABOVE = "above"
+    BELOW = "below"
+    HSIDES = "hsides"
+    LHS = "lhs"
+    RHS = "rhs"
+    VSIDES = "vsides"
+    BOX = "box"
+    BORDER = "border"
+
+
+class XhtmlObjectAttlistDeclare(Enum):
+    DECLARE = "declare"
+
+
+class XhtmlParamAttlistValuetype(Enum):
     DATA = "data"
     REF = "ref"
     OBJECT = "object"
+
+
+class XhtmlRulesAttribRules(Enum):
+    NONE_VALUE = "none"
+    GROUPS = "groups"
+    ROWS = "rows"
+    COLS = "cols"
+    ALL = "all"
+
+
+class XhtmlScopeAttribScope(Enum):
+    ROW = "row"
+    COL = "col"
+    ROWGROUP = "rowgroup"
+    COLGROUP = "colgroup"
 
 
 @dataclass
@@ -65,9 +64,9 @@ class XhtmlBrType:
     class Meta:
         name = "xhtml.br.type"
 
-    space: XhtmlBrTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlBrTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -99,9 +98,9 @@ class XhtmlColType:
     class Meta:
         name = "xhtml.col.type"
 
-    space: XhtmlColTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlColTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -152,7 +151,7 @@ class XhtmlColType:
             "pattern": r"\d*\*",
         }
     )
-    align: Optional["XhtmlColType.Align"] = field(
+    align: Optional[XhtmlCellHalignAttribAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -172,25 +171,12 @@ class XhtmlColType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-    valign: Optional["XhtmlColType.Valign"] = field(
+    valign: Optional[XhtmlCellValignAttribValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -198,9 +184,9 @@ class XhtmlHrType:
     class Meta:
         name = "xhtml.hr.type"
 
-    space: XhtmlHrTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlHrTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -253,9 +239,9 @@ class XhtmlOlType:
             "min_occurs": 1,
         }
     )
-    space: XhtmlOlTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlOlTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -319,8 +305,8 @@ class XhtmlParamType:
             "type": "Attribute",
         }
     )
-    valuetype: XhtmlParamTypeValuetype = field(
-        default=XhtmlParamTypeValuetype.DATA,
+    valuetype: XhtmlParamAttlistValuetype = field(
+        default=XhtmlParamAttlistValuetype.DATA,
         metadata={
             "type": "Attribute",
         }
@@ -345,9 +331,9 @@ class XhtmlColgroupType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlColgroupTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlColgroupTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -398,7 +384,7 @@ class XhtmlColgroupType:
             "pattern": r"\d*\*",
         }
     )
-    align: Optional["XhtmlColgroupType.Align"] = field(
+    align: Optional[XhtmlCellHalignAttribAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -418,25 +404,12 @@ class XhtmlColgroupType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-    valign: Optional["XhtmlColgroupType.Valign"] = field(
+    valign: Optional[XhtmlCellValignAttribValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -621,9 +594,9 @@ class XhtmlQType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlQTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlQTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -852,9 +825,9 @@ class XhtmlAcronymType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlAcronymTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlAcronymTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -1076,9 +1049,9 @@ class XhtmlAbbrType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlAbbrTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlAbbrTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -1300,9 +1273,9 @@ class XhtmlCiteType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlCiteTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlCiteTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -1524,9 +1497,9 @@ class XhtmlVarType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlVarTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlVarTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -1748,9 +1721,9 @@ class XhtmlKbdType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlKbdTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlKbdTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -1972,9 +1945,9 @@ class XhtmlSampType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlSampTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlSampTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -2196,9 +2169,9 @@ class XhtmlCodeType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlCodeTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlCodeTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -2420,9 +2393,9 @@ class XhtmlDfnType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlDfnTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlDfnTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -2644,9 +2617,9 @@ class XhtmlStrongType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlStrongTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlStrongTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -2868,9 +2841,9 @@ class XhtmlCaptionType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlCaptionTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlCaptionTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -3092,9 +3065,9 @@ class XhtmlDtType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlDtTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlDtTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -3316,9 +3289,9 @@ class XhtmlH2Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlH2TypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlH2TypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -3540,9 +3513,9 @@ class XhtmlH3Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlH3TypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlH3TypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -3764,9 +3737,9 @@ class XhtmlH4Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlH4TypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlH4TypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -3988,9 +3961,9 @@ class XhtmlH5Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlH5TypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlH5TypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -4212,9 +4185,9 @@ class XhtmlH6Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlH6TypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlH6TypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -4436,9 +4409,9 @@ class XhtmlPType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlPTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlPTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -4625,9 +4598,9 @@ class XhtmlPreType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlPreTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlPreTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -4961,9 +4934,9 @@ class XhtmlDdType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlDdTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlDdTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -5024,9 +4997,9 @@ class XhtmlDlType:
             "sequential": True,
         }
     )
-    space: XhtmlDlTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlDlTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -5360,9 +5333,9 @@ class XhtmlTdType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlTdTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlTdTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -5420,7 +5393,7 @@ class XhtmlTdType:
             "tokens": True,
         }
     )
-    scope: Optional["XhtmlTdType.Scope"] = field(
+    scope: Optional[XhtmlScopeAttribScope] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5438,7 +5411,7 @@ class XhtmlTdType:
             "type": "Attribute",
         }
     )
-    align: Optional["XhtmlTdType.Align"] = field(
+    align: Optional[XhtmlCellHalignAttribAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5458,31 +5431,12 @@ class XhtmlTdType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-    valign: Optional["XhtmlTdType.Valign"] = field(
+    valign: Optional[XhtmlCellValignAttribValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Scope(Enum):
-        ROW = "row"
-        COL = "col"
-        ROWGROUP = "rowgroup"
-        COLGROUP = "colgroup"
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -5779,9 +5733,9 @@ class XhtmlThType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlThTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlThTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -5839,7 +5793,7 @@ class XhtmlThType:
             "tokens": True,
         }
     )
-    scope: Optional["XhtmlThType.Scope"] = field(
+    scope: Optional[XhtmlScopeAttribScope] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5857,7 +5811,7 @@ class XhtmlThType:
             "type": "Attribute",
         }
     )
-    align: Optional["XhtmlThType.Align"] = field(
+    align: Optional[XhtmlCellHalignAttribAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5877,31 +5831,12 @@ class XhtmlThType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-    valign: Optional["XhtmlThType.Valign"] = field(
+    valign: Optional[XhtmlCellValignAttribValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Scope(Enum):
-        ROW = "row"
-        COL = "col"
-        ROWGROUP = "rowgroup"
-        COLGROUP = "colgroup"
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -5925,9 +5860,9 @@ class XhtmlTrType:
             "sequential": True,
         }
     )
-    space: XhtmlTrTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlTrTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -5965,7 +5900,7 @@ class XhtmlTrType:
             "type": "Attribute",
         }
     )
-    align: Optional["XhtmlTrType.Align"] = field(
+    align: Optional[XhtmlCellHalignAttribAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5985,25 +5920,12 @@ class XhtmlTrType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-    valign: Optional["XhtmlTrType.Valign"] = field(
+    valign: Optional[XhtmlCellValignAttribValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -6019,9 +5941,9 @@ class XhtmlTbodyType:
             "min_occurs": 1,
         }
     )
-    space: XhtmlTbodyTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlTbodyTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -6059,7 +5981,7 @@ class XhtmlTbodyType:
             "type": "Attribute",
         }
     )
-    align: Optional["XhtmlTbodyType.Align"] = field(
+    align: Optional[XhtmlCellHalignAttribAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6079,25 +6001,12 @@ class XhtmlTbodyType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-    valign: Optional["XhtmlTbodyType.Valign"] = field(
+    valign: Optional[XhtmlCellValignAttribValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -6113,9 +6022,9 @@ class XhtmlTfootType:
             "min_occurs": 1,
         }
     )
-    space: XhtmlTfootTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlTfootTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -6153,7 +6062,7 @@ class XhtmlTfootType:
             "type": "Attribute",
         }
     )
-    align: Optional["XhtmlTfootType.Align"] = field(
+    align: Optional[XhtmlCellHalignAttribAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6173,25 +6082,12 @@ class XhtmlTfootType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-    valign: Optional["XhtmlTfootType.Valign"] = field(
+    valign: Optional[XhtmlCellValignAttribValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -6207,9 +6103,9 @@ class XhtmlTheadType:
             "min_occurs": 1,
         }
     )
-    space: XhtmlTheadTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlTheadTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -6247,7 +6143,7 @@ class XhtmlTheadType:
             "type": "Attribute",
         }
     )
-    align: Optional["XhtmlTheadType.Align"] = field(
+    align: Optional[XhtmlCellHalignAttribAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6267,25 +6163,12 @@ class XhtmlTheadType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-    valign: Optional["XhtmlTheadType.Valign"] = field(
+    valign: Optional[XhtmlCellValignAttribValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -6342,9 +6225,9 @@ class XhtmlTableType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlTableTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlTableTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -6401,13 +6284,13 @@ class XhtmlTableType:
             "type": "Attribute",
         }
     )
-    frame: Optional["XhtmlTableType.Frame"] = field(
+    frame: Optional[XhtmlFrameAttribFrame] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    rules: Optional["XhtmlTableType.Rules"] = field(
+    rules: Optional[XhtmlRulesAttribRules] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6427,24 +6310,6 @@ class XhtmlTableType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-
-    class Frame(Enum):
-        VOID = "void"
-        ABOVE = "above"
-        BELOW = "below"
-        HSIDES = "hsides"
-        LHS = "lhs"
-        RHS = "rhs"
-        VSIDES = "vsides"
-        BOX = "box"
-        BORDER = "border"
-
-    class Rules(Enum):
-        NONE_VALUE = "none"
-        GROUPS = "groups"
-        ROWS = "rows"
-        COLS = "cols"
-        ALL = "all"
 
 
 @dataclass
@@ -6579,9 +6444,9 @@ class XhtmlBlockquoteType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlBlockquoteTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlBlockquoteTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -6921,9 +6786,9 @@ class XhtmlDivType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlDivTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlDivTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -7257,9 +7122,9 @@ class XhtmlLiType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlLiTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlLiTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -7312,9 +7177,9 @@ class XhtmlUlType:
             "min_occurs": 1,
         }
     )
-    space: XhtmlUlTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlUlTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -7696,9 +7561,9 @@ class XhtmlObjectType:
             "sequential": True,
         }
     )
-    space: XhtmlObjectTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlObjectTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -7736,7 +7601,7 @@ class XhtmlObjectType:
             "type": "Attribute",
         }
     )
-    declare: Optional["XhtmlObjectType.Declare"] = field(
+    declare: Optional[XhtmlObjectAttlistDeclare] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7811,9 +7676,6 @@ class XhtmlObjectType:
             "type": "Attribute",
         }
     )
-
-    class Declare(Enum):
-        DECLARE = "declare"
 
 
 @dataclass
@@ -7991,9 +7853,9 @@ class XhtmlAType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlATypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlATypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -8266,9 +8128,9 @@ class XhtmlInlPresType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlInlPresTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlInlPresTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -8490,9 +8352,9 @@ class XhtmlEmType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlEmTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlEmTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -8714,9 +8576,9 @@ class XhtmlH1Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlH1TypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlH1TypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -9050,9 +8912,9 @@ class XhtmlEditType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlEditTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlEditTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -9287,9 +9149,9 @@ class XhtmlSpanType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlSpanTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlSpanTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -9511,9 +9373,9 @@ class XhtmlAddressType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlAddressTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlAddressTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
@@ -9735,9 +9597,9 @@ class XhtmlHeadingType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    space: XhtmlHeadingTypeSpace = field(
+    space: SpaceValue = field(
         init=False,
-        default=XhtmlHeadingTypeSpace.PRESERVE,
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",

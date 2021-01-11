@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from enum import Enum
 from typing import List, Optional, Union
 from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     Cs,
@@ -16,6 +15,7 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     ActRelationshipCostTracking,
     ActRelationshipFulfills,
     ActRelationshipHasSupport,
+    ActRelationshipPertainsValue,
     ActRelationshipPosting,
     ActRelationshipTemporallyPertains,
     EntityClass,
@@ -384,7 +384,7 @@ class CoctMt310000Uv04PertinentInformation1:
             "type": "Attribute",
         }
     )
-    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt310000Uv04PertinentInformation1.TypeCode"]] = field(
+    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue]] = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -393,25 +393,6 @@ class CoctMt310000Uv04PertinentInformation1:
             "pattern": r"[^\s]+",
         }
     )
-
-    class TypeCode(Enum):
-        PERT = "PERT"
-        NAME = "NAME"
-        AUTH = "AUTH"
-        COVBY = "COVBY"
-        ELNK = "ELNK"
-        EXPL = "EXPL"
-        PREV = "PREV"
-        REFV = "REFV"
-        SUBJ = "SUBJ"
-        DRIV = "DRIV"
-        CAUS = "CAUS"
-        MFST = "MFST"
-        ITEMSLOC = "ITEMSLOC"
-        LIMIT = "LIMIT"
-        EVID = "EVID"
-        REFR = "REFR"
-        SUMM = "SUMM"
 
 
 @dataclass
@@ -459,7 +440,7 @@ class CoctMt310000Uv04PertinentInformation3:
             "type": "Attribute",
         }
     )
-    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt310000Uv04PertinentInformation3.TypeCode"]] = field(
+    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue]] = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -468,25 +449,6 @@ class CoctMt310000Uv04PertinentInformation3:
             "pattern": r"[^\s]+",
         }
     )
-
-    class TypeCode(Enum):
-        PERT = "PERT"
-        NAME = "NAME"
-        AUTH = "AUTH"
-        COVBY = "COVBY"
-        ELNK = "ELNK"
-        EXPL = "EXPL"
-        PREV = "PREV"
-        REFV = "REFV"
-        SUBJ = "SUBJ"
-        DRIV = "DRIV"
-        CAUS = "CAUS"
-        MFST = "MFST"
-        ITEMSLOC = "ITEMSLOC"
-        LIMIT = "LIMIT"
-        EVID = "EVID"
-        REFR = "REFR"
-        SUMM = "SUMM"
 
 
 @dataclass
@@ -749,7 +711,7 @@ class CoctMt310000Uv04PertinentInformation2:
             "type": "Attribute",
         }
     )
-    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt310000Uv04PertinentInformation2.TypeCode"]] = field(
+    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue]] = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -758,25 +720,6 @@ class CoctMt310000Uv04PertinentInformation2:
             "pattern": r"[^\s]+",
         }
     )
-
-    class TypeCode(Enum):
-        PERT = "PERT"
-        NAME = "NAME"
-        AUTH = "AUTH"
-        COVBY = "COVBY"
-        ELNK = "ELNK"
-        EXPL = "EXPL"
-        PREV = "PREV"
-        REFV = "REFV"
-        SUBJ = "SUBJ"
-        DRIV = "DRIV"
-        CAUS = "CAUS"
-        MFST = "MFST"
-        ITEMSLOC = "ITEMSLOC"
-        LIMIT = "LIMIT"
-        EVID = "EVID"
-        REFR = "REFR"
-        SUMM = "SUMM"
 
 
 @dataclass

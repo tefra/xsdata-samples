@@ -9,7 +9,10 @@ from sabre.models.bargain_finder_max_common_types_v1_9_7 import (
     CompanyNameType,
     EquipmentType,
     FareDirectionality,
+    OtaPayloadStdAttributesTarget,
+    OtaPayloadStdAttributesTransactionStatusCode,
     PassengerTypeQuantityType,
+    PenaltyType1,
     StayRestrictionsType,
 )
 
@@ -73,6 +76,22 @@ class AirFeeType:
             "type": "Attribute",
         }
     )
+
+
+class AirItineraryPricingInfoExchangeAttributeGroupReissueExchange(Enum):
+    """
+    Attributes
+        VALUE_1: Priced as Reissue
+        VALUE_2: Priced as Exchange
+    """
+    VALUE_1 = 1
+    VALUE_2 = 2
+
+
+class AirItineraryPricingInfoTypeSpanishFamilyDiscountIndicator(Enum):
+    A = "A"
+    B = "B"
+    C = "C"
 
 
 @dataclass
@@ -246,79 +265,9 @@ class AirTaxType:
     )
 
 
-@dataclass
-class BaggageInformationType:
-    """
-    Information about baggage.
-    """
-    segment: List["BaggageInformationType.Segment"] = field(
-        default_factory=list,
-        metadata={
-            "name": "Segment",
-            "type": "Element",
-            "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "min_occurs": 1,
-        }
-    )
-    allowance: Optional["BaggageInformationType.Allowance"] = field(
-        default=None,
-        metadata={
-            "name": "Allowance",
-            "type": "Element",
-            "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
-        }
-    )
-
-    @dataclass
-    class Segment:
-        """
-        Attributes
-            id: Id of segment that current baggage information applies
-                to.
-        """
-        id: Optional[int] = field(
-            default=None,
-            metadata={
-                "name": "Id",
-                "type": "Attribute",
-                "required": True,
-            }
-        )
-
-    @dataclass
-    class Allowance:
-        """
-        Attributes
-            pieces: Number of Pieces
-            weight: Weight Limit
-            unit: Units of the Weight Limit
-        """
-        pieces: Optional[int] = field(
-            default=None,
-            metadata={
-                "name": "Pieces",
-                "type": "Attribute",
-            }
-        )
-        weight: Optional[int] = field(
-            default=None,
-            metadata={
-                "name": "Weight",
-                "type": "Attribute",
-            }
-        )
-        unit: Optional["BaggageInformationType.Allowance.Unit"] = field(
-            default=None,
-            metadata={
-                "name": "Unit",
-                "type": "Attribute",
-            }
-        )
-
-        class Unit(Enum):
-            KG = "kg"
-            LBS = "lbs"
+class AllowanceUnit(Enum):
+    KG = "kg"
+    LBS = "lbs"
 
 
 @dataclass
@@ -797,9 +746,24 @@ class OcfeeType:
     )
 
 
-class OtaAirLowFareSearchRsTarget(Enum):
-    TEST = "Test"
-    PRODUCTION = "Production"
+class PtcfareBreakdownTypeReissueExchange(Enum):
+    """
+    Attributes
+        VALUE_1: Priced as Reissue
+        VALUE_2: Priced as Exchange
+    """
+    VALUE_1 = 1
+    VALUE_2 = 2
+
+
+class PenaltyApplicability(Enum):
+    AFTER = "After"
+    BEFORE = "Before"
+
+
+class PenaltyType2(Enum):
+    REFUND = "Refund"
+    EXCHANGE = "Exchange"
 
 
 class PollingStatusType(Enum):
@@ -1347,19 +1311,74 @@ class AlternateLocationLowestFaresType:
 
 
 @dataclass
-class BaggageInformationListType:
+class BaggageInformationType:
     """
-    Baggage information list.
+    Information about baggage.
     """
-    baggage_information: List[BaggageInformationType] = field(
+    segment: List["BaggageInformationType.Segment"] = field(
         default_factory=list,
         metadata={
-            "name": "BaggageInformation",
+            "name": "Segment",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "min_occurs": 1,
         }
     )
+    allowance: Optional["BaggageInformationType.Allowance"] = field(
+        default=None,
+        metadata={
+            "name": "Allowance",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+        }
+    )
+
+    @dataclass
+    class Segment:
+        """
+        Attributes
+            id: Id of segment that current baggage information applies
+                to.
+        """
+        id: Optional[int] = field(
+            default=None,
+            metadata={
+                "name": "Id",
+                "type": "Attribute",
+                "required": True,
+            }
+        )
+
+    @dataclass
+    class Allowance:
+        """
+        Attributes
+            pieces: Number of Pieces
+            weight: Weight Limit
+            unit: Units of the Weight Limit
+        """
+        pieces: Optional[int] = field(
+            default=None,
+            metadata={
+                "name": "Pieces",
+                "type": "Attribute",
+            }
+        )
+        weight: Optional[int] = field(
+            default=None,
+            metadata={
+                "name": "Weight",
+                "type": "Attribute",
+            }
+        )
+        unit: Optional[AllowanceUnit] = field(
+            default=None,
+            metadata={
+                "name": "Unit",
+                "type": "Attribute",
+            }
+        )
 
 
 @dataclass
@@ -1908,6 +1927,22 @@ class WarningType(FreeTextType):
 
 
 @dataclass
+class BaggageInformationListType:
+    """
+    Baggage information list.
+    """
+    baggage_information: List[BaggageInformationType] = field(
+        default_factory=list,
+        metadata={
+            "name": "BaggageInformation",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_occurs": 1,
+        }
+    )
+
+
+@dataclass
 class BookFlightSegmentType:
     """
     Container for the flight segment data plus the MarriageGrp.
@@ -2420,6 +2455,19 @@ class FareInfoType:
 
 
 @dataclass
+class WarningsType:
+    warning: List[WarningType] = field(
+        default_factory=list,
+        metadata={
+            "name": "Warning",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_occurs": 1,
+        }
+    )
+
+
+@dataclass
 class FareType:
     """
     Holds a base fare, tax, total and currency information on a price.
@@ -2774,14 +2822,14 @@ class FareType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 }
             )
-            type: Optional["FareType.PenaltiesInfo.Penalty.Type"] = field(
+            type: Optional[PenaltyType1] = field(
                 default=None,
                 metadata={
                     "name": "Type",
                     "type": "Attribute",
                 }
             )
-            applicability: Optional["FareType.PenaltiesInfo.Penalty.Applicability"] = field(
+            applicability: Optional[PenaltyApplicability] = field(
                 default=None,
                 metadata={
                     "name": "Applicability",
@@ -2866,14 +2914,6 @@ class FareType:
                         "required": True,
                     }
                 )
-
-            class Type(Enum):
-                REFUND = "Refund"
-                EXCHANGE = "Exchange"
-
-            class Applicability(Enum):
-                AFTER = "After"
-                BEFORE = "Before"
 
     @dataclass
     class TpaExtensions:
@@ -3441,16 +3481,85 @@ class FareType:
 
 
 @dataclass
-class WarningsType:
-    warning: List[WarningType] = field(
+class OriginDestinationOptionType:
+    """
+    A container for flight segments.
+
+    Attributes
+        flight_segment: A container for necessary data to describe one
+            or more legs of a single flight number.
+        elapsed_time: Elapsed leg trip time in minutes
+    """
+    flight_segment: List[BookFlightSegmentType] = field(
         default_factory=list,
         metadata={
-            "name": "Warning",
+            "name": "FlightSegment",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
             "min_occurs": 1,
+            "max_occurs": 4,
         }
     )
+    elapsed_time: Optional[int] = field(
+        default=None,
+        metadata={
+            "name": "ElapsedTime",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AirItineraryType:
+    """
+    Specifies the origin and destination of the traveler.
+
+    Attributes
+        origin_destination_options: A collection of
+            OriginDestinationOption
+        direction_ind: A directional indicator that identifies a type of
+            air booking (e.g. one-way, round-trip, open-jaw).
+        departure_date: Itinerary departure date
+    """
+    origin_destination_options: Optional["AirItineraryType.OriginDestinationOptions"] = field(
+        default=None,
+        metadata={
+            "name": "OriginDestinationOptions",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+        }
+    )
+    direction_ind: Optional[AirTripType] = field(
+        default=None,
+        metadata={
+            "name": "DirectionInd",
+            "type": "Attribute",
+        }
+    )
+    departure_date: Optional[XmlDate] = field(
+        default=None,
+        metadata={
+            "name": "DepartureDate",
+            "type": "Attribute",
+        }
+    )
+
+    @dataclass
+    class OriginDestinationOptions:
+        """
+        Attributes
+            origin_destination_option: A container for flight segments.
+        """
+        origin_destination_option: List[OriginDestinationOptionType] = field(
+            default_factory=list,
+            metadata={
+                "name": "OriginDestinationOption",
+                "type": "Element",
+                "namespace": "http://www.opentravel.org/OTA/2003/05",
+                "min_occurs": 1,
+                "max_occurs": 99,
+            }
+        )
 
 
 @dataclass
@@ -3553,35 +3662,6 @@ class ItinTotalFareType(FareType):
                 "fraction_digits": 3,
             }
         )
-
-
-@dataclass
-class OriginDestinationOptionType:
-    """
-    A container for flight segments.
-
-    Attributes
-        flight_segment: A container for necessary data to describe one
-            or more legs of a single flight number.
-        elapsed_time: Elapsed leg trip time in minutes
-    """
-    flight_segment: List[BookFlightSegmentType] = field(
-        default_factory=list,
-        metadata={
-            "name": "FlightSegment",
-            "type": "Element",
-            "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "min_occurs": 1,
-            "max_occurs": 4,
-        }
-    )
-    elapsed_time: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "ElapsedTime",
-            "type": "Attribute",
-        }
-    )
 
 
 @dataclass
@@ -3690,7 +3770,7 @@ class PtcfareBreakdownType:
             "type": "Attribute",
         }
     )
-    reissue_exchange: Optional["PtcfareBreakdownType.ReissueExchange"] = field(
+    reissue_exchange: Optional[PtcfareBreakdownTypeReissueExchange] = field(
         default=None,
         metadata={
             "name": "ReissueExchange",
@@ -4160,15 +4240,6 @@ class PtcfareBreakdownType:
                         }
                     )
 
-    class ReissueExchange(Enum):
-        """
-        Attributes
-            VALUE_1: Priced as Reissue
-            VALUE_2: Priced as Exchange
-        """
-        VALUE_1 = 1
-        VALUE_2 = 2
-
 
 @dataclass
 class AirItineraryPricingInfoType:
@@ -4354,7 +4425,7 @@ class AirItineraryPricingInfoType:
             "length": 1,
         }
     )
-    spanish_family_discount_indicator: Optional["AirItineraryPricingInfoType.SpanishFamilyDiscountIndicator"] = field(
+    spanish_family_discount_indicator: Optional[AirItineraryPricingInfoTypeSpanishFamilyDiscountIndicator] = field(
         default=None,
         metadata={
             "name": "SpanishFamilyDiscountIndicator",
@@ -4375,7 +4446,7 @@ class AirItineraryPricingInfoType:
             "type": "Attribute",
         }
     )
-    reissue_exchange: Optional["AirItineraryPricingInfoType.ReissueExchange"] = field(
+    reissue_exchange: Optional[AirItineraryPricingInfoExchangeAttributeGroupReissueExchange] = field(
         default=None,
         metadata={
             "name": "ReissueExchange",
@@ -5106,73 +5177,6 @@ class AirItineraryPricingInfoType:
                             "type": "Attribute",
                         }
                     )
-
-    class SpanishFamilyDiscountIndicator(Enum):
-        A = "A"
-        B = "B"
-        C = "C"
-
-    class ReissueExchange(Enum):
-        """
-        Attributes
-            VALUE_1: Priced as Reissue
-            VALUE_2: Priced as Exchange
-        """
-        VALUE_1 = 1
-        VALUE_2 = 2
-
-
-@dataclass
-class AirItineraryType:
-    """
-    Specifies the origin and destination of the traveler.
-
-    Attributes
-        origin_destination_options: A collection of
-            OriginDestinationOption
-        direction_ind: A directional indicator that identifies a type of
-            air booking (e.g. one-way, round-trip, open-jaw).
-        departure_date: Itinerary departure date
-    """
-    origin_destination_options: Optional["AirItineraryType.OriginDestinationOptions"] = field(
-        default=None,
-        metadata={
-            "name": "OriginDestinationOptions",
-            "type": "Element",
-            "namespace": "http://www.opentravel.org/OTA/2003/05",
-        }
-    )
-    direction_ind: Optional[AirTripType] = field(
-        default=None,
-        metadata={
-            "name": "DirectionInd",
-            "type": "Attribute",
-        }
-    )
-    departure_date: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "name": "DepartureDate",
-            "type": "Attribute",
-        }
-    )
-
-    @dataclass
-    class OriginDestinationOptions:
-        """
-        Attributes
-            origin_destination_option: A container for flight segments.
-        """
-        origin_destination_option: List[OriginDestinationOptionType] = field(
-            default_factory=list,
-            metadata={
-                "name": "OriginDestinationOption",
-                "type": "Element",
-                "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "min_occurs": 1,
-                "max_occurs": 99,
-            }
-        )
 
 
 @dataclass
@@ -5921,8 +5925,8 @@ class OtaAirLowFareSearchRs:
             "type": "Attribute",
         }
     )
-    target: OtaAirLowFareSearchRsTarget = field(
-        default=OtaAirLowFareSearchRsTarget.PRODUCTION,
+    target: OtaPayloadStdAttributesTarget = field(
+        default=OtaPayloadStdAttributesTarget.PRODUCTION,
         metadata={
             "name": "Target",
             "type": "Attribute",
@@ -5952,7 +5956,7 @@ class OtaAirLowFareSearchRs:
             "type": "Attribute",
         }
     )
-    transaction_status_code: Optional["OtaAirLowFareSearchRs.TransactionStatusCode"] = field(
+    transaction_status_code: Optional[OtaPayloadStdAttributesTransactionStatusCode] = field(
         default=None,
         metadata={
             "name": "TransactionStatusCode",
@@ -6765,21 +6769,6 @@ class OtaAirLowFareSearchRs:
                         "required": True,
                     }
                 )
-
-    class TransactionStatusCode(Enum):
-        """
-        Attributes
-            START: This is the first message within a transaction.
-            END: This is the last message within a transaction.
-            ROLLBACK: This indicates that all messages within the
-                current transaction must be ignored.
-            IN_SERIES: This is any message that is not the first or last
-                message within a transaction.
-        """
-        START = "Start"
-        END = "End"
-        ROLLBACK = "Rollback"
-        IN_SERIES = "InSeries"
 
 
 @dataclass

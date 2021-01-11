@@ -1127,24 +1127,9 @@ class TextualTypeEnum(Enum):
     ABBREVIATION = "ABBREVIATION"
 
 
-@dataclass
-class TwitterType:
-    class Meta:
-        name = "twitterType"
-
-    value: Optional[str] = field(
-        default=None,
-    )
-    type: Optional["TwitterType.Type"] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-
-    class Type(Enum):
-        ACCOUNT = "ACCOUNT"
-        HASHTAG = "HASHTAG"
+class TwitterTypeType(Enum):
+    ACCOUNT = "ACCOUNT"
+    HASHTAG = "HASHTAG"
 
 
 class WorkflowTypeEnum(Enum):
@@ -1666,6 +1651,22 @@ class TopicType:
         default=None,
         metadata={
             "name": "gtaaStatus",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class TwitterType:
+    class Meta:
+        name = "twitterType"
+
+    value: Optional[str] = field(
+        default=None,
+    )
+    type: Optional[TwitterTypeType] = field(
+        default=None,
+        metadata={
             "type": "Attribute",
         }
     )

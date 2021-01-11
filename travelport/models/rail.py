@@ -611,6 +611,12 @@ class RailSegmentRef:
     )
 
 
+class RailSolutionChangedInfoReasonCode(Enum):
+    PRICE = "Price"
+    SCHEDULE = "Schedule"
+    BOTH = "Both"
+
+
 @dataclass
 class RailSpecificSeatAssignment:
     """
@@ -2974,7 +2980,7 @@ class RailSolutionChangedInfo:
             "required": True,
         }
     )
-    reason_code: Optional["RailSolutionChangedInfo.ReasonCode"] = field(
+    reason_code: Optional[RailSolutionChangedInfoReasonCode] = field(
         default=None,
         metadata={
             "name": "ReasonCode",
@@ -2982,8 +2988,3 @@ class RailSolutionChangedInfo:
             "required": True,
         }
     )
-
-    class ReasonCode(Enum):
-        PRICE = "Price"
-        SCHEDULE = "Schedule"
-        BOTH = "Both"

@@ -64,6 +64,7 @@ from travelport.models.common import (
     ServiceRuleType,
     SupplierLocator,
     ThirdPartyInformation,
+    AttrDocumentDocumentType,
     TypeAdjustmentTarget,
     TypeAdjustmentType,
     TypeAssociatedRemarkWithSegmentRef,
@@ -601,6 +602,12 @@ class AirItinerarySolutionRef:
     )
 
 
+class AirLegModifiersOrderBy(Enum):
+    JOURNEY_TIME = "JourneyTime"
+    DEPARTURE_TIME = "DepartureTime"
+    ARRIVAL_TIME = "ArrivalTime"
+
+
 @dataclass
 class AirPricingInfoRef:
     """
@@ -617,6 +624,16 @@ class AirPricingInfoRef:
             "required": True,
         }
     )
+
+
+class AirPricingSolutionItinerary(Enum):
+    NEW = "New"
+    ORIGINAL = "Original"
+
+
+class AirRefundBundleRefundType(Enum):
+    AUTO = "Auto"
+    MANUAL = "Manual"
 
 
 @dataclass
@@ -701,6 +718,12 @@ class AirSearchAsynchModifiers:
         )
 
 
+class AirSearchModifiersOrderBy(Enum):
+    JOURNEY_TIME = "JourneyTime"
+    DEPARTURE_TIME = "DepartureTime"
+    ARRIVAL_TIME = "ArrivalTime"
+
+
 @dataclass
 class AirSegmentRef:
     """
@@ -751,6 +774,12 @@ class AirSegmentTicketingModifiers:
             "max_length": 10,
         }
     )
+
+
+class AirSolutionChangedInfoReasonCode(Enum):
+    PRICE = "Price"
+    SCHEDULE = "Schedule"
+    BOTH = "Both"
 
 
 @dataclass
@@ -1370,6 +1399,11 @@ class CustomerSearch:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
 
+class DirectionInfoDirection(Enum):
+    TO = "To"
+    FROM_VALUE = "From"
+
+
 @dataclass
 class Document:
     """
@@ -1648,6 +1682,20 @@ class EmdtravelerInfo:
                 "max_length": 256,
             }
         )
+
+
+class EmdAvailabilityChargeIndicator(Enum):
+    X = "X"
+    E = "E"
+    F = "F"
+    G = "G"
+    H = "H"
+
+
+class EmdRefundReissueIndicator(Enum):
+    REFUNDABLE = "Refundable"
+    NON_REFUNDABLE = "NonRefundable"
+    REUSE = "Reuse"
 
 
 @dataclass
@@ -2125,6 +2173,11 @@ class FareRemarkRef:
     )
 
 
+class FareRestrictionDateEndDateIndicator(Enum):
+    COMMENCE = "Commence"
+    COMPLETE = "Complete"
+
+
 @dataclass
 class FareRestrictionSaleDate:
     """
@@ -2538,74 +2591,16 @@ class FeeApplication:
     )
 
 
-@dataclass
-class FlexExploreModifiers:
-    """This is the container for a set of modifiers which allow the user to
-    perform a special kind of low fare search, depicted as flex explore, based
-    on different parameters like Area, Zone, Country, State, Specific
-    locations, Distance around the actual destination of the itinerary.
-
-    Applicable for providers 1G,1V,1P
-
-    Parameters
-    ----------
-    destination: List of specific destinations for performing flex
-        explore. Applicable only with flex explore type - Destination
-    type: Type of flex explore to be performed
-    radius: Radius around the destination of actual itinerary in which
-        the search would be performed. Supported only with types -
-        DistanceInMiles and DistanceInKilometers
-    group_name: Group name for a set of destinations to be searched.
-        Use with Type=Group. Group names are defined in the Search
-        Control Console. Supported Providers:  1G/1V/1P
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    destination: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "Destination",
-            "type": "Element",
-            "max_occurs": 59,
-            "length": 3,
-            "white_space": "collapse",
-        }
-    )
-    type: Optional["FlexExploreModifiers.Type"] = field(
-        default=None,
-        metadata={
-            "name": "Type",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-    radius: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "Radius",
-            "type": "Attribute",
-        }
-    )
-    group_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "GroupName",
-            "type": "Attribute",
-            "max_length": 15,
-        }
-    )
-
-    class Type(Enum):
-        ANY_WHERE = "AnyWhere"
-        AREA = "Area"
-        ZONE = "Zone"
-        COUNTRY = "Country"
-        STATE = "State"
-        DISTANCE_IN_MILES = "DistanceInMiles"
-        DISTANCE_IN_KILOMETERS = "DistanceInKilometers"
-        DESTINATION = "Destination"
-        GROUP = "Group"
+class FlexExploreModifiersType(Enum):
+    ANY_WHERE = "AnyWhere"
+    AREA = "Area"
+    ZONE = "Zone"
+    COUNTRY = "Country"
+    STATE = "State"
+    DISTANCE_IN_MILES = "DistanceInMiles"
+    DISTANCE_IN_KILOMETERS = "DistanceInKilometers"
+    DESTINATION = "Destination"
+    GROUP = "Group"
 
 
 @dataclass
@@ -4725,79 +4720,6 @@ class Restriction:
 
 
 @dataclass
-class RoutingRules:
-    """
-    Rules related to routing.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    routing: List["RoutingRules.Routing"] = field(
-        default_factory=list,
-        metadata={
-            "name": "Routing",
-            "type": "Element",
-            "max_occurs": 999,
-        }
-    )
-
-    @dataclass
-    class Routing:
-        direction_info: List["RoutingRules.Routing.DirectionInfo"] = field(
-            default_factory=list,
-            metadata={
-                "name": "DirectionInfo",
-                "type": "Element",
-                "max_occurs": 999,
-            }
-        )
-        routing_constructed_ind: Optional[bool] = field(
-            default=None,
-            metadata={
-                "name": "RoutingConstructedInd",
-                "type": "Attribute",
-            }
-        )
-        number: Optional[str] = field(
-            default=None,
-            metadata={
-                "name": "Number",
-                "type": "Attribute",
-            }
-        )
-        routing_restriction: Optional[str] = field(
-            default=None,
-            metadata={
-                "name": "RoutingRestriction",
-                "type": "Attribute",
-            }
-        )
-
-        @dataclass
-        class DirectionInfo:
-            location_code: Optional[str] = field(
-                default=None,
-                metadata={
-                    "name": "LocationCode",
-                    "type": "Attribute",
-                    "length": 3,
-                    "white_space": "collapse",
-                }
-            )
-            direction: Optional["RoutingRules.Routing.DirectionInfo.Direction"] = field(
-                default=None,
-                metadata={
-                    "name": "Direction",
-                    "type": "Attribute",
-                }
-            )
-
-            class Direction(Enum):
-                TO = "To"
-                FROM_VALUE = "From"
-
-
-@dataclass
 class RuleCharges:
     """
     Container for rules related to charges such as deposits, surcharges,
@@ -5349,6 +5271,12 @@ class SvcSegment:
     )
 
 
+class TcrrefundBundleRefundType(Enum):
+    AUTO = "Auto"
+    MANUAL = "Manual"
+    IGNORED = "Ignored"
+
+
 @dataclass
 class Tax:
     """
@@ -5665,45 +5593,6 @@ class ValueDetails:
 
 
 @dataclass
-class VoidDocumentInfo:
-    """
-    Container to represent document information.
-
-    Parameters
-    ----------
-    document_number: Identifies the document number to be voided.
-    document_type: Identifies the document type to be voided, Document
-        Type can have four values like Service Fee, Paper Ticket , MCO
-        and E-Ticket.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    document_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "DocumentNumber",
-            "type": "Attribute",
-            "min_length": 1,
-            "max_length": 13,
-        }
-    )
-    document_type: Optional["VoidDocumentInfo.DocumentType"] = field(
-        default=None,
-        metadata={
-            "name": "DocumentType",
-            "type": "Attribute",
-        }
-    )
-
-    class DocumentType(Enum):
-        SERVICE_FEE = "Service Fee"
-        PAPER_TICKET = "Paper Ticket"
-        MCO = "MCO"
-        E_TICKET = "E-Ticket"
-
-
-@dataclass
 class VoidFailureInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -5726,61 +5615,6 @@ class VoidFailureInfo:
             "type": "Attribute",
         }
     )
-
-
-@dataclass
-class VoidResultInfo:
-    """
-    List of Successful Or Failed void document results.
-
-    Parameters
-    ----------
-    failure_remark: Container to show all provider failure information.
-    document_number: Identifies the document number to be voided.
-    document_type: Identifies the document type to be voided, Document
-        Type can have four values like Service Fee, Paper Ticket , MCO
-        and E-Ticket.
-    result_type: Successful Or Failed result indicator.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    failure_remark: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "FailureRemark",
-            "type": "Element",
-        }
-    )
-    document_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "DocumentNumber",
-            "type": "Attribute",
-            "min_length": 1,
-            "max_length": 13,
-        }
-    )
-    document_type: Optional["VoidResultInfo.DocumentType"] = field(
-        default=None,
-        metadata={
-            "name": "DocumentType",
-            "type": "Attribute",
-        }
-    )
-    result_type: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ResultType",
-            "type": "Attribute",
-        }
-    )
-
-    class DocumentType(Enum):
-        SERVICE_FEE = "Service Fee"
-        PAPER_TICKET = "Paper Ticket"
-        MCO = "MCO"
-        E_TICKET = "E-Ticket"
 
 
 @dataclass
@@ -6369,63 +6203,13 @@ class TypeFareGuarantee(Enum):
     UNKNOWN = "Unknown"
 
 
-@dataclass
-class TypeFarePenalty:
+class TypeFarePenaltyPenaltyApplies(Enum):
     """
-    Penalty applicable on a Fare for change/ cancellation etc- expressed in
-    both Money and Percentage.
-
-    Parameters
-    ----------
-    amount: The penalty (if any) - expressed as the actual
-        amount of money. Both Amount and Percentage can be present.
-    percentage: The penalty (if any) - expressed in
-        percentage. Both Amount and Percentage can be present.
-    penalty_applies:
-    no_show: The No Show penalty (if any) to change/cancel the fare.
+    The values can be "Anytime", "Before Departure" or "After Departure".
     """
-    class Meta:
-        name = "typeFarePenalty"
-
-    amount: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Amount",
-            "type": "Element",
-            "namespace": "http://www.travelport.com/schema/air_v48_0",
-        }
-    )
-    percentage: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Percentage",
-            "type": "Element",
-            "namespace": "http://www.travelport.com/schema/air_v48_0",
-            "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-        }
-    )
-    penalty_applies: Optional["TypeFarePenalty.PenaltyApplies"] = field(
-        default=None,
-        metadata={
-            "name": "PenaltyApplies",
-            "type": "Attribute",
-        }
-    )
-    no_show: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "NoShow",
-            "type": "Attribute",
-        }
-    )
-
-    class PenaltyApplies(Enum):
-        """
-        The values can be "Anytime", "Before Departure" or "After Departure".
-        """
-        ANYTIME = "Anytime"
-        BEFORE_DEPARTURE = "Before Departure"
-        AFTER_DEPARTURE = "After Departure"
+    ANYTIME = "Anytime"
+    BEFORE_DEPARTURE = "Before Departure"
+    AFTER_DEPARTURE = "After Departure"
 
 
 class TypeFareRestrictionType(Enum):
@@ -8501,77 +8285,6 @@ class AirTicketingModifiers:
 
 
 @dataclass
-class AirVoidDocumentReq(BaseReq):
-    """
-    Request to void all previously issued tickets for the PNR.
-
-    Parameters
-    ----------
-    air_reservation_locator_code: Provider: 1G,1V.
-    void_document_info: Provider: 1G,1V-All tickets that belong to this
-        PNR must be enumerated here. Voiding only some tickets of a
-        multi-ticket PNR not currently supported.
-    show_etr: Provider: 1G,1V-If set as true, response will display the
-        detailed ETR for successfully voided E-Tickets.
-    provider_code: Provider: 1G,1V-Provider code of a specific host.
-    provider_locator_code: Provider: 1G,1V-Contains the locator of the
-        host reservation.
-    validate_spanish_residency: Provider: 1G - If set as true, Spanish
-        Residency will be validated for Provisioned Customers.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    air_reservation_locator_code: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AirReservationLocatorCode",
-            "type": "Element",
-            "min_length": 5,
-            "max_length": 8,
-        }
-    )
-    void_document_info: List[VoidDocumentInfo] = field(
-        default_factory=list,
-        metadata={
-            "name": "VoidDocumentInfo",
-            "type": "Element",
-            "max_occurs": 999,
-        }
-    )
-    show_etr: bool = field(
-        default=False,
-        metadata={
-            "name": "ShowETR",
-            "type": "Attribute",
-        }
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ProviderCode",
-            "type": "Attribute",
-            "min_length": 2,
-            "max_length": 5,
-        }
-    )
-    provider_locator_code: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ProviderLocatorCode",
-            "type": "Attribute",
-        }
-    )
-    validate_spanish_residency: bool = field(
-        default=False,
-        metadata={
-            "name": "ValidateSpanishResidency",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
 class AlternateLocationDistance:
     """
     Information about the Original Search Airport to Alternate Search Airport.
@@ -9680,14 +9393,14 @@ class Emd:
             "type": "Attribute",
         }
     )
-    availability_charge_indicator: Optional["Emd.AvailabilityChargeIndicator"] = field(
+    availability_charge_indicator: Optional[EmdAvailabilityChargeIndicator] = field(
         default=None,
         metadata={
             "name": "AvailabilityChargeIndicator",
             "type": "Attribute",
         }
     )
-    refund_reissue_indicator: Optional["Emd.RefundReissueIndicator"] = field(
+    refund_reissue_indicator: Optional[EmdRefundReissueIndicator] = field(
         default=None,
         metadata={
             "name": "RefundReissueIndicator",
@@ -9745,18 +9458,6 @@ class Emd:
             "type": "Attribute",
         }
     )
-
-    class AvailabilityChargeIndicator(Enum):
-        X = "X"
-        E = "E"
-        F = "F"
-        G = "G"
-        H = "H"
-
-    class RefundReissueIndicator(Enum):
-        REFUNDABLE = "Refundable"
-        NON_REFUNDABLE = "NonRefundable"
-        REUSE = "Reuse"
 
 
 @dataclass
@@ -10364,17 +10065,13 @@ class FareRestrictionDate:
             "type": "Attribute",
         }
     )
-    end_date_indicator: Optional["FareRestrictionDate.EndDateIndicator"] = field(
+    end_date_indicator: Optional[FareRestrictionDateEndDateIndicator] = field(
         default=None,
         metadata={
             "name": "EndDateIndicator",
             "type": "Attribute",
         }
     )
-
-    class EndDateIndicator(Enum):
-        COMMENCE = "Commence"
-        COMPLETE = "Complete"
 
 
 @dataclass
@@ -10687,6 +10384,65 @@ class FeeInfo(TypeFeeInfo):
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
+
+
+@dataclass
+class FlexExploreModifiers:
+    """This is the container for a set of modifiers which allow the user to
+    perform a special kind of low fare search, depicted as flex explore, based
+    on different parameters like Area, Zone, Country, State, Specific
+    locations, Distance around the actual destination of the itinerary.
+
+    Applicable for providers 1G,1V,1P
+
+    Parameters
+    ----------
+    destination: List of specific destinations for performing flex
+        explore. Applicable only with flex explore type - Destination
+    type: Type of flex explore to be performed
+    radius: Radius around the destination of actual itinerary in which
+        the search would be performed. Supported only with types -
+        DistanceInMiles and DistanceInKilometers
+    group_name: Group name for a set of destinations to be searched.
+        Use with Type=Group. Group names are defined in the Search
+        Control Console. Supported Providers:  1G/1V/1P
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    destination: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "Destination",
+            "type": "Element",
+            "max_occurs": 59,
+            "length": 3,
+            "white_space": "collapse",
+        }
+    )
+    type: Optional[FlexExploreModifiersType] = field(
+        default=None,
+        metadata={
+            "name": "Type",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+    radius: Optional[int] = field(
+        default=None,
+        metadata={
+            "name": "Radius",
+            "type": "Attribute",
+        }
+    )
+    group_name: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "GroupName",
+            "type": "Attribute",
+            "max_length": 15,
+        }
+    )
 
 
 @dataclass
@@ -11423,35 +11179,6 @@ class PassengerDetails:
 
 
 @dataclass
-class PenaltyFareInformation:
-    """
-    Parameters
-    ----------
-    penalty_info: Penalty Limit if requested.
-    prohibit_penalty_fares: Indicates whether user wants penalty
-        fares to be returned.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    penalty_info: Optional[TypeFarePenalty] = field(
-        default=None,
-        metadata={
-            "name": "PenaltyInfo",
-            "type": "Element",
-        }
-    )
-    prohibit_penalty_fares: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "ProhibitPenaltyFares",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-
-
-@dataclass
 class PermittedCabins:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11962,6 +11689,75 @@ class RetrieveLowFareSearchReq(BaseReq):
             "max_length": 5,
         }
     )
+
+
+@dataclass
+class RoutingRules:
+    """
+    Rules related to routing.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    routing: List["RoutingRules.Routing"] = field(
+        default_factory=list,
+        metadata={
+            "name": "Routing",
+            "type": "Element",
+            "max_occurs": 999,
+        }
+    )
+
+    @dataclass
+    class Routing:
+        direction_info: List["RoutingRules.Routing.DirectionInfo"] = field(
+            default_factory=list,
+            metadata={
+                "name": "DirectionInfo",
+                "type": "Element",
+                "max_occurs": 999,
+            }
+        )
+        routing_constructed_ind: Optional[bool] = field(
+            default=None,
+            metadata={
+                "name": "RoutingConstructedInd",
+                "type": "Attribute",
+            }
+        )
+        number: Optional[str] = field(
+            default=None,
+            metadata={
+                "name": "Number",
+                "type": "Attribute",
+            }
+        )
+        routing_restriction: Optional[str] = field(
+            default=None,
+            metadata={
+                "name": "RoutingRestriction",
+                "type": "Attribute",
+            }
+        )
+
+        @dataclass
+        class DirectionInfo:
+            location_code: Optional[str] = field(
+                default=None,
+                metadata={
+                    "name": "LocationCode",
+                    "type": "Attribute",
+                    "length": 3,
+                    "white_space": "collapse",
+                }
+            )
+            direction: Optional[DirectionInfoDirection] = field(
+                default=None,
+                metadata={
+                    "name": "Direction",
+                    "type": "Attribute",
+                }
+            )
 
 
 @dataclass
@@ -12748,6 +12544,139 @@ class Variance:
 
 
 @dataclass
+class VoidDocumentInfo:
+    """
+    Container to represent document information.
+
+    Parameters
+    ----------
+    document_number: Identifies the document number to be voided.
+    document_type: Identifies the document type to be voided, Document
+        Type can have four values like Service Fee, Paper Ticket , MCO
+        and E-Ticket.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    document_number: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "DocumentNumber",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 13,
+        }
+    )
+    document_type: Optional[AttrDocumentDocumentType] = field(
+        default=None,
+        metadata={
+            "name": "DocumentType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class VoidResultInfo:
+    """
+    List of Successful Or Failed void document results.
+
+    Parameters
+    ----------
+    failure_remark: Container to show all provider failure information.
+    document_number: Identifies the document number to be voided.
+    document_type: Identifies the document type to be voided, Document
+        Type can have four values like Service Fee, Paper Ticket , MCO
+        and E-Ticket.
+    result_type: Successful Or Failed result indicator.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    failure_remark: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "FailureRemark",
+            "type": "Element",
+        }
+    )
+    document_number: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "DocumentNumber",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 13,
+        }
+    )
+    document_type: Optional[AttrDocumentDocumentType] = field(
+        default=None,
+        metadata={
+            "name": "DocumentType",
+            "type": "Attribute",
+        }
+    )
+    result_type: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ResultType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class TypeFarePenalty:
+    """
+    Penalty applicable on a Fare for change/ cancellation etc- expressed in
+    both Money and Percentage.
+
+    Parameters
+    ----------
+    amount: The penalty (if any) - expressed as the actual
+        amount of money. Both Amount and Percentage can be present.
+    percentage: The penalty (if any) - expressed in
+        percentage. Both Amount and Percentage can be present.
+    penalty_applies:
+    no_show: The No Show penalty (if any) to change/cancel the fare.
+    """
+    class Meta:
+        name = "typeFarePenalty"
+
+    amount: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Amount",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/air_v48_0",
+        }
+    )
+    percentage: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Percentage",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/air_v48_0",
+            "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
+        }
+    )
+    penalty_applies: Optional[TypeFarePenaltyPenaltyApplies] = field(
+        default=None,
+        metadata={
+            "name": "PenaltyApplies",
+            "type": "Attribute",
+        }
+    )
+    no_show: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "NoShow",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
 class TypeRestrictionLengthOfStay:
     """
     Length Of Stay Restriction ( e.g. 2 day minimum..)
@@ -12999,219 +12928,6 @@ class AirExchangeBundle:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v48_0",
             "max_occurs": 999,
-        }
-    )
-
-
-@dataclass
-class AirFareDisplayModifiers:
-    """
-    Parameters
-    ----------
-    trip_type:
-    cabin_class:
-    penalty_fare_information: Request Fares with specific Penalty
-        Information.
-    fare_search_option:
-    max_responses:
-    departure_date:
-    ticketing_date:
-    return_date:
-    base_fare_only:
-    unrestricted_fares_only:
-    fares_indicator: Indicates whether only public fares
-        should be returned or specific type of private fares
-    currency_type:
-    include_taxes:
-    include_estimated_taxes: Indicates to include estimated taxes i.e.
-        if set to true estimated total fare,base fare and taxes would be
-        returned.
-    include_surcharges:
-    global_indicator:
-    prohibit_min_stay_fares:
-    prohibit_max_stay_fares:
-    prohibit_advance_purchase_fares:
-    prohibit_non_refundable_fares: Indicates whether it prohibits
-        NonRefundable Fares.
-    validated_fares_only: Indicates that the requested Fares
-        should be Validated Fares only.                         If set
-        to true, then only valid fares will be returned.
-        If set to false, both valid and non valid fares will be
-        returned.                         If not sent, then no
-        validation will be done. All fares will be
-        returned.
-    prohibit_travel_restricted_fares: Indicates that the Fares not
-        complying                         Travel Restrictions and
-        Seasonality fare rules are prohibited
-    filed_currency: Represents the filed currency of the fare
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    trip_type: List[TypeFareTripType] = field(
-        default_factory=list,
-        metadata={
-            "name": "TripType",
-            "type": "Element",
-            "max_occurs": 3,
-        }
-    )
-    cabin_class: Optional[CabinClass] = field(
-        default=None,
-        metadata={
-            "name": "CabinClass",
-            "type": "Element",
-            "namespace": "http://www.travelport.com/schema/common_v48_0",
-        }
-    )
-    penalty_fare_information: Optional[PenaltyFareInformation] = field(
-        default=None,
-        metadata={
-            "name": "PenaltyFareInformation",
-            "type": "Element",
-        }
-    )
-    fare_search_option: List[TypeFareSearchOption] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareSearchOption",
-            "type": "Element",
-            "max_occurs": 5,
-        }
-    )
-    max_responses: int = field(
-        default=200,
-        metadata={
-            "name": "MaxResponses",
-            "type": "Attribute",
-        }
-    )
-    departure_date: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "name": "DepartureDate",
-            "type": "Attribute",
-        }
-    )
-    ticketing_date: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "name": "TicketingDate",
-            "type": "Attribute",
-        }
-    )
-    return_date: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "name": "ReturnDate",
-            "type": "Attribute",
-        }
-    )
-    base_fare_only: bool = field(
-        default=False,
-        metadata={
-            "name": "BaseFareOnly",
-            "type": "Attribute",
-        }
-    )
-    unrestricted_fares_only: bool = field(
-        default=False,
-        metadata={
-            "name": "UnrestrictedFaresOnly",
-            "type": "Attribute",
-        }
-    )
-    fares_indicator: Optional[TypeFaresIndicator] = field(
-        default=None,
-        metadata={
-            "name": "FaresIndicator",
-            "type": "Attribute",
-        }
-    )
-    currency_type: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CurrencyType",
-            "type": "Attribute",
-            "length": 3,
-        }
-    )
-    include_taxes: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "IncludeTaxes",
-            "type": "Attribute",
-        }
-    )
-    include_estimated_taxes: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "IncludeEstimatedTaxes",
-            "type": "Attribute",
-        }
-    )
-    include_surcharges: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "IncludeSurcharges",
-            "type": "Attribute",
-        }
-    )
-    global_indicator: Optional[TypeAtpcoglobalIndicator] = field(
-        default=None,
-        metadata={
-            "name": "GlobalIndicator",
-            "type": "Attribute",
-        }
-    )
-    prohibit_min_stay_fares: bool = field(
-        default=False,
-        metadata={
-            "name": "ProhibitMinStayFares",
-            "type": "Attribute",
-        }
-    )
-    prohibit_max_stay_fares: bool = field(
-        default=False,
-        metadata={
-            "name": "ProhibitMaxStayFares",
-            "type": "Attribute",
-        }
-    )
-    prohibit_advance_purchase_fares: bool = field(
-        default=False,
-        metadata={
-            "name": "ProhibitAdvancePurchaseFares",
-            "type": "Attribute",
-        }
-    )
-    prohibit_non_refundable_fares: bool = field(
-        default=False,
-        metadata={
-            "name": "ProhibitNonRefundableFares",
-            "type": "Attribute",
-        }
-    )
-    validated_fares_only: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "ValidatedFaresOnly",
-            "type": "Attribute",
-        }
-    )
-    prohibit_travel_restricted_fares: bool = field(
-        default=True,
-        metadata={
-            "name": "ProhibitTravelRestrictedFares",
-            "type": "Attribute",
-        }
-    )
-    filed_currency: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "FiledCurrency",
-            "type": "Attribute",
-            "length": 3,
         }
     )
 
@@ -13477,7 +13193,7 @@ class AirLegModifiers:
             "type": "Attribute",
         }
     )
-    order_by: Optional["AirLegModifiers.OrderBy"] = field(
+    order_by: Optional[AirLegModifiersOrderBy] = field(
         default=None,
         metadata={
             "name": "OrderBy",
@@ -13581,409 +13297,6 @@ class AirLegModifiers:
             }
         )
 
-    class OrderBy(Enum):
-        JOURNEY_TIME = "JourneyTime"
-        DEPARTURE_TIME = "DepartureTime"
-        ARRIVAL_TIME = "ArrivalTime"
-
-
-@dataclass
-class AirPricingModifiers:
-    """
-    Controls and switches for a Air Search request that contains Pricing
-    Information.
-
-    Parameters
-    ----------
-    prohibited_rule_categories:
-    account_codes:
-    permitted_cabins:
-    contract_codes:
-    exempt_taxes:
-    penalty_fare_information: Request Fares with specific Penalty
-        Information.
-    discount_card: Discount request for rail.
-    promo_codes:
-    manual_fare_adjustment: Represents increment/discount applied
-        manually by agent.
-    point_of_sale: User can use this node to send a specific PCC to
-        access fares allowed only for that PCC. This node gives the
-        capability for fare redistribution at stored fare level. As
-        multiple UAPI AirPricingInfos (all having same
-        AirPricingInfoGroup) can converge to a single stored fare, UAPI
-        will map PoinOfSale information from the first available one
-        from each group
-    brand_modifiers: Used to specify the level of branding requested.
-    multi_gdssearch_indicator:
-    preferred_cabins:
-    prohibit_min_stay_fares:
-    prohibit_max_stay_fares:
-    currency_type:
-    prohibit_advance_purchase_fares:
-    prohibit_non_refundable_fares:
-    prohibit_restricted_fares:
-    fares_indicator: Indicates whether only public fares
-        should be returned or specific type of private fares
-    filed_currency: Currency in which Fares/Prices will be filed if
-        supported by the supplier else approximated to.
-    plating_carrier: The Plating Carrier for this journey.
-    override_carrier: The Plating Carrier for this journey.
-    eticketability: Request a search based on whether only
-        E-ticketable fares are required.
-    account_code_fares_only: Indicates whether or not the private
-        fares returned should be restricted to only those specific to
-        the                         input account code and contract
-        code.
-    key:
-    prohibit_non_exchangeable_fares:
-    force_segment_select: This indicator allows agent to force segment
-        select option in host while selecting all air segments to store
-        price on a PNR. This is relevent only when agent selects all air
-        segmnets to price. if agent selects specific segments to price
-        then this attribute will be ignored by the system. This is
-        currently used by Worldspan only.
-    inventory_request_type: This allows user to make request for a
-        particular source of inventory for pricing modifier purposes.
-        This is currently used by Worldspan only.
-    one_way_shop: Via this attribute one way shop can be requested.
-        Applicable provider is 1G
-    prohibit_unbundled_fare_types: A "True" value wiill remove fares
-        with EOU and ERU fare types from consideration. A "False" value
-        is the same as no value.  Default is no value. Applicable
-        providers:  1P/1J/1G/1V
-    return_services: When set to false, ATPCO filed Optional Services
-        will not be returned. Default is true. Provider: 1G, 1V, 1P, 1J
-    channel_id: A Channel ID is 2 to 4 alpha-numeric characters used to
-        activate the Search Control Console filter for a specific group
-        of travelers being served by the agency credential.
-    return_fare_attributes: Returns attributes that are associated to a
-        fare
-    sell_check: Checks if the segment is bookable before pricing
-    return_failed_segments: If "true", returns failed segments
-        information.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    prohibited_rule_categories: Optional["AirPricingModifiers.ProhibitedRuleCategories"] = field(
-        default=None,
-        metadata={
-            "name": "ProhibitedRuleCategories",
-            "type": "Element",
-        }
-    )
-    account_codes: Optional["AirPricingModifiers.AccountCodes"] = field(
-        default=None,
-        metadata={
-            "name": "AccountCodes",
-            "type": "Element",
-        }
-    )
-    permitted_cabins: Optional[PermittedCabins] = field(
-        default=None,
-        metadata={
-            "name": "PermittedCabins",
-            "type": "Element",
-        }
-    )
-    contract_codes: Optional["AirPricingModifiers.ContractCodes"] = field(
-        default=None,
-        metadata={
-            "name": "ContractCodes",
-            "type": "Element",
-        }
-    )
-    exempt_taxes: Optional[ExemptTaxes] = field(
-        default=None,
-        metadata={
-            "name": "ExemptTaxes",
-            "type": "Element",
-        }
-    )
-    penalty_fare_information: Optional[PenaltyFareInformation] = field(
-        default=None,
-        metadata={
-            "name": "PenaltyFareInformation",
-            "type": "Element",
-        }
-    )
-    discount_card: List[DiscountCard] = field(
-        default_factory=list,
-        metadata={
-            "name": "DiscountCard",
-            "type": "Element",
-            "namespace": "http://www.travelport.com/schema/common_v48_0",
-            "max_occurs": 9,
-        }
-    )
-    promo_codes: Optional["AirPricingModifiers.PromoCodes"] = field(
-        default=None,
-        metadata={
-            "name": "PromoCodes",
-            "type": "Element",
-        }
-    )
-    manual_fare_adjustment: List[ManualFareAdjustment] = field(
-        default_factory=list,
-        metadata={
-            "name": "ManualFareAdjustment",
-            "type": "Element",
-            "max_occurs": 999,
-        }
-    )
-    point_of_sale: Optional[PointOfSale] = field(
-        default=None,
-        metadata={
-            "name": "PointOfSale",
-            "type": "Element",
-            "namespace": "http://www.travelport.com/schema/common_v48_0",
-        }
-    )
-    brand_modifiers: Optional[BrandModifiers] = field(
-        default=None,
-        metadata={
-            "name": "BrandModifiers",
-            "type": "Element",
-        }
-    )
-    multi_gdssearch_indicator: List[MultiGdssearchIndicator] = field(
-        default_factory=list,
-        metadata={
-            "name": "MultiGDSSearchIndicator",
-            "type": "Element",
-            "max_occurs": 999,
-        }
-    )
-    preferred_cabins: List[PreferredCabins] = field(
-        default_factory=list,
-        metadata={
-            "name": "PreferredCabins",
-            "type": "Element",
-            "max_occurs": 99,
-        }
-    )
-    prohibit_min_stay_fares: bool = field(
-        default=False,
-        metadata={
-            "name": "ProhibitMinStayFares",
-            "type": "Attribute",
-        }
-    )
-    prohibit_max_stay_fares: bool = field(
-        default=False,
-        metadata={
-            "name": "ProhibitMaxStayFares",
-            "type": "Attribute",
-        }
-    )
-    currency_type: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CurrencyType",
-            "type": "Attribute",
-            "length": 3,
-        }
-    )
-    prohibit_advance_purchase_fares: bool = field(
-        default=False,
-        metadata={
-            "name": "ProhibitAdvancePurchaseFares",
-            "type": "Attribute",
-        }
-    )
-    prohibit_non_refundable_fares: bool = field(
-        default=False,
-        metadata={
-            "name": "ProhibitNonRefundableFares",
-            "type": "Attribute",
-        }
-    )
-    prohibit_restricted_fares: bool = field(
-        default=False,
-        metadata={
-            "name": "ProhibitRestrictedFares",
-            "type": "Attribute",
-        }
-    )
-    fares_indicator: Optional[TypeFaresIndicator] = field(
-        default=None,
-        metadata={
-            "name": "FaresIndicator",
-            "type": "Attribute",
-        }
-    )
-    filed_currency: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "FiledCurrency",
-            "type": "Attribute",
-            "length": 3,
-        }
-    )
-    plating_carrier: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PlatingCarrier",
-            "type": "Attribute",
-            "length": 2,
-        }
-    )
-    override_carrier: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "OverrideCarrier",
-            "type": "Attribute",
-            "length": 2,
-        }
-    )
-    eticketability: Optional[TypeEticketability] = field(
-        default=None,
-        metadata={
-            "name": "ETicketability",
-            "type": "Attribute",
-        }
-    )
-    account_code_fares_only: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "AccountCodeFaresOnly",
-            "type": "Attribute",
-        }
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Key",
-            "type": "Attribute",
-        }
-    )
-    prohibit_non_exchangeable_fares: bool = field(
-        default=False,
-        metadata={
-            "name": "ProhibitNonExchangeableFares",
-            "type": "Attribute",
-        }
-    )
-    force_segment_select: bool = field(
-        default=False,
-        metadata={
-            "name": "ForceSegmentSelect",
-            "type": "Attribute",
-        }
-    )
-    inventory_request_type: Optional[TypeInventoryRequest] = field(
-        default=None,
-        metadata={
-            "name": "InventoryRequestType",
-            "type": "Attribute",
-        }
-    )
-    one_way_shop: bool = field(
-        default=False,
-        metadata={
-            "name": "OneWayShop",
-            "type": "Attribute",
-        }
-    )
-    prohibit_unbundled_fare_types: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "ProhibitUnbundledFareTypes",
-            "type": "Attribute",
-        }
-    )
-    return_services: bool = field(
-        default=True,
-        metadata={
-            "name": "ReturnServices",
-            "type": "Attribute",
-        }
-    )
-    channel_id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ChannelId",
-            "type": "Attribute",
-            "min_length": 2,
-            "max_length": 4,
-        }
-    )
-    return_fare_attributes: bool = field(
-        default=False,
-        metadata={
-            "name": "ReturnFareAttributes",
-            "type": "Attribute",
-        }
-    )
-    sell_check: bool = field(
-        default=False,
-        metadata={
-            "name": "SellCheck",
-            "type": "Attribute",
-        }
-    )
-    return_failed_segments: bool = field(
-        default=False,
-        metadata={
-            "name": "ReturnFailedSegments",
-            "type": "Attribute",
-        }
-    )
-
-    @dataclass
-    class ProhibitedRuleCategories:
-        fare_rule_category: List[FareRuleCategory] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareRuleCategory",
-                "type": "Element",
-                "min_occurs": 1,
-                "max_occurs": 999,
-            }
-        )
-
-    @dataclass
-    class AccountCodes:
-        """
-        Parameters
-        ----------
-        account_code: Used to get negotiated pricing. Provider:ACH.
-        """
-        account_code: List[AccountCode] = field(
-            default_factory=list,
-            metadata={
-                "name": "AccountCode",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/common_v48_0",
-                "min_occurs": 1,
-                "max_occurs": 999,
-            }
-        )
-
-    @dataclass
-    class ContractCodes:
-        contract_code: List[ContractCode] = field(
-            default_factory=list,
-            metadata={
-                "name": "ContractCode",
-                "type": "Element",
-                "min_occurs": 1,
-                "max_occurs": 999,
-            }
-        )
-
-    @dataclass
-    class PromoCodes:
-        promo_code: List[PromoCode] = field(
-            default_factory=list,
-            metadata={
-                "name": "PromoCode",
-                "type": "Element",
-                "min_occurs": 1,
-                "max_occurs": 999,
-            }
-        )
-
 
 @dataclass
 class AirRefundBundle:
@@ -14052,17 +13365,13 @@ class AirRefundBundle:
             "type": "Attribute",
         }
     )
-    refund_type: Optional["AirRefundBundle.RefundType"] = field(
+    refund_type: Optional[AirRefundBundleRefundType] = field(
         default=None,
         metadata={
             "name": "RefundType",
             "type": "Attribute",
         }
     )
-
-    class RefundType(Enum):
-        AUTO = "Auto"
-        MANUAL = "Manual"
 
 
 @dataclass
@@ -14324,7 +13633,7 @@ class AirSearchModifiers:
             "type": "Attribute",
         }
     )
-    order_by: Optional["AirSearchModifiers.OrderBy"] = field(
+    order_by: Optional[AirSearchModifiersOrderBy] = field(
         default=None,
         metadata={
             "name": "OrderBy",
@@ -14449,10 +13758,76 @@ class AirSearchModifiers:
             }
         )
 
-    class OrderBy(Enum):
-        JOURNEY_TIME = "JourneyTime"
-        DEPARTURE_TIME = "DepartureTime"
-        ARRIVAL_TIME = "ArrivalTime"
+
+@dataclass
+class AirVoidDocumentReq(BaseReq):
+    """
+    Request to void all previously issued tickets for the PNR.
+
+    Parameters
+    ----------
+    air_reservation_locator_code: Provider: 1G,1V.
+    void_document_info: Provider: 1G,1V-All tickets that belong to this
+        PNR must be enumerated here. Voiding only some tickets of a
+        multi-ticket PNR not currently supported.
+    show_etr: Provider: 1G,1V-If set as true, response will display the
+        detailed ETR for successfully voided E-Tickets.
+    provider_code: Provider: 1G,1V-Provider code of a specific host.
+    provider_locator_code: Provider: 1G,1V-Contains the locator of the
+        host reservation.
+    validate_spanish_residency: Provider: 1G - If set as true, Spanish
+        Residency will be validated for Provisioned Customers.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    air_reservation_locator_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "AirReservationLocatorCode",
+            "type": "Element",
+            "min_length": 5,
+            "max_length": 8,
+        }
+    )
+    void_document_info: List[VoidDocumentInfo] = field(
+        default_factory=list,
+        metadata={
+            "name": "VoidDocumentInfo",
+            "type": "Element",
+            "max_occurs": 999,
+        }
+    )
+    show_etr: bool = field(
+        default=False,
+        metadata={
+            "name": "ShowETR",
+            "type": "Attribute",
+        }
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 5,
+        }
+    )
+    provider_locator_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ProviderLocatorCode",
+            "type": "Attribute",
+        }
+    )
+    validate_spanish_residency: bool = field(
+        default=False,
+        metadata={
+            "name": "ValidateSpanishResidency",
+            "type": "Attribute",
+        }
+    )
 
 
 @dataclass
@@ -16313,6 +15688,35 @@ class PassengerType(TypePassengerType):
 
 
 @dataclass
+class PenaltyFareInformation:
+    """
+    Parameters
+    ----------
+    penalty_info: Penalty Limit if requested.
+    prohibit_penalty_fares: Indicates whether user wants penalty
+        fares to be returned.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    penalty_info: Optional[TypeFarePenalty] = field(
+        default=None,
+        metadata={
+            "name": "PenaltyInfo",
+            "type": "Element",
+        }
+    )
+    prohibit_penalty_fares: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "ProhibitPenaltyFares",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+
+
+@dataclass
 class PrePayCustomer:
     """
     Detailed customer information for searching pre pay profiles.
@@ -17211,195 +16615,214 @@ class AirExchangeTicketingReq(BaseReq):
 
 
 @dataclass
-class AirFareDisplayReq(BaseReq):
+class AirFareDisplayModifiers:
     """
-    Request to display a tariff for based on origin, destination, and other
-    options.
-
     Parameters
     ----------
-    fare_type: Provider: 1G,1V,1P,1J.
-    passenger_type: Provider: 1G,1V,1P,1J.
-    booking_code: Provider: 1G,1V,1P,1J.
-    include_addl_booking_code_info: Provider: 1G,1V,1P,1J.
-    fare_basis: Provider: 1G,1V,1P,1J.
-    carrier: Provider: 1G,1V,1P,1J.
-    account_code: Provider: 1G,1V,1P,1J.
-    contract_code: Provider: 1G,1V.
-    air_fare_display_modifiers: Provider: 1G,1V,1P,1J.
-    point_of_sale: Provider: 1G,1V.
-    air_fare_display_rule_key: Provider: 1G,1V,1P,1J.
-    origin: Provider: 1G,1V,1P,1J.
-    destination: Provider: 1G,1V,1P,1J.
-    provider_code: Provider: 1G,1V,1P,1J.
-    include_mile_route_information: Provider: 1G,1V,1P,1J-Used to
-        request Mile/Route Information in follow on (Mile, Route, Both)
-    un_saleable_fares_only: Provider: 1G,1V,1P,1J-Used to request
-        unsaleable fares only also known as place of sale fares.
-    channel_id: A Channel ID is 4 alpha-numeric characters used to
-        activate the Search Control Console filter for a specific group
-        of travelers being served by the agency credential.
-    nscc: 1 to 3 numeric that define a Search Control Console
-        filter.This attribute is used to override that filter.
-    return_mm: If this attribute is set to true, Fare Control Manager
-        processing will be invoked.
+    trip_type:
+    cabin_class:
+    penalty_fare_information: Request Fares with specific Penalty
+        Information.
+    fare_search_option:
+    max_responses:
+    departure_date:
+    ticketing_date:
+    return_date:
+    base_fare_only:
+    unrestricted_fares_only:
+    fares_indicator: Indicates whether only public fares
+        should be returned or specific type of private fares
+    currency_type:
+    include_taxes:
+    include_estimated_taxes: Indicates to include estimated taxes i.e.
+        if set to true estimated total fare,base fare and taxes would be
+        returned.
+    include_surcharges:
+    global_indicator:
+    prohibit_min_stay_fares:
+    prohibit_max_stay_fares:
+    prohibit_advance_purchase_fares:
+    prohibit_non_refundable_fares: Indicates whether it prohibits
+        NonRefundable Fares.
+    validated_fares_only: Indicates that the requested Fares
+        should be Validated Fares only.                         If set
+        to true, then only valid fares will be returned.
+        If set to false, both valid and non valid fares will be
+        returned.                         If not sent, then no
+        validation will be done. All fares will be
+        returned.
+    prohibit_travel_restricted_fares: Indicates that the Fares not
+        complying                         Travel Restrictions and
+        Seasonality fare rules are prohibited
+    filed_currency: Represents the filed currency of the fare
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_type: List[FareType] = field(
+    trip_type: List[TypeFareTripType] = field(
         default_factory=list,
         metadata={
-            "name": "FareType",
+            "name": "TripType",
             "type": "Element",
-            "max_occurs": 5,
+            "max_occurs": 3,
         }
     )
-    passenger_type: List[TypePassengerType] = field(
-        default_factory=list,
-        metadata={
-            "name": "PassengerType",
-            "type": "Element",
-            "max_occurs": 999,
-        }
-    )
-    booking_code: List[BookingCode] = field(
-        default_factory=list,
-        metadata={
-            "name": "BookingCode",
-            "type": "Element",
-            "max_occurs": 5,
-        }
-    )
-    include_addl_booking_code_info: Optional[IncludeAddlBookingCodeInfo] = field(
+    cabin_class: Optional[CabinClass] = field(
         default=None,
         metadata={
-            "name": "IncludeAddlBookingCodeInfo",
-            "type": "Element",
-        }
-    )
-    fare_basis: Optional[FareBasis] = field(
-        default=None,
-        metadata={
-            "name": "FareBasis",
-            "type": "Element",
-        }
-    )
-    carrier: List[Carrier] = field(
-        default_factory=list,
-        metadata={
-            "name": "Carrier",
+            "name": "CabinClass",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v48_0",
-            "max_occurs": 10,
         }
     )
-    account_code: List[AccountCode] = field(
+    penalty_fare_information: Optional[PenaltyFareInformation] = field(
+        default=None,
+        metadata={
+            "name": "PenaltyFareInformation",
+            "type": "Element",
+        }
+    )
+    fare_search_option: List[TypeFareSearchOption] = field(
         default_factory=list,
         metadata={
-            "name": "AccountCode",
+            "name": "FareSearchOption",
             "type": "Element",
-            "namespace": "http://www.travelport.com/schema/common_v48_0",
             "max_occurs": 5,
         }
     )
-    contract_code: Optional[ContractCode] = field(
-        default=None,
+    max_responses: int = field(
+        default=200,
         metadata={
-            "name": "ContractCode",
-            "type": "Element",
-        }
-    )
-    air_fare_display_modifiers: Optional[AirFareDisplayModifiers] = field(
-        default=None,
-        metadata={
-            "name": "AirFareDisplayModifiers",
-            "type": "Element",
-        }
-    )
-    point_of_sale: List[PointOfSale] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOfSale",
-            "type": "Element",
-            "namespace": "http://www.travelport.com/schema/common_v48_0",
-            "max_occurs": 5,
-        }
-    )
-    air_fare_display_rule_key: Optional[AirFareDisplayRuleKey] = field(
-        default=None,
-        metadata={
-            "name": "AirFareDisplayRuleKey",
-            "type": "Element",
-        }
-    )
-    origin: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Origin",
-            "type": "Attribute",
-            "required": True,
-            "length": 3,
-            "white_space": "collapse",
-        }
-    )
-    destination: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Destination",
-            "type": "Attribute",
-            "required": True,
-            "length": 3,
-            "white_space": "collapse",
-        }
-    )
-    provider_code: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ProviderCode",
-            "type": "Attribute",
-            "required": True,
-            "min_length": 2,
-            "max_length": 5,
-        }
-    )
-    include_mile_route_information: Optional[TypeMileOrRouteBasedFare] = field(
-        default=None,
-        metadata={
-            "name": "IncludeMileRouteInformation",
+            "name": "MaxResponses",
             "type": "Attribute",
         }
     )
-    un_saleable_fares_only: Optional[bool] = field(
+    departure_date: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "UnSaleableFaresOnly",
+            "name": "DepartureDate",
             "type": "Attribute",
         }
     )
-    channel_id: Optional[str] = field(
+    ticketing_date: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "ChannelId",
+            "name": "TicketingDate",
             "type": "Attribute",
-            "min_length": 2,
-            "max_length": 4,
         }
     )
-    nscc: Optional[str] = field(
+    return_date: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "NSCC",
+            "name": "ReturnDate",
             "type": "Attribute",
-            "min_length": 1,
-            "max_length": 3,
         }
     )
-    return_mm: bool = field(
+    base_fare_only: bool = field(
         default=False,
         metadata={
-            "name": "ReturnMM",
+            "name": "BaseFareOnly",
             "type": "Attribute",
+        }
+    )
+    unrestricted_fares_only: bool = field(
+        default=False,
+        metadata={
+            "name": "UnrestrictedFaresOnly",
+            "type": "Attribute",
+        }
+    )
+    fares_indicator: Optional[TypeFaresIndicator] = field(
+        default=None,
+        metadata={
+            "name": "FaresIndicator",
+            "type": "Attribute",
+        }
+    )
+    currency_type: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "CurrencyType",
+            "type": "Attribute",
+            "length": 3,
+        }
+    )
+    include_taxes: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "IncludeTaxes",
+            "type": "Attribute",
+        }
+    )
+    include_estimated_taxes: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "IncludeEstimatedTaxes",
+            "type": "Attribute",
+        }
+    )
+    include_surcharges: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "IncludeSurcharges",
+            "type": "Attribute",
+        }
+    )
+    global_indicator: Optional[TypeAtpcoglobalIndicator] = field(
+        default=None,
+        metadata={
+            "name": "GlobalIndicator",
+            "type": "Attribute",
+        }
+    )
+    prohibit_min_stay_fares: bool = field(
+        default=False,
+        metadata={
+            "name": "ProhibitMinStayFares",
+            "type": "Attribute",
+        }
+    )
+    prohibit_max_stay_fares: bool = field(
+        default=False,
+        metadata={
+            "name": "ProhibitMaxStayFares",
+            "type": "Attribute",
+        }
+    )
+    prohibit_advance_purchase_fares: bool = field(
+        default=False,
+        metadata={
+            "name": "ProhibitAdvancePurchaseFares",
+            "type": "Attribute",
+        }
+    )
+    prohibit_non_refundable_fares: bool = field(
+        default=False,
+        metadata={
+            "name": "ProhibitNonRefundableFares",
+            "type": "Attribute",
+        }
+    )
+    validated_fares_only: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "ValidatedFaresOnly",
+            "type": "Attribute",
+        }
+    )
+    prohibit_travel_restricted_fares: bool = field(
+        default=True,
+        metadata={
+            "name": "ProhibitTravelRestrictedFares",
+            "type": "Attribute",
+        }
+    )
+    filed_currency: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "FiledCurrency",
+            "type": "Attribute",
+            "length": 3,
         }
     )
 
@@ -17571,56 +16994,401 @@ class AirItinerarySolution:
 
 
 @dataclass
-class AirPricingCommand:
-    """A containter to identify individual pricing events.
-
-    A pricing result will be returned for each pricing command according
-    to its parameters.
+class AirPricingModifiers:
+    """
+    Controls and switches for a Air Search request that contains Pricing
+    Information.
 
     Parameters
     ----------
-    air_pricing_modifiers:
-    air_segment_pricing_modifiers:
-    command_key: An identifier to link the pricing responses to
-        the pricing commands. The value passed here will be returned in
-        the resulting AirPricingInfo(s) from this command.
-    cabin_class: Specify the cabin type to price the entire
-        itinerary in. If segment level cabin selection is required, this
-        attribute should not be used.
+    prohibited_rule_categories:
+    account_codes:
+    permitted_cabins:
+    contract_codes:
+    exempt_taxes:
+    penalty_fare_information: Request Fares with specific Penalty
+        Information.
+    discount_card: Discount request for rail.
+    promo_codes:
+    manual_fare_adjustment: Represents increment/discount applied
+        manually by agent.
+    point_of_sale: User can use this node to send a specific PCC to
+        access fares allowed only for that PCC. This node gives the
+        capability for fare redistribution at stored fare level. As
+        multiple UAPI AirPricingInfos (all having same
+        AirPricingInfoGroup) can converge to a single stored fare, UAPI
+        will map PoinOfSale information from the first available one
+        from each group
+    brand_modifiers: Used to specify the level of branding requested.
+    multi_gdssearch_indicator:
+    preferred_cabins:
+    prohibit_min_stay_fares:
+    prohibit_max_stay_fares:
+    currency_type:
+    prohibit_advance_purchase_fares:
+    prohibit_non_refundable_fares:
+    prohibit_restricted_fares:
+    fares_indicator: Indicates whether only public fares
+        should be returned or specific type of private fares
+    filed_currency: Currency in which Fares/Prices will be filed if
+        supported by the supplier else approximated to.
+    plating_carrier: The Plating Carrier for this journey.
+    override_carrier: The Plating Carrier for this journey.
+    eticketability: Request a search based on whether only
+        E-ticketable fares are required.
+    account_code_fares_only: Indicates whether or not the private
+        fares returned should be restricted to only those specific to
+        the                         input account code and contract
+        code.
+    key:
+    prohibit_non_exchangeable_fares:
+    force_segment_select: This indicator allows agent to force segment
+        select option in host while selecting all air segments to store
+        price on a PNR. This is relevent only when agent selects all air
+        segmnets to price. if agent selects specific segments to price
+        then this attribute will be ignored by the system. This is
+        currently used by Worldspan only.
+    inventory_request_type: This allows user to make request for a
+        particular source of inventory for pricing modifier purposes.
+        This is currently used by Worldspan only.
+    one_way_shop: Via this attribute one way shop can be requested.
+        Applicable provider is 1G
+    prohibit_unbundled_fare_types: A "True" value wiill remove fares
+        with EOU and ERU fare types from consideration. A "False" value
+        is the same as no value.  Default is no value. Applicable
+        providers:  1P/1J/1G/1V
+    return_services: When set to false, ATPCO filed Optional Services
+        will not be returned. Default is true. Provider: 1G, 1V, 1P, 1J
+    channel_id: A Channel ID is 2 to 4 alpha-numeric characters used to
+        activate the Search Control Console filter for a specific group
+        of travelers being served by the agency credential.
+    return_fare_attributes: Returns attributes that are associated to a
+        fare
+    sell_check: Checks if the segment is bookable before pricing
+    return_failed_segments: If "true", returns failed segments
+        information.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_pricing_modifiers: Optional[AirPricingModifiers] = field(
+    prohibited_rule_categories: Optional["AirPricingModifiers.ProhibitedRuleCategories"] = field(
         default=None,
         metadata={
-            "name": "AirPricingModifiers",
+            "name": "ProhibitedRuleCategories",
             "type": "Element",
         }
     )
-    air_segment_pricing_modifiers: List[AirSegmentPricingModifiers] = field(
+    account_codes: Optional["AirPricingModifiers.AccountCodes"] = field(
+        default=None,
+        metadata={
+            "name": "AccountCodes",
+            "type": "Element",
+        }
+    )
+    permitted_cabins: Optional[PermittedCabins] = field(
+        default=None,
+        metadata={
+            "name": "PermittedCabins",
+            "type": "Element",
+        }
+    )
+    contract_codes: Optional["AirPricingModifiers.ContractCodes"] = field(
+        default=None,
+        metadata={
+            "name": "ContractCodes",
+            "type": "Element",
+        }
+    )
+    exempt_taxes: Optional[ExemptTaxes] = field(
+        default=None,
+        metadata={
+            "name": "ExemptTaxes",
+            "type": "Element",
+        }
+    )
+    penalty_fare_information: Optional[PenaltyFareInformation] = field(
+        default=None,
+        metadata={
+            "name": "PenaltyFareInformation",
+            "type": "Element",
+        }
+    )
+    discount_card: List[DiscountCard] = field(
         default_factory=list,
         metadata={
-            "name": "AirSegmentPricingModifiers",
+            "name": "DiscountCard",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 9,
+        }
+    )
+    promo_codes: Optional["AirPricingModifiers.PromoCodes"] = field(
+        default=None,
+        metadata={
+            "name": "PromoCodes",
+            "type": "Element",
+        }
+    )
+    manual_fare_adjustment: List[ManualFareAdjustment] = field(
+        default_factory=list,
+        metadata={
+            "name": "ManualFareAdjustment",
             "type": "Element",
             "max_occurs": 999,
         }
     )
-    command_key: Optional[str] = field(
+    point_of_sale: Optional[PointOfSale] = field(
         default=None,
         metadata={
-            "name": "CommandKey",
-            "type": "Attribute",
-            "max_length": 10,
+            "name": "PointOfSale",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    cabin_class: Optional[str] = field(
+    brand_modifiers: Optional[BrandModifiers] = field(
         default=None,
         metadata={
-            "name": "CabinClass",
+            "name": "BrandModifiers",
+            "type": "Element",
+        }
+    )
+    multi_gdssearch_indicator: List[MultiGdssearchIndicator] = field(
+        default_factory=list,
+        metadata={
+            "name": "MultiGDSSearchIndicator",
+            "type": "Element",
+            "max_occurs": 999,
+        }
+    )
+    preferred_cabins: List[PreferredCabins] = field(
+        default_factory=list,
+        metadata={
+            "name": "PreferredCabins",
+            "type": "Element",
+            "max_occurs": 99,
+        }
+    )
+    prohibit_min_stay_fares: bool = field(
+        default=False,
+        metadata={
+            "name": "ProhibitMinStayFares",
             "type": "Attribute",
         }
     )
+    prohibit_max_stay_fares: bool = field(
+        default=False,
+        metadata={
+            "name": "ProhibitMaxStayFares",
+            "type": "Attribute",
+        }
+    )
+    currency_type: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "CurrencyType",
+            "type": "Attribute",
+            "length": 3,
+        }
+    )
+    prohibit_advance_purchase_fares: bool = field(
+        default=False,
+        metadata={
+            "name": "ProhibitAdvancePurchaseFares",
+            "type": "Attribute",
+        }
+    )
+    prohibit_non_refundable_fares: bool = field(
+        default=False,
+        metadata={
+            "name": "ProhibitNonRefundableFares",
+            "type": "Attribute",
+        }
+    )
+    prohibit_restricted_fares: bool = field(
+        default=False,
+        metadata={
+            "name": "ProhibitRestrictedFares",
+            "type": "Attribute",
+        }
+    )
+    fares_indicator: Optional[TypeFaresIndicator] = field(
+        default=None,
+        metadata={
+            "name": "FaresIndicator",
+            "type": "Attribute",
+        }
+    )
+    filed_currency: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "FiledCurrency",
+            "type": "Attribute",
+            "length": 3,
+        }
+    )
+    plating_carrier: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "PlatingCarrier",
+            "type": "Attribute",
+            "length": 2,
+        }
+    )
+    override_carrier: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "OverrideCarrier",
+            "type": "Attribute",
+            "length": 2,
+        }
+    )
+    eticketability: Optional[TypeEticketability] = field(
+        default=None,
+        metadata={
+            "name": "ETicketability",
+            "type": "Attribute",
+        }
+    )
+    account_code_fares_only: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "AccountCodeFaresOnly",
+            "type": "Attribute",
+        }
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+        }
+    )
+    prohibit_non_exchangeable_fares: bool = field(
+        default=False,
+        metadata={
+            "name": "ProhibitNonExchangeableFares",
+            "type": "Attribute",
+        }
+    )
+    force_segment_select: bool = field(
+        default=False,
+        metadata={
+            "name": "ForceSegmentSelect",
+            "type": "Attribute",
+        }
+    )
+    inventory_request_type: Optional[TypeInventoryRequest] = field(
+        default=None,
+        metadata={
+            "name": "InventoryRequestType",
+            "type": "Attribute",
+        }
+    )
+    one_way_shop: bool = field(
+        default=False,
+        metadata={
+            "name": "OneWayShop",
+            "type": "Attribute",
+        }
+    )
+    prohibit_unbundled_fare_types: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "ProhibitUnbundledFareTypes",
+            "type": "Attribute",
+        }
+    )
+    return_services: bool = field(
+        default=True,
+        metadata={
+            "name": "ReturnServices",
+            "type": "Attribute",
+        }
+    )
+    channel_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ChannelId",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 4,
+        }
+    )
+    return_fare_attributes: bool = field(
+        default=False,
+        metadata={
+            "name": "ReturnFareAttributes",
+            "type": "Attribute",
+        }
+    )
+    sell_check: bool = field(
+        default=False,
+        metadata={
+            "name": "SellCheck",
+            "type": "Attribute",
+        }
+    )
+    return_failed_segments: bool = field(
+        default=False,
+        metadata={
+            "name": "ReturnFailedSegments",
+            "type": "Attribute",
+        }
+    )
+
+    @dataclass
+    class ProhibitedRuleCategories:
+        fare_rule_category: List[FareRuleCategory] = field(
+            default_factory=list,
+            metadata={
+                "name": "FareRuleCategory",
+                "type": "Element",
+                "min_occurs": 1,
+                "max_occurs": 999,
+            }
+        )
+
+    @dataclass
+    class AccountCodes:
+        """
+        Parameters
+        ----------
+        account_code: Used to get negotiated pricing. Provider:ACH.
+        """
+        account_code: List[AccountCode] = field(
+            default_factory=list,
+            metadata={
+                "name": "AccountCode",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/common_v48_0",
+                "min_occurs": 1,
+                "max_occurs": 999,
+            }
+        )
+
+    @dataclass
+    class ContractCodes:
+        contract_code: List[ContractCode] = field(
+            default_factory=list,
+            metadata={
+                "name": "ContractCode",
+                "type": "Element",
+                "min_occurs": 1,
+                "max_occurs": 999,
+            }
+        )
+
+    @dataclass
+    class PromoCodes:
+        promo_code: List[PromoCode] = field(
+            default_factory=list,
+            metadata={
+                "name": "PromoCode",
+                "type": "Element",
+                "min_occurs": 1,
+                "max_occurs": 999,
+            }
+        )
 
 
 @dataclass
@@ -17638,105 +17406,6 @@ class AlternateRouteList:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
-    )
-
-
-@dataclass
-class AutoPricingInfo:
-    """
-    Auto Pricing based on Segment and Traveler Association.
-
-    Parameters
-    ----------
-    air_segment_ref:
-    booking_traveler_ref:
-    air_pricing_modifiers:
-    air_segment_pricing_modifiers:
-    key:
-    pricing_type: Indicates the Pricing Type used.
-        The possible values are TicketRecord, StoredFare,
-        PricingInstruction.
-    plating_carrier: The Plating Carrier for this journey
-    el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
-    """
-    class Meta:
-        namespace = "http://www.travelport.com/schema/air_v48_0"
-
-    air_segment_ref: List[AirSegmentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AirSegmentRef",
-            "type": "Element",
-            "max_occurs": 100,
-        }
-    )
-    booking_traveler_ref: List[BookingTravelerRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "BookingTravelerRef",
-            "type": "Element",
-            "namespace": "http://www.travelport.com/schema/common_v48_0",
-            "max_occurs": 100,
-        }
-    )
-    air_pricing_modifiers: Optional[AirPricingModifiers] = field(
-        default=None,
-        metadata={
-            "name": "AirPricingModifiers",
-            "type": "Element",
-        }
-    )
-    air_segment_pricing_modifiers: List[AirSegmentPricingModifiers] = field(
-        default_factory=list,
-        metadata={
-            "name": "AirSegmentPricingModifiers",
-            "type": "Element",
-            "max_occurs": 100,
-        }
-    )
-    key: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Key",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-    pricing_type: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PricingType",
-            "type": "Attribute",
-            "max_length": 25,
-        }
-    )
-    plating_carrier: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PlatingCarrier",
-            "type": "Attribute",
-            "length": 2,
-        }
-    )
-    el_stat: Optional[TypeElementStatus] = field(
-        default=None,
-        metadata={
-            "name": "ElStat",
-            "type": "Attribute",
-        }
-    )
-    key_override: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "KeyOverride",
-            "type": "Attribute",
         }
     )
 
@@ -19975,6 +19644,200 @@ class StructuredFareRulesType:
 
 
 @dataclass
+class AirFareDisplayReq(BaseReq):
+    """
+    Request to display a tariff for based on origin, destination, and other
+    options.
+
+    Parameters
+    ----------
+    fare_type: Provider: 1G,1V,1P,1J.
+    passenger_type: Provider: 1G,1V,1P,1J.
+    booking_code: Provider: 1G,1V,1P,1J.
+    include_addl_booking_code_info: Provider: 1G,1V,1P,1J.
+    fare_basis: Provider: 1G,1V,1P,1J.
+    carrier: Provider: 1G,1V,1P,1J.
+    account_code: Provider: 1G,1V,1P,1J.
+    contract_code: Provider: 1G,1V.
+    air_fare_display_modifiers: Provider: 1G,1V,1P,1J.
+    point_of_sale: Provider: 1G,1V.
+    air_fare_display_rule_key: Provider: 1G,1V,1P,1J.
+    origin: Provider: 1G,1V,1P,1J.
+    destination: Provider: 1G,1V,1P,1J.
+    provider_code: Provider: 1G,1V,1P,1J.
+    include_mile_route_information: Provider: 1G,1V,1P,1J-Used to
+        request Mile/Route Information in follow on (Mile, Route, Both)
+    un_saleable_fares_only: Provider: 1G,1V,1P,1J-Used to request
+        unsaleable fares only also known as place of sale fares.
+    channel_id: A Channel ID is 4 alpha-numeric characters used to
+        activate the Search Control Console filter for a specific group
+        of travelers being served by the agency credential.
+    nscc: 1 to 3 numeric that define a Search Control Console
+        filter.This attribute is used to override that filter.
+    return_mm: If this attribute is set to true, Fare Control Manager
+        processing will be invoked.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    fare_type: List[FareType] = field(
+        default_factory=list,
+        metadata={
+            "name": "FareType",
+            "type": "Element",
+            "max_occurs": 5,
+        }
+    )
+    passenger_type: List[TypePassengerType] = field(
+        default_factory=list,
+        metadata={
+            "name": "PassengerType",
+            "type": "Element",
+            "max_occurs": 999,
+        }
+    )
+    booking_code: List[BookingCode] = field(
+        default_factory=list,
+        metadata={
+            "name": "BookingCode",
+            "type": "Element",
+            "max_occurs": 5,
+        }
+    )
+    include_addl_booking_code_info: Optional[IncludeAddlBookingCodeInfo] = field(
+        default=None,
+        metadata={
+            "name": "IncludeAddlBookingCodeInfo",
+            "type": "Element",
+        }
+    )
+    fare_basis: Optional[FareBasis] = field(
+        default=None,
+        metadata={
+            "name": "FareBasis",
+            "type": "Element",
+        }
+    )
+    carrier: List[Carrier] = field(
+        default_factory=list,
+        metadata={
+            "name": "Carrier",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 10,
+        }
+    )
+    account_code: List[AccountCode] = field(
+        default_factory=list,
+        metadata={
+            "name": "AccountCode",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 5,
+        }
+    )
+    contract_code: Optional[ContractCode] = field(
+        default=None,
+        metadata={
+            "name": "ContractCode",
+            "type": "Element",
+        }
+    )
+    air_fare_display_modifiers: Optional[AirFareDisplayModifiers] = field(
+        default=None,
+        metadata={
+            "name": "AirFareDisplayModifiers",
+            "type": "Element",
+        }
+    )
+    point_of_sale: List[PointOfSale] = field(
+        default_factory=list,
+        metadata={
+            "name": "PointOfSale",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 5,
+        }
+    )
+    air_fare_display_rule_key: Optional[AirFareDisplayRuleKey] = field(
+        default=None,
+        metadata={
+            "name": "AirFareDisplayRuleKey",
+            "type": "Element",
+        }
+    )
+    origin: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Origin",
+            "type": "Attribute",
+            "required": True,
+            "length": 3,
+            "white_space": "collapse",
+        }
+    )
+    destination: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Destination",
+            "type": "Attribute",
+            "required": True,
+            "length": 3,
+            "white_space": "collapse",
+        }
+    )
+    provider_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ProviderCode",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 2,
+            "max_length": 5,
+        }
+    )
+    include_mile_route_information: Optional[TypeMileOrRouteBasedFare] = field(
+        default=None,
+        metadata={
+            "name": "IncludeMileRouteInformation",
+            "type": "Attribute",
+        }
+    )
+    un_saleable_fares_only: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "UnSaleableFaresOnly",
+            "type": "Attribute",
+        }
+    )
+    channel_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ChannelId",
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 4,
+        }
+    )
+    nscc: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "NSCC",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 3,
+        }
+    )
+    return_mm: bool = field(
+        default=False,
+        metadata={
+            "name": "ReturnMM",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
 class AirMerchandisingDetailsReq(BaseReq):
     """
     Request to retrieve brand details and optional services included in the
@@ -20002,6 +19865,59 @@ class AirMerchandisingDetailsReq(BaseReq):
         metadata={
             "name": "MerchandisingAvailabilityDetails",
             "type": "Element",
+        }
+    )
+
+
+@dataclass
+class AirPricingCommand:
+    """A containter to identify individual pricing events.
+
+    A pricing result will be returned for each pricing command according
+    to its parameters.
+
+    Parameters
+    ----------
+    air_pricing_modifiers:
+    air_segment_pricing_modifiers:
+    command_key: An identifier to link the pricing responses to
+        the pricing commands. The value passed here will be returned in
+        the resulting AirPricingInfo(s) from this command.
+    cabin_class: Specify the cabin type to price the entire
+        itinerary in. If segment level cabin selection is required, this
+        attribute should not be used.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    air_pricing_modifiers: Optional[AirPricingModifiers] = field(
+        default=None,
+        metadata={
+            "name": "AirPricingModifiers",
+            "type": "Element",
+        }
+    )
+    air_segment_pricing_modifiers: List[AirSegmentPricingModifiers] = field(
+        default_factory=list,
+        metadata={
+            "name": "AirSegmentPricingModifiers",
+            "type": "Element",
+            "max_occurs": 999,
+        }
+    )
+    command_key: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "CommandKey",
+            "type": "Attribute",
+            "max_length": 10,
+        }
+    )
+    cabin_class: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "CabinClass",
+            "type": "Attribute",
         }
     )
 
@@ -20152,6 +20068,105 @@ class AirTicketingReq(AirBaseReq):
                 "required": True,
             }
         )
+
+
+@dataclass
+class AutoPricingInfo:
+    """
+    Auto Pricing based on Segment and Traveler Association.
+
+    Parameters
+    ----------
+    air_segment_ref:
+    booking_traveler_ref:
+    air_pricing_modifiers:
+    air_segment_pricing_modifiers:
+    key:
+    pricing_type: Indicates the Pricing Type used.
+        The possible values are TicketRecord, StoredFare,
+        PricingInstruction.
+    plating_carrier: The Plating Carrier for this journey
+    el_stat: This attribute is used to show the action results of an
+        element.               Possible values are "A" (when elements
+        have been added to the UR) and "M" (when existing elements have
+        been modified). Response only.
+    key_override: If a duplicate key is found where we are adding
+        elements in some cases like URAdd, then instead of erroring out
+        set this attribute to true.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/air_v48_0"
+
+    air_segment_ref: List[AirSegmentRef] = field(
+        default_factory=list,
+        metadata={
+            "name": "AirSegmentRef",
+            "type": "Element",
+            "max_occurs": 100,
+        }
+    )
+    booking_traveler_ref: List[BookingTravelerRef] = field(
+        default_factory=list,
+        metadata={
+            "name": "BookingTravelerRef",
+            "type": "Element",
+            "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "max_occurs": 100,
+        }
+    )
+    air_pricing_modifiers: Optional[AirPricingModifiers] = field(
+        default=None,
+        metadata={
+            "name": "AirPricingModifiers",
+            "type": "Element",
+        }
+    )
+    air_segment_pricing_modifiers: List[AirSegmentPricingModifiers] = field(
+        default_factory=list,
+        metadata={
+            "name": "AirSegmentPricingModifiers",
+            "type": "Element",
+            "max_occurs": 100,
+        }
+    )
+    key: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Key",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+    pricing_type: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "PricingType",
+            "type": "Attribute",
+            "max_length": 25,
+        }
+    )
+    plating_carrier: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "PlatingCarrier",
+            "type": "Attribute",
+            "length": 2,
+        }
+    )
+    el_stat: Optional[TypeElementStatus] = field(
+        default=None,
+        metadata={
+            "name": "ElStat",
+            "type": "Attribute",
+        }
+    )
+    key_override: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "KeyOverride",
+            "type": "Attribute",
+        }
+    )
 
 
 @dataclass
@@ -23370,7 +23385,7 @@ class TcrrefundBundle:
             "required": True,
         }
     )
-    refund_type: Optional["TcrrefundBundle.RefundType"] = field(
+    refund_type: Optional[TcrrefundBundleRefundType] = field(
         default=None,
         metadata={
             "name": "RefundType",
@@ -23388,11 +23403,6 @@ class TcrrefundBundle:
             "max_length": 32,
         }
     )
-
-    class RefundType(Enum):
-        AUTO = "Auto"
-        MANUAL = "Manual"
-        IGNORED = "Ignored"
 
 
 @dataclass
@@ -25094,17 +25104,13 @@ class AirPricingSolution:
             "type": "Attribute",
         }
     )
-    itinerary: Optional["AirPricingSolution.Itinerary"] = field(
+    itinerary: Optional[AirPricingSolutionItinerary] = field(
         default=None,
         metadata={
             "name": "Itinerary",
             "type": "Attribute",
         }
     )
-
-    class Itinerary(Enum):
-        NEW = "New"
-        ORIGINAL = "Original"
 
 
 @dataclass
@@ -26913,7 +26919,7 @@ class AirSolutionChangedInfo:
             "required": True,
         }
     )
-    reason_code: Optional["AirSolutionChangedInfo.ReasonCode"] = field(
+    reason_code: Optional[AirSolutionChangedInfoReasonCode] = field(
         default=None,
         metadata={
             "name": "ReasonCode",
@@ -26921,11 +26927,6 @@ class AirSolutionChangedInfo:
             "required": True,
         }
     )
-
-    class ReasonCode(Enum):
-        PRICE = "Price"
-        SCHEDULE = "Schedule"
-        BOTH = "Both"
 
 
 @dataclass
