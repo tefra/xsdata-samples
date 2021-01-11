@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional
-from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
+from xsdata.models.datatype import XmlDateTime, XmlDuration
 
 __NAMESPACE__ = "urn:vpro:shared:2009"
 

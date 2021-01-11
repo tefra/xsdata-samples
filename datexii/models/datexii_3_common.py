@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
-from xsdata.models.datatype import XmlDate, XmlDateTime, XmlTime
+from xsdata.models.datatype import XmlDateTime, XmlTime
 
 __NAMESPACE__ = "http://datex2.eu/schema/3/common"
 
