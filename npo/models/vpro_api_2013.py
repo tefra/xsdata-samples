@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
-from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
+from xsdata.models.datatype import XmlDateTime, XmlDuration
 from npo.models.vpro_media_2009 import (
     ChannelEnum,
     GeoRoleType,

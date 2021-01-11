@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
-from xsdata.models.datatype import XmlDate, XmlDateTime
+from xsdata.models.datatype import XmlDateTime
 from reqif.models.w3_org_xml_1998_namespace import SpaceValue
 
 __NAMESPACE__ = "http://www.w3.org/1999/xhtml"
