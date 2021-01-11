@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from enum import Enum
 from typing import List, Optional, Union
 from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     AdExplicit,
@@ -25,6 +24,7 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     ActRelationshipHasComponent,
     ActRelationshipHasSupport,
     ActRelationshipOutcome,
+    ActRelationshipPertainsValue,
     ActRelationshipPosting,
     ActRelationshipSequel,
     ActRelationshipTemporallyPertains,
@@ -58,66 +58,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt470000_uv import CoctM
 from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt710000_uv01 import CoctMt710000Uv01Place
 
 __NAMESPACE__ = "urn:hl7-org:v3"
-
-
-class CoctMt010000Uv01AuthorizationTypeCode(Enum):
-    PERT = "PERT"
-    NAME = "NAME"
-    AUTH = "AUTH"
-    COVBY = "COVBY"
-    ELNK = "ELNK"
-    EXPL = "EXPL"
-    PREV = "PREV"
-    REFV = "REFV"
-    SUBJ = "SUBJ"
-    DRIV = "DRIV"
-    CAUS = "CAUS"
-    MFST = "MFST"
-    ITEMSLOC = "ITEMSLOC"
-    LIMIT = "LIMIT"
-    EVID = "EVID"
-    REFR = "REFR"
-    SUMM = "SUMM"
-
-
-class CoctMt010000Uv01CauseOfTypeCode(Enum):
-    PERT = "PERT"
-    NAME = "NAME"
-    AUTH = "AUTH"
-    COVBY = "COVBY"
-    ELNK = "ELNK"
-    EXPL = "EXPL"
-    PREV = "PREV"
-    REFV = "REFV"
-    SUBJ = "SUBJ"
-    DRIV = "DRIV"
-    CAUS = "CAUS"
-    MFST = "MFST"
-    ITEMSLOC = "ITEMSLOC"
-    LIMIT = "LIMIT"
-    EVID = "EVID"
-    REFR = "REFR"
-    SUMM = "SUMM"
-
-
-class CoctMt010000Uv01ReferenceTypeCode(Enum):
-    PERT = "PERT"
-    NAME = "NAME"
-    AUTH = "AUTH"
-    COVBY = "COVBY"
-    ELNK = "ELNK"
-    EXPL = "EXPL"
-    PREV = "PREV"
-    REFV = "REFV"
-    SUBJ = "SUBJ"
-    DRIV = "DRIV"
-    CAUS = "CAUS"
-    MFST = "MFST"
-    ITEMSLOC = "ITEMSLOC"
-    LIMIT = "LIMIT"
-    EVID = "EVID"
-    REFR = "REFR"
-    SUMM = "SUMM"
 
 
 @dataclass
@@ -405,9 +345,9 @@ class CoctMt010000Uv01Authorization:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt010000Uv01AuthorizationTypeCode, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
-        default=CoctMt010000Uv01AuthorizationTypeCode.AUTH,
+        default=ActRelationshipPertainsValue.AUTH,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
@@ -867,7 +807,7 @@ class CoctMt010000Uv01PertinentInformation2:
             "type": "Attribute",
         }
     )
-    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt010000Uv01PertinentInformation2.TypeCode"]] = field(
+    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue]] = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -876,25 +816,6 @@ class CoctMt010000Uv01PertinentInformation2:
             "pattern": r"[^\s]+",
         }
     )
-
-    class TypeCode(Enum):
-        PERT = "PERT"
-        NAME = "NAME"
-        AUTH = "AUTH"
-        COVBY = "COVBY"
-        ELNK = "ELNK"
-        EXPL = "EXPL"
-        PREV = "PREV"
-        REFV = "REFV"
-        SUBJ = "SUBJ"
-        DRIV = "DRIV"
-        CAUS = "CAUS"
-        MFST = "MFST"
-        ITEMSLOC = "ITEMSLOC"
-        LIMIT = "LIMIT"
-        EVID = "EVID"
-        REFR = "REFR"
-        SUMM = "SUMM"
 
 
 @dataclass
@@ -942,9 +863,9 @@ class CoctMt010000Uv01Reference:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt010000Uv01ReferenceTypeCode, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
-        default=CoctMt010000Uv01ReferenceTypeCode.REFR,
+        default=ActRelationshipPertainsValue.REFR,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
@@ -1373,7 +1294,7 @@ class CoctMt010000Uv01PertinentInformation3:
             "type": "Attribute",
         }
     )
-    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, "CoctMt010000Uv01PertinentInformation3.TypeCode"]] = field(
+    type_code: Optional[Union[ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue]] = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -1382,25 +1303,6 @@ class CoctMt010000Uv01PertinentInformation3:
             "pattern": r"[^\s]+",
         }
     )
-
-    class TypeCode(Enum):
-        PERT = "PERT"
-        NAME = "NAME"
-        AUTH = "AUTH"
-        COVBY = "COVBY"
-        ELNK = "ELNK"
-        EXPL = "EXPL"
-        PREV = "PREV"
-        REFV = "REFV"
-        SUBJ = "SUBJ"
-        DRIV = "DRIV"
-        CAUS = "CAUS"
-        MFST = "MFST"
-        ITEMSLOC = "ITEMSLOC"
-        LIMIT = "LIMIT"
-        EVID = "EVID"
-        REFR = "REFR"
-        SUMM = "SUMM"
 
 
 @dataclass
@@ -1964,9 +1866,9 @@ class CoctMt010000Uv01CauseOf:
             "type": "Attribute",
         }
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, CoctMt010000Uv01CauseOfTypeCode, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
         init=False,
-        default=CoctMt010000Uv01CauseOfTypeCode.CAUS,
+        default=ActRelationshipPertainsValue.CAUS,
         metadata={
             "name": "typeCode",
             "type": "Attribute",

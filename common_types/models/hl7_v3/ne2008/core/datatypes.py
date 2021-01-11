@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from enum import Enum
 from typing import List, Optional, Union
 from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     Any,
@@ -18,6 +17,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
 )
 from common_types.models.hl7_v3.ne2008.core.voc import (
     CalendarCycleOneLetter,
+    CalendarCycleTwoLetterValue,
     ProbabilityDistributionType,
     SetOperator,
 )
@@ -310,7 +310,7 @@ class PivlTs(SxcmTs):
             "namespace": "urn:hl7-org:v3",
         }
     )
-    alignment: Optional[Union[CalendarCycleOneLetter, str, "PivlTs.Alignment"]] = field(
+    alignment: Optional[Union[CalendarCycleOneLetter, str, CalendarCycleTwoLetterValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -325,23 +325,6 @@ class PivlTs(SxcmTs):
             "pattern": r"true|false",
         }
     )
-
-    class Alignment(Enum):
-        CD = "CD"
-        DM = "DM"
-        DW = "DW"
-        DY = "DY"
-        CH = "CH"
-        HD = "HD"
-        CN = "CN"
-        NH = "NH"
-        CM = "CM"
-        MY = "MY"
-        CS = "CS"
-        SN = "SN"
-        CW = "CW"
-        WY = "WY"
-        CY = "CY"
 
 
 @dataclass
@@ -1217,7 +1200,7 @@ class PivlPpdTs(SxcmPpdTs):
             "namespace": "urn:hl7-org:v3",
         }
     )
-    alignment: Optional[Union[CalendarCycleOneLetter, str, "PivlPpdTs.Alignment"]] = field(
+    alignment: Optional[Union[CalendarCycleOneLetter, str, CalendarCycleTwoLetterValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1232,20 +1215,3 @@ class PivlPpdTs(SxcmPpdTs):
             "pattern": r"true|false",
         }
     )
-
-    class Alignment(Enum):
-        CD = "CD"
-        DM = "DM"
-        DW = "DW"
-        DY = "DY"
-        CH = "CH"
-        HD = "HD"
-        CN = "CN"
-        NH = "NH"
-        CM = "CM"
-        MY = "MY"
-        CS = "CS"
-        SN = "SN"
-        CW = "CW"
-        WY = "WY"
-        CY = "CY"

@@ -110,9 +110,50 @@ class FareDirectionality(Enum):
     FROM_VALUE = "FROM"
 
 
+class MaximumStayReturnType(Enum):
+    """
+    Attributes
+        C: Return travel must be Completed.
+        S: Return travel must be Started.
+    """
+    C = "C"
+    S = "S"
+
+
+class OtaPayloadStdAttributesTarget(Enum):
+    TEST = "Test"
+    PRODUCTION = "Production"
+
+
+class OtaPayloadStdAttributesTransactionStatusCode(Enum):
+    """
+    Attributes
+        START: This is the first message within a transaction.
+        END: This is the last message within a transaction.
+        ROLLBACK: This indicates that all messages within the current
+            transaction must be ignored.
+        IN_SERIES: This is any message that is not the first or last
+            message within a transaction.
+    """
+    START = "Start"
+    END = "End"
+    ROLLBACK = "Rollback"
+    IN_SERIES = "InSeries"
+
+
 class OutboundOrInbound(Enum):
     OUTBOUND = "Outbound"
     INBOUND = "Inbound"
+
+
+class PenaltyApplication(Enum):
+    AFTER = "After"
+    BEFORE = "Before"
+
+
+class PenaltyType1(Enum):
+    REFUND = "Refund"
+    EXCHANGE = "Exchange"
 
 
 class StayUnitType(Enum):
@@ -297,6 +338,21 @@ class VoluntaryChangesType:
                 "max_inclusive": Decimal("100.00"),
             }
         )
+
+
+class VoluntaryChangesMatch(Enum):
+    """
+    Attributes
+        ALL: Conditions are joined by logical conjunction - fare needs
+            to fulfill all the conditions to be returned in response.
+        ANY: Conditions are joined by logical disjunction - fare needs
+            to fulfill at least one of the conditions to be returned in
+            response.
+        INFO: Return penalty information
+    """
+    ALL = "All"
+    ANY = "Any"
+    INFO = "Info"
 
 
 @dataclass
@@ -602,7 +658,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                     "max_occurs": 2,
                 }
             )
-            match: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Match"] = field(
+            match: Optional[VoluntaryChangesMatch] = field(
                 default=None,
                 metadata={
                     "name": "Match",
@@ -628,7 +684,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                         equivalent to the ISO 4217 standard "minor
                         unit".
                 """
-                type: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty.Type"] = field(
+                type: Optional[PenaltyType1] = field(
                     default=None,
                     metadata={
                         "name": "Type",
@@ -642,7 +698,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                         "type": "Attribute",
                     }
                 )
-                application: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty.Application"] = field(
+                application: Optional[PenaltyApplication] = field(
                     default=None,
                     metadata={
                         "name": "Application",
@@ -672,29 +728,6 @@ class PassengerTypeQuantityType(TravelerCountType):
                         "type": "Attribute",
                     }
                 )
-
-                class Type(Enum):
-                    REFUND = "Refund"
-                    EXCHANGE = "Exchange"
-
-                class Application(Enum):
-                    AFTER = "After"
-                    BEFORE = "Before"
-
-            class Match(Enum):
-                """
-                Attributes
-                    ALL: Conditions are joined by logical conjunction -
-                        fare needs to fulfill all the conditions to be
-                        returned in response.
-                    ANY: Conditions are joined by logical disjunction -
-                        fare needs to fulfill at least one of the
-                        conditions to be returned in response.
-                    INFO: Return penalty information
-                """
-                ALL = "All"
-                ANY = "Any"
-                INFO = "Info"
 
 
 @dataclass
@@ -797,7 +830,7 @@ class StayRestrictionsType:
             max_stay_date: The specific date for the maximum stay
                 requirement.
         """
-        return_type: Optional["StayRestrictionsType.MaximumStay.ReturnType"] = field(
+        return_type: Optional[MaximumStayReturnType] = field(
             default=None,
             metadata={
                 "name": "ReturnType",
@@ -834,12 +867,3 @@ class StayRestrictionsType:
                 "type": "Attribute",
             }
         )
-
-        class ReturnType(Enum):
-            """
-            Attributes
-                C: Return travel must be Completed.
-                S: Return travel must be Started.
-            """
-            C = "C"
-            S = "S"

@@ -4,9 +4,7 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt010000_uv01 import (
     CoctMt010000Uv01Admitter,
     CoctMt010000Uv01Attender,
     CoctMt010000Uv01Authorization,
-    CoctMt010000Uv01AuthorizationTypeCode,
     CoctMt010000Uv01CauseOf,
-    CoctMt010000Uv01CauseOfTypeCode,
     CoctMt010000Uv01Component,
     CoctMt010000Uv01Consultant,
     CoctMt010000Uv01Discharger,
@@ -19,7 +17,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt010000_uv01 import (
     CoctMt010000Uv01PertinentInformation2,
     CoctMt010000Uv01PertinentInformation3,
     CoctMt010000Uv01Reference,
-    CoctMt010000Uv01ReferenceTypeCode,
     CoctMt010000Uv01Referrer,
     CoctMt010000Uv01ResponsibleParty1,
     CoctMt010000Uv01SequelTo,
@@ -347,8 +344,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt260003_uv import (
     CoctMt260003UvSeverityObservation,
     CoctMt260003UvSubject,
     CoctMt260003UvSubject2,
-    CoctMt260003UvSubject2TypeCode,
-    CoctMt260003UvSubjectTypeCode,
 )
 from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt280000_uv04 import CoctMt280000Uv04CrossReference
 from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt290000_uv06 import (
@@ -398,10 +393,8 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt290000_uv06 import (
     CoctMt290000Uv06SpecimenCollectionEvent,
     CoctMt290000Uv06Subject,
     CoctMt290000Uv06Subject2,
-    CoctMt290000Uv06Subject2TypeCode,
     CoctMt290000Uv06Subject3,
     CoctMt290000Uv06Subject5,
-    CoctMt290000Uv06SubjectTypeCode,
     CoctMt290000Uv06Substitution,
 )
 from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt300000_uv04 import (
@@ -423,7 +416,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt300000_uv04 import (
     CoctMt300000Uv04Reason,
     CoctMt300000Uv04Reason2,
     CoctMt300000Uv04Subject,
-    CoctMt300000Uv04SubjectTypeCode,
     CoctMt300000Uv04SubstanceAdministrationIntent,
     CoctMt300000Uv04SubstanceAdministrationOrder,
     CoctMt300000Uv04Substitution,
@@ -482,7 +474,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt500000_uv import (
     CoctMt500000UvEmployment,
     CoctMt500000UvHolder,
     CoctMt500000UvLimitation,
-    CoctMt500000UvLimitationTypeCode,
     CoctMt500000UvPolicyHolder,
     CoctMt500000UvPolicyHolderOrganization,
     CoctMt500000UvPolicyHolderPerson,
@@ -499,7 +490,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt500000_uv04 import (
     CoctMt500000Uv04Employment,
     CoctMt500000Uv04Holder,
     CoctMt500000Uv04Limitation,
-    CoctMt500000Uv04LimitationTypeCode,
     CoctMt500000Uv04PolicyHolder,
     CoctMt500000Uv04PolicyHolderOrganization,
     CoctMt500000Uv04PolicyHolderPerson,
@@ -512,7 +502,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt510000_uv06 import (
     CoctMt510000Uv06Benefit,
     CoctMt510000Uv06Component,
     CoctMt510000Uv06Coverage2,
-    CoctMt510000Uv06Coverage2TypeCode,
     CoctMt510000Uv06CoverageCharge,
     CoctMt510000Uv06CoverageChargePolicy,
     CoctMt510000Uv06CoverageDefinition,
@@ -534,10 +523,7 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt510000_uv06 import (
     CoctMt510000Uv06IndirectAuthorithyOver2,
     CoctMt510000Uv06Limitation,
     CoctMt510000Uv06Limitation2,
-    CoctMt510000Uv06Limitation2TypeCode,
     CoctMt510000Uv06Limitation3,
-    CoctMt510000Uv06Limitation3TypeCode,
-    CoctMt510000Uv06LimitationTypeCode,
     CoctMt510000Uv06Organization,
     CoctMt510000Uv06Part,
     CoctMt510000Uv06Payor,
@@ -551,8 +537,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt510000_uv06 import (
     CoctMt510000Uv06PrimaryPerformer,
     CoctMt510000Uv06Reference,
     CoctMt510000Uv06Reference2,
-    CoctMt510000Uv06Reference2TypeCode,
-    CoctMt510000Uv06ReferenceTypeCode,
     CoctMt510000Uv06ReplacementOf,
     CoctMt510000Uv06ResponsibleParty,
     CoctMt510000Uv06ResponsibleParty2,
@@ -603,7 +587,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt530000_uv import (
     CoctMt530000UvProduct2,
     CoctMt530000UvRecordTarget,
     CoctMt530000UvReferenceRange,
-    CoctMt530000UvReferenceRangeTypeCode,
     CoctMt530000UvRelatedEntity,
     CoctMt530000UvResponsibleParty1,
     CoctMt530000UvResponsibleParty2,
@@ -612,7 +595,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt530000_uv import (
     CoctMt530000UvSourceOf2,
     CoctMt530000UvSourceOf3,
     CoctMt530000UvSubject1,
-    CoctMt530000UvSubject1TypeCode,
     CoctMt530000UvSubject2,
     CoctMt530000UvSubstanceAdministration,
     CoctMt530000UvSupply,
@@ -670,7 +652,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt740000_uv04 import (
     CoctMt740000Uv04PertinentInformation2,
     CoctMt740000Uv04ProviderPerson,
     CoctMt740000Uv04Reference,
-    CoctMt740000Uv04ReferenceTypeCode,
     CoctMt740000Uv04Referral,
     CoctMt740000Uv04Referrer,
     CoctMt740000Uv04ResponsibleParty,
@@ -783,7 +764,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.mfmi_mt700701_uv01 import (
     MfmiMt700701Uv01ReplacementOf,
     MfmiMt700701Uv01Subject3,
     MfmiMt700701Uv01Subject4,
-    MfmiMt700701Uv01Subject4TypeCode,
 )
 from common_types.models.hl7_v3.ne2008.multi_cache.mfmi_mt700711_uv01 import (
     MfmiMt700711Uv01ActDefinition,
@@ -805,7 +785,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.mfmi_mt700711_uv01 import (
     MfmiMt700711Uv01ReplacementOf,
     MfmiMt700711Uv01Subject3,
     MfmiMt700711Uv01Subject4,
-    MfmiMt700711Uv01Subject4TypeCode,
 )
 from common_types.models.hl7_v3.ne2008.multi_cache.mfmi_mt700712_uv01 import (
     MfmiMt700712Uv01ActDefinition,
@@ -827,7 +806,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.mfmi_mt700712_uv01 import (
     MfmiMt700712Uv01ReplacementOf,
     MfmiMt700712Uv01Subject3,
     MfmiMt700712Uv01Subject4,
-    MfmiMt700712Uv01Subject4TypeCode,
 )
 from common_types.models.hl7_v3.ne2008.multi_cache.pocd_mt000040 import (
     PocdMt000040Act,
@@ -839,7 +817,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.pocd_mt000040 import (
     PocdMt000040Author,
     PocdMt000040AuthoringDevice,
     PocdMt000040Authorization,
-    PocdMt000040AuthorizationTypeCode,
     PocdMt000040Birthplace,
     PocdMt000040ClinicalDocument,
     PocdMt000040Component1,
@@ -891,7 +868,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.pocd_mt000040 import (
     PocdMt000040Participant1,
     PocdMt000040Participant2,
     PocdMt000040ParticipantRole,
-    PocdMt000040ParticipantRoleClassCode,
     PocdMt000040Patient,
     PocdMt000040PatientRole,
     PocdMt000040Performer1,
@@ -905,7 +881,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.pocd_mt000040 import (
     PocdMt000040RecordTarget,
     PocdMt000040Reference,
     PocdMt000040ReferenceRange,
-    PocdMt000040ReferenceRangeTypeCode,
     PocdMt000040RegionOfInterest,
     PocdMt000040RegionOfInterestValue,
     PocdMt000040RelatedDocument,
@@ -928,7 +903,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.prpa_in201301_uv02 import (
     PrpaIn201301Uv02MfmiMt700701Uv01ControlActProcess,
     PrpaIn201301Uv02MfmiMt700701Uv01RegistrationEvent,
     PrpaIn201301Uv02MfmiMt700701Uv01Subject1,
-    PrpaIn201301Uv02MfmiMt700701Uv01Subject1TypeCode,
     PrpaIn201301Uv02MfmiMt700701Uv01Subject2,
 )
 from common_types.models.hl7_v3.ne2008.multi_cache.prpa_in201302_uv02 import (
@@ -937,7 +911,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.prpa_in201302_uv02 import (
     PrpaIn201302Uv02MfmiMt700701Uv01ControlActProcess,
     PrpaIn201302Uv02MfmiMt700701Uv01RegistrationEvent,
     PrpaIn201302Uv02MfmiMt700701Uv01Subject1,
-    PrpaIn201302Uv02MfmiMt700701Uv01Subject1TypeCode,
     PrpaIn201302Uv02MfmiMt700701Uv01Subject2,
 )
 from common_types.models.hl7_v3.ne2008.multi_cache.prpa_in201304_uv02 import (
@@ -946,7 +919,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.prpa_in201304_uv02 import (
     PrpaIn201304Uv02MfmiMt700701Uv01ControlActProcess,
     PrpaIn201304Uv02MfmiMt700701Uv01RegistrationEvent,
     PrpaIn201304Uv02MfmiMt700701Uv01Subject1,
-    PrpaIn201304Uv02MfmiMt700701Uv01Subject1TypeCode,
     PrpaIn201304Uv02MfmiMt700701Uv01Subject2,
 )
 from common_types.models.hl7_v3.ne2008.multi_cache.prpa_in201305_uv02 import (
@@ -960,7 +932,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.prpa_in201306_uv02 import (
     PrpaIn201306Uv02MfmiMt700711Uv01ControlActProcess,
     PrpaIn201306Uv02MfmiMt700711Uv01RegistrationEvent,
     PrpaIn201306Uv02MfmiMt700711Uv01Subject1,
-    PrpaIn201306Uv02MfmiMt700711Uv01Subject1TypeCode,
     PrpaIn201306Uv02MfmiMt700711Uv01Subject2,
 )
 from common_types.models.hl7_v3.ne2008.multi_cache.prpa_in201307_uv02 import (
@@ -979,7 +950,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.prpa_in201310_uv02 import (
     PrpaIn201310Uv02MfmiMt700711Uv01ControlActProcess,
     PrpaIn201310Uv02MfmiMt700711Uv01RegistrationEvent,
     PrpaIn201310Uv02MfmiMt700711Uv01Subject1,
-    PrpaIn201310Uv02MfmiMt700711Uv01Subject1TypeCode,
     PrpaIn201310Uv02MfmiMt700711Uv01Subject2,
 )
 from common_types.models.hl7_v3.ne2008.multi_cache.prpa_in900300_uv02 import (
@@ -1196,9 +1166,7 @@ from common_types.models.hl7_v3.ne2008.multi_cache.qupc_in043200_uv01 import (
     QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess,
     QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent,
     QupcIn043200Uv01MfmiMt700712Uv01Subject1,
-    QupcIn043200Uv01MfmiMt700712Uv01Subject1TypeCode,
     QupcIn043200Uv01MfmiMt700712Uv01Subject5,
-    QupcIn043200Uv01MfmiMt700712Uv01Subject5TypeCode,
 )
 from common_types.models.hl7_v3.ne2008.multi_cache.qupc_mt040300_uv01 import (
     QupcMt040300Uv01CareProvisionCode,
@@ -1261,7 +1229,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt000100_uv01 import (
     RepcMt000100Uv01Product2,
     RepcMt000100Uv01RecordTarget,
     RepcMt000100Uv01ReferenceRange2,
-    RepcMt000100Uv01ReferenceRange2TypeCode,
     RepcMt000100Uv01ResponsibleParty,
     RepcMt000100Uv01SourceOf,
     RepcMt000100Uv01SourceOf3,
@@ -1315,8 +1282,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt000200_uv import (
     RepcMt000200UvReason2,
     RepcMt000200UvSubject,
     RepcMt000200UvSubject2,
-    RepcMt000200UvSubject2TypeCode,
-    RepcMt000200UvSubjectTypeCode,
     RepcMt000200UvSubstanceAdministrationDefinition,
     RepcMt000200UvSubstanceAdministrationIntent,
     RepcMt000200UvSupplyEvent,
@@ -1332,7 +1297,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt000300_uv01 import (
     RepcMt000300Uv01HealthCareFacility,
     RepcMt000300Uv01Informant,
     RepcMt000300Uv01Links,
-    RepcMt000300Uv01LinksTypeCode,
     RepcMt000300Uv01Location,
     RepcMt000300Uv01Organization,
     RepcMt000300Uv01Performer,
@@ -1340,18 +1304,14 @@ from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt000300_uv01 import (
     RepcMt000300Uv01Reason,
     RepcMt000300Uv01RecordTarget,
     RepcMt000300Uv01Reference,
-    RepcMt000300Uv01ReferenceTypeCode,
     RepcMt000300Uv01ReplacementOf,
     RepcMt000300Uv01ResponsibleParty,
     RepcMt000300Uv01ResponsibleParty2,
     RepcMt000300Uv01SequelTo,
     RepcMt000300Uv01Subject2,
     RepcMt000300Uv01Subject3,
-    RepcMt000300Uv01Subject3TypeCode,
     RepcMt000300Uv01Subject4,
-    RepcMt000300Uv01Subject4TypeCode,
     RepcMt000300Uv01Subject5,
-    RepcMt000300Uv01Subject5TypeCode,
     RepcMt000300Uv01Verifier,
 )
 from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt000301_uv import (
@@ -1360,14 +1320,12 @@ from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt000301_uv import (
     RepcMt000301UvComponent,
     RepcMt000301UvConditionEvent,
     RepcMt000301UvConditionNamed,
-    RepcMt000301UvConditionNamedTypeCode,
     RepcMt000301UvConditionNodeEvent,
     RepcMt000301UvControlActEvent,
     RepcMt000301UvDataEnterer,
     RepcMt000301UvHealthCareFacility,
     RepcMt000301UvInformant,
     RepcMt000301UvLinks,
-    RepcMt000301UvLinksTypeCode,
     RepcMt000301UvLocation,
     RepcMt000301UvOrganization,
     RepcMt000301UvPerformer,
@@ -1379,12 +1337,9 @@ from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt000301_uv import (
     RepcMt000301UvSequelTo,
     RepcMt000301UvSeverityObservation,
     RepcMt000301UvSubject1,
-    RepcMt000301UvSubject1TypeCode,
     RepcMt000301UvSubject2,
     RepcMt000301UvSubject3,
-    RepcMt000301UvSubject3TypeCode,
     RepcMt000301UvSubject5,
-    RepcMt000301UvSubject5TypeCode,
     RepcMt000301UvSupport,
     RepcMt000301UvVerifier,
 )
@@ -1416,7 +1371,6 @@ from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt004000_uv01 import (
     RepcMt004000Uv01Reason,
     RepcMt004000Uv01RecordTarget,
     RepcMt004000Uv01Reference,
-    RepcMt004000Uv01ReferenceTypeCode,
     RepcMt004000Uv01ReplacementOf,
     RepcMt004000Uv01Subject3,
     RepcMt004000Uv01Verifier,

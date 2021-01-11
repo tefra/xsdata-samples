@@ -11,81 +11,39 @@ class StrucDocBr:
         name = "StrucDoc.Br"
 
 
-@dataclass
-class StrucDocCol:
-    class Meta:
-        name = "StrucDoc.Col"
+class StrucDocColAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
 
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ID",
-            "type": "Attribute",
-        }
-    )
-    language: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    style_code: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "styleCode",
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-    span: str = field(
-        default="1",
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    width: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    align: Optional["StrucDocCol.Align"] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    char: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    charoff: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    valign: Optional["StrucDocCol.Valign"] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
 
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
+class StrucDocColValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
 
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
+
+class StrucDocColgroupAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class StrucDocColgroupValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
+
+
+class StrucDocContentRevised(Enum):
+    INSERT = "insert"
+    DELETE = "delete"
 
 
 @dataclass
@@ -157,6 +115,130 @@ class StrucDocSup:
             "mixed": True,
         }
     )
+
+
+class StrucDocTableFrame(Enum):
+    VOID = "void"
+    ABOVE = "above"
+    BELOW = "below"
+    HSIDES = "hsides"
+    LHS = "lhs"
+    RHS = "rhs"
+    VSIDES = "vsides"
+    BOX = "box"
+    BORDER = "border"
+
+
+class StrucDocTableRules(Enum):
+    NONE_VALUE = "none"
+    GROUPS = "groups"
+    ROWS = "rows"
+    COLS = "cols"
+    ALL = "all"
+
+
+class StrucDocTbodyAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class StrucDocTbodyValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
+
+
+class StrucDocTdAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class StrucDocTdScope(Enum):
+    ROW = "row"
+    COL = "col"
+    ROWGROUP = "rowgroup"
+    COLGROUP = "colgroup"
+
+
+class StrucDocTdValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
+
+
+class StrucDocTfootAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class StrucDocTfootValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
+
+
+class StrucDocThAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class StrucDocThScope(Enum):
+    ROW = "row"
+    COL = "col"
+    ROWGROUP = "rowgroup"
+    COLGROUP = "colgroup"
+
+
+class StrucDocThValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
+
+
+class StrucDocTheadAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class StrucDocTheadValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
+
+
+class StrucDocTrAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class StrucDocTrValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
 
 
 @dataclass
@@ -233,17 +315,10 @@ class StrucDocCaption:
 
 
 @dataclass
-class StrucDocColgroup:
+class StrucDocCol:
     class Meta:
-        name = "StrucDoc.Colgroup"
+        name = "StrucDoc.Col"
 
-    col: List[StrucDocCol] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -277,7 +352,7 @@ class StrucDocColgroup:
             "type": "Attribute",
         }
     )
-    align: Optional["StrucDocColgroup.Align"] = field(
+    align: Optional[StrucDocColAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -295,25 +370,12 @@ class StrucDocColgroup:
             "type": "Attribute",
         }
     )
-    valign: Optional["StrucDocColgroup.Valign"] = field(
+    valign: Optional[StrucDocColValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -376,6 +438,77 @@ class StrucDocTitleFootnote:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
+        }
+    )
+
+
+@dataclass
+class StrucDocColgroup:
+    class Meta:
+        name = "StrucDoc.Colgroup"
+
+    col: List[StrucDocCol] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ID",
+            "type": "Attribute",
+        }
+    )
+    language: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    style_code: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "styleCode",
+            "type": "Attribute",
+            "tokens": True,
+        }
+    )
+    span: str = field(
+        default="1",
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    width: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    align: Optional[StrucDocColgroupAlign] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    char: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    charoff: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    valign: Optional[StrucDocColgroupValign] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
         }
     )
 
@@ -725,7 +858,7 @@ class StrucDocTh:
             "tokens": True,
         }
     )
-    scope: Optional["StrucDocTh.Scope"] = field(
+    scope: Optional[StrucDocThScope] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -743,7 +876,7 @@ class StrucDocTh:
             "type": "Attribute",
         }
     )
-    align: Optional["StrucDocTh.Align"] = field(
+    align: Optional[StrucDocThAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -761,31 +894,12 @@ class StrucDocTh:
             "type": "Attribute",
         }
     )
-    valign: Optional["StrucDocTh.Valign"] = field(
+    valign: Optional[StrucDocThValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Scope(Enum):
-        ROW = "row"
-        COL = "col"
-        ROWGROUP = "rowgroup"
-        COLGROUP = "colgroup"
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -1002,7 +1116,7 @@ class StrucDocTd:
             "tokens": True,
         }
     )
-    scope: Optional["StrucDocTd.Scope"] = field(
+    scope: Optional[StrucDocTdScope] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1020,7 +1134,7 @@ class StrucDocTd:
             "type": "Attribute",
         }
     )
-    align: Optional["StrucDocTd.Align"] = field(
+    align: Optional[StrucDocTdAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1038,31 +1152,12 @@ class StrucDocTd:
             "type": "Attribute",
         }
     )
-    valign: Optional["StrucDocTd.Valign"] = field(
+    valign: Optional[StrucDocTdValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Scope(Enum):
-        ROW = "row"
-        COL = "col"
-        ROWGROUP = "rowgroup"
-        COLGROUP = "colgroup"
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -1105,7 +1200,7 @@ class StrucDocTr:
             "tokens": True,
         }
     )
-    align: Optional["StrucDocTr.Align"] = field(
+    align: Optional[StrucDocTrAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1123,25 +1218,12 @@ class StrucDocTr:
             "type": "Attribute",
         }
     )
-    valign: Optional["StrucDocTr.Valign"] = field(
+    valign: Optional[StrucDocTrValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -1178,7 +1260,7 @@ class StrucDocTbody:
             "tokens": True,
         }
     )
-    align: Optional["StrucDocTbody.Align"] = field(
+    align: Optional[StrucDocTbodyAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1196,25 +1278,12 @@ class StrucDocTbody:
             "type": "Attribute",
         }
     )
-    valign: Optional["StrucDocTbody.Valign"] = field(
+    valign: Optional[StrucDocTbodyValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -1251,7 +1320,7 @@ class StrucDocTfoot:
             "tokens": True,
         }
     )
-    align: Optional["StrucDocTfoot.Align"] = field(
+    align: Optional[StrucDocTfootAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1269,25 +1338,12 @@ class StrucDocTfoot:
             "type": "Attribute",
         }
     )
-    valign: Optional["StrucDocTfoot.Valign"] = field(
+    valign: Optional[StrucDocTfootValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -1324,7 +1380,7 @@ class StrucDocThead:
             "tokens": True,
         }
     )
-    align: Optional["StrucDocThead.Align"] = field(
+    align: Optional[StrucDocTheadAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1342,25 +1398,12 @@ class StrucDocThead:
             "type": "Attribute",
         }
     )
-    valign: Optional["StrucDocThead.Valign"] = field(
+    valign: Optional[StrucDocTheadValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Align(Enum):
-        LEFT = "left"
-        CENTER = "center"
-        RIGHT = "right"
-        JUSTIFY = "justify"
-        CHAR = "char"
-
-    class Valign(Enum):
-        TOP = "top"
-        MIDDLE = "middle"
-        BOTTOM = "bottom"
-        BASELINE = "baseline"
 
 
 @dataclass
@@ -1450,13 +1493,13 @@ class StrucDocTable:
             "type": "Attribute",
         }
     )
-    frame: Optional["StrucDocTable.Frame"] = field(
+    frame: Optional[StrucDocTableFrame] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    rules: Optional["StrucDocTable.Rules"] = field(
+    rules: Optional[StrucDocTableRules] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1474,24 +1517,6 @@ class StrucDocTable:
             "type": "Attribute",
         }
     )
-
-    class Frame(Enum):
-        VOID = "void"
-        ABOVE = "above"
-        BELOW = "below"
-        HSIDES = "hsides"
-        LHS = "lhs"
-        RHS = "rhs"
-        VSIDES = "vsides"
-        BOX = "box"
-        BORDER = "border"
-
-    class Rules(Enum):
-        NONE_VALUE = "none"
-        GROUPS = "groups"
-        ROWS = "rows"
-        COLS = "cols"
-        ALL = "all"
 
 
 @dataclass
@@ -1955,16 +1980,12 @@ class StrucDocContent:
             "tokens": True,
         }
     )
-    revised: Optional["StrucDocContent.Revised"] = field(
+    revised: Optional[StrucDocContentRevised] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-
-    class Revised(Enum):
-        INSERT = "insert"
-        DELETE = "delete"
 
 
 @dataclass

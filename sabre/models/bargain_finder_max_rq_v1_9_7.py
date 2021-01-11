@@ -9,6 +9,8 @@ from sabre.models.bargain_finder_max_common_types_v1_9_7 import (
     CompanyNameType,
     DepartureOrArrival,
     EquipmentType,
+    OtaPayloadStdAttributesTarget,
+    OtaPayloadStdAttributesTransactionStatusCode,
     OutboundOrInbound,
     PassengerTypeQuantityType,
     StayRestrictionsType,
@@ -257,6 +259,23 @@ class CarrierType(Enum):
     OPERATING = "Operating"
 
 
+class ConnectionLocationConnectionInfo(Enum):
+    """
+    Attributes
+        VIA: Location without stopping or changing.
+        STOP: Location is for stopping.
+        CHANGE: Location is for changing.
+    """
+    VIA = "Via"
+    STOP = "Stop"
+    CHANGE = "Change"
+
+
+class ContentTypeType(Enum):
+    AIR = "Air"
+    RAIL = "Rail"
+
+
 @dataclass
 class CountryNameType:
     """
@@ -284,137 +303,18 @@ class CountryNameType:
     )
 
 
-@dataclass
-class CustLoyaltyType:
+class CustomerTypeValue(Enum):
     """
-    Program rewarding frequent use by accumulating credits for services
-    provided by vendors.
-
     Attributes
-        share_synch_ind:
-        share_market_ind:
-        program_id: Identifier to indicate the company owner of the
-            loyalty program.
-        membership_id: Unique identifier of the member in the program
-            (membership number, account number, etc.).
-        travel_sector: Identifies the travel sector. Refer to OTA Code
-            List Travel Sector (TVS).
-        loyal_level: Indicates special privileges in program assigned to
-            individual.
-        single_vendor_ind: Indicates if program is affiliated with a
-            group of related offers accumulating credits.
-        signup_date: Indicates when the member signed up for the loyalty
-            program.
-        effective_date: Indicates the starting date.
-        expire_date: Indicates the ending date.
-        rph: Reference place holder, to reference it back in the
-            response.
+        REGULAR: Regular customer type.
+        TVLYPREF: TVLY_PREFERRED customer type.
+        PREFELITE: PREFERED_ELITE customer type.
+        LOYALTY: LOYALTY customer type.
     """
-    share_synch_ind: Optional["CustLoyaltyType.ShareSynchInd"] = field(
-        default=None,
-        metadata={
-            "name": "ShareSynchInd",
-            "type": "Attribute",
-        }
-    )
-    share_market_ind: Optional["CustLoyaltyType.ShareMarketInd"] = field(
-        default=None,
-        metadata={
-            "name": "ShareMarketInd",
-            "type": "Attribute",
-        }
-    )
-    program_id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ProgramID",
-            "type": "Attribute",
-            "min_length": 1,
-            "max_length": 16,
-        }
-    )
-    membership_id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "MembershipID",
-            "type": "Attribute",
-            "min_length": 1,
-            "max_length": 32,
-        }
-    )
-    travel_sector: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TravelSector",
-            "type": "Attribute",
-        }
-    )
-    loyal_level: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "LoyalLevel",
-            "type": "Attribute",
-            "min_length": 1,
-            "max_length": 16,
-        }
-    )
-    single_vendor_ind: Optional["CustLoyaltyType.SingleVendorInd"] = field(
-        default=None,
-        metadata={
-            "name": "SingleVendorInd",
-            "type": "Attribute",
-        }
-    )
-    signup_date: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "name": "SignupDate",
-            "type": "Attribute",
-        }
-    )
-    effective_date: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "name": "EffectiveDate",
-            "type": "Attribute",
-        }
-    )
-    expire_date: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "name": "ExpireDate",
-            "type": "Attribute",
-        }
-    )
-    rph: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "RPH",
-            "type": "Attribute",
-            "pattern": r"[0-9]{1,8}",
-        }
-    )
-
-    class ShareSynchInd(Enum):
-        """
-        value="Inherit" Permission for sharing data for synchronization of
-        information held by other travel service providers.
-        """
-        YES = "Yes"
-        NO = "No"
-        INHERIT = "Inherit"
-
-    class ShareMarketInd(Enum):
-        """
-        value="Inherit" Permission for sharing data for marketing purposes.
-        """
-        YES = "Yes"
-        NO = "No"
-        INHERIT = "Inherit"
-
-    class SingleVendorInd(Enum):
-        SINGLE_VNDR = "SingleVndr"
-        ALLIANCE = "Alliance"
+    REGULAR = "REGULAR"
+    TVLYPREF = "TVLYPREF"
+    PREFELITE = "PREFELITE"
+    LOYALTY = "LOYALTY"
 
 
 @dataclass
@@ -531,221 +431,6 @@ class DepartureDaysType:
 
 
 @dataclass
-class DocumentType:
-    """
-    Provides information on a specific documents.
-
-    Attributes
-        doc_holder_name: Specify document holder name.
-        doc_limitations: Used to indicate any limitations on the
-            document (e.g. as a person may only be allowed to spend a
-            max of 30 days in country on a visitor's visa).
-        share_synch_ind:
-        share_market_ind:
-        doc_issue_authority: Indicates the group or association that
-            granted the document.
-        doc_issue_location: Indicates the location where the document
-            was issued.
-        doc_id: Unique number assigned by authorities to document.
-        doc_type: Indicates the type of document (e.g. Passport,
-            Military ID, Drivers License, national ID, Vaccination
-            Certificate). Refer to OTA Code List Document Type (DOC).
-        gender:
-        birth_date: Indicates the date of birth as indicated in the
-            document, in ISO 8601 prescribed format.
-        effective_date: Indicates the starting date.
-        expire_date: Indicates the ending date.
-    """
-    doc_holder_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "DocHolderName",
-            "type": "Element",
-            "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "min_length": 1,
-            "max_length": 64,
-        }
-    )
-    doc_limitations: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "DocLimitations",
-            "type": "Element",
-            "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "max_occurs": 9,
-            "min_length": 1,
-            "max_length": 64,
-        }
-    )
-    share_synch_ind: Optional["DocumentType.ShareSynchInd"] = field(
-        default=None,
-        metadata={
-            "name": "ShareSynchInd",
-            "type": "Attribute",
-        }
-    )
-    share_market_ind: Optional["DocumentType.ShareMarketInd"] = field(
-        default=None,
-        metadata={
-            "name": "ShareMarketInd",
-            "type": "Attribute",
-        }
-    )
-    doc_issue_authority: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "DocIssueAuthority",
-            "type": "Attribute",
-            "min_length": 1,
-            "max_length": 64,
-        }
-    )
-    doc_issue_location: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "DocIssueLocation",
-            "type": "Attribute",
-            "min_length": 1,
-            "max_length": 64,
-        }
-    )
-    doc_id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "DocID",
-            "type": "Attribute",
-            "min_length": 1,
-            "max_length": 32,
-        }
-    )
-    doc_type: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "DocType",
-            "type": "Attribute",
-        }
-    )
-    gender: Optional["DocumentType.Gender"] = field(
-        default=None,
-        metadata={
-            "name": "Gender",
-            "type": "Attribute",
-        }
-    )
-    birth_date: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "name": "BirthDate",
-            "type": "Attribute",
-        }
-    )
-    effective_date: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "name": "EffectiveDate",
-            "type": "Attribute",
-        }
-    )
-    expire_date: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "name": "ExpireDate",
-            "type": "Attribute",
-        }
-    )
-
-    class ShareSynchInd(Enum):
-        """
-        value="Inherit" Permission for sharing data for synchronization of
-        information held by other travel service providers.
-        """
-        YES = "Yes"
-        NO = "No"
-        INHERIT = "Inherit"
-
-    class ShareMarketInd(Enum):
-        """
-        value="Inherit" Permission for sharing data for marketing purposes.
-        """
-        YES = "Yes"
-        NO = "No"
-        INHERIT = "Inherit"
-
-    class Gender(Enum):
-        MALE = "Male"
-        FEMALE = "Female"
-        UNKNOWN = "Unknown"
-
-
-@dataclass
-class EmailType:
-    """
-    Electronic email addresses, in IETF specified format.
-
-    Attributes
-        value:
-        share_synch_ind:
-        share_market_ind:
-        default_ind:
-        email_type: Defines the purpose of the e-mail address (e.g.
-            personal, business, listserve). Refer to OTA Code List Email
-            Address Type (EAT).
-    """
-    value: Optional[str] = field(
-        default=None,
-        metadata={
-            "min_length": 1,
-            "max_length": 128,
-        }
-    )
-    share_synch_ind: Optional["EmailType.ShareSynchInd"] = field(
-        default=None,
-        metadata={
-            "name": "ShareSynchInd",
-            "type": "Attribute",
-        }
-    )
-    share_market_ind: Optional["EmailType.ShareMarketInd"] = field(
-        default=None,
-        metadata={
-            "name": "ShareMarketInd",
-            "type": "Attribute",
-        }
-    )
-    default_ind: bool = field(
-        default=False,
-        metadata={
-            "name": "DefaultInd",
-            "type": "Attribute",
-        }
-    )
-    email_type: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "EmailType",
-            "type": "Attribute",
-        }
-    )
-
-    class ShareSynchInd(Enum):
-        """
-        value="Inherit" Permission for sharing data for synchronization of
-        information held by other travel service providers.
-        """
-        YES = "Yes"
-        NO = "No"
-        INHERIT = "Inherit"
-
-    class ShareMarketInd(Enum):
-        """
-        value="Inherit" Permission for sharing data for marketing purposes.
-        """
-        YES = "Yes"
-        NO = "No"
-        INHERIT = "Inherit"
-
-
-@dataclass
 class ExchangeFareType:
     """
     Attributes
@@ -811,75 +496,13 @@ class ExchangeFareType:
     )
 
 
-@dataclass
-class ExchangeSettingsType:
-    """
-    Attributes
-        reprice_current_itin: If set to ''false'', disables processing
-            of Current Itin path.
-        attach_exchange_info: If set to ''true'', adds exchange-specific
-            information to the response. The information includes richer
-            Tax elements, ReissueVsExchange attribute and currency
-            conversion rates.
-        reissue_exchange: Process Type Indicator for Primary Request
-            Type
-        branded_results: Enables branded results (if brands are
-            available for returned options)
-        miptimeout_threshold: Hints MIP that it should return options
-            within this amount of time (in seconds)
-        request_type: Used to specify if the request is an usual
-            Exchange request (basic) or an Exchange Context Shopping
-            request (context). When not specified, basic is assumed.
-    """
-    reprice_current_itin: bool = field(
-        default=True,
-        metadata={
-            "name": "RepriceCurrentItin",
-            "type": "Attribute",
-        }
-    )
-    attach_exchange_info: bool = field(
-        default=False,
-        metadata={
-            "name": "AttachExchangeInfo",
-            "type": "Attribute",
-        }
-    )
-    reissue_exchange: Optional["ExchangeSettingsType.ReissueExchange"] = field(
-        default=None,
-        metadata={
-            "name": "ReissueExchange",
-            "type": "Attribute",
-        }
-    )
-    branded_results: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "BrandedResults",
-            "type": "Attribute",
-        }
-    )
-    miptimeout_threshold: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "MIPTimeoutThreshold",
-            "type": "Attribute",
-        }
-    )
-    request_type: Optional["ExchangeSettingsType.RequestType"] = field(
-        default=None,
-        metadata={
-            "name": "RequestType",
-            "type": "Attribute",
-        }
-    )
+class ExchangeSettingsTypeReissueExchange(Enum):
+    A = "A"
 
-    class ReissueExchange(Enum):
-        A = "A"
 
-    class RequestType(Enum):
-        BASIC = "basic"
-        CONTEXT = "context"
+class ExchangeSettingsTypeRequestType(Enum):
+    BASIC = "basic"
+    CONTEXT = "context"
 
 
 @dataclass
@@ -1097,6 +720,12 @@ class FlightTypeType(Enum):
     CONNECTION = "Connection"
 
 
+class GenderGroupGender(Enum):
+    MALE = "Male"
+    FEMALE = "Female"
+    UNKNOWN = "Unknown"
+
+
 @dataclass
 class GoverningCarrierOverrideType:
     """
@@ -1202,6 +831,12 @@ class MileageDisplayType:
     )
 
 
+class MultiTicketDisplayPolicy(Enum):
+    SOW = "SOW"
+    GOW2_RT = "GOW2RT"
+    SCHS = "SCHS"
+
+
 @dataclass
 class NumTripsType:
     """
@@ -1257,11 +892,6 @@ class NumTripsType:
     )
 
 
-class OtaAirLowFareSearchRqTarget(Enum):
-    TEST = "Test"
-    PRODUCTION = "Production"
-
-
 @dataclass
 class OptionsPerDatePairType:
     """
@@ -1306,141 +936,16 @@ class OptionsPerDatePairType:
     )
 
 
-@dataclass
-class PersonNameType:
+class PassengerStatusType(Enum):
     """
-    This is an XML Schema representing the OTA Person Name object.
-
     Attributes
-        name_prefix: Salutation of honorific. (e.g., Mr. Mrs., Ms.,
-            Miss, Dr.)
-        given_name: Given name, first name or names
-        middle_name: Person's middle name
-        surname_prefix: e.g "van der", "von", "de"
-        surname: Family name, last name.
-        name_suffix: Hold various name suffixes and letters (e.g. Jr.,
-            Sr., III, Ret., Esq.).
-        name_title: Degree or honors (e.g., Ph.D., M.D.)
-        share_synch_ind:
-        share_market_ind:
-        name_type: Type of name of the individual, such as former,
-            nickname, alternate or alias name. Refer to OTA Code List
-            Name Type (NAM).
+        R: Residency.
+        E: Employment.
+        N: Nationality.
     """
-    name_prefix: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "NamePrefix",
-            "type": "Element",
-            "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "max_occurs": 3,
-            "min_length": 1,
-            "max_length": 16,
-        }
-    )
-    given_name: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "GivenName",
-            "type": "Element",
-            "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "max_occurs": 5,
-            "min_length": 1,
-            "max_length": 64,
-        }
-    )
-    middle_name: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "MiddleName",
-            "type": "Element",
-            "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "max_occurs": 3,
-            "min_length": 1,
-            "max_length": 64,
-        }
-    )
-    surname_prefix: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "SurnamePrefix",
-            "type": "Element",
-            "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "min_length": 1,
-            "max_length": 16,
-        }
-    )
-    surname: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Surname",
-            "type": "Element",
-            "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
-            "min_length": 1,
-            "max_length": 64,
-        }
-    )
-    name_suffix: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "NameSuffix",
-            "type": "Element",
-            "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "max_occurs": 3,
-            "min_length": 1,
-            "max_length": 16,
-        }
-    )
-    name_title: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "NameTitle",
-            "type": "Element",
-            "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "max_occurs": 5,
-            "min_length": 1,
-            "max_length": 16,
-        }
-    )
-    share_synch_ind: Optional["PersonNameType.ShareSynchInd"] = field(
-        default=None,
-        metadata={
-            "name": "ShareSynchInd",
-            "type": "Attribute",
-        }
-    )
-    share_market_ind: Optional["PersonNameType.ShareMarketInd"] = field(
-        default=None,
-        metadata={
-            "name": "ShareMarketInd",
-            "type": "Attribute",
-        }
-    )
-    name_type: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "NameType",
-            "type": "Attribute",
-        }
-    )
-
-    class ShareSynchInd(Enum):
-        """
-        value="Inherit" Permission for sharing data for synchronization of
-        information held by other travel service providers.
-        """
-        YES = "Yes"
-        NO = "No"
-        INHERIT = "Inherit"
-
-    class ShareMarketInd(Enum):
-        """
-        value="Inherit" Permission for sharing data for marketing purposes.
-        """
-        YES = "Yes"
-        NO = "No"
-        INHERIT = "Inherit"
+    R = "R"
+    E = "E"
+    N = "N"
 
 
 @dataclass
@@ -1595,6 +1100,25 @@ class PreferLevelType(Enum):
     ONLY = "Only"
     UNACCEPTABLE = "Unacceptable"
     PREFERRED = "Preferred"
+
+
+class PrivacyGroupShareMarketInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for marketing purposes.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
+
+
+class PrivacyGroupShareSynchInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for synchronization of
+    information held by other travel service providers.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
 
 
 @dataclass
@@ -1777,6 +1301,20 @@ class SeatStatusSimType:
     )
 
 
+class SegmentTypeCode(Enum):
+    """
+    Attributes
+        ARUNK: Arrival unknown
+        O: Normal
+        X: Connection. Collapses this and subsequent
+            OriginDestinationInformation so that they are treated as
+            single leg.
+    """
+    ARUNK = "ARUNK"
+    O = "O"
+    X = "X"
+
+
 @dataclass
 class SideTripType:
     """
@@ -1806,6 +1344,16 @@ class SideTripType:
             "type": "Attribute",
         }
     )
+
+
+class SingleVendorIndGroupSingleVendorInd(Enum):
+    SINGLE_VNDR = "SingleVndr"
+    ALLIANCE = "Alliance"
+
+
+class SpanishFamilyDiscountLevel(Enum):
+    VALUE_1 = 1
+    VALUE_2 = 2
 
 
 @dataclass
@@ -1880,129 +1428,6 @@ class TaxCodeType:
             "pattern": r"[A-Z0-9]{2}[A-Z0-9]{0,1}",
         }
     )
-
-
-@dataclass
-class TelephoneType:
-    """
-    Construct for holding a telephone number.
-
-    Attributes
-        share_synch_ind:
-        share_market_ind:
-        phone_location_type: Refer to OTA Code List Phone Location Type
-            (PLT).
-        phone_tech_type: Indicates type of technology associated with
-            this telephone number, such as Voice, Data, Fax, Pager,
-            Mobile, TTY, etc. Refer to OTA Code List Phone Technology
-            Type (PTT).
-        country_access_code: Code assigned by telecommunications
-            authorities for international country access identifier.
-        area_city_code: Code assigned for telephones in a specific
-            region, city, or area.
-        phone_number: Telephone number assigned to a single location.
-        extension: Extension to reach a specific party at the phone
-            number.
-        pin: Additional codes used for pager or telephone access rights.
-        formatted_ind: Specifies if the associated data is formatted or
-            not. If true, then it is formatted, if false, then not
-            formatted.
-    """
-    share_synch_ind: Optional["TelephoneType.ShareSynchInd"] = field(
-        default=None,
-        metadata={
-            "name": "ShareSynchInd",
-            "type": "Attribute",
-        }
-    )
-    share_market_ind: Optional["TelephoneType.ShareMarketInd"] = field(
-        default=None,
-        metadata={
-            "name": "ShareMarketInd",
-            "type": "Attribute",
-        }
-    )
-    phone_location_type: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PhoneLocationType",
-            "type": "Attribute",
-        }
-    )
-    phone_tech_type: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PhoneTechType",
-            "type": "Attribute",
-        }
-    )
-    country_access_code: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CountryAccessCode",
-            "type": "Attribute",
-            "pattern": r"[0-9]{1,3}",
-        }
-    )
-    area_city_code: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AreaCityCode",
-            "type": "Attribute",
-            "pattern": r"[0-9]{1,8}",
-        }
-    )
-    phone_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PhoneNumber",
-            "type": "Attribute",
-            "required": True,
-            "min_length": 1,
-            "max_length": 32,
-        }
-    )
-    extension: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Extension",
-            "type": "Attribute",
-            "pattern": r"[0-9]{1,5}",
-        }
-    )
-    pin: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PIN",
-            "type": "Attribute",
-            "min_length": 1,
-            "max_length": 8,
-        }
-    )
-    formatted_ind: bool = field(
-        default=False,
-        metadata={
-            "name": "FormattedInd",
-            "type": "Attribute",
-        }
-    )
-
-    class ShareSynchInd(Enum):
-        """
-        value="Inherit" Permission for sharing data for synchronization of
-        information held by other travel service providers.
-        """
-        YES = "Yes"
-        NO = "No"
-        INHERIT = "Inherit"
-
-    class ShareMarketInd(Enum):
-        """
-        value="Inherit" Permission for sharing data for marketing purposes.
-        """
-        YES = "Yes"
-        NO = "No"
-        INHERIT = "Inherit"
 
 
 @dataclass
@@ -2487,14 +1912,14 @@ class AddressType:
             "type": "Attribute",
         }
     )
-    share_synch_ind: Optional["AddressType.ShareSynchInd"] = field(
+    share_synch_ind: Optional[PrivacyGroupShareSynchInd] = field(
         default=None,
         metadata={
             "name": "ShareSynchInd",
             "type": "Attribute",
         }
     )
-    share_market_ind: Optional["AddressType.ShareMarketInd"] = field(
+    share_market_ind: Optional[PrivacyGroupShareMarketInd] = field(
         default=None,
         metadata={
             "name": "ShareMarketInd",
@@ -2508,23 +1933,6 @@ class AddressType:
             "type": "Attribute",
         }
     )
-
-    class ShareSynchInd(Enum):
-        """
-        value="Inherit" Permission for sharing data for synchronization of
-        information held by other travel service providers.
-        """
-        YES = "Yes"
-        NO = "No"
-        INHERIT = "Inherit"
-
-    class ShareMarketInd(Enum):
-        """
-        value="Inherit" Permission for sharing data for marketing purposes.
-        """
-        YES = "Yes"
-        NO = "No"
-        INHERIT = "Inherit"
 
 
 @dataclass
@@ -2730,7 +2138,7 @@ class ConnectionType:
                 "type": "Attribute",
             }
         )
-        connection_info: Optional["ConnectionType.ConnectionLocation.ConnectionInfo"] = field(
+        connection_info: Optional[ConnectionLocationConnectionInfo] = field(
             default=None,
             metadata={
                 "name": "ConnectionInfo",
@@ -2738,16 +2146,117 @@ class ConnectionType:
             }
         )
 
-        class ConnectionInfo(Enum):
-            """
-            Attributes
-                VIA: Location without stopping or changing.
-                STOP: Location is for stopping.
-                CHANGE: Location is for changing.
-            """
-            VIA = "Via"
-            STOP = "Stop"
-            CHANGE = "Change"
+
+@dataclass
+class CustLoyaltyType:
+    """
+    Program rewarding frequent use by accumulating credits for services
+    provided by vendors.
+
+    Attributes
+        share_synch_ind:
+        share_market_ind:
+        program_id: Identifier to indicate the company owner of the
+            loyalty program.
+        membership_id: Unique identifier of the member in the program
+            (membership number, account number, etc.).
+        travel_sector: Identifies the travel sector. Refer to OTA Code
+            List Travel Sector (TVS).
+        loyal_level: Indicates special privileges in program assigned to
+            individual.
+        single_vendor_ind: Indicates if program is affiliated with a
+            group of related offers accumulating credits.
+        signup_date: Indicates when the member signed up for the loyalty
+            program.
+        effective_date: Indicates the starting date.
+        expire_date: Indicates the ending date.
+        rph: Reference place holder, to reference it back in the
+            response.
+    """
+    share_synch_ind: Optional[PrivacyGroupShareSynchInd] = field(
+        default=None,
+        metadata={
+            "name": "ShareSynchInd",
+            "type": "Attribute",
+        }
+    )
+    share_market_ind: Optional[PrivacyGroupShareMarketInd] = field(
+        default=None,
+        metadata={
+            "name": "ShareMarketInd",
+            "type": "Attribute",
+        }
+    )
+    program_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ProgramID",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
+    )
+    membership_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "MembershipID",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
+    )
+    travel_sector: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "TravelSector",
+            "type": "Attribute",
+        }
+    )
+    loyal_level: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "LoyalLevel",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 16,
+        }
+    )
+    single_vendor_ind: Optional[SingleVendorIndGroupSingleVendorInd] = field(
+        default=None,
+        metadata={
+            "name": "SingleVendorInd",
+            "type": "Attribute",
+        }
+    )
+    signup_date: Optional[XmlDate] = field(
+        default=None,
+        metadata={
+            "name": "SignupDate",
+            "type": "Attribute",
+        }
+    )
+    effective_date: Optional[XmlDate] = field(
+        default=None,
+        metadata={
+            "name": "EffectiveDate",
+            "type": "Attribute",
+        }
+    )
+    expire_date: Optional[XmlDate] = field(
+        default=None,
+        metadata={
+            "name": "ExpireDate",
+            "type": "Attribute",
+        }
+    )
+    rph: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "RPH",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,8}",
+        }
+    )
 
 
 @dataclass
@@ -3099,6 +2608,182 @@ class DiversityControlType:
 
 
 @dataclass
+class DocumentType:
+    """
+    Provides information on a specific documents.
+
+    Attributes
+        doc_holder_name: Specify document holder name.
+        doc_limitations: Used to indicate any limitations on the
+            document (e.g. as a person may only be allowed to spend a
+            max of 30 days in country on a visitor's visa).
+        share_synch_ind:
+        share_market_ind:
+        doc_issue_authority: Indicates the group or association that
+            granted the document.
+        doc_issue_location: Indicates the location where the document
+            was issued.
+        doc_id: Unique number assigned by authorities to document.
+        doc_type: Indicates the type of document (e.g. Passport,
+            Military ID, Drivers License, national ID, Vaccination
+            Certificate). Refer to OTA Code List Document Type (DOC).
+        gender:
+        birth_date: Indicates the date of birth as indicated in the
+            document, in ISO 8601 prescribed format.
+        effective_date: Indicates the starting date.
+        expire_date: Indicates the ending date.
+    """
+    doc_holder_name: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "DocHolderName",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_length": 1,
+            "max_length": 64,
+        }
+    )
+    doc_limitations: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "DocLimitations",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 9,
+            "min_length": 1,
+            "max_length": 64,
+        }
+    )
+    share_synch_ind: Optional[PrivacyGroupShareSynchInd] = field(
+        default=None,
+        metadata={
+            "name": "ShareSynchInd",
+            "type": "Attribute",
+        }
+    )
+    share_market_ind: Optional[PrivacyGroupShareMarketInd] = field(
+        default=None,
+        metadata={
+            "name": "ShareMarketInd",
+            "type": "Attribute",
+        }
+    )
+    doc_issue_authority: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "DocIssueAuthority",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 64,
+        }
+    )
+    doc_issue_location: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "DocIssueLocation",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 64,
+        }
+    )
+    doc_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "DocID",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 32,
+        }
+    )
+    doc_type: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "DocType",
+            "type": "Attribute",
+        }
+    )
+    gender: Optional[GenderGroupGender] = field(
+        default=None,
+        metadata={
+            "name": "Gender",
+            "type": "Attribute",
+        }
+    )
+    birth_date: Optional[XmlDate] = field(
+        default=None,
+        metadata={
+            "name": "BirthDate",
+            "type": "Attribute",
+        }
+    )
+    effective_date: Optional[XmlDate] = field(
+        default=None,
+        metadata={
+            "name": "EffectiveDate",
+            "type": "Attribute",
+        }
+    )
+    expire_date: Optional[XmlDate] = field(
+        default=None,
+        metadata={
+            "name": "ExpireDate",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class EmailType:
+    """
+    Electronic email addresses, in IETF specified format.
+
+    Attributes
+        value:
+        share_synch_ind:
+        share_market_ind:
+        default_ind:
+        email_type: Defines the purpose of the e-mail address (e.g.
+            personal, business, listserve). Refer to OTA Code List Email
+            Address Type (EAT).
+    """
+    value: Optional[str] = field(
+        default=None,
+        metadata={
+            "min_length": 1,
+            "max_length": 128,
+        }
+    )
+    share_synch_ind: Optional[PrivacyGroupShareSynchInd] = field(
+        default=None,
+        metadata={
+            "name": "ShareSynchInd",
+            "type": "Attribute",
+        }
+    )
+    share_market_ind: Optional[PrivacyGroupShareMarketInd] = field(
+        default=None,
+        metadata={
+            "name": "ShareMarketInd",
+            "type": "Attribute",
+        }
+    )
+    default_ind: bool = field(
+        default=False,
+        metadata={
+            "name": "DefaultInd",
+            "type": "Attribute",
+        }
+    )
+    email_type: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "EmailType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
 class EquipmentTypePref(EquipmentType):
     """
     Attributes
@@ -3322,6 +3007,70 @@ class ExchangeOriginDestinationFlightType:
                     "type": "Attribute",
                 }
             )
+
+
+@dataclass
+class ExchangeSettingsType:
+    """
+    Attributes
+        reprice_current_itin: If set to ''false'', disables processing
+            of Current Itin path.
+        attach_exchange_info: If set to ''true'', adds exchange-specific
+            information to the response. The information includes richer
+            Tax elements, ReissueVsExchange attribute and currency
+            conversion rates.
+        reissue_exchange: Process Type Indicator for Primary Request
+            Type
+        branded_results: Enables branded results (if brands are
+            available for returned options)
+        miptimeout_threshold: Hints MIP that it should return options
+            within this amount of time (in seconds)
+        request_type: Used to specify if the request is an usual
+            Exchange request (basic) or an Exchange Context Shopping
+            request (context). When not specified, basic is assumed.
+    """
+    reprice_current_itin: bool = field(
+        default=True,
+        metadata={
+            "name": "RepriceCurrentItin",
+            "type": "Attribute",
+        }
+    )
+    attach_exchange_info: bool = field(
+        default=False,
+        metadata={
+            "name": "AttachExchangeInfo",
+            "type": "Attribute",
+        }
+    )
+    reissue_exchange: Optional[ExchangeSettingsTypeReissueExchange] = field(
+        default=None,
+        metadata={
+            "name": "ReissueExchange",
+            "type": "Attribute",
+        }
+    )
+    branded_results: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "BrandedResults",
+            "type": "Attribute",
+        }
+    )
+    miptimeout_threshold: Optional[int] = field(
+        default=None,
+        metadata={
+            "name": "MIPTimeoutThreshold",
+            "type": "Attribute",
+        }
+    )
+    request_type: Optional[ExchangeSettingsTypeRequestType] = field(
+        default=None,
+        metadata={
+            "name": "RequestType",
+            "type": "Attribute",
+        }
+    )
 
 
 @dataclass
@@ -3949,6 +3698,126 @@ class OverrideDateTimeType(DateTimeType):
 
 
 @dataclass
+class PersonNameType:
+    """
+    This is an XML Schema representing the OTA Person Name object.
+
+    Attributes
+        name_prefix: Salutation of honorific. (e.g., Mr. Mrs., Ms.,
+            Miss, Dr.)
+        given_name: Given name, first name or names
+        middle_name: Person's middle name
+        surname_prefix: e.g "van der", "von", "de"
+        surname: Family name, last name.
+        name_suffix: Hold various name suffixes and letters (e.g. Jr.,
+            Sr., III, Ret., Esq.).
+        name_title: Degree or honors (e.g., Ph.D., M.D.)
+        share_synch_ind:
+        share_market_ind:
+        name_type: Type of name of the individual, such as former,
+            nickname, alternate or alias name. Refer to OTA Code List
+            Name Type (NAM).
+    """
+    name_prefix: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "NamePrefix",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 3,
+            "min_length": 1,
+            "max_length": 16,
+        }
+    )
+    given_name: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "GivenName",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 5,
+            "min_length": 1,
+            "max_length": 64,
+        }
+    )
+    middle_name: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "MiddleName",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 3,
+            "min_length": 1,
+            "max_length": 64,
+        }
+    )
+    surname_prefix: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "SurnamePrefix",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "min_length": 1,
+            "max_length": 16,
+        }
+    )
+    surname: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Surname",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
+            "min_length": 1,
+            "max_length": 64,
+        }
+    )
+    name_suffix: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "NameSuffix",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 3,
+            "min_length": 1,
+            "max_length": 16,
+        }
+    )
+    name_title: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "NameTitle",
+            "type": "Element",
+            "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "max_occurs": 5,
+            "min_length": 1,
+            "max_length": 16,
+        }
+    )
+    share_synch_ind: Optional[PrivacyGroupShareSynchInd] = field(
+        default=None,
+        metadata={
+            "name": "ShareSynchInd",
+            "type": "Attribute",
+        }
+    )
+    share_market_ind: Optional[PrivacyGroupShareMarketInd] = field(
+        default=None,
+        metadata={
+            "name": "ShareMarketInd",
+            "type": "Attribute",
+        }
+    )
+    name_type: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "NameType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
 class PriceRequestInformationType:
     """
     Identify pricing source, if negotiated fares are requested and if it is a
@@ -4523,7 +4392,7 @@ class PriceRequestInformationType:
 
         @dataclass
         class CustomerType:
-            value: Optional["PriceRequestInformationType.TpaExtensions.CustomerType.Value"] = field(
+            value: Optional[CustomerTypeValue] = field(
                 default=None,
                 metadata={
                     "name": "Value",
@@ -4531,19 +4400,6 @@ class PriceRequestInformationType:
                     "required": True,
                 }
             )
-
-            class Value(Enum):
-                """
-                Attributes
-                    REGULAR: Regular customer type.
-                    TVLYPREF: TVLY_PREFERRED customer type.
-                    PREFELITE: PREFERED_ELITE customer type.
-                    LOYALTY: LOYALTY customer type.
-                """
-                REGULAR = "REGULAR"
-                TVLYPREF = "TVLYPREF"
-                PREFELITE = "PREFELITE"
-                LOYALTY = "LOYALTY"
 
         @dataclass
         class MultipleTravelerGroups:
@@ -4643,7 +4499,7 @@ class PriceRequestInformationType:
                     "pattern": r"[a-zA-Z]{3}",
                 }
             )
-            type: Optional["PriceRequestInformationType.TpaExtensions.PassengerStatus.Type"] = field(
+            type: Optional[PassengerStatusType] = field(
                 default=None,
                 metadata={
                     "name": "Type",
@@ -4651,17 +4507,6 @@ class PriceRequestInformationType:
                     "required": True,
                 }
             )
-
-            class Type(Enum):
-                """
-                Attributes
-                    R: Residency.
-                    E: Employment.
-                    N: Nationality.
-                """
-                R = "R"
-                E = "E"
-                N = "N"
 
         @dataclass
         class EticketableOverride:
@@ -4940,6 +4785,112 @@ class TaxCodeAmountType(TaxCodeType):
             "name": "Amount",
             "type": "Attribute",
             "fraction_digits": 3,
+        }
+    )
+
+
+@dataclass
+class TelephoneType:
+    """
+    Construct for holding a telephone number.
+
+    Attributes
+        share_synch_ind:
+        share_market_ind:
+        phone_location_type: Refer to OTA Code List Phone Location Type
+            (PLT).
+        phone_tech_type: Indicates type of technology associated with
+            this telephone number, such as Voice, Data, Fax, Pager,
+            Mobile, TTY, etc. Refer to OTA Code List Phone Technology
+            Type (PTT).
+        country_access_code: Code assigned by telecommunications
+            authorities for international country access identifier.
+        area_city_code: Code assigned for telephones in a specific
+            region, city, or area.
+        phone_number: Telephone number assigned to a single location.
+        extension: Extension to reach a specific party at the phone
+            number.
+        pin: Additional codes used for pager or telephone access rights.
+        formatted_ind: Specifies if the associated data is formatted or
+            not. If true, then it is formatted, if false, then not
+            formatted.
+    """
+    share_synch_ind: Optional[PrivacyGroupShareSynchInd] = field(
+        default=None,
+        metadata={
+            "name": "ShareSynchInd",
+            "type": "Attribute",
+        }
+    )
+    share_market_ind: Optional[PrivacyGroupShareMarketInd] = field(
+        default=None,
+        metadata={
+            "name": "ShareMarketInd",
+            "type": "Attribute",
+        }
+    )
+    phone_location_type: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "PhoneLocationType",
+            "type": "Attribute",
+        }
+    )
+    phone_tech_type: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "PhoneTechType",
+            "type": "Attribute",
+        }
+    )
+    country_access_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "CountryAccessCode",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,3}",
+        }
+    )
+    area_city_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "AreaCityCode",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,8}",
+        }
+    )
+    phone_number: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "PhoneNumber",
+            "type": "Attribute",
+            "required": True,
+            "min_length": 1,
+            "max_length": 32,
+        }
+    )
+    extension: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Extension",
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,5}",
+        }
+    )
+    pin: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "PIN",
+            "type": "Attribute",
+            "min_length": 1,
+            "max_length": 8,
+        }
+    )
+    formatted_ind: bool = field(
+        default=False,
+        metadata={
+            "name": "FormattedInd",
+            "type": "Attribute",
         }
     )
 
@@ -6189,17 +6140,13 @@ class AirSearchPrefsType:
 
         @dataclass
         class ContentType:
-            type: Optional["AirSearchPrefsType.TpaExtensions.ContentType.Type"] = field(
+            type: Optional[ContentTypeType] = field(
                 default=None,
                 metadata={
                     "name": "Type",
                     "type": "Attribute",
                 }
             )
-
-            class Type(Enum):
-                AIR = "Air"
-                RAIL = "Rail"
 
         @dataclass
         class DomesticLayoverTime:
@@ -7295,7 +7242,7 @@ class AirSearchPrefsType:
             level: Spanish Large Family Discount Level. Valid values are
                 1 or 2.
         """
-        level: Optional["AirSearchPrefsType.SpanishFamilyDiscount.Level"] = field(
+        level: Optional[SpanishFamilyDiscountLevel] = field(
             default=None,
             metadata={
                 "name": "Level",
@@ -7303,10 +7250,6 @@ class AirSearchPrefsType:
                 "required": True,
             }
         )
-
-        class Level(Enum):
-            VALUE_1 = 1
-            VALUE_2 = 2
 
 
 @dataclass
@@ -7428,21 +7371,21 @@ class AirTravelerType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         }
     )
-    gender: Optional["AirTravelerType.Gender"] = field(
+    gender: Optional[GenderGroupGender] = field(
         default=None,
         metadata={
             "name": "Gender",
             "type": "Attribute",
         }
     )
-    share_synch_ind: Optional["AirTravelerType.ShareSynchInd"] = field(
+    share_synch_ind: Optional[PrivacyGroupShareSynchInd] = field(
         default=None,
         metadata={
             "name": "ShareSynchInd",
             "type": "Attribute",
         }
     )
-    share_market_ind: Optional["AirTravelerType.ShareMarketInd"] = field(
+    share_market_ind: Optional[PrivacyGroupShareMarketInd] = field(
         default=None,
         metadata={
             "name": "ShareMarketInd",
@@ -7511,28 +7454,6 @@ class AirTravelerType:
                 "pattern": r"[0-9]{1,8}",
             }
         )
-
-    class Gender(Enum):
-        MALE = "Male"
-        FEMALE = "Female"
-        UNKNOWN = "Unknown"
-
-    class ShareSynchInd(Enum):
-        """
-        value="Inherit" Permission for sharing data for synchronization of
-        information held by other travel service providers.
-        """
-        YES = "Yes"
-        NO = "No"
-        INHERIT = "Inherit"
-
-    class ShareMarketInd(Enum):
-        """
-        value="Inherit" Permission for sharing data for marketing purposes.
-        """
-        YES = "Yes"
-        NO = "No"
-        INHERIT = "Inherit"
 
 
 @dataclass
@@ -9004,26 +8925,13 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
             code: "Code" can be "ARUNK", "O" for normal, or "X" for
                 connection.
         """
-        code: Optional["ExchangeOriginDestinationInformationType.SegmentType.Code"] = field(
+        code: Optional[SegmentTypeCode] = field(
             default=None,
             metadata={
                 "name": "Code",
                 "type": "Attribute",
             }
         )
-
-        class Code(Enum):
-            """
-            Attributes
-                ARUNK: Arrival unknown
-                O: Normal
-                X: Connection. Collapses this and subsequent
-                    OriginDestinationInformation so that they are
-                    treated as single leg.
-            """
-            ARUNK = "ARUNK"
-            O = "O"
-            X = "X"
 
     @dataclass
     class AlternateTime:
@@ -9540,8 +9448,8 @@ class OtaAirLowFareSearchRq:
             "type": "Attribute",
         }
     )
-    target: OtaAirLowFareSearchRqTarget = field(
-        default=OtaAirLowFareSearchRqTarget.PRODUCTION,
+    target: OtaPayloadStdAttributesTarget = field(
+        default=OtaPayloadStdAttributesTarget.PRODUCTION,
         metadata={
             "name": "Target",
             "type": "Attribute",
@@ -9571,7 +9479,7 @@ class OtaAirLowFareSearchRq:
             "type": "Attribute",
         }
     )
-    transaction_status_code: Optional["OtaAirLowFareSearchRq.TransactionStatusCode"] = field(
+    transaction_status_code: Optional[OtaPayloadStdAttributesTransactionStatusCode] = field(
         default=None,
         metadata={
             "name": "TransactionStatusCode",
@@ -9859,18 +9767,13 @@ class OtaAirLowFareSearchRq:
                     OneWays, match to RoundTrip and show cheaper
                     solution
             """
-            display_policy: Optional["OtaAirLowFareSearchRq.TpaExtensions.MultiTicket.DisplayPolicy"] = field(
+            display_policy: Optional[MultiTicketDisplayPolicy] = field(
                 default=None,
                 metadata={
                     "name": "DisplayPolicy",
                     "type": "Attribute",
                 }
             )
-
-            class DisplayPolicy(Enum):
-                SOW = "SOW"
-                GOW2_RT = "GOW2RT"
-                SCHS = "SCHS"
 
         @dataclass
         class Partitions:
@@ -10335,26 +10238,13 @@ class OtaAirLowFareSearchRq:
                     code: "Code" can be "ARUNK", "O" for normal, or "X"
                         for connection.
                 """
-                code: Optional["OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SegmentType.Code"] = field(
+                code: Optional[SegmentTypeCode] = field(
                     default=None,
                     metadata={
                         "name": "Code",
                         "type": "Attribute",
                     }
                 )
-
-                class Code(Enum):
-                    """
-                    Attributes
-                        ARUNK: Arrival unknown
-                        O: Normal
-                        X: Connection. Collapses this and subsequent
-                            OriginDestinationInformation so that they
-                            are treated as single leg.
-                    """
-                    ARUNK = "ARUNK"
-                    O = "O"
-                    X = "X"
 
             @dataclass
             class AlternateTime:
@@ -10857,18 +10747,3 @@ class OtaAirLowFareSearchRq:
                     "length": 7,
                 }
             )
-
-    class TransactionStatusCode(Enum):
-        """
-        Attributes
-            START: This is the first message within a transaction.
-            END: This is the last message within a transaction.
-            ROLLBACK: This indicates that all messages within the
-                current transaction must be ignored.
-            IN_SERIES: This is any message that is not the first or last
-                message within a transaction.
-        """
-        START = "Start"
-        END = "End"
-        ROLLBACK = "Rollback"
-        IN_SERIES = "InSeries"
