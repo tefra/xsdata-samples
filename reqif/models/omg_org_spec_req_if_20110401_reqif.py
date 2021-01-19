@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
 from reqif.models.w3_org_1999_xhtml import (
@@ -190,7 +189,7 @@ class AttributeValueReal:
             "required": True,
         }
     )
-    the_value: Optional[Decimal] = field(
+    the_value: Optional[float] = field(
         default=None,
         metadata={
             "name": "THE-VALUE",
@@ -1215,7 +1214,7 @@ class DatatypeDefinitionReal:
             "type": "Attribute",
         }
     )
-    max: Optional[Decimal] = field(
+    max: Optional[float] = field(
         default=None,
         metadata={
             "name": "MAX",
@@ -1223,7 +1222,7 @@ class DatatypeDefinitionReal:
             "required": True,
         }
     )
-    min: Optional[Decimal] = field(
+    min: Optional[float] = field(
         default=None,
         metadata={
             "name": "MIN",

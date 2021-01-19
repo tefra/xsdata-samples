@@ -487,7 +487,7 @@ class ExchangeFareType:
             "pattern": r"[0-9A-Z]{2,3}",
         }
     )
-    roe: Optional[Decimal] = field(
+    roe: Optional[float] = field(
         default=None,
         metadata={
             "name": "ROE",

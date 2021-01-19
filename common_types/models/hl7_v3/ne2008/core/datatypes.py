@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import List, Optional, Union
 from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     Any,
@@ -665,12 +664,12 @@ class UvpTs(Ts):
     class Meta:
         name = "UVP_TS"
 
-    probability: Optional[Decimal] = field(
+    probability: Optional[float] = field(
         default=None,
         metadata={
             "type": "Attribute",
-            "min_inclusive": Decimal("0.0"),
-            "max_inclusive": Decimal("1.0"),
+            "min_inclusive": 0.0,
+            "max_inclusive": 1.0,
         }
     )
 

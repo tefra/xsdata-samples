@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
-from typing import List, Optional
+from typing import List, Optional, Union
 from common_types.models.hl7_v3.ne2008.core.voc import (
     AddressPartType,
     CompressionAlgorithm,
@@ -2475,7 +2475,7 @@ class Mo(Qty):
     class Meta:
         name = "MO"
 
-    value: Optional[Decimal] = field(
+    value: Optional[Union[Decimal, float]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2507,7 +2507,7 @@ class Real(Qty):
     class Meta:
         name = "REAL"
 
-    value: Optional[Decimal] = field(
+    value: Optional[Union[Decimal, float]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3488,7 +3488,7 @@ class PqrExplicit:
             "min_length": 1,
         }
     )
-    value: Optional[Decimal] = field(
+    value: Optional[Union[Decimal, float]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3569,7 +3569,7 @@ class PqExplicit:
             "type": "Attribute",
         }
     )
-    value: Optional[Decimal] = field(
+    value: Optional[Union[Decimal, float]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5179,7 +5179,7 @@ class Pqr(Cv):
     class Meta:
         name = "PQR"
 
-    value: Optional[Decimal] = field(
+    value: Optional[Union[Decimal, float]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5210,7 +5210,7 @@ class Pq(Qty):
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Decimal] = field(
+    value: Optional[Union[Decimal, float]] = field(
         default=None,
         metadata={
             "type": "Attribute",
