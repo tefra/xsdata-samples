@@ -5535,14 +5535,14 @@ class CoordinateLocation(Location):
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    latitude: Optional[Decimal] = field(
+    latitude: Optional[float] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         }
     )
-    longitude: Optional[Decimal] = field(
+    longitude: Optional[float] = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -7312,7 +7312,7 @@ class AirFareDiscount:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    percentage: Optional[Decimal] = field(
+    percentage: Optional[float] = field(
         default=None,
         metadata={
             "name": "Percentage",

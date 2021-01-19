@@ -168,14 +168,14 @@ class AirTaxType:
             "max_length": 8,
         }
     )
-    min_amount: Optional[Decimal] = field(
+    min_amount: Optional[float] = field(
         default=None,
         metadata={
             "name": "MinAmount",
             "type": "Attribute",
         }
     )
-    max_amount: Optional[Decimal] = field(
+    max_amount: Optional[float] = field(
         default=None,
         metadata={
             "name": "MaxAmount",
@@ -190,7 +190,7 @@ class AirTaxType:
             "pattern": r"[a-zA-Z]{3}",
         }
     )
-    rate_used: Optional[Decimal] = field(
+    rate_used: Optional[float] = field(
         default=None,
         metadata={
             "name": "RateUsed",
@@ -233,7 +233,7 @@ class AirTaxType:
             "type": "Attribute",
         }
     )
-    reissue_max_amount: Optional[Decimal] = field(
+    reissue_max_amount: Optional[float] = field(
         default=None,
         metadata={
             "name": "ReissueMaxAmount",
@@ -248,7 +248,7 @@ class AirTaxType:
             "pattern": r"[a-zA-Z]{3}",
         }
     )
-    published_amount: Optional[Decimal] = field(
+    published_amount: Optional[float] = field(
         default=None,
         metadata={
             "name": "PublishedAmount",
@@ -375,7 +375,7 @@ class CurrencyConversionsType:
                 "pattern": r"[a-zA-Z]{3}",
             }
         )
-        rate_of_exchange: Optional[Decimal] = field(
+        rate_of_exchange: Optional[float] = field(
             default=None,
             metadata={
                 "name": "RateOfExchange",
@@ -807,7 +807,7 @@ class RateOfExchangeType:
     Attributes
         value: Exchange rate
     """
-    value: Optional[Decimal] = field(
+    value: Optional[float] = field(
         default=None,
         metadata={
             "name": "Value",
@@ -5712,7 +5712,7 @@ class PricedItineraryType:
                 price_time_value_rank: Price Time Value rank.
                 value_bucket_number: Price Time Value Bucket number.
             """
-            price_time_value_rank: Optional[Decimal] = field(
+            price_time_value_rank: Optional[float] = field(
                 default=None,
                 metadata={
                     "name": "PriceTimeValueRank",
