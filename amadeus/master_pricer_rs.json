@@ -1,813 +1,813 @@
 {
-  "reply_status": {
+  "replyStatus": {
     "status": [
       {
-        "advisory_type_info": "FQX"
+        "advisoryTypeInfo": "FQX"
       }
     ]
   },
-  "conversion_rate": {
-    "conversion_rate_detail": [
+  "conversionRate": {
+    "conversionRateDetail": [
       {
         "currency": "EUR"
       }
     ]
   },
-  "solution_family": [],
-  "family_information": [],
-  "amount_info_per_pax": [],
-  "fee_details": [],
-  "bucket_info": [],
-  "company_id_text": [],
-  "office_id_details": [],
-  "flight_index": [
+  "solutionFamily": [],
+  "familyInformation": [],
+  "amountInfoPerPax": [],
+  "feeDetails": [],
+  "bucketInfo": [],
+  "companyIdText": [],
+  "officeIdDetails": [],
+  "flightIndex": [
     {
-      "requested_segment_ref": {
-        "seg_ref": "1",
-        "location_forcing": []
+      "requestedSegmentRef": {
+        "segRef": "1",
+        "locationForcing": []
       },
-      "group_of_flights": [
+      "groupOfFlights": [
         {
-          "prop_flight_gr_detail": {
-            "flight_proposal": [
+          "propFlightGrDetail": {
+            "flightProposal": [
               {
                 "ref": "1"
               },
               {
                 "ref": "2230",
-                "unit_qualifier": "EFT"
+                "unitQualifier": "EFT"
               },
               {
                 "ref": "BA",
-                "unit_qualifier": "MCX"
+                "unitQualifier": "MCX"
               }
             ]
           },
-          "flight_details": [
+          "flightDetails": [
             {
-              "flight_information": {
-                "product_date_time": {
-                  "date_of_departure": "260914",
-                  "time_of_departure": "2135",
-                  "date_of_arrival": "280914",
-                  "time_of_arrival": "0505",
-                  "date_variation": "2"
+              "flightInformation": {
+                "productDateTime": {
+                  "dateOfDeparture": "260914",
+                  "timeOfDeparture": "2135",
+                  "dateOfArrival": "280914",
+                  "timeOfArrival": "0505",
+                  "dateVariation": "2"
                 },
                 "location": [
                   {
-                    "location_id": "LHR",
+                    "locationId": "LHR",
                     "terminal": "5"
                   },
                   {
-                    "location_id": "SYD",
+                    "locationId": "SYD",
                     "terminal": "1"
                   }
                 ],
-                "company_id": {
-                  "marketing_carrier": "BA",
-                  "operating_carrier": "BA"
+                "companyId": {
+                  "marketingCarrier": "BA",
+                  "operatingCarrier": "BA"
                 },
-                "flight_ortrain_number": "15",
-                "product_detail": {
-                  "equipment_type": "777",
-                  "tech_stop_number": "1",
-                  "location_id": []
+                "flightOrtrainNumber": "15",
+                "productDetail": {
+                  "equipmentType": "777",
+                  "techStopNumber": "1",
+                  "locationId": []
                 },
-                "add_product_detail": {
-                  "electronic_ticketing": "Y",
-                  "product_detail_qualifier": "AIP",
-                  "flight_characteristic": []
+                "addProductDetail": {
+                  "electronicTicketing": "Y",
+                  "productDetailQualifier": "AIP",
+                  "flightCharacteristic": []
                 },
-                "attribute_details": []
+                "attributeDetails": []
               },
-              "avl_info": [],
-              "technical_stop": [
+              "avlInfo": [],
+              "technicalStop": [
                 {
-                  "stop_details": [
+                  "stopDetails": [
                     {
-                      "date_qualifier": "AA",
+                      "dateQualifier": "AA",
                       "date": "270914",
-                      "first_time": "1730",
-                      "location_id": "SIN"
+                      "firstTime": "1730",
+                      "locationId": "SIN"
                     },
                     {
-                      "date_qualifier": "AD",
+                      "dateQualifier": "AD",
                       "date": "270914",
-                      "first_time": "1920"
+                      "firstTime": "1920"
                     }
                   ]
                 }
               ],
-              "flight_services": []
+              "flightServices": []
             }
           ]
         },
         {
-          "prop_flight_gr_detail": {
-            "flight_proposal": [
+          "propFlightGrDetail": {
+            "flightProposal": [
               {
                 "ref": "2"
               },
               {
                 "ref": "2245",
-                "unit_qualifier": "EFT"
+                "unitQualifier": "EFT"
               },
               {
                 "ref": "QF",
-                "unit_qualifier": "MCX"
+                "unitQualifier": "MCX"
               }
             ]
           },
-          "flight_details": [
+          "flightDetails": [
             {
-              "flight_information": {
-                "product_date_time": {
-                  "date_of_departure": "260914",
-                  "time_of_departure": "2125",
-                  "date_of_arrival": "280914",
-                  "time_of_arrival": "0510",
-                  "date_variation": "2"
+              "flightInformation": {
+                "productDateTime": {
+                  "dateOfDeparture": "260914",
+                  "timeOfDeparture": "2125",
+                  "dateOfArrival": "280914",
+                  "timeOfArrival": "0510",
+                  "dateVariation": "2"
                 },
                 "location": [
                   {
-                    "location_id": "LHR",
+                    "locationId": "LHR",
                     "terminal": "3"
                   },
                   {
-                    "location_id": "SYD",
+                    "locationId": "SYD",
                     "terminal": "1"
                   }
                 ],
-                "company_id": {
-                  "marketing_carrier": "QF",
-                  "operating_carrier": "QF"
+                "companyId": {
+                  "marketingCarrier": "QF",
+                  "operatingCarrier": "QF"
                 },
-                "flight_ortrain_number": "2",
-                "product_detail": {
-                  "equipment_type": "388",
-                  "tech_stop_number": "1",
-                  "location_id": []
+                "flightOrtrainNumber": "2",
+                "productDetail": {
+                  "equipmentType": "388",
+                  "techStopNumber": "1",
+                  "locationId": []
                 },
-                "add_product_detail": {
-                  "electronic_ticketing": "Y",
-                  "product_detail_qualifier": "AIP",
-                  "flight_characteristic": []
+                "addProductDetail": {
+                  "electronicTicketing": "Y",
+                  "productDetailQualifier": "AIP",
+                  "flightCharacteristic": []
                 },
-                "attribute_details": []
+                "attributeDetails": []
               },
-              "avl_info": [],
-              "technical_stop": [
+              "avlInfo": [],
+              "technicalStop": [
                 {
-                  "stop_details": [
+                  "stopDetails": [
                     {
-                      "date_qualifier": "AA",
+                      "dateQualifier": "AA",
                       "date": "270914",
-                      "first_time": "0720",
-                      "location_id": "DXB"
+                      "firstTime": "0720",
+                      "locationId": "DXB"
                     },
                     {
-                      "date_qualifier": "AD",
+                      "dateQualifier": "AD",
                       "date": "270914",
-                      "first_time": "0920"
+                      "firstTime": "0920"
                     }
                   ]
                 }
               ],
-              "flight_services": []
+              "flightServices": []
             }
           ]
         }
       ]
     },
     {
-      "requested_segment_ref": {
-        "seg_ref": "2",
-        "location_forcing": []
+      "requestedSegmentRef": {
+        "segRef": "2",
+        "locationForcing": []
       },
-      "group_of_flights": [
+      "groupOfFlights": [
         {
-          "prop_flight_gr_detail": {
-            "flight_proposal": [
+          "propFlightGrDetail": {
+            "flightProposal": [
               {
                 "ref": "1"
               },
               {
                 "ref": "2330",
-                "unit_qualifier": "EFT"
+                "unitQualifier": "EFT"
               },
               {
                 "ref": "EK",
-                "unit_qualifier": "MCX"
+                "unitQualifier": "MCX"
               }
             ]
           },
-          "flight_details": [
+          "flightDetails": [
             {
-              "flight_information": {
-                "product_date_time": {
-                  "date_of_departure": "251014",
-                  "time_of_departure": "0600",
-                  "date_of_arrival": "251014",
-                  "time_of_arrival": "1320"
+              "flightInformation": {
+                "productDateTime": {
+                  "dateOfDeparture": "251014",
+                  "timeOfDeparture": "0600",
+                  "dateOfArrival": "251014",
+                  "timeOfArrival": "1320"
                 },
                 "location": [
                   {
-                    "location_id": "SYD",
+                    "locationId": "SYD",
                     "terminal": "1"
                   },
                   {
-                    "location_id": "DXB",
+                    "locationId": "DXB",
                     "terminal": "3"
                   }
                 ],
-                "company_id": {
-                  "marketing_carrier": "EK",
-                  "operating_carrier": "EK"
+                "companyId": {
+                  "marketingCarrier": "EK",
+                  "operatingCarrier": "EK"
                 },
-                "flight_ortrain_number": "415",
-                "product_detail": {
-                  "equipment_type": "388",
-                  "location_id": []
+                "flightOrtrainNumber": "415",
+                "productDetail": {
+                  "equipmentType": "388",
+                  "locationId": []
                 },
-                "add_product_detail": {
-                  "electronic_ticketing": "Y",
-                  "product_detail_qualifier": "AIP",
-                  "flight_characteristic": []
+                "addProductDetail": {
+                  "electronicTicketing": "Y",
+                  "productDetailQualifier": "AIP",
+                  "flightCharacteristic": []
                 },
-                "attribute_details": []
+                "attributeDetails": []
               },
-              "avl_info": [],
-              "technical_stop": [],
-              "flight_services": []
+              "avlInfo": [],
+              "technicalStop": [],
+              "flightServices": []
             },
             {
-              "flight_information": {
-                "product_date_time": {
-                  "date_of_departure": "251014",
-                  "time_of_departure": "1500",
-                  "date_of_arrival": "251014",
-                  "time_of_arrival": "1930"
+              "flightInformation": {
+                "productDateTime": {
+                  "dateOfDeparture": "251014",
+                  "timeOfDeparture": "1500",
+                  "dateOfArrival": "251014",
+                  "timeOfArrival": "1930"
                 },
                 "location": [
                   {
-                    "location_id": "DXB",
+                    "locationId": "DXB",
                     "terminal": "3"
                   },
                   {
-                    "location_id": "LGW",
+                    "locationId": "LGW",
                     "terminal": "N"
                   }
                 ],
-                "company_id": {
-                  "marketing_carrier": "EK",
-                  "operating_carrier": "EK"
+                "companyId": {
+                  "marketingCarrier": "EK",
+                  "operatingCarrier": "EK"
                 },
-                "flight_ortrain_number": "9",
-                "product_detail": {
-                  "equipment_type": "388",
-                  "location_id": []
+                "flightOrtrainNumber": "9",
+                "productDetail": {
+                  "equipmentType": "388",
+                  "locationId": []
                 },
-                "add_product_detail": {
-                  "electronic_ticketing": "Y",
-                  "product_detail_qualifier": "AIP",
-                  "flight_characteristic": []
+                "addProductDetail": {
+                  "electronicTicketing": "Y",
+                  "productDetailQualifier": "AIP",
+                  "flightCharacteristic": []
                 },
-                "attribute_details": []
+                "attributeDetails": []
               },
-              "avl_info": [],
-              "technical_stop": [],
-              "flight_services": []
+              "avlInfo": [],
+              "technicalStop": [],
+              "flightServices": []
             }
           ]
         },
         {
-          "prop_flight_gr_detail": {
-            "flight_proposal": [
+          "propFlightGrDetail": {
+            "flightProposal": [
               {
                 "ref": "2"
               },
               {
                 "ref": "2320",
-                "unit_qualifier": "EFT"
+                "unitQualifier": "EFT"
               },
               {
                 "ref": "VA",
-                "unit_qualifier": "MCX"
+                "unitQualifier": "MCX"
               }
             ]
           },
-          "flight_details": [
+          "flightDetails": [
             {
-              "flight_information": {
-                "product_date_time": {
-                  "date_of_departure": "251014",
-                  "time_of_departure": "1900",
-                  "date_of_arrival": "261014",
-                  "time_of_arrival": "0020",
-                  "date_variation": "1"
+              "flightInformation": {
+                "productDateTime": {
+                  "dateOfDeparture": "251014",
+                  "timeOfDeparture": "1900",
+                  "dateOfArrival": "261014",
+                  "timeOfArrival": "0020",
+                  "dateVariation": "1"
                 },
                 "location": [
                   {
-                    "location_id": "SYD",
+                    "locationId": "SYD",
                     "terminal": "1"
                   },
                   {
-                    "location_id": "SIN"
+                    "locationId": "SIN"
                   }
                 ],
-                "company_id": {
-                  "marketing_carrier": "VA",
-                  "operating_carrier": "SQ"
+                "companyId": {
+                  "marketingCarrier": "VA",
+                  "operatingCarrier": "SQ"
                 },
-                "flight_ortrain_number": "5514",
-                "product_detail": {
-                  "equipment_type": "772",
-                  "location_id": []
+                "flightOrtrainNumber": "5514",
+                "productDetail": {
+                  "equipmentType": "772",
+                  "locationId": []
                 },
-                "add_product_detail": {
-                  "electronic_ticketing": "Y",
-                  "product_detail_qualifier": "AIP",
-                  "flight_characteristic": []
+                "addProductDetail": {
+                  "electronicTicketing": "Y",
+                  "productDetailQualifier": "AIP",
+                  "flightCharacteristic": []
                 },
-                "attribute_details": []
+                "attributeDetails": []
               },
-              "avl_info": [],
-              "technical_stop": [],
-              "flight_services": []
+              "avlInfo": [],
+              "technicalStop": [],
+              "flightServices": []
             },
             {
-              "flight_information": {
-                "product_date_time": {
-                  "date_of_departure": "261014",
-                  "time_of_departure": "0115",
-                  "date_of_arrival": "261014",
-                  "time_of_arrival": "0720"
+              "flightInformation": {
+                "productDateTime": {
+                  "dateOfDeparture": "261014",
+                  "timeOfDeparture": "0115",
+                  "dateOfArrival": "261014",
+                  "timeOfArrival": "0720"
                 },
                 "location": [
                   {
-                    "location_id": "SIN",
+                    "locationId": "SIN",
                     "terminal": "3"
                   },
                   {
-                    "location_id": "LHR",
+                    "locationId": "LHR",
                     "terminal": "2"
                   }
                 ],
-                "company_id": {
-                  "marketing_carrier": "VA",
-                  "operating_carrier": "SQ"
+                "companyId": {
+                  "marketingCarrier": "VA",
+                  "operatingCarrier": "SQ"
                 },
-                "flight_ortrain_number": "5684",
-                "product_detail": {
-                  "equipment_type": "77W",
-                  "location_id": []
+                "flightOrtrainNumber": "5684",
+                "productDetail": {
+                  "equipmentType": "77W",
+                  "locationId": []
                 },
-                "add_product_detail": {
-                  "electronic_ticketing": "Y",
-                  "product_detail_qualifier": "AIP",
-                  "flight_characteristic": []
+                "addProductDetail": {
+                  "electronicTicketing": "Y",
+                  "productDetailQualifier": "AIP",
+                  "flightCharacteristic": []
                 },
-                "attribute_details": []
+                "attributeDetails": []
               },
-              "avl_info": [],
-              "technical_stop": [],
-              "flight_services": []
+              "avlInfo": [],
+              "technicalStop": [],
+              "flightServices": []
             }
           ]
         },
         {
-          "prop_flight_gr_detail": {
-            "flight_proposal": [
+          "propFlightGrDetail": {
+            "flightProposal": [
               {
                 "ref": "3"
               },
               {
                 "ref": "2300",
-                "unit_qualifier": "EFT"
+                "unitQualifier": "EFT"
               },
               {
                 "ref": "BA",
-                "unit_qualifier": "MCX"
+                "unitQualifier": "MCX"
               }
             ]
           },
-          "flight_details": [
+          "flightDetails": [
             {
-              "flight_information": {
-                "product_date_time": {
-                  "date_of_departure": "251014",
-                  "time_of_departure": "1630",
-                  "date_of_arrival": "261014",
-                  "time_of_arrival": "0430",
-                  "date_variation": "1"
+              "flightInformation": {
+                "productDateTime": {
+                  "dateOfDeparture": "251014",
+                  "timeOfDeparture": "1630",
+                  "dateOfArrival": "261014",
+                  "timeOfArrival": "0430",
+                  "dateVariation": "1"
                 },
                 "location": [
                   {
-                    "location_id": "SYD",
+                    "locationId": "SYD",
                     "terminal": "1"
                   },
                   {
-                    "location_id": "LHR",
+                    "locationId": "LHR",
                     "terminal": "5"
                   }
                 ],
-                "company_id": {
-                  "marketing_carrier": "BA",
-                  "operating_carrier": "BA"
+                "companyId": {
+                  "marketingCarrier": "BA",
+                  "operatingCarrier": "BA"
                 },
-                "flight_ortrain_number": "16",
-                "product_detail": {
-                  "equipment_type": "777",
-                  "tech_stop_number": "1",
-                  "location_id": []
+                "flightOrtrainNumber": "16",
+                "productDetail": {
+                  "equipmentType": "777",
+                  "techStopNumber": "1",
+                  "locationId": []
                 },
-                "add_product_detail": {
-                  "electronic_ticketing": "Y",
-                  "product_detail_qualifier": "AIP",
-                  "flight_characteristic": []
+                "addProductDetail": {
+                  "electronicTicketing": "Y",
+                  "productDetailQualifier": "AIP",
+                  "flightCharacteristic": []
                 },
-                "attribute_details": []
+                "attributeDetails": []
               },
-              "avl_info": [],
-              "technical_stop": [
+              "avlInfo": [],
+              "technicalStop": [
                 {
-                  "stop_details": [
+                  "stopDetails": [
                     {
-                      "date_qualifier": "AA",
+                      "dateQualifier": "AA",
                       "date": "251014",
-                      "first_time": "2145",
-                      "location_id": "SIN"
+                      "firstTime": "2145",
+                      "locationId": "SIN"
                     },
                     {
-                      "date_qualifier": "AD",
+                      "dateQualifier": "AD",
                       "date": "251014",
-                      "first_time": "2305"
+                      "firstTime": "2305"
                     }
                   ]
                 }
               ],
-              "flight_services": []
+              "flightServices": []
             }
           ]
         },
         {
-          "prop_flight_gr_detail": {
-            "flight_proposal": [
+          "propFlightGrDetail": {
+            "flightProposal": [
               {
                 "ref": "4"
               },
               {
                 "ref": "2235",
-                "unit_qualifier": "EFT"
+                "unitQualifier": "EFT"
               },
               {
                 "ref": "BA",
-                "unit_qualifier": "MCX"
+                "unitQualifier": "MCX"
               }
             ]
           },
-          "flight_details": [
+          "flightDetails": [
             {
-              "flight_information": {
-                "product_date_time": {
-                  "date_of_departure": "251014",
-                  "time_of_departure": "1630",
-                  "date_of_arrival": "251014",
-                  "time_of_arrival": "2145"
+              "flightInformation": {
+                "productDateTime": {
+                  "dateOfDeparture": "251014",
+                  "timeOfDeparture": "1630",
+                  "dateOfArrival": "251014",
+                  "timeOfArrival": "2145"
                 },
                 "location": [
                   {
-                    "location_id": "SYD",
+                    "locationId": "SYD",
                     "terminal": "1"
                   },
                   {
-                    "location_id": "SIN",
+                    "locationId": "SIN",
                     "terminal": "1"
                   }
                 ],
-                "company_id": {
-                  "marketing_carrier": "BA",
-                  "operating_carrier": "BA"
+                "companyId": {
+                  "marketingCarrier": "BA",
+                  "operatingCarrier": "BA"
                 },
-                "flight_ortrain_number": "16",
-                "product_detail": {
-                  "equipment_type": "777",
-                  "location_id": []
+                "flightOrtrainNumber": "16",
+                "productDetail": {
+                  "equipmentType": "777",
+                  "locationId": []
                 },
-                "add_product_detail": {
-                  "electronic_ticketing": "Y",
-                  "product_detail_qualifier": "AIP",
-                  "flight_characteristic": []
+                "addProductDetail": {
+                  "electronicTicketing": "Y",
+                  "productDetailQualifier": "AIP",
+                  "flightCharacteristic": []
                 },
-                "attribute_details": []
+                "attributeDetails": []
               },
-              "avl_info": [],
-              "technical_stop": [],
-              "flight_services": []
+              "avlInfo": [],
+              "technicalStop": [],
+              "flightServices": []
             },
             {
-              "flight_information": {
-                "product_date_time": {
-                  "date_of_departure": "251014",
-                  "time_of_departure": "2255",
-                  "date_of_arrival": "261014",
-                  "time_of_arrival": "0405",
-                  "date_variation": "1"
+              "flightInformation": {
+                "productDateTime": {
+                  "dateOfDeparture": "251014",
+                  "timeOfDeparture": "2255",
+                  "dateOfArrival": "261014",
+                  "timeOfArrival": "0405",
+                  "dateVariation": "1"
                 },
                 "location": [
                   {
-                    "location_id": "SIN",
+                    "locationId": "SIN",
                     "terminal": "1"
                   },
                   {
-                    "location_id": "LHR",
+                    "locationId": "LHR",
                     "terminal": "5"
                   }
                 ],
-                "company_id": {
-                  "marketing_carrier": "BA",
-                  "operating_carrier": "BA"
+                "companyId": {
+                  "marketingCarrier": "BA",
+                  "operatingCarrier": "BA"
                 },
-                "flight_ortrain_number": "12",
-                "product_detail": {
-                  "equipment_type": "744",
-                  "location_id": []
+                "flightOrtrainNumber": "12",
+                "productDetail": {
+                  "equipmentType": "744",
+                  "locationId": []
                 },
-                "add_product_detail": {
-                  "electronic_ticketing": "Y",
-                  "product_detail_qualifier": "AIP",
-                  "flight_characteristic": []
+                "addProductDetail": {
+                  "electronicTicketing": "Y",
+                  "productDetailQualifier": "AIP",
+                  "flightCharacteristic": []
                 },
-                "attribute_details": []
+                "attributeDetails": []
               },
-              "avl_info": [],
-              "technical_stop": [],
-              "flight_services": []
+              "avlInfo": [],
+              "technicalStop": [],
+              "flightServices": []
             }
           ]
         },
         {
-          "prop_flight_gr_detail": {
-            "flight_proposal": [
+          "propFlightGrDetail": {
+            "flightProposal": [
               {
                 "ref": "5"
               },
               {
                 "ref": "2320",
-                "unit_qualifier": "EFT"
+                "unitQualifier": "EFT"
               },
               {
                 "ref": "SQ",
-                "unit_qualifier": "MCX"
+                "unitQualifier": "MCX"
               }
             ]
           },
-          "flight_details": [
+          "flightDetails": [
             {
-              "flight_information": {
-                "product_date_time": {
-                  "date_of_departure": "251014",
-                  "time_of_departure": "1900",
-                  "date_of_arrival": "261014",
-                  "time_of_arrival": "0020",
-                  "date_variation": "1"
+              "flightInformation": {
+                "productDateTime": {
+                  "dateOfDeparture": "251014",
+                  "timeOfDeparture": "1900",
+                  "dateOfArrival": "261014",
+                  "timeOfArrival": "0020",
+                  "dateVariation": "1"
                 },
                 "location": [
                   {
-                    "location_id": "SYD",
+                    "locationId": "SYD",
                     "terminal": "1"
                   },
                   {
-                    "location_id": "SIN"
+                    "locationId": "SIN"
                   }
                 ],
-                "company_id": {
-                  "marketing_carrier": "SQ",
-                  "operating_carrier": "SQ"
+                "companyId": {
+                  "marketingCarrier": "SQ",
+                  "operatingCarrier": "SQ"
                 },
-                "flight_ortrain_number": "242",
-                "product_detail": {
-                  "equipment_type": "772",
-                  "location_id": []
+                "flightOrtrainNumber": "242",
+                "productDetail": {
+                  "equipmentType": "772",
+                  "locationId": []
                 },
-                "add_product_detail": {
-                  "electronic_ticketing": "Y",
-                  "product_detail_qualifier": "AIP",
-                  "flight_characteristic": []
+                "addProductDetail": {
+                  "electronicTicketing": "Y",
+                  "productDetailQualifier": "AIP",
+                  "flightCharacteristic": []
                 },
-                "attribute_details": []
+                "attributeDetails": []
               },
-              "avl_info": [],
-              "technical_stop": [],
-              "flight_services": []
+              "avlInfo": [],
+              "technicalStop": [],
+              "flightServices": []
             },
             {
-              "flight_information": {
-                "product_date_time": {
-                  "date_of_departure": "261014",
-                  "time_of_departure": "0115",
-                  "date_of_arrival": "261014",
-                  "time_of_arrival": "0720"
+              "flightInformation": {
+                "productDateTime": {
+                  "dateOfDeparture": "261014",
+                  "timeOfDeparture": "0115",
+                  "dateOfArrival": "261014",
+                  "timeOfArrival": "0720"
                 },
                 "location": [
                   {
-                    "location_id": "SIN",
+                    "locationId": "SIN",
                     "terminal": "3"
                   },
                   {
-                    "location_id": "LHR",
+                    "locationId": "LHR",
                     "terminal": "2"
                   }
                 ],
-                "company_id": {
-                  "marketing_carrier": "SQ",
-                  "operating_carrier": "SQ"
+                "companyId": {
+                  "marketingCarrier": "SQ",
+                  "operatingCarrier": "SQ"
                 },
-                "flight_ortrain_number": "306",
-                "product_detail": {
-                  "equipment_type": "77W",
-                  "location_id": []
+                "flightOrtrainNumber": "306",
+                "productDetail": {
+                  "equipmentType": "77W",
+                  "locationId": []
                 },
-                "add_product_detail": {
-                  "electronic_ticketing": "Y",
-                  "product_detail_qualifier": "AIP",
-                  "flight_characteristic": []
+                "addProductDetail": {
+                  "electronicTicketing": "Y",
+                  "productDetailQualifier": "AIP",
+                  "flightCharacteristic": []
                 },
-                "attribute_details": []
+                "attributeDetails": []
               },
-              "avl_info": [],
-              "technical_stop": [],
-              "flight_services": []
+              "avlInfo": [],
+              "technicalStop": [],
+              "flightServices": []
             }
           ]
         },
         {
-          "prop_flight_gr_detail": {
-            "flight_proposal": [
+          "propFlightGrDetail": {
+            "flightProposal": [
               {
                 "ref": "6"
               },
               {
                 "ref": "2330",
-                "unit_qualifier": "EFT"
+                "unitQualifier": "EFT"
               },
               {
                 "ref": "QF",
-                "unit_qualifier": "MCX"
+                "unitQualifier": "MCX"
               }
             ]
           },
-          "flight_details": [
+          "flightDetails": [
             {
-              "flight_information": {
-                "product_date_time": {
-                  "date_of_departure": "251014",
-                  "time_of_departure": "0600",
-                  "date_of_arrival": "251014",
-                  "time_of_arrival": "1320"
+              "flightInformation": {
+                "productDateTime": {
+                  "dateOfDeparture": "251014",
+                  "timeOfDeparture": "0600",
+                  "dateOfArrival": "251014",
+                  "timeOfArrival": "1320"
                 },
                 "location": [
                   {
-                    "location_id": "SYD",
+                    "locationId": "SYD",
                     "terminal": "1"
                   },
                   {
-                    "location_id": "DXB",
+                    "locationId": "DXB",
                     "terminal": "3"
                   }
                 ],
-                "company_id": {
-                  "marketing_carrier": "QF",
-                  "operating_carrier": "EK"
+                "companyId": {
+                  "marketingCarrier": "QF",
+                  "operatingCarrier": "EK"
                 },
-                "flight_ortrain_number": "8415",
-                "product_detail": {
-                  "equipment_type": "388",
-                  "location_id": []
+                "flightOrtrainNumber": "8415",
+                "productDetail": {
+                  "equipmentType": "388",
+                  "locationId": []
                 },
-                "add_product_detail": {
-                  "electronic_ticketing": "Y",
-                  "product_detail_qualifier": "LCA",
-                  "flight_characteristic": []
+                "addProductDetail": {
+                  "electronicTicketing": "Y",
+                  "productDetailQualifier": "LCA",
+                  "flightCharacteristic": []
                 },
-                "attribute_details": []
+                "attributeDetails": []
               },
-              "avl_info": [],
-              "technical_stop": [],
-              "flight_services": []
+              "avlInfo": [],
+              "technicalStop": [],
+              "flightServices": []
             },
             {
-              "flight_information": {
-                "product_date_time": {
-                  "date_of_departure": "251014",
-                  "time_of_departure": "1500",
-                  "date_of_arrival": "251014",
-                  "time_of_arrival": "1930"
+              "flightInformation": {
+                "productDateTime": {
+                  "dateOfDeparture": "251014",
+                  "timeOfDeparture": "1500",
+                  "dateOfArrival": "251014",
+                  "timeOfArrival": "1930"
                 },
                 "location": [
                   {
-                    "location_id": "DXB",
+                    "locationId": "DXB",
                     "terminal": "3"
                   },
                   {
-                    "location_id": "LGW",
+                    "locationId": "LGW",
                     "terminal": "N"
                   }
                 ],
-                "company_id": {
-                  "marketing_carrier": "QF",
-                  "operating_carrier": "EK"
+                "companyId": {
+                  "marketingCarrier": "QF",
+                  "operatingCarrier": "EK"
                 },
-                "flight_ortrain_number": "8009",
-                "product_detail": {
-                  "equipment_type": "388",
-                  "location_id": []
+                "flightOrtrainNumber": "8009",
+                "productDetail": {
+                  "equipmentType": "388",
+                  "locationId": []
                 },
-                "add_product_detail": {
-                  "electronic_ticketing": "Y",
-                  "product_detail_qualifier": "LCA",
-                  "flight_characteristic": []
+                "addProductDetail": {
+                  "electronicTicketing": "Y",
+                  "productDetailQualifier": "LCA",
+                  "flightCharacteristic": []
                 },
-                "attribute_details": []
+                "attributeDetails": []
               },
-              "avl_info": [],
-              "technical_stop": [],
-              "flight_services": []
+              "avlInfo": [],
+              "technicalStop": [],
+              "flightServices": []
             }
           ]
         },
         {
-          "prop_flight_gr_detail": {
-            "flight_proposal": [
+          "propFlightGrDetail": {
+            "flightProposal": [
               {
                 "ref": "7"
               },
               {
                 "ref": "2355",
-                "unit_qualifier": "EFT"
+                "unitQualifier": "EFT"
               },
               {
                 "ref": "QF",
-                "unit_qualifier": "MCX"
+                "unitQualifier": "MCX"
               }
             ]
           },
-          "flight_details": [
+          "flightDetails": [
             {
-              "flight_information": {
-                "product_date_time": {
-                  "date_of_departure": "251014",
-                  "time_of_departure": "1650",
-                  "date_of_arrival": "261014",
-                  "time_of_arrival": "0545",
-                  "date_variation": "1"
+              "flightInformation": {
+                "productDateTime": {
+                  "dateOfDeparture": "251014",
+                  "timeOfDeparture": "1650",
+                  "dateOfArrival": "261014",
+                  "timeOfArrival": "0545",
+                  "dateVariation": "1"
                 },
                 "location": [
                   {
-                    "location_id": "SYD",
+                    "locationId": "SYD",
                     "terminal": "1"
                   },
                   {
-                    "location_id": "LHR",
+                    "locationId": "LHR",
                     "terminal": "3"
                   }
                 ],
-                "company_id": {
-                  "marketing_carrier": "QF",
-                  "operating_carrier": "QF"
+                "companyId": {
+                  "marketingCarrier": "QF",
+                  "operatingCarrier": "QF"
                 },
-                "flight_ortrain_number": "1",
-                "product_detail": {
-                  "equipment_type": "388",
-                  "tech_stop_number": "1",
-                  "location_id": []
+                "flightOrtrainNumber": "1",
+                "productDetail": {
+                  "equipmentType": "388",
+                  "techStopNumber": "1",
+                  "locationId": []
                 },
-                "add_product_detail": {
-                  "electronic_ticketing": "Y",
-                  "product_detail_qualifier": "AIP",
-                  "flight_characteristic": []
+                "addProductDetail": {
+                  "electronicTicketing": "Y",
+                  "productDetailQualifier": "AIP",
+                  "flightCharacteristic": []
                 },
-                "attribute_details": []
+                "attributeDetails": []
               },
-              "avl_info": [],
-              "technical_stop": [
+              "avlInfo": [],
+              "technicalStop": [
                 {
-                  "stop_details": [
+                  "stopDetails": [
                     {
-                      "date_qualifier": "AA",
+                      "dateQualifier": "AA",
                       "date": "261014",
-                      "first_time": "0035",
-                      "location_id": "DXB"
+                      "firstTime": "0035",
+                      "locationId": "DXB"
                     },
                     {
-                      "date_qualifier": "AD",
+                      "dateQualifier": "AD",
                       "date": "261014",
-                      "first_time": "0215"
+                      "firstTime": "0215"
                     }
                   ]
                 }
               ],
-              "flight_services": []
+              "flightServices": []
             }
           ]
         }
@@ -816,16 +816,16 @@
   ],
   "recommendation": [
     {
-      "item_number": {
-        "item_number_id": {
+      "itemNumber": {
+        "itemNumberId": {
           "number": "1",
-          "number_type": "M"
+          "numberType": "M"
         },
-        "code_share_details": []
+        "codeShareDetails": []
       },
-      "warning_message": [],
-      "rec_price_info": {
-        "monetary_detail": [
+      "warningMessage": [],
+      "recPriceInfo": {
+        "monetaryDetail": [
           {
             "amount": "6948.53"
           },
@@ -834,38 +834,38 @@
           }
         ]
       },
-      "mini_rule": [],
-      "segment_flight_ref": [
+      "miniRule": [],
+      "segmentFlightRef": [
         {
-          "referencing_detail": [
+          "referencingDetail": [
             {
-              "ref_qualifier": "S",
-              "ref_number": "1"
+              "refQualifier": "S",
+              "refNumber": "1"
             }
           ]
         }
       ],
-      "recommandation_segments_fare_details": [],
-      "pax_fare_product": [
+      "recommandationSegmentsFareDetails": [],
+      "paxFareProduct": [
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "1",
-            "total_fare_amount": "2391.77",
-            "total_tax_amount": "421.77",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "1",
+            "totalFareAmount": "2391.77",
+            "totalTaxAmount": "421.77",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "ADT"
@@ -882,10 +882,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -895,56 +895,56 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YOW",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YOW",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "2",
-            "total_fare_amount": "1898.77",
-            "total_tax_amount": "421.77",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "2",
+            "totalFareAmount": "1898.77",
+            "totalTaxAmount": "421.77",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "CH"
@@ -958,10 +958,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -971,56 +971,56 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YOWCH",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YOWCH",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "3",
-            "total_fare_amount": "266.22",
-            "total_tax_amount": "69.22",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "3",
+            "totalFareAmount": "266.22",
+            "totalTaxAmount": "69.22",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "INF"
@@ -1028,17 +1028,17 @@
               "traveller": [
                 {
                   "ref": "1",
-                  "infant_indicator": "1"
+                  "infantIndicator": "1"
                 }
               ]
             }
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -1048,51 +1048,51 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YOWIN",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YOWIN",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         }
       ],
-      "specific_rec_details": []
+      "specificRecDetails": []
     },
     {
-      "item_number": {
-        "item_number_id": {
+      "itemNumber": {
+        "itemNumberId": {
           "number": "2",
-          "number_type": "M"
+          "numberType": "M"
         },
-        "code_share_details": []
+        "codeShareDetails": []
       },
-      "warning_message": [],
-      "rec_price_info": {
-        "monetary_detail": [
+      "warningMessage": [],
+      "recPriceInfo": {
+        "monetaryDetail": [
           {
             "amount": "2234.33"
           },
@@ -1101,33 +1101,33 @@
           }
         ]
       },
-      "mini_rule": [],
-      "segment_flight_ref": [
+      "miniRule": [],
+      "segmentFlightRef": [
         {
-          "referencing_detail": [
+          "referencingDetail": [
             {
-              "ref_qualifier": "S",
-              "ref_number": "1"
+              "refQualifier": "S",
+              "refNumber": "1"
             }
           ]
         }
       ],
-      "recommandation_segments_fare_details": [],
-      "pax_fare_product": [
+      "recommandationSegmentsFareDetails": [],
+      "paxFareProduct": [
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "1",
-            "total_fare_amount": "783.87",
-            "total_tax_amount": "255.87",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "1",
+            "totalFareAmount": "783.87",
+            "totalTaxAmount": "255.87",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "EK"
               }
             ],
-            "monetary_details": []
+            "monetaryDetails": []
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "ADT"
@@ -1144,10 +1144,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "PEN",
-                  "information_type": "71"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "PEN",
+                  "informationType": "71"
                 },
                 "description": [
                   "TICKETS ARE NON REFUNDABLE AFTER\n                        DEPARTURE\n                    "
@@ -1155,10 +1155,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "40"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "40"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -1168,70 +1168,70 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Q",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "QLOUPAU1",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "QLOUPAU1",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Q",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "QLOUPAU1",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "QLOUPAU1",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "2",
-            "total_fare_amount": "613.59",
-            "total_tax_amount": "217.59",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "2",
+            "totalFareAmount": "613.59",
+            "totalTaxAmount": "217.59",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "EK"
               }
             ],
-            "monetary_details": []
+            "monetaryDetails": []
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "CH"
@@ -1245,10 +1245,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "PEN",
-                  "information_type": "71"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "PEN",
+                  "informationType": "71"
                 },
                 "description": [
                   "TICKETS ARE NON REFUNDABLE AFTER\n                        DEPARTURE\n                    "
@@ -1256,10 +1256,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "40"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "40"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -1269,70 +1269,70 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Q",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "QLOUPAU1CH",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "QLOUPAU1CH",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Q",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "QLOUPAU1CH",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "QLOUPAU1CH",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "3",
-            "total_fare_amount": "53.00",
-            "total_tax_amount": "0.00",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "3",
+            "totalFareAmount": "53.00",
+            "totalTaxAmount": "0.00",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "EK"
               }
             ],
-            "monetary_details": []
+            "monetaryDetails": []
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "INF"
@@ -1340,17 +1340,17 @@
               "traveller": [
                 {
                   "ref": "1",
-                  "infant_indicator": "1"
+                  "infantIndicator": "1"
                 }
               ]
             }
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "PEN",
-                  "information_type": "70"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "PEN",
+                  "informationType": "70"
                 },
                 "description": [
                   "TICKETS ARE NON-REFUNDABLE\n                    "
@@ -1358,10 +1358,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "40"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "40"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -1371,70 +1371,70 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Q",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "QLOUPAU1IN",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "QLOUPAU1IN",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Q",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "QLOUPAU1IN",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "QLOUPAU1IN",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         }
       ],
-      "specific_rec_details": []
+      "specificRecDetails": []
     },
     {
-      "item_number": {
-        "item_number_id": {
+      "itemNumber": {
+        "itemNumberId": {
           "number": "3",
-          "number_type": "M"
+          "numberType": "M"
         },
-        "code_share_details": []
+        "codeShareDetails": []
       },
-      "warning_message": [],
-      "rec_price_info": {
-        "monetary_detail": [
+      "warningMessage": [],
+      "recPriceInfo": {
+        "monetaryDetail": [
           {
             "amount": "3058.85"
           },
@@ -1443,38 +1443,38 @@
           }
         ]
       },
-      "mini_rule": [],
-      "segment_flight_ref": [
+      "miniRule": [],
+      "segmentFlightRef": [
         {
-          "referencing_detail": [
+          "referencingDetail": [
             {
-              "ref_qualifier": "S",
-              "ref_number": "2"
+              "refQualifier": "S",
+              "refNumber": "2"
             }
           ]
         }
       ],
-      "recommandation_segments_fare_details": [],
-      "pax_fare_product": [
+      "recommandationSegmentsFareDetails": [],
+      "paxFareProduct": [
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "1",
-            "total_fare_amount": "1069.71",
-            "total_tax_amount": "64.71",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "1",
+            "totalFareAmount": "1069.71",
+            "totalTaxAmount": "64.71",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "HR"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "ADT"
@@ -1491,19 +1491,19 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "PEN",
-                  "information_type": "73"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "PEN",
+                  "informationType": "73"
                 },
                 "description": [
                   "PENALTY APPLIES"
                 ]
               },
-              "monetary_information": {
-                "monetary_detail": [
+              "monetaryInformation": {
+                "monetaryDetail": [
                   {
-                    "amount_type": "MT",
+                    "amountType": "MT",
                     "amount": "84.00",
                     "currency": "EUR"
                   }
@@ -1511,10 +1511,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "40"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "40"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -1524,10 +1524,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "SUR",
-                  "information_type": "79"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "SUR",
+                  "informationType": "79"
                 },
                 "description": [
                   "FARE VALID FOR E TICKET ONLY\n                    "
@@ -1535,77 +1535,77 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "H",
                       "cabin": "M",
-                      "avl_status": "4"
+                      "avlStatus": "4"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "HLOASQ",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "HLOASQ",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP",
                         "ET"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "H",
                       "cabin": "M",
-                      "avl_status": "4"
+                      "avlStatus": "4"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "HLOASQ",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "HLOASQ",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP",
                         "ET"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "2",
-            "total_fare_amount": "832.43",
-            "total_tax_amount": "26.43",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "2",
+            "totalFareAmount": "832.43",
+            "totalTaxAmount": "26.43",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "HR"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "CH"
@@ -1619,19 +1619,19 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "PEN",
-                  "information_type": "73"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "PEN",
+                  "informationType": "73"
                 },
                 "description": [
                   "PENALTY APPLIES"
                 ]
               },
-              "monetary_information": {
-                "monetary_detail": [
+              "monetaryInformation": {
+                "monetaryDetail": [
                   {
-                    "amount_type": "MT",
+                    "amountType": "MT",
                     "amount": "84.00",
                     "currency": "EUR"
                   }
@@ -1639,10 +1639,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "40"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "40"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -1652,10 +1652,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "SUR",
-                  "information_type": "79"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "SUR",
+                  "informationType": "79"
                 },
                 "description": [
                   "FARE VALID FOR E TICKET ONLY\n                    "
@@ -1663,77 +1663,77 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "H",
                       "cabin": "M",
-                      "avl_status": "4"
+                      "avlStatus": "4"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "HLOASQCH",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "HLOASQCH",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP",
                         "ET"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "H",
                       "cabin": "M",
-                      "avl_status": "4"
+                      "avlStatus": "4"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "HLOASQCH",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "HLOASQCH",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP",
                         "ET"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "3",
-            "total_fare_amount": "87.00",
-            "total_tax_amount": "0.00",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "3",
+            "totalFareAmount": "87.00",
+            "totalTaxAmount": "0.00",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "HR"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "INF"
@@ -1741,26 +1741,26 @@
               "traveller": [
                 {
                   "ref": "1",
-                  "infant_indicator": "1"
+                  "infantIndicator": "1"
                 }
               ]
             }
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "PEN",
-                  "information_type": "73"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "PEN",
+                  "informationType": "73"
                 },
                 "description": [
                   "PENALTY APPLIES"
                 ]
               },
-              "monetary_information": {
-                "monetary_detail": [
+              "monetaryInformation": {
+                "monetaryDetail": [
                   {
-                    "amount_type": "MT",
+                    "amountType": "MT",
                     "amount": "84.00",
                     "currency": "EUR"
                   }
@@ -1768,10 +1768,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "40"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "40"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -1781,10 +1781,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "SUR",
-                  "information_type": "79"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "SUR",
+                  "informationType": "79"
                 },
                 "description": [
                   "FARE VALID FOR E TICKET ONLY\n                    "
@@ -1792,71 +1792,71 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "H",
                       "cabin": "M",
-                      "avl_status": "4"
+                      "avlStatus": "4"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "HLOASQIN",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "HLOASQIN",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP",
                         "ET"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "H",
                       "cabin": "M",
-                      "avl_status": "4"
+                      "avlStatus": "4"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "HLOASQIN",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "HLOASQIN",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP",
                         "ET"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         }
       ],
-      "specific_rec_details": []
+      "specificRecDetails": []
     },
     {
-      "item_number": {
-        "item_number_id": {
+      "itemNumber": {
+        "itemNumberId": {
           "number": "4"
         },
-        "code_share_details": []
+        "codeShareDetails": []
       },
-      "warning_message": [],
-      "rec_price_info": {
-        "monetary_detail": [
+      "warningMessage": [],
+      "recPriceInfo": {
+        "monetaryDetail": [
           {
             "amount": "4464.72"
           },
@@ -1865,42 +1865,42 @@
           }
         ]
       },
-      "mini_rule": [],
-      "segment_flight_ref": [
+      "miniRule": [],
+      "segmentFlightRef": [
         {
-          "referencing_detail": [
+          "referencingDetail": [
             {
-              "ref_qualifier": "S",
-              "ref_number": "1"
+              "refQualifier": "S",
+              "refNumber": "1"
             },
             {
-              "ref_qualifier": "S",
-              "ref_number": "3"
+              "refQualifier": "S",
+              "refNumber": "3"
             }
           ]
         }
       ],
-      "recommandation_segments_fare_details": [],
-      "pax_fare_product": [
+      "recommandationSegmentsFareDetails": [],
+      "paxFareProduct": [
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "1",
-            "total_fare_amount": "1514.06",
-            "total_tax_amount": "703.06",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "1",
+            "totalFareAmount": "1514.06",
+            "totalTaxAmount": "703.06",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "ADT"
@@ -1917,10 +1917,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "PEN",
-                  "information_type": "70"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "PEN",
+                  "informationType": "70"
                 },
                 "description": [
                   "TICKETS ARE NON-REFUNDABLE\n                    "
@@ -1928,10 +1928,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "40"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "40"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -1941,84 +1941,84 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "SJBBGB",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "SJBBGB",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "SJBBGB",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "SJBBGB",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "2",
-            "total_fare_amount": "1273.78",
-            "total_tax_amount": "664.78",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "2",
+            "totalFareAmount": "1273.78",
+            "totalTaxAmount": "664.78",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "CH"
@@ -2032,10 +2032,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "PEN",
-                  "information_type": "70"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "PEN",
+                  "informationType": "70"
                 },
                 "description": [
                   "TICKETS ARE NON-REFUNDABLE\n                    "
@@ -2043,10 +2043,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "40"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "40"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -2056,84 +2056,84 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "SJBBGBCH",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "SJBBGBCH",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "SJBBGBCH",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "SJBBGBCH",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "3",
-            "total_fare_amount": "162.82",
-            "total_tax_amount": "81.82",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "3",
+            "totalFareAmount": "162.82",
+            "totalTaxAmount": "81.82",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "INF"
@@ -2141,17 +2141,17 @@
               "traveller": [
                 {
                   "ref": "1",
-                  "infant_indicator": "1"
+                  "infantIndicator": "1"
                 }
               ]
             }
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "PEN",
-                  "information_type": "70"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "PEN",
+                  "informationType": "70"
                 },
                 "description": [
                   "TICKETS ARE NON-REFUNDABLE\n                    "
@@ -2159,10 +2159,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "40"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "40"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -2172,78 +2172,78 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "SJBBGBIN",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "SJBBGBIN",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "SJBBGBIN",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "SJBBGBIN",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         }
       ],
-      "specific_rec_details": []
+      "specificRecDetails": []
     },
     {
-      "item_number": {
-        "item_number_id": {
+      "itemNumber": {
+        "itemNumberId": {
           "number": "5"
         },
-        "code_share_details": []
+        "codeShareDetails": []
       },
-      "warning_message": [],
-      "rec_price_info": {
-        "monetary_detail": [
+      "warningMessage": [],
+      "recPriceInfo": {
+        "monetaryDetail": [
           {
             "amount": "7317.72"
           },
@@ -2252,42 +2252,42 @@
           }
         ]
       },
-      "mini_rule": [],
-      "segment_flight_ref": [
+      "miniRule": [],
+      "segmentFlightRef": [
         {
-          "referencing_detail": [
+          "referencingDetail": [
             {
-              "ref_qualifier": "S",
-              "ref_number": "1"
+              "refQualifier": "S",
+              "refNumber": "1"
             },
             {
-              "ref_qualifier": "S",
-              "ref_number": "4"
+              "refQualifier": "S",
+              "refNumber": "4"
             }
           ]
         }
       ],
-      "recommandation_segments_fare_details": [],
-      "pax_fare_product": [
+      "recommandationSegmentsFareDetails": [],
+      "paxFareProduct": [
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "1",
-            "total_fare_amount": "2515.06",
-            "total_tax_amount": "703.06",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "1",
+            "totalFareAmount": "2515.06",
+            "totalTaxAmount": "703.06",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "ADT"
@@ -2304,10 +2304,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "PEN",
-                  "information_type": "70"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "PEN",
+                  "informationType": "70"
                 },
                 "description": [
                   "TICKETS ARE NON-REFUNDABLE\n                    "
@@ -2315,10 +2315,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "40"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "40"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -2328,103 +2328,103 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "SJBBGB",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "SJBBGB",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "Y2BA",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "Y2BA",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "Y2BA",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "Y2BA",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "2",
-            "total_fare_amount": "2023.78",
-            "total_tax_amount": "664.78",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "2",
+            "totalFareAmount": "2023.78",
+            "totalTaxAmount": "664.78",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "CH"
@@ -2438,10 +2438,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "PEN",
-                  "information_type": "70"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "PEN",
+                  "informationType": "70"
                 },
                 "description": [
                   "TICKETS ARE NON-REFUNDABLE\n                    "
@@ -2449,10 +2449,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "40"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "40"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -2462,103 +2462,103 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "SJBBGBCH",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "SJBBGBCH",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "Y2BACH",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "Y2BACH",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "Y2BACH",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "Y2BACH",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "3",
-            "total_fare_amount": "263.82",
-            "total_tax_amount": "81.82",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "3",
+            "totalFareAmount": "263.82",
+            "totalTaxAmount": "81.82",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "INF"
@@ -2566,17 +2566,17 @@
               "traveller": [
                 {
                   "ref": "1",
-                  "infant_indicator": "1"
+                  "infantIndicator": "1"
                 }
               ]
             }
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "PEN",
-                  "information_type": "70"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "PEN",
+                  "informationType": "70"
                 },
                 "description": [
                   "TICKETS ARE NON-REFUNDABLE\n                    "
@@ -2584,10 +2584,10 @@
               }
             },
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "40"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "40"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -2597,97 +2597,97 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "SJBBGBIN",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "SJBBGBIN",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "Y2BAIN",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "Y2BAIN",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "Y2BAIN",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "Y2BAIN",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         }
       ],
-      "specific_rec_details": []
+      "specificRecDetails": []
     },
     {
-      "item_number": {
-        "item_number_id": {
+      "itemNumber": {
+        "itemNumberId": {
           "number": "6"
         },
-        "code_share_details": []
+        "codeShareDetails": []
       },
-      "warning_message": [],
-      "rec_price_info": {
-        "monetary_detail": [
+      "warningMessage": [],
+      "recPriceInfo": {
+        "monetaryDetail": [
           {
             "amount": "15623.78"
           },
@@ -2696,45 +2696,45 @@
           }
         ]
       },
-      "mini_rule": [],
-      "segment_flight_ref": [
+      "miniRule": [],
+      "segmentFlightRef": [
         {
-          "referencing_detail": [
+          "referencingDetail": [
             {
-              "ref_qualifier": "S",
-              "ref_number": "1"
+              "refQualifier": "S",
+              "refNumber": "1"
             },
             {
-              "ref_qualifier": "S",
-              "ref_number": "5"
+              "refQualifier": "S",
+              "refNumber": "5"
             }
           ]
         }
       ],
-      "recommandation_segments_fare_details": [],
-      "pax_fare_product": [
+      "recommandationSegmentsFareDetails": [],
+      "paxFareProduct": [
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "1",
-            "total_fare_amount": "5432.12",
-            "total_tax_amount": "688.12",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "1",
+            "totalFareAmount": "5432.12",
+            "totalTaxAmount": "688.12",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               },
               {
                 "company": "SQ"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "ADT"
@@ -2751,10 +2751,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -2764,106 +2764,106 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YRT",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YRT",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "2",
-            "total_fare_amount": "4207.84",
-            "total_tax_amount": "649.84",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "2",
+            "totalFareAmount": "4207.84",
+            "totalTaxAmount": "649.84",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               },
               {
                 "company": "SQ"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "CH"
@@ -2877,10 +2877,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -2890,120 +2890,120 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YRTCH",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YRTCH",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": [],
-                  "ticket_infos": {
-                    "additional_fare_details": {
-                      "ticket_designator": "CH25",
-                      "second_rate_class": []
+                  "fareCalculationCodeDetails": [],
+                  "ticketInfos": {
+                    "additionalFareDetails": {
+                      "ticketDesignator": "CH25",
+                      "secondRateClass": []
                     },
-                    "discount_details": []
+                    "discountDetails": []
                   }
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": [],
-                  "ticket_infos": {
-                    "additional_fare_details": {
-                      "ticket_designator": "CH25",
-                      "second_rate_class": []
+                  "fareCalculationCodeDetails": [],
+                  "ticketInfos": {
+                    "additionalFareDetails": {
+                      "ticketDesignator": "CH25",
+                      "secondRateClass": []
                     },
-                    "discount_details": []
+                    "discountDetails": []
                   }
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "3",
-            "total_fare_amount": "551.70",
-            "total_tax_amount": "76.70",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "3",
+            "totalFareAmount": "551.70",
+            "totalTaxAmount": "76.70",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               },
               {
                 "company": "SQ"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "INF"
@@ -3011,17 +3011,17 @@
               "traveller": [
                 {
                   "ref": "1",
-                  "infant_indicator": "1"
+                  "infantIndicator": "1"
                 }
               ]
             }
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -3031,111 +3031,111 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YRTIN",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YRTIN",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": [],
-                  "ticket_infos": {
-                    "additional_fare_details": {
-                      "ticket_designator": "IN90",
-                      "second_rate_class": []
+                  "fareCalculationCodeDetails": [],
+                  "ticketInfos": {
+                    "additionalFareDetails": {
+                      "ticketDesignator": "IN90",
+                      "secondRateClass": []
                     },
-                    "discount_details": []
+                    "discountDetails": []
                   }
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "S",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": [],
-                  "ticket_infos": {
-                    "additional_fare_details": {
-                      "ticket_designator": "IN90",
-                      "second_rate_class": []
+                  "fareCalculationCodeDetails": [],
+                  "ticketInfos": {
+                    "additionalFareDetails": {
+                      "ticketDesignator": "IN90",
+                      "secondRateClass": []
                     },
-                    "discount_details": []
+                    "discountDetails": []
                   }
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         }
       ],
-      "specific_rec_details": []
+      "specificRecDetails": []
     },
     {
-      "item_number": {
-        "item_number_id": {
+      "itemNumber": {
+        "itemNumberId": {
           "number": "7"
         },
-        "code_share_details": []
+        "codeShareDetails": []
       },
-      "warning_message": [],
-      "rec_price_info": {
-        "monetary_detail": [
+      "warningMessage": [],
+      "recPriceInfo": {
+        "monetaryDetail": [
           {
             "amount": "15677.29"
           },
@@ -3144,42 +3144,42 @@
           }
         ]
       },
-      "mini_rule": [],
-      "segment_flight_ref": [
+      "miniRule": [],
+      "segmentFlightRef": [
         {
-          "referencing_detail": [
+          "referencingDetail": [
             {
-              "ref_qualifier": "S",
-              "ref_number": "1"
+              "refQualifier": "S",
+              "refNumber": "1"
             },
             {
-              "ref_qualifier": "S",
-              "ref_number": "6"
+              "refQualifier": "S",
+              "refNumber": "6"
             }
           ]
         }
       ],
-      "recommandation_segments_fare_details": [],
-      "pax_fare_product": [
+      "recommandationSegmentsFareDetails": [],
+      "paxFareProduct": [
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "1",
-            "total_fare_amount": "5452.45",
-            "total_tax_amount": "708.45",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "1",
+            "totalFareAmount": "5452.45",
+            "totalTaxAmount": "708.45",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "ADT"
@@ -3196,10 +3196,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -3209,103 +3209,103 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YRT",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YRT",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "2",
-            "total_fare_amount": "4228.17",
-            "total_tax_amount": "670.17",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "2",
+            "totalFareAmount": "4228.17",
+            "totalTaxAmount": "670.17",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "CH"
@@ -3319,10 +3319,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -3332,117 +3332,117 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YRTCH",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YRTCH",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": [],
-                  "ticket_infos": {
-                    "additional_fare_details": {
-                      "ticket_designator": "CH25",
-                      "second_rate_class": []
+                  "fareCalculationCodeDetails": [],
+                  "ticketInfos": {
+                    "additionalFareDetails": {
+                      "ticketDesignator": "CH25",
+                      "secondRateClass": []
                     },
-                    "discount_details": []
+                    "discountDetails": []
                   }
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": [],
-                  "ticket_infos": {
-                    "additional_fare_details": {
-                      "ticket_designator": "CH25",
-                      "second_rate_class": []
+                  "fareCalculationCodeDetails": [],
+                  "ticketInfos": {
+                    "additionalFareDetails": {
+                      "ticketDesignator": "CH25",
+                      "secondRateClass": []
                     },
-                    "discount_details": []
+                    "discountDetails": []
                   }
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "3",
-            "total_fare_amount": "544.22",
-            "total_tax_amount": "69.22",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "3",
+            "totalFareAmount": "544.22",
+            "totalTaxAmount": "69.22",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "INF"
@@ -3450,17 +3450,17 @@
               "traveller": [
                 {
                   "ref": "1",
-                  "infant_indicator": "1"
+                  "infantIndicator": "1"
                 }
               ]
             }
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -3470,111 +3470,111 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YRTIN",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YRTIN",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "N"
+                    "corporateId": [],
+                    "breakPoint": "N"
                   },
-                  "fare_calculation_code_details": [],
-                  "ticket_infos": {
-                    "additional_fare_details": {
-                      "ticket_designator": "IN90",
-                      "second_rate_class": []
+                  "fareCalculationCodeDetails": [],
+                  "ticketInfos": {
+                    "additionalFareDetails": {
+                      "ticketDesignator": "IN90",
+                      "secondRateClass": []
                     },
-                    "discount_details": []
+                    "discountDetails": []
                   }
                 },
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": [],
-                  "ticket_infos": {
-                    "additional_fare_details": {
-                      "ticket_designator": "IN90",
-                      "second_rate_class": []
+                  "fareCalculationCodeDetails": [],
+                  "ticketInfos": {
+                    "additionalFareDetails": {
+                      "ticketDesignator": "IN90",
+                      "secondRateClass": []
                     },
-                    "discount_details": []
+                    "discountDetails": []
                   }
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         }
       ],
-      "specific_rec_details": []
+      "specificRecDetails": []
     },
     {
-      "item_number": {
-        "item_number_id": {
+      "itemNumber": {
+        "itemNumberId": {
           "number": "8"
         },
-        "code_share_details": []
+        "codeShareDetails": []
       },
-      "warning_message": [],
-      "rec_price_info": {
-        "monetary_detail": [
+      "warningMessage": [],
+      "recPriceInfo": {
+        "monetaryDetail": [
           {
             "amount": "15677.29"
           },
@@ -3583,42 +3583,42 @@
           }
         ]
       },
-      "mini_rule": [],
-      "segment_flight_ref": [
+      "miniRule": [],
+      "segmentFlightRef": [
         {
-          "referencing_detail": [
+          "referencingDetail": [
             {
-              "ref_qualifier": "S",
-              "ref_number": "1"
+              "refQualifier": "S",
+              "refNumber": "1"
             },
             {
-              "ref_qualifier": "S",
-              "ref_number": "7"
+              "refQualifier": "S",
+              "refNumber": "7"
             }
           ]
         }
       ],
-      "recommandation_segments_fare_details": [],
-      "pax_fare_product": [
+      "recommandationSegmentsFareDetails": [],
+      "paxFareProduct": [
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "1",
-            "total_fare_amount": "5452.45",
-            "total_tax_amount": "708.45",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "1",
+            "totalFareAmount": "5452.45",
+            "totalTaxAmount": "708.45",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "ADT"
@@ -3635,10 +3635,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -3648,84 +3648,84 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YRT",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YRT",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "2",
-            "total_fare_amount": "4228.17",
-            "total_tax_amount": "670.17",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "2",
+            "totalFareAmount": "4228.17",
+            "totalTaxAmount": "670.17",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "CH"
@@ -3739,10 +3739,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -3752,91 +3752,91 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YRTCH",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YRTCH",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": [],
-                  "ticket_infos": {
-                    "additional_fare_details": {
-                      "ticket_designator": "CH25",
-                      "second_rate_class": []
+                  "fareCalculationCodeDetails": [],
+                  "ticketInfos": {
+                    "additionalFareDetails": {
+                      "ticketDesignator": "CH25",
+                      "secondRateClass": []
                     },
-                    "discount_details": []
+                    "discountDetails": []
                   }
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "3",
-            "total_fare_amount": "544.22",
-            "total_tax_amount": "69.22",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "3",
+            "totalFareAmount": "544.22",
+            "totalTaxAmount": "69.22",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "INF"
@@ -3844,17 +3844,17 @@
               "traveller": [
                 {
                   "ref": "1",
-                  "infant_indicator": "1"
+                  "infantIndicator": "1"
                 }
               ]
             }
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -3864,85 +3864,85 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YRTIN",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YRTIN",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YIF",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YIF",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": [],
-                  "ticket_infos": {
-                    "additional_fare_details": {
-                      "ticket_designator": "IN90",
-                      "second_rate_class": []
+                  "fareCalculationCodeDetails": [],
+                  "ticketInfos": {
+                    "additionalFareDetails": {
+                      "ticketDesignator": "IN90",
+                      "secondRateClass": []
                     },
-                    "discount_details": []
+                    "discountDetails": []
                   }
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         }
       ],
-      "specific_rec_details": []
+      "specificRecDetails": []
     },
     {
-      "item_number": {
-        "item_number_id": {
+      "itemNumber": {
+        "itemNumberId": {
           "number": "9"
         },
-        "code_share_details": []
+        "codeShareDetails": []
       },
-      "warning_message": [],
-      "rec_price_info": {
-        "monetary_detail": [
+      "warningMessage": [],
+      "recPriceInfo": {
+        "monetaryDetail": [
           {
             "amount": "24294.32"
           },
@@ -3951,42 +3951,42 @@
           }
         ]
       },
-      "mini_rule": [],
-      "segment_flight_ref": [
+      "miniRule": [],
+      "segmentFlightRef": [
         {
-          "referencing_detail": [
+          "referencingDetail": [
             {
-              "ref_qualifier": "S",
-              "ref_number": "2"
+              "refQualifier": "S",
+              "refNumber": "2"
             },
             {
-              "ref_qualifier": "S",
-              "ref_number": "3"
+              "refQualifier": "S",
+              "refNumber": "3"
             }
           ]
         }
       ],
-      "recommandation_segments_fare_details": [],
-      "pax_fare_product": [
+      "recommandationSegmentsFareDetails": [],
+      "paxFareProduct": [
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "1",
-            "total_fare_amount": "8019.46",
-            "total_tax_amount": "1053.46",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "1",
+            "totalFareAmount": "8019.46",
+            "totalTaxAmount": "1053.46",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "ADT"
@@ -4003,10 +4003,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -4016,84 +4016,84 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "C",
                       "cabin": "C",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "CIF",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "CIF",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YRT",
-                      "passenger_type": "ADT",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YRT",
+                      "passengerType": "ADT",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "2",
-            "total_fare_amount": "7489.18",
-            "total_tax_amount": "1015.18",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "2",
+            "totalFareAmount": "7489.18",
+            "totalTaxAmount": "1015.18",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "CH"
@@ -4107,10 +4107,10 @@
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -4120,91 +4120,91 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "C",
                       "cabin": "C",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "CIF",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "CIF",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": [],
-                  "ticket_infos": {
-                    "additional_fare_details": {
-                      "ticket_designator": "CH00",
-                      "second_rate_class": []
+                  "fareCalculationCodeDetails": [],
+                  "ticketInfos": {
+                    "additionalFareDetails": {
+                      "ticketDesignator": "CH00",
+                      "secondRateClass": []
                     },
-                    "discount_details": []
+                    "discountDetails": []
                   }
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YRTCH",
-                      "passenger_type": "CH",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YRTCH",
+                      "passengerType": "CH",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         },
         {
-          "pax_fare_detail": {
-            "pax_fare_num": "3",
-            "total_fare_amount": "766.22",
-            "total_tax_amount": "69.22",
-            "code_share_details": [
+          "paxFareDetail": {
+            "paxFareNum": "3",
+            "totalFareAmount": "766.22",
+            "totalTaxAmount": "69.22",
+            "codeShareDetails": [
               {
-                "transport_stage_qualifier": "V",
+                "transportStageQualifier": "V",
                 "company": "BA"
               }
             ],
-            "monetary_details": [],
-            "pricing_ticketing": {
-              "price_type": [
+            "monetaryDetails": [],
+            "pricingTicketing": {
+              "priceType": [
                 "OBV"
               ]
             }
           },
-          "pax_reference": [
+          "paxReference": [
             {
               "ptc": [
                 "INF"
@@ -4212,17 +4212,17 @@
               "traveller": [
                 {
                   "ref": "1",
-                  "infant_indicator": "1"
+                  "infantIndicator": "1"
                 }
               ]
             }
           ],
           "fare": [
             {
-              "pricing_message": {
-                "free_text_qualification": {
-                  "text_subject_qualifier": "LTD",
-                  "information_type": "41"
+              "pricingMessage": {
+                "freeTextQualification": {
+                  "textSubjectQualifier": "LTD",
+                  "informationType": "41"
                 },
                 "description": [
                   "LAST TKT DTE",
@@ -4232,79 +4232,79 @@
               }
             }
           ],
-          "fare_details": [
+          "fareDetails": [
             {
-              "segment_ref": {
-                "seg_ref": "1",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "1",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "C",
                       "cabin": "C",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "CIF",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "CIF",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": [],
-                  "ticket_infos": {
-                    "additional_fare_details": {
-                      "ticket_designator": "IN90",
-                      "second_rate_class": []
+                  "fareCalculationCodeDetails": [],
+                  "ticketInfos": {
+                    "additionalFareDetails": {
+                      "ticketDesignator": "IN90",
+                      "secondRateClass": []
                     },
-                    "discount_details": []
+                    "discountDetails": []
                   }
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             },
             {
-              "segment_ref": {
-                "seg_ref": "2",
-                "location_forcing": []
+              "segmentRef": {
+                "segRef": "2",
+                "locationForcing": []
               },
-              "group_of_fares": [
+              "groupOfFares": [
                 {
-                  "product_information": {
-                    "cabin_product": {
+                  "productInformation": {
+                    "cabinProduct": {
                       "rbd": "Y",
                       "cabin": "M",
-                      "avl_status": "9"
+                      "avlStatus": "9"
                     },
-                    "fare_product_detail": {
-                      "fare_basis": "YRTIN",
-                      "passenger_type": "IN",
-                      "fare_type": [
+                    "fareProductDetail": {
+                      "fareBasis": "YRTIN",
+                      "passengerType": "IN",
+                      "fareType": [
                         "RP"
                       ]
                     },
-                    "corporate_id": [],
-                    "break_point": "Y"
+                    "corporateId": [],
+                    "breakPoint": "Y"
                   },
-                  "fare_calculation_code_details": []
+                  "fareCalculationCodeDetails": []
                 }
               ],
-              "maj_cabin": []
+              "majCabin": []
             }
           ]
         }
       ],
-      "specific_rec_details": []
+      "specificRecDetails": []
     }
   ],
-  "other_solutions": [],
-  "warning_info": [],
-  "global_information": [],
-  "service_fees_grp": [],
+  "otherSolutions": [],
+  "warningInfo": [],
+  "globalInformation": [],
+  "serviceFeesGrp": [],
   "value": []
 }

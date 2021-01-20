@@ -1,326 +1,153 @@
 {
-    "billing_point_of_sale_info": {
-        "origin_application": "UAPI",
-        "cidbnumber": null
-    },
-    "agent_idoverride": [],
-    "terminal_session_info": null,
-    "trace_id": "c0716df8-12f5-11ea-9d04-000c293dfa64",
-    "token_id": null,
-    "authorized_by": null,
-    "target_branch": "P107695",
-    "override_logging": null,
-    "language_code": null,
-    "next_result_reference": [],
-    "search_air_leg": [
+  "BillingPointOfSaleInfo": {
+    "OriginApplication": "UAPI"
+  },
+  "AgentIDOverride": [],
+  "TraceId": "c0716df8-12f5-11ea-9d04-000c293dfa64",
+  "TargetBranch": "P107695",
+  "NextResultReference": [],
+  "SearchAirLeg": [
+    {
+      "SearchOrigin": [
         {
-            "search_origin": [
-                {
-                    "airport": null,
-                    "city": null,
-                    "city_or_airport": {
-                        "code": "LON",
-                        "prefer_city": false
-                    },
-                    "coordinate_location": null,
-                    "rail_location": null,
-                    "distance": null
-                }
-            ],
-            "search_destination": [
-                {
-                    "airport": null,
-                    "city": null,
-                    "city_or_airport": {
-                        "code": "NYC",
-                        "prefer_city": false
-                    },
-                    "coordinate_location": null,
-                    "rail_location": null,
-                    "distance": null
-                }
-            ],
-            "search_dep_time": [
-                {
-                    "time_range": null,
-                    "specific_time": null,
-                    "preferred_time": "2019-12-15",
-                    "search_extra_days": null
-                }
-            ],
-            "search_arv_time": [],
-            "air_leg_modifiers": {
-                "permitted_cabins": null,
-                "preferred_cabins": null,
-                "permitted_carriers": null,
-                "prohibited_carriers": null,
-                "preferred_carriers": null,
-                "permitted_connection_points": null,
-                "prohibited_connection_points": null,
-                "preferred_connection_points": null,
-                "permitted_booking_codes": null,
-                "preferred_booking_codes": null,
-                "preferred_alliances": null,
-                "prohibited_booking_codes": null,
-                "disfavored_alliances": null,
-                "flight_type": null,
-                "anchor_flight_data": null,
-                "prohibit_overnight_layovers": false,
-                "max_connection_time": null,
-                "return_first_available_only": null,
-                "allow_direct_access": true,
-                "prohibit_multi_airport_connection": null,
-                "prefer_non_stop": false,
-                "order_by": null,
-                "max_journey_time": null
-            }
+          "CityOrAirport": {
+            "Code": "LON",
+            "PreferCity": false
+          }
         }
-    ],
-    "search_specific_air_segment": [],
-    "air_search_modifiers": {
-        "disfavored_providers": null,
-        "preferred_providers": {
-            "provider": [
-                {
-                    "code": "1P"
-                }
-            ]
-        },
-        "disfavored_carriers": null,
-        "permitted_carriers": null,
-        "prohibited_carriers": null,
-        "preferred_carriers": null,
-        "permitted_cabins": null,
-        "preferred_cabins": null,
-        "preferred_alliances": null,
-        "disfavored_alliances": null,
-        "permitted_booking_codes": null,
-        "preferred_booking_codes": null,
-        "prohibited_booking_codes": null,
-        "flight_type": null,
-        "max_layover_duration": null,
-        "native_search_modifier": null,
-        "distance_type": "MI",
-        "include_flight_details": true,
-        "allow_change_of_airport": true,
-        "prohibit_overnight_layovers": false,
-        "max_solutions": 250,
-        "max_connection_time": null,
-        "search_weekends": null,
-        "include_extra_solutions": null,
-        "prohibit_multi_airport_connection": null,
-        "prefer_non_stop": false,
-        "order_by": null,
-        "exclude_open_jaw_airport": false,
-        "exclude_ground_transportation": false,
-        "max_journey_time": null,
-        "jet_service_only": null
-    },
-    "split_ticketing_search": null,
-    "journey_data": null,
-    "search_passenger": [
+      ],
+      "SearchDestination": [
         {
-            "name": null,
-            "loyalty_card": [],
-            "discount_card": [],
-            "personal_geography": null,
-            "code": "ADT",
-            "age": 30,
-            "dob": null,
-            "gender": null,
-            "price_ptconly": null,
-            "booking_traveler_ref": null,
-            "accompanied_passenger": false,
-            "residency_type": null,
-            "key": null
-        },
-        {
-            "name": null,
-            "loyalty_card": [],
-            "discount_card": [],
-            "personal_geography": null,
-            "code": "ADT",
-            "age": 30,
-            "dob": null,
-            "gender": null,
-            "price_ptconly": null,
-            "booking_traveler_ref": null,
-            "accompanied_passenger": false,
-            "residency_type": null,
-            "key": null
-        },
-        {
-            "name": null,
-            "loyalty_card": [],
-            "discount_card": [],
-            "personal_geography": null,
-            "code": "ADT",
-            "age": 30,
-            "dob": null,
-            "gender": null,
-            "price_ptconly": null,
-            "booking_traveler_ref": null,
-            "accompanied_passenger": false,
-            "residency_type": null,
-            "key": null
-        },
-        {
-            "name": null,
-            "loyalty_card": [],
-            "discount_card": [],
-            "personal_geography": null,
-            "code": "CNN",
-            "age": 7,
-            "dob": null,
-            "gender": null,
-            "price_ptconly": null,
-            "booking_traveler_ref": null,
-            "accompanied_passenger": false,
-            "residency_type": null,
-            "key": null
-        },
-        {
-            "name": null,
-            "loyalty_card": [],
-            "discount_card": [],
-            "personal_geography": null,
-            "code": "CNN",
-            "age": 7,
-            "dob": null,
-            "gender": null,
-            "price_ptconly": null,
-            "booking_traveler_ref": null,
-            "accompanied_passenger": false,
-            "residency_type": null,
-            "key": null
-        },
-        {
-            "name": null,
-            "loyalty_card": [],
-            "discount_card": [],
-            "personal_geography": null,
-            "code": "INF",
-            "age": 0,
-            "dob": null,
-            "gender": null,
-            "price_ptconly": null,
-            "booking_traveler_ref": null,
-            "accompanied_passenger": false,
-            "residency_type": null,
-            "key": null
+          "CityOrAirport": {
+            "Code": "NYC",
+            "PreferCity": false
+          }
         }
-    ],
-    "air_pricing_modifiers": {
-        "prohibited_rule_categories": null,
-        "account_codes": null,
-        "permitted_cabins": null,
-        "contract_codes": null,
-        "exempt_taxes": null,
-        "penalty_fare_information": null,
-        "discount_card": [],
-        "promo_codes": null,
-        "manual_fare_adjustment": [],
-        "point_of_sale": null,
-        "brand_modifiers": null,
-        "multi_gdssearch_indicator": [],
-        "preferred_cabins": [],
-        "prohibit_min_stay_fares": false,
-        "prohibit_max_stay_fares": false,
-        "currency_type": "EUR",
-        "prohibit_advance_purchase_fares": false,
-        "prohibit_non_refundable_fares": false,
-        "prohibit_restricted_fares": false,
-        "fares_indicator": "PublicAndPrivateFares",
-        "filed_currency": null,
-        "plating_carrier": null,
-        "override_carrier": null,
-        "eticketability": "Yes",
-        "account_code_fares_only": null,
-        "key": null,
-        "prohibit_non_exchangeable_fares": false,
-        "force_segment_select": false,
-        "inventory_request_type": null,
-        "one_way_shop": false,
-        "prohibit_unbundled_fare_types": null,
-        "return_services": true,
-        "channel_id": null,
-        "return_fare_attributes": false,
-        "sell_check": false,
-        "return_failed_segments": false
-    },
-    "enumeration": null,
-    "air_exchange_modifiers": null,
-    "flex_explore_modifiers": null,
-    "pcc": null,
-    "fare_rules_filter_category": null,
-    "form_of_payment": [
+      ],
+      "SearchDepTime": [
         {
-            "credit_card": {
-                "phone_number": null,
-                "billing_address": null,
-                "type": "CA",
-                "number": "5234123412341234",
-                "exp_date": "2020-11",
-                "name": "Thug Life",
-                "cvv": "123",
-                "approval_code": null,
-                "extended_payment": null,
-                "customer_reference": null,
-                "acceptance_override": null,
-                "third_party_payment": false,
-                "bank_name": null,
-                "bank_country_code": null,
-                "bank_state_code": null,
-                "enett": false,
-                "profile_id": null,
-                "key": null
-            },
-            "debit_card": null,
-            "enett_van": null,
-            "certificate": null,
-            "ticket_number": null,
-            "check": null,
-            "requisition": null,
-            "misc_form_of_payment": null,
-            "agency_payment": null,
-            "united_nations": null,
-            "direct_payment": null,
-            "agent_voucher": null,
-            "payment_advice": null,
-            "provider_reservation_info_ref": [],
-            "segment_ref": [],
-            "bsppayment": null,
-            "arcpayment": null,
-            "key": null,
-            "type": "Credit",
-            "fulfillment_type": null,
-            "fulfillment_location": null,
-            "fulfillment_idtype": null,
-            "fulfillment_idnumber": null,
-            "is_agent_type": false,
-            "agent_text": null,
-            "reuse_fop": null,
-            "external_reference": null,
-            "reusable": false,
-            "profile_id": null,
-            "profile_key": null,
-            "el_stat": null,
-            "key_override": null
+          "PreferredTime": "2019-12-15"
         }
-    ],
-    "enable_point_to_point_search": false,
-    "enable_point_to_point_alternates": false,
-    "max_number_of_expert_solutions": 0,
-    "solution_result": false,
-    "prefer_complete_itinerary": true,
-    "meta_option_identifier": null,
-    "return_upsell_fare": false,
-    "include_fare_info_messages": false,
-    "return_branded_fares": true,
-    "multi_gdssearch": false,
-    "return_mm": false,
-    "check_obfees": "All",
-    "nscc": null,
-    "fare_info_rules": false,
-    "policy_reference": null
+      ],
+      "SearchArvTime": [],
+      "AirLegModifiers": {
+        "ProhibitOvernightLayovers": false,
+        "AllowDirectAccess": true,
+        "PreferNonStop": false
+      }
+    }
+  ],
+  "SearchSpecificAirSegment": [],
+  "AirSearchModifiers": {
+    "PreferredProviders": {
+      "Provider": [
+        {
+          "Code": "1P"
+        }
+      ]
+    },
+    "DistanceType": "MI",
+    "IncludeFlightDetails": true,
+    "AllowChangeOfAirport": true,
+    "ProhibitOvernightLayovers": false,
+    "MaxSolutions": 250,
+    "PreferNonStop": false,
+    "ExcludeOpenJawAirport": false,
+    "ExcludeGroundTransportation": false
+  },
+  "SearchPassenger": [
+    {
+      "LoyaltyCard": [],
+      "DiscountCard": [],
+      "Code": "ADT",
+      "Age": 30,
+      "AccompaniedPassenger": false
+    },
+    {
+      "LoyaltyCard": [],
+      "DiscountCard": [],
+      "Code": "ADT",
+      "Age": 30,
+      "AccompaniedPassenger": false
+    },
+    {
+      "LoyaltyCard": [],
+      "DiscountCard": [],
+      "Code": "ADT",
+      "Age": 30,
+      "AccompaniedPassenger": false
+    },
+    {
+      "LoyaltyCard": [],
+      "DiscountCard": [],
+      "Code": "CNN",
+      "Age": 7,
+      "AccompaniedPassenger": false
+    },
+    {
+      "LoyaltyCard": [],
+      "DiscountCard": [],
+      "Code": "CNN",
+      "Age": 7,
+      "AccompaniedPassenger": false
+    },
+    {
+      "LoyaltyCard": [],
+      "DiscountCard": [],
+      "Code": "INF",
+      "Age": 0,
+      "AccompaniedPassenger": false
+    }
+  ],
+  "AirPricingModifiers": {
+    "DiscountCard": [],
+    "ManualFareAdjustment": [],
+    "MultiGDSSearchIndicator": [],
+    "PreferredCabins": [],
+    "ProhibitMinStayFares": false,
+    "ProhibitMaxStayFares": false,
+    "CurrencyType": "EUR",
+    "ProhibitAdvancePurchaseFares": false,
+    "ProhibitNonRefundableFares": false,
+    "ProhibitRestrictedFares": false,
+    "FaresIndicator": "PublicAndPrivateFares",
+    "ETicketability": "Yes",
+    "ProhibitNonExchangeableFares": false,
+    "ForceSegmentSelect": false,
+    "OneWayShop": false,
+    "ReturnServices": true,
+    "ReturnFareAttributes": false,
+    "SellCheck": false,
+    "ReturnFailedSegments": false
+  },
+  "FormOfPayment": [
+    {
+      "CreditCard": {
+        "Type": "CA",
+        "Number": "5234123412341234",
+        "ExpDate": "2020-11",
+        "Name": "Thug Life",
+        "CVV": "123",
+        "ThirdPartyPayment": false,
+        "Enett": false
+      },
+      "ProviderReservationInfoRef": [],
+      "SegmentRef": [],
+      "Type": "Credit",
+      "IsAgentType": false,
+      "Reusable": false
+    }
+  ],
+  "EnablePointToPointSearch": false,
+  "EnablePointToPointAlternates": false,
+  "MaxNumberOfExpertSolutions": 0,
+  "SolutionResult": false,
+  "PreferCompleteItinerary": true,
+  "ReturnUpsellFare": false,
+  "IncludeFareInfoMessages": false,
+  "ReturnBrandedFares": true,
+  "MultiGDSSearch": false,
+  "ReturnMM": false,
+  "CheckOBFees": "All",
+  "FareInfoRules": false
 }

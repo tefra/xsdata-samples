@@ -6,7 +6,7 @@
      "crid": [
       "crid://vpro/media/vprobroadcast/WO_VPRO_2297327"
      ],
-     "alternative_url": [],
+     "alternativeUrl": [],
      "broadcaster": [
       {
        "value": null,
@@ -20,7 +20,7 @@
       "url": "https://www.vprobroadcast.com"
      },
      "title": "Antibiotics",
-     "sub_title": null,
+     "subTitle": null,
      "keyword": [],
      "genre": [],
      "summary": null,
@@ -29,7 +29,7 @@
      "referral": [],
      "link": [],
      "embed": [],
-     "stat_ref": [],
+     "statRef": [],
      "images": {
       "image": [
        {
@@ -37,7 +37,7 @@
         "description": "Labyrint",
         "credits": null,
         "source": null,
-        "source_name": null,
+        "sourceName": null,
         "license": null,
         "type": "PICTURE",
         "url": "https://images.poms.omroep.nl/image/s360/665086.jpg"
@@ -47,13 +47,13 @@
      "relation": [],
      "url": "https://www.vprobroadcast.com/play~WO_VPRO_2297327~antibiotics~.html",
      "type": "VIDEO",
-     "creation_date": "2019-11-22T14:15:09.443+01:00",
-     "last_modified": "2019-11-22T14:15:09.443+01:00",
-     "last_published": "2019-11-22T14:15:24.341+01:00",
-     "publish_start": "2015-10-16T14:23:14.729+02:00",
-     "publish_stop": null,
-     "ref_count": 0,
-     "sort_date": "2015-10-16T14:23:14.729+02:00",
+     "creationDate": "2019-11-22T14:15:09.443+01:00",
+     "lastModified": "2019-11-22T14:15:09.443+01:00",
+     "lastPublished": "2019-11-22T14:15:24.341+01:00",
+     "publishStart": "2015-10-16T14:23:14.729+02:00",
+     "publishStop": null,
+     "refCount": 0,
+     "sortDate": "2015-10-16T14:23:14.729+02:00",
      "workflow": null
     },
     "highlight": [],
@@ -62,11 +62,11 @@
   ]
  },
  "total": 432,
- "total_qualifier": "EQUAL_TO",
+ "totalQualifier": "EQUAL_TO",
  "offset": 0,
  "max": 0,
  "facets": {
-  "sort_dates": [],
+  "sortDates": [],
   "types": [],
   "broadcasters": [],
   "tags": [],
@@ -76,8 +76,8 @@
   "sections": [],
   "relations": []
  },
- "selected_facets": {
-  "sort_dates": [],
+ "selectedFacets": {
+  "sortDates": [],
   "types": [],
   "broadcasters": [],
   "tags": [],
@@ -87,6 +87,6 @@
   "sections": [],
   "relations": []
  },
- "media_facets": null,
- "media_selected_facets": null
+ "mediaFacets": null,
+ "mediaSelectedFacets": null
 }
