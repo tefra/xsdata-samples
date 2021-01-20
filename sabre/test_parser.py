@@ -13,10 +13,6 @@ serializer = JsonSerializer(indent=2, dict_factory=DictFactory.FILTER_NONE)
 cwd = Path(__file__).parent.absolute()
 
 
-def value_dict(data):
-    return {x: v for x, v in dict(data).items() if v is not None}
-
-
 class ParserTests(TestCase):
     def test_bargain_finder_max(self):
         fixture = "bargain_finder_max_rs"

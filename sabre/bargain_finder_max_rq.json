@@ -1,338 +1,127 @@
 {
-    "pos": {
-        "source": [
-            {
-                "requestor_id": {
-                    "company_name": {
-                        "value": null,
-                        "company_short_name": null,
-                        "travel_sector": null,
-                        "code": "TN",
-                        "code_context": null
-                    },
-                    "url": null,
-                    "type": "1",
-                    "instance": null,
-                    "id": "1",
-                    "id_context": null
-                },
-                "position": null,
-                "booking_channel": null,
-                "agent_sine": null,
-                "pseudo_city_code": "C9QH",
-                "isocountry": null,
-                "isocurrency": null,
-                "agent_duty_code": null,
-                "airline_vendor_id": null,
-                "airport_code": null,
-                "first_depart_point": null,
-                "ersp_user_id": null,
-                "personal_city_code": null,
-                "accounting_code": null,
-                "office_code": null,
-                "default_ticketing_carrier": null,
-                "airline_channel_code": null,
-                "agent_department_code": null,
-                "agent_function": null,
-                "travel_agency_iata": null,
-                "home_agency_iata": null,
-                "agent_iata": null,
-                "vendor_crscode": null,
-                "agent_duty": null,
-                "abacus_user": false,
-                "agent_city": null,
-                "carrier": null,
-                "main_travel_agency_pcc": null,
-                "home_pcc": null
-            }
-        ]
+  "POS": {
+    "Source": [
+      {
+        "RequestorID": {
+          "CompanyName": {
+            "Code": "TN"
+          },
+          "Type": "1",
+          "ID": "1"
+        },
+        "PseudoCityCode": "C9QH",
+        "AbacusUser": false
+      }
+    ]
+  },
+  "OriginDestinationInformation": [
+    {
+      "DepartureDateTime": "2019-12-19T00:00:00",
+      "OriginLocation": {
+        "LocationCode": "ATH",
+        "CodeContext": "IATA"
+      },
+      "DestinationLocation": {
+        "LocationCode": "LON",
+        "CodeContext": "IATA"
+      },
+      "TPA_Extensions": {
+        "Flight": [],
+        "Routing": [],
+        "DateFlexibility": [],
+        "SisterDestinationLocation": [],
+        "SisterOriginLocation": [],
+        "SegmentType": {
+          "Code": "O"
+        },
+        "IncludeVendorPref": [],
+        "IncludeAlliancePref": []
+      },
+      "RPH": "1",
+      "Fixed": false,
+      "FullDiversity": false
+    }
+  ],
+  "Leg": [],
+  "TravelPreferences": {
+    "VendorPref": [],
+    "FareRestrictPref": [],
+    "EquipPref": [],
+    "CabinPref": [],
+    "TicketDistribPref": [],
+    "TPA_Extensions": {
+      "ExcludeVendorPref": [],
+      "IncludeAlliancePref": [],
+      "ExcludeAlliancePref": [],
+      "TripType": {
+        "Value": "OneWay"
+      },
+      "ExemptTax": [],
+      "ExcludeCallDirectCarriers": {
+        "Enabled": true
+      },
+      "SettlementMethod": "BSP",
+      "CountryPref": []
     },
-    "origin_destination_information": [
-        {
-            "departure_date_time": "2019-12-19T00:00:00",
-            "arrival_date_time": null,
-            "departure_dates": null,
-            "arrival_dates": null,
-            "departure_window": null,
-            "arrival_window": null,
-            "origin_location": {
-                "value": null,
-                "location_code": "ATH",
-                "airports_group": null,
-                "code_context": "IATA",
-                "all_airports": null
-            },
-            "destination_location": {
-                "value": null,
-                "location_code": "LON",
-                "airports_group": null,
-                "code_context": "IATA",
-                "all_airports": null
-            },
-            "connection_locations": null,
-            "tpa_extensions": {
-                "flight": [],
-                "routing": [],
-                "date_flexibility": [],
-                "sister_destination_location": [],
-                "sister_destination_mileage": null,
-                "sister_origin_location": [],
-                "sister_origin_mileage": null,
-                "segment_type": {
-                    "code": "O"
-                },
-                "alternate_time": null,
-                "max_one_way_options": null,
-                "num_one_way_options": null,
-                "cabin_pref": null,
-                "connection_time": null,
-                "total_travel_time": null,
-                "include_vendor_pref": [],
-                "include_alliance_pref": [],
-                "departure_days": null
-            },
-            "rph": "1",
-            "fixed": false,
-            "full_diversity": false
-        }
+    "FrequentFlyer": [],
+    "SmokingAllowed": false,
+    "ETicketDesired": false,
+    "ValidInterlineTicket": true,
+    "UseAllFlights": false,
+    "AllFlightsData": false,
+    "Hybrid": true
+  },
+  "TravelerInfoSummary": {
+    "SeatsRequested": [
+      1
     ],
-    "leg": [],
-    "travel_preferences": {
-        "vendor_pref": [],
-        "flight_type_pref": null,
-        "fare_restrict_pref": [],
-        "equip_pref": [],
-        "cabin_pref": [],
-        "ticket_distrib_pref": [],
-        "tpa_extensions": {
-            "departure_window": null,
-            "arrival_window": null,
-            "exclude_vendor_pref": [],
-            "include_alliance_pref": [],
-            "exclude_alliance_pref": [],
-            "num_trips": null,
-            "alt_cities_combinations": null,
-            "num_trips_with_routing": null,
-            "online_indicator": null,
-            "interline_indicator": null,
-            "trip_type": {
-                "value": "OneWay"
-            },
-            "max_price": null,
-            "content_type": null,
-            "domestic_layover_time": null,
-            "long_connect_time": null,
-            "long_connect_points": null,
-            "air_service_only": null,
-            "jet_service_only": null,
-            "same_connection_airport_only": null,
-            "same_origin_airport_only": null,
-            "same_turnaround_airport_only": null,
-            "aircraft_type_penalty": null,
-            "alternate_airport_penalty": null,
-            "fare_amount_threshold": null,
-            "num_of_low_fare_sol": null,
-            "num_of_must_price_onl_sol": null,
-            "num_of_must_price_inrl_sol": null,
-            "num_of_must_price_nstp_onl_sol": null,
-            "num_of_must_price_nstp_inrl_sol": null,
-            "num_of_must_price_sstop_onl_sol": null,
-            "stp_penalty_in_usd": null,
-            "dur_penalty_in_usd": null,
-            "dep_penalty_in_usd": null,
-            "max_allowed_must_price_overage_per_crr": null,
-            "flt_opt_must_price_reuse_limit": null,
-            "upper_bound_must_price_factor_for_not_non_stp": null,
-            "upper_bound_lfsfactor": null,
-            "num_of_must_price_nstp1_stp_onl_sol": null,
-            "num_of_must_price_nstp1_stp_inrl_sol": null,
-            "upper_bound_must_price_factor_for_non_stp": null,
-            "max_allowed_lfsoverage_per_crr_percent": null,
-            "target_min_num_of_lfsonl_sol_per_crr": null,
-            "target_min_num_of_lfstot_onl_sol_percent": null,
-            "flt_opt_lfsreuse_limit_for_non_avs": null,
-            "flt_opt_lfsreuse_limit_for_avs": null,
-            "avs_penalty_crrs": null,
-            "max_num_of_non_stp_onl_sol": null,
-            "max_num_of_non_stp_inrl_sol": null,
-            "max_num_of_single_stp_onl_sol": null,
-            "max_num_of2_plus_stp_sol": null,
-            "min_allowed_overage_per_crr_percent": null,
-            "min_allowed_overage_per_crr": null,
-            "max_rel_fare_lvl_ofx_for_non_stp": null,
-            "max_rel_fare_lvl_ofx_for_cnx": null,
-            "num_of_must_price2_plus_stp_sol": null,
-            "itinerary_number_threshold": null,
-            "xofares": null,
-            "exempt_all_taxes": null,
-            "exempt_all_taxes_and_fees": null,
-            "taxes": null,
-            "exempt_tax": [],
-            "flight_stops_as_connections": null,
-            "ticketing_sum_of_locals": null,
-            "multi_airport_codes": null,
-            "jump_cabin_logic": null,
-            "keep_same_cabin": null,
-            "governing_carrier_override": null,
-            "exclude_call_direct_carriers": {
-                "enabled": true
-            },
-            "validating_carrier": null,
-            "validating_carrier_check": null,
-            "settlement_method": "BSP",
-            "flight_repeat_limit": null,
-            "flexible_fares": null,
-            "diversity_parameters": null,
-            "additional_fare_limit": null,
-            "fare_focus_rules": null,
-            "selling_levels": null,
-            "budget": null,
-            "options_per_date_pair_list": null,
-            "country_pref": [],
-            "retailer_rules": null
-        },
-        "ancillary_fees": null,
-        "frequent_flyer": [],
-        "spanish_family_discount": null,
-        "interline_brands": null,
-        "smoking_allowed": false,
-        "on_time_rate": null,
-        "eticket_desired": false,
-        "valid_interline_ticket": true,
-        "max_stops_quantity": null,
-        "use_all_flights": false,
-        "all_flights_data": false,
-        "hybrid": true
+    "AirTravelerAvail": [
+      {
+        "PassengerTypeQuantity": [
+          {
+            "Code": "ADT",
+            "Quantity": 1,
+            "Changeable": true
+          }
+        ]
+      }
+    ],
+    "PriceRequestInformation": {
+      "NegotiatedFareCode": [],
+      "AccountCode": [],
+      "TPA_Extensions": {
+        "Priority": {
+          "Price": {
+            "Priority": 1
+          },
+          "DirectFlights": {
+            "Priority": 2
+          },
+          "Time": {
+            "Priority": 3
+          },
+          "Vendor": {
+            "Priority": 4
+          }
+        }
+      },
+      "CurrencyCode": "EUR"
+    }
+  },
+  "TPA_Extensions": {
+    "IntelliSellTransaction": {
+      "RequestType": {
+        "Name": "250ITINS"
+      }
     },
-    "traveler_info_summary": {
-        "seats_requested": [
-            1
-        ],
-        "air_traveler_avail": [
-            {
-                "passenger_type_quantity": [
-                    {
-                        "age": null,
-                        "code": "ADT",
-                        "code_context": null,
-                        "uri": null,
-                        "quantity": 1,
-                        "tpa_extensions": null,
-                        "changeable": true,
-                        "index": null
-                    }
-                ],
-                "air_traveler": null
-            }
-        ],
-        "price_request_information": {
-            "negotiated_fare_code": [],
-            "account_code": [],
-            "tpa_extensions": {
-                "public_fare": null,
-                "private_fare": null,
-                "iatafare": null,
-                "web_fare": null,
-                "priority": {
-                    "price": {
-                        "priority": 1
-                    },
-                    "direct_flights": {
-                        "priority": 2
-                    },
-                    "time": {
-                        "priority": 3
-                    },
-                    "vendor": {
-                        "priority": 4
-                    }
-                },
-                "indicators": null,
-                "promo_id": null,
-                "customer_type": null,
-                "multiple_traveler_groups": null,
-                "branded_fare_indicators": null,
-                "passenger_status": null,
-                "point_of_sale_override": null,
-                "point_of_ticketing_override": null,
-                "apply_resident_discount": null,
-                "eticketable_override": null,
-                "currency": null,
-                "use_reduced_constructions": null,
-                "obfees": null,
-                "fare_breaks_at_legs": null,
-                "fare_adjustment": null
-            },
-            "fare_qualifier": null,
-            "negotiated_fares_only": null,
-            "currency_code": "EUR",
-            "pricing_source": null,
-            "reprice": null,
-            "process_thru_fares_only": null,
-            "purchase_date": null,
-            "purchase_time": null,
-            "net_fares_used": null
-        },
-        "tpa_extensions": null,
-        "specific_ptc_indicator": null
-    },
-    "tpa_extensions": {
-        "intelli_sell_transaction": {
-            "request_type": {
-                "value": null,
-                "name": "250ITINS"
-            },
-            "service_tag": null,
-            "purchase_type": null,
-            "sabre_ath": null,
-            "tran_id": null,
-            "client_session_id": null,
-            "branch": null,
-            "compress_response": null,
-            "fare_overrides": null,
-            "diagnostics": null,
-            "subagent_data": null,
-            "response_sorting": null,
-            "seat_status_sim": null,
-            "available_level": null,
-            "atsetest": null,
-            "debug": null,
-            "debug_key": null,
-            "config_set": null,
-            "disable_cache": null,
-            "chunk_number": null,
-            "show_itin_source": null
-        },
-        "diversity_control": null,
-        "messaging_details": null,
-        "alternate_airport_cities": [],
-        "alternate_airport_mileage": null,
-        "award_shopping": null,
-        "billing": null,
-        "exchange_settings": null,
-        "exchange": [],
-        "split_taxes": null,
-        "alternate_dates_processing": null,
-        "itinerary_cache": null,
-        "multi_ticket": null,
-        "partitions": null,
-        "reservation_data": null,
-        "alternate_pcc": []
-    },
-    "echo_token": null,
-    "time_stamp": null,
-    "target": "Production",
-    "version": "1.9.7",
-    "transaction_identifier": null,
-    "sequence_nmbr": null,
-    "transaction_status_code": null,
-    "primary_lang_id": null,
-    "alt_lang_id": null,
-    "max_responses": null,
-    "direct_flights_only": false,
-    "available_flights_only": true,
-    "response_type": null,
-    "response_version": null,
-    "separate_messages": false,
-    "truncate_messages": true
+    "AlternateAirportCities": [],
+    "Exchange": [],
+    "AlternatePCC": []
+  },
+  "Target": "Production",
+  "Version": "1.9.7",
+  "DirectFlightsOnly": false,
+  "AvailableFlightsOnly": true,
+  "SeparateMessages": false,
+  "TruncateMessages": true
 }
