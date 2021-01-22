@@ -1,61 +1,38 @@
 from pathlib import Path
 from unittest import TestCase
 
+from lxml import etree
+from xsdata.formats.dataclass.context import XmlContext
+from xsdata.formats.dataclass.parsers import XmlParser
+from xsdata.formats.dataclass.serializers import JsonSerializer
 from xsdata.formats.dataclass.serializers import XmlSerializer
 from xsdata.formats.dataclass.serializers.config import SerializerConfig
 
-from datexii.models import AlertCDirection
-from datexii.models import AlertCDirectionEnum1
-from datexii.models import AlertCDirectionEnum2
-from datexii.models import AlertCLocation
-from datexii.models import AlertCMethod4Linear
-from datexii.models import AlertCMethod4PrimaryPointLocation
-from datexii.models import AlertCMethod4SecondaryPointLocation
-from datexii.models import LinearDirectionEnum1
-from datexii.models import LinearDirectionEnum2
-from datexii.models import OffsetDistance
-from datexii.models import SingleRoadLinearLocation
+from datexii.models import D2LogicalModel
 
 config = SerializerConfig(pretty_print=True)
-serializer = XmlSerializer(config=config)
-
+context = XmlContext()
+xml_parser = XmlParser(context=context)
+xml_serializer = XmlSerializer(context=context, config=config)
+json_serializer = JsonSerializer(context=context)
 here = Path(__file__).parent.absolute()
-xsd_location = str(here.joinpath("schemas/DATEXII_3_D2Payload.xsd"))
+xsd_location = str(here.joinpath("schemas/DATEXIISchema_2_2_3.xsd"))
 
 
 class SerializerTests(TestCase):
-    def test_manual_object(self):
-        ns_map = {"loc": "http://datex2.eu/schema/3/locationReferencing"}
+    def test_binding(self):
+        ns_map = {None: "http://datex2.eu/schema/2/2_0"}
+        sample = here.joinpath("sample.xml")
 
-        primary_point = AlertCMethod4PrimaryPointLocation(
-            alert_clocation=AlertCLocation(specific_location=10),
-            offset_distance=OffsetDistance(offset_distance=2000),
-        )
-        secondary_point = AlertCMethod4SecondaryPointLocation(
-            alert_clocation=AlertCLocation(specific_location=12),
-            offset_distance=OffsetDistance(offset_distance=150),
-        )
-        obj = SingleRoadLinearLocation(
-            alert_clinear=AlertCMethod4Linear(
-                alert_clocation_country_code="F",
-                alert_clocation_table_number=32,
-                alert_clocation_table_version="1.0",
-                alert_cdirection=AlertCDirection(
-                    alert_cdirection_coded=AlertCDirectionEnum2(
-                        value=AlertCDirectionEnum1.NEGATIVE
-                    ),
-                    alert_caffected_direction=LinearDirectionEnum2(
-                        value=LinearDirectionEnum1.OPPOSITE
-                    ),
-                ),
-                alert_cmethod4_primary_point_location=primary_point,
-                alert_cmethod4_secondary_point_location=secondary_point,
-            )
-        )
+        payload = xml_parser.from_path(sample, D2LogicalModel)
+        result = xml_serializer.render(payload, ns_map=ns_map)
 
-        result = serializer.render(obj, ns_map=ns_map)
-        output = here.joinpath("sample.output.xml")
+        output = here.joinpath("sample.xsdata.xml")
         if output.exists():
             self.assertEqual(output.read_text(), result)
         else:
             output.write_text(result)
+
+        schema = etree.XMLSchema(etree.parse(xsd_location))
+        is_valid = schema.validate(etree.parse(str(output)))
+        self.assertTrue(is_valid, schema.error_log)
