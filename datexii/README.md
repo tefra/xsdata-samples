@@ -1,4 +1,4 @@
-# [DateX II v3.1](https://docs.datex2.eu/downloads/modelv30.html)
+# [DateX II](https://docs.datex2.eu)
 
 The schemas are auto generated from UML and contain some very interesting
 characteristics with multi-level extensible elements.
