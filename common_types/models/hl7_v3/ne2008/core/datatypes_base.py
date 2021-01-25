@@ -237,1443 +237,6 @@ class TsExplicit:
 
 
 @dataclass
-class AdxpAdditionalLocator:
-    class Meta:
-        name = "adxp.additionalLocator"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.ADL,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpBuildingNumberSuffix:
-    class Meta:
-        name = "adxp.buildingNumberSuffix"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.BNS,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpCareOf:
-    class Meta:
-        name = "adxp.careOf"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.CAR,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpCensusTract:
-    class Meta:
-        name = "adxp.censusTract"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.CEN,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpCity:
-    class Meta:
-        name = "adxp.city"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.CTY,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpCountry:
-    class Meta:
-        name = "adxp.country"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.CNT,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpCounty:
-    class Meta:
-        name = "adxp.county"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.CPA,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpDelimiter:
-    class Meta:
-        name = "adxp.delimiter"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DEL_VALUE,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpDeliveryAddressLine:
-    class Meta:
-        name = "adxp.deliveryAddressLine"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DAL,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpDeliveryInstallationArea:
-    class Meta:
-        name = "adxp.deliveryInstallationArea"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DINSTA,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpDeliveryInstallationQualifier:
-    class Meta:
-        name = "adxp.deliveryInstallationQualifier"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DINSTQ,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpDeliveryInstallationType:
-    class Meta:
-        name = "adxp.deliveryInstallationType"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DINST,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpDeliveryMode:
-    class Meta:
-        name = "adxp.deliveryMode"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DMOD,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpDeliveryModeIdentifier:
-    class Meta:
-        name = "adxp.deliveryModeIdentifier"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DMODID,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpDirection:
-    class Meta:
-        name = "adxp.direction"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DIR,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpHouseNumber:
-    class Meta:
-        name = "adxp.houseNumber"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.BNR,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpHouseNumberNumeric:
-    class Meta:
-        name = "adxp.houseNumberNumeric"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.BNN,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpPostBox:
-    class Meta:
-        name = "adxp.postBox"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.POB,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpPostalCode:
-    class Meta:
-        name = "adxp.postalCode"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.ZIP,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpPrecinct:
-    class Meta:
-        name = "adxp.precinct"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.PRE,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpState:
-    class Meta:
-        name = "adxp.state"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.STA,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpStreetAddressLine:
-    class Meta:
-        name = "adxp.streetAddressLine"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.SAL,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpStreetName:
-    class Meta:
-        name = "adxp.streetName"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.STR_VALUE,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpStreetNameBase:
-    class Meta:
-        name = "adxp.streetNameBase"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.STB,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpStreetNameType:
-    class Meta:
-        name = "adxp.streetNameType"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.STTYP,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpUnitId:
-    class Meta:
-        name = "adxp.unitID"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.UNID,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpUnitType:
-    class Meta:
-        name = "adxp.unitType"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.UNIT,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitAdditionalLocator:
-    class Meta:
-        name = "adxp_explicit.additionalLocator"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.ADL,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitBuildingNumberSuffix:
-    class Meta:
-        name = "adxp_explicit.buildingNumberSuffix"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.BNS,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitCareOf:
-    class Meta:
-        name = "adxp_explicit.careOf"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.CAR,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitCensusTract:
-    class Meta:
-        name = "adxp_explicit.censusTract"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.CEN,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitCity:
-    class Meta:
-        name = "adxp_explicit.city"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.CTY,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitCountry:
-    class Meta:
-        name = "adxp_explicit.country"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.CNT,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitCounty:
-    class Meta:
-        name = "adxp_explicit.county"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.CPA,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitDelimiter:
-    class Meta:
-        name = "adxp_explicit.delimiter"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DEL_VALUE,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitDeliveryAddressLine:
-    class Meta:
-        name = "adxp_explicit.deliveryAddressLine"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DAL,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitDeliveryInstallationArea:
-    class Meta:
-        name = "adxp_explicit.deliveryInstallationArea"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DINSTA,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitDeliveryInstallationQualifier:
-    class Meta:
-        name = "adxp_explicit.deliveryInstallationQualifier"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DINSTQ,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitDeliveryInstallationType:
-    class Meta:
-        name = "adxp_explicit.deliveryInstallationType"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DINST,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitDeliveryMode:
-    class Meta:
-        name = "adxp_explicit.deliveryMode"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DMOD,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitDeliveryModeIdentifier:
-    class Meta:
-        name = "adxp_explicit.deliveryModeIdentifier"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DMODID,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitDirection:
-    class Meta:
-        name = "adxp_explicit.direction"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.DIR,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitHouseNumber:
-    class Meta:
-        name = "adxp_explicit.houseNumber"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.BNR,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitHouseNumberNumeric:
-    class Meta:
-        name = "adxp_explicit.houseNumberNumeric"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.BNN,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitPostBox:
-    class Meta:
-        name = "adxp_explicit.postBox"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.POB,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitPostalCode:
-    class Meta:
-        name = "adxp_explicit.postalCode"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.ZIP,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitPrecinct:
-    class Meta:
-        name = "adxp_explicit.precinct"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.PRE,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitState:
-    class Meta:
-        name = "adxp_explicit.state"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.STA,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitStreetAddressLine:
-    class Meta:
-        name = "adxp_explicit.streetAddressLine"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.SAL,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitStreetName:
-    class Meta:
-        name = "adxp_explicit.streetName"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.STR_VALUE,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitStreetNameBase:
-    class Meta:
-        name = "adxp_explicit.streetNameBase"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.STB,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitStreetNameType1:
-    class Meta:
-        name = "adxp_explicit.streetNameType1"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.STTYP,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitUnitId:
-    class Meta:
-        name = "adxp_explicit.unitID"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.UNID,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class AdxpExplicitUnitType:
-    class Meta:
-        name = "adxp_explicit.unitType"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: AddressPartType = field(
-        init=False,
-        default=AddressPartType.UNIT,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class EnDelimiter:
-    """
-    :ivar content:
-    :ivar part_type:
-    :ivar qualifier: is a set of codes each of which specifies
-        a certain subcategory of the name part in addition to
-        the main name part type. For example, a given name may
-        be flagged as a nickname, a family name may be a
-        pseudonym or a name of public records.
-    """
-    class Meta:
-        name = "en.delimiter"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: EntityNamePartType = field(
-        init=False,
-        default=EntityNamePartType.DEL_VALUE,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-    qualifier: List[EntityNamePartQualifier] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-
-
-@dataclass
-class EnFamily:
-    """
-    :ivar content:
-    :ivar part_type:
-    :ivar qualifier: is a set of codes each of which specifies
-        a certain subcategory of the name part in addition to
-        the main name part type. For example, a given name may
-        be flagged as a nickname, a family name may be a
-        pseudonym or a name of public records.
-    """
-    class Meta:
-        name = "en.family"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: EntityNamePartType = field(
-        init=False,
-        default=EntityNamePartType.FAM,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-    qualifier: List[EntityNamePartQualifier] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-
-
-@dataclass
-class EnGiven:
-    """
-    :ivar content:
-    :ivar part_type:
-    :ivar qualifier: is a set of codes each of which specifies
-        a certain subcategory of the name part in addition to
-        the main name part type. For example, a given name may
-        be flagged as a nickname, a family name may be a
-        pseudonym or a name of public records.
-    """
-    class Meta:
-        name = "en.given"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: EntityNamePartType = field(
-        init=False,
-        default=EntityNamePartType.GIV,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-    qualifier: List[EntityNamePartQualifier] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-
-
-@dataclass
-class EnPrefix:
-    """
-    :ivar content:
-    :ivar part_type:
-    :ivar qualifier: is a set of codes each of which specifies
-        a certain subcategory of the name part in addition to
-        the main name part type. For example, a given name may
-        be flagged as a nickname, a family name may be a
-        pseudonym or a name of public records.
-    """
-    class Meta:
-        name = "en.prefix"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: EntityNamePartType = field(
-        init=False,
-        default=EntityNamePartType.PFX,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-    qualifier: List[EntityNamePartQualifier] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-
-
-@dataclass
-class EnSuffix:
-    """
-    :ivar content:
-    :ivar part_type:
-    :ivar qualifier: is a set of codes each of which specifies
-        a certain subcategory of the name part in addition to
-        the main name part type. For example, a given name may
-        be flagged as a nickname, a family name may be a
-        pseudonym or a name of public records.
-    """
-    class Meta:
-        name = "en.suffix"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    part_type: EntityNamePartType = field(
-        init=False,
-        default=EntityNamePartType.SFX,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-    qualifier: List[EntityNamePartQualifier] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-
-
-@dataclass
 class EnExplicitDelimiter:
     class Meta:
         name = "en_explicit.delimiter"
@@ -1819,6 +382,891 @@ class EnExplicitSuffix:
         metadata={
             "type": "Attribute",
             "tokens": True,
+        }
+    )
+
+
+@dataclass
+class AnynonNull(Any):
+    """The BooleanNonNull type is used where a Boolean cannot have a null
+    value.
+
+    A Boolean value can be either true or false.
+    """
+    class Meta:
+        name = "ANYNonNull"
+
+
+@dataclass
+class Bin(Any):
+    """Binary data is a raw block of bits.
+
+    Binary data is a protected type that MUST not be used outside the
+    data type specification.
+
+    :ivar content:
+    :ivar representation: Specifies the representation of the binary
+        data that is the content of the binary data value.
+    """
+    class Meta:
+        name = "BIN"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    representation: BinaryDataEncoding = field(
+        default=BinaryDataEncoding.TXT,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class Bl(Any):
+    """The Boolean type stands for the values of two-valued logic.
+
+    A Boolean value can be either true or false, or, as any other value
+    may be NULL.
+    """
+    class Meta:
+        name = "BL"
+
+    value: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
+    )
+
+
+@dataclass
+class Cr(Any):
+    """A concept qualifier code with optionally named role.
+
+    Both qualifier role and value codes must be defined by the coding
+    system.  For example, if SNOMED RT defines a concept "leg", a role
+    relation "has-laterality", and another concept "left", the concept
+    role relation allows to add the qualifier "has-laterality: left" to
+    a primary code "leg" to construct the meaning "left leg".
+
+    :ivar name: Specifies the manner in which the concept role value
+        contributes to the meaning of a code phrase.  For example, if
+        SNOMED RT defines a concept "leg", a role relation "has-
+        laterality", and another concept "left", the concept role
+        relation allows to add the qualifier "has-laterality: left" to a
+        primary code "leg" to construct the meaning "left leg".  In this
+        example "has-laterality" is .
+    :ivar value: The concept that modifies the primary code of a code
+        phrase through the role relation.  For example, if SNOMED RT
+        defines a concept "leg", a role relation "has-laterality", and
+        another concept "left", the concept role relation allows adding
+        the qualifier "has-laterality: left" to a primary code "leg" to
+        construct the meaning "left leg".  In this example "left" is .
+    :ivar inverted: Indicates if the sense of the role name is inverted.
+        This can be used in cases where the underlying code system
+        defines inversion but does not provide reciprocal pairs of role
+        names. By default, inverted is false.
+    """
+    class Meta:
+        name = "CR"
+
+    name: Optional["Cv"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+    value: Optional["Cd"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+    inverted: str = field(
+        default="false",
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
+    )
+
+
+@dataclass
+class Ii(Any):
+    """An identifier that uniquely identifies a thing or object.
+
+    Examples are object identifier for HL7 RIM objects, medical record
+    number, order id, service catalog item id, Vehicle Identification
+    Number (VIN), etc. Instance identifiers are defined based on ISO
+    object identifiers.
+
+    :ivar root: A unique identifier that guarantees the global
+        uniqueness of the instance identifier. The root alone may be the
+        entire instance identifier.
+    :ivar extension: A character string as a unique identifier within
+        the scope of the identifier root.
+    :ivar assigning_authority_name: A human readable name or mnemonic
+        for the assigning authority. This name may be provided solely
+        for the convenience of unaided humans interpreting an  value and
+        can have no computational meaning. Note: no automated processing
+        must depend on the assigning authority name to be present in any
+        form.
+    :ivar displayable: Specifies if the identifier is intended for human
+        display and data entry (displayable = true) as opposed to pure
+        machine interoperation (displayable = false).
+    """
+    class Meta:
+        name = "II"
+
+    root: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
+    )
+    extension: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "min_length": 1,
+        }
+    )
+    assigning_authority_name: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "assigningAuthorityName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
+    )
+    displayable: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
+    )
+
+
+@dataclass
+class Qty(Any):
+    """is an abstract generalization for all data types (1) whose value set has
+    an order relation (less-or-equal) and (2) where difference is defined in
+    all of the data type's totally ordered value subsets.
+
+    The quantity type abstraction is needed in defining certain other
+    types, such as the interval and the probability distribution.
+    """
+    class Meta:
+        name = "QTY"
+
+
+@dataclass
+class TelExplicit:
+    """A telephone number (voice or fax), e-mail address, or other locator for
+    a resource (information or service) mediated by telecommunication
+    equipment.
+
+    The address is specified as a URL qualified by time specification
+    and use codes that help in deciding which address to use for a given
+    time and purpose.
+
+    :ivar useable_period: Specifies the periods of time during which the
+        telecommunication address can be used.  For a telephone number,
+        this can indicate the time of day in which the party can be
+        reached on that telephone. For a web address, it may specify a
+        time range in which the web content is promised to be available
+        under the given address.
+    :ivar null_flavor: An exceptional value expressing missing
+        information and possibly the reason why the information is
+        missing.
+    :ivar value:
+    :ivar use: One or more codes advising a system or user which
+        telecommunication address in a set of like addresses to select
+        for a given telecommunication need.
+    """
+    class Meta:
+        name = "TEL_explicit"
+
+    useable_period: List[SxcmTsExplicit] = field(
+        default_factory=list,
+        metadata={
+            "name": "useablePeriod",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
+    )
+    value: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    use: List[TelecommunicationAddressUse] = field(
+        default_factory=list,
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
+    )
+
+
+@dataclass
+class Url(Any):
+    """A telecommunications address  specified according to Internet standard
+    RFC 1738.
+
+    [http://www.ietf.org/rfc/rfc1738.txt]. The URL specifies the
+    protocol and the contact point defined by that protocol for the
+    resource.  Notable uses of the telecommunication address data type
+    are for telephone and telefax numbers, e-mail addresses, Hypertext
+    references, FTP references, etc.
+    """
+    class Meta:
+        name = "URL"
+
+    value: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitAdditionalLocator(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.additionalLocator"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.ADL,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitBuildingNumberSuffix(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.buildingNumberSuffix"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.BNS,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitCareOf(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.careOf"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.CAR,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitCensusTract(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.censusTract"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.CEN,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitCity(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.city"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.CTY,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitCountry(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.country"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.CNT,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitCounty(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.county"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.CPA,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitDelimiter(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.delimiter"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DEL_VALUE,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitDeliveryAddressLine(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.deliveryAddressLine"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DAL,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitDeliveryInstallationArea(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.deliveryInstallationArea"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DINSTA,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitDeliveryInstallationQualifier(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.deliveryInstallationQualifier"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DINSTQ,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitDeliveryInstallationType(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.deliveryInstallationType"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DINST,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitDeliveryMode(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.deliveryMode"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DMOD,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitDeliveryModeIdentifier(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.deliveryModeIdentifier"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DMODID,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitDirection(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.direction"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DIR,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitHouseNumber(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.houseNumber"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.BNR,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitHouseNumberNumeric(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.houseNumberNumeric"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.BNN,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitPostBox(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.postBox"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.POB,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitPostalCode(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.postalCode"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.ZIP,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitPrecinct(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.precinct"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.PRE,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitState(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.state"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.STA,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitStreetAddressLine(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.streetAddressLine"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.SAL,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitStreetName(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.streetName"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.STR_VALUE,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitStreetNameBase(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.streetNameBase"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.STB,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitStreetNameType1(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.streetNameType1"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.STTYP,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitUnitId(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.unitID"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.UNID,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpExplicitUnitType(AdxpExplicit):
+    class Meta:
+        name = "adxp_explicit.unitType"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.UNIT,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
         }
     )
 
@@ -2148,270 +1596,6 @@ class AdExplicit:
             "name": "isNotOrdered",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
-    )
-
-
-@dataclass
-class AnynonNull(Any):
-    """The BooleanNonNull type is used where a Boolean cannot have a null
-    value.
-
-    A Boolean value can be either true or false.
-    """
-    class Meta:
-        name = "ANYNonNull"
-
-
-@dataclass
-class Bin(Any):
-    """Binary data is a raw block of bits.
-
-    Binary data is a protected type that MUST not be used outside the
-    data type specification.
-
-    :ivar content:
-    :ivar representation: Specifies the representation of the binary
-        data that is the content of the binary data value.
-    """
-    class Meta:
-        name = "BIN"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    representation: BinaryDataEncoding = field(
-        default=BinaryDataEncoding.TXT,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class Bl(Any):
-    """The Boolean type stands for the values of two-valued logic.
-
-    A Boolean value can be either true or false, or, as any other value
-    may be NULL.
-    """
-    class Meta:
-        name = "BL"
-
-    value: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"true|false",
-        }
-    )
-
-
-@dataclass
-class Cr(Any):
-    """A concept qualifier code with optionally named role.
-
-    Both qualifier role and value codes must be defined by the coding
-    system.  For example, if SNOMED RT defines a concept "leg", a role
-    relation "has-laterality", and another concept "left", the concept
-    role relation allows to add the qualifier "has-laterality: left" to
-    a primary code "leg" to construct the meaning "left leg".
-
-    :ivar name: Specifies the manner in which the concept role value
-        contributes to the meaning of a code phrase.  For example, if
-        SNOMED RT defines a concept "leg", a role relation "has-
-        laterality", and another concept "left", the concept role
-        relation allows to add the qualifier "has-laterality: left" to a
-        primary code "leg" to construct the meaning "left leg".  In this
-        example "has-laterality" is .
-    :ivar value: The concept that modifies the primary code of a code
-        phrase through the role relation.  For example, if SNOMED RT
-        defines a concept "leg", a role relation "has-laterality", and
-        another concept "left", the concept role relation allows adding
-        the qualifier "has-laterality: left" to a primary code "leg" to
-        construct the meaning "left leg".  In this example "left" is .
-    :ivar inverted: Indicates if the sense of the role name is inverted.
-        This can be used in cases where the underlying code system
-        defines inversion but does not provide reciprocal pairs of role
-        names. By default, inverted is false.
-    """
-    class Meta:
-        name = "CR"
-
-    name: Optional["Cv"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    value: Optional["Cd"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    inverted: str = field(
-        default="false",
-        metadata={
-            "type": "Attribute",
-            "pattern": r"true|false",
-        }
-    )
-
-
-@dataclass
-class Ii(Any):
-    """An identifier that uniquely identifies a thing or object.
-
-    Examples are object identifier for HL7 RIM objects, medical record
-    number, order id, service catalog item id, Vehicle Identification
-    Number (VIN), etc. Instance identifiers are defined based on ISO
-    object identifiers.
-
-    :ivar root: A unique identifier that guarantees the global
-        uniqueness of the instance identifier. The root alone may be the
-        entire instance identifier.
-    :ivar extension: A character string as a unique identifier within
-        the scope of the identifier root.
-    :ivar assigning_authority_name: A human readable name or mnemonic
-        for the assigning authority. This name may be provided solely
-        for the convenience of unaided humans interpreting an  value and
-        can have no computational meaning. Note: no automated processing
-        must depend on the assigning authority name to be present in any
-        form.
-    :ivar displayable: Specifies if the identifier is intended for human
-        display and data entry (displayable = true) as opposed to pure
-        machine interoperation (displayable = false).
-    """
-    class Meta:
-        name = "II"
-
-    root: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
-    )
-    extension: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    assigning_authority_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "assigningAuthorityName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    displayable: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"true|false",
-        }
-    )
-
-
-@dataclass
-class Qty(Any):
-    """is an abstract generalization for all data types (1) whose value set has
-    an order relation (less-or-equal) and (2) where difference is defined in
-    all of the data type's totally ordered value subsets.
-
-    The quantity type abstraction is needed in defining certain other
-    types, such as the interval and the probability distribution.
-    """
-    class Meta:
-        name = "QTY"
-
-
-@dataclass
-class TelExplicit:
-    """A telephone number (voice or fax), e-mail address, or other locator for
-    a resource (information or service) mediated by telecommunication
-    equipment.
-
-    The address is specified as a URL qualified by time specification
-    and use codes that help in deciding which address to use for a given
-    time and purpose.
-
-    :ivar useable_period: Specifies the periods of time during which the
-        telecommunication address can be used.  For a telephone number,
-        this can indicate the time of day in which the party can be
-        reached on that telephone. For a web address, it may specify a
-        time range in which the web content is promised to be available
-        under the given address.
-    :ivar null_flavor: An exceptional value expressing missing
-        information and possibly the reason why the information is
-        missing.
-    :ivar value:
-    :ivar use: One or more codes advising a system or user which
-        telecommunication address in a set of like addresses to select
-        for a given telecommunication need.
-    """
-    class Meta:
-        name = "TEL_explicit"
-
-    useable_period: List[SxcmTsExplicit] = field(
-        default_factory=list,
-        metadata={
-            "name": "useablePeriod",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        }
-    )
-    value: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    use: List[TelecommunicationAddressUse] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-
-
-@dataclass
-class Url(Any):
-    """A telecommunications address  specified according to Internet standard
-    RFC 1738.
-
-    [http://www.ietf.org/rfc/rfc1738.txt]. The URL specifies the
-    protocol and the contact point defined by that protocol for the
-    resource.  Notable uses of the telecommunication address data type
-    are for telephone and telefax numbers, e-mail addresses, Hypertext
-    references, FTP references, etc.
-    """
-    class Meta:
-        name = "URL"
-
-    value: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
         }
     )
 
@@ -3090,325 +2274,6 @@ class SxcmTs(Ts):
 
 
 @dataclass
-class Ad(Any):
-    """Mailing and home or office addresses.
-
-    A sequence of address parts, such as street or post office Box,
-    city, postal code, country, etc.
-
-    :ivar content:
-    :ivar delimiter:
-    :ivar country:
-    :ivar state:
-    :ivar county:
-    :ivar city:
-    :ivar postal_code:
-    :ivar street_address_line:
-    :ivar house_number:
-    :ivar house_number_numeric:
-    :ivar direction:
-    :ivar street_name:
-    :ivar street_name_base:
-    :ivar street_name_type:
-    :ivar additional_locator:
-    :ivar unit_id:
-    :ivar unit_type:
-    :ivar care_of:
-    :ivar census_tract:
-    :ivar delivery_address_line:
-    :ivar delivery_installation_type:
-    :ivar delivery_installation_area:
-    :ivar delivery_installation_qualifier:
-    :ivar delivery_mode:
-    :ivar delivery_mode_identifier:
-    :ivar building_number_suffix:
-    :ivar post_box:
-    :ivar precinct:
-    :ivar useable_period: A GTS specifying the periods of time during
-        which the address can be used. This is used to specify different
-        addresses for different times of the year or to refer to
-        historical addresses.
-    :ivar use: A set of codes advising a system or user which address in
-        a set of like addresses to select for a given purpose.
-    :ivar is_not_ordered: A boolean value specifying whether the order
-        of the address parts is known or not. While the address parts
-        are always a Sequence, the order in which they are presented may
-        or may not be known. Where this matters,  can be used to convey
-        this information.
-    """
-    class Meta:
-        name = "AD"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    delimiter: List[AdxpDelimiter] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    country: List[AdxpCountry] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    state: List[AdxpState] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    county: List[AdxpCounty] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    city: List[AdxpCity] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    postal_code: List[AdxpPostalCode] = field(
-        default_factory=list,
-        metadata={
-            "name": "postalCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    street_address_line: List[AdxpStreetAddressLine] = field(
-        default_factory=list,
-        metadata={
-            "name": "streetAddressLine",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    house_number: List[AdxpHouseNumber] = field(
-        default_factory=list,
-        metadata={
-            "name": "houseNumber",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    house_number_numeric: List[AdxpHouseNumberNumeric] = field(
-        default_factory=list,
-        metadata={
-            "name": "houseNumberNumeric",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    direction: List[AdxpDirection] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    street_name: List[AdxpStreetName] = field(
-        default_factory=list,
-        metadata={
-            "name": "streetName",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    street_name_base: List[AdxpStreetNameBase] = field(
-        default_factory=list,
-        metadata={
-            "name": "streetNameBase",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    street_name_type: List[AdxpStreetNameType] = field(
-        default_factory=list,
-        metadata={
-            "name": "streetNameType",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    additional_locator: List[AdxpAdditionalLocator] = field(
-        default_factory=list,
-        metadata={
-            "name": "additionalLocator",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    unit_id: List[AdxpUnitId] = field(
-        default_factory=list,
-        metadata={
-            "name": "unitID",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    unit_type: List[AdxpUnitType] = field(
-        default_factory=list,
-        metadata={
-            "name": "unitType",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    care_of: List[AdxpCareOf] = field(
-        default_factory=list,
-        metadata={
-            "name": "careOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    census_tract: List[AdxpCensusTract] = field(
-        default_factory=list,
-        metadata={
-            "name": "censusTract",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_address_line: List[AdxpDeliveryAddressLine] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryAddressLine",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_installation_type: List[AdxpDeliveryInstallationType] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryInstallationType",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_installation_area: List[AdxpDeliveryInstallationArea] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryInstallationArea",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_installation_qualifier: List[AdxpDeliveryInstallationQualifier] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryInstallationQualifier",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_mode: List[AdxpDeliveryMode] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryMode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_mode_identifier: List[AdxpDeliveryModeIdentifier] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryModeIdentifier",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    building_number_suffix: List[AdxpBuildingNumberSuffix] = field(
-        default_factory=list,
-        metadata={
-            "name": "buildingNumberSuffix",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    post_box: List[AdxpPostBox] = field(
-        default_factory=list,
-        metadata={
-            "name": "postBox",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    precinct: List[AdxpPrecinct] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    useable_period: List[SxcmTs] = field(
-        default_factory=list,
-        metadata={
-            "name": "useablePeriod",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    use: List[PostalAddressUse] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-    is_not_ordered: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "isNotOrdered",
-            "type": "Attribute",
-            "pattern": r"true|false",
-        }
-    )
-
-
-@dataclass
 class PqrExplicit:
     """A representation of a physical quantity in a unit from any code system.
 
@@ -3537,65 +2402,20 @@ class Tel(Url):
 
 
 @dataclass
-class PqExplicit:
-    """
-    A dimensioned quantity expressing the result of a measurement act.
+class Ed(Bin):
+    """Data that is primarily intended for human interpretation or for further
+    machine processing is outside the scope of HL7.
 
-    :ivar translation: An alternative representation of the same
-        physical quantity expressed in a different unit, of a different
-        unit code system and possibly with a different value.
-    :ivar null_flavor: An exceptional value expressing missing
-        information and possibly the reason why the information is
-        missing.
-    :ivar value: The magnitude of the quantity measured in terms of the
-        unit.
-    :ivar unit: The unit of measure specified in the Unified Code for
-        Units of Measure (UCUM) [http://aurora.rg.iupui.edu/UCUM].
-    """
-    class Meta:
-        name = "PQ_explicit"
-
-    translation: List[PqrExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        }
-    )
-    value: Optional[Union[Decimal, float]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    unit: str = field(
-        default="1",
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-
-
-@dataclass
-class Thumbnail:
-    """A thumbnail is an abbreviated rendition of the full data.
-
-    A thumbnail requires significantly fewer resources than the full
-    data, while still maintaining some distinctive similarity with the
-    full data. A thumbnail is typically used with by-reference
-    encapsulated data. It allows a user to select data more efficiently
-    before actually downloading through the reference.
+    This includes unformatted or formatted written language, multimedia
+    data, or structured information as defined by a different standard
+    (e.g., XML-signatures.)  Instead of the data itself, an ED may
+    contain only a reference (see TEL.) Note that the ST data type is a
+    specialization of when the  is text/plain.
 
     :ivar content:
-    :ivar reference:
+    :ivar reference: A telecommunication address (TEL), such as a URL
+        for HTTP or FTP, which will resolve to precisely the same binary
+        data that could as well have been provided as inline data.
     :ivar thumbnail:
     :ivar media_type: Identifies the type of the encapsulated data and
         identifies a method to interpret or render the data.
@@ -3614,7 +2434,7 @@ class Thumbnail:
         compute the integrityCheck value.
     """
     class Meta:
-        name = "thumbnail"
+        name = "ED"
 
     content: List[object] = field(
         default_factory=list,
@@ -3677,154 +2497,26 @@ class Thumbnail:
 
 
 @dataclass
-class Ed(Bin):
-    """Data that is primarily intended for human interpretation or for further
-    machine processing is outside the scope of HL7.
-
-    This includes unformatted or formatted written language, multimedia
-    data, or structured information as defined by a different standard
-    (e.g., XML-signatures.)  Instead of the data itself, an ED may
-    contain only a reference (see TEL.) Note that the ST data type is a
-    specialization of when the  is text/plain.
-
-    :ivar content:
-    :ivar reference: A telecommunication address (TEL), such as a URL
-        for HTTP or FTP, which will resolve to precisely the same binary
-        data that could as well have been provided as inline data.
-    :ivar thumbnail:
-    :ivar media_type: Identifies the type of the encapsulated data and
-        identifies a method to interpret or render the data.
-    :ivar language: For character based information the language
-        property specifies the human language of the text.
-    :ivar compression: Indicates whether the raw byte data is
-        compressed, and what compression algorithm was used.
-    :ivar integrity_check: The integrity check is a short binary value
-        representing a cryptographically strong checksum that is
-        calculated over the binary data. The purpose of this property,
-        when communicated with a reference is for anyone to validate
-        later whether the reference still resolved to the same data that
-        the reference resolved to when the encapsulated data value with
-        reference was created.
-    :ivar integrity_check_algorithm: Specifies the algorithm used to
-        compute the integrityCheck value.
+class PqExplicit:
     """
-    class Meta:
-        name = "ED"
+    A dimensioned quantity expressing the result of a measurement act.
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    reference: Optional[Tel] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    thumbnail: Optional[Thumbnail] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    media_type: str = field(
-        default="text/plain",
-        metadata={
-            "name": "mediaType",
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    language: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    compression: Optional[CompressionAlgorithm] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    integrity_check: Optional[bytes] = field(
-        default=None,
-        metadata={
-            "name": "integrityCheck",
-            "type": "Attribute",
-            "format": "base64",
-        }
-    )
-    integrity_check_algorithm: IntegrityCheckAlgorithm = field(
-        default=IntegrityCheckAlgorithm.SHA_1,
-        metadata={
-            "name": "integrityCheckAlgorithm",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class IvlTsExplicit:
-    """
-    :ivar low: The low limit of the interval.
-    :ivar width: The difference between high and low boundary. The
-        purpose of distinguishing a width property is to handle all
-        cases of incomplete information symmetrically. In any interval
-        representation only two of the three properties high, low, and
-        width need to be stated and the third can be derived.
-    :ivar high: The high limit of the interval.
-    :ivar center: The arithmetic mean of the interval (low plus high
-        divided by 2). The purpose of distinguishing the center as a
-        semantic property is for conversions of intervals from and to
-        point values.
+    :ivar translation: An alternative representation of the same
+        physical quantity expressed in a different unit, of a different
+        unit code system and possibly with a different value.
     :ivar null_flavor: An exceptional value expressing missing
         information and possibly the reason why the information is
         missing.
-    :ivar value:
-    :ivar operator: A code specifying whether the set component is
-        included (union) or excluded (set-difference) from the set, or
-        other set operations with the current set component and the set
-        as constructed from the representation stream up to the current
-        point.
+    :ivar value: The magnitude of the quantity measured in terms of the
+        unit.
+    :ivar unit: The unit of measure specified in the Unified Code for
+        Units of Measure (UCUM) [http://aurora.rg.iupui.edu/UCUM].
     """
     class Meta:
-        name = "IVL_TS_explicit"
+        name = "PQ_explicit"
 
-    low: Optional[IvxbTsExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    width: List[PqExplicit] = field(
+    translation: List[PqrExplicit] = field(
         default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    high: List[IvxbTsExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    center: Optional[TsExplicit] = field(
-        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
@@ -3837,17 +2529,17 @@ class IvlTsExplicit:
             "type": "Attribute",
         }
     )
-    value: Optional[str] = field(
+    value: Optional[Union[Decimal, float]] = field(
         default=None,
         metadata={
             "type": "Attribute",
-            "pattern": r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?",
         }
     )
-    operator: SetOperator = field(
-        default=SetOperator.I,
+    unit: str = field(
+        default="1",
         metadata={
             "type": "Attribute",
+            "pattern": r"[^\s]+",
         }
     )
 
@@ -3969,86 +2661,60 @@ class Cd(Any):
 
 
 @dataclass
-class EnExplicit:
-    """A name for a person.
-
-    A sequence of name parts, such as given name or family name, prefix,
-    suffix, etc. PN differs from EN because the qualifier type cannot
-    include LS (Legal Status).
-
-    :ivar content:
-    :ivar delimiter:
-    :ivar family:
-    :ivar given:
-    :ivar prefix:
-    :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during
-        which the name is or was used for the entity. This accomodates
-        the fact that people change names for people, places and things.
+class IvlTsExplicit:
+    """
+    :ivar low: The low limit of the interval.
+    :ivar width: The difference between high and low boundary. The
+        purpose of distinguishing a width property is to handle all
+        cases of incomplete information symmetrically. In any interval
+        representation only two of the three properties high, low, and
+        width need to be stated and the third can be derived.
+    :ivar high: The high limit of the interval.
+    :ivar center: The arithmetic mean of the interval (low plus high
+        divided by 2). The purpose of distinguishing the center as a
+        semantic property is for conversions of intervals from and to
+        point values.
     :ivar null_flavor: An exceptional value expressing missing
         information and possibly the reason why the information is
         missing.
-    :ivar use: A set of codes advising a system or user which name in a
-        set of like names to select for a given purpose. A name without
-        specific use code might be a default name useful for any
-        purpose, but a name with a specific use code would be preferred
-        for that respective purpose.
+    :ivar value:
+    :ivar operator: A code specifying whether the set component is
+        included (union) or excluded (set-difference) from the set, or
+        other set operations with the current set component and the set
+        as constructed from the representation stream up to the current
+        point.
     """
     class Meta:
-        name = "EN_explicit"
+        name = "IVL_TS_explicit"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    delimiter: List[EnExplicitDelimiter] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    family: List[EnExplicitFamily] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    given: List[EnExplicitGiven] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    prefix: List[EnExplicitPrefix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    suffix: List[EnExplicitSuffix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    valid_time: Optional[IvlTsExplicit] = field(
+    low: Optional[IvxbTsExplicit] = field(
         default=None,
         metadata={
-            "name": "validTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+    width: List[PqExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
+    )
+    high: List[IvxbTsExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
+    )
+    center: Optional[TsExplicit] = field(
+        default=None,
+        metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         }
@@ -4060,195 +2726,17 @@ class EnExplicit:
             "type": "Attribute",
         }
     )
-    use: List[EntityNameUse] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-
-
-@dataclass
-class OnExplicit:
-    """A name for a person.
-
-    A sequence of name parts, such as given name or family name, prefix,
-    suffix, etc. PN differs from EN because the qualifier type cannot
-    include LS (Legal Status).
-
-    :ivar content:
-    :ivar delimiter:
-    :ivar prefix:
-    :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during
-        which the name is or was used for the entity. This accomodates
-        the fact that people change names for people, places and things.
-    :ivar null_flavor: An exceptional value expressing missing
-        information and possibly the reason why the information is
-        missing.
-    :ivar use: A set of codes advising a system or user which name in a
-        set of like names to select for a given purpose. A name without
-        specific use code might be a default name useful for any
-        purpose, but a name with a specific use code would be preferred
-        for that respective purpose.
-    """
-    class Meta:
-        name = "ON_explicit"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    delimiter: List[EnExplicitDelimiter] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    prefix: List[EnExplicitPrefix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    suffix: List[EnExplicitSuffix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    valid_time: Optional[IvlTsExplicit] = field(
+    value: Optional[str] = field(
         default=None,
         metadata={
-            "name": "validTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
             "type": "Attribute",
+            "pattern": r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?",
         }
     )
-    use: List[EntityNameUse] = field(
-        default_factory=list,
+    operator: SetOperator = field(
+        default=SetOperator.I,
         metadata={
             "type": "Attribute",
-            "tokens": True,
-        }
-    )
-
-
-@dataclass
-class PnExplicit:
-    """A name for a person.
-
-    A sequence of name parts, such as given name or family name, prefix,
-    suffix, etc. PN differs from EN because the qualifier type cannot
-    include LS (Legal Status).
-
-    :ivar content:
-    :ivar delimiter:
-    :ivar family:
-    :ivar given:
-    :ivar prefix:
-    :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during
-        which the name is or was used for the entity. This accomodates
-        the fact that people change names for people, places and things.
-    :ivar null_flavor: An exceptional value expressing missing
-        information and possibly the reason why the information is
-        missing.
-    :ivar use: A set of codes advising a system or user which name in a
-        set of like names to select for a given purpose. A name without
-        specific use code might be a default name useful for any
-        purpose, but a name with a specific use code would be preferred
-        for that respective purpose.
-    """
-    class Meta:
-        name = "PN_explicit"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    delimiter: List[EnExplicitDelimiter] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    family: List[EnExplicitFamily] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    given: List[EnExplicitGiven] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    prefix: List[EnExplicitPrefix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    suffix: List[EnExplicitSuffix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    valid_time: Optional[IvlTsExplicit] = field(
-        default=None,
-        metadata={
-            "name": "validTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        }
-    )
-    use: List[EntityNameUse] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
         }
     )
 
@@ -4345,6 +2833,43 @@ class St:
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
+        }
+    )
+
+
+@dataclass
+class Thumbnail(Ed):
+    """A thumbnail is an abbreviated rendition of the full data.
+
+    A thumbnail requires significantly fewer resources than the full
+    data, while still maintaining some distinctive similarity with the
+    full data. A thumbnail is typically used with by-reference
+    encapsulated data. It allows a user to select data more efficiently
+    before actually downloading through the reference.
+    """
+    class Meta:
+        name = "thumbnail"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    reference: Optional[Tel] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+    thumbnail: Optional["Thumbnail"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
         }
     )
 
@@ -5085,6 +3610,291 @@ class Enxp(St):
 
 
 @dataclass
+class EnExplicit:
+    """A name for a person.
+
+    A sequence of name parts, such as given name or family name, prefix,
+    suffix, etc. PN differs from EN because the qualifier type cannot
+    include LS (Legal Status).
+
+    :ivar content:
+    :ivar delimiter:
+    :ivar family:
+    :ivar given:
+    :ivar prefix:
+    :ivar suffix:
+    :ivar valid_time: An interval of time specifying the time during
+        which the name is or was used for the entity. This accomodates
+        the fact that people change names for people, places and things.
+    :ivar null_flavor: An exceptional value expressing missing
+        information and possibly the reason why the information is
+        missing.
+    :ivar use: A set of codes advising a system or user which name in a
+        set of like names to select for a given purpose. A name without
+        specific use code might be a default name useful for any
+        purpose, but a name with a specific use code would be preferred
+        for that respective purpose.
+    """
+    class Meta:
+        name = "EN_explicit"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    delimiter: List[EnExplicitDelimiter] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    family: List[EnExplicitFamily] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    given: List[EnExplicitGiven] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    prefix: List[EnExplicitPrefix] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    suffix: List[EnExplicitSuffix] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    valid_time: Optional[IvlTsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "validTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
+    )
+    use: List[EntityNameUse] = field(
+        default_factory=list,
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
+    )
+
+
+@dataclass
+class OnExplicit:
+    """A name for a person.
+
+    A sequence of name parts, such as given name or family name, prefix,
+    suffix, etc. PN differs from EN because the qualifier type cannot
+    include LS (Legal Status).
+
+    :ivar content:
+    :ivar delimiter:
+    :ivar prefix:
+    :ivar suffix:
+    :ivar valid_time: An interval of time specifying the time during
+        which the name is or was used for the entity. This accomodates
+        the fact that people change names for people, places and things.
+    :ivar null_flavor: An exceptional value expressing missing
+        information and possibly the reason why the information is
+        missing.
+    :ivar use: A set of codes advising a system or user which name in a
+        set of like names to select for a given purpose. A name without
+        specific use code might be a default name useful for any
+        purpose, but a name with a specific use code would be preferred
+        for that respective purpose.
+    """
+    class Meta:
+        name = "ON_explicit"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    delimiter: List[EnExplicitDelimiter] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    prefix: List[EnExplicitPrefix] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    suffix: List[EnExplicitSuffix] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    valid_time: Optional[IvlTsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "validTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
+    )
+    use: List[EntityNameUse] = field(
+        default_factory=list,
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
+    )
+
+
+@dataclass
+class PnExplicit:
+    """A name for a person.
+
+    A sequence of name parts, such as given name or family name, prefix,
+    suffix, etc. PN differs from EN because the qualifier type cannot
+    include LS (Legal Status).
+
+    :ivar content:
+    :ivar delimiter:
+    :ivar family:
+    :ivar given:
+    :ivar prefix:
+    :ivar suffix:
+    :ivar valid_time: An interval of time specifying the time during
+        which the name is or was used for the entity. This accomodates
+        the fact that people change names for people, places and things.
+    :ivar null_flavor: An exceptional value expressing missing
+        information and possibly the reason why the information is
+        missing.
+    :ivar use: A set of codes advising a system or user which name in a
+        set of like names to select for a given purpose. A name without
+        specific use code might be a default name useful for any
+        purpose, but a name with a specific use code would be preferred
+        for that respective purpose.
+    """
+    class Meta:
+        name = "PN_explicit"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    delimiter: List[EnExplicitDelimiter] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    family: List[EnExplicitFamily] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    given: List[EnExplicitGiven] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    prefix: List[EnExplicitPrefix] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    suffix: List[EnExplicitSuffix] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    valid_time: Optional[IvlTsExplicit] = field(
+        default=None,
+        metadata={
+            "name": "validTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
+    )
+    use: List[EntityNameUse] = field(
+        default_factory=list,
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
+    )
+
+
+@dataclass
 class Sc(St):
     """An ST that optionally may have a code attached.
 
@@ -5183,6 +3993,1061 @@ class Pqr(Cv):
         default=None,
         metadata={
             "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpAdditionalLocator(Adxp):
+    class Meta:
+        name = "adxp.additionalLocator"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.ADL,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpBuildingNumberSuffix(Adxp):
+    class Meta:
+        name = "adxp.buildingNumberSuffix"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.BNS,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpCareOf(Adxp):
+    class Meta:
+        name = "adxp.careOf"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.CAR,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpCensusTract(Adxp):
+    class Meta:
+        name = "adxp.censusTract"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.CEN,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpCity(Adxp):
+    class Meta:
+        name = "adxp.city"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.CTY,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpCountry(Adxp):
+    class Meta:
+        name = "adxp.country"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.CNT,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpCounty(Adxp):
+    class Meta:
+        name = "adxp.county"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.CPA,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpDelimiter(Adxp):
+    class Meta:
+        name = "adxp.delimiter"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DEL_VALUE,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpDeliveryAddressLine(Adxp):
+    class Meta:
+        name = "adxp.deliveryAddressLine"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DAL,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpDeliveryInstallationArea(Adxp):
+    class Meta:
+        name = "adxp.deliveryInstallationArea"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DINSTA,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpDeliveryInstallationQualifier(Adxp):
+    class Meta:
+        name = "adxp.deliveryInstallationQualifier"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DINSTQ,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpDeliveryInstallationType(Adxp):
+    class Meta:
+        name = "adxp.deliveryInstallationType"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DINST,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpDeliveryMode(Adxp):
+    class Meta:
+        name = "adxp.deliveryMode"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DMOD,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpDeliveryModeIdentifier(Adxp):
+    class Meta:
+        name = "adxp.deliveryModeIdentifier"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DMODID,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpDirection(Adxp):
+    class Meta:
+        name = "adxp.direction"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.DIR,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpHouseNumber(Adxp):
+    class Meta:
+        name = "adxp.houseNumber"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.BNR,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpHouseNumberNumeric(Adxp):
+    class Meta:
+        name = "adxp.houseNumberNumeric"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.BNN,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpPostBox(Adxp):
+    class Meta:
+        name = "adxp.postBox"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.POB,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpPostalCode(Adxp):
+    class Meta:
+        name = "adxp.postalCode"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.ZIP,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpPrecinct(Adxp):
+    class Meta:
+        name = "adxp.precinct"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.PRE,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpState(Adxp):
+    class Meta:
+        name = "adxp.state"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.STA,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpStreetAddressLine(Adxp):
+    class Meta:
+        name = "adxp.streetAddressLine"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.SAL,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpStreetName(Adxp):
+    class Meta:
+        name = "adxp.streetName"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.STR_VALUE,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpStreetNameBase(Adxp):
+    class Meta:
+        name = "adxp.streetNameBase"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.STB,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpStreetNameType(Adxp):
+    class Meta:
+        name = "adxp.streetNameType"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.STTYP,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpUnitId(Adxp):
+    class Meta:
+        name = "adxp.unitID"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.UNID,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class AdxpUnitType(Adxp):
+    class Meta:
+        name = "adxp.unitType"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: AddressPartType = field(
+        init=False,
+        default=AddressPartType.UNIT,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class EnDelimiter(Enxp):
+    class Meta:
+        name = "en.delimiter"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: EntityNamePartType = field(
+        init=False,
+        default=EntityNamePartType.DEL_VALUE,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class EnFamily(Enxp):
+    class Meta:
+        name = "en.family"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: EntityNamePartType = field(
+        init=False,
+        default=EntityNamePartType.FAM,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class EnGiven(Enxp):
+    class Meta:
+        name = "en.given"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: EntityNamePartType = field(
+        init=False,
+        default=EntityNamePartType.GIV,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class EnPrefix(Enxp):
+    class Meta:
+        name = "en.prefix"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: EntityNamePartType = field(
+        init=False,
+        default=EntityNamePartType.PFX,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class EnSuffix(Enxp):
+    class Meta:
+        name = "en.suffix"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    part_type: EntityNamePartType = field(
+        init=False,
+        default=EntityNamePartType.SFX,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class Ad(Any):
+    """Mailing and home or office addresses.
+
+    A sequence of address parts, such as street or post office Box,
+    city, postal code, country, etc.
+
+    :ivar content:
+    :ivar delimiter:
+    :ivar country:
+    :ivar state:
+    :ivar county:
+    :ivar city:
+    :ivar postal_code:
+    :ivar street_address_line:
+    :ivar house_number:
+    :ivar house_number_numeric:
+    :ivar direction:
+    :ivar street_name:
+    :ivar street_name_base:
+    :ivar street_name_type:
+    :ivar additional_locator:
+    :ivar unit_id:
+    :ivar unit_type:
+    :ivar care_of:
+    :ivar census_tract:
+    :ivar delivery_address_line:
+    :ivar delivery_installation_type:
+    :ivar delivery_installation_area:
+    :ivar delivery_installation_qualifier:
+    :ivar delivery_mode:
+    :ivar delivery_mode_identifier:
+    :ivar building_number_suffix:
+    :ivar post_box:
+    :ivar precinct:
+    :ivar useable_period: A GTS specifying the periods of time during
+        which the address can be used. This is used to specify different
+        addresses for different times of the year or to refer to
+        historical addresses.
+    :ivar use: A set of codes advising a system or user which address in
+        a set of like addresses to select for a given purpose.
+    :ivar is_not_ordered: A boolean value specifying whether the order
+        of the address parts is known or not. While the address parts
+        are always a Sequence, the order in which they are presented may
+        or may not be known. Where this matters,  can be used to convey
+        this information.
+    """
+    class Meta:
+        name = "AD"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    delimiter: List[AdxpDelimiter] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    country: List[AdxpCountry] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    state: List[AdxpState] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    county: List[AdxpCounty] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    city: List[AdxpCity] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    postal_code: List[AdxpPostalCode] = field(
+        default_factory=list,
+        metadata={
+            "name": "postalCode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    street_address_line: List[AdxpStreetAddressLine] = field(
+        default_factory=list,
+        metadata={
+            "name": "streetAddressLine",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    house_number: List[AdxpHouseNumber] = field(
+        default_factory=list,
+        metadata={
+            "name": "houseNumber",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    house_number_numeric: List[AdxpHouseNumberNumeric] = field(
+        default_factory=list,
+        metadata={
+            "name": "houseNumberNumeric",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    direction: List[AdxpDirection] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    street_name: List[AdxpStreetName] = field(
+        default_factory=list,
+        metadata={
+            "name": "streetName",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    street_name_base: List[AdxpStreetNameBase] = field(
+        default_factory=list,
+        metadata={
+            "name": "streetNameBase",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    street_name_type: List[AdxpStreetNameType] = field(
+        default_factory=list,
+        metadata={
+            "name": "streetNameType",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    additional_locator: List[AdxpAdditionalLocator] = field(
+        default_factory=list,
+        metadata={
+            "name": "additionalLocator",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    unit_id: List[AdxpUnitId] = field(
+        default_factory=list,
+        metadata={
+            "name": "unitID",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    unit_type: List[AdxpUnitType] = field(
+        default_factory=list,
+        metadata={
+            "name": "unitType",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    care_of: List[AdxpCareOf] = field(
+        default_factory=list,
+        metadata={
+            "name": "careOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    census_tract: List[AdxpCensusTract] = field(
+        default_factory=list,
+        metadata={
+            "name": "censusTract",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    delivery_address_line: List[AdxpDeliveryAddressLine] = field(
+        default_factory=list,
+        metadata={
+            "name": "deliveryAddressLine",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    delivery_installation_type: List[AdxpDeliveryInstallationType] = field(
+        default_factory=list,
+        metadata={
+            "name": "deliveryInstallationType",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    delivery_installation_area: List[AdxpDeliveryInstallationArea] = field(
+        default_factory=list,
+        metadata={
+            "name": "deliveryInstallationArea",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    delivery_installation_qualifier: List[AdxpDeliveryInstallationQualifier] = field(
+        default_factory=list,
+        metadata={
+            "name": "deliveryInstallationQualifier",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    delivery_mode: List[AdxpDeliveryMode] = field(
+        default_factory=list,
+        metadata={
+            "name": "deliveryMode",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    delivery_mode_identifier: List[AdxpDeliveryModeIdentifier] = field(
+        default_factory=list,
+        metadata={
+            "name": "deliveryModeIdentifier",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    building_number_suffix: List[AdxpBuildingNumberSuffix] = field(
+        default_factory=list,
+        metadata={
+            "name": "buildingNumberSuffix",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    post_box: List[AdxpPostBox] = field(
+        default_factory=list,
+        metadata={
+            "name": "postBox",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    precinct: List[AdxpPrecinct] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "sequential": True,
+        }
+    )
+    useable_period: List[SxcmTs] = field(
+        default_factory=list,
+        metadata={
+            "name": "useablePeriod",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+    use: List[PostalAddressUse] = field(
+        default_factory=list,
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
+    )
+    is_not_ordered: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "isNotOrdered",
+            "type": "Attribute",
+            "pattern": r"true|false",
         }
     )
 
@@ -5461,95 +5326,6 @@ class On:
 
 
 @dataclass
-class Tn:
-    """
-    A restriction of entity name that is effectively a simple string used for a
-    simple name for things and places.
-
-    :ivar content:
-    :ivar delimiter:
-    :ivar family:
-    :ivar given:
-    :ivar prefix:
-    :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during
-        which the name is or was used for the entity. This accomodates
-        the fact that people change names for people, places and things.
-    :ivar use: A set of codes advising a system or user which name in a
-        set of like names to select for a given purpose. A name without
-        specific use code might be a default name useful for any
-        purpose, but a name with a specific use code would be preferred
-        for that respective purpose.
-    """
-    class Meta:
-        name = "TN"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    delimiter: List[EnDelimiter] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    family: List[EnFamily] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    given: List[EnGiven] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    prefix: List[EnPrefix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    suffix: List[EnSuffix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    valid_time: Optional[IvlTs] = field(
-        default=None,
-        metadata={
-            "name": "validTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    use: List[EntityNameUse] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-
-
-@dataclass
 class Pn(En):
     """A name for a person.
 
@@ -5566,5 +5342,37 @@ class Pn(En):
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
+        }
+    )
+
+
+@dataclass
+class Tn(En):
+    """
+    A restriction of entity name that is effectively a simple string used for a
+    simple name for things and places.
+
+    :ivar content:
+    :ivar valid_time: An interval of time specifying the time during
+        which the name is or was used for the entity. This accomodates
+        the fact that people change names for people, places and things.
+    """
+    class Meta:
+        name = "TN"
+
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+        }
+    )
+    valid_time: Optional[IvlTs] = field(
+        default=None,
+        metadata={
+            "name": "validTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
         }
     )
