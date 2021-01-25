@@ -1,10 +1,11 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDateTime
 from reqif.models.w3_org_1999_xhtml import (
     XhtmlDivType,
     XhtmlPType,
 )
+from reqif.models.w3_org_xml_1998_namespace import LangValue
 
 __NAMESPACE__ = "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd"
 
@@ -3201,7 +3202,7 @@ class ReqIf:
             "type": "Element",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",

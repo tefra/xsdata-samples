@@ -1,8 +1,11 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDateTime
-from reqif.models.w3_org_xml_1998_namespace import SpaceValue
+from reqif.models.w3_org_xml_1998_namespace import (
+    LangValue,
+    SpaceValue,
+)
 
 __NAMESPACE__ = "http://www.w3.org/1999/xhtml"
 
@@ -125,7 +128,7 @@ class XhtmlColType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -211,7 +214,7 @@ class XhtmlHrType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -266,7 +269,7 @@ class XhtmlOlType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -358,7 +361,7 @@ class XhtmlColgroupType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -621,7 +624,7 @@ class XhtmlQType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -852,7 +855,7 @@ class XhtmlAcronymType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1076,7 +1079,7 @@ class XhtmlAbbrType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1300,7 +1303,7 @@ class XhtmlCiteType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1524,7 +1527,7 @@ class XhtmlVarType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1748,7 +1751,7 @@ class XhtmlKbdType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1972,7 +1975,7 @@ class XhtmlSampType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2196,7 +2199,7 @@ class XhtmlCodeType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2420,7 +2423,7 @@ class XhtmlDfnType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2644,7 +2647,7 @@ class XhtmlStrongType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2868,7 +2871,7 @@ class XhtmlCaptionType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3092,7 +3095,7 @@ class XhtmlDtType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3316,7 +3319,7 @@ class XhtmlH2Type:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3540,7 +3543,7 @@ class XhtmlH3Type:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3764,7 +3767,7 @@ class XhtmlH4Type:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3988,7 +3991,7 @@ class XhtmlH5Type:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4212,7 +4215,7 @@ class XhtmlH6Type:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4436,7 +4439,7 @@ class XhtmlPType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4625,7 +4628,7 @@ class XhtmlPreType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4961,7 +4964,7 @@ class XhtmlDdType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5024,7 +5027,7 @@ class XhtmlDlType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5360,7 +5363,7 @@ class XhtmlTdType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5760,7 +5763,7 @@ class XhtmlThType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5887,7 +5890,7 @@ class XhtmlTrType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5968,7 +5971,7 @@ class XhtmlTbodyType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6049,7 +6052,7 @@ class XhtmlTfootType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6130,7 +6133,7 @@ class XhtmlTheadType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6252,7 +6255,7 @@ class XhtmlTableType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6471,7 +6474,7 @@ class XhtmlBlockquoteType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6813,7 +6816,7 @@ class XhtmlDivType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7149,7 +7152,7 @@ class XhtmlLiType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7204,7 +7207,7 @@ class XhtmlUlType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7588,7 +7591,7 @@ class XhtmlObjectType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7880,7 +7883,7 @@ class XhtmlAType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8155,7 +8158,7 @@ class XhtmlInlPresType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8379,7 +8382,7 @@ class XhtmlEmType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8603,7 +8606,7 @@ class XhtmlH1Type:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8939,7 +8942,7 @@ class XhtmlEditType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9176,7 +9179,7 @@ class XhtmlSpanType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9400,7 +9403,7 @@ class XhtmlAddressType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9624,7 +9627,7 @@ class XhtmlHeadingType:
             "type": "Attribute",
         }
     )
-    lang: Optional[str] = field(
+    lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",

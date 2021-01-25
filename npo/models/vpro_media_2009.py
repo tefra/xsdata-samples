@@ -1,12 +1,13 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
 from npo.models.vpro_shared_2009 import (
     Image,
     OwnerTypeEnum,
     WorkflowEnumType,
 )
+from npo.models.w3_org_xml_1998_namespace import LangValue
 
 __NAMESPACE__ = "urn:vpro:media:2009"
 
@@ -1088,23 +1089,6 @@ class StreamingStatusValue(Enum):
     UNSET = "UNSET"
 
 
-@dataclass
-class TagType:
-    class Meta:
-        name = "tagType"
-
-    value: Optional[str] = field(
-        default=None,
-    )
-    lang: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-
-
 class TargetGroupEnum(Enum):
     KIDS_6 = "KIDS_6"
     KIDS_12 = "KIDS_12"
@@ -1571,6 +1555,23 @@ class StreamingStatus:
             "name": "withoutDrm",
             "type": "Attribute",
             "required": True,
+        }
+    )
+
+
+@dataclass
+class TagType:
+    class Meta:
+        name = "tagType"
+
+    value: Optional[str] = field(
+        default=None,
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
         }
     )
 
