@@ -655,14 +655,6 @@ class AdxpExplicitAdditionalLocator(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.additionalLocator"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.ADL,
@@ -678,14 +670,6 @@ class AdxpExplicitBuildingNumberSuffix(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.buildingNumberSuffix"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.BNS,
@@ -701,14 +685,6 @@ class AdxpExplicitCareOf(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.careOf"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CAR,
@@ -724,14 +700,6 @@ class AdxpExplicitCensusTract(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.censusTract"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CEN,
@@ -747,14 +715,6 @@ class AdxpExplicitCity(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.city"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CTY,
@@ -770,14 +730,6 @@ class AdxpExplicitCountry(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.country"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CNT,
@@ -793,14 +745,6 @@ class AdxpExplicitCounty(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.county"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CPA,
@@ -816,14 +760,6 @@ class AdxpExplicitDelimiter(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.delimiter"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DEL_VALUE,
@@ -839,14 +775,6 @@ class AdxpExplicitDeliveryAddressLine(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.deliveryAddressLine"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DAL,
@@ -862,14 +790,6 @@ class AdxpExplicitDeliveryInstallationArea(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.deliveryInstallationArea"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DINSTA,
@@ -885,14 +805,6 @@ class AdxpExplicitDeliveryInstallationQualifier(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.deliveryInstallationQualifier"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DINSTQ,
@@ -908,14 +820,6 @@ class AdxpExplicitDeliveryInstallationType(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.deliveryInstallationType"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DINST,
@@ -931,14 +835,6 @@ class AdxpExplicitDeliveryMode(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.deliveryMode"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DMOD,
@@ -954,14 +850,6 @@ class AdxpExplicitDeliveryModeIdentifier(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.deliveryModeIdentifier"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DMODID,
@@ -977,14 +865,6 @@ class AdxpExplicitDirection(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.direction"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DIR,
@@ -1000,14 +880,6 @@ class AdxpExplicitHouseNumber(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.houseNumber"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.BNR,
@@ -1023,14 +895,6 @@ class AdxpExplicitHouseNumberNumeric(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.houseNumberNumeric"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.BNN,
@@ -1046,14 +910,6 @@ class AdxpExplicitPostBox(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.postBox"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.POB,
@@ -1069,14 +925,6 @@ class AdxpExplicitPostalCode(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.postalCode"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.ZIP,
@@ -1092,14 +940,6 @@ class AdxpExplicitPrecinct(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.precinct"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.PRE,
@@ -1115,14 +955,6 @@ class AdxpExplicitState(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.state"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STA,
@@ -1138,14 +970,6 @@ class AdxpExplicitStreetAddressLine(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.streetAddressLine"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.SAL,
@@ -1161,14 +985,6 @@ class AdxpExplicitStreetName(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.streetName"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STR_VALUE,
@@ -1184,14 +1000,6 @@ class AdxpExplicitStreetNameBase(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.streetNameBase"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STB,
@@ -1207,14 +1015,6 @@ class AdxpExplicitStreetNameType1(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.streetNameType1"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STTYP,
@@ -1230,14 +1030,6 @@ class AdxpExplicitUnitId(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.unitID"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.UNID,
@@ -1253,14 +1045,6 @@ class AdxpExplicitUnitType(AdxpExplicit):
     class Meta:
         name = "adxp_explicit.unitType"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.UNIT,
@@ -2412,7 +2196,6 @@ class Ed(Bin):
     contain only a reference (see TEL.) Note that the ST data type is a
     specialization of when the  is text/plain.
 
-    :ivar content:
     :ivar reference: A telecommunication address (TEL), such as a URL
         for HTTP or FTP, which will resolve to precisely the same binary
         data that could as well have been provided as inline data.
@@ -2436,14 +2219,6 @@ class Ed(Bin):
     class Meta:
         name = "ED"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     reference: Optional[Tel] = field(
         default=None,
         metadata={
@@ -2858,13 +2633,6 @@ class Thumbnail(Ed):
             "mixed": True,
         }
     )
-    reference: Optional[Tel] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     thumbnail: Optional["Thumbnail"] = field(
         default=None,
         metadata={
@@ -2886,7 +2654,6 @@ class Adxp(St):
     which are indicated by special line-breaking delimiter elements
     (e.g., DEL).
 
-    :ivar content:
     :ivar part_type: Specifies whether an address part names the street,
         city, country, postal code, post box, etc. If the type is NULL
         the address part is unclassified and would simply appear on an
@@ -2895,14 +2662,6 @@ class Adxp(St):
     class Meta:
         name = "ADXP"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: Optional[AddressPartType] = field(
         default=None,
         metadata={
@@ -3573,7 +3332,6 @@ class Enxp(St):
     part type. Typical name parts for person names are given names, and
     family names, titles, etc.
 
-    :ivar content:
     :ivar part_type: Indicates whether the name part is a given name,
         family name, prefix, suffix, etc.
     :ivar qualifier: is a set of codes each of which specifies
@@ -3585,14 +3343,6 @@ class Enxp(St):
     class Meta:
         name = "ENXP"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: Optional[EntityNamePartType] = field(
         default=None,
         metadata={
@@ -3901,7 +3651,6 @@ class Sc(St):
     The text must always be present if a code is present. The code is
     often a local code.
 
-    :ivar content:
     :ivar code: The plain code symbol defined by the code system. For
         example, "784.0" is the code symbol of the ICD-9 code "784.0"
         for headache.
@@ -3915,14 +3664,6 @@ class Sc(St):
     class Meta:
         name = "SC"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     code: Optional[str] = field(
         default=None,
         metadata={
@@ -5336,43 +5077,12 @@ class Pn(En):
     class Meta:
         name = "PN"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-
 
 @dataclass
 class Tn(En):
     """
     A restriction of entity name that is effectively a simple string used for a
     simple name for things and places.
-
-    :ivar content:
-    :ivar valid_time: An interval of time specifying the time during
-        which the name is or was used for the entity. This accomodates
-        the fact that people change names for people, places and things.
     """
     class Meta:
         name = "TN"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    valid_time: Optional[IvlTs] = field(
-        default=None,
-        metadata={
-            "name": "validTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
