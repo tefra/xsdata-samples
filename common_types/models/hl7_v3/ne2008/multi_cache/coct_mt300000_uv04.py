@@ -106,7 +106,6 @@ class CoctMt300000Uv04Destination:
             "name": "serviceDeliveryLocation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -123,7 +122,6 @@ class CoctMt300000Uv04Destination:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -177,7 +175,6 @@ class CoctMt300000Uv04HealthCareProvider:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -342,7 +339,6 @@ class CoctMt300000Uv04Origin:
             "name": "serviceDeliveryLocation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -359,7 +355,6 @@ class CoctMt300000Uv04Origin:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -421,7 +416,6 @@ class CoctMt300000Uv04PrescriberPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -430,7 +424,6 @@ class CoctMt300000Uv04PrescriberPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -470,7 +463,6 @@ class CoctMt300000Uv04Subject:
             "name": "detectedMedicationIssue",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -487,7 +479,6 @@ class CoctMt300000Uv04Subject:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -613,7 +604,6 @@ class CoctMt300000Uv04SupplyOrder:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -660,7 +650,6 @@ class CoctMt300000Uv04ManufacturedProduct:
             "name": "manufacturedMaterialKind",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -716,7 +705,6 @@ class CoctMt300000Uv04Performer1:
             "name": "healthCareProvider",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -772,7 +760,6 @@ class CoctMt300000Uv04Performer2:
             "name": "substitutionRole",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -835,7 +822,6 @@ class CoctMt300000Uv04PrescriberRole:
             "name": "playingPrescriberPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -892,7 +878,6 @@ class CoctMt300000Uv04Reason:
             "name": "supplyOrder",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -948,7 +933,6 @@ class CoctMt300000Uv04Author:
             "name": "prescriberRole",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -965,7 +949,6 @@ class CoctMt300000Uv04Author:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1005,7 +988,6 @@ class CoctMt300000Uv04Product:
             "name": "manufacturedProduct",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1022,7 +1004,6 @@ class CoctMt300000Uv04Product:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1093,7 +1074,6 @@ class CoctMt300000Uv04Substitution:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1102,7 +1082,6 @@ class CoctMt300000Uv04Substitution:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1141,7 +1120,6 @@ class CoctMt300000Uv04PertinentInformation:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1197,7 +1175,6 @@ class CoctMt300000Uv04PertinentInformation2:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1253,7 +1230,6 @@ class CoctMt300000Uv04SubstanceAdministrationOrder:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1287,7 +1263,6 @@ class CoctMt300000Uv04SubstanceAdministrationOrder:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1296,7 +1271,6 @@ class CoctMt300000Uv04SubstanceAdministrationOrder:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1336,7 +1310,6 @@ class CoctMt300000Uv04InFulfillmentOf:
             "name": "substanceAdministrationOrder",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1415,7 +1388,6 @@ class CoctMt300000Uv04SubstanceAdministrationIntent:
             "name": "inFulfillmentOf",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1450,7 +1422,6 @@ class CoctMt300000Uv04SubstanceAdministrationIntent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: Optional[ActMoodIntent] = field(
@@ -1498,7 +1469,6 @@ class CoctMt300000Uv04Reason2:
             "name": "substanceAdministrationIntent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1592,7 +1562,6 @@ class CoctMt300000Uv04SupplyEvent:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1634,7 +1603,6 @@ class CoctMt300000Uv04SupplyEvent:
             "name": "reasonOf",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )

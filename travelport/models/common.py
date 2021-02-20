@@ -827,6 +827,7 @@ class ContinuityCheckOverride:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
             "white_space": "collapse",
         }
@@ -858,6 +859,9 @@ class CorporateDiscountId:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     negotiated_rate_code: Optional[bool] = field(
         default=None,
@@ -1020,6 +1024,9 @@ class CustomizedNameData:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     key: Optional[str] = field(
         default=None,
@@ -1364,6 +1371,7 @@ class LocatorCode:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
         }
     )
@@ -1406,6 +1414,9 @@ class Mcoremark:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     additional_rmk: Optional[bool] = field(
         default=None,
@@ -1432,6 +1443,9 @@ class Mcotext:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     type: Optional[str] = field(
         default=None,
@@ -1745,6 +1759,7 @@ class NextResultReference:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
             "white_space": "collapse",
         }
@@ -1771,6 +1786,7 @@ class OperatedBy:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
             "white_space": "collapse",
         }
@@ -2352,6 +2368,7 @@ class PseudoCityCode:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 2,
             "max_length": 10,
         }
@@ -2446,6 +2463,9 @@ class Remark:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     key: Optional[str] = field(
         default=None,
@@ -2612,6 +2632,9 @@ class SegmentRemark:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     key: Optional[str] = field(
         default=None,
@@ -2893,6 +2916,9 @@ class State:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
 
 
@@ -3987,6 +4013,9 @@ class TypeRemark:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
@@ -5867,6 +5896,9 @@ class FormattedTextTextType:
     """
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     formatted: Optional[bool] = field(
         default=None,
@@ -6063,6 +6095,9 @@ class HostToken:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     host: Optional[str] = field(
         default=None,
@@ -6543,6 +6578,9 @@ class OtherGuaranteeInfo:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     type: Optional[OtherGuaranteeInfoType] = field(
         default=None,
@@ -7329,6 +7367,9 @@ class ResponseMessage:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     code: Optional[int] = field(
         default=None,
@@ -8376,6 +8417,9 @@ class Xmlremark:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     key: Optional[str] = field(
         default=None,
@@ -9013,6 +9057,9 @@ class TypeResultMessage:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     code: Optional[int] = field(
         default=None,

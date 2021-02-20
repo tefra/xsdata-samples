@@ -197,28 +197,24 @@ class RedirectEntry:
         metadata={
             "name": "from",
             "type": "Attribute",
-            "required": True,
         }
     )
     to: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     ultimate: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     circular: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -315,6 +311,9 @@ class ExtendedMatcherType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     fuzziness: Optional[str] = field(
         default=None,
@@ -351,6 +350,9 @@ class GeoLocationSearchType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     owner: Optional[OwnerTypeEnum] = field(
         default=None,
@@ -399,6 +401,9 @@ class MediaSortType:
 
     value: Optional[MediaSortTypeEnum] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     order: Optional[OrderTypeEnum] = field(
         default=None,
@@ -415,6 +420,9 @@ class PageSortType:
 
     value: Optional[PageSortTypeEnum] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     order: Optional[OrderTypeEnum] = field(
         default=None,
@@ -589,6 +597,9 @@ class SimpleMatcherType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     fuzziness: Optional[str] = field(
         default=None,
@@ -680,6 +691,9 @@ class TextMatcherType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     match_type: Optional[StandardMatchType] = field(
         default=None,
@@ -703,6 +717,9 @@ class TitleSearchType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     owner: Optional[OwnerTypeEnum] = field(
         default=None,

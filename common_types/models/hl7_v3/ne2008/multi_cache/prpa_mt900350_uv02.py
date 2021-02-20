@@ -64,7 +64,6 @@ class PrpaMt900350Uv02Admitter:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -81,7 +80,6 @@ class PrpaMt900350Uv02Admitter:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -145,7 +143,6 @@ class PrpaMt900350Uv02Attender:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -162,7 +159,6 @@ class PrpaMt900350Uv02Attender:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -218,7 +214,6 @@ class PrpaMt900350Uv02ResponsibleParty:
             "name": "assignedOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -235,7 +230,6 @@ class PrpaMt900350Uv02ResponsibleParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -379,7 +373,6 @@ class PrpaMt900350Uv02EncounterEvent:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -404,7 +397,6 @@ class PrpaMt900350Uv02EncounterEvent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -413,6 +405,5 @@ class PrpaMt900350Uv02EncounterEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )

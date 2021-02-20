@@ -113,7 +113,6 @@ class CoctMt050002Uv04NonPersonLivingSubject:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -190,7 +189,6 @@ class CoctMt050002Uv04Person:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -199,7 +197,6 @@ class CoctMt050002Uv04Person:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -288,7 +285,6 @@ class CoctMt050002Uv04Patient:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )

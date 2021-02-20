@@ -315,7 +315,6 @@ class ReqIfHeader:
             "name": "REQ-IF-VERSION",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     source_tool_id: Optional[str] = field(
@@ -3207,7 +3206,6 @@ class ReqIf:
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-            "required": True,
         }
     )
 

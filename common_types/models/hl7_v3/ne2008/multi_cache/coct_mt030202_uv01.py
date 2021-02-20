@@ -122,7 +122,6 @@ class CoctMt030202Uv01Place:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -161,7 +160,6 @@ class CoctMt030202Uv01Birthplace:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -178,7 +176,6 @@ class CoctMt030202Uv01Birthplace:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -265,7 +262,6 @@ class CoctMt030202Uv01Person:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -274,6 +270,5 @@ class CoctMt030202Uv01Person:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )

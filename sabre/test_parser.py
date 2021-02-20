@@ -20,9 +20,10 @@ class ParserTests(TestCase):
         json_fixture = cwd.joinpath(f"{fixture}.json")
 
         obj = parser.from_path(xml_fixture, OtaAirLowFareSearchRs)
-
-        expected = json_fixture.read_text()
         result = serializer.render(obj)
 
-        self.assertEqual(json.loads(expected), json.loads(result))
-        json_fixture.write_text(result + "\n")
+        if json_fixture.exists():
+            expected = json_fixture.read_text()
+            self.assertEqual(json.loads(expected), json.loads(result))
+        else:
+            json_fixture.write_text(result + "\n")

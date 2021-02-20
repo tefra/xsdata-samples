@@ -175,7 +175,6 @@ class CoctMt910000UvSubjectPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -184,7 +183,6 @@ class CoctMt910000UvSubjectPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -264,7 +262,6 @@ class CoctMt910000UvEmployee:
             "name": "employerOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -381,7 +378,6 @@ class CoctMt910000UvRelatedPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -390,7 +386,6 @@ class CoctMt910000UvRelatedPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -461,7 +456,6 @@ class CoctMt910000UvStudent:
             "name": "schoolOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -478,7 +472,6 @@ class CoctMt910000UvStudent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -549,7 +542,6 @@ class CoctMt910000UvCareGiver:
             "name": "careGiverRelatedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -575,7 +567,6 @@ class CoctMt910000UvCareGiver:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -647,7 +638,6 @@ class CoctMt910000UvPersonalRelationship:
             "name": "relationshipHolder",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -673,7 +663,6 @@ class CoctMt910000UvPersonalRelationship:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )

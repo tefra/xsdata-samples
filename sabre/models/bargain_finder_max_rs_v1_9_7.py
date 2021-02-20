@@ -42,6 +42,9 @@ class AirFeeType:
     """
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     fee_code: Optional[str] = field(
         default=None,
@@ -125,6 +128,9 @@ class AirTaxType:
     """
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     tax_code: Optional[str] = field(
         default=None,
@@ -527,6 +533,9 @@ class FreeTextType:
     """
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     language: Optional[str] = field(
         default=None,
@@ -970,6 +979,9 @@ class ResponseLocationType:
     """
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     location_code: Optional[str] = field(
         default=None,
@@ -1004,6 +1016,9 @@ class SuccessType:
 class SurchargesType:
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     ind: Optional[str] = field(
         default=None,
@@ -3831,6 +3846,7 @@ class PtcfareBreakdownType:
             value: Optional[str] = field(
                 default=None,
                 metadata={
+                    "required": True,
                     "min_length": 1,
                     "max_length": 16,
                 }
@@ -4002,6 +4018,9 @@ class PtcfareBreakdownType:
         class FareType:
             value: Optional[str] = field(
                 default=None,
+                metadata={
+                    "required": True,
+                }
             )
             name: Optional[str] = field(
                 default=None,

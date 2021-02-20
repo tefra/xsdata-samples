@@ -202,7 +202,6 @@ class McaiMt900001Uv01SourceOf:
             "name": "detectedIssueManagement",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -265,7 +264,6 @@ class McaiMt900001Uv01Subject:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -359,7 +357,6 @@ class McaiMt900001Uv01ActOrderRequired:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -399,7 +396,6 @@ class McaiMt900001Uv01Requires:
             "name": "actOrderRequired",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -416,7 +412,6 @@ class McaiMt900001Uv01Requires:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -527,7 +522,6 @@ class McaiMt900001Uv01DetectedIssueEvent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -536,6 +530,5 @@ class McaiMt900001Uv01DetectedIssueEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )

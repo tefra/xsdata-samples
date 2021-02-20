@@ -171,7 +171,6 @@ class RepcMt000100Uv01ActDefinition:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -379,7 +378,6 @@ class RepcMt000100Uv01Author3:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -433,7 +431,6 @@ class RepcMt000100Uv01Custodian:
             "name": "responsibleParty",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -450,7 +447,6 @@ class RepcMt000100Uv01Custodian:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -521,7 +517,6 @@ class RepcMt000100Uv01DataEnterer:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -538,7 +533,6 @@ class RepcMt000100Uv01DataEnterer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -675,7 +669,6 @@ class RepcMt000100Uv01Informant12:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -833,7 +826,6 @@ class RepcMt000100Uv01Organization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1038,7 +1030,6 @@ class RepcMt000100Uv01Place:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1093,7 +1084,6 @@ class RepcMt000100Uv01Precondition2:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1110,7 +1100,6 @@ class RepcMt000100Uv01Precondition2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1190,7 +1179,6 @@ class RepcMt000100Uv01RecordTarget:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -1237,7 +1225,6 @@ class RepcMt000100Uv01ResponsibleParty:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1254,7 +1241,6 @@ class RepcMt000100Uv01ResponsibleParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: Optional[ContextControl] = field(
@@ -1477,7 +1463,6 @@ class RepcMt000100Uv01Verifier:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1594,7 +1579,6 @@ class RepcMt000100Uv01Criterion:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     negation_ind: str = field(
@@ -1642,7 +1626,6 @@ class RepcMt000100Uv01Definition2:
             "name": "actDefinition",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1659,7 +1642,6 @@ class RepcMt000100Uv01Definition2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1862,7 +1844,6 @@ class RepcMt000100Uv01Conditions:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1933,7 +1914,6 @@ class RepcMt000100Uv01Location:
             "name": "healthCareFacility",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2088,7 +2068,6 @@ class RepcMt000100Uv01Precondition:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2105,7 +2084,6 @@ class RepcMt000100Uv01Precondition:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -2177,7 +2155,6 @@ class RepcMt000100Uv01AdministerableMaterial:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -2265,7 +2242,6 @@ class RepcMt000100Uv01ObservationRange:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     negation_ind: str = field(
@@ -2708,7 +2684,6 @@ class RepcMt000100Uv01Consumable:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -2783,7 +2758,6 @@ class RepcMt000100Uv01Product2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: Optional[ContextControl] = field(
@@ -2838,7 +2812,6 @@ class RepcMt000100Uv01ReferenceRange2:
             "name": "observationRange",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2855,7 +2828,6 @@ class RepcMt000100Uv01ReferenceRange2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -3472,7 +3444,6 @@ class RepcMt000100Uv01SubstanceAdministration:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: Optional[XClinicalStatementSubstanceMood] = field(
@@ -4128,7 +4099,6 @@ class RepcMt000100Uv01Organizer:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -4561,7 +4531,6 @@ class RepcMt000100Uv01Encounter:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: Optional[XClinicalStatementEncounterMood] = field(

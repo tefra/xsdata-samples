@@ -54,7 +54,6 @@ class CoctMt120104UvAuthor:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -71,7 +70,6 @@ class CoctMt120104UvAuthor:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -189,7 +187,6 @@ class CoctMt120104UvObservationDx:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     negation_ind: str = field(

@@ -94,7 +94,6 @@ class PrpaMt201304Uv02CoveredParty:
             "name": "coverageRecord",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -111,7 +110,6 @@ class PrpaMt201304Uv02CoveredParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -175,7 +173,6 @@ class PrpaMt201304Uv02Employee:
             "name": "employerOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -267,7 +264,6 @@ class PrpaMt201304Uv02Group:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -329,7 +325,6 @@ class PrpaMt201304Uv02Nation:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -338,7 +333,6 @@ class PrpaMt201304Uv02Nation:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -402,7 +396,6 @@ class PrpaMt201304Uv02OtherIds:
             "name": "scopingOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -499,7 +492,6 @@ class PrpaMt201304Uv02Student:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -627,7 +619,6 @@ class PrpaMt201304Uv02Citizen:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -698,7 +689,6 @@ class PrpaMt201304Uv02Member:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -715,7 +705,6 @@ class PrpaMt201304Uv02Member:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -772,7 +761,6 @@ class PrpaMt201304Uv02PatientOfOtherProvider:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -876,7 +864,6 @@ class PrpaMt201304Uv02NonPersonLivingSubject:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -992,7 +979,6 @@ class PrpaMt201304Uv02Person:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -1001,7 +987,6 @@ class PrpaMt201304Uv02Person:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1117,7 +1102,6 @@ class PrpaMt201304Uv02Patient:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )

@@ -94,7 +94,6 @@ class CoctMt090002Uv01Device:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -157,7 +156,6 @@ class CoctMt090002Uv01Organization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -212,7 +210,6 @@ class CoctMt090002Uv01Person:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -221,7 +218,6 @@ class CoctMt090002Uv01Person:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -310,7 +306,6 @@ class CoctMt090002Uv01AssignedEntity:
             "name": "representedOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )

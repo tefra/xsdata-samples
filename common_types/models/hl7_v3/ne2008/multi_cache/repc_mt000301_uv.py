@@ -288,7 +288,6 @@ class RepcMt000301UvDataEnterer:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -479,7 +478,6 @@ class RepcMt000301UvLinks:
             "name": "conditionNodeEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -496,7 +494,6 @@ class RepcMt000301UvLinks:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -580,7 +577,6 @@ class RepcMt000301UvOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -777,7 +773,6 @@ class RepcMt000301UvPlace:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -841,7 +836,6 @@ class RepcMt000301UvRecordTarget:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -888,7 +882,6 @@ class RepcMt000301UvReplacementOf:
             "name": "conditionEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -960,7 +953,6 @@ class RepcMt000301UvResponsibleParty:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -977,7 +969,6 @@ class RepcMt000301UvResponsibleParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1017,7 +1008,6 @@ class RepcMt000301UvResponsibleParty2:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1034,7 +1024,6 @@ class RepcMt000301UvResponsibleParty2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: Optional[ContextControl] = field(
@@ -1081,7 +1070,6 @@ class RepcMt000301UvSequelTo:
             "name": "conditionEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1511,7 +1499,6 @@ class RepcMt000301UvVerifier:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1683,7 +1670,6 @@ class RepcMt000301UvConditionNodeEvent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1692,7 +1678,6 @@ class RepcMt000301UvConditionNodeEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1922,7 +1907,6 @@ class RepcMt000301UvSubject1:
             "name": "severityObservation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1996,7 +1980,6 @@ class RepcMt000301UvConditionNamed:
             "name": "conditionNodeEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2013,7 +1996,6 @@ class RepcMt000301UvConditionNamed:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -2069,7 +2051,6 @@ class RepcMt000301UvLocation:
             "name": "healthCareFacility",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2131,7 +2112,6 @@ class RepcMt000301UvSubject3:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2205,7 +2185,6 @@ class RepcMt000301UvSubject5:
             "name": "controlActEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2540,7 +2519,6 @@ class RepcMt000301UvComponent:
             "name": "conditionEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )

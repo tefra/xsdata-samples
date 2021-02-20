@@ -222,7 +222,6 @@ class McciMt000200Uv01EntityRsp:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -308,7 +307,6 @@ class McciMt000200Uv01Organization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -385,7 +383,6 @@ class McciMt000200Uv01Place:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -504,7 +501,6 @@ class McciMt000200Uv01Acknowledgement:
             "name": "targetMessage",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -819,7 +815,6 @@ class McciMt000200Uv01Device:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 

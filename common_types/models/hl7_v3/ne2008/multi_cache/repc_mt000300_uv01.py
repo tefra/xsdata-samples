@@ -215,7 +215,6 @@ class RepcMt000300Uv01Author:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -293,7 +292,6 @@ class RepcMt000300Uv01DataEnterer:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -483,7 +481,6 @@ class RepcMt000300Uv01Links:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -598,7 +595,6 @@ class RepcMt000300Uv01Organization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -795,7 +791,6 @@ class RepcMt000300Uv01Place:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -986,7 +981,6 @@ class RepcMt000300Uv01RecordTarget:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -1106,7 +1100,6 @@ class RepcMt000300Uv01Reference:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1161,7 +1154,6 @@ class RepcMt000300Uv01ReplacementOf:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1233,7 +1225,6 @@ class RepcMt000300Uv01ResponsibleParty:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1250,7 +1241,6 @@ class RepcMt000300Uv01ResponsibleParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1290,7 +1280,6 @@ class RepcMt000300Uv01ResponsibleParty2:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1307,7 +1296,6 @@ class RepcMt000300Uv01ResponsibleParty2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: Optional[ContextControl] = field(
@@ -1353,7 +1341,6 @@ class RepcMt000300Uv01SequelTo:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1720,7 +1707,6 @@ class RepcMt000300Uv01Verifier:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2060,7 +2046,6 @@ class RepcMt000300Uv01Location:
             "name": "healthCareFacility",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2122,7 +2107,6 @@ class RepcMt000300Uv01Subject3:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2139,7 +2123,6 @@ class RepcMt000300Uv01Subject3:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -2196,7 +2179,6 @@ class RepcMt000300Uv01Subject5:
             "name": "controlActEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2507,7 +2489,6 @@ class RepcMt000300Uv01Component:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )

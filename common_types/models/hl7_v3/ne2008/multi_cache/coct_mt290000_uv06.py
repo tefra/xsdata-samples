@@ -178,7 +178,6 @@ class CoctMt290000Uv06AdministrativeDiagnosis:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -241,7 +240,6 @@ class CoctMt290000Uv06AdministrativeDiagnosisReference:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -303,7 +301,6 @@ class CoctMt290000Uv06BillableModifier:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -449,7 +446,6 @@ class CoctMt290000Uv06Device2:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -549,7 +545,6 @@ class CoctMt290000Uv06InjuryPlace:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -589,7 +584,6 @@ class CoctMt290000Uv06Location:
             "name": "serviceDeliveryLocation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -790,7 +784,6 @@ class CoctMt290000Uv06ManufacturedProductOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -866,7 +859,6 @@ class CoctMt290000Uv06NonPersonLivingSubject:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -950,7 +942,6 @@ class CoctMt290000Uv06PresentingIndication:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1035,7 +1026,6 @@ class CoctMt290000Uv06ProviderPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -1044,7 +1034,6 @@ class CoctMt290000Uv06ProviderPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1129,7 +1118,6 @@ class CoctMt290000Uv06Subject3:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1184,7 +1172,6 @@ class CoctMt290000Uv06Subject5:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1254,7 +1241,6 @@ class CoctMt290000Uv06Substitution:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1263,7 +1249,6 @@ class CoctMt290000Uv06Substitution:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1341,7 +1326,6 @@ class CoctMt290000Uv06HealthCareProvider:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1574,7 +1558,6 @@ class CoctMt290000Uv06Product2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1614,7 +1597,6 @@ class CoctMt290000Uv06Reason:
             "name": "administrativeDiagnosisReference",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1678,7 +1660,6 @@ class CoctMt290000Uv06Reason3:
             "name": "administrativeDiagnosis",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1742,7 +1723,6 @@ class CoctMt290000Uv06Reason5:
             "name": "presentingIndication",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1797,7 +1777,6 @@ class CoctMt290000Uv06ReusableDevice:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1814,7 +1793,6 @@ class CoctMt290000Uv06ReusableDevice:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1853,7 +1831,6 @@ class CoctMt290000Uv06Subject:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1870,7 +1847,6 @@ class CoctMt290000Uv06Subject:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1911,7 +1887,6 @@ class CoctMt290000Uv06Subject2:
             "name": "billableModifier",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1928,7 +1903,6 @@ class CoctMt290000Uv06Subject2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1969,7 +1943,6 @@ class CoctMt290000Uv06IndirectAuthorithyOver:
             "name": "healthCareProvider",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1986,7 +1959,6 @@ class CoctMt290000Uv06IndirectAuthorithyOver:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2026,7 +1998,6 @@ class CoctMt290000Uv06Origin:
             "name": "injuryLocation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2043,7 +2014,6 @@ class CoctMt290000Uv06Origin:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2152,7 +2122,6 @@ class CoctMt290000Uv06PatientEncounter:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -2161,7 +2130,6 @@ class CoctMt290000Uv06PatientEncounter:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2201,7 +2169,6 @@ class CoctMt290000Uv06Product1:
             "name": "manufacturedProduct",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2218,7 +2185,6 @@ class CoctMt290000Uv06Product1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2289,7 +2255,6 @@ class CoctMt290000Uv06SpecimenCollectionEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2425,7 +2390,6 @@ class CoctMt290000Uv06Component1:
             "name": "patientEncounter",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2481,7 +2445,6 @@ class CoctMt290000Uv06Component2:
             "name": "specimenCollectionEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2600,7 +2563,6 @@ class CoctMt290000Uv06Injury:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2640,7 +2602,6 @@ class CoctMt290000Uv06Author:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2657,7 +2618,6 @@ class CoctMt290000Uv06Author:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2704,7 +2664,6 @@ class CoctMt290000Uv06Author1:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2721,7 +2680,6 @@ class CoctMt290000Uv06Author1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2768,7 +2726,6 @@ class CoctMt290000Uv06Author2:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2785,7 +2742,6 @@ class CoctMt290000Uv06Author2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2825,7 +2781,6 @@ class CoctMt290000Uv06Consultant:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2842,7 +2797,6 @@ class CoctMt290000Uv06Consultant:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2890,7 +2844,6 @@ class CoctMt290000Uv06Performer:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2954,7 +2907,6 @@ class CoctMt290000Uv06Reason1:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -3010,7 +2962,6 @@ class CoctMt290000Uv06ResponsibleParty:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -3027,7 +2978,6 @@ class CoctMt290000Uv06ResponsibleParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -3075,7 +3025,6 @@ class CoctMt290000Uv06SecondaryPerformer:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -3092,7 +3041,6 @@ class CoctMt290000Uv06SecondaryPerformer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -3185,7 +3133,6 @@ class CoctMt290000Uv06PatientCareProvisionRequest:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -3262,7 +3209,6 @@ class CoctMt290000Uv06ServiceRequest:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -3302,7 +3248,6 @@ class CoctMt290000Uv06InFulfillmentOf:
             "name": "serviceRequest",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -3366,7 +3311,6 @@ class CoctMt290000Uv06Reason4:
             "name": "patientCareProvisionRequest",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )

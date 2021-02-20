@@ -165,7 +165,6 @@ class CoctMt260003UvDetectedMedicationIssueDefinition:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -174,7 +173,6 @@ class CoctMt260003UvDetectedMedicationIssueDefinition:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -290,7 +288,6 @@ class CoctMt260003UvPharmacy:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -362,7 +359,6 @@ class CoctMt260003UvSeverityObservation:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -402,7 +398,6 @@ class CoctMt260003UvAuthor:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -419,7 +414,6 @@ class CoctMt260003UvAuthor:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -459,7 +453,6 @@ class CoctMt260003UvDefinition:
             "name": "detectedMedicationIssueDefinition",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -514,7 +507,6 @@ class CoctMt260003UvLocation:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -625,7 +617,6 @@ class CoctMt260003UvSubject:
             "name": "severityObservation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -642,7 +633,6 @@ class CoctMt260003UvSubject:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -699,7 +689,6 @@ class CoctMt260003UvConsumable:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -770,7 +759,6 @@ class CoctMt260003UvManagement:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -856,7 +844,6 @@ class CoctMt260003UvOtherSupply:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -895,7 +882,6 @@ class CoctMt260003UvMitigates:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -966,7 +952,6 @@ class CoctMt260003UvOtherMedication:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -975,7 +960,6 @@ class CoctMt260003UvOtherMedication:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1040,7 +1024,6 @@ class CoctMt260003UvSubject2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1137,7 +1120,6 @@ class CoctMt260003UvDetectedMedicationIssue:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1146,6 +1128,5 @@ class CoctMt260003UvDetectedMedicationIssue:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )

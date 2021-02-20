@@ -200,7 +200,6 @@ class CoctMt710000Uv01Place:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 

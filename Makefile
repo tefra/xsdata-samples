@@ -5,6 +5,7 @@ build-common_types: schema = common_types/Common-Types/src/main/resources/schema
 build-reqif: schema = reqif/schemas/reqif.xsd
 build-npo: schema = npo/schemas/rs.poms.omroep.nl/v1/schema/urn:vpro:api:2013
 build-datexii: schema = datexii/schemas
+build-ewp: schema = ewp/schemas/ewp-specs-api-discovery/stable-v5/manifest.xsd
 
 builds = $\
 	build-amadeus $\
@@ -42,6 +43,7 @@ common_types: build-common_types test-common_types mypy-common_types
 reqif: build-reqif test-reqif mypy-reqif
 npo: build-npo test-npo mypy-npo
 datexii: build-datexii test-datexii mypy-datexii
+ewp: build-ewp mypy-ewp
 
 build: $(builds)
 test: $(tests)
