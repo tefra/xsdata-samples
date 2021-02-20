@@ -71,6 +71,5 @@ class CoctMt280000Uv04CrossReference:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )

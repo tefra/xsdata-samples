@@ -109,7 +109,6 @@ class CoctMt500000UvAccommodationCoverage:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -118,7 +117,6 @@ class CoctMt500000UvAccommodationCoverage:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -181,7 +179,6 @@ class CoctMt500000UvCarrierOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -243,7 +240,6 @@ class CoctMt500000UvEmployerOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -312,7 +308,6 @@ class CoctMt500000UvPolicyHolderOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -376,7 +371,6 @@ class CoctMt500000UvCarrierRole:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -479,7 +473,6 @@ class CoctMt500000UvLimitation:
             "name": "accommodationCoverage",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -496,7 +489,6 @@ class CoctMt500000UvLimitation:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -537,7 +529,6 @@ class CoctMt500000UvAuthor:
             "name": "carrierRole",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -554,7 +545,6 @@ class CoctMt500000UvAuthor:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -626,7 +616,6 @@ class CoctMt500000UvPolicyHolderPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -635,7 +624,6 @@ class CoctMt500000UvPolicyHolderPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -705,7 +693,6 @@ class CoctMt500000UvPolicyHolder:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -746,7 +733,6 @@ class CoctMt500000UvHolder:
             "name": "policyHolder",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -763,7 +749,6 @@ class CoctMt500000UvHolder:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -841,7 +826,6 @@ class CoctMt500000UvPolicyOrAccount:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -866,7 +850,6 @@ class CoctMt500000UvPolicyOrAccount:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -875,7 +858,6 @@ class CoctMt500000UvPolicyOrAccount:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -923,7 +905,6 @@ class CoctMt500000UvBeneficiary:
             "name": "policyOrAccount",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -940,7 +921,6 @@ class CoctMt500000UvBeneficiary:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1003,7 +983,6 @@ class CoctMt500000UvCoveredParty:
             "name": "beneficiaryOf",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )

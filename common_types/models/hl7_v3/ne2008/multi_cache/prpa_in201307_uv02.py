@@ -380,6 +380,5 @@ class PrpaIn201307Uv02(PrpaIn201307Uv02McciMt000100Uv01Message):
         metadata={
             "name": "ITSVersion",
             "type": "Attribute",
-            "required": True,
         }
     )

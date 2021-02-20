@@ -31,6 +31,9 @@ class CompanyNameType:
     """
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     company_short_name: Optional[str] = field(
         default=None,
@@ -85,6 +88,9 @@ class EquipmentType:
     """
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     air_equip_type: Optional[str] = field(
         default=None,

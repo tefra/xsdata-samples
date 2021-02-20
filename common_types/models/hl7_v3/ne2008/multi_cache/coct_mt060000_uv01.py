@@ -96,7 +96,6 @@ class CoctMt060000Uv01Entity:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -143,7 +142,6 @@ class CoctMt060000Uv01Escort:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -160,7 +158,6 @@ class CoctMt060000Uv01Escort:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -200,7 +197,6 @@ class CoctMt060000Uv01Location:
             "name": "locatedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -263,7 +259,6 @@ class CoctMt060000Uv01Performer:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -375,7 +370,6 @@ class CoctMt060000Uv01Subject:
             "name": "roleTransport",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -524,7 +518,6 @@ class CoctMt060000Uv01Transportation:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: Optional[XActMoodIntentEvent] = field(

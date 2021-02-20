@@ -167,7 +167,6 @@ class CoctMt530000UvActDefinition:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -300,7 +299,6 @@ class CoctMt530000UvDataEnterer:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -317,7 +315,6 @@ class CoctMt530000UvDataEnterer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -635,7 +632,6 @@ class CoctMt530000UvOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -704,7 +700,6 @@ class CoctMt530000UvPlace:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -759,7 +754,6 @@ class CoctMt530000UvPrecondition2:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -776,7 +770,6 @@ class CoctMt530000UvPrecondition2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -839,7 +832,6 @@ class CoctMt530000UvProduct2:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -856,7 +848,6 @@ class CoctMt530000UvProduct2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: Optional[ContextControl] = field(
@@ -902,7 +893,6 @@ class CoctMt530000UvRecordTarget:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -919,7 +909,6 @@ class CoctMt530000UvRecordTarget:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -966,7 +955,6 @@ class CoctMt530000UvResponsibleParty1:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -983,7 +971,6 @@ class CoctMt530000UvResponsibleParty1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1023,7 +1010,6 @@ class CoctMt530000UvResponsibleParty2:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1040,7 +1026,6 @@ class CoctMt530000UvResponsibleParty2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: Optional[ContextControl] = field(
@@ -1126,7 +1111,6 @@ class CoctMt530000UvVerifier:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1188,7 +1172,6 @@ class CoctMt530000UvBirthplace:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1205,7 +1188,6 @@ class CoctMt530000UvBirthplace:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1300,7 +1282,6 @@ class CoctMt530000UvCriterion:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     negation_ind: str = field(
@@ -1348,7 +1329,6 @@ class CoctMt530000UvDefinition:
             "name": "actDefinition",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1365,7 +1345,6 @@ class CoctMt530000UvDefinition:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1736,7 +1715,6 @@ class CoctMt530000UvSourceOf1:
             "name": "actReference",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1909,7 +1887,6 @@ class CoctMt530000UvAnimal:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -1918,7 +1895,6 @@ class CoctMt530000UvAnimal:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1973,7 +1949,6 @@ class CoctMt530000UvConditions:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2044,7 +2019,6 @@ class CoctMt530000UvDevice:
             "name": "manufacturedProduct",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2190,7 +2164,6 @@ class CoctMt530000UvEntity:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2230,7 +2203,6 @@ class CoctMt530000UvLocation:
             "name": "healthCareFacility",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2472,7 +2444,6 @@ class CoctMt530000UvPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -2481,7 +2452,6 @@ class CoctMt530000UvPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2536,7 +2506,6 @@ class CoctMt530000UvPrecondition1:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2553,7 +2522,6 @@ class CoctMt530000UvPrecondition1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -2625,7 +2593,6 @@ class CoctMt530000UvProduct1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: Optional[ContextControl] = field(
@@ -2688,7 +2655,6 @@ class CoctMt530000UvAdministerableMaterial:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -2776,7 +2742,6 @@ class CoctMt530000UvObservationRange:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     negation_ind: str = field(
@@ -3024,7 +2989,6 @@ class CoctMt530000UvAuthor:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -3095,7 +3059,6 @@ class CoctMt530000UvConsumable:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: Optional[ContextControl] = field(
@@ -3198,7 +3161,6 @@ class CoctMt530000UvInformant:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -3355,7 +3317,6 @@ class CoctMt530000UvReferenceRange:
             "name": "observationRange",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -3372,7 +3333,6 @@ class CoctMt530000UvReferenceRange:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -3634,7 +3594,6 @@ class CoctMt530000UvSubject1:
             "name": "controlActEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -3949,7 +3908,6 @@ class CoctMt530000UvEncounter:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: Optional[XClinicalStatementEncounterMood] = field(
@@ -4586,7 +4544,6 @@ class CoctMt530000UvSubstanceAdministration:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: Optional[XClinicalStatementSubstanceMood] = field(
@@ -5285,7 +5242,6 @@ class CoctMt530000UvOrganizer:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 

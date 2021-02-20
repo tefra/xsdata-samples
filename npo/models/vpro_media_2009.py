@@ -736,6 +736,9 @@ class CountryType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     code: Optional[str] = field(
         default=None,
@@ -846,6 +849,9 @@ class LanguageType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     code: Optional[str] = field(
         default=None,
@@ -919,6 +925,9 @@ class OrganizationType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     id: Optional[str] = field(
         default=None,
@@ -943,6 +952,9 @@ class PortalRestrictionType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     portal_id: Optional[str] = field(
         default=None,
@@ -996,6 +1008,9 @@ class RelationType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     type: Optional[str] = field(
         default=None,
@@ -1034,6 +1049,9 @@ class RepeatType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     is_rerun: Optional[bool] = field(
         default=None,
@@ -1169,6 +1187,9 @@ class DescriptionType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     type: Optional[TextualTypeEnum] = field(
         default=None,
@@ -1236,6 +1257,9 @@ class GeoRestrictionType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     region_id: Optional[GeoRestrictionEnum] = field(
         default=None,
@@ -1408,6 +1432,9 @@ class PredictionType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     state: Optional[PredictionStateEnum] = field(
         default=None,
@@ -1494,6 +1521,9 @@ class ScheduleEventDescription:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     owner: Optional[OwnerTypeEnum] = field(
         default=None,
@@ -1518,6 +1548,9 @@ class ScheduleEventTitle:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     owner: Optional[OwnerTypeEnum] = field(
         default=None,
@@ -1546,7 +1579,6 @@ class StreamingStatus:
         metadata={
             "name": "withDrm",
             "type": "Attribute",
-            "required": True,
         }
     )
     without_drm: Optional[StreamingStatusValue] = field(
@@ -1554,7 +1586,6 @@ class StreamingStatus:
         metadata={
             "name": "withoutDrm",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1566,6 +1597,9 @@ class TagType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
@@ -1604,6 +1638,9 @@ class TitleType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     type: Optional[TextualTypeEnum] = field(
         default=None,
@@ -1664,6 +1701,9 @@ class TwitterType:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     type: Optional[TwitterTypeType] = field(
         default=None,

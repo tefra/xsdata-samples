@@ -81,7 +81,6 @@ class CoctMt310000Uv04AcommodationRequestor:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -90,7 +89,6 @@ class CoctMt310000Uv04AcommodationRequestor:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -208,7 +206,6 @@ class CoctMt310000Uv04MedicalService:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -271,7 +268,6 @@ class CoctMt310000Uv04MinimumAvailableAccommodation:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -373,7 +369,6 @@ class CoctMt310000Uv04PertinentInformation1:
             "name": "minimumAvailableAccommodation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -502,7 +497,6 @@ class CoctMt310000Uv04Author:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -574,7 +568,6 @@ class CoctMt310000Uv04Encounter:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -583,7 +576,6 @@ class CoctMt310000Uv04Encounter:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -662,7 +654,6 @@ class CoctMt310000Uv04AccommodationRequested:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -880,7 +871,6 @@ class CoctMt310000Uv04AccomodationSupplied:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: Optional[XActMoodIntentEvent] = field(

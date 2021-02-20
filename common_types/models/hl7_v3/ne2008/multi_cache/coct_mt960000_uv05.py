@@ -61,7 +61,6 @@ class CoctMt960000Uv05Author:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -123,7 +122,6 @@ class CoctMt960000Uv05Device1:
             "name": "assignedDevice",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -186,7 +184,6 @@ class CoctMt960000Uv05Device2:
             "name": "assignedDevice",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -270,7 +267,6 @@ class CoctMt960000Uv05PositionAccuracy:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -279,7 +275,6 @@ class CoctMt960000Uv05PositionAccuracy:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -319,7 +314,6 @@ class CoctMt960000Uv05Component2:
             "name": "positionAccuracy",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -436,7 +430,6 @@ class CoctMt960000Uv05PositionCoordinate:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -445,7 +438,6 @@ class CoctMt960000Uv05PositionCoordinate:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -493,7 +485,6 @@ class CoctMt960000Uv05Component1:
             "name": "positionCoordinate",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -656,6 +647,5 @@ class CoctMt960000Uv05Position:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )

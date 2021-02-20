@@ -236,7 +236,6 @@ class PrpaMt201303Uv02CareGiver:
             "name": "careGiverPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -425,7 +424,6 @@ class PrpaMt201303Uv02CoveredParty:
             "name": "coverageRecord",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -442,7 +440,6 @@ class PrpaMt201303Uv02CoveredParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -543,7 +540,6 @@ class PrpaMt201303Uv02Employee:
             "name": "employerOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1001,7 +997,6 @@ class PrpaMt201303Uv02OtherIds:
             "name": "scopingOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1268,7 +1263,6 @@ class PrpaMt201303Uv02Subject2:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1550,7 +1544,6 @@ class PrpaMt201303Uv02Member:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1567,7 +1560,6 @@ class PrpaMt201303Uv02Member:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1624,7 +1616,6 @@ class PrpaMt201303Uv02PatientOfOtherProvider:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1665,7 +1656,6 @@ class PrpaMt201303Uv02Subject4:
             "name": "administrativeObservation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2410,7 +2400,6 @@ class PrpaMt201303Uv02Patient:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )

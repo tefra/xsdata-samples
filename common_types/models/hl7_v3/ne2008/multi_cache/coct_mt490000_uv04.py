@@ -107,7 +107,6 @@ class CoctMt490000Uv04ContentPackagedProduct:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -148,7 +147,6 @@ class CoctMt490000Uv04Destination:
             "name": "serviceDeliveryLocation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -165,7 +163,6 @@ class CoctMt490000Uv04Destination:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -243,7 +240,6 @@ class CoctMt490000Uv04Diagnosis:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -368,7 +364,6 @@ class CoctMt490000Uv04ManufacturedProductOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -408,7 +403,6 @@ class CoctMt490000Uv04Origin:
             "name": "serviceDeliveryLocation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -425,7 +419,6 @@ class CoctMt490000Uv04Origin:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -494,7 +487,6 @@ class CoctMt490000Uv04ProviderPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -503,7 +495,6 @@ class CoctMt490000Uv04ProviderPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -573,7 +564,6 @@ class CoctMt490000Uv04WarrantorOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -643,7 +633,6 @@ class CoctMt490000Uv04HealthCareProvider:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -691,7 +680,6 @@ class CoctMt490000Uv04PertinentInformation:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -773,7 +761,6 @@ class CoctMt490000Uv04Warrantor:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -814,7 +801,6 @@ class CoctMt490000Uv04Consultant:
             "name": "healthCareProvider",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -831,7 +817,6 @@ class CoctMt490000Uv04Consultant:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -910,7 +895,6 @@ class CoctMt490000Uv04ManufacturedMaterial:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: Optional[str] = field(
@@ -959,7 +943,6 @@ class CoctMt490000Uv04Referrer:
             "name": "healthCareProvider",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -976,7 +959,6 @@ class CoctMt490000Uv04Referrer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1030,7 +1012,6 @@ class CoctMt490000Uv04ManufacturedProduct:
             "name": "manufacturedMaterial",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1111,7 +1092,6 @@ class CoctMt490000Uv04Product:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 

@@ -134,7 +134,6 @@ class PocdMt000040InfrastructureRootTypeId:
         default="2.16.840.1.113883.1.3",
         metadata={
             "type": "Attribute",
-            "required": True,
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         }
     )
@@ -6183,7 +6182,6 @@ class PocdMt000040RegionOfInterest:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -6192,7 +6190,6 @@ class PocdMt000040RegionOfInterest:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -6412,7 +6409,6 @@ class PocdMt000040SubstanceAdministration:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: Optional[XDocumentSubstanceMood] = field(
@@ -6622,7 +6618,6 @@ class PocdMt000040Supply:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: Optional[XDocumentSubstanceMood] = field(

@@ -58,7 +58,6 @@ class CoctMt810000UvPerformer:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -130,7 +129,6 @@ class CoctMt810000UvPrimaryPerformer:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -147,7 +145,6 @@ class CoctMt810000UvPrimaryPerformer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -210,7 +207,6 @@ class CoctMt810000UvVerificationRequest:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -250,7 +246,6 @@ class CoctMt810000UvInFulfillmentOf:
             "name": "verificationRequest",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -305,7 +300,6 @@ class CoctMt810000UvInformationProvision:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -322,7 +316,6 @@ class CoctMt810000UvInformationProvision:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -331,7 +324,6 @@ class CoctMt810000UvInformationProvision:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -371,7 +363,6 @@ class CoctMt810000UvSupport:
             "name": "informationProvision",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -521,6 +512,5 @@ class CoctMt810000UvVerification:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )

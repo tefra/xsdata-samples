@@ -125,7 +125,6 @@ class CoctMt010000Uv01AccomodationEvent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -134,7 +133,6 @@ class CoctMt010000Uv01AccomodationEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -190,7 +188,6 @@ class CoctMt010000Uv01Admitter:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -207,7 +204,6 @@ class CoctMt010000Uv01Admitter:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -278,7 +274,6 @@ class CoctMt010000Uv01Attender:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -295,7 +290,6 @@ class CoctMt010000Uv01Attender:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -334,7 +328,6 @@ class CoctMt010000Uv01Authorization:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -351,7 +344,6 @@ class CoctMt010000Uv01Authorization:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -391,7 +383,6 @@ class CoctMt010000Uv01Component:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -469,7 +460,6 @@ class CoctMt010000Uv01Consultant:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -486,7 +476,6 @@ class CoctMt010000Uv01Consultant:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -542,7 +531,6 @@ class CoctMt010000Uv01Discharger:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -559,7 +547,6 @@ class CoctMt010000Uv01Discharger:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -598,7 +585,6 @@ class CoctMt010000Uv01InFulfillmentOf:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -654,7 +640,6 @@ class CoctMt010000Uv01NotificationContact:
             "name": "responsibleParty",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -671,7 +656,6 @@ class CoctMt010000Uv01NotificationContact:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -740,7 +724,6 @@ class CoctMt010000Uv01ObservationEvent02:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     negation_ind: Optional[str] = field(
@@ -796,7 +779,6 @@ class CoctMt010000Uv01PertinentInformation2:
             "name": "observationDx",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -852,7 +834,6 @@ class CoctMt010000Uv01Reference:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -869,7 +850,6 @@ class CoctMt010000Uv01Reference:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -926,7 +906,6 @@ class CoctMt010000Uv01Referrer:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -943,7 +922,6 @@ class CoctMt010000Uv01Referrer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1006,7 +984,6 @@ class CoctMt010000Uv01ResponsibleParty1:
             "name": "assignedOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1023,7 +1000,6 @@ class CoctMt010000Uv01ResponsibleParty1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1062,7 +1038,6 @@ class CoctMt010000Uv01SequelTo:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1171,7 +1146,6 @@ class CoctMt010000Uv01TransportedBy:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1227,7 +1201,6 @@ class CoctMt010000Uv01Location3:
             "name": "accomodationEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1283,7 +1256,6 @@ class CoctMt010000Uv01PertinentInformation3:
             "name": "observationEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1479,7 +1451,6 @@ class CoctMt010000Uv01Location1:
             "name": "serviceDeliveryLocation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1807,7 +1778,6 @@ class CoctMt010000Uv01Encounter:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1816,7 +1786,6 @@ class CoctMt010000Uv01Encounter:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1855,7 +1824,6 @@ class CoctMt010000Uv01CauseOf:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1872,7 +1840,6 @@ class CoctMt010000Uv01CauseOf:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )

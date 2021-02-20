@@ -488,6 +488,7 @@ class AddlBookingCodeInformation:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
             "white_space": "collapse",
         }
@@ -569,6 +570,7 @@ class AirFareDisplayRuleKey:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
             "white_space": "collapse",
         }
@@ -680,6 +682,7 @@ class AirReservationLocatorCode:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -969,6 +972,9 @@ class BookingRulesFareReference:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     class_of_service: Optional[str] = field(
         default=None,
@@ -1183,6 +1189,7 @@ class CarrierCode:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "length": 2,
         }
     )
@@ -1232,6 +1239,9 @@ class CodeshareInfo:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     operating_carrier: Optional[str] = field(
         default=None,
@@ -1575,6 +1585,7 @@ class Emdendorsement:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
             "max_length": 255,
         }
@@ -1999,6 +2010,9 @@ class FareInfoMessage:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     key: Optional[str] = field(
         default=None,
@@ -2348,6 +2362,7 @@ class FareRuleKey:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
             "white_space": "collapse",
         }
@@ -2382,6 +2397,9 @@ class FareRuleLong:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     category: Optional[int] = field(
         default=None,
@@ -2580,6 +2598,9 @@ class FeeApplication:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     code: Optional[str] = field(
         default=None,
@@ -2934,6 +2955,9 @@ class ImageLocation:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     type: Optional[str] = field(
         default=None,
@@ -3908,6 +3932,7 @@ class OverrideCode:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "length": 4,
         }
     )
@@ -3943,6 +3968,7 @@ class PassengerReceiptOverride:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
             "white_space": "collapse",
         }
@@ -4216,6 +4242,9 @@ class PenaltyInformation:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     carrier: Optional[str] = field(
         default=None,
@@ -4418,6 +4447,9 @@ class PriceChangeType:
     """
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     amount: Optional[str] = field(
         default=None,
@@ -4951,6 +4983,9 @@ class SeatInformation:
         """
         value: Optional[str] = field(
             default=None,
+            metadata={
+                "required": True,
+            }
         )
         number: Optional[int] = field(
             default=None,
@@ -5485,6 +5520,9 @@ class TravelArranger:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     company_short_name: Optional[str] = field(
         default=None,
@@ -5510,6 +5548,9 @@ class Url:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     type: Optional[str] = field(
         default=None,
@@ -5599,6 +5640,9 @@ class VoidFailureInfo:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     ticket_number: Optional[str] = field(
         default=None,
@@ -6464,6 +6508,9 @@ class TypeNativeSearchModifier:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     provider_code: Optional[str] = field(
         default=None,
@@ -6703,6 +6750,9 @@ class TypeTextElement:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     type: Optional[str] = field(
         default=None,
@@ -9940,6 +9990,9 @@ class FareNote:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     key: Optional[str] = field(
         default=None,

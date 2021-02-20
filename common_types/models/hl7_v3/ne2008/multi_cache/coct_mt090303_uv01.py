@@ -92,7 +92,6 @@ class CoctMt090303Uv01Device:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 

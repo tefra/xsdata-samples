@@ -129,7 +129,6 @@ class MfmiMt700712Uv01ActDefinition:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -176,7 +175,6 @@ class MfmiMt700712Uv01Author1:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -193,7 +191,6 @@ class MfmiMt700712Uv01Author1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -256,7 +253,6 @@ class MfmiMt700712Uv01Author2:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -273,7 +269,6 @@ class MfmiMt700712Uv01Author2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -430,7 +425,6 @@ class MfmiMt700712Uv01Custodian:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -447,7 +441,6 @@ class MfmiMt700712Uv01Custodian:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -509,7 +502,6 @@ class MfmiMt700712Uv01DataEnterer:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -526,7 +518,6 @@ class MfmiMt700712Uv01DataEnterer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -580,7 +571,6 @@ class MfmiMt700712Uv01InformationRecipient:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -682,7 +672,6 @@ class MfmiMt700712Uv01Overseer:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -949,7 +938,6 @@ class MfmiMt700712Uv01Reason:
             "name": "detectedIssueEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1013,7 +1001,6 @@ class MfmiMt700712Uv01Definition:
             "name": "actDefinition",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1030,7 +1017,6 @@ class MfmiMt700712Uv01Definition:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1093,7 +1079,6 @@ class MfmiMt700712Uv01RegistrationRequest:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1102,7 +1087,6 @@ class MfmiMt700712Uv01RegistrationRequest:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1142,7 +1126,6 @@ class MfmiMt700712Uv01Subject3:
             "name": "priorRegisteredRole",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1198,7 +1181,6 @@ class MfmiMt700712Uv01Subject4:
             "name": "priorRegisteredAct",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1215,7 +1197,6 @@ class MfmiMt700712Uv01Subject4:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1264,7 +1245,6 @@ class MfmiMt700712Uv01InFulfillmentOf:
             "name": "registrationRequest",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1358,7 +1338,6 @@ class MfmiMt700712Uv01PriorRegistration:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1367,7 +1346,6 @@ class MfmiMt700712Uv01PriorRegistration:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1407,7 +1385,6 @@ class MfmiMt700712Uv01ReplacementOf:
             "name": "priorRegistration",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1424,7 +1401,6 @@ class MfmiMt700712Uv01ReplacementOf:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )

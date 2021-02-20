@@ -151,7 +151,6 @@ class McciMt000100Uv01EntityRsp:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -237,7 +236,6 @@ class McciMt000100Uv01Organization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -314,7 +312,6 @@ class McciMt000100Uv01Place:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -612,7 +609,6 @@ class McciMt000100Uv01Device:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 

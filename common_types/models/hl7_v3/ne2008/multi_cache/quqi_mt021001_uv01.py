@@ -175,7 +175,6 @@ class QuqiMt021001Uv01DataEnterer:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -192,7 +191,6 @@ class QuqiMt021001Uv01DataEnterer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -246,7 +244,6 @@ class QuqiMt021001Uv01InformationRecipient:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -348,7 +345,6 @@ class QuqiMt021001Uv01Overseer:
             "name": "assignedPerson",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -411,7 +407,6 @@ class QuqiMt021001Uv01Reason:
             "name": "detectedIssueEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )

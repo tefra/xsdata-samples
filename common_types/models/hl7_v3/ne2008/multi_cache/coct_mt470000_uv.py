@@ -96,7 +96,6 @@ class CoctMt470000UvPerformer:
             "name": "assignedEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -191,7 +190,6 @@ class CoctMt470000UvResponsibleParty:
             "name": "responsibleParty",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -208,7 +206,6 @@ class CoctMt470000UvResponsibleParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -312,7 +309,6 @@ class CoctMt470000UvConsent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -321,7 +317,6 @@ class CoctMt470000UvConsent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     negation_ind: Optional[str] = field(

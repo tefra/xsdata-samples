@@ -2569,6 +2569,7 @@ class MultilingualStringValue:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -9418,7 +9419,6 @@ class ChargeBandVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -9434,7 +9434,6 @@ class ContactDetailsVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -9450,7 +9449,6 @@ class MeasurementSiteRecordVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -9466,7 +9464,6 @@ class MeasurementSiteTableVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -9482,7 +9479,6 @@ class ParkingAccessReference(Reference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -9498,7 +9494,6 @@ class ParkingRecordVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -9514,7 +9509,6 @@ class ParkingRouteDetailsVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -9530,7 +9524,6 @@ class ParkingTableVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -9546,7 +9539,6 @@ class PredefinedItineraryVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -9562,7 +9554,6 @@ class PredefinedLocationVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -9578,7 +9569,6 @@ class PredefinedNonOrderedLocationGroupVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -9616,7 +9606,6 @@ class SituationRecordVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -9632,7 +9621,6 @@ class SituationVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -9648,7 +9636,6 @@ class VmsUnitRecordVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -9664,7 +9651,6 @@ class VmsUnitTableVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -15314,7 +15300,6 @@ class D2LogicalModel1:
         metadata={
             "name": "modelBaseVersion",
             "type": "Attribute",
-            "required": True,
         }
     )
 

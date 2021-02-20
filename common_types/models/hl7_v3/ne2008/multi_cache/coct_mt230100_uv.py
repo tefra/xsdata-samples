@@ -115,7 +115,6 @@ class CoctMt230100UvAgency:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -124,7 +123,6 @@ class CoctMt230100UvAgency:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -201,7 +199,6 @@ class CoctMt230100UvCharacteristic:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -271,7 +268,6 @@ class CoctMt230100UvCountry:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -431,7 +427,6 @@ class CoctMt230100UvObservationGoal:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -500,7 +495,6 @@ class CoctMt230100UvPolicy:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -625,7 +619,6 @@ class CoctMt230100UvSubContent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -735,7 +728,6 @@ class CoctMt230100UvSubject7:
             "name": "valuedItem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -814,7 +806,6 @@ class CoctMt230100UvSuperContent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -907,7 +898,6 @@ class CoctMt230100UvManufacturer:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1008,7 +998,6 @@ class CoctMt230100UvSubject14:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1063,7 +1052,6 @@ class CoctMt230100UvSubject15:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1118,7 +1106,6 @@ class CoctMt230100UvSubject2:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1173,7 +1160,6 @@ class CoctMt230100UvSubject22:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1228,7 +1214,6 @@ class CoctMt230100UvSubject25:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1284,7 +1269,6 @@ class CoctMt230100UvSubject3:
             "name": "observationGoal",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1339,7 +1323,6 @@ class CoctMt230100UvSubject4:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1419,7 +1402,6 @@ class CoctMt230100UvTerritorialAuthority:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1483,7 +1465,6 @@ class CoctMt230100UvAuthor:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1577,7 +1558,6 @@ class CoctMt230100UvMedicineManufacturer:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1759,7 +1739,6 @@ class CoctMt230100UvSubstanceManufacturer:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1814,7 +1793,6 @@ class CoctMt230100UvHolder:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1831,7 +1809,6 @@ class CoctMt230100UvHolder:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2026,7 +2003,6 @@ class CoctMt230100UvApproval:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2134,7 +2110,6 @@ class CoctMt230100UvSubject1:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2189,7 +2164,6 @@ class CoctMt230100UvSubject11:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2244,7 +2218,6 @@ class CoctMt230100UvSubject16:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -2556,7 +2529,6 @@ class CoctMt230100UvContent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -2840,7 +2812,6 @@ class CoctMt230100UvMedication:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )

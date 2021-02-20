@@ -74,6 +74,7 @@ class FulFillmentType:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 0,
             "max_length": 255,
         }
@@ -90,6 +91,9 @@ class JourneyRemark:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     category: Optional[str] = field(
         default=None,
@@ -117,6 +121,9 @@ class OperatingCompany:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     code: Optional[str] = field(
         default=None,
@@ -725,6 +732,7 @@ class TicketAdvisory:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
             "max_length": 500,
         }
@@ -986,6 +994,9 @@ class RailFareId:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     key: Optional[str] = field(
         default=None,
@@ -1042,6 +1053,9 @@ class RailFareNote:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     key: Optional[str] = field(
         default=None,
@@ -1277,6 +1291,9 @@ class RailSegmentInfo:
 
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     category: Optional[str] = field(
         default=None,

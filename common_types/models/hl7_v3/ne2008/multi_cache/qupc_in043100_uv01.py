@@ -496,6 +496,5 @@ class QupcIn043100Uv01(QupcIn043100Uv01McciMt000100Uv01Message):
         metadata={
             "name": "ITSVersion",
             "type": "Attribute",
-            "required": True,
         }
     )

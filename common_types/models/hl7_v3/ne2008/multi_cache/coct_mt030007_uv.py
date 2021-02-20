@@ -80,7 +80,6 @@ class CoctMt030007UvBirthPlace:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -97,7 +96,6 @@ class CoctMt030007UvBirthPlace:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -153,7 +151,6 @@ class CoctMt030007UvCitizen:
             "name": "politicalOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -170,7 +167,6 @@ class CoctMt030007UvCitizen:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -503,7 +499,6 @@ class CoctMt030007UvEntity:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -605,7 +600,6 @@ class CoctMt030007UvGuarantor:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -716,7 +710,6 @@ class CoctMt030007UvGuardian:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -945,7 +938,6 @@ class CoctMt030007UvStudent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1016,7 +1008,6 @@ class CoctMt030007UvMember:
             "name": "groupEntity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -1033,7 +1024,6 @@ class CoctMt030007UvMember:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1540,7 +1530,6 @@ class CoctMt030007UvPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: Optional[XDeterminerInstanceKind] = field(

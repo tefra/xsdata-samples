@@ -94,7 +94,6 @@ class PrpaIn201301Uv02MfmiMt700701Uv01Subject2:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -189,7 +188,6 @@ class PrpaIn201301Uv02MfmiMt700701Uv01RegistrationEvent:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -232,7 +230,6 @@ class PrpaIn201301Uv02MfmiMt700701Uv01RegistrationEvent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -241,7 +238,6 @@ class PrpaIn201301Uv02MfmiMt700701Uv01RegistrationEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -281,7 +277,6 @@ class PrpaIn201301Uv02MfmiMt700701Uv01Subject1:
             "name": "registrationEvent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
             "nillable": True,
         }
     )
@@ -298,7 +293,6 @@ class PrpaIn201301Uv02MfmiMt700701Uv01Subject1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -658,6 +652,5 @@ class PrpaIn201301Uv02(PrpaIn201301Uv02McciMt000100Uv01Message):
         metadata={
             "name": "ITSVersion",
             "type": "Attribute",
-            "required": True,
         }
     )
