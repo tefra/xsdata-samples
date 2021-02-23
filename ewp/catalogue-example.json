@@ -1,0 +1,220 @@
+{
+  "host": [
+    {
+      "admin-email": [
+        "registry-service-admin@example.com",
+        "registry-service-admin@example.com"
+      ],
+      "admin-notes": "Registry's EWP Host",
+      "apis-implemented": {
+        "other_element": [
+          {
+            "qname": "{https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd}discovery",
+            "text": "",
+            "children": [
+              {
+                "qname": "{https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd}url",
+                "text": "https://registry.erasmuswithoutpaper.eu/manifest.xml",
+                "children": [],
+                "attributes": {}
+              }
+            ],
+            "attributes": {
+              "version": "5.0.0"
+            }
+          },
+          {
+            "qname": "{https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd}registry",
+            "text": "",
+            "children": [
+              {
+                "qname": "{https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd}catalogue-url",
+                "text": "https://registry.erasmuswithoutpaper.eu/catalogue-v1.xml",
+                "children": [],
+                "attributes": {}
+              }
+            ],
+            "attributes": {
+              "version": "1.0.0"
+            }
+          }
+        ]
+      },
+      "client-credentials-in-use": {
+        "certificate": [
+          {
+            "sha-256": "f47643e26f10fd1e5ffe2c933f0a5e6ccf831d789cd80a12720392e90a8f7d42"
+          },
+          {
+            "sha-256": "0b9e993d1d4a4e1be879bc5be19c1c0b9073d7bfe1556e015c069c6df6231b7f"
+          }
+        ],
+        "rsa-public-key": []
+      }
+    },
+    {
+      "admin-email": [
+        "admin-or-developer@example.com"
+      ],
+      "admin-notes": "It's not a real manifest. Just an example.",
+      "apis-implemented": {
+        "other_element": [
+          {
+            "qname": "{https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd}discovery",
+            "text": "",
+            "children": [
+              {
+                "qname": "{https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd}url",
+                "text": "https://example.com/manifest.xml",
+                "children": [],
+                "attributes": {}
+              }
+            ],
+            "attributes": {
+              "version": "5.0.0"
+            }
+          },
+          {
+            "qname": "{https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd}echo",
+            "text": "",
+            "children": [
+              {
+                "qname": "{https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd}admin-email",
+                "text": "usually-a-developer@example.com",
+                "children": [],
+                "attributes": {}
+              },
+              {
+                "qname": "{https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd}admin-email",
+                "text": "some-other-developer@example.com",
+                "children": [],
+                "attributes": {}
+              },
+              {
+                "qname": "{https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd}admin-notes",
+                "text": "Some notes which might be useful for client developers.",
+                "children": [],
+                "attributes": {}
+              },
+              {
+                "qname": "{https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd}http-security",
+                "text": "",
+                "children": [
+                  {
+                    "qname": "{https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2}client-auth-methods",
+                    "text": "",
+                    "children": [
+                      {
+                        "qname": "{https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1}tlscert",
+                        "text": "",
+                        "children": [],
+                        "attributes": {
+                          "allows-self-signed": "true"
+                        }
+                      },
+                      {
+                        "qname": "{https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1}httpsig",
+                        "text": "",
+                        "children": [],
+                        "attributes": {}
+                      }
+                    ],
+                    "attributes": {}
+                  },
+                  {
+                    "qname": "{https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2}server-auth-methods",
+                    "text": "",
+                    "children": [
+                      {
+                        "qname": "{https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1}tlscert",
+                        "text": "",
+                        "children": [],
+                        "attributes": {}
+                      },
+                      {
+                        "qname": "{https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1}httpsig",
+                        "text": "",
+                        "children": [],
+                        "attributes": {}
+                      }
+                    ],
+                    "attributes": {}
+                  }
+                ],
+                "attributes": {}
+              },
+              {
+                "qname": "{https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd}url",
+                "text": "https://example.com/ewp/echo",
+                "children": [],
+                "attributes": {}
+              }
+            ],
+            "attributes": {
+              "version": "2.0.0"
+            }
+          }
+        ]
+      },
+      "institutions-covered": {
+        "hei-id": [
+          "uw.edu.pl"
+        ]
+      },
+      "client-credentials-in-use": {
+        "certificate": [
+          {
+            "sha-256": "19fdd48a85595958035a1a42da8065709a585f78cc01b4df428f68eab39b9dda"
+          }
+        ],
+        "rsa-public-key": [
+          {
+            "sha-256": "5531f9a02c44a894d0b706961259fec740ad4ae8a3555871f1a5cd9801285bd4"
+          }
+        ]
+      },
+      "server-credentials-in-use": {
+        "rsa-public-key": [
+          {
+            "sha-256": "5531f9a02c44a894d0b706961259fec740ad4ae8a3555871f1a5cd9801285bd4"
+          }
+        ]
+      }
+    }
+  ],
+  "institutions": {
+    "hei": [
+      {
+        "other-id": [
+          {
+            "value": "PL WARSZAW01",
+            "type": "erasmus"
+          },
+          {
+            "value": "45834-EPP-1-2014-1-PL-EPPKA3-ECHE",
+            "type": "erasmus-charter"
+          },
+          {
+            "value": "999572294",
+            "type": "pic"
+          }
+        ],
+        "name": [
+          {
+            "value": "University of Warsaw",
+            "lang": "en"
+          }
+        ],
+        "id": "uw.edu.pl"
+      }
+    ]
+  },
+  "binaries": {
+    "rsa-public-key": [
+      {
+        "value": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkQojIPtX+BYGGC2f1zXrU3ijq5oApW6YA+mSiB3p5pEQRUuvIHKbSKRXQaW/5hORYpWU1GzU2Wq99vykjX9b8GQlM+0xbFP0cILIhjz23R0Q53mKcf2xAzQt2b3f56QOnjUaKbXsuB+ejTLAtQ4DyKYSodCzUFkuUZUw+TK7G9ySMbcVHqrG8qDCw3/7CXkN0Wf9HpSnYP5fwd426fayu6RXGeX5vUuX5BJkjsxoL8Smn7TB31LSFn3LbQLzG4UuxGaGgHWZCMSC35dX2d3z4zcpZxgyN8LNWXCf4g95b20Ljsbnvk1dIUTJtRJJ29zbWXcgXgVl69UKQx8NxXIx6wIDAQAB",
+        "sha-256": "5531f9a02c44a894d0b706961259fec740ad4ae8a3555871f1a5cd9801285bd4"
+      }
+    ]
+  }
+}

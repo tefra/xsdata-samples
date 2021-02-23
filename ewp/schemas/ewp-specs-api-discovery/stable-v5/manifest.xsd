@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    elementFormDefault="qualified"
+
+    targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+>
+    <xs:import
+        schemaLocation="../../xml.xsd"
+        namespace="http://www.w3.org/XML/1998/namespace"
+    />
+
+    <xs:import
+        schemaLocation="../../ewp-specs-architecture/stable-v1/common-types.xsd"
+        namespace="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    />
+
+    <xs:import
+        schemaLocation="../../ewp-specs-api-registry/stable-v1/catalogue.xsd"
+        namespace="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    />
+
+    <xs:annotation>
+        <xs:documentation>
+            This schema is a part of the Erasmus Without Paper project. Before you start
+            using it, make sure you have read the general rules described here:
+
+            http://developers.erasmuswithoutpaper.eu/
+        </xs:documentation>
+    </xs:annotation>
+
+    <xs:element name="manifest">
+        <xs:annotation>
+            <xs:documentation>
+                EWP Discovery Manifest.
+
+                Manifest files describe a set of EWP Hosts. Manifest files are usually read by
+                the EWP Registry Service only.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="host" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>
+                            One v5 manifest file can describe multiple EWP Hosts (this is the primary
+                            difference between v4 and v5 of Discovery API).
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="host">
+        <xs:annotation>
+            <xs:documentation>
+                Defines a single EWP Host.
+
+                EWP Host defines relationships between HEIs, APIs, server administrators and
+                client credentials. One EWP Host defines a single Cartesian product (a "join")
+                of all these sets. (E.g. if a client certificate X and a HEI Y is present in
+                the same host, then it means that server which signs its requests with X is
+                allowed to request resources visible to HEI Y. Similar statement is true for
+                every other pair of sets.)
+
+                Most partners will have exactly one `host` entry. However, in some cases you
+                might need to describe more than one. For example, when you server covers
+                two HEIs, but one of your APIs is available for only one of these two HEIs,
+                then it's impossible to describe such relationship with a single Cartesian
+                product. You will need to use a sum of at least two Cartesian products. (which
+                is expressed by two `host` entries).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ewp:admin-email" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>
+                            RECOMMENDED element. Address of a developer or server administrator who may be
+                            contacted in case of problems (e.g. invalid Manifest file, invalid certificates,
+                            server errors, etc.). Multiple addresses may be provided.
+
+                            Please note, that additional `admin-email` elements can also be included inside
+                            specific APIs sections (this allows you to add extra admins to specific APIs
+                            without the need of creating extra `host` entries).
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element ref="ewp:admin-notes" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Additional information provided by administrators and/or developers of this
+                            host for Registry maintainers and client developers. Must be provided in English.
+
+                            E.g. "This host is a DEMO server. We plan to keep it online for testing.".
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element ref="r:apis-implemented" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="institutions-covered" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            A list of HEIs (Higher Education Institutions) that are covered by this host.
+
+                            In conjunction with `apis-implemented`, enlisting a HEI here indicates that the
+                            partner wants to receive specific HEI-related API queries regarding this HEI,
+                            and that it will be able to understand them.
+
+                            In conjunction with `client-credentials-in-use`, enlisting a HEI here indicates
+                            that these credentials can be used to request resources "in the name of" this
+                            HEI.
+
+                            Be advised, that the Registry Service MAY ignore some (or all) of the items
+                            published here, for example if it believes that this HEI does not *want* to be
+                            covered by you. If, for some reason, your items are not being imported, and
+                            you're not sure why, please contact the Registry Service maintainers. You can
+                            also take a look at this thread:
+                            https://github.com/erasmus-without-paper/ewp-specs-api-discovery/issues/12
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="r:hei" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="client-credentials-in-use" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            The list of client credentials used by this host to make requests to
+                            other EWP hosts.
+
+                            You should have this element present if you intend to perform requests within
+                            the EWP Network. However, it's worth noting, that not having it is also valid
+                            (if you want your EWP Host to be "server only").
+
+                            Be advised, that the Registry Service MAY ignore some (or all) of the
+                            credentials submitted here, for example if it finds they do not meet proper
+                            security standards. If, for some reason, your credentials are not being
+                            imported, and you're not sure why, please contact the Registry Service
+                            administrators.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="certificate" type="xs:base64Binary" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Base64-encoded X.509 certificate used by the partner for TLS Client
+                                        Authentication, as described here:
+
+                                        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert
+
+                                        If your private key is compromised, you MUST immediately remove all
+                                        certificates based on this key from your manifest.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="rsa-public-key" type="xs:base64Binary" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Base64-encoded RSA public key used by the partner for HTTP Signature
+                                        Client Authentication, as described here:
+
+                                        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig
+
+                                        If your private key is compromised, you MUST immediately remove all
+                                        public keys related to this key from your manifest.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="server-credentials-in-use" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            The list of server credentials used by this host to authenticate its servers
+                            when communicating to other EWP hosts. Note, that only *some* methods of server
+                            authentication make use of these credentials.
+
+                            As opposed to client authentication, the keys used in server authentication are
+                            bound to specific endpoints (URLs), **not HEIs**. (Remember, that some services
+                            in EWP are not necessarily bound to any HEI, or are bound to multiple HEIs.)
+                            This means that - if you create multiple manifests - then each of your
+                            endpoints MAY use a different key for signing its responses. However, in most
+                            cases, you will want to use only a single key for all your APIs and endpoints.
+
+                            Be advised, that the Registry Service MAY ignore some (or all) of the
+                            credentials submitted here, for example if it finds they do not meet proper
+                            security standards. If, for some reason, your credentials are not being
+                            imported, and you're not sure why, please contact the Registry Service
+                            administrators.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="rsa-public-key" type="xs:base64Binary" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Base64-encoded RSA public key used by the partner for HTTP Signature
+                                        Server Authentication, as described here:
+
+                                        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig
+
+                                        If your private key is compromised, you MUST immediately remove all
+                                        public keys related to this key from your manifest.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
