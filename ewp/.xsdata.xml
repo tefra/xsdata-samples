@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Config xmlns="http://pypi.org/project/xsdata" version="21.2">
+  <Output wsdl="false">
+    <Package>ewp.models</Package>
+    <Format>pydata</Format>
+    <Structure>namespaces</Structure>
+    <DocstringStyle>reStructuredText</DocstringStyle>
+  </Output>
+  <Conventions>
+    <ClassName case="pascalCase" safePrefix="type"/>
+    <FieldName case="snakeCase" safePrefix="value"/>
+    <ModuleName case="snakeCase" safePrefix="mod"/>
+    <PackageName case="snakeCase" safePrefix="pkg"/>
+  </Conventions>
+</Config>
