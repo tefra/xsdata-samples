@@ -15,7 +15,7 @@ config = SerializerConfig(pretty_print=True)
 serializer = XmlSerializer(context=parser.context, config=config)
 jsonSerializer = JsonSerializer(indent=True)
 here = Path(__file__).parent.absolute()
-schema_path = here.joinpath("schemas/rs.poms.omroep.nl/v1/schema/urn:vpro:api:2013")
+schema_path = here.joinpath("schemas/rs.poms.omroep.nl/v1/schema/api_2013.xsd")
 
 
 class BindingTests(TestCase):
