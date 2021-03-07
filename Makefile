@@ -3,7 +3,7 @@ build-sabre: schema = sabre/schemas
 build-travelport: schema = travelport/schemas/air_v48_0/Air.wsdl
 build-common_types: schema = common_types/Common-Types/src/main/resources/schemas/nhinc/hl7
 build-reqif: schema = reqif/schemas/reqif.xsd
-build-npo: schema = npo/schemas/rs.poms.omroep.nl/v1/schema/urn:vpro:api:2013
+build-npo: schema = npo/schemas/rs.poms.omroep.nl/v1/schema/api_2013.xsd
 build-datexii: schema = datexii/schemas
 build-ewp: schema = ewp/schemas/ewp-specs-api-discovery/stable-v5/manifest.xsd
 
