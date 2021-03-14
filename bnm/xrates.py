@@ -15,7 +15,7 @@ from xsdata.formats.dataclass.parsers import XmlParser
 @dataclass
 class Currency:
     id: int = field(metadata=dict(type="Attribute", name="ID"))
-    name: str = field(metadata=dict(type="Attribute", name="Name"))
+    name: str = field(metadata=dict(type="Element", name="Name"))
     num_code: int = field(metadata=dict(type="Element", name="NumCode"))
     iso_code: str = field(metadata=dict(type="Element", name="CharCode"))
     nominal: int = field(metadata=dict(type="Element", name="Nominal"))
