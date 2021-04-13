@@ -8,6 +8,7 @@ build-datexii: schema = datexii/schemas
 build-ewp: schema = ewp/schemas/ewp-specs-api-discovery/stable-v5/manifest.xsd
 build-ubl: schema = ubl/schemas/maindoc
 build-netex: schema = netex/NeTEx/xsd/NeTEx_publication.xsd
+build-spacex: schema = spacex/launches.json
 
 builds = $\
 	build-amadeus $\
@@ -19,6 +20,7 @@ builds = $\
 	build-datexii $\
 	build-ewp $\
 	build-ubl $\
+	build-spacex $\
 	build-netex
 
 tests = $\
@@ -32,6 +34,7 @@ tests = $\
 	test-ewp $\
 	test-ubl $\
 	test-defxml $\
+	test-spacex $\
 	test-netex
 
 mypies = $\
@@ -45,6 +48,7 @@ mypies = $\
 	mypy-ewp $\
 	mypy-ubl $\
 	mypy-defxml $\
+	mypy-spacex $\
 	mypy-netex
 
 all: $(builds) $(tests) $(mypies)
@@ -60,6 +64,7 @@ ewp: build-ewp test-ewp mypy-ewp
 ubl: build-ubl test-ubl mypy-ubl
 netex: build-netex test-netex mypy-netex
 defxml: test-defxml mypy-defxml
+spacex: build-spacex test-spacex mypy-spacex
 
 build: $(builds)
 test: $(tests)
