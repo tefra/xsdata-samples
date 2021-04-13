@@ -4,7 +4,7 @@
     <Package>ubl.models</Package>
     <Format>dataclasses</Format>
     <Structure>filenames</Structure>
-    <DocstringStyle>reStructuredText</DocstringStyle>
+    <DocstringStyle>Blank</DocstringStyle>
     <CompoundFields>false</CompoundFields>
   </Output>
   <Conventions>
