@@ -23,6 +23,7 @@ jobs:
           - { name: "NPO API", id: "npo", mypy: true, pytest: true, xsdata: true }
           - { name: "DateX II", id: "datexii", mypy: true, pytest: true, xsdata: true }
           - { name: "EWP", id: "ewp", mypy: true, pytest: true, xsdata: true }
+          - { name: "UBL", id: "ubl", mypy: false, pytest: true, xsdata: true }
 
     steps:
       - uses: actions/checkout@v2

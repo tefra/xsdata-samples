@@ -84,6 +84,9 @@ class OtherHeiId:
     """
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     type: Optional[OtherHeiIdValue] = field(
         default=None,
@@ -457,6 +460,7 @@ class Catalogue:
             value: Optional[bytes] = field(
                 default=None,
                 metadata={
+                    "required": True,
                     "format": "base64",
                 }
             )

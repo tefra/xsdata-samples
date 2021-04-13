@@ -156,6 +156,7 @@ class HttpwithOptionalLang:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "pattern": r"https?://.+",
         }
     )
@@ -182,6 +183,9 @@ class MultilineStringWithOptionalLang:
     """
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
@@ -213,6 +217,9 @@ class StringWithOptionalLang:
     """
     value: Optional[str] = field(
         default=None,
+        metadata={
+            "required": True,
+        }
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
