@@ -6,6 +6,7 @@ build-reqif: schema = reqif/schemas/reqif.xsd
 build-npo: schema = npo/schemas/rs.poms.omroep.nl/v1/schema/api_2013.xsd
 build-datexii: schema = datexii/schemas
 build-ewp: schema = ewp/schemas/ewp-specs-api-discovery/stable-v5/manifest.xsd
+build-ubl: schema = ubl/schemas/maindoc
 
 builds = $\
 	build-amadeus $\
