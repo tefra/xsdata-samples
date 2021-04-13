@@ -1,0 +1,192 @@
+from dataclasses import dataclass, field
+from typing import List, Optional
+from xsdata.models.datatype import XmlDate, XmlTime
+from ubl.models.common.ubl_common_aggregate_components_2_1 import (
+    DocumentReference,
+    InventoryPeriod,
+    InventoryReportingParty,
+    RetailerCustomerParty,
+    SellerSupplierParty,
+    Signature,
+    StockAvailabilityReportLine,
+)
+from ubl.models.common.ubl_common_basic_components_2_1 import (
+    CustomizationId,
+    DocumentCurrencyCode,
+    Id,
+    Note,
+    ProfileExecutionId,
+    ProfileId,
+    UblversionId,
+    Uuid,
+)
+from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
+
+__NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:StockAvailabilityReport-2"
+
+
+@dataclass
+class StockAvailabilityReportType:
+    ublextensions: Optional[Ublextensions] = field(
+        default=None,
+        metadata={
+            "name": "UBLExtensions",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
+        }
+    )
+    ublversion_id: Optional[UblversionId] = field(
+        default=None,
+        metadata={
+            "name": "UBLVersionID",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        }
+    )
+    customization_id: Optional[CustomizationId] = field(
+        default=None,
+        metadata={
+            "name": "CustomizationID",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        }
+    )
+    profile_id: Optional[ProfileId] = field(
+        default=None,
+        metadata={
+            "name": "ProfileID",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        }
+    )
+    profile_execution_id: Optional[ProfileExecutionId] = field(
+        default=None,
+        metadata={
+            "name": "ProfileExecutionID",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        }
+    )
+    id: Optional[Id] = field(
+        default=None,
+        metadata={
+            "name": "ID",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "required": True,
+        }
+    )
+    copy_indicator: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "CopyIndicator",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        }
+    )
+    uuid: Optional[Uuid] = field(
+        default=None,
+        metadata={
+            "name": "UUID",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        }
+    )
+    issue_date: Optional[XmlDate] = field(
+        default=None,
+        metadata={
+            "name": "IssueDate",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "required": True,
+        }
+    )
+    issue_time: Optional[XmlTime] = field(
+        default=None,
+        metadata={
+            "name": "IssueTime",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        }
+    )
+    note: List[Note] = field(
+        default_factory=list,
+        metadata={
+            "name": "Note",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        }
+    )
+    document_currency_code: Optional[DocumentCurrencyCode] = field(
+        default=None,
+        metadata={
+            "name": "DocumentCurrencyCode",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        }
+    )
+    inventory_period: Optional[InventoryPeriod] = field(
+        default=None,
+        metadata={
+            "name": "InventoryPeriod",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        }
+    )
+    document_reference: List[DocumentReference] = field(
+        default_factory=list,
+        metadata={
+            "name": "DocumentReference",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        }
+    )
+    signature: List[Signature] = field(
+        default_factory=list,
+        metadata={
+            "name": "Signature",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        }
+    )
+    seller_supplier_party: Optional[SellerSupplierParty] = field(
+        default=None,
+        metadata={
+            "name": "SellerSupplierParty",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            "required": True,
+        }
+    )
+    retailer_customer_party: Optional[RetailerCustomerParty] = field(
+        default=None,
+        metadata={
+            "name": "RetailerCustomerParty",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        }
+    )
+    inventory_reporting_party: Optional[InventoryReportingParty] = field(
+        default=None,
+        metadata={
+            "name": "InventoryReportingParty",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            "required": True,
+        }
+    )
+    stock_availability_report_line: List[StockAvailabilityReportLine] = field(
+        default_factory=list,
+        metadata={
+            "name": "StockAvailabilityReportLine",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            "min_occurs": 1,
+        }
+    )
+
+
+@dataclass
+class StockAvailabilityReport(StockAvailabilityReportType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:StockAvailabilityReport-2"
