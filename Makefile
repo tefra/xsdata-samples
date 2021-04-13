@@ -15,7 +15,9 @@ builds = $\
 	build-common_types $\
 	build-reqif $\
 	build-npo $\
-	build-datexii
+	build-datexii $\
+	build-ewp $\
+	build-ubl
 
 tests = $\
 	test-amadeus $\
@@ -24,7 +26,9 @@ tests = $\
 	test-reqif $\
 	test-npo $\
 	test-datexii $\
-	test-bnm
+	test-bnm $\
+	test-ewp $\
+	test-ubl
 
 mypies = $\
 	mypy-amadeus $\
@@ -33,7 +37,8 @@ mypies = $\
 	mypy-common_types $\
 	mypy-reqif $\
 	mypy-npo $\
-	mypy-datexii
+	mypy-datexii $\
+	mypy-ewp
 
 all: $(builds) $(tests) $(mypies)
 
@@ -45,6 +50,7 @@ reqif: build-reqif test-reqif mypy-reqif
 npo: build-npo test-npo mypy-npo
 datexii: build-datexii test-datexii mypy-datexii
 ewp: build-ewp mypy-ewp
+ubl: build-ubl mypy-ubl test-ubl
 
 build: $(builds)
 test: $(tests)
