@@ -25,3 +25,25 @@ from ewp.models.w3_org_xml_1998_namespace import (
     LangValue,
     SpaceValue,
 )
+
+__all__ = [
+    "Host",
+    "Manifest",
+    "OtherHeiId",
+    "OtherHeiIdValue",
+    "ApisImplemented",
+    "Catalogue",
+    "Hei",
+    "Empty",
+    "Gender",
+    "HttpwithOptionalLang",
+    "ManifestApiEntryBase",
+    "MultilineStringWithOptionalLang",
+    "StringWithOptionalLang",
+    "AdminEmail",
+    "AdminNotes",
+    "ErrorResponse",
+    "SuccessUserMessage",
+    "LangValue",
+    "SpaceValue",
+]
