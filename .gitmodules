@@ -1,3 +1,6 @@
 [submodule "common-types/Common-Types"]
 	path = common_types/Common-Types
 	url = https://github.com/CONNECT-Solution/Common-Types
+[submodule "netex/NeTEx"]
+	path = netex/NeTEx
+	url = git@github.com:NeTEx-CEN/NeTEx.git

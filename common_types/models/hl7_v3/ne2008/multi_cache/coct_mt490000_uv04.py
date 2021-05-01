@@ -889,9 +889,9 @@ class CoctMt490000Uv04ManufacturedMaterial:
             "type": "Attribute",
         }
     )
-    class_code: Optional[EntityClass] = field(
+    class_code: EntityClass = field(
         init=False,
-        default=None,
+        default=EntityClass.MMAT,
         metadata={
             "name": "classCode",
             "type": "Attribute",

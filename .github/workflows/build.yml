@@ -18,12 +18,13 @@ jobs:
           - { name: "Sabre", id: "sabre", xsdata: true, pytest: true }
           - { name: "Travelport", id: "travelport", xsdata: true, pytest: true }
           - { name: "Exchange Rates", id: "bnm", pytest: true }
-          - { name: "Common Types", id: "common_types", xsdata: true, mypy: true }
+          - { name: "Common Types", id: "common_types", xsdata: true, mypy: false }
           - { name: "Requirements Interchange Format", id: "reqif", mypy: true, pytest: true, xsdata: true }
           - { name: "NPO API", id: "npo", mypy: true, pytest: true, xsdata: true }
           - { name: "DateX II", id: "datexii", mypy: true, pytest: true, xsdata: true }
           - { name: "EWP", id: "ewp", mypy: true, pytest: true, xsdata: true }
           - { name: "UBL", id: "ubl", mypy: false, pytest: true, xsdata: true }
+          - { name: "NeTEx", id: "netex", mypy: false, pytest: true, xsdata: true }
 
     steps:
       - uses: actions/checkout@v2

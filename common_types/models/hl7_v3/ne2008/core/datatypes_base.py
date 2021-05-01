@@ -2517,41 +2517,15 @@ class IvlTsExplicit:
 
 
 @dataclass
-class St:
+class St(Ed):
     """
     The character string data type stands for text data, primarily intended for
     machine processing (e.g., sorting, querying, indexing, etc.) Used for
     names, symbols, and formal expressions.
-
-    :ivar content:
-    :ivar reference:
-    :ivar thumbnail:
-    :ivar representation:
-    :ivar media_type:
-    :ivar compression: Indicates whether the raw byte data is
-        compressed, and what compression algorithm was used.
-    :ivar integrity_check: The integrity check is a short binary value
-        representing a cryptographically strong checksum that is
-        calculated over the binary data. The purpose of this property,
-        when communicated with a reference is for anyone to validate
-        later whether the reference still resolved to the same data that
-        the reference resolved to when the encapsulated data value with
-        reference was created.
-    :ivar integrity_check_algorithm: Specifies the algorithm used to
-        compute the integrityCheck value.
-    :ivar language:
     """
     class Meta:
         name = "ST"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     reference: Optional[Tel] = field(
         default=None,
         metadata={
@@ -2582,34 +2556,6 @@ class St:
             "pattern": r"[^\s]+",
         }
     )
-    compression: Optional[CompressionAlgorithm] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    integrity_check: Optional[bytes] = field(
-        default=None,
-        metadata={
-            "name": "integrityCheck",
-            "type": "Attribute",
-            "format": "base64",
-        }
-    )
-    integrity_check_algorithm: IntegrityCheckAlgorithm = field(
-        default=IntegrityCheckAlgorithm.SHA_1,
-        metadata={
-            "name": "integrityCheckAlgorithm",
-            "type": "Attribute",
-        }
-    )
-    language: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
 
 
 @dataclass
@@ -2625,14 +2571,6 @@ class Thumbnail(Ed):
     class Meta:
         name = "thumbnail"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     thumbnail: Optional["Thumbnail"] = field(
         default=None,
         metadata={
@@ -2788,537 +2726,20 @@ class CdExplicit(Any):
 
 
 @dataclass
-class Ce:
+class Ce(Cd):
     """Coded data, consists of a coded value (CV) and, optionally, coded
     value(s) from other coding systems that identify the same concept.
 
     Used when alternative codes may exist.
-
-    :ivar original_text: The text or phrase used as the basis for the
-        coding.
-    :ivar qualifier:
-    :ivar translation: A set of other concept descriptors that translate
-        this concept descriptor into other code systems.
-    :ivar code: The plain code symbol defined by the code system. For
-        example, "784.0" is the code symbol of the ICD-9 code "784.0"
-        for headache.
-    :ivar code_system: Specifies the code system that defines the code.
-    :ivar code_system_name: A common name of the coding system.
-    :ivar code_system_version: If applicable, a version descriptor
-        defined specifically for the given code system.
-    :ivar display_name: A name or title for the code, under which the
-        sending system shows the code value to its users.
-    :ivar value_set:
-    :ivar value_set_version:
     """
     class Meta:
         name = "CE"
 
-    original_text: Optional[Ed] = field(
-        default=None,
-        metadata={
-            "name": "originalText",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     qualifier: Optional[Cr] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
-    )
-    translation: List[Cd] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    code: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    code_system: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystem",
-            "type": "Attribute",
-            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
-    )
-    code_system_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystemName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    code_system_version: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystemVersion",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    display_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "displayName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    value_set: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "valueSet",
-            "type": "Attribute",
-            "namespace": "urn:hl7-org:sdtc",
-            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
-    )
-    value_set_version: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "valueSetVersion",
-            "type": "Attribute",
-            "namespace": "urn:hl7-org:sdtc",
-            "min_length": 1,
-        }
-    )
-
-
-@dataclass
-class CeExplicit:
-    """Coded data, consists of a coded value (CV) and, optionally, coded
-    value(s) from other coding systems that identify the same concept.
-
-    Used when alternative codes may exist.
-
-    :ivar original_text: The text or phrase used as the basis for the
-        coding.
-    :ivar qualifier:
-    :ivar translation: A set of other concept descriptors that translate
-        this concept descriptor into other code systems.
-    :ivar code: The plain code symbol defined by the code system. For
-        example, "784.0" is the code symbol of the ICD-9 code "784.0"
-        for headache.
-    :ivar code_system: Specifies the code system that defines the code.
-    :ivar code_system_name: A common name of the coding system.
-    :ivar code_system_version: If applicable, a version descriptor
-        defined specifically for the given code system.
-    :ivar display_name: A name or title for the code, under which the
-        sending system shows the code value to its users.
-    :ivar value_set:
-    :ivar value_set_version:
-    """
-    class Meta:
-        name = "CE_explicit"
-
-    original_text: Optional[EdExplicit] = field(
-        default=None,
-        metadata={
-            "name": "originalText",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    qualifier: Optional[Cr] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    translation: List[Cd] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    code: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    code_system: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystem",
-            "type": "Attribute",
-            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
-    )
-    code_system_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystemName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    code_system_version: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystemVersion",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    display_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "displayName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    value_set: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "valueSet",
-            "type": "Attribute",
-            "namespace": "urn:hl7-org:sdtc",
-            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
-    )
-    value_set_version: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "valueSetVersion",
-            "type": "Attribute",
-            "namespace": "urn:hl7-org:sdtc",
-            "min_length": 1,
-        }
-    )
-
-
-@dataclass
-class Cs:
-    """Coded data, consists of a code, display name, code system, and original
-    text.
-
-    Used when a single code value must be sent.
-
-    :ivar original_text: The text or phrase used as the basis for the
-        coding.
-    :ivar qualifier:
-    :ivar translation:
-    :ivar code: The plain code symbol defined by the code system. For
-        example, "784.0" is the code symbol of the ICD-9 code "784.0"
-        for headache.
-    :ivar code_system: Specifies the code system that defines the code.
-    :ivar code_system_name: A common name of the coding system.
-    :ivar code_system_version: If applicable, a version descriptor
-        defined specifically for the given code system.
-    :ivar display_name: A name or title for the code, under which the
-        sending system shows the code value to its users.
-    :ivar value_set:
-    :ivar value_set_version:
-    """
-    class Meta:
-        name = "CS"
-
-    original_text: Optional[Ed] = field(
-        default=None,
-        metadata={
-            "name": "originalText",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    qualifier: Optional[Cr] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    translation: Optional[Cd] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    code: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    code_system: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystem",
-            "type": "Attribute",
-            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
-    )
-    code_system_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystemName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    code_system_version: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystemVersion",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    display_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "displayName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    value_set: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "valueSet",
-            "type": "Attribute",
-            "namespace": "urn:hl7-org:sdtc",
-            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
-    )
-    value_set_version: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "valueSetVersion",
-            "type": "Attribute",
-            "namespace": "urn:hl7-org:sdtc",
-            "min_length": 1,
-        }
-    )
-
-
-@dataclass
-class Cv:
-    """Coded data, consists of a code, display name, code system, and original
-    text.
-
-    Used when a single code value must be sent.
-
-    :ivar original_text: The text or phrase used as the basis for the
-        coding.
-    :ivar qualifier:
-    :ivar translation:
-    :ivar code: The plain code symbol defined by the code system. For
-        example, "784.0" is the code symbol of the ICD-9 code "784.0"
-        for headache.
-    :ivar code_system: Specifies the code system that defines the code.
-    :ivar code_system_name: A common name of the coding system.
-    :ivar code_system_version: If applicable, a version descriptor
-        defined specifically for the given code system.
-    :ivar display_name: A name or title for the code, under which the
-        sending system shows the code value to its users.
-    :ivar value_set:
-    :ivar value_set_version:
-    """
-    class Meta:
-        name = "CV"
-
-    original_text: Optional[Ed] = field(
-        default=None,
-        metadata={
-            "name": "originalText",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    qualifier: Optional[Cr] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    translation: Optional[Cd] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    code: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    code_system: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystem",
-            "type": "Attribute",
-            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
-    )
-    code_system_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystemName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    code_system_version: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystemVersion",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    display_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "displayName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    value_set: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "valueSet",
-            "type": "Attribute",
-            "namespace": "urn:hl7-org:sdtc",
-            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
-    )
-    value_set_version: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "valueSetVersion",
-            "type": "Attribute",
-            "namespace": "urn:hl7-org:sdtc",
-            "min_length": 1,
-        }
-    )
-
-
-@dataclass
-class EivlEvent:
-    """
-    A code for a common (periodical) activity of daily living based on which
-    the event related periodic interval is specified.
-
-    :ivar original_text: The text or phrase used as the basis for the
-        coding.
-    :ivar qualifier:
-    :ivar translation: A set of other concept descriptors that translate
-        this concept descriptor into other code systems.
-    :ivar code:
-    :ivar code_system:
-    :ivar code_system_name:
-    :ivar code_system_version: If applicable, a version descriptor
-        defined specifically for the given code system.
-    :ivar display_name: A name or title for the code, under which the
-        sending system shows the code value to its users.
-    :ivar value_set:
-    :ivar value_set_version:
-    """
-    class Meta:
-        name = "EIVL.event"
-
-    original_text: Optional[Ed] = field(
-        default=None,
-        metadata={
-            "name": "originalText",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    qualifier: Optional[Cr] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    translation: List[Cd] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    code: Optional[TimingEvent] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    code_system: str = field(
-        init=False,
-        default="2.16.840.1.113883.5.139",
-        metadata={
-            "name": "codeSystem",
-            "type": "Attribute",
-            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
-    )
-    code_system_name: str = field(
-        init=False,
-        default="TimingEvent",
-        metadata={
-            "name": "codeSystemName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    code_system_version: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystemVersion",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    display_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "displayName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    value_set: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "valueSet",
-            "type": "Attribute",
-            "namespace": "urn:hl7-org:sdtc",
-            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
-    )
-    value_set_version: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "valueSetVersion",
-            "type": "Attribute",
-            "namespace": "urn:hl7-org:sdtc",
-            "min_length": 1,
         }
     )
 
@@ -3706,34 +3127,74 @@ class Sc(St):
 
 
 @dataclass
-class Co(Cv):
-    """Coded data, where the domain from which the codeset comes is ordered.
+class CeExplicit(CdExplicit):
+    """Coded data, consists of a coded value (CV) and, optionally, coded
+    value(s) from other coding systems that identify the same concept.
 
-    The Coded Ordinal data type adds semantics related to ordering so
-    that models that make use of such domains may introduce model
-    elements that involve statements about the order of the terms in a
-    domain.
+    Used when alternative codes may exist.
     """
     class Meta:
-        name = "CO"
+        name = "CE_explicit"
+
+    qualifier: Optional[Cr] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
 
 
 @dataclass
-class Pqr(Cv):
-    """A representation of a physical quantity in a unit from any code system.
+class Cv(Ce):
+    """Coded data, consists of a code, display name, code system, and original
+    text.
 
-    Used to show alternative representation for a physical quantity.
-
-    :ivar value: The magnitude of the measurement value in terms of the
-        unit specified in the code.
+    Used when a single code value must be sent.
     """
     class Meta:
-        name = "PQR"
+        name = "CV"
 
-    value: Optional[Union[Decimal, float]] = field(
+    translation: Optional[Cd] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+
+
+@dataclass
+class EivlEvent(Ce):
+    """
+    A code for a common (periodical) activity of daily living based on which
+    the event related periodic interval is specified.
+    """
+    class Meta:
+        name = "EIVL.event"
+
+    code: Optional[TimingEvent] = field(
         default=None,
         metadata={
             "type": "Attribute",
+        }
+    )
+    code_system: str = field(
+        init=False,
+        default="2.16.840.1.113883.5.139",
+        metadata={
+            "name": "codeSystem",
+            "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
+    )
+    code_system_name: str = field(
+        init=False,
+        default="TimingEvent",
+        metadata={
+            "name": "codeSystemName",
+            "type": "Attribute",
+            "min_length": 1,
         }
     )
 
@@ -3743,14 +3204,6 @@ class AdxpAdditionalLocator(Adxp):
     class Meta:
         name = "adxp.additionalLocator"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.ADL,
@@ -3766,14 +3219,6 @@ class AdxpBuildingNumberSuffix(Adxp):
     class Meta:
         name = "adxp.buildingNumberSuffix"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.BNS,
@@ -3789,14 +3234,6 @@ class AdxpCareOf(Adxp):
     class Meta:
         name = "adxp.careOf"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CAR,
@@ -3812,14 +3249,6 @@ class AdxpCensusTract(Adxp):
     class Meta:
         name = "adxp.censusTract"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CEN,
@@ -3835,14 +3264,6 @@ class AdxpCity(Adxp):
     class Meta:
         name = "adxp.city"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CTY,
@@ -3858,14 +3279,6 @@ class AdxpCountry(Adxp):
     class Meta:
         name = "adxp.country"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CNT,
@@ -3881,14 +3294,6 @@ class AdxpCounty(Adxp):
     class Meta:
         name = "adxp.county"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.CPA,
@@ -3904,14 +3309,6 @@ class AdxpDelimiter(Adxp):
     class Meta:
         name = "adxp.delimiter"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DEL_VALUE,
@@ -3927,14 +3324,6 @@ class AdxpDeliveryAddressLine(Adxp):
     class Meta:
         name = "adxp.deliveryAddressLine"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DAL,
@@ -3950,14 +3339,6 @@ class AdxpDeliveryInstallationArea(Adxp):
     class Meta:
         name = "adxp.deliveryInstallationArea"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DINSTA,
@@ -3973,14 +3354,6 @@ class AdxpDeliveryInstallationQualifier(Adxp):
     class Meta:
         name = "adxp.deliveryInstallationQualifier"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DINSTQ,
@@ -3996,14 +3369,6 @@ class AdxpDeliveryInstallationType(Adxp):
     class Meta:
         name = "adxp.deliveryInstallationType"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DINST,
@@ -4019,14 +3384,6 @@ class AdxpDeliveryMode(Adxp):
     class Meta:
         name = "adxp.deliveryMode"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DMOD,
@@ -4042,14 +3399,6 @@ class AdxpDeliveryModeIdentifier(Adxp):
     class Meta:
         name = "adxp.deliveryModeIdentifier"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DMODID,
@@ -4065,14 +3414,6 @@ class AdxpDirection(Adxp):
     class Meta:
         name = "adxp.direction"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.DIR,
@@ -4088,14 +3429,6 @@ class AdxpHouseNumber(Adxp):
     class Meta:
         name = "adxp.houseNumber"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.BNR,
@@ -4111,14 +3444,6 @@ class AdxpHouseNumberNumeric(Adxp):
     class Meta:
         name = "adxp.houseNumberNumeric"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.BNN,
@@ -4134,14 +3459,6 @@ class AdxpPostBox(Adxp):
     class Meta:
         name = "adxp.postBox"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.POB,
@@ -4157,14 +3474,6 @@ class AdxpPostalCode(Adxp):
     class Meta:
         name = "adxp.postalCode"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.ZIP,
@@ -4180,14 +3489,6 @@ class AdxpPrecinct(Adxp):
     class Meta:
         name = "adxp.precinct"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.PRE,
@@ -4203,14 +3504,6 @@ class AdxpState(Adxp):
     class Meta:
         name = "adxp.state"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STA,
@@ -4226,14 +3519,6 @@ class AdxpStreetAddressLine(Adxp):
     class Meta:
         name = "adxp.streetAddressLine"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.SAL,
@@ -4249,14 +3534,6 @@ class AdxpStreetName(Adxp):
     class Meta:
         name = "adxp.streetName"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STR_VALUE,
@@ -4272,14 +3549,6 @@ class AdxpStreetNameBase(Adxp):
     class Meta:
         name = "adxp.streetNameBase"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STB,
@@ -4295,14 +3564,6 @@ class AdxpStreetNameType(Adxp):
     class Meta:
         name = "adxp.streetNameType"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.STTYP,
@@ -4318,14 +3579,6 @@ class AdxpUnitId(Adxp):
     class Meta:
         name = "adxp.unitID"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.UNID,
@@ -4341,14 +3594,6 @@ class AdxpUnitType(Adxp):
     class Meta:
         name = "adxp.unitType"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.UNIT,
@@ -4364,14 +3609,6 @@ class EnDelimiter(Enxp):
     class Meta:
         name = "en.delimiter"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.DEL_VALUE,
@@ -4387,14 +3624,6 @@ class EnFamily(Enxp):
     class Meta:
         name = "en.family"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.FAM,
@@ -4410,14 +3639,6 @@ class EnGiven(Enxp):
     class Meta:
         name = "en.given"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.GIV,
@@ -4433,14 +3654,6 @@ class EnPrefix(Enxp):
     class Meta:
         name = "en.prefix"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.PFX,
@@ -4456,14 +3669,6 @@ class EnSuffix(Enxp):
     class Meta:
         name = "en.suffix"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.SFX,
@@ -4794,6 +3999,50 @@ class Ad(Any):
 
 
 @dataclass
+class Co(Cv):
+    """Coded data, where the domain from which the codeset comes is ordered.
+
+    The Coded Ordinal data type adds semantics related to ordering so
+    that models that make use of such domains may introduce model
+    elements that involve statements about the order of the terms in a
+    domain.
+    """
+    class Meta:
+        name = "CO"
+
+
+@dataclass
+class Cs(Cv):
+    """Coded data, consists of a code, display name, code system, and original
+    text.
+
+    Used when a single code value must be sent.
+    """
+    class Meta:
+        name = "CS"
+
+
+@dataclass
+class Pqr(Cv):
+    """A representation of a physical quantity in a unit from any code system.
+
+    Used to show alternative representation for a physical quantity.
+
+    :ivar value: The magnitude of the measurement value in terms of the
+        unit specified in the code.
+    """
+    class Meta:
+        name = "PQR"
+
+    value: Optional[Union[Decimal, float]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
 class Pq(Qty):
     """
     A dimensioned quantity expressing the result of a measurement act.
@@ -4978,92 +4227,13 @@ class En(Any):
 
 
 @dataclass
-class On:
+class On(En):
     """A name for an organization.
 
     A sequence of name parts.
-
-    :ivar content:
-    :ivar delimiter:
-    :ivar family:
-    :ivar given:
-    :ivar prefix:
-    :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during
-        which the name is or was used for the entity. This accomodates
-        the fact that people change names for people, places and things.
-    :ivar use: A set of codes advising a system or user which name in a
-        set of like names to select for a given purpose. A name without
-        specific use code might be a default name useful for any
-        purpose, but a name with a specific use code would be preferred
-        for that respective purpose.
     """
     class Meta:
         name = "ON"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    delimiter: List[EnDelimiter] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    family: List[EnFamily] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    given: List[EnGiven] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    prefix: List[EnPrefix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    suffix: List[EnSuffix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    valid_time: Optional[IvlTs] = field(
-        default=None,
-        metadata={
-            "name": "validTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    use: List[EntityNameUse] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
 
 
 @dataclass
