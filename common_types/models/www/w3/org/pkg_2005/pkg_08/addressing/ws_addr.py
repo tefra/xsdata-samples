@@ -17,7 +17,7 @@ class AttributedQnameType:
             "required": True,
         }
     )
-    other_attributes: Dict = field(
+    other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -37,7 +37,7 @@ class AttributedUritype:
             "required": True,
         }
     )
-    other_attributes: Dict = field(
+    other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -54,7 +54,7 @@ class AttributedUnsignedLongType:
             "required": True,
         }
     )
-    other_attributes: Dict = field(
+    other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -86,7 +86,7 @@ class MetadataType:
             "namespace": "##any",
         }
     )
-    other_attributes: Dict = field(
+    other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -104,7 +104,7 @@ class ReferenceParametersType:
             "namespace": "##any",
         }
     )
-    other_attributes: Dict = field(
+    other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -171,7 +171,7 @@ class RelatesToType:
             "type": "Attribute",
         }
     )
-    other_attributes: Dict = field(
+    other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -226,7 +226,7 @@ class EndpointReferenceType:
             "namespace": "##other",
         }
     )
-    other_attributes: Dict = field(
+    other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
@@ -253,7 +253,7 @@ class ProblemActionType:
             "namespace": "http://www.w3.org/2005/08/addressing",
         }
     )
-    other_attributes: Dict = field(
+    other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
