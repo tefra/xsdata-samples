@@ -112,20 +112,7 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 
 @dataclass
-class PocdMt000040InfrastructureRootTypeId:
-    """
-    :ivar root:
-    :ivar extension:
-    :ivar assigning_authority_name: A human readable name or mnemonic
-        for the assigning authority. This name may be provided solely
-        for the convenience of unaided humans interpreting an  value and
-        can have no computational meaning. Note: no automated processing
-        must depend on the assigning authority name to be present in any
-        form.
-    :ivar displayable: Specifies if the identifier is intended for human
-        display and data entry (displayable = true) as opposed to pure
-        machine interoperation (displayable = false).
-    """
+class PocdMt000040InfrastructureRootTypeId(Ii):
     class Meta:
         name = "POCD_MT000040.InfrastructureRoot.typeId"
 
@@ -145,19 +132,17 @@ class PocdMt000040InfrastructureRootTypeId:
             "min_length": 1,
         }
     )
-    assigning_authority_name: Optional[str] = field(
-        default=None,
+
+
+@dataclass
+class PocdMt000040RegionOfInterestValue(IntType):
+    class Meta:
+        name = "POCD_MT000040.RegionOfInterest.value"
+
+    unsorted: bool = field(
+        default=False,
         metadata={
-            "name": "assigningAuthorityName",
             "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    displayable: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"true|false",
         }
     )
 
@@ -1762,19 +1747,6 @@ class PocdMt000040PlayingEntity:
         default=EntityDeterminer.INSTANCE,
         metadata={
             "name": "determinerCode",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class PocdMt000040RegionOfInterestValue(IntType):
-    class Meta:
-        name = "POCD_MT000040.RegionOfInterest.value"
-
-    unsorted: bool = field(
-        default=False,
-        metadata={
             "type": "Attribute",
         }
     )

@@ -7,6 +7,7 @@ build-npo: schema = npo/schemas/rs.poms.omroep.nl/v1/schema/api_2013.xsd
 build-datexii: schema = datexii/schemas
 build-ewp: schema = ewp/schemas/ewp-specs-api-discovery/stable-v5/manifest.xsd
 build-ubl: schema = ubl/schemas/maindoc
+build-netex: schema = netex/NeTEx/xsd/NeTEx_publication.xsd
 
 builds = $\
 	build-amadeus $\
@@ -17,7 +18,8 @@ builds = $\
 	build-npo $\
 	build-datexii $\
 	build-ewp $\
-	build-ubl
+	build-ubl $\
+	build-netex
 
 tests = $\
 	test-amadeus $\
@@ -28,7 +30,8 @@ tests = $\
 	test-datexii $\
 	test-bnm $\
 	test-ewp $\
-	test-ubl
+	test-ubl $\
+	test-netex
 
 mypies = $\
 	mypy-amadeus $\
@@ -38,7 +41,8 @@ mypies = $\
 	mypy-reqif $\
 	mypy-npo $\
 	mypy-datexii $\
-	mypy-ewp
+	mypy-ewp $\
+	mypy-netex
 
 all: $(builds) $(tests) $(mypies)
 
@@ -51,6 +55,7 @@ npo: build-npo test-npo mypy-npo
 datexii: build-datexii test-datexii mypy-datexii
 ewp: build-ewp mypy-ewp
 ubl: build-ubl mypy-ubl test-ubl
+netex: build-netex mypy-netex test-netex
 
 build: $(builds)
 test: $(tests)
