@@ -1123,31 +1123,7 @@ class DataObjectFormat(DataObjectFormatType):
 
 @dataclass
 class OtherTimeStampType(GenericTimeStampType):
-    reference_info: List[ReferenceInfo] = field(
-        default_factory=list,
-        metadata={
-            "name": "ReferenceInfo",
-            "type": "Element",
-            "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "min_occurs": 1,
-        }
-    )
-    encapsulated_time_stamp: Optional[EncapsulatedPkidataType] = field(
-        default=None,
-        metadata={
-            "name": "EncapsulatedTimeStamp",
-            "type": "Element",
-            "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
-    )
-    xmltime_stamp: Optional[AnyType] = field(
-        default=None,
-        metadata={
-            "name": "XMLTimeStamp",
-            "type": "Element",
-            "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
-    )
+    pass
 
 
 @dataclass
